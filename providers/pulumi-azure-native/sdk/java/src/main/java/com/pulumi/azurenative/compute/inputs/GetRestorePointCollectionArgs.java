@@ -19,10 +19,10 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="restorePointCollectionName", required=true)
-      private final String restorePointCollectionName;
+    private String restorePointCollectionName;
 
     public String restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
 
-    public GetRestorePointCollectionArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String restorePointCollectionName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName, "expected parameter 'restorePointCollectionName' to be non-null");
-    }
+    private GetRestorePointCollectionArgs() {}
 
-    private GetRestorePointCollectionArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.restorePointCollectionName = null;
+    private GetRestorePointCollectionArgs(GetRestorePointCollectionArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restorePointCollectionName = $.restorePointCollectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRestorePointCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String restorePointCollectionName;
+        private GetRestorePointCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRestorePointCollectionArgs();
         }
 
         public Builder(GetRestorePointCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restorePointCollectionName = defaults.restorePointCollectionName;
+            $ = new GetRestorePointCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder restorePointCollectionName(String restorePointCollectionName) {
-            this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
+            $.restorePointCollectionName = restorePointCollectionName;
             return this;
-        }        public GetRestorePointCollectionArgs build() {
-            return new GetRestorePointCollectionArgs(expand, resourceGroupName, restorePointCollectionName);
+        }
+
+        public GetRestorePointCollectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.restorePointCollectionName = Objects.requireNonNull($.restorePointCollectionName, "expected parameter 'restorePointCollectionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerservice.enums.LicenseType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable Output<String> adminPassword;
+    private @Nullable Output<String> adminPassword;
 
-    public Output<String> adminPassword() {
-        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
+    public Optional<Output<String>> adminPassword() {
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="adminUsername", required=true)
-      private final Output<String> adminUsername;
+    private Output<String> adminUsername;
 
     public Output<String> adminUsername() {
         return this.adminUsername;
@@ -49,10 +49,10 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enableCSIProxy")
-      private final @Nullable Output<Boolean> enableCSIProxy;
+    private @Nullable Output<Boolean> enableCSIProxy;
 
-    public Output<Boolean> enableCSIProxy() {
-        return this.enableCSIProxy == null ? Codegen.empty() : this.enableCSIProxy;
+    public Optional<Output<Boolean>> enableCSIProxy() {
+        return Optional.ofNullable(this.enableCSIProxy);
     }
 
     /**
@@ -60,89 +60,79 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<Either<String,LicenseType>> licenseType;
+    private @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Output<Either<String,LicenseType>> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<Either<String,LicenseType>>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
-    public ManagedClusterWindowsProfileArgs(
-        @Nullable Output<String> adminPassword,
-        Output<String> adminUsername,
-        @Nullable Output<Boolean> enableCSIProxy,
-        @Nullable Output<Either<String,LicenseType>> licenseType) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = Objects.requireNonNull(adminUsername, "expected parameter 'adminUsername' to be non-null");
-        this.enableCSIProxy = enableCSIProxy;
-        this.licenseType = licenseType;
-    }
+    private ManagedClusterWindowsProfileArgs() {}
 
-    private ManagedClusterWindowsProfileArgs() {
-        this.adminPassword = Codegen.empty();
-        this.adminUsername = Codegen.empty();
-        this.enableCSIProxy = Codegen.empty();
-        this.licenseType = Codegen.empty();
+    private ManagedClusterWindowsProfileArgs(ManagedClusterWindowsProfileArgs $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.enableCSIProxy = $.enableCSIProxy;
+        this.licenseType = $.licenseType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterWindowsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminPassword;
-        private Output<String> adminUsername;
-        private @Nullable Output<Boolean> enableCSIProxy;
-        private @Nullable Output<Either<String,LicenseType>> licenseType;
+        private ManagedClusterWindowsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterWindowsProfileArgs();
         }
 
         public Builder(ManagedClusterWindowsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.enableCSIProxy = defaults.enableCSIProxy;
-    	      this.licenseType = defaults.licenseType;
+            $ = new ManagedClusterWindowsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable Output<String> adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
-        public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Codegen.ofNullable(adminPassword);
-            return this;
+
+        public Builder adminPassword(String adminPassword) {
+            return adminPassword(Output.of(adminPassword));
         }
+
         public Builder adminUsername(Output<String> adminUsername) {
-            this.adminUsername = Objects.requireNonNull(adminUsername);
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder adminUsername(String adminUsername) {
-            this.adminUsername = Output.of(Objects.requireNonNull(adminUsername));
-            return this;
+            return adminUsername(Output.of(adminUsername));
         }
+
         public Builder enableCSIProxy(@Nullable Output<Boolean> enableCSIProxy) {
-            this.enableCSIProxy = enableCSIProxy;
+            $.enableCSIProxy = enableCSIProxy;
             return this;
         }
-        public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
-            this.enableCSIProxy = Codegen.ofNullable(enableCSIProxy);
-            return this;
+
+        public Builder enableCSIProxy(Boolean enableCSIProxy) {
+            return enableCSIProxy(Output.of(enableCSIProxy));
         }
+
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
-        }        public ManagedClusterWindowsProfileArgs build() {
-            return new ManagedClusterWindowsProfileArgs(adminPassword, adminUsername, enableCSIProxy, licenseType);
+
+        public Builder licenseType(Either<String,LicenseType> licenseType) {
+            return licenseType(Output.of(licenseType));
+        }
+
+        public ManagedClusterWindowsProfileArgs build() {
+            $.adminUsername = Objects.requireNonNull($.adminUsername, "expected parameter 'adminUsername' to be non-null");
+            return $;
         }
     }
+
 }

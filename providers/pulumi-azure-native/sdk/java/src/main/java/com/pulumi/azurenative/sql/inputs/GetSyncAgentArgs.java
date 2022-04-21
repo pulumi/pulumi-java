@@ -17,7 +17,7 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -39,64 +39,59 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncAgentName", required=true)
-      private final String syncAgentName;
+    private String syncAgentName;
 
     public String syncAgentName() {
         return this.syncAgentName;
     }
 
-    public GetSyncAgentArgs(
-        String resourceGroupName,
-        String serverName,
-        String syncAgentName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.syncAgentName = Objects.requireNonNull(syncAgentName, "expected parameter 'syncAgentName' to be non-null");
-    }
+    private GetSyncAgentArgs() {}
 
-    private GetSyncAgentArgs() {
-        this.resourceGroupName = null;
-        this.serverName = null;
-        this.syncAgentName = null;
+    private GetSyncAgentArgs(GetSyncAgentArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.syncAgentName = $.syncAgentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSyncAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serverName;
-        private String syncAgentName;
+        private GetSyncAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSyncAgentArgs();
         }
 
         public Builder(GetSyncAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.syncAgentName = defaults.syncAgentName;
+            $ = new GetSyncAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder syncAgentName(String syncAgentName) {
-            this.syncAgentName = Objects.requireNonNull(syncAgentName);
+            $.syncAgentName = syncAgentName;
             return this;
-        }        public GetSyncAgentArgs build() {
-            return new GetSyncAgentArgs(resourceGroupName, serverName, syncAgentName);
+        }
+
+        public GetSyncAgentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.syncAgentName = Objects.requireNonNull($.syncAgentName, "expected parameter 'syncAgentName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends com.
      * 
      */
     @Import(name="publicIPs")
-      private final @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
+    private @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
 
-    public Output<List<ResourceReferenceArgs>> publicIPs() {
-        return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
+    public Optional<Output<List<ResourceReferenceArgs>>> publicIPs() {
+        return Optional.ofNullable(this.publicIPs);
     }
 
-    public ManagedClusterLoadBalancerProfileOutboundIPsArgs(@Nullable Output<List<ResourceReferenceArgs>> publicIPs) {
-        this.publicIPs = publicIPs;
-    }
+    private ManagedClusterLoadBalancerProfileOutboundIPsArgs() {}
 
-    private ManagedClusterLoadBalancerProfileOutboundIPsArgs() {
-        this.publicIPs = Codegen.empty();
+    private ManagedClusterLoadBalancerProfileOutboundIPsArgs(ManagedClusterLoadBalancerProfileOutboundIPsArgs $) {
+        this.publicIPs = $.publicIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterLoadBalancerProfileOutboundIPsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
+        private ManagedClusterLoadBalancerProfileOutboundIPsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterLoadBalancerProfileOutboundIPsArgs();
         }
 
         public Builder(ManagedClusterLoadBalancerProfileOutboundIPsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIPs = defaults.publicIPs;
+            $ = new ManagedClusterLoadBalancerProfileOutboundIPsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIPs(@Nullable Output<List<ResourceReferenceArgs>> publicIPs) {
-            this.publicIPs = publicIPs;
+            $.publicIPs = publicIPs;
             return this;
         }
-        public Builder publicIPs(@Nullable List<ResourceReferenceArgs> publicIPs) {
-            this.publicIPs = Codegen.ofNullable(publicIPs);
-            return this;
+
+        public Builder publicIPs(List<ResourceReferenceArgs> publicIPs) {
+            return publicIPs(Output.of(publicIPs));
         }
+
         public Builder publicIPs(ResourceReferenceArgs... publicIPs) {
             return publicIPs(List.of(publicIPs));
-        }        public ManagedClusterLoadBalancerProfileOutboundIPsArgs build() {
-            return new ManagedClusterLoadBalancerProfileOutboundIPsArgs(publicIPs);
+        }
+
+        public ManagedClusterLoadBalancerProfileOutboundIPsArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ComputeBindingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="computeId")
-      private final @Nullable String computeId;
+    private @Nullable String computeId;
 
     public Optional<String> computeId() {
-        return this.computeId == null ? Optional.empty() : Optional.ofNullable(this.computeId);
+        return Optional.ofNullable(this.computeId);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ComputeBindingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="nodeCount")
-      private final @Nullable Integer nodeCount;
+    private @Nullable Integer nodeCount;
 
     public Optional<Integer> nodeCount() {
-        return this.nodeCount == null ? Optional.empty() : Optional.ofNullable(this.nodeCount);
+        return Optional.ofNullable(this.nodeCount);
     }
 
-    public ComputeBindingResponse(
-        @Nullable String computeId,
-        @Nullable Integer nodeCount) {
-        this.computeId = computeId;
-        this.nodeCount = nodeCount;
-    }
+    private ComputeBindingResponse() {}
 
-    private ComputeBindingResponse() {
-        this.computeId = null;
-        this.nodeCount = null;
+    private ComputeBindingResponse(ComputeBindingResponse $) {
+        this.computeId = $.computeId;
+        this.nodeCount = $.nodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeBindingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String computeId;
-        private @Nullable Integer nodeCount;
+        private ComputeBindingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeBindingResponse();
         }
 
         public Builder(ComputeBindingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeId = defaults.computeId;
-    	      this.nodeCount = defaults.nodeCount;
+            $ = new ComputeBindingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeId(@Nullable String computeId) {
-            this.computeId = computeId;
+            $.computeId = computeId;
             return this;
         }
+
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = nodeCount;
+            $.nodeCount = nodeCount;
             return this;
-        }        public ComputeBindingResponse build() {
-            return new ComputeBindingResponse(computeId, nodeCount);
+        }
+
+        public ComputeBindingResponse build() {
+            return $;
         }
     }
+
 }

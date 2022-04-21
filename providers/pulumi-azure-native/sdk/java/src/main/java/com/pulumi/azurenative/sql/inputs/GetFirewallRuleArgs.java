@@ -17,7 +17,7 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firewallRuleName", required=true)
-      private final String firewallRuleName;
+    private String firewallRuleName;
 
     public String firewallRuleName() {
         return this.firewallRuleName;
@@ -28,7 +28,7 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetFirewallRuleArgs(
-        String firewallRuleName,
-        String resourceGroupName,
-        String serverName) {
-        this.firewallRuleName = Objects.requireNonNull(firewallRuleName, "expected parameter 'firewallRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetFirewallRuleArgs() {}
 
-    private GetFirewallRuleArgs() {
-        this.firewallRuleName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetFirewallRuleArgs(GetFirewallRuleArgs $) {
+        this.firewallRuleName = $.firewallRuleName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallRuleName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetFirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallRuleArgs();
         }
 
         public Builder(GetFirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallRuleName = defaults.firewallRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallRuleName(String firewallRuleName) {
-            this.firewallRuleName = Objects.requireNonNull(firewallRuleName);
+            $.firewallRuleName = firewallRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetFirewallRuleArgs build() {
-            return new GetFirewallRuleArgs(firewallRuleName, resourceGroupName, serverName);
+        }
+
+        public GetFirewallRuleArgs build() {
+            $.firewallRuleName = Objects.requireNonNull($.firewallRuleName, "expected parameter 'firewallRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

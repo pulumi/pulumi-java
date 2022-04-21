@@ -22,7 +22,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * 
      */
     @Import(name="bestEffort", required=true)
-      private final Boolean bestEffort;
+    private Boolean bestEffort;
 
     public Boolean bestEffort() {
         return this.bestEffort;
@@ -33,55 +33,52 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * 
      */
     @Import(name="configurationData", required=true)
-      private final Integer configurationData;
+    private Integer configurationData;
 
     public Integer configurationData() {
         return this.configurationData;
     }
 
-    public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(
-        Boolean bestEffort,
-        Integer configurationData) {
-        this.bestEffort = Objects.requireNonNull(bestEffort, "expected parameter 'bestEffort' to be non-null");
-        this.configurationData = Objects.requireNonNull(configurationData, "expected parameter 'configurationData' to be non-null");
-    }
+    private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse() {}
 
-    private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse() {
-        this.bestEffort = null;
-        this.configurationData = null;
+    private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse $) {
+        this.bestEffort = $.bestEffort;
+        this.configurationData = $.configurationData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean bestEffort;
-        private Integer configurationData;
+        private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse();
         }
 
         public Builder(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bestEffort = defaults.bestEffort;
-    	      this.configurationData = defaults.configurationData;
+            $ = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bestEffort(Boolean bestEffort) {
-            this.bestEffort = Objects.requireNonNull(bestEffort);
+            $.bestEffort = bestEffort;
             return this;
         }
+
         public Builder configurationData(Integer configurationData) {
-            this.configurationData = Objects.requireNonNull(configurationData);
+            $.configurationData = configurationData;
             return this;
-        }        public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse build() {
-            return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(bestEffort, configurationData);
+        }
+
+        public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse build() {
+            $.bestEffort = Objects.requireNonNull($.bestEffort, "expected parameter 'bestEffort' to be non-null");
+            $.configurationData = Objects.requireNonNull($.configurationData, "expected parameter 'configurationData' to be non-null");
+            return $;
         }
     }
+
 }

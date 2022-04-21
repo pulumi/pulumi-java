@@ -7,10 +7,10 @@ import com.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionAr
 import com.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
-      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+    private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Codegen.empty() : this.manualPrivateLinkServiceConnections;
+    public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> manualPrivateLinkServiceConnections() {
+        return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="privateLinkServiceConnections")
-      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
+    private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? Codegen.empty() : this.privateLinkServiceConnections;
+    public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> privateLinkServiceConnections() {
+        return Optional.ofNullable(this.privateLinkServiceConnections);
     }
 
     /**
@@ -60,98 +60,90 @@ public final class RemotePrivateEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="privateLinkServiceProxies")
-      private final @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
+    private @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
 
-    public Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies() {
-        return this.privateLinkServiceProxies == null ? Codegen.empty() : this.privateLinkServiceProxies;
+    public Optional<Output<List<PrivateLinkServiceProxyArgs>>> privateLinkServiceProxies() {
+        return Optional.ofNullable(this.privateLinkServiceProxies);
     }
 
-    public RemotePrivateEndpointArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections,
-        @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections,
-        @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies) {
-        this.id = id;
-        this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-        this.privateLinkServiceConnections = privateLinkServiceConnections;
-        this.privateLinkServiceProxies = privateLinkServiceProxies;
-    }
+    private RemotePrivateEndpointArgs() {}
 
-    private RemotePrivateEndpointArgs() {
-        this.id = Codegen.empty();
-        this.manualPrivateLinkServiceConnections = Codegen.empty();
-        this.privateLinkServiceConnections = Codegen.empty();
-        this.privateLinkServiceProxies = Codegen.empty();
+    private RemotePrivateEndpointArgs(RemotePrivateEndpointArgs $) {
+        this.id = $.id;
+        this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
+        this.privateLinkServiceConnections = $.privateLinkServiceConnections;
+        this.privateLinkServiceProxies = $.privateLinkServiceProxies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemotePrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
-        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
-        private @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
+        private RemotePrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemotePrivateEndpointArgs();
         }
 
         public Builder(RemotePrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
-    	      this.privateLinkServiceConnections = defaults.privateLinkServiceConnections;
-    	      this.privateLinkServiceProxies = defaults.privateLinkServiceProxies;
+            $ = new RemotePrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
+            $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Codegen.ofNullable(manualPrivateLinkServiceConnections);
-            return this;
+
+        public Builder manualPrivateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(Output.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = privateLinkServiceConnections;
+            $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
-        public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = Codegen.ofNullable(privateLinkServiceConnections);
-            return this;
+
+        public Builder privateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
+            return privateLinkServiceConnections(Output.of(privateLinkServiceConnections));
         }
+
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
+
         public Builder privateLinkServiceProxies(@Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies) {
-            this.privateLinkServiceProxies = privateLinkServiceProxies;
+            $.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
-        public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyArgs> privateLinkServiceProxies) {
-            this.privateLinkServiceProxies = Codegen.ofNullable(privateLinkServiceProxies);
-            return this;
+
+        public Builder privateLinkServiceProxies(List<PrivateLinkServiceProxyArgs> privateLinkServiceProxies) {
+            return privateLinkServiceProxies(Output.of(privateLinkServiceProxies));
         }
+
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyArgs... privateLinkServiceProxies) {
             return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
-        }        public RemotePrivateEndpointArgs build() {
-            return new RemotePrivateEndpointArgs(id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies);
+        }
+
+        public RemotePrivateEndpointArgs build() {
+            return $;
         }
     }
+
 }

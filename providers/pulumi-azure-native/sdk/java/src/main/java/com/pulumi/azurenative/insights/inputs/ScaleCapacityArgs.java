@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="default", required=true)
-      private final Output<String> default_;
+    private Output<String> default_;
 
     public Output<String> default_() {
         return this.default_;
@@ -34,7 +33,7 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maximum", required=true)
-      private final Output<String> maximum;
+    private Output<String> maximum;
 
     public Output<String> maximum() {
         return this.maximum;
@@ -45,76 +44,71 @@ public final class ScaleCapacityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimum", required=true)
-      private final Output<String> minimum;
+    private Output<String> minimum;
 
     public Output<String> minimum() {
         return this.minimum;
     }
 
-    public ScaleCapacityArgs(
-        Output<String> default_,
-        Output<String> maximum,
-        Output<String> minimum) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
-        this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-    }
+    private ScaleCapacityArgs() {}
 
-    private ScaleCapacityArgs() {
-        this.default_ = Codegen.empty();
-        this.maximum = Codegen.empty();
-        this.minimum = Codegen.empty();
+    private ScaleCapacityArgs(ScaleCapacityArgs $) {
+        this.default_ = $.default_;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> default_;
-        private Output<String> maximum;
-        private Output<String> minimum;
+        private ScaleCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleCapacityArgs();
         }
 
         public Builder(ScaleCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
+            $ = new ScaleCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(Output<String> default_) {
-            this.default_ = Objects.requireNonNull(default_);
+            $.default_ = default_;
             return this;
         }
+
         public Builder default_(String default_) {
-            this.default_ = Output.of(Objects.requireNonNull(default_));
-            return this;
+            return default_(Output.of(default_));
         }
+
         public Builder maximum(Output<String> maximum) {
-            this.maximum = Objects.requireNonNull(maximum);
+            $.maximum = maximum;
             return this;
         }
+
         public Builder maximum(String maximum) {
-            this.maximum = Output.of(Objects.requireNonNull(maximum));
-            return this;
+            return maximum(Output.of(maximum));
         }
+
         public Builder minimum(Output<String> minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
         }
+
         public Builder minimum(String minimum) {
-            this.minimum = Output.of(Objects.requireNonNull(minimum));
-            return this;
-        }        public ScaleCapacityArgs build() {
-            return new ScaleCapacityArgs(default_, maximum, minimum);
+            return minimum(Output.of(minimum));
+        }
+
+        public ScaleCapacityArgs build() {
+            $.default_ = Objects.requireNonNull($.default_, "expected parameter 'default' to be non-null");
+            $.maximum = Objects.requireNonNull($.maximum, "expected parameter 'maximum' to be non-null");
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            return $;
         }
     }
+
 }

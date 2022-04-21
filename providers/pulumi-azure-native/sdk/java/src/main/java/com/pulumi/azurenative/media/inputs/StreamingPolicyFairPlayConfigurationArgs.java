@@ -5,10 +5,10 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="allowPersistentLicense", required=true)
-      private final Output<Boolean> allowPersistentLicense;
+    private Output<Boolean> allowPersistentLicense;
 
     public Output<Boolean> allowPersistentLicense() {
         return this.allowPersistentLicense;
@@ -36,63 +36,59 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
+    private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Output<String> customLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
+    public Optional<Output<String>> customLicenseAcquisitionUrlTemplate() {
+        return Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 
-    public StreamingPolicyFairPlayConfigurationArgs(
-        Output<Boolean> allowPersistentLicense,
-        @Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
-        this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense, "expected parameter 'allowPersistentLicense' to be non-null");
-        this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
-    }
+    private StreamingPolicyFairPlayConfigurationArgs() {}
 
-    private StreamingPolicyFairPlayConfigurationArgs() {
-        this.allowPersistentLicense = Codegen.empty();
-        this.customLicenseAcquisitionUrlTemplate = Codegen.empty();
+    private StreamingPolicyFairPlayConfigurationArgs(StreamingPolicyFairPlayConfigurationArgs $) {
+        this.allowPersistentLicense = $.allowPersistentLicense;
+        this.customLicenseAcquisitionUrlTemplate = $.customLicenseAcquisitionUrlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyFairPlayConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowPersistentLicense;
-        private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
+        private StreamingPolicyFairPlayConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyFairPlayConfigurationArgs();
         }
 
         public Builder(StreamingPolicyFairPlayConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPersistentLicense = defaults.allowPersistentLicense;
-    	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
+            $ = new StreamingPolicyFairPlayConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPersistentLicense(Output<Boolean> allowPersistentLicense) {
-            this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense);
+            $.allowPersistentLicense = allowPersistentLicense;
             return this;
         }
+
         public Builder allowPersistentLicense(Boolean allowPersistentLicense) {
-            this.allowPersistentLicense = Output.of(Objects.requireNonNull(allowPersistentLicense));
-            return this;
+            return allowPersistentLicense(Output.of(allowPersistentLicense));
         }
+
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
+            $.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Codegen.ofNullable(customLicenseAcquisitionUrlTemplate);
-            return this;
-        }        public StreamingPolicyFairPlayConfigurationArgs build() {
-            return new StreamingPolicyFairPlayConfigurationArgs(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);
+
+        public Builder customLicenseAcquisitionUrlTemplate(String customLicenseAcquisitionUrlTemplate) {
+            return customLicenseAcquisitionUrlTemplate(Output.of(customLicenseAcquisitionUrlTemplate));
+        }
+
+        public StreamingPolicyFairPlayConfigurationArgs build() {
+            $.allowPersistentLicense = Objects.requireNonNull($.allowPersistentLicense, "expected parameter 'allowPersistentLicense' to be non-null");
+            return $;
         }
     }
+
 }

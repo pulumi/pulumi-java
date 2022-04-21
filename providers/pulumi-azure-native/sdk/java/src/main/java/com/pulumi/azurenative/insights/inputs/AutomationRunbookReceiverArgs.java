@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="automationAccountId", required=true)
-      private final Output<String> automationAccountId;
+    private Output<String> automationAccountId;
 
     public Output<String> automationAccountId() {
         return this.automationAccountId;
@@ -36,7 +37,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="isGlobalRunbook", required=true)
-      private final Output<Boolean> isGlobalRunbook;
+    private Output<Boolean> isGlobalRunbook;
 
     public Output<Boolean> isGlobalRunbook() {
         return this.isGlobalRunbook;
@@ -47,10 +48,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="runbookName", required=true)
-      private final Output<String> runbookName;
+    private Output<String> runbookName;
 
     public Output<String> runbookName() {
         return this.runbookName;
@@ -69,10 +70,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable Output<String> serviceUri;
+    private @Nullable Output<String> serviceUri;
 
-    public Output<String> serviceUri() {
-        return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
+    public Optional<Output<String>> serviceUri() {
+        return Optional.ofNullable(this.serviceUri);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Output<Boolean> useCommonAlertSchema;
+    private @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
+    public Optional<Output<Boolean>> useCommonAlertSchema() {
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
     /**
@@ -91,128 +92,113 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="webhookResourceId", required=true)
-      private final Output<String> webhookResourceId;
+    private Output<String> webhookResourceId;
 
     public Output<String> webhookResourceId() {
         return this.webhookResourceId;
     }
 
-    public AutomationRunbookReceiverArgs(
-        Output<String> automationAccountId,
-        Output<Boolean> isGlobalRunbook,
-        @Nullable Output<String> name,
-        Output<String> runbookName,
-        @Nullable Output<String> serviceUri,
-        @Nullable Output<Boolean> useCommonAlertSchema,
-        Output<String> webhookResourceId) {
-        this.automationAccountId = Objects.requireNonNull(automationAccountId, "expected parameter 'automationAccountId' to be non-null");
-        this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook, "expected parameter 'isGlobalRunbook' to be non-null");
-        this.name = name;
-        this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
-        this.serviceUri = serviceUri;
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
-        this.webhookResourceId = Objects.requireNonNull(webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
-    }
+    private AutomationRunbookReceiverArgs() {}
 
-    private AutomationRunbookReceiverArgs() {
-        this.automationAccountId = Codegen.empty();
-        this.isGlobalRunbook = Codegen.empty();
-        this.name = Codegen.empty();
-        this.runbookName = Codegen.empty();
-        this.serviceUri = Codegen.empty();
-        this.useCommonAlertSchema = Codegen.empty();
-        this.webhookResourceId = Codegen.empty();
+    private AutomationRunbookReceiverArgs(AutomationRunbookReceiverArgs $) {
+        this.automationAccountId = $.automationAccountId;
+        this.isGlobalRunbook = $.isGlobalRunbook;
+        this.name = $.name;
+        this.runbookName = $.runbookName;
+        this.serviceUri = $.serviceUri;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
+        this.webhookResourceId = $.webhookResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRunbookReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountId;
-        private Output<Boolean> isGlobalRunbook;
-        private @Nullable Output<String> name;
-        private Output<String> runbookName;
-        private @Nullable Output<String> serviceUri;
-        private @Nullable Output<Boolean> useCommonAlertSchema;
-        private Output<String> webhookResourceId;
+        private AutomationRunbookReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRunbookReceiverArgs();
         }
 
         public Builder(AutomationRunbookReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountId = defaults.automationAccountId;
-    	      this.isGlobalRunbook = defaults.isGlobalRunbook;
-    	      this.name = defaults.name;
-    	      this.runbookName = defaults.runbookName;
-    	      this.serviceUri = defaults.serviceUri;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
-    	      this.webhookResourceId = defaults.webhookResourceId;
+            $ = new AutomationRunbookReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountId(Output<String> automationAccountId) {
-            this.automationAccountId = Objects.requireNonNull(automationAccountId);
+            $.automationAccountId = automationAccountId;
             return this;
         }
+
         public Builder automationAccountId(String automationAccountId) {
-            this.automationAccountId = Output.of(Objects.requireNonNull(automationAccountId));
-            return this;
+            return automationAccountId(Output.of(automationAccountId));
         }
+
         public Builder isGlobalRunbook(Output<Boolean> isGlobalRunbook) {
-            this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook);
+            $.isGlobalRunbook = isGlobalRunbook;
             return this;
         }
+
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
-            this.isGlobalRunbook = Output.of(Objects.requireNonNull(isGlobalRunbook));
-            return this;
+            return isGlobalRunbook(Output.of(isGlobalRunbook));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder runbookName(Output<String> runbookName) {
-            this.runbookName = Objects.requireNonNull(runbookName);
+            $.runbookName = runbookName;
             return this;
         }
+
         public Builder runbookName(String runbookName) {
-            this.runbookName = Output.of(Objects.requireNonNull(runbookName));
-            return this;
+            return runbookName(Output.of(runbookName));
         }
+
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
         }
-        public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Codegen.ofNullable(serviceUri);
-            return this;
+
+        public Builder serviceUri(String serviceUri) {
+            return serviceUri(Output.of(serviceUri));
         }
+
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
-            return this;
+
+        public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
+            return useCommonAlertSchema(Output.of(useCommonAlertSchema));
         }
+
         public Builder webhookResourceId(Output<String> webhookResourceId) {
-            this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
+            $.webhookResourceId = webhookResourceId;
             return this;
         }
+
         public Builder webhookResourceId(String webhookResourceId) {
-            this.webhookResourceId = Output.of(Objects.requireNonNull(webhookResourceId));
-            return this;
-        }        public AutomationRunbookReceiverArgs build() {
-            return new AutomationRunbookReceiverArgs(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
+            return webhookResourceId(Output.of(webhookResourceId));
+        }
+
+        public AutomationRunbookReceiverArgs build() {
+            $.automationAccountId = Objects.requireNonNull($.automationAccountId, "expected parameter 'automationAccountId' to be non-null");
+            $.isGlobalRunbook = Objects.requireNonNull($.isGlobalRunbook, "expected parameter 'isGlobalRunbook' to be non-null");
+            $.runbookName = Objects.requireNonNull($.runbookName, "expected parameter 'runbookName' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg($.useCommonAlertSchema).def(false).getNullable();
+            $.webhookResourceId = Objects.requireNonNull($.webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
+            return $;
         }
     }
+
 }

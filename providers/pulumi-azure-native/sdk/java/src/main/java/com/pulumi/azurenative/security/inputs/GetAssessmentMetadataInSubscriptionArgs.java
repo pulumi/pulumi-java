@@ -17,45 +17,45 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="assessmentMetadataName", required=true)
-      private final String assessmentMetadataName;
+    private String assessmentMetadataName;
 
     public String assessmentMetadataName() {
         return this.assessmentMetadataName;
     }
 
-    public GetAssessmentMetadataInSubscriptionArgs(String assessmentMetadataName) {
-        this.assessmentMetadataName = Objects.requireNonNull(assessmentMetadataName, "expected parameter 'assessmentMetadataName' to be non-null");
-    }
+    private GetAssessmentMetadataInSubscriptionArgs() {}
 
-    private GetAssessmentMetadataInSubscriptionArgs() {
-        this.assessmentMetadataName = null;
+    private GetAssessmentMetadataInSubscriptionArgs(GetAssessmentMetadataInSubscriptionArgs $) {
+        this.assessmentMetadataName = $.assessmentMetadataName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssessmentMetadataInSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assessmentMetadataName;
+        private GetAssessmentMetadataInSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssessmentMetadataInSubscriptionArgs();
         }
 
         public Builder(GetAssessmentMetadataInSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentMetadataName = defaults.assessmentMetadataName;
+            $ = new GetAssessmentMetadataInSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentMetadataName(String assessmentMetadataName) {
-            this.assessmentMetadataName = Objects.requireNonNull(assessmentMetadataName);
+            $.assessmentMetadataName = assessmentMetadataName;
             return this;
-        }        public GetAssessmentMetadataInSubscriptionArgs build() {
-            return new GetAssessmentMetadataInSubscriptionArgs(assessmentMetadataName);
+        }
+
+        public GetAssessmentMetadataInSubscriptionArgs build() {
+            $.assessmentMetadataName = Objects.requireNonNull($.assessmentMetadataName, "expected parameter 'assessmentMetadataName' to be non-null");
+            return $;
         }
     }
+
 }

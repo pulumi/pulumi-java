@@ -23,7 +23,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dataSetId", required=true)
-      private final String dataSetId;
+    private String dataSetId;
 
     public String dataSetId() {
         return this.dataSetId;
@@ -34,7 +34,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dataSetType", required=true)
-      private final String dataSetType;
+    private String dataSetType;
 
     public String dataSetType() {
         return this.dataSetType;
@@ -45,7 +45,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="durationMs", required=true)
-      private final Integer durationMs;
+    private Integer durationMs;
 
     public Integer durationMs() {
         return this.durationMs;
@@ -56,7 +56,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -67,7 +67,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="filesRead", required=true)
-      private final Double filesRead;
+    private Double filesRead;
 
     public Double filesRead() {
         return this.filesRead;
@@ -78,7 +78,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="filesWritten", required=true)
-      private final Double filesWritten;
+    private Double filesWritten;
 
     public Double filesWritten() {
         return this.filesWritten;
@@ -89,7 +89,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -100,7 +100,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -111,7 +111,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rowsCopied", required=true)
-      private final Double rowsCopied;
+    private Double rowsCopied;
 
     public Double rowsCopied() {
         return this.rowsCopied;
@@ -122,7 +122,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rowsRead", required=true)
-      private final Double rowsRead;
+    private Double rowsRead;
 
     public Double rowsRead() {
         return this.rowsRead;
@@ -133,7 +133,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sizeRead", required=true)
-      private final Double sizeRead;
+    private Double sizeRead;
 
     public Double sizeRead() {
         return this.sizeRead;
@@ -144,7 +144,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sizeWritten", required=true)
-      private final Double sizeWritten;
+    private Double sizeWritten;
 
     public Double sizeWritten() {
         return this.sizeWritten;
@@ -155,7 +155,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -166,7 +166,7 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -177,172 +177,143 @@ public final class SynchronizationDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vCore", required=true)
-      private final Double vCore;
+    private Double vCore;
 
     public Double vCore() {
         return this.vCore;
     }
 
-    public SynchronizationDetailsResponse(
-        String dataSetId,
-        String dataSetType,
-        Integer durationMs,
-        String endTime,
-        Double filesRead,
-        Double filesWritten,
-        String message,
-        String name,
-        Double rowsCopied,
-        Double rowsRead,
-        Double sizeRead,
-        Double sizeWritten,
-        String startTime,
-        String status,
-        Double vCore) {
-        this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
-        this.dataSetType = Objects.requireNonNull(dataSetType, "expected parameter 'dataSetType' to be non-null");
-        this.durationMs = Objects.requireNonNull(durationMs, "expected parameter 'durationMs' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.filesRead = Objects.requireNonNull(filesRead, "expected parameter 'filesRead' to be non-null");
-        this.filesWritten = Objects.requireNonNull(filesWritten, "expected parameter 'filesWritten' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.rowsCopied = Objects.requireNonNull(rowsCopied, "expected parameter 'rowsCopied' to be non-null");
-        this.rowsRead = Objects.requireNonNull(rowsRead, "expected parameter 'rowsRead' to be non-null");
-        this.sizeRead = Objects.requireNonNull(sizeRead, "expected parameter 'sizeRead' to be non-null");
-        this.sizeWritten = Objects.requireNonNull(sizeWritten, "expected parameter 'sizeWritten' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.vCore = Objects.requireNonNull(vCore, "expected parameter 'vCore' to be non-null");
-    }
+    private SynchronizationDetailsResponse() {}
 
-    private SynchronizationDetailsResponse() {
-        this.dataSetId = null;
-        this.dataSetType = null;
-        this.durationMs = null;
-        this.endTime = null;
-        this.filesRead = null;
-        this.filesWritten = null;
-        this.message = null;
-        this.name = null;
-        this.rowsCopied = null;
-        this.rowsRead = null;
-        this.sizeRead = null;
-        this.sizeWritten = null;
-        this.startTime = null;
-        this.status = null;
-        this.vCore = null;
+    private SynchronizationDetailsResponse(SynchronizationDetailsResponse $) {
+        this.dataSetId = $.dataSetId;
+        this.dataSetType = $.dataSetType;
+        this.durationMs = $.durationMs;
+        this.endTime = $.endTime;
+        this.filesRead = $.filesRead;
+        this.filesWritten = $.filesWritten;
+        this.message = $.message;
+        this.name = $.name;
+        this.rowsCopied = $.rowsCopied;
+        this.rowsRead = $.rowsRead;
+        this.sizeRead = $.sizeRead;
+        this.sizeWritten = $.sizeWritten;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.vCore = $.vCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SynchronizationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataSetId;
-        private String dataSetType;
-        private Integer durationMs;
-        private String endTime;
-        private Double filesRead;
-        private Double filesWritten;
-        private String message;
-        private String name;
-        private Double rowsCopied;
-        private Double rowsRead;
-        private Double sizeRead;
-        private Double sizeWritten;
-        private String startTime;
-        private String status;
-        private Double vCore;
+        private SynchronizationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SynchronizationDetailsResponse();
         }
 
         public Builder(SynchronizationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSetId = defaults.dataSetId;
-    	      this.dataSetType = defaults.dataSetType;
-    	      this.durationMs = defaults.durationMs;
-    	      this.endTime = defaults.endTime;
-    	      this.filesRead = defaults.filesRead;
-    	      this.filesWritten = defaults.filesWritten;
-    	      this.message = defaults.message;
-    	      this.name = defaults.name;
-    	      this.rowsCopied = defaults.rowsCopied;
-    	      this.rowsRead = defaults.rowsRead;
-    	      this.sizeRead = defaults.sizeRead;
-    	      this.sizeWritten = defaults.sizeWritten;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.vCore = defaults.vCore;
+            $ = new SynchronizationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Objects.requireNonNull(dataSetId);
+            $.dataSetId = dataSetId;
             return this;
         }
+
         public Builder dataSetType(String dataSetType) {
-            this.dataSetType = Objects.requireNonNull(dataSetType);
+            $.dataSetType = dataSetType;
             return this;
         }
+
         public Builder durationMs(Integer durationMs) {
-            this.durationMs = Objects.requireNonNull(durationMs);
+            $.durationMs = durationMs;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder filesRead(Double filesRead) {
-            this.filesRead = Objects.requireNonNull(filesRead);
+            $.filesRead = filesRead;
             return this;
         }
+
         public Builder filesWritten(Double filesWritten) {
-            this.filesWritten = Objects.requireNonNull(filesWritten);
+            $.filesWritten = filesWritten;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder rowsCopied(Double rowsCopied) {
-            this.rowsCopied = Objects.requireNonNull(rowsCopied);
+            $.rowsCopied = rowsCopied;
             return this;
         }
+
         public Builder rowsRead(Double rowsRead) {
-            this.rowsRead = Objects.requireNonNull(rowsRead);
+            $.rowsRead = rowsRead;
             return this;
         }
+
         public Builder sizeRead(Double sizeRead) {
-            this.sizeRead = Objects.requireNonNull(sizeRead);
+            $.sizeRead = sizeRead;
             return this;
         }
+
         public Builder sizeWritten(Double sizeWritten) {
-            this.sizeWritten = Objects.requireNonNull(sizeWritten);
+            $.sizeWritten = sizeWritten;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder vCore(Double vCore) {
-            this.vCore = Objects.requireNonNull(vCore);
+            $.vCore = vCore;
             return this;
-        }        public SynchronizationDetailsResponse build() {
-            return new SynchronizationDetailsResponse(dataSetId, dataSetType, durationMs, endTime, filesRead, filesWritten, message, name, rowsCopied, rowsRead, sizeRead, sizeWritten, startTime, status, vCore);
+        }
+
+        public SynchronizationDetailsResponse build() {
+            $.dataSetId = Objects.requireNonNull($.dataSetId, "expected parameter 'dataSetId' to be non-null");
+            $.dataSetType = Objects.requireNonNull($.dataSetType, "expected parameter 'dataSetType' to be non-null");
+            $.durationMs = Objects.requireNonNull($.durationMs, "expected parameter 'durationMs' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.filesRead = Objects.requireNonNull($.filesRead, "expected parameter 'filesRead' to be non-null");
+            $.filesWritten = Objects.requireNonNull($.filesWritten, "expected parameter 'filesWritten' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rowsCopied = Objects.requireNonNull($.rowsCopied, "expected parameter 'rowsCopied' to be non-null");
+            $.rowsRead = Objects.requireNonNull($.rowsRead, "expected parameter 'rowsRead' to be non-null");
+            $.sizeRead = Objects.requireNonNull($.sizeRead, "expected parameter 'sizeRead' to be non-null");
+            $.sizeWritten = Objects.requireNonNull($.sizeWritten, "expected parameter 'sizeWritten' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.vCore = Objects.requireNonNull($.vCore, "expected parameter 'vCore' to be non-null");
+            return $;
         }
     }
+
 }

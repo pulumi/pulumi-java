@@ -24,7 +24,7 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fqdn", required=true)
-      private final String fqdn;
+    private String fqdn;
 
     public String fqdn() {
         return this.fqdn;
@@ -35,10 +35,10 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="relativeName")
-      private final @Nullable String relativeName;
+    private @Nullable String relativeName;
 
     public Optional<String> relativeName() {
-        return this.relativeName == null ? Optional.empty() : Optional.ofNullable(this.relativeName);
+        return Optional.ofNullable(this.relativeName);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Double ttl;
+    private @Nullable Double ttl;
 
     public Optional<Double> ttl() {
-        return this.ttl == null ? Optional.empty() : Optional.ofNullable(this.ttl);
+        return Optional.ofNullable(this.ttl);
     }
 
-    public DnsConfigResponse(
-        String fqdn,
-        @Nullable String relativeName,
-        @Nullable Double ttl) {
-        this.fqdn = Objects.requireNonNull(fqdn, "expected parameter 'fqdn' to be non-null");
-        this.relativeName = relativeName;
-        this.ttl = ttl;
-    }
+    private DnsConfigResponse() {}
 
-    private DnsConfigResponse() {
-        this.fqdn = null;
-        this.relativeName = null;
-        this.ttl = null;
+    private DnsConfigResponse(DnsConfigResponse $) {
+        this.fqdn = $.fqdn;
+        this.relativeName = $.relativeName;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fqdn;
-        private @Nullable String relativeName;
-        private @Nullable Double ttl;
+        private DnsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsConfigResponse();
         }
 
         public Builder(DnsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.relativeName = defaults.relativeName;
-    	      this.ttl = defaults.ttl;
+            $ = new DnsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(String fqdn) {
-            this.fqdn = Objects.requireNonNull(fqdn);
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder relativeName(@Nullable String relativeName) {
-            this.relativeName = relativeName;
+            $.relativeName = relativeName;
             return this;
         }
+
         public Builder ttl(@Nullable Double ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
-        }        public DnsConfigResponse build() {
-            return new DnsConfigResponse(fqdn, relativeName, ttl);
+        }
+
+        public DnsConfigResponse build() {
+            $.fqdn = Objects.requireNonNull($.fqdn, "expected parameter 'fqdn' to be non-null");
+            return $;
         }
     }
+
 }

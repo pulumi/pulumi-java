@@ -21,7 +21,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
      * 
      */
     @Import(name="interactionPropertyName", required=true)
-      private final String interactionPropertyName;
+    private String interactionPropertyName;
 
     public String interactionPropertyName() {
         return this.interactionPropertyName;
@@ -32,55 +32,52 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
      * 
      */
     @Import(name="profilePropertyName", required=true)
-      private final String profilePropertyName;
+    private String profilePropertyName;
 
     public String profilePropertyName() {
         return this.profilePropertyName;
     }
 
-    public ParticipantProfilePropertyReferenceResponse(
-        String interactionPropertyName,
-        String profilePropertyName) {
-        this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName, "expected parameter 'interactionPropertyName' to be non-null");
-        this.profilePropertyName = Objects.requireNonNull(profilePropertyName, "expected parameter 'profilePropertyName' to be non-null");
-    }
+    private ParticipantProfilePropertyReferenceResponse() {}
 
-    private ParticipantProfilePropertyReferenceResponse() {
-        this.interactionPropertyName = null;
-        this.profilePropertyName = null;
+    private ParticipantProfilePropertyReferenceResponse(ParticipantProfilePropertyReferenceResponse $) {
+        this.interactionPropertyName = $.interactionPropertyName;
+        this.profilePropertyName = $.profilePropertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParticipantProfilePropertyReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interactionPropertyName;
-        private String profilePropertyName;
+        private ParticipantProfilePropertyReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParticipantProfilePropertyReferenceResponse();
         }
 
         public Builder(ParticipantProfilePropertyReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interactionPropertyName = defaults.interactionPropertyName;
-    	      this.profilePropertyName = defaults.profilePropertyName;
+            $ = new ParticipantProfilePropertyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interactionPropertyName(String interactionPropertyName) {
-            this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
+            $.interactionPropertyName = interactionPropertyName;
             return this;
         }
+
         public Builder profilePropertyName(String profilePropertyName) {
-            this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
+            $.profilePropertyName = profilePropertyName;
             return this;
-        }        public ParticipantProfilePropertyReferenceResponse build() {
-            return new ParticipantProfilePropertyReferenceResponse(interactionPropertyName, profilePropertyName);
+        }
+
+        public ParticipantProfilePropertyReferenceResponse build() {
+            $.interactionPropertyName = Objects.requireNonNull($.interactionPropertyName, "expected parameter 'interactionPropertyName' to be non-null");
+            $.profilePropertyName = Objects.requireNonNull($.profilePropertyName, "expected parameter 'profilePropertyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -49,76 +50,70 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @Import(name="sizeDisk", required=true)
-      private final Output<Either<String,SizeTypes>> sizeDisk;
+    private Output<Either<String,SizeTypes>> sizeDisk;
 
     public Output<Either<String,SizeTypes>> sizeDisk() {
         return this.sizeDisk;
     }
 
-    public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(
-        @Nullable Output<String> description,
-        Output<String> kind,
-        Output<Either<String,SizeTypes>> sizeDisk) {
-        this.description = description;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.sizeDisk = Objects.requireNonNull(sizeDisk, "expected parameter 'sizeDisk' to be non-null");
-    }
+    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs() {}
 
-    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs() {
-        this.description = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.sizeDisk = Codegen.empty();
+    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs $) {
+        this.description = $.description;
+        this.kind = $.kind;
+        this.sizeDisk = $.sizeDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> kind;
-        private Output<Either<String,SizeTypes>> sizeDisk;
+        private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs();
         }
 
         public Builder(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
-    	      this.sizeDisk = defaults.sizeDisk;
+            $ = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder sizeDisk(Output<Either<String,SizeTypes>> sizeDisk) {
-            this.sizeDisk = Objects.requireNonNull(sizeDisk);
+            $.sizeDisk = sizeDisk;
             return this;
         }
+
         public Builder sizeDisk(Either<String,SizeTypes> sizeDisk) {
-            this.sizeDisk = Output.of(Objects.requireNonNull(sizeDisk));
-            return this;
-        }        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {
-            return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs(description, kind, sizeDisk);
+            return sizeDisk(Output.of(sizeDisk));
+        }
+
+        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.sizeDisk = Objects.requireNonNull($.sizeDisk, "expected parameter 'sizeDisk' to be non-null");
+            return $;
         }
     }
+
 }

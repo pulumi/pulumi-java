@@ -21,7 +21,7 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastKnownPowerState", required=true)
-      private final String lastKnownPowerState;
+    private String lastKnownPowerState;
 
     public String lastKnownPowerState() {
         return this.lastKnownPowerState;
@@ -32,7 +32,7 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="powerState", required=true)
-      private final String powerState;
+    private String powerState;
 
     public String powerState() {
         return this.powerState;
@@ -43,7 +43,7 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rdpAuthority", required=true)
-      private final String rdpAuthority;
+    private String rdpAuthority;
 
     public String rdpAuthority() {
         return this.rdpAuthority;
@@ -54,73 +54,66 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sshAuthority", required=true)
-      private final String sshAuthority;
+    private String sshAuthority;
 
     public String sshAuthority() {
         return this.sshAuthority;
     }
 
-    public VmStateDetailsResponse(
-        String lastKnownPowerState,
-        String powerState,
-        String rdpAuthority,
-        String sshAuthority) {
-        this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState, "expected parameter 'lastKnownPowerState' to be non-null");
-        this.powerState = Objects.requireNonNull(powerState, "expected parameter 'powerState' to be non-null");
-        this.rdpAuthority = Objects.requireNonNull(rdpAuthority, "expected parameter 'rdpAuthority' to be non-null");
-        this.sshAuthority = Objects.requireNonNull(sshAuthority, "expected parameter 'sshAuthority' to be non-null");
-    }
+    private VmStateDetailsResponse() {}
 
-    private VmStateDetailsResponse() {
-        this.lastKnownPowerState = null;
-        this.powerState = null;
-        this.rdpAuthority = null;
-        this.sshAuthority = null;
+    private VmStateDetailsResponse(VmStateDetailsResponse $) {
+        this.lastKnownPowerState = $.lastKnownPowerState;
+        this.powerState = $.powerState;
+        this.rdpAuthority = $.rdpAuthority;
+        this.sshAuthority = $.sshAuthority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmStateDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastKnownPowerState;
-        private String powerState;
-        private String rdpAuthority;
-        private String sshAuthority;
+        private VmStateDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmStateDetailsResponse();
         }
 
         public Builder(VmStateDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastKnownPowerState = defaults.lastKnownPowerState;
-    	      this.powerState = defaults.powerState;
-    	      this.rdpAuthority = defaults.rdpAuthority;
-    	      this.sshAuthority = defaults.sshAuthority;
+            $ = new VmStateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastKnownPowerState(String lastKnownPowerState) {
-            this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
+            $.lastKnownPowerState = lastKnownPowerState;
             return this;
         }
+
         public Builder powerState(String powerState) {
-            this.powerState = Objects.requireNonNull(powerState);
+            $.powerState = powerState;
             return this;
         }
+
         public Builder rdpAuthority(String rdpAuthority) {
-            this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
+            $.rdpAuthority = rdpAuthority;
             return this;
         }
+
         public Builder sshAuthority(String sshAuthority) {
-            this.sshAuthority = Objects.requireNonNull(sshAuthority);
+            $.sshAuthority = sshAuthority;
             return this;
-        }        public VmStateDetailsResponse build() {
-            return new VmStateDetailsResponse(lastKnownPowerState, powerState, rdpAuthority, sshAuthority);
+        }
+
+        public VmStateDetailsResponse build() {
+            $.lastKnownPowerState = Objects.requireNonNull($.lastKnownPowerState, "expected parameter 'lastKnownPowerState' to be non-null");
+            $.powerState = Objects.requireNonNull($.powerState, "expected parameter 'powerState' to be non-null");
+            $.rdpAuthority = Objects.requireNonNull($.rdpAuthority, "expected parameter 'rdpAuthority' to be non-null");
+            $.sshAuthority = Objects.requireNonNull($.sshAuthority, "expected parameter 'sshAuthority' to be non-null");
+            return $;
         }
     }
+
 }

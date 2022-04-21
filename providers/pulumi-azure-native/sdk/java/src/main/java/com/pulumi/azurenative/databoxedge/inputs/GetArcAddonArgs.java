@@ -17,7 +17,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-      private final String addonName;
+    private String addonName;
 
     public String addonName() {
         return this.addonName;
@@ -28,7 +28,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -39,7 +39,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleName", required=true)
-      private final String roleName;
+    private String roleName;
 
     public String roleName() {
         return this.roleName;
     }
 
-    public GetArcAddonArgs(
-        String addonName,
-        String deviceName,
-        String resourceGroupName,
-        String roleName) {
-        this.addonName = Objects.requireNonNull(addonName, "expected parameter 'addonName' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-    }
+    private GetArcAddonArgs() {}
 
-    private GetArcAddonArgs() {
-        this.addonName = null;
-        this.deviceName = null;
-        this.resourceGroupName = null;
-        this.roleName = null;
+    private GetArcAddonArgs(GetArcAddonArgs $) {
+        this.addonName = $.addonName;
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleName = $.roleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetArcAddonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addonName;
-        private String deviceName;
-        private String resourceGroupName;
-        private String roleName;
+        private GetArcAddonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetArcAddonArgs();
         }
 
         public Builder(GetArcAddonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonName = defaults.addonName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleName = defaults.roleName;
+            $ = new GetArcAddonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addonName(String addonName) {
-            this.addonName = Objects.requireNonNull(addonName);
+            $.addonName = addonName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder roleName(String roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
-        }        public GetArcAddonArgs build() {
-            return new GetArcAddonArgs(addonName, deviceName, resourceGroupName, roleName);
+        }
+
+        public GetArcAddonArgs build() {
+            $.addonName = Objects.requireNonNull($.addonName, "expected parameter 'addonName' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            return $;
         }
     }
+
 }

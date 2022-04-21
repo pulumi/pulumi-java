@@ -32,10 +32,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="autoUserSpecification")
-      private final @Nullable Object autoUserSpecification;
+    private @Nullable Object autoUserSpecification;
 
     public Optional<Object> autoUserSpecification() {
-        return this.autoUserSpecification == null ? Optional.empty() : Optional.ofNullable(this.autoUserSpecification);
+        return Optional.ofNullable(this.autoUserSpecification);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="command", required=true)
-      private final Object command;
+    private Object command;
 
     public Object command() {
         return this.command;
@@ -54,10 +54,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="extendedProperties")
-      private final @Nullable Map<String,Object> extendedProperties;
+    private @Nullable Map<String,Object> extendedProperties;
 
-    public Map<String,Object> extendedProperties() {
-        return this.extendedProperties == null ? Map.of() : this.extendedProperties;
+    public Optional<Map<String,Object>> extendedProperties() {
+        return Optional.ofNullable(this.extendedProperties);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -109,7 +109,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -120,10 +120,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="referenceObjects")
-      private final @Nullable CustomActivityReferenceObjectResponse referenceObjects;
+    private @Nullable CustomActivityReferenceObjectResponse referenceObjects;
 
     public Optional<CustomActivityReferenceObjectResponse> referenceObjects() {
-        return this.referenceObjects == null ? Optional.empty() : Optional.ofNullable(this.referenceObjects);
+        return Optional.ofNullable(this.referenceObjects);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceLinkedService")
-      private final @Nullable LinkedServiceReferenceResponse resourceLinkedService;
+    private @Nullable LinkedServiceReferenceResponse resourceLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> resourceLinkedService() {
-        return this.resourceLinkedService == null ? Optional.empty() : Optional.ofNullable(this.resourceLinkedService);
+        return Optional.ofNullable(this.resourceLinkedService);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="retentionTimeInDays")
-      private final @Nullable Object retentionTimeInDays;
+    private @Nullable Object retentionTimeInDays;
 
     public Optional<Object> retentionTimeInDays() {
-        return this.retentionTimeInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionTimeInDays);
+        return Optional.ofNullable(this.retentionTimeInDays);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -176,169 +176,133 @@ public final class CustomActivityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public CustomActivityResponse(
-        @Nullable Object autoUserSpecification,
-        Object command,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Map<String,Object> extendedProperties,
-        @Nullable Object folderPath,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable CustomActivityReferenceObjectResponse referenceObjects,
-        @Nullable LinkedServiceReferenceResponse resourceLinkedService,
-        @Nullable Object retentionTimeInDays,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.autoUserSpecification = autoUserSpecification;
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.extendedProperties = extendedProperties;
-        this.folderPath = folderPath;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.referenceObjects = referenceObjects;
-        this.resourceLinkedService = resourceLinkedService;
-        this.retentionTimeInDays = retentionTimeInDays;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private CustomActivityResponse() {}
 
-    private CustomActivityResponse() {
-        this.autoUserSpecification = null;
-        this.command = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.extendedProperties = Map.of();
-        this.folderPath = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.referenceObjects = null;
-        this.resourceLinkedService = null;
-        this.retentionTimeInDays = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private CustomActivityResponse(CustomActivityResponse $) {
+        this.autoUserSpecification = $.autoUserSpecification;
+        this.command = $.command;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.extendedProperties = $.extendedProperties;
+        this.folderPath = $.folderPath;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.referenceObjects = $.referenceObjects;
+        this.resourceLinkedService = $.resourceLinkedService;
+        this.retentionTimeInDays = $.retentionTimeInDays;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object autoUserSpecification;
-        private Object command;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Map<String,Object> extendedProperties;
-        private @Nullable Object folderPath;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable CustomActivityReferenceObjectResponse referenceObjects;
-        private @Nullable LinkedServiceReferenceResponse resourceLinkedService;
-        private @Nullable Object retentionTimeInDays;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private CustomActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomActivityResponse();
         }
 
         public Builder(CustomActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUserSpecification = defaults.autoUserSpecification;
-    	      this.command = defaults.command;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.extendedProperties = defaults.extendedProperties;
-    	      this.folderPath = defaults.folderPath;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.referenceObjects = defaults.referenceObjects;
-    	      this.resourceLinkedService = defaults.resourceLinkedService;
-    	      this.retentionTimeInDays = defaults.retentionTimeInDays;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new CustomActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUserSpecification(@Nullable Object autoUserSpecification) {
-            this.autoUserSpecification = autoUserSpecification;
+            $.autoUserSpecification = autoUserSpecification;
             return this;
         }
+
         public Builder command(Object command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder extendedProperties(@Nullable Map<String,Object> extendedProperties) {
-            this.extendedProperties = extendedProperties;
+            $.extendedProperties = extendedProperties;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder referenceObjects(@Nullable CustomActivityReferenceObjectResponse referenceObjects) {
-            this.referenceObjects = referenceObjects;
+            $.referenceObjects = referenceObjects;
             return this;
         }
+
         public Builder resourceLinkedService(@Nullable LinkedServiceReferenceResponse resourceLinkedService) {
-            this.resourceLinkedService = resourceLinkedService;
+            $.resourceLinkedService = resourceLinkedService;
             return this;
         }
+
         public Builder retentionTimeInDays(@Nullable Object retentionTimeInDays) {
-            this.retentionTimeInDays = retentionTimeInDays;
+            $.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public CustomActivityResponse build() {
-            return new CustomActivityResponse(autoUserSpecification, command, dependsOn, description, extendedProperties, folderPath, linkedServiceName, name, policy, referenceObjects, resourceLinkedService, retentionTimeInDays, type, userProperties);
+        }
+
+        public CustomActivityResponse build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

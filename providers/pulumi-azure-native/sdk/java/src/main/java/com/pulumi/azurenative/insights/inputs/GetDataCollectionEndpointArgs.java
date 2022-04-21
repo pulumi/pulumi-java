@@ -17,7 +17,7 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataCollectionEndpointName", required=true)
-      private final String dataCollectionEndpointName;
+    private String dataCollectionEndpointName;
 
     public String dataCollectionEndpointName() {
         return this.dataCollectionEndpointName;
@@ -28,55 +28,52 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataCollectionEndpointArgs(
-        String dataCollectionEndpointName,
-        String resourceGroupName) {
-        this.dataCollectionEndpointName = Objects.requireNonNull(dataCollectionEndpointName, "expected parameter 'dataCollectionEndpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataCollectionEndpointArgs() {}
 
-    private GetDataCollectionEndpointArgs() {
-        this.dataCollectionEndpointName = null;
-        this.resourceGroupName = null;
+    private GetDataCollectionEndpointArgs(GetDataCollectionEndpointArgs $) {
+        this.dataCollectionEndpointName = $.dataCollectionEndpointName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCollectionEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataCollectionEndpointName;
-        private String resourceGroupName;
+        private GetDataCollectionEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCollectionEndpointArgs();
         }
 
         public Builder(GetDataCollectionEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCollectionEndpointName = defaults.dataCollectionEndpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataCollectionEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCollectionEndpointName(String dataCollectionEndpointName) {
-            this.dataCollectionEndpointName = Objects.requireNonNull(dataCollectionEndpointName);
+            $.dataCollectionEndpointName = dataCollectionEndpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataCollectionEndpointArgs build() {
-            return new GetDataCollectionEndpointArgs(dataCollectionEndpointName, resourceGroupName);
+        }
+
+        public GetDataCollectionEndpointArgs build() {
+            $.dataCollectionEndpointName = Objects.requireNonNull($.dataCollectionEndpointName, "expected parameter 'dataCollectionEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="autoProvision", required=true)
-      private final String autoProvision;
+    private String autoProvision;
 
     public String autoProvision() {
         return this.autoProvision;
@@ -36,7 +36,7 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="hybridComputeProvisioningState", required=true)
-      private final String hybridComputeProvisioningState;
+    private String hybridComputeProvisioningState;
 
     public String hybridComputeProvisioningState() {
         return this.hybridComputeProvisioningState;
@@ -47,10 +47,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="proxyServer")
-      private final @Nullable ProxyServerPropertiesResponse proxyServer;
+    private @Nullable ProxyServerPropertiesResponse proxyServer;
 
     public Optional<ProxyServerPropertiesResponse> proxyServer() {
-        return this.proxyServer == null ? Optional.empty() : Optional.ofNullable(this.proxyServer);
+        return Optional.ofNullable(this.proxyServer);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable String resourceGroupName;
+    private @Nullable String resourceGroupName;
 
     public Optional<String> resourceGroupName() {
-        return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -80,91 +80,76 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="servicePrincipal")
-      private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+    private @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
-        return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
+        return Optional.ofNullable(this.servicePrincipal);
     }
 
-    public HybridComputeSettingsPropertiesResponse(
-        String autoProvision,
-        String hybridComputeProvisioningState,
-        @Nullable ProxyServerPropertiesResponse proxyServer,
-        @Nullable String region,
-        @Nullable String resourceGroupName,
-        @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
-        this.autoProvision = Objects.requireNonNull(autoProvision, "expected parameter 'autoProvision' to be non-null");
-        this.hybridComputeProvisioningState = Objects.requireNonNull(hybridComputeProvisioningState, "expected parameter 'hybridComputeProvisioningState' to be non-null");
-        this.proxyServer = proxyServer;
-        this.region = region;
-        this.resourceGroupName = resourceGroupName;
-        this.servicePrincipal = servicePrincipal;
-    }
+    private HybridComputeSettingsPropertiesResponse() {}
 
-    private HybridComputeSettingsPropertiesResponse() {
-        this.autoProvision = null;
-        this.hybridComputeProvisioningState = null;
-        this.proxyServer = null;
-        this.region = null;
-        this.resourceGroupName = null;
-        this.servicePrincipal = null;
+    private HybridComputeSettingsPropertiesResponse(HybridComputeSettingsPropertiesResponse $) {
+        this.autoProvision = $.autoProvision;
+        this.hybridComputeProvisioningState = $.hybridComputeProvisioningState;
+        this.proxyServer = $.proxyServer;
+        this.region = $.region;
+        this.resourceGroupName = $.resourceGroupName;
+        this.servicePrincipal = $.servicePrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridComputeSettingsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoProvision;
-        private String hybridComputeProvisioningState;
-        private @Nullable ProxyServerPropertiesResponse proxyServer;
-        private @Nullable String region;
-        private @Nullable String resourceGroupName;
-        private @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+        private HybridComputeSettingsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridComputeSettingsPropertiesResponse();
         }
 
         public Builder(HybridComputeSettingsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoProvision = defaults.autoProvision;
-    	      this.hybridComputeProvisioningState = defaults.hybridComputeProvisioningState;
-    	      this.proxyServer = defaults.proxyServer;
-    	      this.region = defaults.region;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.servicePrincipal = defaults.servicePrincipal;
+            $ = new HybridComputeSettingsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoProvision(String autoProvision) {
-            this.autoProvision = Objects.requireNonNull(autoProvision);
+            $.autoProvision = autoProvision;
             return this;
         }
+
         public Builder hybridComputeProvisioningState(String hybridComputeProvisioningState) {
-            this.hybridComputeProvisioningState = Objects.requireNonNull(hybridComputeProvisioningState);
+            $.hybridComputeProvisioningState = hybridComputeProvisioningState;
             return this;
         }
+
         public Builder proxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
-            this.proxyServer = proxyServer;
+            $.proxyServer = proxyServer;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
-            this.servicePrincipal = servicePrincipal;
+            $.servicePrincipal = servicePrincipal;
             return this;
-        }        public HybridComputeSettingsPropertiesResponse build() {
-            return new HybridComputeSettingsPropertiesResponse(autoProvision, hybridComputeProvisioningState, proxyServer, region, resourceGroupName, servicePrincipal);
+        }
+
+        public HybridComputeSettingsPropertiesResponse build() {
+            $.autoProvision = Objects.requireNonNull($.autoProvision, "expected parameter 'autoProvision' to be non-null");
+            $.hybridComputeProvisioningState = Objects.requireNonNull($.hybridComputeProvisioningState, "expected parameter 'hybridComputeProvisioningState' to be non-null");
+            return $;
         }
     }
+
 }

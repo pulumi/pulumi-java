@@ -30,10 +30,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="apiDefinitions")
-      private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
+    private @Nullable ApiResourceDefinitionsResponse apiDefinitions;
 
     public Optional<ApiResourceDefinitionsResponse> apiDefinitions() {
-        return this.apiDefinitions == null ? Optional.empty() : Optional.ofNullable(this.apiDefinitions);
+        return Optional.ofNullable(this.apiDefinitions);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="apiType")
-      private final @Nullable String apiType;
+    private @Nullable String apiType;
 
     public Optional<String> apiType() {
-        return this.apiType == null ? Optional.empty() : Optional.ofNullable(this.apiType);
+        return Optional.ofNullable(this.apiType);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="backendService")
-      private final @Nullable ApiResourceBackendServiceResponse backendService;
+    private @Nullable ApiResourceBackendServiceResponse backendService;
 
     public Optional<ApiResourceBackendServiceResponse> backendService() {
-        return this.backendService == null ? Optional.empty() : Optional.ofNullable(this.backendService);
+        return Optional.ofNullable(this.backendService);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="brandColor")
-      private final @Nullable String brandColor;
+    private @Nullable String brandColor;
 
     public Optional<String> brandColor() {
-        return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
+        return Optional.ofNullable(this.brandColor);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable List<String> capabilities;
+    private @Nullable List<String> capabilities;
 
-    public List<String> capabilities() {
-        return this.capabilities == null ? List.of() : this.capabilities;
+    public Optional<List<String>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="connectionParameters")
-      private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
+    private @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
 
-    public Map<String,ConnectionParameterResponse> connectionParameters() {
-        return this.connectionParameters == null ? Map.of() : this.connectionParameters;
+    public Optional<Map<String,ConnectionParameterResponse>> connectionParameters() {
+        return Optional.ofNullable(this.connectionParameters);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="iconUri")
-      private final @Nullable String iconUri;
+    private @Nullable String iconUri;
 
     public Optional<String> iconUri() {
-        return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
+        return Optional.ofNullable(this.iconUri);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="runtimeUrls")
-      private final @Nullable List<String> runtimeUrls;
+    private @Nullable List<String> runtimeUrls;
 
-    public List<String> runtimeUrls() {
-        return this.runtimeUrls == null ? List.of() : this.runtimeUrls;
+    public Optional<List<String>> runtimeUrls() {
+        return Optional.ofNullable(this.runtimeUrls);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="swagger")
-      private final @Nullable Object swagger;
+    private @Nullable Object swagger;
 
     public Optional<Object> swagger() {
-        return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
+        return Optional.ofNullable(this.swagger);
     }
 
     /**
@@ -151,151 +151,118 @@ public final class CustomApiPropertiesDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="wsdlDefinition")
-      private final @Nullable WsdlDefinitionResponse wsdlDefinition;
+    private @Nullable WsdlDefinitionResponse wsdlDefinition;
 
     public Optional<WsdlDefinitionResponse> wsdlDefinition() {
-        return this.wsdlDefinition == null ? Optional.empty() : Optional.ofNullable(this.wsdlDefinition);
+        return Optional.ofNullable(this.wsdlDefinition);
     }
 
-    public CustomApiPropertiesDefinitionResponse(
-        @Nullable ApiResourceDefinitionsResponse apiDefinitions,
-        @Nullable String apiType,
-        @Nullable ApiResourceBackendServiceResponse backendService,
-        @Nullable String brandColor,
-        @Nullable List<String> capabilities,
-        @Nullable Map<String,ConnectionParameterResponse> connectionParameters,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUri,
-        @Nullable List<String> runtimeUrls,
-        @Nullable Object swagger,
-        @Nullable WsdlDefinitionResponse wsdlDefinition) {
-        this.apiDefinitions = apiDefinitions;
-        this.apiType = apiType;
-        this.backendService = backendService;
-        this.brandColor = brandColor;
-        this.capabilities = capabilities;
-        this.connectionParameters = connectionParameters;
-        this.description = description;
-        this.displayName = displayName;
-        this.iconUri = iconUri;
-        this.runtimeUrls = runtimeUrls;
-        this.swagger = swagger;
-        this.wsdlDefinition = wsdlDefinition;
-    }
+    private CustomApiPropertiesDefinitionResponse() {}
 
-    private CustomApiPropertiesDefinitionResponse() {
-        this.apiDefinitions = null;
-        this.apiType = null;
-        this.backendService = null;
-        this.brandColor = null;
-        this.capabilities = List.of();
-        this.connectionParameters = Map.of();
-        this.description = null;
-        this.displayName = null;
-        this.iconUri = null;
-        this.runtimeUrls = List.of();
-        this.swagger = null;
-        this.wsdlDefinition = null;
+    private CustomApiPropertiesDefinitionResponse(CustomApiPropertiesDefinitionResponse $) {
+        this.apiDefinitions = $.apiDefinitions;
+        this.apiType = $.apiType;
+        this.backendService = $.backendService;
+        this.brandColor = $.brandColor;
+        this.capabilities = $.capabilities;
+        this.connectionParameters = $.connectionParameters;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.iconUri = $.iconUri;
+        this.runtimeUrls = $.runtimeUrls;
+        this.swagger = $.swagger;
+        this.wsdlDefinition = $.wsdlDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomApiPropertiesDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApiResourceDefinitionsResponse apiDefinitions;
-        private @Nullable String apiType;
-        private @Nullable ApiResourceBackendServiceResponse backendService;
-        private @Nullable String brandColor;
-        private @Nullable List<String> capabilities;
-        private @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String iconUri;
-        private @Nullable List<String> runtimeUrls;
-        private @Nullable Object swagger;
-        private @Nullable WsdlDefinitionResponse wsdlDefinition;
+        private CustomApiPropertiesDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomApiPropertiesDefinitionResponse();
         }
 
         public Builder(CustomApiPropertiesDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiDefinitions = defaults.apiDefinitions;
-    	      this.apiType = defaults.apiType;
-    	      this.backendService = defaults.backendService;
-    	      this.brandColor = defaults.brandColor;
-    	      this.capabilities = defaults.capabilities;
-    	      this.connectionParameters = defaults.connectionParameters;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.iconUri = defaults.iconUri;
-    	      this.runtimeUrls = defaults.runtimeUrls;
-    	      this.swagger = defaults.swagger;
-    	      this.wsdlDefinition = defaults.wsdlDefinition;
+            $ = new CustomApiPropertiesDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiDefinitions(@Nullable ApiResourceDefinitionsResponse apiDefinitions) {
-            this.apiDefinitions = apiDefinitions;
+            $.apiDefinitions = apiDefinitions;
             return this;
         }
+
         public Builder apiType(@Nullable String apiType) {
-            this.apiType = apiType;
+            $.apiType = apiType;
             return this;
         }
+
         public Builder backendService(@Nullable ApiResourceBackendServiceResponse backendService) {
-            this.backendService = backendService;
+            $.backendService = backendService;
             return this;
         }
+
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = brandColor;
+            $.brandColor = brandColor;
             return this;
         }
+
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder connectionParameters(@Nullable Map<String,ConnectionParameterResponse> connectionParameters) {
-            this.connectionParameters = connectionParameters;
+            $.connectionParameters = connectionParameters;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = iconUri;
+            $.iconUri = iconUri;
             return this;
         }
+
         public Builder runtimeUrls(@Nullable List<String> runtimeUrls) {
-            this.runtimeUrls = runtimeUrls;
+            $.runtimeUrls = runtimeUrls;
             return this;
         }
+
         public Builder runtimeUrls(String... runtimeUrls) {
             return runtimeUrls(List.of(runtimeUrls));
         }
+
         public Builder swagger(@Nullable Object swagger) {
-            this.swagger = swagger;
+            $.swagger = swagger;
             return this;
         }
+
         public Builder wsdlDefinition(@Nullable WsdlDefinitionResponse wsdlDefinition) {
-            this.wsdlDefinition = wsdlDefinition;
+            $.wsdlDefinition = wsdlDefinition;
             return this;
-        }        public CustomApiPropertiesDefinitionResponse build() {
-            return new CustomApiPropertiesDefinitionResponse(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);
+        }
+
+        public CustomApiPropertiesDefinitionResponse build() {
+            return $;
         }
     }
+
 }

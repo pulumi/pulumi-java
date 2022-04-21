@@ -24,10 +24,10 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="actionType")
-      private final @Nullable String actionType;
+    private @Nullable String actionType;
 
     public Optional<String> actionType() {
-        return this.actionType == null ? Optional.empty() : Optional.ofNullable(this.actionType);
+        return Optional.ofNullable(this.actionType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customAction")
-      private final @Nullable AutoHealCustomActionResponse customAction;
+    private @Nullable AutoHealCustomActionResponse customAction;
 
     public Optional<AutoHealCustomActionResponse> customAction() {
-        return this.customAction == null ? Optional.empty() : Optional.ofNullable(this.customAction);
+        return Optional.ofNullable(this.customAction);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class AutoHealActionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="minProcessExecutionTime")
-      private final @Nullable String minProcessExecutionTime;
+    private @Nullable String minProcessExecutionTime;
 
     public Optional<String> minProcessExecutionTime() {
-        return this.minProcessExecutionTime == null ? Optional.empty() : Optional.ofNullable(this.minProcessExecutionTime);
+        return Optional.ofNullable(this.minProcessExecutionTime);
     }
 
-    public AutoHealActionsResponse(
-        @Nullable String actionType,
-        @Nullable AutoHealCustomActionResponse customAction,
-        @Nullable String minProcessExecutionTime) {
-        this.actionType = actionType;
-        this.customAction = customAction;
-        this.minProcessExecutionTime = minProcessExecutionTime;
-    }
+    private AutoHealActionsResponse() {}
 
-    private AutoHealActionsResponse() {
-        this.actionType = null;
-        this.customAction = null;
-        this.minProcessExecutionTime = null;
+    private AutoHealActionsResponse(AutoHealActionsResponse $) {
+        this.actionType = $.actionType;
+        this.customAction = $.customAction;
+        this.minProcessExecutionTime = $.minProcessExecutionTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoHealActionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String actionType;
-        private @Nullable AutoHealCustomActionResponse customAction;
-        private @Nullable String minProcessExecutionTime;
+        private AutoHealActionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoHealActionsResponse();
         }
 
         public Builder(AutoHealActionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.customAction = defaults.customAction;
-    	      this.minProcessExecutionTime = defaults.minProcessExecutionTime;
+            $ = new AutoHealActionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(@Nullable String actionType) {
-            this.actionType = actionType;
+            $.actionType = actionType;
             return this;
         }
+
         public Builder customAction(@Nullable AutoHealCustomActionResponse customAction) {
-            this.customAction = customAction;
+            $.customAction = customAction;
             return this;
         }
+
         public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
-            this.minProcessExecutionTime = minProcessExecutionTime;
+            $.minProcessExecutionTime = minProcessExecutionTime;
             return this;
-        }        public AutoHealActionsResponse build() {
-            return new AutoHealActionsResponse(actionType, customAction, minProcessExecutionTime);
+        }
+
+        public AutoHealActionsResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAvailabilitySetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="availabilitySetName", required=true)
-      private final String availabilitySetName;
+    private String availabilitySetName;
 
     public String availabilitySetName() {
         return this.availabilitySetName;
@@ -28,55 +28,52 @@ public final class GetAvailabilitySetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAvailabilitySetArgs(
-        String availabilitySetName,
-        String resourceGroupName) {
-        this.availabilitySetName = Objects.requireNonNull(availabilitySetName, "expected parameter 'availabilitySetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAvailabilitySetArgs() {}
 
-    private GetAvailabilitySetArgs() {
-        this.availabilitySetName = null;
-        this.resourceGroupName = null;
+    private GetAvailabilitySetArgs(GetAvailabilitySetArgs $) {
+        this.availabilitySetName = $.availabilitySetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAvailabilitySetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String availabilitySetName;
-        private String resourceGroupName;
+        private GetAvailabilitySetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAvailabilitySetArgs();
         }
 
         public Builder(GetAvailabilitySetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilitySetName = defaults.availabilitySetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAvailabilitySetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilitySetName(String availabilitySetName) {
-            this.availabilitySetName = Objects.requireNonNull(availabilitySetName);
+            $.availabilitySetName = availabilitySetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAvailabilitySetArgs build() {
-            return new GetAvailabilitySetArgs(availabilitySetName, resourceGroupName);
+        }
+
+        public GetAvailabilitySetArgs build() {
+            $.availabilitySetName = Objects.requireNonNull($.availabilitySetName, "expected parameter 'availabilitySetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

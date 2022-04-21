@@ -24,10 +24,10 @@ public final class DiskPoolVolumeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable List<String> endpoints;
+    private @Nullable List<String> endpoints;
 
-    public List<String> endpoints() {
-        return this.endpoints == null ? List.of() : this.endpoints;
+    public Optional<List<String>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class DiskPoolVolumeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lunName")
-      private final @Nullable String lunName;
+    private @Nullable String lunName;
 
     public Optional<String> lunName() {
-        return this.lunName == null ? Optional.empty() : Optional.ofNullable(this.lunName);
+        return Optional.ofNullable(this.lunName);
     }
 
-    public DiskPoolVolumeResponse(
-        @Nullable List<String> endpoints,
-        @Nullable String lunName) {
-        this.endpoints = endpoints;
-        this.lunName = lunName;
-    }
+    private DiskPoolVolumeResponse() {}
 
-    private DiskPoolVolumeResponse() {
-        this.endpoints = List.of();
-        this.lunName = null;
+    private DiskPoolVolumeResponse(DiskPoolVolumeResponse $) {
+        this.endpoints = $.endpoints;
+        this.lunName = $.lunName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskPoolVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> endpoints;
-        private @Nullable String lunName;
+        private DiskPoolVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskPoolVolumeResponse();
         }
 
         public Builder(DiskPoolVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
-    	      this.lunName = defaults.lunName;
+            $ = new DiskPoolVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder lunName(@Nullable String lunName) {
-            this.lunName = lunName;
+            $.lunName = lunName;
             return this;
-        }        public DiskPoolVolumeResponse build() {
-            return new DiskPoolVolumeResponse(endpoints, lunName);
+        }
+
+        public DiskPoolVolumeResponse build() {
+            return $;
         }
     }
+
 }

@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="announcement")
-      private final @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
+    private @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
 
-    public Output<LabAnnouncementPropertiesArgs> announcement() {
-        return this.announcement == null ? Codegen.empty() : this.announcement;
+    public Optional<Output<LabAnnouncementPropertiesArgs>> announcement() {
+        return Optional.ofNullable(this.announcement);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentPermission")
-      private final @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
+    private @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
 
-    public Output<Either<String,EnvironmentPermission>> environmentPermission() {
-        return this.environmentPermission == null ? Codegen.empty() : this.environmentPermission;
+    public Optional<Output<Either<String,EnvironmentPermission>>> environmentPermission() {
+        return Optional.ofNullable(this.environmentPermission);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedProperties")
-      private final @Nullable Output<Map<String,String>> extendedProperties;
+    private @Nullable Output<Map<String,String>> extendedProperties;
 
-    public Output<Map<String,String>> extendedProperties() {
-        return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
+    public Optional<Output<Map<String,String>>> extendedProperties() {
+        return Optional.ofNullable(this.extendedProperties);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labStorageType")
-      private final @Nullable Output<Either<String,StorageType>> labStorageType;
+    private @Nullable Output<Either<String,StorageType>> labStorageType;
 
-    public Output<Either<String,StorageType>> labStorageType() {
-        return this.labStorageType == null ? Codegen.empty() : this.labStorageType;
+    public Optional<Output<Either<String,StorageType>>> labStorageType() {
+        return Optional.ofNullable(this.labStorageType);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mandatoryArtifactsResourceIdsLinux")
-      private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
+    private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
 
-    public Output<List<String>> mandatoryArtifactsResourceIdsLinux() {
-        return this.mandatoryArtifactsResourceIdsLinux == null ? Codegen.empty() : this.mandatoryArtifactsResourceIdsLinux;
+    public Optional<Output<List<String>>> mandatoryArtifactsResourceIdsLinux() {
+        return Optional.ofNullable(this.mandatoryArtifactsResourceIdsLinux);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mandatoryArtifactsResourceIdsWindows")
-      private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
+    private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
 
-    public Output<List<String>> mandatoryArtifactsResourceIdsWindows() {
-        return this.mandatoryArtifactsResourceIdsWindows == null ? Codegen.empty() : this.mandatoryArtifactsResourceIdsWindows;
+    public Optional<Output<List<String>>> mandatoryArtifactsResourceIdsWindows() {
+        return Optional.ofNullable(this.mandatoryArtifactsResourceIdsWindows);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,10 +119,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="premiumDataDisks")
-      private final @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
+    private @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
 
-    public Output<Either<String,PremiumDataDisk>> premiumDataDisks() {
-        return this.premiumDataDisks == null ? Codegen.empty() : this.premiumDataDisks;
+    public Optional<Output<Either<String,PremiumDataDisk>>> premiumDataDisks() {
+        return Optional.ofNullable(this.premiumDataDisks);
     }
 
     /**
@@ -129,7 +130,7 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -140,10 +141,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="support")
-      private final @Nullable Output<LabSupportPropertiesArgs> support;
+    private @Nullable Output<LabSupportPropertiesArgs> support;
 
-    public Output<LabSupportPropertiesArgs> support() {
-        return this.support == null ? Codegen.empty() : this.support;
+    public Optional<Output<LabSupportPropertiesArgs>> support() {
+        return Optional.ofNullable(this.support);
     }
 
     /**
@@ -151,199 +152,168 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LabArgs(
-        @Nullable Output<LabAnnouncementPropertiesArgs> announcement,
-        @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission,
-        @Nullable Output<Map<String,String>> extendedProperties,
-        @Nullable Output<Either<String,StorageType>> labStorageType,
-        @Nullable Output<String> location,
-        @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux,
-        @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks,
-        Output<String> resourceGroupName,
-        @Nullable Output<LabSupportPropertiesArgs> support,
-        @Nullable Output<Map<String,String>> tags) {
-        this.announcement = announcement;
-        this.environmentPermission = environmentPermission;
-        this.extendedProperties = extendedProperties;
-        this.labStorageType = Codegen.stringProp("labStorageType").left(StorageType.class).output().arg(labStorageType).def("Premium").getNullable();
-        this.location = location;
-        this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
-        this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
-        this.name = name;
-        this.premiumDataDisks = premiumDataDisks;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.support = support;
-        this.tags = tags;
-    }
+    private LabArgs() {}
 
-    private LabArgs() {
-        this.announcement = Codegen.empty();
-        this.environmentPermission = Codegen.empty();
-        this.extendedProperties = Codegen.empty();
-        this.labStorageType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mandatoryArtifactsResourceIdsLinux = Codegen.empty();
-        this.mandatoryArtifactsResourceIdsWindows = Codegen.empty();
-        this.name = Codegen.empty();
-        this.premiumDataDisks = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.support = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LabArgs(LabArgs $) {
+        this.announcement = $.announcement;
+        this.environmentPermission = $.environmentPermission;
+        this.extendedProperties = $.extendedProperties;
+        this.labStorageType = $.labStorageType;
+        this.location = $.location;
+        this.mandatoryArtifactsResourceIdsLinux = $.mandatoryArtifactsResourceIdsLinux;
+        this.mandatoryArtifactsResourceIdsWindows = $.mandatoryArtifactsResourceIdsWindows;
+        this.name = $.name;
+        this.premiumDataDisks = $.premiumDataDisks;
+        this.resourceGroupName = $.resourceGroupName;
+        this.support = $.support;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
-        private @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
-        private @Nullable Output<Map<String,String>> extendedProperties;
-        private @Nullable Output<Either<String,StorageType>> labStorageType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
-        private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<LabSupportPropertiesArgs> support;
-        private @Nullable Output<Map<String,String>> tags;
+        private LabArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabArgs();
         }
 
         public Builder(LabArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.announcement = defaults.announcement;
-    	      this.environmentPermission = defaults.environmentPermission;
-    	      this.extendedProperties = defaults.extendedProperties;
-    	      this.labStorageType = defaults.labStorageType;
-    	      this.location = defaults.location;
-    	      this.mandatoryArtifactsResourceIdsLinux = defaults.mandatoryArtifactsResourceIdsLinux;
-    	      this.mandatoryArtifactsResourceIdsWindows = defaults.mandatoryArtifactsResourceIdsWindows;
-    	      this.name = defaults.name;
-    	      this.premiumDataDisks = defaults.premiumDataDisks;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.support = defaults.support;
-    	      this.tags = defaults.tags;
+            $ = new LabArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder announcement(@Nullable Output<LabAnnouncementPropertiesArgs> announcement) {
-            this.announcement = announcement;
+            $.announcement = announcement;
             return this;
         }
-        public Builder announcement(@Nullable LabAnnouncementPropertiesArgs announcement) {
-            this.announcement = Codegen.ofNullable(announcement);
-            return this;
+
+        public Builder announcement(LabAnnouncementPropertiesArgs announcement) {
+            return announcement(Output.of(announcement));
         }
+
         public Builder environmentPermission(@Nullable Output<Either<String,EnvironmentPermission>> environmentPermission) {
-            this.environmentPermission = environmentPermission;
+            $.environmentPermission = environmentPermission;
             return this;
         }
-        public Builder environmentPermission(@Nullable Either<String,EnvironmentPermission> environmentPermission) {
-            this.environmentPermission = Codegen.ofNullable(environmentPermission);
-            return this;
+
+        public Builder environmentPermission(Either<String,EnvironmentPermission> environmentPermission) {
+            return environmentPermission(Output.of(environmentPermission));
         }
+
         public Builder extendedProperties(@Nullable Output<Map<String,String>> extendedProperties) {
-            this.extendedProperties = extendedProperties;
+            $.extendedProperties = extendedProperties;
             return this;
         }
-        public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
-            this.extendedProperties = Codegen.ofNullable(extendedProperties);
-            return this;
+
+        public Builder extendedProperties(Map<String,String> extendedProperties) {
+            return extendedProperties(Output.of(extendedProperties));
         }
+
         public Builder labStorageType(@Nullable Output<Either<String,StorageType>> labStorageType) {
-            this.labStorageType = labStorageType;
+            $.labStorageType = labStorageType;
             return this;
         }
-        public Builder labStorageType(@Nullable Either<String,StorageType> labStorageType) {
-            this.labStorageType = Codegen.ofNullable(labStorageType);
-            return this;
+
+        public Builder labStorageType(Either<String,StorageType> labStorageType) {
+            return labStorageType(Output.of(labStorageType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux) {
-            this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
+            $.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
-        public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
-            this.mandatoryArtifactsResourceIdsLinux = Codegen.ofNullable(mandatoryArtifactsResourceIdsLinux);
-            return this;
+
+        public Builder mandatoryArtifactsResourceIdsLinux(List<String> mandatoryArtifactsResourceIdsLinux) {
+            return mandatoryArtifactsResourceIdsLinux(Output.of(mandatoryArtifactsResourceIdsLinux));
         }
+
         public Builder mandatoryArtifactsResourceIdsLinux(String... mandatoryArtifactsResourceIdsLinux) {
             return mandatoryArtifactsResourceIdsLinux(List.of(mandatoryArtifactsResourceIdsLinux));
         }
+
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows) {
-            this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
+            $.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
-        public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
-            this.mandatoryArtifactsResourceIdsWindows = Codegen.ofNullable(mandatoryArtifactsResourceIdsWindows);
-            return this;
+
+        public Builder mandatoryArtifactsResourceIdsWindows(List<String> mandatoryArtifactsResourceIdsWindows) {
+            return mandatoryArtifactsResourceIdsWindows(Output.of(mandatoryArtifactsResourceIdsWindows));
         }
+
         public Builder mandatoryArtifactsResourceIdsWindows(String... mandatoryArtifactsResourceIdsWindows) {
             return mandatoryArtifactsResourceIdsWindows(List.of(mandatoryArtifactsResourceIdsWindows));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder premiumDataDisks(@Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks) {
-            this.premiumDataDisks = premiumDataDisks;
+            $.premiumDataDisks = premiumDataDisks;
             return this;
         }
-        public Builder premiumDataDisks(@Nullable Either<String,PremiumDataDisk> premiumDataDisks) {
-            this.premiumDataDisks = Codegen.ofNullable(premiumDataDisks);
-            return this;
+
+        public Builder premiumDataDisks(Either<String,PremiumDataDisk> premiumDataDisks) {
+            return premiumDataDisks(Output.of(premiumDataDisks));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder support(@Nullable Output<LabSupportPropertiesArgs> support) {
-            this.support = support;
+            $.support = support;
             return this;
         }
-        public Builder support(@Nullable LabSupportPropertiesArgs support) {
-            this.support = Codegen.ofNullable(support);
-            return this;
+
+        public Builder support(LabSupportPropertiesArgs support) {
+            return support(Output.of(support));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LabArgs build() {
-            return new LabArgs(announcement, environmentPermission, extendedProperties, labStorageType, location, mandatoryArtifactsResourceIdsLinux, mandatoryArtifactsResourceIdsWindows, name, premiumDataDisks, resourceGroupName, support, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LabArgs build() {
+            $.labStorageType = Codegen.stringProp("labStorageType").left(StorageType.class).output().arg($.labStorageType).def("Premium").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

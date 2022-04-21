@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +27,49 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maxPercentDeltaUnhealthyServices")
-      private final @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
+    private @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
-    public Output<Integer> maxPercentDeltaUnhealthyServices() {
-        return this.maxPercentDeltaUnhealthyServices == null ? Codegen.empty() : this.maxPercentDeltaUnhealthyServices;
+    public Optional<Output<Integer>> maxPercentDeltaUnhealthyServices() {
+        return Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);
     }
 
-    public ServiceTypeDeltaHealthPolicyArgs(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
-        this.maxPercentDeltaUnhealthyServices = Codegen.integerProp("maxPercentDeltaUnhealthyServices").output().arg(maxPercentDeltaUnhealthyServices).def(0).getNullable();
-    }
+    private ServiceTypeDeltaHealthPolicyArgs() {}
 
-    private ServiceTypeDeltaHealthPolicyArgs() {
-        this.maxPercentDeltaUnhealthyServices = Codegen.empty();
+    private ServiceTypeDeltaHealthPolicyArgs(ServiceTypeDeltaHealthPolicyArgs $) {
+        this.maxPercentDeltaUnhealthyServices = $.maxPercentDeltaUnhealthyServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTypeDeltaHealthPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
+        private ServiceTypeDeltaHealthPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTypeDeltaHealthPolicyArgs();
         }
 
         public Builder(ServiceTypeDeltaHealthPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPercentDeltaUnhealthyServices = defaults.maxPercentDeltaUnhealthyServices;
+            $ = new ServiceTypeDeltaHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPercentDeltaUnhealthyServices(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
-            this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
+            $.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
-        public Builder maxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
-            this.maxPercentDeltaUnhealthyServices = Codegen.ofNullable(maxPercentDeltaUnhealthyServices);
-            return this;
-        }        public ServiceTypeDeltaHealthPolicyArgs build() {
-            return new ServiceTypeDeltaHealthPolicyArgs(maxPercentDeltaUnhealthyServices);
+
+        public Builder maxPercentDeltaUnhealthyServices(Integer maxPercentDeltaUnhealthyServices) {
+            return maxPercentDeltaUnhealthyServices(Output.of(maxPercentDeltaUnhealthyServices));
+        }
+
+        public ServiceTypeDeltaHealthPolicyArgs build() {
+            $.maxPercentDeltaUnhealthyServices = Codegen.integerProp("maxPercentDeltaUnhealthyServices").output().arg($.maxPercentDeltaUnhealthyServices).def(0).getNullable();
+            return $;
         }
     }
+
 }

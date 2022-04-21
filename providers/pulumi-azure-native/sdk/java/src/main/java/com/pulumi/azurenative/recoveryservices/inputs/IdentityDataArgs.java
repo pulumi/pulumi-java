@@ -7,11 +7,11 @@ import com.pulumi.azurenative.recoveryservices.enums.ResourceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class IdentityDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ResourceIdentityType>> type;
+    private Output<Either<String,ResourceIdentityType>> type;
 
     public Output<Either<String,ResourceIdentityType>> type() {
         return this.type;
@@ -39,63 +39,59 @@ public final class IdentityDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
+    private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public IdentityDataArgs(
-        Output<Either<String,ResourceIdentityType>> type,
-        @Nullable Output<Map<String,Object>> userAssignedIdentities) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private IdentityDataArgs() {}
 
-    private IdentityDataArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private IdentityDataArgs(IdentityDataArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ResourceIdentityType>> type;
-        private @Nullable Output<Map<String,Object>> userAssignedIdentities;
+        private IdentityDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityDataArgs();
         }
 
         public Builder(IdentityDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new IdentityDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<Either<String,ResourceIdentityType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ResourceIdentityType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public IdentityDataArgs build() {
-            return new IdentityDataArgs(type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public IdentityDataArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

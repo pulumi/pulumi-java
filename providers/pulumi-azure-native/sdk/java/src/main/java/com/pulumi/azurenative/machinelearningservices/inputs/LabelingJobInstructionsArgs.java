@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LabelingJobInstructionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public LabelingJobInstructionsArgs(@Nullable Output<String> uri) {
-        this.uri = uri;
-    }
+    private LabelingJobInstructionsArgs() {}
 
-    private LabelingJobInstructionsArgs() {
-        this.uri = Codegen.empty();
+    private LabelingJobInstructionsArgs(LabelingJobInstructionsArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobInstructionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> uri;
+        private LabelingJobInstructionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobInstructionsArgs();
         }
 
         public Builder(LabelingJobInstructionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new LabelingJobInstructionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public LabelingJobInstructionsArgs build() {
-            return new LabelingJobInstructionsArgs(uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public LabelingJobInstructionsArgs build() {
+            return $;
         }
     }
+
 }

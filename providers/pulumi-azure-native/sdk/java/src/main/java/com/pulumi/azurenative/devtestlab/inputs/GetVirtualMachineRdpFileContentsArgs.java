@@ -17,7 +17,7 @@ public final class GetVirtualMachineRdpFileContentsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -28,7 +28,7 @@ public final class GetVirtualMachineRdpFileContentsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetVirtualMachineRdpFileContentsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetVirtualMachineRdpFileContentsArgs(
-        String labName,
-        String name,
-        String resourceGroupName) {
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetVirtualMachineRdpFileContentsArgs() {}
 
-    private GetVirtualMachineRdpFileContentsArgs() {
-        this.labName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetVirtualMachineRdpFileContentsArgs(GetVirtualMachineRdpFileContentsArgs $) {
+        this.labName = $.labName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineRdpFileContentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labName;
-        private String name;
-        private String resourceGroupName;
+        private GetVirtualMachineRdpFileContentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineRdpFileContentsArgs();
         }
 
         public Builder(GetVirtualMachineRdpFileContentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labName = defaults.labName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetVirtualMachineRdpFileContentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetVirtualMachineRdpFileContentsArgs build() {
-            return new GetVirtualMachineRdpFileContentsArgs(labName, name, resourceGroupName);
+        }
+
+        public GetVirtualMachineRdpFileContentsArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

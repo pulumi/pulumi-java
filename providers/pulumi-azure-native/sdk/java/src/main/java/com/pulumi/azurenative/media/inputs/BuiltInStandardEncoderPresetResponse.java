@@ -23,7 +23,7 @@ public final class BuiltInStandardEncoderPresetResponse extends com.pulumi.resou
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -34,55 +34,52 @@ public final class BuiltInStandardEncoderPresetResponse extends com.pulumi.resou
      * 
      */
     @Import(name="presetName", required=true)
-      private final String presetName;
+    private String presetName;
 
     public String presetName() {
         return this.presetName;
     }
 
-    public BuiltInStandardEncoderPresetResponse(
-        String odataType,
-        String presetName) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.presetName = Objects.requireNonNull(presetName, "expected parameter 'presetName' to be non-null");
-    }
+    private BuiltInStandardEncoderPresetResponse() {}
 
-    private BuiltInStandardEncoderPresetResponse() {
-        this.odataType = null;
-        this.presetName = null;
+    private BuiltInStandardEncoderPresetResponse(BuiltInStandardEncoderPresetResponse $) {
+        this.odataType = $.odataType;
+        this.presetName = $.presetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuiltInStandardEncoderPresetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private String presetName;
+        private BuiltInStandardEncoderPresetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuiltInStandardEncoderPresetResponse();
         }
 
         public Builder(BuiltInStandardEncoderPresetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.presetName = defaults.presetName;
+            $ = new BuiltInStandardEncoderPresetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder presetName(String presetName) {
-            this.presetName = Objects.requireNonNull(presetName);
+            $.presetName = presetName;
             return this;
-        }        public BuiltInStandardEncoderPresetResponse build() {
-            return new BuiltInStandardEncoderPresetResponse(odataType, presetName);
+        }
+
+        public BuiltInStandardEncoderPresetResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.presetName = Objects.requireNonNull($.presetName, "expected parameter 'presetName' to be non-null");
+            return $;
         }
     }
+
 }

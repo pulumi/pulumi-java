@@ -25,10 +25,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="retry")
-      private final @Nullable Object retry;
+    private @Nullable Object retry;
 
     public Optional<Object> retry() {
-        return this.retry == null ? Optional.empty() : Optional.ofNullable(this.retry);
+        return Optional.ofNullable(this.retry);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="retryIntervalInSeconds")
-      private final @Nullable Integer retryIntervalInSeconds;
+    private @Nullable Integer retryIntervalInSeconds;
 
     public Optional<Integer> retryIntervalInSeconds() {
-        return this.retryIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalInSeconds);
+        return Optional.ofNullable(this.retryIntervalInSeconds);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secureInput")
-      private final @Nullable Boolean secureInput;
+    private @Nullable Boolean secureInput;
 
     public Optional<Boolean> secureInput() {
-        return this.secureInput == null ? Optional.empty() : Optional.ofNullable(this.secureInput);
+        return Optional.ofNullable(this.secureInput);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secureOutput")
-      private final @Nullable Boolean secureOutput;
+    private @Nullable Boolean secureOutput;
 
     public Optional<Boolean> secureOutput() {
-        return this.secureOutput == null ? Optional.empty() : Optional.ofNullable(this.secureOutput);
+        return Optional.ofNullable(this.secureOutput);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class ActivityPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Object timeout;
+    private @Nullable Object timeout;
 
     public Optional<Object> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ActivityPolicyResponse(
-        @Nullable Object retry,
-        @Nullable Integer retryIntervalInSeconds,
-        @Nullable Boolean secureInput,
-        @Nullable Boolean secureOutput,
-        @Nullable Object timeout) {
-        this.retry = retry;
-        this.retryIntervalInSeconds = retryIntervalInSeconds;
-        this.secureInput = secureInput;
-        this.secureOutput = secureOutput;
-        this.timeout = timeout;
-    }
+    private ActivityPolicyResponse() {}
 
-    private ActivityPolicyResponse() {
-        this.retry = null;
-        this.retryIntervalInSeconds = null;
-        this.secureInput = null;
-        this.secureOutput = null;
-        this.timeout = null;
+    private ActivityPolicyResponse(ActivityPolicyResponse $) {
+        this.retry = $.retry;
+        this.retryIntervalInSeconds = $.retryIntervalInSeconds;
+        this.secureInput = $.secureInput;
+        this.secureOutput = $.secureOutput;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object retry;
-        private @Nullable Integer retryIntervalInSeconds;
-        private @Nullable Boolean secureInput;
-        private @Nullable Boolean secureOutput;
-        private @Nullable Object timeout;
+        private ActivityPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityPolicyResponse();
         }
 
         public Builder(ActivityPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retry = defaults.retry;
-    	      this.retryIntervalInSeconds = defaults.retryIntervalInSeconds;
-    	      this.secureInput = defaults.secureInput;
-    	      this.secureOutput = defaults.secureOutput;
-    	      this.timeout = defaults.timeout;
+            $ = new ActivityPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder retry(@Nullable Object retry) {
-            this.retry = retry;
+            $.retry = retry;
             return this;
         }
+
         public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
-            this.retryIntervalInSeconds = retryIntervalInSeconds;
+            $.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
+
         public Builder secureInput(@Nullable Boolean secureInput) {
-            this.secureInput = secureInput;
+            $.secureInput = secureInput;
             return this;
         }
+
         public Builder secureOutput(@Nullable Boolean secureOutput) {
-            this.secureOutput = secureOutput;
+            $.secureOutput = secureOutput;
             return this;
         }
+
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public ActivityPolicyResponse build() {
-            return new ActivityPolicyResponse(retry, retryIntervalInSeconds, secureInput, secureOutput, timeout);
+        }
+
+        public ActivityPolicyResponse build() {
+            return $;
         }
     }
+
 }

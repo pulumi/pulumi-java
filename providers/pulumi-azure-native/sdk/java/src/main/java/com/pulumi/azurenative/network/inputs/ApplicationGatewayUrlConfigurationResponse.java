@@ -24,10 +24,10 @@ public final class ApplicationGatewayUrlConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="modifiedPath")
-      private final @Nullable String modifiedPath;
+    private @Nullable String modifiedPath;
 
     public Optional<String> modifiedPath() {
-        return this.modifiedPath == null ? Optional.empty() : Optional.ofNullable(this.modifiedPath);
+        return Optional.ofNullable(this.modifiedPath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayUrlConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="modifiedQueryString")
-      private final @Nullable String modifiedQueryString;
+    private @Nullable String modifiedQueryString;
 
     public Optional<String> modifiedQueryString() {
-        return this.modifiedQueryString == null ? Optional.empty() : Optional.ofNullable(this.modifiedQueryString);
+        return Optional.ofNullable(this.modifiedQueryString);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ApplicationGatewayUrlConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="reroute")
-      private final @Nullable Boolean reroute;
+    private @Nullable Boolean reroute;
 
     public Optional<Boolean> reroute() {
-        return this.reroute == null ? Optional.empty() : Optional.ofNullable(this.reroute);
+        return Optional.ofNullable(this.reroute);
     }
 
-    public ApplicationGatewayUrlConfigurationResponse(
-        @Nullable String modifiedPath,
-        @Nullable String modifiedQueryString,
-        @Nullable Boolean reroute) {
-        this.modifiedPath = modifiedPath;
-        this.modifiedQueryString = modifiedQueryString;
-        this.reroute = reroute;
-    }
+    private ApplicationGatewayUrlConfigurationResponse() {}
 
-    private ApplicationGatewayUrlConfigurationResponse() {
-        this.modifiedPath = null;
-        this.modifiedQueryString = null;
-        this.reroute = null;
+    private ApplicationGatewayUrlConfigurationResponse(ApplicationGatewayUrlConfigurationResponse $) {
+        this.modifiedPath = $.modifiedPath;
+        this.modifiedQueryString = $.modifiedQueryString;
+        this.reroute = $.reroute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayUrlConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String modifiedPath;
-        private @Nullable String modifiedQueryString;
-        private @Nullable Boolean reroute;
+        private ApplicationGatewayUrlConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayUrlConfigurationResponse();
         }
 
         public Builder(ApplicationGatewayUrlConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modifiedPath = defaults.modifiedPath;
-    	      this.modifiedQueryString = defaults.modifiedQueryString;
-    	      this.reroute = defaults.reroute;
+            $ = new ApplicationGatewayUrlConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder modifiedPath(@Nullable String modifiedPath) {
-            this.modifiedPath = modifiedPath;
+            $.modifiedPath = modifiedPath;
             return this;
         }
+
         public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
-            this.modifiedQueryString = modifiedQueryString;
+            $.modifiedQueryString = modifiedQueryString;
             return this;
         }
+
         public Builder reroute(@Nullable Boolean reroute) {
-            this.reroute = reroute;
+            $.reroute = reroute;
             return this;
-        }        public ApplicationGatewayUrlConfigurationResponse build() {
-            return new ApplicationGatewayUrlConfigurationResponse(modifiedPath, modifiedQueryString, reroute);
+        }
+
+        public ApplicationGatewayUrlConfigurationResponse build() {
+            return $;
         }
     }
+
 }

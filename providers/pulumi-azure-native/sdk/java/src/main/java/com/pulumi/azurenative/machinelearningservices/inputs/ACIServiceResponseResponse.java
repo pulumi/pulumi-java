@@ -35,10 +35,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="appInsightsEnabled")
-      private final @Nullable Boolean appInsightsEnabled;
+    private @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> appInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
+        return Optional.ofNullable(this.appInsightsEnabled);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authEnabled")
-      private final @Nullable Boolean authEnabled;
+    private @Nullable Boolean authEnabled;
 
     public Optional<Boolean> authEnabled() {
-        return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
+        return Optional.ofNullable(this.authEnabled);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cname")
-      private final @Nullable String cname;
+    private @Nullable String cname;
 
     public Optional<String> cname() {
-        return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
+        return Optional.ofNullable(this.cname);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="computeType", required=true)
-      private final String computeType;
+    private String computeType;
 
     public String computeType() {
         return this.computeType;
@@ -80,10 +80,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containerResourceRequirements")
-      private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
+    private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
-        return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
+        return Optional.ofNullable(this.containerResourceRequirements);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataCollection")
-      private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
+    private @Nullable ACIServiceResponseResponseDataCollection dataCollection;
 
     public Optional<ACIServiceResponseResponseDataCollection> dataCollection() {
-        return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
+        return Optional.ofNullable(this.dataCollection);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deploymentType")
-      private final @Nullable String deploymentType;
+    private @Nullable String deploymentType;
 
     public Optional<String> deploymentType() {
-        return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
+        return Optional.ofNullable(this.deploymentType);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="encryptionProperties")
-      private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
+    private @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
 
     public Optional<ACIServiceResponseResponseEncryptionProperties> encryptionProperties() {
-        return this.encryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionProperties);
+        return Optional.ofNullable(this.encryptionProperties);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="environmentImageRequest")
-      private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
+    private @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
     public Optional<ACIServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
-        return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
+        return Optional.ofNullable(this.environmentImageRequest);
     }
 
     /**
@@ -146,7 +146,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="error", required=true)
-      private final ServiceResponseBaseResponseError error;
+    private ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError error() {
         return this.error;
@@ -157,10 +157,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Map<String,String> kvTags;
+    private @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> kvTags() {
-        return this.kvTags == null ? Map.of() : this.kvTags;
+    public Optional<Map<String,String>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -179,7 +179,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="modelConfigMap", required=true)
-      private final Map<String,Object> modelConfigMap;
+    private Map<String,Object> modelConfigMap;
 
     public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
@@ -190,10 +190,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="models")
-      private final @Nullable List<ModelResponse> models;
+    private @Nullable List<ModelResponse> models;
 
-    public List<ModelResponse> models() {
-        return this.models == null ? List.of() : this.models;
+    public Optional<List<ModelResponse>> models() {
+        return Optional.ofNullable(this.models);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicFqdn")
-      private final @Nullable String publicFqdn;
+    private @Nullable String publicFqdn;
 
     public Optional<String> publicFqdn() {
-        return this.publicFqdn == null ? Optional.empty() : Optional.ofNullable(this.publicFqdn);
+        return Optional.ofNullable(this.publicFqdn);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicIp")
-      private final @Nullable String publicIp;
+    private @Nullable String publicIp;
 
     public Optional<String> publicIp() {
-        return this.publicIp == null ? Optional.empty() : Optional.ofNullable(this.publicIp);
+        return Optional.ofNullable(this.publicIp);
     }
 
     /**
@@ -234,7 +234,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="scoringUri", required=true)
-      private final String scoringUri;
+    private String scoringUri;
 
     public String scoringUri() {
         return this.scoringUri;
@@ -245,10 +245,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sslCertificate")
-      private final @Nullable String sslCertificate;
+    private @Nullable String sslCertificate;
 
     public Optional<String> sslCertificate() {
-        return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
+        return Optional.ofNullable(this.sslCertificate);
     }
 
     /**
@@ -256,10 +256,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sslEnabled")
-      private final @Nullable Boolean sslEnabled;
+    private @Nullable Boolean sslEnabled;
 
     public Optional<Boolean> sslEnabled() {
-        return this.sslEnabled == null ? Optional.empty() : Optional.ofNullable(this.sslEnabled);
+        return Optional.ofNullable(this.sslEnabled);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sslKey")
-      private final @Nullable String sslKey;
+    private @Nullable String sslKey;
 
     public Optional<String> sslKey() {
-        return this.sslKey == null ? Optional.empty() : Optional.ofNullable(this.sslKey);
+        return Optional.ofNullable(this.sslKey);
     }
 
     /**
@@ -278,7 +278,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -289,7 +289,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="swaggerUri", required=true)
-      private final String swaggerUri;
+    private String swaggerUri;
 
     public String swaggerUri() {
         return this.swaggerUri;
@@ -300,265 +300,198 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vnetConfiguration")
-      private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
+    private @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 
     public Optional<ACIServiceResponseResponseVnetConfiguration> vnetConfiguration() {
-        return this.vnetConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vnetConfiguration);
+        return Optional.ofNullable(this.vnetConfiguration);
     }
 
-    public ACIServiceResponseResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable Boolean authEnabled,
-        @Nullable String cname,
-        String computeType,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable ACIServiceResponseResponseDataCollection dataCollection,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties,
-        @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
-        ServiceResponseBaseResponseError error,
-        @Nullable Map<String,String> kvTags,
-        @Nullable String location,
-        Map<String,Object> modelConfigMap,
-        @Nullable List<ModelResponse> models,
-        @Nullable Map<String,String> properties,
-        @Nullable String publicFqdn,
-        @Nullable String publicIp,
-        String scoringUri,
-        @Nullable String sslCertificate,
-        @Nullable Boolean sslEnabled,
-        @Nullable String sslKey,
-        String state,
-        String swaggerUri,
-        @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
-        this.appInsightsEnabled = appInsightsEnabled;
-        this.authEnabled = authEnabled;
-        this.cname = cname;
-        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
-        this.containerResourceRequirements = containerResourceRequirements;
-        this.dataCollection = dataCollection;
-        this.deploymentType = deploymentType;
-        this.description = description;
-        this.encryptionProperties = encryptionProperties;
-        this.environmentImageRequest = environmentImageRequest;
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.kvTags = kvTags;
-        this.location = location;
-        this.modelConfigMap = Objects.requireNonNull(modelConfigMap, "expected parameter 'modelConfigMap' to be non-null");
-        this.models = models;
-        this.properties = properties;
-        this.publicFqdn = publicFqdn;
-        this.publicIp = publicIp;
-        this.scoringUri = Objects.requireNonNull(scoringUri, "expected parameter 'scoringUri' to be non-null");
-        this.sslCertificate = sslCertificate;
-        this.sslEnabled = sslEnabled;
-        this.sslKey = sslKey;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.swaggerUri = Objects.requireNonNull(swaggerUri, "expected parameter 'swaggerUri' to be non-null");
-        this.vnetConfiguration = vnetConfiguration;
-    }
+    private ACIServiceResponseResponse() {}
 
-    private ACIServiceResponseResponse() {
-        this.appInsightsEnabled = null;
-        this.authEnabled = null;
-        this.cname = null;
-        this.computeType = null;
-        this.containerResourceRequirements = null;
-        this.dataCollection = null;
-        this.deploymentType = null;
-        this.description = null;
-        this.encryptionProperties = null;
-        this.environmentImageRequest = null;
-        this.error = null;
-        this.kvTags = Map.of();
-        this.location = null;
-        this.modelConfigMap = Map.of();
-        this.models = List.of();
-        this.properties = Map.of();
-        this.publicFqdn = null;
-        this.publicIp = null;
-        this.scoringUri = null;
-        this.sslCertificate = null;
-        this.sslEnabled = null;
-        this.sslKey = null;
-        this.state = null;
-        this.swaggerUri = null;
-        this.vnetConfiguration = null;
+    private ACIServiceResponseResponse(ACIServiceResponseResponse $) {
+        this.appInsightsEnabled = $.appInsightsEnabled;
+        this.authEnabled = $.authEnabled;
+        this.cname = $.cname;
+        this.computeType = $.computeType;
+        this.containerResourceRequirements = $.containerResourceRequirements;
+        this.dataCollection = $.dataCollection;
+        this.deploymentType = $.deploymentType;
+        this.description = $.description;
+        this.encryptionProperties = $.encryptionProperties;
+        this.environmentImageRequest = $.environmentImageRequest;
+        this.error = $.error;
+        this.kvTags = $.kvTags;
+        this.location = $.location;
+        this.modelConfigMap = $.modelConfigMap;
+        this.models = $.models;
+        this.properties = $.properties;
+        this.publicFqdn = $.publicFqdn;
+        this.publicIp = $.publicIp;
+        this.scoringUri = $.scoringUri;
+        this.sslCertificate = $.sslCertificate;
+        this.sslEnabled = $.sslEnabled;
+        this.sslKey = $.sslKey;
+        this.state = $.state;
+        this.swaggerUri = $.swaggerUri;
+        this.vnetConfiguration = $.vnetConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ACIServiceResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean appInsightsEnabled;
-        private @Nullable Boolean authEnabled;
-        private @Nullable String cname;
-        private String computeType;
-        private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
-        private @Nullable ACIServiceResponseResponseDataCollection dataCollection;
-        private @Nullable String deploymentType;
-        private @Nullable String description;
-        private @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
-        private @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
-        private ServiceResponseBaseResponseError error;
-        private @Nullable Map<String,String> kvTags;
-        private @Nullable String location;
-        private Map<String,Object> modelConfigMap;
-        private @Nullable List<ModelResponse> models;
-        private @Nullable Map<String,String> properties;
-        private @Nullable String publicFqdn;
-        private @Nullable String publicIp;
-        private String scoringUri;
-        private @Nullable String sslCertificate;
-        private @Nullable Boolean sslEnabled;
-        private @Nullable String sslKey;
-        private String state;
-        private String swaggerUri;
-        private @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
+        private ACIServiceResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ACIServiceResponseResponse();
         }
 
         public Builder(ACIServiceResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInsightsEnabled = defaults.appInsightsEnabled;
-    	      this.authEnabled = defaults.authEnabled;
-    	      this.cname = defaults.cname;
-    	      this.computeType = defaults.computeType;
-    	      this.containerResourceRequirements = defaults.containerResourceRequirements;
-    	      this.dataCollection = defaults.dataCollection;
-    	      this.deploymentType = defaults.deploymentType;
-    	      this.description = defaults.description;
-    	      this.encryptionProperties = defaults.encryptionProperties;
-    	      this.environmentImageRequest = defaults.environmentImageRequest;
-    	      this.error = defaults.error;
-    	      this.kvTags = defaults.kvTags;
-    	      this.location = defaults.location;
-    	      this.modelConfigMap = defaults.modelConfigMap;
-    	      this.models = defaults.models;
-    	      this.properties = defaults.properties;
-    	      this.publicFqdn = defaults.publicFqdn;
-    	      this.publicIp = defaults.publicIp;
-    	      this.scoringUri = defaults.scoringUri;
-    	      this.sslCertificate = defaults.sslCertificate;
-    	      this.sslEnabled = defaults.sslEnabled;
-    	      this.sslKey = defaults.sslKey;
-    	      this.state = defaults.state;
-    	      this.swaggerUri = defaults.swaggerUri;
-    	      this.vnetConfiguration = defaults.vnetConfiguration;
+            $ = new ACIServiceResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = appInsightsEnabled;
+            $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
+
         public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = authEnabled;
+            $.authEnabled = authEnabled;
             return this;
         }
+
         public Builder cname(@Nullable String cname) {
-            this.cname = cname;
+            $.cname = cname;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
-            this.containerResourceRequirements = containerResourceRequirements;
+            $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
+
         public Builder dataCollection(@Nullable ACIServiceResponseResponseDataCollection dataCollection) {
-            this.dataCollection = dataCollection;
+            $.dataCollection = dataCollection;
             return this;
         }
+
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = deploymentType;
+            $.deploymentType = deploymentType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptionProperties(@Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties) {
-            this.encryptionProperties = encryptionProperties;
+            $.encryptionProperties = encryptionProperties;
             return this;
         }
+
         public Builder environmentImageRequest(@Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
-            this.environmentImageRequest = environmentImageRequest;
+            $.environmentImageRequest = environmentImageRequest;
             return this;
         }
+
         public Builder error(ServiceResponseBaseResponseError error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
-            this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
+            $.modelConfigMap = modelConfigMap;
             return this;
         }
+
         public Builder models(@Nullable List<ModelResponse> models) {
-            this.models = models;
+            $.models = models;
             return this;
         }
+
         public Builder models(ModelResponse... models) {
             return models(List.of(models));
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder publicFqdn(@Nullable String publicFqdn) {
-            this.publicFqdn = publicFqdn;
+            $.publicFqdn = publicFqdn;
             return this;
         }
+
         public Builder publicIp(@Nullable String publicIp) {
-            this.publicIp = publicIp;
+            $.publicIp = publicIp;
             return this;
         }
+
         public Builder scoringUri(String scoringUri) {
-            this.scoringUri = Objects.requireNonNull(scoringUri);
+            $.scoringUri = scoringUri;
             return this;
         }
+
         public Builder sslCertificate(@Nullable String sslCertificate) {
-            this.sslCertificate = sslCertificate;
+            $.sslCertificate = sslCertificate;
             return this;
         }
+
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
-            this.sslEnabled = sslEnabled;
+            $.sslEnabled = sslEnabled;
             return this;
         }
+
         public Builder sslKey(@Nullable String sslKey) {
-            this.sslKey = sslKey;
+            $.sslKey = sslKey;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder swaggerUri(String swaggerUri) {
-            this.swaggerUri = Objects.requireNonNull(swaggerUri);
+            $.swaggerUri = swaggerUri;
             return this;
         }
+
         public Builder vnetConfiguration(@Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
-            this.vnetConfiguration = vnetConfiguration;
+            $.vnetConfiguration = vnetConfiguration;
             return this;
-        }        public ACIServiceResponseResponse build() {
-            return new ACIServiceResponseResponse(appInsightsEnabled, authEnabled, cname, computeType, containerResourceRequirements, dataCollection, deploymentType, description, encryptionProperties, environmentImageRequest, error, kvTags, location, modelConfigMap, models, properties, publicFqdn, publicIp, scoringUri, sslCertificate, sslEnabled, sslKey, state, swaggerUri, vnetConfiguration);
+        }
+
+        public ACIServiceResponseResponse build() {
+            $.computeType = Codegen.stringProp("computeType").arg($.computeType).require();
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.modelConfigMap = Objects.requireNonNull($.modelConfigMap, "expected parameter 'modelConfigMap' to be non-null");
+            $.scoringUri = Objects.requireNonNull($.scoringUri, "expected parameter 'scoringUri' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.swaggerUri = Objects.requireNonNull($.swaggerUri, "expected parameter 'swaggerUri' to be non-null");
+            return $;
         }
     }
+
 }

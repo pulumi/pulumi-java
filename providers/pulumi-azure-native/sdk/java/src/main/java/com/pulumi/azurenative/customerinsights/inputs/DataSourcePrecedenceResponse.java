@@ -24,7 +24,7 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dataSourceReferenceId", required=true)
-      private final String dataSourceReferenceId;
+    private String dataSourceReferenceId;
 
     public String dataSourceReferenceId() {
         return this.dataSourceReferenceId;
@@ -35,7 +35,7 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dataSourceType", required=true)
-      private final String dataSourceType;
+    private String dataSourceType;
 
     public String dataSourceType() {
         return this.dataSourceType;
@@ -46,7 +46,7 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id", required=true)
-      private final Integer id;
+    private Integer id;
 
     public Integer id() {
         return this.id;
@@ -57,7 +57,7 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -68,10 +68,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="precedence")
-      private final @Nullable Integer precedence;
+    private @Nullable Integer precedence;
 
     public Optional<Integer> precedence() {
-        return this.precedence == null ? Optional.empty() : Optional.ofNullable(this.precedence);
+        return Optional.ofNullable(this.precedence);
     }
 
     /**
@@ -79,91 +79,79 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public DataSourcePrecedenceResponse(
-        String dataSourceReferenceId,
-        String dataSourceType,
-        Integer id,
-        String name,
-        @Nullable Integer precedence,
-        String status) {
-        this.dataSourceReferenceId = Objects.requireNonNull(dataSourceReferenceId, "expected parameter 'dataSourceReferenceId' to be non-null");
-        this.dataSourceType = Objects.requireNonNull(dataSourceType, "expected parameter 'dataSourceType' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.precedence = precedence;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DataSourcePrecedenceResponse() {}
 
-    private DataSourcePrecedenceResponse() {
-        this.dataSourceReferenceId = null;
-        this.dataSourceType = null;
-        this.id = null;
-        this.name = null;
-        this.precedence = null;
-        this.status = null;
+    private DataSourcePrecedenceResponse(DataSourcePrecedenceResponse $) {
+        this.dataSourceReferenceId = $.dataSourceReferenceId;
+        this.dataSourceType = $.dataSourceType;
+        this.id = $.id;
+        this.name = $.name;
+        this.precedence = $.precedence;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourcePrecedenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataSourceReferenceId;
-        private String dataSourceType;
-        private Integer id;
-        private String name;
-        private @Nullable Integer precedence;
-        private String status;
+        private DataSourcePrecedenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourcePrecedenceResponse();
         }
 
         public Builder(DataSourcePrecedenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceReferenceId = defaults.dataSourceReferenceId;
-    	      this.dataSourceType = defaults.dataSourceType;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.precedence = defaults.precedence;
-    	      this.status = defaults.status;
+            $ = new DataSourcePrecedenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceReferenceId(String dataSourceReferenceId) {
-            this.dataSourceReferenceId = Objects.requireNonNull(dataSourceReferenceId);
+            $.dataSourceReferenceId = dataSourceReferenceId;
             return this;
         }
+
         public Builder dataSourceType(String dataSourceType) {
-            this.dataSourceType = Objects.requireNonNull(dataSourceType);
+            $.dataSourceType = dataSourceType;
             return this;
         }
+
         public Builder id(Integer id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder precedence(@Nullable Integer precedence) {
-            this.precedence = precedence;
+            $.precedence = precedence;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DataSourcePrecedenceResponse build() {
-            return new DataSourcePrecedenceResponse(dataSourceReferenceId, dataSourceType, id, name, precedence, status);
+        }
+
+        public DataSourcePrecedenceResponse build() {
+            $.dataSourceReferenceId = Objects.requireNonNull($.dataSourceReferenceId, "expected parameter 'dataSourceReferenceId' to be non-null");
+            $.dataSourceType = Objects.requireNonNull($.dataSourceType, "expected parameter 'dataSourceType' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

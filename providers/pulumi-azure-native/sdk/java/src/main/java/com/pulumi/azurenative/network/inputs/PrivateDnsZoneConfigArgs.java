@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrivateDnsZoneConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PrivateDnsZoneConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="privateDnsZoneId")
-      private final @Nullable Output<String> privateDnsZoneId;
+    private @Nullable Output<String> privateDnsZoneId;
 
-    public Output<String> privateDnsZoneId() {
-        return this.privateDnsZoneId == null ? Codegen.empty() : this.privateDnsZoneId;
+    public Optional<Output<String>> privateDnsZoneId() {
+        return Optional.ofNullable(this.privateDnsZoneId);
     }
 
-    public PrivateDnsZoneConfigArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateDnsZoneId) {
-        this.name = name;
-        this.privateDnsZoneId = privateDnsZoneId;
-    }
+    private PrivateDnsZoneConfigArgs() {}
 
-    private PrivateDnsZoneConfigArgs() {
-        this.name = Codegen.empty();
-        this.privateDnsZoneId = Codegen.empty();
+    private PrivateDnsZoneConfigArgs(PrivateDnsZoneConfigArgs $) {
+        this.name = $.name;
+        this.privateDnsZoneId = $.privateDnsZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateDnsZoneConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateDnsZoneId;
+        private PrivateDnsZoneConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateDnsZoneConfigArgs();
         }
 
         public Builder(PrivateDnsZoneConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateDnsZoneId = defaults.privateDnsZoneId;
+            $ = new PrivateDnsZoneConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateDnsZoneId(@Nullable Output<String> privateDnsZoneId) {
-            this.privateDnsZoneId = privateDnsZoneId;
+            $.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
-        public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
-            this.privateDnsZoneId = Codegen.ofNullable(privateDnsZoneId);
-            return this;
-        }        public PrivateDnsZoneConfigArgs build() {
-            return new PrivateDnsZoneConfigArgs(name, privateDnsZoneId);
+
+        public Builder privateDnsZoneId(String privateDnsZoneId) {
+            return privateDnsZoneId(Output.of(privateDnsZoneId));
+        }
+
+        public PrivateDnsZoneConfigArgs build() {
+            return $;
         }
     }
+
 }

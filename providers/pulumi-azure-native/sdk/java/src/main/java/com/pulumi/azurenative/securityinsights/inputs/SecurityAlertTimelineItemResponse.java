@@ -24,7 +24,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="alertType", required=true)
-      private final String alertType;
+    private String alertType;
 
     public String alertType() {
         return this.alertType;
@@ -35,7 +35,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="azureResourceId", required=true)
-      private final String azureResourceId;
+    private String azureResourceId;
 
     public String azureResourceId() {
         return this.azureResourceId;
@@ -46,10 +46,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -68,7 +68,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="endTimeUtc", required=true)
-      private final String endTimeUtc;
+    private String endTimeUtc;
 
     public String endTimeUtc() {
         return this.endTimeUtc;
@@ -80,7 +80,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -91,10 +91,10 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="productName")
-      private final @Nullable String productName;
+    private @Nullable String productName;
 
     public Optional<String> productName() {
-        return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
+        return Optional.ofNullable(this.productName);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
@@ -113,7 +113,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="startTimeUtc", required=true)
-      private final String startTimeUtc;
+    private String startTimeUtc;
 
     public String startTimeUtc() {
         return this.startTimeUtc;
@@ -124,127 +124,106 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
      * 
      */
     @Import(name="timeGenerated", required=true)
-      private final String timeGenerated;
+    private String timeGenerated;
 
     public String timeGenerated() {
         return this.timeGenerated;
     }
 
-    public SecurityAlertTimelineItemResponse(
-        String alertType,
-        String azureResourceId,
-        @Nullable String description,
-        String displayName,
-        String endTimeUtc,
-        String kind,
-        @Nullable String productName,
-        String severity,
-        String startTimeUtc,
-        String timeGenerated) {
-        this.alertType = Objects.requireNonNull(alertType, "expected parameter 'alertType' to be non-null");
-        this.azureResourceId = Objects.requireNonNull(azureResourceId, "expected parameter 'azureResourceId' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.endTimeUtc = Objects.requireNonNull(endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.productName = productName;
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
-        this.timeGenerated = Objects.requireNonNull(timeGenerated, "expected parameter 'timeGenerated' to be non-null");
-    }
+    private SecurityAlertTimelineItemResponse() {}
 
-    private SecurityAlertTimelineItemResponse() {
-        this.alertType = null;
-        this.azureResourceId = null;
-        this.description = null;
-        this.displayName = null;
-        this.endTimeUtc = null;
-        this.kind = null;
-        this.productName = null;
-        this.severity = null;
-        this.startTimeUtc = null;
-        this.timeGenerated = null;
+    private SecurityAlertTimelineItemResponse(SecurityAlertTimelineItemResponse $) {
+        this.alertType = $.alertType;
+        this.azureResourceId = $.azureResourceId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.endTimeUtc = $.endTimeUtc;
+        this.kind = $.kind;
+        this.productName = $.productName;
+        this.severity = $.severity;
+        this.startTimeUtc = $.startTimeUtc;
+        this.timeGenerated = $.timeGenerated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityAlertTimelineItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alertType;
-        private String azureResourceId;
-        private @Nullable String description;
-        private String displayName;
-        private String endTimeUtc;
-        private String kind;
-        private @Nullable String productName;
-        private String severity;
-        private String startTimeUtc;
-        private String timeGenerated;
+        private SecurityAlertTimelineItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityAlertTimelineItemResponse();
         }
 
         public Builder(SecurityAlertTimelineItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertType = defaults.alertType;
-    	      this.azureResourceId = defaults.azureResourceId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.endTimeUtc = defaults.endTimeUtc;
-    	      this.kind = defaults.kind;
-    	      this.productName = defaults.productName;
-    	      this.severity = defaults.severity;
-    	      this.startTimeUtc = defaults.startTimeUtc;
-    	      this.timeGenerated = defaults.timeGenerated;
+            $ = new SecurityAlertTimelineItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alertType(String alertType) {
-            this.alertType = Objects.requireNonNull(alertType);
+            $.alertType = alertType;
             return this;
         }
+
         public Builder azureResourceId(String azureResourceId) {
-            this.azureResourceId = Objects.requireNonNull(azureResourceId);
+            $.azureResourceId = azureResourceId;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder endTimeUtc(String endTimeUtc) {
-            this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
+            $.endTimeUtc = endTimeUtc;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder productName(@Nullable String productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder startTimeUtc(String startTimeUtc) {
-            this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
+            $.startTimeUtc = startTimeUtc;
             return this;
         }
+
         public Builder timeGenerated(String timeGenerated) {
-            this.timeGenerated = Objects.requireNonNull(timeGenerated);
+            $.timeGenerated = timeGenerated;
             return this;
-        }        public SecurityAlertTimelineItemResponse build() {
-            return new SecurityAlertTimelineItemResponse(alertType, azureResourceId, description, displayName, endTimeUtc, kind, productName, severity, startTimeUtc, timeGenerated);
+        }
+
+        public SecurityAlertTimelineItemResponse build() {
+            $.alertType = Objects.requireNonNull($.alertType, "expected parameter 'alertType' to be non-null");
+            $.azureResourceId = Objects.requireNonNull($.azureResourceId, "expected parameter 'azureResourceId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.endTimeUtc = Objects.requireNonNull($.endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.startTimeUtc = Objects.requireNonNull($.startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
+            $.timeGenerated = Objects.requireNonNull($.timeGenerated, "expected parameter 'timeGenerated' to be non-null");
+            return $;
         }
     }
+
 }

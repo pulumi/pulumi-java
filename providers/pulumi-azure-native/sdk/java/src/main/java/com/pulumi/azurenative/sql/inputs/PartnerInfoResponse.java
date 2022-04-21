@@ -21,7 +21,7 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,7 +32,7 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -43,64 +43,59 @@ public final class PartnerInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replicationRole", required=true)
-      private final String replicationRole;
+    private String replicationRole;
 
     public String replicationRole() {
         return this.replicationRole;
     }
 
-    public PartnerInfoResponse(
-        String id,
-        String location,
-        String replicationRole) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.replicationRole = Objects.requireNonNull(replicationRole, "expected parameter 'replicationRole' to be non-null");
-    }
+    private PartnerInfoResponse() {}
 
-    private PartnerInfoResponse() {
-        this.id = null;
-        this.location = null;
-        this.replicationRole = null;
+    private PartnerInfoResponse(PartnerInfoResponse $) {
+        this.id = $.id;
+        this.location = $.location;
+        this.replicationRole = $.replicationRole;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartnerInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String location;
-        private String replicationRole;
+        private PartnerInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartnerInfoResponse();
         }
 
         public Builder(PartnerInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.replicationRole = defaults.replicationRole;
+            $ = new PartnerInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder replicationRole(String replicationRole) {
-            this.replicationRole = Objects.requireNonNull(replicationRole);
+            $.replicationRole = replicationRole;
             return this;
-        }        public PartnerInfoResponse build() {
-            return new PartnerInfoResponse(id, location, replicationRole);
+        }
+
+        public PartnerInfoResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.replicationRole = Objects.requireNonNull($.replicationRole, "expected parameter 'replicationRole' to be non-null");
+            return $;
         }
     }
+
 }

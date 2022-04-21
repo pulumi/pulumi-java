@@ -22,7 +22,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="appliedBytes", required=true)
-      private final Double appliedBytes;
+    private Double appliedBytes;
 
     public Double appliedBytes() {
         return this.appliedBytes;
@@ -33,7 +33,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="appliedItemCount", required=true)
-      private final Double appliedItemCount;
+    private Double appliedItemCount;
 
     public Double appliedItemCount() {
         return this.appliedItemCount;
@@ -44,7 +44,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="perItemErrorCount", required=true)
-      private final Double perItemErrorCount;
+    private Double perItemErrorCount;
 
     public Double perItemErrorCount() {
         return this.perItemErrorCount;
@@ -55,7 +55,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="syncMode", required=true)
-      private final String syncMode;
+    private String syncMode;
 
     public String syncMode() {
         return this.syncMode;
@@ -66,7 +66,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
@@ -77,7 +77,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="totalBytes", required=true)
-      private final Double totalBytes;
+    private Double totalBytes;
 
     public Double totalBytes() {
         return this.totalBytes;
@@ -88,100 +88,87 @@ public final class ServerEndpointSyncActivityStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="totalItemCount", required=true)
-      private final Double totalItemCount;
+    private Double totalItemCount;
 
     public Double totalItemCount() {
         return this.totalItemCount;
     }
 
-    public ServerEndpointSyncActivityStatusResponse(
-        Double appliedBytes,
-        Double appliedItemCount,
-        Double perItemErrorCount,
-        String syncMode,
-        String timestamp,
-        Double totalBytes,
-        Double totalItemCount) {
-        this.appliedBytes = Objects.requireNonNull(appliedBytes, "expected parameter 'appliedBytes' to be non-null");
-        this.appliedItemCount = Objects.requireNonNull(appliedItemCount, "expected parameter 'appliedItemCount' to be non-null");
-        this.perItemErrorCount = Objects.requireNonNull(perItemErrorCount, "expected parameter 'perItemErrorCount' to be non-null");
-        this.syncMode = Objects.requireNonNull(syncMode, "expected parameter 'syncMode' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.totalBytes = Objects.requireNonNull(totalBytes, "expected parameter 'totalBytes' to be non-null");
-        this.totalItemCount = Objects.requireNonNull(totalItemCount, "expected parameter 'totalItemCount' to be non-null");
-    }
+    private ServerEndpointSyncActivityStatusResponse() {}
 
-    private ServerEndpointSyncActivityStatusResponse() {
-        this.appliedBytes = null;
-        this.appliedItemCount = null;
-        this.perItemErrorCount = null;
-        this.syncMode = null;
-        this.timestamp = null;
-        this.totalBytes = null;
-        this.totalItemCount = null;
+    private ServerEndpointSyncActivityStatusResponse(ServerEndpointSyncActivityStatusResponse $) {
+        this.appliedBytes = $.appliedBytes;
+        this.appliedItemCount = $.appliedItemCount;
+        this.perItemErrorCount = $.perItemErrorCount;
+        this.syncMode = $.syncMode;
+        this.timestamp = $.timestamp;
+        this.totalBytes = $.totalBytes;
+        this.totalItemCount = $.totalItemCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointSyncActivityStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double appliedBytes;
-        private Double appliedItemCount;
-        private Double perItemErrorCount;
-        private String syncMode;
-        private String timestamp;
-        private Double totalBytes;
-        private Double totalItemCount;
+        private ServerEndpointSyncActivityStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointSyncActivityStatusResponse();
         }
 
         public Builder(ServerEndpointSyncActivityStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appliedBytes = defaults.appliedBytes;
-    	      this.appliedItemCount = defaults.appliedItemCount;
-    	      this.perItemErrorCount = defaults.perItemErrorCount;
-    	      this.syncMode = defaults.syncMode;
-    	      this.timestamp = defaults.timestamp;
-    	      this.totalBytes = defaults.totalBytes;
-    	      this.totalItemCount = defaults.totalItemCount;
+            $ = new ServerEndpointSyncActivityStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appliedBytes(Double appliedBytes) {
-            this.appliedBytes = Objects.requireNonNull(appliedBytes);
+            $.appliedBytes = appliedBytes;
             return this;
         }
+
         public Builder appliedItemCount(Double appliedItemCount) {
-            this.appliedItemCount = Objects.requireNonNull(appliedItemCount);
+            $.appliedItemCount = appliedItemCount;
             return this;
         }
+
         public Builder perItemErrorCount(Double perItemErrorCount) {
-            this.perItemErrorCount = Objects.requireNonNull(perItemErrorCount);
+            $.perItemErrorCount = perItemErrorCount;
             return this;
         }
+
         public Builder syncMode(String syncMode) {
-            this.syncMode = Objects.requireNonNull(syncMode);
+            $.syncMode = syncMode;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder totalBytes(Double totalBytes) {
-            this.totalBytes = Objects.requireNonNull(totalBytes);
+            $.totalBytes = totalBytes;
             return this;
         }
+
         public Builder totalItemCount(Double totalItemCount) {
-            this.totalItemCount = Objects.requireNonNull(totalItemCount);
+            $.totalItemCount = totalItemCount;
             return this;
-        }        public ServerEndpointSyncActivityStatusResponse build() {
-            return new ServerEndpointSyncActivityStatusResponse(appliedBytes, appliedItemCount, perItemErrorCount, syncMode, timestamp, totalBytes, totalItemCount);
+        }
+
+        public ServerEndpointSyncActivityStatusResponse build() {
+            $.appliedBytes = Objects.requireNonNull($.appliedBytes, "expected parameter 'appliedBytes' to be non-null");
+            $.appliedItemCount = Objects.requireNonNull($.appliedItemCount, "expected parameter 'appliedItemCount' to be non-null");
+            $.perItemErrorCount = Objects.requireNonNull($.perItemErrorCount, "expected parameter 'perItemErrorCount' to be non-null");
+            $.syncMode = Objects.requireNonNull($.syncMode, "expected parameter 'syncMode' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.totalBytes = Objects.requireNonNull($.totalBytes, "expected parameter 'totalBytes' to be non-null");
+            $.totalItemCount = Objects.requireNonNull($.totalItemCount, "expected parameter 'totalItemCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="streamingPolicyName", required=true)
-      private final String streamingPolicyName;
+    private String streamingPolicyName;
 
     public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
 
-    public GetStreamingPolicyArgs(
-        String accountName,
-        String resourceGroupName,
-        String streamingPolicyName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName, "expected parameter 'streamingPolicyName' to be non-null");
-    }
+    private GetStreamingPolicyArgs() {}
 
-    private GetStreamingPolicyArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.streamingPolicyName = null;
+    private GetStreamingPolicyArgs(GetStreamingPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.streamingPolicyName = $.streamingPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String streamingPolicyName;
+        private GetStreamingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamingPolicyArgs();
         }
 
         public Builder(GetStreamingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.streamingPolicyName = defaults.streamingPolicyName;
+            $ = new GetStreamingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder streamingPolicyName(String streamingPolicyName) {
-            this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
+            $.streamingPolicyName = streamingPolicyName;
             return this;
-        }        public GetStreamingPolicyArgs build() {
-            return new GetStreamingPolicyArgs(accountName, resourceGroupName, streamingPolicyName);
+        }
+
+        public GetStreamingPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.streamingPolicyName = Objects.requireNonNull($.streamingPolicyName, "expected parameter 'streamingPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

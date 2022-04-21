@@ -23,45 +23,44 @@ public final class TrustedExternalTenantResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public TrustedExternalTenantResponse(@Nullable String value) {
-        this.value = value;
-    }
+    private TrustedExternalTenantResponse() {}
 
-    private TrustedExternalTenantResponse() {
-        this.value = null;
+    private TrustedExternalTenantResponse(TrustedExternalTenantResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrustedExternalTenantResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String value;
+        private TrustedExternalTenantResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrustedExternalTenantResponse();
         }
 
         public Builder(TrustedExternalTenantResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new TrustedExternalTenantResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public TrustedExternalTenantResponse build() {
-            return new TrustedExternalTenantResponse(value);
+        }
+
+        public TrustedExternalTenantResponse build() {
+            return $;
         }
     }
+
 }

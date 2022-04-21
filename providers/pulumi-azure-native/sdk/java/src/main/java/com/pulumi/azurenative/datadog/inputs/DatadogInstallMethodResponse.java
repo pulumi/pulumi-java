@@ -19,10 +19,10 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="installerVersion")
-      private final @Nullable String installerVersion;
+    private @Nullable String installerVersion;
 
     public Optional<String> installerVersion() {
-        return this.installerVersion == null ? Optional.empty() : Optional.ofNullable(this.installerVersion);
+        return Optional.ofNullable(this.installerVersion);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tool")
-      private final @Nullable String tool;
+    private @Nullable String tool;
 
     public Optional<String> tool() {
-        return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
+        return Optional.ofNullable(this.tool);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="toolVersion")
-      private final @Nullable String toolVersion;
+    private @Nullable String toolVersion;
 
     public Optional<String> toolVersion() {
-        return this.toolVersion == null ? Optional.empty() : Optional.ofNullable(this.toolVersion);
+        return Optional.ofNullable(this.toolVersion);
     }
 
-    public DatadogInstallMethodResponse(
-        @Nullable String installerVersion,
-        @Nullable String tool,
-        @Nullable String toolVersion) {
-        this.installerVersion = installerVersion;
-        this.tool = tool;
-        this.toolVersion = toolVersion;
-    }
+    private DatadogInstallMethodResponse() {}
 
-    private DatadogInstallMethodResponse() {
-        this.installerVersion = null;
-        this.tool = null;
-        this.toolVersion = null;
+    private DatadogInstallMethodResponse(DatadogInstallMethodResponse $) {
+        this.installerVersion = $.installerVersion;
+        this.tool = $.tool;
+        this.toolVersion = $.toolVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogInstallMethodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String installerVersion;
-        private @Nullable String tool;
-        private @Nullable String toolVersion;
+        private DatadogInstallMethodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogInstallMethodResponse();
         }
 
         public Builder(DatadogInstallMethodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.installerVersion = defaults.installerVersion;
-    	      this.tool = defaults.tool;
-    	      this.toolVersion = defaults.toolVersion;
+            $ = new DatadogInstallMethodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder installerVersion(@Nullable String installerVersion) {
-            this.installerVersion = installerVersion;
+            $.installerVersion = installerVersion;
             return this;
         }
+
         public Builder tool(@Nullable String tool) {
-            this.tool = tool;
+            $.tool = tool;
             return this;
         }
+
         public Builder toolVersion(@Nullable String toolVersion) {
-            this.toolVersion = toolVersion;
+            $.toolVersion = toolVersion;
             return this;
-        }        public DatadogInstallMethodResponse build() {
-            return new DatadogInstallMethodResponse(installerVersion, tool, toolVersion);
+        }
+
+        public DatadogInstallMethodResponse build() {
+            return $;
         }
     }
+
 }

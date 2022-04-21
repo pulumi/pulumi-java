@@ -19,7 +19,7 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectionGatewayName", required=true)
-      private final String connectionGatewayName;
+    private String connectionGatewayName;
 
     public String connectionGatewayName() {
         return this.connectionGatewayName;
@@ -30,7 +30,7 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public GetConnectionGatewayArgs(
-        String connectionGatewayName,
-        String resourceGroupName,
-        @Nullable String subscriptionId) {
-        this.connectionGatewayName = Objects.requireNonNull(connectionGatewayName, "expected parameter 'connectionGatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subscriptionId = subscriptionId;
-    }
+    private GetConnectionGatewayArgs() {}
 
-    private GetConnectionGatewayArgs() {
-        this.connectionGatewayName = null;
-        this.resourceGroupName = null;
-        this.subscriptionId = null;
+    private GetConnectionGatewayArgs(GetConnectionGatewayArgs $) {
+        this.connectionGatewayName = $.connectionGatewayName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionGatewayName;
-        private String resourceGroupName;
-        private @Nullable String subscriptionId;
+        private GetConnectionGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionGatewayArgs();
         }
 
         public Builder(GetConnectionGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionGatewayName = defaults.connectionGatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new GetConnectionGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionGatewayName(String connectionGatewayName) {
-            this.connectionGatewayName = Objects.requireNonNull(connectionGatewayName);
+            $.connectionGatewayName = connectionGatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public GetConnectionGatewayArgs build() {
-            return new GetConnectionGatewayArgs(connectionGatewayName, resourceGroupName, subscriptionId);
+        }
+
+        public GetConnectionGatewayArgs build() {
+            $.connectionGatewayName = Objects.requireNonNull($.connectionGatewayName, "expected parameter 'connectionGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hours", required=true)
-      private final Output<Integer> hours;
+    private Output<Integer> hours;
 
     public Output<Integer> hours() {
         return this.hours;
@@ -34,7 +33,7 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minutes", required=true)
-      private final Output<Integer> minutes;
+    private Output<Integer> minutes;
 
     public Output<Integer> minutes() {
         return this.minutes;
@@ -45,76 +44,71 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="seconds", required=true)
-      private final Output<Integer> seconds;
+    private Output<Integer> seconds;
 
     public Output<Integer> seconds() {
         return this.seconds;
     }
 
-    public TimeArgs(
-        Output<Integer> hours,
-        Output<Integer> minutes,
-        Output<Integer> seconds) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private TimeArgs() {}
 
-    private TimeArgs() {
-        this.hours = Codegen.empty();
-        this.minutes = Codegen.empty();
-        this.seconds = Codegen.empty();
+    private TimeArgs(TimeArgs $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> hours;
-        private Output<Integer> minutes;
-        private Output<Integer> seconds;
+        private TimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeArgs();
         }
 
         public Builder(TimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.seconds = defaults.seconds;
+            $ = new TimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Output<Integer> hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(Integer hours) {
-            this.hours = Output.of(Objects.requireNonNull(hours));
-            return this;
+            return hours(Output.of(hours));
         }
+
         public Builder minutes(Output<Integer> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Output.of(Objects.requireNonNull(minutes));
-            return this;
+            return minutes(Output.of(minutes));
         }
+
         public Builder seconds(Output<Integer> seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Output.of(Objects.requireNonNull(seconds));
-            return this;
-        }        public TimeArgs build() {
-            return new TimeArgs(hours, minutes, seconds);
+            return seconds(Output.of(seconds));
+        }
+
+        public TimeArgs build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

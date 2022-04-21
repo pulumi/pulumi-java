@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AzureStaticWebAppsRegistrationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
-    public AzureStaticWebAppsRegistrationArgs(@Nullable Output<String> clientId) {
-        this.clientId = clientId;
-    }
+    private AzureStaticWebAppsRegistrationArgs() {}
 
-    private AzureStaticWebAppsRegistrationArgs() {
-        this.clientId = Codegen.empty();
+    private AzureStaticWebAppsRegistrationArgs(AzureStaticWebAppsRegistrationArgs $) {
+        this.clientId = $.clientId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureStaticWebAppsRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
+        private AzureStaticWebAppsRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureStaticWebAppsRegistrationArgs();
         }
 
         public Builder(AzureStaticWebAppsRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
+            $ = new AzureStaticWebAppsRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
-        }        public AzureStaticWebAppsRegistrationArgs build() {
-            return new AzureStaticWebAppsRegistrationArgs(clientId);
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
+        }
+
+        public AzureStaticWebAppsRegistrationArgs build() {
+            return $;
         }
     }
+
 }

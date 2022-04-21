@@ -6,11 +6,11 @@ package com.pulumi.azurenative.automation;
 import com.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -34,10 +34,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expiryTime")
-      private final @Nullable Output<String> expiryTime;
+    private @Nullable Output<String> expiryTime;
 
-    public Output<String> expiryTime() {
-        return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
+    public Optional<Output<String>> expiryTime() {
+        return Optional.ofNullable(this.expiryTime);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -67,10 +67,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,10 +89,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runOn")
-      private final @Nullable Output<String> runOn;
+    private @Nullable Output<String> runOn;
 
-    public Output<String> runOn() {
-        return this.runOn == null ? Codegen.empty() : this.runOn;
+    public Optional<Output<String>> runOn() {
+        return Optional.ofNullable(this.runOn);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runbook")
-      private final @Nullable Output<RunbookAssociationPropertyArgs> runbook;
+    private @Nullable Output<RunbookAssociationPropertyArgs> runbook;
 
-    public Output<RunbookAssociationPropertyArgs> runbook() {
-        return this.runbook == null ? Codegen.empty() : this.runbook;
+    public Optional<Output<RunbookAssociationPropertyArgs>> runbook() {
+        return Optional.ofNullable(this.runbook);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
     /**
@@ -122,167 +122,141 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookName")
-      private final @Nullable Output<String> webhookName;
+    private @Nullable Output<String> webhookName;
 
-    public Output<String> webhookName() {
-        return this.webhookName == null ? Codegen.empty() : this.webhookName;
+    public Optional<Output<String>> webhookName() {
+        return Optional.ofNullable(this.webhookName);
     }
 
-    public WebhookArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<String> expiryTime,
-        @Nullable Output<Boolean> isEnabled,
-        Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> runOn,
-        @Nullable Output<RunbookAssociationPropertyArgs> runbook,
-        @Nullable Output<String> uri,
-        @Nullable Output<String> webhookName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.expiryTime = expiryTime;
-        this.isEnabled = isEnabled;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runOn = runOn;
-        this.runbook = runbook;
-        this.uri = uri;
-        this.webhookName = webhookName;
-    }
+    private WebhookArgs() {}
 
-    private WebhookArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.expiryTime = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.runOn = Codegen.empty();
-        this.runbook = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.webhookName = Codegen.empty();
+    private WebhookArgs(WebhookArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.expiryTime = $.expiryTime;
+        this.isEnabled = $.isEnabled;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runOn = $.runOn;
+        this.runbook = $.runbook;
+        this.uri = $.uri;
+        this.webhookName = $.webhookName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> expiryTime;
-        private @Nullable Output<Boolean> isEnabled;
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> runOn;
-        private @Nullable Output<RunbookAssociationPropertyArgs> runbook;
-        private @Nullable Output<String> uri;
-        private @Nullable Output<String> webhookName;
+        private WebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookArgs();
         }
 
         public Builder(WebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.expiryTime = defaults.expiryTime;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runOn = defaults.runOn;
-    	      this.runbook = defaults.runbook;
-    	      this.uri = defaults.uri;
-    	      this.webhookName = defaults.webhookName;
+            $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
-            this.expiryTime = expiryTime;
+            $.expiryTime = expiryTime;
             return this;
         }
-        public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Codegen.ofNullable(expiryTime);
-            return this;
+
+        public Builder expiryTime(String expiryTime) {
+            return expiryTime(Output.of(expiryTime));
         }
+
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder runOn(@Nullable Output<String> runOn) {
-            this.runOn = runOn;
+            $.runOn = runOn;
             return this;
         }
-        public Builder runOn(@Nullable String runOn) {
-            this.runOn = Codegen.ofNullable(runOn);
-            return this;
+
+        public Builder runOn(String runOn) {
+            return runOn(Output.of(runOn));
         }
+
         public Builder runbook(@Nullable Output<RunbookAssociationPropertyArgs> runbook) {
-            this.runbook = runbook;
+            $.runbook = runbook;
             return this;
         }
-        public Builder runbook(@Nullable RunbookAssociationPropertyArgs runbook) {
-            this.runbook = Codegen.ofNullable(runbook);
-            return this;
+
+        public Builder runbook(RunbookAssociationPropertyArgs runbook) {
+            return runbook(Output.of(runbook));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
         }
+
         public Builder webhookName(@Nullable Output<String> webhookName) {
-            this.webhookName = webhookName;
+            $.webhookName = webhookName;
             return this;
         }
-        public Builder webhookName(@Nullable String webhookName) {
-            this.webhookName = Codegen.ofNullable(webhookName);
-            return this;
-        }        public WebhookArgs build() {
-            return new WebhookArgs(automationAccountName, expiryTime, isEnabled, name, parameters, resourceGroupName, runOn, runbook, uri, webhookName);
+
+        public Builder webhookName(String webhookName) {
+            return webhookName(Output.of(webhookName));
+        }
+
+        public WebhookArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

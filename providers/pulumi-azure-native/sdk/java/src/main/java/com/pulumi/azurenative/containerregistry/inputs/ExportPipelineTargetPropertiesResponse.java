@@ -23,7 +23,7 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final String keyVaultUri;
+    private String keyVaultUri;
 
     public String keyVaultUri() {
         return this.keyVaultUri;
@@ -34,10 +34,10 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public ExportPipelineTargetPropertiesResponse(
-        String keyVaultUri,
-        @Nullable String type,
-        @Nullable String uri) {
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.type = type;
-        this.uri = uri;
-    }
+    private ExportPipelineTargetPropertiesResponse() {}
 
-    private ExportPipelineTargetPropertiesResponse() {
-        this.keyVaultUri = null;
-        this.type = null;
-        this.uri = null;
+    private ExportPipelineTargetPropertiesResponse(ExportPipelineTargetPropertiesResponse $) {
+        this.keyVaultUri = $.keyVaultUri;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportPipelineTargetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyVaultUri;
-        private @Nullable String type;
-        private @Nullable String uri;
+        private ExportPipelineTargetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportPipelineTargetPropertiesResponse();
         }
 
         public Builder(ExportPipelineTargetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ExportPipelineTargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public ExportPipelineTargetPropertiesResponse build() {
-            return new ExportPipelineTargetPropertiesResponse(keyVaultUri, type, uri);
+        }
+
+        public ExportPipelineTargetPropertiesResponse build() {
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            return $;
         }
     }
+
 }

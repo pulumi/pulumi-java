@@ -24,10 +24,10 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="stateDetails", required=true)
-      private final EnvironmentStateDetailsResponse stateDetails;
+    private EnvironmentStateDetailsResponse stateDetails;
 
     public EnvironmentStateDetailsResponse stateDetails() {
         return this.stateDetails;
     }
 
-    public IngressEnvironmentStatusResponse(
-        @Nullable String state,
-        EnvironmentStateDetailsResponse stateDetails) {
-        this.state = state;
-        this.stateDetails = Objects.requireNonNull(stateDetails, "expected parameter 'stateDetails' to be non-null");
-    }
+    private IngressEnvironmentStatusResponse() {}
 
-    private IngressEnvironmentStatusResponse() {
-        this.state = null;
-        this.stateDetails = null;
+    private IngressEnvironmentStatusResponse(IngressEnvironmentStatusResponse $) {
+        this.state = $.state;
+        this.stateDetails = $.stateDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressEnvironmentStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String state;
-        private EnvironmentStateDetailsResponse stateDetails;
+        private IngressEnvironmentStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressEnvironmentStatusResponse();
         }
 
         public Builder(IngressEnvironmentStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
-    	      this.stateDetails = defaults.stateDetails;
+            $ = new IngressEnvironmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder stateDetails(EnvironmentStateDetailsResponse stateDetails) {
-            this.stateDetails = Objects.requireNonNull(stateDetails);
+            $.stateDetails = stateDetails;
             return this;
-        }        public IngressEnvironmentStatusResponse build() {
-            return new IngressEnvironmentStatusResponse(state, stateDetails);
+        }
+
+        public IngressEnvironmentStatusResponse build() {
+            $.stateDetails = Objects.requireNonNull($.stateDetails, "expected parameter 'stateDetails' to be non-null");
+            return $;
         }
     }
+
 }

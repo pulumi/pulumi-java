@@ -22,10 +22,10 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="importMethod")
-      private final @Nullable Either<String,WsdlImportMethod> importMethod;
+    private @Nullable Either<String,WsdlImportMethod> importMethod;
 
-    public Either<String,WsdlImportMethod> importMethod() {
-        return this.importMethod == null ? null : this.importMethod;
+    public Optional<Either<String,WsdlImportMethod>> importMethod() {
+        return Optional.ofNullable(this.importMethod);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -55,10 +55,10 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="service")
-      private final @Nullable WsdlService service;
+    private @Nullable WsdlService service;
 
     public Optional<WsdlService> service() {
-        return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -77,91 +77,75 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public ListCustomApiWsdlInterfacesArgs(
-        @Nullable String content,
-        @Nullable Either<String,WsdlImportMethod> importMethod,
-        String location,
-        @Nullable WsdlService service,
-        @Nullable String subscriptionId,
-        @Nullable String url) {
-        this.content = content;
-        this.importMethod = importMethod;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.service = service;
-        this.subscriptionId = subscriptionId;
-        this.url = url;
-    }
+    private ListCustomApiWsdlInterfacesArgs() {}
 
-    private ListCustomApiWsdlInterfacesArgs() {
-        this.content = null;
-        this.importMethod = null;
-        this.location = null;
-        this.service = null;
-        this.subscriptionId = null;
-        this.url = null;
+    private ListCustomApiWsdlInterfacesArgs(ListCustomApiWsdlInterfacesArgs $) {
+        this.content = $.content;
+        this.importMethod = $.importMethod;
+        this.location = $.location;
+        this.service = $.service;
+        this.subscriptionId = $.subscriptionId;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListCustomApiWsdlInterfacesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String content;
-        private @Nullable Either<String,WsdlImportMethod> importMethod;
-        private String location;
-        private @Nullable WsdlService service;
-        private @Nullable String subscriptionId;
-        private @Nullable String url;
+        private ListCustomApiWsdlInterfacesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListCustomApiWsdlInterfacesArgs();
         }
 
         public Builder(ListCustomApiWsdlInterfacesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.importMethod = defaults.importMethod;
-    	      this.location = defaults.location;
-    	      this.service = defaults.service;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.url = defaults.url;
+            $ = new ListCustomApiWsdlInterfacesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
-            this.importMethod = importMethod;
+            $.importMethod = importMethod;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder service(@Nullable WsdlService service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public ListCustomApiWsdlInterfacesArgs build() {
-            return new ListCustomApiWsdlInterfacesArgs(content, importMethod, location, service, subscriptionId, url);
+        }
+
+        public ListCustomApiWsdlInterfacesArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

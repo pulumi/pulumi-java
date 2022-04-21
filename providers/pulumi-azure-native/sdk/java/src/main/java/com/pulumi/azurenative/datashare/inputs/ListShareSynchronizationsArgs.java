@@ -19,7 +19,7 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -30,10 +30,10 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="orderby")
-      private final @Nullable String orderby;
+    private @Nullable String orderby;
 
     public Optional<String> orderby() {
-        return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
+        return Optional.ofNullable(this.orderby);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
@@ -74,91 +74,77 @@ public final class ListShareSynchronizationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListShareSynchronizationsArgs(
-        String accountName,
-        @Nullable String filter,
-        @Nullable String orderby,
-        String resourceGroupName,
-        String shareName,
-        @Nullable String skipToken) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.filter = filter;
-        this.orderby = orderby;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListShareSynchronizationsArgs() {}
 
-    private ListShareSynchronizationsArgs() {
-        this.accountName = null;
-        this.filter = null;
-        this.orderby = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
-        this.skipToken = null;
+    private ListShareSynchronizationsArgs(ListShareSynchronizationsArgs $) {
+        this.accountName = $.accountName;
+        this.filter = $.filter;
+        this.orderby = $.orderby;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListShareSynchronizationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String filter;
-        private @Nullable String orderby;
-        private String resourceGroupName;
-        private String shareName;
-        private @Nullable String skipToken;
+        private ListShareSynchronizationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListShareSynchronizationsArgs();
         }
 
         public Builder(ListShareSynchronizationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.filter = defaults.filter;
-    	      this.orderby = defaults.orderby;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListShareSynchronizationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder orderby(@Nullable String orderby) {
-            this.orderby = orderby;
+            $.orderby = orderby;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListShareSynchronizationsArgs build() {
-            return new ListShareSynchronizationsArgs(accountName, filter, orderby, resourceGroupName, shareName, skipToken);
+        }
+
+        public ListShareSynchronizationsArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -34,7 +34,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="keyVaultId", required=true)
-      private final String keyVaultId;
+    private String keyVaultId;
 
     public String keyVaultId() {
         return this.keyVaultId;
@@ -45,7 +45,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final String keyVaultUri;
+    private String keyVaultUri;
 
     public String keyVaultUri() {
         return this.keyVaultUri;
@@ -56,7 +56,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="serviceBusConnectionStringSecretName", required=true)
-      private final String serviceBusConnectionStringSecretName;
+    private String serviceBusConnectionStringSecretName;
 
     public String serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
@@ -67,7 +67,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final String storageAccountId;
+    private String storageAccountId;
 
     public String storageAccountId() {
         return this.storageAccountId;
@@ -78,7 +78,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="storageAccountSasSecretName", required=true)
-      private final String storageAccountSasSecretName;
+    private String storageAccountSasSecretName;
 
     public String storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
@@ -89,100 +89,87 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
      * 
      */
     @Import(name="targetLocation", required=true)
-      private final String targetLocation;
+    private String targetLocation;
 
     public String targetLocation() {
         return this.targetLocation;
     }
 
-    public VMwareCbtProtectionContainerMappingDetailsResponse(
-        String instanceType,
-        String keyVaultId,
-        String keyVaultUri,
-        String serviceBusConnectionStringSecretName,
-        String storageAccountId,
-        String storageAccountSasSecretName,
-        String targetLocation) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.keyVaultId = Objects.requireNonNull(keyVaultId, "expected parameter 'keyVaultId' to be non-null");
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName, "expected parameter 'serviceBusConnectionStringSecretName' to be non-null");
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-        this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName, "expected parameter 'storageAccountSasSecretName' to be non-null");
-        this.targetLocation = Objects.requireNonNull(targetLocation, "expected parameter 'targetLocation' to be non-null");
-    }
+    private VMwareCbtProtectionContainerMappingDetailsResponse() {}
 
-    private VMwareCbtProtectionContainerMappingDetailsResponse() {
-        this.instanceType = null;
-        this.keyVaultId = null;
-        this.keyVaultUri = null;
-        this.serviceBusConnectionStringSecretName = null;
-        this.storageAccountId = null;
-        this.storageAccountSasSecretName = null;
-        this.targetLocation = null;
+    private VMwareCbtProtectionContainerMappingDetailsResponse(VMwareCbtProtectionContainerMappingDetailsResponse $) {
+        this.instanceType = $.instanceType;
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultUri = $.keyVaultUri;
+        this.serviceBusConnectionStringSecretName = $.serviceBusConnectionStringSecretName;
+        this.storageAccountId = $.storageAccountId;
+        this.storageAccountSasSecretName = $.storageAccountSasSecretName;
+        this.targetLocation = $.targetLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtProtectionContainerMappingDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
-        private String keyVaultId;
-        private String keyVaultUri;
-        private String serviceBusConnectionStringSecretName;
-        private String storageAccountId;
-        private String storageAccountSasSecretName;
-        private String targetLocation;
+        private VMwareCbtProtectionContainerMappingDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtProtectionContainerMappingDetailsResponse();
         }
 
         public Builder(VMwareCbtProtectionContainerMappingDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.serviceBusConnectionStringSecretName = defaults.serviceBusConnectionStringSecretName;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.storageAccountSasSecretName = defaults.storageAccountSasSecretName;
-    	      this.targetLocation = defaults.targetLocation;
+            $ = new VMwareCbtProtectionContainerMappingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder keyVaultId(String keyVaultId) {
-            this.keyVaultId = Objects.requireNonNull(keyVaultId);
+            $.keyVaultId = keyVaultId;
             return this;
         }
+
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
-            this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
+            $.serviceBusConnectionStringSecretName = serviceBusConnectionStringSecretName;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
         }
+
         public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
-            this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
+            $.storageAccountSasSecretName = storageAccountSasSecretName;
             return this;
         }
+
         public Builder targetLocation(String targetLocation) {
-            this.targetLocation = Objects.requireNonNull(targetLocation);
+            $.targetLocation = targetLocation;
             return this;
-        }        public VMwareCbtProtectionContainerMappingDetailsResponse build() {
-            return new VMwareCbtProtectionContainerMappingDetailsResponse(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
+        }
+
+        public VMwareCbtProtectionContainerMappingDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.keyVaultId = Objects.requireNonNull($.keyVaultId, "expected parameter 'keyVaultId' to be non-null");
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            $.serviceBusConnectionStringSecretName = Objects.requireNonNull($.serviceBusConnectionStringSecretName, "expected parameter 'serviceBusConnectionStringSecretName' to be non-null");
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            $.storageAccountSasSecretName = Objects.requireNonNull($.storageAccountSasSecretName, "expected parameter 'storageAccountSasSecretName' to be non-null");
+            $.targetLocation = Objects.requireNonNull($.targetLocation, "expected parameter 'targetLocation' to be non-null");
+            return $;
         }
     }
+
 }

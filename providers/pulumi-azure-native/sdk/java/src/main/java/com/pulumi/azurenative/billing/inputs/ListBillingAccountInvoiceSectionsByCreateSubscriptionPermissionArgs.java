@@ -17,45 +17,45 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
      * 
      */
     @Import(name="billingAccountName", required=true)
-      private final String billingAccountName;
+    private String billingAccountName;
 
     public String billingAccountName() {
         return this.billingAccountName;
     }
 
-    public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(String billingAccountName) {
-        this.billingAccountName = Objects.requireNonNull(billingAccountName, "expected parameter 'billingAccountName' to be non-null");
-    }
+    private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs() {}
 
-    private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs() {
-        this.billingAccountName = null;
+    private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs $) {
+        this.billingAccountName = $.billingAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountName;
+        private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs();
         }
 
         public Builder(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountName = defaults.billingAccountName;
+            $ = new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountName(String billingAccountName) {
-            this.billingAccountName = Objects.requireNonNull(billingAccountName);
+            $.billingAccountName = billingAccountName;
             return this;
-        }        public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs build() {
-            return new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(billingAccountName);
+        }
+
+        public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs build() {
+            $.billingAccountName = Objects.requireNonNull($.billingAccountName, "expected parameter 'billingAccountName' to be non-null");
+            return $;
         }
     }
+
 }

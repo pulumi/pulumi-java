@@ -10,13 +10,13 @@ import com.pulumi.azurenative.security.inputs.AutomationScopeArgs;
 import com.pulumi.azurenative.security.inputs.AutomationSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<Object>> actions;
+    private @Nullable Output<List<Object>> actions;
 
-    public Output<List<Object>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<Object>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationName")
-      private final @Nullable Output<String> automationName;
+    private @Nullable Output<String> automationName;
 
-    public Output<String> automationName() {
-        return this.automationName == null ? Codegen.empty() : this.automationName;
+    public Optional<Output<String>> automationName() {
+        return Optional.ofNullable(this.automationName);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -106,10 +106,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<AutomationScopeArgs>> scopes;
+    private @Nullable Output<List<AutomationScopeArgs>> scopes;
 
-    public Output<List<AutomationScopeArgs>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<AutomationScopeArgs>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<AutomationSourceArgs>> sources;
+    private @Nullable Output<List<AutomationSourceArgs>> sources;
 
-    public Output<List<AutomationSourceArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<AutomationSourceArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -128,176 +128,151 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AutomationArgs(
-        @Nullable Output<List<Object>> actions,
-        @Nullable Output<String> automationName,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isEnabled,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<AutomationScopeArgs>> scopes,
-        @Nullable Output<List<AutomationSourceArgs>> sources,
-        @Nullable Output<Map<String,String>> tags) {
-        this.actions = actions;
-        this.automationName = automationName;
-        this.description = description;
-        this.isEnabled = isEnabled;
-        this.kind = kind;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopes = scopes;
-        this.sources = sources;
-        this.tags = tags;
-    }
+    private AutomationArgs() {}
 
-    private AutomationArgs() {
-        this.actions = Codegen.empty();
-        this.automationName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AutomationArgs(AutomationArgs $) {
+        this.actions = $.actions;
+        this.automationName = $.automationName;
+        this.description = $.description;
+        this.isEnabled = $.isEnabled;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopes = $.scopes;
+        this.sources = $.sources;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> actions;
-        private @Nullable Output<String> automationName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isEnabled;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<AutomationScopeArgs>> scopes;
-        private @Nullable Output<List<AutomationSourceArgs>> sources;
-        private @Nullable Output<Map<String,String>> tags;
+        private AutomationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationArgs();
         }
 
         public Builder(AutomationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.automationName = defaults.automationName;
-    	      this.description = defaults.description;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopes = defaults.scopes;
-    	      this.sources = defaults.sources;
-    	      this.tags = defaults.tags;
+            $ = new AutomationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<Object>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<Object> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<Object> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
+
         public Builder automationName(@Nullable Output<String> automationName) {
-            this.automationName = automationName;
+            $.automationName = automationName;
             return this;
         }
-        public Builder automationName(@Nullable String automationName) {
-            this.automationName = Codegen.ofNullable(automationName);
-            return this;
+
+        public Builder automationName(String automationName) {
+            return automationName(Output.of(automationName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scopes(@Nullable Output<List<AutomationScopeArgs>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<AutomationScopeArgs> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<AutomationScopeArgs> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(AutomationScopeArgs... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder sources(@Nullable Output<List<AutomationSourceArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<AutomationSourceArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<AutomationSourceArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(AutomationSourceArgs... sources) {
             return sources(List.of(sources));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AutomationArgs build() {
-            return new AutomationArgs(actions, automationName, description, isEnabled, kind, location, resourceGroupName, scopes, sources, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AutomationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

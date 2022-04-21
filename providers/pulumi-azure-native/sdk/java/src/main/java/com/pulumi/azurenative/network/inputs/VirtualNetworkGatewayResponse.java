@@ -33,10 +33,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="activeActive")
-      private final @Nullable Boolean activeActive;
+    private @Nullable Boolean activeActive;
 
     public Optional<Boolean> activeActive() {
-        return this.activeActive == null ? Optional.empty() : Optional.ofNullable(this.activeActive);
+        return Optional.ofNullable(this.activeActive);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="bgpSettings")
-      private final @Nullable BgpSettingsResponse bgpSettings;
+    private @Nullable BgpSettingsResponse bgpSettings;
 
     public Optional<BgpSettingsResponse> bgpSettings() {
-        return this.bgpSettings == null ? Optional.empty() : Optional.ofNullable(this.bgpSettings);
+        return Optional.ofNullable(this.bgpSettings);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="customRoutes")
-      private final @Nullable AddressSpaceResponse customRoutes;
+    private @Nullable AddressSpaceResponse customRoutes;
 
     public Optional<AddressSpaceResponse> customRoutes() {
-        return this.customRoutes == null ? Optional.empty() : Optional.ofNullable(this.customRoutes);
+        return Optional.ofNullable(this.customRoutes);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enableBgp")
-      private final @Nullable Boolean enableBgp;
+    private @Nullable Boolean enableBgp;
 
     public Optional<Boolean> enableBgp() {
-        return this.enableBgp == null ? Optional.empty() : Optional.ofNullable(this.enableBgp);
+        return Optional.ofNullable(this.enableBgp);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enableDnsForwarding")
-      private final @Nullable Boolean enableDnsForwarding;
+    private @Nullable Boolean enableDnsForwarding;
 
     public Optional<Boolean> enableDnsForwarding() {
-        return this.enableDnsForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableDnsForwarding);
+        return Optional.ofNullable(this.enableDnsForwarding);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enablePrivateIpAddress")
-      private final @Nullable Boolean enablePrivateIpAddress;
+    private @Nullable Boolean enablePrivateIpAddress;
 
     public Optional<Boolean> enablePrivateIpAddress() {
-        return this.enablePrivateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.enablePrivateIpAddress);
+        return Optional.ofNullable(this.enablePrivateIpAddress);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -110,10 +110,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable ExtendedLocationResponse extendedLocation;
+    private @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="gatewayDefaultSite")
-      private final @Nullable SubResourceResponse gatewayDefaultSite;
+    private @Nullable SubResourceResponse gatewayDefaultSite;
 
     public Optional<SubResourceResponse> gatewayDefaultSite() {
-        return this.gatewayDefaultSite == null ? Optional.empty() : Optional.ofNullable(this.gatewayDefaultSite);
+        return Optional.ofNullable(this.gatewayDefaultSite);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="gatewayType")
-      private final @Nullable String gatewayType;
+    private @Nullable String gatewayType;
 
     public Optional<String> gatewayType() {
-        return this.gatewayType == null ? Optional.empty() : Optional.ofNullable(this.gatewayType);
+        return Optional.ofNullable(this.gatewayType);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -154,7 +154,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="inboundDnsForwardingEndpoint", required=true)
-      private final String inboundDnsForwardingEndpoint;
+    private String inboundDnsForwardingEndpoint;
 
     public String inboundDnsForwardingEndpoint() {
         return this.inboundDnsForwardingEndpoint;
@@ -165,10 +165,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations;
+    private @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations;
 
-    public List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations() {
-        return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
+    public Optional<List<VirtualNetworkGatewayIPConfigurationResponse>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -187,7 +187,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -198,7 +198,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -209,7 +209,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -220,10 +220,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sku")
-      private final @Nullable VirtualNetworkGatewaySkuResponse sku;
+    private @Nullable VirtualNetworkGatewaySkuResponse sku;
 
     public Optional<VirtualNetworkGatewaySkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -242,7 +242,7 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -253,10 +253,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vNetExtendedLocationResourceId")
-      private final @Nullable String vNetExtendedLocationResourceId;
+    private @Nullable String vNetExtendedLocationResourceId;
 
     public Optional<String> vNetExtendedLocationResourceId() {
-        return this.vNetExtendedLocationResourceId == null ? Optional.empty() : Optional.ofNullable(this.vNetExtendedLocationResourceId);
+        return Optional.ofNullable(this.vNetExtendedLocationResourceId);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnClientConfiguration")
-      private final @Nullable VpnClientConfigurationResponse vpnClientConfiguration;
+    private @Nullable VpnClientConfigurationResponse vpnClientConfiguration;
 
     public Optional<VpnClientConfigurationResponse> vpnClientConfiguration() {
-        return this.vpnClientConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpnClientConfiguration);
+        return Optional.ofNullable(this.vpnClientConfiguration);
     }
 
     /**
@@ -275,10 +275,10 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnGatewayGeneration")
-      private final @Nullable String vpnGatewayGeneration;
+    private @Nullable String vpnGatewayGeneration;
 
     public Optional<String> vpnGatewayGeneration() {
-        return this.vpnGatewayGeneration == null ? Optional.empty() : Optional.ofNullable(this.vpnGatewayGeneration);
+        return Optional.ofNullable(this.vpnGatewayGeneration);
     }
 
     /**
@@ -286,256 +286,192 @@ public final class VirtualNetworkGatewayResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnType")
-      private final @Nullable String vpnType;
+    private @Nullable String vpnType;
 
     public Optional<String> vpnType() {
-        return this.vpnType == null ? Optional.empty() : Optional.ofNullable(this.vpnType);
+        return Optional.ofNullable(this.vpnType);
     }
 
-    public VirtualNetworkGatewayResponse(
-        @Nullable Boolean activeActive,
-        @Nullable BgpSettingsResponse bgpSettings,
-        @Nullable AddressSpaceResponse customRoutes,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableDnsForwarding,
-        @Nullable Boolean enablePrivateIpAddress,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable SubResourceResponse gatewayDefaultSite,
-        @Nullable String gatewayType,
-        @Nullable String id,
-        String inboundDnsForwardingEndpoint,
-        @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable VirtualNetworkGatewaySkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String vNetExtendedLocationResourceId,
-        @Nullable VpnClientConfigurationResponse vpnClientConfiguration,
-        @Nullable String vpnGatewayGeneration,
-        @Nullable String vpnType) {
-        this.activeActive = activeActive;
-        this.bgpSettings = bgpSettings;
-        this.customRoutes = customRoutes;
-        this.enableBgp = enableBgp;
-        this.enableDnsForwarding = enableDnsForwarding;
-        this.enablePrivateIpAddress = enablePrivateIpAddress;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.extendedLocation = extendedLocation;
-        this.gatewayDefaultSite = gatewayDefaultSite;
-        this.gatewayType = gatewayType;
-        this.id = id;
-        this.inboundDnsForwardingEndpoint = Objects.requireNonNull(inboundDnsForwardingEndpoint, "expected parameter 'inboundDnsForwardingEndpoint' to be non-null");
-        this.ipConfigurations = ipConfigurations;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.vNetExtendedLocationResourceId = vNetExtendedLocationResourceId;
-        this.vpnClientConfiguration = vpnClientConfiguration;
-        this.vpnGatewayGeneration = vpnGatewayGeneration;
-        this.vpnType = vpnType;
-    }
+    private VirtualNetworkGatewayResponse() {}
 
-    private VirtualNetworkGatewayResponse() {
-        this.activeActive = null;
-        this.bgpSettings = null;
-        this.customRoutes = null;
-        this.enableBgp = null;
-        this.enableDnsForwarding = null;
-        this.enablePrivateIpAddress = null;
-        this.etag = null;
-        this.extendedLocation = null;
-        this.gatewayDefaultSite = null;
-        this.gatewayType = null;
-        this.id = null;
-        this.inboundDnsForwardingEndpoint = null;
-        this.ipConfigurations = List.of();
-        this.location = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.resourceGuid = null;
-        this.sku = null;
-        this.tags = Map.of();
-        this.type = null;
-        this.vNetExtendedLocationResourceId = null;
-        this.vpnClientConfiguration = null;
-        this.vpnGatewayGeneration = null;
-        this.vpnType = null;
+    private VirtualNetworkGatewayResponse(VirtualNetworkGatewayResponse $) {
+        this.activeActive = $.activeActive;
+        this.bgpSettings = $.bgpSettings;
+        this.customRoutes = $.customRoutes;
+        this.enableBgp = $.enableBgp;
+        this.enableDnsForwarding = $.enableDnsForwarding;
+        this.enablePrivateIpAddress = $.enablePrivateIpAddress;
+        this.etag = $.etag;
+        this.extendedLocation = $.extendedLocation;
+        this.gatewayDefaultSite = $.gatewayDefaultSite;
+        this.gatewayType = $.gatewayType;
+        this.id = $.id;
+        this.inboundDnsForwardingEndpoint = $.inboundDnsForwardingEndpoint;
+        this.ipConfigurations = $.ipConfigurations;
+        this.location = $.location;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuid = $.resourceGuid;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.vNetExtendedLocationResourceId = $.vNetExtendedLocationResourceId;
+        this.vpnClientConfiguration = $.vpnClientConfiguration;
+        this.vpnGatewayGeneration = $.vpnGatewayGeneration;
+        this.vpnType = $.vpnType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkGatewayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean activeActive;
-        private @Nullable BgpSettingsResponse bgpSettings;
-        private @Nullable AddressSpaceResponse customRoutes;
-        private @Nullable Boolean enableBgp;
-        private @Nullable Boolean enableDnsForwarding;
-        private @Nullable Boolean enablePrivateIpAddress;
-        private String etag;
-        private @Nullable ExtendedLocationResponse extendedLocation;
-        private @Nullable SubResourceResponse gatewayDefaultSite;
-        private @Nullable String gatewayType;
-        private @Nullable String id;
-        private String inboundDnsForwardingEndpoint;
-        private @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations;
-        private @Nullable String location;
-        private String name;
-        private String provisioningState;
-        private String resourceGuid;
-        private @Nullable VirtualNetworkGatewaySkuResponse sku;
-        private @Nullable Map<String,String> tags;
-        private String type;
-        private @Nullable String vNetExtendedLocationResourceId;
-        private @Nullable VpnClientConfigurationResponse vpnClientConfiguration;
-        private @Nullable String vpnGatewayGeneration;
-        private @Nullable String vpnType;
+        private VirtualNetworkGatewayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkGatewayResponse();
         }
 
         public Builder(VirtualNetworkGatewayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeActive = defaults.activeActive;
-    	      this.bgpSettings = defaults.bgpSettings;
-    	      this.customRoutes = defaults.customRoutes;
-    	      this.enableBgp = defaults.enableBgp;
-    	      this.enableDnsForwarding = defaults.enableDnsForwarding;
-    	      this.enablePrivateIpAddress = defaults.enablePrivateIpAddress;
-    	      this.etag = defaults.etag;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.gatewayDefaultSite = defaults.gatewayDefaultSite;
-    	      this.gatewayType = defaults.gatewayType;
-    	      this.id = defaults.id;
-    	      this.inboundDnsForwardingEndpoint = defaults.inboundDnsForwardingEndpoint;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.vNetExtendedLocationResourceId = defaults.vNetExtendedLocationResourceId;
-    	      this.vpnClientConfiguration = defaults.vpnClientConfiguration;
-    	      this.vpnGatewayGeneration = defaults.vpnGatewayGeneration;
-    	      this.vpnType = defaults.vpnType;
+            $ = new VirtualNetworkGatewayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeActive(@Nullable Boolean activeActive) {
-            this.activeActive = activeActive;
+            $.activeActive = activeActive;
             return this;
         }
+
         public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
-            this.bgpSettings = bgpSettings;
+            $.bgpSettings = bgpSettings;
             return this;
         }
+
         public Builder customRoutes(@Nullable AddressSpaceResponse customRoutes) {
-            this.customRoutes = customRoutes;
+            $.customRoutes = customRoutes;
             return this;
         }
+
         public Builder enableBgp(@Nullable Boolean enableBgp) {
-            this.enableBgp = enableBgp;
+            $.enableBgp = enableBgp;
             return this;
         }
+
         public Builder enableDnsForwarding(@Nullable Boolean enableDnsForwarding) {
-            this.enableDnsForwarding = enableDnsForwarding;
+            $.enableDnsForwarding = enableDnsForwarding;
             return this;
         }
+
         public Builder enablePrivateIpAddress(@Nullable Boolean enablePrivateIpAddress) {
-            this.enablePrivateIpAddress = enablePrivateIpAddress;
+            $.enablePrivateIpAddress = enablePrivateIpAddress;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
+
         public Builder gatewayDefaultSite(@Nullable SubResourceResponse gatewayDefaultSite) {
-            this.gatewayDefaultSite = gatewayDefaultSite;
+            $.gatewayDefaultSite = gatewayDefaultSite;
             return this;
         }
+
         public Builder gatewayType(@Nullable String gatewayType) {
-            this.gatewayType = gatewayType;
+            $.gatewayType = gatewayType;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder inboundDnsForwardingEndpoint(String inboundDnsForwardingEndpoint) {
-            this.inboundDnsForwardingEndpoint = Objects.requireNonNull(inboundDnsForwardingEndpoint);
+            $.inboundDnsForwardingEndpoint = inboundDnsForwardingEndpoint;
             return this;
         }
+
         public Builder ipConfigurations(@Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(VirtualNetworkGatewayIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder sku(@Nullable VirtualNetworkGatewaySkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder vNetExtendedLocationResourceId(@Nullable String vNetExtendedLocationResourceId) {
-            this.vNetExtendedLocationResourceId = vNetExtendedLocationResourceId;
+            $.vNetExtendedLocationResourceId = vNetExtendedLocationResourceId;
             return this;
         }
+
         public Builder vpnClientConfiguration(@Nullable VpnClientConfigurationResponse vpnClientConfiguration) {
-            this.vpnClientConfiguration = vpnClientConfiguration;
+            $.vpnClientConfiguration = vpnClientConfiguration;
             return this;
         }
+
         public Builder vpnGatewayGeneration(@Nullable String vpnGatewayGeneration) {
-            this.vpnGatewayGeneration = vpnGatewayGeneration;
+            $.vpnGatewayGeneration = vpnGatewayGeneration;
             return this;
         }
+
         public Builder vpnType(@Nullable String vpnType) {
-            this.vpnType = vpnType;
+            $.vpnType = vpnType;
             return this;
-        }        public VirtualNetworkGatewayResponse build() {
-            return new VirtualNetworkGatewayResponse(activeActive, bgpSettings, customRoutes, enableBgp, enableDnsForwarding, enablePrivateIpAddress, etag, extendedLocation, gatewayDefaultSite, gatewayType, id, inboundDnsForwardingEndpoint, ipConfigurations, location, name, provisioningState, resourceGuid, sku, tags, type, vNetExtendedLocationResourceId, vpnClientConfiguration, vpnGatewayGeneration, vpnType);
+        }
+
+        public VirtualNetworkGatewayResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.inboundDnsForwardingEndpoint = Objects.requireNonNull($.inboundDnsForwardingEndpoint, "expected parameter 'inboundDnsForwardingEndpoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

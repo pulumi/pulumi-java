@@ -23,10 +23,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable String applicationName;
+    private @Nullable String applicationName;
 
     public Optional<String> applicationName() {
-        return this.applicationName == null ? Optional.empty() : Optional.ofNullable(this.applicationName);
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceUri")
-      private final @Nullable String instanceUri;
+    private @Nullable String instanceUri;
 
     public Optional<String> instanceUri() {
-        return this.instanceUri == null ? Optional.empty() : Optional.ofNullable(this.instanceUri);
+        return Optional.ofNullable(this.instanceUri);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="providerId")
-      private final @Nullable String providerId;
+    private @Nullable String providerId;
 
     public Optional<String> providerId() {
-        return this.providerId == null ? Optional.empty() : Optional.ofNullable(this.providerId);
+        return Optional.ofNullable(this.providerId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="providerSku")
-      private final @Nullable String providerSku;
+    private @Nullable String providerSku;
 
     public Optional<String> providerSku() {
-        return this.providerSku == null ? Optional.empty() : Optional.ofNullable(this.providerSku);
+        return Optional.ofNullable(this.providerSku);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUsageId")
-      private final @Nullable String resourceUsageId;
+    private @Nullable String resourceUsageId;
 
     public Optional<String> resourceUsageId() {
-        return this.resourceUsageId == null ? Optional.empty() : Optional.ofNullable(this.resourceUsageId);
+        return Optional.ofNullable(this.resourceUsageId);
     }
 
-    public ProviderResponse(
-        @Nullable String applicationName,
-        @Nullable String instanceUri,
-        @Nullable String providerId,
-        @Nullable String providerSku,
-        @Nullable String provisioningState,
-        @Nullable String resourceUsageId) {
-        this.applicationName = applicationName;
-        this.instanceUri = instanceUri;
-        this.providerId = providerId;
-        this.providerSku = providerSku;
-        this.provisioningState = provisioningState;
-        this.resourceUsageId = resourceUsageId;
-    }
+    private ProviderResponse() {}
 
-    private ProviderResponse() {
-        this.applicationName = null;
-        this.instanceUri = null;
-        this.providerId = null;
-        this.providerSku = null;
-        this.provisioningState = null;
-        this.resourceUsageId = null;
+    private ProviderResponse(ProviderResponse $) {
+        this.applicationName = $.applicationName;
+        this.instanceUri = $.instanceUri;
+        this.providerId = $.providerId;
+        this.providerSku = $.providerSku;
+        this.provisioningState = $.provisioningState;
+        this.resourceUsageId = $.resourceUsageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationName;
-        private @Nullable String instanceUri;
-        private @Nullable String providerId;
-        private @Nullable String providerSku;
-        private @Nullable String provisioningState;
-        private @Nullable String resourceUsageId;
+        private ProviderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderResponse();
         }
 
         public Builder(ProviderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.instanceUri = defaults.instanceUri;
-    	      this.providerId = defaults.providerId;
-    	      this.providerSku = defaults.providerSku;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceUsageId = defaults.resourceUsageId;
+            $ = new ProviderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder instanceUri(@Nullable String instanceUri) {
-            this.instanceUri = instanceUri;
+            $.instanceUri = instanceUri;
             return this;
         }
+
         public Builder providerId(@Nullable String providerId) {
-            this.providerId = providerId;
+            $.providerId = providerId;
             return this;
         }
+
         public Builder providerSku(@Nullable String providerSku) {
-            this.providerSku = providerSku;
+            $.providerSku = providerSku;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
-            this.resourceUsageId = resourceUsageId;
+            $.resourceUsageId = resourceUsageId;
             return this;
-        }        public ProviderResponse build() {
-            return new ProviderResponse(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
+        }
+
+        public ProviderResponse build() {
+            return $;
         }
     }
+
 }

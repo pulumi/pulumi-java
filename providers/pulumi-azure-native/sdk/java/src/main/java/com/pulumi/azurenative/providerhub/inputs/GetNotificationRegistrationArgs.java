@@ -17,7 +17,7 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="notificationRegistrationName", required=true)
-      private final String notificationRegistrationName;
+    private String notificationRegistrationName;
 
     public String notificationRegistrationName() {
         return this.notificationRegistrationName;
@@ -28,55 +28,52 @@ public final class GetNotificationRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
     }
 
-    public GetNotificationRegistrationArgs(
-        String notificationRegistrationName,
-        String providerNamespace) {
-        this.notificationRegistrationName = Objects.requireNonNull(notificationRegistrationName, "expected parameter 'notificationRegistrationName' to be non-null");
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-    }
+    private GetNotificationRegistrationArgs() {}
 
-    private GetNotificationRegistrationArgs() {
-        this.notificationRegistrationName = null;
-        this.providerNamespace = null;
+    private GetNotificationRegistrationArgs(GetNotificationRegistrationArgs $) {
+        this.notificationRegistrationName = $.notificationRegistrationName;
+        this.providerNamespace = $.providerNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String notificationRegistrationName;
-        private String providerNamespace;
+        private GetNotificationRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationRegistrationArgs();
         }
 
         public Builder(GetNotificationRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationRegistrationName = defaults.notificationRegistrationName;
-    	      this.providerNamespace = defaults.providerNamespace;
+            $ = new GetNotificationRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationRegistrationName(String notificationRegistrationName) {
-            this.notificationRegistrationName = Objects.requireNonNull(notificationRegistrationName);
+            $.notificationRegistrationName = notificationRegistrationName;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
-        }        public GetNotificationRegistrationArgs build() {
-            return new GetNotificationRegistrationArgs(notificationRegistrationName, providerNamespace);
+        }
+
+        public GetNotificationRegistrationArgs build() {
+            $.notificationRegistrationName = Objects.requireNonNull($.notificationRegistrationName, "expected parameter 'notificationRegistrationName' to be non-null");
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

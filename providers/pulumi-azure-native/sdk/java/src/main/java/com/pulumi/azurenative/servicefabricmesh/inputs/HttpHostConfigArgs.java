@@ -6,7 +6,6 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class HttpHostConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,66 +35,64 @@ public final class HttpHostConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="routes", required=true)
-      private final Output<List<HttpRouteConfigArgs>> routes;
+    private Output<List<HttpRouteConfigArgs>> routes;
 
     public Output<List<HttpRouteConfigArgs>> routes() {
         return this.routes;
     }
 
-    public HttpHostConfigArgs(
-        Output<String> name,
-        Output<List<HttpRouteConfigArgs>> routes) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.routes = Objects.requireNonNull(routes, "expected parameter 'routes' to be non-null");
-    }
+    private HttpHostConfigArgs() {}
 
-    private HttpHostConfigArgs() {
-        this.name = Codegen.empty();
-        this.routes = Codegen.empty();
+    private HttpHostConfigArgs(HttpHostConfigArgs $) {
+        this.name = $.name;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpHostConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<List<HttpRouteConfigArgs>> routes;
+        private HttpHostConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpHostConfigArgs();
         }
 
         public Builder(HttpHostConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.routes = defaults.routes;
+            $ = new HttpHostConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder routes(Output<List<HttpRouteConfigArgs>> routes) {
-            this.routes = Objects.requireNonNull(routes);
+            $.routes = routes;
             return this;
         }
+
         public Builder routes(List<HttpRouteConfigArgs> routes) {
-            this.routes = Output.of(Objects.requireNonNull(routes));
-            return this;
+            return routes(Output.of(routes));
         }
+
         public Builder routes(HttpRouteConfigArgs... routes) {
             return routes(List.of(routes));
-        }        public HttpHostConfigArgs build() {
-            return new HttpHostConfigArgs(name, routes);
+        }
+
+        public HttpHostConfigArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.routes = Objects.requireNonNull($.routes, "expected parameter 'routes' to be non-null");
+            return $;
         }
     }
+
 }

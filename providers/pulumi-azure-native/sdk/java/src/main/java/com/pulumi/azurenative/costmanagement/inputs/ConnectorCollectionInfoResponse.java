@@ -24,10 +24,10 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="error")
-      private final @Nullable ConnectorCollectionErrorInfoResponse error;
+    private @Nullable ConnectorCollectionErrorInfoResponse error;
 
     public Optional<ConnectorCollectionErrorInfoResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="lastChecked", required=true)
-      private final String lastChecked;
+    private String lastChecked;
 
     public String lastChecked() {
         return this.lastChecked;
@@ -46,7 +46,7 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="lastUpdated", required=true)
-      private final String lastUpdated;
+    private String lastUpdated;
 
     public String lastUpdated() {
         return this.lastUpdated;
@@ -57,73 +57,65 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceLastUpdated", required=true)
-      private final String sourceLastUpdated;
+    private String sourceLastUpdated;
 
     public String sourceLastUpdated() {
         return this.sourceLastUpdated;
     }
 
-    public ConnectorCollectionInfoResponse(
-        @Nullable ConnectorCollectionErrorInfoResponse error,
-        String lastChecked,
-        String lastUpdated,
-        String sourceLastUpdated) {
-        this.error = error;
-        this.lastChecked = Objects.requireNonNull(lastChecked, "expected parameter 'lastChecked' to be non-null");
-        this.lastUpdated = Objects.requireNonNull(lastUpdated, "expected parameter 'lastUpdated' to be non-null");
-        this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated, "expected parameter 'sourceLastUpdated' to be non-null");
-    }
+    private ConnectorCollectionInfoResponse() {}
 
-    private ConnectorCollectionInfoResponse() {
-        this.error = null;
-        this.lastChecked = null;
-        this.lastUpdated = null;
-        this.sourceLastUpdated = null;
+    private ConnectorCollectionInfoResponse(ConnectorCollectionInfoResponse $) {
+        this.error = $.error;
+        this.lastChecked = $.lastChecked;
+        this.lastUpdated = $.lastUpdated;
+        this.sourceLastUpdated = $.sourceLastUpdated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorCollectionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConnectorCollectionErrorInfoResponse error;
-        private String lastChecked;
-        private String lastUpdated;
-        private String sourceLastUpdated;
+        private ConnectorCollectionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorCollectionInfoResponse();
         }
 
         public Builder(ConnectorCollectionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.lastChecked = defaults.lastChecked;
-    	      this.lastUpdated = defaults.lastUpdated;
-    	      this.sourceLastUpdated = defaults.sourceLastUpdated;
+            $ = new ConnectorCollectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable ConnectorCollectionErrorInfoResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder lastChecked(String lastChecked) {
-            this.lastChecked = Objects.requireNonNull(lastChecked);
+            $.lastChecked = lastChecked;
             return this;
         }
+
         public Builder lastUpdated(String lastUpdated) {
-            this.lastUpdated = Objects.requireNonNull(lastUpdated);
+            $.lastUpdated = lastUpdated;
             return this;
         }
+
         public Builder sourceLastUpdated(String sourceLastUpdated) {
-            this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
+            $.sourceLastUpdated = sourceLastUpdated;
             return this;
-        }        public ConnectorCollectionInfoResponse build() {
-            return new ConnectorCollectionInfoResponse(error, lastChecked, lastUpdated, sourceLastUpdated);
+        }
+
+        public ConnectorCollectionInfoResponse build() {
+            $.lastChecked = Objects.requireNonNull($.lastChecked, "expected parameter 'lastChecked' to be non-null");
+            $.lastUpdated = Objects.requireNonNull($.lastUpdated, "expected parameter 'lastUpdated' to be non-null");
+            $.sourceLastUpdated = Objects.requireNonNull($.sourceLastUpdated, "expected parameter 'sourceLastUpdated' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.azurenative.logic.inputs.PartnerContentArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="content", required=true)
-      private final Output<PartnerContentArgs> content;
+    private Output<PartnerContentArgs> content;
 
     public Output<PartnerContentArgs> content() {
         return this.content;
@@ -36,7 +36,7 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final Output<String> integrationAccountName;
+    private Output<String> integrationAccountName;
 
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
@@ -47,10 +47,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="partnerName")
-      private final @Nullable Output<String> partnerName;
+    private @Nullable Output<String> partnerName;
 
-    public Output<String> partnerName() {
-        return this.partnerName == null ? Codegen.empty() : this.partnerName;
+    public Optional<Output<String>> partnerName() {
+        return Optional.ofNullable(this.partnerName);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="partnerType", required=true)
-      private final Output<Either<String,PartnerType>> partnerType;
+    private Output<Either<String,PartnerType>> partnerType;
 
     public Output<Either<String,PartnerType>> partnerType() {
         return this.partnerType;
@@ -91,7 +91,7 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -102,141 +102,122 @@ public final class IntegrationAccountPartnerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationAccountPartnerArgs(
-        Output<PartnerContentArgs> content,
-        Output<String> integrationAccountName,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<String> partnerName,
-        Output<Either<String,PartnerType>> partnerType,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.location = location;
-        this.metadata = metadata;
-        this.partnerName = partnerName;
-        this.partnerType = Objects.requireNonNull(partnerType, "expected parameter 'partnerType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private IntegrationAccountPartnerArgs() {}
 
-    private IntegrationAccountPartnerArgs() {
-        this.content = Codegen.empty();
-        this.integrationAccountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.partnerName = Codegen.empty();
-        this.partnerType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationAccountPartnerArgs(IntegrationAccountPartnerArgs $) {
+        this.content = $.content;
+        this.integrationAccountName = $.integrationAccountName;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.partnerName = $.partnerName;
+        this.partnerType = $.partnerType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountPartnerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PartnerContentArgs> content;
-        private Output<String> integrationAccountName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<String> partnerName;
-        private Output<Either<String,PartnerType>> partnerType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationAccountPartnerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountPartnerArgs();
         }
 
         public Builder(IntegrationAccountPartnerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.partnerName = defaults.partnerName;
-    	      this.partnerType = defaults.partnerType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationAccountPartnerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<PartnerContentArgs> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(PartnerContentArgs content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder integrationAccountName(Output<String> integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
-            return this;
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder partnerName(@Nullable Output<String> partnerName) {
-            this.partnerName = partnerName;
+            $.partnerName = partnerName;
             return this;
         }
-        public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Codegen.ofNullable(partnerName);
-            return this;
+
+        public Builder partnerName(String partnerName) {
+            return partnerName(Output.of(partnerName));
         }
+
         public Builder partnerType(Output<Either<String,PartnerType>> partnerType) {
-            this.partnerType = Objects.requireNonNull(partnerType);
+            $.partnerType = partnerType;
             return this;
         }
+
         public Builder partnerType(Either<String,PartnerType> partnerType) {
-            this.partnerType = Output.of(Objects.requireNonNull(partnerType));
-            return this;
+            return partnerType(Output.of(partnerType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationAccountPartnerArgs build() {
-            return new IntegrationAccountPartnerArgs(content, integrationAccountName, location, metadata, partnerName, partnerType, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationAccountPartnerArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.partnerType = Objects.requireNonNull($.partnerType, "expected parameter 'partnerType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

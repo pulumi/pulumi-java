@@ -26,7 +26,7 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="credentials", required=true)
-      private final UsernamePasswordCredentialsResponse credentials;
+    private UsernamePasswordCredentialsResponse credentials;
 
     public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
@@ -37,10 +37,10 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tunnel")
-      private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
+    private @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
     public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
-        return this.tunnel == null ? Optional.empty() : Optional.ofNullable(this.tunnel);
+        return Optional.ofNullable(this.tunnel);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -60,73 +60,65 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public UnsecuredEndpointResponse(
-        UsernamePasswordCredentialsResponse credentials,
-        @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        String type,
-        String url) {
-        this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
-        this.tunnel = tunnel;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private UnsecuredEndpointResponse() {}
 
-    private UnsecuredEndpointResponse() {
-        this.credentials = null;
-        this.tunnel = null;
-        this.type = null;
-        this.url = null;
+    private UnsecuredEndpointResponse(UnsecuredEndpointResponse $) {
+        this.credentials = $.credentials;
+        this.tunnel = $.tunnel;
+        this.type = $.type;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UnsecuredEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private UsernamePasswordCredentialsResponse credentials;
-        private @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
-        private String type;
-        private String url;
+        private UnsecuredEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UnsecuredEndpointResponse();
         }
 
         public Builder(UnsecuredEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.tunnel = defaults.tunnel;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
+            $ = new UnsecuredEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
-            this.credentials = Objects.requireNonNull(credentials);
+            $.credentials = credentials;
             return this;
         }
+
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
-            this.tunnel = tunnel;
+            $.tunnel = tunnel;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public UnsecuredEndpointResponse build() {
-            return new UnsecuredEndpointResponse(credentials, tunnel, type, url);
+        }
+
+        public UnsecuredEndpointResponse build() {
+            $.credentials = Objects.requireNonNull($.credentials, "expected parameter 'credentials' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="itemId")
-      private final @Nullable String itemId;
+    private @Nullable String itemId;
 
     public Optional<String> itemId() {
-        return this.itemId == null ? Optional.empty() : Optional.ofNullable(this.itemId);
+        return Optional.ofNullable(this.itemId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="protectionIntentItemType", required=true)
-      private final String protectionIntentItemType;
+    private String protectionIntentItemType;
 
     public String protectionIntentItemType() {
         return this.protectionIntentItemType;
@@ -69,10 +69,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable String protectionState;
+    private @Nullable String protectionState;
 
     public Optional<String> protectionState() {
-        return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -91,100 +91,81 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
      * 
      */
     @Import(name="workloadItemType")
-      private final @Nullable String workloadItemType;
+    private @Nullable String workloadItemType;
 
     public Optional<String> workloadItemType() {
-        return this.workloadItemType == null ? Optional.empty() : Optional.ofNullable(this.workloadItemType);
+        return Optional.ofNullable(this.workloadItemType);
     }
 
-    public AzureWorkloadSQLAutoProtectionIntentResponse(
-        @Nullable String backupManagementType,
-        @Nullable String itemId,
-        @Nullable String policyId,
-        String protectionIntentItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadItemType) {
-        this.backupManagementType = backupManagementType;
-        this.itemId = itemId;
-        this.policyId = policyId;
-        this.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").arg(protectionIntentItemType).require();
-        this.protectionState = protectionState;
-        this.sourceResourceId = sourceResourceId;
-        this.workloadItemType = workloadItemType;
-    }
+    private AzureWorkloadSQLAutoProtectionIntentResponse() {}
 
-    private AzureWorkloadSQLAutoProtectionIntentResponse() {
-        this.backupManagementType = null;
-        this.itemId = null;
-        this.policyId = null;
-        this.protectionIntentItemType = null;
-        this.protectionState = null;
-        this.sourceResourceId = null;
-        this.workloadItemType = null;
+    private AzureWorkloadSQLAutoProtectionIntentResponse(AzureWorkloadSQLAutoProtectionIntentResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.itemId = $.itemId;
+        this.policyId = $.policyId;
+        this.protectionIntentItemType = $.protectionIntentItemType;
+        this.protectionState = $.protectionState;
+        this.sourceResourceId = $.sourceResourceId;
+        this.workloadItemType = $.workloadItemType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureWorkloadSQLAutoProtectionIntentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private @Nullable String itemId;
-        private @Nullable String policyId;
-        private String protectionIntentItemType;
-        private @Nullable String protectionState;
-        private @Nullable String sourceResourceId;
-        private @Nullable String workloadItemType;
+        private AzureWorkloadSQLAutoProtectionIntentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureWorkloadSQLAutoProtectionIntentResponse();
         }
 
         public Builder(AzureWorkloadSQLAutoProtectionIntentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.itemId = defaults.itemId;
-    	      this.policyId = defaults.policyId;
-    	      this.protectionIntentItemType = defaults.protectionIntentItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.workloadItemType = defaults.workloadItemType;
+            $ = new AzureWorkloadSQLAutoProtectionIntentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder itemId(@Nullable String itemId) {
-            this.itemId = itemId;
+            $.itemId = itemId;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder protectionIntentItemType(String protectionIntentItemType) {
-            this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
+            $.protectionIntentItemType = protectionIntentItemType;
             return this;
         }
+
         public Builder protectionState(@Nullable String protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
+
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
+
         public Builder workloadItemType(@Nullable String workloadItemType) {
-            this.workloadItemType = workloadItemType;
+            $.workloadItemType = workloadItemType;
             return this;
-        }        public AzureWorkloadSQLAutoProtectionIntentResponse build() {
-            return new AzureWorkloadSQLAutoProtectionIntentResponse(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId, workloadItemType);
+        }
+
+        public AzureWorkloadSQLAutoProtectionIntentResponse build() {
+            $.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").arg($.protectionIntentItemType).require();
+            return $;
         }
     }
+
 }

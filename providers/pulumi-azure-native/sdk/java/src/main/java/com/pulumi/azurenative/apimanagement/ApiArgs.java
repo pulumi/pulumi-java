@@ -14,11 +14,11 @@ import com.pulumi.azurenative.apimanagement.inputs.SubscriptionKeyParameterNames
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiRevision")
-      private final @Nullable Output<String> apiRevision;
+    private @Nullable Output<String> apiRevision;
 
-    public Output<String> apiRevision() {
-        return this.apiRevision == null ? Codegen.empty() : this.apiRevision;
+    public Optional<Output<String>> apiRevision() {
+        return Optional.ofNullable(this.apiRevision);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiRevisionDescription")
-      private final @Nullable Output<String> apiRevisionDescription;
+    private @Nullable Output<String> apiRevisionDescription;
 
-    public Output<String> apiRevisionDescription() {
-        return this.apiRevisionDescription == null ? Codegen.empty() : this.apiRevisionDescription;
+    public Optional<Output<String>> apiRevisionDescription() {
+        return Optional.ofNullable(this.apiRevisionDescription);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiType")
-      private final @Nullable Output<Either<String,ApiType>> apiType;
+    private @Nullable Output<Either<String,ApiType>> apiType;
 
-    public Output<Either<String,ApiType>> apiType() {
-        return this.apiType == null ? Codegen.empty() : this.apiType;
+    public Optional<Output<Either<String,ApiType>>> apiType() {
+        return Optional.ofNullable(this.apiType);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersionDescription")
-      private final @Nullable Output<String> apiVersionDescription;
+    private @Nullable Output<String> apiVersionDescription;
 
-    public Output<String> apiVersionDescription() {
-        return this.apiVersionDescription == null ? Codegen.empty() : this.apiVersionDescription;
+    public Optional<Output<String>> apiVersionDescription() {
+        return Optional.ofNullable(this.apiVersionDescription);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersionSet")
-      private final @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet;
+    private @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet;
 
-    public Output<ApiVersionSetContractDetailsArgs> apiVersionSet() {
-        return this.apiVersionSet == null ? Codegen.empty() : this.apiVersionSet;
+    public Optional<Output<ApiVersionSetContractDetailsArgs>> apiVersionSet() {
+        return Optional.ofNullable(this.apiVersionSet);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersionSetId")
-      private final @Nullable Output<String> apiVersionSetId;
+    private @Nullable Output<String> apiVersionSetId;
 
-    public Output<String> apiVersionSetId() {
-        return this.apiVersionSetId == null ? Codegen.empty() : this.apiVersionSetId;
+    public Optional<Output<String>> apiVersionSetId() {
+        return Optional.ofNullable(this.apiVersionSetId);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationSettings")
-      private final @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings;
+    private @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings;
 
-    public Output<AuthenticationSettingsContractArgs> authenticationSettings() {
-        return this.authenticationSettings == null ? Codegen.empty() : this.authenticationSettings;
+    public Optional<Output<AuthenticationSettingsContractArgs>> authenticationSettings() {
+        return Optional.ofNullable(this.authenticationSettings);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<Either<String,ContentFormat>> format;
+    private @Nullable Output<Either<String,ContentFormat>> format;
 
-    public Output<Either<String,ContentFormat>> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<Either<String,ContentFormat>>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isCurrent")
-      private final @Nullable Output<Boolean> isCurrent;
+    private @Nullable Output<Boolean> isCurrent;
 
-    public Output<Boolean> isCurrent() {
-        return this.isCurrent == null ? Codegen.empty() : this.isCurrent;
+    public Optional<Output<Boolean>> isCurrent() {
+        return Optional.ofNullable(this.isCurrent);
     }
 
     /**
@@ -174,7 +174,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -185,10 +185,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocols")
-      private final @Nullable Output<List<Protocol>> protocols;
+    private @Nullable Output<List<Protocol>> protocols;
 
-    public Output<List<Protocol>> protocols() {
-        return this.protocols == null ? Codegen.empty() : this.protocols;
+    public Optional<Output<List<Protocol>>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -196,7 +196,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -207,7 +207,7 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -218,10 +218,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceUrl")
-      private final @Nullable Output<String> serviceUrl;
+    private @Nullable Output<String> serviceUrl;
 
-    public Output<String> serviceUrl() {
-        return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
+    public Optional<Output<String>> serviceUrl() {
+        return Optional.ofNullable(this.serviceUrl);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="soapApiType")
-      private final @Nullable Output<Either<String,SoapApiType>> soapApiType;
+    private @Nullable Output<Either<String,SoapApiType>> soapApiType;
 
-    public Output<Either<String,SoapApiType>> soapApiType() {
-        return this.soapApiType == null ? Codegen.empty() : this.soapApiType;
+    public Optional<Output<Either<String,SoapApiType>>> soapApiType() {
+        return Optional.ofNullable(this.soapApiType);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceApiId")
-      private final @Nullable Output<String> sourceApiId;
+    private @Nullable Output<String> sourceApiId;
 
-    public Output<String> sourceApiId() {
-        return this.sourceApiId == null ? Codegen.empty() : this.sourceApiId;
+    public Optional<Output<String>> sourceApiId() {
+        return Optional.ofNullable(this.sourceApiId);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionKeyParameterNames")
-      private final @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
+    private @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
 
-    public Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames() {
-        return this.subscriptionKeyParameterNames == null ? Codegen.empty() : this.subscriptionKeyParameterNames;
+    public Optional<Output<SubscriptionKeyParameterNamesContractArgs>> subscriptionKeyParameterNames() {
+        return Optional.ofNullable(this.subscriptionKeyParameterNames);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionRequired")
-      private final @Nullable Output<Boolean> subscriptionRequired;
+    private @Nullable Output<Boolean> subscriptionRequired;
 
-    public Output<Boolean> subscriptionRequired() {
-        return this.subscriptionRequired == null ? Codegen.empty() : this.subscriptionRequired;
+    public Optional<Output<Boolean>> subscriptionRequired() {
+        return Optional.ofNullable(this.subscriptionRequired);
     }
 
     /**
@@ -275,10 +275,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -286,352 +286,285 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="wsdlSelector")
-      private final @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
+    private @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
 
-    public Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector() {
-        return this.wsdlSelector == null ? Codegen.empty() : this.wsdlSelector;
+    public Optional<Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs>> wsdlSelector() {
+        return Optional.ofNullable(this.wsdlSelector);
     }
 
-    public ApiArgs(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> apiRevision,
-        @Nullable Output<String> apiRevisionDescription,
-        @Nullable Output<Either<String,ApiType>> apiType,
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> apiVersionDescription,
-        @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet,
-        @Nullable Output<String> apiVersionSetId,
-        @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Either<String,ContentFormat>> format,
-        @Nullable Output<Boolean> isCurrent,
-        Output<String> path,
-        @Nullable Output<List<Protocol>> protocols,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> serviceUrl,
-        @Nullable Output<Either<String,SoapApiType>> soapApiType,
-        @Nullable Output<String> sourceApiId,
-        @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames,
-        @Nullable Output<Boolean> subscriptionRequired,
-        @Nullable Output<String> value,
-        @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector) {
-        this.apiId = apiId;
-        this.apiRevision = apiRevision;
-        this.apiRevisionDescription = apiRevisionDescription;
-        this.apiType = apiType;
-        this.apiVersion = apiVersion;
-        this.apiVersionDescription = apiVersionDescription;
-        this.apiVersionSet = apiVersionSet;
-        this.apiVersionSetId = apiVersionSetId;
-        this.authenticationSettings = authenticationSettings;
-        this.description = description;
-        this.displayName = displayName;
-        this.format = format;
-        this.isCurrent = isCurrent;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.protocols = protocols;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceUrl = serviceUrl;
-        this.soapApiType = soapApiType;
-        this.sourceApiId = sourceApiId;
-        this.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
-        this.subscriptionRequired = subscriptionRequired;
-        this.value = value;
-        this.wsdlSelector = wsdlSelector;
-    }
+    private ApiArgs() {}
 
-    private ApiArgs() {
-        this.apiId = Codegen.empty();
-        this.apiRevision = Codegen.empty();
-        this.apiRevisionDescription = Codegen.empty();
-        this.apiType = Codegen.empty();
-        this.apiVersion = Codegen.empty();
-        this.apiVersionDescription = Codegen.empty();
-        this.apiVersionSet = Codegen.empty();
-        this.apiVersionSetId = Codegen.empty();
-        this.authenticationSettings = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.format = Codegen.empty();
-        this.isCurrent = Codegen.empty();
-        this.path = Codegen.empty();
-        this.protocols = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceUrl = Codegen.empty();
-        this.soapApiType = Codegen.empty();
-        this.sourceApiId = Codegen.empty();
-        this.subscriptionKeyParameterNames = Codegen.empty();
-        this.subscriptionRequired = Codegen.empty();
-        this.value = Codegen.empty();
-        this.wsdlSelector = Codegen.empty();
+    private ApiArgs(ApiArgs $) {
+        this.apiId = $.apiId;
+        this.apiRevision = $.apiRevision;
+        this.apiRevisionDescription = $.apiRevisionDescription;
+        this.apiType = $.apiType;
+        this.apiVersion = $.apiVersion;
+        this.apiVersionDescription = $.apiVersionDescription;
+        this.apiVersionSet = $.apiVersionSet;
+        this.apiVersionSetId = $.apiVersionSetId;
+        this.authenticationSettings = $.authenticationSettings;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.format = $.format;
+        this.isCurrent = $.isCurrent;
+        this.path = $.path;
+        this.protocols = $.protocols;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.serviceUrl = $.serviceUrl;
+        this.soapApiType = $.soapApiType;
+        this.sourceApiId = $.sourceApiId;
+        this.subscriptionKeyParameterNames = $.subscriptionKeyParameterNames;
+        this.subscriptionRequired = $.subscriptionRequired;
+        this.value = $.value;
+        this.wsdlSelector = $.wsdlSelector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> apiRevision;
-        private @Nullable Output<String> apiRevisionDescription;
-        private @Nullable Output<Either<String,ApiType>> apiType;
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> apiVersionDescription;
-        private @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet;
-        private @Nullable Output<String> apiVersionSetId;
-        private @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Either<String,ContentFormat>> format;
-        private @Nullable Output<Boolean> isCurrent;
-        private Output<String> path;
-        private @Nullable Output<List<Protocol>> protocols;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> serviceUrl;
-        private @Nullable Output<Either<String,SoapApiType>> soapApiType;
-        private @Nullable Output<String> sourceApiId;
-        private @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
-        private @Nullable Output<Boolean> subscriptionRequired;
-        private @Nullable Output<String> value;
-        private @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
+        private ApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiArgs();
         }
 
         public Builder(ApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.apiRevision = defaults.apiRevision;
-    	      this.apiRevisionDescription = defaults.apiRevisionDescription;
-    	      this.apiType = defaults.apiType;
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.apiVersionDescription = defaults.apiVersionDescription;
-    	      this.apiVersionSet = defaults.apiVersionSet;
-    	      this.apiVersionSetId = defaults.apiVersionSetId;
-    	      this.authenticationSettings = defaults.authenticationSettings;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.format = defaults.format;
-    	      this.isCurrent = defaults.isCurrent;
-    	      this.path = defaults.path;
-    	      this.protocols = defaults.protocols;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceUrl = defaults.serviceUrl;
-    	      this.soapApiType = defaults.soapApiType;
-    	      this.sourceApiId = defaults.sourceApiId;
-    	      this.subscriptionKeyParameterNames = defaults.subscriptionKeyParameterNames;
-    	      this.subscriptionRequired = defaults.subscriptionRequired;
-    	      this.value = defaults.value;
-    	      this.wsdlSelector = defaults.wsdlSelector;
+            $ = new ApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder apiRevision(@Nullable Output<String> apiRevision) {
-            this.apiRevision = apiRevision;
+            $.apiRevision = apiRevision;
             return this;
         }
-        public Builder apiRevision(@Nullable String apiRevision) {
-            this.apiRevision = Codegen.ofNullable(apiRevision);
-            return this;
+
+        public Builder apiRevision(String apiRevision) {
+            return apiRevision(Output.of(apiRevision));
         }
+
         public Builder apiRevisionDescription(@Nullable Output<String> apiRevisionDescription) {
-            this.apiRevisionDescription = apiRevisionDescription;
+            $.apiRevisionDescription = apiRevisionDescription;
             return this;
         }
-        public Builder apiRevisionDescription(@Nullable String apiRevisionDescription) {
-            this.apiRevisionDescription = Codegen.ofNullable(apiRevisionDescription);
-            return this;
+
+        public Builder apiRevisionDescription(String apiRevisionDescription) {
+            return apiRevisionDescription(Output.of(apiRevisionDescription));
         }
+
         public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
-            this.apiType = apiType;
+            $.apiType = apiType;
             return this;
         }
-        public Builder apiType(@Nullable Either<String,ApiType> apiType) {
-            this.apiType = Codegen.ofNullable(apiType);
-            return this;
+
+        public Builder apiType(Either<String,ApiType> apiType) {
+            return apiType(Output.of(apiType));
         }
+
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder apiVersionDescription(@Nullable Output<String> apiVersionDescription) {
-            this.apiVersionDescription = apiVersionDescription;
+            $.apiVersionDescription = apiVersionDescription;
             return this;
         }
-        public Builder apiVersionDescription(@Nullable String apiVersionDescription) {
-            this.apiVersionDescription = Codegen.ofNullable(apiVersionDescription);
-            return this;
+
+        public Builder apiVersionDescription(String apiVersionDescription) {
+            return apiVersionDescription(Output.of(apiVersionDescription));
         }
+
         public Builder apiVersionSet(@Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet) {
-            this.apiVersionSet = apiVersionSet;
+            $.apiVersionSet = apiVersionSet;
             return this;
         }
-        public Builder apiVersionSet(@Nullable ApiVersionSetContractDetailsArgs apiVersionSet) {
-            this.apiVersionSet = Codegen.ofNullable(apiVersionSet);
-            return this;
+
+        public Builder apiVersionSet(ApiVersionSetContractDetailsArgs apiVersionSet) {
+            return apiVersionSet(Output.of(apiVersionSet));
         }
+
         public Builder apiVersionSetId(@Nullable Output<String> apiVersionSetId) {
-            this.apiVersionSetId = apiVersionSetId;
+            $.apiVersionSetId = apiVersionSetId;
             return this;
         }
-        public Builder apiVersionSetId(@Nullable String apiVersionSetId) {
-            this.apiVersionSetId = Codegen.ofNullable(apiVersionSetId);
-            return this;
+
+        public Builder apiVersionSetId(String apiVersionSetId) {
+            return apiVersionSetId(Output.of(apiVersionSetId));
         }
+
         public Builder authenticationSettings(@Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings) {
-            this.authenticationSettings = authenticationSettings;
+            $.authenticationSettings = authenticationSettings;
             return this;
         }
-        public Builder authenticationSettings(@Nullable AuthenticationSettingsContractArgs authenticationSettings) {
-            this.authenticationSettings = Codegen.ofNullable(authenticationSettings);
-            return this;
+
+        public Builder authenticationSettings(AuthenticationSettingsContractArgs authenticationSettings) {
+            return authenticationSettings(Output.of(authenticationSettings));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder format(@Nullable Output<Either<String,ContentFormat>> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable Either<String,ContentFormat> format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(Either<String,ContentFormat> format) {
+            return format(Output.of(format));
         }
+
         public Builder isCurrent(@Nullable Output<Boolean> isCurrent) {
-            this.isCurrent = isCurrent;
+            $.isCurrent = isCurrent;
             return this;
         }
-        public Builder isCurrent(@Nullable Boolean isCurrent) {
-            this.isCurrent = Codegen.ofNullable(isCurrent);
-            return this;
+
+        public Builder isCurrent(Boolean isCurrent) {
+            return isCurrent(Output.of(isCurrent));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder protocols(@Nullable Output<List<Protocol>> protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
-        public Builder protocols(@Nullable List<Protocol> protocols) {
-            this.protocols = Codegen.ofNullable(protocols);
-            return this;
+
+        public Builder protocols(List<Protocol> protocols) {
+            return protocols(Output.of(protocols));
         }
+
         public Builder protocols(Protocol... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceUrl(@Nullable Output<String> serviceUrl) {
-            this.serviceUrl = serviceUrl;
+            $.serviceUrl = serviceUrl;
             return this;
         }
-        public Builder serviceUrl(@Nullable String serviceUrl) {
-            this.serviceUrl = Codegen.ofNullable(serviceUrl);
-            return this;
+
+        public Builder serviceUrl(String serviceUrl) {
+            return serviceUrl(Output.of(serviceUrl));
         }
+
         public Builder soapApiType(@Nullable Output<Either<String,SoapApiType>> soapApiType) {
-            this.soapApiType = soapApiType;
+            $.soapApiType = soapApiType;
             return this;
         }
-        public Builder soapApiType(@Nullable Either<String,SoapApiType> soapApiType) {
-            this.soapApiType = Codegen.ofNullable(soapApiType);
-            return this;
+
+        public Builder soapApiType(Either<String,SoapApiType> soapApiType) {
+            return soapApiType(Output.of(soapApiType));
         }
+
         public Builder sourceApiId(@Nullable Output<String> sourceApiId) {
-            this.sourceApiId = sourceApiId;
+            $.sourceApiId = sourceApiId;
             return this;
         }
-        public Builder sourceApiId(@Nullable String sourceApiId) {
-            this.sourceApiId = Codegen.ofNullable(sourceApiId);
-            return this;
+
+        public Builder sourceApiId(String sourceApiId) {
+            return sourceApiId(Output.of(sourceApiId));
         }
+
         public Builder subscriptionKeyParameterNames(@Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames) {
-            this.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
+            $.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
             return this;
         }
-        public Builder subscriptionKeyParameterNames(@Nullable SubscriptionKeyParameterNamesContractArgs subscriptionKeyParameterNames) {
-            this.subscriptionKeyParameterNames = Codegen.ofNullable(subscriptionKeyParameterNames);
-            return this;
+
+        public Builder subscriptionKeyParameterNames(SubscriptionKeyParameterNamesContractArgs subscriptionKeyParameterNames) {
+            return subscriptionKeyParameterNames(Output.of(subscriptionKeyParameterNames));
         }
+
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
-            this.subscriptionRequired = subscriptionRequired;
+            $.subscriptionRequired = subscriptionRequired;
             return this;
         }
-        public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
-            this.subscriptionRequired = Codegen.ofNullable(subscriptionRequired);
-            return this;
+
+        public Builder subscriptionRequired(Boolean subscriptionRequired) {
+            return subscriptionRequired(Output.of(subscriptionRequired));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder wsdlSelector(@Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector) {
-            this.wsdlSelector = wsdlSelector;
+            $.wsdlSelector = wsdlSelector;
             return this;
         }
-        public Builder wsdlSelector(@Nullable ApiCreateOrUpdatePropertiesWsdlSelectorArgs wsdlSelector) {
-            this.wsdlSelector = Codegen.ofNullable(wsdlSelector);
-            return this;
-        }        public ApiArgs build() {
-            return new ApiArgs(apiId, apiRevision, apiRevisionDescription, apiType, apiVersion, apiVersionDescription, apiVersionSet, apiVersionSetId, authenticationSettings, description, displayName, format, isCurrent, path, protocols, resourceGroupName, serviceName, serviceUrl, soapApiType, sourceApiId, subscriptionKeyParameterNames, subscriptionRequired, value, wsdlSelector);
+
+        public Builder wsdlSelector(ApiCreateOrUpdatePropertiesWsdlSelectorArgs wsdlSelector) {
+            return wsdlSelector(Output.of(wsdlSelector));
+        }
+
+        public ApiArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

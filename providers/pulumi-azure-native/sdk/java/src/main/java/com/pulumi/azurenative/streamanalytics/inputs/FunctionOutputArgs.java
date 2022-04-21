@@ -5,9 +5,9 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FunctionOutputArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
-    public FunctionOutputArgs(@Nullable Output<String> dataType) {
-        this.dataType = dataType;
-    }
+    private FunctionOutputArgs() {}
 
-    private FunctionOutputArgs() {
-        this.dataType = Codegen.empty();
+    private FunctionOutputArgs(FunctionOutputArgs $) {
+        this.dataType = $.dataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataType;
+        private FunctionOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionOutputArgs();
         }
 
         public Builder(FunctionOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
+            $ = new FunctionOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
-        }        public FunctionOutputArgs build() {
-            return new FunctionOutputArgs(dataType);
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
+        }
+
+        public FunctionOutputArgs build() {
+            return $;
         }
     }
+
 }

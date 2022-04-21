@@ -17,7 +17,7 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
@@ -50,7 +50,7 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionName", required=true)
-      private final String subscriptionName;
+    private String subscriptionName;
 
     public String subscriptionName() {
         return this.subscriptionName;
@@ -61,82 +61,73 @@ public final class GetRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topicName", required=true)
-      private final String topicName;
+    private String topicName;
 
     public String topicName() {
         return this.topicName;
     }
 
-    public GetRuleArgs(
-        String namespaceName,
-        String resourceGroupName,
-        String ruleName,
-        String subscriptionName,
-        String topicName) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-        this.subscriptionName = Objects.requireNonNull(subscriptionName, "expected parameter 'subscriptionName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private GetRuleArgs() {}
 
-    private GetRuleArgs() {
-        this.namespaceName = null;
-        this.resourceGroupName = null;
-        this.ruleName = null;
-        this.subscriptionName = null;
-        this.topicName = null;
+    private GetRuleArgs(GetRuleArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.subscriptionName = $.subscriptionName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceName;
-        private String resourceGroupName;
-        private String ruleName;
-        private String subscriptionName;
-        private String topicName;
+        private GetRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRuleArgs();
         }
 
         public Builder(GetRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.subscriptionName = defaults.subscriptionName;
-    	      this.topicName = defaults.topicName;
+            $ = new GetRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
         }
+
         public Builder subscriptionName(String subscriptionName) {
-            this.subscriptionName = Objects.requireNonNull(subscriptionName);
+            $.subscriptionName = subscriptionName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
-        }        public GetRuleArgs build() {
-            return new GetRuleArgs(namespaceName, resourceGroupName, ruleName, subscriptionName, topicName);
+        }
+
+        public GetRuleArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            $.subscriptionName = Objects.requireNonNull($.subscriptionName, "expected parameter 'subscriptionName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

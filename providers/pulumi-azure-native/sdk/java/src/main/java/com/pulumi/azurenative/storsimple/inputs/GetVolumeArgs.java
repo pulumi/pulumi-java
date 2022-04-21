@@ -17,7 +17,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -39,7 +39,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeContainerName", required=true)
-      private final String volumeContainerName;
+    private String volumeContainerName;
 
     public String volumeContainerName() {
         return this.volumeContainerName;
@@ -61,82 +61,73 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeName", required=true)
-      private final String volumeName;
+    private String volumeName;
 
     public String volumeName() {
         return this.volumeName;
     }
 
-    public GetVolumeArgs(
-        String deviceName,
-        String managerName,
-        String resourceGroupName,
-        String volumeContainerName,
-        String volumeName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.volumeContainerName = Objects.requireNonNull(volumeContainerName, "expected parameter 'volumeContainerName' to be non-null");
-        this.volumeName = Objects.requireNonNull(volumeName, "expected parameter 'volumeName' to be non-null");
-    }
+    private GetVolumeArgs() {}
 
-    private GetVolumeArgs() {
-        this.deviceName = null;
-        this.managerName = null;
-        this.resourceGroupName = null;
-        this.volumeContainerName = null;
-        this.volumeName = null;
+    private GetVolumeArgs(GetVolumeArgs $) {
+        this.deviceName = $.deviceName;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.volumeContainerName = $.volumeContainerName;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String managerName;
-        private String resourceGroupName;
-        private String volumeContainerName;
-        private String volumeName;
+        private GetVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVolumeArgs();
         }
 
         public Builder(GetVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.volumeContainerName = defaults.volumeContainerName;
-    	      this.volumeName = defaults.volumeName;
+            $ = new GetVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder volumeContainerName(String volumeContainerName) {
-            this.volumeContainerName = Objects.requireNonNull(volumeContainerName);
+            $.volumeContainerName = volumeContainerName;
             return this;
         }
+
         public Builder volumeName(String volumeName) {
-            this.volumeName = Objects.requireNonNull(volumeName);
+            $.volumeName = volumeName;
             return this;
-        }        public GetVolumeArgs build() {
-            return new GetVolumeArgs(deviceName, managerName, resourceGroupName, volumeContainerName, volumeName);
+        }
+
+        public GetVolumeArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.volumeContainerName = Objects.requireNonNull($.volumeContainerName, "expected parameter 'volumeContainerName' to be non-null");
+            $.volumeName = Objects.requireNonNull($.volumeName, "expected parameter 'volumeName' to be non-null");
+            return $;
         }
     }
+
 }

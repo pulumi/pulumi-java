@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.CloudServiceRoleProfilePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CloudServiceRoleProfileArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
+    private @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
-    public Output<List<CloudServiceRoleProfilePropertiesArgs>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<CloudServiceRoleProfilePropertiesArgs>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public CloudServiceRoleProfileArgs(@Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
-        this.roles = roles;
-    }
+    private CloudServiceRoleProfileArgs() {}
 
-    private CloudServiceRoleProfileArgs() {
-        this.roles = Codegen.empty();
+    private CloudServiceRoleProfileArgs(CloudServiceRoleProfileArgs $) {
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceRoleProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
+        private CloudServiceRoleProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceRoleProfileArgs();
         }
 
         public Builder(CloudServiceRoleProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roles = defaults.roles;
+            $ = new CloudServiceRoleProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roles(@Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesArgs> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<CloudServiceRoleProfilePropertiesArgs> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(CloudServiceRoleProfilePropertiesArgs... roles) {
             return roles(List.of(roles));
-        }        public CloudServiceRoleProfileArgs build() {
-            return new CloudServiceRoleProfileArgs(roles);
+        }
+
+        public CloudServiceRoleProfileArgs build() {
+            return $;
         }
     }
+
 }

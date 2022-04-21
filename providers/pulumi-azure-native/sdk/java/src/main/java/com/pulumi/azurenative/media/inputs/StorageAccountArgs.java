@@ -7,9 +7,9 @@ import com.pulumi.azurenative.media.enums.StorageAccountType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -37,63 +37,59 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,StorageAccountType>> type;
+    private Output<Either<String,StorageAccountType>> type;
 
     public Output<Either<String,StorageAccountType>> type() {
         return this.type;
     }
 
-    public StorageAccountArgs(
-        @Nullable Output<String> id,
-        Output<Either<String,StorageAccountType>> type) {
-        this.id = id;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private StorageAccountArgs() {}
 
-    private StorageAccountArgs() {
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private StorageAccountArgs(StorageAccountArgs $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private Output<Either<String,StorageAccountType>> type;
+        private StorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountArgs();
         }
 
         public Builder(StorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder type(Output<Either<String,StorageAccountType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,StorageAccountType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public StorageAccountArgs build() {
-            return new StorageAccountArgs(id, type);
+            return type(Output.of(type));
+        }
+
+        public StorageAccountArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

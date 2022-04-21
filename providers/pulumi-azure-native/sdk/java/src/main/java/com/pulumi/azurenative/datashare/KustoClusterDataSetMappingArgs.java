@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +21,7 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +32,7 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dataSetId", required=true)
-      private final Output<String> dataSetId;
+    private Output<String> dataSetId;
 
     public Output<String> dataSetId() {
         return this.dataSetId;
@@ -42,10 +43,10 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dataSetMappingName")
-      private final @Nullable Output<String> dataSetMappingName;
+    private @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> dataSetMappingName() {
-        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
+    public Optional<Output<String>> dataSetMappingName() {
+        return Optional.ofNullable(this.dataSetMappingName);
     }
 
     /**
@@ -54,7 +55,7 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -65,7 +66,7 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kustoClusterResourceId", required=true)
-      private final Output<String> kustoClusterResourceId;
+    private Output<String> kustoClusterResourceId;
 
     public Output<String> kustoClusterResourceId() {
         return this.kustoClusterResourceId;
@@ -76,7 +77,7 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,128 +88,114 @@ public final class KustoClusterDataSetMappingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final Output<String> shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
-    public KustoClusterDataSetMappingArgs(
-        Output<String> accountName,
-        Output<String> dataSetId,
-        @Nullable Output<String> dataSetMappingName,
-        Output<String> kind,
-        Output<String> kustoClusterResourceId,
-        Output<String> resourceGroupName,
-        Output<String> shareSubscriptionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
-        this.dataSetMappingName = dataSetMappingName;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.kustoClusterResourceId = Objects.requireNonNull(kustoClusterResourceId, "expected parameter 'kustoClusterResourceId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-    }
+    private KustoClusterDataSetMappingArgs() {}
 
-    private KustoClusterDataSetMappingArgs() {
-        this.accountName = Codegen.empty();
-        this.dataSetId = Codegen.empty();
-        this.dataSetMappingName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.kustoClusterResourceId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
+    private KustoClusterDataSetMappingArgs(KustoClusterDataSetMappingArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetId = $.dataSetId;
+        this.dataSetMappingName = $.dataSetMappingName;
+        this.kind = $.kind;
+        this.kustoClusterResourceId = $.kustoClusterResourceId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KustoClusterDataSetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> dataSetId;
-        private @Nullable Output<String> dataSetMappingName;
-        private Output<String> kind;
-        private Output<String> kustoClusterResourceId;
-        private Output<String> resourceGroupName;
-        private Output<String> shareSubscriptionName;
+        private KustoClusterDataSetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KustoClusterDataSetMappingArgs();
         }
 
         public Builder(KustoClusterDataSetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetId = defaults.dataSetId;
-    	      this.dataSetMappingName = defaults.dataSetMappingName;
-    	      this.kind = defaults.kind;
-    	      this.kustoClusterResourceId = defaults.kustoClusterResourceId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
+            $ = new KustoClusterDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder dataSetId(Output<String> dataSetId) {
-            this.dataSetId = Objects.requireNonNull(dataSetId);
+            $.dataSetId = dataSetId;
             return this;
         }
+
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
-            return this;
+            return dataSetId(Output.of(dataSetId));
         }
+
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
-            this.dataSetMappingName = dataSetMappingName;
+            $.dataSetMappingName = dataSetMappingName;
             return this;
         }
-        public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
-            return this;
+
+        public Builder dataSetMappingName(String dataSetMappingName) {
+            return dataSetMappingName(Output.of(dataSetMappingName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder kustoClusterResourceId(Output<String> kustoClusterResourceId) {
-            this.kustoClusterResourceId = Objects.requireNonNull(kustoClusterResourceId);
+            $.kustoClusterResourceId = kustoClusterResourceId;
             return this;
         }
+
         public Builder kustoClusterResourceId(String kustoClusterResourceId) {
-            this.kustoClusterResourceId = Output.of(Objects.requireNonNull(kustoClusterResourceId));
-            return this;
+            return kustoClusterResourceId(Output.of(kustoClusterResourceId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
-            return this;
-        }        public KustoClusterDataSetMappingArgs build() {
-            return new KustoClusterDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, kind, kustoClusterResourceId, resourceGroupName, shareSubscriptionName);
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
+        }
+
+        public KustoClusterDataSetMappingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataSetId = Objects.requireNonNull($.dataSetId, "expected parameter 'dataSetId' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.kustoClusterResourceId = Objects.requireNonNull($.kustoClusterResourceId, "expected parameter 'kustoClusterResourceId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

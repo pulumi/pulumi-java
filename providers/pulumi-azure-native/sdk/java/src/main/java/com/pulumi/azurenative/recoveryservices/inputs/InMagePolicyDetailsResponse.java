@@ -25,10 +25,10 @@ public final class InMagePolicyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
-      private final @Nullable Integer appConsistentFrequencyInMinutes;
+    private @Nullable Integer appConsistentFrequencyInMinutes;
 
     public Optional<Integer> appConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
+        return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class InMagePolicyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -48,10 +48,10 @@ public final class InMagePolicyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="multiVmSyncStatus")
-      private final @Nullable String multiVmSyncStatus;
+    private @Nullable String multiVmSyncStatus;
 
     public Optional<String> multiVmSyncStatus() {
-        return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
+        return Optional.ofNullable(this.multiVmSyncStatus);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InMagePolicyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="recoveryPointHistory")
-      private final @Nullable Integer recoveryPointHistory;
+    private @Nullable Integer recoveryPointHistory;
 
     public Optional<Integer> recoveryPointHistory() {
-        return this.recoveryPointHistory == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistory);
+        return Optional.ofNullable(this.recoveryPointHistory);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class InMagePolicyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="recoveryPointThresholdInMinutes")
-      private final @Nullable Integer recoveryPointThresholdInMinutes;
+    private @Nullable Integer recoveryPointThresholdInMinutes;
 
     public Optional<Integer> recoveryPointThresholdInMinutes() {
-        return this.recoveryPointThresholdInMinutes == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointThresholdInMinutes);
+        return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
 
-    public InMagePolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable String multiVmSyncStatus,
-        @Nullable Integer recoveryPointHistory,
-        @Nullable Integer recoveryPointThresholdInMinutes) {
-        this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.multiVmSyncStatus = multiVmSyncStatus;
-        this.recoveryPointHistory = recoveryPointHistory;
-        this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
-    }
+    private InMagePolicyDetailsResponse() {}
 
-    private InMagePolicyDetailsResponse() {
-        this.appConsistentFrequencyInMinutes = null;
-        this.instanceType = null;
-        this.multiVmSyncStatus = null;
-        this.recoveryPointHistory = null;
-        this.recoveryPointThresholdInMinutes = null;
+    private InMagePolicyDetailsResponse(InMagePolicyDetailsResponse $) {
+        this.appConsistentFrequencyInMinutes = $.appConsistentFrequencyInMinutes;
+        this.instanceType = $.instanceType;
+        this.multiVmSyncStatus = $.multiVmSyncStatus;
+        this.recoveryPointHistory = $.recoveryPointHistory;
+        this.recoveryPointThresholdInMinutes = $.recoveryPointThresholdInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMagePolicyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer appConsistentFrequencyInMinutes;
-        private String instanceType;
-        private @Nullable String multiVmSyncStatus;
-        private @Nullable Integer recoveryPointHistory;
-        private @Nullable Integer recoveryPointThresholdInMinutes;
+        private InMagePolicyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMagePolicyDetailsResponse();
         }
 
         public Builder(InMagePolicyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appConsistentFrequencyInMinutes = defaults.appConsistentFrequencyInMinutes;
-    	      this.instanceType = defaults.instanceType;
-    	      this.multiVmSyncStatus = defaults.multiVmSyncStatus;
-    	      this.recoveryPointHistory = defaults.recoveryPointHistory;
-    	      this.recoveryPointThresholdInMinutes = defaults.recoveryPointThresholdInMinutes;
+            $ = new InMagePolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
+            $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
-            this.multiVmSyncStatus = multiVmSyncStatus;
+            $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
+
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
-            this.recoveryPointHistory = recoveryPointHistory;
+            $.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
+
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
-            this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
+            $.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
-        }        public InMagePolicyDetailsResponse build() {
-            return new InMagePolicyDetailsResponse(appConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
+        }
+
+        public InMagePolicyDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

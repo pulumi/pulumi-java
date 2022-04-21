@@ -5,10 +5,10 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="callingWebHook")
-      private final @Nullable Output<String> callingWebHook;
+    private @Nullable Output<String> callingWebHook;
 
-    public Output<String> callingWebHook() {
-        return this.callingWebHook == null ? Codegen.empty() : this.callingWebHook;
+    public Optional<Output<String>> callingWebHook() {
+        return Optional.ofNullable(this.callingWebHook);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableCalling")
-      private final @Nullable Output<Boolean> enableCalling;
+    private @Nullable Output<Boolean> enableCalling;
 
-    public Output<Boolean> enableCalling() {
-        return this.enableCalling == null ? Codegen.empty() : this.enableCalling;
+    public Optional<Output<Boolean>> enableCalling() {
+        return Optional.ofNullable(this.enableCalling);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableGroups")
-      private final @Nullable Output<Boolean> enableGroups;
+    private @Nullable Output<Boolean> enableGroups;
 
-    public Output<Boolean> enableGroups() {
-        return this.enableGroups == null ? Codegen.empty() : this.enableGroups;
+    public Optional<Output<Boolean>> enableGroups() {
+        return Optional.ofNullable(this.enableGroups);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableMediaCards")
-      private final @Nullable Output<Boolean> enableMediaCards;
+    private @Nullable Output<Boolean> enableMediaCards;
 
-    public Output<Boolean> enableMediaCards() {
-        return this.enableMediaCards == null ? Codegen.empty() : this.enableMediaCards;
+    public Optional<Output<Boolean>> enableMediaCards() {
+        return Optional.ofNullable(this.enableMediaCards);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableMessaging")
-      private final @Nullable Output<Boolean> enableMessaging;
+    private @Nullable Output<Boolean> enableMessaging;
 
-    public Output<Boolean> enableMessaging() {
-        return this.enableMessaging == null ? Codegen.empty() : this.enableMessaging;
+    public Optional<Output<Boolean>> enableMessaging() {
+        return Optional.ofNullable(this.enableMessaging);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableScreenSharing")
-      private final @Nullable Output<Boolean> enableScreenSharing;
+    private @Nullable Output<Boolean> enableScreenSharing;
 
-    public Output<Boolean> enableScreenSharing() {
-        return this.enableScreenSharing == null ? Codegen.empty() : this.enableScreenSharing;
+    public Optional<Output<Boolean>> enableScreenSharing() {
+        return Optional.ofNullable(this.enableScreenSharing);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableVideo")
-      private final @Nullable Output<Boolean> enableVideo;
+    private @Nullable Output<Boolean> enableVideo;
 
-    public Output<Boolean> enableVideo() {
-        return this.enableVideo == null ? Codegen.empty() : this.enableVideo;
+    public Optional<Output<Boolean>> enableVideo() {
+        return Optional.ofNullable(this.enableVideo);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="groupsMode")
-      private final @Nullable Output<String> groupsMode;
+    private @Nullable Output<String> groupsMode;
 
-    public Output<String> groupsMode() {
-        return this.groupsMode == null ? Codegen.empty() : this.groupsMode;
+    public Optional<Output<String>> groupsMode() {
+        return Optional.ofNullable(this.groupsMode);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="incomingCallRoute")
-      private final @Nullable Output<String> incomingCallRoute;
+    private @Nullable Output<String> incomingCallRoute;
 
-    public Output<String> incomingCallRoute() {
-        return this.incomingCallRoute == null ? Codegen.empty() : this.incomingCallRoute;
+    public Optional<Output<String>> incomingCallRoute() {
+        return Optional.ofNullable(this.incomingCallRoute);
     }
 
     /**
@@ -124,167 +124,139 @@ public final class SkypeChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
-    public SkypeChannelPropertiesArgs(
-        @Nullable Output<String> callingWebHook,
-        @Nullable Output<Boolean> enableCalling,
-        @Nullable Output<Boolean> enableGroups,
-        @Nullable Output<Boolean> enableMediaCards,
-        @Nullable Output<Boolean> enableMessaging,
-        @Nullable Output<Boolean> enableScreenSharing,
-        @Nullable Output<Boolean> enableVideo,
-        @Nullable Output<String> groupsMode,
-        @Nullable Output<String> incomingCallRoute,
-        Output<Boolean> isEnabled) {
-        this.callingWebHook = callingWebHook;
-        this.enableCalling = enableCalling;
-        this.enableGroups = enableGroups;
-        this.enableMediaCards = enableMediaCards;
-        this.enableMessaging = enableMessaging;
-        this.enableScreenSharing = enableScreenSharing;
-        this.enableVideo = enableVideo;
-        this.groupsMode = groupsMode;
-        this.incomingCallRoute = incomingCallRoute;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-    }
+    private SkypeChannelPropertiesArgs() {}
 
-    private SkypeChannelPropertiesArgs() {
-        this.callingWebHook = Codegen.empty();
-        this.enableCalling = Codegen.empty();
-        this.enableGroups = Codegen.empty();
-        this.enableMediaCards = Codegen.empty();
-        this.enableMessaging = Codegen.empty();
-        this.enableScreenSharing = Codegen.empty();
-        this.enableVideo = Codegen.empty();
-        this.groupsMode = Codegen.empty();
-        this.incomingCallRoute = Codegen.empty();
-        this.isEnabled = Codegen.empty();
+    private SkypeChannelPropertiesArgs(SkypeChannelPropertiesArgs $) {
+        this.callingWebHook = $.callingWebHook;
+        this.enableCalling = $.enableCalling;
+        this.enableGroups = $.enableGroups;
+        this.enableMediaCards = $.enableMediaCards;
+        this.enableMessaging = $.enableMessaging;
+        this.enableScreenSharing = $.enableScreenSharing;
+        this.enableVideo = $.enableVideo;
+        this.groupsMode = $.groupsMode;
+        this.incomingCallRoute = $.incomingCallRoute;
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkypeChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> callingWebHook;
-        private @Nullable Output<Boolean> enableCalling;
-        private @Nullable Output<Boolean> enableGroups;
-        private @Nullable Output<Boolean> enableMediaCards;
-        private @Nullable Output<Boolean> enableMessaging;
-        private @Nullable Output<Boolean> enableScreenSharing;
-        private @Nullable Output<Boolean> enableVideo;
-        private @Nullable Output<String> groupsMode;
-        private @Nullable Output<String> incomingCallRoute;
-        private Output<Boolean> isEnabled;
+        private SkypeChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkypeChannelPropertiesArgs();
         }
 
         public Builder(SkypeChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callingWebHook = defaults.callingWebHook;
-    	      this.enableCalling = defaults.enableCalling;
-    	      this.enableGroups = defaults.enableGroups;
-    	      this.enableMediaCards = defaults.enableMediaCards;
-    	      this.enableMessaging = defaults.enableMessaging;
-    	      this.enableScreenSharing = defaults.enableScreenSharing;
-    	      this.enableVideo = defaults.enableVideo;
-    	      this.groupsMode = defaults.groupsMode;
-    	      this.incomingCallRoute = defaults.incomingCallRoute;
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new SkypeChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder callingWebHook(@Nullable Output<String> callingWebHook) {
-            this.callingWebHook = callingWebHook;
+            $.callingWebHook = callingWebHook;
             return this;
         }
-        public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = Codegen.ofNullable(callingWebHook);
-            return this;
+
+        public Builder callingWebHook(String callingWebHook) {
+            return callingWebHook(Output.of(callingWebHook));
         }
+
         public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
-            this.enableCalling = enableCalling;
+            $.enableCalling = enableCalling;
             return this;
         }
-        public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = Codegen.ofNullable(enableCalling);
-            return this;
+
+        public Builder enableCalling(Boolean enableCalling) {
+            return enableCalling(Output.of(enableCalling));
         }
+
         public Builder enableGroups(@Nullable Output<Boolean> enableGroups) {
-            this.enableGroups = enableGroups;
+            $.enableGroups = enableGroups;
             return this;
         }
-        public Builder enableGroups(@Nullable Boolean enableGroups) {
-            this.enableGroups = Codegen.ofNullable(enableGroups);
-            return this;
+
+        public Builder enableGroups(Boolean enableGroups) {
+            return enableGroups(Output.of(enableGroups));
         }
+
         public Builder enableMediaCards(@Nullable Output<Boolean> enableMediaCards) {
-            this.enableMediaCards = enableMediaCards;
+            $.enableMediaCards = enableMediaCards;
             return this;
         }
-        public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
-            this.enableMediaCards = Codegen.ofNullable(enableMediaCards);
-            return this;
+
+        public Builder enableMediaCards(Boolean enableMediaCards) {
+            return enableMediaCards(Output.of(enableMediaCards));
         }
+
         public Builder enableMessaging(@Nullable Output<Boolean> enableMessaging) {
-            this.enableMessaging = enableMessaging;
+            $.enableMessaging = enableMessaging;
             return this;
         }
-        public Builder enableMessaging(@Nullable Boolean enableMessaging) {
-            this.enableMessaging = Codegen.ofNullable(enableMessaging);
-            return this;
+
+        public Builder enableMessaging(Boolean enableMessaging) {
+            return enableMessaging(Output.of(enableMessaging));
         }
+
         public Builder enableScreenSharing(@Nullable Output<Boolean> enableScreenSharing) {
-            this.enableScreenSharing = enableScreenSharing;
+            $.enableScreenSharing = enableScreenSharing;
             return this;
         }
-        public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
-            this.enableScreenSharing = Codegen.ofNullable(enableScreenSharing);
-            return this;
+
+        public Builder enableScreenSharing(Boolean enableScreenSharing) {
+            return enableScreenSharing(Output.of(enableScreenSharing));
         }
+
         public Builder enableVideo(@Nullable Output<Boolean> enableVideo) {
-            this.enableVideo = enableVideo;
+            $.enableVideo = enableVideo;
             return this;
         }
-        public Builder enableVideo(@Nullable Boolean enableVideo) {
-            this.enableVideo = Codegen.ofNullable(enableVideo);
-            return this;
+
+        public Builder enableVideo(Boolean enableVideo) {
+            return enableVideo(Output.of(enableVideo));
         }
+
         public Builder groupsMode(@Nullable Output<String> groupsMode) {
-            this.groupsMode = groupsMode;
+            $.groupsMode = groupsMode;
             return this;
         }
-        public Builder groupsMode(@Nullable String groupsMode) {
-            this.groupsMode = Codegen.ofNullable(groupsMode);
-            return this;
+
+        public Builder groupsMode(String groupsMode) {
+            return groupsMode(Output.of(groupsMode));
         }
+
         public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
-            this.incomingCallRoute = incomingCallRoute;
+            $.incomingCallRoute = incomingCallRoute;
             return this;
         }
-        public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = Codegen.ofNullable(incomingCallRoute);
-            return this;
+
+        public Builder incomingCallRoute(String incomingCallRoute) {
+            return incomingCallRoute(Output.of(incomingCallRoute));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
-        }        public SkypeChannelPropertiesArgs build() {
-            return new SkypeChannelPropertiesArgs(callingWebHook, enableCalling, enableGroups, enableMediaCards, enableMessaging, enableScreenSharing, enableVideo, groupsMode, incomingCallRoute, isEnabled);
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        public SkypeChannelPropertiesArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

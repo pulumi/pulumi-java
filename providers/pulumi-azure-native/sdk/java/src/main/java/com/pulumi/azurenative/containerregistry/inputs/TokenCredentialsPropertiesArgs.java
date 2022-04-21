@@ -7,9 +7,9 @@ import com.pulumi.azurenative.containerregistry.inputs.TokenCertificateArgs;
 import com.pulumi.azurenative.containerregistry.inputs.TokenPasswordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,76 +22,73 @@ public final class TokenCredentialsPropertiesArgs extends com.pulumi.resources.R
     public static final TokenCredentialsPropertiesArgs Empty = new TokenCredentialsPropertiesArgs();
 
     @Import(name="certificates")
-      private final @Nullable Output<List<TokenCertificateArgs>> certificates;
+    private @Nullable Output<List<TokenCertificateArgs>> certificates;
 
-    public Output<List<TokenCertificateArgs>> certificates() {
-        return this.certificates == null ? Codegen.empty() : this.certificates;
+    public Optional<Output<List<TokenCertificateArgs>>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     @Import(name="passwords")
-      private final @Nullable Output<List<TokenPasswordArgs>> passwords;
+    private @Nullable Output<List<TokenPasswordArgs>> passwords;
 
-    public Output<List<TokenPasswordArgs>> passwords() {
-        return this.passwords == null ? Codegen.empty() : this.passwords;
+    public Optional<Output<List<TokenPasswordArgs>>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
-    public TokenCredentialsPropertiesArgs(
-        @Nullable Output<List<TokenCertificateArgs>> certificates,
-        @Nullable Output<List<TokenPasswordArgs>> passwords) {
-        this.certificates = certificates;
-        this.passwords = passwords;
-    }
+    private TokenCredentialsPropertiesArgs() {}
 
-    private TokenCredentialsPropertiesArgs() {
-        this.certificates = Codegen.empty();
-        this.passwords = Codegen.empty();
+    private TokenCredentialsPropertiesArgs(TokenCredentialsPropertiesArgs $) {
+        this.certificates = $.certificates;
+        this.passwords = $.passwords;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenCredentialsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TokenCertificateArgs>> certificates;
-        private @Nullable Output<List<TokenPasswordArgs>> passwords;
+        private TokenCredentialsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenCredentialsPropertiesArgs();
         }
 
         public Builder(TokenCredentialsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.passwords = defaults.passwords;
+            $ = new TokenCredentialsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(@Nullable Output<List<TokenCertificateArgs>> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
-        public Builder certificates(@Nullable List<TokenCertificateArgs> certificates) {
-            this.certificates = Codegen.ofNullable(certificates);
-            return this;
+
+        public Builder certificates(List<TokenCertificateArgs> certificates) {
+            return certificates(Output.of(certificates));
         }
+
         public Builder certificates(TokenCertificateArgs... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder passwords(@Nullable Output<List<TokenPasswordArgs>> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
-        public Builder passwords(@Nullable List<TokenPasswordArgs> passwords) {
-            this.passwords = Codegen.ofNullable(passwords);
-            return this;
+
+        public Builder passwords(List<TokenPasswordArgs> passwords) {
+            return passwords(Output.of(passwords));
         }
+
         public Builder passwords(TokenPasswordArgs... passwords) {
             return passwords(List.of(passwords));
-        }        public TokenCredentialsPropertiesArgs build() {
-            return new TokenCredentialsPropertiesArgs(certificates, passwords);
+        }
+
+        public TokenCredentialsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

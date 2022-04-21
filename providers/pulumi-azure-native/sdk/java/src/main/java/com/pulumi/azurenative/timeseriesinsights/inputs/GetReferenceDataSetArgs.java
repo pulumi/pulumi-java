@@ -17,7 +17,7 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="referenceDataSetName", required=true)
-      private final String referenceDataSetName;
+    private String referenceDataSetName;
 
     public String referenceDataSetName() {
         return this.referenceDataSetName;
@@ -39,64 +39,59 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetReferenceDataSetArgs(
-        String environmentName,
-        String referenceDataSetName,
-        String resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.referenceDataSetName = Objects.requireNonNull(referenceDataSetName, "expected parameter 'referenceDataSetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetReferenceDataSetArgs() {}
 
-    private GetReferenceDataSetArgs() {
-        this.environmentName = null;
-        this.referenceDataSetName = null;
-        this.resourceGroupName = null;
+    private GetReferenceDataSetArgs(GetReferenceDataSetArgs $) {
+        this.environmentName = $.environmentName;
+        this.referenceDataSetName = $.referenceDataSetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReferenceDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentName;
-        private String referenceDataSetName;
-        private String resourceGroupName;
+        private GetReferenceDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReferenceDataSetArgs();
         }
 
         public Builder(GetReferenceDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.referenceDataSetName = defaults.referenceDataSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetReferenceDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder referenceDataSetName(String referenceDataSetName) {
-            this.referenceDataSetName = Objects.requireNonNull(referenceDataSetName);
+            $.referenceDataSetName = referenceDataSetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetReferenceDataSetArgs build() {
-            return new GetReferenceDataSetArgs(environmentName, referenceDataSetName, resourceGroupName);
+        }
+
+        public GetReferenceDataSetArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.referenceDataSetName = Objects.requireNonNull($.referenceDataSetName, "expected parameter 'referenceDataSetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class NumberInRangeAdvancedFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NumberInRangeAdvancedFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="operatorType", required=true)
-      private final Output<String> operatorType;
+    private Output<String> operatorType;
 
     public Output<String> operatorType() {
         return this.operatorType;
@@ -49,76 +50,73 @@ public final class NumberInRangeAdvancedFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<List<Double>>> values;
+    private @Nullable Output<List<List<Double>>> values;
 
-    public Output<List<List<Double>>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<List<Double>>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public NumberInRangeAdvancedFilterArgs(
-        @Nullable Output<String> key,
-        Output<String> operatorType,
-        @Nullable Output<List<List<Double>>> values) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
-        this.values = values;
-    }
+    private NumberInRangeAdvancedFilterArgs() {}
 
-    private NumberInRangeAdvancedFilterArgs() {
-        this.key = Codegen.empty();
-        this.operatorType = Codegen.empty();
-        this.values = Codegen.empty();
+    private NumberInRangeAdvancedFilterArgs(NumberInRangeAdvancedFilterArgs $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NumberInRangeAdvancedFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private Output<String> operatorType;
-        private @Nullable Output<List<List<Double>>> values;
+        private NumberInRangeAdvancedFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NumberInRangeAdvancedFilterArgs();
         }
 
         public Builder(NumberInRangeAdvancedFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
-    	      this.values = defaults.values;
+            $ = new NumberInRangeAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder operatorType(Output<String> operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Output.of(Objects.requireNonNull(operatorType));
-            return this;
+            return operatorType(Output.of(operatorType));
         }
+
         public Builder values(@Nullable Output<List<List<Double>>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<List<Double>> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
-        }        public NumberInRangeAdvancedFilterArgs build() {
-            return new NumberInRangeAdvancedFilterArgs(key, operatorType, values);
+
+        public Builder values(List<List<Double>> values) {
+            return values(Output.of(values));
+        }
+
+        public Builder values(List<Double>... values) {
+            return values(List.of(values));
+        }
+
+        public NumberInRangeAdvancedFilterArgs build() {
+            $.operatorType = Codegen.stringProp("operatorType").output().arg($.operatorType).require();
+            return $;
         }
     }
+
 }

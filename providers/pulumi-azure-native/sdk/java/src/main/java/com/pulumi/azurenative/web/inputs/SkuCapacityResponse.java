@@ -24,10 +24,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Integer default_;
+    private @Nullable Integer default_;
 
     public Optional<Integer> default_() {
-        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elasticMaximum")
-      private final @Nullable Integer elasticMaximum;
+    private @Nullable Integer elasticMaximum;
 
     public Optional<Integer> elasticMaximum() {
-        return this.elasticMaximum == null ? Optional.empty() : Optional.ofNullable(this.elasticMaximum);
+        return Optional.ofNullable(this.elasticMaximum);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maximum")
-      private final @Nullable Integer maximum;
+    private @Nullable Integer maximum;
 
     public Optional<Integer> maximum() {
-        return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
+        return Optional.ofNullable(this.maximum);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minimum")
-      private final @Nullable Integer minimum;
+    private @Nullable Integer minimum;
 
     public Optional<Integer> minimum() {
-        return this.minimum == null ? Optional.empty() : Optional.ofNullable(this.minimum);
+        return Optional.ofNullable(this.minimum);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scaleType")
-      private final @Nullable String scaleType;
+    private @Nullable String scaleType;
 
     public Optional<String> scaleType() {
-        return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
+        return Optional.ofNullable(this.scaleType);
     }
 
-    public SkuCapacityResponse(
-        @Nullable Integer default_,
-        @Nullable Integer elasticMaximum,
-        @Nullable Integer maximum,
-        @Nullable Integer minimum,
-        @Nullable String scaleType) {
-        this.default_ = default_;
-        this.elasticMaximum = elasticMaximum;
-        this.maximum = maximum;
-        this.minimum = minimum;
-        this.scaleType = scaleType;
-    }
+    private SkuCapacityResponse() {}
 
-    private SkuCapacityResponse() {
-        this.default_ = null;
-        this.elasticMaximum = null;
-        this.maximum = null;
-        this.minimum = null;
-        this.scaleType = null;
+    private SkuCapacityResponse(SkuCapacityResponse $) {
+        this.default_ = $.default_;
+        this.elasticMaximum = $.elasticMaximum;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.scaleType = $.scaleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuCapacityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer default_;
-        private @Nullable Integer elasticMaximum;
-        private @Nullable Integer maximum;
-        private @Nullable Integer minimum;
-        private @Nullable String scaleType;
+        private SkuCapacityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuCapacityResponse();
         }
 
         public Builder(SkuCapacityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.elasticMaximum = defaults.elasticMaximum;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.scaleType = defaults.scaleType;
+            $ = new SkuCapacityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable Integer default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
+
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
-            this.elasticMaximum = elasticMaximum;
+            $.elasticMaximum = elasticMaximum;
             return this;
         }
+
         public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = maximum;
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(@Nullable Integer minimum) {
-            this.minimum = minimum;
+            $.minimum = minimum;
             return this;
         }
+
         public Builder scaleType(@Nullable String scaleType) {
-            this.scaleType = scaleType;
+            $.scaleType = scaleType;
             return this;
-        }        public SkuCapacityResponse build() {
-            return new SkuCapacityResponse(default_, elasticMaximum, maximum, minimum, scaleType);
+        }
+
+        public SkuCapacityResponse build() {
+            return $;
         }
     }
+
 }

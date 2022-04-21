@@ -6,10 +6,10 @@ package com.pulumi.azurenative.sql.inputs;
 import com.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SyncGroupSchemaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="masterSyncMemberName")
-      private final @Nullable Output<String> masterSyncMemberName;
+    private @Nullable Output<String> masterSyncMemberName;
 
-    public Output<String> masterSyncMemberName() {
-        return this.masterSyncMemberName == null ? Codegen.empty() : this.masterSyncMemberName;
+    public Optional<Output<String>> masterSyncMemberName() {
+        return Optional.ofNullable(this.masterSyncMemberName);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class SyncGroupSchemaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tables")
-      private final @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
+    private @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
-    public Output<List<SyncGroupSchemaTableArgs>> tables() {
-        return this.tables == null ? Codegen.empty() : this.tables;
+    public Optional<Output<List<SyncGroupSchemaTableArgs>>> tables() {
+        return Optional.ofNullable(this.tables);
     }
 
-    public SyncGroupSchemaArgs(
-        @Nullable Output<String> masterSyncMemberName,
-        @Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
-        this.masterSyncMemberName = masterSyncMemberName;
-        this.tables = tables;
-    }
+    private SyncGroupSchemaArgs() {}
 
-    private SyncGroupSchemaArgs() {
-        this.masterSyncMemberName = Codegen.empty();
-        this.tables = Codegen.empty();
+    private SyncGroupSchemaArgs(SyncGroupSchemaArgs $) {
+        this.masterSyncMemberName = $.masterSyncMemberName;
+        this.tables = $.tables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> masterSyncMemberName;
-        private @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
+        private SyncGroupSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupSchemaArgs();
         }
 
         public Builder(SyncGroupSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.masterSyncMemberName = defaults.masterSyncMemberName;
-    	      this.tables = defaults.tables;
+            $ = new SyncGroupSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder masterSyncMemberName(@Nullable Output<String> masterSyncMemberName) {
-            this.masterSyncMemberName = masterSyncMemberName;
+            $.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
-        public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
-            this.masterSyncMemberName = Codegen.ofNullable(masterSyncMemberName);
-            return this;
+
+        public Builder masterSyncMemberName(String masterSyncMemberName) {
+            return masterSyncMemberName(Output.of(masterSyncMemberName));
         }
+
         public Builder tables(@Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
-            this.tables = tables;
+            $.tables = tables;
             return this;
         }
-        public Builder tables(@Nullable List<SyncGroupSchemaTableArgs> tables) {
-            this.tables = Codegen.ofNullable(tables);
-            return this;
+
+        public Builder tables(List<SyncGroupSchemaTableArgs> tables) {
+            return tables(Output.of(tables));
         }
+
         public Builder tables(SyncGroupSchemaTableArgs... tables) {
             return tables(List.of(tables));
-        }        public SyncGroupSchemaArgs build() {
-            return new SyncGroupSchemaArgs(masterSyncMemberName, tables);
+        }
+
+        public SyncGroupSchemaArgs build() {
+            return $;
         }
     }
+
 }

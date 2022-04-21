@@ -17,7 +17,7 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepName", required=true)
-      private final String stepName;
+    private String stepName;
 
     public String stepName() {
         return this.stepName;
     }
 
-    public GetStepArgs(
-        String resourceGroupName,
-        String stepName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.stepName = Objects.requireNonNull(stepName, "expected parameter 'stepName' to be non-null");
-    }
+    private GetStepArgs() {}
 
-    private GetStepArgs() {
-        this.resourceGroupName = null;
-        this.stepName = null;
+    private GetStepArgs(GetStepArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.stepName = $.stepName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String stepName;
+        private GetStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStepArgs();
         }
 
         public Builder(GetStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.stepName = defaults.stepName;
+            $ = new GetStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder stepName(String stepName) {
-            this.stepName = Objects.requireNonNull(stepName);
+            $.stepName = stepName;
             return this;
-        }        public GetStepArgs build() {
-            return new GetStepArgs(resourceGroupName, stepName);
+        }
+
+        public GetStepArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.stepName = Objects.requireNonNull($.stepName, "expected parameter 'stepName' to be non-null");
+            return $;
         }
     }
+
 }

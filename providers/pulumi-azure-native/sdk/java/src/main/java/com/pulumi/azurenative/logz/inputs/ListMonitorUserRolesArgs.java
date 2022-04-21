@@ -19,10 +19,10 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable String emailAddress;
+    private @Nullable String emailAddress;
 
     public Optional<String> emailAddress() {
-        return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -41,64 +41,58 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListMonitorUserRolesArgs(
-        @Nullable String emailAddress,
-        String monitorName,
-        String resourceGroupName) {
-        this.emailAddress = emailAddress;
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListMonitorUserRolesArgs() {}
 
-    private ListMonitorUserRolesArgs() {
-        this.emailAddress = null;
-        this.monitorName = null;
-        this.resourceGroupName = null;
+    private ListMonitorUserRolesArgs(ListMonitorUserRolesArgs $) {
+        this.emailAddress = $.emailAddress;
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListMonitorUserRolesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String emailAddress;
-        private String monitorName;
-        private String resourceGroupName;
+        private ListMonitorUserRolesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListMonitorUserRolesArgs();
         }
 
         public Builder(ListMonitorUserRolesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListMonitorUserRolesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListMonitorUserRolesArgs build() {
-            return new ListMonitorUserRolesArgs(emailAddress, monitorName, resourceGroupName);
+        }
+
+        public ListMonitorUserRolesArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

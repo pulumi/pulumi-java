@@ -17,7 +17,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
      * 
      */
     @Import(name="certificateOrderName", required=true)
-      private final String certificateOrderName;
+    private String certificateOrderName;
 
     public String certificateOrderName() {
         return this.certificateOrderName;
@@ -28,7 +28,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAppServiceCertificateOrderCertificateArgs(
-        String certificateOrderName,
-        String name,
-        String resourceGroupName) {
-        this.certificateOrderName = Objects.requireNonNull(certificateOrderName, "expected parameter 'certificateOrderName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAppServiceCertificateOrderCertificateArgs() {}
 
-    private GetAppServiceCertificateOrderCertificateArgs() {
-        this.certificateOrderName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetAppServiceCertificateOrderCertificateArgs(GetAppServiceCertificateOrderCertificateArgs $) {
+        this.certificateOrderName = $.certificateOrderName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppServiceCertificateOrderCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateOrderName;
-        private String name;
-        private String resourceGroupName;
+        private GetAppServiceCertificateOrderCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppServiceCertificateOrderCertificateArgs();
         }
 
         public Builder(GetAppServiceCertificateOrderCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateOrderName = defaults.certificateOrderName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAppServiceCertificateOrderCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateOrderName(String certificateOrderName) {
-            this.certificateOrderName = Objects.requireNonNull(certificateOrderName);
+            $.certificateOrderName = certificateOrderName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAppServiceCertificateOrderCertificateArgs build() {
-            return new GetAppServiceCertificateOrderCertificateArgs(certificateOrderName, name, resourceGroupName);
+        }
+
+        public GetAppServiceCertificateOrderCertificateArgs build() {
+            $.certificateOrderName = Objects.requireNonNull($.certificateOrderName, "expected parameter 'certificateOrderName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

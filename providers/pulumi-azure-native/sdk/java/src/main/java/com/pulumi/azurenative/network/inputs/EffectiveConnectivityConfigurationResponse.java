@@ -27,10 +27,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="appliesToGroups")
-      private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
+    private @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
-    public List<ConnectivityGroupItemResponse> appliesToGroups() {
-        return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
+    public Optional<List<ConnectivityGroupItemResponse>> appliesToGroups() {
+        return Optional.ofNullable(this.appliesToGroups);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="configurationGroups")
-      private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
+    private @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
-    public List<ConfigurationGroupResponse> configurationGroups() {
-        return this.configurationGroups == null ? List.of() : this.configurationGroups;
+    public Optional<List<ConfigurationGroupResponse>> configurationGroups() {
+        return Optional.ofNullable(this.configurationGroups);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="connectivityTopology", required=true)
-      private final String connectivityTopology;
+    private String connectivityTopology;
 
     public String connectivityTopology() {
         return this.connectivityTopology;
@@ -60,10 +60,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="deleteExistingPeering")
-      private final @Nullable String deleteExistingPeering;
+    private @Nullable String deleteExistingPeering;
 
     public Optional<String> deleteExistingPeering() {
-        return this.deleteExistingPeering == null ? Optional.empty() : Optional.ofNullable(this.deleteExistingPeering);
+        return Optional.ofNullable(this.deleteExistingPeering);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="hubs")
-      private final @Nullable List<HubResponse> hubs;
+    private @Nullable List<HubResponse> hubs;
 
-    public List<HubResponse> hubs() {
-        return this.hubs == null ? List.of() : this.hubs;
+    public Optional<List<HubResponse>> hubs() {
+        return Optional.ofNullable(this.hubs);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="isGlobal")
-      private final @Nullable String isGlobal;
+    private @Nullable String isGlobal;
 
     public Optional<String> isGlobal() {
-        return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
+        return Optional.ofNullable(this.isGlobal);
     }
 
     /**
@@ -126,136 +126,112 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public EffectiveConnectivityConfigurationResponse(
-        @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        @Nullable List<ConfigurationGroupResponse> configurationGroups,
-        String connectivityTopology,
-        @Nullable String deleteExistingPeering,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable List<HubResponse> hubs,
-        @Nullable String id,
-        @Nullable String isGlobal,
-        String provisioningState) {
-        this.appliesToGroups = appliesToGroups;
-        this.configurationGroups = configurationGroups;
-        this.connectivityTopology = Objects.requireNonNull(connectivityTopology, "expected parameter 'connectivityTopology' to be non-null");
-        this.deleteExistingPeering = deleteExistingPeering;
-        this.description = description;
-        this.displayName = displayName;
-        this.hubs = hubs;
-        this.id = id;
-        this.isGlobal = isGlobal;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private EffectiveConnectivityConfigurationResponse() {}
 
-    private EffectiveConnectivityConfigurationResponse() {
-        this.appliesToGroups = List.of();
-        this.configurationGroups = List.of();
-        this.connectivityTopology = null;
-        this.deleteExistingPeering = null;
-        this.description = null;
-        this.displayName = null;
-        this.hubs = List.of();
-        this.id = null;
-        this.isGlobal = null;
-        this.provisioningState = null;
+    private EffectiveConnectivityConfigurationResponse(EffectiveConnectivityConfigurationResponse $) {
+        this.appliesToGroups = $.appliesToGroups;
+        this.configurationGroups = $.configurationGroups;
+        this.connectivityTopology = $.connectivityTopology;
+        this.deleteExistingPeering = $.deleteExistingPeering;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.hubs = $.hubs;
+        this.id = $.id;
+        this.isGlobal = $.isGlobal;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EffectiveConnectivityConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
-        private @Nullable List<ConfigurationGroupResponse> configurationGroups;
-        private String connectivityTopology;
-        private @Nullable String deleteExistingPeering;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable List<HubResponse> hubs;
-        private @Nullable String id;
-        private @Nullable String isGlobal;
-        private String provisioningState;
+        private EffectiveConnectivityConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EffectiveConnectivityConfigurationResponse();
         }
 
         public Builder(EffectiveConnectivityConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appliesToGroups = defaults.appliesToGroups;
-    	      this.configurationGroups = defaults.configurationGroups;
-    	      this.connectivityTopology = defaults.connectivityTopology;
-    	      this.deleteExistingPeering = defaults.deleteExistingPeering;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.hubs = defaults.hubs;
-    	      this.id = defaults.id;
-    	      this.isGlobal = defaults.isGlobal;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new EffectiveConnectivityConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemResponse> appliesToGroups) {
-            this.appliesToGroups = appliesToGroups;
+            $.appliesToGroups = appliesToGroups;
             return this;
         }
+
         public Builder appliesToGroups(ConnectivityGroupItemResponse... appliesToGroups) {
             return appliesToGroups(List.of(appliesToGroups));
         }
+
         public Builder configurationGroups(@Nullable List<ConfigurationGroupResponse> configurationGroups) {
-            this.configurationGroups = configurationGroups;
+            $.configurationGroups = configurationGroups;
             return this;
         }
+
         public Builder configurationGroups(ConfigurationGroupResponse... configurationGroups) {
             return configurationGroups(List.of(configurationGroups));
         }
+
         public Builder connectivityTopology(String connectivityTopology) {
-            this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
+            $.connectivityTopology = connectivityTopology;
             return this;
         }
+
         public Builder deleteExistingPeering(@Nullable String deleteExistingPeering) {
-            this.deleteExistingPeering = deleteExistingPeering;
+            $.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder hubs(@Nullable List<HubResponse> hubs) {
-            this.hubs = hubs;
+            $.hubs = hubs;
             return this;
         }
+
         public Builder hubs(HubResponse... hubs) {
             return hubs(List.of(hubs));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder isGlobal(@Nullable String isGlobal) {
-            this.isGlobal = isGlobal;
+            $.isGlobal = isGlobal;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public EffectiveConnectivityConfigurationResponse build() {
-            return new EffectiveConnectivityConfigurationResponse(appliesToGroups, configurationGroups, connectivityTopology, deleteExistingPeering, description, displayName, hubs, id, isGlobal, provisioningState);
+        }
+
+        public EffectiveConnectivityConfigurationResponse build() {
+            $.connectivityTopology = Objects.requireNonNull($.connectivityTopology, "expected parameter 'connectivityTopology' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

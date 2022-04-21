@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +21,10 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -31,10 +32,10 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hotCachePeriod")
-      private final @Nullable Output<String> hotCachePeriod;
+    private @Nullable Output<String> hotCachePeriod;
 
-    public Output<String> hotCachePeriod() {
-        return this.hotCachePeriod == null ? Codegen.empty() : this.hotCachePeriod;
+    public Optional<Output<String>> hotCachePeriod() {
+        return Optional.ofNullable(this.hotCachePeriod);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -54,7 +55,7 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kustoPoolName", required=true)
-      private final Output<String> kustoPoolName;
+    private Output<String> kustoPoolName;
 
     public Output<String> kustoPoolName() {
         return this.kustoPoolName;
@@ -65,10 +66,10 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,7 +77,7 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,10 +88,10 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="softDeletePeriod")
-      private final @Nullable Output<String> softDeletePeriod;
+    private @Nullable Output<String> softDeletePeriod;
 
-    public Output<String> softDeletePeriod() {
-        return this.softDeletePeriod == null ? Codegen.empty() : this.softDeletePeriod;
+    public Optional<Output<String>> softDeletePeriod() {
+        return Optional.ofNullable(this.softDeletePeriod);
     }
 
     /**
@@ -98,141 +99,122 @@ public final class ReadWriteDatabaseArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ReadWriteDatabaseArgs(
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> hotCachePeriod,
-        Output<String> kind,
-        Output<String> kustoPoolName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> softDeletePeriod,
-        Output<String> workspaceName) {
-        this.databaseName = databaseName;
-        this.hotCachePeriod = hotCachePeriod;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.softDeletePeriod = softDeletePeriod;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ReadWriteDatabaseArgs() {}
 
-    private ReadWriteDatabaseArgs() {
-        this.databaseName = Codegen.empty();
-        this.hotCachePeriod = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.kustoPoolName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.softDeletePeriod = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ReadWriteDatabaseArgs(ReadWriteDatabaseArgs $) {
+        this.databaseName = $.databaseName;
+        this.hotCachePeriod = $.hotCachePeriod;
+        this.kind = $.kind;
+        this.kustoPoolName = $.kustoPoolName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.softDeletePeriod = $.softDeletePeriod;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReadWriteDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> hotCachePeriod;
-        private Output<String> kind;
-        private Output<String> kustoPoolName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> softDeletePeriod;
-        private Output<String> workspaceName;
+        private ReadWriteDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReadWriteDatabaseArgs();
         }
 
         public Builder(ReadWriteDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.hotCachePeriod = defaults.hotCachePeriod;
-    	      this.kind = defaults.kind;
-    	      this.kustoPoolName = defaults.kustoPoolName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.softDeletePeriod = defaults.softDeletePeriod;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ReadWriteDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
-            this.hotCachePeriod = hotCachePeriod;
+            $.hotCachePeriod = hotCachePeriod;
             return this;
         }
-        public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
-            this.hotCachePeriod = Codegen.ofNullable(hotCachePeriod);
-            return this;
+
+        public Builder hotCachePeriod(String hotCachePeriod) {
+            return hotCachePeriod(Output.of(hotCachePeriod));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder kustoPoolName(Output<String> kustoPoolName) {
-            this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
+            $.kustoPoolName = kustoPoolName;
             return this;
         }
+
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
-            return this;
+            return kustoPoolName(Output.of(kustoPoolName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder softDeletePeriod(@Nullable Output<String> softDeletePeriod) {
-            this.softDeletePeriod = softDeletePeriod;
+            $.softDeletePeriod = softDeletePeriod;
             return this;
         }
-        public Builder softDeletePeriod(@Nullable String softDeletePeriod) {
-            this.softDeletePeriod = Codegen.ofNullable(softDeletePeriod);
-            return this;
+
+        public Builder softDeletePeriod(String softDeletePeriod) {
+            return softDeletePeriod(Output.of(softDeletePeriod));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ReadWriteDatabaseArgs build() {
-            return new ReadWriteDatabaseArgs(databaseName, hotCachePeriod, kind, kustoPoolName, location, resourceGroupName, softDeletePeriod, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ReadWriteDatabaseArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.kustoPoolName = Objects.requireNonNull($.kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

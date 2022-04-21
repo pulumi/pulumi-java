@@ -24,10 +24,10 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="database")
-      private final @Nullable String database;
+    private @Nullable String database;
 
     public Optional<String> database() {
-        return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="server")
-      private final @Nullable String server;
+    private @Nullable String server;
 
     public Optional<String> server() {
-        return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
+        return Optional.ofNullable(this.server);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="table")
-      private final @Nullable String table;
+    private @Nullable String table;
 
     public Optional<String> table() {
-        return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -80,91 +80,75 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="user")
-      private final @Nullable String user;
+    private @Nullable String user;
 
     public Optional<String> user() {
-        return this.user == null ? Optional.empty() : Optional.ofNullable(this.user);
+        return Optional.ofNullable(this.user);
     }
 
-    public AzureSqlDatabaseOutputDataSourceResponse(
-        @Nullable String database,
-        @Nullable String password,
-        @Nullable String server,
-        @Nullable String table,
-        String type,
-        @Nullable String user) {
-        this.database = database;
-        this.password = password;
-        this.server = server;
-        this.table = table;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.user = user;
-    }
+    private AzureSqlDatabaseOutputDataSourceResponse() {}
 
-    private AzureSqlDatabaseOutputDataSourceResponse() {
-        this.database = null;
-        this.password = null;
-        this.server = null;
-        this.table = null;
-        this.type = null;
-        this.user = null;
+    private AzureSqlDatabaseOutputDataSourceResponse(AzureSqlDatabaseOutputDataSourceResponse $) {
+        this.database = $.database;
+        this.password = $.password;
+        this.server = $.server;
+        this.table = $.table;
+        this.type = $.type;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlDatabaseOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String database;
-        private @Nullable String password;
-        private @Nullable String server;
-        private @Nullable String table;
-        private String type;
-        private @Nullable String user;
+        private AzureSqlDatabaseOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlDatabaseOutputDataSourceResponse();
         }
 
         public Builder(AzureSqlDatabaseOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.password = defaults.password;
-    	      this.server = defaults.server;
-    	      this.table = defaults.table;
-    	      this.type = defaults.type;
-    	      this.user = defaults.user;
+            $ = new AzureSqlDatabaseOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder database(@Nullable String database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder server(@Nullable String server) {
-            this.server = server;
+            $.server = server;
             return this;
         }
+
         public Builder table(@Nullable String table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder user(@Nullable String user) {
-            this.user = user;
+            $.user = user;
             return this;
-        }        public AzureSqlDatabaseOutputDataSourceResponse build() {
-            return new AzureSqlDatabaseOutputDataSourceResponse(database, password, server, table, type, user);
+        }
+
+        public AzureSqlDatabaseOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

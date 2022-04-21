@@ -24,10 +24,10 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable String oldestRecoveryPoint;
+    private @Nullable String oldestRecoveryPoint;
 
     public Optional<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="policyState")
-      private final @Nullable String policyState;
+    private @Nullable String policyState;
 
     public Optional<String> policyState() {
-        return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
+        return Optional.ofNullable(this.policyState);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class AzureSqlProtectedItemExtendedInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Integer recoveryPointCount;
+    private @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
-    public AzureSqlProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String policyState,
-        @Nullable Integer recoveryPointCount) {
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.policyState = policyState;
-        this.recoveryPointCount = recoveryPointCount;
-    }
+    private AzureSqlProtectedItemExtendedInfoResponse() {}
 
-    private AzureSqlProtectedItemExtendedInfoResponse() {
-        this.oldestRecoveryPoint = null;
-        this.policyState = null;
-        this.recoveryPointCount = null;
+    private AzureSqlProtectedItemExtendedInfoResponse(AzureSqlProtectedItemExtendedInfoResponse $) {
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.policyState = $.policyState;
+        this.recoveryPointCount = $.recoveryPointCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlProtectedItemExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String oldestRecoveryPoint;
-        private @Nullable String policyState;
-        private @Nullable Integer recoveryPointCount;
+        private AzureSqlProtectedItemExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlProtectedItemExtendedInfoResponse();
         }
 
         public Builder(AzureSqlProtectedItemExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.policyState = defaults.policyState;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
+            $ = new AzureSqlProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
+
         public Builder policyState(@Nullable String policyState) {
-            this.policyState = policyState;
+            $.policyState = policyState;
             return this;
         }
+
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
-        }        public AzureSqlProtectedItemExtendedInfoResponse build() {
-            return new AzureSqlProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount);
+        }
+
+        public AzureSqlProtectedItemExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

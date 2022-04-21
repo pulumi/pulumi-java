@@ -23,45 +23,44 @@ public final class TransferConfigurationResponseTransferFilterDetails extends co
      * 
      */
     @Import(name="include")
-      private final @Nullable TransferFilterDetailsResponse include;
+    private @Nullable TransferFilterDetailsResponse include;
 
     public Optional<TransferFilterDetailsResponse> include() {
-        return this.include == null ? Optional.empty() : Optional.ofNullable(this.include);
+        return Optional.ofNullable(this.include);
     }
 
-    public TransferConfigurationResponseTransferFilterDetails(@Nullable TransferFilterDetailsResponse include) {
-        this.include = include;
-    }
+    private TransferConfigurationResponseTransferFilterDetails() {}
 
-    private TransferConfigurationResponseTransferFilterDetails() {
-        this.include = null;
+    private TransferConfigurationResponseTransferFilterDetails(TransferConfigurationResponseTransferFilterDetails $) {
+        this.include = $.include;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferConfigurationResponseTransferFilterDetails defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TransferFilterDetailsResponse include;
+        private TransferConfigurationResponseTransferFilterDetails $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferConfigurationResponseTransferFilterDetails();
         }
 
         public Builder(TransferConfigurationResponseTransferFilterDetails defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.include = defaults.include;
+            $ = new TransferConfigurationResponseTransferFilterDetails(Objects.requireNonNull(defaults));
         }
 
         public Builder include(@Nullable TransferFilterDetailsResponse include) {
-            this.include = include;
+            $.include = include;
             return this;
-        }        public TransferConfigurationResponseTransferFilterDetails build() {
-            return new TransferConfigurationResponseTransferFilterDetails(include);
+        }
+
+        public TransferConfigurationResponseTransferFilterDetails build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="networkInterfaceName", required=true)
-      private final Output<String> networkInterfaceName;
+    private Output<String> networkInterfaceName;
 
     public Output<String> networkInterfaceName() {
         return this.networkInterfaceName;
@@ -54,7 +54,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="tapConfigurationName")
-      private final @Nullable Output<String> tapConfigurationName;
+    private @Nullable Output<String> tapConfigurationName;
 
-    public Output<String> tapConfigurationName() {
-        return this.tapConfigurationName == null ? Codegen.empty() : this.tapConfigurationName;
+    public Optional<Output<String>> tapConfigurationName() {
+        return Optional.ofNullable(this.tapConfigurationName);
     }
 
     /**
@@ -76,115 +76,100 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="virtualNetworkTap")
-      private final @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
+    private @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
-    public Output<VirtualNetworkTapArgs> virtualNetworkTap() {
-        return this.virtualNetworkTap == null ? Codegen.empty() : this.virtualNetworkTap;
+    public Optional<Output<VirtualNetworkTapArgs>> virtualNetworkTap() {
+        return Optional.ofNullable(this.virtualNetworkTap);
     }
 
-    public NetworkInterfaceTapConfigurationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        Output<String> networkInterfaceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> tapConfigurationName,
-        @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
-        this.id = id;
-        this.name = name;
-        this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tapConfigurationName = tapConfigurationName;
-        this.virtualNetworkTap = virtualNetworkTap;
-    }
+    private NetworkInterfaceTapConfigurationArgs() {}
 
-    private NetworkInterfaceTapConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkInterfaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tapConfigurationName = Codegen.empty();
-        this.virtualNetworkTap = Codegen.empty();
+    private NetworkInterfaceTapConfigurationArgs(NetworkInterfaceTapConfigurationArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.networkInterfaceName = $.networkInterfaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tapConfigurationName = $.tapConfigurationName;
+        this.virtualNetworkTap = $.virtualNetworkTap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceTapConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private Output<String> networkInterfaceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> tapConfigurationName;
-        private @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
+        private NetworkInterfaceTapConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceTapConfigurationArgs();
         }
 
         public Builder(NetworkInterfaceTapConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.networkInterfaceName = defaults.networkInterfaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tapConfigurationName = defaults.tapConfigurationName;
-    	      this.virtualNetworkTap = defaults.virtualNetworkTap;
+            $ = new NetworkInterfaceTapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkInterfaceName(Output<String> networkInterfaceName) {
-            this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
+            $.networkInterfaceName = networkInterfaceName;
             return this;
         }
+
         public Builder networkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = Output.of(Objects.requireNonNull(networkInterfaceName));
-            return this;
+            return networkInterfaceName(Output.of(networkInterfaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tapConfigurationName(@Nullable Output<String> tapConfigurationName) {
-            this.tapConfigurationName = tapConfigurationName;
+            $.tapConfigurationName = tapConfigurationName;
             return this;
         }
-        public Builder tapConfigurationName(@Nullable String tapConfigurationName) {
-            this.tapConfigurationName = Codegen.ofNullable(tapConfigurationName);
-            return this;
+
+        public Builder tapConfigurationName(String tapConfigurationName) {
+            return tapConfigurationName(Output.of(tapConfigurationName));
         }
+
         public Builder virtualNetworkTap(@Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
-            this.virtualNetworkTap = virtualNetworkTap;
+            $.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
-        public Builder virtualNetworkTap(@Nullable VirtualNetworkTapArgs virtualNetworkTap) {
-            this.virtualNetworkTap = Codegen.ofNullable(virtualNetworkTap);
-            return this;
-        }        public NetworkInterfaceTapConfigurationArgs build() {
-            return new NetworkInterfaceTapConfigurationArgs(id, name, networkInterfaceName, resourceGroupName, tapConfigurationName, virtualNetworkTap);
+
+        public Builder virtualNetworkTap(VirtualNetworkTapArgs virtualNetworkTap) {
+            return virtualNetworkTap(Output.of(virtualNetworkTap));
+        }
+
+        public NetworkInterfaceTapConfigurationArgs build() {
+            $.networkInterfaceName = Objects.requireNonNull($.networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

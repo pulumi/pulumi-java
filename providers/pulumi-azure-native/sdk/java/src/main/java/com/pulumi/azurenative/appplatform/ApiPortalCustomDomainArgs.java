@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.ApiPortalCustomDomainPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="apiPortalName", required=true)
-      private final Output<String> apiPortalName;
+    private Output<String> apiPortalName;
 
     public Output<String> apiPortalName() {
         return this.apiPortalName;
@@ -32,10 +32,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
+    private @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
 
-    public Output<ApiPortalCustomDomainPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ApiPortalCustomDomainPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,91 @@ public final class ApiPortalCustomDomainArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ApiPortalCustomDomainArgs(
-        Output<String> apiPortalName,
-        @Nullable Output<String> domainName,
-        @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.apiPortalName = Objects.requireNonNull(apiPortalName, "expected parameter 'apiPortalName' to be non-null");
-        this.domainName = domainName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ApiPortalCustomDomainArgs() {}
 
-    private ApiPortalCustomDomainArgs() {
-        this.apiPortalName = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ApiPortalCustomDomainArgs(ApiPortalCustomDomainArgs $) {
+        this.apiPortalName = $.apiPortalName;
+        this.domainName = $.domainName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPortalCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiPortalName;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private ApiPortalCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPortalCustomDomainArgs();
         }
 
         public Builder(ApiPortalCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiPortalName = defaults.apiPortalName;
-    	      this.domainName = defaults.domainName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ApiPortalCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiPortalName(Output<String> apiPortalName) {
-            this.apiPortalName = Objects.requireNonNull(apiPortalName);
+            $.apiPortalName = apiPortalName;
             return this;
         }
+
         public Builder apiPortalName(String apiPortalName) {
-            this.apiPortalName = Output.of(Objects.requireNonNull(apiPortalName));
-            return this;
+            return apiPortalName(Output.of(apiPortalName));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder properties(@Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ApiPortalCustomDomainPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ApiPortalCustomDomainPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ApiPortalCustomDomainArgs build() {
-            return new ApiPortalCustomDomainArgs(apiPortalName, domainName, properties, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ApiPortalCustomDomainArgs build() {
+            $.apiPortalName = Objects.requireNonNull($.apiPortalName, "expected parameter 'apiPortalName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

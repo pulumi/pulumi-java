@@ -24,10 +24,10 @@ public final class ConnectorMappingAvailabilityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="frequency")
-      private final @Nullable String frequency;
+    private @Nullable String frequency;
 
     public Optional<String> frequency() {
-        return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ConnectorMappingAvailabilityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="interval", required=true)
-      private final Integer interval;
+    private Integer interval;
 
     public Integer interval() {
         return this.interval;
     }
 
-    public ConnectorMappingAvailabilityResponse(
-        @Nullable String frequency,
-        Integer interval) {
-        this.frequency = frequency;
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-    }
+    private ConnectorMappingAvailabilityResponse() {}
 
-    private ConnectorMappingAvailabilityResponse() {
-        this.frequency = null;
-        this.interval = null;
+    private ConnectorMappingAvailabilityResponse(ConnectorMappingAvailabilityResponse $) {
+        this.frequency = $.frequency;
+        this.interval = $.interval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingAvailabilityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String frequency;
-        private Integer interval;
+        private ConnectorMappingAvailabilityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingAvailabilityResponse();
         }
 
         public Builder(ConnectorMappingAvailabilityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
+            $ = new ConnectorMappingAvailabilityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(@Nullable String frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
-        }        public ConnectorMappingAvailabilityResponse build() {
-            return new ConnectorMappingAvailabilityResponse(frequency, interval);
+        }
+
+        public ConnectorMappingAvailabilityResponse build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            return $;
         }
     }
+
 }

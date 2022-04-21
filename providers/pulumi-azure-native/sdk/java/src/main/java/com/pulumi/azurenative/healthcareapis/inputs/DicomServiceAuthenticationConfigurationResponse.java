@@ -22,7 +22,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
      * 
      */
     @Import(name="audiences", required=true)
-      private final List<String> audiences;
+    private List<String> audiences;
 
     public List<String> audiences() {
         return this.audiences;
@@ -33,58 +33,56 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
      * 
      */
     @Import(name="authority", required=true)
-      private final String authority;
+    private String authority;
 
     public String authority() {
         return this.authority;
     }
 
-    public DicomServiceAuthenticationConfigurationResponse(
-        List<String> audiences,
-        String authority) {
-        this.audiences = Objects.requireNonNull(audiences, "expected parameter 'audiences' to be non-null");
-        this.authority = Objects.requireNonNull(authority, "expected parameter 'authority' to be non-null");
-    }
+    private DicomServiceAuthenticationConfigurationResponse() {}
 
-    private DicomServiceAuthenticationConfigurationResponse() {
-        this.audiences = List.of();
-        this.authority = null;
+    private DicomServiceAuthenticationConfigurationResponse(DicomServiceAuthenticationConfigurationResponse $) {
+        this.audiences = $.audiences;
+        this.authority = $.authority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomServiceAuthenticationConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> audiences;
-        private String authority;
+        private DicomServiceAuthenticationConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomServiceAuthenticationConfigurationResponse();
         }
 
         public Builder(DicomServiceAuthenticationConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.authority = defaults.authority;
+            $ = new DicomServiceAuthenticationConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(List<String> audiences) {
-            this.audiences = Objects.requireNonNull(audiences);
+            $.audiences = audiences;
             return this;
         }
+
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
+
         public Builder authority(String authority) {
-            this.authority = Objects.requireNonNull(authority);
+            $.authority = authority;
             return this;
-        }        public DicomServiceAuthenticationConfigurationResponse build() {
-            return new DicomServiceAuthenticationConfigurationResponse(audiences, authority);
+        }
+
+        public DicomServiceAuthenticationConfigurationResponse build() {
+            $.audiences = Objects.requireNonNull($.audiences, "expected parameter 'audiences' to be non-null");
+            $.authority = Objects.requireNonNull($.authority, "expected parameter 'authority' to be non-null");
+            return $;
         }
     }
+
 }

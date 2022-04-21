@@ -24,7 +24,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="in", required=true)
-      private final Output<RestAuthLocation> in;
+    private Output<RestAuthLocation> in;
 
     public Output<RestAuthLocation> in() {
         return this.in;
@@ -35,7 +35,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -58,89 +58,82 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ApiKeyAuthenticationArgs(
-        Output<RestAuthLocation> in,
-        Output<String> name,
-        Output<String> type,
-        Output<String> value) {
-        this.in = Objects.requireNonNull(in, "expected parameter 'in' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ApiKeyAuthenticationArgs() {}
 
-    private ApiKeyAuthenticationArgs() {
-        this.in = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApiKeyAuthenticationArgs(ApiKeyAuthenticationArgs $) {
+        this.in = $.in;
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RestAuthLocation> in;
-        private Output<String> name;
-        private Output<String> type;
-        private Output<String> value;
+        private ApiKeyAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyAuthenticationArgs();
         }
 
         public Builder(ApiKeyAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.in = defaults.in;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ApiKeyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder in(Output<RestAuthLocation> in) {
-            this.in = Objects.requireNonNull(in);
+            $.in = in;
             return this;
         }
+
         public Builder in(RestAuthLocation in) {
-            this.in = Output.of(Objects.requireNonNull(in));
-            return this;
+            return in(Output.of(in));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ApiKeyAuthenticationArgs build() {
-            return new ApiKeyAuthenticationArgs(in, name, type, value);
+            return value(Output.of(value));
+        }
+
+        public ApiKeyAuthenticationArgs build() {
+            $.in = Objects.requireNonNull($.in, "expected parameter 'in' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

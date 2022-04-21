@@ -6,10 +6,10 @@ package com.pulumi.azurenative.media;
 import com.pulumi.azurenative.media.inputs.TransformOutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputs", required=true)
-      private final Output<List<TransformOutputArgs>> outputs;
+    private Output<List<TransformOutputArgs>> outputs;
 
     public Output<List<TransformOutputArgs>> outputs() {
         return this.outputs;
@@ -55,7 +55,7 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,105 +66,95 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transformName")
-      private final @Nullable Output<String> transformName;
+    private @Nullable Output<String> transformName;
 
-    public Output<String> transformName() {
-        return this.transformName == null ? Codegen.empty() : this.transformName;
+    public Optional<Output<String>> transformName() {
+        return Optional.ofNullable(this.transformName);
     }
 
-    public TransformArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        Output<List<TransformOutputArgs>> outputs,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> transformName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.outputs = Objects.requireNonNull(outputs, "expected parameter 'outputs' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.transformName = transformName;
-    }
+    private TransformArgs() {}
 
-    private TransformArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.outputs = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.transformName = Codegen.empty();
+    private TransformArgs(TransformArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.outputs = $.outputs;
+        this.resourceGroupName = $.resourceGroupName;
+        this.transformName = $.transformName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private Output<List<TransformOutputArgs>> outputs;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> transformName;
+        private TransformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransformArgs();
         }
 
         public Builder(TransformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.outputs = defaults.outputs;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.transformName = defaults.transformName;
+            $ = new TransformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder outputs(Output<List<TransformOutputArgs>> outputs) {
-            this.outputs = Objects.requireNonNull(outputs);
+            $.outputs = outputs;
             return this;
         }
+
         public Builder outputs(List<TransformOutputArgs> outputs) {
-            this.outputs = Output.of(Objects.requireNonNull(outputs));
-            return this;
+            return outputs(Output.of(outputs));
         }
+
         public Builder outputs(TransformOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder transformName(@Nullable Output<String> transformName) {
-            this.transformName = transformName;
+            $.transformName = transformName;
             return this;
         }
-        public Builder transformName(@Nullable String transformName) {
-            this.transformName = Codegen.ofNullable(transformName);
-            return this;
-        }        public TransformArgs build() {
-            return new TransformArgs(accountName, description, outputs, resourceGroupName, transformName);
+
+        public Builder transformName(String transformName) {
+            return transformName(Output.of(transformName));
+        }
+
+        public TransformArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.outputs = Objects.requireNonNull($.outputs, "expected parameter 'outputs' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

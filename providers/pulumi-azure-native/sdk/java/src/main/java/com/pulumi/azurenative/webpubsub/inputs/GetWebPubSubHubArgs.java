@@ -17,7 +17,7 @@ public final class GetWebPubSubHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetWebPubSubHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWebPubSubHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetWebPubSubHubArgs(
-        String hubName,
-        String resourceGroupName,
-        String resourceName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetWebPubSubHubArgs() {}
 
-    private GetWebPubSubHubArgs() {
-        this.hubName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetWebPubSubHubArgs(GetWebPubSubHubArgs $) {
+        this.hubName = $.hubName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebPubSubHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetWebPubSubHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebPubSubHubArgs();
         }
 
         public Builder(GetWebPubSubHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetWebPubSubHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetWebPubSubHubArgs build() {
-            return new GetWebPubSubHubArgs(hubName, resourceGroupName, resourceName);
+        }
+
+        public GetWebPubSubHubArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

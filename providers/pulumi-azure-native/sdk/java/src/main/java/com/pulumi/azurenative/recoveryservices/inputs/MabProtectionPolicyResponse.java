@@ -33,7 +33,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final String backupManagementType;
+    private String backupManagementType;
 
     public String backupManagementType() {
         return this.backupManagementType;
@@ -44,10 +44,10 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Integer protectedItemsCount;
+    private @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+    private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? null : this.retentionPolicy;
+    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -66,73 +66,63 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="schedulePolicy")
-      private final @Nullable Object schedulePolicy;
+    private @Nullable Object schedulePolicy;
 
-    public Object schedulePolicy() {
-        return this.schedulePolicy == null ? null : this.schedulePolicy;
+    public Optional<Object> schedulePolicy() {
+        return Optional.ofNullable(this.schedulePolicy);
     }
 
-    public MabProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
-        this.protectedItemsCount = protectedItemsCount;
-        this.retentionPolicy = retentionPolicy;
-        this.schedulePolicy = schedulePolicy;
-    }
+    private MabProtectionPolicyResponse() {}
 
-    private MabProtectionPolicyResponse() {
-        this.backupManagementType = null;
-        this.protectedItemsCount = null;
-        this.retentionPolicy = null;
-        this.schedulePolicy = null;
+    private MabProtectionPolicyResponse(MabProtectionPolicyResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedulePolicy = $.schedulePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabProtectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupManagementType;
-        private @Nullable Integer protectedItemsCount;
-        private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
-        private @Nullable Object schedulePolicy;
+        private MabProtectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabProtectionPolicyResponse();
         }
 
         public Builder(MabProtectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedulePolicy = defaults.schedulePolicy;
+            $ = new MabProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = schedulePolicy;
+            $.schedulePolicy = schedulePolicy;
             return this;
-        }        public MabProtectionPolicyResponse build() {
-            return new MabProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);
+        }
+
+        public MabProtectionPolicyResponse build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

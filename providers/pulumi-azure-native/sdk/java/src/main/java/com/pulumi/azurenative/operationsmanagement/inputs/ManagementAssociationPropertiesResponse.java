@@ -21,45 +21,45 @@ public final class ManagementAssociationPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="applicationId", required=true)
-      private final String applicationId;
+    private String applicationId;
 
     public String applicationId() {
         return this.applicationId;
     }
 
-    public ManagementAssociationPropertiesResponse(String applicationId) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-    }
+    private ManagementAssociationPropertiesResponse() {}
 
-    private ManagementAssociationPropertiesResponse() {
-        this.applicationId = null;
+    private ManagementAssociationPropertiesResponse(ManagementAssociationPropertiesResponse $) {
+        this.applicationId = $.applicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementAssociationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationId;
+        private ManagementAssociationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementAssociationPropertiesResponse();
         }
 
         public Builder(ManagementAssociationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
+            $ = new ManagementAssociationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
-        }        public ManagementAssociationPropertiesResponse build() {
-            return new ManagementAssociationPropertiesResponse(applicationId);
+        }
+
+        public ManagementAssociationPropertiesResponse build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

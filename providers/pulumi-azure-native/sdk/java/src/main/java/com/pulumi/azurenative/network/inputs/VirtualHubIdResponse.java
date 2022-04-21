@@ -23,45 +23,44 @@ public final class VirtualHubIdResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public VirtualHubIdResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private VirtualHubIdResponse() {}
 
-    private VirtualHubIdResponse() {
-        this.id = null;
+    private VirtualHubIdResponse(VirtualHubIdResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private VirtualHubIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubIdResponse();
         }
 
         public Builder(VirtualHubIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new VirtualHubIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public VirtualHubIdResponse build() {
-            return new VirtualHubIdResponse(id);
+        }
+
+        public VirtualHubIdResponse build() {
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiName", required=true)
-      private final String apiName;
+    private String apiName;
 
     public String apiName() {
         return this.apiName;
@@ -30,7 +30,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public GetCustomApiArgs(
-        String apiName,
-        String resourceGroupName,
-        @Nullable String subscriptionId) {
-        this.apiName = Objects.requireNonNull(apiName, "expected parameter 'apiName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subscriptionId = subscriptionId;
-    }
+    private GetCustomApiArgs() {}
 
-    private GetCustomApiArgs() {
-        this.apiName = null;
-        this.resourceGroupName = null;
-        this.subscriptionId = null;
+    private GetCustomApiArgs(GetCustomApiArgs $) {
+        this.apiName = $.apiName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiName;
-        private String resourceGroupName;
-        private @Nullable String subscriptionId;
+        private GetCustomApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomApiArgs();
         }
 
         public Builder(GetCustomApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiName = defaults.apiName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new GetCustomApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiName(String apiName) {
-            this.apiName = Objects.requireNonNull(apiName);
+            $.apiName = apiName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public GetCustomApiArgs build() {
-            return new GetCustomApiArgs(apiName, resourceGroupName, subscriptionId);
+        }
+
+        public GetCustomApiArgs build() {
+            $.apiName = Objects.requireNonNull($.apiName, "expected parameter 'apiName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

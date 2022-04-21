@@ -17,7 +17,7 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="virtualMachineTemplateName", required=true)
-      private final String virtualMachineTemplateName;
+    private String virtualMachineTemplateName;
 
     public String virtualMachineTemplateName() {
         return this.virtualMachineTemplateName;
     }
 
-    public GetVirtualMachineTemplateArgs(
-        String resourceGroupName,
-        String virtualMachineTemplateName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachineTemplateName = Objects.requireNonNull(virtualMachineTemplateName, "expected parameter 'virtualMachineTemplateName' to be non-null");
-    }
+    private GetVirtualMachineTemplateArgs() {}
 
-    private GetVirtualMachineTemplateArgs() {
-        this.resourceGroupName = null;
-        this.virtualMachineTemplateName = null;
+    private GetVirtualMachineTemplateArgs(GetVirtualMachineTemplateArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachineTemplateName = $.virtualMachineTemplateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualMachineTemplateName;
+        private GetVirtualMachineTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineTemplateArgs();
         }
 
         public Builder(GetVirtualMachineTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachineTemplateName = defaults.virtualMachineTemplateName;
+            $ = new GetVirtualMachineTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualMachineTemplateName(String virtualMachineTemplateName) {
-            this.virtualMachineTemplateName = Objects.requireNonNull(virtualMachineTemplateName);
+            $.virtualMachineTemplateName = virtualMachineTemplateName;
             return this;
-        }        public GetVirtualMachineTemplateArgs build() {
-            return new GetVirtualMachineTemplateArgs(resourceGroupName, virtualMachineTemplateName);
+        }
+
+        public GetVirtualMachineTemplateArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachineTemplateName = Objects.requireNonNull($.virtualMachineTemplateName, "expected parameter 'virtualMachineTemplateName' to be non-null");
+            return $;
         }
     }
+
 }

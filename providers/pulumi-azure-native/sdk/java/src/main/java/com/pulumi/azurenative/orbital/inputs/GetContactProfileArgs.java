@@ -17,7 +17,7 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="contactProfileName", required=true)
-      private final String contactProfileName;
+    private String contactProfileName;
 
     public String contactProfileName() {
         return this.contactProfileName;
@@ -28,55 +28,52 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetContactProfileArgs(
-        String contactProfileName,
-        String resourceGroupName) {
-        this.contactProfileName = Objects.requireNonNull(contactProfileName, "expected parameter 'contactProfileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetContactProfileArgs() {}
 
-    private GetContactProfileArgs() {
-        this.contactProfileName = null;
-        this.resourceGroupName = null;
+    private GetContactProfileArgs(GetContactProfileArgs $) {
+        this.contactProfileName = $.contactProfileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactProfileName;
-        private String resourceGroupName;
+        private GetContactProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactProfileArgs();
         }
 
         public Builder(GetContactProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactProfileName = defaults.contactProfileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetContactProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactProfileName(String contactProfileName) {
-            this.contactProfileName = Objects.requireNonNull(contactProfileName);
+            $.contactProfileName = contactProfileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetContactProfileArgs build() {
-            return new GetContactProfileArgs(contactProfileName, resourceGroupName);
+        }
+
+        public GetContactProfileArgs build() {
+            $.contactProfileName = Objects.requireNonNull($.contactProfileName, "expected parameter 'contactProfileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

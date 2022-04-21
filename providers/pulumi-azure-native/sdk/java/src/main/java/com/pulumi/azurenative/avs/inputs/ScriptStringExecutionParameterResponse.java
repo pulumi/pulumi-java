@@ -24,7 +24,7 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -36,7 +36,7 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -47,64 +47,58 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ScriptStringExecutionParameterResponse(
-        String name,
-        String type,
-        @Nullable String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.value = value;
-    }
+    private ScriptStringExecutionParameterResponse() {}
 
-    private ScriptStringExecutionParameterResponse() {
-        this.name = null;
-        this.type = null;
-        this.value = null;
+    private ScriptStringExecutionParameterResponse(ScriptStringExecutionParameterResponse $) {
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptStringExecutionParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String type;
-        private @Nullable String value;
+        private ScriptStringExecutionParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptStringExecutionParameterResponse();
         }
 
         public Builder(ScriptStringExecutionParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ScriptStringExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ScriptStringExecutionParameterResponse build() {
-            return new ScriptStringExecutionParameterResponse(name, type, value);
+        }
+
+        public ScriptStringExecutionParameterResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

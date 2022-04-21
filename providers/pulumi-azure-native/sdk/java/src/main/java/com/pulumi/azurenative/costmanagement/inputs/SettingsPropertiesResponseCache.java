@@ -19,7 +19,7 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
      * 
      */
     @Import(name="channel", required=true)
-      private final String channel;
+    private String channel;
 
     public String channel() {
         return this.channel;
@@ -30,7 +30,7 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -41,7 +41,7 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -52,10 +52,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
      * 
      */
     @Import(name="parent")
-      private final @Nullable String parent;
+    private @Nullable String parent;
 
     public Optional<String> parent() {
-        return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -74,91 +74,78 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
      * 
      */
     @Import(name="subchannel", required=true)
-      private final String subchannel;
+    private String subchannel;
 
     public String subchannel() {
         return this.subchannel;
     }
 
-    public SettingsPropertiesResponseCache(
-        String channel,
-        String id,
-        String name,
-        @Nullable String parent,
-        @Nullable String status,
-        String subchannel) {
-        this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parent = parent;
-        this.status = status;
-        this.subchannel = Objects.requireNonNull(subchannel, "expected parameter 'subchannel' to be non-null");
-    }
+    private SettingsPropertiesResponseCache() {}
 
-    private SettingsPropertiesResponseCache() {
-        this.channel = null;
-        this.id = null;
-        this.name = null;
-        this.parent = null;
-        this.status = null;
-        this.subchannel = null;
+    private SettingsPropertiesResponseCache(SettingsPropertiesResponseCache $) {
+        this.channel = $.channel;
+        this.id = $.id;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.status = $.status;
+        this.subchannel = $.subchannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsPropertiesResponseCache defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channel;
-        private String id;
-        private String name;
-        private @Nullable String parent;
-        private @Nullable String status;
-        private String subchannel;
+        private SettingsPropertiesResponseCache $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsPropertiesResponseCache();
         }
 
         public Builder(SettingsPropertiesResponseCache defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channel = defaults.channel;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.status = defaults.status;
-    	      this.subchannel = defaults.subchannel;
+            $ = new SettingsPropertiesResponseCache(Objects.requireNonNull(defaults));
         }
 
         public Builder channel(String channel) {
-            this.channel = Objects.requireNonNull(channel);
+            $.channel = channel;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parent(@Nullable String parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder subchannel(String subchannel) {
-            this.subchannel = Objects.requireNonNull(subchannel);
+            $.subchannel = subchannel;
             return this;
-        }        public SettingsPropertiesResponseCache build() {
-            return new SettingsPropertiesResponseCache(channel, id, name, parent, status, subchannel);
+        }
+
+        public SettingsPropertiesResponseCache build() {
+            $.channel = Objects.requireNonNull($.channel, "expected parameter 'channel' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subchannel = Objects.requireNonNull($.subchannel, "expected parameter 'subchannel' to be non-null");
+            return $;
         }
     }
+
 }

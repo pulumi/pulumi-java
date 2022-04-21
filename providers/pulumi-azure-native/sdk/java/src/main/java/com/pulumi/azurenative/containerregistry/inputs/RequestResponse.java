@@ -23,10 +23,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addr")
-      private final @Nullable String addr;
+    private @Nullable String addr;
 
     public Optional<String> addr() {
-        return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
+        return Optional.ofNullable(this.addr);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable String host;
+    private @Nullable String host;
 
     public Optional<String> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="method")
-      private final @Nullable String method;
+    private @Nullable String method;
 
     public Optional<String> method() {
-        return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useragent")
-      private final @Nullable String useragent;
+    private @Nullable String useragent;
 
     public Optional<String> useragent() {
-        return this.useragent == null ? Optional.empty() : Optional.ofNullable(this.useragent);
+        return Optional.ofNullable(this.useragent);
     }
 
-    public RequestResponse(
-        @Nullable String addr,
-        @Nullable String host,
-        @Nullable String id,
-        @Nullable String method,
-        @Nullable String useragent) {
-        this.addr = addr;
-        this.host = host;
-        this.id = id;
-        this.method = method;
-        this.useragent = useragent;
-    }
+    private RequestResponse() {}
 
-    private RequestResponse() {
-        this.addr = null;
-        this.host = null;
-        this.id = null;
-        this.method = null;
-        this.useragent = null;
+    private RequestResponse(RequestResponse $) {
+        this.addr = $.addr;
+        this.host = $.host;
+        this.id = $.id;
+        this.method = $.method;
+        this.useragent = $.useragent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addr;
-        private @Nullable String host;
-        private @Nullable String id;
-        private @Nullable String method;
-        private @Nullable String useragent;
+        private RequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestResponse();
         }
 
         public Builder(RequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addr = defaults.addr;
-    	      this.host = defaults.host;
-    	      this.id = defaults.id;
-    	      this.method = defaults.method;
-    	      this.useragent = defaults.useragent;
+            $ = new RequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addr(@Nullable String addr) {
-            this.addr = addr;
+            $.addr = addr;
             return this;
         }
+
         public Builder host(@Nullable String host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder method(@Nullable String method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
+
         public Builder useragent(@Nullable String useragent) {
-            this.useragent = useragent;
+            $.useragent = useragent;
             return this;
-        }        public RequestResponse build() {
-            return new RequestResponse(addr, host, id, method, useragent);
+        }
+
+        public RequestResponse build() {
+            return $;
         }
     }
+
 }

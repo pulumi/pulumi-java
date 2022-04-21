@@ -24,10 +24,10 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="errorDetail")
-      private final @Nullable ErrorDetailResponse errorDetail;
+    private @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> errorDetail() {
-        return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
+        return Optional.ofNullable(this.errorDetail);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nodeName")
-      private final @Nullable String nodeName;
+    private @Nullable String nodeName;
 
     public Optional<String> nodeName() {
-        return this.nodeName == null ? Optional.empty() : Optional.ofNullable(this.nodeName);
+        return Optional.ofNullable(this.nodeName);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public DistributedNodesInfoResponse(
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable String nodeName,
-        @Nullable String status) {
-        this.errorDetail = errorDetail;
-        this.nodeName = nodeName;
-        this.status = status;
-    }
+    private DistributedNodesInfoResponse() {}
 
-    private DistributedNodesInfoResponse() {
-        this.errorDetail = null;
-        this.nodeName = null;
-        this.status = null;
+    private DistributedNodesInfoResponse(DistributedNodesInfoResponse $) {
+        this.errorDetail = $.errorDetail;
+        this.nodeName = $.nodeName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributedNodesInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ErrorDetailResponse errorDetail;
-        private @Nullable String nodeName;
-        private @Nullable String status;
+        private DistributedNodesInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributedNodesInfoResponse();
         }
 
         public Builder(DistributedNodesInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorDetail = defaults.errorDetail;
-    	      this.nodeName = defaults.nodeName;
-    	      this.status = defaults.status;
+            $ = new DistributedNodesInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
-            this.errorDetail = errorDetail;
+            $.errorDetail = errorDetail;
             return this;
         }
+
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = nodeName;
+            $.nodeName = nodeName;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public DistributedNodesInfoResponse build() {
-            return new DistributedNodesInfoResponse(errorDetail, nodeName, status);
+        }
+
+        public DistributedNodesInfoResponse build() {
+            return $;
         }
     }
+
 }

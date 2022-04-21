@@ -5,9 +5,9 @@ package com.pulumi.azurenative.avs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudLinkName")
-      private final @Nullable Output<String> cloudLinkName;
+    private @Nullable Output<String> cloudLinkName;
 
-    public Output<String> cloudLinkName() {
-        return this.cloudLinkName == null ? Codegen.empty() : this.cloudLinkName;
+    public Optional<Output<String>> cloudLinkName() {
+        return Optional.ofNullable(this.cloudLinkName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedCloud")
-      private final @Nullable Output<String> linkedCloud;
+    private @Nullable Output<String> linkedCloud;
 
-    public Output<String> linkedCloud() {
-        return this.linkedCloud == null ? Codegen.empty() : this.linkedCloud;
+    public Optional<Output<String>> linkedCloud() {
+        return Optional.ofNullable(this.linkedCloud);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -53,89 +53,80 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public CloudLinkArgs(
-        @Nullable Output<String> cloudLinkName,
-        @Nullable Output<String> linkedCloud,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName) {
-        this.cloudLinkName = cloudLinkName;
-        this.linkedCloud = linkedCloud;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private CloudLinkArgs() {}
 
-    private CloudLinkArgs() {
-        this.cloudLinkName = Codegen.empty();
-        this.linkedCloud = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private CloudLinkArgs(CloudLinkArgs $) {
+        this.cloudLinkName = $.cloudLinkName;
+        this.linkedCloud = $.linkedCloud;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudLinkName;
-        private @Nullable Output<String> linkedCloud;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
+        private CloudLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudLinkArgs();
         }
 
         public Builder(CloudLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudLinkName = defaults.cloudLinkName;
-    	      this.linkedCloud = defaults.linkedCloud;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new CloudLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudLinkName(@Nullable Output<String> cloudLinkName) {
-            this.cloudLinkName = cloudLinkName;
+            $.cloudLinkName = cloudLinkName;
             return this;
         }
-        public Builder cloudLinkName(@Nullable String cloudLinkName) {
-            this.cloudLinkName = Codegen.ofNullable(cloudLinkName);
-            return this;
+
+        public Builder cloudLinkName(String cloudLinkName) {
+            return cloudLinkName(Output.of(cloudLinkName));
         }
+
         public Builder linkedCloud(@Nullable Output<String> linkedCloud) {
-            this.linkedCloud = linkedCloud;
+            $.linkedCloud = linkedCloud;
             return this;
         }
-        public Builder linkedCloud(@Nullable String linkedCloud) {
-            this.linkedCloud = Codegen.ofNullable(linkedCloud);
-            return this;
+
+        public Builder linkedCloud(String linkedCloud) {
+            return linkedCloud(Output.of(linkedCloud));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public CloudLinkArgs build() {
-            return new CloudLinkArgs(cloudLinkName, linkedCloud, privateCloudName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public CloudLinkArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

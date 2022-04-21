@@ -5,10 +5,10 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxInstanceCount")
-      private final @Nullable Output<Integer> maxInstanceCount;
+    private @Nullable Output<Integer> maxInstanceCount;
 
-    public Output<Integer> maxInstanceCount() {
-        return this.maxInstanceCount == null ? Codegen.empty() : this.maxInstanceCount;
+    public Optional<Output<Integer>> maxInstanceCount() {
+        return Optional.ofNullable(this.maxInstanceCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="minInstanceCount")
-      private final @Nullable Output<Integer> minInstanceCount;
+    private @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> minInstanceCount() {
-        return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
+    public Optional<Output<Integer>> minInstanceCount() {
+        return Optional.ofNullable(this.minInstanceCount);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class AutoscaleTimeAndCapacityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
-    public AutoscaleTimeAndCapacityArgs(
-        @Nullable Output<Integer> maxInstanceCount,
-        @Nullable Output<Integer> minInstanceCount,
-        @Nullable Output<String> time) {
-        this.maxInstanceCount = maxInstanceCount;
-        this.minInstanceCount = minInstanceCount;
-        this.time = time;
-    }
+    private AutoscaleTimeAndCapacityArgs() {}
 
-    private AutoscaleTimeAndCapacityArgs() {
-        this.maxInstanceCount = Codegen.empty();
-        this.minInstanceCount = Codegen.empty();
-        this.time = Codegen.empty();
+    private AutoscaleTimeAndCapacityArgs(AutoscaleTimeAndCapacityArgs $) {
+        this.maxInstanceCount = $.maxInstanceCount;
+        this.minInstanceCount = $.minInstanceCount;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleTimeAndCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxInstanceCount;
-        private @Nullable Output<Integer> minInstanceCount;
-        private @Nullable Output<String> time;
+        private AutoscaleTimeAndCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleTimeAndCapacityArgs();
         }
 
         public Builder(AutoscaleTimeAndCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstanceCount = defaults.maxInstanceCount;
-    	      this.minInstanceCount = defaults.minInstanceCount;
-    	      this.time = defaults.time;
+            $ = new AutoscaleTimeAndCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstanceCount(@Nullable Output<Integer> maxInstanceCount) {
-            this.maxInstanceCount = maxInstanceCount;
+            $.maxInstanceCount = maxInstanceCount;
             return this;
         }
-        public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = Codegen.ofNullable(maxInstanceCount);
-            return this;
+
+        public Builder maxInstanceCount(Integer maxInstanceCount) {
+            return maxInstanceCount(Output.of(maxInstanceCount));
         }
+
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
-            this.minInstanceCount = minInstanceCount;
+            $.minInstanceCount = minInstanceCount;
             return this;
         }
-        public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Codegen.ofNullable(minInstanceCount);
-            return this;
+
+        public Builder minInstanceCount(Integer minInstanceCount) {
+            return minInstanceCount(Output.of(minInstanceCount));
         }
+
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
-        }        public AutoscaleTimeAndCapacityArgs build() {
-            return new AutoscaleTimeAndCapacityArgs(maxInstanceCount, minInstanceCount, time);
+
+        public Builder time(String time) {
+            return time(Output.of(time));
+        }
+
+        public AutoscaleTimeAndCapacityArgs build() {
+            return $;
         }
     }
+
 }

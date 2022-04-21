@@ -6,9 +6,9 @@ package com.pulumi.azurenative.logz;
 import com.pulumi.azurenative.logz.inputs.MonitoringTagRulesPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="monitorName", required=true)
-      private final Output<String> monitorName;
+    private Output<String> monitorName;
 
     public Output<String> monitorName() {
         return this.monitorName;
@@ -32,10 +32,10 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
+    private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
-    public Output<MonitoringTagRulesPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<MonitoringTagRulesPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,17 +43,17 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName")
-      private final @Nullable Output<String> ruleSetName;
+    private @Nullable Output<String> ruleSetName;
 
-    public Output<String> ruleSetName() {
-        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
+    public Optional<Output<String>> ruleSetName() {
+        return Optional.ofNullable(this.ruleSetName);
     }
 
     /**
@@ -61,102 +61,91 @@ public final class SubAccountTagRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subAccountName", required=true)
-      private final Output<String> subAccountName;
+    private Output<String> subAccountName;
 
     public Output<String> subAccountName() {
         return this.subAccountName;
     }
 
-    public SubAccountTagRuleArgs(
-        Output<String> monitorName,
-        @Nullable Output<MonitoringTagRulesPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleSetName,
-        Output<String> subAccountName) {
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = ruleSetName;
-        this.subAccountName = Objects.requireNonNull(subAccountName, "expected parameter 'subAccountName' to be non-null");
-    }
+    private SubAccountTagRuleArgs() {}
 
-    private SubAccountTagRuleArgs() {
-        this.monitorName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleSetName = Codegen.empty();
-        this.subAccountName = Codegen.empty();
+    private SubAccountTagRuleArgs(SubAccountTagRuleArgs $) {
+        this.monitorName = $.monitorName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
+        this.subAccountName = $.subAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubAccountTagRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> monitorName;
-        private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleSetName;
-        private Output<String> subAccountName;
+        private SubAccountTagRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubAccountTagRuleArgs();
         }
 
         public Builder(SubAccountTagRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitorName = defaults.monitorName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
-    	      this.subAccountName = defaults.subAccountName;
+            $ = new SubAccountTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitorName(Output<String> monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder monitorName(String monitorName) {
-            this.monitorName = Output.of(Objects.requireNonNull(monitorName));
-            return this;
+            return monitorName(Output.of(monitorName));
         }
+
         public Builder properties(@Nullable Output<MonitoringTagRulesPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(MonitoringTagRulesPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
-            this.ruleSetName = ruleSetName;
+            $.ruleSetName = ruleSetName;
             return this;
         }
-        public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Codegen.ofNullable(ruleSetName);
-            return this;
+
+        public Builder ruleSetName(String ruleSetName) {
+            return ruleSetName(Output.of(ruleSetName));
         }
+
         public Builder subAccountName(Output<String> subAccountName) {
-            this.subAccountName = Objects.requireNonNull(subAccountName);
+            $.subAccountName = subAccountName;
             return this;
         }
+
         public Builder subAccountName(String subAccountName) {
-            this.subAccountName = Output.of(Objects.requireNonNull(subAccountName));
-            return this;
-        }        public SubAccountTagRuleArgs build() {
-            return new SubAccountTagRuleArgs(monitorName, properties, resourceGroupName, ruleSetName, subAccountName);
+            return subAccountName(Output.of(subAccountName));
+        }
+
+        public SubAccountTagRuleArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subAccountName = Objects.requireNonNull($.subAccountName, "expected parameter 'subAccountName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends com.pulumi.resou
      * 
      */
     @Import(name="ranges", required=true)
-      private final Output<String> ranges;
+    private Output<String> ranges;
 
     public Output<String> ranges() {
         return this.ranges;
@@ -35,63 +35,60 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public VideoSequenceAbsoluteTimeMarkersArgs(
-        Output<String> ranges,
-        Output<String> type) {
-        this.ranges = Objects.requireNonNull(ranges, "expected parameter 'ranges' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private VideoSequenceAbsoluteTimeMarkersArgs() {}
 
-    private VideoSequenceAbsoluteTimeMarkersArgs() {
-        this.ranges = Codegen.empty();
-        this.type = Codegen.empty();
+    private VideoSequenceAbsoluteTimeMarkersArgs(VideoSequenceAbsoluteTimeMarkersArgs $) {
+        this.ranges = $.ranges;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoSequenceAbsoluteTimeMarkersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ranges;
-        private Output<String> type;
+        private VideoSequenceAbsoluteTimeMarkersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoSequenceAbsoluteTimeMarkersArgs();
         }
 
         public Builder(VideoSequenceAbsoluteTimeMarkersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ranges = defaults.ranges;
-    	      this.type = defaults.type;
+            $ = new VideoSequenceAbsoluteTimeMarkersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ranges(Output<String> ranges) {
-            this.ranges = Objects.requireNonNull(ranges);
+            $.ranges = ranges;
             return this;
         }
+
         public Builder ranges(String ranges) {
-            this.ranges = Output.of(Objects.requireNonNull(ranges));
-            return this;
+            return ranges(Output.of(ranges));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public VideoSequenceAbsoluteTimeMarkersArgs build() {
-            return new VideoSequenceAbsoluteTimeMarkersArgs(ranges, type);
+            return type(Output.of(type));
+        }
+
+        public VideoSequenceAbsoluteTimeMarkersArgs build() {
+            $.ranges = Objects.requireNonNull($.ranges, "expected parameter 'ranges' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

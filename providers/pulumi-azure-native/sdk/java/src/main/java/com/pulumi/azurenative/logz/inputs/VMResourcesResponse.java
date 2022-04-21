@@ -23,10 +23,10 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public VMResourcesResponse(
-        @Nullable String agentVersion,
-        @Nullable String id) {
-        this.agentVersion = agentVersion;
-        this.id = id;
-    }
+    private VMResourcesResponse() {}
 
-    private VMResourcesResponse() {
-        this.agentVersion = null;
-        this.id = null;
+    private VMResourcesResponse(VMResourcesResponse $) {
+        this.agentVersion = $.agentVersion;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMResourcesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentVersion;
-        private @Nullable String id;
+        private VMResourcesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMResourcesResponse();
         }
 
         public Builder(VMResourcesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.id = defaults.id;
+            $ = new VMResourcesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public VMResourcesResponse build() {
-            return new VMResourcesResponse(agentVersion, id);
+        }
+
+        public VMResourcesResponse build() {
+            return $;
         }
     }
+
 }

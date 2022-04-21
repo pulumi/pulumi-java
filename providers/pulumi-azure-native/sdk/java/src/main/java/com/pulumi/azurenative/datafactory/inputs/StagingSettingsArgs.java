@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableCompression")
-      private final @Nullable Output<Object> enableCompression;
+    private @Nullable Output<Object> enableCompression;
 
-    public Output<Object> enableCompression() {
-        return this.enableCompression == null ? Codegen.empty() : this.enableCompression;
+    public Optional<Output<Object>> enableCompression() {
+        return Optional.ofNullable(this.enableCompression);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
@@ -47,76 +47,69 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<Object> path;
+    private @Nullable Output<Object> path;
 
-    public Output<Object> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<Object>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public StagingSettingsArgs(
-        @Nullable Output<Object> enableCompression,
-        Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Object> path) {
-        this.enableCompression = enableCompression;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.path = path;
-    }
+    private StagingSettingsArgs() {}
 
-    private StagingSettingsArgs() {
-        this.enableCompression = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.path = Codegen.empty();
+    private StagingSettingsArgs(StagingSettingsArgs $) {
+        this.enableCompression = $.enableCompression;
+        this.linkedServiceName = $.linkedServiceName;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StagingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> enableCompression;
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Object> path;
+        private StagingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StagingSettingsArgs();
         }
 
         public Builder(StagingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableCompression = defaults.enableCompression;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.path = defaults.path;
+            $ = new StagingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableCompression(@Nullable Output<Object> enableCompression) {
-            this.enableCompression = enableCompression;
+            $.enableCompression = enableCompression;
             return this;
         }
-        public Builder enableCompression(@Nullable Object enableCompression) {
-            this.enableCompression = Codegen.ofNullable(enableCompression);
-            return this;
+
+        public Builder enableCompression(Object enableCompression) {
+            return enableCompression(Output.of(enableCompression));
         }
+
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder path(@Nullable Output<Object> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable Object path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public StagingSettingsArgs build() {
-            return new StagingSettingsArgs(enableCompression, linkedServiceName, path);
+
+        public Builder path(Object path) {
+            return path(Output.of(path));
+        }
+
+        public StagingSettingsArgs build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

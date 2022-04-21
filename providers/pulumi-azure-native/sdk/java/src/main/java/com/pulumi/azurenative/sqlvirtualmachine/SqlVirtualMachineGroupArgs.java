@@ -8,10 +8,10 @@ import com.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainProfileArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -46,10 +46,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sqlImageOffer")
-      private final @Nullable Output<String> sqlImageOffer;
+    private @Nullable Output<String> sqlImageOffer;
 
-    public Output<String> sqlImageOffer() {
-        return this.sqlImageOffer == null ? Codegen.empty() : this.sqlImageOffer;
+    public Optional<Output<String>> sqlImageOffer() {
+        return Optional.ofNullable(this.sqlImageOffer);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sqlImageSku")
-      private final @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
+    private @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
-    public Output<Either<String,SqlVmGroupImageSku>> sqlImageSku() {
-        return this.sqlImageSku == null ? Codegen.empty() : this.sqlImageSku;
+    public Optional<Output<Either<String,SqlVmGroupImageSku>>> sqlImageSku() {
+        return Optional.ofNullable(this.sqlImageSku);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sqlVirtualMachineGroupName")
-      private final @Nullable Output<String> sqlVirtualMachineGroupName;
+    private @Nullable Output<String> sqlVirtualMachineGroupName;
 
-    public Output<String> sqlVirtualMachineGroupName() {
-        return this.sqlVirtualMachineGroupName == null ? Codegen.empty() : this.sqlVirtualMachineGroupName;
+    public Optional<Output<String>> sqlVirtualMachineGroupName() {
+        return Optional.ofNullable(this.sqlVirtualMachineGroupName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -90,128 +90,109 @@ public final class SqlVirtualMachineGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="wsfcDomainProfile")
-      private final @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
+    private @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
 
-    public Output<WsfcDomainProfileArgs> wsfcDomainProfile() {
-        return this.wsfcDomainProfile == null ? Codegen.empty() : this.wsfcDomainProfile;
+    public Optional<Output<WsfcDomainProfileArgs>> wsfcDomainProfile() {
+        return Optional.ofNullable(this.wsfcDomainProfile);
     }
 
-    public SqlVirtualMachineGroupArgs(
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sqlImageOffer,
-        @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku,
-        @Nullable Output<String> sqlVirtualMachineGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile) {
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlImageOffer = sqlImageOffer;
-        this.sqlImageSku = sqlImageSku;
-        this.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
-        this.tags = tags;
-        this.wsfcDomainProfile = wsfcDomainProfile;
-    }
+    private SqlVirtualMachineGroupArgs() {}
 
-    private SqlVirtualMachineGroupArgs() {
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlImageOffer = Codegen.empty();
-        this.sqlImageSku = Codegen.empty();
-        this.sqlVirtualMachineGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.wsfcDomainProfile = Codegen.empty();
+    private SqlVirtualMachineGroupArgs(SqlVirtualMachineGroupArgs $) {
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlImageOffer = $.sqlImageOffer;
+        this.sqlImageSku = $.sqlImageSku;
+        this.sqlVirtualMachineGroupName = $.sqlVirtualMachineGroupName;
+        this.tags = $.tags;
+        this.wsfcDomainProfile = $.wsfcDomainProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlVirtualMachineGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sqlImageOffer;
-        private @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
-        private @Nullable Output<String> sqlVirtualMachineGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
+        private SqlVirtualMachineGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlVirtualMachineGroupArgs();
         }
 
         public Builder(SqlVirtualMachineGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlImageOffer = defaults.sqlImageOffer;
-    	      this.sqlImageSku = defaults.sqlImageSku;
-    	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
-    	      this.tags = defaults.tags;
-    	      this.wsfcDomainProfile = defaults.wsfcDomainProfile;
+            $ = new SqlVirtualMachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
-            this.sqlImageOffer = sqlImageOffer;
+            $.sqlImageOffer = sqlImageOffer;
             return this;
         }
-        public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
-            this.sqlImageOffer = Codegen.ofNullable(sqlImageOffer);
-            return this;
+
+        public Builder sqlImageOffer(String sqlImageOffer) {
+            return sqlImageOffer(Output.of(sqlImageOffer));
         }
+
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku) {
-            this.sqlImageSku = sqlImageSku;
+            $.sqlImageSku = sqlImageSku;
             return this;
         }
-        public Builder sqlImageSku(@Nullable Either<String,SqlVmGroupImageSku> sqlImageSku) {
-            this.sqlImageSku = Codegen.ofNullable(sqlImageSku);
-            return this;
+
+        public Builder sqlImageSku(Either<String,SqlVmGroupImageSku> sqlImageSku) {
+            return sqlImageSku(Output.of(sqlImageSku));
         }
+
         public Builder sqlVirtualMachineGroupName(@Nullable Output<String> sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
+            $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
-        public Builder sqlVirtualMachineGroupName(@Nullable String sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Codegen.ofNullable(sqlVirtualMachineGroupName);
-            return this;
+
+        public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
+            return sqlVirtualMachineGroupName(Output.of(sqlVirtualMachineGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder wsfcDomainProfile(@Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile) {
-            this.wsfcDomainProfile = wsfcDomainProfile;
+            $.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }
-        public Builder wsfcDomainProfile(@Nullable WsfcDomainProfileArgs wsfcDomainProfile) {
-            this.wsfcDomainProfile = Codegen.ofNullable(wsfcDomainProfile);
-            return this;
-        }        public SqlVirtualMachineGroupArgs build() {
-            return new SqlVirtualMachineGroupArgs(location, resourceGroupName, sqlImageOffer, sqlImageSku, sqlVirtualMachineGroupName, tags, wsfcDomainProfile);
+
+        public Builder wsfcDomainProfile(WsfcDomainProfileArgs wsfcDomainProfile) {
+            return wsfcDomainProfile(Output.of(wsfcDomainProfile));
+        }
+
+        public SqlVirtualMachineGroupArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

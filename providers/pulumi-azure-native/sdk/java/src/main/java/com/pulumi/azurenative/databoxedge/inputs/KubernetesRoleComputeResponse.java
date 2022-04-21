@@ -23,7 +23,7 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="memoryInBytes", required=true)
-      private final Double memoryInBytes;
+    private Double memoryInBytes;
 
     public Double memoryInBytes() {
         return this.memoryInBytes;
@@ -34,7 +34,7 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="processorCount", required=true)
-      private final Integer processorCount;
+    private Integer processorCount;
 
     public Integer processorCount() {
         return this.processorCount;
@@ -45,64 +45,59 @@ public final class KubernetesRoleComputeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmProfile", required=true)
-      private final String vmProfile;
+    private String vmProfile;
 
     public String vmProfile() {
         return this.vmProfile;
     }
 
-    public KubernetesRoleComputeResponse(
-        Double memoryInBytes,
-        Integer processorCount,
-        String vmProfile) {
-        this.memoryInBytes = Objects.requireNonNull(memoryInBytes, "expected parameter 'memoryInBytes' to be non-null");
-        this.processorCount = Objects.requireNonNull(processorCount, "expected parameter 'processorCount' to be non-null");
-        this.vmProfile = Objects.requireNonNull(vmProfile, "expected parameter 'vmProfile' to be non-null");
-    }
+    private KubernetesRoleComputeResponse() {}
 
-    private KubernetesRoleComputeResponse() {
-        this.memoryInBytes = null;
-        this.processorCount = null;
-        this.vmProfile = null;
+    private KubernetesRoleComputeResponse(KubernetesRoleComputeResponse $) {
+        this.memoryInBytes = $.memoryInBytes;
+        this.processorCount = $.processorCount;
+        this.vmProfile = $.vmProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleComputeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double memoryInBytes;
-        private Integer processorCount;
-        private String vmProfile;
+        private KubernetesRoleComputeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleComputeResponse();
         }
 
         public Builder(KubernetesRoleComputeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memoryInBytes = defaults.memoryInBytes;
-    	      this.processorCount = defaults.processorCount;
-    	      this.vmProfile = defaults.vmProfile;
+            $ = new KubernetesRoleComputeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder memoryInBytes(Double memoryInBytes) {
-            this.memoryInBytes = Objects.requireNonNull(memoryInBytes);
+            $.memoryInBytes = memoryInBytes;
             return this;
         }
+
         public Builder processorCount(Integer processorCount) {
-            this.processorCount = Objects.requireNonNull(processorCount);
+            $.processorCount = processorCount;
             return this;
         }
+
         public Builder vmProfile(String vmProfile) {
-            this.vmProfile = Objects.requireNonNull(vmProfile);
+            $.vmProfile = vmProfile;
             return this;
-        }        public KubernetesRoleComputeResponse build() {
-            return new KubernetesRoleComputeResponse(memoryInBytes, processorCount, vmProfile);
+        }
+
+        public KubernetesRoleComputeResponse build() {
+            $.memoryInBytes = Objects.requireNonNull($.memoryInBytes, "expected parameter 'memoryInBytes' to be non-null");
+            $.processorCount = Objects.requireNonNull($.processorCount, "expected parameter 'processorCount' to be non-null");
+            $.vmProfile = Objects.requireNonNull($.vmProfile, "expected parameter 'vmProfile' to be non-null");
+            return $;
         }
     }
+
 }

@@ -30,7 +30,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="agentDetails", required=true)
-      private final List<AgentDetailsResponse> agentDetails;
+    private List<AgentDetailsResponse> agentDetails;
 
     public List<AgentDetailsResponse> agentDetails() {
         return this.agentDetails;
@@ -41,7 +41,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="controlPlaneUri", required=true)
-      private final String controlPlaneUri;
+    private String controlPlaneUri;
 
     public String controlPlaneUri() {
         return this.controlPlaneUri;
@@ -52,7 +52,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="dataPlaneUri", required=true)
-      private final String dataPlaneUri;
+    private String dataPlaneUri;
 
     public String dataPlaneUri() {
         return this.dataPlaneUri;
@@ -63,7 +63,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="dras", required=true)
-      private final List<DraDetailsResponse> dras;
+    private List<DraDetailsResponse> dras;
 
     public List<DraDetailsResponse> dras() {
         return this.dras;
@@ -75,7 +75,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -86,7 +86,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="physicalSiteId", required=true)
-      private final String physicalSiteId;
+    private String physicalSiteId;
 
     public String physicalSiteId() {
         return this.physicalSiteId;
@@ -97,7 +97,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="processServers", required=true)
-      private final List<ProcessServerDetailsResponse> processServers;
+    private List<ProcessServerDetailsResponse> processServers;
 
     public List<ProcessServerDetailsResponse> processServers() {
         return this.processServers;
@@ -108,7 +108,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="pushInstallers", required=true)
-      private final List<PushInstallerDetailsResponse> pushInstallers;
+    private List<PushInstallerDetailsResponse> pushInstallers;
 
     public List<PushInstallerDetailsResponse> pushInstallers() {
         return this.pushInstallers;
@@ -119,7 +119,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="rcmProxies", required=true)
-      private final List<RcmProxyDetailsResponse> rcmProxies;
+    private List<RcmProxyDetailsResponse> rcmProxies;
 
     public List<RcmProxyDetailsResponse> rcmProxies() {
         return this.rcmProxies;
@@ -130,7 +130,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="replicationAgents", required=true)
-      private final List<ReplicationAgentDetailsResponse> replicationAgents;
+    private List<ReplicationAgentDetailsResponse> replicationAgents;
 
     public List<ReplicationAgentDetailsResponse> replicationAgents() {
         return this.replicationAgents;
@@ -141,7 +141,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="reprotectAgents", required=true)
-      private final List<ReprotectAgentDetailsResponse> reprotectAgents;
+    private List<ReprotectAgentDetailsResponse> reprotectAgents;
 
     public List<ReprotectAgentDetailsResponse> reprotectAgents() {
         return this.reprotectAgents;
@@ -152,7 +152,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="serviceContainerId", required=true)
-      private final String serviceContainerId;
+    private String serviceContainerId;
 
     public String serviceContainerId() {
         return this.serviceContainerId;
@@ -163,7 +163,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="serviceEndpoint", required=true)
-      private final String serviceEndpoint;
+    private String serviceEndpoint;
 
     public String serviceEndpoint() {
         return this.serviceEndpoint;
@@ -174,7 +174,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="serviceResourceId", required=true)
-      private final String serviceResourceId;
+    private String serviceResourceId;
 
     public String serviceResourceId() {
         return this.serviceResourceId;
@@ -185,193 +185,171 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="vmwareSiteId", required=true)
-      private final String vmwareSiteId;
+    private String vmwareSiteId;
 
     public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
 
-    public InMageRcmFabricSpecificDetailsResponse(
-        List<AgentDetailsResponse> agentDetails,
-        String controlPlaneUri,
-        String dataPlaneUri,
-        List<DraDetailsResponse> dras,
-        String instanceType,
-        String physicalSiteId,
-        List<ProcessServerDetailsResponse> processServers,
-        List<PushInstallerDetailsResponse> pushInstallers,
-        List<RcmProxyDetailsResponse> rcmProxies,
-        List<ReplicationAgentDetailsResponse> replicationAgents,
-        List<ReprotectAgentDetailsResponse> reprotectAgents,
-        String serviceContainerId,
-        String serviceEndpoint,
-        String serviceResourceId,
-        String vmwareSiteId) {
-        this.agentDetails = Objects.requireNonNull(agentDetails, "expected parameter 'agentDetails' to be non-null");
-        this.controlPlaneUri = Objects.requireNonNull(controlPlaneUri, "expected parameter 'controlPlaneUri' to be non-null");
-        this.dataPlaneUri = Objects.requireNonNull(dataPlaneUri, "expected parameter 'dataPlaneUri' to be non-null");
-        this.dras = Objects.requireNonNull(dras, "expected parameter 'dras' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.physicalSiteId = Objects.requireNonNull(physicalSiteId, "expected parameter 'physicalSiteId' to be non-null");
-        this.processServers = Objects.requireNonNull(processServers, "expected parameter 'processServers' to be non-null");
-        this.pushInstallers = Objects.requireNonNull(pushInstallers, "expected parameter 'pushInstallers' to be non-null");
-        this.rcmProxies = Objects.requireNonNull(rcmProxies, "expected parameter 'rcmProxies' to be non-null");
-        this.replicationAgents = Objects.requireNonNull(replicationAgents, "expected parameter 'replicationAgents' to be non-null");
-        this.reprotectAgents = Objects.requireNonNull(reprotectAgents, "expected parameter 'reprotectAgents' to be non-null");
-        this.serviceContainerId = Objects.requireNonNull(serviceContainerId, "expected parameter 'serviceContainerId' to be non-null");
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
-        this.serviceResourceId = Objects.requireNonNull(serviceResourceId, "expected parameter 'serviceResourceId' to be non-null");
-        this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
-    }
+    private InMageRcmFabricSpecificDetailsResponse() {}
 
-    private InMageRcmFabricSpecificDetailsResponse() {
-        this.agentDetails = List.of();
-        this.controlPlaneUri = null;
-        this.dataPlaneUri = null;
-        this.dras = List.of();
-        this.instanceType = null;
-        this.physicalSiteId = null;
-        this.processServers = List.of();
-        this.pushInstallers = List.of();
-        this.rcmProxies = List.of();
-        this.replicationAgents = List.of();
-        this.reprotectAgents = List.of();
-        this.serviceContainerId = null;
-        this.serviceEndpoint = null;
-        this.serviceResourceId = null;
-        this.vmwareSiteId = null;
+    private InMageRcmFabricSpecificDetailsResponse(InMageRcmFabricSpecificDetailsResponse $) {
+        this.agentDetails = $.agentDetails;
+        this.controlPlaneUri = $.controlPlaneUri;
+        this.dataPlaneUri = $.dataPlaneUri;
+        this.dras = $.dras;
+        this.instanceType = $.instanceType;
+        this.physicalSiteId = $.physicalSiteId;
+        this.processServers = $.processServers;
+        this.pushInstallers = $.pushInstallers;
+        this.rcmProxies = $.rcmProxies;
+        this.replicationAgents = $.replicationAgents;
+        this.reprotectAgents = $.reprotectAgents;
+        this.serviceContainerId = $.serviceContainerId;
+        this.serviceEndpoint = $.serviceEndpoint;
+        this.serviceResourceId = $.serviceResourceId;
+        this.vmwareSiteId = $.vmwareSiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmFabricSpecificDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AgentDetailsResponse> agentDetails;
-        private String controlPlaneUri;
-        private String dataPlaneUri;
-        private List<DraDetailsResponse> dras;
-        private String instanceType;
-        private String physicalSiteId;
-        private List<ProcessServerDetailsResponse> processServers;
-        private List<PushInstallerDetailsResponse> pushInstallers;
-        private List<RcmProxyDetailsResponse> rcmProxies;
-        private List<ReplicationAgentDetailsResponse> replicationAgents;
-        private List<ReprotectAgentDetailsResponse> reprotectAgents;
-        private String serviceContainerId;
-        private String serviceEndpoint;
-        private String serviceResourceId;
-        private String vmwareSiteId;
+        private InMageRcmFabricSpecificDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmFabricSpecificDetailsResponse();
         }
 
         public Builder(InMageRcmFabricSpecificDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentDetails = defaults.agentDetails;
-    	      this.controlPlaneUri = defaults.controlPlaneUri;
-    	      this.dataPlaneUri = defaults.dataPlaneUri;
-    	      this.dras = defaults.dras;
-    	      this.instanceType = defaults.instanceType;
-    	      this.physicalSiteId = defaults.physicalSiteId;
-    	      this.processServers = defaults.processServers;
-    	      this.pushInstallers = defaults.pushInstallers;
-    	      this.rcmProxies = defaults.rcmProxies;
-    	      this.replicationAgents = defaults.replicationAgents;
-    	      this.reprotectAgents = defaults.reprotectAgents;
-    	      this.serviceContainerId = defaults.serviceContainerId;
-    	      this.serviceEndpoint = defaults.serviceEndpoint;
-    	      this.serviceResourceId = defaults.serviceResourceId;
-    	      this.vmwareSiteId = defaults.vmwareSiteId;
+            $ = new InMageRcmFabricSpecificDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentDetails(List<AgentDetailsResponse> agentDetails) {
-            this.agentDetails = Objects.requireNonNull(agentDetails);
+            $.agentDetails = agentDetails;
             return this;
         }
+
         public Builder agentDetails(AgentDetailsResponse... agentDetails) {
             return agentDetails(List.of(agentDetails));
         }
+
         public Builder controlPlaneUri(String controlPlaneUri) {
-            this.controlPlaneUri = Objects.requireNonNull(controlPlaneUri);
+            $.controlPlaneUri = controlPlaneUri;
             return this;
         }
+
         public Builder dataPlaneUri(String dataPlaneUri) {
-            this.dataPlaneUri = Objects.requireNonNull(dataPlaneUri);
+            $.dataPlaneUri = dataPlaneUri;
             return this;
         }
+
         public Builder dras(List<DraDetailsResponse> dras) {
-            this.dras = Objects.requireNonNull(dras);
+            $.dras = dras;
             return this;
         }
+
         public Builder dras(DraDetailsResponse... dras) {
             return dras(List.of(dras));
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder physicalSiteId(String physicalSiteId) {
-            this.physicalSiteId = Objects.requireNonNull(physicalSiteId);
+            $.physicalSiteId = physicalSiteId;
             return this;
         }
+
         public Builder processServers(List<ProcessServerDetailsResponse> processServers) {
-            this.processServers = Objects.requireNonNull(processServers);
+            $.processServers = processServers;
             return this;
         }
+
         public Builder processServers(ProcessServerDetailsResponse... processServers) {
             return processServers(List.of(processServers));
         }
+
         public Builder pushInstallers(List<PushInstallerDetailsResponse> pushInstallers) {
-            this.pushInstallers = Objects.requireNonNull(pushInstallers);
+            $.pushInstallers = pushInstallers;
             return this;
         }
+
         public Builder pushInstallers(PushInstallerDetailsResponse... pushInstallers) {
             return pushInstallers(List.of(pushInstallers));
         }
+
         public Builder rcmProxies(List<RcmProxyDetailsResponse> rcmProxies) {
-            this.rcmProxies = Objects.requireNonNull(rcmProxies);
+            $.rcmProxies = rcmProxies;
             return this;
         }
+
         public Builder rcmProxies(RcmProxyDetailsResponse... rcmProxies) {
             return rcmProxies(List.of(rcmProxies));
         }
+
         public Builder replicationAgents(List<ReplicationAgentDetailsResponse> replicationAgents) {
-            this.replicationAgents = Objects.requireNonNull(replicationAgents);
+            $.replicationAgents = replicationAgents;
             return this;
         }
+
         public Builder replicationAgents(ReplicationAgentDetailsResponse... replicationAgents) {
             return replicationAgents(List.of(replicationAgents));
         }
+
         public Builder reprotectAgents(List<ReprotectAgentDetailsResponse> reprotectAgents) {
-            this.reprotectAgents = Objects.requireNonNull(reprotectAgents);
+            $.reprotectAgents = reprotectAgents;
             return this;
         }
+
         public Builder reprotectAgents(ReprotectAgentDetailsResponse... reprotectAgents) {
             return reprotectAgents(List.of(reprotectAgents));
         }
+
         public Builder serviceContainerId(String serviceContainerId) {
-            this.serviceContainerId = Objects.requireNonNull(serviceContainerId);
+            $.serviceContainerId = serviceContainerId;
             return this;
         }
+
         public Builder serviceEndpoint(String serviceEndpoint) {
-            this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
+            $.serviceEndpoint = serviceEndpoint;
             return this;
         }
+
         public Builder serviceResourceId(String serviceResourceId) {
-            this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
+            $.serviceResourceId = serviceResourceId;
             return this;
         }
+
         public Builder vmwareSiteId(String vmwareSiteId) {
-            this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
+            $.vmwareSiteId = vmwareSiteId;
             return this;
-        }        public InMageRcmFabricSpecificDetailsResponse build() {
-            return new InMageRcmFabricSpecificDetailsResponse(agentDetails, controlPlaneUri, dataPlaneUri, dras, instanceType, physicalSiteId, processServers, pushInstallers, rcmProxies, replicationAgents, reprotectAgents, serviceContainerId, serviceEndpoint, serviceResourceId, vmwareSiteId);
+        }
+
+        public InMageRcmFabricSpecificDetailsResponse build() {
+            $.agentDetails = Objects.requireNonNull($.agentDetails, "expected parameter 'agentDetails' to be non-null");
+            $.controlPlaneUri = Objects.requireNonNull($.controlPlaneUri, "expected parameter 'controlPlaneUri' to be non-null");
+            $.dataPlaneUri = Objects.requireNonNull($.dataPlaneUri, "expected parameter 'dataPlaneUri' to be non-null");
+            $.dras = Objects.requireNonNull($.dras, "expected parameter 'dras' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.physicalSiteId = Objects.requireNonNull($.physicalSiteId, "expected parameter 'physicalSiteId' to be non-null");
+            $.processServers = Objects.requireNonNull($.processServers, "expected parameter 'processServers' to be non-null");
+            $.pushInstallers = Objects.requireNonNull($.pushInstallers, "expected parameter 'pushInstallers' to be non-null");
+            $.rcmProxies = Objects.requireNonNull($.rcmProxies, "expected parameter 'rcmProxies' to be non-null");
+            $.replicationAgents = Objects.requireNonNull($.replicationAgents, "expected parameter 'replicationAgents' to be non-null");
+            $.reprotectAgents = Objects.requireNonNull($.reprotectAgents, "expected parameter 'reprotectAgents' to be non-null");
+            $.serviceContainerId = Objects.requireNonNull($.serviceContainerId, "expected parameter 'serviceContainerId' to be non-null");
+            $.serviceEndpoint = Objects.requireNonNull($.serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
+            $.serviceResourceId = Objects.requireNonNull($.serviceResourceId, "expected parameter 'serviceResourceId' to be non-null");
+            $.vmwareSiteId = Objects.requireNonNull($.vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
+            return $;
         }
     }
+
 }

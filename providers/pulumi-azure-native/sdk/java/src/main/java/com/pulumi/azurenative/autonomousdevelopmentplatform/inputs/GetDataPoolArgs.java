@@ -17,7 +17,7 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataPoolName", required=true)
-      private final String dataPoolName;
+    private String dataPoolName;
 
     public String dataPoolName() {
         return this.dataPoolName;
@@ -39,64 +39,59 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataPoolArgs(
-        String accountName,
-        String dataPoolName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataPoolName = Objects.requireNonNull(dataPoolName, "expected parameter 'dataPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataPoolArgs() {}
 
-    private GetDataPoolArgs() {
-        this.accountName = null;
-        this.dataPoolName = null;
-        this.resourceGroupName = null;
+    private GetDataPoolArgs(GetDataPoolArgs $) {
+        this.accountName = $.accountName;
+        this.dataPoolName = $.dataPoolName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String dataPoolName;
-        private String resourceGroupName;
+        private GetDataPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataPoolArgs();
         }
 
         public Builder(GetDataPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataPoolName = defaults.dataPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder dataPoolName(String dataPoolName) {
-            this.dataPoolName = Objects.requireNonNull(dataPoolName);
+            $.dataPoolName = dataPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataPoolArgs build() {
-            return new GetDataPoolArgs(accountName, dataPoolName, resourceGroupName);
+        }
+
+        public GetDataPoolArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataPoolName = Objects.requireNonNull($.dataPoolName, "expected parameter 'dataPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

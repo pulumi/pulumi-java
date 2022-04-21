@@ -7,10 +7,10 @@ import com.pulumi.azurenative.logic.enums.HashingAlgorithm;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dispositionNotificationTo")
-      private final @Nullable Output<String> dispositionNotificationTo;
+    private @Nullable Output<String> dispositionNotificationTo;
 
-    public Output<String> dispositionNotificationTo() {
-        return this.dispositionNotificationTo == null ? Codegen.empty() : this.dispositionNotificationTo;
+    public Optional<Output<String>> dispositionNotificationTo() {
+        return Optional.ofNullable(this.dispositionNotificationTo);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mdnText")
-      private final @Nullable Output<String> mdnText;
+    private @Nullable Output<String> mdnText;
 
-    public Output<String> mdnText() {
-        return this.mdnText == null ? Codegen.empty() : this.mdnText;
+    public Optional<Output<String>> mdnText() {
+        return Optional.ofNullable(this.mdnText);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="micHashingAlgorithm", required=true)
-      private final Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
+    private Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
 
     public Output<Either<String,HashingAlgorithm>> micHashingAlgorithm() {
         return this.micHashingAlgorithm;
@@ -60,7 +60,7 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="needMDN", required=true)
-      private final Output<Boolean> needMDN;
+    private Output<Boolean> needMDN;
 
     public Output<Boolean> needMDN() {
         return this.needMDN;
@@ -71,10 +71,10 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="receiptDeliveryUrl")
-      private final @Nullable Output<String> receiptDeliveryUrl;
+    private @Nullable Output<String> receiptDeliveryUrl;
 
-    public Output<String> receiptDeliveryUrl() {
-        return this.receiptDeliveryUrl == null ? Codegen.empty() : this.receiptDeliveryUrl;
+    public Optional<Output<String>> receiptDeliveryUrl() {
+        return Optional.ofNullable(this.receiptDeliveryUrl);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sendInboundMDNToMessageBox", required=true)
-      private final Output<Boolean> sendInboundMDNToMessageBox;
+    private Output<Boolean> sendInboundMDNToMessageBox;
 
     public Output<Boolean> sendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
@@ -93,7 +93,7 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sendMDNAsynchronously", required=true)
-      private final Output<Boolean> sendMDNAsynchronously;
+    private Output<Boolean> sendMDNAsynchronously;
 
     public Output<Boolean> sendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
@@ -104,7 +104,7 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="signMDN", required=true)
-      private final Output<Boolean> signMDN;
+    private Output<Boolean> signMDN;
 
     public Output<Boolean> signMDN() {
         return this.signMDN;
@@ -115,154 +115,134 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="signOutboundMDNIfOptional", required=true)
-      private final Output<Boolean> signOutboundMDNIfOptional;
+    private Output<Boolean> signOutboundMDNIfOptional;
 
     public Output<Boolean> signOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
 
-    public AS2MdnSettingsArgs(
-        @Nullable Output<String> dispositionNotificationTo,
-        @Nullable Output<String> mdnText,
-        Output<Either<String,HashingAlgorithm>> micHashingAlgorithm,
-        Output<Boolean> needMDN,
-        @Nullable Output<String> receiptDeliveryUrl,
-        Output<Boolean> sendInboundMDNToMessageBox,
-        Output<Boolean> sendMDNAsynchronously,
-        Output<Boolean> signMDN,
-        Output<Boolean> signOutboundMDNIfOptional) {
-        this.dispositionNotificationTo = dispositionNotificationTo;
-        this.mdnText = mdnText;
-        this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm, "expected parameter 'micHashingAlgorithm' to be non-null");
-        this.needMDN = Objects.requireNonNull(needMDN, "expected parameter 'needMDN' to be non-null");
-        this.receiptDeliveryUrl = receiptDeliveryUrl;
-        this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox, "expected parameter 'sendInboundMDNToMessageBox' to be non-null");
-        this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously, "expected parameter 'sendMDNAsynchronously' to be non-null");
-        this.signMDN = Objects.requireNonNull(signMDN, "expected parameter 'signMDN' to be non-null");
-        this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional, "expected parameter 'signOutboundMDNIfOptional' to be non-null");
-    }
+    private AS2MdnSettingsArgs() {}
 
-    private AS2MdnSettingsArgs() {
-        this.dispositionNotificationTo = Codegen.empty();
-        this.mdnText = Codegen.empty();
-        this.micHashingAlgorithm = Codegen.empty();
-        this.needMDN = Codegen.empty();
-        this.receiptDeliveryUrl = Codegen.empty();
-        this.sendInboundMDNToMessageBox = Codegen.empty();
-        this.sendMDNAsynchronously = Codegen.empty();
-        this.signMDN = Codegen.empty();
-        this.signOutboundMDNIfOptional = Codegen.empty();
+    private AS2MdnSettingsArgs(AS2MdnSettingsArgs $) {
+        this.dispositionNotificationTo = $.dispositionNotificationTo;
+        this.mdnText = $.mdnText;
+        this.micHashingAlgorithm = $.micHashingAlgorithm;
+        this.needMDN = $.needMDN;
+        this.receiptDeliveryUrl = $.receiptDeliveryUrl;
+        this.sendInboundMDNToMessageBox = $.sendInboundMDNToMessageBox;
+        this.sendMDNAsynchronously = $.sendMDNAsynchronously;
+        this.signMDN = $.signMDN;
+        this.signOutboundMDNIfOptional = $.signOutboundMDNIfOptional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2MdnSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dispositionNotificationTo;
-        private @Nullable Output<String> mdnText;
-        private Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
-        private Output<Boolean> needMDN;
-        private @Nullable Output<String> receiptDeliveryUrl;
-        private Output<Boolean> sendInboundMDNToMessageBox;
-        private Output<Boolean> sendMDNAsynchronously;
-        private Output<Boolean> signMDN;
-        private Output<Boolean> signOutboundMDNIfOptional;
+        private AS2MdnSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2MdnSettingsArgs();
         }
 
         public Builder(AS2MdnSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dispositionNotificationTo = defaults.dispositionNotificationTo;
-    	      this.mdnText = defaults.mdnText;
-    	      this.micHashingAlgorithm = defaults.micHashingAlgorithm;
-    	      this.needMDN = defaults.needMDN;
-    	      this.receiptDeliveryUrl = defaults.receiptDeliveryUrl;
-    	      this.sendInboundMDNToMessageBox = defaults.sendInboundMDNToMessageBox;
-    	      this.sendMDNAsynchronously = defaults.sendMDNAsynchronously;
-    	      this.signMDN = defaults.signMDN;
-    	      this.signOutboundMDNIfOptional = defaults.signOutboundMDNIfOptional;
+            $ = new AS2MdnSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dispositionNotificationTo(@Nullable Output<String> dispositionNotificationTo) {
-            this.dispositionNotificationTo = dispositionNotificationTo;
+            $.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
-        public Builder dispositionNotificationTo(@Nullable String dispositionNotificationTo) {
-            this.dispositionNotificationTo = Codegen.ofNullable(dispositionNotificationTo);
-            return this;
+
+        public Builder dispositionNotificationTo(String dispositionNotificationTo) {
+            return dispositionNotificationTo(Output.of(dispositionNotificationTo));
         }
+
         public Builder mdnText(@Nullable Output<String> mdnText) {
-            this.mdnText = mdnText;
+            $.mdnText = mdnText;
             return this;
         }
-        public Builder mdnText(@Nullable String mdnText) {
-            this.mdnText = Codegen.ofNullable(mdnText);
-            return this;
+
+        public Builder mdnText(String mdnText) {
+            return mdnText(Output.of(mdnText));
         }
+
         public Builder micHashingAlgorithm(Output<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
-            this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
+            $.micHashingAlgorithm = micHashingAlgorithm;
             return this;
         }
+
         public Builder micHashingAlgorithm(Either<String,HashingAlgorithm> micHashingAlgorithm) {
-            this.micHashingAlgorithm = Output.of(Objects.requireNonNull(micHashingAlgorithm));
-            return this;
+            return micHashingAlgorithm(Output.of(micHashingAlgorithm));
         }
+
         public Builder needMDN(Output<Boolean> needMDN) {
-            this.needMDN = Objects.requireNonNull(needMDN);
+            $.needMDN = needMDN;
             return this;
         }
+
         public Builder needMDN(Boolean needMDN) {
-            this.needMDN = Output.of(Objects.requireNonNull(needMDN));
-            return this;
+            return needMDN(Output.of(needMDN));
         }
+
         public Builder receiptDeliveryUrl(@Nullable Output<String> receiptDeliveryUrl) {
-            this.receiptDeliveryUrl = receiptDeliveryUrl;
+            $.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
-        public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
-            this.receiptDeliveryUrl = Codegen.ofNullable(receiptDeliveryUrl);
-            return this;
+
+        public Builder receiptDeliveryUrl(String receiptDeliveryUrl) {
+            return receiptDeliveryUrl(Output.of(receiptDeliveryUrl));
         }
+
         public Builder sendInboundMDNToMessageBox(Output<Boolean> sendInboundMDNToMessageBox) {
-            this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
+            $.sendInboundMDNToMessageBox = sendInboundMDNToMessageBox;
             return this;
         }
+
         public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
-            this.sendInboundMDNToMessageBox = Output.of(Objects.requireNonNull(sendInboundMDNToMessageBox));
-            return this;
+            return sendInboundMDNToMessageBox(Output.of(sendInboundMDNToMessageBox));
         }
+
         public Builder sendMDNAsynchronously(Output<Boolean> sendMDNAsynchronously) {
-            this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
+            $.sendMDNAsynchronously = sendMDNAsynchronously;
             return this;
         }
+
         public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
-            this.sendMDNAsynchronously = Output.of(Objects.requireNonNull(sendMDNAsynchronously));
-            return this;
+            return sendMDNAsynchronously(Output.of(sendMDNAsynchronously));
         }
+
         public Builder signMDN(Output<Boolean> signMDN) {
-            this.signMDN = Objects.requireNonNull(signMDN);
+            $.signMDN = signMDN;
             return this;
         }
+
         public Builder signMDN(Boolean signMDN) {
-            this.signMDN = Output.of(Objects.requireNonNull(signMDN));
-            return this;
+            return signMDN(Output.of(signMDN));
         }
+
         public Builder signOutboundMDNIfOptional(Output<Boolean> signOutboundMDNIfOptional) {
-            this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
+            $.signOutboundMDNIfOptional = signOutboundMDNIfOptional;
             return this;
         }
+
         public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
-            this.signOutboundMDNIfOptional = Output.of(Objects.requireNonNull(signOutboundMDNIfOptional));
-            return this;
-        }        public AS2MdnSettingsArgs build() {
-            return new AS2MdnSettingsArgs(dispositionNotificationTo, mdnText, micHashingAlgorithm, needMDN, receiptDeliveryUrl, sendInboundMDNToMessageBox, sendMDNAsynchronously, signMDN, signOutboundMDNIfOptional);
+            return signOutboundMDNIfOptional(Output.of(signOutboundMDNIfOptional));
+        }
+
+        public AS2MdnSettingsArgs build() {
+            $.micHashingAlgorithm = Objects.requireNonNull($.micHashingAlgorithm, "expected parameter 'micHashingAlgorithm' to be non-null");
+            $.needMDN = Objects.requireNonNull($.needMDN, "expected parameter 'needMDN' to be non-null");
+            $.sendInboundMDNToMessageBox = Objects.requireNonNull($.sendInboundMDNToMessageBox, "expected parameter 'sendInboundMDNToMessageBox' to be non-null");
+            $.sendMDNAsynchronously = Objects.requireNonNull($.sendMDNAsynchronously, "expected parameter 'sendMDNAsynchronously' to be non-null");
+            $.signMDN = Objects.requireNonNull($.signMDN, "expected parameter 'signMDN' to be non-null");
+            $.signOutboundMDNIfOptional = Objects.requireNonNull($.signOutboundMDNIfOptional, "expected parameter 'signOutboundMDNIfOptional' to be non-null");
+            return $;
         }
     }
+
 }

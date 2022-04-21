@@ -17,7 +17,7 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIntegrationAccountSessionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sessionName", required=true)
-      private final String sessionName;
+    private String sessionName;
 
     public String sessionName() {
         return this.sessionName;
     }
 
-    public GetIntegrationAccountSessionArgs(
-        String integrationAccountName,
-        String resourceGroupName,
-        String sessionName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sessionName = Objects.requireNonNull(sessionName, "expected parameter 'sessionName' to be non-null");
-    }
+    private GetIntegrationAccountSessionArgs() {}
 
-    private GetIntegrationAccountSessionArgs() {
-        this.integrationAccountName = null;
-        this.resourceGroupName = null;
-        this.sessionName = null;
+    private GetIntegrationAccountSessionArgs(GetIntegrationAccountSessionArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sessionName = $.sessionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationAccountSessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private String resourceGroupName;
-        private String sessionName;
+        private GetIntegrationAccountSessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationAccountSessionArgs();
         }
 
         public Builder(GetIntegrationAccountSessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sessionName = defaults.sessionName;
+            $ = new GetIntegrationAccountSessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sessionName(String sessionName) {
-            this.sessionName = Objects.requireNonNull(sessionName);
+            $.sessionName = sessionName;
             return this;
-        }        public GetIntegrationAccountSessionArgs build() {
-            return new GetIntegrationAccountSessionArgs(integrationAccountName, resourceGroupName, sessionName);
+        }
+
+        public GetIntegrationAccountSessionArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sessionName = Objects.requireNonNull($.sessionName, "expected parameter 'sessionName' to be non-null");
+            return $;
         }
     }
+
 }

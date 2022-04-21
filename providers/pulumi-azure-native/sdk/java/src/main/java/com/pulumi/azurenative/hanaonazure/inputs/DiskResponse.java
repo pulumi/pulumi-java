@@ -24,10 +24,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
@@ -46,64 +46,57 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DiskResponse(
-        @Nullable Integer diskSizeGB,
-        Integer lun,
-        @Nullable String name) {
-        this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.name = name;
-    }
+    private DiskResponse() {}
 
-    private DiskResponse() {
-        this.diskSizeGB = null;
-        this.lun = null;
-        this.name = null;
+    private DiskResponse(DiskResponse $) {
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer diskSizeGB;
-        private Integer lun;
-        private @Nullable String name;
+        private DiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskResponse();
         }
 
         public Builder(DiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.name = defaults.name;
+            $ = new DiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DiskResponse build() {
-            return new DiskResponse(diskSizeGB, lun, name);
+        }
+
+        public DiskResponse build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

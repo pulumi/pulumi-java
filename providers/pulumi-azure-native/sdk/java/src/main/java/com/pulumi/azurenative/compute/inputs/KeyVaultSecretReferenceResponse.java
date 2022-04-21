@@ -22,7 +22,7 @@ public final class KeyVaultSecretReferenceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="secretUrl", required=true)
-      private final String secretUrl;
+    private String secretUrl;
 
     public String secretUrl() {
         return this.secretUrl;
@@ -33,55 +33,52 @@ public final class KeyVaultSecretReferenceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceVault", required=true)
-      private final SubResourceResponse sourceVault;
+    private SubResourceResponse sourceVault;
 
     public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }
 
-    public KeyVaultSecretReferenceResponse(
-        String secretUrl,
-        SubResourceResponse sourceVault) {
-        this.secretUrl = Objects.requireNonNull(secretUrl, "expected parameter 'secretUrl' to be non-null");
-        this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
-    }
+    private KeyVaultSecretReferenceResponse() {}
 
-    private KeyVaultSecretReferenceResponse() {
-        this.secretUrl = null;
-        this.sourceVault = null;
+    private KeyVaultSecretReferenceResponse(KeyVaultSecretReferenceResponse $) {
+        this.secretUrl = $.secretUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultSecretReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String secretUrl;
-        private SubResourceResponse sourceVault;
+        private KeyVaultSecretReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultSecretReferenceResponse();
         }
 
         public Builder(KeyVaultSecretReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretUrl = defaults.secretUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new KeyVaultSecretReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secretUrl(String secretUrl) {
-            this.secretUrl = Objects.requireNonNull(secretUrl);
+            $.secretUrl = secretUrl;
             return this;
         }
+
         public Builder sourceVault(SubResourceResponse sourceVault) {
-            this.sourceVault = Objects.requireNonNull(sourceVault);
+            $.sourceVault = sourceVault;
             return this;
-        }        public KeyVaultSecretReferenceResponse build() {
-            return new KeyVaultSecretReferenceResponse(secretUrl, sourceVault);
+        }
+
+        public KeyVaultSecretReferenceResponse build() {
+            $.secretUrl = Objects.requireNonNull($.secretUrl, "expected parameter 'secretUrl' to be non-null");
+            $.sourceVault = Objects.requireNonNull($.sourceVault, "expected parameter 'sourceVault' to be non-null");
+            return $;
         }
     }
+
 }

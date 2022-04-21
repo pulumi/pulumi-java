@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,7 +33,7 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="contactDetails", required=true)
-      private final Output<ContactDetailsArgs> contactDetails;
+    private Output<ContactDetailsArgs> contactDetails;
 
     public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
@@ -43,10 +44,10 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataExportDetails")
-      private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
+    private @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
-    public Output<List<DataExportDetailsArgs>> dataExportDetails() {
-        return this.dataExportDetails == null ? Codegen.empty() : this.dataExportDetails;
+    public Optional<Output<List<DataExportDetailsArgs>>> dataExportDetails() {
+        return Optional.ofNullable(this.dataExportDetails);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataImportDetails")
-      private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
+    private @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
-    public Output<List<DataImportDetailsArgs>> dataImportDetails() {
-        return this.dataImportDetails == null ? Codegen.empty() : this.dataImportDetails;
+    public Optional<Output<List<DataImportDetailsArgs>>> dataImportDetails() {
+        return Optional.ofNullable(this.dataImportDetails);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="devicePassword")
-      private final @Nullable Output<String> devicePassword;
+    private @Nullable Output<String> devicePassword;
 
-    public Output<String> devicePassword() {
-        return this.devicePassword == null ? Codegen.empty() : this.devicePassword;
+    public Optional<Output<String>> devicePassword() {
+        return Optional.ofNullable(this.devicePassword);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expectedDataSizeInTeraBytes")
-      private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
+    private @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
-    public Output<Integer> expectedDataSizeInTeraBytes() {
-        return this.expectedDataSizeInTeraBytes == null ? Codegen.empty() : this.expectedDataSizeInTeraBytes;
+    public Optional<Output<Integer>> expectedDataSizeInTeraBytes() {
+        return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
 
     /**
@@ -88,7 +89,7 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="jobDetailsType", required=true)
-      private final Output<String> jobDetailsType;
+    private Output<String> jobDetailsType;
 
     public Output<String> jobDetailsType() {
         return this.jobDetailsType;
@@ -99,10 +100,10 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
+    private @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
-    public Output<KeyEncryptionKeyArgs> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
+    public Optional<Output<KeyEncryptionKeyArgs>> keyEncryptionKey() {
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="preferences")
-      private final @Nullable Output<PreferencesArgs> preferences;
+    private @Nullable Output<PreferencesArgs> preferences;
 
-    public Output<PreferencesArgs> preferences() {
-        return this.preferences == null ? Codegen.empty() : this.preferences;
+    public Optional<Output<PreferencesArgs>> preferences() {
+        return Optional.ofNullable(this.preferences);
     }
 
     /**
@@ -121,160 +122,138 @@ public final class DataBoxHeavyJobDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="shippingAddress")
-      private final @Nullable Output<ShippingAddressArgs> shippingAddress;
+    private @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Output<ShippingAddressArgs> shippingAddress() {
-        return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
+    public Optional<Output<ShippingAddressArgs>> shippingAddress() {
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    public DataBoxHeavyJobDetailsArgs(
-        Output<ContactDetailsArgs> contactDetails,
-        @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails,
-        @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails,
-        @Nullable Output<String> devicePassword,
-        @Nullable Output<Integer> expectedDataSizeInTeraBytes,
-        Output<String> jobDetailsType,
-        @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey,
-        @Nullable Output<PreferencesArgs> preferences,
-        @Nullable Output<ShippingAddressArgs> shippingAddress) {
-        this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
-        this.dataExportDetails = dataExportDetails;
-        this.dataImportDetails = dataImportDetails;
-        this.devicePassword = devicePassword;
-        this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Codegen.stringProp("jobDetailsType").output().arg(jobDetailsType).require();
-        this.keyEncryptionKey = keyEncryptionKey;
-        this.preferences = preferences;
-        this.shippingAddress = shippingAddress;
-    }
+    private DataBoxHeavyJobDetailsArgs() {}
 
-    private DataBoxHeavyJobDetailsArgs() {
-        this.contactDetails = Codegen.empty();
-        this.dataExportDetails = Codegen.empty();
-        this.dataImportDetails = Codegen.empty();
-        this.devicePassword = Codegen.empty();
-        this.expectedDataSizeInTeraBytes = Codegen.empty();
-        this.jobDetailsType = Codegen.empty();
-        this.keyEncryptionKey = Codegen.empty();
-        this.preferences = Codegen.empty();
-        this.shippingAddress = Codegen.empty();
+    private DataBoxHeavyJobDetailsArgs(DataBoxHeavyJobDetailsArgs $) {
+        this.contactDetails = $.contactDetails;
+        this.dataExportDetails = $.dataExportDetails;
+        this.dataImportDetails = $.dataImportDetails;
+        this.devicePassword = $.devicePassword;
+        this.expectedDataSizeInTeraBytes = $.expectedDataSizeInTeraBytes;
+        this.jobDetailsType = $.jobDetailsType;
+        this.keyEncryptionKey = $.keyEncryptionKey;
+        this.preferences = $.preferences;
+        this.shippingAddress = $.shippingAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxHeavyJobDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ContactDetailsArgs> contactDetails;
-        private @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
-        private @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
-        private @Nullable Output<String> devicePassword;
-        private @Nullable Output<Integer> expectedDataSizeInTeraBytes;
-        private Output<String> jobDetailsType;
-        private @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
-        private @Nullable Output<PreferencesArgs> preferences;
-        private @Nullable Output<ShippingAddressArgs> shippingAddress;
+        private DataBoxHeavyJobDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxHeavyJobDetailsArgs();
         }
 
         public Builder(DataBoxHeavyJobDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactDetails = defaults.contactDetails;
-    	      this.dataExportDetails = defaults.dataExportDetails;
-    	      this.dataImportDetails = defaults.dataImportDetails;
-    	      this.devicePassword = defaults.devicePassword;
-    	      this.expectedDataSizeInTeraBytes = defaults.expectedDataSizeInTeraBytes;
-    	      this.jobDetailsType = defaults.jobDetailsType;
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
-    	      this.preferences = defaults.preferences;
-    	      this.shippingAddress = defaults.shippingAddress;
+            $ = new DataBoxHeavyJobDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
-            this.contactDetails = Objects.requireNonNull(contactDetails);
+            $.contactDetails = contactDetails;
             return this;
         }
+
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
-            this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
-            return this;
+            return contactDetails(Output.of(contactDetails));
         }
+
         public Builder dataExportDetails(@Nullable Output<List<DataExportDetailsArgs>> dataExportDetails) {
-            this.dataExportDetails = dataExportDetails;
+            $.dataExportDetails = dataExportDetails;
             return this;
         }
-        public Builder dataExportDetails(@Nullable List<DataExportDetailsArgs> dataExportDetails) {
-            this.dataExportDetails = Codegen.ofNullable(dataExportDetails);
-            return this;
+
+        public Builder dataExportDetails(List<DataExportDetailsArgs> dataExportDetails) {
+            return dataExportDetails(Output.of(dataExportDetails));
         }
+
         public Builder dataExportDetails(DataExportDetailsArgs... dataExportDetails) {
             return dataExportDetails(List.of(dataExportDetails));
         }
+
         public Builder dataImportDetails(@Nullable Output<List<DataImportDetailsArgs>> dataImportDetails) {
-            this.dataImportDetails = dataImportDetails;
+            $.dataImportDetails = dataImportDetails;
             return this;
         }
-        public Builder dataImportDetails(@Nullable List<DataImportDetailsArgs> dataImportDetails) {
-            this.dataImportDetails = Codegen.ofNullable(dataImportDetails);
-            return this;
+
+        public Builder dataImportDetails(List<DataImportDetailsArgs> dataImportDetails) {
+            return dataImportDetails(Output.of(dataImportDetails));
         }
+
         public Builder dataImportDetails(DataImportDetailsArgs... dataImportDetails) {
             return dataImportDetails(List.of(dataImportDetails));
         }
+
         public Builder devicePassword(@Nullable Output<String> devicePassword) {
-            this.devicePassword = devicePassword;
+            $.devicePassword = devicePassword;
             return this;
         }
-        public Builder devicePassword(@Nullable String devicePassword) {
-            this.devicePassword = Codegen.ofNullable(devicePassword);
-            return this;
+
+        public Builder devicePassword(String devicePassword) {
+            return devicePassword(Output.of(devicePassword));
         }
+
         public Builder expectedDataSizeInTeraBytes(@Nullable Output<Integer> expectedDataSizeInTeraBytes) {
-            this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
+            $.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
-        public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
-            this.expectedDataSizeInTeraBytes = Codegen.ofNullable(expectedDataSizeInTeraBytes);
-            return this;
+
+        public Builder expectedDataSizeInTeraBytes(Integer expectedDataSizeInTeraBytes) {
+            return expectedDataSizeInTeraBytes(Output.of(expectedDataSizeInTeraBytes));
         }
+
         public Builder jobDetailsType(Output<String> jobDetailsType) {
-            this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
+            $.jobDetailsType = jobDetailsType;
             return this;
         }
+
         public Builder jobDetailsType(String jobDetailsType) {
-            this.jobDetailsType = Output.of(Objects.requireNonNull(jobDetailsType));
-            return this;
+            return jobDetailsType(Output.of(jobDetailsType));
         }
+
         public Builder keyEncryptionKey(@Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-        public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
-            return this;
+
+        public Builder keyEncryptionKey(KeyEncryptionKeyArgs keyEncryptionKey) {
+            return keyEncryptionKey(Output.of(keyEncryptionKey));
         }
+
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
-            this.preferences = preferences;
+            $.preferences = preferences;
             return this;
         }
-        public Builder preferences(@Nullable PreferencesArgs preferences) {
-            this.preferences = Codegen.ofNullable(preferences);
-            return this;
+
+        public Builder preferences(PreferencesArgs preferences) {
+            return preferences(Output.of(preferences));
         }
+
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
-            this.shippingAddress = shippingAddress;
+            $.shippingAddress = shippingAddress;
             return this;
         }
-        public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Codegen.ofNullable(shippingAddress);
-            return this;
-        }        public DataBoxHeavyJobDetailsArgs build() {
-            return new DataBoxHeavyJobDetailsArgs(contactDetails, dataExportDetails, dataImportDetails, devicePassword, expectedDataSizeInTeraBytes, jobDetailsType, keyEncryptionKey, preferences, shippingAddress);
+
+        public Builder shippingAddress(ShippingAddressArgs shippingAddress) {
+            return shippingAddress(Output.of(shippingAddress));
+        }
+
+        public DataBoxHeavyJobDetailsArgs build() {
+            $.contactDetails = Objects.requireNonNull($.contactDetails, "expected parameter 'contactDetails' to be non-null");
+            $.jobDetailsType = Codegen.stringProp("jobDetailsType").output().arg($.jobDetailsType).require();
+            return $;
         }
     }
+
 }

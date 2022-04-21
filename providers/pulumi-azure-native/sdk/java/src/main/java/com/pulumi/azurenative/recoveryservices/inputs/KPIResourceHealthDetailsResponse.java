@@ -25,10 +25,10 @@ public final class KPIResourceHealthDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="resourceHealthDetails")
-      private final @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
+    private @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
 
-    public List<ResourceHealthDetailsResponse> resourceHealthDetails() {
-        return this.resourceHealthDetails == null ? List.of() : this.resourceHealthDetails;
+    public Optional<List<ResourceHealthDetailsResponse>> resourceHealthDetails() {
+        return Optional.ofNullable(this.resourceHealthDetails);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class KPIResourceHealthDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="resourceHealthStatus")
-      private final @Nullable String resourceHealthStatus;
+    private @Nullable String resourceHealthStatus;
 
     public Optional<String> resourceHealthStatus() {
-        return this.resourceHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.resourceHealthStatus);
+        return Optional.ofNullable(this.resourceHealthStatus);
     }
 
-    public KPIResourceHealthDetailsResponse(
-        @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails,
-        @Nullable String resourceHealthStatus) {
-        this.resourceHealthDetails = resourceHealthDetails;
-        this.resourceHealthStatus = resourceHealthStatus;
-    }
+    private KPIResourceHealthDetailsResponse() {}
 
-    private KPIResourceHealthDetailsResponse() {
-        this.resourceHealthDetails = List.of();
-        this.resourceHealthStatus = null;
+    private KPIResourceHealthDetailsResponse(KPIResourceHealthDetailsResponse $) {
+        this.resourceHealthDetails = $.resourceHealthDetails;
+        this.resourceHealthStatus = $.resourceHealthStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KPIResourceHealthDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
-        private @Nullable String resourceHealthStatus;
+        private KPIResourceHealthDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KPIResourceHealthDetailsResponse();
         }
 
         public Builder(KPIResourceHealthDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceHealthDetails = defaults.resourceHealthDetails;
-    	      this.resourceHealthStatus = defaults.resourceHealthStatus;
+            $ = new KPIResourceHealthDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceHealthDetails(@Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails) {
-            this.resourceHealthDetails = resourceHealthDetails;
+            $.resourceHealthDetails = resourceHealthDetails;
             return this;
         }
+
         public Builder resourceHealthDetails(ResourceHealthDetailsResponse... resourceHealthDetails) {
             return resourceHealthDetails(List.of(resourceHealthDetails));
         }
+
         public Builder resourceHealthStatus(@Nullable String resourceHealthStatus) {
-            this.resourceHealthStatus = resourceHealthStatus;
+            $.resourceHealthStatus = resourceHealthStatus;
             return this;
-        }        public KPIResourceHealthDetailsResponse build() {
-            return new KPIResourceHealthDetailsResponse(resourceHealthDetails, resourceHealthStatus);
+        }
+
+        public KPIResourceHealthDetailsResponse build() {
+            return $;
         }
     }
+
 }

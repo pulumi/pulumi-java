@@ -5,7 +5,6 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expiry", required=true)
-      private final Output<String> expiry;
+    private Output<String> expiry;
 
     public Output<String> expiry() {
         return this.expiry;
@@ -34,7 +33,7 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<String> subject;
+    private Output<String> subject;
 
     public Output<String> subject() {
         return this.subject;
@@ -45,76 +44,71 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final Output<String> thumbprint;
+    private Output<String> thumbprint;
 
     public Output<String> thumbprint() {
         return this.thumbprint;
     }
 
-    public CertificateInformationArgs(
-        Output<String> expiry,
-        Output<String> subject,
-        Output<String> thumbprint) {
-        this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-    }
+    private CertificateInformationArgs() {}
 
-    private CertificateInformationArgs() {
-        this.expiry = Codegen.empty();
-        this.subject = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private CertificateInformationArgs(CertificateInformationArgs $) {
+        this.expiry = $.expiry;
+        this.subject = $.subject;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> expiry;
-        private Output<String> subject;
-        private Output<String> thumbprint;
+        private CertificateInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateInformationArgs();
         }
 
         public Builder(CertificateInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiry = defaults.expiry;
-    	      this.subject = defaults.subject;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new CertificateInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expiry(Output<String> expiry) {
-            this.expiry = Objects.requireNonNull(expiry);
+            $.expiry = expiry;
             return this;
         }
+
         public Builder expiry(String expiry) {
-            this.expiry = Output.of(Objects.requireNonNull(expiry));
-            return this;
+            return expiry(Output.of(expiry));
         }
+
         public Builder subject(Output<String> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
+            return subject(Output.of(subject));
         }
+
         public Builder thumbprint(Output<String> thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Output.of(Objects.requireNonNull(thumbprint));
-            return this;
-        }        public CertificateInformationArgs build() {
-            return new CertificateInformationArgs(expiry, subject, thumbprint);
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public CertificateInformationArgs build() {
+            $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            return $;
         }
     }
+
 }

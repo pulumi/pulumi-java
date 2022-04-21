@@ -17,7 +17,7 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkGroupName", required=true)
-      private final String networkGroupName;
+    private String networkGroupName;
 
     public String networkGroupName() {
         return this.networkGroupName;
@@ -28,7 +28,7 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -39,64 +39,59 @@ public final class GetNetworkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkGroupArgs(
-        String networkGroupName,
-        String networkManagerName,
-        String resourceGroupName) {
-        this.networkGroupName = Objects.requireNonNull(networkGroupName, "expected parameter 'networkGroupName' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkGroupArgs() {}
 
-    private GetNetworkGroupArgs() {
-        this.networkGroupName = null;
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
+    private GetNetworkGroupArgs(GetNetworkGroupArgs $) {
+        this.networkGroupName = $.networkGroupName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkGroupName;
-        private String networkManagerName;
-        private String resourceGroupName;
+        private GetNetworkGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkGroupArgs();
         }
 
         public Builder(GetNetworkGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkGroupName = defaults.networkGroupName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkGroupName(String networkGroupName) {
-            this.networkGroupName = Objects.requireNonNull(networkGroupName);
+            $.networkGroupName = networkGroupName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkGroupArgs build() {
-            return new GetNetworkGroupArgs(networkGroupName, networkManagerName, resourceGroupName);
+        }
+
+        public GetNetworkGroupArgs build() {
+            $.networkGroupName = Objects.requireNonNull($.networkGroupName, "expected parameter 'networkGroupName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

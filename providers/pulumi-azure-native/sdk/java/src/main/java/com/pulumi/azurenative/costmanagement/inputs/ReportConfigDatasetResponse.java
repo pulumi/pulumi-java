@@ -30,10 +30,10 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
+    private @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
 
-    public Map<String,ReportConfigAggregationResponse> aggregation() {
-        return this.aggregation == null ? Map.of() : this.aggregation;
+    public Optional<Map<String,ReportConfigAggregationResponse>> aggregation() {
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configuration")
-      private final @Nullable ReportConfigDatasetConfigurationResponse configuration;
+    private @Nullable ReportConfigDatasetConfigurationResponse configuration;
 
     public Optional<ReportConfigDatasetConfigurationResponse> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filter")
-      private final @Nullable ReportConfigFilterResponse filter;
+    private @Nullable ReportConfigFilterResponse filter;
 
     public Optional<ReportConfigFilterResponse> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="granularity")
-      private final @Nullable String granularity;
+    private @Nullable String granularity;
 
     public Optional<String> granularity() {
-        return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
+        return Optional.ofNullable(this.granularity);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="grouping")
-      private final @Nullable List<ReportConfigGroupingResponse> grouping;
+    private @Nullable List<ReportConfigGroupingResponse> grouping;
 
-    public List<ReportConfigGroupingResponse> grouping() {
-        return this.grouping == null ? List.of() : this.grouping;
+    public Optional<List<ReportConfigGroupingResponse>> grouping() {
+        return Optional.ofNullable(this.grouping);
     }
 
     /**
@@ -85,97 +85,82 @@ public final class ReportConfigDatasetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sorting")
-      private final @Nullable List<ReportConfigSortingResponse> sorting;
+    private @Nullable List<ReportConfigSortingResponse> sorting;
 
-    public List<ReportConfigSortingResponse> sorting() {
-        return this.sorting == null ? List.of() : this.sorting;
+    public Optional<List<ReportConfigSortingResponse>> sorting() {
+        return Optional.ofNullable(this.sorting);
     }
 
-    public ReportConfigDatasetResponse(
-        @Nullable Map<String,ReportConfigAggregationResponse> aggregation,
-        @Nullable ReportConfigDatasetConfigurationResponse configuration,
-        @Nullable ReportConfigFilterResponse filter,
-        @Nullable String granularity,
-        @Nullable List<ReportConfigGroupingResponse> grouping,
-        @Nullable List<ReportConfigSortingResponse> sorting) {
-        this.aggregation = aggregation;
-        this.configuration = configuration;
-        this.filter = filter;
-        this.granularity = granularity;
-        this.grouping = grouping;
-        this.sorting = sorting;
-    }
+    private ReportConfigDatasetResponse() {}
 
-    private ReportConfigDatasetResponse() {
-        this.aggregation = Map.of();
-        this.configuration = null;
-        this.filter = null;
-        this.granularity = null;
-        this.grouping = List.of();
-        this.sorting = List.of();
+    private ReportConfigDatasetResponse(ReportConfigDatasetResponse $) {
+        this.aggregation = $.aggregation;
+        this.configuration = $.configuration;
+        this.filter = $.filter;
+        this.granularity = $.granularity;
+        this.grouping = $.grouping;
+        this.sorting = $.sorting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
-        private @Nullable ReportConfigDatasetConfigurationResponse configuration;
-        private @Nullable ReportConfigFilterResponse filter;
-        private @Nullable String granularity;
-        private @Nullable List<ReportConfigGroupingResponse> grouping;
-        private @Nullable List<ReportConfigSortingResponse> sorting;
+        private ReportConfigDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigDatasetResponse();
         }
 
         public Builder(ReportConfigDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.configuration = defaults.configuration;
-    	      this.filter = defaults.filter;
-    	      this.granularity = defaults.granularity;
-    	      this.grouping = defaults.grouping;
-    	      this.sorting = defaults.sorting;
+            $ = new ReportConfigDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable Map<String,ReportConfigAggregationResponse> aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
+
         public Builder configuration(@Nullable ReportConfigDatasetConfigurationResponse configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder filter(@Nullable ReportConfigFilterResponse filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder granularity(@Nullable String granularity) {
-            this.granularity = granularity;
+            $.granularity = granularity;
             return this;
         }
+
         public Builder grouping(@Nullable List<ReportConfigGroupingResponse> grouping) {
-            this.grouping = grouping;
+            $.grouping = grouping;
             return this;
         }
+
         public Builder grouping(ReportConfigGroupingResponse... grouping) {
             return grouping(List.of(grouping));
         }
+
         public Builder sorting(@Nullable List<ReportConfigSortingResponse> sorting) {
-            this.sorting = sorting;
+            $.sorting = sorting;
             return this;
         }
+
         public Builder sorting(ReportConfigSortingResponse... sorting) {
             return sorting(List.of(sorting));
-        }        public ReportConfigDatasetResponse build() {
-            return new ReportConfigDatasetResponse(aggregation, configuration, filter, granularity, grouping, sorting);
+        }
+
+        public ReportConfigDatasetResponse build() {
+            return $;
         }
     }
+
 }

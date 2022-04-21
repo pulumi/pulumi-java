@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.botservice.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ListBotConnectionServiceProvidersArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final ListBotConnectionServiceProvidersArgs Empty = new ListBotConnectionServiceProvidersArgs();
 
-    public ListBotConnectionServiceProvidersArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ListBotConnectionServiceProvidersArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ListBotConnectionServiceProvidersArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ListBotConnectionServiceProvidersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ListBotConnectionServiceProvidersArgs();
         }
         public ListBotConnectionServiceProvidersArgs build() {
-            return new ListBotConnectionServiceProvidersArgs();
+            return $;
         }
     }
+
 }

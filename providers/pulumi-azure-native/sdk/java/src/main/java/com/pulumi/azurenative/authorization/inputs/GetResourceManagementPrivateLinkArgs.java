@@ -17,7 +17,7 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
      * 
      */
     @Import(name="rmplName", required=true)
-      private final String rmplName;
+    private String rmplName;
 
     public String rmplName() {
         return this.rmplName;
     }
 
-    public GetResourceManagementPrivateLinkArgs(
-        String resourceGroupName,
-        String rmplName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rmplName = Objects.requireNonNull(rmplName, "expected parameter 'rmplName' to be non-null");
-    }
+    private GetResourceManagementPrivateLinkArgs() {}
 
-    private GetResourceManagementPrivateLinkArgs() {
-        this.resourceGroupName = null;
-        this.rmplName = null;
+    private GetResourceManagementPrivateLinkArgs(GetResourceManagementPrivateLinkArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.rmplName = $.rmplName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceManagementPrivateLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String rmplName;
+        private GetResourceManagementPrivateLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceManagementPrivateLinkArgs();
         }
 
         public Builder(GetResourceManagementPrivateLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rmplName = defaults.rmplName;
+            $ = new GetResourceManagementPrivateLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder rmplName(String rmplName) {
-            this.rmplName = Objects.requireNonNull(rmplName);
+            $.rmplName = rmplName;
             return this;
-        }        public GetResourceManagementPrivateLinkArgs build() {
-            return new GetResourceManagementPrivateLinkArgs(resourceGroupName, rmplName);
+        }
+
+        public GetResourceManagementPrivateLinkArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.rmplName = Objects.requireNonNull($.rmplName, "expected parameter 'rmplName' to be non-null");
+            return $;
         }
     }
+
 }

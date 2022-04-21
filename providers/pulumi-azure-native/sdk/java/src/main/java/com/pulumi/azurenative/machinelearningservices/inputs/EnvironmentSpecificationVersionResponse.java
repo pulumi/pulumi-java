@@ -31,10 +31,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="condaFile")
-      private final @Nullable String condaFile;
+    private @Nullable String condaFile;
 
     public Optional<String> condaFile() {
-        return this.condaFile == null ? Optional.empty() : Optional.ofNullable(this.condaFile);
+        return Optional.ofNullable(this.condaFile);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="docker")
-      private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
+    private @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
 
-    public Either<DockerBuildResponse,DockerImageResponse> docker() {
-        return this.docker == null ? null : this.docker;
+    public Optional<Either<DockerBuildResponse,DockerImageResponse>> docker() {
+        return Optional.ofNullable(this.docker);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="environmentSpecificationType", required=true)
-      private final String environmentSpecificationType;
+    private String environmentSpecificationType;
 
     public String environmentSpecificationType() {
         return this.environmentSpecificationType;
@@ -76,10 +76,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="inferenceContainerProperties")
-      private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
+    private @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
 
     public Optional<InferenceContainerPropertiesResponse> inferenceContainerProperties() {
-        return this.inferenceContainerProperties == null ? Optional.empty() : Optional.ofNullable(this.inferenceContainerProperties);
+        return Optional.ofNullable(this.inferenceContainerProperties);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="isAnonymous")
-      private final @Nullable Boolean isAnonymous;
+    private @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> isAnonymous() {
-        return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
+        return Optional.ofNullable(this.isAnonymous);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -109,109 +109,87 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EnvironmentSpecificationVersionResponse(
-        @Nullable String condaFile,
-        @Nullable String description,
-        @Nullable Either<DockerBuildResponse,DockerImageResponse> docker,
-        String environmentSpecificationType,
-        @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties,
-        @Nullable Boolean isAnonymous,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
-        this.condaFile = condaFile;
-        this.description = description;
-        this.docker = docker;
-        this.environmentSpecificationType = Objects.requireNonNull(environmentSpecificationType, "expected parameter 'environmentSpecificationType' to be non-null");
-        this.inferenceContainerProperties = inferenceContainerProperties;
-        this.isAnonymous = isAnonymous;
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private EnvironmentSpecificationVersionResponse() {}
 
-    private EnvironmentSpecificationVersionResponse() {
-        this.condaFile = null;
-        this.description = null;
-        this.docker = null;
-        this.environmentSpecificationType = null;
-        this.inferenceContainerProperties = null;
-        this.isAnonymous = null;
-        this.properties = Map.of();
-        this.tags = Map.of();
+    private EnvironmentSpecificationVersionResponse(EnvironmentSpecificationVersionResponse $) {
+        this.condaFile = $.condaFile;
+        this.description = $.description;
+        this.docker = $.docker;
+        this.environmentSpecificationType = $.environmentSpecificationType;
+        this.inferenceContainerProperties = $.inferenceContainerProperties;
+        this.isAnonymous = $.isAnonymous;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentSpecificationVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String condaFile;
-        private @Nullable String description;
-        private @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
-        private String environmentSpecificationType;
-        private @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
-        private @Nullable Boolean isAnonymous;
-        private @Nullable Map<String,String> properties;
-        private @Nullable Map<String,String> tags;
+        private EnvironmentSpecificationVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentSpecificationVersionResponse();
         }
 
         public Builder(EnvironmentSpecificationVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condaFile = defaults.condaFile;
-    	      this.description = defaults.description;
-    	      this.docker = defaults.docker;
-    	      this.environmentSpecificationType = defaults.environmentSpecificationType;
-    	      this.inferenceContainerProperties = defaults.inferenceContainerProperties;
-    	      this.isAnonymous = defaults.isAnonymous;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new EnvironmentSpecificationVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condaFile(@Nullable String condaFile) {
-            this.condaFile = condaFile;
+            $.condaFile = condaFile;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder docker(@Nullable Either<DockerBuildResponse,DockerImageResponse> docker) {
-            this.docker = docker;
+            $.docker = docker;
             return this;
         }
+
         public Builder environmentSpecificationType(String environmentSpecificationType) {
-            this.environmentSpecificationType = Objects.requireNonNull(environmentSpecificationType);
+            $.environmentSpecificationType = environmentSpecificationType;
             return this;
         }
+
         public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesResponse inferenceContainerProperties) {
-            this.inferenceContainerProperties = inferenceContainerProperties;
+            $.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
+
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = isAnonymous;
+            $.isAnonymous = isAnonymous;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public EnvironmentSpecificationVersionResponse build() {
-            return new EnvironmentSpecificationVersionResponse(condaFile, description, docker, environmentSpecificationType, inferenceContainerProperties, isAnonymous, properties, tags);
+        }
+
+        public EnvironmentSpecificationVersionResponse build() {
+            $.environmentSpecificationType = Objects.requireNonNull($.environmentSpecificationType, "expected parameter 'environmentSpecificationType' to be non-null");
+            return $;
         }
     }
+
 }

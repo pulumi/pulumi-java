@@ -23,7 +23,7 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,7 +34,7 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeSequences", required=true)
-      private final VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
+    private VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
 
     public VideoSequenceAbsoluteTimeMarkersResponse timeSequences() {
         return this.timeSequences;
@@ -46,7 +46,7 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -57,73 +57,66 @@ public final class VideoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="videoName", required=true)
-      private final String videoName;
+    private String videoName;
 
     public String videoName() {
         return this.videoName;
     }
 
-    public VideoSourceResponse(
-        String name,
-        VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
-        String type,
-        String videoName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.timeSequences = Objects.requireNonNull(timeSequences, "expected parameter 'timeSequences' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.videoName = Objects.requireNonNull(videoName, "expected parameter 'videoName' to be non-null");
-    }
+    private VideoSourceResponse() {}
 
-    private VideoSourceResponse() {
-        this.name = null;
-        this.timeSequences = null;
-        this.type = null;
-        this.videoName = null;
+    private VideoSourceResponse(VideoSourceResponse $) {
+        this.name = $.name;
+        this.timeSequences = $.timeSequences;
+        this.type = $.type;
+        this.videoName = $.videoName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
-        private String type;
-        private String videoName;
+        private VideoSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoSourceResponse();
         }
 
         public Builder(VideoSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.timeSequences = defaults.timeSequences;
-    	      this.type = defaults.type;
-    	      this.videoName = defaults.videoName;
+            $ = new VideoSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
-            this.timeSequences = Objects.requireNonNull(timeSequences);
+            $.timeSequences = timeSequences;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder videoName(String videoName) {
-            this.videoName = Objects.requireNonNull(videoName);
+            $.videoName = videoName;
             return this;
-        }        public VideoSourceResponse build() {
-            return new VideoSourceResponse(name, timeSequences, type, videoName);
+        }
+
+        public VideoSourceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.timeSequences = Objects.requireNonNull($.timeSequences, "expected parameter 'timeSequences' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.videoName = Objects.requireNonNull($.videoName, "expected parameter 'videoName' to be non-null");
+            return $;
         }
     }
+
 }

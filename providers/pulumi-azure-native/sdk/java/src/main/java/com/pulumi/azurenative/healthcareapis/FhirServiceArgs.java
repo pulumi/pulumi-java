@@ -13,11 +13,11 @@ import com.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdenti
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
+    private @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
 
-    public Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies() {
-        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
+    public Optional<Output<List<FhirServiceAccessPolicyEntryArgs>>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acrConfiguration")
-      private final @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
+    private @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
 
-    public Output<FhirServiceAcrConfigurationArgs> acrConfiguration() {
-        return this.acrConfiguration == null ? Codegen.empty() : this.acrConfiguration;
+    public Optional<Output<FhirServiceAcrConfigurationArgs>> acrConfiguration() {
+        return Optional.ofNullable(this.acrConfiguration);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationConfiguration")
-      private final @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
+    private @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
+    public Optional<Output<FhirServiceAuthenticationConfigurationArgs>> authenticationConfiguration() {
+        return Optional.ofNullable(this.authenticationConfiguration);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="corsConfiguration")
-      private final @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
+    private @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
 
-    public Output<FhirServiceCorsConfigurationArgs> corsConfiguration() {
-        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
+    public Optional<Output<FhirServiceCorsConfigurationArgs>> corsConfiguration() {
+        return Optional.ofNullable(this.corsConfiguration);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exportConfiguration")
-      private final @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
+    private @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
 
-    public Output<FhirServiceExportConfigurationArgs> exportConfiguration() {
-        return this.exportConfiguration == null ? Codegen.empty() : this.exportConfiguration;
+    public Optional<Output<FhirServiceExportConfigurationArgs>> exportConfiguration() {
+        return Optional.ofNullable(this.exportConfiguration);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fhirServiceName")
-      private final @Nullable Output<String> fhirServiceName;
+    private @Nullable Output<String> fhirServiceName;
 
-    public Output<String> fhirServiceName() {
-        return this.fhirServiceName == null ? Codegen.empty() : this.fhirServiceName;
+    public Optional<Output<String>> fhirServiceName() {
+        return Optional.ofNullable(this.fhirServiceName);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
+    private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
-    public Output<ServiceManagedIdentityIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ServiceManagedIdentityIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,FhirServiceKind>> kind;
+    private @Nullable Output<Either<String,FhirServiceKind>> kind;
 
-    public Output<Either<String,FhirServiceKind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,FhirServiceKind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -140,10 +140,10 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -151,196 +151,164 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public FhirServiceArgs(
-        @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies,
-        @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration,
-        @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration,
-        @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration,
-        @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration,
-        @Nullable Output<String> fhirServiceName,
-        @Nullable Output<ServiceManagedIdentityIdentityArgs> identity,
-        @Nullable Output<Either<String,FhirServiceKind>> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.accessPolicies = accessPolicies;
-        this.acrConfiguration = acrConfiguration;
-        this.authenticationConfiguration = authenticationConfiguration;
-        this.corsConfiguration = corsConfiguration;
-        this.exportConfiguration = exportConfiguration;
-        this.fhirServiceName = fhirServiceName;
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private FhirServiceArgs() {}
 
-    private FhirServiceArgs() {
-        this.accessPolicies = Codegen.empty();
-        this.acrConfiguration = Codegen.empty();
-        this.authenticationConfiguration = Codegen.empty();
-        this.corsConfiguration = Codegen.empty();
-        this.exportConfiguration = Codegen.empty();
-        this.fhirServiceName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private FhirServiceArgs(FhirServiceArgs $) {
+        this.accessPolicies = $.accessPolicies;
+        this.acrConfiguration = $.acrConfiguration;
+        this.authenticationConfiguration = $.authenticationConfiguration;
+        this.corsConfiguration = $.corsConfiguration;
+        this.exportConfiguration = $.exportConfiguration;
+        this.fhirServiceName = $.fhirServiceName;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
-        private @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
-        private @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
-        private @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
-        private @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
-        private @Nullable Output<String> fhirServiceName;
-        private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
-        private @Nullable Output<Either<String,FhirServiceKind>> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private FhirServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirServiceArgs();
         }
 
         public Builder(FhirServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.acrConfiguration = defaults.acrConfiguration;
-    	      this.authenticationConfiguration = defaults.authenticationConfiguration;
-    	      this.corsConfiguration = defaults.corsConfiguration;
-    	      this.exportConfiguration = defaults.exportConfiguration;
-    	      this.fhirServiceName = defaults.fhirServiceName;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new FhirServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
-        public Builder accessPolicies(@Nullable List<FhirServiceAccessPolicyEntryArgs> accessPolicies) {
-            this.accessPolicies = Codegen.ofNullable(accessPolicies);
-            return this;
+
+        public Builder accessPolicies(List<FhirServiceAccessPolicyEntryArgs> accessPolicies) {
+            return accessPolicies(Output.of(accessPolicies));
         }
+
         public Builder accessPolicies(FhirServiceAccessPolicyEntryArgs... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
+
         public Builder acrConfiguration(@Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration) {
-            this.acrConfiguration = acrConfiguration;
+            $.acrConfiguration = acrConfiguration;
             return this;
         }
-        public Builder acrConfiguration(@Nullable FhirServiceAcrConfigurationArgs acrConfiguration) {
-            this.acrConfiguration = Codegen.ofNullable(acrConfiguration);
-            return this;
+
+        public Builder acrConfiguration(FhirServiceAcrConfigurationArgs acrConfiguration) {
+            return acrConfiguration(Output.of(acrConfiguration));
         }
+
         public Builder authenticationConfiguration(@Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
-            this.authenticationConfiguration = authenticationConfiguration;
+            $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-        public Builder authenticationConfiguration(@Nullable FhirServiceAuthenticationConfigurationArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Codegen.ofNullable(authenticationConfiguration);
-            return this;
+
+        public Builder authenticationConfiguration(FhirServiceAuthenticationConfigurationArgs authenticationConfiguration) {
+            return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
+
         public Builder corsConfiguration(@Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration) {
-            this.corsConfiguration = corsConfiguration;
+            $.corsConfiguration = corsConfiguration;
             return this;
         }
-        public Builder corsConfiguration(@Nullable FhirServiceCorsConfigurationArgs corsConfiguration) {
-            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
-            return this;
+
+        public Builder corsConfiguration(FhirServiceCorsConfigurationArgs corsConfiguration) {
+            return corsConfiguration(Output.of(corsConfiguration));
         }
+
         public Builder exportConfiguration(@Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration) {
-            this.exportConfiguration = exportConfiguration;
+            $.exportConfiguration = exportConfiguration;
             return this;
         }
-        public Builder exportConfiguration(@Nullable FhirServiceExportConfigurationArgs exportConfiguration) {
-            this.exportConfiguration = Codegen.ofNullable(exportConfiguration);
-            return this;
+
+        public Builder exportConfiguration(FhirServiceExportConfigurationArgs exportConfiguration) {
+            return exportConfiguration(Output.of(exportConfiguration));
         }
+
         public Builder fhirServiceName(@Nullable Output<String> fhirServiceName) {
-            this.fhirServiceName = fhirServiceName;
+            $.fhirServiceName = fhirServiceName;
             return this;
         }
-        public Builder fhirServiceName(@Nullable String fhirServiceName) {
-            this.fhirServiceName = Codegen.ofNullable(fhirServiceName);
-            return this;
+
+        public Builder fhirServiceName(String fhirServiceName) {
+            return fhirServiceName(Output.of(fhirServiceName));
         }
+
         public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ServiceManagedIdentityIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<Either<String,FhirServiceKind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,FhirServiceKind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,FhirServiceKind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public FhirServiceArgs build() {
-            return new FhirServiceArgs(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, exportConfiguration, fhirServiceName, identity, kind, location, resourceGroupName, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public FhirServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

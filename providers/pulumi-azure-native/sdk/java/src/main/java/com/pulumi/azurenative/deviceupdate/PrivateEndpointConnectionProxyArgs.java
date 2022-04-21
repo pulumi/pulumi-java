@@ -6,9 +6,9 @@ package com.pulumi.azurenative.deviceupdate;
 import com.pulumi.azurenative.deviceupdate.inputs.RemotePrivateEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="privateEndpointConnectionProxyId")
-      private final @Nullable Output<String> privateEndpointConnectionProxyId;
+    private @Nullable Output<String> privateEndpointConnectionProxyId;
 
-    public Output<String> privateEndpointConnectionProxyId() {
-        return this.privateEndpointConnectionProxyId == null ? Codegen.empty() : this.privateEndpointConnectionProxyId;
+    public Optional<Output<String>> privateEndpointConnectionProxyId() {
+        return Optional.ofNullable(this.privateEndpointConnectionProxyId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="remotePrivateEndpoint")
-      private final @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
+    private @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
-    public Output<RemotePrivateEndpointArgs> remotePrivateEndpoint() {
-        return this.remotePrivateEndpoint == null ? Codegen.empty() : this.remotePrivateEndpoint;
+    public Optional<Output<RemotePrivateEndpointArgs>> remotePrivateEndpoint() {
+        return Optional.ofNullable(this.remotePrivateEndpoint);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,90 @@ public final class PrivateEndpointConnectionProxyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public PrivateEndpointConnectionProxyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> privateEndpointConnectionProxyId,
-        @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> status) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
-        this.remotePrivateEndpoint = remotePrivateEndpoint;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.status = status;
-    }
+    private PrivateEndpointConnectionProxyArgs() {}
 
-    private PrivateEndpointConnectionProxyArgs() {
-        this.accountName = Codegen.empty();
-        this.privateEndpointConnectionProxyId = Codegen.empty();
-        this.remotePrivateEndpoint = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.status = Codegen.empty();
+    private PrivateEndpointConnectionProxyArgs(PrivateEndpointConnectionProxyArgs $) {
+        this.accountName = $.accountName;
+        this.privateEndpointConnectionProxyId = $.privateEndpointConnectionProxyId;
+        this.remotePrivateEndpoint = $.remotePrivateEndpoint;
+        this.resourceGroupName = $.resourceGroupName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> privateEndpointConnectionProxyId;
-        private @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> status;
+        private PrivateEndpointConnectionProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionProxyArgs();
         }
 
         public Builder(PrivateEndpointConnectionProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.privateEndpointConnectionProxyId = defaults.privateEndpointConnectionProxyId;
-    	      this.remotePrivateEndpoint = defaults.remotePrivateEndpoint;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.status = defaults.status;
+            $ = new PrivateEndpointConnectionProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder privateEndpointConnectionProxyId(@Nullable Output<String> privateEndpointConnectionProxyId) {
-            this.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
+            $.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
             return this;
         }
-        public Builder privateEndpointConnectionProxyId(@Nullable String privateEndpointConnectionProxyId) {
-            this.privateEndpointConnectionProxyId = Codegen.ofNullable(privateEndpointConnectionProxyId);
-            return this;
+
+        public Builder privateEndpointConnectionProxyId(String privateEndpointConnectionProxyId) {
+            return privateEndpointConnectionProxyId(Output.of(privateEndpointConnectionProxyId));
         }
+
         public Builder remotePrivateEndpoint(@Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint) {
-            this.remotePrivateEndpoint = remotePrivateEndpoint;
+            $.remotePrivateEndpoint = remotePrivateEndpoint;
             return this;
         }
-        public Builder remotePrivateEndpoint(@Nullable RemotePrivateEndpointArgs remotePrivateEndpoint) {
-            this.remotePrivateEndpoint = Codegen.ofNullable(remotePrivateEndpoint);
-            return this;
+
+        public Builder remotePrivateEndpoint(RemotePrivateEndpointArgs remotePrivateEndpoint) {
+            return remotePrivateEndpoint(Output.of(remotePrivateEndpoint));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public PrivateEndpointConnectionProxyArgs build() {
-            return new PrivateEndpointConnectionProxyArgs(accountName, privateEndpointConnectionProxyId, remotePrivateEndpoint, resourceGroupName, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public PrivateEndpointConnectionProxyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
@@ -37,10 +37,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="appSecret")
-      private final @Nullable String appSecret;
+    private @Nullable String appSecret;
 
     public Optional<String> appSecret() {
-        return this.appSecret == null ? Optional.empty() : Optional.ofNullable(this.appSecret);
+        return Optional.ofNullable(this.appSecret);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="callbackUrl", required=true)
-      private final String callbackUrl;
+    private String callbackUrl;
 
     public String callbackUrl() {
         return this.callbackUrl;
@@ -59,7 +59,7 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -70,10 +70,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="pages")
-      private final @Nullable List<FacebookPageResponse> pages;
+    private @Nullable List<FacebookPageResponse> pages;
 
-    public List<FacebookPageResponse> pages() {
-        return this.pages == null ? List.of() : this.pages;
+    public Optional<List<FacebookPageResponse>> pages() {
+        return Optional.ofNullable(this.pages);
     }
 
     /**
@@ -81,94 +81,82 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="verifyToken", required=true)
-      private final String verifyToken;
+    private String verifyToken;
 
     public String verifyToken() {
         return this.verifyToken;
     }
 
-    public FacebookChannelPropertiesResponse(
-        String appId,
-        @Nullable String appSecret,
-        String callbackUrl,
-        Boolean isEnabled,
-        @Nullable List<FacebookPageResponse> pages,
-        String verifyToken) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.appSecret = appSecret;
-        this.callbackUrl = Objects.requireNonNull(callbackUrl, "expected parameter 'callbackUrl' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.pages = pages;
-        this.verifyToken = Objects.requireNonNull(verifyToken, "expected parameter 'verifyToken' to be non-null");
-    }
+    private FacebookChannelPropertiesResponse() {}
 
-    private FacebookChannelPropertiesResponse() {
-        this.appId = null;
-        this.appSecret = null;
-        this.callbackUrl = null;
-        this.isEnabled = null;
-        this.pages = List.of();
-        this.verifyToken = null;
+    private FacebookChannelPropertiesResponse(FacebookChannelPropertiesResponse $) {
+        this.appId = $.appId;
+        this.appSecret = $.appSecret;
+        this.callbackUrl = $.callbackUrl;
+        this.isEnabled = $.isEnabled;
+        this.pages = $.pages;
+        this.verifyToken = $.verifyToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FacebookChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private @Nullable String appSecret;
-        private String callbackUrl;
-        private Boolean isEnabled;
-        private @Nullable List<FacebookPageResponse> pages;
-        private String verifyToken;
+        private FacebookChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FacebookChannelPropertiesResponse();
         }
 
         public Builder(FacebookChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appSecret = defaults.appSecret;
-    	      this.callbackUrl = defaults.callbackUrl;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.pages = defaults.pages;
-    	      this.verifyToken = defaults.verifyToken;
+            $ = new FacebookChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appSecret(@Nullable String appSecret) {
-            this.appSecret = appSecret;
+            $.appSecret = appSecret;
             return this;
         }
+
         public Builder callbackUrl(String callbackUrl) {
-            this.callbackUrl = Objects.requireNonNull(callbackUrl);
+            $.callbackUrl = callbackUrl;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder pages(@Nullable List<FacebookPageResponse> pages) {
-            this.pages = pages;
+            $.pages = pages;
             return this;
         }
+
         public Builder pages(FacebookPageResponse... pages) {
             return pages(List.of(pages));
         }
+
         public Builder verifyToken(String verifyToken) {
-            this.verifyToken = Objects.requireNonNull(verifyToken);
+            $.verifyToken = verifyToken;
             return this;
-        }        public FacebookChannelPropertiesResponse build() {
-            return new FacebookChannelPropertiesResponse(appId, appSecret, callbackUrl, isEnabled, pages, verifyToken);
+        }
+
+        public FacebookChannelPropertiesResponse build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.callbackUrl = Objects.requireNonNull($.callbackUrl, "expected parameter 'callbackUrl' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.verifyToken = Objects.requireNonNull($.verifyToken, "expected parameter 'verifyToken' to be non-null");
+            return $;
         }
     }
+
 }

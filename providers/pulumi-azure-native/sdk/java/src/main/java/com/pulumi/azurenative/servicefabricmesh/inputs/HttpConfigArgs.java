@@ -6,7 +6,6 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +25,7 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hosts", required=true)
-      private final Output<List<HttpHostConfigArgs>> hosts;
+    private Output<List<HttpHostConfigArgs>> hosts;
 
     public Output<List<HttpHostConfigArgs>> hosts() {
         return this.hosts;
@@ -37,7 +36,7 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,79 +47,75 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public HttpConfigArgs(
-        Output<List<HttpHostConfigArgs>> hosts,
-        Output<String> name,
-        Output<Integer> port) {
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private HttpConfigArgs() {}
 
-    private HttpConfigArgs() {
-        this.hosts = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
+    private HttpConfigArgs(HttpConfigArgs $) {
+        this.hosts = $.hosts;
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<HttpHostConfigArgs>> hosts;
-        private Output<String> name;
-        private Output<Integer> port;
+        private HttpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpConfigArgs();
         }
 
         public Builder(HttpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new HttpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(Output<List<HttpHostConfigArgs>> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(List<HttpHostConfigArgs> hosts) {
-            this.hosts = Output.of(Objects.requireNonNull(hosts));
-            return this;
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(HttpHostConfigArgs... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public HttpConfigArgs build() {
-            return new HttpConfigArgs(hosts, name, port);
+            return port(Output.of(port));
+        }
+
+        public HttpConfigArgs build() {
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

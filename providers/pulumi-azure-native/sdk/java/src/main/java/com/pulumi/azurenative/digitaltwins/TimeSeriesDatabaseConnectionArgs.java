@@ -6,9 +6,9 @@ package com.pulumi.azurenative.digitaltwins;
 import com.pulumi.azurenative.digitaltwins.inputs.AzureDataExplorerConnectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
+    private @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
 
-    public Output<AzureDataExplorerConnectionPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<AzureDataExplorerConnectionPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -54,89 +54,80 @@ public final class TimeSeriesDatabaseConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="timeSeriesDatabaseConnectionName")
-      private final @Nullable Output<String> timeSeriesDatabaseConnectionName;
+    private @Nullable Output<String> timeSeriesDatabaseConnectionName;
 
-    public Output<String> timeSeriesDatabaseConnectionName() {
-        return this.timeSeriesDatabaseConnectionName == null ? Codegen.empty() : this.timeSeriesDatabaseConnectionName;
+    public Optional<Output<String>> timeSeriesDatabaseConnectionName() {
+        return Optional.ofNullable(this.timeSeriesDatabaseConnectionName);
     }
 
-    public TimeSeriesDatabaseConnectionArgs(
-        @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<String> timeSeriesDatabaseConnectionName) {
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
-    }
+    private TimeSeriesDatabaseConnectionArgs() {}
 
-    private TimeSeriesDatabaseConnectionArgs() {
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.timeSeriesDatabaseConnectionName = Codegen.empty();
+    private TimeSeriesDatabaseConnectionArgs(TimeSeriesDatabaseConnectionArgs $) {
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.timeSeriesDatabaseConnectionName = $.timeSeriesDatabaseConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesDatabaseConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<String> timeSeriesDatabaseConnectionName;
+        private TimeSeriesDatabaseConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesDatabaseConnectionArgs();
         }
 
         public Builder(TimeSeriesDatabaseConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.timeSeriesDatabaseConnectionName = defaults.timeSeriesDatabaseConnectionName;
+            $ = new TimeSeriesDatabaseConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable AzureDataExplorerConnectionPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(AzureDataExplorerConnectionPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder timeSeriesDatabaseConnectionName(@Nullable Output<String> timeSeriesDatabaseConnectionName) {
-            this.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
+            $.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;
         }
-        public Builder timeSeriesDatabaseConnectionName(@Nullable String timeSeriesDatabaseConnectionName) {
-            this.timeSeriesDatabaseConnectionName = Codegen.ofNullable(timeSeriesDatabaseConnectionName);
-            return this;
-        }        public TimeSeriesDatabaseConnectionArgs build() {
-            return new TimeSeriesDatabaseConnectionArgs(properties, resourceGroupName, resourceName, timeSeriesDatabaseConnectionName);
+
+        public Builder timeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
+            return timeSeriesDatabaseConnectionName(Output.of(timeSeriesDatabaseConnectionName));
+        }
+
+        public TimeSeriesDatabaseConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

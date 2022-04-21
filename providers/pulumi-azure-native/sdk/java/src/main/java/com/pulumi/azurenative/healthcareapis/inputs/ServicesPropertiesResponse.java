@@ -31,10 +31,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
+    private @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
 
-    public List<ServiceAccessPolicyEntryResponse> accessPolicies() {
-        return this.accessPolicies == null ? List.of() : this.accessPolicies;
+    public Optional<List<ServiceAccessPolicyEntryResponse>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="acrConfiguration")
-      private final @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration;
+    private @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration;
 
     public Optional<ServiceAcrConfigurationInfoResponse> acrConfiguration() {
-        return this.acrConfiguration == null ? Optional.empty() : Optional.ofNullable(this.acrConfiguration);
+        return Optional.ofNullable(this.acrConfiguration);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authenticationConfiguration")
-      private final @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
+    private @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
 
     public Optional<ServiceAuthenticationConfigurationInfoResponse> authenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
+        return Optional.ofNullable(this.authenticationConfiguration);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="corsConfiguration")
-      private final @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
+    private @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
 
     public Optional<ServiceCorsConfigurationInfoResponse> corsConfiguration() {
-        return this.corsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.corsConfiguration);
+        return Optional.ofNullable(this.corsConfiguration);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cosmosDbConfiguration")
-      private final @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
+    private @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
 
     public Optional<ServiceCosmosDbConfigurationInfoResponse> cosmosDbConfiguration() {
-        return this.cosmosDbConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cosmosDbConfiguration);
+        return Optional.ofNullable(this.cosmosDbConfiguration);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="exportConfiguration")
-      private final @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
+    private @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
 
     public Optional<ServiceExportConfigurationInfoResponse> exportConfiguration() {
-        return this.exportConfiguration == null ? Optional.empty() : Optional.ofNullable(this.exportConfiguration);
+        return Optional.ofNullable(this.exportConfiguration);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
+    public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -119,124 +119,101 @@ public final class ServicesPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public ServicesPropertiesResponse(
-        @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
-        @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration,
-        @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
-        @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
-        @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
-        @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
-        this.accessPolicies = accessPolicies;
-        this.acrConfiguration = acrConfiguration;
-        this.authenticationConfiguration = authenticationConfiguration;
-        this.corsConfiguration = corsConfiguration;
-        this.cosmosDbConfiguration = cosmosDbConfiguration;
-        this.exportConfiguration = exportConfiguration;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private ServicesPropertiesResponse() {}
 
-    private ServicesPropertiesResponse() {
-        this.accessPolicies = List.of();
-        this.acrConfiguration = null;
-        this.authenticationConfiguration = null;
-        this.corsConfiguration = null;
-        this.cosmosDbConfiguration = null;
-        this.exportConfiguration = null;
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
+    private ServicesPropertiesResponse(ServicesPropertiesResponse $) {
+        this.accessPolicies = $.accessPolicies;
+        this.acrConfiguration = $.acrConfiguration;
+        this.authenticationConfiguration = $.authenticationConfiguration;
+        this.corsConfiguration = $.corsConfiguration;
+        this.cosmosDbConfiguration = $.cosmosDbConfiguration;
+        this.exportConfiguration = $.exportConfiguration;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicesPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
-        private @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration;
-        private @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
-        private @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
-        private @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
-        private @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
-        private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
+        private ServicesPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicesPropertiesResponse();
         }
 
         public Builder(ServicesPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.acrConfiguration = defaults.acrConfiguration;
-    	      this.authenticationConfiguration = defaults.authenticationConfiguration;
-    	      this.corsConfiguration = defaults.corsConfiguration;
-    	      this.cosmosDbConfiguration = defaults.cosmosDbConfiguration;
-    	      this.exportConfiguration = defaults.exportConfiguration;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new ServicesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
+
         public Builder accessPolicies(ServiceAccessPolicyEntryResponse... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
+
         public Builder acrConfiguration(@Nullable ServiceAcrConfigurationInfoResponse acrConfiguration) {
-            this.acrConfiguration = acrConfiguration;
+            $.acrConfiguration = acrConfiguration;
             return this;
         }
+
         public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration) {
-            this.authenticationConfiguration = authenticationConfiguration;
+            $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
+
         public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoResponse corsConfiguration) {
-            this.corsConfiguration = corsConfiguration;
+            $.corsConfiguration = corsConfiguration;
             return this;
         }
+
         public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration) {
-            this.cosmosDbConfiguration = cosmosDbConfiguration;
+            $.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
+
         public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoResponse exportConfiguration) {
-            this.exportConfiguration = exportConfiguration;
+            $.exportConfiguration = exportConfiguration;
             return this;
         }
+
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
-        }        public ServicesPropertiesResponse build() {
-            return new ServicesPropertiesResponse(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, provisioningState, publicNetworkAccess);
+        }
+
+        public ServicesPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

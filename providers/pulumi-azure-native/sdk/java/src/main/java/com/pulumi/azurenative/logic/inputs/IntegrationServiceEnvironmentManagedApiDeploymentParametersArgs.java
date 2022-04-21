@@ -6,8 +6,8 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
      * 
      */
     @Import(name="contentLinkDefinition")
-      private final @Nullable Output<ContentLinkArgs> contentLinkDefinition;
+    private @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
-    public Output<ContentLinkArgs> contentLinkDefinition() {
-        return this.contentLinkDefinition == null ? Codegen.empty() : this.contentLinkDefinition;
+    public Optional<Output<ContentLinkArgs>> contentLinkDefinition() {
+        return Optional.ofNullable(this.contentLinkDefinition);
     }
 
-    public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(@Nullable Output<ContentLinkArgs> contentLinkDefinition) {
-        this.contentLinkDefinition = contentLinkDefinition;
-    }
+    private IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs() {}
 
-    private IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs() {
-        this.contentLinkDefinition = Codegen.empty();
+    private IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs $) {
+        this.contentLinkDefinition = $.contentLinkDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContentLinkArgs> contentLinkDefinition;
+        private IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs();
         }
 
         public Builder(IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentLinkDefinition = defaults.contentLinkDefinition;
+            $ = new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentLinkDefinition(@Nullable Output<ContentLinkArgs> contentLinkDefinition) {
-            this.contentLinkDefinition = contentLinkDefinition;
+            $.contentLinkDefinition = contentLinkDefinition;
             return this;
         }
-        public Builder contentLinkDefinition(@Nullable ContentLinkArgs contentLinkDefinition) {
-            this.contentLinkDefinition = Codegen.ofNullable(contentLinkDefinition);
-            return this;
-        }        public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs build() {
-            return new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(contentLinkDefinition);
+
+        public Builder contentLinkDefinition(ContentLinkArgs contentLinkDefinition) {
+            return contentLinkDefinition(Output.of(contentLinkDefinition));
+        }
+
+        public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs build() {
+            return $;
         }
     }
+
 }

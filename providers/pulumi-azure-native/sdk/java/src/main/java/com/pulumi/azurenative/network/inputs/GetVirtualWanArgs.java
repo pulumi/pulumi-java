@@ -17,7 +17,7 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualWANName", required=true)
-      private final String virtualWANName;
+    private String virtualWANName;
 
     public String virtualWANName() {
         return this.virtualWANName;
     }
 
-    public GetVirtualWanArgs(
-        String resourceGroupName,
-        String virtualWANName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualWANName = Objects.requireNonNull(virtualWANName, "expected parameter 'virtualWANName' to be non-null");
-    }
+    private GetVirtualWanArgs() {}
 
-    private GetVirtualWanArgs() {
-        this.resourceGroupName = null;
-        this.virtualWANName = null;
+    private GetVirtualWanArgs(GetVirtualWanArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualWANName = $.virtualWANName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualWanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualWANName;
+        private GetVirtualWanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualWanArgs();
         }
 
         public Builder(GetVirtualWanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualWANName = defaults.virtualWANName;
+            $ = new GetVirtualWanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualWANName(String virtualWANName) {
-            this.virtualWANName = Objects.requireNonNull(virtualWANName);
+            $.virtualWANName = virtualWANName;
             return this;
-        }        public GetVirtualWanArgs build() {
-            return new GetVirtualWanArgs(resourceGroupName, virtualWANName);
+        }
+
+        public GetVirtualWanArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualWANName = Objects.requireNonNull($.virtualWANName, "expected parameter 'virtualWANName' to be non-null");
+            return $;
         }
     }
+
 }

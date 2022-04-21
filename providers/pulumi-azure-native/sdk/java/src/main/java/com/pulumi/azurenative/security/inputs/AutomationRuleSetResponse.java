@@ -20,48 +20,48 @@ public final class AutomationRuleSetResponse extends com.pulumi.resources.Invoke
     public static final AutomationRuleSetResponse Empty = new AutomationRuleSetResponse();
 
     @Import(name="rules")
-      private final @Nullable List<AutomationTriggeringRuleResponse> rules;
+    private @Nullable List<AutomationTriggeringRuleResponse> rules;
 
-    public List<AutomationTriggeringRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<AutomationTriggeringRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public AutomationRuleSetResponse(@Nullable List<AutomationTriggeringRuleResponse> rules) {
-        this.rules = rules;
-    }
+    private AutomationRuleSetResponse() {}
 
-    private AutomationRuleSetResponse() {
-        this.rules = List.of();
+    private AutomationRuleSetResponse(AutomationRuleSetResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AutomationTriggeringRuleResponse> rules;
+        private AutomationRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleSetResponse();
         }
 
         public Builder(AutomationRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new AutomationRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(AutomationTriggeringRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public AutomationRuleSetResponse build() {
-            return new AutomationRuleSetResponse(rules);
+        }
+
+        public AutomationRuleSetResponse build() {
+            return $;
         }
     }
+
 }

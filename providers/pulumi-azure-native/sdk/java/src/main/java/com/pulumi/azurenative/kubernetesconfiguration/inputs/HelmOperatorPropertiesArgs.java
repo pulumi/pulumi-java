@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HelmOperatorPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="chartValues")
-      private final @Nullable Output<String> chartValues;
+    private @Nullable Output<String> chartValues;
 
-    public Output<String> chartValues() {
-        return this.chartValues == null ? Codegen.empty() : this.chartValues;
+    public Optional<Output<String>> chartValues() {
+        return Optional.ofNullable(this.chartValues);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class HelmOperatorPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="chartVersion")
-      private final @Nullable Output<String> chartVersion;
+    private @Nullable Output<String> chartVersion;
 
-    public Output<String> chartVersion() {
-        return this.chartVersion == null ? Codegen.empty() : this.chartVersion;
+    public Optional<Output<String>> chartVersion() {
+        return Optional.ofNullable(this.chartVersion);
     }
 
-    public HelmOperatorPropertiesArgs(
-        @Nullable Output<String> chartValues,
-        @Nullable Output<String> chartVersion) {
-        this.chartValues = chartValues;
-        this.chartVersion = chartVersion;
-    }
+    private HelmOperatorPropertiesArgs() {}
 
-    private HelmOperatorPropertiesArgs() {
-        this.chartValues = Codegen.empty();
-        this.chartVersion = Codegen.empty();
+    private HelmOperatorPropertiesArgs(HelmOperatorPropertiesArgs $) {
+        this.chartValues = $.chartValues;
+        this.chartVersion = $.chartVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HelmOperatorPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> chartValues;
-        private @Nullable Output<String> chartVersion;
+        private HelmOperatorPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HelmOperatorPropertiesArgs();
         }
 
         public Builder(HelmOperatorPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chartValues = defaults.chartValues;
-    	      this.chartVersion = defaults.chartVersion;
+            $ = new HelmOperatorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder chartValues(@Nullable Output<String> chartValues) {
-            this.chartValues = chartValues;
+            $.chartValues = chartValues;
             return this;
         }
-        public Builder chartValues(@Nullable String chartValues) {
-            this.chartValues = Codegen.ofNullable(chartValues);
-            return this;
+
+        public Builder chartValues(String chartValues) {
+            return chartValues(Output.of(chartValues));
         }
+
         public Builder chartVersion(@Nullable Output<String> chartVersion) {
-            this.chartVersion = chartVersion;
+            $.chartVersion = chartVersion;
             return this;
         }
-        public Builder chartVersion(@Nullable String chartVersion) {
-            this.chartVersion = Codegen.ofNullable(chartVersion);
-            return this;
-        }        public HelmOperatorPropertiesArgs build() {
-            return new HelmOperatorPropertiesArgs(chartValues, chartVersion);
+
+        public Builder chartVersion(String chartVersion) {
+            return chartVersion(Output.of(chartVersion));
+        }
+
+        public HelmOperatorPropertiesArgs build() {
+            return $;
         }
     }
+
 }

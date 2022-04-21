@@ -17,7 +17,7 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="linkedSubscriptionName", required=true)
-      private final String linkedSubscriptionName;
+    private String linkedSubscriptionName;
 
     public String linkedSubscriptionName() {
         return this.linkedSubscriptionName;
@@ -28,55 +28,52 @@ public final class GetLinkedSubscriptionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetLinkedSubscriptionArgs(
-        String linkedSubscriptionName,
-        String resourceGroup) {
-        this.linkedSubscriptionName = Objects.requireNonNull(linkedSubscriptionName, "expected parameter 'linkedSubscriptionName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetLinkedSubscriptionArgs() {}
 
-    private GetLinkedSubscriptionArgs() {
-        this.linkedSubscriptionName = null;
-        this.resourceGroup = null;
+    private GetLinkedSubscriptionArgs(GetLinkedSubscriptionArgs $) {
+        this.linkedSubscriptionName = $.linkedSubscriptionName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLinkedSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String linkedSubscriptionName;
-        private String resourceGroup;
+        private GetLinkedSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLinkedSubscriptionArgs();
         }
 
         public Builder(GetLinkedSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedSubscriptionName = defaults.linkedSubscriptionName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetLinkedSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedSubscriptionName(String linkedSubscriptionName) {
-            this.linkedSubscriptionName = Objects.requireNonNull(linkedSubscriptionName);
+            $.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetLinkedSubscriptionArgs build() {
-            return new GetLinkedSubscriptionArgs(linkedSubscriptionName, resourceGroup);
+        }
+
+        public GetLinkedSubscriptionArgs build() {
+            $.linkedSubscriptionName = Objects.requireNonNull($.linkedSubscriptionName, "expected parameter 'linkedSubscriptionName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

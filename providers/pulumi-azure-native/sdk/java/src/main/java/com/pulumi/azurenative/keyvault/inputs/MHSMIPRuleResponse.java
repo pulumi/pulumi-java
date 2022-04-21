@@ -21,45 +21,45 @@ public final class MHSMIPRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public MHSMIPRuleResponse(String value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private MHSMIPRuleResponse() {}
 
-    private MHSMIPRuleResponse() {
-        this.value = null;
+    private MHSMIPRuleResponse(MHSMIPRuleResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MHSMIPRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
+        private MHSMIPRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MHSMIPRuleResponse();
         }
 
         public Builder(MHSMIPRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new MHSMIPRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public MHSMIPRuleResponse build() {
-            return new MHSMIPRuleResponse(value);
+        }
+
+        public MHSMIPRuleResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

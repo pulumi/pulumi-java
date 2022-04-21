@@ -23,10 +23,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentExpiryDate")
-      private final @Nullable String agentExpiryDate;
+    private @Nullable String agentExpiryDate;
 
     public Optional<String> agentExpiryDate() {
-        return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
+        return Optional.ofNullable(this.agentExpiryDate);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentUpdateStatus")
-      private final @Nullable String agentUpdateStatus;
+    private @Nullable String agentUpdateStatus;
 
     public Optional<String> agentUpdateStatus() {
-        return this.agentUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentUpdateStatus);
+        return Optional.ofNullable(this.agentUpdateStatus);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="postUpdateRebootStatus")
-      private final @Nullable String postUpdateRebootStatus;
+    private @Nullable String postUpdateRebootStatus;
 
     public Optional<String> postUpdateRebootStatus() {
-        return this.postUpdateRebootStatus == null ? Optional.empty() : Optional.ofNullable(this.postUpdateRebootStatus);
+        return Optional.ofNullable(this.postUpdateRebootStatus);
     }
 
-    public InMageAgentDetailsResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentUpdateStatus,
-        @Nullable String agentVersion,
-        @Nullable String postUpdateRebootStatus) {
-        this.agentExpiryDate = agentExpiryDate;
-        this.agentUpdateStatus = agentUpdateStatus;
-        this.agentVersion = agentVersion;
-        this.postUpdateRebootStatus = postUpdateRebootStatus;
-    }
+    private InMageAgentDetailsResponse() {}
 
-    private InMageAgentDetailsResponse() {
-        this.agentExpiryDate = null;
-        this.agentUpdateStatus = null;
-        this.agentVersion = null;
-        this.postUpdateRebootStatus = null;
+    private InMageAgentDetailsResponse(InMageAgentDetailsResponse $) {
+        this.agentExpiryDate = $.agentExpiryDate;
+        this.agentUpdateStatus = $.agentUpdateStatus;
+        this.agentVersion = $.agentVersion;
+        this.postUpdateRebootStatus = $.postUpdateRebootStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageAgentDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentExpiryDate;
-        private @Nullable String agentUpdateStatus;
-        private @Nullable String agentVersion;
-        private @Nullable String postUpdateRebootStatus;
+        private InMageAgentDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageAgentDetailsResponse();
         }
 
         public Builder(InMageAgentDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentExpiryDate = defaults.agentExpiryDate;
-    	      this.agentUpdateStatus = defaults.agentUpdateStatus;
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.postUpdateRebootStatus = defaults.postUpdateRebootStatus;
+            $ = new InMageAgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
-            this.agentExpiryDate = agentExpiryDate;
+            $.agentExpiryDate = agentExpiryDate;
             return this;
         }
+
         public Builder agentUpdateStatus(@Nullable String agentUpdateStatus) {
-            this.agentUpdateStatus = agentUpdateStatus;
+            $.agentUpdateStatus = agentUpdateStatus;
             return this;
         }
+
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder postUpdateRebootStatus(@Nullable String postUpdateRebootStatus) {
-            this.postUpdateRebootStatus = postUpdateRebootStatus;
+            $.postUpdateRebootStatus = postUpdateRebootStatus;
             return this;
-        }        public InMageAgentDetailsResponse build() {
-            return new InMageAgentDetailsResponse(agentExpiryDate, agentUpdateStatus, agentVersion, postUpdateRebootStatus);
+        }
+
+        public InMageAgentDetailsResponse build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="propertyColumns")
-      private final @Nullable List<String> propertyColumns;
+    private @Nullable List<String> propertyColumns;
 
-    public List<String> propertyColumns() {
-        return this.propertyColumns == null ? List.of() : this.propertyColumns;
+    public Optional<List<String>> propertyColumns() {
+        return Optional.ofNullable(this.propertyColumns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="serviceBusNamespace")
-      private final @Nullable String serviceBusNamespace;
+    private @Nullable String serviceBusNamespace;
 
     public Optional<String> serviceBusNamespace() {
-        return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
+        return Optional.ofNullable(this.serviceBusNamespace);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="sharedAccessPolicyKey")
-      private final @Nullable String sharedAccessPolicyKey;
+    private @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> sharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
+        return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="sharedAccessPolicyName")
-      private final @Nullable String sharedAccessPolicyName;
+    private @Nullable String sharedAccessPolicyName;
 
     public Optional<String> sharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
+        return Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="topicName")
-      private final @Nullable String topicName;
+    private @Nullable String topicName;
 
     public Optional<String> topicName() {
-        return this.topicName == null ? Optional.empty() : Optional.ofNullable(this.topicName);
+        return Optional.ofNullable(this.topicName);
     }
 
     /**
@@ -81,94 +81,79 @@ public final class ServiceBusTopicOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServiceBusTopicOutputDataSourceResponse(
-        @Nullable List<String> propertyColumns,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        @Nullable String topicName,
-        String type) {
-        this.propertyColumns = propertyColumns;
-        this.serviceBusNamespace = serviceBusNamespace;
-        this.sharedAccessPolicyKey = sharedAccessPolicyKey;
-        this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.topicName = topicName;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ServiceBusTopicOutputDataSourceResponse() {}
 
-    private ServiceBusTopicOutputDataSourceResponse() {
-        this.propertyColumns = List.of();
-        this.serviceBusNamespace = null;
-        this.sharedAccessPolicyKey = null;
-        this.sharedAccessPolicyName = null;
-        this.topicName = null;
-        this.type = null;
+    private ServiceBusTopicOutputDataSourceResponse(ServiceBusTopicOutputDataSourceResponse $) {
+        this.propertyColumns = $.propertyColumns;
+        this.serviceBusNamespace = $.serviceBusNamespace;
+        this.sharedAccessPolicyKey = $.sharedAccessPolicyKey;
+        this.sharedAccessPolicyName = $.sharedAccessPolicyName;
+        this.topicName = $.topicName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusTopicOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> propertyColumns;
-        private @Nullable String serviceBusNamespace;
-        private @Nullable String sharedAccessPolicyKey;
-        private @Nullable String sharedAccessPolicyName;
-        private @Nullable String topicName;
-        private String type;
+        private ServiceBusTopicOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusTopicOutputDataSourceResponse();
         }
 
         public Builder(ServiceBusTopicOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propertyColumns = defaults.propertyColumns;
-    	      this.serviceBusNamespace = defaults.serviceBusNamespace;
-    	      this.sharedAccessPolicyKey = defaults.sharedAccessPolicyKey;
-    	      this.sharedAccessPolicyName = defaults.sharedAccessPolicyName;
-    	      this.topicName = defaults.topicName;
-    	      this.type = defaults.type;
+            $ = new ServiceBusTopicOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
-            this.propertyColumns = propertyColumns;
+            $.propertyColumns = propertyColumns;
             return this;
         }
+
         public Builder propertyColumns(String... propertyColumns) {
             return propertyColumns(List.of(propertyColumns));
         }
+
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = serviceBusNamespace;
+            $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
+
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = sharedAccessPolicyKey;
+            $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
+
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = sharedAccessPolicyName;
+            $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
+
         public Builder topicName(@Nullable String topicName) {
-            this.topicName = topicName;
+            $.topicName = topicName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServiceBusTopicOutputDataSourceResponse build() {
-            return new ServiceBusTopicOutputDataSourceResponse(propertyColumns, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, topicName, type);
+        }
+
+        public ServiceBusTopicOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

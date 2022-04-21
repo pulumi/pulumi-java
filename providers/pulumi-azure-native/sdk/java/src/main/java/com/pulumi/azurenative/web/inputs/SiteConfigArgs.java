@@ -31,6 +31,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acrUseManagedIdentityCreds")
-      private final @Nullable Output<Boolean> acrUseManagedIdentityCreds;
+    private @Nullable Output<Boolean> acrUseManagedIdentityCreds;
 
-    public Output<Boolean> acrUseManagedIdentityCreds() {
-        return this.acrUseManagedIdentityCreds == null ? Codegen.empty() : this.acrUseManagedIdentityCreds;
+    public Optional<Output<Boolean>> acrUseManagedIdentityCreds() {
+        return Optional.ofNullable(this.acrUseManagedIdentityCreds);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acrUserManagedIdentityID")
-      private final @Nullable Output<String> acrUserManagedIdentityID;
+    private @Nullable Output<String> acrUserManagedIdentityID;
 
-    public Output<String> acrUserManagedIdentityID() {
-        return this.acrUserManagedIdentityID == null ? Codegen.empty() : this.acrUserManagedIdentityID;
+    public Optional<Output<String>> acrUserManagedIdentityID() {
+        return Optional.ofNullable(this.acrUserManagedIdentityID);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alwaysOn")
-      private final @Nullable Output<Boolean> alwaysOn;
+    private @Nullable Output<Boolean> alwaysOn;
 
-    public Output<Boolean> alwaysOn() {
-        return this.alwaysOn == null ? Codegen.empty() : this.alwaysOn;
+    public Optional<Output<Boolean>> alwaysOn() {
+        return Optional.ofNullable(this.alwaysOn);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiDefinition")
-      private final @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
+    private @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
 
-    public Output<ApiDefinitionInfoArgs> apiDefinition() {
-        return this.apiDefinition == null ? Codegen.empty() : this.apiDefinition;
+    public Optional<Output<ApiDefinitionInfoArgs>> apiDefinition() {
+        return Optional.ofNullable(this.apiDefinition);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiManagementConfig")
-      private final @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
+    private @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
 
-    public Output<ApiManagementConfigArgs> apiManagementConfig() {
-        return this.apiManagementConfig == null ? Codegen.empty() : this.apiManagementConfig;
+    public Optional<Output<ApiManagementConfigArgs>> apiManagementConfig() {
+        return Optional.ofNullable(this.apiManagementConfig);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appCommandLine")
-      private final @Nullable Output<String> appCommandLine;
+    private @Nullable Output<String> appCommandLine;
 
-    public Output<String> appCommandLine() {
-        return this.appCommandLine == null ? Codegen.empty() : this.appCommandLine;
+    public Optional<Output<String>> appCommandLine() {
+        return Optional.ofNullable(this.appCommandLine);
     }
 
     /**
@@ -113,10 +114,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appSettings")
-      private final @Nullable Output<List<NameValuePairArgs>> appSettings;
+    private @Nullable Output<List<NameValuePairArgs>> appSettings;
 
-    public Output<List<NameValuePairArgs>> appSettings() {
-        return this.appSettings == null ? Codegen.empty() : this.appSettings;
+    public Optional<Output<List<NameValuePairArgs>>> appSettings() {
+        return Optional.ofNullable(this.appSettings);
     }
 
     /**
@@ -124,10 +125,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoHealEnabled")
-      private final @Nullable Output<Boolean> autoHealEnabled;
+    private @Nullable Output<Boolean> autoHealEnabled;
 
-    public Output<Boolean> autoHealEnabled() {
-        return this.autoHealEnabled == null ? Codegen.empty() : this.autoHealEnabled;
+    public Optional<Output<Boolean>> autoHealEnabled() {
+        return Optional.ofNullable(this.autoHealEnabled);
     }
 
     /**
@@ -135,10 +136,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoHealRules")
-      private final @Nullable Output<AutoHealRulesArgs> autoHealRules;
+    private @Nullable Output<AutoHealRulesArgs> autoHealRules;
 
-    public Output<AutoHealRulesArgs> autoHealRules() {
-        return this.autoHealRules == null ? Codegen.empty() : this.autoHealRules;
+    public Optional<Output<AutoHealRulesArgs>> autoHealRules() {
+        return Optional.ofNullable(this.autoHealRules);
     }
 
     /**
@@ -146,10 +147,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoSwapSlotName")
-      private final @Nullable Output<String> autoSwapSlotName;
+    private @Nullable Output<String> autoSwapSlotName;
 
-    public Output<String> autoSwapSlotName() {
-        return this.autoSwapSlotName == null ? Codegen.empty() : this.autoSwapSlotName;
+    public Optional<Output<String>> autoSwapSlotName() {
+        return Optional.ofNullable(this.autoSwapSlotName);
     }
 
     /**
@@ -157,10 +158,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureStorageAccounts")
-      private final @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
+    private @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
 
-    public Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts() {
-        return this.azureStorageAccounts == null ? Codegen.empty() : this.azureStorageAccounts;
+    public Optional<Output<Map<String,AzureStorageInfoValueArgs>>> azureStorageAccounts() {
+        return Optional.ofNullable(this.azureStorageAccounts);
     }
 
     /**
@@ -168,10 +169,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionStrings")
-      private final @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
+    private @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
 
-    public Output<List<ConnStringInfoArgs>> connectionStrings() {
-        return this.connectionStrings == null ? Codegen.empty() : this.connectionStrings;
+    public Optional<Output<List<ConnStringInfoArgs>>> connectionStrings() {
+        return Optional.ofNullable(this.connectionStrings);
     }
 
     /**
@@ -179,10 +180,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cors")
-      private final @Nullable Output<CorsSettingsArgs> cors;
+    private @Nullable Output<CorsSettingsArgs> cors;
 
-    public Output<CorsSettingsArgs> cors() {
-        return this.cors == null ? Codegen.empty() : this.cors;
+    public Optional<Output<CorsSettingsArgs>> cors() {
+        return Optional.ofNullable(this.cors);
     }
 
     /**
@@ -190,10 +191,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultDocuments")
-      private final @Nullable Output<List<String>> defaultDocuments;
+    private @Nullable Output<List<String>> defaultDocuments;
 
-    public Output<List<String>> defaultDocuments() {
-        return this.defaultDocuments == null ? Codegen.empty() : this.defaultDocuments;
+    public Optional<Output<List<String>>> defaultDocuments() {
+        return Optional.ofNullable(this.defaultDocuments);
     }
 
     /**
@@ -201,10 +202,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detailedErrorLoggingEnabled")
-      private final @Nullable Output<Boolean> detailedErrorLoggingEnabled;
+    private @Nullable Output<Boolean> detailedErrorLoggingEnabled;
 
-    public Output<Boolean> detailedErrorLoggingEnabled() {
-        return this.detailedErrorLoggingEnabled == null ? Codegen.empty() : this.detailedErrorLoggingEnabled;
+    public Optional<Output<Boolean>> detailedErrorLoggingEnabled() {
+        return Optional.ofNullable(this.detailedErrorLoggingEnabled);
     }
 
     /**
@@ -212,10 +213,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentRoot")
-      private final @Nullable Output<String> documentRoot;
+    private @Nullable Output<String> documentRoot;
 
-    public Output<String> documentRoot() {
-        return this.documentRoot == null ? Codegen.empty() : this.documentRoot;
+    public Optional<Output<String>> documentRoot() {
+        return Optional.ofNullable(this.documentRoot);
     }
 
     /**
@@ -223,10 +224,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="experiments")
-      private final @Nullable Output<ExperimentsArgs> experiments;
+    private @Nullable Output<ExperimentsArgs> experiments;
 
-    public Output<ExperimentsArgs> experiments() {
-        return this.experiments == null ? Codegen.empty() : this.experiments;
+    public Optional<Output<ExperimentsArgs>> experiments() {
+        return Optional.ofNullable(this.experiments);
     }
 
     /**
@@ -234,10 +235,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ftpsState")
-      private final @Nullable Output<Either<String,FtpsState>> ftpsState;
+    private @Nullable Output<Either<String,FtpsState>> ftpsState;
 
-    public Output<Either<String,FtpsState>> ftpsState() {
-        return this.ftpsState == null ? Codegen.empty() : this.ftpsState;
+    public Optional<Output<Either<String,FtpsState>>> ftpsState() {
+        return Optional.ofNullable(this.ftpsState);
     }
 
     /**
@@ -246,10 +247,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionAppScaleLimit")
-      private final @Nullable Output<Integer> functionAppScaleLimit;
+    private @Nullable Output<Integer> functionAppScaleLimit;
 
-    public Output<Integer> functionAppScaleLimit() {
-        return this.functionAppScaleLimit == null ? Codegen.empty() : this.functionAppScaleLimit;
+    public Optional<Output<Integer>> functionAppScaleLimit() {
+        return Optional.ofNullable(this.functionAppScaleLimit);
     }
 
     /**
@@ -259,10 +260,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionsRuntimeScaleMonitoringEnabled")
-      private final @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
+    private @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
 
-    public Output<Boolean> functionsRuntimeScaleMonitoringEnabled() {
-        return this.functionsRuntimeScaleMonitoringEnabled == null ? Codegen.empty() : this.functionsRuntimeScaleMonitoringEnabled;
+    public Optional<Output<Boolean>> functionsRuntimeScaleMonitoringEnabled() {
+        return Optional.ofNullable(this.functionsRuntimeScaleMonitoringEnabled);
     }
 
     /**
@@ -270,10 +271,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="handlerMappings")
-      private final @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
+    private @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
 
-    public Output<List<HandlerMappingArgs>> handlerMappings() {
-        return this.handlerMappings == null ? Codegen.empty() : this.handlerMappings;
+    public Optional<Output<List<HandlerMappingArgs>>> handlerMappings() {
+        return Optional.ofNullable(this.handlerMappings);
     }
 
     /**
@@ -281,10 +282,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckPath")
-      private final @Nullable Output<String> healthCheckPath;
+    private @Nullable Output<String> healthCheckPath;
 
-    public Output<String> healthCheckPath() {
-        return this.healthCheckPath == null ? Codegen.empty() : this.healthCheckPath;
+    public Optional<Output<String>> healthCheckPath() {
+        return Optional.ofNullable(this.healthCheckPath);
     }
 
     /**
@@ -292,10 +293,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="http20Enabled")
-      private final @Nullable Output<Boolean> http20Enabled;
+    private @Nullable Output<Boolean> http20Enabled;
 
-    public Output<Boolean> http20Enabled() {
-        return this.http20Enabled == null ? Codegen.empty() : this.http20Enabled;
+    public Optional<Output<Boolean>> http20Enabled() {
+        return Optional.ofNullable(this.http20Enabled);
     }
 
     /**
@@ -303,10 +304,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpLoggingEnabled")
-      private final @Nullable Output<Boolean> httpLoggingEnabled;
+    private @Nullable Output<Boolean> httpLoggingEnabled;
 
-    public Output<Boolean> httpLoggingEnabled() {
-        return this.httpLoggingEnabled == null ? Codegen.empty() : this.httpLoggingEnabled;
+    public Optional<Output<Boolean>> httpLoggingEnabled() {
+        return Optional.ofNullable(this.httpLoggingEnabled);
     }
 
     /**
@@ -314,10 +315,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipSecurityRestrictions")
-      private final @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
+    private @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
 
-    public Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions() {
-        return this.ipSecurityRestrictions == null ? Codegen.empty() : this.ipSecurityRestrictions;
+    public Optional<Output<List<IpSecurityRestrictionArgs>>> ipSecurityRestrictions() {
+        return Optional.ofNullable(this.ipSecurityRestrictions);
     }
 
     /**
@@ -325,10 +326,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="javaContainer")
-      private final @Nullable Output<String> javaContainer;
+    private @Nullable Output<String> javaContainer;
 
-    public Output<String> javaContainer() {
-        return this.javaContainer == null ? Codegen.empty() : this.javaContainer;
+    public Optional<Output<String>> javaContainer() {
+        return Optional.ofNullable(this.javaContainer);
     }
 
     /**
@@ -336,10 +337,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="javaContainerVersion")
-      private final @Nullable Output<String> javaContainerVersion;
+    private @Nullable Output<String> javaContainerVersion;
 
-    public Output<String> javaContainerVersion() {
-        return this.javaContainerVersion == null ? Codegen.empty() : this.javaContainerVersion;
+    public Optional<Output<String>> javaContainerVersion() {
+        return Optional.ofNullable(this.javaContainerVersion);
     }
 
     /**
@@ -347,10 +348,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="javaVersion")
-      private final @Nullable Output<String> javaVersion;
+    private @Nullable Output<String> javaVersion;
 
-    public Output<String> javaVersion() {
-        return this.javaVersion == null ? Codegen.empty() : this.javaVersion;
+    public Optional<Output<String>> javaVersion() {
+        return Optional.ofNullable(this.javaVersion);
     }
 
     /**
@@ -358,10 +359,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultReferenceIdentity")
-      private final @Nullable Output<String> keyVaultReferenceIdentity;
+    private @Nullable Output<String> keyVaultReferenceIdentity;
 
-    public Output<String> keyVaultReferenceIdentity() {
-        return this.keyVaultReferenceIdentity == null ? Codegen.empty() : this.keyVaultReferenceIdentity;
+    public Optional<Output<String>> keyVaultReferenceIdentity() {
+        return Optional.ofNullable(this.keyVaultReferenceIdentity);
     }
 
     /**
@@ -369,10 +370,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<SiteLimitsArgs> limits;
+    private @Nullable Output<SiteLimitsArgs> limits;
 
-    public Output<SiteLimitsArgs> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<SiteLimitsArgs>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -380,10 +381,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxFxVersion")
-      private final @Nullable Output<String> linuxFxVersion;
+    private @Nullable Output<String> linuxFxVersion;
 
-    public Output<String> linuxFxVersion() {
-        return this.linuxFxVersion == null ? Codegen.empty() : this.linuxFxVersion;
+    public Optional<Output<String>> linuxFxVersion() {
+        return Optional.ofNullable(this.linuxFxVersion);
     }
 
     /**
@@ -391,10 +392,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancing")
-      private final @Nullable Output<SiteLoadBalancing> loadBalancing;
+    private @Nullable Output<SiteLoadBalancing> loadBalancing;
 
-    public Output<SiteLoadBalancing> loadBalancing() {
-        return this.loadBalancing == null ? Codegen.empty() : this.loadBalancing;
+    public Optional<Output<SiteLoadBalancing>> loadBalancing() {
+        return Optional.ofNullable(this.loadBalancing);
     }
 
     /**
@@ -402,10 +403,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localMySqlEnabled")
-      private final @Nullable Output<Boolean> localMySqlEnabled;
+    private @Nullable Output<Boolean> localMySqlEnabled;
 
-    public Output<Boolean> localMySqlEnabled() {
-        return this.localMySqlEnabled == null ? Codegen.empty() : this.localMySqlEnabled;
+    public Optional<Output<Boolean>> localMySqlEnabled() {
+        return Optional.ofNullable(this.localMySqlEnabled);
     }
 
     /**
@@ -413,10 +414,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logsDirectorySizeLimit")
-      private final @Nullable Output<Integer> logsDirectorySizeLimit;
+    private @Nullable Output<Integer> logsDirectorySizeLimit;
 
-    public Output<Integer> logsDirectorySizeLimit() {
-        return this.logsDirectorySizeLimit == null ? Codegen.empty() : this.logsDirectorySizeLimit;
+    public Optional<Output<Integer>> logsDirectorySizeLimit() {
+        return Optional.ofNullable(this.logsDirectorySizeLimit);
     }
 
     /**
@@ -424,10 +425,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedPipelineMode")
-      private final @Nullable Output<ManagedPipelineMode> managedPipelineMode;
+    private @Nullable Output<ManagedPipelineMode> managedPipelineMode;
 
-    public Output<ManagedPipelineMode> managedPipelineMode() {
-        return this.managedPipelineMode == null ? Codegen.empty() : this.managedPipelineMode;
+    public Optional<Output<ManagedPipelineMode>> managedPipelineMode() {
+        return Optional.ofNullable(this.managedPipelineMode);
     }
 
     /**
@@ -435,10 +436,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedServiceIdentityId")
-      private final @Nullable Output<Integer> managedServiceIdentityId;
+    private @Nullable Output<Integer> managedServiceIdentityId;
 
-    public Output<Integer> managedServiceIdentityId() {
-        return this.managedServiceIdentityId == null ? Codegen.empty() : this.managedServiceIdentityId;
+    public Optional<Output<Integer>> managedServiceIdentityId() {
+        return Optional.ofNullable(this.managedServiceIdentityId);
     }
 
     /**
@@ -446,10 +447,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minTlsVersion")
-      private final @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
+    private @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
 
-    public Output<Either<String,SupportedTlsVersions>> minTlsVersion() {
-        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
+    public Optional<Output<Either<String,SupportedTlsVersions>>> minTlsVersion() {
+        return Optional.ofNullable(this.minTlsVersion);
     }
 
     /**
@@ -458,10 +459,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimumElasticInstanceCount")
-      private final @Nullable Output<Integer> minimumElasticInstanceCount;
+    private @Nullable Output<Integer> minimumElasticInstanceCount;
 
-    public Output<Integer> minimumElasticInstanceCount() {
-        return this.minimumElasticInstanceCount == null ? Codegen.empty() : this.minimumElasticInstanceCount;
+    public Optional<Output<Integer>> minimumElasticInstanceCount() {
+        return Optional.ofNullable(this.minimumElasticInstanceCount);
     }
 
     /**
@@ -469,10 +470,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="netFrameworkVersion")
-      private final @Nullable Output<String> netFrameworkVersion;
+    private @Nullable Output<String> netFrameworkVersion;
 
-    public Output<String> netFrameworkVersion() {
-        return this.netFrameworkVersion == null ? Codegen.empty() : this.netFrameworkVersion;
+    public Optional<Output<String>> netFrameworkVersion() {
+        return Optional.ofNullable(this.netFrameworkVersion);
     }
 
     /**
@@ -480,10 +481,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeVersion")
-      private final @Nullable Output<String> nodeVersion;
+    private @Nullable Output<String> nodeVersion;
 
-    public Output<String> nodeVersion() {
-        return this.nodeVersion == null ? Codegen.empty() : this.nodeVersion;
+    public Optional<Output<String>> nodeVersion() {
+        return Optional.ofNullable(this.nodeVersion);
     }
 
     /**
@@ -491,10 +492,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfWorkers")
-      private final @Nullable Output<Integer> numberOfWorkers;
+    private @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> numberOfWorkers() {
-        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
+    public Optional<Output<Integer>> numberOfWorkers() {
+        return Optional.ofNullable(this.numberOfWorkers);
     }
 
     /**
@@ -502,10 +503,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phpVersion")
-      private final @Nullable Output<String> phpVersion;
+    private @Nullable Output<String> phpVersion;
 
-    public Output<String> phpVersion() {
-        return this.phpVersion == null ? Codegen.empty() : this.phpVersion;
+    public Optional<Output<String>> phpVersion() {
+        return Optional.ofNullable(this.phpVersion);
     }
 
     /**
@@ -513,10 +514,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="powerShellVersion")
-      private final @Nullable Output<String> powerShellVersion;
+    private @Nullable Output<String> powerShellVersion;
 
-    public Output<String> powerShellVersion() {
-        return this.powerShellVersion == null ? Codegen.empty() : this.powerShellVersion;
+    public Optional<Output<String>> powerShellVersion() {
+        return Optional.ofNullable(this.powerShellVersion);
     }
 
     /**
@@ -525,10 +526,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preWarmedInstanceCount")
-      private final @Nullable Output<Integer> preWarmedInstanceCount;
+    private @Nullable Output<Integer> preWarmedInstanceCount;
 
-    public Output<Integer> preWarmedInstanceCount() {
-        return this.preWarmedInstanceCount == null ? Codegen.empty() : this.preWarmedInstanceCount;
+    public Optional<Output<Integer>> preWarmedInstanceCount() {
+        return Optional.ofNullable(this.preWarmedInstanceCount);
     }
 
     /**
@@ -536,10 +537,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<String> publicNetworkAccess;
+    private @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<String>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -547,10 +548,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishingUsername")
-      private final @Nullable Output<String> publishingUsername;
+    private @Nullable Output<String> publishingUsername;
 
-    public Output<String> publishingUsername() {
-        return this.publishingUsername == null ? Codegen.empty() : this.publishingUsername;
+    public Optional<Output<String>> publishingUsername() {
+        return Optional.ofNullable(this.publishingUsername);
     }
 
     /**
@@ -558,10 +559,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="push")
-      private final @Nullable Output<PushSettingsArgs> push;
+    private @Nullable Output<PushSettingsArgs> push;
 
-    public Output<PushSettingsArgs> push() {
-        return this.push == null ? Codegen.empty() : this.push;
+    public Optional<Output<PushSettingsArgs>> push() {
+        return Optional.ofNullable(this.push);
     }
 
     /**
@@ -569,10 +570,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pythonVersion")
-      private final @Nullable Output<String> pythonVersion;
+    private @Nullable Output<String> pythonVersion;
 
-    public Output<String> pythonVersion() {
-        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
+    public Optional<Output<String>> pythonVersion() {
+        return Optional.ofNullable(this.pythonVersion);
     }
 
     /**
@@ -580,10 +581,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteDebuggingEnabled")
-      private final @Nullable Output<Boolean> remoteDebuggingEnabled;
+    private @Nullable Output<Boolean> remoteDebuggingEnabled;
 
-    public Output<Boolean> remoteDebuggingEnabled() {
-        return this.remoteDebuggingEnabled == null ? Codegen.empty() : this.remoteDebuggingEnabled;
+    public Optional<Output<Boolean>> remoteDebuggingEnabled() {
+        return Optional.ofNullable(this.remoteDebuggingEnabled);
     }
 
     /**
@@ -591,10 +592,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteDebuggingVersion")
-      private final @Nullable Output<String> remoteDebuggingVersion;
+    private @Nullable Output<String> remoteDebuggingVersion;
 
-    public Output<String> remoteDebuggingVersion() {
-        return this.remoteDebuggingVersion == null ? Codegen.empty() : this.remoteDebuggingVersion;
+    public Optional<Output<String>> remoteDebuggingVersion() {
+        return Optional.ofNullable(this.remoteDebuggingVersion);
     }
 
     /**
@@ -602,10 +603,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestTracingEnabled")
-      private final @Nullable Output<Boolean> requestTracingEnabled;
+    private @Nullable Output<Boolean> requestTracingEnabled;
 
-    public Output<Boolean> requestTracingEnabled() {
-        return this.requestTracingEnabled == null ? Codegen.empty() : this.requestTracingEnabled;
+    public Optional<Output<Boolean>> requestTracingEnabled() {
+        return Optional.ofNullable(this.requestTracingEnabled);
     }
 
     /**
@@ -613,10 +614,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestTracingExpirationTime")
-      private final @Nullable Output<String> requestTracingExpirationTime;
+    private @Nullable Output<String> requestTracingExpirationTime;
 
-    public Output<String> requestTracingExpirationTime() {
-        return this.requestTracingExpirationTime == null ? Codegen.empty() : this.requestTracingExpirationTime;
+    public Optional<Output<String>> requestTracingExpirationTime() {
+        return Optional.ofNullable(this.requestTracingExpirationTime);
     }
 
     /**
@@ -624,10 +625,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scmIpSecurityRestrictions")
-      private final @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
+    private @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
 
-    public Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions() {
-        return this.scmIpSecurityRestrictions == null ? Codegen.empty() : this.scmIpSecurityRestrictions;
+    public Optional<Output<List<IpSecurityRestrictionArgs>>> scmIpSecurityRestrictions() {
+        return Optional.ofNullable(this.scmIpSecurityRestrictions);
     }
 
     /**
@@ -635,10 +636,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scmIpSecurityRestrictionsUseMain")
-      private final @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
+    private @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
 
-    public Output<Boolean> scmIpSecurityRestrictionsUseMain() {
-        return this.scmIpSecurityRestrictionsUseMain == null ? Codegen.empty() : this.scmIpSecurityRestrictionsUseMain;
+    public Optional<Output<Boolean>> scmIpSecurityRestrictionsUseMain() {
+        return Optional.ofNullable(this.scmIpSecurityRestrictionsUseMain);
     }
 
     /**
@@ -646,10 +647,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scmMinTlsVersion")
-      private final @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
+    private @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
 
-    public Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion() {
-        return this.scmMinTlsVersion == null ? Codegen.empty() : this.scmMinTlsVersion;
+    public Optional<Output<Either<String,SupportedTlsVersions>>> scmMinTlsVersion() {
+        return Optional.ofNullable(this.scmMinTlsVersion);
     }
 
     /**
@@ -657,10 +658,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scmType")
-      private final @Nullable Output<Either<String,ScmType>> scmType;
+    private @Nullable Output<Either<String,ScmType>> scmType;
 
-    public Output<Either<String,ScmType>> scmType() {
-        return this.scmType == null ? Codegen.empty() : this.scmType;
+    public Optional<Output<Either<String,ScmType>>> scmType() {
+        return Optional.ofNullable(this.scmType);
     }
 
     /**
@@ -668,10 +669,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tracingOptions")
-      private final @Nullable Output<String> tracingOptions;
+    private @Nullable Output<String> tracingOptions;
 
-    public Output<String> tracingOptions() {
-        return this.tracingOptions == null ? Codegen.empty() : this.tracingOptions;
+    public Optional<Output<String>> tracingOptions() {
+        return Optional.ofNullable(this.tracingOptions);
     }
 
     /**
@@ -679,10 +680,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="use32BitWorkerProcess")
-      private final @Nullable Output<Boolean> use32BitWorkerProcess;
+    private @Nullable Output<Boolean> use32BitWorkerProcess;
 
-    public Output<Boolean> use32BitWorkerProcess() {
-        return this.use32BitWorkerProcess == null ? Codegen.empty() : this.use32BitWorkerProcess;
+    public Optional<Output<Boolean>> use32BitWorkerProcess() {
+        return Optional.ofNullable(this.use32BitWorkerProcess);
     }
 
     /**
@@ -690,10 +691,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualApplications")
-      private final @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
+    private @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
 
-    public Output<List<VirtualApplicationArgs>> virtualApplications() {
-        return this.virtualApplications == null ? Codegen.empty() : this.virtualApplications;
+    public Optional<Output<List<VirtualApplicationArgs>>> virtualApplications() {
+        return Optional.ofNullable(this.virtualApplications);
     }
 
     /**
@@ -701,10 +702,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vnetName")
-      private final @Nullable Output<String> vnetName;
+    private @Nullable Output<String> vnetName;
 
-    public Output<String> vnetName() {
-        return this.vnetName == null ? Codegen.empty() : this.vnetName;
+    public Optional<Output<String>> vnetName() {
+        return Optional.ofNullable(this.vnetName);
     }
 
     /**
@@ -712,10 +713,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vnetPrivatePortsCount")
-      private final @Nullable Output<Integer> vnetPrivatePortsCount;
+    private @Nullable Output<Integer> vnetPrivatePortsCount;
 
-    public Output<Integer> vnetPrivatePortsCount() {
-        return this.vnetPrivatePortsCount == null ? Codegen.empty() : this.vnetPrivatePortsCount;
+    public Optional<Output<Integer>> vnetPrivatePortsCount() {
+        return Optional.ofNullable(this.vnetPrivatePortsCount);
     }
 
     /**
@@ -723,10 +724,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vnetRouteAllEnabled")
-      private final @Nullable Output<Boolean> vnetRouteAllEnabled;
+    private @Nullable Output<Boolean> vnetRouteAllEnabled;
 
-    public Output<Boolean> vnetRouteAllEnabled() {
-        return this.vnetRouteAllEnabled == null ? Codegen.empty() : this.vnetRouteAllEnabled;
+    public Optional<Output<Boolean>> vnetRouteAllEnabled() {
+        return Optional.ofNullable(this.vnetRouteAllEnabled);
     }
 
     /**
@@ -734,10 +735,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webSocketsEnabled")
-      private final @Nullable Output<Boolean> webSocketsEnabled;
+    private @Nullable Output<Boolean> webSocketsEnabled;
 
-    public Output<Boolean> webSocketsEnabled() {
-        return this.webSocketsEnabled == null ? Codegen.empty() : this.webSocketsEnabled;
+    public Optional<Output<Boolean>> webSocketsEnabled() {
+        return Optional.ofNullable(this.webSocketsEnabled);
     }
 
     /**
@@ -745,10 +746,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="websiteTimeZone")
-      private final @Nullable Output<String> websiteTimeZone;
+    private @Nullable Output<String> websiteTimeZone;
 
-    public Output<String> websiteTimeZone() {
-        return this.websiteTimeZone == null ? Codegen.empty() : this.websiteTimeZone;
+    public Optional<Output<String>> websiteTimeZone() {
+        return Optional.ofNullable(this.websiteTimeZone);
     }
 
     /**
@@ -756,10 +757,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsFxVersion")
-      private final @Nullable Output<String> windowsFxVersion;
+    private @Nullable Output<String> windowsFxVersion;
 
-    public Output<String> windowsFxVersion() {
-        return this.windowsFxVersion == null ? Codegen.empty() : this.windowsFxVersion;
+    public Optional<Output<String>> windowsFxVersion() {
+        return Optional.ofNullable(this.windowsFxVersion);
     }
 
     /**
@@ -767,916 +768,729 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xManagedServiceIdentityId")
-      private final @Nullable Output<Integer> xManagedServiceIdentityId;
+    private @Nullable Output<Integer> xManagedServiceIdentityId;
 
-    public Output<Integer> xManagedServiceIdentityId() {
-        return this.xManagedServiceIdentityId == null ? Codegen.empty() : this.xManagedServiceIdentityId;
+    public Optional<Output<Integer>> xManagedServiceIdentityId() {
+        return Optional.ofNullable(this.xManagedServiceIdentityId);
     }
 
-    public SiteConfigArgs(
-        @Nullable Output<Boolean> acrUseManagedIdentityCreds,
-        @Nullable Output<String> acrUserManagedIdentityID,
-        @Nullable Output<Boolean> alwaysOn,
-        @Nullable Output<ApiDefinitionInfoArgs> apiDefinition,
-        @Nullable Output<ApiManagementConfigArgs> apiManagementConfig,
-        @Nullable Output<String> appCommandLine,
-        @Nullable Output<List<NameValuePairArgs>> appSettings,
-        @Nullable Output<Boolean> autoHealEnabled,
-        @Nullable Output<AutoHealRulesArgs> autoHealRules,
-        @Nullable Output<String> autoSwapSlotName,
-        @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts,
-        @Nullable Output<List<ConnStringInfoArgs>> connectionStrings,
-        @Nullable Output<CorsSettingsArgs> cors,
-        @Nullable Output<List<String>> defaultDocuments,
-        @Nullable Output<Boolean> detailedErrorLoggingEnabled,
-        @Nullable Output<String> documentRoot,
-        @Nullable Output<ExperimentsArgs> experiments,
-        @Nullable Output<Either<String,FtpsState>> ftpsState,
-        @Nullable Output<Integer> functionAppScaleLimit,
-        @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled,
-        @Nullable Output<List<HandlerMappingArgs>> handlerMappings,
-        @Nullable Output<String> healthCheckPath,
-        @Nullable Output<Boolean> http20Enabled,
-        @Nullable Output<Boolean> httpLoggingEnabled,
-        @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions,
-        @Nullable Output<String> javaContainer,
-        @Nullable Output<String> javaContainerVersion,
-        @Nullable Output<String> javaVersion,
-        @Nullable Output<String> keyVaultReferenceIdentity,
-        @Nullable Output<SiteLimitsArgs> limits,
-        @Nullable Output<String> linuxFxVersion,
-        @Nullable Output<SiteLoadBalancing> loadBalancing,
-        @Nullable Output<Boolean> localMySqlEnabled,
-        @Nullable Output<Integer> logsDirectorySizeLimit,
-        @Nullable Output<ManagedPipelineMode> managedPipelineMode,
-        @Nullable Output<Integer> managedServiceIdentityId,
-        @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion,
-        @Nullable Output<Integer> minimumElasticInstanceCount,
-        @Nullable Output<String> netFrameworkVersion,
-        @Nullable Output<String> nodeVersion,
-        @Nullable Output<Integer> numberOfWorkers,
-        @Nullable Output<String> phpVersion,
-        @Nullable Output<String> powerShellVersion,
-        @Nullable Output<Integer> preWarmedInstanceCount,
-        @Nullable Output<String> publicNetworkAccess,
-        @Nullable Output<String> publishingUsername,
-        @Nullable Output<PushSettingsArgs> push,
-        @Nullable Output<String> pythonVersion,
-        @Nullable Output<Boolean> remoteDebuggingEnabled,
-        @Nullable Output<String> remoteDebuggingVersion,
-        @Nullable Output<Boolean> requestTracingEnabled,
-        @Nullable Output<String> requestTracingExpirationTime,
-        @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions,
-        @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain,
-        @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion,
-        @Nullable Output<Either<String,ScmType>> scmType,
-        @Nullable Output<String> tracingOptions,
-        @Nullable Output<Boolean> use32BitWorkerProcess,
-        @Nullable Output<List<VirtualApplicationArgs>> virtualApplications,
-        @Nullable Output<String> vnetName,
-        @Nullable Output<Integer> vnetPrivatePortsCount,
-        @Nullable Output<Boolean> vnetRouteAllEnabled,
-        @Nullable Output<Boolean> webSocketsEnabled,
-        @Nullable Output<String> websiteTimeZone,
-        @Nullable Output<String> windowsFxVersion,
-        @Nullable Output<Integer> xManagedServiceIdentityId) {
-        this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
-        this.acrUserManagedIdentityID = acrUserManagedIdentityID;
-        this.alwaysOn = alwaysOn;
-        this.apiDefinition = apiDefinition;
-        this.apiManagementConfig = apiManagementConfig;
-        this.appCommandLine = appCommandLine;
-        this.appSettings = appSettings;
-        this.autoHealEnabled = autoHealEnabled;
-        this.autoHealRules = autoHealRules;
-        this.autoSwapSlotName = autoSwapSlotName;
-        this.azureStorageAccounts = azureStorageAccounts;
-        this.connectionStrings = connectionStrings;
-        this.cors = cors;
-        this.defaultDocuments = defaultDocuments;
-        this.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
-        this.documentRoot = documentRoot;
-        this.experiments = experiments;
-        this.ftpsState = ftpsState;
-        this.functionAppScaleLimit = functionAppScaleLimit;
-        this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
-        this.handlerMappings = handlerMappings;
-        this.healthCheckPath = healthCheckPath;
-        this.http20Enabled = Codegen.booleanProp("http20Enabled").output().arg(http20Enabled).def(true).getNullable();
-        this.httpLoggingEnabled = httpLoggingEnabled;
-        this.ipSecurityRestrictions = ipSecurityRestrictions;
-        this.javaContainer = javaContainer;
-        this.javaContainerVersion = javaContainerVersion;
-        this.javaVersion = javaVersion;
-        this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
-        this.limits = limits;
-        this.linuxFxVersion = linuxFxVersion;
-        this.loadBalancing = loadBalancing;
-        this.localMySqlEnabled = Codegen.booleanProp("localMySqlEnabled").output().arg(localMySqlEnabled).def(false).getNullable();
-        this.logsDirectorySizeLimit = logsDirectorySizeLimit;
-        this.managedPipelineMode = managedPipelineMode;
-        this.managedServiceIdentityId = managedServiceIdentityId;
-        this.minTlsVersion = minTlsVersion;
-        this.minimumElasticInstanceCount = minimumElasticInstanceCount;
-        this.netFrameworkVersion = Codegen.stringProp("netFrameworkVersion").output().arg(netFrameworkVersion).def("v4.6").getNullable();
-        this.nodeVersion = nodeVersion;
-        this.numberOfWorkers = numberOfWorkers;
-        this.phpVersion = phpVersion;
-        this.powerShellVersion = powerShellVersion;
-        this.preWarmedInstanceCount = preWarmedInstanceCount;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.publishingUsername = publishingUsername;
-        this.push = push;
-        this.pythonVersion = pythonVersion;
-        this.remoteDebuggingEnabled = remoteDebuggingEnabled;
-        this.remoteDebuggingVersion = remoteDebuggingVersion;
-        this.requestTracingEnabled = requestTracingEnabled;
-        this.requestTracingExpirationTime = requestTracingExpirationTime;
-        this.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
-        this.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
-        this.scmMinTlsVersion = scmMinTlsVersion;
-        this.scmType = scmType;
-        this.tracingOptions = tracingOptions;
-        this.use32BitWorkerProcess = use32BitWorkerProcess;
-        this.virtualApplications = virtualApplications;
-        this.vnetName = vnetName;
-        this.vnetPrivatePortsCount = vnetPrivatePortsCount;
-        this.vnetRouteAllEnabled = vnetRouteAllEnabled;
-        this.webSocketsEnabled = webSocketsEnabled;
-        this.websiteTimeZone = websiteTimeZone;
-        this.windowsFxVersion = windowsFxVersion;
-        this.xManagedServiceIdentityId = xManagedServiceIdentityId;
-    }
+    private SiteConfigArgs() {}
 
-    private SiteConfigArgs() {
-        this.acrUseManagedIdentityCreds = Codegen.empty();
-        this.acrUserManagedIdentityID = Codegen.empty();
-        this.alwaysOn = Codegen.empty();
-        this.apiDefinition = Codegen.empty();
-        this.apiManagementConfig = Codegen.empty();
-        this.appCommandLine = Codegen.empty();
-        this.appSettings = Codegen.empty();
-        this.autoHealEnabled = Codegen.empty();
-        this.autoHealRules = Codegen.empty();
-        this.autoSwapSlotName = Codegen.empty();
-        this.azureStorageAccounts = Codegen.empty();
-        this.connectionStrings = Codegen.empty();
-        this.cors = Codegen.empty();
-        this.defaultDocuments = Codegen.empty();
-        this.detailedErrorLoggingEnabled = Codegen.empty();
-        this.documentRoot = Codegen.empty();
-        this.experiments = Codegen.empty();
-        this.ftpsState = Codegen.empty();
-        this.functionAppScaleLimit = Codegen.empty();
-        this.functionsRuntimeScaleMonitoringEnabled = Codegen.empty();
-        this.handlerMappings = Codegen.empty();
-        this.healthCheckPath = Codegen.empty();
-        this.http20Enabled = Codegen.empty();
-        this.httpLoggingEnabled = Codegen.empty();
-        this.ipSecurityRestrictions = Codegen.empty();
-        this.javaContainer = Codegen.empty();
-        this.javaContainerVersion = Codegen.empty();
-        this.javaVersion = Codegen.empty();
-        this.keyVaultReferenceIdentity = Codegen.empty();
-        this.limits = Codegen.empty();
-        this.linuxFxVersion = Codegen.empty();
-        this.loadBalancing = Codegen.empty();
-        this.localMySqlEnabled = Codegen.empty();
-        this.logsDirectorySizeLimit = Codegen.empty();
-        this.managedPipelineMode = Codegen.empty();
-        this.managedServiceIdentityId = Codegen.empty();
-        this.minTlsVersion = Codegen.empty();
-        this.minimumElasticInstanceCount = Codegen.empty();
-        this.netFrameworkVersion = Codegen.empty();
-        this.nodeVersion = Codegen.empty();
-        this.numberOfWorkers = Codegen.empty();
-        this.phpVersion = Codegen.empty();
-        this.powerShellVersion = Codegen.empty();
-        this.preWarmedInstanceCount = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.publishingUsername = Codegen.empty();
-        this.push = Codegen.empty();
-        this.pythonVersion = Codegen.empty();
-        this.remoteDebuggingEnabled = Codegen.empty();
-        this.remoteDebuggingVersion = Codegen.empty();
-        this.requestTracingEnabled = Codegen.empty();
-        this.requestTracingExpirationTime = Codegen.empty();
-        this.scmIpSecurityRestrictions = Codegen.empty();
-        this.scmIpSecurityRestrictionsUseMain = Codegen.empty();
-        this.scmMinTlsVersion = Codegen.empty();
-        this.scmType = Codegen.empty();
-        this.tracingOptions = Codegen.empty();
-        this.use32BitWorkerProcess = Codegen.empty();
-        this.virtualApplications = Codegen.empty();
-        this.vnetName = Codegen.empty();
-        this.vnetPrivatePortsCount = Codegen.empty();
-        this.vnetRouteAllEnabled = Codegen.empty();
-        this.webSocketsEnabled = Codegen.empty();
-        this.websiteTimeZone = Codegen.empty();
-        this.windowsFxVersion = Codegen.empty();
-        this.xManagedServiceIdentityId = Codegen.empty();
+    private SiteConfigArgs(SiteConfigArgs $) {
+        this.acrUseManagedIdentityCreds = $.acrUseManagedIdentityCreds;
+        this.acrUserManagedIdentityID = $.acrUserManagedIdentityID;
+        this.alwaysOn = $.alwaysOn;
+        this.apiDefinition = $.apiDefinition;
+        this.apiManagementConfig = $.apiManagementConfig;
+        this.appCommandLine = $.appCommandLine;
+        this.appSettings = $.appSettings;
+        this.autoHealEnabled = $.autoHealEnabled;
+        this.autoHealRules = $.autoHealRules;
+        this.autoSwapSlotName = $.autoSwapSlotName;
+        this.azureStorageAccounts = $.azureStorageAccounts;
+        this.connectionStrings = $.connectionStrings;
+        this.cors = $.cors;
+        this.defaultDocuments = $.defaultDocuments;
+        this.detailedErrorLoggingEnabled = $.detailedErrorLoggingEnabled;
+        this.documentRoot = $.documentRoot;
+        this.experiments = $.experiments;
+        this.ftpsState = $.ftpsState;
+        this.functionAppScaleLimit = $.functionAppScaleLimit;
+        this.functionsRuntimeScaleMonitoringEnabled = $.functionsRuntimeScaleMonitoringEnabled;
+        this.handlerMappings = $.handlerMappings;
+        this.healthCheckPath = $.healthCheckPath;
+        this.http20Enabled = $.http20Enabled;
+        this.httpLoggingEnabled = $.httpLoggingEnabled;
+        this.ipSecurityRestrictions = $.ipSecurityRestrictions;
+        this.javaContainer = $.javaContainer;
+        this.javaContainerVersion = $.javaContainerVersion;
+        this.javaVersion = $.javaVersion;
+        this.keyVaultReferenceIdentity = $.keyVaultReferenceIdentity;
+        this.limits = $.limits;
+        this.linuxFxVersion = $.linuxFxVersion;
+        this.loadBalancing = $.loadBalancing;
+        this.localMySqlEnabled = $.localMySqlEnabled;
+        this.logsDirectorySizeLimit = $.logsDirectorySizeLimit;
+        this.managedPipelineMode = $.managedPipelineMode;
+        this.managedServiceIdentityId = $.managedServiceIdentityId;
+        this.minTlsVersion = $.minTlsVersion;
+        this.minimumElasticInstanceCount = $.minimumElasticInstanceCount;
+        this.netFrameworkVersion = $.netFrameworkVersion;
+        this.nodeVersion = $.nodeVersion;
+        this.numberOfWorkers = $.numberOfWorkers;
+        this.phpVersion = $.phpVersion;
+        this.powerShellVersion = $.powerShellVersion;
+        this.preWarmedInstanceCount = $.preWarmedInstanceCount;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.publishingUsername = $.publishingUsername;
+        this.push = $.push;
+        this.pythonVersion = $.pythonVersion;
+        this.remoteDebuggingEnabled = $.remoteDebuggingEnabled;
+        this.remoteDebuggingVersion = $.remoteDebuggingVersion;
+        this.requestTracingEnabled = $.requestTracingEnabled;
+        this.requestTracingExpirationTime = $.requestTracingExpirationTime;
+        this.scmIpSecurityRestrictions = $.scmIpSecurityRestrictions;
+        this.scmIpSecurityRestrictionsUseMain = $.scmIpSecurityRestrictionsUseMain;
+        this.scmMinTlsVersion = $.scmMinTlsVersion;
+        this.scmType = $.scmType;
+        this.tracingOptions = $.tracingOptions;
+        this.use32BitWorkerProcess = $.use32BitWorkerProcess;
+        this.virtualApplications = $.virtualApplications;
+        this.vnetName = $.vnetName;
+        this.vnetPrivatePortsCount = $.vnetPrivatePortsCount;
+        this.vnetRouteAllEnabled = $.vnetRouteAllEnabled;
+        this.webSocketsEnabled = $.webSocketsEnabled;
+        this.websiteTimeZone = $.websiteTimeZone;
+        this.windowsFxVersion = $.windowsFxVersion;
+        this.xManagedServiceIdentityId = $.xManagedServiceIdentityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> acrUseManagedIdentityCreds;
-        private @Nullable Output<String> acrUserManagedIdentityID;
-        private @Nullable Output<Boolean> alwaysOn;
-        private @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
-        private @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
-        private @Nullable Output<String> appCommandLine;
-        private @Nullable Output<List<NameValuePairArgs>> appSettings;
-        private @Nullable Output<Boolean> autoHealEnabled;
-        private @Nullable Output<AutoHealRulesArgs> autoHealRules;
-        private @Nullable Output<String> autoSwapSlotName;
-        private @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
-        private @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
-        private @Nullable Output<CorsSettingsArgs> cors;
-        private @Nullable Output<List<String>> defaultDocuments;
-        private @Nullable Output<Boolean> detailedErrorLoggingEnabled;
-        private @Nullable Output<String> documentRoot;
-        private @Nullable Output<ExperimentsArgs> experiments;
-        private @Nullable Output<Either<String,FtpsState>> ftpsState;
-        private @Nullable Output<Integer> functionAppScaleLimit;
-        private @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
-        private @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
-        private @Nullable Output<String> healthCheckPath;
-        private @Nullable Output<Boolean> http20Enabled;
-        private @Nullable Output<Boolean> httpLoggingEnabled;
-        private @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
-        private @Nullable Output<String> javaContainer;
-        private @Nullable Output<String> javaContainerVersion;
-        private @Nullable Output<String> javaVersion;
-        private @Nullable Output<String> keyVaultReferenceIdentity;
-        private @Nullable Output<SiteLimitsArgs> limits;
-        private @Nullable Output<String> linuxFxVersion;
-        private @Nullable Output<SiteLoadBalancing> loadBalancing;
-        private @Nullable Output<Boolean> localMySqlEnabled;
-        private @Nullable Output<Integer> logsDirectorySizeLimit;
-        private @Nullable Output<ManagedPipelineMode> managedPipelineMode;
-        private @Nullable Output<Integer> managedServiceIdentityId;
-        private @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
-        private @Nullable Output<Integer> minimumElasticInstanceCount;
-        private @Nullable Output<String> netFrameworkVersion;
-        private @Nullable Output<String> nodeVersion;
-        private @Nullable Output<Integer> numberOfWorkers;
-        private @Nullable Output<String> phpVersion;
-        private @Nullable Output<String> powerShellVersion;
-        private @Nullable Output<Integer> preWarmedInstanceCount;
-        private @Nullable Output<String> publicNetworkAccess;
-        private @Nullable Output<String> publishingUsername;
-        private @Nullable Output<PushSettingsArgs> push;
-        private @Nullable Output<String> pythonVersion;
-        private @Nullable Output<Boolean> remoteDebuggingEnabled;
-        private @Nullable Output<String> remoteDebuggingVersion;
-        private @Nullable Output<Boolean> requestTracingEnabled;
-        private @Nullable Output<String> requestTracingExpirationTime;
-        private @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
-        private @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
-        private @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
-        private @Nullable Output<Either<String,ScmType>> scmType;
-        private @Nullable Output<String> tracingOptions;
-        private @Nullable Output<Boolean> use32BitWorkerProcess;
-        private @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
-        private @Nullable Output<String> vnetName;
-        private @Nullable Output<Integer> vnetPrivatePortsCount;
-        private @Nullable Output<Boolean> vnetRouteAllEnabled;
-        private @Nullable Output<Boolean> webSocketsEnabled;
-        private @Nullable Output<String> websiteTimeZone;
-        private @Nullable Output<String> windowsFxVersion;
-        private @Nullable Output<Integer> xManagedServiceIdentityId;
+        private SiteConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteConfigArgs();
         }
 
         public Builder(SiteConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acrUseManagedIdentityCreds = defaults.acrUseManagedIdentityCreds;
-    	      this.acrUserManagedIdentityID = defaults.acrUserManagedIdentityID;
-    	      this.alwaysOn = defaults.alwaysOn;
-    	      this.apiDefinition = defaults.apiDefinition;
-    	      this.apiManagementConfig = defaults.apiManagementConfig;
-    	      this.appCommandLine = defaults.appCommandLine;
-    	      this.appSettings = defaults.appSettings;
-    	      this.autoHealEnabled = defaults.autoHealEnabled;
-    	      this.autoHealRules = defaults.autoHealRules;
-    	      this.autoSwapSlotName = defaults.autoSwapSlotName;
-    	      this.azureStorageAccounts = defaults.azureStorageAccounts;
-    	      this.connectionStrings = defaults.connectionStrings;
-    	      this.cors = defaults.cors;
-    	      this.defaultDocuments = defaults.defaultDocuments;
-    	      this.detailedErrorLoggingEnabled = defaults.detailedErrorLoggingEnabled;
-    	      this.documentRoot = defaults.documentRoot;
-    	      this.experiments = defaults.experiments;
-    	      this.ftpsState = defaults.ftpsState;
-    	      this.functionAppScaleLimit = defaults.functionAppScaleLimit;
-    	      this.functionsRuntimeScaleMonitoringEnabled = defaults.functionsRuntimeScaleMonitoringEnabled;
-    	      this.handlerMappings = defaults.handlerMappings;
-    	      this.healthCheckPath = defaults.healthCheckPath;
-    	      this.http20Enabled = defaults.http20Enabled;
-    	      this.httpLoggingEnabled = defaults.httpLoggingEnabled;
-    	      this.ipSecurityRestrictions = defaults.ipSecurityRestrictions;
-    	      this.javaContainer = defaults.javaContainer;
-    	      this.javaContainerVersion = defaults.javaContainerVersion;
-    	      this.javaVersion = defaults.javaVersion;
-    	      this.keyVaultReferenceIdentity = defaults.keyVaultReferenceIdentity;
-    	      this.limits = defaults.limits;
-    	      this.linuxFxVersion = defaults.linuxFxVersion;
-    	      this.loadBalancing = defaults.loadBalancing;
-    	      this.localMySqlEnabled = defaults.localMySqlEnabled;
-    	      this.logsDirectorySizeLimit = defaults.logsDirectorySizeLimit;
-    	      this.managedPipelineMode = defaults.managedPipelineMode;
-    	      this.managedServiceIdentityId = defaults.managedServiceIdentityId;
-    	      this.minTlsVersion = defaults.minTlsVersion;
-    	      this.minimumElasticInstanceCount = defaults.minimumElasticInstanceCount;
-    	      this.netFrameworkVersion = defaults.netFrameworkVersion;
-    	      this.nodeVersion = defaults.nodeVersion;
-    	      this.numberOfWorkers = defaults.numberOfWorkers;
-    	      this.phpVersion = defaults.phpVersion;
-    	      this.powerShellVersion = defaults.powerShellVersion;
-    	      this.preWarmedInstanceCount = defaults.preWarmedInstanceCount;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.publishingUsername = defaults.publishingUsername;
-    	      this.push = defaults.push;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.remoteDebuggingEnabled = defaults.remoteDebuggingEnabled;
-    	      this.remoteDebuggingVersion = defaults.remoteDebuggingVersion;
-    	      this.requestTracingEnabled = defaults.requestTracingEnabled;
-    	      this.requestTracingExpirationTime = defaults.requestTracingExpirationTime;
-    	      this.scmIpSecurityRestrictions = defaults.scmIpSecurityRestrictions;
-    	      this.scmIpSecurityRestrictionsUseMain = defaults.scmIpSecurityRestrictionsUseMain;
-    	      this.scmMinTlsVersion = defaults.scmMinTlsVersion;
-    	      this.scmType = defaults.scmType;
-    	      this.tracingOptions = defaults.tracingOptions;
-    	      this.use32BitWorkerProcess = defaults.use32BitWorkerProcess;
-    	      this.virtualApplications = defaults.virtualApplications;
-    	      this.vnetName = defaults.vnetName;
-    	      this.vnetPrivatePortsCount = defaults.vnetPrivatePortsCount;
-    	      this.vnetRouteAllEnabled = defaults.vnetRouteAllEnabled;
-    	      this.webSocketsEnabled = defaults.webSocketsEnabled;
-    	      this.websiteTimeZone = defaults.websiteTimeZone;
-    	      this.windowsFxVersion = defaults.windowsFxVersion;
-    	      this.xManagedServiceIdentityId = defaults.xManagedServiceIdentityId;
+            $ = new SiteConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acrUseManagedIdentityCreds(@Nullable Output<Boolean> acrUseManagedIdentityCreds) {
-            this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
+            $.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
             return this;
         }
-        public Builder acrUseManagedIdentityCreds(@Nullable Boolean acrUseManagedIdentityCreds) {
-            this.acrUseManagedIdentityCreds = Codegen.ofNullable(acrUseManagedIdentityCreds);
-            return this;
+
+        public Builder acrUseManagedIdentityCreds(Boolean acrUseManagedIdentityCreds) {
+            return acrUseManagedIdentityCreds(Output.of(acrUseManagedIdentityCreds));
         }
+
         public Builder acrUserManagedIdentityID(@Nullable Output<String> acrUserManagedIdentityID) {
-            this.acrUserManagedIdentityID = acrUserManagedIdentityID;
+            $.acrUserManagedIdentityID = acrUserManagedIdentityID;
             return this;
         }
-        public Builder acrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
-            this.acrUserManagedIdentityID = Codegen.ofNullable(acrUserManagedIdentityID);
-            return this;
+
+        public Builder acrUserManagedIdentityID(String acrUserManagedIdentityID) {
+            return acrUserManagedIdentityID(Output.of(acrUserManagedIdentityID));
         }
+
         public Builder alwaysOn(@Nullable Output<Boolean> alwaysOn) {
-            this.alwaysOn = alwaysOn;
+            $.alwaysOn = alwaysOn;
             return this;
         }
-        public Builder alwaysOn(@Nullable Boolean alwaysOn) {
-            this.alwaysOn = Codegen.ofNullable(alwaysOn);
-            return this;
+
+        public Builder alwaysOn(Boolean alwaysOn) {
+            return alwaysOn(Output.of(alwaysOn));
         }
+
         public Builder apiDefinition(@Nullable Output<ApiDefinitionInfoArgs> apiDefinition) {
-            this.apiDefinition = apiDefinition;
+            $.apiDefinition = apiDefinition;
             return this;
         }
-        public Builder apiDefinition(@Nullable ApiDefinitionInfoArgs apiDefinition) {
-            this.apiDefinition = Codegen.ofNullable(apiDefinition);
-            return this;
+
+        public Builder apiDefinition(ApiDefinitionInfoArgs apiDefinition) {
+            return apiDefinition(Output.of(apiDefinition));
         }
+
         public Builder apiManagementConfig(@Nullable Output<ApiManagementConfigArgs> apiManagementConfig) {
-            this.apiManagementConfig = apiManagementConfig;
+            $.apiManagementConfig = apiManagementConfig;
             return this;
         }
-        public Builder apiManagementConfig(@Nullable ApiManagementConfigArgs apiManagementConfig) {
-            this.apiManagementConfig = Codegen.ofNullable(apiManagementConfig);
-            return this;
+
+        public Builder apiManagementConfig(ApiManagementConfigArgs apiManagementConfig) {
+            return apiManagementConfig(Output.of(apiManagementConfig));
         }
+
         public Builder appCommandLine(@Nullable Output<String> appCommandLine) {
-            this.appCommandLine = appCommandLine;
+            $.appCommandLine = appCommandLine;
             return this;
         }
-        public Builder appCommandLine(@Nullable String appCommandLine) {
-            this.appCommandLine = Codegen.ofNullable(appCommandLine);
-            return this;
+
+        public Builder appCommandLine(String appCommandLine) {
+            return appCommandLine(Output.of(appCommandLine));
         }
+
         public Builder appSettings(@Nullable Output<List<NameValuePairArgs>> appSettings) {
-            this.appSettings = appSettings;
+            $.appSettings = appSettings;
             return this;
         }
-        public Builder appSettings(@Nullable List<NameValuePairArgs> appSettings) {
-            this.appSettings = Codegen.ofNullable(appSettings);
-            return this;
+
+        public Builder appSettings(List<NameValuePairArgs> appSettings) {
+            return appSettings(Output.of(appSettings));
         }
+
         public Builder appSettings(NameValuePairArgs... appSettings) {
             return appSettings(List.of(appSettings));
         }
+
         public Builder autoHealEnabled(@Nullable Output<Boolean> autoHealEnabled) {
-            this.autoHealEnabled = autoHealEnabled;
+            $.autoHealEnabled = autoHealEnabled;
             return this;
         }
-        public Builder autoHealEnabled(@Nullable Boolean autoHealEnabled) {
-            this.autoHealEnabled = Codegen.ofNullable(autoHealEnabled);
-            return this;
+
+        public Builder autoHealEnabled(Boolean autoHealEnabled) {
+            return autoHealEnabled(Output.of(autoHealEnabled));
         }
+
         public Builder autoHealRules(@Nullable Output<AutoHealRulesArgs> autoHealRules) {
-            this.autoHealRules = autoHealRules;
+            $.autoHealRules = autoHealRules;
             return this;
         }
-        public Builder autoHealRules(@Nullable AutoHealRulesArgs autoHealRules) {
-            this.autoHealRules = Codegen.ofNullable(autoHealRules);
-            return this;
+
+        public Builder autoHealRules(AutoHealRulesArgs autoHealRules) {
+            return autoHealRules(Output.of(autoHealRules));
         }
+
         public Builder autoSwapSlotName(@Nullable Output<String> autoSwapSlotName) {
-            this.autoSwapSlotName = autoSwapSlotName;
+            $.autoSwapSlotName = autoSwapSlotName;
             return this;
         }
-        public Builder autoSwapSlotName(@Nullable String autoSwapSlotName) {
-            this.autoSwapSlotName = Codegen.ofNullable(autoSwapSlotName);
-            return this;
+
+        public Builder autoSwapSlotName(String autoSwapSlotName) {
+            return autoSwapSlotName(Output.of(autoSwapSlotName));
         }
+
         public Builder azureStorageAccounts(@Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts) {
-            this.azureStorageAccounts = azureStorageAccounts;
+            $.azureStorageAccounts = azureStorageAccounts;
             return this;
         }
-        public Builder azureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueArgs> azureStorageAccounts) {
-            this.azureStorageAccounts = Codegen.ofNullable(azureStorageAccounts);
-            return this;
+
+        public Builder azureStorageAccounts(Map<String,AzureStorageInfoValueArgs> azureStorageAccounts) {
+            return azureStorageAccounts(Output.of(azureStorageAccounts));
         }
+
         public Builder connectionStrings(@Nullable Output<List<ConnStringInfoArgs>> connectionStrings) {
-            this.connectionStrings = connectionStrings;
+            $.connectionStrings = connectionStrings;
             return this;
         }
-        public Builder connectionStrings(@Nullable List<ConnStringInfoArgs> connectionStrings) {
-            this.connectionStrings = Codegen.ofNullable(connectionStrings);
-            return this;
+
+        public Builder connectionStrings(List<ConnStringInfoArgs> connectionStrings) {
+            return connectionStrings(Output.of(connectionStrings));
         }
+
         public Builder connectionStrings(ConnStringInfoArgs... connectionStrings) {
             return connectionStrings(List.of(connectionStrings));
         }
+
         public Builder cors(@Nullable Output<CorsSettingsArgs> cors) {
-            this.cors = cors;
+            $.cors = cors;
             return this;
         }
-        public Builder cors(@Nullable CorsSettingsArgs cors) {
-            this.cors = Codegen.ofNullable(cors);
-            return this;
+
+        public Builder cors(CorsSettingsArgs cors) {
+            return cors(Output.of(cors));
         }
+
         public Builder defaultDocuments(@Nullable Output<List<String>> defaultDocuments) {
-            this.defaultDocuments = defaultDocuments;
+            $.defaultDocuments = defaultDocuments;
             return this;
         }
-        public Builder defaultDocuments(@Nullable List<String> defaultDocuments) {
-            this.defaultDocuments = Codegen.ofNullable(defaultDocuments);
-            return this;
+
+        public Builder defaultDocuments(List<String> defaultDocuments) {
+            return defaultDocuments(Output.of(defaultDocuments));
         }
+
         public Builder defaultDocuments(String... defaultDocuments) {
             return defaultDocuments(List.of(defaultDocuments));
         }
+
         public Builder detailedErrorLoggingEnabled(@Nullable Output<Boolean> detailedErrorLoggingEnabled) {
-            this.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
+            $.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
             return this;
         }
-        public Builder detailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
-            this.detailedErrorLoggingEnabled = Codegen.ofNullable(detailedErrorLoggingEnabled);
-            return this;
+
+        public Builder detailedErrorLoggingEnabled(Boolean detailedErrorLoggingEnabled) {
+            return detailedErrorLoggingEnabled(Output.of(detailedErrorLoggingEnabled));
         }
+
         public Builder documentRoot(@Nullable Output<String> documentRoot) {
-            this.documentRoot = documentRoot;
+            $.documentRoot = documentRoot;
             return this;
         }
-        public Builder documentRoot(@Nullable String documentRoot) {
-            this.documentRoot = Codegen.ofNullable(documentRoot);
-            return this;
+
+        public Builder documentRoot(String documentRoot) {
+            return documentRoot(Output.of(documentRoot));
         }
+
         public Builder experiments(@Nullable Output<ExperimentsArgs> experiments) {
-            this.experiments = experiments;
+            $.experiments = experiments;
             return this;
         }
-        public Builder experiments(@Nullable ExperimentsArgs experiments) {
-            this.experiments = Codegen.ofNullable(experiments);
-            return this;
+
+        public Builder experiments(ExperimentsArgs experiments) {
+            return experiments(Output.of(experiments));
         }
+
         public Builder ftpsState(@Nullable Output<Either<String,FtpsState>> ftpsState) {
-            this.ftpsState = ftpsState;
+            $.ftpsState = ftpsState;
             return this;
         }
-        public Builder ftpsState(@Nullable Either<String,FtpsState> ftpsState) {
-            this.ftpsState = Codegen.ofNullable(ftpsState);
-            return this;
+
+        public Builder ftpsState(Either<String,FtpsState> ftpsState) {
+            return ftpsState(Output.of(ftpsState));
         }
+
         public Builder functionAppScaleLimit(@Nullable Output<Integer> functionAppScaleLimit) {
-            this.functionAppScaleLimit = functionAppScaleLimit;
+            $.functionAppScaleLimit = functionAppScaleLimit;
             return this;
         }
-        public Builder functionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
-            this.functionAppScaleLimit = Codegen.ofNullable(functionAppScaleLimit);
-            return this;
+
+        public Builder functionAppScaleLimit(Integer functionAppScaleLimit) {
+            return functionAppScaleLimit(Output.of(functionAppScaleLimit));
         }
+
         public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled) {
-            this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
+            $.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
             return this;
         }
-        public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
-            this.functionsRuntimeScaleMonitoringEnabled = Codegen.ofNullable(functionsRuntimeScaleMonitoringEnabled);
-            return this;
+
+        public Builder functionsRuntimeScaleMonitoringEnabled(Boolean functionsRuntimeScaleMonitoringEnabled) {
+            return functionsRuntimeScaleMonitoringEnabled(Output.of(functionsRuntimeScaleMonitoringEnabled));
         }
+
         public Builder handlerMappings(@Nullable Output<List<HandlerMappingArgs>> handlerMappings) {
-            this.handlerMappings = handlerMappings;
+            $.handlerMappings = handlerMappings;
             return this;
         }
-        public Builder handlerMappings(@Nullable List<HandlerMappingArgs> handlerMappings) {
-            this.handlerMappings = Codegen.ofNullable(handlerMappings);
-            return this;
+
+        public Builder handlerMappings(List<HandlerMappingArgs> handlerMappings) {
+            return handlerMappings(Output.of(handlerMappings));
         }
+
         public Builder handlerMappings(HandlerMappingArgs... handlerMappings) {
             return handlerMappings(List.of(handlerMappings));
         }
+
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
-            this.healthCheckPath = healthCheckPath;
+            $.healthCheckPath = healthCheckPath;
             return this;
         }
-        public Builder healthCheckPath(@Nullable String healthCheckPath) {
-            this.healthCheckPath = Codegen.ofNullable(healthCheckPath);
-            return this;
+
+        public Builder healthCheckPath(String healthCheckPath) {
+            return healthCheckPath(Output.of(healthCheckPath));
         }
+
         public Builder http20Enabled(@Nullable Output<Boolean> http20Enabled) {
-            this.http20Enabled = http20Enabled;
+            $.http20Enabled = http20Enabled;
             return this;
         }
-        public Builder http20Enabled(@Nullable Boolean http20Enabled) {
-            this.http20Enabled = Codegen.ofNullable(http20Enabled);
-            return this;
+
+        public Builder http20Enabled(Boolean http20Enabled) {
+            return http20Enabled(Output.of(http20Enabled));
         }
+
         public Builder httpLoggingEnabled(@Nullable Output<Boolean> httpLoggingEnabled) {
-            this.httpLoggingEnabled = httpLoggingEnabled;
+            $.httpLoggingEnabled = httpLoggingEnabled;
             return this;
         }
-        public Builder httpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
-            this.httpLoggingEnabled = Codegen.ofNullable(httpLoggingEnabled);
-            return this;
+
+        public Builder httpLoggingEnabled(Boolean httpLoggingEnabled) {
+            return httpLoggingEnabled(Output.of(httpLoggingEnabled));
         }
+
         public Builder ipSecurityRestrictions(@Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions) {
-            this.ipSecurityRestrictions = ipSecurityRestrictions;
+            $.ipSecurityRestrictions = ipSecurityRestrictions;
             return this;
         }
-        public Builder ipSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> ipSecurityRestrictions) {
-            this.ipSecurityRestrictions = Codegen.ofNullable(ipSecurityRestrictions);
-            return this;
+
+        public Builder ipSecurityRestrictions(List<IpSecurityRestrictionArgs> ipSecurityRestrictions) {
+            return ipSecurityRestrictions(Output.of(ipSecurityRestrictions));
         }
+
         public Builder ipSecurityRestrictions(IpSecurityRestrictionArgs... ipSecurityRestrictions) {
             return ipSecurityRestrictions(List.of(ipSecurityRestrictions));
         }
+
         public Builder javaContainer(@Nullable Output<String> javaContainer) {
-            this.javaContainer = javaContainer;
+            $.javaContainer = javaContainer;
             return this;
         }
-        public Builder javaContainer(@Nullable String javaContainer) {
-            this.javaContainer = Codegen.ofNullable(javaContainer);
-            return this;
+
+        public Builder javaContainer(String javaContainer) {
+            return javaContainer(Output.of(javaContainer));
         }
+
         public Builder javaContainerVersion(@Nullable Output<String> javaContainerVersion) {
-            this.javaContainerVersion = javaContainerVersion;
+            $.javaContainerVersion = javaContainerVersion;
             return this;
         }
-        public Builder javaContainerVersion(@Nullable String javaContainerVersion) {
-            this.javaContainerVersion = Codegen.ofNullable(javaContainerVersion);
-            return this;
+
+        public Builder javaContainerVersion(String javaContainerVersion) {
+            return javaContainerVersion(Output.of(javaContainerVersion));
         }
+
         public Builder javaVersion(@Nullable Output<String> javaVersion) {
-            this.javaVersion = javaVersion;
+            $.javaVersion = javaVersion;
             return this;
         }
-        public Builder javaVersion(@Nullable String javaVersion) {
-            this.javaVersion = Codegen.ofNullable(javaVersion);
-            return this;
+
+        public Builder javaVersion(String javaVersion) {
+            return javaVersion(Output.of(javaVersion));
         }
+
         public Builder keyVaultReferenceIdentity(@Nullable Output<String> keyVaultReferenceIdentity) {
-            this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
+            $.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
-        public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
-            this.keyVaultReferenceIdentity = Codegen.ofNullable(keyVaultReferenceIdentity);
-            return this;
+
+        public Builder keyVaultReferenceIdentity(String keyVaultReferenceIdentity) {
+            return keyVaultReferenceIdentity(Output.of(keyVaultReferenceIdentity));
         }
+
         public Builder limits(@Nullable Output<SiteLimitsArgs> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable SiteLimitsArgs limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(SiteLimitsArgs limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder linuxFxVersion(@Nullable Output<String> linuxFxVersion) {
-            this.linuxFxVersion = linuxFxVersion;
+            $.linuxFxVersion = linuxFxVersion;
             return this;
         }
-        public Builder linuxFxVersion(@Nullable String linuxFxVersion) {
-            this.linuxFxVersion = Codegen.ofNullable(linuxFxVersion);
-            return this;
+
+        public Builder linuxFxVersion(String linuxFxVersion) {
+            return linuxFxVersion(Output.of(linuxFxVersion));
         }
+
         public Builder loadBalancing(@Nullable Output<SiteLoadBalancing> loadBalancing) {
-            this.loadBalancing = loadBalancing;
+            $.loadBalancing = loadBalancing;
             return this;
         }
-        public Builder loadBalancing(@Nullable SiteLoadBalancing loadBalancing) {
-            this.loadBalancing = Codegen.ofNullable(loadBalancing);
-            return this;
+
+        public Builder loadBalancing(SiteLoadBalancing loadBalancing) {
+            return loadBalancing(Output.of(loadBalancing));
         }
+
         public Builder localMySqlEnabled(@Nullable Output<Boolean> localMySqlEnabled) {
-            this.localMySqlEnabled = localMySqlEnabled;
+            $.localMySqlEnabled = localMySqlEnabled;
             return this;
         }
-        public Builder localMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
-            this.localMySqlEnabled = Codegen.ofNullable(localMySqlEnabled);
-            return this;
+
+        public Builder localMySqlEnabled(Boolean localMySqlEnabled) {
+            return localMySqlEnabled(Output.of(localMySqlEnabled));
         }
+
         public Builder logsDirectorySizeLimit(@Nullable Output<Integer> logsDirectorySizeLimit) {
-            this.logsDirectorySizeLimit = logsDirectorySizeLimit;
+            $.logsDirectorySizeLimit = logsDirectorySizeLimit;
             return this;
         }
-        public Builder logsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
-            this.logsDirectorySizeLimit = Codegen.ofNullable(logsDirectorySizeLimit);
-            return this;
+
+        public Builder logsDirectorySizeLimit(Integer logsDirectorySizeLimit) {
+            return logsDirectorySizeLimit(Output.of(logsDirectorySizeLimit));
         }
+
         public Builder managedPipelineMode(@Nullable Output<ManagedPipelineMode> managedPipelineMode) {
-            this.managedPipelineMode = managedPipelineMode;
+            $.managedPipelineMode = managedPipelineMode;
             return this;
         }
-        public Builder managedPipelineMode(@Nullable ManagedPipelineMode managedPipelineMode) {
-            this.managedPipelineMode = Codegen.ofNullable(managedPipelineMode);
-            return this;
+
+        public Builder managedPipelineMode(ManagedPipelineMode managedPipelineMode) {
+            return managedPipelineMode(Output.of(managedPipelineMode));
         }
+
         public Builder managedServiceIdentityId(@Nullable Output<Integer> managedServiceIdentityId) {
-            this.managedServiceIdentityId = managedServiceIdentityId;
+            $.managedServiceIdentityId = managedServiceIdentityId;
             return this;
         }
-        public Builder managedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
-            this.managedServiceIdentityId = Codegen.ofNullable(managedServiceIdentityId);
-            return this;
+
+        public Builder managedServiceIdentityId(Integer managedServiceIdentityId) {
+            return managedServiceIdentityId(Output.of(managedServiceIdentityId));
         }
+
         public Builder minTlsVersion(@Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion) {
-            this.minTlsVersion = minTlsVersion;
+            $.minTlsVersion = minTlsVersion;
             return this;
         }
-        public Builder minTlsVersion(@Nullable Either<String,SupportedTlsVersions> minTlsVersion) {
-            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
-            return this;
+
+        public Builder minTlsVersion(Either<String,SupportedTlsVersions> minTlsVersion) {
+            return minTlsVersion(Output.of(minTlsVersion));
         }
+
         public Builder minimumElasticInstanceCount(@Nullable Output<Integer> minimumElasticInstanceCount) {
-            this.minimumElasticInstanceCount = minimumElasticInstanceCount;
+            $.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
         }
-        public Builder minimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
-            this.minimumElasticInstanceCount = Codegen.ofNullable(minimumElasticInstanceCount);
-            return this;
+
+        public Builder minimumElasticInstanceCount(Integer minimumElasticInstanceCount) {
+            return minimumElasticInstanceCount(Output.of(minimumElasticInstanceCount));
         }
+
         public Builder netFrameworkVersion(@Nullable Output<String> netFrameworkVersion) {
-            this.netFrameworkVersion = netFrameworkVersion;
+            $.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
-        public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
-            this.netFrameworkVersion = Codegen.ofNullable(netFrameworkVersion);
-            return this;
+
+        public Builder netFrameworkVersion(String netFrameworkVersion) {
+            return netFrameworkVersion(Output.of(netFrameworkVersion));
         }
+
         public Builder nodeVersion(@Nullable Output<String> nodeVersion) {
-            this.nodeVersion = nodeVersion;
+            $.nodeVersion = nodeVersion;
             return this;
         }
-        public Builder nodeVersion(@Nullable String nodeVersion) {
-            this.nodeVersion = Codegen.ofNullable(nodeVersion);
-            return this;
+
+        public Builder nodeVersion(String nodeVersion) {
+            return nodeVersion(Output.of(nodeVersion));
         }
+
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
-            this.numberOfWorkers = numberOfWorkers;
+            $.numberOfWorkers = numberOfWorkers;
             return this;
         }
-        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
-            return this;
+
+        public Builder numberOfWorkers(Integer numberOfWorkers) {
+            return numberOfWorkers(Output.of(numberOfWorkers));
         }
+
         public Builder phpVersion(@Nullable Output<String> phpVersion) {
-            this.phpVersion = phpVersion;
+            $.phpVersion = phpVersion;
             return this;
         }
-        public Builder phpVersion(@Nullable String phpVersion) {
-            this.phpVersion = Codegen.ofNullable(phpVersion);
-            return this;
+
+        public Builder phpVersion(String phpVersion) {
+            return phpVersion(Output.of(phpVersion));
         }
+
         public Builder powerShellVersion(@Nullable Output<String> powerShellVersion) {
-            this.powerShellVersion = powerShellVersion;
+            $.powerShellVersion = powerShellVersion;
             return this;
         }
-        public Builder powerShellVersion(@Nullable String powerShellVersion) {
-            this.powerShellVersion = Codegen.ofNullable(powerShellVersion);
-            return this;
+
+        public Builder powerShellVersion(String powerShellVersion) {
+            return powerShellVersion(Output.of(powerShellVersion));
         }
+
         public Builder preWarmedInstanceCount(@Nullable Output<Integer> preWarmedInstanceCount) {
-            this.preWarmedInstanceCount = preWarmedInstanceCount;
+            $.preWarmedInstanceCount = preWarmedInstanceCount;
             return this;
         }
-        public Builder preWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
-            this.preWarmedInstanceCount = Codegen.ofNullable(preWarmedInstanceCount);
-            return this;
+
+        public Builder preWarmedInstanceCount(Integer preWarmedInstanceCount) {
+            return preWarmedInstanceCount(Output.of(preWarmedInstanceCount));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder publishingUsername(@Nullable Output<String> publishingUsername) {
-            this.publishingUsername = publishingUsername;
+            $.publishingUsername = publishingUsername;
             return this;
         }
-        public Builder publishingUsername(@Nullable String publishingUsername) {
-            this.publishingUsername = Codegen.ofNullable(publishingUsername);
-            return this;
+
+        public Builder publishingUsername(String publishingUsername) {
+            return publishingUsername(Output.of(publishingUsername));
         }
+
         public Builder push(@Nullable Output<PushSettingsArgs> push) {
-            this.push = push;
+            $.push = push;
             return this;
         }
-        public Builder push(@Nullable PushSettingsArgs push) {
-            this.push = Codegen.ofNullable(push);
-            return this;
+
+        public Builder push(PushSettingsArgs push) {
+            return push(Output.of(push));
         }
+
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
-            this.pythonVersion = pythonVersion;
+            $.pythonVersion = pythonVersion;
             return this;
         }
-        public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Codegen.ofNullable(pythonVersion);
-            return this;
+
+        public Builder pythonVersion(String pythonVersion) {
+            return pythonVersion(Output.of(pythonVersion));
         }
+
         public Builder remoteDebuggingEnabled(@Nullable Output<Boolean> remoteDebuggingEnabled) {
-            this.remoteDebuggingEnabled = remoteDebuggingEnabled;
+            $.remoteDebuggingEnabled = remoteDebuggingEnabled;
             return this;
         }
-        public Builder remoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
-            this.remoteDebuggingEnabled = Codegen.ofNullable(remoteDebuggingEnabled);
-            return this;
+
+        public Builder remoteDebuggingEnabled(Boolean remoteDebuggingEnabled) {
+            return remoteDebuggingEnabled(Output.of(remoteDebuggingEnabled));
         }
+
         public Builder remoteDebuggingVersion(@Nullable Output<String> remoteDebuggingVersion) {
-            this.remoteDebuggingVersion = remoteDebuggingVersion;
+            $.remoteDebuggingVersion = remoteDebuggingVersion;
             return this;
         }
-        public Builder remoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
-            this.remoteDebuggingVersion = Codegen.ofNullable(remoteDebuggingVersion);
-            return this;
+
+        public Builder remoteDebuggingVersion(String remoteDebuggingVersion) {
+            return remoteDebuggingVersion(Output.of(remoteDebuggingVersion));
         }
+
         public Builder requestTracingEnabled(@Nullable Output<Boolean> requestTracingEnabled) {
-            this.requestTracingEnabled = requestTracingEnabled;
+            $.requestTracingEnabled = requestTracingEnabled;
             return this;
         }
-        public Builder requestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
-            this.requestTracingEnabled = Codegen.ofNullable(requestTracingEnabled);
-            return this;
+
+        public Builder requestTracingEnabled(Boolean requestTracingEnabled) {
+            return requestTracingEnabled(Output.of(requestTracingEnabled));
         }
+
         public Builder requestTracingExpirationTime(@Nullable Output<String> requestTracingExpirationTime) {
-            this.requestTracingExpirationTime = requestTracingExpirationTime;
+            $.requestTracingExpirationTime = requestTracingExpirationTime;
             return this;
         }
-        public Builder requestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
-            this.requestTracingExpirationTime = Codegen.ofNullable(requestTracingExpirationTime);
-            return this;
+
+        public Builder requestTracingExpirationTime(String requestTracingExpirationTime) {
+            return requestTracingExpirationTime(Output.of(requestTracingExpirationTime));
         }
+
         public Builder scmIpSecurityRestrictions(@Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions) {
-            this.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
+            $.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
             return this;
         }
-        public Builder scmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> scmIpSecurityRestrictions) {
-            this.scmIpSecurityRestrictions = Codegen.ofNullable(scmIpSecurityRestrictions);
-            return this;
+
+        public Builder scmIpSecurityRestrictions(List<IpSecurityRestrictionArgs> scmIpSecurityRestrictions) {
+            return scmIpSecurityRestrictions(Output.of(scmIpSecurityRestrictions));
         }
+
         public Builder scmIpSecurityRestrictions(IpSecurityRestrictionArgs... scmIpSecurityRestrictions) {
             return scmIpSecurityRestrictions(List.of(scmIpSecurityRestrictions));
         }
+
         public Builder scmIpSecurityRestrictionsUseMain(@Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain) {
-            this.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
+            $.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
             return this;
         }
-        public Builder scmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
-            this.scmIpSecurityRestrictionsUseMain = Codegen.ofNullable(scmIpSecurityRestrictionsUseMain);
-            return this;
+
+        public Builder scmIpSecurityRestrictionsUseMain(Boolean scmIpSecurityRestrictionsUseMain) {
+            return scmIpSecurityRestrictionsUseMain(Output.of(scmIpSecurityRestrictionsUseMain));
         }
+
         public Builder scmMinTlsVersion(@Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion) {
-            this.scmMinTlsVersion = scmMinTlsVersion;
+            $.scmMinTlsVersion = scmMinTlsVersion;
             return this;
         }
-        public Builder scmMinTlsVersion(@Nullable Either<String,SupportedTlsVersions> scmMinTlsVersion) {
-            this.scmMinTlsVersion = Codegen.ofNullable(scmMinTlsVersion);
-            return this;
+
+        public Builder scmMinTlsVersion(Either<String,SupportedTlsVersions> scmMinTlsVersion) {
+            return scmMinTlsVersion(Output.of(scmMinTlsVersion));
         }
+
         public Builder scmType(@Nullable Output<Either<String,ScmType>> scmType) {
-            this.scmType = scmType;
+            $.scmType = scmType;
             return this;
         }
-        public Builder scmType(@Nullable Either<String,ScmType> scmType) {
-            this.scmType = Codegen.ofNullable(scmType);
-            return this;
+
+        public Builder scmType(Either<String,ScmType> scmType) {
+            return scmType(Output.of(scmType));
         }
+
         public Builder tracingOptions(@Nullable Output<String> tracingOptions) {
-            this.tracingOptions = tracingOptions;
+            $.tracingOptions = tracingOptions;
             return this;
         }
-        public Builder tracingOptions(@Nullable String tracingOptions) {
-            this.tracingOptions = Codegen.ofNullable(tracingOptions);
-            return this;
+
+        public Builder tracingOptions(String tracingOptions) {
+            return tracingOptions(Output.of(tracingOptions));
         }
+
         public Builder use32BitWorkerProcess(@Nullable Output<Boolean> use32BitWorkerProcess) {
-            this.use32BitWorkerProcess = use32BitWorkerProcess;
+            $.use32BitWorkerProcess = use32BitWorkerProcess;
             return this;
         }
-        public Builder use32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
-            this.use32BitWorkerProcess = Codegen.ofNullable(use32BitWorkerProcess);
-            return this;
+
+        public Builder use32BitWorkerProcess(Boolean use32BitWorkerProcess) {
+            return use32BitWorkerProcess(Output.of(use32BitWorkerProcess));
         }
+
         public Builder virtualApplications(@Nullable Output<List<VirtualApplicationArgs>> virtualApplications) {
-            this.virtualApplications = virtualApplications;
+            $.virtualApplications = virtualApplications;
             return this;
         }
-        public Builder virtualApplications(@Nullable List<VirtualApplicationArgs> virtualApplications) {
-            this.virtualApplications = Codegen.ofNullable(virtualApplications);
-            return this;
+
+        public Builder virtualApplications(List<VirtualApplicationArgs> virtualApplications) {
+            return virtualApplications(Output.of(virtualApplications));
         }
+
         public Builder virtualApplications(VirtualApplicationArgs... virtualApplications) {
             return virtualApplications(List.of(virtualApplications));
         }
+
         public Builder vnetName(@Nullable Output<String> vnetName) {
-            this.vnetName = vnetName;
+            $.vnetName = vnetName;
             return this;
         }
-        public Builder vnetName(@Nullable String vnetName) {
-            this.vnetName = Codegen.ofNullable(vnetName);
-            return this;
+
+        public Builder vnetName(String vnetName) {
+            return vnetName(Output.of(vnetName));
         }
+
         public Builder vnetPrivatePortsCount(@Nullable Output<Integer> vnetPrivatePortsCount) {
-            this.vnetPrivatePortsCount = vnetPrivatePortsCount;
+            $.vnetPrivatePortsCount = vnetPrivatePortsCount;
             return this;
         }
-        public Builder vnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
-            this.vnetPrivatePortsCount = Codegen.ofNullable(vnetPrivatePortsCount);
-            return this;
+
+        public Builder vnetPrivatePortsCount(Integer vnetPrivatePortsCount) {
+            return vnetPrivatePortsCount(Output.of(vnetPrivatePortsCount));
         }
+
         public Builder vnetRouteAllEnabled(@Nullable Output<Boolean> vnetRouteAllEnabled) {
-            this.vnetRouteAllEnabled = vnetRouteAllEnabled;
+            $.vnetRouteAllEnabled = vnetRouteAllEnabled;
             return this;
         }
-        public Builder vnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
-            this.vnetRouteAllEnabled = Codegen.ofNullable(vnetRouteAllEnabled);
-            return this;
+
+        public Builder vnetRouteAllEnabled(Boolean vnetRouteAllEnabled) {
+            return vnetRouteAllEnabled(Output.of(vnetRouteAllEnabled));
         }
+
         public Builder webSocketsEnabled(@Nullable Output<Boolean> webSocketsEnabled) {
-            this.webSocketsEnabled = webSocketsEnabled;
+            $.webSocketsEnabled = webSocketsEnabled;
             return this;
         }
-        public Builder webSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
-            this.webSocketsEnabled = Codegen.ofNullable(webSocketsEnabled);
-            return this;
+
+        public Builder webSocketsEnabled(Boolean webSocketsEnabled) {
+            return webSocketsEnabled(Output.of(webSocketsEnabled));
         }
+
         public Builder websiteTimeZone(@Nullable Output<String> websiteTimeZone) {
-            this.websiteTimeZone = websiteTimeZone;
+            $.websiteTimeZone = websiteTimeZone;
             return this;
         }
-        public Builder websiteTimeZone(@Nullable String websiteTimeZone) {
-            this.websiteTimeZone = Codegen.ofNullable(websiteTimeZone);
-            return this;
+
+        public Builder websiteTimeZone(String websiteTimeZone) {
+            return websiteTimeZone(Output.of(websiteTimeZone));
         }
+
         public Builder windowsFxVersion(@Nullable Output<String> windowsFxVersion) {
-            this.windowsFxVersion = windowsFxVersion;
+            $.windowsFxVersion = windowsFxVersion;
             return this;
         }
-        public Builder windowsFxVersion(@Nullable String windowsFxVersion) {
-            this.windowsFxVersion = Codegen.ofNullable(windowsFxVersion);
-            return this;
+
+        public Builder windowsFxVersion(String windowsFxVersion) {
+            return windowsFxVersion(Output.of(windowsFxVersion));
         }
+
         public Builder xManagedServiceIdentityId(@Nullable Output<Integer> xManagedServiceIdentityId) {
-            this.xManagedServiceIdentityId = xManagedServiceIdentityId;
+            $.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
         }
-        public Builder xManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
-            this.xManagedServiceIdentityId = Codegen.ofNullable(xManagedServiceIdentityId);
-            return this;
-        }        public SiteConfigArgs build() {
-            return new SiteConfigArgs(acrUseManagedIdentityCreds, acrUserManagedIdentityID, alwaysOn, apiDefinition, apiManagementConfig, appCommandLine, appSettings, autoHealEnabled, autoHealRules, autoSwapSlotName, azureStorageAccounts, connectionStrings, cors, defaultDocuments, detailedErrorLoggingEnabled, documentRoot, experiments, ftpsState, functionAppScaleLimit, functionsRuntimeScaleMonitoringEnabled, handlerMappings, healthCheckPath, http20Enabled, httpLoggingEnabled, ipSecurityRestrictions, javaContainer, javaContainerVersion, javaVersion, keyVaultReferenceIdentity, limits, linuxFxVersion, loadBalancing, localMySqlEnabled, logsDirectorySizeLimit, managedPipelineMode, managedServiceIdentityId, minTlsVersion, minimumElasticInstanceCount, netFrameworkVersion, nodeVersion, numberOfWorkers, phpVersion, powerShellVersion, preWarmedInstanceCount, publicNetworkAccess, publishingUsername, push, pythonVersion, remoteDebuggingEnabled, remoteDebuggingVersion, requestTracingEnabled, requestTracingExpirationTime, scmIpSecurityRestrictions, scmIpSecurityRestrictionsUseMain, scmMinTlsVersion, scmType, tracingOptions, use32BitWorkerProcess, virtualApplications, vnetName, vnetPrivatePortsCount, vnetRouteAllEnabled, webSocketsEnabled, websiteTimeZone, windowsFxVersion, xManagedServiceIdentityId);
+
+        public Builder xManagedServiceIdentityId(Integer xManagedServiceIdentityId) {
+            return xManagedServiceIdentityId(Output.of(xManagedServiceIdentityId));
+        }
+
+        public SiteConfigArgs build() {
+            $.http20Enabled = Codegen.booleanProp("http20Enabled").output().arg($.http20Enabled).def(true).getNullable();
+            $.localMySqlEnabled = Codegen.booleanProp("localMySqlEnabled").output().arg($.localMySqlEnabled).def(false).getNullable();
+            $.netFrameworkVersion = Codegen.stringProp("netFrameworkVersion").output().arg($.netFrameworkVersion).def("v4.6").getNullable();
+            return $;
         }
     }
+
 }

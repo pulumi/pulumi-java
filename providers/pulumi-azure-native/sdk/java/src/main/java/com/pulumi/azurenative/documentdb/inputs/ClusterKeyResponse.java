@@ -23,10 +23,10 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="orderBy")
-      private final @Nullable String orderBy;
+    private @Nullable String orderBy;
 
     public Optional<String> orderBy() {
-        return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
+        return Optional.ofNullable(this.orderBy);
     }
 
-    public ClusterKeyResponse(
-        @Nullable String name,
-        @Nullable String orderBy) {
-        this.name = name;
-        this.orderBy = orderBy;
-    }
+    private ClusterKeyResponse() {}
 
-    private ClusterKeyResponse() {
-        this.name = null;
-        this.orderBy = null;
+    private ClusterKeyResponse(ClusterKeyResponse $) {
+        this.name = $.name;
+        this.orderBy = $.orderBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String orderBy;
+        private ClusterKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterKeyResponse();
         }
 
         public Builder(ClusterKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.orderBy = defaults.orderBy;
+            $ = new ClusterKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder orderBy(@Nullable String orderBy) {
-            this.orderBy = orderBy;
+            $.orderBy = orderBy;
             return this;
-        }        public ClusterKeyResponse build() {
-            return new ClusterKeyResponse(name, orderBy);
+        }
+
+        public ClusterKeyResponse build() {
+            return $;
         }
     }
+
 }

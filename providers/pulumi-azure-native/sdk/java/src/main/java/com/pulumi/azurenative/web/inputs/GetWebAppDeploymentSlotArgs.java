@@ -17,7 +17,7 @@ public final class GetWebAppDeploymentSlotArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -28,7 +28,7 @@ public final class GetWebAppDeploymentSlotArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppDeploymentSlotArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppDeploymentSlotArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppDeploymentSlotArgs(
-        String id,
-        String name,
-        String resourceGroupName,
-        String slot) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppDeploymentSlotArgs() {}
 
-    private GetWebAppDeploymentSlotArgs() {
-        this.id = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppDeploymentSlotArgs(GetWebAppDeploymentSlotArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppDeploymentSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppDeploymentSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppDeploymentSlotArgs();
         }
 
         public Builder(GetWebAppDeploymentSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppDeploymentSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppDeploymentSlotArgs build() {
-            return new GetWebAppDeploymentSlotArgs(id, name, resourceGroupName, slot);
+        }
+
+        public GetWebAppDeploymentSlotArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

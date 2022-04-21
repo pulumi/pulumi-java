@@ -16,62 +16,57 @@ public final class CloudServiceVaultAndSecretReferenceResponse extends com.pulum
     public static final CloudServiceVaultAndSecretReferenceResponse Empty = new CloudServiceVaultAndSecretReferenceResponse();
 
     @Import(name="secretUrl")
-      private final @Nullable String secretUrl;
+    private @Nullable String secretUrl;
 
     public Optional<String> secretUrl() {
-        return this.secretUrl == null ? Optional.empty() : Optional.ofNullable(this.secretUrl);
+        return Optional.ofNullable(this.secretUrl);
     }
 
     @Import(name="sourceVault")
-      private final @Nullable SubResourceResponse sourceVault;
+    private @Nullable SubResourceResponse sourceVault;
 
     public Optional<SubResourceResponse> sourceVault() {
-        return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
+        return Optional.ofNullable(this.sourceVault);
     }
 
-    public CloudServiceVaultAndSecretReferenceResponse(
-        @Nullable String secretUrl,
-        @Nullable SubResourceResponse sourceVault) {
-        this.secretUrl = secretUrl;
-        this.sourceVault = sourceVault;
-    }
+    private CloudServiceVaultAndSecretReferenceResponse() {}
 
-    private CloudServiceVaultAndSecretReferenceResponse() {
-        this.secretUrl = null;
-        this.sourceVault = null;
+    private CloudServiceVaultAndSecretReferenceResponse(CloudServiceVaultAndSecretReferenceResponse $) {
+        this.secretUrl = $.secretUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceVaultAndSecretReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String secretUrl;
-        private @Nullable SubResourceResponse sourceVault;
+        private CloudServiceVaultAndSecretReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceVaultAndSecretReferenceResponse();
         }
 
         public Builder(CloudServiceVaultAndSecretReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretUrl = defaults.secretUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new CloudServiceVaultAndSecretReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secretUrl(@Nullable String secretUrl) {
-            this.secretUrl = secretUrl;
+            $.secretUrl = secretUrl;
             return this;
         }
+
         public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
-            this.sourceVault = sourceVault;
+            $.sourceVault = sourceVault;
             return this;
-        }        public CloudServiceVaultAndSecretReferenceResponse build() {
-            return new CloudServiceVaultAndSecretReferenceResponse(secretUrl, sourceVault);
+        }
+
+        public CloudServiceVaultAndSecretReferenceResponse build() {
+            return $;
         }
     }
+
 }

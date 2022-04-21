@@ -25,7 +25,7 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -36,7 +36,7 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="request", required=true)
-      private final RestRequestResponse request;
+    private RestRequestResponse request;
 
     public RestRequestResponse request() {
         return this.request;
@@ -47,64 +47,58 @@ public final class RestHealthCheckResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="response")
-      private final @Nullable RestResponseResponse response;
+    private @Nullable RestResponseResponse response;
 
     public Optional<RestResponseResponse> response() {
-        return this.response == null ? Optional.empty() : Optional.ofNullable(this.response);
+        return Optional.ofNullable(this.response);
     }
 
-    public RestHealthCheckResponse(
-        String name,
-        RestRequestResponse request,
-        @Nullable RestResponseResponse response) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.request = Objects.requireNonNull(request, "expected parameter 'request' to be non-null");
-        this.response = response;
-    }
+    private RestHealthCheckResponse() {}
 
-    private RestHealthCheckResponse() {
-        this.name = null;
-        this.request = null;
-        this.response = null;
+    private RestHealthCheckResponse(RestHealthCheckResponse $) {
+        this.name = $.name;
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestHealthCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private RestRequestResponse request;
-        private @Nullable RestResponseResponse response;
+        private RestHealthCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestHealthCheckResponse();
         }
 
         public Builder(RestHealthCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new RestHealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder request(RestRequestResponse request) {
-            this.request = Objects.requireNonNull(request);
+            $.request = request;
             return this;
         }
+
         public Builder response(@Nullable RestResponseResponse response) {
-            this.response = response;
+            $.response = response;
             return this;
-        }        public RestHealthCheckResponse build() {
-            return new RestHealthCheckResponse(name, request, response);
+        }
+
+        public RestHealthCheckResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.request = Objects.requireNonNull($.request, "expected parameter 'request' to be non-null");
+            return $;
         }
     }
+
 }

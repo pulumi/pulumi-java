@@ -8,9 +8,9 @@ import com.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputName")
-      private final @Nullable Output<String> inputName;
+    private @Nullable Output<String> inputName;
 
-    public Output<String> inputName() {
-        return this.inputName == null ? Codegen.empty() : this.inputName;
+    public Optional<Output<String>> inputName() {
+        return Optional.ofNullable(this.inputName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobName", required=true)
-      private final Output<String> jobName;
+    private Output<String> jobName;
 
     public Output<String> jobName() {
         return this.jobName;
@@ -45,10 +45,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
+    private @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
-    public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -67,102 +67,90 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public InputArgs(
-        @Nullable Output<String> inputName,
-        Output<String> jobName,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties,
-        Output<String> resourceGroupName) {
-        this.inputName = inputName;
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.name = name;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private InputArgs() {}
 
-    private InputArgs() {
-        this.inputName = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private InputArgs(InputArgs $) {
+        this.inputName = $.inputName;
+        this.jobName = $.jobName;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> inputName;
-        private Output<String> jobName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
-        private Output<String> resourceGroupName;
+        private InputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputArgs();
         }
 
         public Builder(InputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputName = defaults.inputName;
-    	      this.jobName = defaults.jobName;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new InputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputName(@Nullable Output<String> inputName) {
-            this.inputName = inputName;
+            $.inputName = inputName;
             return this;
         }
-        public Builder inputName(@Nullable String inputName) {
-            this.inputName = Codegen.ofNullable(inputName);
-            return this;
+
+        public Builder inputName(String inputName) {
+            return inputName(Output.of(inputName));
         }
+
         public Builder jobName(Output<String> jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Output.of(Objects.requireNonNull(jobName));
-            return this;
+            return jobName(Output.of(jobName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public InputArgs build() {
-            return new InputArgs(inputName, jobName, name, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public InputArgs build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

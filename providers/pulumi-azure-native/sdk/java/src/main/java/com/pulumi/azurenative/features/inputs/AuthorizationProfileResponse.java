@@ -21,7 +21,7 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="approvedTime", required=true)
-      private final String approvedTime;
+    private String approvedTime;
 
     public String approvedTime() {
         return this.approvedTime;
@@ -32,7 +32,7 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="approver", required=true)
-      private final String approver;
+    private String approver;
 
     public String approver() {
         return this.approver;
@@ -43,7 +43,7 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="requestedTime", required=true)
-      private final String requestedTime;
+    private String requestedTime;
 
     public String requestedTime() {
         return this.requestedTime;
@@ -54,7 +54,7 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="requester", required=true)
-      private final String requester;
+    private String requester;
 
     public String requester() {
         return this.requester;
@@ -65,82 +65,73 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="requesterObjectId", required=true)
-      private final String requesterObjectId;
+    private String requesterObjectId;
 
     public String requesterObjectId() {
         return this.requesterObjectId;
     }
 
-    public AuthorizationProfileResponse(
-        String approvedTime,
-        String approver,
-        String requestedTime,
-        String requester,
-        String requesterObjectId) {
-        this.approvedTime = Objects.requireNonNull(approvedTime, "expected parameter 'approvedTime' to be non-null");
-        this.approver = Objects.requireNonNull(approver, "expected parameter 'approver' to be non-null");
-        this.requestedTime = Objects.requireNonNull(requestedTime, "expected parameter 'requestedTime' to be non-null");
-        this.requester = Objects.requireNonNull(requester, "expected parameter 'requester' to be non-null");
-        this.requesterObjectId = Objects.requireNonNull(requesterObjectId, "expected parameter 'requesterObjectId' to be non-null");
-    }
+    private AuthorizationProfileResponse() {}
 
-    private AuthorizationProfileResponse() {
-        this.approvedTime = null;
-        this.approver = null;
-        this.requestedTime = null;
-        this.requester = null;
-        this.requesterObjectId = null;
+    private AuthorizationProfileResponse(AuthorizationProfileResponse $) {
+        this.approvedTime = $.approvedTime;
+        this.approver = $.approver;
+        this.requestedTime = $.requestedTime;
+        this.requester = $.requester;
+        this.requesterObjectId = $.requesterObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String approvedTime;
-        private String approver;
-        private String requestedTime;
-        private String requester;
-        private String requesterObjectId;
+        private AuthorizationProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationProfileResponse();
         }
 
         public Builder(AuthorizationProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvedTime = defaults.approvedTime;
-    	      this.approver = defaults.approver;
-    	      this.requestedTime = defaults.requestedTime;
-    	      this.requester = defaults.requester;
-    	      this.requesterObjectId = defaults.requesterObjectId;
+            $ = new AuthorizationProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder approvedTime(String approvedTime) {
-            this.approvedTime = Objects.requireNonNull(approvedTime);
+            $.approvedTime = approvedTime;
             return this;
         }
+
         public Builder approver(String approver) {
-            this.approver = Objects.requireNonNull(approver);
+            $.approver = approver;
             return this;
         }
+
         public Builder requestedTime(String requestedTime) {
-            this.requestedTime = Objects.requireNonNull(requestedTime);
+            $.requestedTime = requestedTime;
             return this;
         }
+
         public Builder requester(String requester) {
-            this.requester = Objects.requireNonNull(requester);
+            $.requester = requester;
             return this;
         }
+
         public Builder requesterObjectId(String requesterObjectId) {
-            this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
+            $.requesterObjectId = requesterObjectId;
             return this;
-        }        public AuthorizationProfileResponse build() {
-            return new AuthorizationProfileResponse(approvedTime, approver, requestedTime, requester, requesterObjectId);
+        }
+
+        public AuthorizationProfileResponse build() {
+            $.approvedTime = Objects.requireNonNull($.approvedTime, "expected parameter 'approvedTime' to be non-null");
+            $.approver = Objects.requireNonNull($.approver, "expected parameter 'approver' to be non-null");
+            $.requestedTime = Objects.requireNonNull($.requestedTime, "expected parameter 'requestedTime' to be non-null");
+            $.requester = Objects.requireNonNull($.requester, "expected parameter 'requester' to be non-null");
+            $.requesterObjectId = Objects.requireNonNull($.requesterObjectId, "expected parameter 'requesterObjectId' to be non-null");
+            return $;
         }
     }
+
 }

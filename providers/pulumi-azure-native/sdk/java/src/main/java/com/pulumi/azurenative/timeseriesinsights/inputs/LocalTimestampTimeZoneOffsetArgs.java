@@ -5,9 +5,9 @@ package com.pulumi.azurenative.timeseriesinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LocalTimestampTimeZoneOffsetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="propertyName")
-      private final @Nullable Output<String> propertyName;
+    private @Nullable Output<String> propertyName;
 
-    public Output<String> propertyName() {
-        return this.propertyName == null ? Codegen.empty() : this.propertyName;
+    public Optional<Output<String>> propertyName() {
+        return Optional.ofNullable(this.propertyName);
     }
 
-    public LocalTimestampTimeZoneOffsetArgs(@Nullable Output<String> propertyName) {
-        this.propertyName = propertyName;
-    }
+    private LocalTimestampTimeZoneOffsetArgs() {}
 
-    private LocalTimestampTimeZoneOffsetArgs() {
-        this.propertyName = Codegen.empty();
+    private LocalTimestampTimeZoneOffsetArgs(LocalTimestampTimeZoneOffsetArgs $) {
+        this.propertyName = $.propertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalTimestampTimeZoneOffsetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> propertyName;
+        private LocalTimestampTimeZoneOffsetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalTimestampTimeZoneOffsetArgs();
         }
 
         public Builder(LocalTimestampTimeZoneOffsetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propertyName = defaults.propertyName;
+            $ = new LocalTimestampTimeZoneOffsetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder propertyName(@Nullable Output<String> propertyName) {
-            this.propertyName = propertyName;
+            $.propertyName = propertyName;
             return this;
         }
-        public Builder propertyName(@Nullable String propertyName) {
-            this.propertyName = Codegen.ofNullable(propertyName);
-            return this;
-        }        public LocalTimestampTimeZoneOffsetArgs build() {
-            return new LocalTimestampTimeZoneOffsetArgs(propertyName);
+
+        public Builder propertyName(String propertyName) {
+            return propertyName(Output.of(propertyName));
+        }
+
+        public LocalTimestampTimeZoneOffsetArgs build() {
+            return $;
         }
     }
+
 }

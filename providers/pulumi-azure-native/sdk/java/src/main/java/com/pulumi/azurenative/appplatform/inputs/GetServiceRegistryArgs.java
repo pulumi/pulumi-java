@@ -17,7 +17,7 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,64 +39,59 @@ public final class GetServiceRegistryArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceRegistryName", required=true)
-      private final String serviceRegistryName;
+    private String serviceRegistryName;
 
     public String serviceRegistryName() {
         return this.serviceRegistryName;
     }
 
-    public GetServiceRegistryArgs(
-        String resourceGroupName,
-        String serviceName,
-        String serviceRegistryName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceRegistryName = Objects.requireNonNull(serviceRegistryName, "expected parameter 'serviceRegistryName' to be non-null");
-    }
+    private GetServiceRegistryArgs() {}
 
-    private GetServiceRegistryArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.serviceRegistryName = null;
+    private GetServiceRegistryArgs(GetServiceRegistryArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.serviceRegistryName = $.serviceRegistryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String serviceRegistryName;
+        private GetServiceRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceRegistryArgs();
         }
 
         public Builder(GetServiceRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceRegistryName = defaults.serviceRegistryName;
+            $ = new GetServiceRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceRegistryName(String serviceRegistryName) {
-            this.serviceRegistryName = Objects.requireNonNull(serviceRegistryName);
+            $.serviceRegistryName = serviceRegistryName;
             return this;
-        }        public GetServiceRegistryArgs build() {
-            return new GetServiceRegistryArgs(resourceGroupName, serviceName, serviceRegistryName);
+        }
+
+        public GetServiceRegistryArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.serviceRegistryName = Objects.requireNonNull($.serviceRegistryName, "expected parameter 'serviceRegistryName' to be non-null");
+            return $;
         }
     }
+
 }

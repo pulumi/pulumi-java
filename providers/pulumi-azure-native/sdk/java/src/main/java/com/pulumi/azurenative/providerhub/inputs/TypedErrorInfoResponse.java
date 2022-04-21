@@ -14,62 +14,59 @@ public final class TypedErrorInfoResponse extends com.pulumi.resources.InvokeArg
     public static final TypedErrorInfoResponse Empty = new TypedErrorInfoResponse();
 
     @Import(name="info", required=true)
-      private final Object info;
+    private Object info;
 
     public Object info() {
         return this.info;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TypedErrorInfoResponse(
-        Object info,
-        String type) {
-        this.info = Objects.requireNonNull(info, "expected parameter 'info' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TypedErrorInfoResponse() {}
 
-    private TypedErrorInfoResponse() {
-        this.info = null;
-        this.type = null;
+    private TypedErrorInfoResponse(TypedErrorInfoResponse $) {
+        this.info = $.info;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypedErrorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object info;
-        private String type;
+        private TypedErrorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypedErrorInfoResponse();
         }
 
         public Builder(TypedErrorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.info = defaults.info;
-    	      this.type = defaults.type;
+            $ = new TypedErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder info(Object info) {
-            this.info = Objects.requireNonNull(info);
+            $.info = info;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TypedErrorInfoResponse build() {
-            return new TypedErrorInfoResponse(info, type);
+        }
+
+        public TypedErrorInfoResponse build() {
+            $.info = Objects.requireNonNull($.info, "expected parameter 'info' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="container")
-      private final @Nullable String container;
+    private @Nullable String container;
 
     public Optional<String> container() {
-        return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable String fileSystem;
+    private @Nullable String fileSystem;
 
     public Optional<String> fileSystem() {
-        return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
+        return Optional.ofNullable(this.fileSystem);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fileshare")
-      private final @Nullable String fileshare;
+    private @Nullable String fileshare;
 
     public Optional<String> fileshare() {
-        return this.fileshare == null ? Optional.empty() : Optional.ofNullable(this.fileshare);
+        return Optional.ofNullable(this.fileshare);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isDefault")
-      private final @Nullable Boolean isDefault;
+    private @Nullable Boolean isDefault;
 
     public Optional<Boolean> isDefault() {
-        return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
+        return Optional.ofNullable(this.isDefault);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="msiResourceId")
-      private final @Nullable String msiResourceId;
+    private @Nullable String msiResourceId;
 
     public Optional<String> msiResourceId() {
-        return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
+        return Optional.ofNullable(this.msiResourceId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -112,118 +112,92 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="saskey")
-      private final @Nullable String saskey;
+    private @Nullable String saskey;
 
     public Optional<String> saskey() {
-        return this.saskey == null ? Optional.empty() : Optional.ofNullable(this.saskey);
+        return Optional.ofNullable(this.saskey);
     }
 
-    public StorageAccountResponse(
-        @Nullable String container,
-        @Nullable String fileSystem,
-        @Nullable String fileshare,
-        @Nullable Boolean isDefault,
-        @Nullable String key,
-        @Nullable String msiResourceId,
-        @Nullable String name,
-        @Nullable String resourceId,
-        @Nullable String saskey) {
-        this.container = container;
-        this.fileSystem = fileSystem;
-        this.fileshare = fileshare;
-        this.isDefault = isDefault;
-        this.key = key;
-        this.msiResourceId = msiResourceId;
-        this.name = name;
-        this.resourceId = resourceId;
-        this.saskey = saskey;
-    }
+    private StorageAccountResponse() {}
 
-    private StorageAccountResponse() {
-        this.container = null;
-        this.fileSystem = null;
-        this.fileshare = null;
-        this.isDefault = null;
-        this.key = null;
-        this.msiResourceId = null;
-        this.name = null;
-        this.resourceId = null;
-        this.saskey = null;
+    private StorageAccountResponse(StorageAccountResponse $) {
+        this.container = $.container;
+        this.fileSystem = $.fileSystem;
+        this.fileshare = $.fileshare;
+        this.isDefault = $.isDefault;
+        this.key = $.key;
+        this.msiResourceId = $.msiResourceId;
+        this.name = $.name;
+        this.resourceId = $.resourceId;
+        this.saskey = $.saskey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String container;
-        private @Nullable String fileSystem;
-        private @Nullable String fileshare;
-        private @Nullable Boolean isDefault;
-        private @Nullable String key;
-        private @Nullable String msiResourceId;
-        private @Nullable String name;
-        private @Nullable String resourceId;
-        private @Nullable String saskey;
+        private StorageAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountResponse();
         }
 
         public Builder(StorageAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.fileshare = defaults.fileshare;
-    	      this.isDefault = defaults.isDefault;
-    	      this.key = defaults.key;
-    	      this.msiResourceId = defaults.msiResourceId;
-    	      this.name = defaults.name;
-    	      this.resourceId = defaults.resourceId;
-    	      this.saskey = defaults.saskey;
+            $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder container(@Nullable String container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
+
         public Builder fileSystem(@Nullable String fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
+
         public Builder fileshare(@Nullable String fileshare) {
-            this.fileshare = fileshare;
+            $.fileshare = fileshare;
             return this;
         }
+
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = isDefault;
+            $.isDefault = isDefault;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = msiResourceId;
+            $.msiResourceId = msiResourceId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder saskey(@Nullable String saskey) {
-            this.saskey = saskey;
+            $.saskey = saskey;
             return this;
-        }        public StorageAccountResponse build() {
-            return new StorageAccountResponse(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);
+        }
+
+        public StorageAccountResponse build() {
+            return $;
         }
     }
+
 }

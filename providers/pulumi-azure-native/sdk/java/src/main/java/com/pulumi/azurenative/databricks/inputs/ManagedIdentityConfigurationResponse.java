@@ -21,7 +21,7 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -43,64 +43,59 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedIdentityConfigurationResponse(
-        String principalId,
-        String tenantId,
-        String type) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagedIdentityConfigurationResponse() {}
 
-    private ManagedIdentityConfigurationResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
+    private ManagedIdentityConfigurationResponse(ManagedIdentityConfigurationResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentityConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String tenantId;
-        private String type;
+        private ManagedIdentityConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentityConfigurationResponse();
         }
 
         public Builder(ManagedIdentityConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new ManagedIdentityConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedIdentityConfigurationResponse build() {
-            return new ManagedIdentityConfigurationResponse(principalId, tenantId, type);
+        }
+
+        public ManagedIdentityConfigurationResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

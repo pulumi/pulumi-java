@@ -23,10 +23,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="datasourceType")
-      private final @Nullable String datasourceType;
+    private @Nullable String datasourceType;
 
     public Optional<String> datasourceType() {
-        return this.datasourceType == null ? Optional.empty() : Optional.ofNullable(this.datasourceType);
+        return Optional.ofNullable(this.datasourceType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="objectType")
-      private final @Nullable String objectType;
+    private @Nullable String objectType;
 
     public Optional<String> objectType() {
-        return this.objectType == null ? Optional.empty() : Optional.ofNullable(this.objectType);
+        return Optional.ofNullable(this.objectType);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceID", required=true)
-      private final String resourceID;
+    private String resourceID;
 
     public String resourceID() {
         return this.resourceID;
@@ -56,10 +56,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceLocation")
-      private final @Nullable String resourceLocation;
+    private @Nullable String resourceLocation;
 
     public Optional<String> resourceLocation() {
-        return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
+        return Optional.ofNullable(this.resourceLocation);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable String resourceName;
+    private @Nullable String resourceName;
 
     public Optional<String> resourceName() {
-        return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -89,100 +89,81 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable String resourceUri;
+    private @Nullable String resourceUri;
 
     public Optional<String> resourceUri() {
-        return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
+        return Optional.ofNullable(this.resourceUri);
     }
 
-    public DatasourceSetResponse(
-        @Nullable String datasourceType,
-        @Nullable String objectType,
-        String resourceID,
-        @Nullable String resourceLocation,
-        @Nullable String resourceName,
-        @Nullable String resourceType,
-        @Nullable String resourceUri) {
-        this.datasourceType = datasourceType;
-        this.objectType = objectType;
-        this.resourceID = Objects.requireNonNull(resourceID, "expected parameter 'resourceID' to be non-null");
-        this.resourceLocation = resourceLocation;
-        this.resourceName = resourceName;
-        this.resourceType = resourceType;
-        this.resourceUri = resourceUri;
-    }
+    private DatasourceSetResponse() {}
 
-    private DatasourceSetResponse() {
-        this.datasourceType = null;
-        this.objectType = null;
-        this.resourceID = null;
-        this.resourceLocation = null;
-        this.resourceName = null;
-        this.resourceType = null;
-        this.resourceUri = null;
+    private DatasourceSetResponse(DatasourceSetResponse $) {
+        this.datasourceType = $.datasourceType;
+        this.objectType = $.objectType;
+        this.resourceID = $.resourceID;
+        this.resourceLocation = $.resourceLocation;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasourceSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datasourceType;
-        private @Nullable String objectType;
-        private String resourceID;
-        private @Nullable String resourceLocation;
-        private @Nullable String resourceName;
-        private @Nullable String resourceType;
-        private @Nullable String resourceUri;
+        private DatasourceSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasourceSetResponse();
         }
 
         public Builder(DatasourceSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasourceType = defaults.datasourceType;
-    	      this.objectType = defaults.objectType;
-    	      this.resourceID = defaults.resourceID;
-    	      this.resourceLocation = defaults.resourceLocation;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new DatasourceSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasourceType(@Nullable String datasourceType) {
-            this.datasourceType = datasourceType;
+            $.datasourceType = datasourceType;
             return this;
         }
+
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = objectType;
+            $.objectType = objectType;
             return this;
         }
+
         public Builder resourceID(String resourceID) {
-            this.resourceID = Objects.requireNonNull(resourceID);
+            $.resourceID = resourceID;
             return this;
         }
+
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = resourceLocation;
+            $.resourceLocation = resourceLocation;
             return this;
         }
+
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
-        }        public DatasourceSetResponse build() {
-            return new DatasourceSetResponse(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);
+        }
+
+        public DatasourceSetResponse build() {
+            $.resourceID = Objects.requireNonNull($.resourceID, "expected parameter 'resourceID' to be non-null");
+            return $;
         }
     }
+
 }

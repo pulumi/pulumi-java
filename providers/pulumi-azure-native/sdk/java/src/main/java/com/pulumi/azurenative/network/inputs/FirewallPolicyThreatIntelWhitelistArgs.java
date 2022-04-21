@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends com.pulumi.res
      * 
      */
     @Import(name="fqdns")
-      private final @Nullable Output<List<String>> fqdns;
+    private @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> fqdns() {
-        return this.fqdns == null ? Codegen.empty() : this.fqdns;
+    public Optional<Output<List<String>>> fqdns() {
+        return Optional.ofNullable(this.fqdns);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends com.pulumi.res
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
-    public FirewallPolicyThreatIntelWhitelistArgs(
-        @Nullable Output<List<String>> fqdns,
-        @Nullable Output<List<String>> ipAddresses) {
-        this.fqdns = fqdns;
-        this.ipAddresses = ipAddresses;
-    }
+    private FirewallPolicyThreatIntelWhitelistArgs() {}
 
-    private FirewallPolicyThreatIntelWhitelistArgs() {
-        this.fqdns = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
+    private FirewallPolicyThreatIntelWhitelistArgs(FirewallPolicyThreatIntelWhitelistArgs $) {
+        this.fqdns = $.fqdns;
+        this.ipAddresses = $.ipAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyThreatIntelWhitelistArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> fqdns;
-        private @Nullable Output<List<String>> ipAddresses;
+        private FirewallPolicyThreatIntelWhitelistArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyThreatIntelWhitelistArgs();
         }
 
         public Builder(FirewallPolicyThreatIntelWhitelistArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdns = defaults.fqdns;
-    	      this.ipAddresses = defaults.ipAddresses;
+            $ = new FirewallPolicyThreatIntelWhitelistArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
-            this.fqdns = fqdns;
+            $.fqdns = fqdns;
             return this;
         }
-        public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Codegen.ofNullable(fqdns);
-            return this;
+
+        public Builder fqdns(List<String> fqdns) {
+            return fqdns(Output.of(fqdns));
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
-        }        public FirewallPolicyThreatIntelWhitelistArgs build() {
-            return new FirewallPolicyThreatIntelWhitelistArgs(fqdns, ipAddresses);
+        }
+
+        public FirewallPolicyThreatIntelWhitelistArgs build() {
+            return $;
         }
     }
+
 }

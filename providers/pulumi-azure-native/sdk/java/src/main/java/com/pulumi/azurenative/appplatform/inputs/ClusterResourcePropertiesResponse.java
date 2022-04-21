@@ -25,10 +25,10 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable NetworkProfileResponse networkProfile;
+    private @Nullable NetworkProfileResponse networkProfile;
 
     public Optional<NetworkProfileResponse> networkProfile() {
-        return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -47,7 +47,7 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="serviceId", required=true)
-      private final String serviceId;
+    private String serviceId;
 
     public String serviceId() {
         return this.serviceId;
@@ -58,73 +58,65 @@ public final class ClusterResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="version", required=true)
-      private final Integer version;
+    private Integer version;
 
     public Integer version() {
         return this.version;
     }
 
-    public ClusterResourcePropertiesResponse(
-        @Nullable NetworkProfileResponse networkProfile,
-        String provisioningState,
-        String serviceId,
-        Integer version) {
-        this.networkProfile = networkProfile;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ClusterResourcePropertiesResponse() {}
 
-    private ClusterResourcePropertiesResponse() {
-        this.networkProfile = null;
-        this.provisioningState = null;
-        this.serviceId = null;
-        this.version = null;
+    private ClusterResourcePropertiesResponse(ClusterResourcePropertiesResponse $) {
+        this.networkProfile = $.networkProfile;
+        this.provisioningState = $.provisioningState;
+        this.serviceId = $.serviceId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable NetworkProfileResponse networkProfile;
-        private String provisioningState;
-        private String serviceId;
-        private Integer version;
+        private ClusterResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterResourcePropertiesResponse();
         }
 
         public Builder(ClusterResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.serviceId = defaults.serviceId;
-    	      this.version = defaults.version;
+            $ = new ClusterResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ClusterResourcePropertiesResponse build() {
-            return new ClusterResourcePropertiesResponse(networkProfile, provisioningState, serviceId, version);
+        }
+
+        public ClusterResourcePropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

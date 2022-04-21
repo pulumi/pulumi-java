@@ -23,7 +23,7 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="acknowledgmentOfReceiptSettings", required=true)
-      private final RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
+    private RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
 
     public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
@@ -34,7 +34,7 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="activityBehavior", required=true)
-      private final RosettaNetPipActivityBehaviorResponse activityBehavior;
+    private RosettaNetPipActivityBehaviorResponse activityBehavior;
 
     public RosettaNetPipActivityBehaviorResponse activityBehavior() {
         return this.activityBehavior;
@@ -45,64 +45,59 @@ public final class RosettaNetPipActivitySettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="activityType", required=true)
-      private final String activityType;
+    private String activityType;
 
     public String activityType() {
         return this.activityType;
     }
 
-    public RosettaNetPipActivitySettingsResponse(
-        RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
-        RosettaNetPipActivityBehaviorResponse activityBehavior,
-        String activityType) {
-        this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings, "expected parameter 'acknowledgmentOfReceiptSettings' to be non-null");
-        this.activityBehavior = Objects.requireNonNull(activityBehavior, "expected parameter 'activityBehavior' to be non-null");
-        this.activityType = Objects.requireNonNull(activityType, "expected parameter 'activityType' to be non-null");
-    }
+    private RosettaNetPipActivitySettingsResponse() {}
 
-    private RosettaNetPipActivitySettingsResponse() {
-        this.acknowledgmentOfReceiptSettings = null;
-        this.activityBehavior = null;
-        this.activityType = null;
+    private RosettaNetPipActivitySettingsResponse(RosettaNetPipActivitySettingsResponse $) {
+        this.acknowledgmentOfReceiptSettings = $.acknowledgmentOfReceiptSettings;
+        this.activityBehavior = $.activityBehavior;
+        this.activityType = $.activityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipActivitySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
-        private RosettaNetPipActivityBehaviorResponse activityBehavior;
-        private String activityType;
+        private RosettaNetPipActivitySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipActivitySettingsResponse();
         }
 
         public Builder(RosettaNetPipActivitySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acknowledgmentOfReceiptSettings = defaults.acknowledgmentOfReceiptSettings;
-    	      this.activityBehavior = defaults.activityBehavior;
-    	      this.activityType = defaults.activityType;
+            $ = new RosettaNetPipActivitySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings) {
-            this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
+            $.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
             return this;
         }
+
         public Builder activityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
-            this.activityBehavior = Objects.requireNonNull(activityBehavior);
+            $.activityBehavior = activityBehavior;
             return this;
         }
+
         public Builder activityType(String activityType) {
-            this.activityType = Objects.requireNonNull(activityType);
+            $.activityType = activityType;
             return this;
-        }        public RosettaNetPipActivitySettingsResponse build() {
-            return new RosettaNetPipActivitySettingsResponse(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
+        }
+
+        public RosettaNetPipActivitySettingsResponse build() {
+            $.acknowledgmentOfReceiptSettings = Objects.requireNonNull($.acknowledgmentOfReceiptSettings, "expected parameter 'acknowledgmentOfReceiptSettings' to be non-null");
+            $.activityBehavior = Objects.requireNonNull($.activityBehavior, "expected parameter 'activityBehavior' to be non-null");
+            $.activityType = Objects.requireNonNull($.activityType, "expected parameter 'activityType' to be non-null");
+            return $;
         }
     }
+
 }

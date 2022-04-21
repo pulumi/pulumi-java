@@ -6,8 +6,8 @@ package com.pulumi.azurenative.consumption.inputs;
 import com.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
+    private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
-    public Output<BudgetComparisonExpressionArgs> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<BudgetComparisonExpressionArgs>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<BudgetComparisonExpressionArgs> tags;
+    private @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
-    public Output<BudgetComparisonExpressionArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<BudgetComparisonExpressionArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public BudgetFilterPropertiesArgs(
-        @Nullable Output<BudgetComparisonExpressionArgs> dimensions,
-        @Nullable Output<BudgetComparisonExpressionArgs> tags) {
-        this.dimensions = dimensions;
-        this.tags = tags;
-    }
+    private BudgetFilterPropertiesArgs() {}
 
-    private BudgetFilterPropertiesArgs() {
-        this.dimensions = Codegen.empty();
-        this.tags = Codegen.empty();
+    private BudgetFilterPropertiesArgs(BudgetFilterPropertiesArgs $) {
+        this.dimensions = $.dimensions;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetFilterPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
-        private @Nullable Output<BudgetComparisonExpressionArgs> tags;
+        private BudgetFilterPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetFilterPropertiesArgs();
         }
 
         public Builder(BudgetFilterPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.tags = defaults.tags;
+            $ = new BudgetFilterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable Output<BudgetComparisonExpressionArgs> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(BudgetComparisonExpressionArgs dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable BudgetComparisonExpressionArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public BudgetFilterPropertiesArgs build() {
-            return new BudgetFilterPropertiesArgs(dimensions, tags);
+
+        public Builder tags(BudgetComparisonExpressionArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public BudgetFilterPropertiesArgs build() {
+            return $;
         }
     }
+
 }

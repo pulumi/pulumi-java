@@ -14,48 +14,49 @@ public final class ResourceProviderManifestPropertiesResponseProviderAuthenticat
     public static final ResourceProviderManifestPropertiesResponseProviderAuthentication Empty = new ResourceProviderManifestPropertiesResponseProviderAuthentication();
 
     @Import(name="allowedAudiences", required=true)
-      private final List<String> allowedAudiences;
+    private List<String> allowedAudiences;
 
     public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 
-    public ResourceProviderManifestPropertiesResponseProviderAuthentication(List<String> allowedAudiences) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
-    }
+    private ResourceProviderManifestPropertiesResponseProviderAuthentication() {}
 
-    private ResourceProviderManifestPropertiesResponseProviderAuthentication() {
-        this.allowedAudiences = List.of();
+    private ResourceProviderManifestPropertiesResponseProviderAuthentication(ResourceProviderManifestPropertiesResponseProviderAuthentication $) {
+        this.allowedAudiences = $.allowedAudiences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderManifestPropertiesResponseProviderAuthentication defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedAudiences;
+        private ResourceProviderManifestPropertiesResponseProviderAuthentication $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderManifestPropertiesResponseProviderAuthentication();
         }
 
         public Builder(ResourceProviderManifestPropertiesResponseProviderAuthentication defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
+            $ = new ResourceProviderManifestPropertiesResponseProviderAuthentication(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
-        }        public ResourceProviderManifestPropertiesResponseProviderAuthentication build() {
-            return new ResourceProviderManifestPropertiesResponseProviderAuthentication(allowedAudiences);
+        }
+
+        public ResourceProviderManifestPropertiesResponseProviderAuthentication build() {
+            $.allowedAudiences = Objects.requireNonNull($.allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
+            return $;
         }
     }
+
 }

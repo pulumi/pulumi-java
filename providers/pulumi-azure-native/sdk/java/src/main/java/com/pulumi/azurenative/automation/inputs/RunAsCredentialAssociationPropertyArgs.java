@@ -5,9 +5,9 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RunAsCredentialAssociationPropertyArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public RunAsCredentialAssociationPropertyArgs(@Nullable Output<String> name) {
-        this.name = name;
-    }
+    private RunAsCredentialAssociationPropertyArgs() {}
 
-    private RunAsCredentialAssociationPropertyArgs() {
-        this.name = Codegen.empty();
+    private RunAsCredentialAssociationPropertyArgs(RunAsCredentialAssociationPropertyArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunAsCredentialAssociationPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
+        private RunAsCredentialAssociationPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunAsCredentialAssociationPropertyArgs();
         }
 
         public Builder(RunAsCredentialAssociationPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new RunAsCredentialAssociationPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public RunAsCredentialAssociationPropertyArgs build() {
-            return new RunAsCredentialAssociationPropertyArgs(name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public RunAsCredentialAssociationPropertyArgs build() {
+            return $;
         }
     }
+
 }

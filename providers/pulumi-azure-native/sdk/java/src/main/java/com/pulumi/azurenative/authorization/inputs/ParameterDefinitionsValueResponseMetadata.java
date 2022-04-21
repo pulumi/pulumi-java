@@ -24,10 +24,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
      * 
      */
     @Import(name="assignPermissions")
-      private final @Nullable Boolean assignPermissions;
+    private @Nullable Boolean assignPermissions;
 
     public Optional<Boolean> assignPermissions() {
-        return this.assignPermissions == null ? Optional.empty() : Optional.ofNullable(this.assignPermissions);
+        return Optional.ofNullable(this.assignPermissions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
      * 
      */
     @Import(name="strongType")
-      private final @Nullable String strongType;
+    private @Nullable String strongType;
 
     public Optional<String> strongType() {
-        return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
+        return Optional.ofNullable(this.strongType);
     }
 
-    public ParameterDefinitionsValueResponseMetadata(
-        @Nullable Boolean assignPermissions,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String strongType) {
-        this.assignPermissions = assignPermissions;
-        this.description = description;
-        this.displayName = displayName;
-        this.strongType = strongType;
-    }
+    private ParameterDefinitionsValueResponseMetadata() {}
 
-    private ParameterDefinitionsValueResponseMetadata() {
-        this.assignPermissions = null;
-        this.description = null;
-        this.displayName = null;
-        this.strongType = null;
+    private ParameterDefinitionsValueResponseMetadata(ParameterDefinitionsValueResponseMetadata $) {
+        this.assignPermissions = $.assignPermissions;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.strongType = $.strongType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionsValueResponseMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean assignPermissions;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String strongType;
+        private ParameterDefinitionsValueResponseMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionsValueResponseMetadata();
         }
 
         public Builder(ParameterDefinitionsValueResponseMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignPermissions = defaults.assignPermissions;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.strongType = defaults.strongType;
+            $ = new ParameterDefinitionsValueResponseMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder assignPermissions(@Nullable Boolean assignPermissions) {
-            this.assignPermissions = assignPermissions;
+            $.assignPermissions = assignPermissions;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = strongType;
+            $.strongType = strongType;
             return this;
-        }        public ParameterDefinitionsValueResponseMetadata build() {
-            return new ParameterDefinitionsValueResponseMetadata(assignPermissions, description, displayName, strongType);
+        }
+
+        public ParameterDefinitionsValueResponseMetadata build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="channelDescription")
-      private final @Nullable String channelDescription;
+    private @Nullable String channelDescription;
 
     public Optional<String> channelDescription() {
-        return this.channelDescription == null ? Optional.empty() : Optional.ofNullable(this.channelDescription);
+        return Optional.ofNullable(this.channelDescription);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="channelFunctions")
-      private final @Nullable List<String> channelFunctions;
+    private @Nullable List<String> channelFunctions;
 
-    public List<String> channelFunctions() {
-        return this.channelFunctions == null ? List.of() : this.channelFunctions;
+    public Optional<List<String>> channelFunctions() {
+        return Optional.ofNullable(this.channelFunctions);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="channelType")
-      private final @Nullable String channelType;
+    private @Nullable String channelType;
 
     public Optional<String> channelType() {
-        return this.channelType == null ? Optional.empty() : Optional.ofNullable(this.channelType);
+        return Optional.ofNullable(this.channelType);
     }
 
-    public ChannelTypeDescriptionResponse(
-        @Nullable String channelDescription,
-        @Nullable List<String> channelFunctions,
-        @Nullable String channelType) {
-        this.channelDescription = channelDescription;
-        this.channelFunctions = channelFunctions;
-        this.channelType = channelType;
-    }
+    private ChannelTypeDescriptionResponse() {}
 
-    private ChannelTypeDescriptionResponse() {
-        this.channelDescription = null;
-        this.channelFunctions = List.of();
-        this.channelType = null;
+    private ChannelTypeDescriptionResponse(ChannelTypeDescriptionResponse $) {
+        this.channelDescription = $.channelDescription;
+        this.channelFunctions = $.channelFunctions;
+        this.channelType = $.channelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelTypeDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String channelDescription;
-        private @Nullable List<String> channelFunctions;
-        private @Nullable String channelType;
+        private ChannelTypeDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelTypeDescriptionResponse();
         }
 
         public Builder(ChannelTypeDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelDescription = defaults.channelDescription;
-    	      this.channelFunctions = defaults.channelFunctions;
-    	      this.channelType = defaults.channelType;
+            $ = new ChannelTypeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelDescription(@Nullable String channelDescription) {
-            this.channelDescription = channelDescription;
+            $.channelDescription = channelDescription;
             return this;
         }
+
         public Builder channelFunctions(@Nullable List<String> channelFunctions) {
-            this.channelFunctions = channelFunctions;
+            $.channelFunctions = channelFunctions;
             return this;
         }
+
         public Builder channelFunctions(String... channelFunctions) {
             return channelFunctions(List.of(channelFunctions));
         }
+
         public Builder channelType(@Nullable String channelType) {
-            this.channelType = channelType;
+            $.channelType = channelType;
             return this;
-        }        public ChannelTypeDescriptionResponse build() {
-            return new ChannelTypeDescriptionResponse(channelDescription, channelFunctions, channelType);
+        }
+
+        public ChannelTypeDescriptionResponse build() {
+            return $;
         }
     }
+
 }

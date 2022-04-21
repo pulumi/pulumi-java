@@ -23,7 +23,7 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="agentId", required=true)
-      private final String agentId;
+    private String agentId;
 
     public String agentId() {
         return this.agentId;
@@ -34,7 +34,7 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="biosId", required=true)
-      private final String biosId;
+    private String biosId;
 
     public String biosId() {
         return this.biosId;
@@ -45,7 +45,7 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="disks", required=true)
-      private final List<AgentDiskDetailsResponse> disks;
+    private List<AgentDiskDetailsResponse> disks;
 
     public List<AgentDiskDetailsResponse> disks() {
         return this.disks;
@@ -56,7 +56,7 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fqdn", required=true)
-      private final String fqdn;
+    private String fqdn;
 
     public String fqdn() {
         return this.fqdn;
@@ -67,85 +67,77 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="machineId", required=true)
-      private final String machineId;
+    private String machineId;
 
     public String machineId() {
         return this.machineId;
     }
 
-    public AgentDetailsResponse(
-        String agentId,
-        String biosId,
-        List<AgentDiskDetailsResponse> disks,
-        String fqdn,
-        String machineId) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.biosId = Objects.requireNonNull(biosId, "expected parameter 'biosId' to be non-null");
-        this.disks = Objects.requireNonNull(disks, "expected parameter 'disks' to be non-null");
-        this.fqdn = Objects.requireNonNull(fqdn, "expected parameter 'fqdn' to be non-null");
-        this.machineId = Objects.requireNonNull(machineId, "expected parameter 'machineId' to be non-null");
-    }
+    private AgentDetailsResponse() {}
 
-    private AgentDetailsResponse() {
-        this.agentId = null;
-        this.biosId = null;
-        this.disks = List.of();
-        this.fqdn = null;
-        this.machineId = null;
+    private AgentDetailsResponse(AgentDetailsResponse $) {
+        this.agentId = $.agentId;
+        this.biosId = $.biosId;
+        this.disks = $.disks;
+        this.fqdn = $.fqdn;
+        this.machineId = $.machineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentId;
-        private String biosId;
-        private List<AgentDiskDetailsResponse> disks;
-        private String fqdn;
-        private String machineId;
+        private AgentDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentDetailsResponse();
         }
 
         public Builder(AgentDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.biosId = defaults.biosId;
-    	      this.disks = defaults.disks;
-    	      this.fqdn = defaults.fqdn;
-    	      this.machineId = defaults.machineId;
+            $ = new AgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder biosId(String biosId) {
-            this.biosId = Objects.requireNonNull(biosId);
+            $.biosId = biosId;
             return this;
         }
+
         public Builder disks(List<AgentDiskDetailsResponse> disks) {
-            this.disks = Objects.requireNonNull(disks);
+            $.disks = disks;
             return this;
         }
+
         public Builder disks(AgentDiskDetailsResponse... disks) {
             return disks(List.of(disks));
         }
+
         public Builder fqdn(String fqdn) {
-            this.fqdn = Objects.requireNonNull(fqdn);
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder machineId(String machineId) {
-            this.machineId = Objects.requireNonNull(machineId);
+            $.machineId = machineId;
             return this;
-        }        public AgentDetailsResponse build() {
-            return new AgentDetailsResponse(agentId, biosId, disks, fqdn, machineId);
+        }
+
+        public AgentDetailsResponse build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.biosId = Objects.requireNonNull($.biosId, "expected parameter 'biosId' to be non-null");
+            $.disks = Objects.requireNonNull($.disks, "expected parameter 'disks' to be non-null");
+            $.fqdn = Objects.requireNonNull($.fqdn, "expected parameter 'fqdn' to be non-null");
+            $.machineId = Objects.requireNonNull($.machineId, "expected parameter 'machineId' to be non-null");
+            return $;
         }
     }
+
 }

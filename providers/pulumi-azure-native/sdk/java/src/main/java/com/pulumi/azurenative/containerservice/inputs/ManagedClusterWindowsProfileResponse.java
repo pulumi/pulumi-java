@@ -24,10 +24,10 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable String adminPassword;
+    private @Nullable String adminPassword;
 
     public Optional<String> adminPassword() {
-        return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="adminUsername", required=true)
-      private final String adminUsername;
+    private String adminUsername;
 
     public String adminUsername() {
         return this.adminUsername;
@@ -46,10 +46,10 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="enableCSIProxy")
-      private final @Nullable Boolean enableCSIProxy;
+    private @Nullable Boolean enableCSIProxy;
 
     public Optional<Boolean> enableCSIProxy() {
-        return this.enableCSIProxy == null ? Optional.empty() : Optional.ofNullable(this.enableCSIProxy);
+        return Optional.ofNullable(this.enableCSIProxy);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class ManagedClusterWindowsProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
-    public ManagedClusterWindowsProfileResponse(
-        @Nullable String adminPassword,
-        String adminUsername,
-        @Nullable Boolean enableCSIProxy,
-        @Nullable String licenseType) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = Objects.requireNonNull(adminUsername, "expected parameter 'adminUsername' to be non-null");
-        this.enableCSIProxy = enableCSIProxy;
-        this.licenseType = licenseType;
-    }
+    private ManagedClusterWindowsProfileResponse() {}
 
-    private ManagedClusterWindowsProfileResponse() {
-        this.adminPassword = null;
-        this.adminUsername = null;
-        this.enableCSIProxy = null;
-        this.licenseType = null;
+    private ManagedClusterWindowsProfileResponse(ManagedClusterWindowsProfileResponse $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.enableCSIProxy = $.enableCSIProxy;
+        this.licenseType = $.licenseType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterWindowsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String adminPassword;
-        private String adminUsername;
-        private @Nullable Boolean enableCSIProxy;
-        private @Nullable String licenseType;
+        private ManagedClusterWindowsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterWindowsProfileResponse();
         }
 
         public Builder(ManagedClusterWindowsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.enableCSIProxy = defaults.enableCSIProxy;
-    	      this.licenseType = defaults.licenseType;
+            $ = new ManagedClusterWindowsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
+
         public Builder adminUsername(String adminUsername) {
-            this.adminUsername = Objects.requireNonNull(adminUsername);
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
-            this.enableCSIProxy = enableCSIProxy;
+            $.enableCSIProxy = enableCSIProxy;
             return this;
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
-        }        public ManagedClusterWindowsProfileResponse build() {
-            return new ManagedClusterWindowsProfileResponse(adminPassword, adminUsername, enableCSIProxy, licenseType);
+        }
+
+        public ManagedClusterWindowsProfileResponse build() {
+            $.adminUsername = Objects.requireNonNull($.adminUsername, "expected parameter 'adminUsername' to be non-null");
+            return $;
         }
     }
+
 }

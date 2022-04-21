@@ -9,9 +9,9 @@ import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class AFDDomainHttpsParametersArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateType", required=true)
-      private final Output<Either<String,AfdCertificateType>> certificateType;
+    private Output<Either<String,AfdCertificateType>> certificateType;
 
     public Output<Either<String,AfdCertificateType>> certificateType() {
         return this.certificateType;
@@ -39,10 +39,10 @@ public final class AFDDomainHttpsParametersArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="minimumTlsVersion")
-      private final @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
+    private @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
 
-    public Output<AfdMinimumTlsVersion> minimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
+    public Optional<Output<AfdMinimumTlsVersion>> minimumTlsVersion() {
+        return Optional.ofNullable(this.minimumTlsVersion);
     }
 
     /**
@@ -50,76 +50,69 @@ public final class AFDDomainHttpsParametersArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<ResourceReferenceArgs> secret;
+    private @Nullable Output<ResourceReferenceArgs> secret;
 
-    public Output<ResourceReferenceArgs> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<ResourceReferenceArgs>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public AFDDomainHttpsParametersArgs(
-        Output<Either<String,AfdCertificateType>> certificateType,
-        @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion,
-        @Nullable Output<ResourceReferenceArgs> secret) {
-        this.certificateType = Objects.requireNonNull(certificateType, "expected parameter 'certificateType' to be non-null");
-        this.minimumTlsVersion = minimumTlsVersion;
-        this.secret = secret;
-    }
+    private AFDDomainHttpsParametersArgs() {}
 
-    private AFDDomainHttpsParametersArgs() {
-        this.certificateType = Codegen.empty();
-        this.minimumTlsVersion = Codegen.empty();
-        this.secret = Codegen.empty();
+    private AFDDomainHttpsParametersArgs(AFDDomainHttpsParametersArgs $) {
+        this.certificateType = $.certificateType;
+        this.minimumTlsVersion = $.minimumTlsVersion;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AFDDomainHttpsParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AfdCertificateType>> certificateType;
-        private @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
-        private @Nullable Output<ResourceReferenceArgs> secret;
+        private AFDDomainHttpsParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AFDDomainHttpsParametersArgs();
         }
 
         public Builder(AFDDomainHttpsParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateType = defaults.certificateType;
-    	      this.minimumTlsVersion = defaults.minimumTlsVersion;
-    	      this.secret = defaults.secret;
+            $ = new AFDDomainHttpsParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateType(Output<Either<String,AfdCertificateType>> certificateType) {
-            this.certificateType = Objects.requireNonNull(certificateType);
+            $.certificateType = certificateType;
             return this;
         }
+
         public Builder certificateType(Either<String,AfdCertificateType> certificateType) {
-            this.certificateType = Output.of(Objects.requireNonNull(certificateType));
-            return this;
+            return certificateType(Output.of(certificateType));
         }
+
         public Builder minimumTlsVersion(@Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = minimumTlsVersion;
+            $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-        public Builder minimumTlsVersion(@Nullable AfdMinimumTlsVersion minimumTlsVersion) {
-            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
-            return this;
+
+        public Builder minimumTlsVersion(AfdMinimumTlsVersion minimumTlsVersion) {
+            return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
+
         public Builder secret(@Nullable Output<ResourceReferenceArgs> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable ResourceReferenceArgs secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public AFDDomainHttpsParametersArgs build() {
-            return new AFDDomainHttpsParametersArgs(certificateType, minimumTlsVersion, secret);
+
+        public Builder secret(ResourceReferenceArgs secret) {
+            return secret(Output.of(secret));
+        }
+
+        public AFDDomainHttpsParametersArgs build() {
+            $.certificateType = Objects.requireNonNull($.certificateType, "expected parameter 'certificateType' to be non-null");
+            return $;
         }
     }
+
 }

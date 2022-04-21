@@ -20,7 +20,7 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -31,7 +31,7 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sourceDeviceName", required=true)
-      private final String sourceDeviceName;
+    private String sourceDeviceName;
 
     public String sourceDeviceName() {
         return this.sourceDeviceName;
@@ -53,76 +53,69 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="volumeContainers")
-      private final @Nullable List<String> volumeContainers;
+    private @Nullable List<String> volumeContainers;
 
-    public List<String> volumeContainers() {
-        return this.volumeContainers == null ? List.of() : this.volumeContainers;
+    public Optional<List<String>> volumeContainers() {
+        return Optional.ofNullable(this.volumeContainers);
     }
 
-    public ListDeviceFailoverTarsArgs(
-        String managerName,
-        String resourceGroupName,
-        String sourceDeviceName,
-        @Nullable List<String> volumeContainers) {
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceDeviceName = Objects.requireNonNull(sourceDeviceName, "expected parameter 'sourceDeviceName' to be non-null");
-        this.volumeContainers = volumeContainers;
-    }
+    private ListDeviceFailoverTarsArgs() {}
 
-    private ListDeviceFailoverTarsArgs() {
-        this.managerName = null;
-        this.resourceGroupName = null;
-        this.sourceDeviceName = null;
-        this.volumeContainers = List.of();
+    private ListDeviceFailoverTarsArgs(ListDeviceFailoverTarsArgs $) {
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceDeviceName = $.sourceDeviceName;
+        this.volumeContainers = $.volumeContainers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListDeviceFailoverTarsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managerName;
-        private String resourceGroupName;
-        private String sourceDeviceName;
-        private @Nullable List<String> volumeContainers;
+        private ListDeviceFailoverTarsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListDeviceFailoverTarsArgs();
         }
 
         public Builder(ListDeviceFailoverTarsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceDeviceName = defaults.sourceDeviceName;
-    	      this.volumeContainers = defaults.volumeContainers;
+            $ = new ListDeviceFailoverTarsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sourceDeviceName(String sourceDeviceName) {
-            this.sourceDeviceName = Objects.requireNonNull(sourceDeviceName);
+            $.sourceDeviceName = sourceDeviceName;
             return this;
         }
+
         public Builder volumeContainers(@Nullable List<String> volumeContainers) {
-            this.volumeContainers = volumeContainers;
+            $.volumeContainers = volumeContainers;
             return this;
         }
+
         public Builder volumeContainers(String... volumeContainers) {
             return volumeContainers(List.of(volumeContainers));
-        }        public ListDeviceFailoverTarsArgs build() {
-            return new ListDeviceFailoverTarsArgs(managerName, resourceGroupName, sourceDeviceName, volumeContainers);
+        }
+
+        public ListDeviceFailoverTarsArgs build() {
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceDeviceName = Objects.requireNonNull($.sourceDeviceName, "expected parameter 'sourceDeviceName' to be non-null");
+            return $;
         }
     }
+
 }

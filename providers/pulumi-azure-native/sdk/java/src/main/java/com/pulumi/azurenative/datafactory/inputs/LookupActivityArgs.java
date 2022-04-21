@@ -110,6 +110,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -126,7 +127,7 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataset", required=true)
-      private final Output<DatasetReferenceArgs> dataset;
+    private Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> dataset() {
         return this.dataset;
@@ -137,10 +138,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -148,10 +149,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -159,10 +160,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="firstRowOnly")
-      private final @Nullable Output<Object> firstRowOnly;
+    private @Nullable Output<Object> firstRowOnly;
 
-    public Output<Object> firstRowOnly() {
-        return this.firstRowOnly == null ? Codegen.empty() : this.firstRowOnly;
+    public Optional<Output<Object>> firstRowOnly() {
+        return Optional.ofNullable(this.firstRowOnly);
     }
 
     /**
@@ -170,10 +171,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -181,7 +182,7 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -192,10 +193,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -203,7 +204,7 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="source", required=true)
-      private final Output<Object> source;
+    private Output<Object> source;
 
     public Output<Object> source() {
         return this.source;
@@ -215,7 +216,7 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -226,173 +227,150 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public LookupActivityArgs(
-        Output<DatasetReferenceArgs> dataset,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> firstRowOnly,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        Output<Object> source,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.firstRowOnly = firstRowOnly;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private LookupActivityArgs() {}
 
-    private LookupActivityArgs() {
-        this.dataset = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.firstRowOnly = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.source = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private LookupActivityArgs(LookupActivityArgs $) {
+        this.dataset = $.dataset;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.firstRowOnly = $.firstRowOnly;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.source = $.source;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LookupActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DatasetReferenceArgs> dataset;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> firstRowOnly;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private Output<Object> source;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private LookupActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LookupActivityArgs();
         }
 
         public Builder(LookupActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.firstRowOnly = defaults.firstRowOnly;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new LookupActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(Output<DatasetReferenceArgs> dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dataset(DatasetReferenceArgs dataset) {
-            this.dataset = Output.of(Objects.requireNonNull(dataset));
-            return this;
+            return dataset(Output.of(dataset));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder firstRowOnly(@Nullable Output<Object> firstRowOnly) {
-            this.firstRowOnly = firstRowOnly;
+            $.firstRowOnly = firstRowOnly;
             return this;
         }
-        public Builder firstRowOnly(@Nullable Object firstRowOnly) {
-            this.firstRowOnly = Codegen.ofNullable(firstRowOnly);
-            return this;
+
+        public Builder firstRowOnly(Object firstRowOnly) {
+            return firstRowOnly(Output.of(firstRowOnly));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder source(Output<Object> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(Object source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public LookupActivityArgs build() {
-            return new LookupActivityArgs(dataset, dependsOn, description, firstRowOnly, linkedServiceName, name, policy, source, type, userProperties);
+        }
+
+        public LookupActivityArgs build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

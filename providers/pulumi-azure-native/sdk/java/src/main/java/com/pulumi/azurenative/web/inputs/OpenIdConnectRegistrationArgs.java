@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.inputs.OpenIdConnectClientCredentialArgs;
 import com.pulumi.azurenative.web.inputs.OpenIdConnectConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clientCredential")
-      private final @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
+    private @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
 
-    public Output<OpenIdConnectClientCredentialArgs> clientCredential() {
-        return this.clientCredential == null ? Codegen.empty() : this.clientCredential;
+    public Optional<Output<OpenIdConnectClientCredentialArgs>> clientCredential() {
+        return Optional.ofNullable(this.clientCredential);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="openIdConnectConfiguration")
-      private final @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
+    private @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
 
-    public Output<OpenIdConnectConfigArgs> openIdConnectConfiguration() {
-        return this.openIdConnectConfiguration == null ? Codegen.empty() : this.openIdConnectConfiguration;
+    public Optional<Output<OpenIdConnectConfigArgs>> openIdConnectConfiguration() {
+        return Optional.ofNullable(this.openIdConnectConfiguration);
     }
 
-    public OpenIdConnectRegistrationArgs(
-        @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential,
-        @Nullable Output<String> clientId,
-        @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration) {
-        this.clientCredential = clientCredential;
-        this.clientId = clientId;
-        this.openIdConnectConfiguration = openIdConnectConfiguration;
-    }
+    private OpenIdConnectRegistrationArgs() {}
 
-    private OpenIdConnectRegistrationArgs() {
-        this.clientCredential = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.openIdConnectConfiguration = Codegen.empty();
+    private OpenIdConnectRegistrationArgs(OpenIdConnectRegistrationArgs $) {
+        this.clientCredential = $.clientCredential;
+        this.clientId = $.clientId;
+        this.openIdConnectConfiguration = $.openIdConnectConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdConnectRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
+        private OpenIdConnectRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdConnectRegistrationArgs();
         }
 
         public Builder(OpenIdConnectRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCredential = defaults.clientCredential;
-    	      this.clientId = defaults.clientId;
-    	      this.openIdConnectConfiguration = defaults.openIdConnectConfiguration;
+            $ = new OpenIdConnectRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientCredential(@Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential) {
-            this.clientCredential = clientCredential;
+            $.clientCredential = clientCredential;
             return this;
         }
-        public Builder clientCredential(@Nullable OpenIdConnectClientCredentialArgs clientCredential) {
-            this.clientCredential = Codegen.ofNullable(clientCredential);
-            return this;
+
+        public Builder clientCredential(OpenIdConnectClientCredentialArgs clientCredential) {
+            return clientCredential(Output.of(clientCredential));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder openIdConnectConfiguration(@Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration) {
-            this.openIdConnectConfiguration = openIdConnectConfiguration;
+            $.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }
-        public Builder openIdConnectConfiguration(@Nullable OpenIdConnectConfigArgs openIdConnectConfiguration) {
-            this.openIdConnectConfiguration = Codegen.ofNullable(openIdConnectConfiguration);
-            return this;
-        }        public OpenIdConnectRegistrationArgs build() {
-            return new OpenIdConnectRegistrationArgs(clientCredential, clientId, openIdConnectConfiguration);
+
+        public Builder openIdConnectConfiguration(OpenIdConnectConfigArgs openIdConnectConfiguration) {
+            return openIdConnectConfiguration(Output.of(openIdConnectConfiguration));
+        }
+
+        public OpenIdConnectRegistrationArgs build() {
+            return $;
         }
     }
+
 }

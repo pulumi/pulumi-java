@@ -17,7 +17,7 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sqlServerInstanceName", required=true)
-      private final String sqlServerInstanceName;
+    private String sqlServerInstanceName;
 
     public String sqlServerInstanceName() {
         return this.sqlServerInstanceName;
     }
 
-    public GetSqlServerInstanceArgs(
-        String resourceGroupName,
-        String sqlServerInstanceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlServerInstanceName = Objects.requireNonNull(sqlServerInstanceName, "expected parameter 'sqlServerInstanceName' to be non-null");
-    }
+    private GetSqlServerInstanceArgs() {}
 
-    private GetSqlServerInstanceArgs() {
-        this.resourceGroupName = null;
-        this.sqlServerInstanceName = null;
+    private GetSqlServerInstanceArgs(GetSqlServerInstanceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlServerInstanceName = $.sqlServerInstanceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlServerInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlServerInstanceName;
+        private GetSqlServerInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlServerInstanceArgs();
         }
 
         public Builder(GetSqlServerInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlServerInstanceName = defaults.sqlServerInstanceName;
+            $ = new GetSqlServerInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlServerInstanceName(String sqlServerInstanceName) {
-            this.sqlServerInstanceName = Objects.requireNonNull(sqlServerInstanceName);
+            $.sqlServerInstanceName = sqlServerInstanceName;
             return this;
-        }        public GetSqlServerInstanceArgs build() {
-            return new GetSqlServerInstanceArgs(resourceGroupName, sqlServerInstanceName);
+        }
+
+        public GetSqlServerInstanceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlServerInstanceName = Objects.requireNonNull($.sqlServerInstanceName, "expected parameter 'sqlServerInstanceName' to be non-null");
+            return $;
         }
     }
+
 }

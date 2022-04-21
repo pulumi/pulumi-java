@@ -9,9 +9,9 @@ import com.pulumi.azurenative.providerhub.inputs.LoggingRuleHiddenPropertyPathsA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,110 +20,102 @@ public final class LoggingRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final LoggingRuleArgs Empty = new LoggingRuleArgs();
 
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
     }
 
     @Import(name="detailLevel", required=true)
-      private final Output<Either<String,LoggingDetails>> detailLevel;
+    private Output<Either<String,LoggingDetails>> detailLevel;
 
     public Output<Either<String,LoggingDetails>> detailLevel() {
         return this.detailLevel;
     }
 
     @Import(name="direction", required=true)
-      private final Output<Either<String,LoggingDirections>> direction;
+    private Output<Either<String,LoggingDirections>> direction;
 
     public Output<Either<String,LoggingDirections>> direction() {
         return this.direction;
     }
 
     @Import(name="hiddenPropertyPaths")
-      private final @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
+    private @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
-    public Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths() {
-        return this.hiddenPropertyPaths == null ? Codegen.empty() : this.hiddenPropertyPaths;
+    public Optional<Output<LoggingRuleHiddenPropertyPathsArgs>> hiddenPropertyPaths() {
+        return Optional.ofNullable(this.hiddenPropertyPaths);
     }
 
-    public LoggingRuleArgs(
-        Output<String> action,
-        Output<Either<String,LoggingDetails>> detailLevel,
-        Output<Either<String,LoggingDirections>> direction,
-        @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.detailLevel = Objects.requireNonNull(detailLevel, "expected parameter 'detailLevel' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.hiddenPropertyPaths = hiddenPropertyPaths;
-    }
+    private LoggingRuleArgs() {}
 
-    private LoggingRuleArgs() {
-        this.action = Codegen.empty();
-        this.detailLevel = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.hiddenPropertyPaths = Codegen.empty();
+    private LoggingRuleArgs(LoggingRuleArgs $) {
+        this.action = $.action;
+        this.detailLevel = $.detailLevel;
+        this.direction = $.direction;
+        this.hiddenPropertyPaths = $.hiddenPropertyPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<Either<String,LoggingDetails>> detailLevel;
-        private Output<Either<String,LoggingDirections>> direction;
-        private @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
+        private LoggingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingRuleArgs();
         }
 
         public Builder(LoggingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.detailLevel = defaults.detailLevel;
-    	      this.direction = defaults.direction;
-    	      this.hiddenPropertyPaths = defaults.hiddenPropertyPaths;
+            $ = new LoggingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder detailLevel(Output<Either<String,LoggingDetails>> detailLevel) {
-            this.detailLevel = Objects.requireNonNull(detailLevel);
+            $.detailLevel = detailLevel;
             return this;
         }
+
         public Builder detailLevel(Either<String,LoggingDetails> detailLevel) {
-            this.detailLevel = Output.of(Objects.requireNonNull(detailLevel));
-            return this;
+            return detailLevel(Output.of(detailLevel));
         }
+
         public Builder direction(Output<Either<String,LoggingDirections>> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(Either<String,LoggingDirections> direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder hiddenPropertyPaths(@Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths) {
-            this.hiddenPropertyPaths = hiddenPropertyPaths;
+            $.hiddenPropertyPaths = hiddenPropertyPaths;
             return this;
         }
-        public Builder hiddenPropertyPaths(@Nullable LoggingRuleHiddenPropertyPathsArgs hiddenPropertyPaths) {
-            this.hiddenPropertyPaths = Codegen.ofNullable(hiddenPropertyPaths);
-            return this;
-        }        public LoggingRuleArgs build() {
-            return new LoggingRuleArgs(action, detailLevel, direction, hiddenPropertyPaths);
+
+        public Builder hiddenPropertyPaths(LoggingRuleHiddenPropertyPathsArgs hiddenPropertyPaths) {
+            return hiddenPropertyPaths(Output.of(hiddenPropertyPaths));
+        }
+
+        public LoggingRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.detailLevel = Objects.requireNonNull($.detailLevel, "expected parameter 'detailLevel' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            return $;
         }
     }
+
 }

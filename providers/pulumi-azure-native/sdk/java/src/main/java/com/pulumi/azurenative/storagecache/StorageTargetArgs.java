@@ -13,10 +13,10 @@ import com.pulumi.azurenative.storagecache.inputs.UnknownTargetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobNfs")
-      private final @Nullable Output<BlobNfsTargetArgs> blobNfs;
+    private @Nullable Output<BlobNfsTargetArgs> blobNfs;
 
-    public Output<BlobNfsTargetArgs> blobNfs() {
-        return this.blobNfs == null ? Codegen.empty() : this.blobNfs;
+    public Optional<Output<BlobNfsTargetArgs>> blobNfs() {
+        return Optional.ofNullable(this.blobNfs);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheName", required=true)
-      private final Output<String> cacheName;
+    private Output<String> cacheName;
 
     public Output<String> cacheName() {
         return this.cacheName;
@@ -51,10 +51,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clfs")
-      private final @Nullable Output<ClfsTargetArgs> clfs;
+    private @Nullable Output<ClfsTargetArgs> clfs;
 
-    public Output<ClfsTargetArgs> clfs() {
-        return this.clfs == null ? Codegen.empty() : this.clfs;
+    public Optional<Output<ClfsTargetArgs>> clfs() {
+        return Optional.ofNullable(this.clfs);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="junctions")
-      private final @Nullable Output<List<NamespaceJunctionArgs>> junctions;
+    private @Nullable Output<List<NamespaceJunctionArgs>> junctions;
 
-    public Output<List<NamespaceJunctionArgs>> junctions() {
-        return this.junctions == null ? Codegen.empty() : this.junctions;
+    public Optional<Output<List<NamespaceJunctionArgs>>> junctions() {
+        return Optional.ofNullable(this.junctions);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nfs3")
-      private final @Nullable Output<Nfs3TargetArgs> nfs3;
+    private @Nullable Output<Nfs3TargetArgs> nfs3;
 
-    public Output<Nfs3TargetArgs> nfs3() {
-        return this.nfs3 == null ? Codegen.empty() : this.nfs3;
+    public Optional<Output<Nfs3TargetArgs>> nfs3() {
+        return Optional.ofNullable(this.nfs3);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
-    public Output<Either<String,ProvisioningStateType>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningStateType>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -106,10 +106,10 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageTargetName")
-      private final @Nullable Output<String> storageTargetName;
+    private @Nullable Output<String> storageTargetName;
 
-    public Output<String> storageTargetName() {
-        return this.storageTargetName == null ? Codegen.empty() : this.storageTargetName;
+    public Optional<Output<String>> storageTargetName() {
+        return Optional.ofNullable(this.storageTargetName);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetType", required=true)
-      private final Output<Either<String,StorageTargetType>> targetType;
+    private Output<Either<String,StorageTargetType>> targetType;
 
     public Output<Either<String,StorageTargetType>> targetType() {
         return this.targetType;
@@ -128,170 +128,145 @@ public final class StorageTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unknown")
-      private final @Nullable Output<UnknownTargetArgs> unknown;
+    private @Nullable Output<UnknownTargetArgs> unknown;
 
-    public Output<UnknownTargetArgs> unknown() {
-        return this.unknown == null ? Codegen.empty() : this.unknown;
+    public Optional<Output<UnknownTargetArgs>> unknown() {
+        return Optional.ofNullable(this.unknown);
     }
 
-    public StorageTargetArgs(
-        @Nullable Output<BlobNfsTargetArgs> blobNfs,
-        Output<String> cacheName,
-        @Nullable Output<ClfsTargetArgs> clfs,
-        @Nullable Output<List<NamespaceJunctionArgs>> junctions,
-        @Nullable Output<Nfs3TargetArgs> nfs3,
-        @Nullable Output<Either<String,ProvisioningStateType>> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> storageTargetName,
-        Output<Either<String,StorageTargetType>> targetType,
-        @Nullable Output<UnknownTargetArgs> unknown) {
-        this.blobNfs = blobNfs;
-        this.cacheName = Objects.requireNonNull(cacheName, "expected parameter 'cacheName' to be non-null");
-        this.clfs = clfs;
-        this.junctions = junctions;
-        this.nfs3 = nfs3;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageTargetName = storageTargetName;
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-        this.unknown = unknown;
-    }
+    private StorageTargetArgs() {}
 
-    private StorageTargetArgs() {
-        this.blobNfs = Codegen.empty();
-        this.cacheName = Codegen.empty();
-        this.clfs = Codegen.empty();
-        this.junctions = Codegen.empty();
-        this.nfs3 = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageTargetName = Codegen.empty();
-        this.targetType = Codegen.empty();
-        this.unknown = Codegen.empty();
+    private StorageTargetArgs(StorageTargetArgs $) {
+        this.blobNfs = $.blobNfs;
+        this.cacheName = $.cacheName;
+        this.clfs = $.clfs;
+        this.junctions = $.junctions;
+        this.nfs3 = $.nfs3;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageTargetName = $.storageTargetName;
+        this.targetType = $.targetType;
+        this.unknown = $.unknown;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BlobNfsTargetArgs> blobNfs;
-        private Output<String> cacheName;
-        private @Nullable Output<ClfsTargetArgs> clfs;
-        private @Nullable Output<List<NamespaceJunctionArgs>> junctions;
-        private @Nullable Output<Nfs3TargetArgs> nfs3;
-        private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> storageTargetName;
-        private Output<Either<String,StorageTargetType>> targetType;
-        private @Nullable Output<UnknownTargetArgs> unknown;
+        private StorageTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageTargetArgs();
         }
 
         public Builder(StorageTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobNfs = defaults.blobNfs;
-    	      this.cacheName = defaults.cacheName;
-    	      this.clfs = defaults.clfs;
-    	      this.junctions = defaults.junctions;
-    	      this.nfs3 = defaults.nfs3;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageTargetName = defaults.storageTargetName;
-    	      this.targetType = defaults.targetType;
-    	      this.unknown = defaults.unknown;
+            $ = new StorageTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobNfs(@Nullable Output<BlobNfsTargetArgs> blobNfs) {
-            this.blobNfs = blobNfs;
+            $.blobNfs = blobNfs;
             return this;
         }
-        public Builder blobNfs(@Nullable BlobNfsTargetArgs blobNfs) {
-            this.blobNfs = Codegen.ofNullable(blobNfs);
-            return this;
+
+        public Builder blobNfs(BlobNfsTargetArgs blobNfs) {
+            return blobNfs(Output.of(blobNfs));
         }
+
         public Builder cacheName(Output<String> cacheName) {
-            this.cacheName = Objects.requireNonNull(cacheName);
+            $.cacheName = cacheName;
             return this;
         }
+
         public Builder cacheName(String cacheName) {
-            this.cacheName = Output.of(Objects.requireNonNull(cacheName));
-            return this;
+            return cacheName(Output.of(cacheName));
         }
+
         public Builder clfs(@Nullable Output<ClfsTargetArgs> clfs) {
-            this.clfs = clfs;
+            $.clfs = clfs;
             return this;
         }
-        public Builder clfs(@Nullable ClfsTargetArgs clfs) {
-            this.clfs = Codegen.ofNullable(clfs);
-            return this;
+
+        public Builder clfs(ClfsTargetArgs clfs) {
+            return clfs(Output.of(clfs));
         }
+
         public Builder junctions(@Nullable Output<List<NamespaceJunctionArgs>> junctions) {
-            this.junctions = junctions;
+            $.junctions = junctions;
             return this;
         }
-        public Builder junctions(@Nullable List<NamespaceJunctionArgs> junctions) {
-            this.junctions = Codegen.ofNullable(junctions);
-            return this;
+
+        public Builder junctions(List<NamespaceJunctionArgs> junctions) {
+            return junctions(Output.of(junctions));
         }
+
         public Builder junctions(NamespaceJunctionArgs... junctions) {
             return junctions(List.of(junctions));
         }
+
         public Builder nfs3(@Nullable Output<Nfs3TargetArgs> nfs3) {
-            this.nfs3 = nfs3;
+            $.nfs3 = nfs3;
             return this;
         }
-        public Builder nfs3(@Nullable Nfs3TargetArgs nfs3) {
-            this.nfs3 = Codegen.ofNullable(nfs3);
-            return this;
+
+        public Builder nfs3(Nfs3TargetArgs nfs3) {
+            return nfs3(Output.of(nfs3));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ProvisioningStateType> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageTargetName(@Nullable Output<String> storageTargetName) {
-            this.storageTargetName = storageTargetName;
+            $.storageTargetName = storageTargetName;
             return this;
         }
-        public Builder storageTargetName(@Nullable String storageTargetName) {
-            this.storageTargetName = Codegen.ofNullable(storageTargetName);
-            return this;
+
+        public Builder storageTargetName(String storageTargetName) {
+            return storageTargetName(Output.of(storageTargetName));
         }
+
         public Builder targetType(Output<Either<String,StorageTargetType>> targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
         }
+
         public Builder targetType(Either<String,StorageTargetType> targetType) {
-            this.targetType = Output.of(Objects.requireNonNull(targetType));
-            return this;
+            return targetType(Output.of(targetType));
         }
+
         public Builder unknown(@Nullable Output<UnknownTargetArgs> unknown) {
-            this.unknown = unknown;
+            $.unknown = unknown;
             return this;
         }
-        public Builder unknown(@Nullable UnknownTargetArgs unknown) {
-            this.unknown = Codegen.ofNullable(unknown);
-            return this;
-        }        public StorageTargetArgs build() {
-            return new StorageTargetArgs(blobNfs, cacheName, clfs, junctions, nfs3, provisioningState, resourceGroupName, storageTargetName, targetType, unknown);
+
+        public Builder unknown(UnknownTargetArgs unknown) {
+            return unknown(Output.of(unknown));
+        }
+
+        public StorageTargetArgs build() {
+            $.cacheName = Objects.requireNonNull($.cacheName, "expected parameter 'cacheName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -28,7 +28,7 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetProtectionPolicyArgs(
-        String policyName,
-        String resourceGroupName,
-        String vaultName) {
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetProtectionPolicyArgs() {}
 
-    private GetProtectionPolicyArgs() {
-        this.policyName = null;
-        this.resourceGroupName = null;
-        this.vaultName = null;
+    private GetProtectionPolicyArgs(GetProtectionPolicyArgs $) {
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyName;
-        private String resourceGroupName;
-        private String vaultName;
+        private GetProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProtectionPolicyArgs();
         }
 
         public Builder(GetProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetProtectionPolicyArgs build() {
-            return new GetProtectionPolicyArgs(policyName, resourceGroupName, vaultName);
+        }
+
+        public GetProtectionPolicyArgs build() {
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

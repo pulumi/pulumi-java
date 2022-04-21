@@ -6,8 +6,8 @@ package com.pulumi.azurenative.portal.inputs;
 import com.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MarkdownPartMetadataContentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;
+    private @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;
 
-    public Output<MarkdownPartMetadataSettingsSettingsArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<MarkdownPartMetadataSettingsSettingsArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public MarkdownPartMetadataContentArgs(@Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings) {
-        this.settings = settings;
-    }
+    private MarkdownPartMetadataContentArgs() {}
 
-    private MarkdownPartMetadataContentArgs() {
-        this.settings = Codegen.empty();
+    private MarkdownPartMetadataContentArgs(MarkdownPartMetadataContentArgs $) {
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;
+        private MarkdownPartMetadataContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataContentArgs();
         }
 
         public Builder(MarkdownPartMetadataContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.settings = defaults.settings;
+            $ = new MarkdownPartMetadataContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder settings(@Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable MarkdownPartMetadataSettingsSettingsArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
-        }        public MarkdownPartMetadataContentArgs build() {
-            return new MarkdownPartMetadataContentArgs(settings);
+
+        public Builder settings(MarkdownPartMetadataSettingsSettingsArgs settings) {
+            return settings(Output.of(settings));
+        }
+
+        public MarkdownPartMetadataContentArgs build() {
+            return $;
         }
     }
+
 }

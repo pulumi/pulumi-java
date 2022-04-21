@@ -23,45 +23,44 @@ public final class ContainerRegistryPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ContainerRegistryPropertiesResponse(@Nullable String resourceId) {
-        this.resourceId = resourceId;
-    }
+    private ContainerRegistryPropertiesResponse() {}
 
-    private ContainerRegistryPropertiesResponse() {
-        this.resourceId = null;
+    private ContainerRegistryPropertiesResponse(ContainerRegistryPropertiesResponse $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRegistryPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
+        private ContainerRegistryPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRegistryPropertiesResponse();
         }
 
         public Builder(ContainerRegistryPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new ContainerRegistryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public ContainerRegistryPropertiesResponse build() {
-            return new ContainerRegistryPropertiesResponse(resourceId);
+        }
+
+        public ContainerRegistryPropertiesResponse build() {
+            return $;
         }
     }
+
 }

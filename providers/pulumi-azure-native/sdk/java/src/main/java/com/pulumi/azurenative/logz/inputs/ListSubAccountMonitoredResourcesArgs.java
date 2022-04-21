@@ -17,7 +17,7 @@ public final class ListSubAccountMonitoredResourcesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -28,7 +28,7 @@ public final class ListSubAccountMonitoredResourcesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListSubAccountMonitoredResourcesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="subAccountName", required=true)
-      private final String subAccountName;
+    private String subAccountName;
 
     public String subAccountName() {
         return this.subAccountName;
     }
 
-    public ListSubAccountMonitoredResourcesArgs(
-        String monitorName,
-        String resourceGroupName,
-        String subAccountName) {
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subAccountName = Objects.requireNonNull(subAccountName, "expected parameter 'subAccountName' to be non-null");
-    }
+    private ListSubAccountMonitoredResourcesArgs() {}
 
-    private ListSubAccountMonitoredResourcesArgs() {
-        this.monitorName = null;
-        this.resourceGroupName = null;
-        this.subAccountName = null;
+    private ListSubAccountMonitoredResourcesArgs(ListSubAccountMonitoredResourcesArgs $) {
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subAccountName = $.subAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListSubAccountMonitoredResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String monitorName;
-        private String resourceGroupName;
-        private String subAccountName;
+        private ListSubAccountMonitoredResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListSubAccountMonitoredResourcesArgs();
         }
 
         public Builder(ListSubAccountMonitoredResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subAccountName = defaults.subAccountName;
+            $ = new ListSubAccountMonitoredResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder subAccountName(String subAccountName) {
-            this.subAccountName = Objects.requireNonNull(subAccountName);
+            $.subAccountName = subAccountName;
             return this;
-        }        public ListSubAccountMonitoredResourcesArgs build() {
-            return new ListSubAccountMonitoredResourcesArgs(monitorName, resourceGroupName, subAccountName);
+        }
+
+        public ListSubAccountMonitoredResourcesArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subAccountName = Objects.requireNonNull($.subAccountName, "expected parameter 'subAccountName' to be non-null");
+            return $;
         }
     }
+
 }

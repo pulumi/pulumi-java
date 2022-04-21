@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +28,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="frequencyInterval", required=true)
-      private final Output<Integer> frequencyInterval;
+    private Output<Integer> frequencyInterval;
 
     public Output<Integer> frequencyInterval() {
         return this.frequencyInterval;
@@ -38,7 +39,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="frequencyUnit", required=true)
-      private final Output<FrequencyUnit> frequencyUnit;
+    private Output<FrequencyUnit> frequencyUnit;
 
     public Output<FrequencyUnit> frequencyUnit() {
         return this.frequencyUnit;
@@ -49,7 +50,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keepAtLeastOneBackup", required=true)
-      private final Output<Boolean> keepAtLeastOneBackup;
+    private Output<Boolean> keepAtLeastOneBackup;
 
     public Output<Boolean> keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
@@ -60,7 +61,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="retentionPeriodInDays", required=true)
-      private final Output<Integer> retentionPeriodInDays;
+    private Output<Integer> retentionPeriodInDays;
 
     public Output<Integer> retentionPeriodInDays() {
         return this.retentionPeriodInDays;
@@ -71,102 +72,92 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public BackupScheduleArgs(
-        Output<Integer> frequencyInterval,
-        Output<FrequencyUnit> frequencyUnit,
-        Output<Boolean> keepAtLeastOneBackup,
-        Output<Integer> retentionPeriodInDays,
-        @Nullable Output<String> startTime) {
-        this.frequencyInterval = Codegen.integerProp("frequencyInterval").output().arg(frequencyInterval).def(7).require();
-        this.frequencyUnit = Codegen.objectProp("frequencyUnit", FrequencyUnit.class).output().arg(frequencyUnit).def(FrequencyUnit.Day).require();
-        this.keepAtLeastOneBackup = Codegen.booleanProp("keepAtLeastOneBackup").output().arg(keepAtLeastOneBackup).def(true).require();
-        this.retentionPeriodInDays = Codegen.integerProp("retentionPeriodInDays").output().arg(retentionPeriodInDays).def(30).require();
-        this.startTime = startTime;
-    }
+    private BackupScheduleArgs() {}
 
-    private BackupScheduleArgs() {
-        this.frequencyInterval = Codegen.empty();
-        this.frequencyUnit = Codegen.empty();
-        this.keepAtLeastOneBackup = Codegen.empty();
-        this.retentionPeriodInDays = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private BackupScheduleArgs(BackupScheduleArgs $) {
+        this.frequencyInterval = $.frequencyInterval;
+        this.frequencyUnit = $.frequencyUnit;
+        this.keepAtLeastOneBackup = $.keepAtLeastOneBackup;
+        this.retentionPeriodInDays = $.retentionPeriodInDays;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> frequencyInterval;
-        private Output<FrequencyUnit> frequencyUnit;
-        private Output<Boolean> keepAtLeastOneBackup;
-        private Output<Integer> retentionPeriodInDays;
-        private @Nullable Output<String> startTime;
+        private BackupScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupScheduleArgs();
         }
 
         public Builder(BackupScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequencyInterval = defaults.frequencyInterval;
-    	      this.frequencyUnit = defaults.frequencyUnit;
-    	      this.keepAtLeastOneBackup = defaults.keepAtLeastOneBackup;
-    	      this.retentionPeriodInDays = defaults.retentionPeriodInDays;
-    	      this.startTime = defaults.startTime;
+            $ = new BackupScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frequencyInterval(Output<Integer> frequencyInterval) {
-            this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
+            $.frequencyInterval = frequencyInterval;
             return this;
         }
+
         public Builder frequencyInterval(Integer frequencyInterval) {
-            this.frequencyInterval = Output.of(Objects.requireNonNull(frequencyInterval));
-            return this;
+            return frequencyInterval(Output.of(frequencyInterval));
         }
+
         public Builder frequencyUnit(Output<FrequencyUnit> frequencyUnit) {
-            this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
+            $.frequencyUnit = frequencyUnit;
             return this;
         }
+
         public Builder frequencyUnit(FrequencyUnit frequencyUnit) {
-            this.frequencyUnit = Output.of(Objects.requireNonNull(frequencyUnit));
-            return this;
+            return frequencyUnit(Output.of(frequencyUnit));
         }
+
         public Builder keepAtLeastOneBackup(Output<Boolean> keepAtLeastOneBackup) {
-            this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
+            $.keepAtLeastOneBackup = keepAtLeastOneBackup;
             return this;
         }
+
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
-            this.keepAtLeastOneBackup = Output.of(Objects.requireNonNull(keepAtLeastOneBackup));
-            return this;
+            return keepAtLeastOneBackup(Output.of(keepAtLeastOneBackup));
         }
+
         public Builder retentionPeriodInDays(Output<Integer> retentionPeriodInDays) {
-            this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
+            $.retentionPeriodInDays = retentionPeriodInDays;
             return this;
         }
+
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
-            this.retentionPeriodInDays = Output.of(Objects.requireNonNull(retentionPeriodInDays));
-            return this;
+            return retentionPeriodInDays(Output.of(retentionPeriodInDays));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public BackupScheduleArgs build() {
-            return new BackupScheduleArgs(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, retentionPeriodInDays, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public BackupScheduleArgs build() {
+            $.frequencyInterval = Codegen.integerProp("frequencyInterval").output().arg($.frequencyInterval).def(7).require();
+            $.frequencyUnit = Codegen.objectProp("frequencyUnit", FrequencyUnit.class).output().arg($.frequencyUnit).def(FrequencyUnit.Day).require();
+            $.keepAtLeastOneBackup = Codegen.booleanProp("keepAtLeastOneBackup").output().arg($.keepAtLeastOneBackup).def(true).require();
+            $.retentionPeriodInDays = Codegen.integerProp("retentionPeriodInDays").output().arg($.retentionPeriodInDays).def(30).require();
+            return $;
         }
     }
+
 }

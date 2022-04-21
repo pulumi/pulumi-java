@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devices.enums.AuthenticationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+    private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<Either<String,AuthenticationType>>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<String> connectionString;
+    private @Nullable Output<String> connectionString;
 
-    public Output<String> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<String>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable Output<String> endpointUri;
+    private @Nullable Output<String> endpointUri;
 
-    public Output<String> endpointUri() {
-        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
+    public Optional<Output<String>> endpointUri() {
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="entityPath")
-      private final @Nullable Output<String> entityPath;
+    private @Nullable Output<String> entityPath;
 
-    public Output<String> entityPath() {
-        return this.entityPath == null ? Codegen.empty() : this.entityPath;
+    public Optional<Output<String>> entityPath() {
+        return Optional.ofNullable(this.entityPath);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -92,10 +92,10 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<String> resourceGroup;
+    private @Nullable Output<String> resourceGroup;
 
-    public Output<String> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<String>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -103,141 +103,119 @@ public final class RoutingServiceBusTopicEndpointPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public RoutingServiceBusTopicEndpointPropertiesArgs(
-        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Output<String> connectionString,
-        @Nullable Output<String> endpointUri,
-        @Nullable Output<String> entityPath,
-        @Nullable Output<String> id,
-        Output<String> name,
-        @Nullable Output<String> resourceGroup,
-        @Nullable Output<String> subscriptionId) {
-        this.authenticationType = authenticationType;
-        this.connectionString = connectionString;
-        this.endpointUri = endpointUri;
-        this.entityPath = entityPath;
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroup = resourceGroup;
-        this.subscriptionId = subscriptionId;
-    }
+    private RoutingServiceBusTopicEndpointPropertiesArgs() {}
 
-    private RoutingServiceBusTopicEndpointPropertiesArgs() {
-        this.authenticationType = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.endpointUri = Codegen.empty();
-        this.entityPath = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
+    private RoutingServiceBusTopicEndpointPropertiesArgs(RoutingServiceBusTopicEndpointPropertiesArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.connectionString = $.connectionString;
+        this.endpointUri = $.endpointUri;
+        this.entityPath = $.entityPath;
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceGroup = $.resourceGroup;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingServiceBusTopicEndpointPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Output<String> connectionString;
-        private @Nullable Output<String> endpointUri;
-        private @Nullable Output<String> entityPath;
-        private @Nullable Output<String> id;
-        private Output<String> name;
-        private @Nullable Output<String> resourceGroup;
-        private @Nullable Output<String> subscriptionId;
+        private RoutingServiceBusTopicEndpointPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingServiceBusTopicEndpointPropertiesArgs();
         }
 
         public Builder(RoutingServiceBusTopicEndpointPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.entityPath = defaults.entityPath;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new RoutingServiceBusTopicEndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder connectionString(@Nullable Output<String> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(String connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
-        public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Codegen.ofNullable(endpointUri);
-            return this;
+
+        public Builder endpointUri(String endpointUri) {
+            return endpointUri(Output.of(endpointUri));
         }
+
         public Builder entityPath(@Nullable Output<String> entityPath) {
-            this.entityPath = entityPath;
+            $.entityPath = entityPath;
             return this;
         }
-        public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Codegen.ofNullable(entityPath);
-            return this;
+
+        public Builder entityPath(String entityPath) {
+            return entityPath(Output.of(entityPath));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(String resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
-        }        public RoutingServiceBusTopicEndpointPropertiesArgs build() {
-            return new RoutingServiceBusTopicEndpointPropertiesArgs(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        public RoutingServiceBusTopicEndpointPropertiesArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

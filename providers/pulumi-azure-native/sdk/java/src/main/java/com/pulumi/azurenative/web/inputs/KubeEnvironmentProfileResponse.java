@@ -23,10 +23,10 @@ public final class KubeEnvironmentProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class KubeEnvironmentProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,58 @@ public final class KubeEnvironmentProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public KubeEnvironmentProfileResponse(
-        @Nullable String id,
-        String name,
-        String type) {
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private KubeEnvironmentProfileResponse() {}
 
-    private KubeEnvironmentProfileResponse() {
-        this.id = null;
-        this.name = null;
-        this.type = null;
+    private KubeEnvironmentProfileResponse(KubeEnvironmentProfileResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubeEnvironmentProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private String name;
-        private String type;
+        private KubeEnvironmentProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubeEnvironmentProfileResponse();
         }
 
         public Builder(KubeEnvironmentProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new KubeEnvironmentProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public KubeEnvironmentProfileResponse build() {
-            return new KubeEnvironmentProfileResponse(id, name, type);
+        }
+
+        public KubeEnvironmentProfileResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

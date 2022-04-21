@@ -5,7 +5,6 @@ package com.pulumi.azurenative.keyvault.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class MHSMVirtualNetworkRuleArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public MHSMVirtualNetworkRuleArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private MHSMVirtualNetworkRuleArgs() {}
 
-    private MHSMVirtualNetworkRuleArgs() {
-        this.id = Codegen.empty();
+    private MHSMVirtualNetworkRuleArgs(MHSMVirtualNetworkRuleArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MHSMVirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private MHSMVirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MHSMVirtualNetworkRuleArgs();
         }
 
         public Builder(MHSMVirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new MHSMVirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public MHSMVirtualNetworkRuleArgs build() {
-            return new MHSMVirtualNetworkRuleArgs(id);
+            return id(Output.of(id));
+        }
+
+        public MHSMVirtualNetworkRuleArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

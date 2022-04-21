@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ExportPipelineTargetPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final Output<String> keyVaultUri;
+    private Output<String> keyVaultUri;
 
     public Output<String> keyVaultUri() {
         return this.keyVaultUri;
@@ -35,10 +35,10 @@ public final class ExportPipelineTargetPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class ExportPipelineTargetPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ExportPipelineTargetPropertiesArgs(
-        Output<String> keyVaultUri,
-        @Nullable Output<String> type,
-        @Nullable Output<String> uri) {
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.type = type;
-        this.uri = uri;
-    }
+    private ExportPipelineTargetPropertiesArgs() {}
 
-    private ExportPipelineTargetPropertiesArgs() {
-        this.keyVaultUri = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ExportPipelineTargetPropertiesArgs(ExportPipelineTargetPropertiesArgs $) {
+        this.keyVaultUri = $.keyVaultUri;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportPipelineTargetPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyVaultUri;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> uri;
+        private ExportPipelineTargetPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportPipelineTargetPropertiesArgs();
         }
 
         public Builder(ExportPipelineTargetPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ExportPipelineTargetPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultUri(Output<String> keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
-            return this;
+            return keyVaultUri(Output.of(keyVaultUri));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ExportPipelineTargetPropertiesArgs build() {
-            return new ExportPipelineTargetPropertiesArgs(keyVaultUri, type, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ExportPipelineTargetPropertiesArgs build() {
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            return $;
         }
     }
+
 }

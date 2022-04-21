@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="messageTtl", required=true)
-      private final Output<String> messageTtl;
+    private Output<String> messageTtl;
 
     public Output<String> messageTtl() {
         return this.messageTtl;
@@ -35,10 +35,10 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="syncWindow")
-      private final @Nullable Output<String> syncWindow;
+    private @Nullable Output<String> syncWindow;
 
-    public Output<String> syncWindow() {
-        return this.syncWindow == null ? Codegen.empty() : this.syncWindow;
+    public Optional<Output<String>> syncWindow() {
+        return Optional.ofNullable(this.syncWindow);
     }
 
     /**
@@ -57,89 +57,80 @@ public final class SyncPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tokenId", required=true)
-      private final Output<String> tokenId;
+    private Output<String> tokenId;
 
     public Output<String> tokenId() {
         return this.tokenId;
     }
 
-    public SyncPropertiesArgs(
-        Output<String> messageTtl,
-        @Nullable Output<String> schedule,
-        @Nullable Output<String> syncWindow,
-        Output<String> tokenId) {
-        this.messageTtl = Objects.requireNonNull(messageTtl, "expected parameter 'messageTtl' to be non-null");
-        this.schedule = schedule;
-        this.syncWindow = syncWindow;
-        this.tokenId = Objects.requireNonNull(tokenId, "expected parameter 'tokenId' to be non-null");
-    }
+    private SyncPropertiesArgs() {}
 
-    private SyncPropertiesArgs() {
-        this.messageTtl = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.syncWindow = Codegen.empty();
-        this.tokenId = Codegen.empty();
+    private SyncPropertiesArgs(SyncPropertiesArgs $) {
+        this.messageTtl = $.messageTtl;
+        this.schedule = $.schedule;
+        this.syncWindow = $.syncWindow;
+        this.tokenId = $.tokenId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> messageTtl;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<String> syncWindow;
-        private Output<String> tokenId;
+        private SyncPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncPropertiesArgs();
         }
 
         public Builder(SyncPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageTtl = defaults.messageTtl;
-    	      this.schedule = defaults.schedule;
-    	      this.syncWindow = defaults.syncWindow;
-    	      this.tokenId = defaults.tokenId;
+            $ = new SyncPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageTtl(Output<String> messageTtl) {
-            this.messageTtl = Objects.requireNonNull(messageTtl);
+            $.messageTtl = messageTtl;
             return this;
         }
+
         public Builder messageTtl(String messageTtl) {
-            this.messageTtl = Output.of(Objects.requireNonNull(messageTtl));
-            return this;
+            return messageTtl(Output.of(messageTtl));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder syncWindow(@Nullable Output<String> syncWindow) {
-            this.syncWindow = syncWindow;
+            $.syncWindow = syncWindow;
             return this;
         }
-        public Builder syncWindow(@Nullable String syncWindow) {
-            this.syncWindow = Codegen.ofNullable(syncWindow);
-            return this;
+
+        public Builder syncWindow(String syncWindow) {
+            return syncWindow(Output.of(syncWindow));
         }
+
         public Builder tokenId(Output<String> tokenId) {
-            this.tokenId = Objects.requireNonNull(tokenId);
+            $.tokenId = tokenId;
             return this;
         }
+
         public Builder tokenId(String tokenId) {
-            this.tokenId = Output.of(Objects.requireNonNull(tokenId));
-            return this;
-        }        public SyncPropertiesArgs build() {
-            return new SyncPropertiesArgs(messageTtl, schedule, syncWindow, tokenId);
+            return tokenId(Output.of(tokenId));
+        }
+
+        public SyncPropertiesArgs build() {
+            $.messageTtl = Objects.requireNonNull($.messageTtl, "expected parameter 'messageTtl' to be non-null");
+            $.tokenId = Objects.requireNonNull($.tokenId, "expected parameter 'tokenId' to be non-null");
+            return $;
         }
     }
+
 }

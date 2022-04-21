@@ -5,10 +5,10 @@ package com.pulumi.azurenative.deviceupdate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="customerVisibleFqdns")
-      private final @Nullable Output<List<String>> customerVisibleFqdns;
+    private @Nullable Output<List<String>> customerVisibleFqdns;
 
-    public Output<List<String>> customerVisibleFqdns() {
-        return this.customerVisibleFqdns == null ? Codegen.empty() : this.customerVisibleFqdns;
+    public Optional<Output<List<String>>> customerVisibleFqdns() {
+        return Optional.ofNullable(this.customerVisibleFqdns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateLinkServiceArmRegion")
-      private final @Nullable Output<String> privateLinkServiceArmRegion;
+    private @Nullable Output<String> privateLinkServiceArmRegion;
 
-    public Output<String> privateLinkServiceArmRegion() {
-        return this.privateLinkServiceArmRegion == null ? Codegen.empty() : this.privateLinkServiceArmRegion;
+    public Optional<Output<String>> privateLinkServiceArmRegion() {
+        return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="redirectMapId")
-      private final @Nullable Output<String> redirectMapId;
+    private @Nullable Output<String> redirectMapId;
 
-    public Output<String> redirectMapId() {
-        return this.redirectMapId == null ? Codegen.empty() : this.redirectMapId;
+    public Optional<Output<String>> redirectMapId() {
+        return Optional.ofNullable(this.redirectMapId);
     }
 
-    public GroupConnectivityInformationArgs(
-        @Nullable Output<List<String>> customerVisibleFqdns,
-        @Nullable Output<String> privateLinkServiceArmRegion,
-        @Nullable Output<String> redirectMapId) {
-        this.customerVisibleFqdns = customerVisibleFqdns;
-        this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
-        this.redirectMapId = redirectMapId;
-    }
+    private GroupConnectivityInformationArgs() {}
 
-    private GroupConnectivityInformationArgs() {
-        this.customerVisibleFqdns = Codegen.empty();
-        this.privateLinkServiceArmRegion = Codegen.empty();
-        this.redirectMapId = Codegen.empty();
+    private GroupConnectivityInformationArgs(GroupConnectivityInformationArgs $) {
+        this.customerVisibleFqdns = $.customerVisibleFqdns;
+        this.privateLinkServiceArmRegion = $.privateLinkServiceArmRegion;
+        this.redirectMapId = $.redirectMapId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupConnectivityInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customerVisibleFqdns;
-        private @Nullable Output<String> privateLinkServiceArmRegion;
-        private @Nullable Output<String> redirectMapId;
+        private GroupConnectivityInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupConnectivityInformationArgs();
         }
 
         public Builder(GroupConnectivityInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerVisibleFqdns = defaults.customerVisibleFqdns;
-    	      this.privateLinkServiceArmRegion = defaults.privateLinkServiceArmRegion;
-    	      this.redirectMapId = defaults.redirectMapId;
+            $ = new GroupConnectivityInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerVisibleFqdns(@Nullable Output<List<String>> customerVisibleFqdns) {
-            this.customerVisibleFqdns = customerVisibleFqdns;
+            $.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
-        public Builder customerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
-            this.customerVisibleFqdns = Codegen.ofNullable(customerVisibleFqdns);
-            return this;
+
+        public Builder customerVisibleFqdns(List<String> customerVisibleFqdns) {
+            return customerVisibleFqdns(Output.of(customerVisibleFqdns));
         }
+
         public Builder customerVisibleFqdns(String... customerVisibleFqdns) {
             return customerVisibleFqdns(List.of(customerVisibleFqdns));
         }
+
         public Builder privateLinkServiceArmRegion(@Nullable Output<String> privateLinkServiceArmRegion) {
-            this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
+            $.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
-        public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
-            this.privateLinkServiceArmRegion = Codegen.ofNullable(privateLinkServiceArmRegion);
-            return this;
+
+        public Builder privateLinkServiceArmRegion(String privateLinkServiceArmRegion) {
+            return privateLinkServiceArmRegion(Output.of(privateLinkServiceArmRegion));
         }
+
         public Builder redirectMapId(@Nullable Output<String> redirectMapId) {
-            this.redirectMapId = redirectMapId;
+            $.redirectMapId = redirectMapId;
             return this;
         }
-        public Builder redirectMapId(@Nullable String redirectMapId) {
-            this.redirectMapId = Codegen.ofNullable(redirectMapId);
-            return this;
-        }        public GroupConnectivityInformationArgs build() {
-            return new GroupConnectivityInformationArgs(customerVisibleFqdns, privateLinkServiceArmRegion, redirectMapId);
+
+        public Builder redirectMapId(String redirectMapId) {
+            return redirectMapId(Output.of(redirectMapId));
+        }
+
+        public GroupConnectivityInformationArgs build() {
+            return $;
         }
     }
+
 }

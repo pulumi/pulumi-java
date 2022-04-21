@@ -23,10 +23,10 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endAddress")
-      private final @Nullable String endAddress;
+    private @Nullable String endAddress;
 
     public Optional<String> endAddress() {
-        return this.endAddress == null ? Optional.empty() : Optional.ofNullable(this.endAddress);
+        return Optional.ofNullable(this.endAddress);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,10 +45,10 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -72,10 +72,10 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeType")
-      private final @Nullable String routeType;
+    private @Nullable String routeType;
 
     public Optional<String> routeType() {
-        return this.routeType == null ? Optional.empty() : Optional.ofNullable(this.routeType);
+        return Optional.ofNullable(this.routeType);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startAddress")
-      private final @Nullable String startAddress;
+    private @Nullable String startAddress;
 
     public Optional<String> startAddress() {
-        return this.startAddress == null ? Optional.empty() : Optional.ofNullable(this.startAddress);
+        return Optional.ofNullable(this.startAddress);
     }
 
     /**
@@ -94,100 +94,83 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VnetRouteResponse(
-        @Nullable String endAddress,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String routeType,
-        @Nullable String startAddress,
-        String type) {
-        this.endAddress = endAddress;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.routeType = routeType;
-        this.startAddress = startAddress;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VnetRouteResponse() {}
 
-    private VnetRouteResponse() {
-        this.endAddress = null;
-        this.id = null;
-        this.kind = null;
-        this.name = null;
-        this.routeType = null;
-        this.startAddress = null;
-        this.type = null;
+    private VnetRouteResponse(VnetRouteResponse $) {
+        this.endAddress = $.endAddress;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.routeType = $.routeType;
+        this.startAddress = $.startAddress;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VnetRouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endAddress;
-        private String id;
-        private @Nullable String kind;
-        private String name;
-        private @Nullable String routeType;
-        private @Nullable String startAddress;
-        private String type;
+        private VnetRouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VnetRouteResponse();
         }
 
         public Builder(VnetRouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endAddress = defaults.endAddress;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.routeType = defaults.routeType;
-    	      this.startAddress = defaults.startAddress;
-    	      this.type = defaults.type;
+            $ = new VnetRouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endAddress(@Nullable String endAddress) {
-            this.endAddress = endAddress;
+            $.endAddress = endAddress;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder routeType(@Nullable String routeType) {
-            this.routeType = routeType;
+            $.routeType = routeType;
             return this;
         }
+
         public Builder startAddress(@Nullable String startAddress) {
-            this.startAddress = startAddress;
+            $.startAddress = startAddress;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VnetRouteResponse build() {
-            return new VnetRouteResponse(endAddress, id, kind, name, routeType, startAddress, type);
+        }
+
+        public VnetRouteResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

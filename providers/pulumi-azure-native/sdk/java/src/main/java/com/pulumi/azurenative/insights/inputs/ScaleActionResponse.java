@@ -24,7 +24,7 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cooldown", required=true)
-      private final String cooldown;
+    private String cooldown;
 
     public String cooldown() {
         return this.cooldown;
@@ -35,7 +35,7 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -46,7 +46,7 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -57,73 +57,66 @@ public final class ScaleActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ScaleActionResponse(
-        String cooldown,
-        String direction,
-        String type,
-        @Nullable String value) {
-        this.cooldown = Objects.requireNonNull(cooldown, "expected parameter 'cooldown' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Codegen.stringProp("value").arg(value).def("1").getNullable();
-    }
+    private ScaleActionResponse() {}
 
-    private ScaleActionResponse() {
-        this.cooldown = null;
-        this.direction = null;
-        this.type = null;
-        this.value = null;
+    private ScaleActionResponse(ScaleActionResponse $) {
+        this.cooldown = $.cooldown;
+        this.direction = $.direction;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cooldown;
-        private String direction;
-        private String type;
-        private @Nullable String value;
+        private ScaleActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleActionResponse();
         }
 
         public Builder(ScaleActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cooldown = defaults.cooldown;
-    	      this.direction = defaults.direction;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ScaleActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cooldown(String cooldown) {
-            this.cooldown = Objects.requireNonNull(cooldown);
+            $.cooldown = cooldown;
             return this;
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ScaleActionResponse build() {
-            return new ScaleActionResponse(cooldown, direction, type, value);
+        }
+
+        public ScaleActionResponse build() {
+            $.cooldown = Objects.requireNonNull($.cooldown, "expected parameter 'cooldown' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Codegen.stringProp("value").arg($.value).def("1").getNullable();
+            return $;
         }
     }
+
 }

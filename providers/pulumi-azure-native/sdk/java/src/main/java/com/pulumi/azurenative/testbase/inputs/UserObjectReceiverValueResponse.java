@@ -24,48 +24,48 @@ public final class UserObjectReceiverValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="userObjectIds")
-      private final @Nullable List<String> userObjectIds;
+    private @Nullable List<String> userObjectIds;
 
-    public List<String> userObjectIds() {
-        return this.userObjectIds == null ? List.of() : this.userObjectIds;
+    public Optional<List<String>> userObjectIds() {
+        return Optional.ofNullable(this.userObjectIds);
     }
 
-    public UserObjectReceiverValueResponse(@Nullable List<String> userObjectIds) {
-        this.userObjectIds = userObjectIds;
-    }
+    private UserObjectReceiverValueResponse() {}
 
-    private UserObjectReceiverValueResponse() {
-        this.userObjectIds = List.of();
+    private UserObjectReceiverValueResponse(UserObjectReceiverValueResponse $) {
+        this.userObjectIds = $.userObjectIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserObjectReceiverValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> userObjectIds;
+        private UserObjectReceiverValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserObjectReceiverValueResponse();
         }
 
         public Builder(UserObjectReceiverValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userObjectIds = defaults.userObjectIds;
+            $ = new UserObjectReceiverValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userObjectIds(@Nullable List<String> userObjectIds) {
-            this.userObjectIds = userObjectIds;
+            $.userObjectIds = userObjectIds;
             return this;
         }
+
         public Builder userObjectIds(String... userObjectIds) {
             return userObjectIds(List.of(userObjectIds));
-        }        public UserObjectReceiverValueResponse build() {
-            return new UserObjectReceiverValueResponse(userObjectIds);
+        }
+
+        public UserObjectReceiverValueResponse build() {
+            return $;
         }
     }
+
 }

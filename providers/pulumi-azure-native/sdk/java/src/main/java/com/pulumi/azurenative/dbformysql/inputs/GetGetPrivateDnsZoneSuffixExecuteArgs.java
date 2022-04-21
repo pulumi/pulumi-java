@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.dbformysql.inputs;
 
-import java.util.Objects;
+
 
 
 public final class GetGetPrivateDnsZoneSuffixExecuteArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetGetPrivateDnsZoneSuffixExecuteArgs Empty = new GetGetPrivateDnsZoneSuffixExecuteArgs();
 
-    public GetGetPrivateDnsZoneSuffixExecuteArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GetGetPrivateDnsZoneSuffixExecuteArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GetGetPrivateDnsZoneSuffixExecuteArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GetGetPrivateDnsZoneSuffixExecuteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GetGetPrivateDnsZoneSuffixExecuteArgs();
         }
         public GetGetPrivateDnsZoneSuffixExecuteArgs build() {
-            return new GetGetPrivateDnsZoneSuffixExecuteArgs();
+            return $;
         }
     }
+
 }

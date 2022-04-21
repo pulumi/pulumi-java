@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApiVersionConstraintArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="minApiVersion")
-      private final @Nullable Output<String> minApiVersion;
+    private @Nullable Output<String> minApiVersion;
 
-    public Output<String> minApiVersion() {
-        return this.minApiVersion == null ? Codegen.empty() : this.minApiVersion;
+    public Optional<Output<String>> minApiVersion() {
+        return Optional.ofNullable(this.minApiVersion);
     }
 
-    public ApiVersionConstraintArgs(@Nullable Output<String> minApiVersion) {
-        this.minApiVersion = minApiVersion;
-    }
+    private ApiVersionConstraintArgs() {}
 
-    private ApiVersionConstraintArgs() {
-        this.minApiVersion = Codegen.empty();
+    private ApiVersionConstraintArgs(ApiVersionConstraintArgs $) {
+        this.minApiVersion = $.minApiVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiVersionConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minApiVersion;
+        private ApiVersionConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiVersionConstraintArgs();
         }
 
         public Builder(ApiVersionConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minApiVersion = defaults.minApiVersion;
+            $ = new ApiVersionConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minApiVersion(@Nullable Output<String> minApiVersion) {
-            this.minApiVersion = minApiVersion;
+            $.minApiVersion = minApiVersion;
             return this;
         }
-        public Builder minApiVersion(@Nullable String minApiVersion) {
-            this.minApiVersion = Codegen.ofNullable(minApiVersion);
-            return this;
-        }        public ApiVersionConstraintArgs build() {
-            return new ApiVersionConstraintArgs(minApiVersion);
+
+        public Builder minApiVersion(String minApiVersion) {
+            return minApiVersion(Output.of(minApiVersion));
+        }
+
+        public ApiVersionConstraintArgs build() {
+            return $;
         }
     }
+
 }

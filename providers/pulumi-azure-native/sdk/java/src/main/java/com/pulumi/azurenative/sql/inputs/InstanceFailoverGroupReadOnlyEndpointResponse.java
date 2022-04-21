@@ -23,45 +23,44 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse extends com.pul
      * 
      */
     @Import(name="failoverPolicy")
-      private final @Nullable String failoverPolicy;
+    private @Nullable String failoverPolicy;
 
     public Optional<String> failoverPolicy() {
-        return this.failoverPolicy == null ? Optional.empty() : Optional.ofNullable(this.failoverPolicy);
+        return Optional.ofNullable(this.failoverPolicy);
     }
 
-    public InstanceFailoverGroupReadOnlyEndpointResponse(@Nullable String failoverPolicy) {
-        this.failoverPolicy = failoverPolicy;
-    }
+    private InstanceFailoverGroupReadOnlyEndpointResponse() {}
 
-    private InstanceFailoverGroupReadOnlyEndpointResponse() {
-        this.failoverPolicy = null;
+    private InstanceFailoverGroupReadOnlyEndpointResponse(InstanceFailoverGroupReadOnlyEndpointResponse $) {
+        this.failoverPolicy = $.failoverPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFailoverGroupReadOnlyEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String failoverPolicy;
+        private InstanceFailoverGroupReadOnlyEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFailoverGroupReadOnlyEndpointResponse();
         }
 
         public Builder(InstanceFailoverGroupReadOnlyEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverPolicy = defaults.failoverPolicy;
+            $ = new InstanceFailoverGroupReadOnlyEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverPolicy(@Nullable String failoverPolicy) {
-            this.failoverPolicy = failoverPolicy;
+            $.failoverPolicy = failoverPolicy;
             return this;
-        }        public InstanceFailoverGroupReadOnlyEndpointResponse build() {
-            return new InstanceFailoverGroupReadOnlyEndpointResponse(failoverPolicy);
+        }
+
+        public InstanceFailoverGroupReadOnlyEndpointResponse build() {
+            return $;
         }
     }
+
 }

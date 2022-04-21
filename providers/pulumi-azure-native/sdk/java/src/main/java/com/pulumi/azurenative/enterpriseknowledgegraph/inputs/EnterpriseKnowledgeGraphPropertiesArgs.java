@@ -5,10 +5,10 @@ package com.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public EnterpriseKnowledgeGraphPropertiesArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<String> provisioningState) {
-        this.description = description;
-        this.metadata = metadata;
-        this.provisioningState = provisioningState;
-    }
+    private EnterpriseKnowledgeGraphPropertiesArgs() {}
 
-    private EnterpriseKnowledgeGraphPropertiesArgs() {
-        this.description = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.provisioningState = Codegen.empty();
+    private EnterpriseKnowledgeGraphPropertiesArgs(EnterpriseKnowledgeGraphPropertiesArgs $) {
+        this.description = $.description;
+        this.metadata = $.metadata;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseKnowledgeGraphPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<String> provisioningState;
+        private EnterpriseKnowledgeGraphPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseKnowledgeGraphPropertiesArgs();
         }
 
         public Builder(EnterpriseKnowledgeGraphPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.metadata = defaults.metadata;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new EnterpriseKnowledgeGraphPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
-        }        public EnterpriseKnowledgeGraphPropertiesArgs build() {
-            return new EnterpriseKnowledgeGraphPropertiesArgs(description, metadata, provisioningState);
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
+        }
+
+        public EnterpriseKnowledgeGraphPropertiesArgs build() {
+            return $;
         }
     }
+
 }

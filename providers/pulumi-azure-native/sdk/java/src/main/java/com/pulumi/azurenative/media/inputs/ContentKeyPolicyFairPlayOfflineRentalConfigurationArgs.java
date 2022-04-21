@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
      * 
      */
     @Import(name="playbackDurationSeconds", required=true)
-      private final Output<Double> playbackDurationSeconds;
+    private Output<Double> playbackDurationSeconds;
 
     public Output<Double> playbackDurationSeconds() {
         return this.playbackDurationSeconds;
@@ -30,63 +29,60 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
      * 
      */
     @Import(name="storageDurationSeconds", required=true)
-      private final Output<Double> storageDurationSeconds;
+    private Output<Double> storageDurationSeconds;
 
     public Output<Double> storageDurationSeconds() {
         return this.storageDurationSeconds;
     }
 
-    public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(
-        Output<Double> playbackDurationSeconds,
-        Output<Double> storageDurationSeconds) {
-        this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds, "expected parameter 'playbackDurationSeconds' to be non-null");
-        this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds, "expected parameter 'storageDurationSeconds' to be non-null");
-    }
+    private ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs() {}
 
-    private ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs() {
-        this.playbackDurationSeconds = Codegen.empty();
-        this.storageDurationSeconds = Codegen.empty();
+    private ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs $) {
+        this.playbackDurationSeconds = $.playbackDurationSeconds;
+        this.storageDurationSeconds = $.storageDurationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> playbackDurationSeconds;
-        private Output<Double> storageDurationSeconds;
+        private ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs();
         }
 
         public Builder(ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.playbackDurationSeconds = defaults.playbackDurationSeconds;
-    	      this.storageDurationSeconds = defaults.storageDurationSeconds;
+            $ = new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder playbackDurationSeconds(Output<Double> playbackDurationSeconds) {
-            this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
+            $.playbackDurationSeconds = playbackDurationSeconds;
             return this;
         }
+
         public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
-            this.playbackDurationSeconds = Output.of(Objects.requireNonNull(playbackDurationSeconds));
-            return this;
+            return playbackDurationSeconds(Output.of(playbackDurationSeconds));
         }
+
         public Builder storageDurationSeconds(Output<Double> storageDurationSeconds) {
-            this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
+            $.storageDurationSeconds = storageDurationSeconds;
             return this;
         }
+
         public Builder storageDurationSeconds(Double storageDurationSeconds) {
-            this.storageDurationSeconds = Output.of(Objects.requireNonNull(storageDurationSeconds));
-            return this;
-        }        public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs build() {
-            return new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs(playbackDurationSeconds, storageDurationSeconds);
+            return storageDurationSeconds(Output.of(storageDurationSeconds));
+        }
+
+        public ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs build() {
+            $.playbackDurationSeconds = Objects.requireNonNull($.playbackDurationSeconds, "expected parameter 'playbackDurationSeconds' to be non-null");
+            $.storageDurationSeconds = Objects.requireNonNull($.storageDurationSeconds, "expected parameter 'storageDurationSeconds' to be non-null");
+            return $;
         }
     }
+
 }

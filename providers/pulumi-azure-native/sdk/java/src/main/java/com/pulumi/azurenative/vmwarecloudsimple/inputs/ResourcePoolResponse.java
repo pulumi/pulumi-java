@@ -21,7 +21,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fullName", required=true)
-      private final String fullName;
+    private String fullName;
 
     public String fullName() {
         return this.fullName;
@@ -32,7 +32,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,7 +43,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -54,7 +54,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -65,7 +65,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="privateCloudId", required=true)
-      private final String privateCloudId;
+    private String privateCloudId;
 
     public String privateCloudId() {
         return this.privateCloudId;
@@ -76,91 +76,80 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourcePoolResponse(
-        String fullName,
-        String id,
-        String location,
-        String name,
-        String privateCloudId,
-        String type) {
-        this.fullName = Objects.requireNonNull(fullName, "expected parameter 'fullName' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateCloudId = Objects.requireNonNull(privateCloudId, "expected parameter 'privateCloudId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourcePoolResponse() {}
 
-    private ResourcePoolResponse() {
-        this.fullName = null;
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.privateCloudId = null;
-        this.type = null;
+    private ResourcePoolResponse(ResourcePoolResponse $) {
+        this.fullName = $.fullName;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.privateCloudId = $.privateCloudId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fullName;
-        private String id;
-        private String location;
-        private String name;
-        private String privateCloudId;
-        private String type;
+        private ResourcePoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePoolResponse();
         }
 
         public Builder(ResourcePoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullName = defaults.fullName;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.privateCloudId = defaults.privateCloudId;
-    	      this.type = defaults.type;
+            $ = new ResourcePoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fullName(String fullName) {
-            this.fullName = Objects.requireNonNull(fullName);
+            $.fullName = fullName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateCloudId(String privateCloudId) {
-            this.privateCloudId = Objects.requireNonNull(privateCloudId);
+            $.privateCloudId = privateCloudId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourcePoolResponse build() {
-            return new ResourcePoolResponse(fullName, id, location, name, privateCloudId, type);
+        }
+
+        public ResourcePoolResponse build() {
+            $.fullName = Objects.requireNonNull($.fullName, "expected parameter 'fullName' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateCloudId = Objects.requireNonNull($.privateCloudId, "expected parameter 'privateCloudId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

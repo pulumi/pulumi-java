@@ -24,10 +24,10 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Integer batchSize;
+    private @Nullable Integer batchSize;
 
     public Optional<Integer> batchSize() {
-        return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="messageCount")
-      private final @Nullable Integer messageCount;
+    private @Nullable Integer messageCount;
 
     public Optional<Integer> messageCount() {
-        return this.messageCount == null ? Optional.empty() : Optional.ofNullable(this.messageCount);
+        return Optional.ofNullable(this.messageCount);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable WorkflowTriggerRecurrenceResponse recurrence;
+    private @Nullable WorkflowTriggerRecurrenceResponse recurrence;
 
     public Optional<WorkflowTriggerRecurrenceResponse> recurrence() {
-        return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
+        return Optional.ofNullable(this.recurrence);
     }
 
-    public BatchReleaseCriteriaResponse(
-        @Nullable Integer batchSize,
-        @Nullable Integer messageCount,
-        @Nullable WorkflowTriggerRecurrenceResponse recurrence) {
-        this.batchSize = batchSize;
-        this.messageCount = messageCount;
-        this.recurrence = recurrence;
-    }
+    private BatchReleaseCriteriaResponse() {}
 
-    private BatchReleaseCriteriaResponse() {
-        this.batchSize = null;
-        this.messageCount = null;
-        this.recurrence = null;
+    private BatchReleaseCriteriaResponse(BatchReleaseCriteriaResponse $) {
+        this.batchSize = $.batchSize;
+        this.messageCount = $.messageCount;
+        this.recurrence = $.recurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchReleaseCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer batchSize;
-        private @Nullable Integer messageCount;
-        private @Nullable WorkflowTriggerRecurrenceResponse recurrence;
+        private BatchReleaseCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchReleaseCriteriaResponse();
         }
 
         public Builder(BatchReleaseCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchSize = defaults.batchSize;
-    	      this.messageCount = defaults.messageCount;
-    	      this.recurrence = defaults.recurrence;
+            $ = new BatchReleaseCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
+
         public Builder messageCount(@Nullable Integer messageCount) {
-            this.messageCount = messageCount;
+            $.messageCount = messageCount;
             return this;
         }
+
         public Builder recurrence(@Nullable WorkflowTriggerRecurrenceResponse recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
-        }        public BatchReleaseCriteriaResponse build() {
-            return new BatchReleaseCriteriaResponse(batchSize, messageCount, recurrence);
+        }
+
+        public BatchReleaseCriteriaResponse build() {
+            return $;
         }
     }
+
 }

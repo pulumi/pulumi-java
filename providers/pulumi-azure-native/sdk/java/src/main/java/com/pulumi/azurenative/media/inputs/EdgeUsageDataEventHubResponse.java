@@ -19,10 +19,10 @@ public final class EdgeUsageDataEventHubResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class EdgeUsageDataEventHubResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class EdgeUsageDataEventHubResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="token")
-      private final @Nullable String token;
+    private @Nullable String token;
 
     public Optional<String> token() {
-        return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
+        return Optional.ofNullable(this.token);
     }
 
-    public EdgeUsageDataEventHubResponse(
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String token) {
-        this.name = name;
-        this.namespace = namespace;
-        this.token = token;
-    }
+    private EdgeUsageDataEventHubResponse() {}
 
-    private EdgeUsageDataEventHubResponse() {
-        this.name = null;
-        this.namespace = null;
-        this.token = null;
+    private EdgeUsageDataEventHubResponse(EdgeUsageDataEventHubResponse $) {
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeUsageDataEventHubResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String namespace;
-        private @Nullable String token;
+        private EdgeUsageDataEventHubResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeUsageDataEventHubResponse();
         }
 
         public Builder(EdgeUsageDataEventHubResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.token = defaults.token;
+            $ = new EdgeUsageDataEventHubResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
+
         public Builder token(@Nullable String token) {
-            this.token = token;
+            $.token = token;
             return this;
-        }        public EdgeUsageDataEventHubResponse build() {
-            return new EdgeUsageDataEventHubResponse(name, namespace, token);
+        }
+
+        public EdgeUsageDataEventHubResponse build() {
+            return $;
         }
     }
+
 }

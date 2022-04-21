@@ -22,7 +22,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionStatus", required=true)
-      private final String connectionStatus;
+    private String connectionStatus;
 
     public String connectionStatus() {
         return this.connectionStatus;
@@ -33,7 +33,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="egressBytesTransferred", required=true)
-      private final Double egressBytesTransferred;
+    private Double egressBytesTransferred;
 
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -44,7 +44,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ingressBytesTransferred", required=true)
-      private final Double ingressBytesTransferred;
+    private Double ingressBytesTransferred;
 
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -55,7 +55,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="lastConnectionEstablishedUtcTime", required=true)
-      private final String lastConnectionEstablishedUtcTime;
+    private String lastConnectionEstablishedUtcTime;
 
     public String lastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
@@ -66,82 +66,73 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tunnel", required=true)
-      private final String tunnel;
+    private String tunnel;
 
     public String tunnel() {
         return this.tunnel;
     }
 
-    public TunnelConnectionHealthResponse(
-        String connectionStatus,
-        Double egressBytesTransferred,
-        Double ingressBytesTransferred,
-        String lastConnectionEstablishedUtcTime,
-        String tunnel) {
-        this.connectionStatus = Objects.requireNonNull(connectionStatus, "expected parameter 'connectionStatus' to be non-null");
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
-        this.lastConnectionEstablishedUtcTime = Objects.requireNonNull(lastConnectionEstablishedUtcTime, "expected parameter 'lastConnectionEstablishedUtcTime' to be non-null");
-        this.tunnel = Objects.requireNonNull(tunnel, "expected parameter 'tunnel' to be non-null");
-    }
+    private TunnelConnectionHealthResponse() {}
 
-    private TunnelConnectionHealthResponse() {
-        this.connectionStatus = null;
-        this.egressBytesTransferred = null;
-        this.ingressBytesTransferred = null;
-        this.lastConnectionEstablishedUtcTime = null;
-        this.tunnel = null;
+    private TunnelConnectionHealthResponse(TunnelConnectionHealthResponse $) {
+        this.connectionStatus = $.connectionStatus;
+        this.egressBytesTransferred = $.egressBytesTransferred;
+        this.ingressBytesTransferred = $.ingressBytesTransferred;
+        this.lastConnectionEstablishedUtcTime = $.lastConnectionEstablishedUtcTime;
+        this.tunnel = $.tunnel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TunnelConnectionHealthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionStatus;
-        private Double egressBytesTransferred;
-        private Double ingressBytesTransferred;
-        private String lastConnectionEstablishedUtcTime;
-        private String tunnel;
+        private TunnelConnectionHealthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TunnelConnectionHealthResponse();
         }
 
         public Builder(TunnelConnectionHealthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionStatus = defaults.connectionStatus;
-    	      this.egressBytesTransferred = defaults.egressBytesTransferred;
-    	      this.ingressBytesTransferred = defaults.ingressBytesTransferred;
-    	      this.lastConnectionEstablishedUtcTime = defaults.lastConnectionEstablishedUtcTime;
-    	      this.tunnel = defaults.tunnel;
+            $ = new TunnelConnectionHealthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionStatus(String connectionStatus) {
-            this.connectionStatus = Objects.requireNonNull(connectionStatus);
+            $.connectionStatus = connectionStatus;
             return this;
         }
+
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
-            this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
+            $.egressBytesTransferred = egressBytesTransferred;
             return this;
         }
+
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
-            this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
+            $.ingressBytesTransferred = ingressBytesTransferred;
             return this;
         }
+
         public Builder lastConnectionEstablishedUtcTime(String lastConnectionEstablishedUtcTime) {
-            this.lastConnectionEstablishedUtcTime = Objects.requireNonNull(lastConnectionEstablishedUtcTime);
+            $.lastConnectionEstablishedUtcTime = lastConnectionEstablishedUtcTime;
             return this;
         }
+
         public Builder tunnel(String tunnel) {
-            this.tunnel = Objects.requireNonNull(tunnel);
+            $.tunnel = tunnel;
             return this;
-        }        public TunnelConnectionHealthResponse build() {
-            return new TunnelConnectionHealthResponse(connectionStatus, egressBytesTransferred, ingressBytesTransferred, lastConnectionEstablishedUtcTime, tunnel);
+        }
+
+        public TunnelConnectionHealthResponse build() {
+            $.connectionStatus = Objects.requireNonNull($.connectionStatus, "expected parameter 'connectionStatus' to be non-null");
+            $.egressBytesTransferred = Objects.requireNonNull($.egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
+            $.ingressBytesTransferred = Objects.requireNonNull($.ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
+            $.lastConnectionEstablishedUtcTime = Objects.requireNonNull($.lastConnectionEstablishedUtcTime, "expected parameter 'lastConnectionEstablishedUtcTime' to be non-null");
+            $.tunnel = Objects.requireNonNull($.tunnel, "expected parameter 'tunnel' to be non-null");
+            return $;
         }
     }
+
 }

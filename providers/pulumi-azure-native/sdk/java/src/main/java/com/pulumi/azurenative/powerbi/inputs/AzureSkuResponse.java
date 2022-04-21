@@ -17,7 +17,7 @@ public final class AzureSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class AzureSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
-    public AzureSkuResponse(
-        String name,
-        String tier) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private AzureSkuResponse() {}
 
-    private AzureSkuResponse() {
-        this.name = null;
-        this.tier = null;
+    private AzureSkuResponse(AzureSkuResponse $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String tier;
+        private AzureSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSkuResponse();
         }
 
         public Builder(AzureSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new AzureSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
-        }        public AzureSkuResponse build() {
-            return new AzureSkuResponse(name, tier);
+        }
+
+        public AzureSkuResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

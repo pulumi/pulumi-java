@@ -20,6 +20,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,10 +37,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<Object> bucketName;
+    private Output<Object> bucketName;
 
     public Output<Object> bucketName() {
         return this.bucketName;
@@ -58,10 +59,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="compression")
-      private final @Nullable Output<DatasetCompressionArgs> compression;
+    private @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Output<DatasetCompressionArgs> compression() {
-        return this.compression == null ? Codegen.empty() : this.compression;
+    public Optional<Output<DatasetCompressionArgs>> compression() {
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<DatasetFolderArgs> folder;
+    private @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<DatasetFolderArgs>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<Object> format;
+    private @Nullable Output<Object> format;
 
-    public Output<Object> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<Object>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<Object> key;
+    private @Nullable Output<Object> key;
 
-    public Output<Object> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<Object>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
@@ -124,10 +125,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="modifiedDatetimeEnd")
-      private final @Nullable Output<Object> modifiedDatetimeEnd;
+    private @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> modifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
+    public Optional<Output<Object>> modifiedDatetimeEnd() {
+        return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
     /**
@@ -135,10 +136,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="modifiedDatetimeStart")
-      private final @Nullable Output<Object> modifiedDatetimeStart;
+    private @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> modifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
+    public Optional<Output<Object>> modifiedDatetimeStart() {
+        return Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
     /**
@@ -146,10 +147,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -157,10 +158,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<Object> prefix;
+    private @Nullable Output<Object> prefix;
 
-    public Output<Object> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<Object>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -168,10 +169,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<Object> schema;
+    private @Nullable Output<Object> schema;
 
-    public Output<Object> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<Object>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -179,10 +180,10 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="structure")
-      private final @Nullable Output<Object> structure;
+    private @Nullable Output<Object> structure;
 
-    public Output<Object> structure() {
-        return this.structure == null ? Codegen.empty() : this.structure;
+    public Optional<Output<Object>> structure() {
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -191,7 +192,7 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -202,248 +203,205 @@ public final class AmazonS3DatasetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Object> version;
+    private @Nullable Output<Object> version;
 
-    public Output<Object> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Object>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public AmazonS3DatasetArgs(
-        @Nullable Output<List<Object>> annotations,
-        Output<Object> bucketName,
-        @Nullable Output<DatasetCompressionArgs> compression,
-        @Nullable Output<String> description,
-        @Nullable Output<DatasetFolderArgs> folder,
-        @Nullable Output<Object> format,
-        @Nullable Output<Object> key,
-        Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Object> modifiedDatetimeEnd,
-        @Nullable Output<Object> modifiedDatetimeStart,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Object> prefix,
-        @Nullable Output<Object> schema,
-        @Nullable Output<Object> structure,
-        Output<String> type,
-        @Nullable Output<Object> version) {
-        this.annotations = annotations;
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.compression = compression;
-        this.description = description;
-        this.folder = folder;
-        this.format = format;
-        this.key = key;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.modifiedDatetimeEnd = modifiedDatetimeEnd;
-        this.modifiedDatetimeStart = modifiedDatetimeStart;
-        this.parameters = parameters;
-        this.prefix = prefix;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.version = version;
-    }
+    private AmazonS3DatasetArgs() {}
 
-    private AmazonS3DatasetArgs() {
-        this.annotations = Codegen.empty();
-        this.bucketName = Codegen.empty();
-        this.compression = Codegen.empty();
-        this.description = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.format = Codegen.empty();
-        this.key = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.modifiedDatetimeEnd = Codegen.empty();
-        this.modifiedDatetimeStart = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.structure = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private AmazonS3DatasetArgs(AmazonS3DatasetArgs $) {
+        this.annotations = $.annotations;
+        this.bucketName = $.bucketName;
+        this.compression = $.compression;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.format = $.format;
+        this.key = $.key;
+        this.linkedServiceName = $.linkedServiceName;
+        this.modifiedDatetimeEnd = $.modifiedDatetimeEnd;
+        this.modifiedDatetimeStart = $.modifiedDatetimeStart;
+        this.parameters = $.parameters;
+        this.prefix = $.prefix;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonS3DatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private Output<Object> bucketName;
-        private @Nullable Output<DatasetCompressionArgs> compression;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DatasetFolderArgs> folder;
-        private @Nullable Output<Object> format;
-        private @Nullable Output<Object> key;
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Object> modifiedDatetimeEnd;
-        private @Nullable Output<Object> modifiedDatetimeStart;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Object> prefix;
-        private @Nullable Output<Object> schema;
-        private @Nullable Output<Object> structure;
-        private Output<String> type;
-        private @Nullable Output<Object> version;
+        private AmazonS3DatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonS3DatasetArgs();
         }
 
         public Builder(AmazonS3DatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.bucketName = defaults.bucketName;
-    	      this.compression = defaults.compression;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.modifiedDatetimeEnd = defaults.modifiedDatetimeEnd;
-    	      this.modifiedDatetimeStart = defaults.modifiedDatetimeStart;
-    	      this.parameters = defaults.parameters;
-    	      this.prefix = defaults.prefix;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new AmazonS3DatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder bucketName(Output<Object> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(Object bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder compression(@Nullable Output<DatasetCompressionArgs> compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
-        public Builder compression(@Nullable DatasetCompressionArgs compression) {
-            this.compression = Codegen.ofNullable(compression);
-            return this;
+
+        public Builder compression(DatasetCompressionArgs compression) {
+            return compression(Output.of(compression));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(DatasetFolderArgs folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder format(@Nullable Output<Object> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable Object format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(Object format) {
+            return format(Output.of(format));
         }
+
         public Builder key(@Nullable Output<Object> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable Object key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(Object key) {
+            return key(Output.of(key));
         }
+
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = modifiedDatetimeEnd;
+            $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
-        public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = Codegen.ofNullable(modifiedDatetimeEnd);
-            return this;
+
+        public Builder modifiedDatetimeEnd(Object modifiedDatetimeEnd) {
+            return modifiedDatetimeEnd(Output.of(modifiedDatetimeEnd));
         }
+
         public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = modifiedDatetimeStart;
+            $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
-        public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = Codegen.ofNullable(modifiedDatetimeStart);
-            return this;
+
+        public Builder modifiedDatetimeStart(Object modifiedDatetimeStart) {
+            return modifiedDatetimeStart(Output.of(modifiedDatetimeStart));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder prefix(@Nullable Output<Object> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable Object prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(Object prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder schema(@Nullable Output<Object> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable Object schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(Object schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder structure(@Nullable Output<Object> structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
-        public Builder structure(@Nullable Object structure) {
-            this.structure = Codegen.ofNullable(structure);
-            return this;
+
+        public Builder structure(Object structure) {
+            return structure(Output.of(structure));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<Object> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Object version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public AmazonS3DatasetArgs build() {
-            return new AmazonS3DatasetArgs(annotations, bucketName, compression, description, folder, format, key, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, prefix, schema, structure, type, version);
+
+        public Builder version(Object version) {
+            return version(Output.of(version));
+        }
+
+        public AmazonS3DatasetArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

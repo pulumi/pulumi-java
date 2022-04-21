@@ -26,10 +26,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Integer cpu;
+    private @Nullable Integer cpu;
 
     public Optional<Integer> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Map<String,String> environmentVariables;
+    private @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> environmentVariables() {
-        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
+    public Optional<Map<String,String>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="jvmOptions")
-      private final @Nullable String jvmOptions;
+    private @Nullable String jvmOptions;
 
     public Optional<String> jvmOptions() {
-        return this.jvmOptions == null ? Optional.empty() : Optional.ofNullable(this.jvmOptions);
+        return Optional.ofNullable(this.jvmOptions);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="memoryInGB")
-      private final @Nullable Integer memoryInGB;
+    private @Nullable Integer memoryInGB;
 
     public Optional<Integer> memoryInGB() {
-        return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
+        return Optional.ofNullable(this.memoryInGB);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="netCoreMainEntryPath")
-      private final @Nullable String netCoreMainEntryPath;
+    private @Nullable String netCoreMainEntryPath;
 
     public Optional<String> netCoreMainEntryPath() {
-        return this.netCoreMainEntryPath == null ? Optional.empty() : Optional.ofNullable(this.netCoreMainEntryPath);
+        return Optional.ofNullable(this.netCoreMainEntryPath);
     }
 
     /**
@@ -81,91 +81,77 @@ public final class DeploymentSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable String runtimeVersion;
+    private @Nullable String runtimeVersion;
 
     public Optional<String> runtimeVersion() {
-        return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
-    public DeploymentSettingsResponse(
-        @Nullable Integer cpu,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String jvmOptions,
-        @Nullable Integer memoryInGB,
-        @Nullable String netCoreMainEntryPath,
-        @Nullable String runtimeVersion) {
-        this.cpu = Codegen.integerProp("cpu").arg(cpu).def(1).getNullable();
-        this.environmentVariables = environmentVariables;
-        this.jvmOptions = jvmOptions;
-        this.memoryInGB = Codegen.integerProp("memoryInGB").arg(memoryInGB).def(1).getNullable();
-        this.netCoreMainEntryPath = netCoreMainEntryPath;
-        this.runtimeVersion = Codegen.stringProp("runtimeVersion").arg(runtimeVersion).def("Java_8").getNullable();
-    }
+    private DeploymentSettingsResponse() {}
 
-    private DeploymentSettingsResponse() {
-        this.cpu = null;
-        this.environmentVariables = Map.of();
-        this.jvmOptions = null;
-        this.memoryInGB = null;
-        this.netCoreMainEntryPath = null;
-        this.runtimeVersion = null;
+    private DeploymentSettingsResponse(DeploymentSettingsResponse $) {
+        this.cpu = $.cpu;
+        this.environmentVariables = $.environmentVariables;
+        this.jvmOptions = $.jvmOptions;
+        this.memoryInGB = $.memoryInGB;
+        this.netCoreMainEntryPath = $.netCoreMainEntryPath;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer cpu;
-        private @Nullable Map<String,String> environmentVariables;
-        private @Nullable String jvmOptions;
-        private @Nullable Integer memoryInGB;
-        private @Nullable String netCoreMainEntryPath;
-        private @Nullable String runtimeVersion;
+        private DeploymentSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentSettingsResponse();
         }
 
         public Builder(DeploymentSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.jvmOptions = defaults.jvmOptions;
-    	      this.memoryInGB = defaults.memoryInGB;
-    	      this.netCoreMainEntryPath = defaults.netCoreMainEntryPath;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new DeploymentSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
+
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder jvmOptions(@Nullable String jvmOptions) {
-            this.jvmOptions = jvmOptions;
+            $.jvmOptions = jvmOptions;
             return this;
         }
+
         public Builder memoryInGB(@Nullable Integer memoryInGB) {
-            this.memoryInGB = memoryInGB;
+            $.memoryInGB = memoryInGB;
             return this;
         }
+
         public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
-            this.netCoreMainEntryPath = netCoreMainEntryPath;
+            $.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
+
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
-        }        public DeploymentSettingsResponse build() {
-            return new DeploymentSettingsResponse(cpu, environmentVariables, jvmOptions, memoryInGB, netCoreMainEntryPath, runtimeVersion);
+        }
+
+        public DeploymentSettingsResponse build() {
+            $.cpu = Codegen.integerProp("cpu").arg($.cpu).def(1).getNullable();
+            $.memoryInGB = Codegen.integerProp("memoryInGB").arg($.memoryInGB).def(1).getNullable();
+            $.runtimeVersion = Codegen.stringProp("runtimeVersion").arg($.runtimeVersion).def("Java_8").getNullable();
+            return $;
         }
     }
+
 }

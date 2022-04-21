@@ -7,9 +7,9 @@ import com.pulumi.azurenative.apimanagement.enums.VersioningScheme;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -66,10 +66,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionHeaderName")
-      private final @Nullable Output<String> versionHeaderName;
+    private @Nullable Output<String> versionHeaderName;
 
-    public Output<String> versionHeaderName() {
-        return this.versionHeaderName == null ? Codegen.empty() : this.versionHeaderName;
+    public Optional<Output<String>> versionHeaderName() {
+        return Optional.ofNullable(this.versionHeaderName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionQueryName")
-      private final @Nullable Output<String> versionQueryName;
+    private @Nullable Output<String> versionQueryName;
 
-    public Output<String> versionQueryName() {
-        return this.versionQueryName == null ? Codegen.empty() : this.versionQueryName;
+    public Optional<Output<String>> versionQueryName() {
+        return Optional.ofNullable(this.versionQueryName);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionSetId")
-      private final @Nullable Output<String> versionSetId;
+    private @Nullable Output<String> versionSetId;
 
-    public Output<String> versionSetId() {
-        return this.versionSetId == null ? Codegen.empty() : this.versionSetId;
+    public Optional<Output<String>> versionSetId() {
+        return Optional.ofNullable(this.versionSetId);
     }
 
     /**
@@ -99,141 +99,122 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versioningScheme", required=true)
-      private final Output<Either<String,VersioningScheme>> versioningScheme;
+    private Output<Either<String,VersioningScheme>> versioningScheme;
 
     public Output<Either<String,VersioningScheme>> versioningScheme() {
         return this.versioningScheme;
     }
 
-    public ApiVersionSetArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> versionHeaderName,
-        @Nullable Output<String> versionQueryName,
-        @Nullable Output<String> versionSetId,
-        Output<Either<String,VersioningScheme>> versioningScheme) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.versionHeaderName = versionHeaderName;
-        this.versionQueryName = versionQueryName;
-        this.versionSetId = versionSetId;
-        this.versioningScheme = Objects.requireNonNull(versioningScheme, "expected parameter 'versioningScheme' to be non-null");
-    }
+    private ApiVersionSetArgs() {}
 
-    private ApiVersionSetArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.versionHeaderName = Codegen.empty();
-        this.versionQueryName = Codegen.empty();
-        this.versionSetId = Codegen.empty();
-        this.versioningScheme = Codegen.empty();
+    private ApiVersionSetArgs(ApiVersionSetArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.versionHeaderName = $.versionHeaderName;
+        this.versionQueryName = $.versionQueryName;
+        this.versionSetId = $.versionSetId;
+        this.versioningScheme = $.versioningScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiVersionSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> versionHeaderName;
-        private @Nullable Output<String> versionQueryName;
-        private @Nullable Output<String> versionSetId;
-        private Output<Either<String,VersioningScheme>> versioningScheme;
+        private ApiVersionSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiVersionSetArgs();
         }
 
         public Builder(ApiVersionSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.versionHeaderName = defaults.versionHeaderName;
-    	      this.versionQueryName = defaults.versionQueryName;
-    	      this.versionSetId = defaults.versionSetId;
-    	      this.versioningScheme = defaults.versioningScheme;
+            $ = new ApiVersionSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
-            this.versionHeaderName = versionHeaderName;
+            $.versionHeaderName = versionHeaderName;
             return this;
         }
-        public Builder versionHeaderName(@Nullable String versionHeaderName) {
-            this.versionHeaderName = Codegen.ofNullable(versionHeaderName);
-            return this;
+
+        public Builder versionHeaderName(String versionHeaderName) {
+            return versionHeaderName(Output.of(versionHeaderName));
         }
+
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
-            this.versionQueryName = versionQueryName;
+            $.versionQueryName = versionQueryName;
             return this;
         }
-        public Builder versionQueryName(@Nullable String versionQueryName) {
-            this.versionQueryName = Codegen.ofNullable(versionQueryName);
-            return this;
+
+        public Builder versionQueryName(String versionQueryName) {
+            return versionQueryName(Output.of(versionQueryName));
         }
+
         public Builder versionSetId(@Nullable Output<String> versionSetId) {
-            this.versionSetId = versionSetId;
+            $.versionSetId = versionSetId;
             return this;
         }
-        public Builder versionSetId(@Nullable String versionSetId) {
-            this.versionSetId = Codegen.ofNullable(versionSetId);
-            return this;
+
+        public Builder versionSetId(String versionSetId) {
+            return versionSetId(Output.of(versionSetId));
         }
+
         public Builder versioningScheme(Output<Either<String,VersioningScheme>> versioningScheme) {
-            this.versioningScheme = Objects.requireNonNull(versioningScheme);
+            $.versioningScheme = versioningScheme;
             return this;
         }
+
         public Builder versioningScheme(Either<String,VersioningScheme> versioningScheme) {
-            this.versioningScheme = Output.of(Objects.requireNonNull(versioningScheme));
-            return this;
-        }        public ApiVersionSetArgs build() {
-            return new ApiVersionSetArgs(description, displayName, resourceGroupName, serviceName, versionHeaderName, versionQueryName, versionSetId, versioningScheme);
+            return versioningScheme(Output.of(versioningScheme));
+        }
+
+        public ApiVersionSetArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.versioningScheme = Objects.requireNonNull($.versioningScheme, "expected parameter 'versioningScheme' to be non-null");
+            return $;
         }
     }
+
 }

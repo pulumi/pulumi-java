@@ -18,7 +18,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -29,7 +29,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -41,7 +41,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -52,7 +52,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="sourceServer", required=true)
-      private final String sourceServer;
+    private String sourceServer;
 
     public String sourceServer() {
         return this.sourceServer;
@@ -63,7 +63,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="sourceServerVersion", required=true)
-      private final String sourceServerVersion;
+    private String sourceServerVersion;
 
     public String sourceServerVersion() {
         return this.sourceServerVersion;
@@ -74,7 +74,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -85,7 +85,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="targetServer", required=true)
-      private final String targetServer;
+    private String targetServer;
 
     public String targetServer() {
         return this.targetServer;
@@ -96,109 +96,94 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
-    public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(
-        String endedOn,
-        String id,
-        String resultType,
-        String sourceServer,
-        String sourceServerVersion,
-        String startedOn,
-        String targetServer,
-        String targetServerVersion) {
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.sourceServer = Objects.requireNonNull(sourceServer, "expected parameter 'sourceServer' to be non-null");
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.targetServer = Objects.requireNonNull(targetServer, "expected parameter 'targetServer' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-    }
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse() {}
 
-    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse() {
-        this.endedOn = null;
-        this.id = null;
-        this.resultType = null;
-        this.sourceServer = null;
-        this.sourceServerVersion = null;
-        this.startedOn = null;
-        this.targetServer = null;
-        this.targetServerVersion = null;
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse $) {
+        this.endedOn = $.endedOn;
+        this.id = $.id;
+        this.resultType = $.resultType;
+        this.sourceServer = $.sourceServer;
+        this.sourceServerVersion = $.sourceServerVersion;
+        this.startedOn = $.startedOn;
+        this.targetServer = $.targetServer;
+        this.targetServerVersion = $.targetServerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endedOn;
-        private String id;
-        private String resultType;
-        private String sourceServer;
-        private String sourceServerVersion;
-        private String startedOn;
-        private String targetServer;
-        private String targetServerVersion;
+        private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse();
         }
 
         public Builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endedOn = defaults.endedOn;
-    	      this.id = defaults.id;
-    	      this.resultType = defaults.resultType;
-    	      this.sourceServer = defaults.sourceServer;
-    	      this.sourceServerVersion = defaults.sourceServerVersion;
-    	      this.startedOn = defaults.startedOn;
-    	      this.targetServer = defaults.targetServer;
-    	      this.targetServerVersion = defaults.targetServerVersion;
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder sourceServer(String sourceServer) {
-            this.sourceServer = Objects.requireNonNull(sourceServer);
+            $.sourceServer = sourceServer;
             return this;
         }
+
         public Builder sourceServerVersion(String sourceServerVersion) {
-            this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
+            $.sourceServerVersion = sourceServerVersion;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder targetServer(String targetServer) {
-            this.targetServer = Objects.requireNonNull(targetServer);
+            $.targetServer = targetServer;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
-        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse build() {
-            return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(endedOn, id, resultType, sourceServer, sourceServerVersion, startedOn, targetServer, targetServerVersion);
+        }
+
+        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse build() {
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.sourceServer = Objects.requireNonNull($.sourceServer, "expected parameter 'sourceServer' to be non-null");
+            $.sourceServerVersion = Objects.requireNonNull($.sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.targetServer = Objects.requireNonNull($.targetServer, "expected parameter 'targetServer' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            return $;
         }
     }
+
 }

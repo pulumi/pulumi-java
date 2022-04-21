@@ -23,10 +23,10 @@ public final class MasterProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class MasterProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public MasterProfileResponse(
-        @Nullable String subnetId,
-        @Nullable String vmSize) {
-        this.subnetId = subnetId;
-        this.vmSize = vmSize;
-    }
+    private MasterProfileResponse() {}
 
-    private MasterProfileResponse() {
-        this.subnetId = null;
-        this.vmSize = null;
+    private MasterProfileResponse(MasterProfileResponse $) {
+        this.subnetId = $.subnetId;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MasterProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String subnetId;
-        private @Nullable String vmSize;
+        private MasterProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MasterProfileResponse();
         }
 
         public Builder(MasterProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
-    	      this.vmSize = defaults.vmSize;
+            $ = new MasterProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public MasterProfileResponse build() {
-            return new MasterProfileResponse(subnetId, vmSize);
+        }
+
+        public MasterProfileResponse build() {
+            return $;
         }
     }
+
 }

@@ -11,6 +11,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="events", required=true)
-      private final Output<List<Object>> events;
+    private Output<List<Object>> events;
 
     public Output<List<Object>> events() {
         return this.events;
@@ -60,10 +61,10 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pipelines")
-      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+    private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
-        return this.pipelines == null ? Codegen.empty() : this.pipelines;
+    public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
+        return Optional.ofNullable(this.pipelines);
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -82,10 +83,10 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="subjectBeginsWith")
-      private final @Nullable Output<String> subjectBeginsWith;
+    private @Nullable Output<String> subjectBeginsWith;
 
-    public Output<String> subjectBeginsWith() {
-        return this.subjectBeginsWith == null ? Codegen.empty() : this.subjectBeginsWith;
+    public Optional<Output<String>> subjectBeginsWith() {
+        return Optional.ofNullable(this.subjectBeginsWith);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="subjectEndsWith")
-      private final @Nullable Output<String> subjectEndsWith;
+    private @Nullable Output<String> subjectEndsWith;
 
-    public Output<String> subjectEndsWith() {
-        return this.subjectEndsWith == null ? Codegen.empty() : this.subjectEndsWith;
+    public Optional<Output<String>> subjectEndsWith() {
+        return Optional.ofNullable(this.subjectEndsWith);
     }
 
     /**
@@ -105,150 +106,133 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public CustomEventsTriggerArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<String> description,
-        Output<List<Object>> events,
-        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
-        Output<String> scope,
-        @Nullable Output<String> subjectBeginsWith,
-        @Nullable Output<String> subjectEndsWith,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.pipelines = pipelines;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.subjectBeginsWith = subjectBeginsWith;
-        this.subjectEndsWith = subjectEndsWith;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private CustomEventsTriggerArgs() {}
 
-    private CustomEventsTriggerArgs() {
-        this.annotations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.events = Codegen.empty();
-        this.pipelines = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.subjectBeginsWith = Codegen.empty();
-        this.subjectEndsWith = Codegen.empty();
-        this.type = Codegen.empty();
+    private CustomEventsTriggerArgs(CustomEventsTriggerArgs $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.events = $.events;
+        this.pipelines = $.pipelines;
+        this.scope = $.scope;
+        this.subjectBeginsWith = $.subjectBeginsWith;
+        this.subjectEndsWith = $.subjectEndsWith;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomEventsTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<String> description;
-        private Output<List<Object>> events;
-        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Output<String> scope;
-        private @Nullable Output<String> subjectBeginsWith;
-        private @Nullable Output<String> subjectEndsWith;
-        private Output<String> type;
+        private CustomEventsTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomEventsTriggerArgs();
         }
 
         public Builder(CustomEventsTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.events = defaults.events;
-    	      this.pipelines = defaults.pipelines;
-    	      this.scope = defaults.scope;
-    	      this.subjectBeginsWith = defaults.subjectBeginsWith;
-    	      this.subjectEndsWith = defaults.subjectEndsWith;
-    	      this.type = defaults.type;
+            $ = new CustomEventsTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder events(Output<List<Object>> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(List<Object> events) {
-            this.events = Output.of(Objects.requireNonNull(events));
-            return this;
+            return events(Output.of(events));
         }
+
         public Builder events(Object... events) {
             return events(List.of(events));
         }
+
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
-            this.pipelines = pipelines;
+            $.pipelines = pipelines;
             return this;
         }
-        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Codegen.ofNullable(pipelines);
-            return this;
+
+        public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
+            return pipelines(Output.of(pipelines));
         }
+
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder subjectBeginsWith(@Nullable Output<String> subjectBeginsWith) {
-            this.subjectBeginsWith = subjectBeginsWith;
+            $.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
-        public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
-            this.subjectBeginsWith = Codegen.ofNullable(subjectBeginsWith);
-            return this;
+
+        public Builder subjectBeginsWith(String subjectBeginsWith) {
+            return subjectBeginsWith(Output.of(subjectBeginsWith));
         }
+
         public Builder subjectEndsWith(@Nullable Output<String> subjectEndsWith) {
-            this.subjectEndsWith = subjectEndsWith;
+            $.subjectEndsWith = subjectEndsWith;
             return this;
         }
-        public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
-            this.subjectEndsWith = Codegen.ofNullable(subjectEndsWith);
-            return this;
+
+        public Builder subjectEndsWith(String subjectEndsWith) {
+            return subjectEndsWith(Output.of(subjectEndsWith));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public CustomEventsTriggerArgs build() {
-            return new CustomEventsTriggerArgs(annotations, description, events, pipelines, scope, subjectBeginsWith, subjectEndsWith, type);
+            return type(Output.of(type));
+        }
+
+        public CustomEventsTriggerArgs build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

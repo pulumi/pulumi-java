@@ -23,7 +23,7 @@ public final class TargetIpFilterRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -34,7 +34,7 @@ public final class TargetIpFilterRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="filterName", required=true)
-      private final String filterName;
+    private String filterName;
 
     public String filterName() {
         return this.filterName;
@@ -45,7 +45,7 @@ public final class TargetIpFilterRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ipMask", required=true)
-      private final String ipMask;
+    private String ipMask;
 
     public String ipMask() {
         return this.ipMask;
@@ -56,73 +56,65 @@ public final class TargetIpFilterRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public TargetIpFilterRuleResponse(
-        String action,
-        String filterName,
-        String ipMask,
-        @Nullable String target) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
-        this.ipMask = Objects.requireNonNull(ipMask, "expected parameter 'ipMask' to be non-null");
-        this.target = target;
-    }
+    private TargetIpFilterRuleResponse() {}
 
-    private TargetIpFilterRuleResponse() {
-        this.action = null;
-        this.filterName = null;
-        this.ipMask = null;
-        this.target = null;
+    private TargetIpFilterRuleResponse(TargetIpFilterRuleResponse $) {
+        this.action = $.action;
+        this.filterName = $.filterName;
+        this.ipMask = $.ipMask;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetIpFilterRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private String filterName;
-        private String ipMask;
-        private @Nullable String target;
+        private TargetIpFilterRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetIpFilterRuleResponse();
         }
 
         public Builder(TargetIpFilterRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.filterName = defaults.filterName;
-    	      this.ipMask = defaults.ipMask;
-    	      this.target = defaults.target;
+            $ = new TargetIpFilterRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder filterName(String filterName) {
-            this.filterName = Objects.requireNonNull(filterName);
+            $.filterName = filterName;
             return this;
         }
+
         public Builder ipMask(String ipMask) {
-            this.ipMask = Objects.requireNonNull(ipMask);
+            $.ipMask = ipMask;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public TargetIpFilterRuleResponse build() {
-            return new TargetIpFilterRuleResponse(action, filterName, ipMask, target);
+        }
+
+        public TargetIpFilterRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.filterName = Objects.requireNonNull($.filterName, "expected parameter 'filterName' to be non-null");
+            $.ipMask = Objects.requireNonNull($.ipMask, "expected parameter 'ipMask' to be non-null");
+            return $;
         }
     }
+
 }

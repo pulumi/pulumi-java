@@ -9,12 +9,12 @@ import com.pulumi.azurenative.web.inputs.VirtualNetworkProfileArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clusterSettings")
-      private final @Nullable Output<List<NameValuePairArgs>> clusterSettings;
+    private @Nullable Output<List<NameValuePairArgs>> clusterSettings;
 
-    public Output<List<NameValuePairArgs>> clusterSettings() {
-        return this.clusterSettings == null ? Codegen.empty() : this.clusterSettings;
+    public Optional<Output<List<NameValuePairArgs>>> clusterSettings() {
+        return Optional.ofNullable(this.clusterSettings);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dnsSuffix")
-      private final @Nullable Output<String> dnsSuffix;
+    private @Nullable Output<String> dnsSuffix;
 
-    public Output<String> dnsSuffix() {
-        return this.dnsSuffix == null ? Codegen.empty() : this.dnsSuffix;
+    public Optional<Output<String>> dnsSuffix() {
+        return Optional.ofNullable(this.dnsSuffix);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="frontEndScaleFactor")
-      private final @Nullable Output<Integer> frontEndScaleFactor;
+    private @Nullable Output<Integer> frontEndScaleFactor;
 
-    public Output<Integer> frontEndScaleFactor() {
-        return this.frontEndScaleFactor == null ? Codegen.empty() : this.frontEndScaleFactor;
+    public Optional<Output<Integer>> frontEndScaleFactor() {
+        return Optional.ofNullable(this.frontEndScaleFactor);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="internalLoadBalancingMode")
-      private final @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
+    private @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
 
-    public Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode() {
-        return this.internalLoadBalancingMode == null ? Codegen.empty() : this.internalLoadBalancingMode;
+    public Optional<Output<Either<String,LoadBalancingMode>>> internalLoadBalancingMode() {
+        return Optional.ofNullable(this.internalLoadBalancingMode);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipsslAddressCount")
-      private final @Nullable Output<Integer> ipsslAddressCount;
+    private @Nullable Output<Integer> ipsslAddressCount;
 
-    public Output<Integer> ipsslAddressCount() {
-        return this.ipsslAddressCount == null ? Codegen.empty() : this.ipsslAddressCount;
+    public Optional<Output<Integer>> ipsslAddressCount() {
+        return Optional.ofNullable(this.ipsslAddressCount);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="multiSize")
-      private final @Nullable Output<String> multiSize;
+    private @Nullable Output<String> multiSize;
 
-    public Output<String> multiSize() {
-        return this.multiSize == null ? Codegen.empty() : this.multiSize;
+    public Optional<Output<String>> multiSize() {
+        return Optional.ofNullable(this.multiSize);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -137,10 +137,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="userWhitelistedIpRanges")
-      private final @Nullable Output<List<String>> userWhitelistedIpRanges;
+    private @Nullable Output<List<String>> userWhitelistedIpRanges;
 
-    public Output<List<String>> userWhitelistedIpRanges() {
-        return this.userWhitelistedIpRanges == null ? Codegen.empty() : this.userWhitelistedIpRanges;
+    public Optional<Output<List<String>>> userWhitelistedIpRanges() {
+        return Optional.ofNullable(this.userWhitelistedIpRanges);
     }
 
     /**
@@ -159,212 +159,178 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="virtualNetwork", required=true)
-      private final Output<VirtualNetworkProfileArgs> virtualNetwork;
+    private Output<VirtualNetworkProfileArgs> virtualNetwork;
 
     public Output<VirtualNetworkProfileArgs> virtualNetwork() {
         return this.virtualNetwork;
     }
 
-    public AppServiceEnvironmentArgs(
-        @Nullable Output<List<NameValuePairArgs>> clusterSettings,
-        @Nullable Output<String> dnsSuffix,
-        @Nullable Output<Integer> frontEndScaleFactor,
-        @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode,
-        @Nullable Output<Integer> ipsslAddressCount,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> multiSize,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> userWhitelistedIpRanges,
-        Output<VirtualNetworkProfileArgs> virtualNetwork) {
-        this.clusterSettings = clusterSettings;
-        this.dnsSuffix = dnsSuffix;
-        this.frontEndScaleFactor = frontEndScaleFactor;
-        this.internalLoadBalancingMode = internalLoadBalancingMode;
-        this.ipsslAddressCount = ipsslAddressCount;
-        this.kind = kind;
-        this.location = location;
-        this.multiSize = multiSize;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.userWhitelistedIpRanges = userWhitelistedIpRanges;
-        this.virtualNetwork = Objects.requireNonNull(virtualNetwork, "expected parameter 'virtualNetwork' to be non-null");
-    }
+    private AppServiceEnvironmentArgs() {}
 
-    private AppServiceEnvironmentArgs() {
-        this.clusterSettings = Codegen.empty();
-        this.dnsSuffix = Codegen.empty();
-        this.frontEndScaleFactor = Codegen.empty();
-        this.internalLoadBalancingMode = Codegen.empty();
-        this.ipsslAddressCount = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.multiSize = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userWhitelistedIpRanges = Codegen.empty();
-        this.virtualNetwork = Codegen.empty();
+    private AppServiceEnvironmentArgs(AppServiceEnvironmentArgs $) {
+        this.clusterSettings = $.clusterSettings;
+        this.dnsSuffix = $.dnsSuffix;
+        this.frontEndScaleFactor = $.frontEndScaleFactor;
+        this.internalLoadBalancingMode = $.internalLoadBalancingMode;
+        this.ipsslAddressCount = $.ipsslAddressCount;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.multiSize = $.multiSize;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.userWhitelistedIpRanges = $.userWhitelistedIpRanges;
+        this.virtualNetwork = $.virtualNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServiceEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NameValuePairArgs>> clusterSettings;
-        private @Nullable Output<String> dnsSuffix;
-        private @Nullable Output<Integer> frontEndScaleFactor;
-        private @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
-        private @Nullable Output<Integer> ipsslAddressCount;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> multiSize;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> userWhitelistedIpRanges;
-        private Output<VirtualNetworkProfileArgs> virtualNetwork;
+        private AppServiceEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServiceEnvironmentArgs();
         }
 
         public Builder(AppServiceEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSettings = defaults.clusterSettings;
-    	      this.dnsSuffix = defaults.dnsSuffix;
-    	      this.frontEndScaleFactor = defaults.frontEndScaleFactor;
-    	      this.internalLoadBalancingMode = defaults.internalLoadBalancingMode;
-    	      this.ipsslAddressCount = defaults.ipsslAddressCount;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.multiSize = defaults.multiSize;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.userWhitelistedIpRanges = defaults.userWhitelistedIpRanges;
-    	      this.virtualNetwork = defaults.virtualNetwork;
+            $ = new AppServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSettings(@Nullable Output<List<NameValuePairArgs>> clusterSettings) {
-            this.clusterSettings = clusterSettings;
+            $.clusterSettings = clusterSettings;
             return this;
         }
-        public Builder clusterSettings(@Nullable List<NameValuePairArgs> clusterSettings) {
-            this.clusterSettings = Codegen.ofNullable(clusterSettings);
-            return this;
+
+        public Builder clusterSettings(List<NameValuePairArgs> clusterSettings) {
+            return clusterSettings(Output.of(clusterSettings));
         }
+
         public Builder clusterSettings(NameValuePairArgs... clusterSettings) {
             return clusterSettings(List.of(clusterSettings));
         }
+
         public Builder dnsSuffix(@Nullable Output<String> dnsSuffix) {
-            this.dnsSuffix = dnsSuffix;
+            $.dnsSuffix = dnsSuffix;
             return this;
         }
-        public Builder dnsSuffix(@Nullable String dnsSuffix) {
-            this.dnsSuffix = Codegen.ofNullable(dnsSuffix);
-            return this;
+
+        public Builder dnsSuffix(String dnsSuffix) {
+            return dnsSuffix(Output.of(dnsSuffix));
         }
+
         public Builder frontEndScaleFactor(@Nullable Output<Integer> frontEndScaleFactor) {
-            this.frontEndScaleFactor = frontEndScaleFactor;
+            $.frontEndScaleFactor = frontEndScaleFactor;
             return this;
         }
-        public Builder frontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
-            this.frontEndScaleFactor = Codegen.ofNullable(frontEndScaleFactor);
-            return this;
+
+        public Builder frontEndScaleFactor(Integer frontEndScaleFactor) {
+            return frontEndScaleFactor(Output.of(frontEndScaleFactor));
         }
+
         public Builder internalLoadBalancingMode(@Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode) {
-            this.internalLoadBalancingMode = internalLoadBalancingMode;
+            $.internalLoadBalancingMode = internalLoadBalancingMode;
             return this;
         }
-        public Builder internalLoadBalancingMode(@Nullable Either<String,LoadBalancingMode> internalLoadBalancingMode) {
-            this.internalLoadBalancingMode = Codegen.ofNullable(internalLoadBalancingMode);
-            return this;
+
+        public Builder internalLoadBalancingMode(Either<String,LoadBalancingMode> internalLoadBalancingMode) {
+            return internalLoadBalancingMode(Output.of(internalLoadBalancingMode));
         }
+
         public Builder ipsslAddressCount(@Nullable Output<Integer> ipsslAddressCount) {
-            this.ipsslAddressCount = ipsslAddressCount;
+            $.ipsslAddressCount = ipsslAddressCount;
             return this;
         }
-        public Builder ipsslAddressCount(@Nullable Integer ipsslAddressCount) {
-            this.ipsslAddressCount = Codegen.ofNullable(ipsslAddressCount);
-            return this;
+
+        public Builder ipsslAddressCount(Integer ipsslAddressCount) {
+            return ipsslAddressCount(Output.of(ipsslAddressCount));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder multiSize(@Nullable Output<String> multiSize) {
-            this.multiSize = multiSize;
+            $.multiSize = multiSize;
             return this;
         }
-        public Builder multiSize(@Nullable String multiSize) {
-            this.multiSize = Codegen.ofNullable(multiSize);
-            return this;
+
+        public Builder multiSize(String multiSize) {
+            return multiSize(Output.of(multiSize));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userWhitelistedIpRanges(@Nullable Output<List<String>> userWhitelistedIpRanges) {
-            this.userWhitelistedIpRanges = userWhitelistedIpRanges;
+            $.userWhitelistedIpRanges = userWhitelistedIpRanges;
             return this;
         }
-        public Builder userWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
-            this.userWhitelistedIpRanges = Codegen.ofNullable(userWhitelistedIpRanges);
-            return this;
+
+        public Builder userWhitelistedIpRanges(List<String> userWhitelistedIpRanges) {
+            return userWhitelistedIpRanges(Output.of(userWhitelistedIpRanges));
         }
+
         public Builder userWhitelistedIpRanges(String... userWhitelistedIpRanges) {
             return userWhitelistedIpRanges(List.of(userWhitelistedIpRanges));
         }
+
         public Builder virtualNetwork(Output<VirtualNetworkProfileArgs> virtualNetwork) {
-            this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
+            $.virtualNetwork = virtualNetwork;
             return this;
         }
+
         public Builder virtualNetwork(VirtualNetworkProfileArgs virtualNetwork) {
-            this.virtualNetwork = Output.of(Objects.requireNonNull(virtualNetwork));
-            return this;
-        }        public AppServiceEnvironmentArgs build() {
-            return new AppServiceEnvironmentArgs(clusterSettings, dnsSuffix, frontEndScaleFactor, internalLoadBalancingMode, ipsslAddressCount, kind, location, multiSize, name, resourceGroupName, tags, userWhitelistedIpRanges, virtualNetwork);
+            return virtualNetwork(Output.of(virtualNetwork));
+        }
+
+        public AppServiceEnvironmentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetwork = Objects.requireNonNull($.virtualNetwork, "expected parameter 'virtualNetwork' to be non-null");
+            return $;
         }
     }
+
 }

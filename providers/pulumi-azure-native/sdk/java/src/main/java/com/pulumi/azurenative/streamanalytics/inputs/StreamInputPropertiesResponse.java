@@ -32,10 +32,10 @@ public final class StreamInputPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="datasource")
-      private final @Nullable Object datasource;
+    private @Nullable Object datasource;
 
-    public Object datasource() {
-        return this.datasource == null ? null : this.datasource;
+    public Optional<Object> datasource() {
+        return Optional.ofNullable(this.datasource);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class StreamInputPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="diagnostics", required=true)
-      private final DiagnosticsResponse diagnostics;
+    private DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse diagnostics() {
         return this.diagnostics;
@@ -54,7 +54,7 @@ public final class StreamInputPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -65,10 +65,10 @@ public final class StreamInputPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="serialization")
-      private final @Nullable Object serialization;
+    private @Nullable Object serialization;
 
-    public Object serialization() {
-        return this.serialization == null ? null : this.serialization;
+    public Optional<Object> serialization() {
+        return Optional.ofNullable(this.serialization);
     }
 
     /**
@@ -77,82 +77,71 @@ public final class StreamInputPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public StreamInputPropertiesResponse(
-        @Nullable Object datasource,
-        DiagnosticsResponse diagnostics,
-        String etag,
-        @Nullable Object serialization,
-        String type) {
-        this.datasource = datasource;
-        this.diagnostics = Objects.requireNonNull(diagnostics, "expected parameter 'diagnostics' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.serialization = serialization;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private StreamInputPropertiesResponse() {}
 
-    private StreamInputPropertiesResponse() {
-        this.datasource = null;
-        this.diagnostics = null;
-        this.etag = null;
-        this.serialization = null;
-        this.type = null;
+    private StreamInputPropertiesResponse(StreamInputPropertiesResponse $) {
+        this.datasource = $.datasource;
+        this.diagnostics = $.diagnostics;
+        this.etag = $.etag;
+        this.serialization = $.serialization;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamInputPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object datasource;
-        private DiagnosticsResponse diagnostics;
-        private String etag;
-        private @Nullable Object serialization;
-        private String type;
+        private StreamInputPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamInputPropertiesResponse();
         }
 
         public Builder(StreamInputPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasource = defaults.datasource;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.etag = defaults.etag;
-    	      this.serialization = defaults.serialization;
-    	      this.type = defaults.type;
+            $ = new StreamInputPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasource(@Nullable Object datasource) {
-            this.datasource = datasource;
+            $.datasource = datasource;
             return this;
         }
+
         public Builder diagnostics(DiagnosticsResponse diagnostics) {
-            this.diagnostics = Objects.requireNonNull(diagnostics);
+            $.diagnostics = diagnostics;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = serialization;
+            $.serialization = serialization;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public StreamInputPropertiesResponse build() {
-            return new StreamInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
+        }
+
+        public StreamInputPropertiesResponse build() {
+            $.diagnostics = Objects.requireNonNull($.diagnostics, "expected parameter 'diagnostics' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class DcAccessSecurityCodeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="forwardDCAccessCode")
-      private final @Nullable String forwardDCAccessCode;
+    private @Nullable String forwardDCAccessCode;
 
     public Optional<String> forwardDCAccessCode() {
-        return this.forwardDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.forwardDCAccessCode);
+        return Optional.ofNullable(this.forwardDCAccessCode);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DcAccessSecurityCodeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="reverseDCAccessCode")
-      private final @Nullable String reverseDCAccessCode;
+    private @Nullable String reverseDCAccessCode;
 
     public Optional<String> reverseDCAccessCode() {
-        return this.reverseDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.reverseDCAccessCode);
+        return Optional.ofNullable(this.reverseDCAccessCode);
     }
 
-    public DcAccessSecurityCodeResponse(
-        @Nullable String forwardDCAccessCode,
-        @Nullable String reverseDCAccessCode) {
-        this.forwardDCAccessCode = forwardDCAccessCode;
-        this.reverseDCAccessCode = reverseDCAccessCode;
-    }
+    private DcAccessSecurityCodeResponse() {}
 
-    private DcAccessSecurityCodeResponse() {
-        this.forwardDCAccessCode = null;
-        this.reverseDCAccessCode = null;
+    private DcAccessSecurityCodeResponse(DcAccessSecurityCodeResponse $) {
+        this.forwardDCAccessCode = $.forwardDCAccessCode;
+        this.reverseDCAccessCode = $.reverseDCAccessCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DcAccessSecurityCodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String forwardDCAccessCode;
-        private @Nullable String reverseDCAccessCode;
+        private DcAccessSecurityCodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DcAccessSecurityCodeResponse();
         }
 
         public Builder(DcAccessSecurityCodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardDCAccessCode = defaults.forwardDCAccessCode;
-    	      this.reverseDCAccessCode = defaults.reverseDCAccessCode;
+            $ = new DcAccessSecurityCodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardDCAccessCode(@Nullable String forwardDCAccessCode) {
-            this.forwardDCAccessCode = forwardDCAccessCode;
+            $.forwardDCAccessCode = forwardDCAccessCode;
             return this;
         }
+
         public Builder reverseDCAccessCode(@Nullable String reverseDCAccessCode) {
-            this.reverseDCAccessCode = reverseDCAccessCode;
+            $.reverseDCAccessCode = reverseDCAccessCode;
             return this;
-        }        public DcAccessSecurityCodeResponse build() {
-            return new DcAccessSecurityCodeResponse(forwardDCAccessCode, reverseDCAccessCode);
+        }
+
+        public DcAccessSecurityCodeResponse build() {
+            return $;
         }
     }
+
 }

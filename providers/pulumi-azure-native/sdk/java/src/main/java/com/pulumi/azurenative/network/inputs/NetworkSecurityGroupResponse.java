@@ -29,7 +29,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="defaultSecurityRules", required=true)
-      private final List<SecurityRuleResponse> defaultSecurityRules;
+    private List<SecurityRuleResponse> defaultSecurityRules;
 
     public List<SecurityRuleResponse> defaultSecurityRules() {
         return this.defaultSecurityRules;
@@ -40,7 +40,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -51,7 +51,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="flowLogs", required=true)
-      private final List<FlowLogResponse> flowLogs;
+    private List<FlowLogResponse> flowLogs;
 
     public List<FlowLogResponse> flowLogs() {
         return this.flowLogs;
@@ -62,10 +62,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -95,7 +95,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="networkInterfaces", required=true)
-      private final List<NetworkInterfaceResponse> networkInterfaces;
+    private List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
@@ -106,7 +106,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -117,7 +117,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -128,10 +128,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="securityRules")
-      private final @Nullable List<SecurityRuleResponse> securityRules;
+    private @Nullable List<SecurityRuleResponse> securityRules;
 
-    public List<SecurityRuleResponse> securityRules() {
-        return this.securityRules == null ? List.of() : this.securityRules;
+    public Optional<List<SecurityRuleResponse>> securityRules() {
+        return Optional.ofNullable(this.securityRules);
     }
 
     /**
@@ -139,7 +139,7 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subnets", required=true)
-      private final List<SubnetResponse> subnets;
+    private List<SubnetResponse> subnets;
 
     public List<SubnetResponse> subnets() {
         return this.subnets;
@@ -150,10 +150,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -161,169 +161,145 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public NetworkSecurityGroupResponse(
-        List<SecurityRuleResponse> defaultSecurityRules,
-        String etag,
-        List<FlowLogResponse> flowLogs,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<SecurityRuleResponse> securityRules,
-        List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.defaultSecurityRules = Objects.requireNonNull(defaultSecurityRules, "expected parameter 'defaultSecurityRules' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.flowLogs = Objects.requireNonNull(flowLogs, "expected parameter 'flowLogs' to be non-null");
-        this.id = id;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.securityRules = securityRules;
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private NetworkSecurityGroupResponse() {}
 
-    private NetworkSecurityGroupResponse() {
-        this.defaultSecurityRules = List.of();
-        this.etag = null;
-        this.flowLogs = List.of();
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.networkInterfaces = List.of();
-        this.provisioningState = null;
-        this.resourceGuid = null;
-        this.securityRules = List.of();
-        this.subnets = List.of();
-        this.tags = Map.of();
-        this.type = null;
+    private NetworkSecurityGroupResponse(NetworkSecurityGroupResponse $) {
+        this.defaultSecurityRules = $.defaultSecurityRules;
+        this.etag = $.etag;
+        this.flowLogs = $.flowLogs;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.networkInterfaces = $.networkInterfaces;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuid = $.resourceGuid;
+        this.securityRules = $.securityRules;
+        this.subnets = $.subnets;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkSecurityGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SecurityRuleResponse> defaultSecurityRules;
-        private String etag;
-        private List<FlowLogResponse> flowLogs;
-        private @Nullable String id;
-        private @Nullable String location;
-        private String name;
-        private List<NetworkInterfaceResponse> networkInterfaces;
-        private String provisioningState;
-        private String resourceGuid;
-        private @Nullable List<SecurityRuleResponse> securityRules;
-        private List<SubnetResponse> subnets;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private NetworkSecurityGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkSecurityGroupResponse();
         }
 
         public Builder(NetworkSecurityGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultSecurityRules = defaults.defaultSecurityRules;
-    	      this.etag = defaults.etag;
-    	      this.flowLogs = defaults.flowLogs;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.securityRules = defaults.securityRules;
-    	      this.subnets = defaults.subnets;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new NetworkSecurityGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultSecurityRules(List<SecurityRuleResponse> defaultSecurityRules) {
-            this.defaultSecurityRules = Objects.requireNonNull(defaultSecurityRules);
+            $.defaultSecurityRules = defaultSecurityRules;
             return this;
         }
+
         public Builder defaultSecurityRules(SecurityRuleResponse... defaultSecurityRules) {
             return defaultSecurityRules(List.of(defaultSecurityRules));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder flowLogs(List<FlowLogResponse> flowLogs) {
-            this.flowLogs = Objects.requireNonNull(flowLogs);
+            $.flowLogs = flowLogs;
             return this;
         }
+
         public Builder flowLogs(FlowLogResponse... flowLogs) {
             return flowLogs(List.of(flowLogs));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder securityRules(@Nullable List<SecurityRuleResponse> securityRules) {
-            this.securityRules = securityRules;
+            $.securityRules = securityRules;
             return this;
         }
+
         public Builder securityRules(SecurityRuleResponse... securityRules) {
             return securityRules(List.of(securityRules));
         }
+
         public Builder subnets(List<SubnetResponse> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(SubnetResponse... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public NetworkSecurityGroupResponse build() {
-            return new NetworkSecurityGroupResponse(defaultSecurityRules, etag, flowLogs, id, location, name, networkInterfaces, provisioningState, resourceGuid, securityRules, subnets, tags, type);
+        }
+
+        public NetworkSecurityGroupResponse build() {
+            $.defaultSecurityRules = Objects.requireNonNull($.defaultSecurityRules, "expected parameter 'defaultSecurityRules' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.flowLogs = Objects.requireNonNull($.flowLogs, "expected parameter 'flowLogs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.networkInterfaces = Objects.requireNonNull($.networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

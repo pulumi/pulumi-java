@@ -23,45 +23,45 @@ public final class VmmToAzureNetworkMappingSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
     }
 
-    public VmmToAzureNetworkMappingSettingsResponse(String instanceType) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-    }
+    private VmmToAzureNetworkMappingSettingsResponse() {}
 
-    private VmmToAzureNetworkMappingSettingsResponse() {
-        this.instanceType = null;
+    private VmmToAzureNetworkMappingSettingsResponse(VmmToAzureNetworkMappingSettingsResponse $) {
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmmToAzureNetworkMappingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
+        private VmmToAzureNetworkMappingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmmToAzureNetworkMappingSettingsResponse();
         }
 
         public Builder(VmmToAzureNetworkMappingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
+            $ = new VmmToAzureNetworkMappingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
-        }        public VmmToAzureNetworkMappingSettingsResponse build() {
-            return new VmmToAzureNetworkMappingSettingsResponse(instanceType);
+        }
+
+        public VmmToAzureNetworkMappingSettingsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

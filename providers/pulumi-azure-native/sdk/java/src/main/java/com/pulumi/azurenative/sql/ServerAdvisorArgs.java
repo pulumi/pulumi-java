@@ -6,9 +6,9 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.enums.AutoExecuteStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advisorName")
-      private final @Nullable Output<String> advisorName;
+    private @Nullable Output<String> advisorName;
 
-    public Output<String> advisorName() {
-        return this.advisorName == null ? Codegen.empty() : this.advisorName;
+    public Optional<Output<String>> advisorName() {
+        return Optional.ofNullable(this.advisorName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoExecuteStatus", required=true)
-      private final Output<AutoExecuteStatus> autoExecuteStatus;
+    private Output<AutoExecuteStatus> autoExecuteStatus;
 
     public Output<AutoExecuteStatus> autoExecuteStatus() {
         return this.autoExecuteStatus;
@@ -43,7 +43,7 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,81 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public ServerAdvisorArgs(
-        @Nullable Output<String> advisorName,
-        Output<AutoExecuteStatus> autoExecuteStatus,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.advisorName = advisorName;
-        this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus, "expected parameter 'autoExecuteStatus' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private ServerAdvisorArgs() {}
 
-    private ServerAdvisorArgs() {
-        this.advisorName = Codegen.empty();
-        this.autoExecuteStatus = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private ServerAdvisorArgs(ServerAdvisorArgs $) {
+        this.advisorName = $.advisorName;
+        this.autoExecuteStatus = $.autoExecuteStatus;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerAdvisorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> advisorName;
-        private Output<AutoExecuteStatus> autoExecuteStatus;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private ServerAdvisorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerAdvisorArgs();
         }
 
         public Builder(ServerAdvisorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advisorName = defaults.advisorName;
-    	      this.autoExecuteStatus = defaults.autoExecuteStatus;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new ServerAdvisorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advisorName(@Nullable Output<String> advisorName) {
-            this.advisorName = advisorName;
+            $.advisorName = advisorName;
             return this;
         }
-        public Builder advisorName(@Nullable String advisorName) {
-            this.advisorName = Codegen.ofNullable(advisorName);
-            return this;
+
+        public Builder advisorName(String advisorName) {
+            return advisorName(Output.of(advisorName));
         }
+
         public Builder autoExecuteStatus(Output<AutoExecuteStatus> autoExecuteStatus) {
-            this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
+            $.autoExecuteStatus = autoExecuteStatus;
             return this;
         }
+
         public Builder autoExecuteStatus(AutoExecuteStatus autoExecuteStatus) {
-            this.autoExecuteStatus = Output.of(Objects.requireNonNull(autoExecuteStatus));
-            return this;
+            return autoExecuteStatus(Output.of(autoExecuteStatus));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public ServerAdvisorArgs build() {
-            return new ServerAdvisorArgs(advisorName, autoExecuteStatus, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public ServerAdvisorArgs build() {
+            $.autoExecuteStatus = Objects.requireNonNull($.autoExecuteStatus, "expected parameter 'autoExecuteStatus' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

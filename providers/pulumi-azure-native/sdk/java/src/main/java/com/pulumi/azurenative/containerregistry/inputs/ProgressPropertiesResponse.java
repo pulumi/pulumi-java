@@ -19,45 +19,44 @@ public final class ProgressPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="percentage")
-      private final @Nullable String percentage;
+    private @Nullable String percentage;
 
     public Optional<String> percentage() {
-        return this.percentage == null ? Optional.empty() : Optional.ofNullable(this.percentage);
+        return Optional.ofNullable(this.percentage);
     }
 
-    public ProgressPropertiesResponse(@Nullable String percentage) {
-        this.percentage = percentage;
-    }
+    private ProgressPropertiesResponse() {}
 
-    private ProgressPropertiesResponse() {
-        this.percentage = null;
+    private ProgressPropertiesResponse(ProgressPropertiesResponse $) {
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProgressPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String percentage;
+        private ProgressPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProgressPropertiesResponse();
         }
 
         public Builder(ProgressPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percentage = defaults.percentage;
+            $ = new ProgressPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder percentage(@Nullable String percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
-        }        public ProgressPropertiesResponse build() {
-            return new ProgressPropertiesResponse(percentage);
+        }
+
+        public ProgressPropertiesResponse build() {
+            return $;
         }
     }
+
 }

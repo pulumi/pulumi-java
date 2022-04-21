@@ -38,10 +38,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codeId")
-      private final @Nullable String codeId;
+    private @Nullable String codeId;
 
     public Optional<String> codeId() {
-        return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
+        return Optional.ofNullable(this.codeId);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command", required=true)
-      private final String command;
+    private String command;
 
     public String command() {
         return this.command;
@@ -60,7 +60,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compute", required=true)
-      private final ComputeConfigurationResponse compute;
+    private ComputeConfigurationResponse compute;
 
     public ComputeConfigurationResponse compute() {
         return this.compute;
@@ -71,10 +71,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Object distribution;
+    private @Nullable Object distribution;
 
-    public Object distribution() {
-        return this.distribution == null ? null : this.distribution;
+    public Optional<Object> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable String environmentId;
+    private @Nullable String environmentId;
 
     public Optional<String> environmentId() {
-        return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Map<String,String> environmentVariables;
+    private @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> environmentVariables() {
-        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
+    public Optional<Map<String,String>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable String experimentName;
+    private @Nullable String experimentName;
 
     public Optional<String> experimentName() {
-        return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
+    private @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
-    public Either<AmlTokenResponse,ManagedIdentityResponse> identity() {
-        return this.identity == null ? null : this.identity;
+    public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputDataBindings")
-      private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
+    private @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
-    public Map<String,InputDataBindingResponse> inputDataBindings() {
-        return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
+    public Optional<Map<String,InputDataBindingResponse>> inputDataBindings() {
+        return Optional.ofNullable(this.inputDataBindings);
     }
 
     /**
@@ -150,7 +150,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interactionEndpoints", required=true)
-      private final Map<String,JobEndpointResponse> interactionEndpoints;
+    private Map<String,JobEndpointResponse> interactionEndpoints;
 
     public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
@@ -162,7 +162,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobType", required=true)
-      private final String jobType;
+    private String jobType;
 
     public String jobType() {
         return this.jobType;
@@ -173,7 +173,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="output", required=true)
-      private final JobOutputResponse output;
+    private JobOutputResponse output;
 
     public JobOutputResponse output() {
         return this.output;
@@ -184,10 +184,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputDataBindings")
-      private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
+    private @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
-    public Map<String,OutputDataBindingResponse> outputDataBindings() {
-        return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
+    public Optional<Map<String,OutputDataBindingResponse>> outputDataBindings() {
+        return Optional.ofNullable(this.outputDataBindings);
     }
 
     /**
@@ -195,7 +195,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters", required=true)
-      private final Object parameters;
+    private Object parameters;
 
     public Object parameters() {
         return this.parameters;
@@ -207,10 +207,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -229,7 +229,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -240,7 +240,7 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -251,10 +251,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -262,226 +262,172 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public CommandJobResponse(
-        @Nullable String codeId,
-        String command,
-        ComputeConfigurationResponse compute,
-        @Nullable String description,
-        @Nullable Object distribution,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String experimentName,
-        @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
-        @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        Map<String,JobEndpointResponse> interactionEndpoints,
-        String jobType,
-        JobOutputResponse output,
-        @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        Object parameters,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout) {
-        this.codeId = codeId;
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
-        this.description = description;
-        this.distribution = distribution;
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.experimentName = experimentName;
-        this.identity = identity;
-        this.inputDataBindings = inputDataBindings;
-        this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints, "expected parameter 'interactionEndpoints' to be non-null");
-        this.jobType = Codegen.stringProp("jobType").arg(jobType).require();
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.outputDataBindings = outputDataBindings;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.priority = priority;
-        this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.tags = tags;
-        this.timeout = timeout;
-    }
+    private CommandJobResponse() {}
 
-    private CommandJobResponse() {
-        this.codeId = null;
-        this.command = null;
-        this.compute = null;
-        this.description = null;
-        this.distribution = null;
-        this.environmentId = null;
-        this.environmentVariables = Map.of();
-        this.experimentName = null;
-        this.identity = null;
-        this.inputDataBindings = Map.of();
-        this.interactionEndpoints = Map.of();
-        this.jobType = null;
-        this.output = null;
-        this.outputDataBindings = Map.of();
-        this.parameters = null;
-        this.priority = null;
-        this.properties = Map.of();
-        this.provisioningState = null;
-        this.status = null;
-        this.tags = Map.of();
-        this.timeout = null;
+    private CommandJobResponse(CommandJobResponse $) {
+        this.codeId = $.codeId;
+        this.command = $.command;
+        this.compute = $.compute;
+        this.description = $.description;
+        this.distribution = $.distribution;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.experimentName = $.experimentName;
+        this.identity = $.identity;
+        this.inputDataBindings = $.inputDataBindings;
+        this.interactionEndpoints = $.interactionEndpoints;
+        this.jobType = $.jobType;
+        this.output = $.output;
+        this.outputDataBindings = $.outputDataBindings;
+        this.parameters = $.parameters;
+        this.priority = $.priority;
+        this.properties = $.properties;
+        this.provisioningState = $.provisioningState;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommandJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String codeId;
-        private String command;
-        private ComputeConfigurationResponse compute;
-        private @Nullable String description;
-        private @Nullable Object distribution;
-        private @Nullable String environmentId;
-        private @Nullable Map<String,String> environmentVariables;
-        private @Nullable String experimentName;
-        private @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
-        private @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
-        private Map<String,JobEndpointResponse> interactionEndpoints;
-        private String jobType;
-        private JobOutputResponse output;
-        private @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
-        private Object parameters;
-        private @Nullable Integer priority;
-        private @Nullable Map<String,String> properties;
-        private String provisioningState;
-        private String status;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String timeout;
+        private CommandJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommandJobResponse();
         }
 
         public Builder(CommandJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeId = defaults.codeId;
-    	      this.command = defaults.command;
-    	      this.compute = defaults.compute;
-    	      this.description = defaults.description;
-    	      this.distribution = defaults.distribution;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.experimentName = defaults.experimentName;
-    	      this.identity = defaults.identity;
-    	      this.inputDataBindings = defaults.inputDataBindings;
-    	      this.interactionEndpoints = defaults.interactionEndpoints;
-    	      this.jobType = defaults.jobType;
-    	      this.output = defaults.output;
-    	      this.outputDataBindings = defaults.outputDataBindings;
-    	      this.parameters = defaults.parameters;
-    	      this.priority = defaults.priority;
-    	      this.properties = defaults.properties;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
+            $ = new CommandJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = codeId;
+            $.codeId = codeId;
             return this;
         }
+
         public Builder command(String command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder compute(ComputeConfigurationResponse compute) {
-            this.compute = Objects.requireNonNull(compute);
+            $.compute = compute;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder distribution(@Nullable Object distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
+
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
+
         public Builder identity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
-            this.inputDataBindings = inputDataBindings;
+            $.inputDataBindings = inputDataBindings;
             return this;
         }
+
         public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
-            this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints);
+            $.interactionEndpoints = interactionEndpoints;
             return this;
         }
+
         public Builder jobType(String jobType) {
-            this.jobType = Objects.requireNonNull(jobType);
+            $.jobType = jobType;
             return this;
         }
+
         public Builder output(JobOutputResponse output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
-            this.outputDataBindings = outputDataBindings;
+            $.outputDataBindings = outputDataBindings;
             return this;
         }
+
         public Builder parameters(Object parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public CommandJobResponse build() {
-            return new CommandJobResponse(codeId, command, compute, description, distribution, environmentId, environmentVariables, experimentName, identity, inputDataBindings, interactionEndpoints, jobType, output, outputDataBindings, parameters, priority, properties, provisioningState, status, tags, timeout);
+        }
+
+        public CommandJobResponse build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.compute = Objects.requireNonNull($.compute, "expected parameter 'compute' to be non-null");
+            $.interactionEndpoints = Objects.requireNonNull($.interactionEndpoints, "expected parameter 'interactionEndpoints' to be non-null");
+            $.jobType = Codegen.stringProp("jobType").arg($.jobType).require();
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

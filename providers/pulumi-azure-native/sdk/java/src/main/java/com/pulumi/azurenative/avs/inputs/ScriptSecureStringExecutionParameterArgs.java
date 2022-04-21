@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,10 +36,10 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
      * 
      */
     @Import(name="secureValue")
-      private final @Nullable Output<String> secureValue;
+    private @Nullable Output<String> secureValue;
 
-    public Output<String> secureValue() {
-        return this.secureValue == null ? Codegen.empty() : this.secureValue;
+    public Optional<Output<String>> secureValue() {
+        return Optional.ofNullable(this.secureValue);
     }
 
     /**
@@ -47,76 +48,70 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ScriptSecureStringExecutionParameterArgs(
-        Output<String> name,
-        @Nullable Output<String> secureValue,
-        Output<String> type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secureValue = secureValue;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ScriptSecureStringExecutionParameterArgs() {}
 
-    private ScriptSecureStringExecutionParameterArgs() {
-        this.name = Codegen.empty();
-        this.secureValue = Codegen.empty();
-        this.type = Codegen.empty();
+    private ScriptSecureStringExecutionParameterArgs(ScriptSecureStringExecutionParameterArgs $) {
+        this.name = $.name;
+        this.secureValue = $.secureValue;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptSecureStringExecutionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> secureValue;
-        private Output<String> type;
+        private ScriptSecureStringExecutionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptSecureStringExecutionParameterArgs();
         }
 
         public Builder(ScriptSecureStringExecutionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secureValue = defaults.secureValue;
-    	      this.type = defaults.type;
+            $ = new ScriptSecureStringExecutionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder secureValue(@Nullable Output<String> secureValue) {
-            this.secureValue = secureValue;
+            $.secureValue = secureValue;
             return this;
         }
-        public Builder secureValue(@Nullable String secureValue) {
-            this.secureValue = Codegen.ofNullable(secureValue);
-            return this;
+
+        public Builder secureValue(String secureValue) {
+            return secureValue(Output.of(secureValue));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ScriptSecureStringExecutionParameterArgs build() {
-            return new ScriptSecureStringExecutionParameterArgs(name, secureValue, type);
+            return type(Output.of(type));
+        }
+
+        public ScriptSecureStringExecutionParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filePath", required=true)
-      private final Output<Object> filePath;
+    private Output<Object> filePath;
 
     public Output<Object> filePath() {
         return this.filePath;
@@ -35,63 +34,60 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
-    public AzureMLWebServiceFileArgs(
-        Output<Object> filePath,
-        Output<LinkedServiceReferenceArgs> linkedServiceName) {
-        this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-    }
+    private AzureMLWebServiceFileArgs() {}
 
-    private AzureMLWebServiceFileArgs() {
-        this.filePath = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
+    private AzureMLWebServiceFileArgs(AzureMLWebServiceFileArgs $) {
+        this.filePath = $.filePath;
+        this.linkedServiceName = $.linkedServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLWebServiceFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> filePath;
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private AzureMLWebServiceFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLWebServiceFileArgs();
         }
 
         public Builder(AzureMLWebServiceFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePath = defaults.filePath;
-    	      this.linkedServiceName = defaults.linkedServiceName;
+            $ = new AzureMLWebServiceFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filePath(Output<Object> filePath) {
-            this.filePath = Objects.requireNonNull(filePath);
+            $.filePath = filePath;
             return this;
         }
+
         public Builder filePath(Object filePath) {
-            this.filePath = Output.of(Objects.requireNonNull(filePath));
-            return this;
+            return filePath(Output.of(filePath));
         }
+
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
-        }        public AzureMLWebServiceFileArgs build() {
-            return new AzureMLWebServiceFileArgs(filePath, linkedServiceName);
+            return linkedServiceName(Output.of(linkedServiceName));
+        }
+
+        public AzureMLWebServiceFileArgs build() {
+            $.filePath = Objects.requireNonNull($.filePath, "expected parameter 'filePath' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

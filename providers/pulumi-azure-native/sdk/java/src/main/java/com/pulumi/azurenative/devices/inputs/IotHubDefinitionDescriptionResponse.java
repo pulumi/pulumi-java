@@ -25,10 +25,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="allocationWeight")
-      private final @Nullable Integer allocationWeight;
+    private @Nullable Integer allocationWeight;
 
     public Optional<Integer> allocationWeight() {
-        return this.allocationWeight == null ? Optional.empty() : Optional.ofNullable(this.allocationWeight);
+        return Optional.ofNullable(this.allocationWeight);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="applyAllocationPolicy")
-      private final @Nullable Boolean applyAllocationPolicy;
+    private @Nullable Boolean applyAllocationPolicy;
 
     public Optional<Boolean> applyAllocationPolicy() {
-        return this.applyAllocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.applyAllocationPolicy);
+        return Optional.ofNullable(this.applyAllocationPolicy);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="connectionString", required=true)
-      private final String connectionString;
+    private String connectionString;
 
     public String connectionString() {
         return this.connectionString;
@@ -58,7 +58,7 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -69,82 +69,71 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public IotHubDefinitionDescriptionResponse(
-        @Nullable Integer allocationWeight,
-        @Nullable Boolean applyAllocationPolicy,
-        String connectionString,
-        String location,
-        String name) {
-        this.allocationWeight = allocationWeight;
-        this.applyAllocationPolicy = applyAllocationPolicy;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private IotHubDefinitionDescriptionResponse() {}
 
-    private IotHubDefinitionDescriptionResponse() {
-        this.allocationWeight = null;
-        this.applyAllocationPolicy = null;
-        this.connectionString = null;
-        this.location = null;
-        this.name = null;
+    private IotHubDefinitionDescriptionResponse(IotHubDefinitionDescriptionResponse $) {
+        this.allocationWeight = $.allocationWeight;
+        this.applyAllocationPolicy = $.applyAllocationPolicy;
+        this.connectionString = $.connectionString;
+        this.location = $.location;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubDefinitionDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer allocationWeight;
-        private @Nullable Boolean applyAllocationPolicy;
-        private String connectionString;
-        private String location;
-        private String name;
+        private IotHubDefinitionDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubDefinitionDescriptionResponse();
         }
 
         public Builder(IotHubDefinitionDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationWeight = defaults.allocationWeight;
-    	      this.applyAllocationPolicy = defaults.applyAllocationPolicy;
-    	      this.connectionString = defaults.connectionString;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
+            $ = new IotHubDefinitionDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationWeight(@Nullable Integer allocationWeight) {
-            this.allocationWeight = allocationWeight;
+            $.allocationWeight = allocationWeight;
             return this;
         }
+
         public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
-            this.applyAllocationPolicy = applyAllocationPolicy;
+            $.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
+
         public Builder connectionString(String connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public IotHubDefinitionDescriptionResponse build() {
-            return new IotHubDefinitionDescriptionResponse(allocationWeight, applyAllocationPolicy, connectionString, location, name);
+        }
+
+        public IotHubDefinitionDescriptionResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

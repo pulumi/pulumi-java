@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FirewallPolicyCertificateAuthorityArgs extends com.pulumi.res
      * 
      */
     @Import(name="keyVaultSecretId")
-      private final @Nullable Output<String> keyVaultSecretId;
+    private @Nullable Output<String> keyVaultSecretId;
 
-    public Output<String> keyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
+    public Optional<Output<String>> keyVaultSecretId() {
+        return Optional.ofNullable(this.keyVaultSecretId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class FirewallPolicyCertificateAuthorityArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FirewallPolicyCertificateAuthorityArgs(
-        @Nullable Output<String> keyVaultSecretId,
-        @Nullable Output<String> name) {
-        this.keyVaultSecretId = keyVaultSecretId;
-        this.name = name;
-    }
+    private FirewallPolicyCertificateAuthorityArgs() {}
 
-    private FirewallPolicyCertificateAuthorityArgs() {
-        this.keyVaultSecretId = Codegen.empty();
-        this.name = Codegen.empty();
+    private FirewallPolicyCertificateAuthorityArgs(FirewallPolicyCertificateAuthorityArgs $) {
+        this.keyVaultSecretId = $.keyVaultSecretId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyCertificateAuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultSecretId;
-        private @Nullable Output<String> name;
+        private FirewallPolicyCertificateAuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyCertificateAuthorityArgs();
         }
 
         public Builder(FirewallPolicyCertificateAuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultSecretId = defaults.keyVaultSecretId;
-    	      this.name = defaults.name;
+            $ = new FirewallPolicyCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
-            this.keyVaultSecretId = keyVaultSecretId;
+            $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-        public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = Codegen.ofNullable(keyVaultSecretId);
-            return this;
+
+        public Builder keyVaultSecretId(String keyVaultSecretId) {
+            return keyVaultSecretId(Output.of(keyVaultSecretId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FirewallPolicyCertificateAuthorityArgs build() {
-            return new FirewallPolicyCertificateAuthorityArgs(keyVaultSecretId, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FirewallPolicyCertificateAuthorityArgs build() {
+            return $;
         }
     }
+
 }

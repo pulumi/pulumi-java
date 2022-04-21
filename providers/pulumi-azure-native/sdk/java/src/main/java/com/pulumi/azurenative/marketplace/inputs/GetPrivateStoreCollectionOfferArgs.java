@@ -17,7 +17,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="collectionId", required=true)
-      private final String collectionId;
+    private String collectionId;
 
     public String collectionId() {
         return this.collectionId;
@@ -28,7 +28,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="offerId", required=true)
-      private final String offerId;
+    private String offerId;
 
     public String offerId() {
         return this.offerId;
@@ -39,64 +39,59 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="privateStoreId", required=true)
-      private final String privateStoreId;
+    private String privateStoreId;
 
     public String privateStoreId() {
         return this.privateStoreId;
     }
 
-    public GetPrivateStoreCollectionOfferArgs(
-        String collectionId,
-        String offerId,
-        String privateStoreId) {
-        this.collectionId = Objects.requireNonNull(collectionId, "expected parameter 'collectionId' to be non-null");
-        this.offerId = Objects.requireNonNull(offerId, "expected parameter 'offerId' to be non-null");
-        this.privateStoreId = Objects.requireNonNull(privateStoreId, "expected parameter 'privateStoreId' to be non-null");
-    }
+    private GetPrivateStoreCollectionOfferArgs() {}
 
-    private GetPrivateStoreCollectionOfferArgs() {
-        this.collectionId = null;
-        this.offerId = null;
-        this.privateStoreId = null;
+    private GetPrivateStoreCollectionOfferArgs(GetPrivateStoreCollectionOfferArgs $) {
+        this.collectionId = $.collectionId;
+        this.offerId = $.offerId;
+        this.privateStoreId = $.privateStoreId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateStoreCollectionOfferArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String collectionId;
-        private String offerId;
-        private String privateStoreId;
+        private GetPrivateStoreCollectionOfferArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateStoreCollectionOfferArgs();
         }
 
         public Builder(GetPrivateStoreCollectionOfferArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionId = defaults.collectionId;
-    	      this.offerId = defaults.offerId;
-    	      this.privateStoreId = defaults.privateStoreId;
+            $ = new GetPrivateStoreCollectionOfferArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionId(String collectionId) {
-            this.collectionId = Objects.requireNonNull(collectionId);
+            $.collectionId = collectionId;
             return this;
         }
+
         public Builder offerId(String offerId) {
-            this.offerId = Objects.requireNonNull(offerId);
+            $.offerId = offerId;
             return this;
         }
+
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Objects.requireNonNull(privateStoreId);
+            $.privateStoreId = privateStoreId;
             return this;
-        }        public GetPrivateStoreCollectionOfferArgs build() {
-            return new GetPrivateStoreCollectionOfferArgs(collectionId, offerId, privateStoreId);
+        }
+
+        public GetPrivateStoreCollectionOfferArgs build() {
+            $.collectionId = Objects.requireNonNull($.collectionId, "expected parameter 'collectionId' to be non-null");
+            $.offerId = Objects.requireNonNull($.offerId, "expected parameter 'offerId' to be non-null");
+            $.privateStoreId = Objects.requireNonNull($.privateStoreId, "expected parameter 'privateStoreId' to be non-null");
+            return $;
         }
     }
+
 }

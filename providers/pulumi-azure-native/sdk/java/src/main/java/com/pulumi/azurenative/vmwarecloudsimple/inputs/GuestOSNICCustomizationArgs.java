@@ -5,10 +5,10 @@ package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="allocation")
-      private final @Nullable Output<String> allocation;
+    private @Nullable Output<String> allocation;
 
-    public Output<String> allocation() {
-        return this.allocation == null ? Codegen.empty() : this.allocation;
+    public Optional<Output<String>> allocation() {
+        return Optional.ofNullable(this.allocation);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="gateway")
-      private final @Nullable Output<List<String>> gateway;
+    private @Nullable Output<List<String>> gateway;
 
-    public Output<List<String>> gateway() {
-        return this.gateway == null ? Codegen.empty() : this.gateway;
+    public Optional<Output<List<String>>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mask")
-      private final @Nullable Output<String> mask;
+    private @Nullable Output<String> mask;
 
-    public Output<String> mask() {
-        return this.mask == null ? Codegen.empty() : this.mask;
+    public Optional<Output<String>> mask() {
+        return Optional.ofNullable(this.mask);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="primaryWinsServer")
-      private final @Nullable Output<String> primaryWinsServer;
+    private @Nullable Output<String> primaryWinsServer;
 
-    public Output<String> primaryWinsServer() {
-        return this.primaryWinsServer == null ? Codegen.empty() : this.primaryWinsServer;
+    public Optional<Output<String>> primaryWinsServer() {
+        return Optional.ofNullable(this.primaryWinsServer);
     }
 
     /**
@@ -91,134 +91,116 @@ public final class GuestOSNICCustomizationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="secondaryWinsServer")
-      private final @Nullable Output<String> secondaryWinsServer;
+    private @Nullable Output<String> secondaryWinsServer;
 
-    public Output<String> secondaryWinsServer() {
-        return this.secondaryWinsServer == null ? Codegen.empty() : this.secondaryWinsServer;
+    public Optional<Output<String>> secondaryWinsServer() {
+        return Optional.ofNullable(this.secondaryWinsServer);
     }
 
-    public GuestOSNICCustomizationArgs(
-        @Nullable Output<String> allocation,
-        @Nullable Output<List<String>> dnsServers,
-        @Nullable Output<List<String>> gateway,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> mask,
-        @Nullable Output<String> primaryWinsServer,
-        @Nullable Output<String> secondaryWinsServer) {
-        this.allocation = allocation;
-        this.dnsServers = dnsServers;
-        this.gateway = gateway;
-        this.ipAddress = ipAddress;
-        this.mask = mask;
-        this.primaryWinsServer = primaryWinsServer;
-        this.secondaryWinsServer = secondaryWinsServer;
-    }
+    private GuestOSNICCustomizationArgs() {}
 
-    private GuestOSNICCustomizationArgs() {
-        this.allocation = Codegen.empty();
-        this.dnsServers = Codegen.empty();
-        this.gateway = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.mask = Codegen.empty();
-        this.primaryWinsServer = Codegen.empty();
-        this.secondaryWinsServer = Codegen.empty();
+    private GuestOSNICCustomizationArgs(GuestOSNICCustomizationArgs $) {
+        this.allocation = $.allocation;
+        this.dnsServers = $.dnsServers;
+        this.gateway = $.gateway;
+        this.ipAddress = $.ipAddress;
+        this.mask = $.mask;
+        this.primaryWinsServer = $.primaryWinsServer;
+        this.secondaryWinsServer = $.secondaryWinsServer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestOSNICCustomizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocation;
-        private @Nullable Output<List<String>> dnsServers;
-        private @Nullable Output<List<String>> gateway;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> mask;
-        private @Nullable Output<String> primaryWinsServer;
-        private @Nullable Output<String> secondaryWinsServer;
+        private GuestOSNICCustomizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestOSNICCustomizationArgs();
         }
 
         public Builder(GuestOSNICCustomizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocation = defaults.allocation;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.gateway = defaults.gateway;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.mask = defaults.mask;
-    	      this.primaryWinsServer = defaults.primaryWinsServer;
-    	      this.secondaryWinsServer = defaults.secondaryWinsServer;
+            $ = new GuestOSNICCustomizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocation(@Nullable Output<String> allocation) {
-            this.allocation = allocation;
+            $.allocation = allocation;
             return this;
         }
-        public Builder allocation(@Nullable String allocation) {
-            this.allocation = Codegen.ofNullable(allocation);
-            return this;
+
+        public Builder allocation(String allocation) {
+            return allocation(Output.of(allocation));
         }
+
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder gateway(@Nullable Output<List<String>> gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
-        public Builder gateway(@Nullable List<String> gateway) {
-            this.gateway = Codegen.ofNullable(gateway);
-            return this;
+
+        public Builder gateway(List<String> gateway) {
+            return gateway(Output.of(gateway));
         }
+
         public Builder gateway(String... gateway) {
             return gateway(List.of(gateway));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder mask(@Nullable Output<String> mask) {
-            this.mask = mask;
+            $.mask = mask;
             return this;
         }
-        public Builder mask(@Nullable String mask) {
-            this.mask = Codegen.ofNullable(mask);
-            return this;
+
+        public Builder mask(String mask) {
+            return mask(Output.of(mask));
         }
+
         public Builder primaryWinsServer(@Nullable Output<String> primaryWinsServer) {
-            this.primaryWinsServer = primaryWinsServer;
+            $.primaryWinsServer = primaryWinsServer;
             return this;
         }
-        public Builder primaryWinsServer(@Nullable String primaryWinsServer) {
-            this.primaryWinsServer = Codegen.ofNullable(primaryWinsServer);
-            return this;
+
+        public Builder primaryWinsServer(String primaryWinsServer) {
+            return primaryWinsServer(Output.of(primaryWinsServer));
         }
+
         public Builder secondaryWinsServer(@Nullable Output<String> secondaryWinsServer) {
-            this.secondaryWinsServer = secondaryWinsServer;
+            $.secondaryWinsServer = secondaryWinsServer;
             return this;
         }
-        public Builder secondaryWinsServer(@Nullable String secondaryWinsServer) {
-            this.secondaryWinsServer = Codegen.ofNullable(secondaryWinsServer);
-            return this;
-        }        public GuestOSNICCustomizationArgs build() {
-            return new GuestOSNICCustomizationArgs(allocation, dnsServers, gateway, ipAddress, mask, primaryWinsServer, secondaryWinsServer);
+
+        public Builder secondaryWinsServer(String secondaryWinsServer) {
+            return secondaryWinsServer(Output.of(secondaryWinsServer));
+        }
+
+        public GuestOSNICCustomizationArgs build() {
+            return $;
         }
     }
+
 }

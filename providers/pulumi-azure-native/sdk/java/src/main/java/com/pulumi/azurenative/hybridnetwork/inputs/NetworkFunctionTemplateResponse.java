@@ -24,48 +24,48 @@ public final class NetworkFunctionTemplateResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="networkFunctionRoleConfigurations")
-      private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
+    private @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
-    public List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations() {
-        return this.networkFunctionRoleConfigurations == null ? List.of() : this.networkFunctionRoleConfigurations;
+    public Optional<List<NetworkFunctionRoleConfigurationResponse>> networkFunctionRoleConfigurations() {
+        return Optional.ofNullable(this.networkFunctionRoleConfigurations);
     }
 
-    public NetworkFunctionTemplateResponse(@Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
-        this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
-    }
+    private NetworkFunctionTemplateResponse() {}
 
-    private NetworkFunctionTemplateResponse() {
-        this.networkFunctionRoleConfigurations = List.of();
+    private NetworkFunctionTemplateResponse(NetworkFunctionTemplateResponse $) {
+        this.networkFunctionRoleConfigurations = $.networkFunctionRoleConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
+        private NetworkFunctionTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionTemplateResponse();
         }
 
         public Builder(NetworkFunctionTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkFunctionRoleConfigurations = defaults.networkFunctionRoleConfigurations;
+            $ = new NetworkFunctionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
-            this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
+            $.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
+
         public Builder networkFunctionRoleConfigurations(NetworkFunctionRoleConfigurationResponse... networkFunctionRoleConfigurations) {
             return networkFunctionRoleConfigurations(List.of(networkFunctionRoleConfigurations));
-        }        public NetworkFunctionTemplateResponse build() {
-            return new NetworkFunctionTemplateResponse(networkFunctionRoleConfigurations);
+        }
+
+        public NetworkFunctionTemplateResponse build() {
+            return $;
         }
     }
+
 }

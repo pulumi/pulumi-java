@@ -17,7 +17,7 @@ public final class GetNotificationHubArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetNotificationHubArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="notificationHubName", required=true)
-      private final String notificationHubName;
+    private String notificationHubName;
 
     public String notificationHubName() {
         return this.notificationHubName;
@@ -39,64 +39,59 @@ public final class GetNotificationHubArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNotificationHubArgs(
-        String namespaceName,
-        String notificationHubName,
-        String resourceGroupName) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.notificationHubName = Objects.requireNonNull(notificationHubName, "expected parameter 'notificationHubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNotificationHubArgs() {}
 
-    private GetNotificationHubArgs() {
-        this.namespaceName = null;
-        this.notificationHubName = null;
-        this.resourceGroupName = null;
+    private GetNotificationHubArgs(GetNotificationHubArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.notificationHubName = $.notificationHubName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceName;
-        private String notificationHubName;
-        private String resourceGroupName;
+        private GetNotificationHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationHubArgs();
         }
 
         public Builder(GetNotificationHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.notificationHubName = defaults.notificationHubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNotificationHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder notificationHubName(String notificationHubName) {
-            this.notificationHubName = Objects.requireNonNull(notificationHubName);
+            $.notificationHubName = notificationHubName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNotificationHubArgs build() {
-            return new GetNotificationHubArgs(namespaceName, notificationHubName, resourceGroupName);
+        }
+
+        public GetNotificationHubArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.notificationHubName = Objects.requireNonNull($.notificationHubName, "expected parameter 'notificationHubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

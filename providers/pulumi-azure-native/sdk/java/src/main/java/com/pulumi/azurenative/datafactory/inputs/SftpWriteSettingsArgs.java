@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="copyBehavior")
-      private final @Nullable Output<Object> copyBehavior;
+    private @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> copyBehavior() {
-        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
+    public Optional<Output<Object>> copyBehavior() {
+        return Optional.ofNullable(this.copyBehavior);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="operationTimeout")
-      private final @Nullable Output<Object> operationTimeout;
+    private @Nullable Output<Object> operationTimeout;
 
-    public Output<Object> operationTimeout() {
-        return this.operationTimeout == null ? Codegen.empty() : this.operationTimeout;
+    public Optional<Output<Object>> operationTimeout() {
+        return Optional.ofNullable(this.operationTimeout);
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -81,115 +82,99 @@ public final class SftpWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="useTempFileRename")
-      private final @Nullable Output<Object> useTempFileRename;
+    private @Nullable Output<Object> useTempFileRename;
 
-    public Output<Object> useTempFileRename() {
-        return this.useTempFileRename == null ? Codegen.empty() : this.useTempFileRename;
+    public Optional<Output<Object>> useTempFileRename() {
+        return Optional.ofNullable(this.useTempFileRename);
     }
 
-    public SftpWriteSettingsArgs(
-        @Nullable Output<Object> copyBehavior,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> operationTimeout,
-        Output<String> type,
-        @Nullable Output<Object> useTempFileRename) {
-        this.copyBehavior = copyBehavior;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.operationTimeout = operationTimeout;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useTempFileRename = useTempFileRename;
-    }
+    private SftpWriteSettingsArgs() {}
 
-    private SftpWriteSettingsArgs() {
-        this.copyBehavior = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.operationTimeout = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useTempFileRename = Codegen.empty();
+    private SftpWriteSettingsArgs(SftpWriteSettingsArgs $) {
+        this.copyBehavior = $.copyBehavior;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.operationTimeout = $.operationTimeout;
+        this.type = $.type;
+        this.useTempFileRename = $.useTempFileRename;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SftpWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> copyBehavior;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> operationTimeout;
-        private Output<String> type;
-        private @Nullable Output<Object> useTempFileRename;
+        private SftpWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SftpWriteSettingsArgs();
         }
 
         public Builder(SftpWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyBehavior = defaults.copyBehavior;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.operationTimeout = defaults.operationTimeout;
-    	      this.type = defaults.type;
-    	      this.useTempFileRename = defaults.useTempFileRename;
+            $ = new SftpWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
-            this.copyBehavior = copyBehavior;
+            $.copyBehavior = copyBehavior;
             return this;
         }
-        public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Codegen.ofNullable(copyBehavior);
-            return this;
+
+        public Builder copyBehavior(Object copyBehavior) {
+            return copyBehavior(Output.of(copyBehavior));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder operationTimeout(@Nullable Output<Object> operationTimeout) {
-            this.operationTimeout = operationTimeout;
+            $.operationTimeout = operationTimeout;
             return this;
         }
-        public Builder operationTimeout(@Nullable Object operationTimeout) {
-            this.operationTimeout = Codegen.ofNullable(operationTimeout);
-            return this;
+
+        public Builder operationTimeout(Object operationTimeout) {
+            return operationTimeout(Output.of(operationTimeout));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useTempFileRename(@Nullable Output<Object> useTempFileRename) {
-            this.useTempFileRename = useTempFileRename;
+            $.useTempFileRename = useTempFileRename;
             return this;
         }
-        public Builder useTempFileRename(@Nullable Object useTempFileRename) {
-            this.useTempFileRename = Codegen.ofNullable(useTempFileRename);
-            return this;
-        }        public SftpWriteSettingsArgs build() {
-            return new SftpWriteSettingsArgs(copyBehavior, disableMetricsCollection, maxConcurrentConnections, operationTimeout, type, useTempFileRename);
+
+        public Builder useTempFileRename(Object useTempFileRename) {
+            return useTempFileRename(Output.of(useTempFileRename));
+        }
+
+        public SftpWriteSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cache;
 import com.pulumi.azurenative.cache.enums.ReplicationRole;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedRedisCacheId", required=true)
-      private final Output<String> linkedRedisCacheId;
+    private Output<String> linkedRedisCacheId;
 
     public Output<String> linkedRedisCacheId() {
         return this.linkedRedisCacheId;
@@ -32,7 +32,7 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedRedisCacheLocation", required=true)
-      private final Output<String> linkedRedisCacheLocation;
+    private Output<String> linkedRedisCacheLocation;
 
     public Output<String> linkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
@@ -43,10 +43,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedServerName")
-      private final @Nullable Output<String> linkedServerName;
+    private @Nullable Output<String> linkedServerName;
 
-    public Output<String> linkedServerName() {
-        return this.linkedServerName == null ? Codegen.empty() : this.linkedServerName;
+    public Optional<Output<String>> linkedServerName() {
+        return Optional.ofNullable(this.linkedServerName);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -65,7 +65,7 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,103 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverRole", required=true)
-      private final Output<ReplicationRole> serverRole;
+    private Output<ReplicationRole> serverRole;
 
     public Output<ReplicationRole> serverRole() {
         return this.serverRole;
     }
 
-    public LinkedServerArgs(
-        Output<String> linkedRedisCacheId,
-        Output<String> linkedRedisCacheLocation,
-        @Nullable Output<String> linkedServerName,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        Output<ReplicationRole> serverRole) {
-        this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId, "expected parameter 'linkedRedisCacheId' to be non-null");
-        this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation, "expected parameter 'linkedRedisCacheLocation' to be non-null");
-        this.linkedServerName = linkedServerName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverRole = Objects.requireNonNull(serverRole, "expected parameter 'serverRole' to be non-null");
-    }
+    private LinkedServerArgs() {}
 
-    private LinkedServerArgs() {
-        this.linkedRedisCacheId = Codegen.empty();
-        this.linkedRedisCacheLocation = Codegen.empty();
-        this.linkedServerName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverRole = Codegen.empty();
+    private LinkedServerArgs(LinkedServerArgs $) {
+        this.linkedRedisCacheId = $.linkedRedisCacheId;
+        this.linkedRedisCacheLocation = $.linkedRedisCacheLocation;
+        this.linkedServerName = $.linkedServerName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverRole = $.serverRole;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> linkedRedisCacheId;
-        private Output<String> linkedRedisCacheLocation;
-        private @Nullable Output<String> linkedServerName;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<ReplicationRole> serverRole;
+        private LinkedServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedServerArgs();
         }
 
         public Builder(LinkedServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedRedisCacheId = defaults.linkedRedisCacheId;
-    	      this.linkedRedisCacheLocation = defaults.linkedRedisCacheLocation;
-    	      this.linkedServerName = defaults.linkedServerName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverRole = defaults.serverRole;
+            $ = new LinkedServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedRedisCacheId(Output<String> linkedRedisCacheId) {
-            this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
+            $.linkedRedisCacheId = linkedRedisCacheId;
             return this;
         }
+
         public Builder linkedRedisCacheId(String linkedRedisCacheId) {
-            this.linkedRedisCacheId = Output.of(Objects.requireNonNull(linkedRedisCacheId));
-            return this;
+            return linkedRedisCacheId(Output.of(linkedRedisCacheId));
         }
+
         public Builder linkedRedisCacheLocation(Output<String> linkedRedisCacheLocation) {
-            this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
+            $.linkedRedisCacheLocation = linkedRedisCacheLocation;
             return this;
         }
+
         public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
-            this.linkedRedisCacheLocation = Output.of(Objects.requireNonNull(linkedRedisCacheLocation));
-            return this;
+            return linkedRedisCacheLocation(Output.of(linkedRedisCacheLocation));
         }
+
         public Builder linkedServerName(@Nullable Output<String> linkedServerName) {
-            this.linkedServerName = linkedServerName;
+            $.linkedServerName = linkedServerName;
             return this;
         }
-        public Builder linkedServerName(@Nullable String linkedServerName) {
-            this.linkedServerName = Codegen.ofNullable(linkedServerName);
-            return this;
+
+        public Builder linkedServerName(String linkedServerName) {
+            return linkedServerName(Output.of(linkedServerName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverRole(Output<ReplicationRole> serverRole) {
-            this.serverRole = Objects.requireNonNull(serverRole);
+            $.serverRole = serverRole;
             return this;
         }
+
         public Builder serverRole(ReplicationRole serverRole) {
-            this.serverRole = Output.of(Objects.requireNonNull(serverRole));
-            return this;
-        }        public LinkedServerArgs build() {
-            return new LinkedServerArgs(linkedRedisCacheId, linkedRedisCacheLocation, linkedServerName, name, resourceGroupName, serverRole);
+            return serverRole(Output.of(serverRole));
+        }
+
+        public LinkedServerArgs build() {
+            $.linkedRedisCacheId = Objects.requireNonNull($.linkedRedisCacheId, "expected parameter 'linkedRedisCacheId' to be non-null");
+            $.linkedRedisCacheLocation = Objects.requireNonNull($.linkedRedisCacheLocation, "expected parameter 'linkedRedisCacheLocation' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverRole = Objects.requireNonNull($.serverRole, "expected parameter 'serverRole' to be non-null");
+            return $;
         }
     }
+
 }

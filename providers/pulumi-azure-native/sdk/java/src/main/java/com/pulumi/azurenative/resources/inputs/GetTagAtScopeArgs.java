@@ -17,45 +17,45 @@ public final class GetTagAtScopeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetTagAtScopeArgs(String scope) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetTagAtScopeArgs() {}
 
-    private GetTagAtScopeArgs() {
-        this.scope = null;
+    private GetTagAtScopeArgs(GetTagAtScopeArgs $) {
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTagAtScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
+        private GetTagAtScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTagAtScopeArgs();
         }
 
         public Builder(GetTagAtScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
+            $ = new GetTagAtScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetTagAtScopeArgs build() {
-            return new GetTagAtScopeArgs(scope);
+        }
+
+        public GetTagAtScopeArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

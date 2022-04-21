@@ -17,45 +17,45 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends com.pulumi.r
      * 
      */
     @Import(name="historyDefinitionId", required=true)
-      private final String historyDefinitionId;
+    private String historyDefinitionId;
 
     public String historyDefinitionId() {
         return this.historyDefinitionId;
     }
 
-    public GetAccessReviewHistoryDefinitionByIdArgs(String historyDefinitionId) {
-        this.historyDefinitionId = Objects.requireNonNull(historyDefinitionId, "expected parameter 'historyDefinitionId' to be non-null");
-    }
+    private GetAccessReviewHistoryDefinitionByIdArgs() {}
 
-    private GetAccessReviewHistoryDefinitionByIdArgs() {
-        this.historyDefinitionId = null;
+    private GetAccessReviewHistoryDefinitionByIdArgs(GetAccessReviewHistoryDefinitionByIdArgs $) {
+        this.historyDefinitionId = $.historyDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessReviewHistoryDefinitionByIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String historyDefinitionId;
+        private GetAccessReviewHistoryDefinitionByIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessReviewHistoryDefinitionByIdArgs();
         }
 
         public Builder(GetAccessReviewHistoryDefinitionByIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.historyDefinitionId = defaults.historyDefinitionId;
+            $ = new GetAccessReviewHistoryDefinitionByIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder historyDefinitionId(String historyDefinitionId) {
-            this.historyDefinitionId = Objects.requireNonNull(historyDefinitionId);
+            $.historyDefinitionId = historyDefinitionId;
             return this;
-        }        public GetAccessReviewHistoryDefinitionByIdArgs build() {
-            return new GetAccessReviewHistoryDefinitionByIdArgs(historyDefinitionId);
+        }
+
+        public GetAccessReviewHistoryDefinitionByIdArgs build() {
+            $.historyDefinitionId = Objects.requireNonNull($.historyDefinitionId, "expected parameter 'historyDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

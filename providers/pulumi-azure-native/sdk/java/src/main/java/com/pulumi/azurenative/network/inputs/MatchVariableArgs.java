@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.WebApplicationFirewallMatchVariable;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MatchVariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -37,63 +37,59 @@ public final class MatchVariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variableName", required=true)
-      private final Output<Either<String,WebApplicationFirewallMatchVariable>> variableName;
+    private Output<Either<String,WebApplicationFirewallMatchVariable>> variableName;
 
     public Output<Either<String,WebApplicationFirewallMatchVariable>> variableName() {
         return this.variableName;
     }
 
-    public MatchVariableArgs(
-        @Nullable Output<String> selector,
-        Output<Either<String,WebApplicationFirewallMatchVariable>> variableName) {
-        this.selector = selector;
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-    }
+    private MatchVariableArgs() {}
 
-    private MatchVariableArgs() {
-        this.selector = Codegen.empty();
-        this.variableName = Codegen.empty();
+    private MatchVariableArgs(MatchVariableArgs $) {
+        this.selector = $.selector;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MatchVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> selector;
-        private Output<Either<String,WebApplicationFirewallMatchVariable>> variableName;
+        private MatchVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MatchVariableArgs();
         }
 
         public Builder(MatchVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selector = defaults.selector;
-    	      this.variableName = defaults.variableName;
+            $ = new MatchVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder variableName(Output<Either<String,WebApplicationFirewallMatchVariable>> variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
         }
+
         public Builder variableName(Either<String,WebApplicationFirewallMatchVariable> variableName) {
-            this.variableName = Output.of(Objects.requireNonNull(variableName));
-            return this;
-        }        public MatchVariableArgs build() {
-            return new MatchVariableArgs(selector, variableName);
+            return variableName(Output.of(variableName));
+        }
+
+        public MatchVariableArgs build() {
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            return $;
         }
     }
+
 }

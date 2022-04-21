@@ -24,10 +24,10 @@ public final class FailoverPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="failoverPriority")
-      private final @Nullable Integer failoverPriority;
+    private @Nullable Integer failoverPriority;
 
     public Optional<Integer> failoverPriority() {
-        return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
+        return Optional.ofNullable(this.failoverPriority);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class FailoverPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -46,64 +46,57 @@ public final class FailoverPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="locationName")
-      private final @Nullable String locationName;
+    private @Nullable String locationName;
 
     public Optional<String> locationName() {
-        return this.locationName == null ? Optional.empty() : Optional.ofNullable(this.locationName);
+        return Optional.ofNullable(this.locationName);
     }
 
-    public FailoverPolicyResponse(
-        @Nullable Integer failoverPriority,
-        String id,
-        @Nullable String locationName) {
-        this.failoverPriority = failoverPriority;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.locationName = locationName;
-    }
+    private FailoverPolicyResponse() {}
 
-    private FailoverPolicyResponse() {
-        this.failoverPriority = null;
-        this.id = null;
-        this.locationName = null;
+    private FailoverPolicyResponse(FailoverPolicyResponse $) {
+        this.failoverPriority = $.failoverPriority;
+        this.id = $.id;
+        this.locationName = $.locationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailoverPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer failoverPriority;
-        private String id;
-        private @Nullable String locationName;
+        private FailoverPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailoverPolicyResponse();
         }
 
         public Builder(FailoverPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverPriority = defaults.failoverPriority;
-    	      this.id = defaults.id;
-    	      this.locationName = defaults.locationName;
+            $ = new FailoverPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverPriority(@Nullable Integer failoverPriority) {
-            this.failoverPriority = failoverPriority;
+            $.failoverPriority = failoverPriority;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder locationName(@Nullable String locationName) {
-            this.locationName = locationName;
+            $.locationName = locationName;
             return this;
-        }        public FailoverPolicyResponse build() {
-            return new FailoverPolicyResponse(failoverPriority, id, locationName);
+        }
+
+        public FailoverPolicyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

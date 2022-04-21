@@ -24,7 +24,7 @@ public final class ApplicationGatewayFrontendPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -35,10 +35,10 @@ public final class ApplicationGatewayFrontendPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewayFrontendPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationGatewayFrontendPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ApplicationGatewayFrontendPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,91 +79,77 @@ public final class ApplicationGatewayFrontendPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayFrontendPortResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer port,
-        String provisioningState,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.port = port;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayFrontendPortResponse() {}
 
-    private ApplicationGatewayFrontendPortResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.port = null;
-        this.provisioningState = null;
-        this.type = null;
+    private ApplicationGatewayFrontendPortResponse(ApplicationGatewayFrontendPortResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.port = $.port;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayFrontendPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Integer port;
-        private String provisioningState;
-        private String type;
+        private ApplicationGatewayFrontendPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayFrontendPortResponse();
         }
 
         public Builder(ApplicationGatewayFrontendPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayFrontendPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayFrontendPortResponse build() {
-            return new ApplicationGatewayFrontendPortResponse(etag, id, name, port, provisioningState, type);
+        }
+
+        public ApplicationGatewayFrontendPortResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

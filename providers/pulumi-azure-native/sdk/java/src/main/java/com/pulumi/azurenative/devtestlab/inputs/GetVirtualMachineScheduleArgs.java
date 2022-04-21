@@ -19,10 +19,10 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -63,82 +63,72 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="virtualMachineName", required=true)
-      private final String virtualMachineName;
+    private String virtualMachineName;
 
     public String virtualMachineName() {
         return this.virtualMachineName;
     }
 
-    public GetVirtualMachineScheduleArgs(
-        @Nullable String expand,
-        String labName,
-        String name,
-        String resourceGroupName,
-        String virtualMachineName) {
-        this.expand = expand;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachineName = Objects.requireNonNull(virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
-    }
+    private GetVirtualMachineScheduleArgs() {}
 
-    private GetVirtualMachineScheduleArgs() {
-        this.expand = null;
-        this.labName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.virtualMachineName = null;
+    private GetVirtualMachineScheduleArgs(GetVirtualMachineScheduleArgs $) {
+        this.expand = $.expand;
+        this.labName = $.labName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachineName = $.virtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String labName;
-        private String name;
-        private String resourceGroupName;
-        private String virtualMachineName;
+        private GetVirtualMachineScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineScheduleArgs();
         }
 
         public Builder(GetVirtualMachineScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.labName = defaults.labName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachineName = defaults.virtualMachineName;
+            $ = new GetVirtualMachineScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualMachineName(String virtualMachineName) {
-            this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
+            $.virtualMachineName = virtualMachineName;
             return this;
-        }        public GetVirtualMachineScheduleArgs build() {
-            return new GetVirtualMachineScheduleArgs(expand, labName, name, resourceGroupName, virtualMachineName);
+        }
+
+        public GetVirtualMachineScheduleArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachineName = Objects.requireNonNull($.virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
+            return $;
         }
     }
+
 }

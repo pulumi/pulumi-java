@@ -23,10 +23,10 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subnetResourceId")
-      private final @Nullable String subnetResourceId;
+    private @Nullable String subnetResourceId;
 
     public Optional<String> subnetResourceId() {
-        return this.subnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.subnetResourceId);
+        return Optional.ofNullable(this.subnetResourceId);
     }
 
-    public PrivateIPAddressResponse(
-        @Nullable String ipAddress,
-        @Nullable String subnetResourceId) {
-        this.ipAddress = ipAddress;
-        this.subnetResourceId = subnetResourceId;
-    }
+    private PrivateIPAddressResponse() {}
 
-    private PrivateIPAddressResponse() {
-        this.ipAddress = null;
-        this.subnetResourceId = null;
+    private PrivateIPAddressResponse(PrivateIPAddressResponse $) {
+        this.ipAddress = $.ipAddress;
+        this.subnetResourceId = $.subnetResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateIPAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipAddress;
-        private @Nullable String subnetResourceId;
+        private PrivateIPAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateIPAddressResponse();
         }
 
         public Builder(PrivateIPAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.subnetResourceId = defaults.subnetResourceId;
+            $ = new PrivateIPAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = subnetResourceId;
+            $.subnetResourceId = subnetResourceId;
             return this;
-        }        public PrivateIPAddressResponse build() {
-            return new PrivateIPAddressResponse(ipAddress, subnetResourceId);
+        }
+
+        public PrivateIPAddressResponse build() {
+            return $;
         }
     }
+
 }

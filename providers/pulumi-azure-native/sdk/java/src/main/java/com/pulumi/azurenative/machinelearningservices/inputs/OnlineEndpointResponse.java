@@ -25,7 +25,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="authMode", required=true)
-      private final String authMode;
+    private String authMode;
 
     public String authMode() {
         return this.authMode;
@@ -36,10 +36,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -69,7 +69,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scoringUri", required=true)
-      private final String scoringUri;
+    private String scoringUri;
 
     public String scoringUri() {
         return this.scoringUri;
@@ -80,7 +80,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="swaggerUri", required=true)
-      private final String swaggerUri;
+    private String swaggerUri;
 
     public String swaggerUri() {
         return this.swaggerUri;
@@ -92,10 +92,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -103,109 +103,90 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="traffic")
-      private final @Nullable Map<String,Integer> traffic;
+    private @Nullable Map<String,Integer> traffic;
 
-    public Map<String,Integer> traffic() {
-        return this.traffic == null ? Map.of() : this.traffic;
+    public Optional<Map<String,Integer>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
-    public OnlineEndpointResponse(
-        String authMode,
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        String scoringUri,
-        String swaggerUri,
-        @Nullable String target,
-        @Nullable Map<String,Integer> traffic) {
-        this.authMode = Objects.requireNonNull(authMode, "expected parameter 'authMode' to be non-null");
-        this.description = description;
-        this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.scoringUri = Objects.requireNonNull(scoringUri, "expected parameter 'scoringUri' to be non-null");
-        this.swaggerUri = Objects.requireNonNull(swaggerUri, "expected parameter 'swaggerUri' to be non-null");
-        this.target = target;
-        this.traffic = traffic;
-    }
+    private OnlineEndpointResponse() {}
 
-    private OnlineEndpointResponse() {
-        this.authMode = null;
-        this.description = null;
-        this.properties = Map.of();
-        this.provisioningState = null;
-        this.scoringUri = null;
-        this.swaggerUri = null;
-        this.target = null;
-        this.traffic = Map.of();
+    private OnlineEndpointResponse(OnlineEndpointResponse $) {
+        this.authMode = $.authMode;
+        this.description = $.description;
+        this.properties = $.properties;
+        this.provisioningState = $.provisioningState;
+        this.scoringUri = $.scoringUri;
+        this.swaggerUri = $.swaggerUri;
+        this.target = $.target;
+        this.traffic = $.traffic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnlineEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authMode;
-        private @Nullable String description;
-        private @Nullable Map<String,String> properties;
-        private String provisioningState;
-        private String scoringUri;
-        private String swaggerUri;
-        private @Nullable String target;
-        private @Nullable Map<String,Integer> traffic;
+        private OnlineEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnlineEndpointResponse();
         }
 
         public Builder(OnlineEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authMode = defaults.authMode;
-    	      this.description = defaults.description;
-    	      this.properties = defaults.properties;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.scoringUri = defaults.scoringUri;
-    	      this.swaggerUri = defaults.swaggerUri;
-    	      this.target = defaults.target;
-    	      this.traffic = defaults.traffic;
+            $ = new OnlineEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authMode(String authMode) {
-            this.authMode = Objects.requireNonNull(authMode);
+            $.authMode = authMode;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder scoringUri(String scoringUri) {
-            this.scoringUri = Objects.requireNonNull(scoringUri);
+            $.scoringUri = scoringUri;
             return this;
         }
+
         public Builder swaggerUri(String swaggerUri) {
-            this.swaggerUri = Objects.requireNonNull(swaggerUri);
+            $.swaggerUri = swaggerUri;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
-        }        public OnlineEndpointResponse build() {
-            return new OnlineEndpointResponse(authMode, description, properties, provisioningState, scoringUri, swaggerUri, target, traffic);
+        }
+
+        public OnlineEndpointResponse build() {
+            $.authMode = Objects.requireNonNull($.authMode, "expected parameter 'authMode' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.scoringUri = Objects.requireNonNull($.scoringUri, "expected parameter 'scoringUri' to be non-null");
+            $.swaggerUri = Objects.requireNonNull($.swaggerUri, "expected parameter 'swaggerUri' to be non-null");
+            return $;
         }
     }
+
 }

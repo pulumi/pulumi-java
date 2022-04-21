@@ -6,9 +6,9 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentHash")
-      private final @Nullable Output<ContentHashArgs> contentHash;
+    private @Nullable Output<ContentHashArgs> contentHash;
 
-    public Output<ContentHashArgs> contentHash() {
-        return this.contentHash == null ? Codegen.empty() : this.contentHash;
+    public Optional<Output<ContentHashArgs>> contentHash() {
+        return Optional.ofNullable(this.contentHash);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ContentLinkArgs(
-        @Nullable Output<ContentHashArgs> contentHash,
-        @Nullable Output<String> uri,
-        @Nullable Output<String> version) {
-        this.contentHash = contentHash;
-        this.uri = uri;
-        this.version = version;
-    }
+    private ContentLinkArgs() {}
 
-    private ContentLinkArgs() {
-        this.contentHash = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.version = Codegen.empty();
+    private ContentLinkArgs(ContentLinkArgs $) {
+        this.contentHash = $.contentHash;
+        this.uri = $.uri;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContentHashArgs> contentHash;
-        private @Nullable Output<String> uri;
-        private @Nullable Output<String> version;
+        private ContentLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentLinkArgs();
         }
 
         public Builder(ContentLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHash = defaults.contentHash;
-    	      this.uri = defaults.uri;
-    	      this.version = defaults.version;
+            $ = new ContentLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHash(@Nullable Output<ContentHashArgs> contentHash) {
-            this.contentHash = contentHash;
+            $.contentHash = contentHash;
             return this;
         }
-        public Builder contentHash(@Nullable ContentHashArgs contentHash) {
-            this.contentHash = Codegen.ofNullable(contentHash);
-            return this;
+
+        public Builder contentHash(ContentHashArgs contentHash) {
+            return contentHash(Output.of(contentHash));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ContentLinkArgs build() {
-            return new ContentLinkArgs(contentHash, uri, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ContentLinkArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-      private final String virtualNetworkName;
+    private String virtualNetworkName;
 
     public String virtualNetworkName() {
         return this.virtualNetworkName;
@@ -39,64 +39,59 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="virtualNetworkPeeringName", required=true)
-      private final String virtualNetworkPeeringName;
+    private String virtualNetworkPeeringName;
 
     public String virtualNetworkPeeringName() {
         return this.virtualNetworkPeeringName;
     }
 
-    public GetVirtualNetworkPeeringArgs(
-        String resourceGroupName,
-        String virtualNetworkName,
-        String virtualNetworkPeeringName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
-        this.virtualNetworkPeeringName = Objects.requireNonNull(virtualNetworkPeeringName, "expected parameter 'virtualNetworkPeeringName' to be non-null");
-    }
+    private GetVirtualNetworkPeeringArgs() {}
 
-    private GetVirtualNetworkPeeringArgs() {
-        this.resourceGroupName = null;
-        this.virtualNetworkName = null;
-        this.virtualNetworkPeeringName = null;
+    private GetVirtualNetworkPeeringArgs(GetVirtualNetworkPeeringArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkName = $.virtualNetworkName;
+        this.virtualNetworkPeeringName = $.virtualNetworkPeeringName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualNetworkName;
-        private String virtualNetworkPeeringName;
+        private GetVirtualNetworkPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkPeeringArgs();
         }
 
         public Builder(GetVirtualNetworkPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkName = defaults.virtualNetworkName;
-    	      this.virtualNetworkPeeringName = defaults.virtualNetworkPeeringName;
+            $ = new GetVirtualNetworkPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkName(String virtualNetworkName) {
-            this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
+            $.virtualNetworkName = virtualNetworkName;
             return this;
         }
+
         public Builder virtualNetworkPeeringName(String virtualNetworkPeeringName) {
-            this.virtualNetworkPeeringName = Objects.requireNonNull(virtualNetworkPeeringName);
+            $.virtualNetworkPeeringName = virtualNetworkPeeringName;
             return this;
-        }        public GetVirtualNetworkPeeringArgs build() {
-            return new GetVirtualNetworkPeeringArgs(resourceGroupName, virtualNetworkName, virtualNetworkPeeringName);
+        }
+
+        public GetVirtualNetworkPeeringArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkName = Objects.requireNonNull($.virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
+            $.virtualNetworkPeeringName = Objects.requireNonNull($.virtualNetworkPeeringName, "expected parameter 'virtualNetworkPeeringName' to be non-null");
+            return $;
         }
     }
+
 }

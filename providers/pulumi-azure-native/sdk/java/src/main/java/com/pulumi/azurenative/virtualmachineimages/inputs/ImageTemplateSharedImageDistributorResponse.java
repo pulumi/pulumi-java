@@ -27,10 +27,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="artifactTags")
-      private final @Nullable Map<String,String> artifactTags;
+    private @Nullable Map<String,String> artifactTags;
 
-    public Map<String,String> artifactTags() {
-        return this.artifactTags == null ? Map.of() : this.artifactTags;
+    public Optional<Map<String,String>> artifactTags() {
+        return Optional.ofNullable(this.artifactTags);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="excludeFromLatest")
-      private final @Nullable Boolean excludeFromLatest;
+    private @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> excludeFromLatest() {
-        return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
+        return Optional.ofNullable(this.excludeFromLatest);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="galleryImageId", required=true)
-      private final String galleryImageId;
+    private String galleryImageId;
 
     public String galleryImageId() {
         return this.galleryImageId;
@@ -60,7 +60,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="replicationRegions", required=true)
-      private final List<String> replicationRegions;
+    private List<String> replicationRegions;
 
     public List<String> replicationRegions() {
         return this.replicationRegions;
@@ -71,7 +71,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="runOutputName", required=true)
-      private final String runOutputName;
+    private String runOutputName;
 
     public String runOutputName() {
         return this.runOutputName;
@@ -82,10 +82,10 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
     /**
@@ -94,103 +94,89 @@ public final class ImageTemplateSharedImageDistributorResponse extends com.pulum
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ImageTemplateSharedImageDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        @Nullable Boolean excludeFromLatest,
-        String galleryImageId,
-        List<String> replicationRegions,
-        String runOutputName,
-        @Nullable String storageAccountType,
-        String type) {
-        this.artifactTags = artifactTags;
-        this.excludeFromLatest = Codegen.booleanProp("excludeFromLatest").arg(excludeFromLatest).def(false).getNullable();
-        this.galleryImageId = Objects.requireNonNull(galleryImageId, "expected parameter 'galleryImageId' to be non-null");
-        this.replicationRegions = Objects.requireNonNull(replicationRegions, "expected parameter 'replicationRegions' to be non-null");
-        this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.storageAccountType = storageAccountType;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ImageTemplateSharedImageDistributorResponse() {}
 
-    private ImageTemplateSharedImageDistributorResponse() {
-        this.artifactTags = Map.of();
-        this.excludeFromLatest = null;
-        this.galleryImageId = null;
-        this.replicationRegions = List.of();
-        this.runOutputName = null;
-        this.storageAccountType = null;
-        this.type = null;
+    private ImageTemplateSharedImageDistributorResponse(ImageTemplateSharedImageDistributorResponse $) {
+        this.artifactTags = $.artifactTags;
+        this.excludeFromLatest = $.excludeFromLatest;
+        this.galleryImageId = $.galleryImageId;
+        this.replicationRegions = $.replicationRegions;
+        this.runOutputName = $.runOutputName;
+        this.storageAccountType = $.storageAccountType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateSharedImageDistributorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> artifactTags;
-        private @Nullable Boolean excludeFromLatest;
-        private String galleryImageId;
-        private List<String> replicationRegions;
-        private String runOutputName;
-        private @Nullable String storageAccountType;
-        private String type;
+        private ImageTemplateSharedImageDistributorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateSharedImageDistributorResponse();
         }
 
         public Builder(ImageTemplateSharedImageDistributorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactTags = defaults.artifactTags;
-    	      this.excludeFromLatest = defaults.excludeFromLatest;
-    	      this.galleryImageId = defaults.galleryImageId;
-    	      this.replicationRegions = defaults.replicationRegions;
-    	      this.runOutputName = defaults.runOutputName;
-    	      this.storageAccountType = defaults.storageAccountType;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateSharedImageDistributorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = artifactTags;
+            $.artifactTags = artifactTags;
             return this;
         }
+
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = excludeFromLatest;
+            $.excludeFromLatest = excludeFromLatest;
             return this;
         }
+
         public Builder galleryImageId(String galleryImageId) {
-            this.galleryImageId = Objects.requireNonNull(galleryImageId);
+            $.galleryImageId = galleryImageId;
             return this;
         }
+
         public Builder replicationRegions(List<String> replicationRegions) {
-            this.replicationRegions = Objects.requireNonNull(replicationRegions);
+            $.replicationRegions = replicationRegions;
             return this;
         }
+
         public Builder replicationRegions(String... replicationRegions) {
             return replicationRegions(List.of(replicationRegions));
         }
+
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Objects.requireNonNull(runOutputName);
+            $.runOutputName = runOutputName;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ImageTemplateSharedImageDistributorResponse build() {
-            return new ImageTemplateSharedImageDistributorResponse(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
+        }
+
+        public ImageTemplateSharedImageDistributorResponse build() {
+            $.excludeFromLatest = Codegen.booleanProp("excludeFromLatest").arg($.excludeFromLatest).def(false).getNullable();
+            $.galleryImageId = Objects.requireNonNull($.galleryImageId, "expected parameter 'galleryImageId' to be non-null");
+            $.replicationRegions = Objects.requireNonNull($.replicationRegions, "expected parameter 'replicationRegions' to be non-null");
+            $.runOutputName = Objects.requireNonNull($.runOutputName, "expected parameter 'runOutputName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

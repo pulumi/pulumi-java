@@ -17,7 +17,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="columnName", required=true)
-      private final String columnName;
+    private String columnName;
 
     public String columnName() {
         return this.columnName;
@@ -28,7 +28,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -50,7 +50,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
@@ -72,7 +72,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="sensitivityLabelSource", required=true)
-      private final String sensitivityLabelSource;
+    private String sensitivityLabelSource;
 
     public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
@@ -83,100 +83,87 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends com.pulumi.res
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public GetManagedDatabaseSensitivityLabelArgs(
-        String columnName,
-        String databaseName,
-        String managedInstanceName,
-        String resourceGroupName,
-        String schemaName,
-        String sensitivityLabelSource,
-        String tableName) {
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource, "expected parameter 'sensitivityLabelSource' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private GetManagedDatabaseSensitivityLabelArgs() {}
 
-    private GetManagedDatabaseSensitivityLabelArgs() {
-        this.columnName = null;
-        this.databaseName = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
-        this.schemaName = null;
-        this.sensitivityLabelSource = null;
-        this.tableName = null;
+    private GetManagedDatabaseSensitivityLabelArgs(GetManagedDatabaseSensitivityLabelArgs $) {
+        this.columnName = $.columnName;
+        this.databaseName = $.databaseName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
+        this.sensitivityLabelSource = $.sensitivityLabelSource;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedDatabaseSensitivityLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String columnName;
-        private String databaseName;
-        private String managedInstanceName;
-        private String resourceGroupName;
-        private String schemaName;
-        private String sensitivityLabelSource;
-        private String tableName;
+        private GetManagedDatabaseSensitivityLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedDatabaseSensitivityLabelArgs();
         }
 
         public Builder(GetManagedDatabaseSensitivityLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
-    	      this.sensitivityLabelSource = defaults.sensitivityLabelSource;
-    	      this.tableName = defaults.tableName;
+            $ = new GetManagedDatabaseSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(String columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
-            this.sensitivityLabelSource = Objects.requireNonNull(sensitivityLabelSource);
+            $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public GetManagedDatabaseSensitivityLabelArgs build() {
-            return new GetManagedDatabaseSensitivityLabelArgs(columnName, databaseName, managedInstanceName, resourceGroupName, schemaName, sensitivityLabelSource, tableName);
+        }
+
+        public GetManagedDatabaseSensitivityLabelArgs build() {
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            $.sensitivityLabelSource = Objects.requireNonNull($.sensitivityLabelSource, "expected parameter 'sensitivityLabelSource' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

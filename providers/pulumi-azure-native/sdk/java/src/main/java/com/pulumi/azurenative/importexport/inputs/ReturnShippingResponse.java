@@ -21,7 +21,7 @@ public final class ReturnShippingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="carrierAccountNumber", required=true)
-      private final String carrierAccountNumber;
+    private String carrierAccountNumber;
 
     public String carrierAccountNumber() {
         return this.carrierAccountNumber;
@@ -32,55 +32,52 @@ public final class ReturnShippingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="carrierName", required=true)
-      private final String carrierName;
+    private String carrierName;
 
     public String carrierName() {
         return this.carrierName;
     }
 
-    public ReturnShippingResponse(
-        String carrierAccountNumber,
-        String carrierName) {
-        this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber, "expected parameter 'carrierAccountNumber' to be non-null");
-        this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
-    }
+    private ReturnShippingResponse() {}
 
-    private ReturnShippingResponse() {
-        this.carrierAccountNumber = null;
-        this.carrierName = null;
+    private ReturnShippingResponse(ReturnShippingResponse $) {
+        this.carrierAccountNumber = $.carrierAccountNumber;
+        this.carrierName = $.carrierName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReturnShippingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String carrierAccountNumber;
-        private String carrierName;
+        private ReturnShippingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReturnShippingResponse();
         }
 
         public Builder(ReturnShippingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierAccountNumber = defaults.carrierAccountNumber;
-    	      this.carrierName = defaults.carrierName;
+            $ = new ReturnShippingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierAccountNumber(String carrierAccountNumber) {
-            this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber);
+            $.carrierAccountNumber = carrierAccountNumber;
             return this;
         }
+
         public Builder carrierName(String carrierName) {
-            this.carrierName = Objects.requireNonNull(carrierName);
+            $.carrierName = carrierName;
             return this;
-        }        public ReturnShippingResponse build() {
-            return new ReturnShippingResponse(carrierAccountNumber, carrierName);
+        }
+
+        public ReturnShippingResponse build() {
+            $.carrierAccountNumber = Objects.requireNonNull($.carrierAccountNumber, "expected parameter 'carrierAccountNumber' to be non-null");
+            $.carrierName = Objects.requireNonNull($.carrierName, "expected parameter 'carrierName' to be non-null");
+            return $;
         }
     }
+
 }

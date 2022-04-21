@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ImportCollectorPropertiesArgs extends com.pulumi.resources.Re
     public static final ImportCollectorPropertiesArgs Empty = new ImportCollectorPropertiesArgs();
 
     @Import(name="discoverySiteId")
-      private final @Nullable Output<String> discoverySiteId;
+    private @Nullable Output<String> discoverySiteId;
 
-    public Output<String> discoverySiteId() {
-        return this.discoverySiteId == null ? Codegen.empty() : this.discoverySiteId;
+    public Optional<Output<String>> discoverySiteId() {
+        return Optional.ofNullable(this.discoverySiteId);
     }
 
-    public ImportCollectorPropertiesArgs(@Nullable Output<String> discoverySiteId) {
-        this.discoverySiteId = discoverySiteId;
-    }
+    private ImportCollectorPropertiesArgs() {}
 
-    private ImportCollectorPropertiesArgs() {
-        this.discoverySiteId = Codegen.empty();
+    private ImportCollectorPropertiesArgs(ImportCollectorPropertiesArgs $) {
+        this.discoverySiteId = $.discoverySiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportCollectorPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> discoverySiteId;
+        private ImportCollectorPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportCollectorPropertiesArgs();
         }
 
         public Builder(ImportCollectorPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.discoverySiteId = defaults.discoverySiteId;
+            $ = new ImportCollectorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder discoverySiteId(@Nullable Output<String> discoverySiteId) {
-            this.discoverySiteId = discoverySiteId;
+            $.discoverySiteId = discoverySiteId;
             return this;
         }
-        public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = Codegen.ofNullable(discoverySiteId);
-            return this;
-        }        public ImportCollectorPropertiesArgs build() {
-            return new ImportCollectorPropertiesArgs(discoverySiteId);
+
+        public Builder discoverySiteId(String discoverySiteId) {
+            return discoverySiteId(Output.of(discoverySiteId));
+        }
+
+        public ImportCollectorPropertiesArgs build() {
+            return $;
         }
     }
+
 }

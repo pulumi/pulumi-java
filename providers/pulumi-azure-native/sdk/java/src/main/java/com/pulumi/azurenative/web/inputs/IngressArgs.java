@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowInsecure")
-      private final @Nullable Output<Boolean> allowInsecure;
+    private @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> allowInsecure() {
-        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
+    public Optional<Output<Boolean>> allowInsecure() {
+        return Optional.ofNullable(this.allowInsecure);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="external")
-      private final @Nullable Output<Boolean> external;
+    private @Nullable Output<Boolean> external;
 
-    public Output<Boolean> external() {
-        return this.external == null ? Codegen.empty() : this.external;
+    public Optional<Output<Boolean>> external() {
+        return Optional.ofNullable(this.external);
     }
 
     /**
@@ -52,17 +53,17 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetPort")
-      private final @Nullable Output<Integer> targetPort;
+    private @Nullable Output<Integer> targetPort;
 
-    public Output<Integer> targetPort() {
-        return this.targetPort == null ? Codegen.empty() : this.targetPort;
+    public Optional<Output<Integer>> targetPort() {
+        return Optional.ofNullable(this.targetPort);
     }
 
     @Import(name="traffic")
-      private final @Nullable Output<List<TrafficWeightArgs>> traffic;
+    private @Nullable Output<List<TrafficWeightArgs>> traffic;
 
-    public Output<List<TrafficWeightArgs>> traffic() {
-        return this.traffic == null ? Codegen.empty() : this.traffic;
+    public Optional<Output<List<TrafficWeightArgs>>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
     /**
@@ -70,105 +71,93 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transport")
-      private final @Nullable Output<Either<String,IngressTransportMethod>> transport;
+    private @Nullable Output<Either<String,IngressTransportMethod>> transport;
 
-    public Output<Either<String,IngressTransportMethod>> transport() {
-        return this.transport == null ? Codegen.empty() : this.transport;
+    public Optional<Output<Either<String,IngressTransportMethod>>> transport() {
+        return Optional.ofNullable(this.transport);
     }
 
-    public IngressArgs(
-        @Nullable Output<Boolean> allowInsecure,
-        @Nullable Output<Boolean> external,
-        @Nullable Output<Integer> targetPort,
-        @Nullable Output<List<TrafficWeightArgs>> traffic,
-        @Nullable Output<Either<String,IngressTransportMethod>> transport) {
-        this.allowInsecure = allowInsecure;
-        this.external = Codegen.booleanProp("external").output().arg(external).def(false).getNullable();
-        this.targetPort = targetPort;
-        this.traffic = traffic;
-        this.transport = transport;
-    }
+    private IngressArgs() {}
 
-    private IngressArgs() {
-        this.allowInsecure = Codegen.empty();
-        this.external = Codegen.empty();
-        this.targetPort = Codegen.empty();
-        this.traffic = Codegen.empty();
-        this.transport = Codegen.empty();
+    private IngressArgs(IngressArgs $) {
+        this.allowInsecure = $.allowInsecure;
+        this.external = $.external;
+        this.targetPort = $.targetPort;
+        this.traffic = $.traffic;
+        this.transport = $.transport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowInsecure;
-        private @Nullable Output<Boolean> external;
-        private @Nullable Output<Integer> targetPort;
-        private @Nullable Output<List<TrafficWeightArgs>> traffic;
-        private @Nullable Output<Either<String,IngressTransportMethod>> transport;
+        private IngressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressArgs();
         }
 
         public Builder(IngressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInsecure = defaults.allowInsecure;
-    	      this.external = defaults.external;
-    	      this.targetPort = defaults.targetPort;
-    	      this.traffic = defaults.traffic;
-    	      this.transport = defaults.transport;
+            $ = new IngressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
-            this.allowInsecure = allowInsecure;
+            $.allowInsecure = allowInsecure;
             return this;
         }
-        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Codegen.ofNullable(allowInsecure);
-            return this;
+
+        public Builder allowInsecure(Boolean allowInsecure) {
+            return allowInsecure(Output.of(allowInsecure));
         }
+
         public Builder external(@Nullable Output<Boolean> external) {
-            this.external = external;
+            $.external = external;
             return this;
         }
-        public Builder external(@Nullable Boolean external) {
-            this.external = Codegen.ofNullable(external);
-            return this;
+
+        public Builder external(Boolean external) {
+            return external(Output.of(external));
         }
+
         public Builder targetPort(@Nullable Output<Integer> targetPort) {
-            this.targetPort = targetPort;
+            $.targetPort = targetPort;
             return this;
         }
-        public Builder targetPort(@Nullable Integer targetPort) {
-            this.targetPort = Codegen.ofNullable(targetPort);
-            return this;
+
+        public Builder targetPort(Integer targetPort) {
+            return targetPort(Output.of(targetPort));
         }
+
         public Builder traffic(@Nullable Output<List<TrafficWeightArgs>> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
         }
-        public Builder traffic(@Nullable List<TrafficWeightArgs> traffic) {
-            this.traffic = Codegen.ofNullable(traffic);
-            return this;
+
+        public Builder traffic(List<TrafficWeightArgs> traffic) {
+            return traffic(Output.of(traffic));
         }
+
         public Builder traffic(TrafficWeightArgs... traffic) {
             return traffic(List.of(traffic));
         }
+
         public Builder transport(@Nullable Output<Either<String,IngressTransportMethod>> transport) {
-            this.transport = transport;
+            $.transport = transport;
             return this;
         }
-        public Builder transport(@Nullable Either<String,IngressTransportMethod> transport) {
-            this.transport = Codegen.ofNullable(transport);
-            return this;
-        }        public IngressArgs build() {
-            return new IngressArgs(allowInsecure, external, targetPort, traffic, transport);
+
+        public Builder transport(Either<String,IngressTransportMethod> transport) {
+            return transport(Output.of(transport));
+        }
+
+        public IngressArgs build() {
+            $.external = Codegen.booleanProp("external").output().arg($.external).def(false).getNullable();
+            return $;
         }
     }
+
 }

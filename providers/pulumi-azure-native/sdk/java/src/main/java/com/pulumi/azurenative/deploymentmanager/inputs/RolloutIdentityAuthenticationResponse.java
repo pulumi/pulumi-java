@@ -23,45 +23,45 @@ public final class RolloutIdentityAuthenticationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RolloutIdentityAuthenticationResponse(String type) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private RolloutIdentityAuthenticationResponse() {}
 
-    private RolloutIdentityAuthenticationResponse() {
-        this.type = null;
+    private RolloutIdentityAuthenticationResponse(RolloutIdentityAuthenticationResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutIdentityAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private RolloutIdentityAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutIdentityAuthenticationResponse();
         }
 
         public Builder(RolloutIdentityAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new RolloutIdentityAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RolloutIdentityAuthenticationResponse build() {
-            return new RolloutIdentityAuthenticationResponse(type);
+        }
+
+        public RolloutIdentityAuthenticationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

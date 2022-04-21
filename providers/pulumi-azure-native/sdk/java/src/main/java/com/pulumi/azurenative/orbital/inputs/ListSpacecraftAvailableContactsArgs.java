@@ -18,7 +18,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="contactProfile", required=true)
-      private final ResourceReference contactProfile;
+    private ResourceReference contactProfile;
 
     public ResourceReference contactProfile() {
         return this.contactProfile;
@@ -29,7 +29,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -40,7 +40,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="groundStationName", required=true)
-      private final String groundStationName;
+    private String groundStationName;
 
     public String groundStationName() {
         return this.groundStationName;
@@ -51,7 +51,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -62,7 +62,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="spacecraftName", required=true)
-      private final String spacecraftName;
+    private String spacecraftName;
 
     public String spacecraftName() {
         return this.spacecraftName;
@@ -73,91 +73,80 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public ListSpacecraftAvailableContactsArgs(
-        ResourceReference contactProfile,
-        String endTime,
-        String groundStationName,
-        String resourceGroupName,
-        String spacecraftName,
-        String startTime) {
-        this.contactProfile = Objects.requireNonNull(contactProfile, "expected parameter 'contactProfile' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.groundStationName = Objects.requireNonNull(groundStationName, "expected parameter 'groundStationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.spacecraftName = Objects.requireNonNull(spacecraftName, "expected parameter 'spacecraftName' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ListSpacecraftAvailableContactsArgs() {}
 
-    private ListSpacecraftAvailableContactsArgs() {
-        this.contactProfile = null;
-        this.endTime = null;
-        this.groundStationName = null;
-        this.resourceGroupName = null;
-        this.spacecraftName = null;
-        this.startTime = null;
+    private ListSpacecraftAvailableContactsArgs(ListSpacecraftAvailableContactsArgs $) {
+        this.contactProfile = $.contactProfile;
+        this.endTime = $.endTime;
+        this.groundStationName = $.groundStationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.spacecraftName = $.spacecraftName;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListSpacecraftAvailableContactsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourceReference contactProfile;
-        private String endTime;
-        private String groundStationName;
-        private String resourceGroupName;
-        private String spacecraftName;
-        private String startTime;
+        private ListSpacecraftAvailableContactsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListSpacecraftAvailableContactsArgs();
         }
 
         public Builder(ListSpacecraftAvailableContactsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactProfile = defaults.contactProfile;
-    	      this.endTime = defaults.endTime;
-    	      this.groundStationName = defaults.groundStationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.spacecraftName = defaults.spacecraftName;
-    	      this.startTime = defaults.startTime;
+            $ = new ListSpacecraftAvailableContactsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactProfile(ResourceReference contactProfile) {
-            this.contactProfile = Objects.requireNonNull(contactProfile);
+            $.contactProfile = contactProfile;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder groundStationName(String groundStationName) {
-            this.groundStationName = Objects.requireNonNull(groundStationName);
+            $.groundStationName = groundStationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder spacecraftName(String spacecraftName) {
-            this.spacecraftName = Objects.requireNonNull(spacecraftName);
+            $.spacecraftName = spacecraftName;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public ListSpacecraftAvailableContactsArgs build() {
-            return new ListSpacecraftAvailableContactsArgs(contactProfile, endTime, groundStationName, resourceGroupName, spacecraftName, startTime);
+        }
+
+        public ListSpacecraftAvailableContactsArgs build() {
+            $.contactProfile = Objects.requireNonNull($.contactProfile, "expected parameter 'contactProfile' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.groundStationName = Objects.requireNonNull($.groundStationName, "expected parameter 'groundStationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.spacecraftName = Objects.requireNonNull($.spacecraftName, "expected parameter 'spacecraftName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

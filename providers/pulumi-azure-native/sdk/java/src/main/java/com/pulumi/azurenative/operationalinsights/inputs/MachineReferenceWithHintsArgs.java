@@ -23,7 +23,7 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -35,63 +35,60 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
-    public MachineReferenceWithHintsArgs(
-        Output<String> id,
-        Output<String> kind) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-    }
+    private MachineReferenceWithHintsArgs() {}
 
-    private MachineReferenceWithHintsArgs() {
-        this.id = Codegen.empty();
-        this.kind = Codegen.empty();
+    private MachineReferenceWithHintsArgs(MachineReferenceWithHintsArgs $) {
+        this.id = $.id;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineReferenceWithHintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> kind;
+        private MachineReferenceWithHintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineReferenceWithHintsArgs();
         }
 
         public Builder(MachineReferenceWithHintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
+            $ = new MachineReferenceWithHintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
-        }        public MachineReferenceWithHintsArgs build() {
-            return new MachineReferenceWithHintsArgs(id, kind);
+            return kind(Output.of(kind));
+        }
+
+        public MachineReferenceWithHintsArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            return $;
         }
     }
+
 }

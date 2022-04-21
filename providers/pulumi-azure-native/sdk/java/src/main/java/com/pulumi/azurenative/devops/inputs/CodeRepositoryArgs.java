@@ -8,10 +8,10 @@ import com.pulumi.azurenative.devops.inputs.AuthorizationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authorization")
-      private final @Nullable Output<AuthorizationArgs> authorization;
+    private @Nullable Output<AuthorizationArgs> authorization;
 
-    public Output<AuthorizationArgs> authorization() {
-        return this.authorization == null ? Codegen.empty() : this.authorization;
+    public Optional<Output<AuthorizationArgs>> authorization() {
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultBranch", required=true)
-      private final Output<String> defaultBranch;
+    private Output<String> defaultBranch;
 
     public Output<String> defaultBranch() {
         return this.defaultBranch;
@@ -50,7 +50,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -61,10 +61,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -72,102 +72,91 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="repositoryType", required=true)
-      private final Output<Either<String,CodeRepositoryType>> repositoryType;
+    private Output<Either<String,CodeRepositoryType>> repositoryType;
 
     public Output<Either<String,CodeRepositoryType>> repositoryType() {
         return this.repositoryType;
     }
 
-    public CodeRepositoryArgs(
-        @Nullable Output<AuthorizationArgs> authorization,
-        Output<String> defaultBranch,
-        Output<String> id,
-        @Nullable Output<Map<String,String>> properties,
-        Output<Either<String,CodeRepositoryType>> repositoryType) {
-        this.authorization = authorization;
-        this.defaultBranch = Objects.requireNonNull(defaultBranch, "expected parameter 'defaultBranch' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.properties = properties;
-        this.repositoryType = Objects.requireNonNull(repositoryType, "expected parameter 'repositoryType' to be non-null");
-    }
+    private CodeRepositoryArgs() {}
 
-    private CodeRepositoryArgs() {
-        this.authorization = Codegen.empty();
-        this.defaultBranch = Codegen.empty();
-        this.id = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.repositoryType = Codegen.empty();
+    private CodeRepositoryArgs(CodeRepositoryArgs $) {
+        this.authorization = $.authorization;
+        this.defaultBranch = $.defaultBranch;
+        this.id = $.id;
+        this.properties = $.properties;
+        this.repositoryType = $.repositoryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AuthorizationArgs> authorization;
-        private Output<String> defaultBranch;
-        private Output<String> id;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<Either<String,CodeRepositoryType>> repositoryType;
+        private CodeRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeRepositoryArgs();
         }
 
         public Builder(CodeRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorization = defaults.authorization;
-    	      this.defaultBranch = defaults.defaultBranch;
-    	      this.id = defaults.id;
-    	      this.properties = defaults.properties;
-    	      this.repositoryType = defaults.repositoryType;
+            $ = new CodeRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorization(@Nullable Output<AuthorizationArgs> authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
-        public Builder authorization(@Nullable AuthorizationArgs authorization) {
-            this.authorization = Codegen.ofNullable(authorization);
-            return this;
+
+        public Builder authorization(AuthorizationArgs authorization) {
+            return authorization(Output.of(authorization));
         }
+
         public Builder defaultBranch(Output<String> defaultBranch) {
-            this.defaultBranch = Objects.requireNonNull(defaultBranch);
+            $.defaultBranch = defaultBranch;
             return this;
         }
+
         public Builder defaultBranch(String defaultBranch) {
-            this.defaultBranch = Output.of(Objects.requireNonNull(defaultBranch));
-            return this;
+            return defaultBranch(Output.of(defaultBranch));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder repositoryType(Output<Either<String,CodeRepositoryType>> repositoryType) {
-            this.repositoryType = Objects.requireNonNull(repositoryType);
+            $.repositoryType = repositoryType;
             return this;
         }
+
         public Builder repositoryType(Either<String,CodeRepositoryType> repositoryType) {
-            this.repositoryType = Output.of(Objects.requireNonNull(repositoryType));
-            return this;
-        }        public CodeRepositoryArgs build() {
-            return new CodeRepositoryArgs(authorization, defaultBranch, id, properties, repositoryType);
+            return repositoryType(Output.of(repositoryType));
+        }
+
+        public CodeRepositoryArgs build() {
+            $.defaultBranch = Objects.requireNonNull($.defaultBranch, "expected parameter 'defaultBranch' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.repositoryType = Objects.requireNonNull($.repositoryType, "expected parameter 'repositoryType' to be non-null");
+            return $;
         }
     }
+
 }

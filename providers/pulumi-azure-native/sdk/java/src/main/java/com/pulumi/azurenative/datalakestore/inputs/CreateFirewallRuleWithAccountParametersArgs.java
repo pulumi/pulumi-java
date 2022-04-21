@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datalakestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
      * 
      */
     @Import(name="endIpAddress", required=true)
-      private final Output<String> endIpAddress;
+    private Output<String> endIpAddress;
 
     public Output<String> endIpAddress() {
         return this.endIpAddress;
@@ -34,7 +33,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -45,76 +44,71 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends com.pulum
      * 
      */
     @Import(name="startIpAddress", required=true)
-      private final Output<String> startIpAddress;
+    private Output<String> startIpAddress;
 
     public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
 
-    public CreateFirewallRuleWithAccountParametersArgs(
-        Output<String> endIpAddress,
-        Output<String> name,
-        Output<String> startIpAddress) {
-        this.endIpAddress = Objects.requireNonNull(endIpAddress, "expected parameter 'endIpAddress' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.startIpAddress = Objects.requireNonNull(startIpAddress, "expected parameter 'startIpAddress' to be non-null");
-    }
+    private CreateFirewallRuleWithAccountParametersArgs() {}
 
-    private CreateFirewallRuleWithAccountParametersArgs() {
-        this.endIpAddress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.startIpAddress = Codegen.empty();
+    private CreateFirewallRuleWithAccountParametersArgs(CreateFirewallRuleWithAccountParametersArgs $) {
+        this.endIpAddress = $.endIpAddress;
+        this.name = $.name;
+        this.startIpAddress = $.startIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateFirewallRuleWithAccountParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endIpAddress;
-        private Output<String> name;
-        private Output<String> startIpAddress;
+        private CreateFirewallRuleWithAccountParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateFirewallRuleWithAccountParametersArgs();
         }
 
         public Builder(CreateFirewallRuleWithAccountParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endIpAddress = defaults.endIpAddress;
-    	      this.name = defaults.name;
-    	      this.startIpAddress = defaults.startIpAddress;
+            $ = new CreateFirewallRuleWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endIpAddress(Output<String> endIpAddress) {
-            this.endIpAddress = Objects.requireNonNull(endIpAddress);
+            $.endIpAddress = endIpAddress;
             return this;
         }
+
         public Builder endIpAddress(String endIpAddress) {
-            this.endIpAddress = Output.of(Objects.requireNonNull(endIpAddress));
-            return this;
+            return endIpAddress(Output.of(endIpAddress));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder startIpAddress(Output<String> startIpAddress) {
-            this.startIpAddress = Objects.requireNonNull(startIpAddress);
+            $.startIpAddress = startIpAddress;
             return this;
         }
+
         public Builder startIpAddress(String startIpAddress) {
-            this.startIpAddress = Output.of(Objects.requireNonNull(startIpAddress));
-            return this;
-        }        public CreateFirewallRuleWithAccountParametersArgs build() {
-            return new CreateFirewallRuleWithAccountParametersArgs(endIpAddress, name, startIpAddress);
+            return startIpAddress(Output.of(startIpAddress));
+        }
+
+        public CreateFirewallRuleWithAccountParametersArgs build() {
+            $.endIpAddress = Objects.requireNonNull($.endIpAddress, "expected parameter 'endIpAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.startIpAddress = Objects.requireNonNull($.startIpAddress, "expected parameter 'startIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

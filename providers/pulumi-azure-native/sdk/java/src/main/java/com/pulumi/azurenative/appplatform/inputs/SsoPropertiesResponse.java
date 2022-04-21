@@ -24,10 +24,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="issuerUri")
-      private final @Nullable String issuerUri;
+    private @Nullable String issuerUri;
 
     public Optional<String> issuerUri() {
-        return this.issuerUri == null ? Optional.empty() : Optional.ofNullable(this.issuerUri);
+        return Optional.ofNullable(this.issuerUri);
     }
 
     /**
@@ -57,76 +57,66 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope")
-      private final @Nullable List<String> scope;
+    private @Nullable List<String> scope;
 
-    public List<String> scope() {
-        return this.scope == null ? List.of() : this.scope;
+    public Optional<List<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public SsoPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String issuerUri,
-        @Nullable List<String> scope) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.issuerUri = issuerUri;
-        this.scope = scope;
-    }
+    private SsoPropertiesResponse() {}
 
-    private SsoPropertiesResponse() {
-        this.clientId = null;
-        this.clientSecret = null;
-        this.issuerUri = null;
-        this.scope = List.of();
+    private SsoPropertiesResponse(SsoPropertiesResponse $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.issuerUri = $.issuerUri;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SsoPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
-        private @Nullable String issuerUri;
-        private @Nullable List<String> scope;
+        private SsoPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SsoPropertiesResponse();
         }
 
         public Builder(SsoPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.issuerUri = defaults.issuerUri;
-    	      this.scope = defaults.scope;
+            $ = new SsoPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = issuerUri;
+            $.issuerUri = issuerUri;
             return this;
         }
+
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String... scope) {
             return scope(List.of(scope));
-        }        public SsoPropertiesResponse build() {
-            return new SsoPropertiesResponse(clientId, clientSecret, issuerUri, scope);
+        }
+
+        public SsoPropertiesResponse build() {
+            return $;
         }
     }
+
 }

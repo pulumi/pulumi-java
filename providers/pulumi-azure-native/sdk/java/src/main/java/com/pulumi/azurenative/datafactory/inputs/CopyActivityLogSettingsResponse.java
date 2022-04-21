@@ -23,10 +23,10 @@ public final class CopyActivityLogSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enableReliableLogging")
-      private final @Nullable Object enableReliableLogging;
+    private @Nullable Object enableReliableLogging;
 
     public Optional<Object> enableReliableLogging() {
-        return this.enableReliableLogging == null ? Optional.empty() : Optional.ofNullable(this.enableReliableLogging);
+        return Optional.ofNullable(this.enableReliableLogging);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class CopyActivityLogSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Object logLevel;
+    private @Nullable Object logLevel;
 
     public Optional<Object> logLevel() {
-        return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
+        return Optional.ofNullable(this.logLevel);
     }
 
-    public CopyActivityLogSettingsResponse(
-        @Nullable Object enableReliableLogging,
-        @Nullable Object logLevel) {
-        this.enableReliableLogging = enableReliableLogging;
-        this.logLevel = logLevel;
-    }
+    private CopyActivityLogSettingsResponse() {}
 
-    private CopyActivityLogSettingsResponse() {
-        this.enableReliableLogging = null;
-        this.logLevel = null;
+    private CopyActivityLogSettingsResponse(CopyActivityLogSettingsResponse $) {
+        this.enableReliableLogging = $.enableReliableLogging;
+        this.logLevel = $.logLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyActivityLogSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object enableReliableLogging;
-        private @Nullable Object logLevel;
+        private CopyActivityLogSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyActivityLogSettingsResponse();
         }
 
         public Builder(CopyActivityLogSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableReliableLogging = defaults.enableReliableLogging;
-    	      this.logLevel = defaults.logLevel;
+            $ = new CopyActivityLogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = enableReliableLogging;
+            $.enableReliableLogging = enableReliableLogging;
             return this;
         }
+
         public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
-        }        public CopyActivityLogSettingsResponse build() {
-            return new CopyActivityLogSettingsResponse(enableReliableLogging, logLevel);
+        }
+
+        public CopyActivityLogSettingsResponse build() {
+            return $;
         }
     }
+
 }

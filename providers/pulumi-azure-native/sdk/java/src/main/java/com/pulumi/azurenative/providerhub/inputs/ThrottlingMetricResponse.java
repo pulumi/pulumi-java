@@ -16,78 +16,72 @@ public final class ThrottlingMetricResponse extends com.pulumi.resources.InvokeA
     public static final ThrottlingMetricResponse Empty = new ThrottlingMetricResponse();
 
     @Import(name="interval")
-      private final @Nullable String interval;
+    private @Nullable String interval;
 
     public Optional<String> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
     @Import(name="limit", required=true)
-      private final Double limit;
+    private Double limit;
 
     public Double limit() {
         return this.limit;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ThrottlingMetricResponse(
-        @Nullable String interval,
-        Double limit,
-        String type) {
-        this.interval = interval;
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ThrottlingMetricResponse() {}
 
-    private ThrottlingMetricResponse() {
-        this.interval = null;
-        this.limit = null;
-        this.type = null;
+    private ThrottlingMetricResponse(ThrottlingMetricResponse $) {
+        this.interval = $.interval;
+        this.limit = $.limit;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThrottlingMetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String interval;
-        private Double limit;
-        private String type;
+        private ThrottlingMetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThrottlingMetricResponse();
         }
 
         public Builder(ThrottlingMetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.limit = defaults.limit;
-    	      this.type = defaults.type;
+            $ = new ThrottlingMetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
+
         public Builder limit(Double limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ThrottlingMetricResponse build() {
-            return new ThrottlingMetricResponse(interval, limit, type);
+        }
+
+        public ThrottlingMetricResponse build() {
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

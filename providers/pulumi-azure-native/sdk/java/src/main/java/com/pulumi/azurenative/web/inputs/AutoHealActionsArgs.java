@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.enums.AutoHealActionType;
 import com.pulumi.azurenative.web.inputs.AutoHealCustomActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="actionType")
-      private final @Nullable Output<AutoHealActionType> actionType;
+    private @Nullable Output<AutoHealActionType> actionType;
 
-    public Output<AutoHealActionType> actionType() {
-        return this.actionType == null ? Codegen.empty() : this.actionType;
+    public Optional<Output<AutoHealActionType>> actionType() {
+        return Optional.ofNullable(this.actionType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="customAction")
-      private final @Nullable Output<AutoHealCustomActionArgs> customAction;
+    private @Nullable Output<AutoHealCustomActionArgs> customAction;
 
-    public Output<AutoHealCustomActionArgs> customAction() {
-        return this.customAction == null ? Codegen.empty() : this.customAction;
+    public Optional<Output<AutoHealCustomActionArgs>> customAction() {
+        return Optional.ofNullable(this.customAction);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="minProcessExecutionTime")
-      private final @Nullable Output<String> minProcessExecutionTime;
+    private @Nullable Output<String> minProcessExecutionTime;
 
-    public Output<String> minProcessExecutionTime() {
-        return this.minProcessExecutionTime == null ? Codegen.empty() : this.minProcessExecutionTime;
+    public Optional<Output<String>> minProcessExecutionTime() {
+        return Optional.ofNullable(this.minProcessExecutionTime);
     }
 
-    public AutoHealActionsArgs(
-        @Nullable Output<AutoHealActionType> actionType,
-        @Nullable Output<AutoHealCustomActionArgs> customAction,
-        @Nullable Output<String> minProcessExecutionTime) {
-        this.actionType = actionType;
-        this.customAction = customAction;
-        this.minProcessExecutionTime = minProcessExecutionTime;
-    }
+    private AutoHealActionsArgs() {}
 
-    private AutoHealActionsArgs() {
-        this.actionType = Codegen.empty();
-        this.customAction = Codegen.empty();
-        this.minProcessExecutionTime = Codegen.empty();
+    private AutoHealActionsArgs(AutoHealActionsArgs $) {
+        this.actionType = $.actionType;
+        this.customAction = $.customAction;
+        this.minProcessExecutionTime = $.minProcessExecutionTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoHealActionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoHealActionType> actionType;
-        private @Nullable Output<AutoHealCustomActionArgs> customAction;
-        private @Nullable Output<String> minProcessExecutionTime;
+        private AutoHealActionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoHealActionsArgs();
         }
 
         public Builder(AutoHealActionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.customAction = defaults.customAction;
-    	      this.minProcessExecutionTime = defaults.minProcessExecutionTime;
+            $ = new AutoHealActionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(@Nullable Output<AutoHealActionType> actionType) {
-            this.actionType = actionType;
+            $.actionType = actionType;
             return this;
         }
-        public Builder actionType(@Nullable AutoHealActionType actionType) {
-            this.actionType = Codegen.ofNullable(actionType);
-            return this;
+
+        public Builder actionType(AutoHealActionType actionType) {
+            return actionType(Output.of(actionType));
         }
+
         public Builder customAction(@Nullable Output<AutoHealCustomActionArgs> customAction) {
-            this.customAction = customAction;
+            $.customAction = customAction;
             return this;
         }
-        public Builder customAction(@Nullable AutoHealCustomActionArgs customAction) {
-            this.customAction = Codegen.ofNullable(customAction);
-            return this;
+
+        public Builder customAction(AutoHealCustomActionArgs customAction) {
+            return customAction(Output.of(customAction));
         }
+
         public Builder minProcessExecutionTime(@Nullable Output<String> minProcessExecutionTime) {
-            this.minProcessExecutionTime = minProcessExecutionTime;
+            $.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }
-        public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
-            this.minProcessExecutionTime = Codegen.ofNullable(minProcessExecutionTime);
-            return this;
-        }        public AutoHealActionsArgs build() {
-            return new AutoHealActionsArgs(actionType, customAction, minProcessExecutionTime);
+
+        public Builder minProcessExecutionTime(String minProcessExecutionTime) {
+            return minProcessExecutionTime(Output.of(minProcessExecutionTime));
+        }
+
+        public AutoHealActionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.cognitiveservices.enums.IdentityType;
 import com.pulumi.azurenative.cognitiveservices.inputs.UserAssignedIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<IdentityType> type;
+    private @Nullable Output<IdentityType> type;
 
-    public Output<IdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<IdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+    private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,UserAssignedIdentityArgs>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public IdentityArgs(
-        @Nullable Output<IdentityType> type,
-        @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private IdentityArgs() {}
 
-    private IdentityArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private IdentityArgs(IdentityArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IdentityType> type;
-        private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
+        private IdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityArgs();
         }
 
         public Builder(IdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<IdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable IdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(IdentityType type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public IdentityArgs build() {
-            return new IdentityArgs(type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public IdentityArgs build() {
+            return $;
         }
     }
+
 }

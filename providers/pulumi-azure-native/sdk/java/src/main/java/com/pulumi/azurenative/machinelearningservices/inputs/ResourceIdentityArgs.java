@@ -8,10 +8,10 @@ import com.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentit
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
+    private @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
 
-    public Output<Either<String,ResourceIdentityAssignment>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ResourceIdentityAssignment>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -39,63 +39,58 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
+    private @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,UserAssignedIdentityMetaArgs>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ResourceIdentityArgs(
-        @Nullable Output<Either<String,ResourceIdentityAssignment>> type,
-        @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ResourceIdentityArgs() {}
 
-    private ResourceIdentityArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private ResourceIdentityArgs(ResourceIdentityArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
-        private @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
+        private ResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdentityArgs();
         }
 
         public Builder(ResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,ResourceIdentityAssignment>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ResourceIdentityAssignment> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,ResourceIdentityAssignment> type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityMetaArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public ResourceIdentityArgs build() {
-            return new ResourceIdentityArgs(type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,UserAssignedIdentityMetaArgs> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public ResourceIdentityArgs build() {
+            return $;
         }
     }
+
 }

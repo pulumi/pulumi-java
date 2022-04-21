@@ -24,10 +24,10 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyType")
-      private final @Nullable String keyType;
+    private @Nullable String keyType;
 
     public Optional<String> keyType() {
-        return this.keyType == null ? Optional.empty() : Optional.ofNullable(this.keyType);
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastEnabledTime", required=true)
-      private final String lastEnabledTime;
+    private String lastEnabledTime;
 
     public String lastEnabledTime() {
         return this.lastEnabledTime;
     }
 
-    public EncryptionServiceResponse(
-        @Nullable Boolean enabled,
-        @Nullable String keyType,
-        String lastEnabledTime) {
-        this.enabled = enabled;
-        this.keyType = keyType;
-        this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime, "expected parameter 'lastEnabledTime' to be non-null");
-    }
+    private EncryptionServiceResponse() {}
 
-    private EncryptionServiceResponse() {
-        this.enabled = null;
-        this.keyType = null;
-        this.lastEnabledTime = null;
+    private EncryptionServiceResponse(EncryptionServiceResponse $) {
+        this.enabled = $.enabled;
+        this.keyType = $.keyType;
+        this.lastEnabledTime = $.lastEnabledTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String keyType;
-        private String lastEnabledTime;
+        private EncryptionServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionServiceResponse();
         }
 
         public Builder(EncryptionServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.keyType = defaults.keyType;
-    	      this.lastEnabledTime = defaults.lastEnabledTime;
+            $ = new EncryptionServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder lastEnabledTime(String lastEnabledTime) {
-            this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
+            $.lastEnabledTime = lastEnabledTime;
             return this;
-        }        public EncryptionServiceResponse build() {
-            return new EncryptionServiceResponse(enabled, keyType, lastEnabledTime);
+        }
+
+        public EncryptionServiceResponse build() {
+            $.lastEnabledTime = Objects.requireNonNull($.lastEnabledTime, "expected parameter 'lastEnabledTime' to be non-null");
+            return $;
         }
     }
+
 }

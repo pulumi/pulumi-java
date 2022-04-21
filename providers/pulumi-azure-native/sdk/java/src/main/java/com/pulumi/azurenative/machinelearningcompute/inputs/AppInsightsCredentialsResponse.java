@@ -23,10 +23,10 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="appId")
-      private final @Nullable String appId;
+    private @Nullable String appId;
 
     public Optional<String> appId() {
-        return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="instrumentationKey")
-      private final @Nullable String instrumentationKey;
+    private @Nullable String instrumentationKey;
 
     public Optional<String> instrumentationKey() {
-        return this.instrumentationKey == null ? Optional.empty() : Optional.ofNullable(this.instrumentationKey);
+        return Optional.ofNullable(this.instrumentationKey);
     }
 
-    public AppInsightsCredentialsResponse(
-        @Nullable String appId,
-        @Nullable String instrumentationKey) {
-        this.appId = appId;
-        this.instrumentationKey = instrumentationKey;
-    }
+    private AppInsightsCredentialsResponse() {}
 
-    private AppInsightsCredentialsResponse() {
-        this.appId = null;
-        this.instrumentationKey = null;
+    private AppInsightsCredentialsResponse(AppInsightsCredentialsResponse $) {
+        this.appId = $.appId;
+        this.instrumentationKey = $.instrumentationKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppInsightsCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appId;
-        private @Nullable String instrumentationKey;
+        private AppInsightsCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppInsightsCredentialsResponse();
         }
 
         public Builder(AppInsightsCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.instrumentationKey = defaults.instrumentationKey;
+            $ = new AppInsightsCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
+
         public Builder instrumentationKey(@Nullable String instrumentationKey) {
-            this.instrumentationKey = instrumentationKey;
+            $.instrumentationKey = instrumentationKey;
             return this;
-        }        public AppInsightsCredentialsResponse build() {
-            return new AppInsightsCredentialsResponse(appId, instrumentationKey);
+        }
+
+        public AppInsightsCredentialsResponse build() {
+            return $;
         }
     }
+
 }

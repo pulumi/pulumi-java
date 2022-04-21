@@ -17,45 +17,45 @@ public final class GetVendorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vendorName", required=true)
-      private final String vendorName;
+    private String vendorName;
 
     public String vendorName() {
         return this.vendorName;
     }
 
-    public GetVendorArgs(String vendorName) {
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-    }
+    private GetVendorArgs() {}
 
-    private GetVendorArgs() {
-        this.vendorName = null;
+    private GetVendorArgs(GetVendorArgs $) {
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVendorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vendorName;
+        private GetVendorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVendorArgs();
         }
 
         public Builder(GetVendorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vendorName = defaults.vendorName;
+            $ = new GetVendorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vendorName(String vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
-        }        public GetVendorArgs build() {
-            return new GetVendorArgs(vendorName);
+        }
+
+        public GetVendorArgs build() {
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

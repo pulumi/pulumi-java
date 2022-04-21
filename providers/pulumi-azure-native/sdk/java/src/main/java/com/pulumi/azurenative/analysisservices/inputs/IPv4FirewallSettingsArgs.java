@@ -6,10 +6,10 @@ package com.pulumi.azurenative.analysisservices.inputs;
 import com.pulumi.azurenative.analysisservices.inputs.IPv4FirewallRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IPv4FirewallSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enablePowerBIService")
-      private final @Nullable Output<Boolean> enablePowerBIService;
+    private @Nullable Output<Boolean> enablePowerBIService;
 
-    public Output<Boolean> enablePowerBIService() {
-        return this.enablePowerBIService == null ? Codegen.empty() : this.enablePowerBIService;
+    public Optional<Output<Boolean>> enablePowerBIService() {
+        return Optional.ofNullable(this.enablePowerBIService);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class IPv4FirewallSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="firewallRules")
-      private final @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;
+    private @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;
 
-    public Output<List<IPv4FirewallRuleArgs>> firewallRules() {
-        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
+    public Optional<Output<List<IPv4FirewallRuleArgs>>> firewallRules() {
+        return Optional.ofNullable(this.firewallRules);
     }
 
-    public IPv4FirewallSettingsArgs(
-        @Nullable Output<Boolean> enablePowerBIService,
-        @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules) {
-        this.enablePowerBIService = enablePowerBIService;
-        this.firewallRules = firewallRules;
-    }
+    private IPv4FirewallSettingsArgs() {}
 
-    private IPv4FirewallSettingsArgs() {
-        this.enablePowerBIService = Codegen.empty();
-        this.firewallRules = Codegen.empty();
+    private IPv4FirewallSettingsArgs(IPv4FirewallSettingsArgs $) {
+        this.enablePowerBIService = $.enablePowerBIService;
+        this.firewallRules = $.firewallRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPv4FirewallSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enablePowerBIService;
-        private @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;
+        private IPv4FirewallSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPv4FirewallSettingsArgs();
         }
 
         public Builder(IPv4FirewallSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enablePowerBIService = defaults.enablePowerBIService;
-    	      this.firewallRules = defaults.firewallRules;
+            $ = new IPv4FirewallSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enablePowerBIService(@Nullable Output<Boolean> enablePowerBIService) {
-            this.enablePowerBIService = enablePowerBIService;
+            $.enablePowerBIService = enablePowerBIService;
             return this;
         }
-        public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
-            this.enablePowerBIService = Codegen.ofNullable(enablePowerBIService);
-            return this;
+
+        public Builder enablePowerBIService(Boolean enablePowerBIService) {
+            return enablePowerBIService(Output.of(enablePowerBIService));
         }
+
         public Builder firewallRules(@Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules) {
-            this.firewallRules = firewallRules;
+            $.firewallRules = firewallRules;
             return this;
         }
-        public Builder firewallRules(@Nullable List<IPv4FirewallRuleArgs> firewallRules) {
-            this.firewallRules = Codegen.ofNullable(firewallRules);
-            return this;
+
+        public Builder firewallRules(List<IPv4FirewallRuleArgs> firewallRules) {
+            return firewallRules(Output.of(firewallRules));
         }
+
         public Builder firewallRules(IPv4FirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
-        }        public IPv4FirewallSettingsArgs build() {
-            return new IPv4FirewallSettingsArgs(enablePowerBIService, firewallRules);
+        }
+
+        public IPv4FirewallSettingsArgs build() {
+            return $;
         }
     }
+
 }

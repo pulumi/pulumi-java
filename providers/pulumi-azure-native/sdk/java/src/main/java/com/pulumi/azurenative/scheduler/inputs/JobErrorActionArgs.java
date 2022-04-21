@@ -11,8 +11,8 @@ import com.pulumi.azurenative.scheduler.inputs.ServiceBusTopicMessageArgs;
 import com.pulumi.azurenative.scheduler.inputs.StorageQueueMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queueMessage")
-      private final @Nullable Output<StorageQueueMessageArgs> queueMessage;
+    private @Nullable Output<StorageQueueMessageArgs> queueMessage;
 
-    public Output<StorageQueueMessageArgs> queueMessage() {
-        return this.queueMessage == null ? Codegen.empty() : this.queueMessage;
+    public Optional<Output<StorageQueueMessageArgs>> queueMessage() {
+        return Optional.ofNullable(this.queueMessage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="request")
-      private final @Nullable Output<HttpRequestArgs> request;
+    private @Nullable Output<HttpRequestArgs> request;
 
-    public Output<HttpRequestArgs> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<HttpRequestArgs>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<RetryPolicyArgs> retryPolicy;
+    private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<RetryPolicyArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceBusQueueMessage")
-      private final @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
+    private @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
-    public Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage() {
-        return this.serviceBusQueueMessage == null ? Codegen.empty() : this.serviceBusQueueMessage;
+    public Optional<Output<ServiceBusQueueMessageArgs>> serviceBusQueueMessage() {
+        return Optional.ofNullable(this.serviceBusQueueMessage);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceBusTopicMessage")
-      private final @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
+    private @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
-    public Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage() {
-        return this.serviceBusTopicMessage == null ? Codegen.empty() : this.serviceBusTopicMessage;
+    public Optional<Output<ServiceBusTopicMessageArgs>> serviceBusTopicMessage() {
+        return Optional.ofNullable(this.serviceBusTopicMessage);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<JobActionType> type;
+    private @Nullable Output<JobActionType> type;
 
-    public Output<JobActionType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<JobActionType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public JobErrorActionArgs(
-        @Nullable Output<StorageQueueMessageArgs> queueMessage,
-        @Nullable Output<HttpRequestArgs> request,
-        @Nullable Output<RetryPolicyArgs> retryPolicy,
-        @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage,
-        @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage,
-        @Nullable Output<JobActionType> type) {
-        this.queueMessage = queueMessage;
-        this.request = request;
-        this.retryPolicy = retryPolicy;
-        this.serviceBusQueueMessage = serviceBusQueueMessage;
-        this.serviceBusTopicMessage = serviceBusTopicMessage;
-        this.type = type;
-    }
+    private JobErrorActionArgs() {}
 
-    private JobErrorActionArgs() {
-        this.queueMessage = Codegen.empty();
-        this.request = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.serviceBusQueueMessage = Codegen.empty();
-        this.serviceBusTopicMessage = Codegen.empty();
-        this.type = Codegen.empty();
+    private JobErrorActionArgs(JobErrorActionArgs $) {
+        this.queueMessage = $.queueMessage;
+        this.request = $.request;
+        this.retryPolicy = $.retryPolicy;
+        this.serviceBusQueueMessage = $.serviceBusQueueMessage;
+        this.serviceBusTopicMessage = $.serviceBusTopicMessage;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobErrorActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StorageQueueMessageArgs> queueMessage;
-        private @Nullable Output<HttpRequestArgs> request;
-        private @Nullable Output<RetryPolicyArgs> retryPolicy;
-        private @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
-        private @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
-        private @Nullable Output<JobActionType> type;
+        private JobErrorActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobErrorActionArgs();
         }
 
         public Builder(JobErrorActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queueMessage = defaults.queueMessage;
-    	      this.request = defaults.request;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.serviceBusQueueMessage = defaults.serviceBusQueueMessage;
-    	      this.serviceBusTopicMessage = defaults.serviceBusTopicMessage;
-    	      this.type = defaults.type;
+            $ = new JobErrorActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queueMessage(@Nullable Output<StorageQueueMessageArgs> queueMessage) {
-            this.queueMessage = queueMessage;
+            $.queueMessage = queueMessage;
             return this;
         }
-        public Builder queueMessage(@Nullable StorageQueueMessageArgs queueMessage) {
-            this.queueMessage = Codegen.ofNullable(queueMessage);
-            return this;
+
+        public Builder queueMessage(StorageQueueMessageArgs queueMessage) {
+            return queueMessage(Output.of(queueMessage));
         }
+
         public Builder request(@Nullable Output<HttpRequestArgs> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable HttpRequestArgs request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(HttpRequestArgs request) {
+            return request(Output.of(request));
         }
+
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder serviceBusQueueMessage(@Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage) {
-            this.serviceBusQueueMessage = serviceBusQueueMessage;
+            $.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
-        public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageArgs serviceBusQueueMessage) {
-            this.serviceBusQueueMessage = Codegen.ofNullable(serviceBusQueueMessage);
-            return this;
+
+        public Builder serviceBusQueueMessage(ServiceBusQueueMessageArgs serviceBusQueueMessage) {
+            return serviceBusQueueMessage(Output.of(serviceBusQueueMessage));
         }
+
         public Builder serviceBusTopicMessage(@Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage) {
-            this.serviceBusTopicMessage = serviceBusTopicMessage;
+            $.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
-        public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageArgs serviceBusTopicMessage) {
-            this.serviceBusTopicMessage = Codegen.ofNullable(serviceBusTopicMessage);
-            return this;
+
+        public Builder serviceBusTopicMessage(ServiceBusTopicMessageArgs serviceBusTopicMessage) {
+            return serviceBusTopicMessage(Output.of(serviceBusTopicMessage));
         }
+
         public Builder type(@Nullable Output<JobActionType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable JobActionType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public JobErrorActionArgs build() {
-            return new JobErrorActionArgs(queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
+
+        public Builder type(JobActionType type) {
+            return type(Output.of(type));
+        }
+
+        public JobErrorActionArgs build() {
+            return $;
         }
     }
+
 }

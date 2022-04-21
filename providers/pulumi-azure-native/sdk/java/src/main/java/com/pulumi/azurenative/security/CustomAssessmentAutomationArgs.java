@@ -8,9 +8,9 @@ import com.pulumi.azurenative.security.enums.SupportedCloudEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="compressedQuery")
-      private final @Nullable Output<String> compressedQuery;
+    private @Nullable Output<String> compressedQuery;
 
-    public Output<String> compressedQuery() {
-        return this.compressedQuery == null ? Codegen.empty() : this.compressedQuery;
+    public Optional<Output<String>> compressedQuery() {
+        return Optional.ofNullable(this.compressedQuery);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="customAssessmentAutomationName")
-      private final @Nullable Output<String> customAssessmentAutomationName;
+    private @Nullable Output<String> customAssessmentAutomationName;
 
-    public Output<String> customAssessmentAutomationName() {
-        return this.customAssessmentAutomationName == null ? Codegen.empty() : this.customAssessmentAutomationName;
+    public Optional<Output<String>> customAssessmentAutomationName() {
+        return Optional.ofNullable(this.customAssessmentAutomationName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="remediationDescription")
-      private final @Nullable Output<String> remediationDescription;
+    private @Nullable Output<String> remediationDescription;
 
-    public Output<String> remediationDescription() {
-        return this.remediationDescription == null ? Codegen.empty() : this.remediationDescription;
+    public Optional<Output<String>> remediationDescription() {
+        return Optional.ofNullable(this.remediationDescription);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,10 +89,10 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<Either<String,SeverityEnum>> severity;
+    private @Nullable Output<Either<String,SeverityEnum>> severity;
 
-    public Output<Either<String,SeverityEnum>> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<Either<String,SeverityEnum>>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -100,141 +100,119 @@ public final class CustomAssessmentAutomationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="supportedCloud")
-      private final @Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud;
+    private @Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud;
 
-    public Output<Either<String,SupportedCloudEnum>> supportedCloud() {
-        return this.supportedCloud == null ? Codegen.empty() : this.supportedCloud;
+    public Optional<Output<Either<String,SupportedCloudEnum>>> supportedCloud() {
+        return Optional.ofNullable(this.supportedCloud);
     }
 
-    public CustomAssessmentAutomationArgs(
-        @Nullable Output<String> compressedQuery,
-        @Nullable Output<String> customAssessmentAutomationName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> remediationDescription,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,SeverityEnum>> severity,
-        @Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud) {
-        this.compressedQuery = compressedQuery;
-        this.customAssessmentAutomationName = customAssessmentAutomationName;
-        this.description = description;
-        this.displayName = displayName;
-        this.remediationDescription = remediationDescription;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.severity = severity;
-        this.supportedCloud = supportedCloud;
-    }
+    private CustomAssessmentAutomationArgs() {}
 
-    private CustomAssessmentAutomationArgs() {
-        this.compressedQuery = Codegen.empty();
-        this.customAssessmentAutomationName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.remediationDescription = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.supportedCloud = Codegen.empty();
+    private CustomAssessmentAutomationArgs(CustomAssessmentAutomationArgs $) {
+        this.compressedQuery = $.compressedQuery;
+        this.customAssessmentAutomationName = $.customAssessmentAutomationName;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.remediationDescription = $.remediationDescription;
+        this.resourceGroupName = $.resourceGroupName;
+        this.severity = $.severity;
+        this.supportedCloud = $.supportedCloud;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomAssessmentAutomationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> compressedQuery;
-        private @Nullable Output<String> customAssessmentAutomationName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> remediationDescription;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,SeverityEnum>> severity;
-        private @Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud;
+        private CustomAssessmentAutomationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomAssessmentAutomationArgs();
         }
 
         public Builder(CustomAssessmentAutomationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressedQuery = defaults.compressedQuery;
-    	      this.customAssessmentAutomationName = defaults.customAssessmentAutomationName;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.remediationDescription = defaults.remediationDescription;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.severity = defaults.severity;
-    	      this.supportedCloud = defaults.supportedCloud;
+            $ = new CustomAssessmentAutomationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compressedQuery(@Nullable Output<String> compressedQuery) {
-            this.compressedQuery = compressedQuery;
+            $.compressedQuery = compressedQuery;
             return this;
         }
-        public Builder compressedQuery(@Nullable String compressedQuery) {
-            this.compressedQuery = Codegen.ofNullable(compressedQuery);
-            return this;
+
+        public Builder compressedQuery(String compressedQuery) {
+            return compressedQuery(Output.of(compressedQuery));
         }
+
         public Builder customAssessmentAutomationName(@Nullable Output<String> customAssessmentAutomationName) {
-            this.customAssessmentAutomationName = customAssessmentAutomationName;
+            $.customAssessmentAutomationName = customAssessmentAutomationName;
             return this;
         }
-        public Builder customAssessmentAutomationName(@Nullable String customAssessmentAutomationName) {
-            this.customAssessmentAutomationName = Codegen.ofNullable(customAssessmentAutomationName);
-            return this;
+
+        public Builder customAssessmentAutomationName(String customAssessmentAutomationName) {
+            return customAssessmentAutomationName(Output.of(customAssessmentAutomationName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
-            this.remediationDescription = remediationDescription;
+            $.remediationDescription = remediationDescription;
             return this;
         }
-        public Builder remediationDescription(@Nullable String remediationDescription) {
-            this.remediationDescription = Codegen.ofNullable(remediationDescription);
-            return this;
+
+        public Builder remediationDescription(String remediationDescription) {
+            return remediationDescription(Output.of(remediationDescription));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder severity(@Nullable Output<Either<String,SeverityEnum>> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable Either<String,SeverityEnum> severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(Either<String,SeverityEnum> severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder supportedCloud(@Nullable Output<Either<String,SupportedCloudEnum>> supportedCloud) {
-            this.supportedCloud = supportedCloud;
+            $.supportedCloud = supportedCloud;
             return this;
         }
-        public Builder supportedCloud(@Nullable Either<String,SupportedCloudEnum> supportedCloud) {
-            this.supportedCloud = Codegen.ofNullable(supportedCloud);
-            return this;
-        }        public CustomAssessmentAutomationArgs build() {
-            return new CustomAssessmentAutomationArgs(compressedQuery, customAssessmentAutomationName, description, displayName, remediationDescription, resourceGroupName, severity, supportedCloud);
+
+        public Builder supportedCloud(Either<String,SupportedCloudEnum> supportedCloud) {
+            return supportedCloud(Output.of(supportedCloud));
+        }
+
+        public CustomAssessmentAutomationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

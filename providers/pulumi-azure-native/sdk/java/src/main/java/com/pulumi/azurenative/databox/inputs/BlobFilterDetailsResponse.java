@@ -24,10 +24,10 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="blobPathList")
-      private final @Nullable List<String> blobPathList;
+    private @Nullable List<String> blobPathList;
 
-    public List<String> blobPathList() {
-        return this.blobPathList == null ? List.of() : this.blobPathList;
+    public Optional<List<String>> blobPathList() {
+        return Optional.ofNullable(this.blobPathList);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="blobPrefixList")
-      private final @Nullable List<String> blobPrefixList;
+    private @Nullable List<String> blobPrefixList;
 
-    public List<String> blobPrefixList() {
-        return this.blobPrefixList == null ? List.of() : this.blobPrefixList;
+    public Optional<List<String>> blobPrefixList() {
+        return Optional.ofNullable(this.blobPrefixList);
     }
 
     /**
@@ -46,73 +46,68 @@ public final class BlobFilterDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="containerList")
-      private final @Nullable List<String> containerList;
+    private @Nullable List<String> containerList;
 
-    public List<String> containerList() {
-        return this.containerList == null ? List.of() : this.containerList;
+    public Optional<List<String>> containerList() {
+        return Optional.ofNullable(this.containerList);
     }
 
-    public BlobFilterDetailsResponse(
-        @Nullable List<String> blobPathList,
-        @Nullable List<String> blobPrefixList,
-        @Nullable List<String> containerList) {
-        this.blobPathList = blobPathList;
-        this.blobPrefixList = blobPrefixList;
-        this.containerList = containerList;
-    }
+    private BlobFilterDetailsResponse() {}
 
-    private BlobFilterDetailsResponse() {
-        this.blobPathList = List.of();
-        this.blobPrefixList = List.of();
-        this.containerList = List.of();
+    private BlobFilterDetailsResponse(BlobFilterDetailsResponse $) {
+        this.blobPathList = $.blobPathList;
+        this.blobPrefixList = $.blobPrefixList;
+        this.containerList = $.containerList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobFilterDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> blobPathList;
-        private @Nullable List<String> blobPrefixList;
-        private @Nullable List<String> containerList;
+        private BlobFilterDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobFilterDetailsResponse();
         }
 
         public Builder(BlobFilterDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobPathList = defaults.blobPathList;
-    	      this.blobPrefixList = defaults.blobPrefixList;
-    	      this.containerList = defaults.containerList;
+            $ = new BlobFilterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobPathList(@Nullable List<String> blobPathList) {
-            this.blobPathList = blobPathList;
+            $.blobPathList = blobPathList;
             return this;
         }
+
         public Builder blobPathList(String... blobPathList) {
             return blobPathList(List.of(blobPathList));
         }
+
         public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
-            this.blobPrefixList = blobPrefixList;
+            $.blobPrefixList = blobPrefixList;
             return this;
         }
+
         public Builder blobPrefixList(String... blobPrefixList) {
             return blobPrefixList(List.of(blobPrefixList));
         }
+
         public Builder containerList(@Nullable List<String> containerList) {
-            this.containerList = containerList;
+            $.containerList = containerList;
             return this;
         }
+
         public Builder containerList(String... containerList) {
             return containerList(List.of(containerList));
-        }        public BlobFilterDetailsResponse build() {
-            return new BlobFilterDetailsResponse(blobPathList, blobPrefixList, containerList);
+        }
+
+        public BlobFilterDetailsResponse build() {
+            return $;
         }
     }
+
 }

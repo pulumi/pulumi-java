@@ -23,7 +23,7 @@ public final class ResourceHealthDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="code", required=true)
-      private final Integer code;
+    private Integer code;
 
     public Integer code() {
         return this.code;
@@ -34,7 +34,7 @@ public final class ResourceHealthDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -45,7 +45,7 @@ public final class ResourceHealthDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recommendations", required=true)
-      private final List<String> recommendations;
+    private List<String> recommendations;
 
     public List<String> recommendations() {
         return this.recommendations;
@@ -56,76 +56,70 @@ public final class ResourceHealthDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public ResourceHealthDetailsResponse(
-        Integer code,
-        String message,
-        List<String> recommendations,
-        String title) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.recommendations = Objects.requireNonNull(recommendations, "expected parameter 'recommendations' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private ResourceHealthDetailsResponse() {}
 
-    private ResourceHealthDetailsResponse() {
-        this.code = null;
-        this.message = null;
-        this.recommendations = List.of();
-        this.title = null;
+    private ResourceHealthDetailsResponse(ResourceHealthDetailsResponse $) {
+        this.code = $.code;
+        this.message = $.message;
+        this.recommendations = $.recommendations;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceHealthDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer code;
-        private String message;
-        private List<String> recommendations;
-        private String title;
+        private ResourceHealthDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceHealthDetailsResponse();
         }
 
         public Builder(ResourceHealthDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
-    	      this.recommendations = defaults.recommendations;
-    	      this.title = defaults.title;
+            $ = new ResourceHealthDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(Integer code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder recommendations(List<String> recommendations) {
-            this.recommendations = Objects.requireNonNull(recommendations);
+            $.recommendations = recommendations;
             return this;
         }
+
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public ResourceHealthDetailsResponse build() {
-            return new ResourceHealthDetailsResponse(code, message, recommendations, title);
+        }
+
+        public ResourceHealthDetailsResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.recommendations = Objects.requireNonNull($.recommendations, "expected parameter 'recommendations' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

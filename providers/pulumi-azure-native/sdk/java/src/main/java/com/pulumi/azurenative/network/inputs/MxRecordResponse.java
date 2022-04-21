@@ -24,10 +24,10 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exchange")
-      private final @Nullable String exchange;
+    private @Nullable String exchange;
 
     public Optional<String> exchange() {
-        return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
+        return Optional.ofNullable(this.exchange);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preference")
-      private final @Nullable Integer preference;
+    private @Nullable Integer preference;
 
     public Optional<Integer> preference() {
-        return this.preference == null ? Optional.empty() : Optional.ofNullable(this.preference);
+        return Optional.ofNullable(this.preference);
     }
 
-    public MxRecordResponse(
-        @Nullable String exchange,
-        @Nullable Integer preference) {
-        this.exchange = exchange;
-        this.preference = preference;
-    }
+    private MxRecordResponse() {}
 
-    private MxRecordResponse() {
-        this.exchange = null;
-        this.preference = null;
+    private MxRecordResponse(MxRecordResponse $) {
+        this.exchange = $.exchange;
+        this.preference = $.preference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MxRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String exchange;
-        private @Nullable Integer preference;
+        private MxRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MxRecordResponse();
         }
 
         public Builder(MxRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exchange = defaults.exchange;
-    	      this.preference = defaults.preference;
+            $ = new MxRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exchange(@Nullable String exchange) {
-            this.exchange = exchange;
+            $.exchange = exchange;
             return this;
         }
+
         public Builder preference(@Nullable Integer preference) {
-            this.preference = preference;
+            $.preference = preference;
             return this;
-        }        public MxRecordResponse build() {
-            return new MxRecordResponse(exchange, preference);
+        }
+
+        public MxRecordResponse build() {
+            return $;
         }
     }
+
 }

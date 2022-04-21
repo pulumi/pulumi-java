@@ -9,11 +9,11 @@ import com.pulumi.azurenative.digitaltwins.inputs.PrivateEndpointConnectionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<DigitalTwinsIdentityArgs> identity;
+    private @Nullable Output<DigitalTwinsIdentityArgs> identity;
 
-    public Output<DigitalTwinsIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<DigitalTwinsIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -37,17 +37,17 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="privateEndpointConnections")
-      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+    private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
+    public Optional<Output<List<PrivateEndpointConnectionArgs>>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,10 +77,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -88,131 +88,113 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DigitalTwinArgs(
-        @Nullable Output<DigitalTwinsIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.identity = identity;
-        this.location = location;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.tags = tags;
-    }
+    private DigitalTwinArgs() {}
 
-    private DigitalTwinArgs() {
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.privateEndpointConnections = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DigitalTwinArgs(DigitalTwinArgs $) {
+        this.identity = $.identity;
+        this.location = $.location;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DigitalTwinArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DigitalTwinsIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Map<String,String>> tags;
+        private DigitalTwinArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DigitalTwinArgs();
         }
 
         public Builder(DigitalTwinArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tags = defaults.tags;
+            $ = new DigitalTwinArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<DigitalTwinsIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable DigitalTwinsIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(DigitalTwinsIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Codegen.ofNullable(privateEndpointConnections);
-            return this;
+
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+            return privateEndpointConnections(Output.of(privateEndpointConnections));
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DigitalTwinArgs build() {
-            return new DigitalTwinArgs(identity, location, privateEndpointConnections, publicNetworkAccess, resourceGroupName, resourceName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DigitalTwinArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

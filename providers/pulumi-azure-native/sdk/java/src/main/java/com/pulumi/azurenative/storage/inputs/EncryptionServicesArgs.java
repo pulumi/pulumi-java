@@ -6,8 +6,8 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.EncryptionServiceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="blob")
-      private final @Nullable Output<EncryptionServiceArgs> blob;
+    private @Nullable Output<EncryptionServiceArgs> blob;
 
-    public Output<EncryptionServiceArgs> blob() {
-        return this.blob == null ? Codegen.empty() : this.blob;
+    public Optional<Output<EncryptionServiceArgs>> blob() {
+        return Optional.ofNullable(this.blob);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<EncryptionServiceArgs> file;
+    private @Nullable Output<EncryptionServiceArgs> file;
 
-    public Output<EncryptionServiceArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<EncryptionServiceArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queue")
-      private final @Nullable Output<EncryptionServiceArgs> queue;
+    private @Nullable Output<EncryptionServiceArgs> queue;
 
-    public Output<EncryptionServiceArgs> queue() {
-        return this.queue == null ? Codegen.empty() : this.queue;
+    public Optional<Output<EncryptionServiceArgs>> queue() {
+        return Optional.ofNullable(this.queue);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class EncryptionServicesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<EncryptionServiceArgs> table;
+    private @Nullable Output<EncryptionServiceArgs> table;
 
-    public Output<EncryptionServiceArgs> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<EncryptionServiceArgs>> table() {
+        return Optional.ofNullable(this.table);
     }
 
-    public EncryptionServicesArgs(
-        @Nullable Output<EncryptionServiceArgs> blob,
-        @Nullable Output<EncryptionServiceArgs> file,
-        @Nullable Output<EncryptionServiceArgs> queue,
-        @Nullable Output<EncryptionServiceArgs> table) {
-        this.blob = blob;
-        this.file = file;
-        this.queue = queue;
-        this.table = table;
-    }
+    private EncryptionServicesArgs() {}
 
-    private EncryptionServicesArgs() {
-        this.blob = Codegen.empty();
-        this.file = Codegen.empty();
-        this.queue = Codegen.empty();
-        this.table = Codegen.empty();
+    private EncryptionServicesArgs(EncryptionServicesArgs $) {
+        this.blob = $.blob;
+        this.file = $.file;
+        this.queue = $.queue;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionServicesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionServiceArgs> blob;
-        private @Nullable Output<EncryptionServiceArgs> file;
-        private @Nullable Output<EncryptionServiceArgs> queue;
-        private @Nullable Output<EncryptionServiceArgs> table;
+        private EncryptionServicesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionServicesArgs();
         }
 
         public Builder(EncryptionServicesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blob = defaults.blob;
-    	      this.file = defaults.file;
-    	      this.queue = defaults.queue;
-    	      this.table = defaults.table;
+            $ = new EncryptionServicesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blob(@Nullable Output<EncryptionServiceArgs> blob) {
-            this.blob = blob;
+            $.blob = blob;
             return this;
         }
-        public Builder blob(@Nullable EncryptionServiceArgs blob) {
-            this.blob = Codegen.ofNullable(blob);
-            return this;
+
+        public Builder blob(EncryptionServiceArgs blob) {
+            return blob(Output.of(blob));
         }
+
         public Builder file(@Nullable Output<EncryptionServiceArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable EncryptionServiceArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(EncryptionServiceArgs file) {
+            return file(Output.of(file));
         }
+
         public Builder queue(@Nullable Output<EncryptionServiceArgs> queue) {
-            this.queue = queue;
+            $.queue = queue;
             return this;
         }
-        public Builder queue(@Nullable EncryptionServiceArgs queue) {
-            this.queue = Codegen.ofNullable(queue);
-            return this;
+
+        public Builder queue(EncryptionServiceArgs queue) {
+            return queue(Output.of(queue));
         }
+
         public Builder table(@Nullable Output<EncryptionServiceArgs> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable EncryptionServiceArgs table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
-        }        public EncryptionServicesArgs build() {
-            return new EncryptionServicesArgs(blob, file, queue, table);
+
+        public Builder table(EncryptionServiceArgs table) {
+            return table(Output.of(table));
+        }
+
+        public EncryptionServicesArgs build() {
+            return $;
         }
     }
+
 }

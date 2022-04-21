@@ -26,7 +26,7 @@ public final class Mp4FormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filenamePattern", required=true)
-      private final String filenamePattern;
+    private String filenamePattern;
 
     public String filenamePattern() {
         return this.filenamePattern;
@@ -38,7 +38,7 @@ public final class Mp4FormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -49,67 +49,62 @@ public final class Mp4FormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputFiles")
-      private final @Nullable List<OutputFileResponse> outputFiles;
+    private @Nullable List<OutputFileResponse> outputFiles;
 
-    public List<OutputFileResponse> outputFiles() {
-        return this.outputFiles == null ? List.of() : this.outputFiles;
+    public Optional<List<OutputFileResponse>> outputFiles() {
+        return Optional.ofNullable(this.outputFiles);
     }
 
-    public Mp4FormatResponse(
-        String filenamePattern,
-        String odataType,
-        @Nullable List<OutputFileResponse> outputFiles) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.outputFiles = outputFiles;
-    }
+    private Mp4FormatResponse() {}
 
-    private Mp4FormatResponse() {
-        this.filenamePattern = null;
-        this.odataType = null;
-        this.outputFiles = List.of();
+    private Mp4FormatResponse(Mp4FormatResponse $) {
+        this.filenamePattern = $.filenamePattern;
+        this.odataType = $.odataType;
+        this.outputFiles = $.outputFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Mp4FormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filenamePattern;
-        private String odataType;
-        private @Nullable List<OutputFileResponse> outputFiles;
+        private Mp4FormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Mp4FormatResponse();
         }
 
         public Builder(Mp4FormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filenamePattern = defaults.filenamePattern;
-    	      this.odataType = defaults.odataType;
-    	      this.outputFiles = defaults.outputFiles;
+            $ = new Mp4FormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Objects.requireNonNull(filenamePattern);
+            $.filenamePattern = filenamePattern;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
-            this.outputFiles = outputFiles;
+            $.outputFiles = outputFiles;
             return this;
         }
+
         public Builder outputFiles(OutputFileResponse... outputFiles) {
             return outputFiles(List.of(outputFiles));
-        }        public Mp4FormatResponse build() {
-            return new Mp4FormatResponse(filenamePattern, odataType, outputFiles);
+        }
+
+        public Mp4FormatResponse build() {
+            $.filenamePattern = Objects.requireNonNull($.filenamePattern, "expected parameter 'filenamePattern' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

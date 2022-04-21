@@ -23,10 +23,10 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
      * 
      */
     @Import(name="consumerGroup")
-      private final @Nullable String consumerGroup;
+    private @Nullable String consumerGroup;
 
     public Optional<String> consumerGroup() {
-        return this.consumerGroup == null ? Optional.empty() : Optional.ofNullable(this.consumerGroup);
+        return Optional.ofNullable(this.consumerGroup);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
      * 
      */
     @Import(name="eventHubName")
-      private final @Nullable String eventHubName;
+    private @Nullable String eventHubName;
 
     public Optional<String> eventHubName() {
-        return this.eventHubName == null ? Optional.empty() : Optional.ofNullable(this.eventHubName);
+        return Optional.ofNullable(this.eventHubName);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
      * 
      */
     @Import(name="fullyQualifiedEventHubNamespace")
-      private final @Nullable String fullyQualifiedEventHubNamespace;
+    private @Nullable String fullyQualifiedEventHubNamespace;
 
     public Optional<String> fullyQualifiedEventHubNamespace() {
-        return this.fullyQualifiedEventHubNamespace == null ? Optional.empty() : Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
+        return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
 
-    public IotEventHubIngestionEndpointConfigurationResponse(
-        @Nullable String consumerGroup,
-        @Nullable String eventHubName,
-        @Nullable String fullyQualifiedEventHubNamespace) {
-        this.consumerGroup = consumerGroup;
-        this.eventHubName = eventHubName;
-        this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
-    }
+    private IotEventHubIngestionEndpointConfigurationResponse() {}
 
-    private IotEventHubIngestionEndpointConfigurationResponse() {
-        this.consumerGroup = null;
-        this.eventHubName = null;
-        this.fullyQualifiedEventHubNamespace = null;
+    private IotEventHubIngestionEndpointConfigurationResponse(IotEventHubIngestionEndpointConfigurationResponse $) {
+        this.consumerGroup = $.consumerGroup;
+        this.eventHubName = $.eventHubName;
+        this.fullyQualifiedEventHubNamespace = $.fullyQualifiedEventHubNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotEventHubIngestionEndpointConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String consumerGroup;
-        private @Nullable String eventHubName;
-        private @Nullable String fullyQualifiedEventHubNamespace;
+        private IotEventHubIngestionEndpointConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotEventHubIngestionEndpointConfigurationResponse();
         }
 
         public Builder(IotEventHubIngestionEndpointConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerGroup = defaults.consumerGroup;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.fullyQualifiedEventHubNamespace = defaults.fullyQualifiedEventHubNamespace;
+            $ = new IotEventHubIngestionEndpointConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerGroup(@Nullable String consumerGroup) {
-            this.consumerGroup = consumerGroup;
+            $.consumerGroup = consumerGroup;
             return this;
         }
+
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = eventHubName;
+            $.eventHubName = eventHubName;
             return this;
         }
+
         public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
-            this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
+            $.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
-        }        public IotEventHubIngestionEndpointConfigurationResponse build() {
-            return new IotEventHubIngestionEndpointConfigurationResponse(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
+        }
+
+        public IotEventHubIngestionEndpointConfigurationResponse build() {
+            return $;
         }
     }
+
 }

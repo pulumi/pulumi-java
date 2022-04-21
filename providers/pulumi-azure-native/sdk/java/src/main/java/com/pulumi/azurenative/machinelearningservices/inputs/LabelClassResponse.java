@@ -24,10 +24,10 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class LabelClassResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subclasses")
-      private final @Nullable Map<String,LabelClassResponse> subclasses;
+    private @Nullable Map<String,LabelClassResponse> subclasses;
 
-    public Map<String,LabelClassResponse> subclasses() {
-        return this.subclasses == null ? Map.of() : this.subclasses;
+    public Optional<Map<String,LabelClassResponse>> subclasses() {
+        return Optional.ofNullable(this.subclasses);
     }
 
-    public LabelClassResponse(
-        @Nullable String displayName,
-        @Nullable Map<String,LabelClassResponse> subclasses) {
-        this.displayName = displayName;
-        this.subclasses = subclasses;
-    }
+    private LabelClassResponse() {}
 
-    private LabelClassResponse() {
-        this.displayName = null;
-        this.subclasses = Map.of();
+    private LabelClassResponse(LabelClassResponse $) {
+        this.displayName = $.displayName;
+        this.subclasses = $.subclasses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelClassResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable Map<String,LabelClassResponse> subclasses;
+        private LabelClassResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelClassResponse();
         }
 
         public Builder(LabelClassResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.subclasses = defaults.subclasses;
+            $ = new LabelClassResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder subclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
-            this.subclasses = subclasses;
+            $.subclasses = subclasses;
             return this;
-        }        public LabelClassResponse build() {
-            return new LabelClassResponse(displayName, subclasses);
+        }
+
+        public LabelClassResponse build() {
+            return $;
         }
     }
+
 }

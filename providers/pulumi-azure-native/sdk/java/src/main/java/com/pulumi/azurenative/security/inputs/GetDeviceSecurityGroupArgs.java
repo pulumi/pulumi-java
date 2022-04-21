@@ -17,7 +17,7 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deviceSecurityGroupName", required=true)
-      private final String deviceSecurityGroupName;
+    private String deviceSecurityGroupName;
 
     public String deviceSecurityGroupName() {
         return this.deviceSecurityGroupName;
@@ -28,55 +28,52 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public GetDeviceSecurityGroupArgs(
-        String deviceSecurityGroupName,
-        String resourceId) {
-        this.deviceSecurityGroupName = Objects.requireNonNull(deviceSecurityGroupName, "expected parameter 'deviceSecurityGroupName' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private GetDeviceSecurityGroupArgs() {}
 
-    private GetDeviceSecurityGroupArgs() {
-        this.deviceSecurityGroupName = null;
-        this.resourceId = null;
+    private GetDeviceSecurityGroupArgs(GetDeviceSecurityGroupArgs $) {
+        this.deviceSecurityGroupName = $.deviceSecurityGroupName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeviceSecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceSecurityGroupName;
-        private String resourceId;
+        private GetDeviceSecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeviceSecurityGroupArgs();
         }
 
         public Builder(GetDeviceSecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceSecurityGroupName = defaults.deviceSecurityGroupName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new GetDeviceSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceSecurityGroupName(String deviceSecurityGroupName) {
-            this.deviceSecurityGroupName = Objects.requireNonNull(deviceSecurityGroupName);
+            $.deviceSecurityGroupName = deviceSecurityGroupName;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public GetDeviceSecurityGroupArgs build() {
-            return new GetDeviceSecurityGroupArgs(deviceSecurityGroupName, resourceId);
+        }
+
+        public GetDeviceSecurityGroupArgs build() {
+            $.deviceSecurityGroupName = Objects.requireNonNull($.deviceSecurityGroupName, "expected parameter 'deviceSecurityGroupName' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

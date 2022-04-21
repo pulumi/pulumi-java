@@ -17,10 +17,10 @@ import com.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSo
 import com.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +37,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasource")
-      private final @Nullable Output<Object> datasource;
+    private @Nullable Output<Object> datasource;
 
-    public Output<Object> datasource() {
-        return this.datasource == null ? Codegen.empty() : this.datasource;
+    public Optional<Output<Object>> datasource() {
+        return Optional.ofNullable(this.datasource);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,76 +59,68 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serialization")
-      private final @Nullable Output<Object> serialization;
+    private @Nullable Output<Object> serialization;
 
-    public Output<Object> serialization() {
-        return this.serialization == null ? Codegen.empty() : this.serialization;
+    public Optional<Output<Object>> serialization() {
+        return Optional.ofNullable(this.serialization);
     }
 
-    public OutputArgs(
-        @Nullable Output<Object> datasource,
-        @Nullable Output<String> name,
-        @Nullable Output<Object> serialization) {
-        this.datasource = datasource;
-        this.name = name;
-        this.serialization = serialization;
-    }
+    private OutputArgs() {}
 
-    private OutputArgs() {
-        this.datasource = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serialization = Codegen.empty();
+    private OutputArgs(OutputArgs $) {
+        this.datasource = $.datasource;
+        this.name = $.name;
+        this.serialization = $.serialization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> datasource;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Object> serialization;
+        private OutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputArgs();
         }
 
         public Builder(OutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasource = defaults.datasource;
-    	      this.name = defaults.name;
-    	      this.serialization = defaults.serialization;
+            $ = new OutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasource(@Nullable Output<Object> datasource) {
-            this.datasource = datasource;
+            $.datasource = datasource;
             return this;
         }
-        public Builder datasource(@Nullable Object datasource) {
-            this.datasource = Codegen.ofNullable(datasource);
-            return this;
+
+        public Builder datasource(Object datasource) {
+            return datasource(Output.of(datasource));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serialization(@Nullable Output<Object> serialization) {
-            this.serialization = serialization;
+            $.serialization = serialization;
             return this;
         }
-        public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Codegen.ofNullable(serialization);
-            return this;
-        }        public OutputArgs build() {
-            return new OutputArgs(datasource, name, serialization);
+
+        public Builder serialization(Object serialization) {
+            return serialization(Output.of(serialization));
+        }
+
+        public OutputArgs build() {
+            return $;
         }
     }
+
 }

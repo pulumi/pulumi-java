@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="autoKeyConfigUrl")
-      private final @Nullable Output<String> autoKeyConfigUrl;
+    private @Nullable Output<String> autoKeyConfigUrl;
 
-    public Output<String> autoKeyConfigUrl() {
-        return this.autoKeyConfigUrl == null ? Codegen.empty() : this.autoKeyConfigUrl;
+    public Optional<Output<String>> autoKeyConfigUrl() {
+        return Optional.ofNullable(this.autoKeyConfigUrl);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="fluentdConfigUrl")
-      private final @Nullable Output<Object> fluentdConfigUrl;
+    private @Nullable Output<Object> fluentdConfigUrl;
 
-    public Output<Object> fluentdConfigUrl() {
-        return this.fluentdConfigUrl == null ? Codegen.empty() : this.fluentdConfigUrl;
+    public Optional<Output<Object>> fluentdConfigUrl() {
+        return Optional.ofNullable(this.fluentdConfigUrl);
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -81,10 +82,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="maConfigUrl")
-      private final @Nullable Output<String> maConfigUrl;
+    private @Nullable Output<String> maConfigUrl;
 
-    public Output<String> maConfigUrl() {
-        return this.maConfigUrl == null ? Codegen.empty() : this.maConfigUrl;
+    public Optional<Output<String>> maConfigUrl() {
+        return Optional.ofNullable(this.maConfigUrl);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,141 +104,119 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public AzureInternalMonitoringPipelineSinkDescriptionArgs(
-        @Nullable Output<String> accountName,
-        @Nullable Output<String> autoKeyConfigUrl,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> fluentdConfigUrl,
-        Output<String> kind,
-        @Nullable Output<String> maConfigUrl,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace) {
-        this.accountName = accountName;
-        this.autoKeyConfigUrl = autoKeyConfigUrl;
-        this.description = description;
-        this.fluentdConfigUrl = fluentdConfigUrl;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.maConfigUrl = maConfigUrl;
-        this.name = name;
-        this.namespace = namespace;
-    }
+    private AzureInternalMonitoringPipelineSinkDescriptionArgs() {}
 
-    private AzureInternalMonitoringPipelineSinkDescriptionArgs() {
-        this.accountName = Codegen.empty();
-        this.autoKeyConfigUrl = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fluentdConfigUrl = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.maConfigUrl = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private AzureInternalMonitoringPipelineSinkDescriptionArgs(AzureInternalMonitoringPipelineSinkDescriptionArgs $) {
+        this.accountName = $.accountName;
+        this.autoKeyConfigUrl = $.autoKeyConfigUrl;
+        this.description = $.description;
+        this.fluentdConfigUrl = $.fluentdConfigUrl;
+        this.kind = $.kind;
+        this.maConfigUrl = $.maConfigUrl;
+        this.name = $.name;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureInternalMonitoringPipelineSinkDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<String> autoKeyConfigUrl;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> fluentdConfigUrl;
-        private Output<String> kind;
-        private @Nullable Output<String> maConfigUrl;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
+        private AzureInternalMonitoringPipelineSinkDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureInternalMonitoringPipelineSinkDescriptionArgs();
         }
 
         public Builder(AzureInternalMonitoringPipelineSinkDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.autoKeyConfigUrl = defaults.autoKeyConfigUrl;
-    	      this.description = defaults.description;
-    	      this.fluentdConfigUrl = defaults.fluentdConfigUrl;
-    	      this.kind = defaults.kind;
-    	      this.maConfigUrl = defaults.maConfigUrl;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
+            $ = new AzureInternalMonitoringPipelineSinkDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder autoKeyConfigUrl(@Nullable Output<String> autoKeyConfigUrl) {
-            this.autoKeyConfigUrl = autoKeyConfigUrl;
+            $.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
-        public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
-            this.autoKeyConfigUrl = Codegen.ofNullable(autoKeyConfigUrl);
-            return this;
+
+        public Builder autoKeyConfigUrl(String autoKeyConfigUrl) {
+            return autoKeyConfigUrl(Output.of(autoKeyConfigUrl));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fluentdConfigUrl(@Nullable Output<Object> fluentdConfigUrl) {
-            this.fluentdConfigUrl = fluentdConfigUrl;
+            $.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
-        public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
-            this.fluentdConfigUrl = Codegen.ofNullable(fluentdConfigUrl);
-            return this;
+
+        public Builder fluentdConfigUrl(Object fluentdConfigUrl) {
+            return fluentdConfigUrl(Output.of(fluentdConfigUrl));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder maConfigUrl(@Nullable Output<String> maConfigUrl) {
-            this.maConfigUrl = maConfigUrl;
+            $.maConfigUrl = maConfigUrl;
             return this;
         }
-        public Builder maConfigUrl(@Nullable String maConfigUrl) {
-            this.maConfigUrl = Codegen.ofNullable(maConfigUrl);
-            return this;
+
+        public Builder maConfigUrl(String maConfigUrl) {
+            return maConfigUrl(Output.of(maConfigUrl));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public AzureInternalMonitoringPipelineSinkDescriptionArgs build() {
-            return new AzureInternalMonitoringPipelineSinkDescriptionArgs(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public AzureInternalMonitoringPipelineSinkDescriptionArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class EdifactMessageFilterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="messageFilterType", required=true)
-      private final String messageFilterType;
+    private String messageFilterType;
 
     public String messageFilterType() {
         return this.messageFilterType;
     }
 
-    public EdifactMessageFilterResponse(String messageFilterType) {
-        this.messageFilterType = Objects.requireNonNull(messageFilterType, "expected parameter 'messageFilterType' to be non-null");
-    }
+    private EdifactMessageFilterResponse() {}
 
-    private EdifactMessageFilterResponse() {
-        this.messageFilterType = null;
+    private EdifactMessageFilterResponse(EdifactMessageFilterResponse $) {
+        this.messageFilterType = $.messageFilterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactMessageFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageFilterType;
+        private EdifactMessageFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactMessageFilterResponse();
         }
 
         public Builder(EdifactMessageFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFilterType = defaults.messageFilterType;
+            $ = new EdifactMessageFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFilterType(String messageFilterType) {
-            this.messageFilterType = Objects.requireNonNull(messageFilterType);
+            $.messageFilterType = messageFilterType;
             return this;
-        }        public EdifactMessageFilterResponse build() {
-            return new EdifactMessageFilterResponse(messageFilterType);
+        }
+
+        public EdifactMessageFilterResponse build() {
+            $.messageFilterType = Objects.requireNonNull($.messageFilterType, "expected parameter 'messageFilterType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labAccountName", required=true)
-      private final String labAccountName;
+    private String labAccountName;
 
     public String labAccountName() {
         return this.labAccountName;
@@ -41,7 +41,7 @@ public final class GetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -52,73 +52,65 @@ public final class GetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLabArgs(
-        @Nullable String expand,
-        String labAccountName,
-        String labName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.labAccountName = Objects.requireNonNull(labAccountName, "expected parameter 'labAccountName' to be non-null");
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLabArgs() {}
 
-    private GetLabArgs() {
-        this.expand = null;
-        this.labAccountName = null;
-        this.labName = null;
-        this.resourceGroupName = null;
+    private GetLabArgs(GetLabArgs $) {
+        this.expand = $.expand;
+        this.labAccountName = $.labAccountName;
+        this.labName = $.labName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLabArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String labAccountName;
-        private String labName;
-        private String resourceGroupName;
+        private GetLabArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLabArgs();
         }
 
         public Builder(GetLabArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.labName = defaults.labName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLabArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Objects.requireNonNull(labAccountName);
+            $.labAccountName = labAccountName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLabArgs build() {
-            return new GetLabArgs(expand, labAccountName, labName, resourceGroupName);
+        }
+
+        public GetLabArgs build() {
+            $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

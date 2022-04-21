@@ -21,7 +21,7 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -32,7 +32,7 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyVersion", required=true)
-      private final String keyVersion;
+    private String keyVersion;
 
     public String keyVersion() {
         return this.keyVersion;
@@ -43,64 +43,59 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vaultBaseUrl", required=true)
-      private final String vaultBaseUrl;
+    private String vaultBaseUrl;
 
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 
-    public EncryptionPropertiesResponse(
-        String keyName,
-        String keyVersion,
-        String vaultBaseUrl) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.keyVersion = Objects.requireNonNull(keyVersion, "expected parameter 'keyVersion' to be non-null");
-        this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl, "expected parameter 'vaultBaseUrl' to be non-null");
-    }
+    private EncryptionPropertiesResponse() {}
 
-    private EncryptionPropertiesResponse() {
-        this.keyName = null;
-        this.keyVersion = null;
-        this.vaultBaseUrl = null;
+    private EncryptionPropertiesResponse(EncryptionPropertiesResponse $) {
+        this.keyName = $.keyName;
+        this.keyVersion = $.keyVersion;
+        this.vaultBaseUrl = $.vaultBaseUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String keyVersion;
-        private String vaultBaseUrl;
+        private EncryptionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertiesResponse();
         }
 
         public Builder(EncryptionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyVersion = defaults.keyVersion;
-    	      this.vaultBaseUrl = defaults.vaultBaseUrl;
+            $ = new EncryptionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyVersion(String keyVersion) {
-            this.keyVersion = Objects.requireNonNull(keyVersion);
+            $.keyVersion = keyVersion;
             return this;
         }
+
         public Builder vaultBaseUrl(String vaultBaseUrl) {
-            this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
+            $.vaultBaseUrl = vaultBaseUrl;
             return this;
-        }        public EncryptionPropertiesResponse build() {
-            return new EncryptionPropertiesResponse(keyName, keyVersion, vaultBaseUrl);
+        }
+
+        public EncryptionPropertiesResponse build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.keyVersion = Objects.requireNonNull($.keyVersion, "expected parameter 'keyVersion' to be non-null");
+            $.vaultBaseUrl = Objects.requireNonNull($.vaultBaseUrl, "expected parameter 'vaultBaseUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="containerNetworkInterfaces")
-      private final @Nullable List<SubResourceResponse> containerNetworkInterfaces;
+    private @Nullable List<SubResourceResponse> containerNetworkInterfaces;
 
-    public List<SubResourceResponse> containerNetworkInterfaces() {
-        return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
+    public Optional<List<SubResourceResponse>> containerNetworkInterfaces() {
+        return Optional.ofNullable(this.containerNetworkInterfaces);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -48,10 +48,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
+    private @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
 
-    public List<IPConfigurationProfileResponse> ipConfigurations() {
-        return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
+    public Optional<List<IPConfigurationProfileResponse>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -92,106 +92,91 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends com.pu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ContainerNetworkInterfaceConfigurationResponse(
-        @Nullable List<SubResourceResponse> containerNetworkInterfaces,
-        String etag,
-        @Nullable String id,
-        @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
-        this.containerNetworkInterfaces = containerNetworkInterfaces;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ContainerNetworkInterfaceConfigurationResponse() {}
 
-    private ContainerNetworkInterfaceConfigurationResponse() {
-        this.containerNetworkInterfaces = List.of();
-        this.etag = null;
-        this.id = null;
-        this.ipConfigurations = List.of();
-        this.name = null;
-        this.provisioningState = null;
-        this.type = null;
+    private ContainerNetworkInterfaceConfigurationResponse(ContainerNetworkInterfaceConfigurationResponse $) {
+        this.containerNetworkInterfaces = $.containerNetworkInterfaces;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerNetworkInterfaceConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SubResourceResponse> containerNetworkInterfaces;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
-        private @Nullable String name;
-        private String provisioningState;
-        private String type;
+        private ContainerNetworkInterfaceConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerNetworkInterfaceConfigurationResponse();
         }
 
         public Builder(ContainerNetworkInterfaceConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerNetworkInterfaces = defaults.containerNetworkInterfaces;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new ContainerNetworkInterfaceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerNetworkInterfaces(@Nullable List<SubResourceResponse> containerNetworkInterfaces) {
-            this.containerNetworkInterfaces = containerNetworkInterfaces;
+            $.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
+
         public Builder containerNetworkInterfaces(SubResourceResponse... containerNetworkInterfaces) {
             return containerNetworkInterfaces(List.of(containerNetworkInterfaces));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipConfigurations(@Nullable List<IPConfigurationProfileResponse> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(IPConfigurationProfileResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ContainerNetworkInterfaceConfigurationResponse build() {
-            return new ContainerNetworkInterfaceConfigurationResponse(containerNetworkInterfaces, etag, id, ipConfigurations, name, provisioningState, type);
+        }
+
+        public ContainerNetworkInterfaceConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

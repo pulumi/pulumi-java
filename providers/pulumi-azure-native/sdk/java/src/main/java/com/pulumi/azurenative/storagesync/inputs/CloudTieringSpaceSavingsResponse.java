@@ -23,7 +23,7 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cachedSizeBytes", required=true)
-      private final Double cachedSizeBytes;
+    private Double cachedSizeBytes;
 
     public Double cachedSizeBytes() {
         return this.cachedSizeBytes;
@@ -34,7 +34,7 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -45,7 +45,7 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="spaceSavingsBytes", required=true)
-      private final Double spaceSavingsBytes;
+    private Double spaceSavingsBytes;
 
     public Double spaceSavingsBytes() {
         return this.spaceSavingsBytes;
@@ -56,7 +56,7 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="spaceSavingsPercent", required=true)
-      private final Integer spaceSavingsPercent;
+    private Integer spaceSavingsPercent;
 
     public Integer spaceSavingsPercent() {
         return this.spaceSavingsPercent;
@@ -67,7 +67,7 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="totalSizeCloudBytes", required=true)
-      private final Double totalSizeCloudBytes;
+    private Double totalSizeCloudBytes;
 
     public Double totalSizeCloudBytes() {
         return this.totalSizeCloudBytes;
@@ -78,91 +78,80 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="volumeSizeBytes", required=true)
-      private final Double volumeSizeBytes;
+    private Double volumeSizeBytes;
 
     public Double volumeSizeBytes() {
         return this.volumeSizeBytes;
     }
 
-    public CloudTieringSpaceSavingsResponse(
-        Double cachedSizeBytes,
-        String lastUpdatedTimestamp,
-        Double spaceSavingsBytes,
-        Integer spaceSavingsPercent,
-        Double totalSizeCloudBytes,
-        Double volumeSizeBytes) {
-        this.cachedSizeBytes = Objects.requireNonNull(cachedSizeBytes, "expected parameter 'cachedSizeBytes' to be non-null");
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-        this.spaceSavingsBytes = Objects.requireNonNull(spaceSavingsBytes, "expected parameter 'spaceSavingsBytes' to be non-null");
-        this.spaceSavingsPercent = Objects.requireNonNull(spaceSavingsPercent, "expected parameter 'spaceSavingsPercent' to be non-null");
-        this.totalSizeCloudBytes = Objects.requireNonNull(totalSizeCloudBytes, "expected parameter 'totalSizeCloudBytes' to be non-null");
-        this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes, "expected parameter 'volumeSizeBytes' to be non-null");
-    }
+    private CloudTieringSpaceSavingsResponse() {}
 
-    private CloudTieringSpaceSavingsResponse() {
-        this.cachedSizeBytes = null;
-        this.lastUpdatedTimestamp = null;
-        this.spaceSavingsBytes = null;
-        this.spaceSavingsPercent = null;
-        this.totalSizeCloudBytes = null;
-        this.volumeSizeBytes = null;
+    private CloudTieringSpaceSavingsResponse(CloudTieringSpaceSavingsResponse $) {
+        this.cachedSizeBytes = $.cachedSizeBytes;
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
+        this.spaceSavingsBytes = $.spaceSavingsBytes;
+        this.spaceSavingsPercent = $.spaceSavingsPercent;
+        this.totalSizeCloudBytes = $.totalSizeCloudBytes;
+        this.volumeSizeBytes = $.volumeSizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudTieringSpaceSavingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cachedSizeBytes;
-        private String lastUpdatedTimestamp;
-        private Double spaceSavingsBytes;
-        private Integer spaceSavingsPercent;
-        private Double totalSizeCloudBytes;
-        private Double volumeSizeBytes;
+        private CloudTieringSpaceSavingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudTieringSpaceSavingsResponse();
         }
 
         public Builder(CloudTieringSpaceSavingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cachedSizeBytes = defaults.cachedSizeBytes;
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
-    	      this.spaceSavingsBytes = defaults.spaceSavingsBytes;
-    	      this.spaceSavingsPercent = defaults.spaceSavingsPercent;
-    	      this.totalSizeCloudBytes = defaults.totalSizeCloudBytes;
-    	      this.volumeSizeBytes = defaults.volumeSizeBytes;
+            $ = new CloudTieringSpaceSavingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cachedSizeBytes(Double cachedSizeBytes) {
-            this.cachedSizeBytes = Objects.requireNonNull(cachedSizeBytes);
+            $.cachedSizeBytes = cachedSizeBytes;
             return this;
         }
+
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
+
         public Builder spaceSavingsBytes(Double spaceSavingsBytes) {
-            this.spaceSavingsBytes = Objects.requireNonNull(spaceSavingsBytes);
+            $.spaceSavingsBytes = spaceSavingsBytes;
             return this;
         }
+
         public Builder spaceSavingsPercent(Integer spaceSavingsPercent) {
-            this.spaceSavingsPercent = Objects.requireNonNull(spaceSavingsPercent);
+            $.spaceSavingsPercent = spaceSavingsPercent;
             return this;
         }
+
         public Builder totalSizeCloudBytes(Double totalSizeCloudBytes) {
-            this.totalSizeCloudBytes = Objects.requireNonNull(totalSizeCloudBytes);
+            $.totalSizeCloudBytes = totalSizeCloudBytes;
             return this;
         }
+
         public Builder volumeSizeBytes(Double volumeSizeBytes) {
-            this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes);
+            $.volumeSizeBytes = volumeSizeBytes;
             return this;
-        }        public CloudTieringSpaceSavingsResponse build() {
-            return new CloudTieringSpaceSavingsResponse(cachedSizeBytes, lastUpdatedTimestamp, spaceSavingsBytes, spaceSavingsPercent, totalSizeCloudBytes, volumeSizeBytes);
+        }
+
+        public CloudTieringSpaceSavingsResponse build() {
+            $.cachedSizeBytes = Objects.requireNonNull($.cachedSizeBytes, "expected parameter 'cachedSizeBytes' to be non-null");
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            $.spaceSavingsBytes = Objects.requireNonNull($.spaceSavingsBytes, "expected parameter 'spaceSavingsBytes' to be non-null");
+            $.spaceSavingsPercent = Objects.requireNonNull($.spaceSavingsPercent, "expected parameter 'spaceSavingsPercent' to be non-null");
+            $.totalSizeCloudBytes = Objects.requireNonNull($.totalSizeCloudBytes, "expected parameter 'totalSizeCloudBytes' to be non-null");
+            $.volumeSizeBytes = Objects.requireNonNull($.volumeSizeBytes, "expected parameter 'volumeSizeBytes' to be non-null");
+            return $;
         }
     }
+
 }

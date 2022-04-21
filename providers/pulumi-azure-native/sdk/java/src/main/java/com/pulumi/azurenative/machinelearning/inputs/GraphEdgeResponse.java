@@ -23,10 +23,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceNodeId")
-      private final @Nullable String sourceNodeId;
+    private @Nullable String sourceNodeId;
 
     public Optional<String> sourceNodeId() {
-        return this.sourceNodeId == null ? Optional.empty() : Optional.ofNullable(this.sourceNodeId);
+        return Optional.ofNullable(this.sourceNodeId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourcePortId")
-      private final @Nullable String sourcePortId;
+    private @Nullable String sourcePortId;
 
     public Optional<String> sourcePortId() {
-        return this.sourcePortId == null ? Optional.empty() : Optional.ofNullable(this.sourcePortId);
+        return Optional.ofNullable(this.sourcePortId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetNodeId")
-      private final @Nullable String targetNodeId;
+    private @Nullable String targetNodeId;
 
     public Optional<String> targetNodeId() {
-        return this.targetNodeId == null ? Optional.empty() : Optional.ofNullable(this.targetNodeId);
+        return Optional.ofNullable(this.targetNodeId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetPortId")
-      private final @Nullable String targetPortId;
+    private @Nullable String targetPortId;
 
     public Optional<String> targetPortId() {
-        return this.targetPortId == null ? Optional.empty() : Optional.ofNullable(this.targetPortId);
+        return Optional.ofNullable(this.targetPortId);
     }
 
-    public GraphEdgeResponse(
-        @Nullable String sourceNodeId,
-        @Nullable String sourcePortId,
-        @Nullable String targetNodeId,
-        @Nullable String targetPortId) {
-        this.sourceNodeId = sourceNodeId;
-        this.sourcePortId = sourcePortId;
-        this.targetNodeId = targetNodeId;
-        this.targetPortId = targetPortId;
-    }
+    private GraphEdgeResponse() {}
 
-    private GraphEdgeResponse() {
-        this.sourceNodeId = null;
-        this.sourcePortId = null;
-        this.targetNodeId = null;
-        this.targetPortId = null;
+    private GraphEdgeResponse(GraphEdgeResponse $) {
+        this.sourceNodeId = $.sourceNodeId;
+        this.sourcePortId = $.sourcePortId;
+        this.targetNodeId = $.targetNodeId;
+        this.targetPortId = $.targetPortId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphEdgeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sourceNodeId;
-        private @Nullable String sourcePortId;
-        private @Nullable String targetNodeId;
-        private @Nullable String targetPortId;
+        private GraphEdgeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphEdgeResponse();
         }
 
         public Builder(GraphEdgeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceNodeId = defaults.sourceNodeId;
-    	      this.sourcePortId = defaults.sourcePortId;
-    	      this.targetNodeId = defaults.targetNodeId;
-    	      this.targetPortId = defaults.targetPortId;
+            $ = new GraphEdgeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceNodeId(@Nullable String sourceNodeId) {
-            this.sourceNodeId = sourceNodeId;
+            $.sourceNodeId = sourceNodeId;
             return this;
         }
+
         public Builder sourcePortId(@Nullable String sourcePortId) {
-            this.sourcePortId = sourcePortId;
+            $.sourcePortId = sourcePortId;
             return this;
         }
+
         public Builder targetNodeId(@Nullable String targetNodeId) {
-            this.targetNodeId = targetNodeId;
+            $.targetNodeId = targetNodeId;
             return this;
         }
+
         public Builder targetPortId(@Nullable String targetPortId) {
-            this.targetPortId = targetPortId;
+            $.targetPortId = targetPortId;
             return this;
-        }        public GraphEdgeResponse build() {
-            return new GraphEdgeResponse(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
+        }
+
+        public GraphEdgeResponse build() {
+            return $;
         }
     }
+
 }

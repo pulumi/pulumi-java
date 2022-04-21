@@ -25,10 +25,10 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
-      private final @Nullable Integer appConsistentFrequencyInMinutes;
+    private @Nullable Integer appConsistentFrequencyInMinutes;
 
     public Optional<Integer> appConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
+        return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="crashConsistentFrequencyInMinutes")
-      private final @Nullable Integer crashConsistentFrequencyInMinutes;
+    private @Nullable Integer crashConsistentFrequencyInMinutes;
 
     public Optional<Integer> crashConsistentFrequencyInMinutes() {
-        return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
+        return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -59,73 +59,63 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryPointHistoryInMinutes")
-      private final @Nullable Integer recoveryPointHistoryInMinutes;
+    private @Nullable Integer recoveryPointHistoryInMinutes;
 
     public Optional<Integer> recoveryPointHistoryInMinutes() {
-        return this.recoveryPointHistoryInMinutes == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryInMinutes);
+        return Optional.ofNullable(this.recoveryPointHistoryInMinutes);
     }
 
-    public VmwareCbtPolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        @Nullable Integer crashConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable Integer recoveryPointHistoryInMinutes) {
-        this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
-        this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
-    }
+    private VmwareCbtPolicyDetailsResponse() {}
 
-    private VmwareCbtPolicyDetailsResponse() {
-        this.appConsistentFrequencyInMinutes = null;
-        this.crashConsistentFrequencyInMinutes = null;
-        this.instanceType = null;
-        this.recoveryPointHistoryInMinutes = null;
+    private VmwareCbtPolicyDetailsResponse(VmwareCbtPolicyDetailsResponse $) {
+        this.appConsistentFrequencyInMinutes = $.appConsistentFrequencyInMinutes;
+        this.crashConsistentFrequencyInMinutes = $.crashConsistentFrequencyInMinutes;
+        this.instanceType = $.instanceType;
+        this.recoveryPointHistoryInMinutes = $.recoveryPointHistoryInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmwareCbtPolicyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer appConsistentFrequencyInMinutes;
-        private @Nullable Integer crashConsistentFrequencyInMinutes;
-        private String instanceType;
-        private @Nullable Integer recoveryPointHistoryInMinutes;
+        private VmwareCbtPolicyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmwareCbtPolicyDetailsResponse();
         }
 
         public Builder(VmwareCbtPolicyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appConsistentFrequencyInMinutes = defaults.appConsistentFrequencyInMinutes;
-    	      this.crashConsistentFrequencyInMinutes = defaults.crashConsistentFrequencyInMinutes;
-    	      this.instanceType = defaults.instanceType;
-    	      this.recoveryPointHistoryInMinutes = defaults.recoveryPointHistoryInMinutes;
+            $ = new VmwareCbtPolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
+            $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
-            this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
+            $.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder recoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
-            this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
+            $.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
-        }        public VmwareCbtPolicyDetailsResponse build() {
-            return new VmwareCbtPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, recoveryPointHistoryInMinutes);
+        }
+
+        public VmwareCbtPolicyDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public SrvRecordResponse(
-        @Nullable Integer port,
-        @Nullable Integer priority,
-        @Nullable String target,
-        @Nullable Integer weight) {
-        this.port = port;
-        this.priority = priority;
-        this.target = target;
-        this.weight = weight;
-    }
+    private SrvRecordResponse() {}
 
-    private SrvRecordResponse() {
-        this.port = null;
-        this.priority = null;
-        this.target = null;
-        this.weight = null;
+    private SrvRecordResponse(SrvRecordResponse $) {
+        this.port = $.port;
+        this.priority = $.priority;
+        this.target = $.target;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SrvRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer port;
-        private @Nullable Integer priority;
-        private @Nullable String target;
-        private @Nullable Integer weight;
+        private SrvRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SrvRecordResponse();
         }
 
         public Builder(SrvRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.priority = defaults.priority;
-    	      this.target = defaults.target;
-    	      this.weight = defaults.weight;
+            $ = new SrvRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public SrvRecordResponse build() {
-            return new SrvRecordResponse(port, priority, target, weight);
+        }
+
+        public SrvRecordResponse build() {
+            return $;
         }
     }
+
 }

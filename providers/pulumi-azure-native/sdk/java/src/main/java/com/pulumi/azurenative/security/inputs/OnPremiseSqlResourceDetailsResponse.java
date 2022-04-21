@@ -22,7 +22,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -33,7 +33,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="machineName", required=true)
-      private final String machineName;
+    private String machineName;
 
     public String machineName() {
         return this.machineName;
@@ -44,7 +44,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -56,7 +56,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -67,7 +67,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="sourceComputerId", required=true)
-      private final String sourceComputerId;
+    private String sourceComputerId;
 
     public String sourceComputerId() {
         return this.sourceComputerId;
@@ -78,7 +78,7 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="vmuuid", required=true)
-      private final String vmuuid;
+    private String vmuuid;
 
     public String vmuuid() {
         return this.vmuuid;
@@ -89,100 +89,87 @@ public final class OnPremiseSqlResourceDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final String workspaceId;
+    private String workspaceId;
 
     public String workspaceId() {
         return this.workspaceId;
     }
 
-    public OnPremiseSqlResourceDetailsResponse(
-        String databaseName,
-        String machineName,
-        String serverName,
-        String source,
-        String sourceComputerId,
-        String vmuuid,
-        String workspaceId) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.source = Codegen.stringProp("source").arg(source).require();
-        this.sourceComputerId = Objects.requireNonNull(sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
-        this.vmuuid = Objects.requireNonNull(vmuuid, "expected parameter 'vmuuid' to be non-null");
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-    }
+    private OnPremiseSqlResourceDetailsResponse() {}
 
-    private OnPremiseSqlResourceDetailsResponse() {
-        this.databaseName = null;
-        this.machineName = null;
-        this.serverName = null;
-        this.source = null;
-        this.sourceComputerId = null;
-        this.vmuuid = null;
-        this.workspaceId = null;
+    private OnPremiseSqlResourceDetailsResponse(OnPremiseSqlResourceDetailsResponse $) {
+        this.databaseName = $.databaseName;
+        this.machineName = $.machineName;
+        this.serverName = $.serverName;
+        this.source = $.source;
+        this.sourceComputerId = $.sourceComputerId;
+        this.vmuuid = $.vmuuid;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremiseSqlResourceDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String machineName;
-        private String serverName;
-        private String source;
-        private String sourceComputerId;
-        private String vmuuid;
-        private String workspaceId;
+        private OnPremiseSqlResourceDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremiseSqlResourceDetailsResponse();
         }
 
         public Builder(OnPremiseSqlResourceDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.machineName = defaults.machineName;
-    	      this.serverName = defaults.serverName;
-    	      this.source = defaults.source;
-    	      this.sourceComputerId = defaults.sourceComputerId;
-    	      this.vmuuid = defaults.vmuuid;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new OnPremiseSqlResourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder machineName(String machineName) {
-            this.machineName = Objects.requireNonNull(machineName);
+            $.machineName = machineName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder sourceComputerId(String sourceComputerId) {
-            this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
+            $.sourceComputerId = sourceComputerId;
             return this;
         }
+
         public Builder vmuuid(String vmuuid) {
-            this.vmuuid = Objects.requireNonNull(vmuuid);
+            $.vmuuid = vmuuid;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
-        }        public OnPremiseSqlResourceDetailsResponse build() {
-            return new OnPremiseSqlResourceDetailsResponse(databaseName, machineName, serverName, source, sourceComputerId, vmuuid, workspaceId);
+        }
+
+        public OnPremiseSqlResourceDetailsResponse build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.machineName = Objects.requireNonNull($.machineName, "expected parameter 'machineName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.source = Codegen.stringProp("source").arg($.source).require();
+            $.sourceComputerId = Objects.requireNonNull($.sourceComputerId, "expected parameter 'sourceComputerId' to be non-null");
+            $.vmuuid = Objects.requireNonNull($.vmuuid, "expected parameter 'vmuuid' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

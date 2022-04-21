@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="itemId")
-      private final @Nullable Output<String> itemId;
+    private @Nullable Output<String> itemId;
 
-    public Output<String> itemId() {
-        return this.itemId == null ? Codegen.empty() : this.itemId;
+    public Optional<Output<String>> itemId() {
+        return Optional.ofNullable(this.itemId);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="protectionIntentItemType", required=true)
-      private final Output<String> protectionIntentItemType;
+    private Output<String> protectionIntentItemType;
 
     public Output<String> protectionIntentItemType() {
         return this.protectionIntentItemType;
@@ -83,10 +84,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
+    private @Nullable Output<Either<String,ProtectionStatus>> protectionState;
 
-    public Output<Either<String,ProtectionStatus>> protectionState() {
-        return this.protectionState == null ? Codegen.empty() : this.protectionState;
+    public Optional<Output<Either<String,ProtectionStatus>>> protectionState() {
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -94,128 +95,109 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable Output<String> sourceResourceId;
+    private @Nullable Output<String> sourceResourceId;
 
-    public Output<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
+    public Optional<Output<String>> sourceResourceId() {
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
-    public AzureResourceProtectionIntentArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> itemId,
-        @Nullable Output<String> policyId,
-        Output<String> protectionIntentItemType,
-        @Nullable Output<Either<String,ProtectionStatus>> protectionState,
-        @Nullable Output<String> sourceResourceId) {
-        this.backupManagementType = backupManagementType;
-        this.friendlyName = friendlyName;
-        this.itemId = itemId;
-        this.policyId = policyId;
-        this.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").output().arg(protectionIntentItemType).require();
-        this.protectionState = protectionState;
-        this.sourceResourceId = sourceResourceId;
-    }
+    private AzureResourceProtectionIntentArgs() {}
 
-    private AzureResourceProtectionIntentArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.itemId = Codegen.empty();
-        this.policyId = Codegen.empty();
-        this.protectionIntentItemType = Codegen.empty();
-        this.protectionState = Codegen.empty();
-        this.sourceResourceId = Codegen.empty();
+    private AzureResourceProtectionIntentArgs(AzureResourceProtectionIntentArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.friendlyName = $.friendlyName;
+        this.itemId = $.itemId;
+        this.policyId = $.policyId;
+        this.protectionIntentItemType = $.protectionIntentItemType;
+        this.protectionState = $.protectionState;
+        this.sourceResourceId = $.sourceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureResourceProtectionIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> itemId;
-        private @Nullable Output<String> policyId;
-        private Output<String> protectionIntentItemType;
-        private @Nullable Output<Either<String,ProtectionStatus>> protectionState;
-        private @Nullable Output<String> sourceResourceId;
+        private AzureResourceProtectionIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureResourceProtectionIntentArgs();
         }
 
         public Builder(AzureResourceProtectionIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.itemId = defaults.itemId;
-    	      this.policyId = defaults.policyId;
-    	      this.protectionIntentItemType = defaults.protectionIntentItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.sourceResourceId = defaults.sourceResourceId;
+            $ = new AzureResourceProtectionIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder itemId(@Nullable Output<String> itemId) {
-            this.itemId = itemId;
+            $.itemId = itemId;
             return this;
         }
-        public Builder itemId(@Nullable String itemId) {
-            this.itemId = Codegen.ofNullable(itemId);
-            return this;
+
+        public Builder itemId(String itemId) {
+            return itemId(Output.of(itemId));
         }
+
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder protectionIntentItemType(Output<String> protectionIntentItemType) {
-            this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
+            $.protectionIntentItemType = protectionIntentItemType;
             return this;
         }
+
         public Builder protectionIntentItemType(String protectionIntentItemType) {
-            this.protectionIntentItemType = Output.of(Objects.requireNonNull(protectionIntentItemType));
-            return this;
+            return protectionIntentItemType(Output.of(protectionIntentItemType));
         }
+
         public Builder protectionState(@Nullable Output<Either<String,ProtectionStatus>> protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
-        public Builder protectionState(@Nullable Either<String,ProtectionStatus> protectionState) {
-            this.protectionState = Codegen.ofNullable(protectionState);
-            return this;
+
+        public Builder protectionState(Either<String,ProtectionStatus> protectionState) {
+            return protectionState(Output.of(protectionState));
         }
+
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
-        public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
-            return this;
-        }        public AzureResourceProtectionIntentArgs build() {
-            return new AzureResourceProtectionIntentArgs(backupManagementType, friendlyName, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
+
+        public Builder sourceResourceId(String sourceResourceId) {
+            return sourceResourceId(Output.of(sourceResourceId));
+        }
+
+        public AzureResourceProtectionIntentArgs build() {
+            $.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").output().arg($.protectionIntentItemType).require();
+            return $;
         }
     }
+
 }

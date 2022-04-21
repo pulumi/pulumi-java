@@ -21,45 +21,45 @@ public final class ExpressRouteConnectionIdResponse extends com.pulumi.resources
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public ExpressRouteConnectionIdResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private ExpressRouteConnectionIdResponse() {}
 
-    private ExpressRouteConnectionIdResponse() {
-        this.id = null;
+    private ExpressRouteConnectionIdResponse(ExpressRouteConnectionIdResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteConnectionIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private ExpressRouteConnectionIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteConnectionIdResponse();
         }
 
         public Builder(ExpressRouteConnectionIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ExpressRouteConnectionIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public ExpressRouteConnectionIdResponse build() {
-            return new ExpressRouteConnectionIdResponse(id);
+        }
+
+        public ExpressRouteConnectionIdResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

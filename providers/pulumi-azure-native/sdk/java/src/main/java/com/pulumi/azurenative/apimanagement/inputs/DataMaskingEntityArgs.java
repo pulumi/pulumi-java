@@ -7,9 +7,9 @@ import com.pulumi.azurenative.apimanagement.enums.DataMaskingMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,DataMaskingMode>> mode;
+    private @Nullable Output<Either<String,DataMaskingMode>> mode;
 
-    public Output<Either<String,DataMaskingMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,DataMaskingMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public DataMaskingEntityArgs(
-        @Nullable Output<Either<String,DataMaskingMode>> mode,
-        @Nullable Output<String> value) {
-        this.mode = mode;
-        this.value = value;
-    }
+    private DataMaskingEntityArgs() {}
 
-    private DataMaskingEntityArgs() {
-        this.mode = Codegen.empty();
-        this.value = Codegen.empty();
+    private DataMaskingEntityArgs(DataMaskingEntityArgs $) {
+        this.mode = $.mode;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataMaskingEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DataMaskingMode>> mode;
-        private @Nullable Output<String> value;
+        private DataMaskingEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataMaskingEntityArgs();
         }
 
         public Builder(DataMaskingEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.value = defaults.value;
+            $ = new DataMaskingEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<Either<String,DataMaskingMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,DataMaskingMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,DataMaskingMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public DataMaskingEntityArgs build() {
-            return new DataMaskingEntityArgs(mode, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public DataMaskingEntityArgs build() {
+            return $;
         }
     }
+
 }

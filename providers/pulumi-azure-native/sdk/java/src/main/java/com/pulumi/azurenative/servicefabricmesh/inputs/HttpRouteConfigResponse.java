@@ -23,7 +23,7 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="destination", required=true)
-      private final GatewayDestinationResponse destination;
+    private GatewayDestinationResponse destination;
 
     public GatewayDestinationResponse destination() {
         return this.destination;
@@ -34,7 +34,7 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="match", required=true)
-      private final HttpRouteMatchRuleResponse match;
+    private HttpRouteMatchRuleResponse match;
 
     public HttpRouteMatchRuleResponse match() {
         return this.match;
@@ -45,64 +45,59 @@ public final class HttpRouteConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public HttpRouteConfigResponse(
-        GatewayDestinationResponse destination,
-        HttpRouteMatchRuleResponse match,
-        String name) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private HttpRouteConfigResponse() {}
 
-    private HttpRouteConfigResponse() {
-        this.destination = null;
-        this.match = null;
-        this.name = null;
+    private HttpRouteConfigResponse(HttpRouteConfigResponse $) {
+        this.destination = $.destination;
+        this.match = $.match;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GatewayDestinationResponse destination;
-        private HttpRouteMatchRuleResponse match;
-        private String name;
+        private HttpRouteConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteConfigResponse();
         }
 
         public Builder(HttpRouteConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.match = defaults.match;
-    	      this.name = defaults.name;
+            $ = new HttpRouteConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(GatewayDestinationResponse destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder match(HttpRouteMatchRuleResponse match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public HttpRouteConfigResponse build() {
-            return new HttpRouteConfigResponse(destination, match, name);
+        }
+
+        public HttpRouteConfigResponse build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

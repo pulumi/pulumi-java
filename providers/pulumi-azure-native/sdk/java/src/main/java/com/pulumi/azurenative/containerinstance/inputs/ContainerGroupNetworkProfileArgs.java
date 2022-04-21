@@ -5,7 +5,6 @@ package com.pulumi.azurenative.containerinstance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ContainerGroupNetworkProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public ContainerGroupNetworkProfileArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private ContainerGroupNetworkProfileArgs() {}
 
-    private ContainerGroupNetworkProfileArgs() {
-        this.id = Codegen.empty();
+    private ContainerGroupNetworkProfileArgs(ContainerGroupNetworkProfileArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private ContainerGroupNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupNetworkProfileArgs();
         }
 
         public Builder(ContainerGroupNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ContainerGroupNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public ContainerGroupNetworkProfileArgs build() {
-            return new ContainerGroupNetworkProfileArgs(id);
+            return id(Output.of(id));
+        }
+
+        public ContainerGroupNetworkProfileArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

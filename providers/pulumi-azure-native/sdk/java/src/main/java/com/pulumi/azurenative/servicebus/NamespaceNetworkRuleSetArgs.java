@@ -9,10 +9,10 @@ import com.pulumi.azurenative.servicebus.inputs.NWRuleSetVirtualNetworkRulesArgs
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
+    private @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
-    public Output<Either<String,DefaultAction>> defaultAction() {
-        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
+    public Optional<Output<Either<String,DefaultAction>>> defaultAction() {
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
+    private @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
 
-    public Output<List<NWRuleSetIpRulesArgs>> ipRules() {
-        return this.ipRules == null ? Codegen.empty() : this.ipRules;
+    public Optional<Output<List<NWRuleSetIpRulesArgs>>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -58,7 +58,7 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -69,108 +69,98 @@ public final class NamespaceNetworkRuleSetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
+    private @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
-    public Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
+    public Optional<Output<List<NWRuleSetVirtualNetworkRulesArgs>>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public NamespaceNetworkRuleSetArgs(
-        @Nullable Output<Either<String,DefaultAction>> defaultAction,
-        @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules,
-        Output<String> namespaceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
-        this.defaultAction = defaultAction;
-        this.ipRules = ipRules;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private NamespaceNetworkRuleSetArgs() {}
 
-    private NamespaceNetworkRuleSetArgs() {
-        this.defaultAction = Codegen.empty();
-        this.ipRules = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.virtualNetworkRules = Codegen.empty();
+    private NamespaceNetworkRuleSetArgs(NamespaceNetworkRuleSetArgs $) {
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceNetworkRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DefaultAction>> defaultAction;
-        private @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
-        private Output<String> namespaceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
+        private NamespaceNetworkRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceNetworkRuleSetArgs();
         }
 
         public Builder(NamespaceNetworkRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new NamespaceNetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultAction(@Nullable Output<Either<String,DefaultAction>> defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
-        public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
-            this.defaultAction = Codegen.ofNullable(defaultAction);
-            return this;
+
+        public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder ipRules(@Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
-        public Builder ipRules(@Nullable List<NWRuleSetIpRulesArgs> ipRules) {
-            this.ipRules = Codegen.ofNullable(ipRules);
-            return this;
+
+        public Builder ipRules(List<NWRuleSetIpRulesArgs> ipRules) {
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(NWRuleSetIpRulesArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder virtualNetworkRules(@Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
-            return this;
+
+        public Builder virtualNetworkRules(List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
+            return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
+
         public Builder virtualNetworkRules(NWRuleSetVirtualNetworkRulesArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public NamespaceNetworkRuleSetArgs build() {
-            return new NamespaceNetworkRuleSetArgs(defaultAction, ipRules, namespaceName, resourceGroupName, virtualNetworkRules);
+        }
+
+        public NamespaceNetworkRuleSetArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

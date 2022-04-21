@@ -25,7 +25,7 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="destinations", required=true)
-      private final List<String> destinations;
+    private List<String> destinations;
 
     public List<String> destinations() {
         return this.destinations;
@@ -36,10 +36,10 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="disable")
-      private final @Nullable Boolean disable;
+    private @Nullable Boolean disable;
 
     public Optional<Boolean> disable() {
-        return this.disable == null ? Optional.empty() : Optional.ofNullable(this.disable);
+        return Optional.ofNullable(this.disable);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sources", required=true)
-      private final List<String> sources;
+    private List<String> sources;
 
     public List<String> sources() {
         return this.sources;
@@ -69,91 +69,84 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testConfigurations", required=true)
-      private final List<String> testConfigurations;
+    private List<String> testConfigurations;
 
     public List<String> testConfigurations() {
         return this.testConfigurations;
     }
 
-    public ConnectionMonitorTestGroupResponse(
-        List<String> destinations,
-        @Nullable Boolean disable,
-        String name,
-        List<String> sources,
-        List<String> testConfigurations) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.disable = disable;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-        this.testConfigurations = Objects.requireNonNull(testConfigurations, "expected parameter 'testConfigurations' to be non-null");
-    }
+    private ConnectionMonitorTestGroupResponse() {}
 
-    private ConnectionMonitorTestGroupResponse() {
-        this.destinations = List.of();
-        this.disable = null;
-        this.name = null;
-        this.sources = List.of();
-        this.testConfigurations = List.of();
+    private ConnectionMonitorTestGroupResponse(ConnectionMonitorTestGroupResponse $) {
+        this.destinations = $.destinations;
+        this.disable = $.disable;
+        this.name = $.name;
+        this.sources = $.sources;
+        this.testConfigurations = $.testConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorTestGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> destinations;
-        private @Nullable Boolean disable;
-        private String name;
-        private List<String> sources;
-        private List<String> testConfigurations;
+        private ConnectionMonitorTestGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorTestGroupResponse();
         }
 
         public Builder(ConnectionMonitorTestGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.disable = defaults.disable;
-    	      this.name = defaults.name;
-    	      this.sources = defaults.sources;
-    	      this.testConfigurations = defaults.testConfigurations;
+            $ = new ConnectionMonitorTestGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(List<String> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder disable(@Nullable Boolean disable) {
-            this.disable = disable;
+            $.disable = disable;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder sources(List<String> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(String... sources) {
             return sources(List.of(sources));
         }
+
         public Builder testConfigurations(List<String> testConfigurations) {
-            this.testConfigurations = Objects.requireNonNull(testConfigurations);
+            $.testConfigurations = testConfigurations;
             return this;
         }
+
         public Builder testConfigurations(String... testConfigurations) {
             return testConfigurations(List.of(testConfigurations));
-        }        public ConnectionMonitorTestGroupResponse build() {
-            return new ConnectionMonitorTestGroupResponse(destinations, disable, name, sources, testConfigurations);
+        }
+
+        public ConnectionMonitorTestGroupResponse build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            $.testConfigurations = Objects.requireNonNull($.testConfigurations, "expected parameter 'testConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

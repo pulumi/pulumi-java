@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.AddRecoveryServicesProviderInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
      * 
      */
     @Import(name="fabricName", required=true)
-      private final Output<String> fabricName;
+    private Output<String> fabricName;
 
     public Output<String> fabricName() {
         return this.fabricName;
@@ -32,7 +32,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
+    private Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
     public Output<AddRecoveryServicesProviderInputPropertiesArgs> properties() {
         return this.properties;
@@ -43,10 +43,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
      * 
      */
     @Import(name="providerName")
-      private final @Nullable Output<String> providerName;
+    private @Nullable Output<String> providerName;
 
-    public Output<String> providerName() {
-        return this.providerName == null ? Codegen.empty() : this.providerName;
+    public Optional<Output<String>> providerName() {
+        return Optional.ofNullable(this.providerName);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,92 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ReplicationRecoveryServicesProviderArgs(
-        Output<String> fabricName,
-        Output<AddRecoveryServicesProviderInputPropertiesArgs> properties,
-        @Nullable Output<String> providerName,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.providerName = providerName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ReplicationRecoveryServicesProviderArgs() {}
 
-    private ReplicationRecoveryServicesProviderArgs() {
-        this.fabricName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.providerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ReplicationRecoveryServicesProviderArgs(ReplicationRecoveryServicesProviderArgs $) {
+        this.fabricName = $.fabricName;
+        this.properties = $.properties;
+        this.providerName = $.providerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationRecoveryServicesProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fabricName;
-        private Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
-        private @Nullable Output<String> providerName;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ReplicationRecoveryServicesProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationRecoveryServicesProviderArgs();
         }
 
         public Builder(ReplicationRecoveryServicesProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.properties = defaults.properties;
-    	      this.providerName = defaults.providerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ReplicationRecoveryServicesProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(Output<String> fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
-            return this;
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder properties(Output<AddRecoveryServicesProviderInputPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(AddRecoveryServicesProviderInputPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder providerName(@Nullable Output<String> providerName) {
-            this.providerName = providerName;
+            $.providerName = providerName;
             return this;
         }
-        public Builder providerName(@Nullable String providerName) {
-            this.providerName = Codegen.ofNullable(providerName);
-            return this;
+
+        public Builder providerName(String providerName) {
+            return providerName(Output.of(providerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ReplicationRecoveryServicesProviderArgs build() {
-            return new ReplicationRecoveryServicesProviderArgs(fabricName, properties, providerName, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ReplicationRecoveryServicesProviderArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

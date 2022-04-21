@@ -21,7 +21,7 @@ public final class IncidentLabelResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="labelName", required=true)
-      private final String labelName;
+    private String labelName;
 
     public String labelName() {
         return this.labelName;
@@ -32,55 +32,52 @@ public final class IncidentLabelResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="labelType", required=true)
-      private final String labelType;
+    private String labelType;
 
     public String labelType() {
         return this.labelType;
     }
 
-    public IncidentLabelResponse(
-        String labelName,
-        String labelType) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-        this.labelType = Objects.requireNonNull(labelType, "expected parameter 'labelType' to be non-null");
-    }
+    private IncidentLabelResponse() {}
 
-    private IncidentLabelResponse() {
-        this.labelName = null;
-        this.labelType = null;
+    private IncidentLabelResponse(IncidentLabelResponse $) {
+        this.labelName = $.labelName;
+        this.labelType = $.labelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentLabelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labelName;
-        private String labelType;
+        private IncidentLabelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentLabelResponse();
         }
 
         public Builder(IncidentLabelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
-    	      this.labelType = defaults.labelType;
+            $ = new IncidentLabelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(String labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
         }
+
         public Builder labelType(String labelType) {
-            this.labelType = Objects.requireNonNull(labelType);
+            $.labelType = labelType;
             return this;
-        }        public IncidentLabelResponse build() {
-            return new IncidentLabelResponse(labelName, labelType);
+        }
+
+        public IncidentLabelResponse build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            $.labelType = Objects.requireNonNull($.labelType, "expected parameter 'labelType' to be non-null");
+            return $;
         }
     }
+
 }

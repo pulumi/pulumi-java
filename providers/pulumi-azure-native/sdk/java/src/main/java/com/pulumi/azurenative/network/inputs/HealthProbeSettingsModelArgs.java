@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
+    private @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
 
-    public Output<Either<String,HealthProbeEnabled>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,HealthProbeEnabled>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="healthProbeMethod")
-      private final @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
+    private @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
-    public Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod() {
-        return this.healthProbeMethod == null ? Codegen.empty() : this.healthProbeMethod;
+    public Optional<Output<Either<String,FrontDoorHealthProbeMethod>>> healthProbeMethod() {
+        return Optional.ofNullable(this.healthProbeMethod);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Output<Integer> intervalInSeconds;
+    private @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
+    public Optional<Output<Integer>> intervalInSeconds() {
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -95,128 +96,109 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
+    private @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
-    public Output<Either<String,FrontDoorProtocol>> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<Either<String,FrontDoorProtocol>>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public HealthProbeSettingsModelArgs(
-        @Nullable Output<Either<String,HealthProbeEnabled>> enabledState,
-        @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> intervalInSeconds,
-        @Nullable Output<String> name,
-        @Nullable Output<String> path,
-        @Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
-        this.enabledState = enabledState;
-        this.healthProbeMethod = Codegen.stringProp("healthProbeMethod").left(FrontDoorHealthProbeMethod.class).output().arg(healthProbeMethod).def("HEAD").getNullable();
-        this.id = id;
-        this.intervalInSeconds = intervalInSeconds;
-        this.name = name;
-        this.path = path;
-        this.protocol = protocol;
-    }
+    private HealthProbeSettingsModelArgs() {}
 
-    private HealthProbeSettingsModelArgs() {
-        this.enabledState = Codegen.empty();
-        this.healthProbeMethod = Codegen.empty();
-        this.id = Codegen.empty();
-        this.intervalInSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private HealthProbeSettingsModelArgs(HealthProbeSettingsModelArgs $) {
+        this.enabledState = $.enabledState;
+        this.healthProbeMethod = $.healthProbeMethod;
+        this.id = $.id;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.name = $.name;
+        this.path = $.path;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthProbeSettingsModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
-        private @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> intervalInSeconds;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
+        private HealthProbeSettingsModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthProbeSettingsModelArgs();
         }
 
         public Builder(HealthProbeSettingsModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledState = defaults.enabledState;
-    	      this.healthProbeMethod = defaults.healthProbeMethod;
-    	      this.id = defaults.id;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.protocol = defaults.protocol;
+            $ = new HealthProbeSettingsModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledState(@Nullable Output<Either<String,HealthProbeEnabled>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,HealthProbeEnabled> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,HealthProbeEnabled> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder healthProbeMethod(@Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
-            this.healthProbeMethod = healthProbeMethod;
+            $.healthProbeMethod = healthProbeMethod;
             return this;
         }
-        public Builder healthProbeMethod(@Nullable Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
-            this.healthProbeMethod = Codegen.ofNullable(healthProbeMethod);
-            return this;
+
+        public Builder healthProbeMethod(Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
+            return healthProbeMethod(Output.of(healthProbeMethod));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
-        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
-            return this;
+
+        public Builder intervalInSeconds(Integer intervalInSeconds) {
+            return intervalInSeconds(Output.of(intervalInSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder protocol(@Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable Either<String,FrontDoorProtocol> protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public HealthProbeSettingsModelArgs build() {
-            return new HealthProbeSettingsModelArgs(enabledState, healthProbeMethod, id, intervalInSeconds, name, path, protocol);
+
+        public Builder protocol(Either<String,FrontDoorProtocol> protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public HealthProbeSettingsModelArgs build() {
+            $.healthProbeMethod = Codegen.stringProp("healthProbeMethod").left(FrontDoorHealthProbeMethod.class).output().arg($.healthProbeMethod).def("HEAD").getNullable();
+            return $;
         }
     }
+
 }

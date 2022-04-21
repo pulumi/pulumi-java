@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends c
      * 
      */
     @Import(name="ref")
-      private final @Nullable Output<String> ref;
+    private @Nullable Output<String> ref;
 
-    public Output<String> ref() {
-        return this.ref == null ? Codegen.empty() : this.ref;
+    public Optional<Output<String>> ref() {
+        return Optional.ofNullable(this.ref);
     }
 
-    public IntegrationAccountMapPropertiesParametersSchemaArgs(@Nullable Output<String> ref) {
-        this.ref = ref;
-    }
+    private IntegrationAccountMapPropertiesParametersSchemaArgs() {}
 
-    private IntegrationAccountMapPropertiesParametersSchemaArgs() {
-        this.ref = Codegen.empty();
+    private IntegrationAccountMapPropertiesParametersSchemaArgs(IntegrationAccountMapPropertiesParametersSchemaArgs $) {
+        this.ref = $.ref;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountMapPropertiesParametersSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ref;
+        private IntegrationAccountMapPropertiesParametersSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountMapPropertiesParametersSchemaArgs();
         }
 
         public Builder(IntegrationAccountMapPropertiesParametersSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ref = defaults.ref;
+            $ = new IntegrationAccountMapPropertiesParametersSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ref(@Nullable Output<String> ref) {
-            this.ref = ref;
+            $.ref = ref;
             return this;
         }
-        public Builder ref(@Nullable String ref) {
-            this.ref = Codegen.ofNullable(ref);
-            return this;
-        }        public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
-            return new IntegrationAccountMapPropertiesParametersSchemaArgs(ref);
+
+        public Builder ref(String ref) {
+            return ref(Output.of(ref));
+        }
+
+        public IntegrationAccountMapPropertiesParametersSchemaArgs build() {
+            return $;
         }
     }
+
 }

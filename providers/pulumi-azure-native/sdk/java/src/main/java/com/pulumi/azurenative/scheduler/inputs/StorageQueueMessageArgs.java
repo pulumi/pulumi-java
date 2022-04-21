@@ -5,9 +5,9 @@ package com.pulumi.azurenative.scheduler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="queueName")
-      private final @Nullable Output<String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output<String> queueName() {
-        return this.queueName == null ? Codegen.empty() : this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable Output<String> sasToken;
+    private @Nullable Output<String> sasToken;
 
-    public Output<String> sasToken() {
-        return this.sasToken == null ? Codegen.empty() : this.sasToken;
+    public Optional<Output<String>> sasToken() {
+        return Optional.ofNullable(this.sasToken);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable Output<String> storageAccount;
+    private @Nullable Output<String> storageAccount;
 
-    public Output<String> storageAccount() {
-        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
+    public Optional<Output<String>> storageAccount() {
+        return Optional.ofNullable(this.storageAccount);
     }
 
-    public StorageQueueMessageArgs(
-        @Nullable Output<String> message,
-        @Nullable Output<String> queueName,
-        @Nullable Output<String> sasToken,
-        @Nullable Output<String> storageAccount) {
-        this.message = message;
-        this.queueName = queueName;
-        this.sasToken = sasToken;
-        this.storageAccount = storageAccount;
-    }
+    private StorageQueueMessageArgs() {}
 
-    private StorageQueueMessageArgs() {
-        this.message = Codegen.empty();
-        this.queueName = Codegen.empty();
-        this.sasToken = Codegen.empty();
-        this.storageAccount = Codegen.empty();
+    private StorageQueueMessageArgs(StorageQueueMessageArgs $) {
+        this.message = $.message;
+        this.queueName = $.queueName;
+        this.sasToken = $.sasToken;
+        this.storageAccount = $.storageAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageQueueMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> queueName;
-        private @Nullable Output<String> sasToken;
-        private @Nullable Output<String> storageAccount;
+        private StorageQueueMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageQueueMessageArgs();
         }
 
         public Builder(StorageQueueMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.queueName = defaults.queueName;
-    	      this.sasToken = defaults.sasToken;
-    	      this.storageAccount = defaults.storageAccount;
+            $ = new StorageQueueMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder queueName(@Nullable Output<String> queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
-        public Builder queueName(@Nullable String queueName) {
-            this.queueName = Codegen.ofNullable(queueName);
-            return this;
+
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
         }
+
         public Builder sasToken(@Nullable Output<String> sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
-        public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = Codegen.ofNullable(sasToken);
-            return this;
+
+        public Builder sasToken(String sasToken) {
+            return sasToken(Output.of(sasToken));
         }
+
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
         }
-        public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Codegen.ofNullable(storageAccount);
-            return this;
-        }        public StorageQueueMessageArgs build() {
-            return new StorageQueueMessageArgs(message, queueName, sasToken, storageAccount);
+
+        public Builder storageAccount(String storageAccount) {
+            return storageAccount(Output.of(storageAccount));
+        }
+
+        public StorageQueueMessageArgs build() {
+            return $;
         }
     }
+
 }

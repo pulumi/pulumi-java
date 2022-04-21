@@ -27,6 +27,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -43,7 +44,7 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="codecs", required=true)
-      private final Output<List<Object>> codecs;
+    private Output<List<Object>> codecs;
 
     public Output<List<Object>> codecs() {
         return this.codecs;
@@ -54,10 +55,10 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<FiltersArgs> filters;
+    private @Nullable Output<FiltersArgs> filters;
 
-    public Output<FiltersArgs> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<FiltersArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -65,7 +66,7 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="formats", required=true)
-      private final Output<List<Object>> formats;
+    private Output<List<Object>> formats;
 
     public Output<List<Object>> formats() {
         return this.formats;
@@ -77,95 +78,89 @@ public final class StandardEncoderPresetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public StandardEncoderPresetArgs(
-        Output<List<Object>> codecs,
-        @Nullable Output<FiltersArgs> filters,
-        Output<List<Object>> formats,
-        Output<String> odataType) {
-        this.codecs = Objects.requireNonNull(codecs, "expected parameter 'codecs' to be non-null");
-        this.filters = filters;
-        this.formats = Objects.requireNonNull(formats, "expected parameter 'formats' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private StandardEncoderPresetArgs() {}
 
-    private StandardEncoderPresetArgs() {
-        this.codecs = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.formats = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private StandardEncoderPresetArgs(StandardEncoderPresetArgs $) {
+        this.codecs = $.codecs;
+        this.filters = $.filters;
+        this.formats = $.formats;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardEncoderPresetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Object>> codecs;
-        private @Nullable Output<FiltersArgs> filters;
-        private Output<List<Object>> formats;
-        private Output<String> odataType;
+        private StandardEncoderPresetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardEncoderPresetArgs();
         }
 
         public Builder(StandardEncoderPresetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codecs = defaults.codecs;
-    	      this.filters = defaults.filters;
-    	      this.formats = defaults.formats;
-    	      this.odataType = defaults.odataType;
+            $ = new StandardEncoderPresetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codecs(Output<List<Object>> codecs) {
-            this.codecs = Objects.requireNonNull(codecs);
+            $.codecs = codecs;
             return this;
         }
+
         public Builder codecs(List<Object> codecs) {
-            this.codecs = Output.of(Objects.requireNonNull(codecs));
-            return this;
+            return codecs(Output.of(codecs));
         }
+
         public Builder codecs(Object... codecs) {
             return codecs(List.of(codecs));
         }
+
         public Builder filters(@Nullable Output<FiltersArgs> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable FiltersArgs filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(FiltersArgs filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder formats(Output<List<Object>> formats) {
-            this.formats = Objects.requireNonNull(formats);
+            $.formats = formats;
             return this;
         }
+
         public Builder formats(List<Object> formats) {
-            this.formats = Output.of(Objects.requireNonNull(formats));
-            return this;
+            return formats(Output.of(formats));
         }
+
         public Builder formats(Object... formats) {
             return formats(List.of(formats));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public StandardEncoderPresetArgs build() {
-            return new StandardEncoderPresetArgs(codecs, filters, formats, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public StandardEncoderPresetArgs build() {
+            $.codecs = Objects.requireNonNull($.codecs, "expected parameter 'codecs' to be non-null");
+            $.formats = Objects.requireNonNull($.formats, "expected parameter 'formats' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

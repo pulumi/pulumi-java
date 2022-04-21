@@ -24,10 +24,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hash")
-      private final @Nullable ContentHashResponse hash;
+    private @Nullable ContentHashResponse hash;
 
     public Optional<ContentHashResponse> hash() {
-        return this.hash == null ? Optional.empty() : Optional.ofNullable(this.hash);
+        return Optional.ofNullable(this.hash);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ContentSourceResponse(
-        @Nullable ContentHashResponse hash,
-        @Nullable String type,
-        @Nullable String value,
-        @Nullable String version) {
-        this.hash = hash;
-        this.type = type;
-        this.value = value;
-        this.version = version;
-    }
+    private ContentSourceResponse() {}
 
-    private ContentSourceResponse() {
-        this.hash = null;
-        this.type = null;
-        this.value = null;
-        this.version = null;
+    private ContentSourceResponse(ContentSourceResponse $) {
+        this.hash = $.hash;
+        this.type = $.type;
+        this.value = $.value;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ContentHashResponse hash;
-        private @Nullable String type;
-        private @Nullable String value;
-        private @Nullable String version;
+        private ContentSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentSourceResponse();
         }
 
         public Builder(ContentSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hash = defaults.hash;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
-    	      this.version = defaults.version;
+            $ = new ContentSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hash(@Nullable ContentHashResponse hash) {
-            this.hash = hash;
+            $.hash = hash;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ContentSourceResponse build() {
-            return new ContentSourceResponse(hash, type, value, version);
+        }
+
+        public ContentSourceResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationGroupName", required=true)
-      private final String applicationGroupName;
+    private String applicationGroupName;
 
     public String applicationGroupName() {
         return this.applicationGroupName;
@@ -28,7 +28,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationName", required=true)
-      private final String applicationName;
+    private String applicationName;
 
     public String applicationName() {
         return this.applicationName;
@@ -39,64 +39,59 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationArgs(
-        String applicationGroupName,
-        String applicationName,
-        String resourceGroupName) {
-        this.applicationGroupName = Objects.requireNonNull(applicationGroupName, "expected parameter 'applicationGroupName' to be non-null");
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationArgs() {}
 
-    private GetApplicationArgs() {
-        this.applicationGroupName = null;
-        this.applicationName = null;
-        this.resourceGroupName = null;
+    private GetApplicationArgs(GetApplicationArgs $) {
+        this.applicationGroupName = $.applicationGroupName;
+        this.applicationName = $.applicationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationGroupName;
-        private String applicationName;
-        private String resourceGroupName;
+        private GetApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationArgs();
         }
 
         public Builder(GetApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGroupName = defaults.applicationGroupName;
-    	      this.applicationName = defaults.applicationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGroupName(String applicationGroupName) {
-            this.applicationGroupName = Objects.requireNonNull(applicationGroupName);
+            $.applicationGroupName = applicationGroupName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationArgs build() {
-            return new GetApplicationArgs(applicationGroupName, applicationName, resourceGroupName);
+        }
+
+        public GetApplicationArgs build() {
+            $.applicationGroupName = Objects.requireNonNull($.applicationGroupName, "expected parameter 'applicationGroupName' to be non-null");
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

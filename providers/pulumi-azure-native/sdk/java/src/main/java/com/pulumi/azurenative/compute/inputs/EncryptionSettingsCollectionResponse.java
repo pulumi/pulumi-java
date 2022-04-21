@@ -26,7 +26,7 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -37,10 +37,10 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
+    private @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
 
-    public List<EncryptionSettingsElementResponse> encryptionSettings() {
-        return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
+    public Optional<List<EncryptionSettingsElementResponse>> encryptionSettings() {
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -48,67 +48,61 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="encryptionSettingsVersion")
-      private final @Nullable String encryptionSettingsVersion;
+    private @Nullable String encryptionSettingsVersion;
 
     public Optional<String> encryptionSettingsVersion() {
-        return this.encryptionSettingsVersion == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettingsVersion);
+        return Optional.ofNullable(this.encryptionSettingsVersion);
     }
 
-    public EncryptionSettingsCollectionResponse(
-        Boolean enabled,
-        @Nullable List<EncryptionSettingsElementResponse> encryptionSettings,
-        @Nullable String encryptionSettingsVersion) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.encryptionSettings = encryptionSettings;
-        this.encryptionSettingsVersion = encryptionSettingsVersion;
-    }
+    private EncryptionSettingsCollectionResponse() {}
 
-    private EncryptionSettingsCollectionResponse() {
-        this.enabled = null;
-        this.encryptionSettings = List.of();
-        this.encryptionSettingsVersion = null;
+    private EncryptionSettingsCollectionResponse(EncryptionSettingsCollectionResponse $) {
+        this.enabled = $.enabled;
+        this.encryptionSettings = $.encryptionSettings;
+        this.encryptionSettingsVersion = $.encryptionSettingsVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionSettingsCollectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
-        private @Nullable String encryptionSettingsVersion;
+        private EncryptionSettingsCollectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionSettingsCollectionResponse();
         }
 
         public Builder(EncryptionSettingsCollectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.encryptionSettingsVersion = defaults.encryptionSettingsVersion;
+            $ = new EncryptionSettingsCollectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementResponse> encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
+
         public Builder encryptionSettings(EncryptionSettingsElementResponse... encryptionSettings) {
             return encryptionSettings(List.of(encryptionSettings));
         }
+
         public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
-            this.encryptionSettingsVersion = encryptionSettingsVersion;
+            $.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
-        }        public EncryptionSettingsCollectionResponse build() {
-            return new EncryptionSettingsCollectionResponse(enabled, encryptionSettings, encryptionSettingsVersion);
+        }
+
+        public EncryptionSettingsCollectionResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

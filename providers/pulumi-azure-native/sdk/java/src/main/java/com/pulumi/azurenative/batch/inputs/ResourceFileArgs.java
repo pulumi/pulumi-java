@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResourceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoStorageContainerName")
-      private final @Nullable Output<String> autoStorageContainerName;
+    private @Nullable Output<String> autoStorageContainerName;
 
-    public Output<String> autoStorageContainerName() {
-        return this.autoStorageContainerName == null ? Codegen.empty() : this.autoStorageContainerName;
+    public Optional<Output<String>> autoStorageContainerName() {
+        return Optional.ofNullable(this.autoStorageContainerName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResourceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobPrefix")
-      private final @Nullable Output<String> blobPrefix;
+    private @Nullable Output<String> blobPrefix;
 
-    public Output<String> blobPrefix() {
-        return this.blobPrefix == null ? Codegen.empty() : this.blobPrefix;
+    public Optional<Output<String>> blobPrefix() {
+        return Optional.ofNullable(this.blobPrefix);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResourceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileMode")
-      private final @Nullable Output<String> fileMode;
+    private @Nullable Output<String> fileMode;
 
-    public Output<String> fileMode() {
-        return this.fileMode == null ? Codegen.empty() : this.fileMode;
+    public Optional<Output<String>> fileMode() {
+        return Optional.ofNullable(this.fileMode);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ResourceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filePath")
-      private final @Nullable Output<String> filePath;
+    private @Nullable Output<String> filePath;
 
-    public Output<String> filePath() {
-        return this.filePath == null ? Codegen.empty() : this.filePath;
+    public Optional<Output<String>> filePath() {
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ResourceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpUrl")
-      private final @Nullable Output<String> httpUrl;
+    private @Nullable Output<String> httpUrl;
 
-    public Output<String> httpUrl() {
-        return this.httpUrl == null ? Codegen.empty() : this.httpUrl;
+    public Optional<Output<String>> httpUrl() {
+        return Optional.ofNullable(this.httpUrl);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class ResourceFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageContainerUrl")
-      private final @Nullable Output<String> storageContainerUrl;
+    private @Nullable Output<String> storageContainerUrl;
 
-    public Output<String> storageContainerUrl() {
-        return this.storageContainerUrl == null ? Codegen.empty() : this.storageContainerUrl;
+    public Optional<Output<String>> storageContainerUrl() {
+        return Optional.ofNullable(this.storageContainerUrl);
     }
 
-    public ResourceFileArgs(
-        @Nullable Output<String> autoStorageContainerName,
-        @Nullable Output<String> blobPrefix,
-        @Nullable Output<String> fileMode,
-        @Nullable Output<String> filePath,
-        @Nullable Output<String> httpUrl,
-        @Nullable Output<String> storageContainerUrl) {
-        this.autoStorageContainerName = autoStorageContainerName;
-        this.blobPrefix = blobPrefix;
-        this.fileMode = fileMode;
-        this.filePath = filePath;
-        this.httpUrl = httpUrl;
-        this.storageContainerUrl = storageContainerUrl;
-    }
+    private ResourceFileArgs() {}
 
-    private ResourceFileArgs() {
-        this.autoStorageContainerName = Codegen.empty();
-        this.blobPrefix = Codegen.empty();
-        this.fileMode = Codegen.empty();
-        this.filePath = Codegen.empty();
-        this.httpUrl = Codegen.empty();
-        this.storageContainerUrl = Codegen.empty();
+    private ResourceFileArgs(ResourceFileArgs $) {
+        this.autoStorageContainerName = $.autoStorageContainerName;
+        this.blobPrefix = $.blobPrefix;
+        this.fileMode = $.fileMode;
+        this.filePath = $.filePath;
+        this.httpUrl = $.httpUrl;
+        this.storageContainerUrl = $.storageContainerUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoStorageContainerName;
-        private @Nullable Output<String> blobPrefix;
-        private @Nullable Output<String> fileMode;
-        private @Nullable Output<String> filePath;
-        private @Nullable Output<String> httpUrl;
-        private @Nullable Output<String> storageContainerUrl;
+        private ResourceFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceFileArgs();
         }
 
         public Builder(ResourceFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoStorageContainerName = defaults.autoStorageContainerName;
-    	      this.blobPrefix = defaults.blobPrefix;
-    	      this.fileMode = defaults.fileMode;
-    	      this.filePath = defaults.filePath;
-    	      this.httpUrl = defaults.httpUrl;
-    	      this.storageContainerUrl = defaults.storageContainerUrl;
+            $ = new ResourceFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoStorageContainerName(@Nullable Output<String> autoStorageContainerName) {
-            this.autoStorageContainerName = autoStorageContainerName;
+            $.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
-        public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
-            this.autoStorageContainerName = Codegen.ofNullable(autoStorageContainerName);
-            return this;
+
+        public Builder autoStorageContainerName(String autoStorageContainerName) {
+            return autoStorageContainerName(Output.of(autoStorageContainerName));
         }
+
         public Builder blobPrefix(@Nullable Output<String> blobPrefix) {
-            this.blobPrefix = blobPrefix;
+            $.blobPrefix = blobPrefix;
             return this;
         }
-        public Builder blobPrefix(@Nullable String blobPrefix) {
-            this.blobPrefix = Codegen.ofNullable(blobPrefix);
-            return this;
+
+        public Builder blobPrefix(String blobPrefix) {
+            return blobPrefix(Output.of(blobPrefix));
         }
+
         public Builder fileMode(@Nullable Output<String> fileMode) {
-            this.fileMode = fileMode;
+            $.fileMode = fileMode;
             return this;
         }
-        public Builder fileMode(@Nullable String fileMode) {
-            this.fileMode = Codegen.ofNullable(fileMode);
-            return this;
+
+        public Builder fileMode(String fileMode) {
+            return fileMode(Output.of(fileMode));
         }
+
         public Builder filePath(@Nullable Output<String> filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
-        public Builder filePath(@Nullable String filePath) {
-            this.filePath = Codegen.ofNullable(filePath);
-            return this;
+
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
         }
+
         public Builder httpUrl(@Nullable Output<String> httpUrl) {
-            this.httpUrl = httpUrl;
+            $.httpUrl = httpUrl;
             return this;
         }
-        public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = Codegen.ofNullable(httpUrl);
-            return this;
+
+        public Builder httpUrl(String httpUrl) {
+            return httpUrl(Output.of(httpUrl));
         }
+
         public Builder storageContainerUrl(@Nullable Output<String> storageContainerUrl) {
-            this.storageContainerUrl = storageContainerUrl;
+            $.storageContainerUrl = storageContainerUrl;
             return this;
         }
-        public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
-            this.storageContainerUrl = Codegen.ofNullable(storageContainerUrl);
-            return this;
-        }        public ResourceFileArgs build() {
-            return new ResourceFileArgs(autoStorageContainerName, blobPrefix, fileMode, filePath, httpUrl, storageContainerUrl);
+
+        public Builder storageContainerUrl(String storageContainerUrl) {
+            return storageContainerUrl(Output.of(storageContainerUrl));
+        }
+
+        public ResourceFileArgs build() {
+            return $;
         }
     }
+
 }

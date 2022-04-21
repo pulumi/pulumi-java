@@ -17,7 +17,7 @@ public final class GetBackupVaultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetBackupVaultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetBackupVaultArgs(
-        String resourceGroupName,
-        String vaultName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetBackupVaultArgs() {}
 
-    private GetBackupVaultArgs() {
-        this.resourceGroupName = null;
-        this.vaultName = null;
+    private GetBackupVaultArgs(GetBackupVaultArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupVaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String vaultName;
+        private GetBackupVaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupVaultArgs();
         }
 
         public Builder(GetBackupVaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetBackupVaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetBackupVaultArgs build() {
-            return new GetBackupVaultArgs(resourceGroupName, vaultName);
+        }
+
+        public GetBackupVaultArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

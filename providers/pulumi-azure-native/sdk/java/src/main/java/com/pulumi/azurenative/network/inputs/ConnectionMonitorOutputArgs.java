@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.inputs.ConnectionMonitorWorkspaceSettingsA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,OutputType>> type;
+    private @Nullable Output<Either<String,OutputType>> type;
 
-    public Output<Either<String,OutputType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,OutputType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workspaceSettings")
-      private final @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
+    private @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
-    public Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings() {
-        return this.workspaceSettings == null ? Codegen.empty() : this.workspaceSettings;
+    public Optional<Output<ConnectionMonitorWorkspaceSettingsArgs>> workspaceSettings() {
+        return Optional.ofNullable(this.workspaceSettings);
     }
 
-    public ConnectionMonitorOutputArgs(
-        @Nullable Output<Either<String,OutputType>> type,
-        @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
-        this.type = type;
-        this.workspaceSettings = workspaceSettings;
-    }
+    private ConnectionMonitorOutputArgs() {}
 
-    private ConnectionMonitorOutputArgs() {
-        this.type = Codegen.empty();
-        this.workspaceSettings = Codegen.empty();
+    private ConnectionMonitorOutputArgs(ConnectionMonitorOutputArgs $) {
+        this.type = $.type;
+        this.workspaceSettings = $.workspaceSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,OutputType>> type;
-        private @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
+        private ConnectionMonitorOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorOutputArgs();
         }
 
         public Builder(ConnectionMonitorOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.workspaceSettings = defaults.workspaceSettings;
+            $ = new ConnectionMonitorOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,OutputType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,OutputType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,OutputType> type) {
+            return type(Output.of(type));
         }
+
         public Builder workspaceSettings(@Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
-            this.workspaceSettings = workspaceSettings;
+            $.workspaceSettings = workspaceSettings;
             return this;
         }
-        public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
-            this.workspaceSettings = Codegen.ofNullable(workspaceSettings);
-            return this;
-        }        public ConnectionMonitorOutputArgs build() {
-            return new ConnectionMonitorOutputArgs(type, workspaceSettings);
+
+        public Builder workspaceSettings(ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
+            return workspaceSettings(Output.of(workspaceSettings));
+        }
+
+        public ConnectionMonitorOutputArgs build() {
+            return $;
         }
     }
+
 }

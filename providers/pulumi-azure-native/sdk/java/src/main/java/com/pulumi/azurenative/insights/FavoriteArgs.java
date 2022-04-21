@@ -6,11 +6,11 @@ package com.pulumi.azurenative.insights;
 import com.pulumi.azurenative.insights.enums.FavoriteType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<String> config;
+    private @Nullable Output<String> config;
 
-    public Output<String> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<String>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="favoriteId")
-      private final @Nullable Output<String> favoriteId;
+    private @Nullable Output<String> favoriteId;
 
-    public Output<String> favoriteId() {
-        return this.favoriteId == null ? Codegen.empty() : this.favoriteId;
+    public Optional<Output<String>> favoriteId() {
+        return Optional.ofNullable(this.favoriteId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="favoriteType")
-      private final @Nullable Output<FavoriteType> favoriteType;
+    private @Nullable Output<FavoriteType> favoriteType;
 
-    public Output<FavoriteType> favoriteType() {
-        return this.favoriteType == null ? Codegen.empty() : this.favoriteType;
+    public Optional<Output<FavoriteType>> favoriteType() {
+        return Optional.ofNullable(this.favoriteType);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isGeneratedFromTemplate")
-      private final @Nullable Output<Boolean> isGeneratedFromTemplate;
+    private @Nullable Output<Boolean> isGeneratedFromTemplate;
 
-    public Output<Boolean> isGeneratedFromTemplate() {
-        return this.isGeneratedFromTemplate == null ? Codegen.empty() : this.isGeneratedFromTemplate;
+    public Optional<Output<Boolean>> isGeneratedFromTemplate() {
+        return Optional.ofNullable(this.isGeneratedFromTemplate);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -111,10 +111,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable Output<String> sourceType;
+    private @Nullable Output<String> sourceType;
 
-    public Output<String> sourceType() {
-        return this.sourceType == null ? Codegen.empty() : this.sourceType;
+    public Optional<Output<String>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -133,183 +133,154 @@ public final class FavoriteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public FavoriteArgs(
-        @Nullable Output<String> category,
-        @Nullable Output<String> config,
-        @Nullable Output<String> favoriteId,
-        @Nullable Output<FavoriteType> favoriteType,
-        @Nullable Output<Boolean> isGeneratedFromTemplate,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<String> sourceType,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> version) {
-        this.category = category;
-        this.config = config;
-        this.favoriteId = favoriteId;
-        this.favoriteType = favoriteType;
-        this.isGeneratedFromTemplate = isGeneratedFromTemplate;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.sourceType = sourceType;
-        this.tags = tags;
-        this.version = version;
-    }
+    private FavoriteArgs() {}
 
-    private FavoriteArgs() {
-        this.category = Codegen.empty();
-        this.config = Codegen.empty();
-        this.favoriteId = Codegen.empty();
-        this.favoriteType = Codegen.empty();
-        this.isGeneratedFromTemplate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.sourceType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.version = Codegen.empty();
+    private FavoriteArgs(FavoriteArgs $) {
+        this.category = $.category;
+        this.config = $.config;
+        this.favoriteId = $.favoriteId;
+        this.favoriteType = $.favoriteType;
+        this.isGeneratedFromTemplate = $.isGeneratedFromTemplate;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.sourceType = $.sourceType;
+        this.tags = $.tags;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FavoriteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> category;
-        private @Nullable Output<String> config;
-        private @Nullable Output<String> favoriteId;
-        private @Nullable Output<FavoriteType> favoriteType;
-        private @Nullable Output<Boolean> isGeneratedFromTemplate;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<String> sourceType;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> version;
+        private FavoriteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FavoriteArgs();
         }
 
         public Builder(FavoriteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.config = defaults.config;
-    	      this.favoriteId = defaults.favoriteId;
-    	      this.favoriteType = defaults.favoriteType;
-    	      this.isGeneratedFromTemplate = defaults.isGeneratedFromTemplate;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.sourceType = defaults.sourceType;
-    	      this.tags = defaults.tags;
-    	      this.version = defaults.version;
+            $ = new FavoriteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder config(@Nullable Output<String> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable String config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(String config) {
+            return config(Output.of(config));
         }
+
         public Builder favoriteId(@Nullable Output<String> favoriteId) {
-            this.favoriteId = favoriteId;
+            $.favoriteId = favoriteId;
             return this;
         }
-        public Builder favoriteId(@Nullable String favoriteId) {
-            this.favoriteId = Codegen.ofNullable(favoriteId);
-            return this;
+
+        public Builder favoriteId(String favoriteId) {
+            return favoriteId(Output.of(favoriteId));
         }
+
         public Builder favoriteType(@Nullable Output<FavoriteType> favoriteType) {
-            this.favoriteType = favoriteType;
+            $.favoriteType = favoriteType;
             return this;
         }
-        public Builder favoriteType(@Nullable FavoriteType favoriteType) {
-            this.favoriteType = Codegen.ofNullable(favoriteType);
-            return this;
+
+        public Builder favoriteType(FavoriteType favoriteType) {
+            return favoriteType(Output.of(favoriteType));
         }
+
         public Builder isGeneratedFromTemplate(@Nullable Output<Boolean> isGeneratedFromTemplate) {
-            this.isGeneratedFromTemplate = isGeneratedFromTemplate;
+            $.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
-        public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
-            this.isGeneratedFromTemplate = Codegen.ofNullable(isGeneratedFromTemplate);
-            return this;
+
+        public Builder isGeneratedFromTemplate(Boolean isGeneratedFromTemplate) {
+            return isGeneratedFromTemplate(Output.of(isGeneratedFromTemplate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder sourceType(@Nullable Output<String> sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
         }
-        public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Codegen.ofNullable(sourceType);
-            return this;
+
+        public Builder sourceType(String sourceType) {
+            return sourceType(Output.of(sourceType));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public FavoriteArgs build() {
-            return new FavoriteArgs(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, resourceGroupName, resourceName, sourceType, tags, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public FavoriteArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

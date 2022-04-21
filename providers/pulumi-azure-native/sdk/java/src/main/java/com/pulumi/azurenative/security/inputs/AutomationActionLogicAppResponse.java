@@ -25,7 +25,7 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
      * 
      */
     @Import(name="actionType", required=true)
-      private final String actionType;
+    private String actionType;
 
     public String actionType() {
         return this.actionType;
@@ -36,10 +36,10 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
      * 
      */
     @Import(name="logicAppResourceId")
-      private final @Nullable String logicAppResourceId;
+    private @Nullable String logicAppResourceId;
 
     public Optional<String> logicAppResourceId() {
-        return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
+        return Optional.ofNullable(this.logicAppResourceId);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public AutomationActionLogicAppResponse(
-        String actionType,
-        @Nullable String logicAppResourceId,
-        @Nullable String uri) {
-        this.actionType = Codegen.stringProp("actionType").arg(actionType).require();
-        this.logicAppResourceId = logicAppResourceId;
-        this.uri = uri;
-    }
+    private AutomationActionLogicAppResponse() {}
 
-    private AutomationActionLogicAppResponse() {
-        this.actionType = null;
-        this.logicAppResourceId = null;
-        this.uri = null;
+    private AutomationActionLogicAppResponse(AutomationActionLogicAppResponse $) {
+        this.actionType = $.actionType;
+        this.logicAppResourceId = $.logicAppResourceId;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationActionLogicAppResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionType;
-        private @Nullable String logicAppResourceId;
-        private @Nullable String uri;
+        private AutomationActionLogicAppResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationActionLogicAppResponse();
         }
 
         public Builder(AutomationActionLogicAppResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.logicAppResourceId = defaults.logicAppResourceId;
-    	      this.uri = defaults.uri;
+            $ = new AutomationActionLogicAppResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
-            this.logicAppResourceId = logicAppResourceId;
+            $.logicAppResourceId = logicAppResourceId;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public AutomationActionLogicAppResponse build() {
-            return new AutomationActionLogicAppResponse(actionType, logicAppResourceId, uri);
+        }
+
+        public AutomationActionLogicAppResponse build() {
+            $.actionType = Codegen.stringProp("actionType").arg($.actionType).require();
+            return $;
         }
     }
+
 }

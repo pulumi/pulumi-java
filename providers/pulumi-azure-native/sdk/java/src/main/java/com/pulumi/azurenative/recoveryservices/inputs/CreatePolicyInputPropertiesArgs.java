@@ -13,9 +13,9 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInp
 import com.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,49 +32,48 @@ public final class CreatePolicyInputPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="providerSpecificInput")
-      private final @Nullable Output<Object> providerSpecificInput;
+    private @Nullable Output<Object> providerSpecificInput;
 
-    public Output<Object> providerSpecificInput() {
-        return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
+    public Optional<Output<Object>> providerSpecificInput() {
+        return Optional.ofNullable(this.providerSpecificInput);
     }
 
-    public CreatePolicyInputPropertiesArgs(@Nullable Output<Object> providerSpecificInput) {
-        this.providerSpecificInput = providerSpecificInput;
-    }
+    private CreatePolicyInputPropertiesArgs() {}
 
-    private CreatePolicyInputPropertiesArgs() {
-        this.providerSpecificInput = Codegen.empty();
+    private CreatePolicyInputPropertiesArgs(CreatePolicyInputPropertiesArgs $) {
+        this.providerSpecificInput = $.providerSpecificInput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreatePolicyInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> providerSpecificInput;
+        private CreatePolicyInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreatePolicyInputPropertiesArgs();
         }
 
         public Builder(CreatePolicyInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerSpecificInput = defaults.providerSpecificInput;
+            $ = new CreatePolicyInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providerSpecificInput(@Nullable Output<Object> providerSpecificInput) {
-            this.providerSpecificInput = providerSpecificInput;
+            $.providerSpecificInput = providerSpecificInput;
             return this;
         }
-        public Builder providerSpecificInput(@Nullable Object providerSpecificInput) {
-            this.providerSpecificInput = Codegen.ofNullable(providerSpecificInput);
-            return this;
-        }        public CreatePolicyInputPropertiesArgs build() {
-            return new CreatePolicyInputPropertiesArgs(providerSpecificInput);
+
+        public Builder providerSpecificInput(Object providerSpecificInput) {
+            return providerSpecificInput(Output.of(providerSpecificInput));
+        }
+
+        public CreatePolicyInputPropertiesArgs build() {
+            return $;
         }
     }
+
 }

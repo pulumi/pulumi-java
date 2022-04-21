@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GroupMembersItemArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public GroupMembersItemArgs(@Nullable Output<String> resourceId) {
-        this.resourceId = resourceId;
-    }
+    private GroupMembersItemArgs() {}
 
-    private GroupMembersItemArgs() {
-        this.resourceId = Codegen.empty();
+    private GroupMembersItemArgs(GroupMembersItemArgs $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMembersItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceId;
+        private GroupMembersItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMembersItemArgs();
         }
 
         public Builder(GroupMembersItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new GroupMembersItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public GroupMembersItemArgs build() {
-            return new GroupMembersItemArgs(resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public GroupMembersItemArgs build() {
+            return $;
         }
     }
+
 }

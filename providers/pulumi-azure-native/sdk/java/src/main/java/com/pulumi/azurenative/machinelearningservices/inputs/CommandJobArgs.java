@@ -20,6 +20,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,10 +37,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="codeId")
-      private final @Nullable Output<String> codeId;
+    private @Nullable Output<String> codeId;
 
-    public Output<String> codeId() {
-        return this.codeId == null ? Codegen.empty() : this.codeId;
+    public Optional<Output<String>> codeId() {
+        return Optional.ofNullable(this.codeId);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command", required=true)
-      private final Output<String> command;
+    private Output<String> command;
 
     public Output<String> command() {
         return this.command;
@@ -58,7 +59,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compute", required=true)
-      private final Output<ComputeConfigurationArgs> compute;
+    private Output<ComputeConfigurationArgs> compute;
 
     public Output<ComputeConfigurationArgs> compute() {
         return this.compute;
@@ -69,10 +70,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Output<Object> distribution;
+    private @Nullable Output<Object> distribution;
 
-    public Output<Object> distribution() {
-        return this.distribution == null ? Codegen.empty() : this.distribution;
+    public Optional<Output<Object>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -113,10 +114,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable Output<String> experimentName;
+    private @Nullable Output<String> experimentName;
 
-    public Output<String> experimentName() {
-        return this.experimentName == null ? Codegen.empty() : this.experimentName;
+    public Optional<Output<String>> experimentName() {
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
+    private @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
-    public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<Either<AmlTokenArgs,ManagedIdentityArgs>>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputDataBindings")
-      private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
+    private @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
-    public Output<Map<String,InputDataBindingArgs>> inputDataBindings() {
-        return this.inputDataBindings == null ? Codegen.empty() : this.inputDataBindings;
+    public Optional<Output<Map<String,InputDataBindingArgs>>> inputDataBindings() {
+        return Optional.ofNullable(this.inputDataBindings);
     }
 
     /**
@@ -148,7 +149,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobType", required=true)
-      private final Output<String> jobType;
+    private Output<String> jobType;
 
     public Output<String> jobType() {
         return this.jobType;
@@ -159,10 +160,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputDataBindings")
-      private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
+    private @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
-    public Output<Map<String,OutputDataBindingArgs>> outputDataBindings() {
-        return this.outputDataBindings == null ? Codegen.empty() : this.outputDataBindings;
+    public Optional<Output<Map<String,OutputDataBindingArgs>>> outputDataBindings() {
+        return Optional.ofNullable(this.outputDataBindings);
     }
 
     /**
@@ -171,10 +172,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -182,10 +183,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -193,10 +194,10 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -204,245 +205,201 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public CommandJobArgs(
-        @Nullable Output<String> codeId,
-        Output<String> command,
-        Output<ComputeConfigurationArgs> compute,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> distribution,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<String> experimentName,
-        @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity,
-        @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings,
-        Output<String> jobType,
-        @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> timeout) {
-        this.codeId = codeId;
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
-        this.description = description;
-        this.distribution = distribution;
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.experimentName = experimentName;
-        this.identity = identity;
-        this.inputDataBindings = inputDataBindings;
-        this.jobType = Codegen.stringProp("jobType").output().arg(jobType).require();
-        this.outputDataBindings = outputDataBindings;
-        this.priority = priority;
-        this.properties = properties;
-        this.tags = tags;
-        this.timeout = timeout;
-    }
+    private CommandJobArgs() {}
 
-    private CommandJobArgs() {
-        this.codeId = Codegen.empty();
-        this.command = Codegen.empty();
-        this.compute = Codegen.empty();
-        this.description = Codegen.empty();
-        this.distribution = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.experimentName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.inputDataBindings = Codegen.empty();
-        this.jobType = Codegen.empty();
-        this.outputDataBindings = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private CommandJobArgs(CommandJobArgs $) {
+        this.codeId = $.codeId;
+        this.command = $.command;
+        this.compute = $.compute;
+        this.description = $.description;
+        this.distribution = $.distribution;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.experimentName = $.experimentName;
+        this.identity = $.identity;
+        this.inputDataBindings = $.inputDataBindings;
+        this.jobType = $.jobType;
+        this.outputDataBindings = $.outputDataBindings;
+        this.priority = $.priority;
+        this.properties = $.properties;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommandJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> codeId;
-        private Output<String> command;
-        private Output<ComputeConfigurationArgs> compute;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> distribution;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<String> experimentName;
-        private @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
-        private @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
-        private Output<String> jobType;
-        private @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> timeout;
+        private CommandJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommandJobArgs();
         }
 
         public Builder(CommandJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeId = defaults.codeId;
-    	      this.command = defaults.command;
-    	      this.compute = defaults.compute;
-    	      this.description = defaults.description;
-    	      this.distribution = defaults.distribution;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.experimentName = defaults.experimentName;
-    	      this.identity = defaults.identity;
-    	      this.inputDataBindings = defaults.inputDataBindings;
-    	      this.jobType = defaults.jobType;
-    	      this.outputDataBindings = defaults.outputDataBindings;
-    	      this.priority = defaults.priority;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
+            $ = new CommandJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeId(@Nullable Output<String> codeId) {
-            this.codeId = codeId;
+            $.codeId = codeId;
             return this;
         }
-        public Builder codeId(@Nullable String codeId) {
-            this.codeId = Codegen.ofNullable(codeId);
-            return this;
+
+        public Builder codeId(String codeId) {
+            return codeId(Output.of(codeId));
         }
+
         public Builder command(Output<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String command) {
-            this.command = Output.of(Objects.requireNonNull(command));
-            return this;
+            return command(Output.of(command));
         }
+
         public Builder compute(Output<ComputeConfigurationArgs> compute) {
-            this.compute = Objects.requireNonNull(compute);
+            $.compute = compute;
             return this;
         }
+
         public Builder compute(ComputeConfigurationArgs compute) {
-            this.compute = Output.of(Objects.requireNonNull(compute));
-            return this;
+            return compute(Output.of(compute));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder distribution(@Nullable Output<Object> distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
-        public Builder distribution(@Nullable Object distribution) {
-            this.distribution = Codegen.ofNullable(distribution);
-            return this;
+
+        public Builder distribution(Object distribution) {
+            return distribution(Output.of(distribution));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder experimentName(@Nullable Output<String> experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
-        public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Codegen.ofNullable(experimentName);
-            return this;
+
+        public Builder experimentName(String experimentName) {
+            return experimentName(Output.of(experimentName));
         }
+
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
-            this.inputDataBindings = inputDataBindings;
+            $.inputDataBindings = inputDataBindings;
             return this;
         }
-        public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
-            this.inputDataBindings = Codegen.ofNullable(inputDataBindings);
-            return this;
+
+        public Builder inputDataBindings(Map<String,InputDataBindingArgs> inputDataBindings) {
+            return inputDataBindings(Output.of(inputDataBindings));
         }
+
         public Builder jobType(Output<String> jobType) {
-            this.jobType = Objects.requireNonNull(jobType);
+            $.jobType = jobType;
             return this;
         }
+
         public Builder jobType(String jobType) {
-            this.jobType = Output.of(Objects.requireNonNull(jobType));
-            return this;
+            return jobType(Output.of(jobType));
         }
+
         public Builder outputDataBindings(@Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings) {
-            this.outputDataBindings = outputDataBindings;
+            $.outputDataBindings = outputDataBindings;
             return this;
         }
-        public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
-            this.outputDataBindings = Codegen.ofNullable(outputDataBindings);
-            return this;
+
+        public Builder outputDataBindings(Map<String,OutputDataBindingArgs> outputDataBindings) {
+            return outputDataBindings(Output.of(outputDataBindings));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public CommandJobArgs build() {
-            return new CommandJobArgs(codeId, command, compute, description, distribution, environmentId, environmentVariables, experimentName, identity, inputDataBindings, jobType, outputDataBindings, priority, properties, tags, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public CommandJobArgs build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.compute = Objects.requireNonNull($.compute, "expected parameter 'compute' to be non-null");
+            $.jobType = Codegen.stringProp("jobType").output().arg($.jobType).require();
+            return $;
         }
     }
+
 }

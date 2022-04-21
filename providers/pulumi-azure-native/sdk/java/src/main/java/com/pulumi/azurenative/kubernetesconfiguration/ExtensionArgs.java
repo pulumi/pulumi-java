@@ -8,12 +8,12 @@ import com.pulumi.azurenative.kubernetesconfiguration.inputs.ExtensionStatusArgs
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
+    private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
+    public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -48,7 +48,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterResourceName", required=true)
-      private final Output<String> clusterResourceName;
+    private Output<String> clusterResourceName;
 
     public Output<String> clusterResourceName() {
         return this.clusterResourceName;
@@ -59,7 +59,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterRp", required=true)
-      private final Output<String> clusterRp;
+    private Output<String> clusterRp;
 
     public Output<String> clusterRp() {
         return this.clusterRp;
@@ -70,10 +70,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationProtectedSettings")
-      private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
+    private @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
-    public Output<Map<String,String>> configurationProtectedSettings() {
-        return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
+    public Optional<Output<Map<String,String>>> configurationProtectedSettings() {
+        return Optional.ofNullable(this.configurationProtectedSettings);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationSettings")
-      private final @Nullable Output<Map<String,String>> configurationSettings;
+    private @Nullable Output<Map<String,String>> configurationSettings;
 
-    public Output<Map<String,String>> configurationSettings() {
-        return this.configurationSettings == null ? Codegen.empty() : this.configurationSettings;
+    public Optional<Output<Map<String,String>>> configurationSettings() {
+        return Optional.ofNullable(this.configurationSettings);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extensionInstanceName")
-      private final @Nullable Output<String> extensionInstanceName;
+    private @Nullable Output<String> extensionInstanceName;
 
-    public Output<String> extensionInstanceName() {
-        return this.extensionInstanceName == null ? Codegen.empty() : this.extensionInstanceName;
+    public Optional<Output<String>> extensionInstanceName() {
+        return Optional.ofNullable(this.extensionInstanceName);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extensionType")
-      private final @Nullable Output<String> extensionType;
+    private @Nullable Output<String> extensionType;
 
-    public Output<String> extensionType() {
-        return this.extensionType == null ? Codegen.empty() : this.extensionType;
+    public Optional<Output<String>> extensionType() {
+        return Optional.ofNullable(this.extensionType);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ConfigurationIdentityArgs> identity;
+    private @Nullable Output<ConfigurationIdentityArgs> identity;
 
-    public Output<ConfigurationIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ConfigurationIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseTrain")
-      private final @Nullable Output<String> releaseTrain;
+    private @Nullable Output<String> releaseTrain;
 
-    public Output<String> releaseTrain() {
-        return this.releaseTrain == null ? Codegen.empty() : this.releaseTrain;
+    public Optional<Output<String>> releaseTrain() {
+        return Optional.ofNullable(this.releaseTrain);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -147,10 +147,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<ScopeArgs> scope;
+    private @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<ScopeArgs>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statuses")
-      private final @Nullable Output<List<ExtensionStatusArgs>> statuses;
+    private @Nullable Output<List<ExtensionStatusArgs>> statuses;
 
-    public Output<List<ExtensionStatusArgs>> statuses() {
-        return this.statuses == null ? Codegen.empty() : this.statuses;
+    public Optional<Output<List<ExtensionStatusArgs>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -169,222 +169,186 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ExtensionArgs(
-        @Nullable Output<Boolean> autoUpgradeMinorVersion,
-        Output<String> clusterName,
-        Output<String> clusterResourceName,
-        Output<String> clusterRp,
-        @Nullable Output<Map<String,String>> configurationProtectedSettings,
-        @Nullable Output<Map<String,String>> configurationSettings,
-        @Nullable Output<String> extensionInstanceName,
-        @Nullable Output<String> extensionType,
-        @Nullable Output<ConfigurationIdentityArgs> identity,
-        @Nullable Output<String> releaseTrain,
-        Output<String> resourceGroupName,
-        @Nullable Output<ScopeArgs> scope,
-        @Nullable Output<List<ExtensionStatusArgs>> statuses,
-        @Nullable Output<String> version) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterResourceName = Objects.requireNonNull(clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
-        this.clusterRp = Objects.requireNonNull(clusterRp, "expected parameter 'clusterRp' to be non-null");
-        this.configurationProtectedSettings = configurationProtectedSettings;
-        this.configurationSettings = configurationSettings;
-        this.extensionInstanceName = extensionInstanceName;
-        this.extensionType = extensionType;
-        this.identity = identity;
-        this.releaseTrain = releaseTrain;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scope = scope;
-        this.statuses = statuses;
-        this.version = version;
-    }
+    private ExtensionArgs() {}
 
-    private ExtensionArgs() {
-        this.autoUpgradeMinorVersion = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.clusterResourceName = Codegen.empty();
-        this.clusterRp = Codegen.empty();
-        this.configurationProtectedSettings = Codegen.empty();
-        this.configurationSettings = Codegen.empty();
-        this.extensionInstanceName = Codegen.empty();
-        this.extensionType = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.releaseTrain = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.statuses = Codegen.empty();
-        this.version = Codegen.empty();
+    private ExtensionArgs(ExtensionArgs $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.clusterName = $.clusterName;
+        this.clusterResourceName = $.clusterResourceName;
+        this.clusterRp = $.clusterRp;
+        this.configurationProtectedSettings = $.configurationProtectedSettings;
+        this.configurationSettings = $.configurationSettings;
+        this.extensionInstanceName = $.extensionInstanceName;
+        this.extensionType = $.extensionType;
+        this.identity = $.identity;
+        this.releaseTrain = $.releaseTrain;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scope = $.scope;
+        this.statuses = $.statuses;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
-        private Output<String> clusterName;
-        private Output<String> clusterResourceName;
-        private Output<String> clusterRp;
-        private @Nullable Output<Map<String,String>> configurationProtectedSettings;
-        private @Nullable Output<Map<String,String>> configurationSettings;
-        private @Nullable Output<String> extensionInstanceName;
-        private @Nullable Output<String> extensionType;
-        private @Nullable Output<ConfigurationIdentityArgs> identity;
-        private @Nullable Output<String> releaseTrain;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ScopeArgs> scope;
-        private @Nullable Output<List<ExtensionStatusArgs>> statuses;
-        private @Nullable Output<String> version;
+        private ExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionArgs();
         }
 
         public Builder(ExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterResourceName = defaults.clusterResourceName;
-    	      this.clusterRp = defaults.clusterRp;
-    	      this.configurationProtectedSettings = defaults.configurationProtectedSettings;
-    	      this.configurationSettings = defaults.configurationSettings;
-    	      this.extensionInstanceName = defaults.extensionInstanceName;
-    	      this.extensionType = defaults.extensionType;
-    	      this.identity = defaults.identity;
-    	      this.releaseTrain = defaults.releaseTrain;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scope = defaults.scope;
-    	      this.statuses = defaults.statuses;
-    	      this.version = defaults.version;
+            $ = new ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
-            return this;
+
+        public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
+            return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder clusterResourceName(Output<String> clusterResourceName) {
-            this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
+            $.clusterResourceName = clusterResourceName;
             return this;
         }
+
         public Builder clusterResourceName(String clusterResourceName) {
-            this.clusterResourceName = Output.of(Objects.requireNonNull(clusterResourceName));
-            return this;
+            return clusterResourceName(Output.of(clusterResourceName));
         }
+
         public Builder clusterRp(Output<String> clusterRp) {
-            this.clusterRp = Objects.requireNonNull(clusterRp);
+            $.clusterRp = clusterRp;
             return this;
         }
+
         public Builder clusterRp(String clusterRp) {
-            this.clusterRp = Output.of(Objects.requireNonNull(clusterRp));
-            return this;
+            return clusterRp(Output.of(clusterRp));
         }
+
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
-            this.configurationProtectedSettings = configurationProtectedSettings;
+            $.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
-            this.configurationProtectedSettings = Codegen.ofNullable(configurationProtectedSettings);
-            return this;
+
+        public Builder configurationProtectedSettings(Map<String,String> configurationProtectedSettings) {
+            return configurationProtectedSettings(Output.of(configurationProtectedSettings));
         }
+
         public Builder configurationSettings(@Nullable Output<Map<String,String>> configurationSettings) {
-            this.configurationSettings = configurationSettings;
+            $.configurationSettings = configurationSettings;
             return this;
         }
-        public Builder configurationSettings(@Nullable Map<String,String> configurationSettings) {
-            this.configurationSettings = Codegen.ofNullable(configurationSettings);
-            return this;
+
+        public Builder configurationSettings(Map<String,String> configurationSettings) {
+            return configurationSettings(Output.of(configurationSettings));
         }
+
         public Builder extensionInstanceName(@Nullable Output<String> extensionInstanceName) {
-            this.extensionInstanceName = extensionInstanceName;
+            $.extensionInstanceName = extensionInstanceName;
             return this;
         }
-        public Builder extensionInstanceName(@Nullable String extensionInstanceName) {
-            this.extensionInstanceName = Codegen.ofNullable(extensionInstanceName);
-            return this;
+
+        public Builder extensionInstanceName(String extensionInstanceName) {
+            return extensionInstanceName(Output.of(extensionInstanceName));
         }
+
         public Builder extensionType(@Nullable Output<String> extensionType) {
-            this.extensionType = extensionType;
+            $.extensionType = extensionType;
             return this;
         }
-        public Builder extensionType(@Nullable String extensionType) {
-            this.extensionType = Codegen.ofNullable(extensionType);
-            return this;
+
+        public Builder extensionType(String extensionType) {
+            return extensionType(Output.of(extensionType));
         }
+
         public Builder identity(@Nullable Output<ConfigurationIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ConfigurationIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ConfigurationIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder releaseTrain(@Nullable Output<String> releaseTrain) {
-            this.releaseTrain = releaseTrain;
+            $.releaseTrain = releaseTrain;
             return this;
         }
-        public Builder releaseTrain(@Nullable String releaseTrain) {
-            this.releaseTrain = Codegen.ofNullable(releaseTrain);
-            return this;
+
+        public Builder releaseTrain(String releaseTrain) {
+            return releaseTrain(Output.of(releaseTrain));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(ScopeArgs scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder statuses(@Nullable Output<List<ExtensionStatusArgs>> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
-        public Builder statuses(@Nullable List<ExtensionStatusArgs> statuses) {
-            this.statuses = Codegen.ofNullable(statuses);
-            return this;
+
+        public Builder statuses(List<ExtensionStatusArgs> statuses) {
+            return statuses(Output.of(statuses));
         }
+
         public Builder statuses(ExtensionStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ExtensionArgs build() {
-            return new ExtensionArgs(autoUpgradeMinorVersion, clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, configurationSettings, extensionInstanceName, extensionType, identity, releaseTrain, resourceGroupName, scope, statuses, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ExtensionArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterResourceName = Objects.requireNonNull($.clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
+            $.clusterRp = Objects.requireNonNull($.clusterRp, "expected parameter 'clusterRp' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

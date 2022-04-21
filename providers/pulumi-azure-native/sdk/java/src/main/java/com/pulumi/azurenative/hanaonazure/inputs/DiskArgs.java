@@ -5,10 +5,10 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public DiskArgs(
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<String> name) {
-        this.diskSizeGB = diskSizeGB;
-        this.name = name;
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.diskSizeGB = Codegen.empty();
-        this.name = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.diskSizeGB = $.diskSizeGB;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<String> name;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.name = defaults.name;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public DiskArgs build() {
-            return new DiskArgs(diskSizeGB, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public DiskArgs build() {
+            return $;
         }
     }
+
 }

@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="acceptedTerms")
-      private final @Nullable Output<Boolean> acceptedTerms;
+    private @Nullable Output<Boolean> acceptedTerms;
 
-    public Output<Boolean> acceptedTerms() {
-        return this.acceptedTerms == null ? Codegen.empty() : this.acceptedTerms;
+    public Optional<Output<Boolean>> acceptedTerms() {
+        return Optional.ofNullable(this.acceptedTerms);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="callingWebHook")
-      private final @Nullable Output<String> callingWebHook;
+    private @Nullable Output<String> callingWebHook;
 
-    public Output<String> callingWebHook() {
-        return this.callingWebHook == null ? Codegen.empty() : this.callingWebHook;
+    public Optional<Output<String>> callingWebHook() {
+        return Optional.ofNullable(this.callingWebHook);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="deploymentEnvironment")
-      private final @Nullable Output<String> deploymentEnvironment;
+    private @Nullable Output<String> deploymentEnvironment;
 
-    public Output<String> deploymentEnvironment() {
-        return this.deploymentEnvironment == null ? Codegen.empty() : this.deploymentEnvironment;
+    public Optional<Output<String>> deploymentEnvironment() {
+        return Optional.ofNullable(this.deploymentEnvironment);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enableCalling")
-      private final @Nullable Output<Boolean> enableCalling;
+    private @Nullable Output<Boolean> enableCalling;
 
-    public Output<Boolean> enableCalling() {
-        return this.enableCalling == null ? Codegen.empty() : this.enableCalling;
+    public Optional<Output<Boolean>> enableCalling() {
+        return Optional.ofNullable(this.enableCalling);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="incomingCallRoute")
-      private final @Nullable Output<String> incomingCallRoute;
+    private @Nullable Output<String> incomingCallRoute;
 
-    public Output<String> incomingCallRoute() {
-        return this.incomingCallRoute == null ? Codegen.empty() : this.incomingCallRoute;
+    public Optional<Output<String>> incomingCallRoute() {
+        return Optional.ofNullable(this.incomingCallRoute);
     }
 
     /**
@@ -80,115 +81,100 @@ public final class MsTeamsChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
-    public MsTeamsChannelPropertiesArgs(
-        @Nullable Output<Boolean> acceptedTerms,
-        @Nullable Output<String> callingWebHook,
-        @Nullable Output<String> deploymentEnvironment,
-        @Nullable Output<Boolean> enableCalling,
-        @Nullable Output<String> incomingCallRoute,
-        Output<Boolean> isEnabled) {
-        this.acceptedTerms = Codegen.booleanProp("acceptedTerms").output().arg(acceptedTerms).def(true).getNullable();
-        this.callingWebHook = callingWebHook;
-        this.deploymentEnvironment = deploymentEnvironment;
-        this.enableCalling = enableCalling;
-        this.incomingCallRoute = incomingCallRoute;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-    }
+    private MsTeamsChannelPropertiesArgs() {}
 
-    private MsTeamsChannelPropertiesArgs() {
-        this.acceptedTerms = Codegen.empty();
-        this.callingWebHook = Codegen.empty();
-        this.deploymentEnvironment = Codegen.empty();
-        this.enableCalling = Codegen.empty();
-        this.incomingCallRoute = Codegen.empty();
-        this.isEnabled = Codegen.empty();
+    private MsTeamsChannelPropertiesArgs(MsTeamsChannelPropertiesArgs $) {
+        this.acceptedTerms = $.acceptedTerms;
+        this.callingWebHook = $.callingWebHook;
+        this.deploymentEnvironment = $.deploymentEnvironment;
+        this.enableCalling = $.enableCalling;
+        this.incomingCallRoute = $.incomingCallRoute;
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MsTeamsChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> acceptedTerms;
-        private @Nullable Output<String> callingWebHook;
-        private @Nullable Output<String> deploymentEnvironment;
-        private @Nullable Output<Boolean> enableCalling;
-        private @Nullable Output<String> incomingCallRoute;
-        private Output<Boolean> isEnabled;
+        private MsTeamsChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MsTeamsChannelPropertiesArgs();
         }
 
         public Builder(MsTeamsChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptedTerms = defaults.acceptedTerms;
-    	      this.callingWebHook = defaults.callingWebHook;
-    	      this.deploymentEnvironment = defaults.deploymentEnvironment;
-    	      this.enableCalling = defaults.enableCalling;
-    	      this.incomingCallRoute = defaults.incomingCallRoute;
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new MsTeamsChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptedTerms(@Nullable Output<Boolean> acceptedTerms) {
-            this.acceptedTerms = acceptedTerms;
+            $.acceptedTerms = acceptedTerms;
             return this;
         }
-        public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
-            this.acceptedTerms = Codegen.ofNullable(acceptedTerms);
-            return this;
+
+        public Builder acceptedTerms(Boolean acceptedTerms) {
+            return acceptedTerms(Output.of(acceptedTerms));
         }
+
         public Builder callingWebHook(@Nullable Output<String> callingWebHook) {
-            this.callingWebHook = callingWebHook;
+            $.callingWebHook = callingWebHook;
             return this;
         }
-        public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = Codegen.ofNullable(callingWebHook);
-            return this;
+
+        public Builder callingWebHook(String callingWebHook) {
+            return callingWebHook(Output.of(callingWebHook));
         }
+
         public Builder deploymentEnvironment(@Nullable Output<String> deploymentEnvironment) {
-            this.deploymentEnvironment = deploymentEnvironment;
+            $.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
-        public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
-            this.deploymentEnvironment = Codegen.ofNullable(deploymentEnvironment);
-            return this;
+
+        public Builder deploymentEnvironment(String deploymentEnvironment) {
+            return deploymentEnvironment(Output.of(deploymentEnvironment));
         }
+
         public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
-            this.enableCalling = enableCalling;
+            $.enableCalling = enableCalling;
             return this;
         }
-        public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = Codegen.ofNullable(enableCalling);
-            return this;
+
+        public Builder enableCalling(Boolean enableCalling) {
+            return enableCalling(Output.of(enableCalling));
         }
+
         public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
-            this.incomingCallRoute = incomingCallRoute;
+            $.incomingCallRoute = incomingCallRoute;
             return this;
         }
-        public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = Codegen.ofNullable(incomingCallRoute);
-            return this;
+
+        public Builder incomingCallRoute(String incomingCallRoute) {
+            return incomingCallRoute(Output.of(incomingCallRoute));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
-        }        public MsTeamsChannelPropertiesArgs build() {
-            return new MsTeamsChannelPropertiesArgs(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        public MsTeamsChannelPropertiesArgs build() {
+            $.acceptedTerms = Codegen.booleanProp("acceptedTerms").output().arg($.acceptedTerms).def(true).getNullable();
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

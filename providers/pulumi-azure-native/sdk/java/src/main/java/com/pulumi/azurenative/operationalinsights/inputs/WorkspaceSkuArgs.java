@@ -7,10 +7,10 @@ import com.pulumi.azurenative.operationalinsights.enums.WorkspaceSkuNameEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WorkspaceSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityReservationLevel")
-      private final @Nullable Output<Integer> capacityReservationLevel;
+    private @Nullable Output<Integer> capacityReservationLevel;
 
-    public Output<Integer> capacityReservationLevel() {
-        return this.capacityReservationLevel == null ? Codegen.empty() : this.capacityReservationLevel;
+    public Optional<Output<Integer>> capacityReservationLevel() {
+        return Optional.ofNullable(this.capacityReservationLevel);
     }
 
     /**
@@ -38,63 +38,59 @@ public final class WorkspaceSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,WorkspaceSkuNameEnum>> name;
+    private Output<Either<String,WorkspaceSkuNameEnum>> name;
 
     public Output<Either<String,WorkspaceSkuNameEnum>> name() {
         return this.name;
     }
 
-    public WorkspaceSkuArgs(
-        @Nullable Output<Integer> capacityReservationLevel,
-        Output<Either<String,WorkspaceSkuNameEnum>> name) {
-        this.capacityReservationLevel = capacityReservationLevel;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private WorkspaceSkuArgs() {}
 
-    private WorkspaceSkuArgs() {
-        this.capacityReservationLevel = Codegen.empty();
-        this.name = Codegen.empty();
+    private WorkspaceSkuArgs(WorkspaceSkuArgs $) {
+        this.capacityReservationLevel = $.capacityReservationLevel;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacityReservationLevel;
-        private Output<Either<String,WorkspaceSkuNameEnum>> name;
+        private WorkspaceSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceSkuArgs();
         }
 
         public Builder(WorkspaceSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityReservationLevel = defaults.capacityReservationLevel;
-    	      this.name = defaults.name;
+            $ = new WorkspaceSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityReservationLevel(@Nullable Output<Integer> capacityReservationLevel) {
-            this.capacityReservationLevel = capacityReservationLevel;
+            $.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
-        public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
-            this.capacityReservationLevel = Codegen.ofNullable(capacityReservationLevel);
-            return this;
+
+        public Builder capacityReservationLevel(Integer capacityReservationLevel) {
+            return capacityReservationLevel(Output.of(capacityReservationLevel));
         }
+
         public Builder name(Output<Either<String,WorkspaceSkuNameEnum>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,WorkspaceSkuNameEnum> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public WorkspaceSkuArgs build() {
-            return new WorkspaceSkuArgs(capacityReservationLevel, name);
+            return name(Output.of(name));
+        }
+
+        public WorkspaceSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

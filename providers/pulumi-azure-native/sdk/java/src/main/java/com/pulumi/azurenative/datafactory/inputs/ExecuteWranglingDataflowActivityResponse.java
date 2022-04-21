@@ -36,10 +36,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="compute")
-      private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
+    private @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
-        return this.compute == null ? Optional.empty() : Optional.ofNullable(this.compute);
+        return Optional.ofNullable(this.compute);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="continueOnError")
-      private final @Nullable Object continueOnError;
+    private @Nullable Object continueOnError;
 
     public Optional<Object> continueOnError() {
-        return this.continueOnError == null ? Optional.empty() : Optional.ofNullable(this.continueOnError);
+        return Optional.ofNullable(this.continueOnError);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="dataFlow", required=true)
-      private final DataFlowReferenceResponse dataFlow;
+    private DataFlowReferenceResponse dataFlow;
 
     public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
@@ -69,10 +69,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="integrationRuntime")
-      private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
+    private @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
     public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
-        return this.integrationRuntime == null ? Optional.empty() : Optional.ofNullable(this.integrationRuntime);
+        return Optional.ofNullable(this.integrationRuntime);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -113,10 +113,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="queries")
-      private final @Nullable List<PowerQuerySinkMappingResponse> queries;
+    private @Nullable List<PowerQuerySinkMappingResponse> queries;
 
-    public List<PowerQuerySinkMappingResponse> queries() {
-        return this.queries == null ? List.of() : this.queries;
+    public Optional<List<PowerQuerySinkMappingResponse>> queries() {
+        return Optional.ofNullable(this.queries);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="runConcurrently")
-      private final @Nullable Object runConcurrently;
+    private @Nullable Object runConcurrently;
 
     public Optional<Object> runConcurrently() {
-        return this.runConcurrently == null ? Optional.empty() : Optional.ofNullable(this.runConcurrently);
+        return Optional.ofNullable(this.runConcurrently);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="sinks")
-      private final @Nullable Map<String,PowerQuerySinkResponse> sinks;
+    private @Nullable Map<String,PowerQuerySinkResponse> sinks;
 
-    public Map<String,PowerQuerySinkResponse> sinks() {
-        return this.sinks == null ? Map.of() : this.sinks;
+    public Optional<Map<String,PowerQuerySinkResponse>> sinks() {
+        return Optional.ofNullable(this.sinks);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="staging")
-      private final @Nullable DataFlowStagingInfoResponse staging;
+    private @Nullable DataFlowStagingInfoResponse staging;
 
     public Optional<DataFlowStagingInfoResponse> staging() {
-        return this.staging == null ? Optional.empty() : Optional.ofNullable(this.staging);
+        return Optional.ofNullable(this.staging);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="traceLevel")
-      private final @Nullable Object traceLevel;
+    private @Nullable Object traceLevel;
 
     public Optional<Object> traceLevel() {
-        return this.traceLevel == null ? Optional.empty() : Optional.ofNullable(this.traceLevel);
+        return Optional.ofNullable(this.traceLevel);
     }
 
     /**
@@ -180,7 +180,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -191,181 +191,143 @@ public final class ExecuteWranglingDataflowActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public ExecuteWranglingDataflowActivityResponse(
-        @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
-        @Nullable Object continueOnError,
-        DataFlowReferenceResponse dataFlow,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<PowerQuerySinkMappingResponse> queries,
-        @Nullable Object runConcurrently,
-        @Nullable Map<String,PowerQuerySinkResponse> sinks,
-        @Nullable DataFlowStagingInfoResponse staging,
-        @Nullable Object traceLevel,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.compute = compute;
-        this.continueOnError = continueOnError;
-        this.dataFlow = Objects.requireNonNull(dataFlow, "expected parameter 'dataFlow' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.integrationRuntime = integrationRuntime;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.queries = queries;
-        this.runConcurrently = runConcurrently;
-        this.sinks = sinks;
-        this.staging = staging;
-        this.traceLevel = traceLevel;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private ExecuteWranglingDataflowActivityResponse() {}
 
-    private ExecuteWranglingDataflowActivityResponse() {
-        this.compute = null;
-        this.continueOnError = null;
-        this.dataFlow = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.integrationRuntime = null;
-        this.name = null;
-        this.policy = null;
-        this.queries = List.of();
-        this.runConcurrently = null;
-        this.sinks = Map.of();
-        this.staging = null;
-        this.traceLevel = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private ExecuteWranglingDataflowActivityResponse(ExecuteWranglingDataflowActivityResponse $) {
+        this.compute = $.compute;
+        this.continueOnError = $.continueOnError;
+        this.dataFlow = $.dataFlow;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.integrationRuntime = $.integrationRuntime;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.queries = $.queries;
+        this.runConcurrently = $.runConcurrently;
+        this.sinks = $.sinks;
+        this.staging = $.staging;
+        this.traceLevel = $.traceLevel;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecuteWranglingDataflowActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
-        private @Nullable Object continueOnError;
-        private DataFlowReferenceResponse dataFlow;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable List<PowerQuerySinkMappingResponse> queries;
-        private @Nullable Object runConcurrently;
-        private @Nullable Map<String,PowerQuerySinkResponse> sinks;
-        private @Nullable DataFlowStagingInfoResponse staging;
-        private @Nullable Object traceLevel;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private ExecuteWranglingDataflowActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecuteWranglingDataflowActivityResponse();
         }
 
         public Builder(ExecuteWranglingDataflowActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compute = defaults.compute;
-    	      this.continueOnError = defaults.continueOnError;
-    	      this.dataFlow = defaults.dataFlow;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.integrationRuntime = defaults.integrationRuntime;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.queries = defaults.queries;
-    	      this.runConcurrently = defaults.runConcurrently;
-    	      this.sinks = defaults.sinks;
-    	      this.staging = defaults.staging;
-    	      this.traceLevel = defaults.traceLevel;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new ExecuteWranglingDataflowActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
-            this.compute = compute;
+            $.compute = compute;
             return this;
         }
+
         public Builder continueOnError(@Nullable Object continueOnError) {
-            this.continueOnError = continueOnError;
+            $.continueOnError = continueOnError;
             return this;
         }
+
         public Builder dataFlow(DataFlowReferenceResponse dataFlow) {
-            this.dataFlow = Objects.requireNonNull(dataFlow);
+            $.dataFlow = dataFlow;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
-            this.integrationRuntime = integrationRuntime;
+            $.integrationRuntime = integrationRuntime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder queries(@Nullable List<PowerQuerySinkMappingResponse> queries) {
-            this.queries = queries;
+            $.queries = queries;
             return this;
         }
+
         public Builder queries(PowerQuerySinkMappingResponse... queries) {
             return queries(List.of(queries));
         }
+
         public Builder runConcurrently(@Nullable Object runConcurrently) {
-            this.runConcurrently = runConcurrently;
+            $.runConcurrently = runConcurrently;
             return this;
         }
+
         public Builder sinks(@Nullable Map<String,PowerQuerySinkResponse> sinks) {
-            this.sinks = sinks;
+            $.sinks = sinks;
             return this;
         }
+
         public Builder staging(@Nullable DataFlowStagingInfoResponse staging) {
-            this.staging = staging;
+            $.staging = staging;
             return this;
         }
+
         public Builder traceLevel(@Nullable Object traceLevel) {
-            this.traceLevel = traceLevel;
+            $.traceLevel = traceLevel;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public ExecuteWranglingDataflowActivityResponse build() {
-            return new ExecuteWranglingDataflowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, name, policy, queries, runConcurrently, sinks, staging, traceLevel, type, userProperties);
+        }
+
+        public ExecuteWranglingDataflowActivityResponse build() {
+            $.dataFlow = Objects.requireNonNull($.dataFlow, "expected parameter 'dataFlow' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

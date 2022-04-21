@@ -17,7 +17,7 @@ public final class GetGeoBackupPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetGeoBackupPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="geoBackupPolicyName", required=true)
-      private final String geoBackupPolicyName;
+    private String geoBackupPolicyName;
 
     public String geoBackupPolicyName() {
         return this.geoBackupPolicyName;
@@ -39,7 +39,7 @@ public final class GetGeoBackupPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetGeoBackupPolicyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetGeoBackupPolicyArgs(
-        String databaseName,
-        String geoBackupPolicyName,
-        String resourceGroupName,
-        String serverName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.geoBackupPolicyName = Objects.requireNonNull(geoBackupPolicyName, "expected parameter 'geoBackupPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetGeoBackupPolicyArgs() {}
 
-    private GetGeoBackupPolicyArgs() {
-        this.databaseName = null;
-        this.geoBackupPolicyName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetGeoBackupPolicyArgs(GetGeoBackupPolicyArgs $) {
+        this.databaseName = $.databaseName;
+        this.geoBackupPolicyName = $.geoBackupPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGeoBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String geoBackupPolicyName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetGeoBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGeoBackupPolicyArgs();
         }
 
         public Builder(GetGeoBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.geoBackupPolicyName = defaults.geoBackupPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetGeoBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder geoBackupPolicyName(String geoBackupPolicyName) {
-            this.geoBackupPolicyName = Objects.requireNonNull(geoBackupPolicyName);
+            $.geoBackupPolicyName = geoBackupPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetGeoBackupPolicyArgs build() {
-            return new GetGeoBackupPolicyArgs(databaseName, geoBackupPolicyName, resourceGroupName, serverName);
+        }
+
+        public GetGeoBackupPolicyArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.geoBackupPolicyName = Objects.requireNonNull($.geoBackupPolicyName, "expected parameter 'geoBackupPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

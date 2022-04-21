@@ -26,10 +26,10 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
      * 
      */
     @Import(name="allocatedIpAddresses")
-      private final @Nullable List<String> allocatedIpAddresses;
+    private @Nullable List<String> allocatedIpAddresses;
 
-    public List<String> allocatedIpAddresses() {
-        return this.allocatedIpAddresses == null ? List.of() : this.allocatedIpAddresses;
+    public Optional<List<String>> allocatedIpAddresses() {
+        return Optional.ofNullable(this.allocatedIpAddresses);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
      * 
      */
     @Import(name="totalEgressBytesTransferred", required=true)
-      private final Double totalEgressBytesTransferred;
+    private Double totalEgressBytesTransferred;
 
     public Double totalEgressBytesTransferred() {
         return this.totalEgressBytesTransferred;
@@ -48,7 +48,7 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
      * 
      */
     @Import(name="totalIngressBytesTransferred", required=true)
-      private final Double totalIngressBytesTransferred;
+    private Double totalIngressBytesTransferred;
 
     public Double totalIngressBytesTransferred() {
         return this.totalIngressBytesTransferred;
@@ -59,76 +59,68 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
      * 
      */
     @Import(name="vpnClientConnectionsCount")
-      private final @Nullable Integer vpnClientConnectionsCount;
+    private @Nullable Integer vpnClientConnectionsCount;
 
     public Optional<Integer> vpnClientConnectionsCount() {
-        return this.vpnClientConnectionsCount == null ? Optional.empty() : Optional.ofNullable(this.vpnClientConnectionsCount);
+        return Optional.ofNullable(this.vpnClientConnectionsCount);
     }
 
-    public VpnClientConnectionHealthResponse(
-        @Nullable List<String> allocatedIpAddresses,
-        Double totalEgressBytesTransferred,
-        Double totalIngressBytesTransferred,
-        @Nullable Integer vpnClientConnectionsCount) {
-        this.allocatedIpAddresses = allocatedIpAddresses;
-        this.totalEgressBytesTransferred = Objects.requireNonNull(totalEgressBytesTransferred, "expected parameter 'totalEgressBytesTransferred' to be non-null");
-        this.totalIngressBytesTransferred = Objects.requireNonNull(totalIngressBytesTransferred, "expected parameter 'totalIngressBytesTransferred' to be non-null");
-        this.vpnClientConnectionsCount = vpnClientConnectionsCount;
-    }
+    private VpnClientConnectionHealthResponse() {}
 
-    private VpnClientConnectionHealthResponse() {
-        this.allocatedIpAddresses = List.of();
-        this.totalEgressBytesTransferred = null;
-        this.totalIngressBytesTransferred = null;
-        this.vpnClientConnectionsCount = null;
+    private VpnClientConnectionHealthResponse(VpnClientConnectionHealthResponse $) {
+        this.allocatedIpAddresses = $.allocatedIpAddresses;
+        this.totalEgressBytesTransferred = $.totalEgressBytesTransferred;
+        this.totalIngressBytesTransferred = $.totalIngressBytesTransferred;
+        this.vpnClientConnectionsCount = $.vpnClientConnectionsCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnClientConnectionHealthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allocatedIpAddresses;
-        private Double totalEgressBytesTransferred;
-        private Double totalIngressBytesTransferred;
-        private @Nullable Integer vpnClientConnectionsCount;
+        private VpnClientConnectionHealthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnClientConnectionHealthResponse();
         }
 
         public Builder(VpnClientConnectionHealthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatedIpAddresses = defaults.allocatedIpAddresses;
-    	      this.totalEgressBytesTransferred = defaults.totalEgressBytesTransferred;
-    	      this.totalIngressBytesTransferred = defaults.totalIngressBytesTransferred;
-    	      this.vpnClientConnectionsCount = defaults.vpnClientConnectionsCount;
+            $ = new VpnClientConnectionHealthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatedIpAddresses(@Nullable List<String> allocatedIpAddresses) {
-            this.allocatedIpAddresses = allocatedIpAddresses;
+            $.allocatedIpAddresses = allocatedIpAddresses;
             return this;
         }
+
         public Builder allocatedIpAddresses(String... allocatedIpAddresses) {
             return allocatedIpAddresses(List.of(allocatedIpAddresses));
         }
+
         public Builder totalEgressBytesTransferred(Double totalEgressBytesTransferred) {
-            this.totalEgressBytesTransferred = Objects.requireNonNull(totalEgressBytesTransferred);
+            $.totalEgressBytesTransferred = totalEgressBytesTransferred;
             return this;
         }
+
         public Builder totalIngressBytesTransferred(Double totalIngressBytesTransferred) {
-            this.totalIngressBytesTransferred = Objects.requireNonNull(totalIngressBytesTransferred);
+            $.totalIngressBytesTransferred = totalIngressBytesTransferred;
             return this;
         }
+
         public Builder vpnClientConnectionsCount(@Nullable Integer vpnClientConnectionsCount) {
-            this.vpnClientConnectionsCount = vpnClientConnectionsCount;
+            $.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;
-        }        public VpnClientConnectionHealthResponse build() {
-            return new VpnClientConnectionHealthResponse(allocatedIpAddresses, totalEgressBytesTransferred, totalIngressBytesTransferred, vpnClientConnectionsCount);
+        }
+
+        public VpnClientConnectionHealthResponse build() {
+            $.totalEgressBytesTransferred = Objects.requireNonNull($.totalEgressBytesTransferred, "expected parameter 'totalEgressBytesTransferred' to be non-null");
+            $.totalIngressBytesTransferred = Objects.requireNonNull($.totalIngressBytesTransferred, "expected parameter 'totalIngressBytesTransferred' to be non-null");
+            return $;
         }
     }
+
 }

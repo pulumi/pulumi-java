@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.EntityReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class PackageStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,63 +34,60 @@ public final class PackageStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageStoreLinkedService", required=true)
-      private final Output<EntityReferenceArgs> packageStoreLinkedService;
+    private Output<EntityReferenceArgs> packageStoreLinkedService;
 
     public Output<EntityReferenceArgs> packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
 
-    public PackageStoreArgs(
-        Output<String> name,
-        Output<EntityReferenceArgs> packageStoreLinkedService) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService, "expected parameter 'packageStoreLinkedService' to be non-null");
-    }
+    private PackageStoreArgs() {}
 
-    private PackageStoreArgs() {
-        this.name = Codegen.empty();
-        this.packageStoreLinkedService = Codegen.empty();
+    private PackageStoreArgs(PackageStoreArgs $) {
+        this.name = $.name;
+        this.packageStoreLinkedService = $.packageStoreLinkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<EntityReferenceArgs> packageStoreLinkedService;
+        private PackageStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageStoreArgs();
         }
 
         public Builder(PackageStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.packageStoreLinkedService = defaults.packageStoreLinkedService;
+            $ = new PackageStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder packageStoreLinkedService(Output<EntityReferenceArgs> packageStoreLinkedService) {
-            this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
+            $.packageStoreLinkedService = packageStoreLinkedService;
             return this;
         }
+
         public Builder packageStoreLinkedService(EntityReferenceArgs packageStoreLinkedService) {
-            this.packageStoreLinkedService = Output.of(Objects.requireNonNull(packageStoreLinkedService));
-            return this;
-        }        public PackageStoreArgs build() {
-            return new PackageStoreArgs(name, packageStoreLinkedService);
+            return packageStoreLinkedService(Output.of(packageStoreLinkedService));
+        }
+
+        public PackageStoreArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.packageStoreLinkedService = Objects.requireNonNull($.packageStoreLinkedService, "expected parameter 'packageStoreLinkedService' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class RecurrenceScheduleOccurrenceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="day")
-      private final @Nullable String day;
+    private @Nullable String day;
 
     public Optional<String> day() {
-        return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class RecurrenceScheduleOccurrenceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="occurrence")
-      private final @Nullable Integer occurrence;
+    private @Nullable Integer occurrence;
 
     public Optional<Integer> occurrence() {
-        return this.occurrence == null ? Optional.empty() : Optional.ofNullable(this.occurrence);
+        return Optional.ofNullable(this.occurrence);
     }
 
-    public RecurrenceScheduleOccurrenceResponse(
-        @Nullable String day,
-        @Nullable Integer occurrence) {
-        this.day = day;
-        this.occurrence = occurrence;
-    }
+    private RecurrenceScheduleOccurrenceResponse() {}
 
-    private RecurrenceScheduleOccurrenceResponse() {
-        this.day = null;
-        this.occurrence = null;
+    private RecurrenceScheduleOccurrenceResponse(RecurrenceScheduleOccurrenceResponse $) {
+        this.day = $.day;
+        this.occurrence = $.occurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrenceScheduleOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String day;
-        private @Nullable Integer occurrence;
+        private RecurrenceScheduleOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrenceScheduleOccurrenceResponse();
         }
 
         public Builder(RecurrenceScheduleOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.occurrence = defaults.occurrence;
+            $ = new RecurrenceScheduleOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable String day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
+
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = occurrence;
+            $.occurrence = occurrence;
             return this;
-        }        public RecurrenceScheduleOccurrenceResponse build() {
-            return new RecurrenceScheduleOccurrenceResponse(day, occurrence);
+        }
+
+        public RecurrenceScheduleOccurrenceResponse build() {
+            return $;
         }
     }
+
 }

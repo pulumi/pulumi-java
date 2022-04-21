@@ -6,10 +6,10 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="assemblyCulture")
-      private final @Nullable Output<String> assemblyCulture;
+    private @Nullable Output<String> assemblyCulture;
 
-    public Output<String> assemblyCulture() {
-        return this.assemblyCulture == null ? Codegen.empty() : this.assemblyCulture;
+    public Optional<Output<String>> assemblyCulture() {
+        return Optional.ofNullable(this.assemblyCulture);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="assemblyName", required=true)
-      private final Output<String> assemblyName;
+    private Output<String> assemblyName;
 
     public Output<String> assemblyName() {
         return this.assemblyName;
@@ -48,10 +48,10 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="assemblyPublicKeyToken")
-      private final @Nullable Output<String> assemblyPublicKeyToken;
+    private @Nullable Output<String> assemblyPublicKeyToken;
 
-    public Output<String> assemblyPublicKeyToken() {
-        return this.assemblyPublicKeyToken == null ? Codegen.empty() : this.assemblyPublicKeyToken;
+    public Optional<Output<String>> assemblyPublicKeyToken() {
+        return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="assemblyVersion")
-      private final @Nullable Output<String> assemblyVersion;
+    private @Nullable Output<String> assemblyVersion;
 
-    public Output<String> assemblyVersion() {
-        return this.assemblyVersion == null ? Codegen.empty() : this.assemblyVersion;
+    public Optional<Output<String>> assemblyVersion() {
+        return Optional.ofNullable(this.assemblyVersion);
     }
 
     /**
@@ -70,17 +70,17 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="changedTime")
-      private final @Nullable Output<String> changedTime;
+    private @Nullable Output<String> changedTime;
 
-    public Output<String> changedTime() {
-        return this.changedTime == null ? Codegen.empty() : this.changedTime;
+    public Optional<Output<String>> changedTime() {
+        return Optional.ofNullable(this.changedTime);
     }
 
     @Import(name="content")
-      private final @Nullable Output<Object> content;
+    private @Nullable Output<Object> content;
 
-    public Output<Object> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<Object>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="contentLink")
-      private final @Nullable Output<ContentLinkArgs> contentLink;
+    private @Nullable Output<ContentLinkArgs> contentLink;
 
-    public Output<ContentLinkArgs> contentLink() {
-        return this.contentLink == null ? Codegen.empty() : this.contentLink;
+    public Optional<Output<ContentLinkArgs>> contentLink() {
+        return Optional.ofNullable(this.contentLink);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -110,174 +110,146 @@ public final class AssemblyPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public AssemblyPropertiesArgs(
-        @Nullable Output<String> assemblyCulture,
-        Output<String> assemblyName,
-        @Nullable Output<String> assemblyPublicKeyToken,
-        @Nullable Output<String> assemblyVersion,
-        @Nullable Output<String> changedTime,
-        @Nullable Output<Object> content,
-        @Nullable Output<ContentLinkArgs> contentLink,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<Object> metadata) {
-        this.assemblyCulture = assemblyCulture;
-        this.assemblyName = Objects.requireNonNull(assemblyName, "expected parameter 'assemblyName' to be non-null");
-        this.assemblyPublicKeyToken = assemblyPublicKeyToken;
-        this.assemblyVersion = assemblyVersion;
-        this.changedTime = changedTime;
-        this.content = content;
-        this.contentLink = contentLink;
-        this.contentType = contentType;
-        this.createdTime = createdTime;
-        this.metadata = metadata;
-    }
+    private AssemblyPropertiesArgs() {}
 
-    private AssemblyPropertiesArgs() {
-        this.assemblyCulture = Codegen.empty();
-        this.assemblyName = Codegen.empty();
-        this.assemblyPublicKeyToken = Codegen.empty();
-        this.assemblyVersion = Codegen.empty();
-        this.changedTime = Codegen.empty();
-        this.content = Codegen.empty();
-        this.contentLink = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.metadata = Codegen.empty();
+    private AssemblyPropertiesArgs(AssemblyPropertiesArgs $) {
+        this.assemblyCulture = $.assemblyCulture;
+        this.assemblyName = $.assemblyName;
+        this.assemblyPublicKeyToken = $.assemblyPublicKeyToken;
+        this.assemblyVersion = $.assemblyVersion;
+        this.changedTime = $.changedTime;
+        this.content = $.content;
+        this.contentLink = $.contentLink;
+        this.contentType = $.contentType;
+        this.createdTime = $.createdTime;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssemblyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assemblyCulture;
-        private Output<String> assemblyName;
-        private @Nullable Output<String> assemblyPublicKeyToken;
-        private @Nullable Output<String> assemblyVersion;
-        private @Nullable Output<String> changedTime;
-        private @Nullable Output<Object> content;
-        private @Nullable Output<ContentLinkArgs> contentLink;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<Object> metadata;
+        private AssemblyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssemblyPropertiesArgs();
         }
 
         public Builder(AssemblyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assemblyCulture = defaults.assemblyCulture;
-    	      this.assemblyName = defaults.assemblyName;
-    	      this.assemblyPublicKeyToken = defaults.assemblyPublicKeyToken;
-    	      this.assemblyVersion = defaults.assemblyVersion;
-    	      this.changedTime = defaults.changedTime;
-    	      this.content = defaults.content;
-    	      this.contentLink = defaults.contentLink;
-    	      this.contentType = defaults.contentType;
-    	      this.createdTime = defaults.createdTime;
-    	      this.metadata = defaults.metadata;
+            $ = new AssemblyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assemblyCulture(@Nullable Output<String> assemblyCulture) {
-            this.assemblyCulture = assemblyCulture;
+            $.assemblyCulture = assemblyCulture;
             return this;
         }
-        public Builder assemblyCulture(@Nullable String assemblyCulture) {
-            this.assemblyCulture = Codegen.ofNullable(assemblyCulture);
-            return this;
+
+        public Builder assemblyCulture(String assemblyCulture) {
+            return assemblyCulture(Output.of(assemblyCulture));
         }
+
         public Builder assemblyName(Output<String> assemblyName) {
-            this.assemblyName = Objects.requireNonNull(assemblyName);
+            $.assemblyName = assemblyName;
             return this;
         }
+
         public Builder assemblyName(String assemblyName) {
-            this.assemblyName = Output.of(Objects.requireNonNull(assemblyName));
-            return this;
+            return assemblyName(Output.of(assemblyName));
         }
+
         public Builder assemblyPublicKeyToken(@Nullable Output<String> assemblyPublicKeyToken) {
-            this.assemblyPublicKeyToken = assemblyPublicKeyToken;
+            $.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
-        public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
-            this.assemblyPublicKeyToken = Codegen.ofNullable(assemblyPublicKeyToken);
-            return this;
+
+        public Builder assemblyPublicKeyToken(String assemblyPublicKeyToken) {
+            return assemblyPublicKeyToken(Output.of(assemblyPublicKeyToken));
         }
+
         public Builder assemblyVersion(@Nullable Output<String> assemblyVersion) {
-            this.assemblyVersion = assemblyVersion;
+            $.assemblyVersion = assemblyVersion;
             return this;
         }
-        public Builder assemblyVersion(@Nullable String assemblyVersion) {
-            this.assemblyVersion = Codegen.ofNullable(assemblyVersion);
-            return this;
+
+        public Builder assemblyVersion(String assemblyVersion) {
+            return assemblyVersion(Output.of(assemblyVersion));
         }
+
         public Builder changedTime(@Nullable Output<String> changedTime) {
-            this.changedTime = changedTime;
+            $.changedTime = changedTime;
             return this;
         }
-        public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Codegen.ofNullable(changedTime);
-            return this;
+
+        public Builder changedTime(String changedTime) {
+            return changedTime(Output.of(changedTime));
         }
+
         public Builder content(@Nullable Output<Object> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable Object content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(Object content) {
+            return content(Output.of(content));
         }
+
         public Builder contentLink(@Nullable Output<ContentLinkArgs> contentLink) {
-            this.contentLink = contentLink;
+            $.contentLink = contentLink;
             return this;
         }
-        public Builder contentLink(@Nullable ContentLinkArgs contentLink) {
-            this.contentLink = Codegen.ofNullable(contentLink);
-            return this;
+
+        public Builder contentLink(ContentLinkArgs contentLink) {
+            return contentLink(Output.of(contentLink));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public AssemblyPropertiesArgs build() {
-            return new AssemblyPropertiesArgs(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public AssemblyPropertiesArgs build() {
+            $.assemblyName = Objects.requireNonNull($.assemblyName, "expected parameter 'assemblyName' to be non-null");
+            return $;
         }
     }
+
 }

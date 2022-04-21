@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ParquetWriteSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fileNamePrefix")
-      private final @Nullable Output<Object> fileNamePrefix;
+    private @Nullable Output<Object> fileNamePrefix;
 
-    public Output<Object> fileNamePrefix() {
-        return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
+    public Optional<Output<Object>> fileNamePrefix() {
+        return Optional.ofNullable(this.fileNamePrefix);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class ParquetWriteSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxRowsPerFile")
-      private final @Nullable Output<Object> maxRowsPerFile;
+    private @Nullable Output<Object> maxRowsPerFile;
 
-    public Output<Object> maxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
+    public Optional<Output<Object>> maxRowsPerFile() {
+        return Optional.ofNullable(this.maxRowsPerFile);
     }
 
     /**
@@ -48,76 +49,69 @@ public final class ParquetWriteSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ParquetWriteSettingsArgs(
-        @Nullable Output<Object> fileNamePrefix,
-        @Nullable Output<Object> maxRowsPerFile,
-        Output<String> type) {
-        this.fileNamePrefix = fileNamePrefix;
-        this.maxRowsPerFile = maxRowsPerFile;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ParquetWriteSettingsArgs() {}
 
-    private ParquetWriteSettingsArgs() {
-        this.fileNamePrefix = Codegen.empty();
-        this.maxRowsPerFile = Codegen.empty();
-        this.type = Codegen.empty();
+    private ParquetWriteSettingsArgs(ParquetWriteSettingsArgs $) {
+        this.fileNamePrefix = $.fileNamePrefix;
+        this.maxRowsPerFile = $.maxRowsPerFile;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParquetWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> fileNamePrefix;
-        private @Nullable Output<Object> maxRowsPerFile;
-        private Output<String> type;
+        private ParquetWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParquetWriteSettingsArgs();
         }
 
         public Builder(ParquetWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileNamePrefix = defaults.fileNamePrefix;
-    	      this.maxRowsPerFile = defaults.maxRowsPerFile;
-    	      this.type = defaults.type;
+            $ = new ParquetWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileNamePrefix(@Nullable Output<Object> fileNamePrefix) {
-            this.fileNamePrefix = fileNamePrefix;
+            $.fileNamePrefix = fileNamePrefix;
             return this;
         }
-        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Codegen.ofNullable(fileNamePrefix);
-            return this;
+
+        public Builder fileNamePrefix(Object fileNamePrefix) {
+            return fileNamePrefix(Output.of(fileNamePrefix));
         }
+
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
-            this.maxRowsPerFile = maxRowsPerFile;
+            $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Codegen.ofNullable(maxRowsPerFile);
-            return this;
+
+        public Builder maxRowsPerFile(Object maxRowsPerFile) {
+            return maxRowsPerFile(Output.of(maxRowsPerFile));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ParquetWriteSettingsArgs build() {
-            return new ParquetWriteSettingsArgs(fileNamePrefix, maxRowsPerFile, type);
+            return type(Output.of(type));
+        }
+
+        public ParquetWriteSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

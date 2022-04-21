@@ -7,9 +7,9 @@ import com.pulumi.azurenative.signalrservice.inputs.PrivateEndpointArgs;
 import com.pulumi.azurenative.signalrservice.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SignalRPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
+    private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> privateEndpoint() {
-        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
+    public Optional<Output<PrivateEndpointArgs>> privateEndpoint() {
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SignalRPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="privateEndpointConnectionName")
-      private final @Nullable Output<String> privateEndpointConnectionName;
+    private @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> privateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
+    public Optional<Output<String>> privateEndpointConnectionName() {
+        return Optional.ofNullable(this.privateEndpointConnectionName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SignalRPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<PrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class SignalRPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,102 +66,90 @@ public final class SignalRPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public SignalRPrivateEndpointConnectionArgs(
-        @Nullable Output<PrivateEndpointArgs> privateEndpoint,
-        @Nullable Output<String> privateEndpointConnectionName,
-        @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.privateEndpoint = privateEndpoint;
-        this.privateEndpointConnectionName = privateEndpointConnectionName;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private SignalRPrivateEndpointConnectionArgs() {}
 
-    private SignalRPrivateEndpointConnectionArgs() {
-        this.privateEndpoint = Codegen.empty();
-        this.privateEndpointConnectionName = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private SignalRPrivateEndpointConnectionArgs(SignalRPrivateEndpointConnectionArgs $) {
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignalRPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
-        private @Nullable Output<String> privateEndpointConnectionName;
-        private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private SignalRPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignalRPrivateEndpointConnectionArgs();
         }
 
         public Builder(SignalRPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new SignalRPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
-        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
-            return this;
+
+        public Builder privateEndpoint(PrivateEndpointArgs privateEndpoint) {
+            return privateEndpoint(Output.of(privateEndpoint));
         }
+
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = privateEndpointConnectionName;
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
-            return this;
+
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
+
+        public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public SignalRPrivateEndpointConnectionArgs build() {
-            return new SignalRPrivateEndpointConnectionArgs(privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public SignalRPrivateEndpointConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

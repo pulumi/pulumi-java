@@ -23,45 +23,44 @@ public final class PropertiesResponseLockbox extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public PropertiesResponseLockbox(@Nullable String state) {
-        this.state = state;
-    }
+    private PropertiesResponseLockbox() {}
 
-    private PropertiesResponseLockbox() {
-        this.state = null;
+    private PropertiesResponseLockbox(PropertiesResponseLockbox $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertiesResponseLockbox defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String state;
+        private PropertiesResponseLockbox $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertiesResponseLockbox();
         }
 
         public Builder(PropertiesResponseLockbox defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new PropertiesResponseLockbox(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public PropertiesResponseLockbox build() {
-            return new PropertiesResponseLockbox(state);
+        }
+
+        public PropertiesResponseLockbox build() {
+            return $;
         }
     }
+
 }

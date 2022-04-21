@@ -21,7 +21,7 @@ public final class ScaleCapacityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="default", required=true)
-      private final String default_;
+    private String default_;
 
     public String default_() {
         return this.default_;
@@ -32,7 +32,7 @@ public final class ScaleCapacityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maximum", required=true)
-      private final String maximum;
+    private String maximum;
 
     public String maximum() {
         return this.maximum;
@@ -43,64 +43,59 @@ public final class ScaleCapacityResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="minimum", required=true)
-      private final String minimum;
+    private String minimum;
 
     public String minimum() {
         return this.minimum;
     }
 
-    public ScaleCapacityResponse(
-        String default_,
-        String maximum,
-        String minimum) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
-        this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-    }
+    private ScaleCapacityResponse() {}
 
-    private ScaleCapacityResponse() {
-        this.default_ = null;
-        this.maximum = null;
-        this.minimum = null;
+    private ScaleCapacityResponse(ScaleCapacityResponse $) {
+        this.default_ = $.default_;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleCapacityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String default_;
-        private String maximum;
-        private String minimum;
+        private ScaleCapacityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleCapacityResponse();
         }
 
         public Builder(ScaleCapacityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
+            $ = new ScaleCapacityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(String default_) {
-            this.default_ = Objects.requireNonNull(default_);
+            $.default_ = default_;
             return this;
         }
+
         public Builder maximum(String maximum) {
-            this.maximum = Objects.requireNonNull(maximum);
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(String minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
-        }        public ScaleCapacityResponse build() {
-            return new ScaleCapacityResponse(default_, maximum, minimum);
+        }
+
+        public ScaleCapacityResponse build() {
+            $.default_ = Objects.requireNonNull($.default_, "expected parameter 'default' to be non-null");
+            $.maximum = Objects.requireNonNull($.maximum, "expected parameter 'maximum' to be non-null");
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            return $;
         }
     }
+
 }

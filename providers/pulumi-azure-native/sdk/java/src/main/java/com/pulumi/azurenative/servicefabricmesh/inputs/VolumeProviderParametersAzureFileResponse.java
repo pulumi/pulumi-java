@@ -23,10 +23,10 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable String accountKey;
+    private @Nullable String accountKey;
 
     public Optional<String> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -45,64 +45,58 @@ public final class VolumeProviderParametersAzureFileResponse extends com.pulumi.
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
     }
 
-    public VolumeProviderParametersAzureFileResponse(
-        @Nullable String accountKey,
-        String accountName,
-        String shareName) {
-        this.accountKey = accountKey;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private VolumeProviderParametersAzureFileResponse() {}
 
-    private VolumeProviderParametersAzureFileResponse() {
-        this.accountKey = null;
-        this.accountName = null;
-        this.shareName = null;
+    private VolumeProviderParametersAzureFileResponse(VolumeProviderParametersAzureFileResponse $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeProviderParametersAzureFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountKey;
-        private String accountName;
-        private String shareName;
+        private VolumeProviderParametersAzureFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeProviderParametersAzureFileResponse();
         }
 
         public Builder(VolumeProviderParametersAzureFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.shareName = defaults.shareName;
+            $ = new VolumeProviderParametersAzureFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
-        }        public VolumeProviderParametersAzureFileResponse build() {
-            return new VolumeProviderParametersAzureFileResponse(accountKey, accountName, shareName);
+        }
+
+        public VolumeProviderParametersAzureFileResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

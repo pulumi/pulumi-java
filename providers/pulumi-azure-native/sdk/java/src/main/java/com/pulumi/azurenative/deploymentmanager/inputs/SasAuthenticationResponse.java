@@ -22,7 +22,7 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sasUri", required=true)
-      private final String sasUri;
+    private String sasUri;
 
     public String sasUri() {
         return this.sasUri;
@@ -34,55 +34,52 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SasAuthenticationResponse(
-        String sasUri,
-        String type) {
-        this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SasAuthenticationResponse() {}
 
-    private SasAuthenticationResponse() {
-        this.sasUri = null;
-        this.type = null;
+    private SasAuthenticationResponse(SasAuthenticationResponse $) {
+        this.sasUri = $.sasUri;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SasAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sasUri;
-        private String type;
+        private SasAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SasAuthenticationResponse();
         }
 
         public Builder(SasAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasUri = defaults.sasUri;
-    	      this.type = defaults.type;
+            $ = new SasAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sasUri(String sasUri) {
-            this.sasUri = Objects.requireNonNull(sasUri);
+            $.sasUri = sasUri;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SasAuthenticationResponse build() {
-            return new SasAuthenticationResponse(sasUri, type);
+        }
+
+        public SasAuthenticationResponse build() {
+            $.sasUri = Objects.requireNonNull($.sasUri, "expected parameter 'sasUri' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

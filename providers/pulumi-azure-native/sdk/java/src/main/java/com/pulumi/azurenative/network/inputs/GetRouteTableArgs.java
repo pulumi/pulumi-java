@@ -19,10 +19,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableName", required=true)
-      private final String routeTableName;
+    private String routeTableName;
 
     public String routeTableName() {
         return this.routeTableName;
     }
 
-    public GetRouteTableArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String routeTableName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeTableName = Objects.requireNonNull(routeTableName, "expected parameter 'routeTableName' to be non-null");
-    }
+    private GetRouteTableArgs() {}
 
-    private GetRouteTableArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.routeTableName = null;
+    private GetRouteTableArgs(GetRouteTableArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeTableName = $.routeTableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String routeTableName;
+        private GetRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTableArgs();
         }
 
         public Builder(GetRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeTableName = defaults.routeTableName;
+            $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeTableName(String routeTableName) {
-            this.routeTableName = Objects.requireNonNull(routeTableName);
+            $.routeTableName = routeTableName;
             return this;
-        }        public GetRouteTableArgs build() {
-            return new GetRouteTableArgs(expand, resourceGroupName, routeTableName);
+        }
+
+        public GetRouteTableArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeTableName = Objects.requireNonNull($.routeTableName, "expected parameter 'routeTableName' to be non-null");
+            return $;
         }
     }
+
 }

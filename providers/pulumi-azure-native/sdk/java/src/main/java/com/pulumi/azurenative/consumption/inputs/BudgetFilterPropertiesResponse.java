@@ -23,10 +23,10 @@ public final class BudgetFilterPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable BudgetComparisonExpressionResponse dimensions;
+    private @Nullable BudgetComparisonExpressionResponse dimensions;
 
     public Optional<BudgetComparisonExpressionResponse> dimensions() {
-        return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class BudgetFilterPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tags")
-      private final @Nullable BudgetComparisonExpressionResponse tags;
+    private @Nullable BudgetComparisonExpressionResponse tags;
 
     public Optional<BudgetComparisonExpressionResponse> tags() {
-        return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
+        return Optional.ofNullable(this.tags);
     }
 
-    public BudgetFilterPropertiesResponse(
-        @Nullable BudgetComparisonExpressionResponse dimensions,
-        @Nullable BudgetComparisonExpressionResponse tags) {
-        this.dimensions = dimensions;
-        this.tags = tags;
-    }
+    private BudgetFilterPropertiesResponse() {}
 
-    private BudgetFilterPropertiesResponse() {
-        this.dimensions = null;
-        this.tags = null;
+    private BudgetFilterPropertiesResponse(BudgetFilterPropertiesResponse $) {
+        this.dimensions = $.dimensions;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetFilterPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BudgetComparisonExpressionResponse dimensions;
-        private @Nullable BudgetComparisonExpressionResponse tags;
+        private BudgetFilterPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetFilterPropertiesResponse();
         }
 
         public Builder(BudgetFilterPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.tags = defaults.tags;
+            $ = new BudgetFilterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public BudgetFilterPropertiesResponse build() {
-            return new BudgetFilterPropertiesResponse(dimensions, tags);
+        }
+
+        public BudgetFilterPropertiesResponse build() {
+            return $;
         }
     }
+
 }

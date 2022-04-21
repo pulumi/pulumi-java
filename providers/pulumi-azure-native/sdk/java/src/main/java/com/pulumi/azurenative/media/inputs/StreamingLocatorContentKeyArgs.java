@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -35,10 +35,10 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="labelReferenceInStreamingPolicy")
-      private final @Nullable Output<String> labelReferenceInStreamingPolicy;
+    private @Nullable Output<String> labelReferenceInStreamingPolicy;
 
-    public Output<String> labelReferenceInStreamingPolicy() {
-        return this.labelReferenceInStreamingPolicy == null ? Codegen.empty() : this.labelReferenceInStreamingPolicy;
+    public Optional<Output<String>> labelReferenceInStreamingPolicy() {
+        return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class StreamingLocatorContentKeyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public StreamingLocatorContentKeyArgs(
-        Output<String> id,
-        @Nullable Output<String> labelReferenceInStreamingPolicy,
-        @Nullable Output<String> value) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
-        this.value = value;
-    }
+    private StreamingLocatorContentKeyArgs() {}
 
-    private StreamingLocatorContentKeyArgs() {
-        this.id = Codegen.empty();
-        this.labelReferenceInStreamingPolicy = Codegen.empty();
-        this.value = Codegen.empty();
+    private StreamingLocatorContentKeyArgs(StreamingLocatorContentKeyArgs $) {
+        this.id = $.id;
+        this.labelReferenceInStreamingPolicy = $.labelReferenceInStreamingPolicy;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingLocatorContentKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private @Nullable Output<String> labelReferenceInStreamingPolicy;
-        private @Nullable Output<String> value;
+        private StreamingLocatorContentKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingLocatorContentKeyArgs();
         }
 
         public Builder(StreamingLocatorContentKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.labelReferenceInStreamingPolicy = defaults.labelReferenceInStreamingPolicy;
-    	      this.value = defaults.value;
+            $ = new StreamingLocatorContentKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder labelReferenceInStreamingPolicy(@Nullable Output<String> labelReferenceInStreamingPolicy) {
-            this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
+            $.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
-        public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
-            this.labelReferenceInStreamingPolicy = Codegen.ofNullable(labelReferenceInStreamingPolicy);
-            return this;
+
+        public Builder labelReferenceInStreamingPolicy(String labelReferenceInStreamingPolicy) {
+            return labelReferenceInStreamingPolicy(Output.of(labelReferenceInStreamingPolicy));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public StreamingLocatorContentKeyArgs build() {
-            return new StreamingLocatorContentKeyArgs(id, labelReferenceInStreamingPolicy, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public StreamingLocatorContentKeyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

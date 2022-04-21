@@ -21,45 +21,45 @@ public final class ApplicationDeploymentPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="deploymentMode", required=true)
-      private final String deploymentMode;
+    private String deploymentMode;
 
     public String deploymentMode() {
         return this.deploymentMode;
     }
 
-    public ApplicationDeploymentPolicyResponse(String deploymentMode) {
-        this.deploymentMode = Objects.requireNonNull(deploymentMode, "expected parameter 'deploymentMode' to be non-null");
-    }
+    private ApplicationDeploymentPolicyResponse() {}
 
-    private ApplicationDeploymentPolicyResponse() {
-        this.deploymentMode = null;
+    private ApplicationDeploymentPolicyResponse(ApplicationDeploymentPolicyResponse $) {
+        this.deploymentMode = $.deploymentMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationDeploymentPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentMode;
+        private ApplicationDeploymentPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationDeploymentPolicyResponse();
         }
 
         public Builder(ApplicationDeploymentPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentMode = defaults.deploymentMode;
+            $ = new ApplicationDeploymentPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentMode(String deploymentMode) {
-            this.deploymentMode = Objects.requireNonNull(deploymentMode);
+            $.deploymentMode = deploymentMode;
             return this;
-        }        public ApplicationDeploymentPolicyResponse build() {
-            return new ApplicationDeploymentPolicyResponse(deploymentMode);
+        }
+
+        public ApplicationDeploymentPolicyResponse build() {
+            $.deploymentMode = Objects.requireNonNull($.deploymentMode, "expected parameter 'deploymentMode' to be non-null");
+            return $;
         }
     }
+
 }

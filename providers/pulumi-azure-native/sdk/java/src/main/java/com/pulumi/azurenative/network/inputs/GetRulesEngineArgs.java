@@ -17,7 +17,7 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frontDoorName", required=true)
-      private final String frontDoorName;
+    private String frontDoorName;
 
     public String frontDoorName() {
         return this.frontDoorName;
@@ -28,7 +28,7 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rulesEngineName", required=true)
-      private final String rulesEngineName;
+    private String rulesEngineName;
 
     public String rulesEngineName() {
         return this.rulesEngineName;
     }
 
-    public GetRulesEngineArgs(
-        String frontDoorName,
-        String resourceGroupName,
-        String rulesEngineName) {
-        this.frontDoorName = Objects.requireNonNull(frontDoorName, "expected parameter 'frontDoorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rulesEngineName = Objects.requireNonNull(rulesEngineName, "expected parameter 'rulesEngineName' to be non-null");
-    }
+    private GetRulesEngineArgs() {}
 
-    private GetRulesEngineArgs() {
-        this.frontDoorName = null;
-        this.resourceGroupName = null;
-        this.rulesEngineName = null;
+    private GetRulesEngineArgs(GetRulesEngineArgs $) {
+        this.frontDoorName = $.frontDoorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rulesEngineName = $.rulesEngineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRulesEngineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String frontDoorName;
-        private String resourceGroupName;
-        private String rulesEngineName;
+        private GetRulesEngineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRulesEngineArgs();
         }
 
         public Builder(GetRulesEngineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frontDoorName = defaults.frontDoorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rulesEngineName = defaults.rulesEngineName;
+            $ = new GetRulesEngineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frontDoorName(String frontDoorName) {
-            this.frontDoorName = Objects.requireNonNull(frontDoorName);
+            $.frontDoorName = frontDoorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder rulesEngineName(String rulesEngineName) {
-            this.rulesEngineName = Objects.requireNonNull(rulesEngineName);
+            $.rulesEngineName = rulesEngineName;
             return this;
-        }        public GetRulesEngineArgs build() {
-            return new GetRulesEngineArgs(frontDoorName, resourceGroupName, rulesEngineName);
+        }
+
+        public GetRulesEngineArgs build() {
+            $.frontDoorName = Objects.requireNonNull($.frontDoorName, "expected parameter 'frontDoorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.rulesEngineName = Objects.requireNonNull($.rulesEngineName, "expected parameter 'rulesEngineName' to be non-null");
+            return $;
         }
     }
+
 }

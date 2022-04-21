@@ -7,9 +7,9 @@ import com.pulumi.azurenative.elastic.enums.ManagedIdentityTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;
+    private @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
-    public Output<Either<String,ManagedIdentityTypes>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ManagedIdentityTypes>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityPropertiesArgs(@Nullable Output<Either<String,ManagedIdentityTypes>> type) {
-        this.type = type;
-    }
+    private IdentityPropertiesArgs() {}
 
-    private IdentityPropertiesArgs() {
-        this.type = Codegen.empty();
+    private IdentityPropertiesArgs(IdentityPropertiesArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ManagedIdentityTypes>> type;
+        private IdentityPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPropertiesArgs();
         }
 
         public Builder(IdentityPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new IdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,ManagedIdentityTypes>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ManagedIdentityTypes> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IdentityPropertiesArgs build() {
-            return new IdentityPropertiesArgs(type);
+
+        public Builder type(Either<String,ManagedIdentityTypes> type) {
+            return type(Output.of(type));
+        }
+
+        public IdentityPropertiesArgs build() {
+            return $;
         }
     }
+
 }

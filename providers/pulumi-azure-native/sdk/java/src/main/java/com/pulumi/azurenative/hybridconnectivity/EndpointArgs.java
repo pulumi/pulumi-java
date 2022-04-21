@@ -8,9 +8,9 @@ import com.pulumi.azurenative.hybridconnectivity.enums.Type;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable Output<String> createdBy;
+    private @Nullable Output<String> createdBy;
 
-    public Output<String> createdBy() {
-        return this.createdBy == null ? Codegen.empty() : this.createdBy;
+    public Optional<Output<String>> createdBy() {
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdByType")
-      private final @Nullable Output<Either<String,CreatedByType>> createdByType;
+    private @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> createdByType() {
-        return this.createdByType == null ? Codegen.empty() : this.createdByType;
+    public Optional<Output<Either<String,CreatedByType>>> createdByType() {
+        return Optional.ofNullable(this.createdByType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointName")
-      private final @Nullable Output<String> endpointName;
+    private @Nullable Output<String> endpointName;
 
-    public Output<String> endpointName() {
-        return this.endpointName == null ? Codegen.empty() : this.endpointName;
+    public Optional<Output<String>> endpointName() {
+        return Optional.ofNullable(this.endpointName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedAt")
-      private final @Nullable Output<String> lastModifiedAt;
+    private @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> lastModifiedAt() {
-        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
+    public Optional<Output<String>> lastModifiedAt() {
+        return Optional.ofNullable(this.lastModifiedAt);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedBy")
-      private final @Nullable Output<String> lastModifiedBy;
+    private @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> lastModifiedBy() {
-        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
+    public Optional<Output<String>> lastModifiedBy() {
+        return Optional.ofNullable(this.lastModifiedBy);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedByType")
-      private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
+    private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> lastModifiedByType() {
-        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
+    public Optional<Output<Either<String,CreatedByType>>> lastModifiedByType() {
+        return Optional.ofNullable(this.lastModifiedByType);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final Output<String> resourceUri;
+    private Output<String> resourceUri;
 
     public Output<String> resourceUri() {
         return this.resourceUri;
@@ -122,167 +122,140 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,Type>> type;
+    private Output<Either<String,Type>> type;
 
     public Output<Either<String,Type>> type() {
         return this.type;
     }
 
-    public EndpointArgs(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> createdBy,
-        @Nullable Output<Either<String,CreatedByType>> createdByType,
-        @Nullable Output<String> endpointName,
-        @Nullable Output<String> lastModifiedAt,
-        @Nullable Output<String> lastModifiedBy,
-        @Nullable Output<Either<String,CreatedByType>> lastModifiedByType,
-        @Nullable Output<String> resourceId,
-        Output<String> resourceUri,
-        Output<Either<String,Type>> type) {
-        this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.createdByType = createdByType;
-        this.endpointName = endpointName;
-        this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.lastModifiedByType = lastModifiedByType;
-        this.resourceId = resourceId;
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.createdAt = Codegen.empty();
-        this.createdBy = Codegen.empty();
-        this.createdByType = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.lastModifiedAt = Codegen.empty();
-        this.lastModifiedBy = Codegen.empty();
-        this.lastModifiedByType = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.resourceUri = Codegen.empty();
-        this.type = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.createdAt = $.createdAt;
+        this.createdBy = $.createdBy;
+        this.createdByType = $.createdByType;
+        this.endpointName = $.endpointName;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.lastModifiedByType = $.lastModifiedByType;
+        this.resourceId = $.resourceId;
+        this.resourceUri = $.resourceUri;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> createdBy;
-        private @Nullable Output<Either<String,CreatedByType>> createdByType;
-        private @Nullable Output<String> endpointName;
-        private @Nullable Output<String> lastModifiedAt;
-        private @Nullable Output<String> lastModifiedBy;
-        private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
-        private @Nullable Output<String> resourceId;
-        private Output<String> resourceUri;
-        private Output<Either<String,Type>> type;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdByType = defaults.createdByType;
-    	      this.endpointName = defaults.endpointName;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.lastModifiedByType = defaults.lastModifiedByType;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.type = defaults.type;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder createdBy(@Nullable Output<String> createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
-        public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Codegen.ofNullable(createdBy);
-            return this;
+
+        public Builder createdBy(String createdBy) {
+            return createdBy(Output.of(createdBy));
         }
+
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
-            this.createdByType = createdByType;
+            $.createdByType = createdByType;
             return this;
         }
-        public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Codegen.ofNullable(createdByType);
-            return this;
+
+        public Builder createdByType(Either<String,CreatedByType> createdByType) {
+            return createdByType(Output.of(createdByType));
         }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
-            this.endpointName = endpointName;
+            $.endpointName = endpointName;
             return this;
         }
-        public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Codegen.ofNullable(endpointName);
-            return this;
+
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
-            this.lastModifiedAt = lastModifiedAt;
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
-        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
-            return this;
+
+        public Builder lastModifiedAt(String lastModifiedAt) {
+            return lastModifiedAt(Output.of(lastModifiedAt));
         }
+
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
-            this.lastModifiedBy = lastModifiedBy;
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
-        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
-            return this;
+
+        public Builder lastModifiedBy(String lastModifiedBy) {
+            return lastModifiedBy(Output.of(lastModifiedBy));
         }
+
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
-            this.lastModifiedByType = lastModifiedByType;
+            $.lastModifiedByType = lastModifiedByType;
             return this;
         }
-        public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
-            return this;
+
+        public Builder lastModifiedByType(Either<String,CreatedByType> lastModifiedByType) {
+            return lastModifiedByType(Output.of(lastModifiedByType));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceUri(Output<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
+
         public Builder type(Output<Either<String,Type>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,Type> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(createdAt, createdBy, createdByType, endpointName, lastModifiedAt, lastModifiedBy, lastModifiedByType, resourceId, resourceUri, type);
+            return type(Output.of(type));
+        }
+
+        public EndpointArgs build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

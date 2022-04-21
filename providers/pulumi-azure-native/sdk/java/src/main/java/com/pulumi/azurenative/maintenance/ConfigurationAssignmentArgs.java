@@ -5,9 +5,9 @@ package com.pulumi.azurenative.maintenance;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="configurationAssignmentName")
-      private final @Nullable Output<String> configurationAssignmentName;
+    private @Nullable Output<String> configurationAssignmentName;
 
-    public Output<String> configurationAssignmentName() {
-        return this.configurationAssignmentName == null ? Codegen.empty() : this.configurationAssignmentName;
+    public Optional<Output<String>> configurationAssignmentName() {
+        return Optional.ofNullable(this.configurationAssignmentName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maintenanceConfigurationId")
-      private final @Nullable Output<String> maintenanceConfigurationId;
+    private @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> maintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
+    public Optional<Output<String>> maintenanceConfigurationId() {
+        return Optional.ofNullable(this.maintenanceConfigurationId);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="providerName", required=true)
-      private final Output<String> providerName;
+    private Output<String> providerName;
 
     public Output<String> providerName() {
         return this.providerName;
@@ -64,7 +64,7 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,10 +75,10 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -97,141 +97,122 @@ public final class ConfigurationAssignmentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
     }
 
-    public ConfigurationAssignmentArgs(
-        @Nullable Output<String> configurationAssignmentName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> maintenanceConfigurationId,
-        Output<String> providerName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceId,
-        Output<String> resourceName,
-        Output<String> resourceType) {
-        this.configurationAssignmentName = configurationAssignmentName;
-        this.location = location;
-        this.maintenanceConfigurationId = maintenanceConfigurationId;
-        this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = resourceId;
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ConfigurationAssignmentArgs() {}
 
-    private ConfigurationAssignmentArgs() {
-        this.configurationAssignmentName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenanceConfigurationId = Codegen.empty();
-        this.providerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ConfigurationAssignmentArgs(ConfigurationAssignmentArgs $) {
+        this.configurationAssignmentName = $.configurationAssignmentName;
+        this.location = $.location;
+        this.maintenanceConfigurationId = $.maintenanceConfigurationId;
+        this.providerName = $.providerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationAssignmentName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> maintenanceConfigurationId;
-        private Output<String> providerName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceId;
-        private Output<String> resourceName;
-        private Output<String> resourceType;
+        private ConfigurationAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAssignmentArgs();
         }
 
         public Builder(ConfigurationAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationAssignmentName = defaults.configurationAssignmentName;
-    	      this.location = defaults.location;
-    	      this.maintenanceConfigurationId = defaults.maintenanceConfigurationId;
-    	      this.providerName = defaults.providerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ConfigurationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationAssignmentName(@Nullable Output<String> configurationAssignmentName) {
-            this.configurationAssignmentName = configurationAssignmentName;
+            $.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
-        public Builder configurationAssignmentName(@Nullable String configurationAssignmentName) {
-            this.configurationAssignmentName = Codegen.ofNullable(configurationAssignmentName);
-            return this;
+
+        public Builder configurationAssignmentName(String configurationAssignmentName) {
+            return configurationAssignmentName(Output.of(configurationAssignmentName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = maintenanceConfigurationId;
+            $.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Codegen.ofNullable(maintenanceConfigurationId);
-            return this;
+
+        public Builder maintenanceConfigurationId(String maintenanceConfigurationId) {
+            return maintenanceConfigurationId(Output.of(maintenanceConfigurationId));
         }
+
         public Builder providerName(Output<String> providerName) {
-            this.providerName = Objects.requireNonNull(providerName);
+            $.providerName = providerName;
             return this;
         }
+
         public Builder providerName(String providerName) {
-            this.providerName = Output.of(Objects.requireNonNull(providerName));
-            return this;
+            return providerName(Output.of(providerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
-        }        public ConfigurationAssignmentArgs build() {
-            return new ConfigurationAssignmentArgs(configurationAssignmentName, location, maintenanceConfigurationId, providerName, resourceGroupName, resourceId, resourceName, resourceType);
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ConfigurationAssignmentArgs build() {
+            $.providerName = Objects.requireNonNull($.providerName, "expected parameter 'providerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.dataprotection;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backupInstanceName")
-      private final @Nullable Output<String> backupInstanceName;
+    private @Nullable Output<String> backupInstanceName;
 
-    public Output<String> backupInstanceName() {
-        return this.backupInstanceName == null ? Codegen.empty() : this.backupInstanceName;
+    public Optional<Output<String>> backupInstanceName() {
+        return Optional.ofNullable(this.backupInstanceName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
+    private @Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
 
-    public Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,80 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vaultName", required=true)
-      private final Output<String> vaultName;
+    private Output<String> vaultName;
 
     public Output<String> vaultName() {
         return this.vaultName;
     }
 
-    public BackupInstanceArgs(
-        @Nullable Output<String> backupInstanceName,
-        @Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> vaultName) {
-        this.backupInstanceName = backupInstanceName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private BackupInstanceArgs() {}
 
-    private BackupInstanceArgs() {
-        this.backupInstanceName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.vaultName = Codegen.empty();
+    private BackupInstanceArgs(BackupInstanceArgs $) {
+        this.backupInstanceName = $.backupInstanceName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backupInstanceName;
-        private @Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> vaultName;
+        private BackupInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupInstanceArgs();
         }
 
         public Builder(BackupInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupInstanceName = defaults.backupInstanceName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new BackupInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupInstanceName(@Nullable Output<String> backupInstanceName) {
-            this.backupInstanceName = backupInstanceName;
+            $.backupInstanceName = backupInstanceName;
             return this;
         }
-        public Builder backupInstanceName(@Nullable String backupInstanceName) {
-            this.backupInstanceName = Codegen.ofNullable(backupInstanceName);
-            return this;
+
+        public Builder backupInstanceName(String backupInstanceName) {
+            return backupInstanceName(Output.of(backupInstanceName));
         }
+
         public Builder properties(@Nullable Output<com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(com.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder vaultName(Output<String> vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
-            return this;
-        }        public BackupInstanceArgs build() {
-            return new BackupInstanceArgs(backupInstanceName, properties, resourceGroupName, vaultName);
+            return vaultName(Output.of(vaultName));
+        }
+
+        public BackupInstanceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesBoundsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
      * 
      */
     @Import(name="bounds")
-      private final @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
+    private @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
-    public Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds() {
-        return this.bounds == null ? Codegen.empty() : this.bounds;
+    public Optional<Output<ExpressRouteGatewayPropertiesBoundsArgs>> bounds() {
+        return Optional.ofNullable(this.bounds);
     }
 
-    public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(@Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
-        this.bounds = bounds;
-    }
+    private ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs() {}
 
-    private ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs() {
-        this.bounds = Codegen.empty();
+    private ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs $) {
+        this.bounds = $.bounds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
+        private ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs();
         }
 
         public Builder(ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bounds = defaults.bounds;
+            $ = new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bounds(@Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
-            this.bounds = bounds;
+            $.bounds = bounds;
             return this;
         }
-        public Builder bounds(@Nullable ExpressRouteGatewayPropertiesBoundsArgs bounds) {
-            this.bounds = Codegen.ofNullable(bounds);
-            return this;
-        }        public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
-            return new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(bounds);
+
+        public Builder bounds(ExpressRouteGatewayPropertiesBoundsArgs bounds) {
+            return bounds(Output.of(bounds));
+        }
+
+        public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {
+            return $;
         }
     }
+
 }

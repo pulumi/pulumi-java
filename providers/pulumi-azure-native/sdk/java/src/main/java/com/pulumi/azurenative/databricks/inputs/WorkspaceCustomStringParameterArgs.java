@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databricks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class WorkspaceCustomStringParameterArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public WorkspaceCustomStringParameterArgs(Output<String> value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private WorkspaceCustomStringParameterArgs() {}
 
-    private WorkspaceCustomStringParameterArgs() {
-        this.value = Codegen.empty();
+    private WorkspaceCustomStringParameterArgs(WorkspaceCustomStringParameterArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCustomStringParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> value;
+        private WorkspaceCustomStringParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCustomStringParameterArgs();
         }
 
         public Builder(WorkspaceCustomStringParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new WorkspaceCustomStringParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public WorkspaceCustomStringParameterArgs build() {
-            return new WorkspaceCustomStringParameterArgs(value);
+            return value(Output.of(value));
+        }
+
+        public WorkspaceCustomStringParameterArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

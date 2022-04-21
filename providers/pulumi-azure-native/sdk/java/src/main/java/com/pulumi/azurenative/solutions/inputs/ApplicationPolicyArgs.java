@@ -5,9 +5,9 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<String> parameters;
+    private @Nullable Output<String> parameters;
 
-    public Output<String> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ApplicationPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyDefinitionId")
-      private final @Nullable Output<String> policyDefinitionId;
+    private @Nullable Output<String> policyDefinitionId;
 
-    public Output<String> policyDefinitionId() {
-        return this.policyDefinitionId == null ? Codegen.empty() : this.policyDefinitionId;
+    public Optional<Output<String>> policyDefinitionId() {
+        return Optional.ofNullable(this.policyDefinitionId);
     }
 
-    public ApplicationPolicyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> parameters,
-        @Nullable Output<String> policyDefinitionId) {
-        this.name = name;
-        this.parameters = parameters;
-        this.policyDefinitionId = policyDefinitionId;
-    }
+    private ApplicationPolicyArgs() {}
 
-    private ApplicationPolicyArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policyDefinitionId = Codegen.empty();
+    private ApplicationPolicyArgs(ApplicationPolicyArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.policyDefinitionId = $.policyDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parameters;
-        private @Nullable Output<String> policyDefinitionId;
+        private ApplicationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPolicyArgs();
         }
 
         public Builder(ApplicationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.policyDefinitionId = defaults.policyDefinitionId;
+            $ = new ApplicationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable String parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(String parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
-            this.policyDefinitionId = policyDefinitionId;
+            $.policyDefinitionId = policyDefinitionId;
             return this;
         }
-        public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = Codegen.ofNullable(policyDefinitionId);
-            return this;
-        }        public ApplicationPolicyArgs build() {
-            return new ApplicationPolicyArgs(name, parameters, policyDefinitionId);
+
+        public Builder policyDefinitionId(String policyDefinitionId) {
+            return policyDefinitionId(Output.of(policyDefinitionId));
+        }
+
+        public ApplicationPolicyArgs build() {
+            return $;
         }
     }
+
 }

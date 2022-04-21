@@ -8,11 +8,11 @@ import com.pulumi.azurenative.peering.inputs.ContactDetailArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable Output<Integer> peerAsn;
+    private @Nullable Output<Integer> peerAsn;
 
-    public Output<Integer> peerAsn() {
-        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
+    public Optional<Output<Integer>> peerAsn() {
+        return Optional.ofNullable(this.peerAsn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerAsnName")
-      private final @Nullable Output<String> peerAsnName;
+    private @Nullable Output<String> peerAsnName;
 
-    public Output<String> peerAsnName() {
-        return this.peerAsnName == null ? Codegen.empty() : this.peerAsnName;
+    public Optional<Output<String>> peerAsnName() {
+        return Optional.ofNullable(this.peerAsnName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerContactDetail")
-      private final @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
+    private @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
 
-    public Output<List<ContactDetailArgs>> peerContactDetail() {
-        return this.peerContactDetail == null ? Codegen.empty() : this.peerContactDetail;
+    public Optional<Output<List<ContactDetailArgs>>> peerContactDetail() {
+        return Optional.ofNullable(this.peerContactDetail);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerName")
-      private final @Nullable Output<String> peerName;
+    private @Nullable Output<String> peerName;
 
-    public Output<String> peerName() {
-        return this.peerName == null ? Codegen.empty() : this.peerName;
+    public Optional<Output<String>> peerName() {
+        return Optional.ofNullable(this.peerName);
     }
 
     /**
@@ -69,105 +69,92 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationState")
-      private final @Nullable Output<Either<String,ValidationState>> validationState;
+    private @Nullable Output<Either<String,ValidationState>> validationState;
 
-    public Output<Either<String,ValidationState>> validationState() {
-        return this.validationState == null ? Codegen.empty() : this.validationState;
+    public Optional<Output<Either<String,ValidationState>>> validationState() {
+        return Optional.ofNullable(this.validationState);
     }
 
-    public PeerAsnArgs(
-        @Nullable Output<Integer> peerAsn,
-        @Nullable Output<String> peerAsnName,
-        @Nullable Output<List<ContactDetailArgs>> peerContactDetail,
-        @Nullable Output<String> peerName,
-        @Nullable Output<Either<String,ValidationState>> validationState) {
-        this.peerAsn = peerAsn;
-        this.peerAsnName = peerAsnName;
-        this.peerContactDetail = peerContactDetail;
-        this.peerName = peerName;
-        this.validationState = validationState;
-    }
+    private PeerAsnArgs() {}
 
-    private PeerAsnArgs() {
-        this.peerAsn = Codegen.empty();
-        this.peerAsnName = Codegen.empty();
-        this.peerContactDetail = Codegen.empty();
-        this.peerName = Codegen.empty();
-        this.validationState = Codegen.empty();
+    private PeerAsnArgs(PeerAsnArgs $) {
+        this.peerAsn = $.peerAsn;
+        this.peerAsnName = $.peerAsnName;
+        this.peerContactDetail = $.peerContactDetail;
+        this.peerName = $.peerName;
+        this.validationState = $.validationState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeerAsnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> peerAsn;
-        private @Nullable Output<String> peerAsnName;
-        private @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
-        private @Nullable Output<String> peerName;
-        private @Nullable Output<Either<String,ValidationState>> validationState;
+        private PeerAsnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeerAsnArgs();
         }
 
         public Builder(PeerAsnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peerAsn = defaults.peerAsn;
-    	      this.peerAsnName = defaults.peerAsnName;
-    	      this.peerContactDetail = defaults.peerContactDetail;
-    	      this.peerName = defaults.peerName;
-    	      this.validationState = defaults.validationState;
+            $ = new PeerAsnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peerAsn(@Nullable Output<Integer> peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
         }
-        public Builder peerAsn(@Nullable Integer peerAsn) {
-            this.peerAsn = Codegen.ofNullable(peerAsn);
-            return this;
+
+        public Builder peerAsn(Integer peerAsn) {
+            return peerAsn(Output.of(peerAsn));
         }
+
         public Builder peerAsnName(@Nullable Output<String> peerAsnName) {
-            this.peerAsnName = peerAsnName;
+            $.peerAsnName = peerAsnName;
             return this;
         }
-        public Builder peerAsnName(@Nullable String peerAsnName) {
-            this.peerAsnName = Codegen.ofNullable(peerAsnName);
-            return this;
+
+        public Builder peerAsnName(String peerAsnName) {
+            return peerAsnName(Output.of(peerAsnName));
         }
+
         public Builder peerContactDetail(@Nullable Output<List<ContactDetailArgs>> peerContactDetail) {
-            this.peerContactDetail = peerContactDetail;
+            $.peerContactDetail = peerContactDetail;
             return this;
         }
-        public Builder peerContactDetail(@Nullable List<ContactDetailArgs> peerContactDetail) {
-            this.peerContactDetail = Codegen.ofNullable(peerContactDetail);
-            return this;
+
+        public Builder peerContactDetail(List<ContactDetailArgs> peerContactDetail) {
+            return peerContactDetail(Output.of(peerContactDetail));
         }
+
         public Builder peerContactDetail(ContactDetailArgs... peerContactDetail) {
             return peerContactDetail(List.of(peerContactDetail));
         }
+
         public Builder peerName(@Nullable Output<String> peerName) {
-            this.peerName = peerName;
+            $.peerName = peerName;
             return this;
         }
-        public Builder peerName(@Nullable String peerName) {
-            this.peerName = Codegen.ofNullable(peerName);
-            return this;
+
+        public Builder peerName(String peerName) {
+            return peerName(Output.of(peerName));
         }
+
         public Builder validationState(@Nullable Output<Either<String,ValidationState>> validationState) {
-            this.validationState = validationState;
+            $.validationState = validationState;
             return this;
         }
-        public Builder validationState(@Nullable Either<String,ValidationState> validationState) {
-            this.validationState = Codegen.ofNullable(validationState);
-            return this;
-        }        public PeerAsnArgs build() {
-            return new PeerAsnArgs(peerAsn, peerAsnName, peerContactDetail, peerName, validationState);
+
+        public Builder validationState(Either<String,ValidationState> validationState) {
+            return validationState(Output.of(validationState));
+        }
+
+        public PeerAsnArgs build() {
+            return $;
         }
     }
+
 }

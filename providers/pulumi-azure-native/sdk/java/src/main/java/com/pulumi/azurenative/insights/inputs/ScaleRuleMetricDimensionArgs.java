@@ -7,7 +7,6 @@ import com.pulumi.azurenative.insights.enums.ScaleRuleMetricDimensionOperationTy
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dimensionName", required=true)
-      private final Output<String> dimensionName;
+    private Output<String> dimensionName;
 
     public Output<String> dimensionName() {
         return this.dimensionName;
@@ -37,7 +36,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
+    private Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
 
     public Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator() {
         return this.operator;
@@ -48,79 +47,75 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public ScaleRuleMetricDimensionArgs(
-        Output<String> dimensionName,
-        Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator,
-        Output<List<String>> values) {
-        this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ScaleRuleMetricDimensionArgs() {}
 
-    private ScaleRuleMetricDimensionArgs() {
-        this.dimensionName = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.values = Codegen.empty();
+    private ScaleRuleMetricDimensionArgs(ScaleRuleMetricDimensionArgs $) {
+        this.dimensionName = $.dimensionName;
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleMetricDimensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dimensionName;
-        private Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
-        private Output<List<String>> values;
+        private ScaleRuleMetricDimensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleMetricDimensionArgs();
         }
 
         public Builder(ScaleRuleMetricDimensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensionName = defaults.dimensionName;
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new ScaleRuleMetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensionName(Output<String> dimensionName) {
-            this.dimensionName = Objects.requireNonNull(dimensionName);
+            $.dimensionName = dimensionName;
             return this;
         }
+
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
-            return this;
+            return dimensionName(Output.of(dimensionName));
         }
+
         public Builder operator(Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(Either<String,ScaleRuleMetricDimensionOperationType> operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ScaleRuleMetricDimensionArgs build() {
-            return new ScaleRuleMetricDimensionArgs(dimensionName, operator, values);
+        }
+
+        public ScaleRuleMetricDimensionArgs build() {
+            $.dimensionName = Objects.requireNonNull($.dimensionName, "expected parameter 'dimensionName' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

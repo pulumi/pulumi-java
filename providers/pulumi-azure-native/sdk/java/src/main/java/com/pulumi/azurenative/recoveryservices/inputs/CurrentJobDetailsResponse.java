@@ -23,10 +23,10 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="jobId")
-      private final @Nullable String jobId;
+    private @Nullable String jobId;
 
     public Optional<String> jobId() {
-        return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
+        return Optional.ofNullable(this.jobId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="jobName")
-      private final @Nullable String jobName;
+    private @Nullable String jobName;
 
     public Optional<String> jobName() {
-        return this.jobName == null ? Optional.empty() : Optional.ofNullable(this.jobName);
+        return Optional.ofNullable(this.jobName);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public CurrentJobDetailsResponse(
-        @Nullable String jobId,
-        @Nullable String jobName,
-        @Nullable String startTime) {
-        this.jobId = jobId;
-        this.jobName = jobName;
-        this.startTime = startTime;
-    }
+    private CurrentJobDetailsResponse() {}
 
-    private CurrentJobDetailsResponse() {
-        this.jobId = null;
-        this.jobName = null;
-        this.startTime = null;
+    private CurrentJobDetailsResponse(CurrentJobDetailsResponse $) {
+        this.jobId = $.jobId;
+        this.jobName = $.jobName;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CurrentJobDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String jobId;
-        private @Nullable String jobName;
-        private @Nullable String startTime;
+        private CurrentJobDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CurrentJobDetailsResponse();
         }
 
         public Builder(CurrentJobDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.jobName = defaults.jobName;
-    	      this.startTime = defaults.startTime;
+            $ = new CurrentJobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
+
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = jobName;
+            $.jobName = jobName;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public CurrentJobDetailsResponse build() {
-            return new CurrentJobDetailsResponse(jobId, jobName, startTime);
+        }
+
+        public CurrentJobDetailsResponse build() {
+            return $;
         }
     }
+
 }

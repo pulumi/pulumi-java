@@ -26,7 +26,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -37,10 +37,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="includePath")
-      private final @Nullable Boolean includePath;
+    private @Nullable Boolean includePath;
 
     public Optional<Boolean> includePath() {
-        return this.includePath == null ? Optional.empty() : Optional.ofNullable(this.includePath);
+        return Optional.ofNullable(this.includePath);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="includeQueryString")
-      private final @Nullable Boolean includeQueryString;
+    private @Nullable Boolean includeQueryString;
 
     public Optional<Boolean> includeQueryString() {
-        return this.includeQueryString == null ? Optional.empty() : Optional.ofNullable(this.includeQueryString);
+        return Optional.ofNullable(this.includeQueryString);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="pathRules")
-      private final @Nullable List<SubResourceResponse> pathRules;
+    private @Nullable List<SubResourceResponse> pathRules;
 
-    public List<SubResourceResponse> pathRules() {
-        return this.pathRules == null ? List.of() : this.pathRules;
+    public Optional<List<SubResourceResponse>> pathRules() {
+        return Optional.ofNullable(this.pathRules);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="redirectType")
-      private final @Nullable String redirectType;
+    private @Nullable String redirectType;
 
     public Optional<String> redirectType() {
-        return this.redirectType == null ? Optional.empty() : Optional.ofNullable(this.redirectType);
+        return Optional.ofNullable(this.redirectType);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="requestRoutingRules")
-      private final @Nullable List<SubResourceResponse> requestRoutingRules;
+    private @Nullable List<SubResourceResponse> requestRoutingRules;
 
-    public List<SubResourceResponse> requestRoutingRules() {
-        return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
+    public Optional<List<SubResourceResponse>> requestRoutingRules() {
+        return Optional.ofNullable(this.requestRoutingRules);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="targetListener")
-      private final @Nullable SubResourceResponse targetListener;
+    private @Nullable SubResourceResponse targetListener;
 
     public Optional<SubResourceResponse> targetListener() {
-        return this.targetListener == null ? Optional.empty() : Optional.ofNullable(this.targetListener);
+        return Optional.ofNullable(this.targetListener);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="targetUrl")
-      private final @Nullable String targetUrl;
+    private @Nullable String targetUrl;
 
     public Optional<String> targetUrl() {
-        return this.targetUrl == null ? Optional.empty() : Optional.ofNullable(this.targetUrl);
+        return Optional.ofNullable(this.targetUrl);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -147,154 +147,124 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
      * 
      */
     @Import(name="urlPathMaps")
-      private final @Nullable List<SubResourceResponse> urlPathMaps;
+    private @Nullable List<SubResourceResponse> urlPathMaps;
 
-    public List<SubResourceResponse> urlPathMaps() {
-        return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
+    public Optional<List<SubResourceResponse>> urlPathMaps() {
+        return Optional.ofNullable(this.urlPathMaps);
     }
 
-    public ApplicationGatewayRedirectConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable Boolean includePath,
-        @Nullable Boolean includeQueryString,
-        @Nullable String name,
-        @Nullable List<SubResourceResponse> pathRules,
-        @Nullable String redirectType,
-        @Nullable List<SubResourceResponse> requestRoutingRules,
-        @Nullable SubResourceResponse targetListener,
-        @Nullable String targetUrl,
-        String type,
-        @Nullable List<SubResourceResponse> urlPathMaps) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.includePath = includePath;
-        this.includeQueryString = includeQueryString;
-        this.name = name;
-        this.pathRules = pathRules;
-        this.redirectType = redirectType;
-        this.requestRoutingRules = requestRoutingRules;
-        this.targetListener = targetListener;
-        this.targetUrl = targetUrl;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.urlPathMaps = urlPathMaps;
-    }
+    private ApplicationGatewayRedirectConfigurationResponse() {}
 
-    private ApplicationGatewayRedirectConfigurationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.includePath = null;
-        this.includeQueryString = null;
-        this.name = null;
-        this.pathRules = List.of();
-        this.redirectType = null;
-        this.requestRoutingRules = List.of();
-        this.targetListener = null;
-        this.targetUrl = null;
-        this.type = null;
-        this.urlPathMaps = List.of();
+    private ApplicationGatewayRedirectConfigurationResponse(ApplicationGatewayRedirectConfigurationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.includePath = $.includePath;
+        this.includeQueryString = $.includeQueryString;
+        this.name = $.name;
+        this.pathRules = $.pathRules;
+        this.redirectType = $.redirectType;
+        this.requestRoutingRules = $.requestRoutingRules;
+        this.targetListener = $.targetListener;
+        this.targetUrl = $.targetUrl;
+        this.type = $.type;
+        this.urlPathMaps = $.urlPathMaps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRedirectConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable Boolean includePath;
-        private @Nullable Boolean includeQueryString;
-        private @Nullable String name;
-        private @Nullable List<SubResourceResponse> pathRules;
-        private @Nullable String redirectType;
-        private @Nullable List<SubResourceResponse> requestRoutingRules;
-        private @Nullable SubResourceResponse targetListener;
-        private @Nullable String targetUrl;
-        private String type;
-        private @Nullable List<SubResourceResponse> urlPathMaps;
+        private ApplicationGatewayRedirectConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRedirectConfigurationResponse();
         }
 
         public Builder(ApplicationGatewayRedirectConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.includePath = defaults.includePath;
-    	      this.includeQueryString = defaults.includeQueryString;
-    	      this.name = defaults.name;
-    	      this.pathRules = defaults.pathRules;
-    	      this.redirectType = defaults.redirectType;
-    	      this.requestRoutingRules = defaults.requestRoutingRules;
-    	      this.targetListener = defaults.targetListener;
-    	      this.targetUrl = defaults.targetUrl;
-    	      this.type = defaults.type;
-    	      this.urlPathMaps = defaults.urlPathMaps;
+            $ = new ApplicationGatewayRedirectConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder includePath(@Nullable Boolean includePath) {
-            this.includePath = includePath;
+            $.includePath = includePath;
             return this;
         }
+
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
-            this.includeQueryString = includeQueryString;
+            $.includeQueryString = includeQueryString;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder pathRules(@Nullable List<SubResourceResponse> pathRules) {
-            this.pathRules = pathRules;
+            $.pathRules = pathRules;
             return this;
         }
+
         public Builder pathRules(SubResourceResponse... pathRules) {
             return pathRules(List.of(pathRules));
         }
+
         public Builder redirectType(@Nullable String redirectType) {
-            this.redirectType = redirectType;
+            $.redirectType = redirectType;
             return this;
         }
+
         public Builder requestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
-            this.requestRoutingRules = requestRoutingRules;
+            $.requestRoutingRules = requestRoutingRules;
             return this;
         }
+
         public Builder requestRoutingRules(SubResourceResponse... requestRoutingRules) {
             return requestRoutingRules(List.of(requestRoutingRules));
         }
+
         public Builder targetListener(@Nullable SubResourceResponse targetListener) {
-            this.targetListener = targetListener;
+            $.targetListener = targetListener;
             return this;
         }
+
         public Builder targetUrl(@Nullable String targetUrl) {
-            this.targetUrl = targetUrl;
+            $.targetUrl = targetUrl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder urlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
-            this.urlPathMaps = urlPathMaps;
+            $.urlPathMaps = urlPathMaps;
             return this;
         }
+
         public Builder urlPathMaps(SubResourceResponse... urlPathMaps) {
             return urlPathMaps(List.of(urlPathMaps));
-        }        public ApplicationGatewayRedirectConfigurationResponse build() {
-            return new ApplicationGatewayRedirectConfigurationResponse(etag, id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, type, urlPathMaps);
+        }
+
+        public ApplicationGatewayRedirectConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

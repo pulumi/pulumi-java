@@ -7,10 +7,10 @@ import com.pulumi.azurenative.media.inputs.MediaGraphAssetSinkArgs;
 import com.pulumi.azurenative.media.inputs.MediaGraphRtspSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,10 +34,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mediaGraphName")
-      private final @Nullable Output<String> mediaGraphName;
+    private @Nullable Output<String> mediaGraphName;
 
-    public Output<String> mediaGraphName() {
-        return this.mediaGraphName == null ? Codegen.empty() : this.mediaGraphName;
+    public Optional<Output<String>> mediaGraphName() {
+        return Optional.ofNullable(this.mediaGraphName);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sinks", required=true)
-      private final Output<List<MediaGraphAssetSinkArgs>> sinks;
+    private Output<List<MediaGraphAssetSinkArgs>> sinks;
 
     public Output<List<MediaGraphAssetSinkArgs>> sinks() {
         return this.sinks;
@@ -78,121 +78,110 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sources", required=true)
-      private final Output<List<MediaGraphRtspSourceArgs>> sources;
+    private Output<List<MediaGraphRtspSourceArgs>> sources;
 
     public Output<List<MediaGraphRtspSourceArgs>> sources() {
         return this.sources;
     }
 
-    public MediaGraphArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> mediaGraphName,
-        Output<String> resourceGroupName,
-        Output<List<MediaGraphAssetSinkArgs>> sinks,
-        Output<List<MediaGraphRtspSourceArgs>> sources) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.mediaGraphName = mediaGraphName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sinks = Objects.requireNonNull(sinks, "expected parameter 'sinks' to be non-null");
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-    }
+    private MediaGraphArgs() {}
 
-    private MediaGraphArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.mediaGraphName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sinks = Codegen.empty();
-        this.sources = Codegen.empty();
+    private MediaGraphArgs(MediaGraphArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.mediaGraphName = $.mediaGraphName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sinks = $.sinks;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> mediaGraphName;
-        private Output<String> resourceGroupName;
-        private Output<List<MediaGraphAssetSinkArgs>> sinks;
-        private Output<List<MediaGraphRtspSourceArgs>> sources;
+        private MediaGraphArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphArgs();
         }
 
         public Builder(MediaGraphArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.mediaGraphName = defaults.mediaGraphName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sinks = defaults.sinks;
-    	      this.sources = defaults.sources;
+            $ = new MediaGraphArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder mediaGraphName(@Nullable Output<String> mediaGraphName) {
-            this.mediaGraphName = mediaGraphName;
+            $.mediaGraphName = mediaGraphName;
             return this;
         }
-        public Builder mediaGraphName(@Nullable String mediaGraphName) {
-            this.mediaGraphName = Codegen.ofNullable(mediaGraphName);
-            return this;
+
+        public Builder mediaGraphName(String mediaGraphName) {
+            return mediaGraphName(Output.of(mediaGraphName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sinks(Output<List<MediaGraphAssetSinkArgs>> sinks) {
-            this.sinks = Objects.requireNonNull(sinks);
+            $.sinks = sinks;
             return this;
         }
+
         public Builder sinks(List<MediaGraphAssetSinkArgs> sinks) {
-            this.sinks = Output.of(Objects.requireNonNull(sinks));
-            return this;
+            return sinks(Output.of(sinks));
         }
+
         public Builder sinks(MediaGraphAssetSinkArgs... sinks) {
             return sinks(List.of(sinks));
         }
+
         public Builder sources(Output<List<MediaGraphRtspSourceArgs>> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(List<MediaGraphRtspSourceArgs> sources) {
-            this.sources = Output.of(Objects.requireNonNull(sources));
-            return this;
+            return sources(Output.of(sources));
         }
+
         public Builder sources(MediaGraphRtspSourceArgs... sources) {
             return sources(List.of(sources));
-        }        public MediaGraphArgs build() {
-            return new MediaGraphArgs(accountName, description, mediaGraphName, resourceGroupName, sinks, sources);
+        }
+
+        public MediaGraphArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sinks = Objects.requireNonNull($.sinks, "expected parameter 'sinks' to be non-null");
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            return $;
         }
     }
+
 }

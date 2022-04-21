@@ -21,7 +21,7 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -32,7 +32,7 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataFormat", required=true)
-      private final String dataFormat;
+    private String dataFormat;
 
     public String dataFormat() {
         return this.dataFormat;
@@ -43,64 +43,59 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="storageAccountCredentialId", required=true)
-      private final String storageAccountCredentialId;
+    private String storageAccountCredentialId;
 
     public String storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 
-    public AzureContainerInfoResponse(
-        String containerName,
-        String dataFormat,
-        String storageAccountCredentialId) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
-        this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
-    }
+    private AzureContainerInfoResponse() {}
 
-    private AzureContainerInfoResponse() {
-        this.containerName = null;
-        this.dataFormat = null;
-        this.storageAccountCredentialId = null;
+    private AzureContainerInfoResponse(AzureContainerInfoResponse $) {
+        this.containerName = $.containerName;
+        this.dataFormat = $.dataFormat;
+        this.storageAccountCredentialId = $.storageAccountCredentialId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureContainerInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerName;
-        private String dataFormat;
-        private String storageAccountCredentialId;
+        private AzureContainerInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureContainerInfoResponse();
         }
 
         public Builder(AzureContainerInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.dataFormat = defaults.dataFormat;
-    	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
+            $ = new AzureContainerInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder dataFormat(String dataFormat) {
-            this.dataFormat = Objects.requireNonNull(dataFormat);
+            $.dataFormat = dataFormat;
             return this;
         }
+
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
+            $.storageAccountCredentialId = storageAccountCredentialId;
             return this;
-        }        public AzureContainerInfoResponse build() {
-            return new AzureContainerInfoResponse(containerName, dataFormat, storageAccountCredentialId);
+        }
+
+        public AzureContainerInfoResponse build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.dataFormat = Objects.requireNonNull($.dataFormat, "expected parameter 'dataFormat' to be non-null");
+            $.storageAccountCredentialId = Objects.requireNonNull($.storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
+            return $;
         }
     }
+
 }

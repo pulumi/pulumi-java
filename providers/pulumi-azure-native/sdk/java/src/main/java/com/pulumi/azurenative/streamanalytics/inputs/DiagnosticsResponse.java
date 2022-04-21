@@ -22,48 +22,49 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<DiagnosticConditionResponse> conditions;
+    private List<DiagnosticConditionResponse> conditions;
 
     public List<DiagnosticConditionResponse> conditions() {
         return this.conditions;
     }
 
-    public DiagnosticsResponse(List<DiagnosticConditionResponse> conditions) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-    }
+    private DiagnosticsResponse() {}
 
-    private DiagnosticsResponse() {
-        this.conditions = List.of();
+    private DiagnosticsResponse(DiagnosticsResponse $) {
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DiagnosticConditionResponse> conditions;
+        private DiagnosticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsResponse();
         }
 
         public Builder(DiagnosticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
+            $ = new DiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(List<DiagnosticConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(DiagnosticConditionResponse... conditions) {
             return conditions(List.of(conditions));
-        }        public DiagnosticsResponse build() {
-            return new DiagnosticsResponse(conditions);
+        }
+
+        public DiagnosticsResponse build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ConnectionMonitorSuccessThresholdResponse extends com.pulumi.
      * 
      */
     @Import(name="checksFailedPercent")
-      private final @Nullable Integer checksFailedPercent;
+    private @Nullable Integer checksFailedPercent;
 
     public Optional<Integer> checksFailedPercent() {
-        return this.checksFailedPercent == null ? Optional.empty() : Optional.ofNullable(this.checksFailedPercent);
+        return Optional.ofNullable(this.checksFailedPercent);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ConnectionMonitorSuccessThresholdResponse extends com.pulumi.
      * 
      */
     @Import(name="roundTripTimeMs")
-      private final @Nullable Double roundTripTimeMs;
+    private @Nullable Double roundTripTimeMs;
 
     public Optional<Double> roundTripTimeMs() {
-        return this.roundTripTimeMs == null ? Optional.empty() : Optional.ofNullable(this.roundTripTimeMs);
+        return Optional.ofNullable(this.roundTripTimeMs);
     }
 
-    public ConnectionMonitorSuccessThresholdResponse(
-        @Nullable Integer checksFailedPercent,
-        @Nullable Double roundTripTimeMs) {
-        this.checksFailedPercent = checksFailedPercent;
-        this.roundTripTimeMs = roundTripTimeMs;
-    }
+    private ConnectionMonitorSuccessThresholdResponse() {}
 
-    private ConnectionMonitorSuccessThresholdResponse() {
-        this.checksFailedPercent = null;
-        this.roundTripTimeMs = null;
+    private ConnectionMonitorSuccessThresholdResponse(ConnectionMonitorSuccessThresholdResponse $) {
+        this.checksFailedPercent = $.checksFailedPercent;
+        this.roundTripTimeMs = $.roundTripTimeMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorSuccessThresholdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer checksFailedPercent;
-        private @Nullable Double roundTripTimeMs;
+        private ConnectionMonitorSuccessThresholdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorSuccessThresholdResponse();
         }
 
         public Builder(ConnectionMonitorSuccessThresholdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksFailedPercent = defaults.checksFailedPercent;
-    	      this.roundTripTimeMs = defaults.roundTripTimeMs;
+            $ = new ConnectionMonitorSuccessThresholdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checksFailedPercent(@Nullable Integer checksFailedPercent) {
-            this.checksFailedPercent = checksFailedPercent;
+            $.checksFailedPercent = checksFailedPercent;
             return this;
         }
+
         public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
-            this.roundTripTimeMs = roundTripTimeMs;
+            $.roundTripTimeMs = roundTripTimeMs;
             return this;
-        }        public ConnectionMonitorSuccessThresholdResponse build() {
-            return new ConnectionMonitorSuccessThresholdResponse(checksFailedPercent, roundTripTimeMs);
+        }
+
+        public ConnectionMonitorSuccessThresholdResponse build() {
+            return $;
         }
     }
+
 }

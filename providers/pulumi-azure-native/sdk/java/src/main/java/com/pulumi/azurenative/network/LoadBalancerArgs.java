@@ -14,11 +14,11 @@ import com.pulumi.azurenative.network.inputs.OutboundRuleArgs;
 import com.pulumi.azurenative.network.inputs.ProbeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendAddressPools")
-      private final @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
+    private @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
 
-    public Output<List<BackendAddressPoolArgs>> backendAddressPools() {
-        return this.backendAddressPools == null ? Codegen.empty() : this.backendAddressPools;
+    public Optional<Output<List<BackendAddressPoolArgs>>> backendAddressPools() {
+        return Optional.ofNullable(this.backendAddressPools);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frontendIPConfigurations")
-      private final @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
+    private @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
 
-    public Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? Codegen.empty() : this.frontendIPConfigurations;
+    public Optional<Output<List<FrontendIPConfigurationArgs>>> frontendIPConfigurations() {
+        return Optional.ofNullable(this.frontendIPConfigurations);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inboundNatPools")
-      private final @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
+    private @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
 
-    public Output<List<InboundNatPoolArgs>> inboundNatPools() {
-        return this.inboundNatPools == null ? Codegen.empty() : this.inboundNatPools;
+    public Optional<Output<List<InboundNatPoolArgs>>> inboundNatPools() {
+        return Optional.ofNullable(this.inboundNatPools);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inboundNatRules")
-      private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
+    private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
-    public Output<List<InboundNatRuleArgs>> inboundNatRules() {
-        return this.inboundNatRules == null ? Codegen.empty() : this.inboundNatRules;
+    public Optional<Output<List<InboundNatRuleArgs>>> inboundNatRules() {
+        return Optional.ofNullable(this.inboundNatRules);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancerName")
-      private final @Nullable Output<String> loadBalancerName;
+    private @Nullable Output<String> loadBalancerName;
 
-    public Output<String> loadBalancerName() {
-        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
+    public Optional<Output<String>> loadBalancerName() {
+        return Optional.ofNullable(this.loadBalancerName);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancingRules")
-      private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
+    private @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
-    public Output<List<LoadBalancingRuleArgs>> loadBalancingRules() {
-        return this.loadBalancingRules == null ? Codegen.empty() : this.loadBalancingRules;
+    public Optional<Output<List<LoadBalancingRuleArgs>>> loadBalancingRules() {
+        return Optional.ofNullable(this.loadBalancingRules);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outboundRules")
-      private final @Nullable Output<List<OutboundRuleArgs>> outboundRules;
+    private @Nullable Output<List<OutboundRuleArgs>> outboundRules;
 
-    public Output<List<OutboundRuleArgs>> outboundRules() {
-        return this.outboundRules == null ? Codegen.empty() : this.outboundRules;
+    public Optional<Output<List<OutboundRuleArgs>>> outboundRules() {
+        return Optional.ofNullable(this.outboundRules);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="probes")
-      private final @Nullable Output<List<ProbeArgs>> probes;
+    private @Nullable Output<List<ProbeArgs>> probes;
 
-    public Output<List<ProbeArgs>> probes() {
-        return this.probes == null ? Codegen.empty() : this.probes;
+    public Optional<Output<List<ProbeArgs>>> probes() {
+        return Optional.ofNullable(this.probes);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -163,10 +163,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<LoadBalancerSkuArgs> sku;
+    private @Nullable Output<LoadBalancerSkuArgs> sku;
 
-    public Output<LoadBalancerSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<LoadBalancerSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -174,240 +174,207 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LoadBalancerArgs(
-        @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations,
-        @Nullable Output<String> id,
-        @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools,
-        @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules,
-        @Nullable Output<String> loadBalancerName,
-        @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules,
-        @Nullable Output<String> location,
-        @Nullable Output<List<OutboundRuleArgs>> outboundRules,
-        @Nullable Output<List<ProbeArgs>> probes,
-        Output<String> resourceGroupName,
-        @Nullable Output<LoadBalancerSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.backendAddressPools = backendAddressPools;
-        this.extendedLocation = extendedLocation;
-        this.frontendIPConfigurations = frontendIPConfigurations;
-        this.id = id;
-        this.inboundNatPools = inboundNatPools;
-        this.inboundNatRules = inboundNatRules;
-        this.loadBalancerName = loadBalancerName;
-        this.loadBalancingRules = loadBalancingRules;
-        this.location = location;
-        this.outboundRules = outboundRules;
-        this.probes = probes;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private LoadBalancerArgs() {}
 
-    private LoadBalancerArgs() {
-        this.backendAddressPools = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.frontendIPConfigurations = Codegen.empty();
-        this.id = Codegen.empty();
-        this.inboundNatPools = Codegen.empty();
-        this.inboundNatRules = Codegen.empty();
-        this.loadBalancerName = Codegen.empty();
-        this.loadBalancingRules = Codegen.empty();
-        this.location = Codegen.empty();
-        this.outboundRules = Codegen.empty();
-        this.probes = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LoadBalancerArgs(LoadBalancerArgs $) {
+        this.backendAddressPools = $.backendAddressPools;
+        this.extendedLocation = $.extendedLocation;
+        this.frontendIPConfigurations = $.frontendIPConfigurations;
+        this.id = $.id;
+        this.inboundNatPools = $.inboundNatPools;
+        this.inboundNatRules = $.inboundNatRules;
+        this.loadBalancerName = $.loadBalancerName;
+        this.loadBalancingRules = $.loadBalancingRules;
+        this.location = $.location;
+        this.outboundRules = $.outboundRules;
+        this.probes = $.probes;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
-        private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
-        private @Nullable Output<String> loadBalancerName;
-        private @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<OutboundRuleArgs>> outboundRules;
-        private @Nullable Output<List<ProbeArgs>> probes;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<LoadBalancerSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private LoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerArgs();
         }
 
         public Builder(LoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPools = defaults.backendAddressPools;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
-    	      this.id = defaults.id;
-    	      this.inboundNatPools = defaults.inboundNatPools;
-    	      this.inboundNatRules = defaults.inboundNatRules;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.loadBalancingRules = defaults.loadBalancingRules;
-    	      this.location = defaults.location;
-    	      this.outboundRules = defaults.outboundRules;
-    	      this.probes = defaults.probes;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new LoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPools(@Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools) {
-            this.backendAddressPools = backendAddressPools;
+            $.backendAddressPools = backendAddressPools;
             return this;
         }
-        public Builder backendAddressPools(@Nullable List<BackendAddressPoolArgs> backendAddressPools) {
-            this.backendAddressPools = Codegen.ofNullable(backendAddressPools);
-            return this;
+
+        public Builder backendAddressPools(List<BackendAddressPoolArgs> backendAddressPools) {
+            return backendAddressPools(Output.of(backendAddressPools));
         }
+
         public Builder backendAddressPools(BackendAddressPoolArgs... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder frontendIPConfigurations(@Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations) {
-            this.frontendIPConfigurations = frontendIPConfigurations;
+            $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
-        public Builder frontendIPConfigurations(@Nullable List<FrontendIPConfigurationArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Codegen.ofNullable(frontendIPConfigurations);
-            return this;
+
+        public Builder frontendIPConfigurations(List<FrontendIPConfigurationArgs> frontendIPConfigurations) {
+            return frontendIPConfigurations(Output.of(frontendIPConfigurations));
         }
+
         public Builder frontendIPConfigurations(FrontendIPConfigurationArgs... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder inboundNatPools(@Nullable Output<List<InboundNatPoolArgs>> inboundNatPools) {
-            this.inboundNatPools = inboundNatPools;
+            $.inboundNatPools = inboundNatPools;
             return this;
         }
-        public Builder inboundNatPools(@Nullable List<InboundNatPoolArgs> inboundNatPools) {
-            this.inboundNatPools = Codegen.ofNullable(inboundNatPools);
-            return this;
+
+        public Builder inboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
+            return inboundNatPools(Output.of(inboundNatPools));
         }
+
         public Builder inboundNatPools(InboundNatPoolArgs... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
         }
+
         public Builder inboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
-            this.inboundNatRules = inboundNatRules;
+            $.inboundNatRules = inboundNatRules;
             return this;
         }
-        public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
-            this.inboundNatRules = Codegen.ofNullable(inboundNatRules);
-            return this;
+
+        public Builder inboundNatRules(List<InboundNatRuleArgs> inboundNatRules) {
+            return inboundNatRules(Output.of(inboundNatRules));
         }
+
         public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
         }
+
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
-            this.loadBalancerName = loadBalancerName;
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
-        public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
-            return this;
+
+        public Builder loadBalancerName(String loadBalancerName) {
+            return loadBalancerName(Output.of(loadBalancerName));
         }
+
         public Builder loadBalancingRules(@Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules) {
-            this.loadBalancingRules = loadBalancingRules;
+            $.loadBalancingRules = loadBalancingRules;
             return this;
         }
-        public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
-            this.loadBalancingRules = Codegen.ofNullable(loadBalancingRules);
-            return this;
+
+        public Builder loadBalancingRules(List<LoadBalancingRuleArgs> loadBalancingRules) {
+            return loadBalancingRules(Output.of(loadBalancingRules));
         }
+
         public Builder loadBalancingRules(LoadBalancingRuleArgs... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder outboundRules(@Nullable Output<List<OutboundRuleArgs>> outboundRules) {
-            this.outboundRules = outboundRules;
+            $.outboundRules = outboundRules;
             return this;
         }
-        public Builder outboundRules(@Nullable List<OutboundRuleArgs> outboundRules) {
-            this.outboundRules = Codegen.ofNullable(outboundRules);
-            return this;
+
+        public Builder outboundRules(List<OutboundRuleArgs> outboundRules) {
+            return outboundRules(Output.of(outboundRules));
         }
+
         public Builder outboundRules(OutboundRuleArgs... outboundRules) {
             return outboundRules(List.of(outboundRules));
         }
+
         public Builder probes(@Nullable Output<List<ProbeArgs>> probes) {
-            this.probes = probes;
+            $.probes = probes;
             return this;
         }
-        public Builder probes(@Nullable List<ProbeArgs> probes) {
-            this.probes = Codegen.ofNullable(probes);
-            return this;
+
+        public Builder probes(List<ProbeArgs> probes) {
+            return probes(Output.of(probes));
         }
+
         public Builder probes(ProbeArgs... probes) {
             return probes(List.of(probes));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<LoadBalancerSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable LoadBalancerSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(LoadBalancerSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LoadBalancerArgs build() {
-            return new LoadBalancerArgs(backendAddressPools, extendedLocation, frontendIPConfigurations, id, inboundNatPools, inboundNatRules, loadBalancerName, loadBalancingRules, location, outboundRules, probes, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LoadBalancerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

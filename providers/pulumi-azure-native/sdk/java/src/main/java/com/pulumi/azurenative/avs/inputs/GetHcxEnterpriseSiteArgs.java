@@ -17,7 +17,7 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hcxEnterpriseSiteName", required=true)
-      private final String hcxEnterpriseSiteName;
+    private String hcxEnterpriseSiteName;
 
     public String hcxEnterpriseSiteName() {
         return this.hcxEnterpriseSiteName;
@@ -28,7 +28,7 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetHcxEnterpriseSiteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetHcxEnterpriseSiteArgs(
-        String hcxEnterpriseSiteName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.hcxEnterpriseSiteName = Objects.requireNonNull(hcxEnterpriseSiteName, "expected parameter 'hcxEnterpriseSiteName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetHcxEnterpriseSiteArgs() {}
 
-    private GetHcxEnterpriseSiteArgs() {
-        this.hcxEnterpriseSiteName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetHcxEnterpriseSiteArgs(GetHcxEnterpriseSiteArgs $) {
+        this.hcxEnterpriseSiteName = $.hcxEnterpriseSiteName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHcxEnterpriseSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hcxEnterpriseSiteName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetHcxEnterpriseSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHcxEnterpriseSiteArgs();
         }
 
         public Builder(GetHcxEnterpriseSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hcxEnterpriseSiteName = defaults.hcxEnterpriseSiteName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetHcxEnterpriseSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hcxEnterpriseSiteName(String hcxEnterpriseSiteName) {
-            this.hcxEnterpriseSiteName = Objects.requireNonNull(hcxEnterpriseSiteName);
+            $.hcxEnterpriseSiteName = hcxEnterpriseSiteName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetHcxEnterpriseSiteArgs build() {
-            return new GetHcxEnterpriseSiteArgs(hcxEnterpriseSiteName, privateCloudName, resourceGroupName);
+        }
+
+        public GetHcxEnterpriseSiteArgs build() {
+            $.hcxEnterpriseSiteName = Objects.requireNonNull($.hcxEnterpriseSiteName, "expected parameter 'hcxEnterpriseSiteName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

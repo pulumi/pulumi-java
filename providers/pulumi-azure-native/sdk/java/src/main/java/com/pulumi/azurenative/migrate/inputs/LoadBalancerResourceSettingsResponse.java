@@ -27,10 +27,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="backendAddressPools")
-      private final @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
+    private @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
 
-    public List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools() {
-        return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
+    public Optional<List<LBBackendAddressPoolResourceSettingsResponse>> backendAddressPools() {
+        return Optional.ofNullable(this.backendAddressPools);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="frontendIPConfigurations")
-      private final @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
+    private @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
 
-    public List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
+    public Optional<List<LBFrontendIPConfigurationResourceSettingsResponse>> frontendIPConfigurations() {
+        return Optional.ofNullable(this.frontendIPConfigurations);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -61,10 +61,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sku")
-      private final @Nullable String sku;
+    private @Nullable String sku;
 
     public Optional<String> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
@@ -84,97 +84,84 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="zones")
-      private final @Nullable String zones;
+    private @Nullable String zones;
 
     public Optional<String> zones() {
-        return this.zones == null ? Optional.empty() : Optional.ofNullable(this.zones);
+        return Optional.ofNullable(this.zones);
     }
 
-    public LoadBalancerResourceSettingsResponse(
-        @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
-        @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
-        String resourceType,
-        @Nullable String sku,
-        String targetResourceName,
-        @Nullable String zones) {
-        this.backendAddressPools = backendAddressPools;
-        this.frontendIPConfigurations = frontendIPConfigurations;
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.sku = sku;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.zones = zones;
-    }
+    private LoadBalancerResourceSettingsResponse() {}
 
-    private LoadBalancerResourceSettingsResponse() {
-        this.backendAddressPools = List.of();
-        this.frontendIPConfigurations = List.of();
-        this.resourceType = null;
-        this.sku = null;
-        this.targetResourceName = null;
-        this.zones = null;
+    private LoadBalancerResourceSettingsResponse(LoadBalancerResourceSettingsResponse $) {
+        this.backendAddressPools = $.backendAddressPools;
+        this.frontendIPConfigurations = $.frontendIPConfigurations;
+        this.resourceType = $.resourceType;
+        this.sku = $.sku;
+        this.targetResourceName = $.targetResourceName;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
-        private @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
-        private String resourceType;
-        private @Nullable String sku;
-        private String targetResourceName;
-        private @Nullable String zones;
+        private LoadBalancerResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerResourceSettingsResponse();
         }
 
         public Builder(LoadBalancerResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPools = defaults.backendAddressPools;
-    	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sku = defaults.sku;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.zones = defaults.zones;
+            $ = new LoadBalancerResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools) {
-            this.backendAddressPools = backendAddressPools;
+            $.backendAddressPools = backendAddressPools;
             return this;
         }
+
         public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsResponse... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
+
         public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations) {
-            this.frontendIPConfigurations = frontendIPConfigurations;
+            $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
+
         public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder sku(@Nullable String sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder zones(@Nullable String zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
-        }        public LoadBalancerResourceSettingsResponse build() {
-            return new LoadBalancerResourceSettingsResponse(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
+        }
+
+        public LoadBalancerResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

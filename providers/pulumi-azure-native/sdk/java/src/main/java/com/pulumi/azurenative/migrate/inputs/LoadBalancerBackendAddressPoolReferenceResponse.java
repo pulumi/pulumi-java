@@ -23,10 +23,10 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse extends com.p
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse extends com.p
      * 
      */
     @Import(name="sourceArmResourceId", required=true)
-      private final String sourceArmResourceId;
+    private String sourceArmResourceId;
 
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public LoadBalancerBackendAddressPoolReferenceResponse(
-        @Nullable String name,
-        String sourceArmResourceId) {
-        this.name = name;
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
-    }
+    private LoadBalancerBackendAddressPoolReferenceResponse() {}
 
-    private LoadBalancerBackendAddressPoolReferenceResponse() {
-        this.name = null;
-        this.sourceArmResourceId = null;
+    private LoadBalancerBackendAddressPoolReferenceResponse(LoadBalancerBackendAddressPoolReferenceResponse $) {
+        this.name = $.name;
+        this.sourceArmResourceId = $.sourceArmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerBackendAddressPoolReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private String sourceArmResourceId;
+        private LoadBalancerBackendAddressPoolReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerBackendAddressPoolReferenceResponse();
         }
 
         public Builder(LoadBalancerBackendAddressPoolReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sourceArmResourceId = defaults.sourceArmResourceId;
+            $ = new LoadBalancerBackendAddressPoolReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+            $.sourceArmResourceId = sourceArmResourceId;
             return this;
-        }        public LoadBalancerBackendAddressPoolReferenceResponse build() {
-            return new LoadBalancerBackendAddressPoolReferenceResponse(name, sourceArmResourceId);
+        }
+
+        public LoadBalancerBackendAddressPoolReferenceResponse build() {
+            $.sourceArmResourceId = Objects.requireNonNull($.sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

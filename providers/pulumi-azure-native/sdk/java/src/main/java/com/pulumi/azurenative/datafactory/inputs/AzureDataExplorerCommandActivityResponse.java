@@ -30,7 +30,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="command", required=true)
-      private final Object command;
+    private Object command;
 
     public Object command() {
         return this.command;
@@ -41,10 +41,10 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="commandTimeout")
-      private final @Nullable Object commandTimeout;
+    private @Nullable Object commandTimeout;
 
     public Optional<Object> commandTimeout() {
-        return this.commandTimeout == null ? Optional.empty() : Optional.ofNullable(this.commandTimeout);
+        return Optional.ofNullable(this.commandTimeout);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -85,7 +85,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -96,10 +96,10 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -119,124 +119,103 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public AzureDataExplorerCommandActivityResponse(
-        Object command,
-        @Nullable Object commandTimeout,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.commandTimeout = commandTimeout;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private AzureDataExplorerCommandActivityResponse() {}
 
-    private AzureDataExplorerCommandActivityResponse() {
-        this.command = null;
-        this.commandTimeout = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private AzureDataExplorerCommandActivityResponse(AzureDataExplorerCommandActivityResponse $) {
+        this.command = $.command;
+        this.commandTimeout = $.commandTimeout;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataExplorerCommandActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object command;
-        private @Nullable Object commandTimeout;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private AzureDataExplorerCommandActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataExplorerCommandActivityResponse();
         }
 
         public Builder(AzureDataExplorerCommandActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.commandTimeout = defaults.commandTimeout;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new AzureDataExplorerCommandActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder command(Object command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder commandTimeout(@Nullable Object commandTimeout) {
-            this.commandTimeout = commandTimeout;
+            $.commandTimeout = commandTimeout;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public AzureDataExplorerCommandActivityResponse build() {
-            return new AzureDataExplorerCommandActivityResponse(command, commandTimeout, dependsOn, description, linkedServiceName, name, policy, type, userProperties);
+        }
+
+        public AzureDataExplorerCommandActivityResponse build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

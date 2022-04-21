@@ -24,10 +24,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskSizeGiB")
-      private final @Nullable Integer diskSizeGiB;
+    private @Nullable Integer diskSizeGiB;
 
     public Optional<Integer> diskSizeGiB() {
-        return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
+        return Optional.ofNullable(this.diskSizeGiB);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskUri")
-      private final @Nullable String diskUri;
+    private @Nullable String diskUri;
 
     public Optional<String> diskUri() {
-        return this.diskUri == null ? Optional.empty() : Optional.ofNullable(this.diskUri);
+        return Optional.ofNullable(this.diskUri);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managedDiskId")
-      private final @Nullable String managedDiskId;
+    private @Nullable String managedDiskId;
 
     public Optional<String> managedDiskId() {
-        return this.managedDiskId == null ? Optional.empty() : Optional.ofNullable(this.managedDiskId);
+        return Optional.ofNullable(this.managedDiskId);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ComputeDataDiskResponse(
-        @Nullable Integer diskSizeGiB,
-        @Nullable String diskUri,
-        @Nullable String managedDiskId,
-        @Nullable String name) {
-        this.diskSizeGiB = diskSizeGiB;
-        this.diskUri = diskUri;
-        this.managedDiskId = managedDiskId;
-        this.name = name;
-    }
+    private ComputeDataDiskResponse() {}
 
-    private ComputeDataDiskResponse() {
-        this.diskSizeGiB = null;
-        this.diskUri = null;
-        this.managedDiskId = null;
-        this.name = null;
+    private ComputeDataDiskResponse(ComputeDataDiskResponse $) {
+        this.diskSizeGiB = $.diskSizeGiB;
+        this.diskUri = $.diskUri;
+        this.managedDiskId = $.managedDiskId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeDataDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer diskSizeGiB;
-        private @Nullable String diskUri;
-        private @Nullable String managedDiskId;
-        private @Nullable String name;
+        private ComputeDataDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeDataDiskResponse();
         }
 
         public Builder(ComputeDataDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGiB = defaults.diskSizeGiB;
-    	      this.diskUri = defaults.diskUri;
-    	      this.managedDiskId = defaults.managedDiskId;
-    	      this.name = defaults.name;
+            $ = new ComputeDataDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = diskSizeGiB;
+            $.diskSizeGiB = diskSizeGiB;
             return this;
         }
+
         public Builder diskUri(@Nullable String diskUri) {
-            this.diskUri = diskUri;
+            $.diskUri = diskUri;
             return this;
         }
+
         public Builder managedDiskId(@Nullable String managedDiskId) {
-            this.managedDiskId = managedDiskId;
+            $.managedDiskId = managedDiskId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ComputeDataDiskResponse build() {
-            return new ComputeDataDiskResponse(diskSizeGiB, diskUri, managedDiskId, name);
+        }
+
+        public ComputeDataDiskResponse build() {
+            return $;
         }
     }
+
 }

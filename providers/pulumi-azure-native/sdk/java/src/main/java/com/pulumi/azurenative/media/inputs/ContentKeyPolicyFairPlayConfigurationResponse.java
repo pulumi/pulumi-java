@@ -26,7 +26,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="ask", required=true)
-      private final String ask;
+    private String ask;
 
     public String ask() {
         return this.ask;
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="fairPlayPfx", required=true)
-      private final String fairPlayPfx;
+    private String fairPlayPfx;
 
     public String fairPlayPfx() {
         return this.fairPlayPfx;
@@ -48,7 +48,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="fairPlayPfxPassword", required=true)
-      private final String fairPlayPfxPassword;
+    private String fairPlayPfxPassword;
 
     public String fairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
@@ -60,7 +60,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -71,10 +71,10 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="offlineRentalConfiguration")
-      private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
+    private @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
 
     public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> offlineRentalConfiguration() {
-        return this.offlineRentalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.offlineRentalConfiguration);
+        return Optional.ofNullable(this.offlineRentalConfiguration);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="rentalAndLeaseKeyType", required=true)
-      private final String rentalAndLeaseKeyType;
+    private String rentalAndLeaseKeyType;
 
     public String rentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
@@ -93,100 +93,86 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends com.pul
      * 
      */
     @Import(name="rentalDuration", required=true)
-      private final Double rentalDuration;
+    private Double rentalDuration;
 
     public Double rentalDuration() {
         return this.rentalDuration;
     }
 
-    public ContentKeyPolicyFairPlayConfigurationResponse(
-        String ask,
-        String fairPlayPfx,
-        String fairPlayPfxPassword,
-        String odataType,
-        @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration,
-        String rentalAndLeaseKeyType,
-        Double rentalDuration) {
-        this.ask = Objects.requireNonNull(ask, "expected parameter 'ask' to be non-null");
-        this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx, "expected parameter 'fairPlayPfx' to be non-null");
-        this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword, "expected parameter 'fairPlayPfxPassword' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.offlineRentalConfiguration = offlineRentalConfiguration;
-        this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType, "expected parameter 'rentalAndLeaseKeyType' to be non-null");
-        this.rentalDuration = Objects.requireNonNull(rentalDuration, "expected parameter 'rentalDuration' to be non-null");
-    }
+    private ContentKeyPolicyFairPlayConfigurationResponse() {}
 
-    private ContentKeyPolicyFairPlayConfigurationResponse() {
-        this.ask = null;
-        this.fairPlayPfx = null;
-        this.fairPlayPfxPassword = null;
-        this.odataType = null;
-        this.offlineRentalConfiguration = null;
-        this.rentalAndLeaseKeyType = null;
-        this.rentalDuration = null;
+    private ContentKeyPolicyFairPlayConfigurationResponse(ContentKeyPolicyFairPlayConfigurationResponse $) {
+        this.ask = $.ask;
+        this.fairPlayPfx = $.fairPlayPfx;
+        this.fairPlayPfxPassword = $.fairPlayPfxPassword;
+        this.odataType = $.odataType;
+        this.offlineRentalConfiguration = $.offlineRentalConfiguration;
+        this.rentalAndLeaseKeyType = $.rentalAndLeaseKeyType;
+        this.rentalDuration = $.rentalDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyFairPlayConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ask;
-        private String fairPlayPfx;
-        private String fairPlayPfxPassword;
-        private String odataType;
-        private @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
-        private String rentalAndLeaseKeyType;
-        private Double rentalDuration;
+        private ContentKeyPolicyFairPlayConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyFairPlayConfigurationResponse();
         }
 
         public Builder(ContentKeyPolicyFairPlayConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ask = defaults.ask;
-    	      this.fairPlayPfx = defaults.fairPlayPfx;
-    	      this.fairPlayPfxPassword = defaults.fairPlayPfxPassword;
-    	      this.odataType = defaults.odataType;
-    	      this.offlineRentalConfiguration = defaults.offlineRentalConfiguration;
-    	      this.rentalAndLeaseKeyType = defaults.rentalAndLeaseKeyType;
-    	      this.rentalDuration = defaults.rentalDuration;
+            $ = new ContentKeyPolicyFairPlayConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ask(String ask) {
-            this.ask = Objects.requireNonNull(ask);
+            $.ask = ask;
             return this;
         }
+
         public Builder fairPlayPfx(String fairPlayPfx) {
-            this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx);
+            $.fairPlayPfx = fairPlayPfx;
             return this;
         }
+
         public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
-            this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword);
+            $.fairPlayPfxPassword = fairPlayPfxPassword;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration) {
-            this.offlineRentalConfiguration = offlineRentalConfiguration;
+            $.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
+
         public Builder rentalAndLeaseKeyType(String rentalAndLeaseKeyType) {
-            this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType);
+            $.rentalAndLeaseKeyType = rentalAndLeaseKeyType;
             return this;
         }
+
         public Builder rentalDuration(Double rentalDuration) {
-            this.rentalDuration = Objects.requireNonNull(rentalDuration);
+            $.rentalDuration = rentalDuration;
             return this;
-        }        public ContentKeyPolicyFairPlayConfigurationResponse build() {
-            return new ContentKeyPolicyFairPlayConfigurationResponse(ask, fairPlayPfx, fairPlayPfxPassword, odataType, offlineRentalConfiguration, rentalAndLeaseKeyType, rentalDuration);
+        }
+
+        public ContentKeyPolicyFairPlayConfigurationResponse build() {
+            $.ask = Objects.requireNonNull($.ask, "expected parameter 'ask' to be non-null");
+            $.fairPlayPfx = Objects.requireNonNull($.fairPlayPfx, "expected parameter 'fairPlayPfx' to be non-null");
+            $.fairPlayPfxPassword = Objects.requireNonNull($.fairPlayPfxPassword, "expected parameter 'fairPlayPfxPassword' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.rentalAndLeaseKeyType = Objects.requireNonNull($.rentalAndLeaseKeyType, "expected parameter 'rentalAndLeaseKeyType' to be non-null");
+            $.rentalDuration = Objects.requireNonNull($.rentalDuration, "expected parameter 'rentalDuration' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class ContainerExecResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="command")
-      private final @Nullable List<String> command;
+    private @Nullable List<String> command;
 
-    public List<String> command() {
-        return this.command == null ? List.of() : this.command;
+    public Optional<List<String>> command() {
+        return Optional.ofNullable(this.command);
     }
 
-    public ContainerExecResponse(@Nullable List<String> command) {
-        this.command = command;
-    }
+    private ContainerExecResponse() {}
 
-    private ContainerExecResponse() {
-        this.command = List.of();
+    private ContainerExecResponse(ContainerExecResponse $) {
+        this.command = $.command;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerExecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> command;
+        private ContainerExecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerExecResponse();
         }
 
         public Builder(ContainerExecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
+            $ = new ContainerExecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
-        }        public ContainerExecResponse build() {
-            return new ContainerExecResponse(command);
+        }
+
+        public ContainerExecResponse build() {
+            return $;
         }
     }
+
 }

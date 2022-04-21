@@ -21,45 +21,45 @@ public final class ServiceAccessPolicyEntryResponse extends com.pulumi.resources
      * 
      */
     @Import(name="objectId", required=true)
-      private final String objectId;
+    private String objectId;
 
     public String objectId() {
         return this.objectId;
     }
 
-    public ServiceAccessPolicyEntryResponse(String objectId) {
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-    }
+    private ServiceAccessPolicyEntryResponse() {}
 
-    private ServiceAccessPolicyEntryResponse() {
-        this.objectId = null;
+    private ServiceAccessPolicyEntryResponse(ServiceAccessPolicyEntryResponse $) {
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccessPolicyEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectId;
+        private ServiceAccessPolicyEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccessPolicyEntryResponse();
         }
 
         public Builder(ServiceAccessPolicyEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
+            $ = new ServiceAccessPolicyEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
-        }        public ServiceAccessPolicyEntryResponse build() {
-            return new ServiceAccessPolicyEntryResponse(objectId);
+        }
+
+        public ServiceAccessPolicyEntryResponse build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            return $;
         }
     }
+
 }

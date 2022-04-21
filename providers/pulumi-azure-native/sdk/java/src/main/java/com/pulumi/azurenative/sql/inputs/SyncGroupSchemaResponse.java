@@ -25,10 +25,10 @@ public final class SyncGroupSchemaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="masterSyncMemberName")
-      private final @Nullable String masterSyncMemberName;
+    private @Nullable String masterSyncMemberName;
 
     public Optional<String> masterSyncMemberName() {
-        return this.masterSyncMemberName == null ? Optional.empty() : Optional.ofNullable(this.masterSyncMemberName);
+        return Optional.ofNullable(this.masterSyncMemberName);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class SyncGroupSchemaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tables")
-      private final @Nullable List<SyncGroupSchemaTableResponse> tables;
+    private @Nullable List<SyncGroupSchemaTableResponse> tables;
 
-    public List<SyncGroupSchemaTableResponse> tables() {
-        return this.tables == null ? List.of() : this.tables;
+    public Optional<List<SyncGroupSchemaTableResponse>> tables() {
+        return Optional.ofNullable(this.tables);
     }
 
-    public SyncGroupSchemaResponse(
-        @Nullable String masterSyncMemberName,
-        @Nullable List<SyncGroupSchemaTableResponse> tables) {
-        this.masterSyncMemberName = masterSyncMemberName;
-        this.tables = tables;
-    }
+    private SyncGroupSchemaResponse() {}
 
-    private SyncGroupSchemaResponse() {
-        this.masterSyncMemberName = null;
-        this.tables = List.of();
+    private SyncGroupSchemaResponse(SyncGroupSchemaResponse $) {
+        this.masterSyncMemberName = $.masterSyncMemberName;
+        this.tables = $.tables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupSchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String masterSyncMemberName;
-        private @Nullable List<SyncGroupSchemaTableResponse> tables;
+        private SyncGroupSchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupSchemaResponse();
         }
 
         public Builder(SyncGroupSchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.masterSyncMemberName = defaults.masterSyncMemberName;
-    	      this.tables = defaults.tables;
+            $ = new SyncGroupSchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
-            this.masterSyncMemberName = masterSyncMemberName;
+            $.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
+
         public Builder tables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
-            this.tables = tables;
+            $.tables = tables;
             return this;
         }
+
         public Builder tables(SyncGroupSchemaTableResponse... tables) {
             return tables(List.of(tables));
-        }        public SyncGroupSchemaResponse build() {
-            return new SyncGroupSchemaResponse(masterSyncMemberName, tables);
+        }
+
+        public SyncGroupSchemaResponse build() {
+            return $;
         }
     }
+
 }

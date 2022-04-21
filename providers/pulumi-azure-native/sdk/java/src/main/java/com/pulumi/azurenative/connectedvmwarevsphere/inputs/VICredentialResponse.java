@@ -23,45 +23,44 @@ public final class VICredentialResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public VICredentialResponse(@Nullable String username) {
-        this.username = username;
-    }
+    private VICredentialResponse() {}
 
-    private VICredentialResponse() {
-        this.username = null;
+    private VICredentialResponse(VICredentialResponse $) {
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VICredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String username;
+        private VICredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VICredentialResponse();
         }
 
         public Builder(VICredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.username = defaults.username;
+            $ = new VICredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public VICredentialResponse build() {
-            return new VICredentialResponse(username);
+        }
+
+        public VICredentialResponse build() {
+            return $;
         }
     }
+
 }

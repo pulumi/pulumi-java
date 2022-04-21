@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -37,10 +38,10 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -48,76 +49,69 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable Output<String> serviceUri;
+    private @Nullable Output<String> serviceUri;
 
-    public Output<String> serviceUri() {
-        return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
+    public Optional<Output<String>> serviceUri() {
+        return Optional.ofNullable(this.serviceUri);
     }
 
-    public RuleWebhookActionArgs(
-        Output<String> odataType,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> serviceUri) {
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.properties = properties;
-        this.serviceUri = serviceUri;
-    }
+    private RuleWebhookActionArgs() {}
 
-    private RuleWebhookActionArgs() {
-        this.odataType = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.serviceUri = Codegen.empty();
+    private RuleWebhookActionArgs(RuleWebhookActionArgs $) {
+        this.odataType = $.odataType;
+        this.properties = $.properties;
+        this.serviceUri = $.serviceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleWebhookActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> serviceUri;
+        private RuleWebhookActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleWebhookActionArgs();
         }
 
         public Builder(RuleWebhookActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.properties = defaults.properties;
-    	      this.serviceUri = defaults.serviceUri;
+            $ = new RuleWebhookActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
         }
-        public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Codegen.ofNullable(serviceUri);
-            return this;
-        }        public RuleWebhookActionArgs build() {
-            return new RuleWebhookActionArgs(odataType, properties, serviceUri);
+
+        public Builder serviceUri(String serviceUri) {
+            return serviceUri(Output.of(serviceUri));
+        }
+
+        public RuleWebhookActionArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

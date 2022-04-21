@@ -23,45 +23,44 @@ public final class AssignedComponentItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
-    public AssignedComponentItemResponse(@Nullable String key) {
-        this.key = key;
-    }
+    private AssignedComponentItemResponse() {}
 
-    private AssignedComponentItemResponse() {
-        this.key = null;
+    private AssignedComponentItemResponse(AssignedComponentItemResponse $) {
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignedComponentItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
+        private AssignedComponentItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignedComponentItemResponse();
         }
 
         public Builder(AssignedComponentItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
+            $ = new AssignedComponentItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
-        }        public AssignedComponentItemResponse build() {
-            return new AssignedComponentItemResponse(key);
+        }
+
+        public AssignedComponentItemResponse build() {
+            return $;
         }
     }
+
 }

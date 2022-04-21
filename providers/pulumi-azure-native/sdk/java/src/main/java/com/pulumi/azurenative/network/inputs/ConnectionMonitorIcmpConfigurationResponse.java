@@ -23,45 +23,44 @@ public final class ConnectionMonitorIcmpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="disableTraceRoute")
-      private final @Nullable Boolean disableTraceRoute;
+    private @Nullable Boolean disableTraceRoute;
 
     public Optional<Boolean> disableTraceRoute() {
-        return this.disableTraceRoute == null ? Optional.empty() : Optional.ofNullable(this.disableTraceRoute);
+        return Optional.ofNullable(this.disableTraceRoute);
     }
 
-    public ConnectionMonitorIcmpConfigurationResponse(@Nullable Boolean disableTraceRoute) {
-        this.disableTraceRoute = disableTraceRoute;
-    }
+    private ConnectionMonitorIcmpConfigurationResponse() {}
 
-    private ConnectionMonitorIcmpConfigurationResponse() {
-        this.disableTraceRoute = null;
+    private ConnectionMonitorIcmpConfigurationResponse(ConnectionMonitorIcmpConfigurationResponse $) {
+        this.disableTraceRoute = $.disableTraceRoute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorIcmpConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean disableTraceRoute;
+        private ConnectionMonitorIcmpConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorIcmpConfigurationResponse();
         }
 
         public Builder(ConnectionMonitorIcmpConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableTraceRoute = defaults.disableTraceRoute;
+            $ = new ConnectionMonitorIcmpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
-            this.disableTraceRoute = disableTraceRoute;
+            $.disableTraceRoute = disableTraceRoute;
             return this;
-        }        public ConnectionMonitorIcmpConfigurationResponse build() {
-            return new ConnectionMonitorIcmpConfigurationResponse(disableTraceRoute);
+        }
+
+        public ConnectionMonitorIcmpConfigurationResponse build() {
+            return $;
         }
     }
+
 }

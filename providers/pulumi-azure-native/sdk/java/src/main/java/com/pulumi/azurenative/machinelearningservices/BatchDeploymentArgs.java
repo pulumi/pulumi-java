@@ -6,10 +6,10 @@ package com.pulumi.azurenative.machinelearningservices;
 import com.pulumi.azurenative.machinelearningservices.inputs.ResourceIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deploymentName")
-      private final @Nullable Output<String> deploymentName;
+    private @Nullable Output<String> deploymentName;
 
-    public Output<String> deploymentName() {
-        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
+    public Optional<Output<String>> deploymentName() {
+        return Optional.ofNullable(this.deploymentName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="endpointName", required=true)
-      private final Output<String> endpointName;
+    private Output<String> endpointName;
 
     public Output<String> endpointName() {
         return this.endpointName;
@@ -44,10 +44,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ResourceIdentityArgs> identity;
+    private @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
+    private Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
 
     public Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties() {
         return this.properties;
@@ -88,7 +88,7 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,10 +99,10 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -110,154 +110,132 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public BatchDeploymentArgs(
-        @Nullable Output<String> deploymentName,
-        Output<String> endpointName,
-        @Nullable Output<ResourceIdentityArgs> identity,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.deploymentName = deploymentName;
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private BatchDeploymentArgs() {}
 
-    private BatchDeploymentArgs() {
-        this.deploymentName = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private BatchDeploymentArgs(BatchDeploymentArgs $) {
+        this.deploymentName = $.deploymentName;
+        this.endpointName = $.endpointName;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deploymentName;
-        private Output<String> endpointName;
-        private @Nullable Output<ResourceIdentityArgs> identity;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private BatchDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchDeploymentArgs();
         }
 
         public Builder(BatchDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.endpointName = defaults.endpointName;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new BatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
-            this.deploymentName = deploymentName;
+            $.deploymentName = deploymentName;
             return this;
         }
-        public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Codegen.ofNullable(deploymentName);
-            return this;
+
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
         }
+
         public Builder endpointName(Output<String> endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
-            return this;
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(com.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public BatchDeploymentArgs build() {
-            return new BatchDeploymentArgs(deploymentName, endpointName, identity, kind, location, properties, resourceGroupName, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public BatchDeploymentArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

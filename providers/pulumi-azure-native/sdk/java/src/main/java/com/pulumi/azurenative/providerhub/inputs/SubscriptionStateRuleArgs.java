@@ -7,10 +7,10 @@ import com.pulumi.azurenative.providerhub.enums.SubscriptionState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,73 +19,69 @@ public final class SubscriptionStateRuleArgs extends com.pulumi.resources.Resour
     public static final SubscriptionStateRuleArgs Empty = new SubscriptionStateRuleArgs();
 
     @Import(name="allowedActions")
-      private final @Nullable Output<List<String>> allowedActions;
+    private @Nullable Output<List<String>> allowedActions;
 
-    public Output<List<String>> allowedActions() {
-        return this.allowedActions == null ? Codegen.empty() : this.allowedActions;
+    public Optional<Output<List<String>>> allowedActions() {
+        return Optional.ofNullable(this.allowedActions);
     }
 
     @Import(name="state")
-      private final @Nullable Output<Either<String,SubscriptionState>> state;
+    private @Nullable Output<Either<String,SubscriptionState>> state;
 
-    public Output<Either<String,SubscriptionState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,SubscriptionState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public SubscriptionStateRuleArgs(
-        @Nullable Output<List<String>> allowedActions,
-        @Nullable Output<Either<String,SubscriptionState>> state) {
-        this.allowedActions = allowedActions;
-        this.state = state;
-    }
+    private SubscriptionStateRuleArgs() {}
 
-    private SubscriptionStateRuleArgs() {
-        this.allowedActions = Codegen.empty();
-        this.state = Codegen.empty();
+    private SubscriptionStateRuleArgs(SubscriptionStateRuleArgs $) {
+        this.allowedActions = $.allowedActions;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionStateRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedActions;
-        private @Nullable Output<Either<String,SubscriptionState>> state;
+        private SubscriptionStateRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionStateRuleArgs();
         }
 
         public Builder(SubscriptionStateRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedActions = defaults.allowedActions;
-    	      this.state = defaults.state;
+            $ = new SubscriptionStateRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedActions(@Nullable Output<List<String>> allowedActions) {
-            this.allowedActions = allowedActions;
+            $.allowedActions = allowedActions;
             return this;
         }
-        public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = Codegen.ofNullable(allowedActions);
-            return this;
+
+        public Builder allowedActions(List<String> allowedActions) {
+            return allowedActions(Output.of(allowedActions));
         }
+
         public Builder allowedActions(String... allowedActions) {
             return allowedActions(List.of(allowedActions));
         }
+
         public Builder state(@Nullable Output<Either<String,SubscriptionState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,SubscriptionState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public SubscriptionStateRuleArgs build() {
-            return new SubscriptionStateRuleArgs(allowedActions, state);
+
+        public Builder state(Either<String,SubscriptionState> state) {
+            return state(Output.of(state));
+        }
+
+        public SubscriptionStateRuleArgs build() {
+            return $;
         }
     }
+
 }

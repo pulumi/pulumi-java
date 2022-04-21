@@ -6,7 +6,6 @@ package com.pulumi.azurenative.storsimple.inputs;
 import com.pulumi.azurenative.storsimple.enums.ManagerType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class ManagerIntrinsicSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ManagerType> type;
+    private Output<ManagerType> type;
 
     public Output<ManagerType> type() {
         return this.type;
     }
 
-    public ManagerIntrinsicSettingsArgs(Output<ManagerType> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagerIntrinsicSettingsArgs() {}
 
-    private ManagerIntrinsicSettingsArgs() {
-        this.type = Codegen.empty();
+    private ManagerIntrinsicSettingsArgs(ManagerIntrinsicSettingsArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagerIntrinsicSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ManagerType> type;
+        private ManagerIntrinsicSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagerIntrinsicSettingsArgs();
         }
 
         public Builder(ManagerIntrinsicSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ManagerIntrinsicSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<ManagerType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ManagerType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ManagerIntrinsicSettingsArgs build() {
-            return new ManagerIntrinsicSettingsArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ManagerIntrinsicSettingsArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

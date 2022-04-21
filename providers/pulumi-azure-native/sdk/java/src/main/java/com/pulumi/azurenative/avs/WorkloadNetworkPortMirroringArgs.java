@@ -7,10 +7,10 @@ import com.pulumi.azurenative.avs.enums.PortMirroringDirectionEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
+    private @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
 
-    public Output<Either<String,PortMirroringDirectionEnum>> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<Either<String,PortMirroringDirectionEnum>>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="portMirroringId")
-      private final @Nullable Output<String> portMirroringId;
+    private @Nullable Output<String> portMirroringId;
 
-    public Output<String> portMirroringId() {
-        return this.portMirroringId == null ? Codegen.empty() : this.portMirroringId;
+    public Optional<Output<String>> portMirroringId() {
+        return Optional.ofNullable(this.portMirroringId);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -78,7 +78,7 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,10 +89,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Double> revision;
+    private @Nullable Output<Double> revision;
 
-    public Output<Double> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Double>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -100,141 +100,120 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public WorkloadNetworkPortMirroringArgs(
-        @Nullable Output<String> destination,
-        @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> portMirroringId,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Double> revision,
-        @Nullable Output<String> source) {
-        this.destination = destination;
-        this.direction = direction;
-        this.displayName = displayName;
-        this.portMirroringId = portMirroringId;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.revision = revision;
-        this.source = source;
-    }
+    private WorkloadNetworkPortMirroringArgs() {}
 
-    private WorkloadNetworkPortMirroringArgs() {
-        this.destination = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.portMirroringId = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.source = Codegen.empty();
+    private WorkloadNetworkPortMirroringArgs(WorkloadNetworkPortMirroringArgs $) {
+        this.destination = $.destination;
+        this.direction = $.direction;
+        this.displayName = $.displayName;
+        this.portMirroringId = $.portMirroringId;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.revision = $.revision;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkPortMirroringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
-        private @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> portMirroringId;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Double> revision;
-        private @Nullable Output<String> source;
+        private WorkloadNetworkPortMirroringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkPortMirroringArgs();
         }
 
         public Builder(WorkloadNetworkPortMirroringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.direction = defaults.direction;
-    	      this.displayName = defaults.displayName;
-    	      this.portMirroringId = defaults.portMirroringId;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.revision = defaults.revision;
-    	      this.source = defaults.source;
+            $ = new WorkloadNetworkPortMirroringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder direction(@Nullable Output<Either<String,PortMirroringDirectionEnum>> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable Either<String,PortMirroringDirectionEnum> direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(Either<String,PortMirroringDirectionEnum> direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder portMirroringId(@Nullable Output<String> portMirroringId) {
-            this.portMirroringId = portMirroringId;
+            $.portMirroringId = portMirroringId;
             return this;
         }
-        public Builder portMirroringId(@Nullable String portMirroringId) {
-            this.portMirroringId = Codegen.ofNullable(portMirroringId);
-            return this;
+
+        public Builder portMirroringId(String portMirroringId) {
+            return portMirroringId(Output.of(portMirroringId));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder revision(@Nullable Output<Double> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Double revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(Double revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public WorkloadNetworkPortMirroringArgs build() {
-            return new WorkloadNetworkPortMirroringArgs(destination, direction, displayName, portMirroringId, privateCloudName, resourceGroupName, revision, source);
+
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public WorkloadNetworkPortMirroringArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

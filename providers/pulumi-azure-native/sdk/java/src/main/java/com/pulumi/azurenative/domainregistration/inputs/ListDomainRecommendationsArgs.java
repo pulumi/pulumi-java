@@ -20,10 +20,10 @@ public final class ListDomainRecommendationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="keywords")
-      private final @Nullable String keywords;
+    private @Nullable String keywords;
 
     public Optional<String> keywords() {
-        return this.keywords == null ? Optional.empty() : Optional.ofNullable(this.keywords);
+        return Optional.ofNullable(this.keywords);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class ListDomainRecommendationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxDomainRecommendations")
-      private final @Nullable Integer maxDomainRecommendations;
+    private @Nullable Integer maxDomainRecommendations;
 
     public Optional<Integer> maxDomainRecommendations() {
-        return this.maxDomainRecommendations == null ? Optional.empty() : Optional.ofNullable(this.maxDomainRecommendations);
+        return Optional.ofNullable(this.maxDomainRecommendations);
     }
 
-    public ListDomainRecommendationsArgs(
-        @Nullable String keywords,
-        @Nullable Integer maxDomainRecommendations) {
-        this.keywords = keywords;
-        this.maxDomainRecommendations = maxDomainRecommendations;
-    }
+    private ListDomainRecommendationsArgs() {}
 
-    private ListDomainRecommendationsArgs() {
-        this.keywords = null;
-        this.maxDomainRecommendations = null;
+    private ListDomainRecommendationsArgs(ListDomainRecommendationsArgs $) {
+        this.keywords = $.keywords;
+        this.maxDomainRecommendations = $.maxDomainRecommendations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListDomainRecommendationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keywords;
-        private @Nullable Integer maxDomainRecommendations;
+        private ListDomainRecommendationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListDomainRecommendationsArgs();
         }
 
         public Builder(ListDomainRecommendationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keywords = defaults.keywords;
-    	      this.maxDomainRecommendations = defaults.maxDomainRecommendations;
+            $ = new ListDomainRecommendationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keywords(@Nullable String keywords) {
-            this.keywords = keywords;
+            $.keywords = keywords;
             return this;
         }
+
         public Builder maxDomainRecommendations(@Nullable Integer maxDomainRecommendations) {
-            this.maxDomainRecommendations = maxDomainRecommendations;
+            $.maxDomainRecommendations = maxDomainRecommendations;
             return this;
-        }        public ListDomainRecommendationsArgs build() {
-            return new ListDomainRecommendationsArgs(keywords, maxDomainRecommendations);
+        }
+
+        public ListDomainRecommendationsArgs build() {
+            return $;
         }
     }
+
 }

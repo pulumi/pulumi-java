@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class MediaGraphTlsValidationOptionsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ignoreHostname", required=true)
-      private final Output<Boolean> ignoreHostname;
+    private Output<Boolean> ignoreHostname;
 
     public Output<Boolean> ignoreHostname() {
         return this.ignoreHostname;
@@ -34,63 +33,60 @@ public final class MediaGraphTlsValidationOptionsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ignoreSignature", required=true)
-      private final Output<Boolean> ignoreSignature;
+    private Output<Boolean> ignoreSignature;
 
     public Output<Boolean> ignoreSignature() {
         return this.ignoreSignature;
     }
 
-    public MediaGraphTlsValidationOptionsArgs(
-        Output<Boolean> ignoreHostname,
-        Output<Boolean> ignoreSignature) {
-        this.ignoreHostname = Objects.requireNonNull(ignoreHostname, "expected parameter 'ignoreHostname' to be non-null");
-        this.ignoreSignature = Objects.requireNonNull(ignoreSignature, "expected parameter 'ignoreSignature' to be non-null");
-    }
+    private MediaGraphTlsValidationOptionsArgs() {}
 
-    private MediaGraphTlsValidationOptionsArgs() {
-        this.ignoreHostname = Codegen.empty();
-        this.ignoreSignature = Codegen.empty();
+    private MediaGraphTlsValidationOptionsArgs(MediaGraphTlsValidationOptionsArgs $) {
+        this.ignoreHostname = $.ignoreHostname;
+        this.ignoreSignature = $.ignoreSignature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphTlsValidationOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> ignoreHostname;
-        private Output<Boolean> ignoreSignature;
+        private MediaGraphTlsValidationOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphTlsValidationOptionsArgs();
         }
 
         public Builder(MediaGraphTlsValidationOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreHostname = defaults.ignoreHostname;
-    	      this.ignoreSignature = defaults.ignoreSignature;
+            $ = new MediaGraphTlsValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreHostname(Output<Boolean> ignoreHostname) {
-            this.ignoreHostname = Objects.requireNonNull(ignoreHostname);
+            $.ignoreHostname = ignoreHostname;
             return this;
         }
+
         public Builder ignoreHostname(Boolean ignoreHostname) {
-            this.ignoreHostname = Output.of(Objects.requireNonNull(ignoreHostname));
-            return this;
+            return ignoreHostname(Output.of(ignoreHostname));
         }
+
         public Builder ignoreSignature(Output<Boolean> ignoreSignature) {
-            this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
+            $.ignoreSignature = ignoreSignature;
             return this;
         }
+
         public Builder ignoreSignature(Boolean ignoreSignature) {
-            this.ignoreSignature = Output.of(Objects.requireNonNull(ignoreSignature));
-            return this;
-        }        public MediaGraphTlsValidationOptionsArgs build() {
-            return new MediaGraphTlsValidationOptionsArgs(ignoreHostname, ignoreSignature);
+            return ignoreSignature(Output.of(ignoreSignature));
+        }
+
+        public MediaGraphTlsValidationOptionsArgs build() {
+            $.ignoreHostname = Objects.requireNonNull($.ignoreHostname, "expected parameter 'ignoreHostname' to be non-null");
+            $.ignoreSignature = Objects.requireNonNull($.ignoreSignature, "expected parameter 'ignoreSignature' to be non-null");
+            return $;
         }
     }
+
 }

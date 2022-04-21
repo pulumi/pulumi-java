@@ -23,10 +23,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="accessTokenString")
-      private final @Nullable String accessTokenString;
+    private @Nullable String accessTokenString;
 
     public Optional<String> accessTokenString() {
-        return this.accessTokenString == null ? Optional.empty() : Optional.ofNullable(this.accessTokenString);
+        return Optional.ofNullable(this.accessTokenString);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="bMSActiveRegion")
-      private final @Nullable String bMSActiveRegion;
+    private @Nullable String bMSActiveRegion;
 
     public Optional<String> bMSActiveRegion() {
-        return this.bMSActiveRegion == null ? Optional.empty() : Optional.ofNullable(this.bMSActiveRegion);
+        return Optional.ofNullable(this.bMSActiveRegion);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerId")
-      private final @Nullable String containerId;
+    private @Nullable String containerId;
 
     public Optional<String> containerId() {
-        return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
+        return Optional.ofNullable(this.containerId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerType")
-      private final @Nullable String containerType;
+    private @Nullable String containerType;
 
     public Optional<String> containerType() {
-        return this.containerType == null ? Optional.empty() : Optional.ofNullable(this.containerType);
+        return Optional.ofNullable(this.containerType);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="coordinatorServiceStampId")
-      private final @Nullable String coordinatorServiceStampId;
+    private @Nullable String coordinatorServiceStampId;
 
     public Optional<String> coordinatorServiceStampId() {
-        return this.coordinatorServiceStampId == null ? Optional.empty() : Optional.ofNullable(this.coordinatorServiceStampId);
+        return Optional.ofNullable(this.coordinatorServiceStampId);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="coordinatorServiceStampUri")
-      private final @Nullable String coordinatorServiceStampUri;
+    private @Nullable String coordinatorServiceStampUri;
 
     public Optional<String> coordinatorServiceStampUri() {
-        return this.coordinatorServiceStampUri == null ? Optional.empty() : Optional.ofNullable(this.coordinatorServiceStampUri);
+        return Optional.ofNullable(this.coordinatorServiceStampUri);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="datasourceContainerName")
-      private final @Nullable String datasourceContainerName;
+    private @Nullable String datasourceContainerName;
 
     public Optional<String> datasourceContainerName() {
-        return this.datasourceContainerName == null ? Optional.empty() : Optional.ofNullable(this.datasourceContainerName);
+        return Optional.ofNullable(this.datasourceContainerName);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="datasourceId")
-      private final @Nullable String datasourceId;
+    private @Nullable String datasourceId;
 
     public Optional<String> datasourceId() {
-        return this.datasourceId == null ? Optional.empty() : Optional.ofNullable(this.datasourceId);
+        return Optional.ofNullable(this.datasourceId);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="datasourceName")
-      private final @Nullable String datasourceName;
+    private @Nullable String datasourceName;
 
     public Optional<String> datasourceName() {
-        return this.datasourceName == null ? Optional.empty() : Optional.ofNullable(this.datasourceName);
+        return Optional.ofNullable(this.datasourceName);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="datasourceType")
-      private final @Nullable String datasourceType;
+    private @Nullable String datasourceType;
 
     public Optional<String> datasourceType() {
-        return this.datasourceType == null ? Optional.empty() : Optional.ofNullable(this.datasourceType);
+        return Optional.ofNullable(this.datasourceType);
     }
 
     /**
@@ -156,7 +156,7 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -167,10 +167,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -178,52 +178,52 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="policyName")
-      private final @Nullable String policyName;
+    private @Nullable String policyName;
 
     public Optional<String> policyName() {
-        return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
+        return Optional.ofNullable(this.policyName);
     }
 
     @Import(name="protectableObjectContainerHostOsName")
-      private final @Nullable String protectableObjectContainerHostOsName;
+    private @Nullable String protectableObjectContainerHostOsName;
 
     public Optional<String> protectableObjectContainerHostOsName() {
-        return this.protectableObjectContainerHostOsName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectContainerHostOsName);
+        return Optional.ofNullable(this.protectableObjectContainerHostOsName);
     }
 
     @Import(name="protectableObjectFriendlyName")
-      private final @Nullable String protectableObjectFriendlyName;
+    private @Nullable String protectableObjectFriendlyName;
 
     public Optional<String> protectableObjectFriendlyName() {
-        return this.protectableObjectFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectFriendlyName);
+        return Optional.ofNullable(this.protectableObjectFriendlyName);
     }
 
     @Import(name="protectableObjectParentLogicalContainerName")
-      private final @Nullable String protectableObjectParentLogicalContainerName;
+    private @Nullable String protectableObjectParentLogicalContainerName;
 
     public Optional<String> protectableObjectParentLogicalContainerName() {
-        return this.protectableObjectParentLogicalContainerName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectParentLogicalContainerName);
+        return Optional.ofNullable(this.protectableObjectParentLogicalContainerName);
     }
 
     @Import(name="protectableObjectProtectionState")
-      private final @Nullable String protectableObjectProtectionState;
+    private @Nullable String protectableObjectProtectionState;
 
     public Optional<String> protectableObjectProtectionState() {
-        return this.protectableObjectProtectionState == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectProtectionState);
+        return Optional.ofNullable(this.protectableObjectProtectionState);
     }
 
     @Import(name="protectableObjectUniqueName")
-      private final @Nullable String protectableObjectUniqueName;
+    private @Nullable String protectableObjectUniqueName;
 
     public Optional<String> protectableObjectUniqueName() {
-        return this.protectableObjectUniqueName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectUniqueName);
+        return Optional.ofNullable(this.protectableObjectUniqueName);
     }
 
     @Import(name="protectableObjectWorkloadType")
-      private final @Nullable String protectableObjectWorkloadType;
+    private @Nullable String protectableObjectWorkloadType;
 
     public Optional<String> protectableObjectWorkloadType() {
-        return this.protectableObjectWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectWorkloadType);
+        return Optional.ofNullable(this.protectableObjectWorkloadType);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="protectionContainerId")
-      private final @Nullable Double protectionContainerId;
+    private @Nullable Double protectionContainerId;
 
     public Optional<Double> protectionContainerId() {
-        return this.protectionContainerId == null ? Optional.empty() : Optional.ofNullable(this.protectionContainerId);
+        return Optional.ofNullable(this.protectionContainerId);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="protectionServiceStampId")
-      private final @Nullable String protectionServiceStampId;
+    private @Nullable String protectionServiceStampId;
 
     public Optional<String> protectionServiceStampId() {
-        return this.protectionServiceStampId == null ? Optional.empty() : Optional.ofNullable(this.protectionServiceStampId);
+        return Optional.ofNullable(this.protectionServiceStampId);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="protectionServiceStampUri")
-      private final @Nullable String protectionServiceStampUri;
+    private @Nullable String protectionServiceStampUri;
 
     public Optional<String> protectionServiceStampUri() {
-        return this.protectionServiceStampUri == null ? Optional.empty() : Optional.ofNullable(this.protectionServiceStampUri);
+        return Optional.ofNullable(this.protectionServiceStampUri);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryPointId")
-      private final @Nullable String recoveryPointId;
+    private @Nullable String recoveryPointId;
 
     public Optional<String> recoveryPointId() {
-        return this.recoveryPointId == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointId);
+        return Optional.ofNullable(this.recoveryPointId);
     }
 
     /**
@@ -275,10 +275,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryPointTime")
-      private final @Nullable String recoveryPointTime;
+    private @Nullable String recoveryPointTime;
 
     public Optional<String> recoveryPointTime() {
-        return this.recoveryPointTime == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointTime);
+        return Optional.ofNullable(this.recoveryPointTime);
     }
 
     /**
@@ -286,10 +286,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable String resourceGroupName;
+    private @Nullable String resourceGroupName;
 
     public Optional<String> resourceGroupName() {
-        return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -297,10 +297,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -308,10 +308,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable String resourceName;
+    private @Nullable String resourceName;
 
     public Optional<String> resourceName() {
-        return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -319,10 +319,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rpIsManagedVirtualMachine")
-      private final @Nullable Boolean rpIsManagedVirtualMachine;
+    private @Nullable Boolean rpIsManagedVirtualMachine;
 
     public Optional<Boolean> rpIsManagedVirtualMachine() {
-        return this.rpIsManagedVirtualMachine == null ? Optional.empty() : Optional.ofNullable(this.rpIsManagedVirtualMachine);
+        return Optional.ofNullable(this.rpIsManagedVirtualMachine);
     }
 
     /**
@@ -330,10 +330,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rpOriginalSAOption")
-      private final @Nullable Boolean rpOriginalSAOption;
+    private @Nullable Boolean rpOriginalSAOption;
 
     public Optional<Boolean> rpOriginalSAOption() {
-        return this.rpOriginalSAOption == null ? Optional.empty() : Optional.ofNullable(this.rpOriginalSAOption);
+        return Optional.ofNullable(this.rpOriginalSAOption);
     }
 
     /**
@@ -341,10 +341,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rpTierInformation")
-      private final @Nullable Map<String,String> rpTierInformation;
+    private @Nullable Map<String,String> rpTierInformation;
 
-    public Map<String,String> rpTierInformation() {
-        return this.rpTierInformation == null ? Map.of() : this.rpTierInformation;
+    public Optional<Map<String,String>> rpTierInformation() {
+        return Optional.ofNullable(this.rpTierInformation);
     }
 
     /**
@@ -352,10 +352,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rpVMSizeDescription")
-      private final @Nullable String rpVMSizeDescription;
+    private @Nullable String rpVMSizeDescription;
 
     public Optional<String> rpVMSizeDescription() {
-        return this.rpVMSizeDescription == null ? Optional.empty() : Optional.ofNullable(this.rpVMSizeDescription);
+        return Optional.ofNullable(this.rpVMSizeDescription);
     }
 
     /**
@@ -363,10 +363,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -374,352 +374,249 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tokenExtendedInformation")
-      private final @Nullable String tokenExtendedInformation;
+    private @Nullable String tokenExtendedInformation;
 
     public Optional<String> tokenExtendedInformation() {
-        return this.tokenExtendedInformation == null ? Optional.empty() : Optional.ofNullable(this.tokenExtendedInformation);
+        return Optional.ofNullable(this.tokenExtendedInformation);
     }
 
-    public WorkloadCrrAccessTokenResponse(
-        @Nullable String accessTokenString,
-        @Nullable String bMSActiveRegion,
-        @Nullable String backupManagementType,
-        @Nullable String containerId,
-        @Nullable String containerName,
-        @Nullable String containerType,
-        @Nullable String coordinatorServiceStampId,
-        @Nullable String coordinatorServiceStampUri,
-        @Nullable String datasourceContainerName,
-        @Nullable String datasourceId,
-        @Nullable String datasourceName,
-        @Nullable String datasourceType,
-        String objectType,
-        @Nullable String policyId,
-        @Nullable String policyName,
-        @Nullable String protectableObjectContainerHostOsName,
-        @Nullable String protectableObjectFriendlyName,
-        @Nullable String protectableObjectParentLogicalContainerName,
-        @Nullable String protectableObjectProtectionState,
-        @Nullable String protectableObjectUniqueName,
-        @Nullable String protectableObjectWorkloadType,
-        @Nullable Double protectionContainerId,
-        @Nullable String protectionServiceStampId,
-        @Nullable String protectionServiceStampUri,
-        @Nullable String recoveryPointId,
-        @Nullable String recoveryPointTime,
-        @Nullable String resourceGroupName,
-        @Nullable String resourceId,
-        @Nullable String resourceName,
-        @Nullable Boolean rpIsManagedVirtualMachine,
-        @Nullable Boolean rpOriginalSAOption,
-        @Nullable Map<String,String> rpTierInformation,
-        @Nullable String rpVMSizeDescription,
-        @Nullable String subscriptionId,
-        @Nullable String tokenExtendedInformation) {
-        this.accessTokenString = accessTokenString;
-        this.bMSActiveRegion = bMSActiveRegion;
-        this.backupManagementType = backupManagementType;
-        this.containerId = containerId;
-        this.containerName = containerName;
-        this.containerType = containerType;
-        this.coordinatorServiceStampId = coordinatorServiceStampId;
-        this.coordinatorServiceStampUri = coordinatorServiceStampUri;
-        this.datasourceContainerName = datasourceContainerName;
-        this.datasourceId = datasourceId;
-        this.datasourceName = datasourceName;
-        this.datasourceType = datasourceType;
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-        this.policyId = policyId;
-        this.policyName = policyName;
-        this.protectableObjectContainerHostOsName = protectableObjectContainerHostOsName;
-        this.protectableObjectFriendlyName = protectableObjectFriendlyName;
-        this.protectableObjectParentLogicalContainerName = protectableObjectParentLogicalContainerName;
-        this.protectableObjectProtectionState = protectableObjectProtectionState;
-        this.protectableObjectUniqueName = protectableObjectUniqueName;
-        this.protectableObjectWorkloadType = protectableObjectWorkloadType;
-        this.protectionContainerId = protectionContainerId;
-        this.protectionServiceStampId = protectionServiceStampId;
-        this.protectionServiceStampUri = protectionServiceStampUri;
-        this.recoveryPointId = recoveryPointId;
-        this.recoveryPointTime = recoveryPointTime;
-        this.resourceGroupName = resourceGroupName;
-        this.resourceId = resourceId;
-        this.resourceName = resourceName;
-        this.rpIsManagedVirtualMachine = rpIsManagedVirtualMachine;
-        this.rpOriginalSAOption = rpOriginalSAOption;
-        this.rpTierInformation = rpTierInformation;
-        this.rpVMSizeDescription = rpVMSizeDescription;
-        this.subscriptionId = subscriptionId;
-        this.tokenExtendedInformation = tokenExtendedInformation;
-    }
+    private WorkloadCrrAccessTokenResponse() {}
 
-    private WorkloadCrrAccessTokenResponse() {
-        this.accessTokenString = null;
-        this.bMSActiveRegion = null;
-        this.backupManagementType = null;
-        this.containerId = null;
-        this.containerName = null;
-        this.containerType = null;
-        this.coordinatorServiceStampId = null;
-        this.coordinatorServiceStampUri = null;
-        this.datasourceContainerName = null;
-        this.datasourceId = null;
-        this.datasourceName = null;
-        this.datasourceType = null;
-        this.objectType = null;
-        this.policyId = null;
-        this.policyName = null;
-        this.protectableObjectContainerHostOsName = null;
-        this.protectableObjectFriendlyName = null;
-        this.protectableObjectParentLogicalContainerName = null;
-        this.protectableObjectProtectionState = null;
-        this.protectableObjectUniqueName = null;
-        this.protectableObjectWorkloadType = null;
-        this.protectionContainerId = null;
-        this.protectionServiceStampId = null;
-        this.protectionServiceStampUri = null;
-        this.recoveryPointId = null;
-        this.recoveryPointTime = null;
-        this.resourceGroupName = null;
-        this.resourceId = null;
-        this.resourceName = null;
-        this.rpIsManagedVirtualMachine = null;
-        this.rpOriginalSAOption = null;
-        this.rpTierInformation = Map.of();
-        this.rpVMSizeDescription = null;
-        this.subscriptionId = null;
-        this.tokenExtendedInformation = null;
+    private WorkloadCrrAccessTokenResponse(WorkloadCrrAccessTokenResponse $) {
+        this.accessTokenString = $.accessTokenString;
+        this.bMSActiveRegion = $.bMSActiveRegion;
+        this.backupManagementType = $.backupManagementType;
+        this.containerId = $.containerId;
+        this.containerName = $.containerName;
+        this.containerType = $.containerType;
+        this.coordinatorServiceStampId = $.coordinatorServiceStampId;
+        this.coordinatorServiceStampUri = $.coordinatorServiceStampUri;
+        this.datasourceContainerName = $.datasourceContainerName;
+        this.datasourceId = $.datasourceId;
+        this.datasourceName = $.datasourceName;
+        this.datasourceType = $.datasourceType;
+        this.objectType = $.objectType;
+        this.policyId = $.policyId;
+        this.policyName = $.policyName;
+        this.protectableObjectContainerHostOsName = $.protectableObjectContainerHostOsName;
+        this.protectableObjectFriendlyName = $.protectableObjectFriendlyName;
+        this.protectableObjectParentLogicalContainerName = $.protectableObjectParentLogicalContainerName;
+        this.protectableObjectProtectionState = $.protectableObjectProtectionState;
+        this.protectableObjectUniqueName = $.protectableObjectUniqueName;
+        this.protectableObjectWorkloadType = $.protectableObjectWorkloadType;
+        this.protectionContainerId = $.protectionContainerId;
+        this.protectionServiceStampId = $.protectionServiceStampId;
+        this.protectionServiceStampUri = $.protectionServiceStampUri;
+        this.recoveryPointId = $.recoveryPointId;
+        this.recoveryPointTime = $.recoveryPointTime;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.resourceName = $.resourceName;
+        this.rpIsManagedVirtualMachine = $.rpIsManagedVirtualMachine;
+        this.rpOriginalSAOption = $.rpOriginalSAOption;
+        this.rpTierInformation = $.rpTierInformation;
+        this.rpVMSizeDescription = $.rpVMSizeDescription;
+        this.subscriptionId = $.subscriptionId;
+        this.tokenExtendedInformation = $.tokenExtendedInformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadCrrAccessTokenResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessTokenString;
-        private @Nullable String bMSActiveRegion;
-        private @Nullable String backupManagementType;
-        private @Nullable String containerId;
-        private @Nullable String containerName;
-        private @Nullable String containerType;
-        private @Nullable String coordinatorServiceStampId;
-        private @Nullable String coordinatorServiceStampUri;
-        private @Nullable String datasourceContainerName;
-        private @Nullable String datasourceId;
-        private @Nullable String datasourceName;
-        private @Nullable String datasourceType;
-        private String objectType;
-        private @Nullable String policyId;
-        private @Nullable String policyName;
-        private @Nullable String protectableObjectContainerHostOsName;
-        private @Nullable String protectableObjectFriendlyName;
-        private @Nullable String protectableObjectParentLogicalContainerName;
-        private @Nullable String protectableObjectProtectionState;
-        private @Nullable String protectableObjectUniqueName;
-        private @Nullable String protectableObjectWorkloadType;
-        private @Nullable Double protectionContainerId;
-        private @Nullable String protectionServiceStampId;
-        private @Nullable String protectionServiceStampUri;
-        private @Nullable String recoveryPointId;
-        private @Nullable String recoveryPointTime;
-        private @Nullable String resourceGroupName;
-        private @Nullable String resourceId;
-        private @Nullable String resourceName;
-        private @Nullable Boolean rpIsManagedVirtualMachine;
-        private @Nullable Boolean rpOriginalSAOption;
-        private @Nullable Map<String,String> rpTierInformation;
-        private @Nullable String rpVMSizeDescription;
-        private @Nullable String subscriptionId;
-        private @Nullable String tokenExtendedInformation;
+        private WorkloadCrrAccessTokenResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadCrrAccessTokenResponse();
         }
 
         public Builder(WorkloadCrrAccessTokenResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTokenString = defaults.accessTokenString;
-    	      this.bMSActiveRegion = defaults.bMSActiveRegion;
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerId = defaults.containerId;
-    	      this.containerName = defaults.containerName;
-    	      this.containerType = defaults.containerType;
-    	      this.coordinatorServiceStampId = defaults.coordinatorServiceStampId;
-    	      this.coordinatorServiceStampUri = defaults.coordinatorServiceStampUri;
-    	      this.datasourceContainerName = defaults.datasourceContainerName;
-    	      this.datasourceId = defaults.datasourceId;
-    	      this.datasourceName = defaults.datasourceName;
-    	      this.datasourceType = defaults.datasourceType;
-    	      this.objectType = defaults.objectType;
-    	      this.policyId = defaults.policyId;
-    	      this.policyName = defaults.policyName;
-    	      this.protectableObjectContainerHostOsName = defaults.protectableObjectContainerHostOsName;
-    	      this.protectableObjectFriendlyName = defaults.protectableObjectFriendlyName;
-    	      this.protectableObjectParentLogicalContainerName = defaults.protectableObjectParentLogicalContainerName;
-    	      this.protectableObjectProtectionState = defaults.protectableObjectProtectionState;
-    	      this.protectableObjectUniqueName = defaults.protectableObjectUniqueName;
-    	      this.protectableObjectWorkloadType = defaults.protectableObjectWorkloadType;
-    	      this.protectionContainerId = defaults.protectionContainerId;
-    	      this.protectionServiceStampId = defaults.protectionServiceStampId;
-    	      this.protectionServiceStampUri = defaults.protectionServiceStampUri;
-    	      this.recoveryPointId = defaults.recoveryPointId;
-    	      this.recoveryPointTime = defaults.recoveryPointTime;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceName = defaults.resourceName;
-    	      this.rpIsManagedVirtualMachine = defaults.rpIsManagedVirtualMachine;
-    	      this.rpOriginalSAOption = defaults.rpOriginalSAOption;
-    	      this.rpTierInformation = defaults.rpTierInformation;
-    	      this.rpVMSizeDescription = defaults.rpVMSizeDescription;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tokenExtendedInformation = defaults.tokenExtendedInformation;
+            $ = new WorkloadCrrAccessTokenResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTokenString(@Nullable String accessTokenString) {
-            this.accessTokenString = accessTokenString;
+            $.accessTokenString = accessTokenString;
             return this;
         }
+
         public Builder bMSActiveRegion(@Nullable String bMSActiveRegion) {
-            this.bMSActiveRegion = bMSActiveRegion;
+            $.bMSActiveRegion = bMSActiveRegion;
             return this;
         }
+
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder containerId(@Nullable String containerId) {
-            this.containerId = containerId;
+            $.containerId = containerId;
             return this;
         }
+
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerType(@Nullable String containerType) {
-            this.containerType = containerType;
+            $.containerType = containerType;
             return this;
         }
+
         public Builder coordinatorServiceStampId(@Nullable String coordinatorServiceStampId) {
-            this.coordinatorServiceStampId = coordinatorServiceStampId;
+            $.coordinatorServiceStampId = coordinatorServiceStampId;
             return this;
         }
+
         public Builder coordinatorServiceStampUri(@Nullable String coordinatorServiceStampUri) {
-            this.coordinatorServiceStampUri = coordinatorServiceStampUri;
+            $.coordinatorServiceStampUri = coordinatorServiceStampUri;
             return this;
         }
+
         public Builder datasourceContainerName(@Nullable String datasourceContainerName) {
-            this.datasourceContainerName = datasourceContainerName;
+            $.datasourceContainerName = datasourceContainerName;
             return this;
         }
+
         public Builder datasourceId(@Nullable String datasourceId) {
-            this.datasourceId = datasourceId;
+            $.datasourceId = datasourceId;
             return this;
         }
+
         public Builder datasourceName(@Nullable String datasourceName) {
-            this.datasourceName = datasourceName;
+            $.datasourceName = datasourceName;
             return this;
         }
+
         public Builder datasourceType(@Nullable String datasourceType) {
-            this.datasourceType = datasourceType;
+            $.datasourceType = datasourceType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
+
         public Builder protectableObjectContainerHostOsName(@Nullable String protectableObjectContainerHostOsName) {
-            this.protectableObjectContainerHostOsName = protectableObjectContainerHostOsName;
+            $.protectableObjectContainerHostOsName = protectableObjectContainerHostOsName;
             return this;
         }
+
         public Builder protectableObjectFriendlyName(@Nullable String protectableObjectFriendlyName) {
-            this.protectableObjectFriendlyName = protectableObjectFriendlyName;
+            $.protectableObjectFriendlyName = protectableObjectFriendlyName;
             return this;
         }
+
         public Builder protectableObjectParentLogicalContainerName(@Nullable String protectableObjectParentLogicalContainerName) {
-            this.protectableObjectParentLogicalContainerName = protectableObjectParentLogicalContainerName;
+            $.protectableObjectParentLogicalContainerName = protectableObjectParentLogicalContainerName;
             return this;
         }
+
         public Builder protectableObjectProtectionState(@Nullable String protectableObjectProtectionState) {
-            this.protectableObjectProtectionState = protectableObjectProtectionState;
+            $.protectableObjectProtectionState = protectableObjectProtectionState;
             return this;
         }
+
         public Builder protectableObjectUniqueName(@Nullable String protectableObjectUniqueName) {
-            this.protectableObjectUniqueName = protectableObjectUniqueName;
+            $.protectableObjectUniqueName = protectableObjectUniqueName;
             return this;
         }
+
         public Builder protectableObjectWorkloadType(@Nullable String protectableObjectWorkloadType) {
-            this.protectableObjectWorkloadType = protectableObjectWorkloadType;
+            $.protectableObjectWorkloadType = protectableObjectWorkloadType;
             return this;
         }
+
         public Builder protectionContainerId(@Nullable Double protectionContainerId) {
-            this.protectionContainerId = protectionContainerId;
+            $.protectionContainerId = protectionContainerId;
             return this;
         }
+
         public Builder protectionServiceStampId(@Nullable String protectionServiceStampId) {
-            this.protectionServiceStampId = protectionServiceStampId;
+            $.protectionServiceStampId = protectionServiceStampId;
             return this;
         }
+
         public Builder protectionServiceStampUri(@Nullable String protectionServiceStampUri) {
-            this.protectionServiceStampUri = protectionServiceStampUri;
+            $.protectionServiceStampUri = protectionServiceStampUri;
             return this;
         }
+
         public Builder recoveryPointId(@Nullable String recoveryPointId) {
-            this.recoveryPointId = recoveryPointId;
+            $.recoveryPointId = recoveryPointId;
             return this;
         }
+
         public Builder recoveryPointTime(@Nullable String recoveryPointTime) {
-            this.recoveryPointTime = recoveryPointTime;
+            $.recoveryPointTime = recoveryPointTime;
             return this;
         }
+
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder rpIsManagedVirtualMachine(@Nullable Boolean rpIsManagedVirtualMachine) {
-            this.rpIsManagedVirtualMachine = rpIsManagedVirtualMachine;
+            $.rpIsManagedVirtualMachine = rpIsManagedVirtualMachine;
             return this;
         }
+
         public Builder rpOriginalSAOption(@Nullable Boolean rpOriginalSAOption) {
-            this.rpOriginalSAOption = rpOriginalSAOption;
+            $.rpOriginalSAOption = rpOriginalSAOption;
             return this;
         }
+
         public Builder rpTierInformation(@Nullable Map<String,String> rpTierInformation) {
-            this.rpTierInformation = rpTierInformation;
+            $.rpTierInformation = rpTierInformation;
             return this;
         }
+
         public Builder rpVMSizeDescription(@Nullable String rpVMSizeDescription) {
-            this.rpVMSizeDescription = rpVMSizeDescription;
+            $.rpVMSizeDescription = rpVMSizeDescription;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tokenExtendedInformation(@Nullable String tokenExtendedInformation) {
-            this.tokenExtendedInformation = tokenExtendedInformation;
+            $.tokenExtendedInformation = tokenExtendedInformation;
             return this;
-        }        public WorkloadCrrAccessTokenResponse build() {
-            return new WorkloadCrrAccessTokenResponse(accessTokenString, bMSActiveRegion, backupManagementType, containerId, containerName, containerType, coordinatorServiceStampId, coordinatorServiceStampUri, datasourceContainerName, datasourceId, datasourceName, datasourceType, objectType, policyId, policyName, protectableObjectContainerHostOsName, protectableObjectFriendlyName, protectableObjectParentLogicalContainerName, protectableObjectProtectionState, protectableObjectUniqueName, protectableObjectWorkloadType, protectionContainerId, protectionServiceStampId, protectionServiceStampUri, recoveryPointId, recoveryPointTime, resourceGroupName, resourceId, resourceName, rpIsManagedVirtualMachine, rpOriginalSAOption, rpTierInformation, rpVMSizeDescription, subscriptionId, tokenExtendedInformation);
+        }
+
+        public WorkloadCrrAccessTokenResponse build() {
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

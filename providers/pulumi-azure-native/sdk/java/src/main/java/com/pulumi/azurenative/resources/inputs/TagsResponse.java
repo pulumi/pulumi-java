@@ -20,45 +20,44 @@ public final class TagsResponse extends com.pulumi.resources.InvokeArgs {
     public static final TagsResponse Empty = new TagsResponse();
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public TagsResponse(@Nullable Map<String,String> tags) {
-        this.tags = tags;
-    }
+    private TagsResponse() {}
 
-    private TagsResponse() {
-        this.tags = Map.of();
+    private TagsResponse(TagsResponse $) {
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> tags;
+        private TagsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagsResponse();
         }
 
         public Builder(TagsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
+            $ = new TagsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public TagsResponse build() {
-            return new TagsResponse(tags);
+        }
+
+        public TagsResponse build() {
+            return $;
         }
     }
+
 }

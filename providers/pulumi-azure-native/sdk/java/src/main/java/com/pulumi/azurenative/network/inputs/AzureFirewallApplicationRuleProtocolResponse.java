@@ -24,10 +24,10 @@ public final class AzureFirewallApplicationRuleProtocolResponse extends com.pulu
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AzureFirewallApplicationRuleProtocolResponse extends com.pulu
      * 
      */
     @Import(name="protocolType")
-      private final @Nullable String protocolType;
+    private @Nullable String protocolType;
 
     public Optional<String> protocolType() {
-        return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);
+        return Optional.ofNullable(this.protocolType);
     }
 
-    public AzureFirewallApplicationRuleProtocolResponse(
-        @Nullable Integer port,
-        @Nullable String protocolType) {
-        this.port = port;
-        this.protocolType = protocolType;
-    }
+    private AzureFirewallApplicationRuleProtocolResponse() {}
 
-    private AzureFirewallApplicationRuleProtocolResponse() {
-        this.port = null;
-        this.protocolType = null;
+    private AzureFirewallApplicationRuleProtocolResponse(AzureFirewallApplicationRuleProtocolResponse $) {
+        this.port = $.port;
+        this.protocolType = $.protocolType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallApplicationRuleProtocolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer port;
-        private @Nullable String protocolType;
+        private AzureFirewallApplicationRuleProtocolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallApplicationRuleProtocolResponse();
         }
 
         public Builder(AzureFirewallApplicationRuleProtocolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocolType = defaults.protocolType;
+            $ = new AzureFirewallApplicationRuleProtocolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder protocolType(@Nullable String protocolType) {
-            this.protocolType = protocolType;
+            $.protocolType = protocolType;
             return this;
-        }        public AzureFirewallApplicationRuleProtocolResponse build() {
-            return new AzureFirewallApplicationRuleProtocolResponse(port, protocolType);
+        }
+
+        public AzureFirewallApplicationRuleProtocolResponse build() {
+            return $;
         }
     }
+
 }

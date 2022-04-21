@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutoHealCustomActionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="exe")
-      private final @Nullable Output<String> exe;
+    private @Nullable Output<String> exe;
 
-    public Output<String> exe() {
-        return this.exe == null ? Codegen.empty() : this.exe;
+    public Optional<Output<String>> exe() {
+        return Optional.ofNullable(this.exe);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AutoHealCustomActionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<String> parameters;
+    private @Nullable Output<String> parameters;
 
-    public Output<String> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public AutoHealCustomActionArgs(
-        @Nullable Output<String> exe,
-        @Nullable Output<String> parameters) {
-        this.exe = exe;
-        this.parameters = parameters;
-    }
+    private AutoHealCustomActionArgs() {}
 
-    private AutoHealCustomActionArgs() {
-        this.exe = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private AutoHealCustomActionArgs(AutoHealCustomActionArgs $) {
+        this.exe = $.exe;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoHealCustomActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exe;
-        private @Nullable Output<String> parameters;
+        private AutoHealCustomActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoHealCustomActionArgs();
         }
 
         public Builder(AutoHealCustomActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exe = defaults.exe;
-    	      this.parameters = defaults.parameters;
+            $ = new AutoHealCustomActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exe(@Nullable Output<String> exe) {
-            this.exe = exe;
+            $.exe = exe;
             return this;
         }
-        public Builder exe(@Nullable String exe) {
-            this.exe = Codegen.ofNullable(exe);
-            return this;
+
+        public Builder exe(String exe) {
+            return exe(Output.of(exe));
         }
+
         public Builder parameters(@Nullable Output<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable String parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
-        }        public AutoHealCustomActionArgs build() {
-            return new AutoHealCustomActionArgs(exe, parameters);
+
+        public Builder parameters(String parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        public AutoHealCustomActionArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.DateAfterModificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="delete")
-      private final @Nullable Output<DateAfterModificationArgs> delete;
+    private @Nullable Output<DateAfterModificationArgs> delete;
 
-    public Output<DateAfterModificationArgs> delete() {
-        return this.delete == null ? Codegen.empty() : this.delete;
+    public Optional<Output<DateAfterModificationArgs>> delete() {
+        return Optional.ofNullable(this.delete);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enableAutoTierToHotFromCool")
-      private final @Nullable Output<Boolean> enableAutoTierToHotFromCool;
+    private @Nullable Output<Boolean> enableAutoTierToHotFromCool;
 
-    public Output<Boolean> enableAutoTierToHotFromCool() {
-        return this.enableAutoTierToHotFromCool == null ? Codegen.empty() : this.enableAutoTierToHotFromCool;
+    public Optional<Output<Boolean>> enableAutoTierToHotFromCool() {
+        return Optional.ofNullable(this.enableAutoTierToHotFromCool);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tierToArchive")
-      private final @Nullable Output<DateAfterModificationArgs> tierToArchive;
+    private @Nullable Output<DateAfterModificationArgs> tierToArchive;
 
-    public Output<DateAfterModificationArgs> tierToArchive() {
-        return this.tierToArchive == null ? Codegen.empty() : this.tierToArchive;
+    public Optional<Output<DateAfterModificationArgs>> tierToArchive() {
+        return Optional.ofNullable(this.tierToArchive);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tierToCool")
-      private final @Nullable Output<DateAfterModificationArgs> tierToCool;
+    private @Nullable Output<DateAfterModificationArgs> tierToCool;
 
-    public Output<DateAfterModificationArgs> tierToCool() {
-        return this.tierToCool == null ? Codegen.empty() : this.tierToCool;
+    public Optional<Output<DateAfterModificationArgs>> tierToCool() {
+        return Optional.ofNullable(this.tierToCool);
     }
 
-    public ManagementPolicyBaseBlobArgs(
-        @Nullable Output<DateAfterModificationArgs> delete,
-        @Nullable Output<Boolean> enableAutoTierToHotFromCool,
-        @Nullable Output<DateAfterModificationArgs> tierToArchive,
-        @Nullable Output<DateAfterModificationArgs> tierToCool) {
-        this.delete = delete;
-        this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
-        this.tierToArchive = tierToArchive;
-        this.tierToCool = tierToCool;
-    }
+    private ManagementPolicyBaseBlobArgs() {}
 
-    private ManagementPolicyBaseBlobArgs() {
-        this.delete = Codegen.empty();
-        this.enableAutoTierToHotFromCool = Codegen.empty();
-        this.tierToArchive = Codegen.empty();
-        this.tierToCool = Codegen.empty();
+    private ManagementPolicyBaseBlobArgs(ManagementPolicyBaseBlobArgs $) {
+        this.delete = $.delete;
+        this.enableAutoTierToHotFromCool = $.enableAutoTierToHotFromCool;
+        this.tierToArchive = $.tierToArchive;
+        this.tierToCool = $.tierToCool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyBaseBlobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DateAfterModificationArgs> delete;
-        private @Nullable Output<Boolean> enableAutoTierToHotFromCool;
-        private @Nullable Output<DateAfterModificationArgs> tierToArchive;
-        private @Nullable Output<DateAfterModificationArgs> tierToCool;
+        private ManagementPolicyBaseBlobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyBaseBlobArgs();
         }
 
         public Builder(ManagementPolicyBaseBlobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delete = defaults.delete;
-    	      this.enableAutoTierToHotFromCool = defaults.enableAutoTierToHotFromCool;
-    	      this.tierToArchive = defaults.tierToArchive;
-    	      this.tierToCool = defaults.tierToCool;
+            $ = new ManagementPolicyBaseBlobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delete(@Nullable Output<DateAfterModificationArgs> delete) {
-            this.delete = delete;
+            $.delete = delete;
             return this;
         }
-        public Builder delete(@Nullable DateAfterModificationArgs delete) {
-            this.delete = Codegen.ofNullable(delete);
-            return this;
+
+        public Builder delete(DateAfterModificationArgs delete) {
+            return delete(Output.of(delete));
         }
+
         public Builder enableAutoTierToHotFromCool(@Nullable Output<Boolean> enableAutoTierToHotFromCool) {
-            this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
+            $.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
-        public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
-            this.enableAutoTierToHotFromCool = Codegen.ofNullable(enableAutoTierToHotFromCool);
-            return this;
+
+        public Builder enableAutoTierToHotFromCool(Boolean enableAutoTierToHotFromCool) {
+            return enableAutoTierToHotFromCool(Output.of(enableAutoTierToHotFromCool));
         }
+
         public Builder tierToArchive(@Nullable Output<DateAfterModificationArgs> tierToArchive) {
-            this.tierToArchive = tierToArchive;
+            $.tierToArchive = tierToArchive;
             return this;
         }
-        public Builder tierToArchive(@Nullable DateAfterModificationArgs tierToArchive) {
-            this.tierToArchive = Codegen.ofNullable(tierToArchive);
-            return this;
+
+        public Builder tierToArchive(DateAfterModificationArgs tierToArchive) {
+            return tierToArchive(Output.of(tierToArchive));
         }
+
         public Builder tierToCool(@Nullable Output<DateAfterModificationArgs> tierToCool) {
-            this.tierToCool = tierToCool;
+            $.tierToCool = tierToCool;
             return this;
         }
-        public Builder tierToCool(@Nullable DateAfterModificationArgs tierToCool) {
-            this.tierToCool = Codegen.ofNullable(tierToCool);
-            return this;
-        }        public ManagementPolicyBaseBlobArgs build() {
-            return new ManagementPolicyBaseBlobArgs(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
+
+        public Builder tierToCool(DateAfterModificationArgs tierToCool) {
+            return tierToCool(Output.of(tierToCool));
+        }
+
+        public ManagementPolicyBaseBlobArgs build() {
+            return $;
         }
     }
+
 }

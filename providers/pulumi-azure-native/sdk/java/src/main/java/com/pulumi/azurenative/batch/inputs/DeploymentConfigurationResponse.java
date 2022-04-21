@@ -20,10 +20,10 @@ public final class DeploymentConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="cloudServiceConfiguration")
-      private final @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
+    private @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
 
     public Optional<CloudServiceConfigurationResponse> cloudServiceConfiguration() {
-        return this.cloudServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cloudServiceConfiguration);
+        return Optional.ofNullable(this.cloudServiceConfiguration);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class DeploymentConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="virtualMachineConfiguration")
-      private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
+    private @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
 
     public Optional<VirtualMachineConfigurationResponse> virtualMachineConfiguration() {
-        return this.virtualMachineConfiguration == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineConfiguration);
+        return Optional.ofNullable(this.virtualMachineConfiguration);
     }
 
-    public DeploymentConfigurationResponse(
-        @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration,
-        @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
-        this.cloudServiceConfiguration = cloudServiceConfiguration;
-        this.virtualMachineConfiguration = virtualMachineConfiguration;
-    }
+    private DeploymentConfigurationResponse() {}
 
-    private DeploymentConfigurationResponse() {
-        this.cloudServiceConfiguration = null;
-        this.virtualMachineConfiguration = null;
+    private DeploymentConfigurationResponse(DeploymentConfigurationResponse $) {
+        this.cloudServiceConfiguration = $.cloudServiceConfiguration;
+        this.virtualMachineConfiguration = $.virtualMachineConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
-        private @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
+        private DeploymentConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentConfigurationResponse();
         }
 
         public Builder(DeploymentConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudServiceConfiguration = defaults.cloudServiceConfiguration;
-    	      this.virtualMachineConfiguration = defaults.virtualMachineConfiguration;
+            $ = new DeploymentConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationResponse cloudServiceConfiguration) {
-            this.cloudServiceConfiguration = cloudServiceConfiguration;
+            $.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
+
         public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
-            this.virtualMachineConfiguration = virtualMachineConfiguration;
+            $.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
-        }        public DeploymentConfigurationResponse build() {
-            return new DeploymentConfigurationResponse(cloudServiceConfiguration, virtualMachineConfiguration);
+        }
+
+        public DeploymentConfigurationResponse build() {
+            return $;
         }
     }
+
 }

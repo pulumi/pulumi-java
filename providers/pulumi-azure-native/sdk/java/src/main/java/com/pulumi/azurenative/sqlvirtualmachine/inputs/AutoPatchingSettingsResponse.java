@@ -25,10 +25,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dayOfWeek")
-      private final @Nullable String dayOfWeek;
+    private @Nullable String dayOfWeek;
 
     public Optional<String> dayOfWeek() {
-        return this.dayOfWeek == null ? Optional.empty() : Optional.ofNullable(this.dayOfWeek);
+        return Optional.ofNullable(this.dayOfWeek);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enable")
-      private final @Nullable Boolean enable;
+    private @Nullable Boolean enable;
 
     public Optional<Boolean> enable() {
-        return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maintenanceWindowDuration")
-      private final @Nullable Integer maintenanceWindowDuration;
+    private @Nullable Integer maintenanceWindowDuration;
 
     public Optional<Integer> maintenanceWindowDuration() {
-        return this.maintenanceWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowDuration);
+        return Optional.ofNullable(this.maintenanceWindowDuration);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maintenanceWindowStartingHour")
-      private final @Nullable Integer maintenanceWindowStartingHour;
+    private @Nullable Integer maintenanceWindowStartingHour;
 
     public Optional<Integer> maintenanceWindowStartingHour() {
-        return this.maintenanceWindowStartingHour == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowStartingHour);
+        return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }
 
-    public AutoPatchingSettingsResponse(
-        @Nullable String dayOfWeek,
-        @Nullable Boolean enable,
-        @Nullable Integer maintenanceWindowDuration,
-        @Nullable Integer maintenanceWindowStartingHour) {
-        this.dayOfWeek = dayOfWeek;
-        this.enable = enable;
-        this.maintenanceWindowDuration = maintenanceWindowDuration;
-        this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
-    }
+    private AutoPatchingSettingsResponse() {}
 
-    private AutoPatchingSettingsResponse() {
-        this.dayOfWeek = null;
-        this.enable = null;
-        this.maintenanceWindowDuration = null;
-        this.maintenanceWindowStartingHour = null;
+    private AutoPatchingSettingsResponse(AutoPatchingSettingsResponse $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.enable = $.enable;
+        this.maintenanceWindowDuration = $.maintenanceWindowDuration;
+        this.maintenanceWindowStartingHour = $.maintenanceWindowStartingHour;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoPatchingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dayOfWeek;
-        private @Nullable Boolean enable;
-        private @Nullable Integer maintenanceWindowDuration;
-        private @Nullable Integer maintenanceWindowStartingHour;
+        private AutoPatchingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoPatchingSettingsResponse();
         }
 
         public Builder(AutoPatchingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.enable = defaults.enable;
-    	      this.maintenanceWindowDuration = defaults.maintenanceWindowDuration;
-    	      this.maintenanceWindowStartingHour = defaults.maintenanceWindowStartingHour;
+            $ = new AutoPatchingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(@Nullable String dayOfWeek) {
-            this.dayOfWeek = dayOfWeek;
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
+
         public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
-            this.maintenanceWindowDuration = maintenanceWindowDuration;
+            $.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
+
         public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
-            this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
+            $.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
-        }        public AutoPatchingSettingsResponse build() {
-            return new AutoPatchingSettingsResponse(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
+        }
+
+        public AutoPatchingSettingsResponse build() {
+            return $;
         }
     }
+
 }

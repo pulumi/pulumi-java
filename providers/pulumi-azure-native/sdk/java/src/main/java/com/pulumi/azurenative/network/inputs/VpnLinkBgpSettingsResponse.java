@@ -24,10 +24,10 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="asn")
-      private final @Nullable Double asn;
+    private @Nullable Double asn;
 
     public Optional<Double> asn() {
-        return this.asn == null ? Optional.empty() : Optional.ofNullable(this.asn);
+        return Optional.ofNullable(this.asn);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class VpnLinkBgpSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="bgpPeeringAddress")
-      private final @Nullable String bgpPeeringAddress;
+    private @Nullable String bgpPeeringAddress;
 
     public Optional<String> bgpPeeringAddress() {
-        return this.bgpPeeringAddress == null ? Optional.empty() : Optional.ofNullable(this.bgpPeeringAddress);
+        return Optional.ofNullable(this.bgpPeeringAddress);
     }
 
-    public VpnLinkBgpSettingsResponse(
-        @Nullable Double asn,
-        @Nullable String bgpPeeringAddress) {
-        this.asn = asn;
-        this.bgpPeeringAddress = bgpPeeringAddress;
-    }
+    private VpnLinkBgpSettingsResponse() {}
 
-    private VpnLinkBgpSettingsResponse() {
-        this.asn = null;
-        this.bgpPeeringAddress = null;
+    private VpnLinkBgpSettingsResponse(VpnLinkBgpSettingsResponse $) {
+        this.asn = $.asn;
+        this.bgpPeeringAddress = $.bgpPeeringAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnLinkBgpSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double asn;
-        private @Nullable String bgpPeeringAddress;
+        private VpnLinkBgpSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnLinkBgpSettingsResponse();
         }
 
         public Builder(VpnLinkBgpSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asn = defaults.asn;
-    	      this.bgpPeeringAddress = defaults.bgpPeeringAddress;
+            $ = new VpnLinkBgpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asn(@Nullable Double asn) {
-            this.asn = asn;
+            $.asn = asn;
             return this;
         }
+
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
-            this.bgpPeeringAddress = bgpPeeringAddress;
+            $.bgpPeeringAddress = bgpPeeringAddress;
             return this;
-        }        public VpnLinkBgpSettingsResponse build() {
-            return new VpnLinkBgpSettingsResponse(asn, bgpPeeringAddress);
+        }
+
+        public VpnLinkBgpSettingsResponse build() {
+            return $;
         }
     }
+
 }

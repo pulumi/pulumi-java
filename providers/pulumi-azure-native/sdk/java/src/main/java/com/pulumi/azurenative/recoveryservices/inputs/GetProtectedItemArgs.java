@@ -19,7 +19,7 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -30,7 +30,7 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -41,10 +41,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectedItemName", required=true)
-      private final String protectedItemName;
+    private String protectedItemName;
 
     public String protectedItemName() {
         return this.protectedItemName;
@@ -63,7 +63,7 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -74,91 +74,79 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetProtectedItemArgs(
-        String containerName,
-        String fabricName,
-        @Nullable String filter,
-        String protectedItemName,
-        String resourceGroupName,
-        String vaultName) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.filter = filter;
-        this.protectedItemName = Objects.requireNonNull(protectedItemName, "expected parameter 'protectedItemName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetProtectedItemArgs() {}
 
-    private GetProtectedItemArgs() {
-        this.containerName = null;
-        this.fabricName = null;
-        this.filter = null;
-        this.protectedItemName = null;
-        this.resourceGroupName = null;
-        this.vaultName = null;
+    private GetProtectedItemArgs(GetProtectedItemArgs $) {
+        this.containerName = $.containerName;
+        this.fabricName = $.fabricName;
+        this.filter = $.filter;
+        this.protectedItemName = $.protectedItemName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProtectedItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerName;
-        private String fabricName;
-        private @Nullable String filter;
-        private String protectedItemName;
-        private String resourceGroupName;
-        private String vaultName;
+        private GetProtectedItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProtectedItemArgs();
         }
 
         public Builder(GetProtectedItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.fabricName = defaults.fabricName;
-    	      this.filter = defaults.filter;
-    	      this.protectedItemName = defaults.protectedItemName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetProtectedItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder protectedItemName(String protectedItemName) {
-            this.protectedItemName = Objects.requireNonNull(protectedItemName);
+            $.protectedItemName = protectedItemName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetProtectedItemArgs build() {
-            return new GetProtectedItemArgs(containerName, fabricName, filter, protectedItemName, resourceGroupName, vaultName);
+        }
+
+        public GetProtectedItemArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.protectedItemName = Objects.requireNonNull($.protectedItemName, "expected parameter 'protectedItemName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

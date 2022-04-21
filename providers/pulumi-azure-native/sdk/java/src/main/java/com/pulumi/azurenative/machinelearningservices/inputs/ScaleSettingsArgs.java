@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxNodeCount", required=true)
-      private final Output<Integer> maxNodeCount;
+    private Output<Integer> maxNodeCount;
 
     public Output<Integer> maxNodeCount() {
         return this.maxNodeCount;
@@ -36,10 +37,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minNodeCount")
-      private final @Nullable Output<Integer> minNodeCount;
+    private @Nullable Output<Integer> minNodeCount;
 
-    public Output<Integer> minNodeCount() {
-        return this.minNodeCount == null ? Codegen.empty() : this.minNodeCount;
+    public Optional<Output<Integer>> minNodeCount() {
+        return Optional.ofNullable(this.minNodeCount);
     }
 
     /**
@@ -47,76 +48,70 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeIdleTimeBeforeScaleDown")
-      private final @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
+    private @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
 
-    public Output<String> nodeIdleTimeBeforeScaleDown() {
-        return this.nodeIdleTimeBeforeScaleDown == null ? Codegen.empty() : this.nodeIdleTimeBeforeScaleDown;
+    public Optional<Output<String>> nodeIdleTimeBeforeScaleDown() {
+        return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }
 
-    public ScaleSettingsArgs(
-        Output<Integer> maxNodeCount,
-        @Nullable Output<Integer> minNodeCount,
-        @Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = Codegen.integerProp("minNodeCount").output().arg(minNodeCount).def(0).getNullable();
-        this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
-    }
+    private ScaleSettingsArgs() {}
 
-    private ScaleSettingsArgs() {
-        this.maxNodeCount = Codegen.empty();
-        this.minNodeCount = Codegen.empty();
-        this.nodeIdleTimeBeforeScaleDown = Codegen.empty();
+    private ScaleSettingsArgs(ScaleSettingsArgs $) {
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
+        this.nodeIdleTimeBeforeScaleDown = $.nodeIdleTimeBeforeScaleDown;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxNodeCount;
-        private @Nullable Output<Integer> minNodeCount;
-        private @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
+        private ScaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleSettingsArgs();
         }
 
         public Builder(ScaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
-    	      this.nodeIdleTimeBeforeScaleDown = defaults.nodeIdleTimeBeforeScaleDown;
+            $ = new ScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxNodeCount(Output<Integer> maxNodeCount) {
-            this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
+
         public Builder maxNodeCount(Integer maxNodeCount) {
-            this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
-            return this;
+            return maxNodeCount(Output.of(maxNodeCount));
         }
+
         public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
-            this.minNodeCount = minNodeCount;
+            $.minNodeCount = minNodeCount;
             return this;
         }
-        public Builder minNodeCount(@Nullable Integer minNodeCount) {
-            this.minNodeCount = Codegen.ofNullable(minNodeCount);
-            return this;
+
+        public Builder minNodeCount(Integer minNodeCount) {
+            return minNodeCount(Output.of(minNodeCount));
         }
+
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
-            this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
+            $.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }
-        public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
-            this.nodeIdleTimeBeforeScaleDown = Codegen.ofNullable(nodeIdleTimeBeforeScaleDown);
-            return this;
-        }        public ScaleSettingsArgs build() {
-            return new ScaleSettingsArgs(maxNodeCount, minNodeCount, nodeIdleTimeBeforeScaleDown);
+
+        public Builder nodeIdleTimeBeforeScaleDown(String nodeIdleTimeBeforeScaleDown) {
+            return nodeIdleTimeBeforeScaleDown(Output.of(nodeIdleTimeBeforeScaleDown));
+        }
+
+        public ScaleSettingsArgs build() {
+            $.maxNodeCount = Objects.requireNonNull($.maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
+            $.minNodeCount = Codegen.integerProp("minNodeCount").output().arg($.minNodeCount).def(0).getNullable();
+            return $;
         }
     }
+
 }

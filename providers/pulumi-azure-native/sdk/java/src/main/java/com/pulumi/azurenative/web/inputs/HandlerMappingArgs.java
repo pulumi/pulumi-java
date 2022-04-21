@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<String> arguments;
+    private @Nullable Output<String> arguments;
 
-    public Output<String> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<String>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extension")
-      private final @Nullable Output<String> extension;
+    private @Nullable Output<String> extension;
 
-    public Output<String> extension() {
-        return this.extension == null ? Codegen.empty() : this.extension;
+    public Optional<Output<String>> extension() {
+        return Optional.ofNullable(this.extension);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class HandlerMappingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scriptProcessor")
-      private final @Nullable Output<String> scriptProcessor;
+    private @Nullable Output<String> scriptProcessor;
 
-    public Output<String> scriptProcessor() {
-        return this.scriptProcessor == null ? Codegen.empty() : this.scriptProcessor;
+    public Optional<Output<String>> scriptProcessor() {
+        return Optional.ofNullable(this.scriptProcessor);
     }
 
-    public HandlerMappingArgs(
-        @Nullable Output<String> arguments,
-        @Nullable Output<String> extension,
-        @Nullable Output<String> scriptProcessor) {
-        this.arguments = arguments;
-        this.extension = extension;
-        this.scriptProcessor = scriptProcessor;
-    }
+    private HandlerMappingArgs() {}
 
-    private HandlerMappingArgs() {
-        this.arguments = Codegen.empty();
-        this.extension = Codegen.empty();
-        this.scriptProcessor = Codegen.empty();
+    private HandlerMappingArgs(HandlerMappingArgs $) {
+        this.arguments = $.arguments;
+        this.extension = $.extension;
+        this.scriptProcessor = $.scriptProcessor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HandlerMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arguments;
-        private @Nullable Output<String> extension;
-        private @Nullable Output<String> scriptProcessor;
+        private HandlerMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HandlerMappingArgs();
         }
 
         public Builder(HandlerMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.extension = defaults.extension;
-    	      this.scriptProcessor = defaults.scriptProcessor;
+            $ = new HandlerMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<String> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable String arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(String arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder extension(@Nullable Output<String> extension) {
-            this.extension = extension;
+            $.extension = extension;
             return this;
         }
-        public Builder extension(@Nullable String extension) {
-            this.extension = Codegen.ofNullable(extension);
-            return this;
+
+        public Builder extension(String extension) {
+            return extension(Output.of(extension));
         }
+
         public Builder scriptProcessor(@Nullable Output<String> scriptProcessor) {
-            this.scriptProcessor = scriptProcessor;
+            $.scriptProcessor = scriptProcessor;
             return this;
         }
-        public Builder scriptProcessor(@Nullable String scriptProcessor) {
-            this.scriptProcessor = Codegen.ofNullable(scriptProcessor);
-            return this;
-        }        public HandlerMappingArgs build() {
-            return new HandlerMappingArgs(arguments, extension, scriptProcessor);
+
+        public Builder scriptProcessor(String scriptProcessor) {
+            return scriptProcessor(Output.of(scriptProcessor));
+        }
+
+        public HandlerMappingArgs build() {
+            return $;
         }
     }
+
 }

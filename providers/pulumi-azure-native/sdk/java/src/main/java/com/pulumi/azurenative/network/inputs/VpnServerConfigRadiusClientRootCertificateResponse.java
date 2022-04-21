@@ -23,10 +23,10 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends co
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse extends co
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public VpnServerConfigRadiusClientRootCertificateResponse(
-        @Nullable String name,
-        @Nullable String thumbprint) {
-        this.name = name;
-        this.thumbprint = thumbprint;
-    }
+    private VpnServerConfigRadiusClientRootCertificateResponse() {}
 
-    private VpnServerConfigRadiusClientRootCertificateResponse() {
-        this.name = null;
-        this.thumbprint = null;
+    private VpnServerConfigRadiusClientRootCertificateResponse(VpnServerConfigRadiusClientRootCertificateResponse $) {
+        this.name = $.name;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnServerConfigRadiusClientRootCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String thumbprint;
+        private VpnServerConfigRadiusClientRootCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnServerConfigRadiusClientRootCertificateResponse();
         }
 
         public Builder(VpnServerConfigRadiusClientRootCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new VpnServerConfigRadiusClientRootCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public VpnServerConfigRadiusClientRootCertificateResponse build() {
-            return new VpnServerConfigRadiusClientRootCertificateResponse(name, thumbprint);
+        }
+
+        public VpnServerConfigRadiusClientRootCertificateResponse build() {
+            return $;
         }
     }
+
 }

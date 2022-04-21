@@ -24,48 +24,48 @@ public final class UniqueKeyPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uniqueKeys")
-      private final @Nullable List<UniqueKeyResponse> uniqueKeys;
+    private @Nullable List<UniqueKeyResponse> uniqueKeys;
 
-    public List<UniqueKeyResponse> uniqueKeys() {
-        return this.uniqueKeys == null ? List.of() : this.uniqueKeys;
+    public Optional<List<UniqueKeyResponse>> uniqueKeys() {
+        return Optional.ofNullable(this.uniqueKeys);
     }
 
-    public UniqueKeyPolicyResponse(@Nullable List<UniqueKeyResponse> uniqueKeys) {
-        this.uniqueKeys = uniqueKeys;
-    }
+    private UniqueKeyPolicyResponse() {}
 
-    private UniqueKeyPolicyResponse() {
-        this.uniqueKeys = List.of();
+    private UniqueKeyPolicyResponse(UniqueKeyPolicyResponse $) {
+        this.uniqueKeys = $.uniqueKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniqueKeyPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<UniqueKeyResponse> uniqueKeys;
+        private UniqueKeyPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniqueKeyPolicyResponse();
         }
 
         public Builder(UniqueKeyPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uniqueKeys = defaults.uniqueKeys;
+            $ = new UniqueKeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder uniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
-            this.uniqueKeys = uniqueKeys;
+            $.uniqueKeys = uniqueKeys;
             return this;
         }
+
         public Builder uniqueKeys(UniqueKeyResponse... uniqueKeys) {
             return uniqueKeys(List.of(uniqueKeys));
-        }        public UniqueKeyPolicyResponse build() {
-            return new UniqueKeyPolicyResponse(uniqueKeys);
+        }
+
+        public UniqueKeyPolicyResponse build() {
+            return $;
         }
     }
+
 }

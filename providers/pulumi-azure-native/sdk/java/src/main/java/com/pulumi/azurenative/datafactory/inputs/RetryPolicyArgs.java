@@ -5,10 +5,10 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Object> count;
+    private @Nullable Output<Object> count;
 
-    public Output<Object> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Object>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Output<Integer> intervalInSeconds;
+    private @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
+    public Optional<Output<Integer>> intervalInSeconds() {
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
-    public RetryPolicyArgs(
-        @Nullable Output<Object> count,
-        @Nullable Output<Integer> intervalInSeconds) {
-        this.count = count;
-        this.intervalInSeconds = intervalInSeconds;
-    }
+    private RetryPolicyArgs() {}
 
-    private RetryPolicyArgs() {
-        this.count = Codegen.empty();
-        this.intervalInSeconds = Codegen.empty();
+    private RetryPolicyArgs(RetryPolicyArgs $) {
+        this.count = $.count;
+        this.intervalInSeconds = $.intervalInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> count;
-        private @Nullable Output<Integer> intervalInSeconds;
+        private RetryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryPolicyArgs();
         }
 
         public Builder(RetryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
+            $ = new RetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Object> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Object count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Object count) {
+            return count(Output.of(count));
         }
+
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
-        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
-            return this;
-        }        public RetryPolicyArgs build() {
-            return new RetryPolicyArgs(count, intervalInSeconds);
+
+        public Builder intervalInSeconds(Integer intervalInSeconds) {
+            return intervalInSeconds(Output.of(intervalInSeconds));
+        }
+
+        public RetryPolicyArgs build() {
+            return $;
         }
     }
+
 }

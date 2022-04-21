@@ -24,10 +24,10 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="logRules")
-      private final @Nullable LogRulesResponse logRules;
+    private @Nullable LogRulesResponse logRules;
 
     public Optional<LogRulesResponse> logRules() {
-        return this.logRules == null ? Optional.empty() : Optional.ofNullable(this.logRules);
+        return Optional.ofNullable(this.logRules);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public MonitoringTagRulesPropertiesResponse(
-        @Nullable LogRulesResponse logRules,
-        @Nullable String provisioningState) {
-        this.logRules = logRules;
-        this.provisioningState = provisioningState;
-    }
+    private MonitoringTagRulesPropertiesResponse() {}
 
-    private MonitoringTagRulesPropertiesResponse() {
-        this.logRules = null;
-        this.provisioningState = null;
+    private MonitoringTagRulesPropertiesResponse(MonitoringTagRulesPropertiesResponse $) {
+        this.logRules = $.logRules;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringTagRulesPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LogRulesResponse logRules;
-        private @Nullable String provisioningState;
+        private MonitoringTagRulesPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringTagRulesPropertiesResponse();
         }
 
         public Builder(MonitoringTagRulesPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logRules = defaults.logRules;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new MonitoringTagRulesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logRules(@Nullable LogRulesResponse logRules) {
-            this.logRules = logRules;
+            $.logRules = logRules;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
-        }        public MonitoringTagRulesPropertiesResponse build() {
-            return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState);
+        }
+
+        public MonitoringTagRulesPropertiesResponse build() {
+            return $;
         }
     }
+
 }

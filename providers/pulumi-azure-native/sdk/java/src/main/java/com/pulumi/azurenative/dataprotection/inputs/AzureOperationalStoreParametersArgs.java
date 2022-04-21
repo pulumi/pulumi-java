@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
      * 
      */
     @Import(name="dataStoreType", required=true)
-      private final Output<Either<String,DataStoreTypes>> dataStoreType;
+    private Output<Either<String,DataStoreTypes>> dataStoreType;
 
     public Output<Either<String,DataStoreTypes>> dataStoreType() {
         return this.dataStoreType;
@@ -38,7 +39,7 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
@@ -49,76 +50,70 @@ public final class AzureOperationalStoreParametersArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupId")
-      private final @Nullable Output<String> resourceGroupId;
+    private @Nullable Output<String> resourceGroupId;
 
-    public Output<String> resourceGroupId() {
-        return this.resourceGroupId == null ? Codegen.empty() : this.resourceGroupId;
+    public Optional<Output<String>> resourceGroupId() {
+        return Optional.ofNullable(this.resourceGroupId);
     }
 
-    public AzureOperationalStoreParametersArgs(
-        Output<Either<String,DataStoreTypes>> dataStoreType,
-        Output<String> objectType,
-        @Nullable Output<String> resourceGroupId) {
-        this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-        this.resourceGroupId = resourceGroupId;
-    }
+    private AzureOperationalStoreParametersArgs() {}
 
-    private AzureOperationalStoreParametersArgs() {
-        this.dataStoreType = Codegen.empty();
-        this.objectType = Codegen.empty();
-        this.resourceGroupId = Codegen.empty();
+    private AzureOperationalStoreParametersArgs(AzureOperationalStoreParametersArgs $) {
+        this.dataStoreType = $.dataStoreType;
+        this.objectType = $.objectType;
+        this.resourceGroupId = $.resourceGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureOperationalStoreParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DataStoreTypes>> dataStoreType;
-        private Output<String> objectType;
-        private @Nullable Output<String> resourceGroupId;
+        private AzureOperationalStoreParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureOperationalStoreParametersArgs();
         }
 
         public Builder(AzureOperationalStoreParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStoreType = defaults.dataStoreType;
-    	      this.objectType = defaults.objectType;
-    	      this.resourceGroupId = defaults.resourceGroupId;
+            $ = new AzureOperationalStoreParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStoreType(Output<Either<String,DataStoreTypes>> dataStoreType) {
-            this.dataStoreType = Objects.requireNonNull(dataStoreType);
+            $.dataStoreType = dataStoreType;
             return this;
         }
+
         public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
-            this.dataStoreType = Output.of(Objects.requireNonNull(dataStoreType));
-            return this;
+            return dataStoreType(Output.of(dataStoreType));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = Codegen.ofNullable(resourceGroupId);
-            return this;
-        }        public AzureOperationalStoreParametersArgs build() {
-            return new AzureOperationalStoreParametersArgs(dataStoreType, objectType, resourceGroupId);
+
+        public Builder resourceGroupId(String resourceGroupId) {
+            return resourceGroupId(Output.of(resourceGroupId));
+        }
+
+        public AzureOperationalStoreParametersArgs build() {
+            $.dataStoreType = Objects.requireNonNull($.dataStoreType, "expected parameter 'dataStoreType' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            return $;
         }
     }
+
 }

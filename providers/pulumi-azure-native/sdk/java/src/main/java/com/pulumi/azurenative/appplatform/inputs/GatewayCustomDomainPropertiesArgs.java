@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GatewayCustomDomainPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public GatewayCustomDomainPropertiesArgs(@Nullable Output<String> thumbprint) {
-        this.thumbprint = thumbprint;
-    }
+    private GatewayCustomDomainPropertiesArgs() {}
 
-    private GatewayCustomDomainPropertiesArgs() {
-        this.thumbprint = Codegen.empty();
+    private GatewayCustomDomainPropertiesArgs(GatewayCustomDomainPropertiesArgs $) {
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayCustomDomainPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> thumbprint;
+        private GatewayCustomDomainPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayCustomDomainPropertiesArgs();
         }
 
         public Builder(GatewayCustomDomainPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new GatewayCustomDomainPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public GatewayCustomDomainPropertiesArgs build() {
-            return new GatewayCustomDomainPropertiesArgs(thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public GatewayCustomDomainPropertiesArgs build() {
+            return $;
         }
     }
+
 }

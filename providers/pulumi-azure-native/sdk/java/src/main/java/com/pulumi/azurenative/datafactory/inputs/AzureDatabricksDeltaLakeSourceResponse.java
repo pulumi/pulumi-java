@@ -26,10 +26,10 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="exportSettings")
-      private final @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings;
+    private @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings;
 
     public Optional<AzureDatabricksDeltaLakeExportCommandResponse> exportSettings() {
-        return this.exportSettings == null ? Optional.empty() : Optional.ofNullable(this.exportSettings);
+        return Optional.ofNullable(this.exportSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="query")
-      private final @Nullable Object query;
+    private @Nullable Object query;
 
     public Optional<Object> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -93,100 +93,81 @@ public final class AzureDatabricksDeltaLakeSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureDatabricksDeltaLakeSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object query,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.exportSettings = exportSettings;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.query = query;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureDatabricksDeltaLakeSourceResponse() {}
 
-    private AzureDatabricksDeltaLakeSourceResponse() {
-        this.disableMetricsCollection = null;
-        this.exportSettings = null;
-        this.maxConcurrentConnections = null;
-        this.query = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private AzureDatabricksDeltaLakeSourceResponse(AzureDatabricksDeltaLakeSourceResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.exportSettings = $.exportSettings;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.query = $.query;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDatabricksDeltaLakeSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object query;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private AzureDatabricksDeltaLakeSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDatabricksDeltaLakeSourceResponse();
         }
 
         public Builder(AzureDatabricksDeltaLakeSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.exportSettings = defaults.exportSettings;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.query = defaults.query;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new AzureDatabricksDeltaLakeSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder exportSettings(@Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings) {
-            this.exportSettings = exportSettings;
+            $.exportSettings = exportSettings;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder query(@Nullable Object query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureDatabricksDeltaLakeSourceResponse build() {
-            return new AzureDatabricksDeltaLakeSourceResponse(disableMetricsCollection, exportSettings, maxConcurrentConnections, query, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public AzureDatabricksDeltaLakeSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

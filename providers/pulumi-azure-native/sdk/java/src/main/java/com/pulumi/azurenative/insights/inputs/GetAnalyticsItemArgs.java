@@ -19,10 +19,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -63,82 +63,71 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="scopePath", required=true)
-      private final String scopePath;
+    private String scopePath;
 
     public String scopePath() {
         return this.scopePath;
     }
 
-    public GetAnalyticsItemArgs(
-        @Nullable String id,
-        @Nullable String name,
-        String resourceGroupName,
-        String resourceName,
-        String scopePath) {
-        this.id = id;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.scopePath = Objects.requireNonNull(scopePath, "expected parameter 'scopePath' to be non-null");
-    }
+    private GetAnalyticsItemArgs() {}
 
-    private GetAnalyticsItemArgs() {
-        this.id = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.scopePath = null;
+    private GetAnalyticsItemArgs(GetAnalyticsItemArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.scopePath = $.scopePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnalyticsItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String name;
-        private String resourceGroupName;
-        private String resourceName;
-        private String scopePath;
+        private GetAnalyticsItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnalyticsItemArgs();
         }
 
         public Builder(GetAnalyticsItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.scopePath = defaults.scopePath;
+            $ = new GetAnalyticsItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder scopePath(String scopePath) {
-            this.scopePath = Objects.requireNonNull(scopePath);
+            $.scopePath = scopePath;
             return this;
-        }        public GetAnalyticsItemArgs build() {
-            return new GetAnalyticsItemArgs(id, name, resourceGroupName, resourceName, scopePath);
+        }
+
+        public GetAnalyticsItemArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.scopePath = Objects.requireNonNull($.scopePath, "expected parameter 'scopePath' to be non-null");
+            return $;
         }
     }
+
 }

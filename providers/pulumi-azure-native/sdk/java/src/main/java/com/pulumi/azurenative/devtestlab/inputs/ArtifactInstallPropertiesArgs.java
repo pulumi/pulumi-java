@@ -6,10 +6,10 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.ArtifactParameterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="artifactId")
-      private final @Nullable Output<String> artifactId;
+    private @Nullable Output<String> artifactId;
 
-    public Output<String> artifactId() {
-        return this.artifactId == null ? Codegen.empty() : this.artifactId;
+    public Optional<Output<String>> artifactId() {
+        return Optional.ofNullable(this.artifactId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="artifactTitle")
-      private final @Nullable Output<String> artifactTitle;
+    private @Nullable Output<String> artifactTitle;
 
-    public Output<String> artifactTitle() {
-        return this.artifactTitle == null ? Codegen.empty() : this.artifactTitle;
+    public Optional<Output<String>> artifactTitle() {
+        return Optional.ofNullable(this.artifactTitle);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="deploymentStatusMessage")
-      private final @Nullable Output<String> deploymentStatusMessage;
+    private @Nullable Output<String> deploymentStatusMessage;
 
-    public Output<String> deploymentStatusMessage() {
-        return this.deploymentStatusMessage == null ? Codegen.empty() : this.deploymentStatusMessage;
+    public Optional<Output<String>> deploymentStatusMessage() {
+        return Optional.ofNullable(this.deploymentStatusMessage);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="installTime")
-      private final @Nullable Output<String> installTime;
+    private @Nullable Output<String> installTime;
 
-    public Output<String> installTime() {
-        return this.installTime == null ? Codegen.empty() : this.installTime;
+    public Optional<Output<String>> installTime() {
+        return Optional.ofNullable(this.installTime);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
+    private @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
 
-    public Output<List<ArtifactParameterPropertiesArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ArtifactParameterPropertiesArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -92,131 +92,112 @@ public final class ArtifactInstallPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vmExtensionStatusMessage")
-      private final @Nullable Output<String> vmExtensionStatusMessage;
+    private @Nullable Output<String> vmExtensionStatusMessage;
 
-    public Output<String> vmExtensionStatusMessage() {
-        return this.vmExtensionStatusMessage == null ? Codegen.empty() : this.vmExtensionStatusMessage;
+    public Optional<Output<String>> vmExtensionStatusMessage() {
+        return Optional.ofNullable(this.vmExtensionStatusMessage);
     }
 
-    public ArtifactInstallPropertiesArgs(
-        @Nullable Output<String> artifactId,
-        @Nullable Output<String> artifactTitle,
-        @Nullable Output<String> deploymentStatusMessage,
-        @Nullable Output<String> installTime,
-        @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters,
-        @Nullable Output<String> status,
-        @Nullable Output<String> vmExtensionStatusMessage) {
-        this.artifactId = artifactId;
-        this.artifactTitle = artifactTitle;
-        this.deploymentStatusMessage = deploymentStatusMessage;
-        this.installTime = installTime;
-        this.parameters = parameters;
-        this.status = status;
-        this.vmExtensionStatusMessage = vmExtensionStatusMessage;
-    }
+    private ArtifactInstallPropertiesArgs() {}
 
-    private ArtifactInstallPropertiesArgs() {
-        this.artifactId = Codegen.empty();
-        this.artifactTitle = Codegen.empty();
-        this.deploymentStatusMessage = Codegen.empty();
-        this.installTime = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.status = Codegen.empty();
-        this.vmExtensionStatusMessage = Codegen.empty();
+    private ArtifactInstallPropertiesArgs(ArtifactInstallPropertiesArgs $) {
+        this.artifactId = $.artifactId;
+        this.artifactTitle = $.artifactTitle;
+        this.deploymentStatusMessage = $.deploymentStatusMessage;
+        this.installTime = $.installTime;
+        this.parameters = $.parameters;
+        this.status = $.status;
+        this.vmExtensionStatusMessage = $.vmExtensionStatusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactInstallPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactId;
-        private @Nullable Output<String> artifactTitle;
-        private @Nullable Output<String> deploymentStatusMessage;
-        private @Nullable Output<String> installTime;
-        private @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> vmExtensionStatusMessage;
+        private ArtifactInstallPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactInstallPropertiesArgs();
         }
 
         public Builder(ArtifactInstallPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
-    	      this.artifactTitle = defaults.artifactTitle;
-    	      this.deploymentStatusMessage = defaults.deploymentStatusMessage;
-    	      this.installTime = defaults.installTime;
-    	      this.parameters = defaults.parameters;
-    	      this.status = defaults.status;
-    	      this.vmExtensionStatusMessage = defaults.vmExtensionStatusMessage;
+            $ = new ArtifactInstallPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(@Nullable Output<String> artifactId) {
-            this.artifactId = artifactId;
+            $.artifactId = artifactId;
             return this;
         }
-        public Builder artifactId(@Nullable String artifactId) {
-            this.artifactId = Codegen.ofNullable(artifactId);
-            return this;
+
+        public Builder artifactId(String artifactId) {
+            return artifactId(Output.of(artifactId));
         }
+
         public Builder artifactTitle(@Nullable Output<String> artifactTitle) {
-            this.artifactTitle = artifactTitle;
+            $.artifactTitle = artifactTitle;
             return this;
         }
-        public Builder artifactTitle(@Nullable String artifactTitle) {
-            this.artifactTitle = Codegen.ofNullable(artifactTitle);
-            return this;
+
+        public Builder artifactTitle(String artifactTitle) {
+            return artifactTitle(Output.of(artifactTitle));
         }
+
         public Builder deploymentStatusMessage(@Nullable Output<String> deploymentStatusMessage) {
-            this.deploymentStatusMessage = deploymentStatusMessage;
+            $.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
-        public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
-            this.deploymentStatusMessage = Codegen.ofNullable(deploymentStatusMessage);
-            return this;
+
+        public Builder deploymentStatusMessage(String deploymentStatusMessage) {
+            return deploymentStatusMessage(Output.of(deploymentStatusMessage));
         }
+
         public Builder installTime(@Nullable Output<String> installTime) {
-            this.installTime = installTime;
+            $.installTime = installTime;
             return this;
         }
-        public Builder installTime(@Nullable String installTime) {
-            this.installTime = Codegen.ofNullable(installTime);
-            return this;
+
+        public Builder installTime(String installTime) {
+            return installTime(Output.of(installTime));
         }
+
         public Builder parameters(@Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ArtifactParameterPropertiesArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ArtifactParameterPropertiesArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ArtifactParameterPropertiesArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder vmExtensionStatusMessage(@Nullable Output<String> vmExtensionStatusMessage) {
-            this.vmExtensionStatusMessage = vmExtensionStatusMessage;
+            $.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
         }
-        public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
-            this.vmExtensionStatusMessage = Codegen.ofNullable(vmExtensionStatusMessage);
-            return this;
-        }        public ArtifactInstallPropertiesArgs build() {
-            return new ArtifactInstallPropertiesArgs(artifactId, artifactTitle, deploymentStatusMessage, installTime, parameters, status, vmExtensionStatusMessage);
+
+        public Builder vmExtensionStatusMessage(String vmExtensionStatusMessage) {
+            return vmExtensionStatusMessage(Output.of(vmExtensionStatusMessage));
+        }
+
+        public ArtifactInstallPropertiesArgs build() {
+            return $;
         }
     }
+
 }

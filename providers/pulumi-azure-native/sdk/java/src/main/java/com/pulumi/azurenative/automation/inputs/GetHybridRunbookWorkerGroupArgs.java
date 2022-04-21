@@ -17,7 +17,7 @@ public final class GetHybridRunbookWorkerGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetHybridRunbookWorkerGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="hybridRunbookWorkerGroupName", required=true)
-      private final String hybridRunbookWorkerGroupName;
+    private String hybridRunbookWorkerGroupName;
 
     public String hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
@@ -39,64 +39,59 @@ public final class GetHybridRunbookWorkerGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetHybridRunbookWorkerGroupArgs(
-        String automationAccountName,
-        String hybridRunbookWorkerGroupName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName, "expected parameter 'hybridRunbookWorkerGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetHybridRunbookWorkerGroupArgs() {}
 
-    private GetHybridRunbookWorkerGroupArgs() {
-        this.automationAccountName = null;
-        this.hybridRunbookWorkerGroupName = null;
-        this.resourceGroupName = null;
+    private GetHybridRunbookWorkerGroupArgs(GetHybridRunbookWorkerGroupArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.hybridRunbookWorkerGroupName = $.hybridRunbookWorkerGroupName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHybridRunbookWorkerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String hybridRunbookWorkerGroupName;
-        private String resourceGroupName;
+        private GetHybridRunbookWorkerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHybridRunbookWorkerGroupArgs();
         }
 
         public Builder(GetHybridRunbookWorkerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.hybridRunbookWorkerGroupName = defaults.hybridRunbookWorkerGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetHybridRunbookWorkerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
-            this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName);
+            $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetHybridRunbookWorkerGroupArgs build() {
-            return new GetHybridRunbookWorkerGroupArgs(automationAccountName, hybridRunbookWorkerGroupName, resourceGroupName);
+        }
+
+        public GetHybridRunbookWorkerGroupArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.hybridRunbookWorkerGroupName = Objects.requireNonNull($.hybridRunbookWorkerGroupName, "expected parameter 'hybridRunbookWorkerGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -30,10 +30,10 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,73 +52,65 @@ public final class GetFileShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
     }
 
-    public GetFileShareArgs(
-        String accountName,
-        @Nullable String expand,
-        String resourceGroupName,
-        String shareName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private GetFileShareArgs() {}
 
-    private GetFileShareArgs() {
-        this.accountName = null;
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
+    private GetFileShareArgs(GetFileShareArgs $) {
+        this.accountName = $.accountName;
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFileShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String shareName;
+        private GetFileShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFileShareArgs();
         }
 
         public Builder(GetFileShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
+            $ = new GetFileShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
-        }        public GetFileShareArgs build() {
-            return new GetFileShareArgs(accountName, expand, resourceGroupName, shareName);
+        }
+
+        public GetFileShareArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

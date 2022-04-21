@@ -17,45 +17,45 @@ public final class GetReportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reportName", required=true)
-      private final String reportName;
+    private String reportName;
 
     public String reportName() {
         return this.reportName;
     }
 
-    public GetReportArgs(String reportName) {
-        this.reportName = Objects.requireNonNull(reportName, "expected parameter 'reportName' to be non-null");
-    }
+    private GetReportArgs() {}
 
-    private GetReportArgs() {
-        this.reportName = null;
+    private GetReportArgs(GetReportArgs $) {
+        this.reportName = $.reportName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String reportName;
+        private GetReportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportArgs();
         }
 
         public Builder(GetReportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reportName = defaults.reportName;
+            $ = new GetReportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reportName(String reportName) {
-            this.reportName = Objects.requireNonNull(reportName);
+            $.reportName = reportName;
             return this;
-        }        public GetReportArgs build() {
-            return new GetReportArgs(reportName);
+        }
+
+        public GetReportArgs build() {
+            $.reportName = Objects.requireNonNull($.reportName, "expected parameter 'reportName' to be non-null");
+            return $;
         }
     }
+
 }

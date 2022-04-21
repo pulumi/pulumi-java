@@ -17,7 +17,7 @@ public final class GetLoggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loggerId", required=true)
-      private final String loggerId;
+    private String loggerId;
 
     public String loggerId() {
         return this.loggerId;
@@ -28,7 +28,7 @@ public final class GetLoggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetLoggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetLoggerArgs(
-        String loggerId,
-        String resourceGroupName,
-        String serviceName) {
-        this.loggerId = Objects.requireNonNull(loggerId, "expected parameter 'loggerId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetLoggerArgs() {}
 
-    private GetLoggerArgs() {
-        this.loggerId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetLoggerArgs(GetLoggerArgs $) {
+        this.loggerId = $.loggerId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String loggerId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetLoggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoggerArgs();
         }
 
         public Builder(GetLoggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loggerId = defaults.loggerId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetLoggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loggerId(String loggerId) {
-            this.loggerId = Objects.requireNonNull(loggerId);
+            $.loggerId = loggerId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetLoggerArgs build() {
-            return new GetLoggerArgs(loggerId, resourceGroupName, serviceName);
+        }
+
+        public GetLoggerArgs build() {
+            $.loggerId = Objects.requireNonNull($.loggerId, "expected parameter 'loggerId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

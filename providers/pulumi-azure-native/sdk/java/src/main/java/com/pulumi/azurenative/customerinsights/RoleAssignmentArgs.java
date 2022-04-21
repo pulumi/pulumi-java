@@ -8,11 +8,11 @@ import com.pulumi.azurenative.customerinsights.inputs.AssignmentPrincipalArgs;
 import com.pulumi.azurenative.customerinsights.inputs.ResourceSetDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="assignmentName")
-      private final @Nullable Output<String> assignmentName;
+    private @Nullable Output<String> assignmentName;
 
-    public Output<String> assignmentName() {
-        return this.assignmentName == null ? Codegen.empty() : this.assignmentName;
+    public Optional<Output<String>> assignmentName() {
+        return Optional.ofNullable(this.assignmentName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="conflationPolicies")
-      private final @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
+    private @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
 
-    public Output<ResourceSetDescriptionArgs> conflationPolicies() {
-        return this.conflationPolicies == null ? Codegen.empty() : this.conflationPolicies;
+    public Optional<Output<ResourceSetDescriptionArgs>> conflationPolicies() {
+        return Optional.ofNullable(this.conflationPolicies);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="connectors")
-      private final @Nullable Output<ResourceSetDescriptionArgs> connectors;
+    private @Nullable Output<ResourceSetDescriptionArgs> connectors;
 
-    public Output<ResourceSetDescriptionArgs> connectors() {
-        return this.connectors == null ? Codegen.empty() : this.connectors;
+    public Optional<Output<ResourceSetDescriptionArgs>> connectors() {
+        return Optional.ofNullable(this.connectors);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<Map<String,String>> description;
+    private @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<Map<String,String>>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -91,10 +91,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="interactions")
-      private final @Nullable Output<ResourceSetDescriptionArgs> interactions;
+    private @Nullable Output<ResourceSetDescriptionArgs> interactions;
 
-    public Output<ResourceSetDescriptionArgs> interactions() {
-        return this.interactions == null ? Codegen.empty() : this.interactions;
+    public Optional<Output<ResourceSetDescriptionArgs>> interactions() {
+        return Optional.ofNullable(this.interactions);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kpis")
-      private final @Nullable Output<ResourceSetDescriptionArgs> kpis;
+    private @Nullable Output<ResourceSetDescriptionArgs> kpis;
 
-    public Output<ResourceSetDescriptionArgs> kpis() {
-        return this.kpis == null ? Codegen.empty() : this.kpis;
+    public Optional<Output<ResourceSetDescriptionArgs>> kpis() {
+        return Optional.ofNullable(this.kpis);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="links")
-      private final @Nullable Output<ResourceSetDescriptionArgs> links;
+    private @Nullable Output<ResourceSetDescriptionArgs> links;
 
-    public Output<ResourceSetDescriptionArgs> links() {
-        return this.links == null ? Codegen.empty() : this.links;
+    public Optional<Output<ResourceSetDescriptionArgs>> links() {
+        return Optional.ofNullable(this.links);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="principals", required=true)
-      private final Output<List<AssignmentPrincipalArgs>> principals;
+    private Output<List<AssignmentPrincipalArgs>> principals;
 
     public Output<List<AssignmentPrincipalArgs>> principals() {
         return this.principals;
@@ -135,10 +135,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="profiles")
-      private final @Nullable Output<ResourceSetDescriptionArgs> profiles;
+    private @Nullable Output<ResourceSetDescriptionArgs> profiles;
 
-    public Output<ResourceSetDescriptionArgs> profiles() {
-        return this.profiles == null ? Codegen.empty() : this.profiles;
+    public Optional<Output<ResourceSetDescriptionArgs>> profiles() {
+        return Optional.ofNullable(this.profiles);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="relationshipLinks")
-      private final @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
+    private @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
 
-    public Output<ResourceSetDescriptionArgs> relationshipLinks() {
-        return this.relationshipLinks == null ? Codegen.empty() : this.relationshipLinks;
+    public Optional<Output<ResourceSetDescriptionArgs>> relationshipLinks() {
+        return Optional.ofNullable(this.relationshipLinks);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="relationships")
-      private final @Nullable Output<ResourceSetDescriptionArgs> relationships;
+    private @Nullable Output<ResourceSetDescriptionArgs> relationships;
 
-    public Output<ResourceSetDescriptionArgs> relationships() {
-        return this.relationships == null ? Codegen.empty() : this.relationships;
+    public Optional<Output<ResourceSetDescriptionArgs>> relationships() {
+        return Optional.ofNullable(this.relationships);
     }
 
     /**
@@ -168,7 +168,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -179,7 +179,7 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="role", required=true)
-      private final Output<RoleTypes> role;
+    private Output<RoleTypes> role;
 
     public Output<RoleTypes> role() {
         return this.role;
@@ -190,10 +190,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleAssignments")
-      private final @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
+    private @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
 
-    public Output<ResourceSetDescriptionArgs> roleAssignments() {
-        return this.roleAssignments == null ? Codegen.empty() : this.roleAssignments;
+    public Optional<Output<ResourceSetDescriptionArgs>> roleAssignments() {
+        return Optional.ofNullable(this.roleAssignments);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sasPolicies")
-      private final @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
+    private @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
 
-    public Output<ResourceSetDescriptionArgs> sasPolicies() {
-        return this.sasPolicies == null ? Codegen.empty() : this.sasPolicies;
+    public Optional<Output<ResourceSetDescriptionArgs>> sasPolicies() {
+        return Optional.ofNullable(this.sasPolicies);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="segments")
-      private final @Nullable Output<ResourceSetDescriptionArgs> segments;
+    private @Nullable Output<ResourceSetDescriptionArgs> segments;
 
-    public Output<ResourceSetDescriptionArgs> segments() {
-        return this.segments == null ? Codegen.empty() : this.segments;
+    public Optional<Output<ResourceSetDescriptionArgs>> segments() {
+        return Optional.ofNullable(this.segments);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="views")
-      private final @Nullable Output<ResourceSetDescriptionArgs> views;
+    private @Nullable Output<ResourceSetDescriptionArgs> views;
 
-    public Output<ResourceSetDescriptionArgs> views() {
-        return this.views == null ? Codegen.empty() : this.views;
+    public Optional<Output<ResourceSetDescriptionArgs>> views() {
+        return Optional.ofNullable(this.views);
     }
 
     /**
@@ -234,300 +234,246 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="widgetTypes")
-      private final @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
+    private @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
 
-    public Output<ResourceSetDescriptionArgs> widgetTypes() {
-        return this.widgetTypes == null ? Codegen.empty() : this.widgetTypes;
+    public Optional<Output<ResourceSetDescriptionArgs>> widgetTypes() {
+        return Optional.ofNullable(this.widgetTypes);
     }
 
-    public RoleAssignmentArgs(
-        @Nullable Output<String> assignmentName,
-        @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies,
-        @Nullable Output<ResourceSetDescriptionArgs> connectors,
-        @Nullable Output<Map<String,String>> description,
-        @Nullable Output<Map<String,String>> displayName,
-        Output<String> hubName,
-        @Nullable Output<ResourceSetDescriptionArgs> interactions,
-        @Nullable Output<ResourceSetDescriptionArgs> kpis,
-        @Nullable Output<ResourceSetDescriptionArgs> links,
-        Output<List<AssignmentPrincipalArgs>> principals,
-        @Nullable Output<ResourceSetDescriptionArgs> profiles,
-        @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks,
-        @Nullable Output<ResourceSetDescriptionArgs> relationships,
-        Output<String> resourceGroupName,
-        Output<RoleTypes> role,
-        @Nullable Output<ResourceSetDescriptionArgs> roleAssignments,
-        @Nullable Output<ResourceSetDescriptionArgs> sasPolicies,
-        @Nullable Output<ResourceSetDescriptionArgs> segments,
-        @Nullable Output<ResourceSetDescriptionArgs> views,
-        @Nullable Output<ResourceSetDescriptionArgs> widgetTypes) {
-        this.assignmentName = assignmentName;
-        this.conflationPolicies = conflationPolicies;
-        this.connectors = connectors;
-        this.description = description;
-        this.displayName = displayName;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.interactions = interactions;
-        this.kpis = kpis;
-        this.links = links;
-        this.principals = Objects.requireNonNull(principals, "expected parameter 'principals' to be non-null");
-        this.profiles = profiles;
-        this.relationshipLinks = relationshipLinks;
-        this.relationships = relationships;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.roleAssignments = roleAssignments;
-        this.sasPolicies = sasPolicies;
-        this.segments = segments;
-        this.views = views;
-        this.widgetTypes = widgetTypes;
-    }
+    private RoleAssignmentArgs() {}
 
-    private RoleAssignmentArgs() {
-        this.assignmentName = Codegen.empty();
-        this.conflationPolicies = Codegen.empty();
-        this.connectors = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.interactions = Codegen.empty();
-        this.kpis = Codegen.empty();
-        this.links = Codegen.empty();
-        this.principals = Codegen.empty();
-        this.profiles = Codegen.empty();
-        this.relationshipLinks = Codegen.empty();
-        this.relationships = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.role = Codegen.empty();
-        this.roleAssignments = Codegen.empty();
-        this.sasPolicies = Codegen.empty();
-        this.segments = Codegen.empty();
-        this.views = Codegen.empty();
-        this.widgetTypes = Codegen.empty();
+    private RoleAssignmentArgs(RoleAssignmentArgs $) {
+        this.assignmentName = $.assignmentName;
+        this.conflationPolicies = $.conflationPolicies;
+        this.connectors = $.connectors;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.hubName = $.hubName;
+        this.interactions = $.interactions;
+        this.kpis = $.kpis;
+        this.links = $.links;
+        this.principals = $.principals;
+        this.profiles = $.profiles;
+        this.relationshipLinks = $.relationshipLinks;
+        this.relationships = $.relationships;
+        this.resourceGroupName = $.resourceGroupName;
+        this.role = $.role;
+        this.roleAssignments = $.roleAssignments;
+        this.sasPolicies = $.sasPolicies;
+        this.segments = $.segments;
+        this.views = $.views;
+        this.widgetTypes = $.widgetTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assignmentName;
-        private @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
-        private @Nullable Output<ResourceSetDescriptionArgs> connectors;
-        private @Nullable Output<Map<String,String>> description;
-        private @Nullable Output<Map<String,String>> displayName;
-        private Output<String> hubName;
-        private @Nullable Output<ResourceSetDescriptionArgs> interactions;
-        private @Nullable Output<ResourceSetDescriptionArgs> kpis;
-        private @Nullable Output<ResourceSetDescriptionArgs> links;
-        private Output<List<AssignmentPrincipalArgs>> principals;
-        private @Nullable Output<ResourceSetDescriptionArgs> profiles;
-        private @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
-        private @Nullable Output<ResourceSetDescriptionArgs> relationships;
-        private Output<String> resourceGroupName;
-        private Output<RoleTypes> role;
-        private @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
-        private @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
-        private @Nullable Output<ResourceSetDescriptionArgs> segments;
-        private @Nullable Output<ResourceSetDescriptionArgs> views;
-        private @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
+        private RoleAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleAssignmentArgs();
         }
 
         public Builder(RoleAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentName = defaults.assignmentName;
-    	      this.conflationPolicies = defaults.conflationPolicies;
-    	      this.connectors = defaults.connectors;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.hubName = defaults.hubName;
-    	      this.interactions = defaults.interactions;
-    	      this.kpis = defaults.kpis;
-    	      this.links = defaults.links;
-    	      this.principals = defaults.principals;
-    	      this.profiles = defaults.profiles;
-    	      this.relationshipLinks = defaults.relationshipLinks;
-    	      this.relationships = defaults.relationships;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.role = defaults.role;
-    	      this.roleAssignments = defaults.roleAssignments;
-    	      this.sasPolicies = defaults.sasPolicies;
-    	      this.segments = defaults.segments;
-    	      this.views = defaults.views;
-    	      this.widgetTypes = defaults.widgetTypes;
+            $ = new RoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentName(@Nullable Output<String> assignmentName) {
-            this.assignmentName = assignmentName;
+            $.assignmentName = assignmentName;
             return this;
         }
-        public Builder assignmentName(@Nullable String assignmentName) {
-            this.assignmentName = Codegen.ofNullable(assignmentName);
-            return this;
+
+        public Builder assignmentName(String assignmentName) {
+            return assignmentName(Output.of(assignmentName));
         }
+
         public Builder conflationPolicies(@Nullable Output<ResourceSetDescriptionArgs> conflationPolicies) {
-            this.conflationPolicies = conflationPolicies;
+            $.conflationPolicies = conflationPolicies;
             return this;
         }
-        public Builder conflationPolicies(@Nullable ResourceSetDescriptionArgs conflationPolicies) {
-            this.conflationPolicies = Codegen.ofNullable(conflationPolicies);
-            return this;
+
+        public Builder conflationPolicies(ResourceSetDescriptionArgs conflationPolicies) {
+            return conflationPolicies(Output.of(conflationPolicies));
         }
+
         public Builder connectors(@Nullable Output<ResourceSetDescriptionArgs> connectors) {
-            this.connectors = connectors;
+            $.connectors = connectors;
             return this;
         }
-        public Builder connectors(@Nullable ResourceSetDescriptionArgs connectors) {
-            this.connectors = Codegen.ofNullable(connectors);
-            return this;
+
+        public Builder connectors(ResourceSetDescriptionArgs connectors) {
+            return connectors(Output.of(connectors));
         }
+
         public Builder description(@Nullable Output<Map<String,String>> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable Map<String,String> description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(Map<String,String> description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder interactions(@Nullable Output<ResourceSetDescriptionArgs> interactions) {
-            this.interactions = interactions;
+            $.interactions = interactions;
             return this;
         }
-        public Builder interactions(@Nullable ResourceSetDescriptionArgs interactions) {
-            this.interactions = Codegen.ofNullable(interactions);
-            return this;
+
+        public Builder interactions(ResourceSetDescriptionArgs interactions) {
+            return interactions(Output.of(interactions));
         }
+
         public Builder kpis(@Nullable Output<ResourceSetDescriptionArgs> kpis) {
-            this.kpis = kpis;
+            $.kpis = kpis;
             return this;
         }
-        public Builder kpis(@Nullable ResourceSetDescriptionArgs kpis) {
-            this.kpis = Codegen.ofNullable(kpis);
-            return this;
+
+        public Builder kpis(ResourceSetDescriptionArgs kpis) {
+            return kpis(Output.of(kpis));
         }
+
         public Builder links(@Nullable Output<ResourceSetDescriptionArgs> links) {
-            this.links = links;
+            $.links = links;
             return this;
         }
-        public Builder links(@Nullable ResourceSetDescriptionArgs links) {
-            this.links = Codegen.ofNullable(links);
-            return this;
+
+        public Builder links(ResourceSetDescriptionArgs links) {
+            return links(Output.of(links));
         }
+
         public Builder principals(Output<List<AssignmentPrincipalArgs>> principals) {
-            this.principals = Objects.requireNonNull(principals);
+            $.principals = principals;
             return this;
         }
+
         public Builder principals(List<AssignmentPrincipalArgs> principals) {
-            this.principals = Output.of(Objects.requireNonNull(principals));
-            return this;
+            return principals(Output.of(principals));
         }
+
         public Builder principals(AssignmentPrincipalArgs... principals) {
             return principals(List.of(principals));
         }
+
         public Builder profiles(@Nullable Output<ResourceSetDescriptionArgs> profiles) {
-            this.profiles = profiles;
+            $.profiles = profiles;
             return this;
         }
-        public Builder profiles(@Nullable ResourceSetDescriptionArgs profiles) {
-            this.profiles = Codegen.ofNullable(profiles);
-            return this;
+
+        public Builder profiles(ResourceSetDescriptionArgs profiles) {
+            return profiles(Output.of(profiles));
         }
+
         public Builder relationshipLinks(@Nullable Output<ResourceSetDescriptionArgs> relationshipLinks) {
-            this.relationshipLinks = relationshipLinks;
+            $.relationshipLinks = relationshipLinks;
             return this;
         }
-        public Builder relationshipLinks(@Nullable ResourceSetDescriptionArgs relationshipLinks) {
-            this.relationshipLinks = Codegen.ofNullable(relationshipLinks);
-            return this;
+
+        public Builder relationshipLinks(ResourceSetDescriptionArgs relationshipLinks) {
+            return relationshipLinks(Output.of(relationshipLinks));
         }
+
         public Builder relationships(@Nullable Output<ResourceSetDescriptionArgs> relationships) {
-            this.relationships = relationships;
+            $.relationships = relationships;
             return this;
         }
-        public Builder relationships(@Nullable ResourceSetDescriptionArgs relationships) {
-            this.relationships = Codegen.ofNullable(relationships);
-            return this;
+
+        public Builder relationships(ResourceSetDescriptionArgs relationships) {
+            return relationships(Output.of(relationships));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder role(Output<RoleTypes> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(RoleTypes role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder roleAssignments(@Nullable Output<ResourceSetDescriptionArgs> roleAssignments) {
-            this.roleAssignments = roleAssignments;
+            $.roleAssignments = roleAssignments;
             return this;
         }
-        public Builder roleAssignments(@Nullable ResourceSetDescriptionArgs roleAssignments) {
-            this.roleAssignments = Codegen.ofNullable(roleAssignments);
-            return this;
+
+        public Builder roleAssignments(ResourceSetDescriptionArgs roleAssignments) {
+            return roleAssignments(Output.of(roleAssignments));
         }
+
         public Builder sasPolicies(@Nullable Output<ResourceSetDescriptionArgs> sasPolicies) {
-            this.sasPolicies = sasPolicies;
+            $.sasPolicies = sasPolicies;
             return this;
         }
-        public Builder sasPolicies(@Nullable ResourceSetDescriptionArgs sasPolicies) {
-            this.sasPolicies = Codegen.ofNullable(sasPolicies);
-            return this;
+
+        public Builder sasPolicies(ResourceSetDescriptionArgs sasPolicies) {
+            return sasPolicies(Output.of(sasPolicies));
         }
+
         public Builder segments(@Nullable Output<ResourceSetDescriptionArgs> segments) {
-            this.segments = segments;
+            $.segments = segments;
             return this;
         }
-        public Builder segments(@Nullable ResourceSetDescriptionArgs segments) {
-            this.segments = Codegen.ofNullable(segments);
-            return this;
+
+        public Builder segments(ResourceSetDescriptionArgs segments) {
+            return segments(Output.of(segments));
         }
+
         public Builder views(@Nullable Output<ResourceSetDescriptionArgs> views) {
-            this.views = views;
+            $.views = views;
             return this;
         }
-        public Builder views(@Nullable ResourceSetDescriptionArgs views) {
-            this.views = Codegen.ofNullable(views);
-            return this;
+
+        public Builder views(ResourceSetDescriptionArgs views) {
+            return views(Output.of(views));
         }
+
         public Builder widgetTypes(@Nullable Output<ResourceSetDescriptionArgs> widgetTypes) {
-            this.widgetTypes = widgetTypes;
+            $.widgetTypes = widgetTypes;
             return this;
         }
-        public Builder widgetTypes(@Nullable ResourceSetDescriptionArgs widgetTypes) {
-            this.widgetTypes = Codegen.ofNullable(widgetTypes);
-            return this;
-        }        public RoleAssignmentArgs build() {
-            return new RoleAssignmentArgs(assignmentName, conflationPolicies, connectors, description, displayName, hubName, interactions, kpis, links, principals, profiles, relationshipLinks, relationships, resourceGroupName, role, roleAssignments, sasPolicies, segments, views, widgetTypes);
+
+        public Builder widgetTypes(ResourceSetDescriptionArgs widgetTypes) {
+            return widgetTypes(Output.of(widgetTypes));
+        }
+
+        public RoleAssignmentArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.principals = Objects.requireNonNull($.principals, "expected parameter 'principals' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

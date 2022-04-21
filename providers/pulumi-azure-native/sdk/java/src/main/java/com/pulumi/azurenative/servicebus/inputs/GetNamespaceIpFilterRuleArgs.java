@@ -17,7 +17,7 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ipFilterRuleName", required=true)
-      private final String ipFilterRuleName;
+    private String ipFilterRuleName;
 
     public String ipFilterRuleName() {
         return this.ipFilterRuleName;
@@ -28,7 +28,7 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,64 +39,59 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNamespaceIpFilterRuleArgs(
-        String ipFilterRuleName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.ipFilterRuleName = Objects.requireNonNull(ipFilterRuleName, "expected parameter 'ipFilterRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNamespaceIpFilterRuleArgs() {}
 
-    private GetNamespaceIpFilterRuleArgs() {
-        this.ipFilterRuleName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetNamespaceIpFilterRuleArgs(GetNamespaceIpFilterRuleArgs $) {
+        this.ipFilterRuleName = $.ipFilterRuleName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNamespaceIpFilterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipFilterRuleName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetNamespaceIpFilterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNamespaceIpFilterRuleArgs();
         }
 
         public Builder(GetNamespaceIpFilterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipFilterRuleName = defaults.ipFilterRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNamespaceIpFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipFilterRuleName(String ipFilterRuleName) {
-            this.ipFilterRuleName = Objects.requireNonNull(ipFilterRuleName);
+            $.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNamespaceIpFilterRuleArgs build() {
-            return new GetNamespaceIpFilterRuleArgs(ipFilterRuleName, namespaceName, resourceGroupName);
+        }
+
+        public GetNamespaceIpFilterRuleArgs build() {
+            $.ipFilterRuleName = Objects.requireNonNull($.ipFilterRuleName, "expected parameter 'ipFilterRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

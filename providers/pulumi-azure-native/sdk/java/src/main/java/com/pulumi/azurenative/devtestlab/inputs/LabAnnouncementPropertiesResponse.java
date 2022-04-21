@@ -24,10 +24,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enabled")
-      private final @Nullable String enabled;
+    private @Nullable String enabled;
 
     public Optional<String> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable String expirationDate;
+    private @Nullable String expirationDate;
 
     public Optional<String> expirationDate() {
-        return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="expired")
-      private final @Nullable Boolean expired;
+    private @Nullable Boolean expired;
 
     public Optional<Boolean> expired() {
-        return this.expired == null ? Optional.empty() : Optional.ofNullable(this.expired);
+        return Optional.ofNullable(this.expired);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="markdown")
-      private final @Nullable String markdown;
+    private @Nullable String markdown;
 
     public Optional<String> markdown() {
-        return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
+        return Optional.ofNullable(this.markdown);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,10 +79,10 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -90,100 +90,82 @@ public final class LabAnnouncementPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="uniqueIdentifier", required=true)
-      private final String uniqueIdentifier;
+    private String uniqueIdentifier;
 
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
-    public LabAnnouncementPropertiesResponse(
-        @Nullable String enabled,
-        @Nullable String expirationDate,
-        @Nullable Boolean expired,
-        @Nullable String markdown,
-        String provisioningState,
-        @Nullable String title,
-        String uniqueIdentifier) {
-        this.enabled = enabled;
-        this.expirationDate = expirationDate;
-        this.expired = expired;
-        this.markdown = markdown;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.title = title;
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier, "expected parameter 'uniqueIdentifier' to be non-null");
-    }
+    private LabAnnouncementPropertiesResponse() {}
 
-    private LabAnnouncementPropertiesResponse() {
-        this.enabled = null;
-        this.expirationDate = null;
-        this.expired = null;
-        this.markdown = null;
-        this.provisioningState = null;
-        this.title = null;
-        this.uniqueIdentifier = null;
+    private LabAnnouncementPropertiesResponse(LabAnnouncementPropertiesResponse $) {
+        this.enabled = $.enabled;
+        this.expirationDate = $.expirationDate;
+        this.expired = $.expired;
+        this.markdown = $.markdown;
+        this.provisioningState = $.provisioningState;
+        this.title = $.title;
+        this.uniqueIdentifier = $.uniqueIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabAnnouncementPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String enabled;
-        private @Nullable String expirationDate;
-        private @Nullable Boolean expired;
-        private @Nullable String markdown;
-        private String provisioningState;
-        private @Nullable String title;
-        private String uniqueIdentifier;
+        private LabAnnouncementPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabAnnouncementPropertiesResponse();
         }
 
         public Builder(LabAnnouncementPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.expired = defaults.expired;
-    	      this.markdown = defaults.markdown;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.title = defaults.title;
-    	      this.uniqueIdentifier = defaults.uniqueIdentifier;
+            $ = new LabAnnouncementPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable String enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder expired(@Nullable Boolean expired) {
-            this.expired = expired;
+            $.expired = expired;
             return this;
         }
+
         public Builder markdown(@Nullable String markdown) {
-            this.markdown = markdown;
+            $.markdown = markdown;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
+
         public Builder uniqueIdentifier(String uniqueIdentifier) {
-            this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+            $.uniqueIdentifier = uniqueIdentifier;
             return this;
-        }        public LabAnnouncementPropertiesResponse build() {
-            return new LabAnnouncementPropertiesResponse(enabled, expirationDate, expired, markdown, provisioningState, title, uniqueIdentifier);
+        }
+
+        public LabAnnouncementPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.uniqueIdentifier = Objects.requireNonNull($.uniqueIdentifier, "expected parameter 'uniqueIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

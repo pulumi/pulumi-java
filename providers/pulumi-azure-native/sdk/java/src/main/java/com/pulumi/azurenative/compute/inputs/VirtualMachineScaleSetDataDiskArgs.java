@@ -9,12 +9,12 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskPa
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="caching")
-      private final @Nullable Output<CachingTypes> caching;
+    private @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> caching() {
-        return this.caching == null ? Codegen.empty() : this.caching;
+    public Optional<Output<CachingTypes>> caching() {
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="createOption", required=true)
-      private final Output<Either<String,DiskCreateOptionTypes>> createOption;
+    private Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
@@ -53,10 +53,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="diskIOPSReadWrite")
-      private final @Nullable Output<Double> diskIOPSReadWrite;
+    private @Nullable Output<Double> diskIOPSReadWrite;
 
-    public Output<Double> diskIOPSReadWrite() {
-        return this.diskIOPSReadWrite == null ? Codegen.empty() : this.diskIOPSReadWrite;
+    public Optional<Output<Double>> diskIOPSReadWrite() {
+        return Optional.ofNullable(this.diskIOPSReadWrite);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="diskMBpsReadWrite")
-      private final @Nullable Output<Double> diskMBpsReadWrite;
+    private @Nullable Output<Double> diskMBpsReadWrite;
 
-    public Output<Double> diskMBpsReadWrite() {
-        return this.diskMBpsReadWrite == null ? Codegen.empty() : this.diskMBpsReadWrite;
+    public Optional<Output<Double>> diskMBpsReadWrite() {
+        return Optional.ofNullable(this.diskMBpsReadWrite);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="lun", required=true)
-      private final Output<Integer> lun;
+    private Output<Integer> lun;
 
     public Output<Integer> lun() {
         return this.lun;
@@ -97,10 +97,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
+    private @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
-    public Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk() {
-        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
+    public Optional<Output<VirtualMachineScaleSetManagedDiskParametersArgs>> managedDisk() {
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -119,154 +119,130 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="writeAcceleratorEnabled")
-      private final @Nullable Output<Boolean> writeAcceleratorEnabled;
+    private @Nullable Output<Boolean> writeAcceleratorEnabled;
 
-    public Output<Boolean> writeAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
+    public Optional<Output<Boolean>> writeAcceleratorEnabled() {
+        return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 
-    public VirtualMachineScaleSetDataDiskArgs(
-        @Nullable Output<CachingTypes> caching,
-        Output<Either<String,DiskCreateOptionTypes>> createOption,
-        @Nullable Output<Double> diskIOPSReadWrite,
-        @Nullable Output<Double> diskMBpsReadWrite,
-        @Nullable Output<Integer> diskSizeGB,
-        Output<Integer> lun,
-        @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> writeAcceleratorEnabled) {
-        this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.diskIOPSReadWrite = diskIOPSReadWrite;
-        this.diskMBpsReadWrite = diskMBpsReadWrite;
-        this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.writeAcceleratorEnabled = writeAcceleratorEnabled;
-    }
+    private VirtualMachineScaleSetDataDiskArgs() {}
 
-    private VirtualMachineScaleSetDataDiskArgs() {
-        this.caching = Codegen.empty();
-        this.createOption = Codegen.empty();
-        this.diskIOPSReadWrite = Codegen.empty();
-        this.diskMBpsReadWrite = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.lun = Codegen.empty();
-        this.managedDisk = Codegen.empty();
-        this.name = Codegen.empty();
-        this.writeAcceleratorEnabled = Codegen.empty();
+    private VirtualMachineScaleSetDataDiskArgs(VirtualMachineScaleSetDataDiskArgs $) {
+        this.caching = $.caching;
+        this.createOption = $.createOption;
+        this.diskIOPSReadWrite = $.diskIOPSReadWrite;
+        this.diskMBpsReadWrite = $.diskMBpsReadWrite;
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.writeAcceleratorEnabled = $.writeAcceleratorEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetDataDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CachingTypes> caching;
-        private Output<Either<String,DiskCreateOptionTypes>> createOption;
-        private @Nullable Output<Double> diskIOPSReadWrite;
-        private @Nullable Output<Double> diskMBpsReadWrite;
-        private @Nullable Output<Integer> diskSizeGB;
-        private Output<Integer> lun;
-        private @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> writeAcceleratorEnabled;
+        private VirtualMachineScaleSetDataDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetDataDiskArgs();
         }
 
         public Builder(VirtualMachineScaleSetDataDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.createOption = defaults.createOption;
-    	      this.diskIOPSReadWrite = defaults.diskIOPSReadWrite;
-    	      this.diskMBpsReadWrite = defaults.diskMBpsReadWrite;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
+            $ = new VirtualMachineScaleSetDataDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable Output<CachingTypes> caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
-        public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Codegen.ofNullable(caching);
-            return this;
+
+        public Builder caching(CachingTypes caching) {
+            return caching(Output.of(caching));
         }
+
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
-            this.createOption = Output.of(Objects.requireNonNull(createOption));
-            return this;
+            return createOption(Output.of(createOption));
         }
+
         public Builder diskIOPSReadWrite(@Nullable Output<Double> diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = diskIOPSReadWrite;
+            $.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
-        public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = Codegen.ofNullable(diskIOPSReadWrite);
-            return this;
+
+        public Builder diskIOPSReadWrite(Double diskIOPSReadWrite) {
+            return diskIOPSReadWrite(Output.of(diskIOPSReadWrite));
         }
+
         public Builder diskMBpsReadWrite(@Nullable Output<Double> diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = diskMBpsReadWrite;
+            $.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
-        public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = Codegen.ofNullable(diskMBpsReadWrite);
-            return this;
+
+        public Builder diskMBpsReadWrite(Double diskMBpsReadWrite) {
+            return diskMBpsReadWrite(Output.of(diskMBpsReadWrite));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder lun(Output<Integer> lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Output.of(Objects.requireNonNull(lun));
-            return this;
+            return lun(Output.of(lun));
         }
+
         public Builder managedDisk(@Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
-        public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
-            this.managedDisk = Codegen.ofNullable(managedDisk);
-            return this;
+
+        public Builder managedDisk(VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
+            return managedDisk(Output.of(managedDisk));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = writeAcceleratorEnabled;
+            $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = Codegen.ofNullable(writeAcceleratorEnabled);
-            return this;
-        }        public VirtualMachineScaleSetDataDiskArgs build() {
-            return new VirtualMachineScaleSetDataDiskArgs(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
+
+        public Builder writeAcceleratorEnabled(Boolean writeAcceleratorEnabled) {
+            return writeAcceleratorEnabled(Output.of(writeAcceleratorEnabled));
+        }
+
+        public VirtualMachineScaleSetDataDiskArgs build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

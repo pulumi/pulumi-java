@@ -23,10 +23,10 @@ public final class SettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public SettingResponse(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private SettingResponse() {}
 
-    private SettingResponse() {
-        this.name = null;
-        this.value = null;
+    private SettingResponse(SettingResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private SettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingResponse();
         }
 
         public Builder(SettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new SettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public SettingResponse build() {
-            return new SettingResponse(name, value);
+        }
+
+        public SettingResponse build() {
+            return $;
         }
     }
+
 }

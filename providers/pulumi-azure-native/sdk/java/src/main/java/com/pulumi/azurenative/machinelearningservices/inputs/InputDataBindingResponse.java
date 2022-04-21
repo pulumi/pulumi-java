@@ -19,10 +19,10 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataId")
-      private final @Nullable String dataId;
+    private @Nullable String dataId;
 
     public Optional<String> dataId() {
-        return this.dataId == null ? Optional.empty() : Optional.ofNullable(this.dataId);
+        return Optional.ofNullable(this.dataId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pathOnCompute")
-      private final @Nullable String pathOnCompute;
+    private @Nullable String pathOnCompute;
 
     public Optional<String> pathOnCompute() {
-        return this.pathOnCompute == null ? Optional.empty() : Optional.ofNullable(this.pathOnCompute);
+        return Optional.ofNullable(this.pathOnCompute);
     }
 
-    public InputDataBindingResponse(
-        @Nullable String dataId,
-        @Nullable String mode,
-        @Nullable String pathOnCompute) {
-        this.dataId = dataId;
-        this.mode = mode;
-        this.pathOnCompute = pathOnCompute;
-    }
+    private InputDataBindingResponse() {}
 
-    private InputDataBindingResponse() {
-        this.dataId = null;
-        this.mode = null;
-        this.pathOnCompute = null;
+    private InputDataBindingResponse(InputDataBindingResponse $) {
+        this.dataId = $.dataId;
+        this.mode = $.mode;
+        this.pathOnCompute = $.pathOnCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputDataBindingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataId;
-        private @Nullable String mode;
-        private @Nullable String pathOnCompute;
+        private InputDataBindingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputDataBindingResponse();
         }
 
         public Builder(InputDataBindingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataId = defaults.dataId;
-    	      this.mode = defaults.mode;
-    	      this.pathOnCompute = defaults.pathOnCompute;
+            $ = new InputDataBindingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataId(@Nullable String dataId) {
-            this.dataId = dataId;
+            $.dataId = dataId;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
-            this.pathOnCompute = pathOnCompute;
+            $.pathOnCompute = pathOnCompute;
             return this;
-        }        public InputDataBindingResponse build() {
-            return new InputDataBindingResponse(dataId, mode, pathOnCompute);
+        }
+
+        public InputDataBindingResponse build() {
+            return $;
         }
     }
+
 }

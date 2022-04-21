@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RealtimeConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxConcurrentCalls")
-      private final @Nullable Output<Integer> maxConcurrentCalls;
+    private @Nullable Output<Integer> maxConcurrentCalls;
 
-    public Output<Integer> maxConcurrentCalls() {
-        return this.maxConcurrentCalls == null ? Codegen.empty() : this.maxConcurrentCalls;
+    public Optional<Output<Integer>> maxConcurrentCalls() {
+        return Optional.ofNullable(this.maxConcurrentCalls);
     }
 
-    public RealtimeConfigurationArgs(@Nullable Output<Integer> maxConcurrentCalls) {
-        this.maxConcurrentCalls = maxConcurrentCalls;
-    }
+    private RealtimeConfigurationArgs() {}
 
-    private RealtimeConfigurationArgs() {
-        this.maxConcurrentCalls = Codegen.empty();
+    private RealtimeConfigurationArgs(RealtimeConfigurationArgs $) {
+        this.maxConcurrentCalls = $.maxConcurrentCalls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RealtimeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxConcurrentCalls;
+        private RealtimeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RealtimeConfigurationArgs();
         }
 
         public Builder(RealtimeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentCalls = defaults.maxConcurrentCalls;
+            $ = new RealtimeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentCalls(@Nullable Output<Integer> maxConcurrentCalls) {
-            this.maxConcurrentCalls = maxConcurrentCalls;
+            $.maxConcurrentCalls = maxConcurrentCalls;
             return this;
         }
-        public Builder maxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
-            this.maxConcurrentCalls = Codegen.ofNullable(maxConcurrentCalls);
-            return this;
-        }        public RealtimeConfigurationArgs build() {
-            return new RealtimeConfigurationArgs(maxConcurrentCalls);
+
+        public Builder maxConcurrentCalls(Integer maxConcurrentCalls) {
+            return maxConcurrentCalls(Output.of(maxConcurrentCalls));
+        }
+
+        public RealtimeConfigurationArgs build() {
+            return $;
         }
     }
+
 }

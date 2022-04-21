@@ -24,7 +24,7 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends com.pu
      * 
      */
     @Import(name="failoverPolicy", required=true)
-      private final String failoverPolicy;
+    private String failoverPolicy;
 
     public String failoverPolicy() {
         return this.failoverPolicy;
@@ -35,55 +35,51 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends com.pu
      * 
      */
     @Import(name="failoverWithDataLossGracePeriodMinutes")
-      private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
+    private @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
     public Optional<Integer> failoverWithDataLossGracePeriodMinutes() {
-        return this.failoverWithDataLossGracePeriodMinutes == null ? Optional.empty() : Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
+        return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }
 
-    public InstanceFailoverGroupReadWriteEndpointResponse(
-        String failoverPolicy,
-        @Nullable Integer failoverWithDataLossGracePeriodMinutes) {
-        this.failoverPolicy = Objects.requireNonNull(failoverPolicy, "expected parameter 'failoverPolicy' to be non-null");
-        this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
-    }
+    private InstanceFailoverGroupReadWriteEndpointResponse() {}
 
-    private InstanceFailoverGroupReadWriteEndpointResponse() {
-        this.failoverPolicy = null;
-        this.failoverWithDataLossGracePeriodMinutes = null;
+    private InstanceFailoverGroupReadWriteEndpointResponse(InstanceFailoverGroupReadWriteEndpointResponse $) {
+        this.failoverPolicy = $.failoverPolicy;
+        this.failoverWithDataLossGracePeriodMinutes = $.failoverWithDataLossGracePeriodMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFailoverGroupReadWriteEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String failoverPolicy;
-        private @Nullable Integer failoverWithDataLossGracePeriodMinutes;
+        private InstanceFailoverGroupReadWriteEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFailoverGroupReadWriteEndpointResponse();
         }
 
         public Builder(InstanceFailoverGroupReadWriteEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverPolicy = defaults.failoverPolicy;
-    	      this.failoverWithDataLossGracePeriodMinutes = defaults.failoverWithDataLossGracePeriodMinutes;
+            $ = new InstanceFailoverGroupReadWriteEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverPolicy(String failoverPolicy) {
-            this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
+            $.failoverPolicy = failoverPolicy;
             return this;
         }
+
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
-            this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
+            $.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
-        }        public InstanceFailoverGroupReadWriteEndpointResponse build() {
-            return new InstanceFailoverGroupReadWriteEndpointResponse(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
+        }
+
+        public InstanceFailoverGroupReadWriteEndpointResponse build() {
+            $.failoverPolicy = Objects.requireNonNull($.failoverPolicy, "expected parameter 'failoverPolicy' to be non-null");
+            return $;
         }
     }
+
 }

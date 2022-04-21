@@ -24,45 +24,45 @@ public final class InputPortResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public InputPortResponse(@Nullable String type) {
-        this.type = Codegen.stringProp("type").arg(type).def("Dataset").getNullable();
-    }
+    private InputPortResponse() {}
 
-    private InputPortResponse() {
-        this.type = null;
+    private InputPortResponse(InputPortResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private InputPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputPortResponse();
         }
 
         public Builder(InputPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new InputPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public InputPortResponse build() {
-            return new InputPortResponse(type);
+        }
+
+        public InputPortResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).def("Dataset").getNullable();
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="capacityAllocated", required=true)
-      private final Integer capacityAllocated;
+    private Integer capacityAllocated;
 
     public Integer capacityAllocated() {
         return this.capacityAllocated;
@@ -33,7 +33,7 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="capacityAssigned", required=true)
-      private final Integer capacityAssigned;
+    private Integer capacityAssigned;
 
     public Integer capacityAssigned() {
         return this.capacityAssigned;
@@ -44,7 +44,7 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
@@ -55,7 +55,7 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="createdDate", required=true)
-      private final String createdDate;
+    private String createdDate;
 
     public String createdDate() {
         return this.createdDate;
@@ -66,82 +66,73 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public ClusterPropertiesResponse(
-        Integer capacityAllocated,
-        Integer capacityAssigned,
-        String clusterId,
-        String createdDate,
-        String provisioningState) {
-        this.capacityAllocated = Objects.requireNonNull(capacityAllocated, "expected parameter 'capacityAllocated' to be non-null");
-        this.capacityAssigned = Objects.requireNonNull(capacityAssigned, "expected parameter 'capacityAssigned' to be non-null");
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.createdDate = Objects.requireNonNull(createdDate, "expected parameter 'createdDate' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private ClusterPropertiesResponse() {}
 
-    private ClusterPropertiesResponse() {
-        this.capacityAllocated = null;
-        this.capacityAssigned = null;
-        this.clusterId = null;
-        this.createdDate = null;
-        this.provisioningState = null;
+    private ClusterPropertiesResponse(ClusterPropertiesResponse $) {
+        this.capacityAllocated = $.capacityAllocated;
+        this.capacityAssigned = $.capacityAssigned;
+        this.clusterId = $.clusterId;
+        this.createdDate = $.createdDate;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer capacityAllocated;
-        private Integer capacityAssigned;
-        private String clusterId;
-        private String createdDate;
-        private String provisioningState;
+        private ClusterPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterPropertiesResponse();
         }
 
         public Builder(ClusterPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityAllocated = defaults.capacityAllocated;
-    	      this.capacityAssigned = defaults.capacityAssigned;
-    	      this.clusterId = defaults.clusterId;
-    	      this.createdDate = defaults.createdDate;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new ClusterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityAllocated(Integer capacityAllocated) {
-            this.capacityAllocated = Objects.requireNonNull(capacityAllocated);
+            $.capacityAllocated = capacityAllocated;
             return this;
         }
+
         public Builder capacityAssigned(Integer capacityAssigned) {
-            this.capacityAssigned = Objects.requireNonNull(capacityAssigned);
+            $.capacityAssigned = capacityAssigned;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder createdDate(String createdDate) {
-            this.createdDate = Objects.requireNonNull(createdDate);
+            $.createdDate = createdDate;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public ClusterPropertiesResponse build() {
-            return new ClusterPropertiesResponse(capacityAllocated, capacityAssigned, clusterId, createdDate, provisioningState);
+        }
+
+        public ClusterPropertiesResponse build() {
+            $.capacityAllocated = Objects.requireNonNull($.capacityAllocated, "expected parameter 'capacityAllocated' to be non-null");
+            $.capacityAssigned = Objects.requireNonNull($.capacityAssigned, "expected parameter 'capacityAssigned' to be non-null");
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.createdDate = Objects.requireNonNull($.createdDate, "expected parameter 'createdDate' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

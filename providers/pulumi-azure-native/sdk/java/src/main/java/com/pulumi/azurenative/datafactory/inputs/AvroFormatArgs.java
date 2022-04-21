@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deserializer")
-      private final @Nullable Output<Object> deserializer;
+    private @Nullable Output<Object> deserializer;
 
-    public Output<Object> deserializer() {
-        return this.deserializer == null ? Codegen.empty() : this.deserializer;
+    public Optional<Output<Object>> deserializer() {
+        return Optional.ofNullable(this.deserializer);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serializer")
-      private final @Nullable Output<Object> serializer;
+    private @Nullable Output<Object> serializer;
 
-    public Output<Object> serializer() {
-        return this.serializer == null ? Codegen.empty() : this.serializer;
+    public Optional<Output<Object>> serializer() {
+        return Optional.ofNullable(this.serializer);
     }
 
     /**
@@ -48,76 +49,69 @@ public final class AvroFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AvroFormatArgs(
-        @Nullable Output<Object> deserializer,
-        @Nullable Output<Object> serializer,
-        Output<String> type) {
-        this.deserializer = deserializer;
-        this.serializer = serializer;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AvroFormatArgs() {}
 
-    private AvroFormatArgs() {
-        this.deserializer = Codegen.empty();
-        this.serializer = Codegen.empty();
-        this.type = Codegen.empty();
+    private AvroFormatArgs(AvroFormatArgs $) {
+        this.deserializer = $.deserializer;
+        this.serializer = $.serializer;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> deserializer;
-        private @Nullable Output<Object> serializer;
-        private Output<String> type;
+        private AvroFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroFormatArgs();
         }
 
         public Builder(AvroFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deserializer = defaults.deserializer;
-    	      this.serializer = defaults.serializer;
-    	      this.type = defaults.type;
+            $ = new AvroFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deserializer(@Nullable Output<Object> deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
         }
-        public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Codegen.ofNullable(deserializer);
-            return this;
+
+        public Builder deserializer(Object deserializer) {
+            return deserializer(Output.of(deserializer));
         }
+
         public Builder serializer(@Nullable Output<Object> serializer) {
-            this.serializer = serializer;
+            $.serializer = serializer;
             return this;
         }
-        public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Codegen.ofNullable(serializer);
-            return this;
+
+        public Builder serializer(Object serializer) {
+            return serializer(Output.of(serializer));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AvroFormatArgs build() {
-            return new AvroFormatArgs(deserializer, serializer, type);
+            return type(Output.of(type));
+        }
+
+        public AvroFormatArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

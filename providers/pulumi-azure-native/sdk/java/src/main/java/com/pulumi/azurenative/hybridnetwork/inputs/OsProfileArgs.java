@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable Output<String> adminUsername;
+    private @Nullable Output<String> adminUsername;
 
-    public Output<String> adminUsername() {
-        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
+    public Optional<Output<String>> adminUsername() {
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customData")
-      private final @Nullable Output<String> customData;
+    private @Nullable Output<String> customData;
 
-    public Output<String> customData() {
-        return this.customData == null ? Codegen.empty() : this.customData;
+    public Optional<Output<String>> customData() {
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customDataRequired")
-      private final @Nullable Output<Boolean> customDataRequired;
+    private @Nullable Output<Boolean> customDataRequired;
 
-    public Output<Boolean> customDataRequired() {
-        return this.customDataRequired == null ? Codegen.empty() : this.customDataRequired;
+    public Optional<Output<Boolean>> customDataRequired() {
+        return Optional.ofNullable(this.customDataRequired);
     }
 
     /**
@@ -59,89 +60,79 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxConfiguration")
-      private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
+    private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> linuxConfiguration() {
-        return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
+    public Optional<Output<LinuxConfigurationArgs>> linuxConfiguration() {
+        return Optional.ofNullable(this.linuxConfiguration);
     }
 
-    public OsProfileArgs(
-        @Nullable Output<String> adminUsername,
-        @Nullable Output<String> customData,
-        @Nullable Output<Boolean> customDataRequired,
-        @Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
-        this.adminUsername = adminUsername;
-        this.customData = customData;
-        this.customDataRequired = Codegen.booleanProp("customDataRequired").output().arg(customDataRequired).def(true).getNullable();
-        this.linuxConfiguration = linuxConfiguration;
-    }
+    private OsProfileArgs() {}
 
-    private OsProfileArgs() {
-        this.adminUsername = Codegen.empty();
-        this.customData = Codegen.empty();
-        this.customDataRequired = Codegen.empty();
-        this.linuxConfiguration = Codegen.empty();
+    private OsProfileArgs(OsProfileArgs $) {
+        this.adminUsername = $.adminUsername;
+        this.customData = $.customData;
+        this.customDataRequired = $.customDataRequired;
+        this.linuxConfiguration = $.linuxConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminUsername;
-        private @Nullable Output<String> customData;
-        private @Nullable Output<Boolean> customDataRequired;
-        private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
+        private OsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsProfileArgs();
         }
 
         public Builder(OsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.customData = defaults.customData;
-    	      this.customDataRequired = defaults.customDataRequired;
-    	      this.linuxConfiguration = defaults.linuxConfiguration;
+            $ = new OsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
-        public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Codegen.ofNullable(adminUsername);
-            return this;
+
+        public Builder adminUsername(String adminUsername) {
+            return adminUsername(Output.of(adminUsername));
         }
+
         public Builder customData(@Nullable Output<String> customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
-        public Builder customData(@Nullable String customData) {
-            this.customData = Codegen.ofNullable(customData);
-            return this;
+
+        public Builder customData(String customData) {
+            return customData(Output.of(customData));
         }
+
         public Builder customDataRequired(@Nullable Output<Boolean> customDataRequired) {
-            this.customDataRequired = customDataRequired;
+            $.customDataRequired = customDataRequired;
             return this;
         }
-        public Builder customDataRequired(@Nullable Boolean customDataRequired) {
-            this.customDataRequired = Codegen.ofNullable(customDataRequired);
-            return this;
+
+        public Builder customDataRequired(Boolean customDataRequired) {
+            return customDataRequired(Output.of(customDataRequired));
         }
+
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
-            this.linuxConfiguration = linuxConfiguration;
+            $.linuxConfiguration = linuxConfiguration;
             return this;
         }
-        public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Codegen.ofNullable(linuxConfiguration);
-            return this;
-        }        public OsProfileArgs build() {
-            return new OsProfileArgs(adminUsername, customData, customDataRequired, linuxConfiguration);
+
+        public Builder linuxConfiguration(LinuxConfigurationArgs linuxConfiguration) {
+            return linuxConfiguration(Output.of(linuxConfiguration));
+        }
+
+        public OsProfileArgs build() {
+            $.customDataRequired = Codegen.booleanProp("customDataRequired").output().arg($.customDataRequired).def(true).getNullable();
+            return $;
         }
     }
+
 }

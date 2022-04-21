@@ -5,9 +5,9 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ImageRegistryCredentialArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ImageRegistryCredentialArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="server", required=true)
-      private final Output<String> server;
+    private Output<String> server;
 
     public Output<String> server() {
         return this.server;
@@ -46,76 +46,70 @@ public final class ImageRegistryCredentialArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public ImageRegistryCredentialArgs(
-        @Nullable Output<String> password,
-        Output<String> server,
-        Output<String> username) {
-        this.password = password;
-        this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private ImageRegistryCredentialArgs() {}
 
-    private ImageRegistryCredentialArgs() {
-        this.password = Codegen.empty();
-        this.server = Codegen.empty();
-        this.username = Codegen.empty();
+    private ImageRegistryCredentialArgs(ImageRegistryCredentialArgs $) {
+        this.password = $.password;
+        this.server = $.server;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRegistryCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private Output<String> server;
-        private Output<String> username;
+        private ImageRegistryCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRegistryCredentialArgs();
         }
 
         public Builder(ImageRegistryCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.server = defaults.server;
-    	      this.username = defaults.username;
+            $ = new ImageRegistryCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder server(Output<String> server) {
-            this.server = Objects.requireNonNull(server);
+            $.server = server;
             return this;
         }
+
         public Builder server(String server) {
-            this.server = Output.of(Objects.requireNonNull(server));
-            return this;
+            return server(Output.of(server));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public ImageRegistryCredentialArgs build() {
-            return new ImageRegistryCredentialArgs(password, server, username);
+            return username(Output.of(username));
+        }
+
+        public ImageRegistryCredentialArgs build() {
+            $.server = Objects.requireNonNull($.server, "expected parameter 'server' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

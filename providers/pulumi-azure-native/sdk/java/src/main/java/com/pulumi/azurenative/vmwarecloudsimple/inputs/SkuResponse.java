@@ -23,10 +23,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable String capacity;
+    private @Nullable String capacity;
 
     public Optional<String> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable String family;
+    private @Nullable String family;
 
     public Optional<String> family() {
-        return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,82 +67,69 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public SkuResponse(
-        @Nullable String capacity,
-        @Nullable String description,
-        @Nullable String family,
-        String name,
-        @Nullable String tier) {
-        this.capacity = capacity;
-        this.description = description;
-        this.family = family;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = tier;
-    }
+    private SkuResponse() {}
 
-    private SkuResponse() {
-        this.capacity = null;
-        this.description = null;
-        this.family = null;
-        this.name = null;
-        this.tier = null;
+    private SkuResponse(SkuResponse $) {
+        this.capacity = $.capacity;
+        this.description = $.description;
+        this.family = $.family;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String capacity;
-        private @Nullable String description;
-        private @Nullable String family;
-        private String name;
-        private @Nullable String tier;
+        private SkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuResponse();
         }
 
         public Builder(SkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.description = defaults.description;
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable String capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder family(@Nullable String family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public SkuResponse build() {
-            return new SkuResponse(capacity, description, family, name, tier);
+        }
+
+        public SkuResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

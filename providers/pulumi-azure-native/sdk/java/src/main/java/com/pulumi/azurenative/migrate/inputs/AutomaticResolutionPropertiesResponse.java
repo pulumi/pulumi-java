@@ -24,45 +24,44 @@ public final class AutomaticResolutionPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="moveResourceId")
-      private final @Nullable String moveResourceId;
+    private @Nullable String moveResourceId;
 
     public Optional<String> moveResourceId() {
-        return this.moveResourceId == null ? Optional.empty() : Optional.ofNullable(this.moveResourceId);
+        return Optional.ofNullable(this.moveResourceId);
     }
 
-    public AutomaticResolutionPropertiesResponse(@Nullable String moveResourceId) {
-        this.moveResourceId = moveResourceId;
-    }
+    private AutomaticResolutionPropertiesResponse() {}
 
-    private AutomaticResolutionPropertiesResponse() {
-        this.moveResourceId = null;
+    private AutomaticResolutionPropertiesResponse(AutomaticResolutionPropertiesResponse $) {
+        this.moveResourceId = $.moveResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticResolutionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String moveResourceId;
+        private AutomaticResolutionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticResolutionPropertiesResponse();
         }
 
         public Builder(AutomaticResolutionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moveResourceId = defaults.moveResourceId;
+            $ = new AutomaticResolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder moveResourceId(@Nullable String moveResourceId) {
-            this.moveResourceId = moveResourceId;
+            $.moveResourceId = moveResourceId;
             return this;
-        }        public AutomaticResolutionPropertiesResponse build() {
-            return new AutomaticResolutionPropertiesResponse(moveResourceId);
+        }
+
+        public AutomaticResolutionPropertiesResponse build() {
+            return $;
         }
     }
+
 }

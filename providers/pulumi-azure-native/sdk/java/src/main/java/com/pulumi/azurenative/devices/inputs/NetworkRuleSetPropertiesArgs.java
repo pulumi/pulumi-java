@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
-      private final Output<Boolean> applyToBuiltInEventHubEndpoint;
+    private Output<Boolean> applyToBuiltInEventHubEndpoint;
 
     public Output<Boolean> applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
@@ -40,10 +41,10 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
+    private @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
-    public Output<Either<String,DefaultAction>> defaultAction() {
-        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
+    public Optional<Output<Either<String,DefaultAction>>> defaultAction() {
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -51,79 +52,75 @@ public final class NetworkRuleSetPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ipRules", required=true)
-      private final Output<List<NetworkRuleSetIpRuleArgs>> ipRules;
+    private Output<List<NetworkRuleSetIpRuleArgs>> ipRules;
 
     public Output<List<NetworkRuleSetIpRuleArgs>> ipRules() {
         return this.ipRules;
     }
 
-    public NetworkRuleSetPropertiesArgs(
-        Output<Boolean> applyToBuiltInEventHubEndpoint,
-        @Nullable Output<Either<String,DefaultAction>> defaultAction,
-        Output<List<NetworkRuleSetIpRuleArgs>> ipRules) {
-        this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint, "expected parameter 'applyToBuiltInEventHubEndpoint' to be non-null");
-        this.defaultAction = Codegen.stringProp("defaultAction").left(DefaultAction.class).output().arg(defaultAction).def("Deny").getNullable();
-        this.ipRules = Objects.requireNonNull(ipRules, "expected parameter 'ipRules' to be non-null");
-    }
+    private NetworkRuleSetPropertiesArgs() {}
 
-    private NetworkRuleSetPropertiesArgs() {
-        this.applyToBuiltInEventHubEndpoint = Codegen.empty();
-        this.defaultAction = Codegen.empty();
-        this.ipRules = Codegen.empty();
+    private NetworkRuleSetPropertiesArgs(NetworkRuleSetPropertiesArgs $) {
+        this.applyToBuiltInEventHubEndpoint = $.applyToBuiltInEventHubEndpoint;
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> applyToBuiltInEventHubEndpoint;
-        private @Nullable Output<Either<String,DefaultAction>> defaultAction;
-        private Output<List<NetworkRuleSetIpRuleArgs>> ipRules;
+        private NetworkRuleSetPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetPropertiesArgs();
         }
 
         public Builder(NetworkRuleSetPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyToBuiltInEventHubEndpoint = defaults.applyToBuiltInEventHubEndpoint;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
+            $ = new NetworkRuleSetPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applyToBuiltInEventHubEndpoint(Output<Boolean> applyToBuiltInEventHubEndpoint) {
-            this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
+            $.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
             return this;
         }
+
         public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
-            this.applyToBuiltInEventHubEndpoint = Output.of(Objects.requireNonNull(applyToBuiltInEventHubEndpoint));
-            return this;
+            return applyToBuiltInEventHubEndpoint(Output.of(applyToBuiltInEventHubEndpoint));
         }
+
         public Builder defaultAction(@Nullable Output<Either<String,DefaultAction>> defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
-        public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
-            this.defaultAction = Codegen.ofNullable(defaultAction);
-            return this;
+
+        public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder ipRules(Output<List<NetworkRuleSetIpRuleArgs>> ipRules) {
-            this.ipRules = Objects.requireNonNull(ipRules);
+            $.ipRules = ipRules;
             return this;
         }
+
         public Builder ipRules(List<NetworkRuleSetIpRuleArgs> ipRules) {
-            this.ipRules = Output.of(Objects.requireNonNull(ipRules));
-            return this;
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(NetworkRuleSetIpRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
-        }        public NetworkRuleSetPropertiesArgs build() {
-            return new NetworkRuleSetPropertiesArgs(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
+        }
+
+        public NetworkRuleSetPropertiesArgs build() {
+            $.applyToBuiltInEventHubEndpoint = Objects.requireNonNull($.applyToBuiltInEventHubEndpoint, "expected parameter 'applyToBuiltInEventHubEndpoint' to be non-null");
+            $.defaultAction = Codegen.stringProp("defaultAction").left(DefaultAction.class).output().arg($.defaultAction).def("Deny").getNullable();
+            $.ipRules = Objects.requireNonNull($.ipRules, "expected parameter 'ipRules' to be non-null");
+            return $;
         }
     }
+
 }

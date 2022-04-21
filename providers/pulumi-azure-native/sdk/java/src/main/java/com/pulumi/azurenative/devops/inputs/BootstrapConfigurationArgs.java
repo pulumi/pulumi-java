@@ -7,8 +7,8 @@ import com.pulumi.azurenative.devops.inputs.CodeRepositoryArgs;
 import com.pulumi.azurenative.devops.inputs.PipelineTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sourceRepository")
-      private final @Nullable Output<CodeRepositoryArgs> sourceRepository;
+    private @Nullable Output<CodeRepositoryArgs> sourceRepository;
 
-    public Output<CodeRepositoryArgs> sourceRepository() {
-        return this.sourceRepository == null ? Codegen.empty() : this.sourceRepository;
+    public Optional<Output<CodeRepositoryArgs>> sourceRepository() {
+        return Optional.ofNullable(this.sourceRepository);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="template", required=true)
-      private final Output<PipelineTemplateArgs> template;
+    private Output<PipelineTemplateArgs> template;
 
     public Output<PipelineTemplateArgs> template() {
         return this.template;
     }
 
-    public BootstrapConfigurationArgs(
-        @Nullable Output<CodeRepositoryArgs> sourceRepository,
-        Output<PipelineTemplateArgs> template) {
-        this.sourceRepository = sourceRepository;
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private BootstrapConfigurationArgs() {}
 
-    private BootstrapConfigurationArgs() {
-        this.sourceRepository = Codegen.empty();
-        this.template = Codegen.empty();
+    private BootstrapConfigurationArgs(BootstrapConfigurationArgs $) {
+        this.sourceRepository = $.sourceRepository;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BootstrapConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CodeRepositoryArgs> sourceRepository;
-        private Output<PipelineTemplateArgs> template;
+        private BootstrapConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BootstrapConfigurationArgs();
         }
 
         public Builder(BootstrapConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceRepository = defaults.sourceRepository;
-    	      this.template = defaults.template;
+            $ = new BootstrapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceRepository(@Nullable Output<CodeRepositoryArgs> sourceRepository) {
-            this.sourceRepository = sourceRepository;
+            $.sourceRepository = sourceRepository;
             return this;
         }
-        public Builder sourceRepository(@Nullable CodeRepositoryArgs sourceRepository) {
-            this.sourceRepository = Codegen.ofNullable(sourceRepository);
-            return this;
+
+        public Builder sourceRepository(CodeRepositoryArgs sourceRepository) {
+            return sourceRepository(Output.of(sourceRepository));
         }
+
         public Builder template(Output<PipelineTemplateArgs> template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder template(PipelineTemplateArgs template) {
-            this.template = Output.of(Objects.requireNonNull(template));
-            return this;
-        }        public BootstrapConfigurationArgs build() {
-            return new BootstrapConfigurationArgs(sourceRepository, template);
+            return template(Output.of(template));
+        }
+
+        public BootstrapConfigurationArgs build() {
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

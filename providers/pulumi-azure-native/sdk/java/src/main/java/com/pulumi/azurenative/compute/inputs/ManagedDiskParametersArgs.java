@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
+    private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
+    public Optional<Output<DiskEncryptionSetParametersArgs>> diskEncryptionSet() {
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountTypes>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public ManagedDiskParametersArgs(
-        @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet,
-        @Nullable Output<String> id,
-        @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.id = id;
-        this.storageAccountType = storageAccountType;
-    }
+    private ManagedDiskParametersArgs() {}
 
-    private ManagedDiskParametersArgs() {
-        this.diskEncryptionSet = Codegen.empty();
-        this.id = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
+    private ManagedDiskParametersArgs(ManagedDiskParametersArgs $) {
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.id = $.id;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedDiskParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+        private ManagedDiskParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedDiskParametersArgs();
         }
 
         public Builder(ManagedDiskParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.id = defaults.id;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new ManagedDiskParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
-            return this;
+
+        public Builder diskEncryptionSet(DiskEncryptionSetParametersArgs diskEncryptionSet) {
+            return diskEncryptionSet(Output.of(diskEncryptionSet));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
-        }        public ManagedDiskParametersArgs build() {
-            return new ManagedDiskParametersArgs(diskEncryptionSet, id, storageAccountType);
+
+        public Builder storageAccountType(Either<String,StorageAccountTypes> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public ManagedDiskParametersArgs build() {
+            return $;
         }
     }
+
 }

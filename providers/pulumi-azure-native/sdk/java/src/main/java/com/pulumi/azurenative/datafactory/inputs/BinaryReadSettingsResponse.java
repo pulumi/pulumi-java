@@ -28,10 +28,10 @@ public final class BinaryReadSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Object compressionProperties;
+    private @Nullable Object compressionProperties;
 
-    public Object compressionProperties() {
-        return this.compressionProperties == null ? null : this.compressionProperties;
+    public Optional<Object> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -40,55 +40,51 @@ public final class BinaryReadSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BinaryReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        String type) {
-        this.compressionProperties = compressionProperties;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private BinaryReadSettingsResponse() {}
 
-    private BinaryReadSettingsResponse() {
-        this.compressionProperties = null;
-        this.type = null;
+    private BinaryReadSettingsResponse(BinaryReadSettingsResponse $) {
+        this.compressionProperties = $.compressionProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BinaryReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object compressionProperties;
-        private String type;
+        private BinaryReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BinaryReadSettingsResponse();
         }
 
         public Builder(BinaryReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.type = defaults.type;
+            $ = new BinaryReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BinaryReadSettingsResponse build() {
-            return new BinaryReadSettingsResponse(compressionProperties, type);
+        }
+
+        public BinaryReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

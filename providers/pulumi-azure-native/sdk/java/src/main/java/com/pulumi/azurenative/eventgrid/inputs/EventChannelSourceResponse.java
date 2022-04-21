@@ -24,45 +24,44 @@ public final class EventChannelSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="source")
-      private final @Nullable String source;
+    private @Nullable String source;
 
     public Optional<String> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
-    public EventChannelSourceResponse(@Nullable String source) {
-        this.source = source;
-    }
+    private EventChannelSourceResponse() {}
 
-    private EventChannelSourceResponse() {
-        this.source = null;
+    private EventChannelSourceResponse(EventChannelSourceResponse $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventChannelSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String source;
+        private EventChannelSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventChannelSourceResponse();
         }
 
         public Builder(EventChannelSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new EventChannelSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder source(@Nullable String source) {
-            this.source = source;
+            $.source = source;
             return this;
-        }        public EventChannelSourceResponse build() {
-            return new EventChannelSourceResponse(source);
+        }
+
+        public EventChannelSourceResponse build() {
+            return $;
         }
     }
+
 }

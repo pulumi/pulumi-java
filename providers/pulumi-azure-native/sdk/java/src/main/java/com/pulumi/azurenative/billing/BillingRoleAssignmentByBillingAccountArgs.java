@@ -5,9 +5,9 @@ package com.pulumi.azurenative.billing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="billingAccountName", required=true)
-      private final Output<String> billingAccountName;
+    private Output<String> billingAccountName;
 
     public Output<String> billingAccountName() {
         return this.billingAccountName;
@@ -31,10 +31,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="billingRoleAssignmentName")
-      private final @Nullable Output<String> billingRoleAssignmentName;
+    private @Nullable Output<String> billingRoleAssignmentName;
 
-    public Output<String> billingRoleAssignmentName() {
-        return this.billingRoleAssignmentName == null ? Codegen.empty() : this.billingRoleAssignmentName;
+    public Optional<Output<String>> billingRoleAssignmentName() {
+        return Optional.ofNullable(this.billingRoleAssignmentName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="principalTenantId")
-      private final @Nullable Output<String> principalTenantId;
+    private @Nullable Output<String> principalTenantId;
 
-    public Output<String> principalTenantId() {
-        return this.principalTenantId == null ? Codegen.empty() : this.principalTenantId;
+    public Optional<Output<String>> principalTenantId() {
+        return Optional.ofNullable(this.principalTenantId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="roleDefinitionId")
-      private final @Nullable Output<String> roleDefinitionId;
+    private @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> roleDefinitionId() {
-        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
+    public Optional<Output<String>> roleDefinitionId() {
+        return Optional.ofNullable(this.roleDefinitionId);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="userAuthenticationType")
-      private final @Nullable Output<String> userAuthenticationType;
+    private @Nullable Output<String> userAuthenticationType;
 
-    public Output<String> userAuthenticationType() {
-        return this.userAuthenticationType == null ? Codegen.empty() : this.userAuthenticationType;
+    public Optional<Output<String>> userAuthenticationType() {
+        return Optional.ofNullable(this.userAuthenticationType);
     }
 
     /**
@@ -86,128 +86,109 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends com.pulumi.
      * 
      */
     @Import(name="userEmailAddress")
-      private final @Nullable Output<String> userEmailAddress;
+    private @Nullable Output<String> userEmailAddress;
 
-    public Output<String> userEmailAddress() {
-        return this.userEmailAddress == null ? Codegen.empty() : this.userEmailAddress;
+    public Optional<Output<String>> userEmailAddress() {
+        return Optional.ofNullable(this.userEmailAddress);
     }
 
-    public BillingRoleAssignmentByBillingAccountArgs(
-        Output<String> billingAccountName,
-        @Nullable Output<String> billingRoleAssignmentName,
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> principalTenantId,
-        @Nullable Output<String> roleDefinitionId,
-        @Nullable Output<String> userAuthenticationType,
-        @Nullable Output<String> userEmailAddress) {
-        this.billingAccountName = Objects.requireNonNull(billingAccountName, "expected parameter 'billingAccountName' to be non-null");
-        this.billingRoleAssignmentName = billingRoleAssignmentName;
-        this.principalId = principalId;
-        this.principalTenantId = principalTenantId;
-        this.roleDefinitionId = roleDefinitionId;
-        this.userAuthenticationType = userAuthenticationType;
-        this.userEmailAddress = userEmailAddress;
-    }
+    private BillingRoleAssignmentByBillingAccountArgs() {}
 
-    private BillingRoleAssignmentByBillingAccountArgs() {
-        this.billingAccountName = Codegen.empty();
-        this.billingRoleAssignmentName = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalTenantId = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
-        this.userAuthenticationType = Codegen.empty();
-        this.userEmailAddress = Codegen.empty();
+    private BillingRoleAssignmentByBillingAccountArgs(BillingRoleAssignmentByBillingAccountArgs $) {
+        this.billingAccountName = $.billingAccountName;
+        this.billingRoleAssignmentName = $.billingRoleAssignmentName;
+        this.principalId = $.principalId;
+        this.principalTenantId = $.principalTenantId;
+        this.roleDefinitionId = $.roleDefinitionId;
+        this.userAuthenticationType = $.userAuthenticationType;
+        this.userEmailAddress = $.userEmailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingRoleAssignmentByBillingAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccountName;
-        private @Nullable Output<String> billingRoleAssignmentName;
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> principalTenantId;
-        private @Nullable Output<String> roleDefinitionId;
-        private @Nullable Output<String> userAuthenticationType;
-        private @Nullable Output<String> userEmailAddress;
+        private BillingRoleAssignmentByBillingAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingRoleAssignmentByBillingAccountArgs();
         }
 
         public Builder(BillingRoleAssignmentByBillingAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountName = defaults.billingAccountName;
-    	      this.billingRoleAssignmentName = defaults.billingRoleAssignmentName;
-    	      this.principalId = defaults.principalId;
-    	      this.principalTenantId = defaults.principalTenantId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
-    	      this.userAuthenticationType = defaults.userAuthenticationType;
-    	      this.userEmailAddress = defaults.userEmailAddress;
+            $ = new BillingRoleAssignmentByBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountName(Output<String> billingAccountName) {
-            this.billingAccountName = Objects.requireNonNull(billingAccountName);
+            $.billingAccountName = billingAccountName;
             return this;
         }
+
         public Builder billingAccountName(String billingAccountName) {
-            this.billingAccountName = Output.of(Objects.requireNonNull(billingAccountName));
-            return this;
+            return billingAccountName(Output.of(billingAccountName));
         }
+
         public Builder billingRoleAssignmentName(@Nullable Output<String> billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = billingRoleAssignmentName;
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
-        public Builder billingRoleAssignmentName(@Nullable String billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = Codegen.ofNullable(billingRoleAssignmentName);
-            return this;
+
+        public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
+            return billingRoleAssignmentName(Output.of(billingRoleAssignmentName));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalTenantId(@Nullable Output<String> principalTenantId) {
-            this.principalTenantId = principalTenantId;
+            $.principalTenantId = principalTenantId;
             return this;
         }
-        public Builder principalTenantId(@Nullable String principalTenantId) {
-            this.principalTenantId = Codegen.ofNullable(principalTenantId);
-            return this;
+
+        public Builder principalTenantId(String principalTenantId) {
+            return principalTenantId(Output.of(principalTenantId));
         }
+
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
-            this.roleDefinitionId = roleDefinitionId;
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
-        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
-            return this;
+
+        public Builder roleDefinitionId(String roleDefinitionId) {
+            return roleDefinitionId(Output.of(roleDefinitionId));
         }
+
         public Builder userAuthenticationType(@Nullable Output<String> userAuthenticationType) {
-            this.userAuthenticationType = userAuthenticationType;
+            $.userAuthenticationType = userAuthenticationType;
             return this;
         }
-        public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
-            this.userAuthenticationType = Codegen.ofNullable(userAuthenticationType);
-            return this;
+
+        public Builder userAuthenticationType(String userAuthenticationType) {
+            return userAuthenticationType(Output.of(userAuthenticationType));
         }
+
         public Builder userEmailAddress(@Nullable Output<String> userEmailAddress) {
-            this.userEmailAddress = userEmailAddress;
+            $.userEmailAddress = userEmailAddress;
             return this;
         }
-        public Builder userEmailAddress(@Nullable String userEmailAddress) {
-            this.userEmailAddress = Codegen.ofNullable(userEmailAddress);
-            return this;
-        }        public BillingRoleAssignmentByBillingAccountArgs build() {
-            return new BillingRoleAssignmentByBillingAccountArgs(billingAccountName, billingRoleAssignmentName, principalId, principalTenantId, roleDefinitionId, userAuthenticationType, userEmailAddress);
+
+        public Builder userEmailAddress(String userEmailAddress) {
+            return userEmailAddress(Output.of(userEmailAddress));
+        }
+
+        public BillingRoleAssignmentByBillingAccountArgs build() {
+            $.billingAccountName = Objects.requireNonNull($.billingAccountName, "expected parameter 'billingAccountName' to be non-null");
+            return $;
         }
     }
+
 }

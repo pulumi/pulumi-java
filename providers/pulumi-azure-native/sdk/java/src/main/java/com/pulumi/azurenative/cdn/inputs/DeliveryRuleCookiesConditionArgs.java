@@ -25,7 +25,7 @@ public final class DeliveryRuleCookiesConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class DeliveryRuleCookiesConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<CookiesMatchConditionParametersArgs> parameters;
+    private Output<CookiesMatchConditionParametersArgs> parameters;
 
     public Output<CookiesMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleCookiesConditionArgs(
-        Output<String> name,
-        Output<CookiesMatchConditionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleCookiesConditionArgs() {}
 
-    private DeliveryRuleCookiesConditionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DeliveryRuleCookiesConditionArgs(DeliveryRuleCookiesConditionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleCookiesConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<CookiesMatchConditionParametersArgs> parameters;
+        private DeliveryRuleCookiesConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleCookiesConditionArgs();
         }
 
         public Builder(DeliveryRuleCookiesConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleCookiesConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<CookiesMatchConditionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(CookiesMatchConditionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public DeliveryRuleCookiesConditionArgs build() {
-            return new DeliveryRuleCookiesConditionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public DeliveryRuleCookiesConditionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WebTestPropertiesConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="webTest")
-      private final @Nullable Output<String> webTest;
+    private @Nullable Output<String> webTest;
 
-    public Output<String> webTest() {
-        return this.webTest == null ? Codegen.empty() : this.webTest;
+    public Optional<Output<String>> webTest() {
+        return Optional.ofNullable(this.webTest);
     }
 
-    public WebTestPropertiesConfigurationArgs(@Nullable Output<String> webTest) {
-        this.webTest = webTest;
-    }
+    private WebTestPropertiesConfigurationArgs() {}
 
-    private WebTestPropertiesConfigurationArgs() {
-        this.webTest = Codegen.empty();
+    private WebTestPropertiesConfigurationArgs(WebTestPropertiesConfigurationArgs $) {
+        this.webTest = $.webTest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTestPropertiesConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> webTest;
+        private WebTestPropertiesConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTestPropertiesConfigurationArgs();
         }
 
         public Builder(WebTestPropertiesConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.webTest = defaults.webTest;
+            $ = new WebTestPropertiesConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder webTest(@Nullable Output<String> webTest) {
-            this.webTest = webTest;
+            $.webTest = webTest;
             return this;
         }
-        public Builder webTest(@Nullable String webTest) {
-            this.webTest = Codegen.ofNullable(webTest);
-            return this;
-        }        public WebTestPropertiesConfigurationArgs build() {
-            return new WebTestPropertiesConfigurationArgs(webTest);
+
+        public Builder webTest(String webTest) {
+            return webTest(Output.of(webTest));
+        }
+
+        public WebTestPropertiesConfigurationArgs build() {
+            return $;
         }
     }
+
 }

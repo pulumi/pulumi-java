@@ -21,10 +21,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
      * 
      */
     @Import(name="allowedSourceAddressPrefix")
-      private final @Nullable String allowedSourceAddressPrefix;
+    private @Nullable String allowedSourceAddressPrefix;
 
     public Optional<String> allowedSourceAddressPrefix() {
-        return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
+        return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
      * 
      */
     @Import(name="allowedSourceAddressPrefixes")
-      private final @Nullable List<String> allowedSourceAddressPrefixes;
+    private @Nullable List<String> allowedSourceAddressPrefixes;
 
-    public List<String> allowedSourceAddressPrefixes() {
-        return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
+    public Optional<List<String>> allowedSourceAddressPrefixes() {
+        return Optional.ofNullable(this.allowedSourceAddressPrefixes);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
      * 
      */
     @Import(name="endTimeUtc", required=true)
-      private final String endTimeUtc;
+    private String endTimeUtc;
 
     public String endTimeUtc() {
         return this.endTimeUtc;
@@ -54,14 +54,14 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
      * 
      */
     @Import(name="mappedPort")
-      private final @Nullable Integer mappedPort;
+    private @Nullable Integer mappedPort;
 
     public Optional<Integer> mappedPort() {
-        return this.mappedPort == null ? Optional.empty() : Optional.ofNullable(this.mappedPort);
+        return Optional.ofNullable(this.mappedPort);
     }
 
     @Import(name="number", required=true)
-      private final Integer number;
+    private Integer number;
 
     public Integer number() {
         return this.number;
@@ -72,7 +72,7 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -83,103 +83,88 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
      * 
      */
     @Import(name="statusReason", required=true)
-      private final String statusReason;
+    private String statusReason;
 
     public String statusReason() {
         return this.statusReason;
     }
 
-    public JitNetworkAccessRequestPortResponse(
-        @Nullable String allowedSourceAddressPrefix,
-        @Nullable List<String> allowedSourceAddressPrefixes,
-        String endTimeUtc,
-        @Nullable Integer mappedPort,
-        Integer number,
-        String status,
-        String statusReason) {
-        this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
-        this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
-        this.endTimeUtc = Objects.requireNonNull(endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
-        this.mappedPort = mappedPort;
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusReason = Objects.requireNonNull(statusReason, "expected parameter 'statusReason' to be non-null");
-    }
+    private JitNetworkAccessRequestPortResponse() {}
 
-    private JitNetworkAccessRequestPortResponse() {
-        this.allowedSourceAddressPrefix = null;
-        this.allowedSourceAddressPrefixes = List.of();
-        this.endTimeUtc = null;
-        this.mappedPort = null;
-        this.number = null;
-        this.status = null;
-        this.statusReason = null;
+    private JitNetworkAccessRequestPortResponse(JitNetworkAccessRequestPortResponse $) {
+        this.allowedSourceAddressPrefix = $.allowedSourceAddressPrefix;
+        this.allowedSourceAddressPrefixes = $.allowedSourceAddressPrefixes;
+        this.endTimeUtc = $.endTimeUtc;
+        this.mappedPort = $.mappedPort;
+        this.number = $.number;
+        this.status = $.status;
+        this.statusReason = $.statusReason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessRequestPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String allowedSourceAddressPrefix;
-        private @Nullable List<String> allowedSourceAddressPrefixes;
-        private String endTimeUtc;
-        private @Nullable Integer mappedPort;
-        private Integer number;
-        private String status;
-        private String statusReason;
+        private JitNetworkAccessRequestPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessRequestPortResponse();
         }
 
         public Builder(JitNetworkAccessRequestPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedSourceAddressPrefix = defaults.allowedSourceAddressPrefix;
-    	      this.allowedSourceAddressPrefixes = defaults.allowedSourceAddressPrefixes;
-    	      this.endTimeUtc = defaults.endTimeUtc;
-    	      this.mappedPort = defaults.mappedPort;
-    	      this.number = defaults.number;
-    	      this.status = defaults.status;
-    	      this.statusReason = defaults.statusReason;
+            $ = new JitNetworkAccessRequestPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
+            $.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
+
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
+            $.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
+
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
         }
+
         public Builder endTimeUtc(String endTimeUtc) {
-            this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
+            $.endTimeUtc = endTimeUtc;
             return this;
         }
+
         public Builder mappedPort(@Nullable Integer mappedPort) {
-            this.mappedPort = mappedPort;
+            $.mappedPort = mappedPort;
             return this;
         }
+
         public Builder number(Integer number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusReason(String statusReason) {
-            this.statusReason = Objects.requireNonNull(statusReason);
+            $.statusReason = statusReason;
             return this;
-        }        public JitNetworkAccessRequestPortResponse build() {
-            return new JitNetworkAccessRequestPortResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, endTimeUtc, mappedPort, number, status, statusReason);
+        }
+
+        public JitNetworkAccessRequestPortResponse build() {
+            $.endTimeUtc = Objects.requireNonNull($.endTimeUtc, "expected parameter 'endTimeUtc' to be non-null");
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusReason = Objects.requireNonNull($.statusReason, "expected parameter 'statusReason' to be non-null");
+            return $;
         }
     }
+
 }

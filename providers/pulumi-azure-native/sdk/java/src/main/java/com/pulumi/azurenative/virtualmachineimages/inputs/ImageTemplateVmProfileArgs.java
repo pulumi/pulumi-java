@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="osDiskSizeGB")
-      private final @Nullable Output<Integer> osDiskSizeGB;
+    private @Nullable Output<Integer> osDiskSizeGB;
 
-    public Output<Integer> osDiskSizeGB() {
-        return this.osDiskSizeGB == null ? Codegen.empty() : this.osDiskSizeGB;
+    public Optional<Output<Integer>> osDiskSizeGB() {
+        return Optional.ofNullable(this.osDiskSizeGB);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
     /**
@@ -48,76 +49,70 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vnetConfig")
-      private final @Nullable Output<VirtualNetworkConfigArgs> vnetConfig;
+    private @Nullable Output<VirtualNetworkConfigArgs> vnetConfig;
 
-    public Output<VirtualNetworkConfigArgs> vnetConfig() {
-        return this.vnetConfig == null ? Codegen.empty() : this.vnetConfig;
+    public Optional<Output<VirtualNetworkConfigArgs>> vnetConfig() {
+        return Optional.ofNullable(this.vnetConfig);
     }
 
-    public ImageTemplateVmProfileArgs(
-        @Nullable Output<Integer> osDiskSizeGB,
-        @Nullable Output<String> vmSize,
-        @Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
-        this.osDiskSizeGB = Codegen.integerProp("osDiskSizeGB").output().arg(osDiskSizeGB).def(0).getNullable();
-        this.vmSize = Codegen.stringProp("vmSize").output().arg(vmSize).def("").getNullable();
-        this.vnetConfig = vnetConfig;
-    }
+    private ImageTemplateVmProfileArgs() {}
 
-    private ImageTemplateVmProfileArgs() {
-        this.osDiskSizeGB = Codegen.empty();
-        this.vmSize = Codegen.empty();
-        this.vnetConfig = Codegen.empty();
+    private ImageTemplateVmProfileArgs(ImageTemplateVmProfileArgs $) {
+        this.osDiskSizeGB = $.osDiskSizeGB;
+        this.vmSize = $.vmSize;
+        this.vnetConfig = $.vnetConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateVmProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> osDiskSizeGB;
-        private @Nullable Output<String> vmSize;
-        private @Nullable Output<VirtualNetworkConfigArgs> vnetConfig;
+        private ImageTemplateVmProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateVmProfileArgs();
         }
 
         public Builder(ImageTemplateVmProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osDiskSizeGB = defaults.osDiskSizeGB;
-    	      this.vmSize = defaults.vmSize;
-    	      this.vnetConfig = defaults.vnetConfig;
+            $ = new ImageTemplateVmProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder osDiskSizeGB(@Nullable Output<Integer> osDiskSizeGB) {
-            this.osDiskSizeGB = osDiskSizeGB;
+            $.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
-        public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
-            this.osDiskSizeGB = Codegen.ofNullable(osDiskSizeGB);
-            return this;
+
+        public Builder osDiskSizeGB(Integer osDiskSizeGB) {
+            return osDiskSizeGB(Output.of(osDiskSizeGB));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
         }
+
         public Builder vnetConfig(@Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
-            this.vnetConfig = vnetConfig;
+            $.vnetConfig = vnetConfig;
             return this;
         }
-        public Builder vnetConfig(@Nullable VirtualNetworkConfigArgs vnetConfig) {
-            this.vnetConfig = Codegen.ofNullable(vnetConfig);
-            return this;
-        }        public ImageTemplateVmProfileArgs build() {
-            return new ImageTemplateVmProfileArgs(osDiskSizeGB, vmSize, vnetConfig);
+
+        public Builder vnetConfig(VirtualNetworkConfigArgs vnetConfig) {
+            return vnetConfig(Output.of(vnetConfig));
+        }
+
+        public ImageTemplateVmProfileArgs build() {
+            $.osDiskSizeGB = Codegen.integerProp("osDiskSizeGB").output().arg($.osDiskSizeGB).def(0).getNullable();
+            $.vmSize = Codegen.stringProp("vmSize").output().arg($.vmSize).def("").getNullable();
+            return $;
         }
     }
+
 }

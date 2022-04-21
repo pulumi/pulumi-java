@@ -17,7 +17,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountResourceName", required=true)
-      private final String accountResourceName;
+    private String accountResourceName;
 
     public String accountResourceName() {
         return this.accountResourceName;
@@ -28,7 +28,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionResourceName", required=true)
-      private final String extensionResourceName;
+    private String extensionResourceName;
 
     public String extensionResourceName() {
         return this.extensionResourceName;
@@ -39,64 +39,59 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExtensionArgs(
-        String accountResourceName,
-        String extensionResourceName,
-        String resourceGroupName) {
-        this.accountResourceName = Objects.requireNonNull(accountResourceName, "expected parameter 'accountResourceName' to be non-null");
-        this.extensionResourceName = Objects.requireNonNull(extensionResourceName, "expected parameter 'extensionResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExtensionArgs() {}
 
-    private GetExtensionArgs() {
-        this.accountResourceName = null;
-        this.extensionResourceName = null;
-        this.resourceGroupName = null;
+    private GetExtensionArgs(GetExtensionArgs $) {
+        this.accountResourceName = $.accountResourceName;
+        this.extensionResourceName = $.extensionResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountResourceName;
-        private String extensionResourceName;
-        private String resourceGroupName;
+        private GetExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExtensionArgs();
         }
 
         public Builder(GetExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountResourceName = defaults.accountResourceName;
-    	      this.extensionResourceName = defaults.extensionResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountResourceName(String accountResourceName) {
-            this.accountResourceName = Objects.requireNonNull(accountResourceName);
+            $.accountResourceName = accountResourceName;
             return this;
         }
+
         public Builder extensionResourceName(String extensionResourceName) {
-            this.extensionResourceName = Objects.requireNonNull(extensionResourceName);
+            $.extensionResourceName = extensionResourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExtensionArgs build() {
-            return new GetExtensionArgs(accountResourceName, extensionResourceName, resourceGroupName);
+        }
+
+        public GetExtensionArgs build() {
+            $.accountResourceName = Objects.requireNonNull($.accountResourceName, "expected parameter 'accountResourceName' to be non-null");
+            $.extensionResourceName = Objects.requireNonNull($.extensionResourceName, "expected parameter 'extensionResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

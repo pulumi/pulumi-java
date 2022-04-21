@@ -6,9 +6,9 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.inputs.SubnetPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VirtualNetworkPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VirtualNetworkPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetPropertiesArgs> subnet;
+    private @Nullable Output<SubnetPropertiesArgs> subnet;
 
-    public Output<SubnetPropertiesArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetPropertiesArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public VirtualNetworkPropertiesArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<SubnetPropertiesArgs> subnet) {
-        this.id = id;
-        this.subnet = subnet;
-    }
+    private VirtualNetworkPropertiesArgs() {}
 
-    private VirtualNetworkPropertiesArgs() {
-        this.id = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private VirtualNetworkPropertiesArgs(VirtualNetworkPropertiesArgs $) {
+        this.id = $.id;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<SubnetPropertiesArgs> subnet;
+        private VirtualNetworkPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkPropertiesArgs();
         }
 
         public Builder(VirtualNetworkPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.subnet = defaults.subnet;
+            $ = new VirtualNetworkPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder subnet(@Nullable Output<SubnetPropertiesArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetPropertiesArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public VirtualNetworkPropertiesArgs build() {
-            return new VirtualNetworkPropertiesArgs(id, subnet);
+
+        public Builder subnet(SubnetPropertiesArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public VirtualNetworkPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class FhirServiceAccessPolicyEntryArgs extends com.pulumi.resources
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
     }
 
-    public FhirServiceAccessPolicyEntryArgs(Output<String> objectId) {
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-    }
+    private FhirServiceAccessPolicyEntryArgs() {}
 
-    private FhirServiceAccessPolicyEntryArgs() {
-        this.objectId = Codegen.empty();
+    private FhirServiceAccessPolicyEntryArgs(FhirServiceAccessPolicyEntryArgs $) {
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirServiceAccessPolicyEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectId;
+        private FhirServiceAccessPolicyEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirServiceAccessPolicyEntryArgs();
         }
 
         public Builder(FhirServiceAccessPolicyEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
+            $ = new FhirServiceAccessPolicyEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
-        }        public FhirServiceAccessPolicyEntryArgs build() {
-            return new FhirServiceAccessPolicyEntryArgs(objectId);
+            return objectId(Output.of(objectId));
+        }
+
+        public FhirServiceAccessPolicyEntryArgs build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            return $;
         }
     }
+
 }

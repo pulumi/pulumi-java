@@ -29,10 +29,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionBandwidth")
-      private final @Nullable Integer connectionBandwidth;
+    private @Nullable Integer connectionBandwidth;
 
     public Optional<Integer> connectionBandwidth() {
-        return this.connectionBandwidth == null ? Optional.empty() : Optional.ofNullable(this.connectionBandwidth);
+        return Optional.ofNullable(this.connectionBandwidth);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionStatus", required=true)
-      private final String connectionStatus;
+    private String connectionStatus;
 
     public String connectionStatus() {
         return this.connectionStatus;
@@ -51,7 +51,7 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="egressBytesTransferred", required=true)
-      private final Double egressBytesTransferred;
+    private Double egressBytesTransferred;
 
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -62,10 +62,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="egressNatRules")
-      private final @Nullable List<SubResourceResponse> egressNatRules;
+    private @Nullable List<SubResourceResponse> egressNatRules;
 
-    public List<SubResourceResponse> egressNatRules() {
-        return this.egressNatRules == null ? List.of() : this.egressNatRules;
+    public Optional<List<SubResourceResponse>> egressNatRules() {
+        return Optional.ofNullable(this.egressNatRules);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enableBgp")
-      private final @Nullable Boolean enableBgp;
+    private @Nullable Boolean enableBgp;
 
     public Optional<Boolean> enableBgp() {
-        return this.enableBgp == null ? Optional.empty() : Optional.ofNullable(this.enableBgp);
+        return Optional.ofNullable(this.enableBgp);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enableRateLimiting")
-      private final @Nullable Boolean enableRateLimiting;
+    private @Nullable Boolean enableRateLimiting;
 
     public Optional<Boolean> enableRateLimiting() {
-        return this.enableRateLimiting == null ? Optional.empty() : Optional.ofNullable(this.enableRateLimiting);
+        return Optional.ofNullable(this.enableRateLimiting);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -106,10 +106,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ingressBytesTransferred", required=true)
-      private final Double ingressBytesTransferred;
+    private Double ingressBytesTransferred;
 
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -128,10 +128,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ingressNatRules")
-      private final @Nullable List<SubResourceResponse> ingressNatRules;
+    private @Nullable List<SubResourceResponse> ingressNatRules;
 
-    public List<SubResourceResponse> ingressNatRules() {
-        return this.ingressNatRules == null ? List.of() : this.ingressNatRules;
+    public Optional<List<SubResourceResponse>> ingressNatRules() {
+        return Optional.ofNullable(this.ingressNatRules);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ipsecPolicies")
-      private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
+    private @Nullable List<IpsecPolicyResponse> ipsecPolicies;
 
-    public List<IpsecPolicyResponse> ipsecPolicies() {
-        return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
+    public Optional<List<IpsecPolicyResponse>> ipsecPolicies() {
+        return Optional.ofNullable(this.ipsecPolicies);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -161,7 +161,7 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -172,10 +172,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="routingWeight")
-      private final @Nullable Integer routingWeight;
+    private @Nullable Integer routingWeight;
 
     public Optional<Integer> routingWeight() {
-        return this.routingWeight == null ? Optional.empty() : Optional.ofNullable(this.routingWeight);
+        return Optional.ofNullable(this.routingWeight);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sharedKey")
-      private final @Nullable String sharedKey;
+    private @Nullable String sharedKey;
 
     public Optional<String> sharedKey() {
-        return this.sharedKey == null ? Optional.empty() : Optional.ofNullable(this.sharedKey);
+        return Optional.ofNullable(this.sharedKey);
     }
 
     /**
@@ -194,7 +194,7 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -205,10 +205,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useLocalAzureIpAddress")
-      private final @Nullable Boolean useLocalAzureIpAddress;
+    private @Nullable Boolean useLocalAzureIpAddress;
 
     public Optional<Boolean> useLocalAzureIpAddress() {
-        return this.useLocalAzureIpAddress == null ? Optional.empty() : Optional.ofNullable(this.useLocalAzureIpAddress);
+        return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="usePolicyBasedTrafficSelectors")
-      private final @Nullable Boolean usePolicyBasedTrafficSelectors;
+    private @Nullable Boolean usePolicyBasedTrafficSelectors;
 
     public Optional<Boolean> usePolicyBasedTrafficSelectors() {
-        return this.usePolicyBasedTrafficSelectors == null ? Optional.empty() : Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
+        return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnConnectionProtocolType")
-      private final @Nullable String vpnConnectionProtocolType;
+    private @Nullable String vpnConnectionProtocolType;
 
     public Optional<String> vpnConnectionProtocolType() {
-        return this.vpnConnectionProtocolType == null ? Optional.empty() : Optional.ofNullable(this.vpnConnectionProtocolType);
+        return Optional.ofNullable(this.vpnConnectionProtocolType);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnLinkConnectionMode")
-      private final @Nullable String vpnLinkConnectionMode;
+    private @Nullable String vpnLinkConnectionMode;
 
     public Optional<String> vpnLinkConnectionMode() {
-        return this.vpnLinkConnectionMode == null ? Optional.empty() : Optional.ofNullable(this.vpnLinkConnectionMode);
+        return Optional.ofNullable(this.vpnLinkConnectionMode);
     }
 
     /**
@@ -249,235 +249,182 @@ public final class VpnSiteLinkConnectionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vpnSiteLink")
-      private final @Nullable SubResourceResponse vpnSiteLink;
+    private @Nullable SubResourceResponse vpnSiteLink;
 
     public Optional<SubResourceResponse> vpnSiteLink() {
-        return this.vpnSiteLink == null ? Optional.empty() : Optional.ofNullable(this.vpnSiteLink);
+        return Optional.ofNullable(this.vpnSiteLink);
     }
 
-    public VpnSiteLinkConnectionResponse(
-        @Nullable Integer connectionBandwidth,
-        String connectionStatus,
-        Double egressBytesTransferred,
-        @Nullable List<SubResourceResponse> egressNatRules,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableRateLimiting,
-        String etag,
-        @Nullable String id,
-        Double ingressBytesTransferred,
-        @Nullable List<SubResourceResponse> ingressNatRules,
-        @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable Integer routingWeight,
-        @Nullable String sharedKey,
-        String type,
-        @Nullable Boolean useLocalAzureIpAddress,
-        @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @Nullable String vpnConnectionProtocolType,
-        @Nullable String vpnLinkConnectionMode,
-        @Nullable SubResourceResponse vpnSiteLink) {
-        this.connectionBandwidth = connectionBandwidth;
-        this.connectionStatus = Objects.requireNonNull(connectionStatus, "expected parameter 'connectionStatus' to be non-null");
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
-        this.egressNatRules = egressNatRules;
-        this.enableBgp = enableBgp;
-        this.enableRateLimiting = enableRateLimiting;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
-        this.ingressNatRules = ingressNatRules;
-        this.ipsecPolicies = ipsecPolicies;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.routingWeight = routingWeight;
-        this.sharedKey = sharedKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.useLocalAzureIpAddress = useLocalAzureIpAddress;
-        this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
-        this.vpnConnectionProtocolType = vpnConnectionProtocolType;
-        this.vpnLinkConnectionMode = vpnLinkConnectionMode;
-        this.vpnSiteLink = vpnSiteLink;
-    }
+    private VpnSiteLinkConnectionResponse() {}
 
-    private VpnSiteLinkConnectionResponse() {
-        this.connectionBandwidth = null;
-        this.connectionStatus = null;
-        this.egressBytesTransferred = null;
-        this.egressNatRules = List.of();
-        this.enableBgp = null;
-        this.enableRateLimiting = null;
-        this.etag = null;
-        this.id = null;
-        this.ingressBytesTransferred = null;
-        this.ingressNatRules = List.of();
-        this.ipsecPolicies = List.of();
-        this.name = null;
-        this.provisioningState = null;
-        this.routingWeight = null;
-        this.sharedKey = null;
-        this.type = null;
-        this.useLocalAzureIpAddress = null;
-        this.usePolicyBasedTrafficSelectors = null;
-        this.vpnConnectionProtocolType = null;
-        this.vpnLinkConnectionMode = null;
-        this.vpnSiteLink = null;
+    private VpnSiteLinkConnectionResponse(VpnSiteLinkConnectionResponse $) {
+        this.connectionBandwidth = $.connectionBandwidth;
+        this.connectionStatus = $.connectionStatus;
+        this.egressBytesTransferred = $.egressBytesTransferred;
+        this.egressNatRules = $.egressNatRules;
+        this.enableBgp = $.enableBgp;
+        this.enableRateLimiting = $.enableRateLimiting;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.ingressBytesTransferred = $.ingressBytesTransferred;
+        this.ingressNatRules = $.ingressNatRules;
+        this.ipsecPolicies = $.ipsecPolicies;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.routingWeight = $.routingWeight;
+        this.sharedKey = $.sharedKey;
+        this.type = $.type;
+        this.useLocalAzureIpAddress = $.useLocalAzureIpAddress;
+        this.usePolicyBasedTrafficSelectors = $.usePolicyBasedTrafficSelectors;
+        this.vpnConnectionProtocolType = $.vpnConnectionProtocolType;
+        this.vpnLinkConnectionMode = $.vpnLinkConnectionMode;
+        this.vpnSiteLink = $.vpnSiteLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnSiteLinkConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer connectionBandwidth;
-        private String connectionStatus;
-        private Double egressBytesTransferred;
-        private @Nullable List<SubResourceResponse> egressNatRules;
-        private @Nullable Boolean enableBgp;
-        private @Nullable Boolean enableRateLimiting;
-        private String etag;
-        private @Nullable String id;
-        private Double ingressBytesTransferred;
-        private @Nullable List<SubResourceResponse> ingressNatRules;
-        private @Nullable List<IpsecPolicyResponse> ipsecPolicies;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable Integer routingWeight;
-        private @Nullable String sharedKey;
-        private String type;
-        private @Nullable Boolean useLocalAzureIpAddress;
-        private @Nullable Boolean usePolicyBasedTrafficSelectors;
-        private @Nullable String vpnConnectionProtocolType;
-        private @Nullable String vpnLinkConnectionMode;
-        private @Nullable SubResourceResponse vpnSiteLink;
+        private VpnSiteLinkConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnSiteLinkConnectionResponse();
         }
 
         public Builder(VpnSiteLinkConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionBandwidth = defaults.connectionBandwidth;
-    	      this.connectionStatus = defaults.connectionStatus;
-    	      this.egressBytesTransferred = defaults.egressBytesTransferred;
-    	      this.egressNatRules = defaults.egressNatRules;
-    	      this.enableBgp = defaults.enableBgp;
-    	      this.enableRateLimiting = defaults.enableRateLimiting;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.ingressBytesTransferred = defaults.ingressBytesTransferred;
-    	      this.ingressNatRules = defaults.ingressNatRules;
-    	      this.ipsecPolicies = defaults.ipsecPolicies;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.routingWeight = defaults.routingWeight;
-    	      this.sharedKey = defaults.sharedKey;
-    	      this.type = defaults.type;
-    	      this.useLocalAzureIpAddress = defaults.useLocalAzureIpAddress;
-    	      this.usePolicyBasedTrafficSelectors = defaults.usePolicyBasedTrafficSelectors;
-    	      this.vpnConnectionProtocolType = defaults.vpnConnectionProtocolType;
-    	      this.vpnLinkConnectionMode = defaults.vpnLinkConnectionMode;
-    	      this.vpnSiteLink = defaults.vpnSiteLink;
+            $ = new VpnSiteLinkConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
-            this.connectionBandwidth = connectionBandwidth;
+            $.connectionBandwidth = connectionBandwidth;
             return this;
         }
+
         public Builder connectionStatus(String connectionStatus) {
-            this.connectionStatus = Objects.requireNonNull(connectionStatus);
+            $.connectionStatus = connectionStatus;
             return this;
         }
+
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
-            this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
+            $.egressBytesTransferred = egressBytesTransferred;
             return this;
         }
+
         public Builder egressNatRules(@Nullable List<SubResourceResponse> egressNatRules) {
-            this.egressNatRules = egressNatRules;
+            $.egressNatRules = egressNatRules;
             return this;
         }
+
         public Builder egressNatRules(SubResourceResponse... egressNatRules) {
             return egressNatRules(List.of(egressNatRules));
         }
+
         public Builder enableBgp(@Nullable Boolean enableBgp) {
-            this.enableBgp = enableBgp;
+            $.enableBgp = enableBgp;
             return this;
         }
+
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
-            this.enableRateLimiting = enableRateLimiting;
+            $.enableRateLimiting = enableRateLimiting;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
-            this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
+            $.ingressBytesTransferred = ingressBytesTransferred;
             return this;
         }
+
         public Builder ingressNatRules(@Nullable List<SubResourceResponse> ingressNatRules) {
-            this.ingressNatRules = ingressNatRules;
+            $.ingressNatRules = ingressNatRules;
             return this;
         }
+
         public Builder ingressNatRules(SubResourceResponse... ingressNatRules) {
             return ingressNatRules(List.of(ingressNatRules));
         }
+
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
-            this.ipsecPolicies = ipsecPolicies;
+            $.ipsecPolicies = ipsecPolicies;
             return this;
         }
+
         public Builder ipsecPolicies(IpsecPolicyResponse... ipsecPolicies) {
             return ipsecPolicies(List.of(ipsecPolicies));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder routingWeight(@Nullable Integer routingWeight) {
-            this.routingWeight = routingWeight;
+            $.routingWeight = routingWeight;
             return this;
         }
+
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = sharedKey;
+            $.sharedKey = sharedKey;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
-            this.useLocalAzureIpAddress = useLocalAzureIpAddress;
+            $.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
+
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
-            this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
+            $.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
+
         public Builder vpnConnectionProtocolType(@Nullable String vpnConnectionProtocolType) {
-            this.vpnConnectionProtocolType = vpnConnectionProtocolType;
+            $.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
+
         public Builder vpnLinkConnectionMode(@Nullable String vpnLinkConnectionMode) {
-            this.vpnLinkConnectionMode = vpnLinkConnectionMode;
+            $.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
         }
+
         public Builder vpnSiteLink(@Nullable SubResourceResponse vpnSiteLink) {
-            this.vpnSiteLink = vpnSiteLink;
+            $.vpnSiteLink = vpnSiteLink;
             return this;
-        }        public VpnSiteLinkConnectionResponse build() {
-            return new VpnSiteLinkConnectionResponse(connectionBandwidth, connectionStatus, egressBytesTransferred, egressNatRules, enableBgp, enableRateLimiting, etag, id, ingressBytesTransferred, ingressNatRules, ipsecPolicies, name, provisioningState, routingWeight, sharedKey, type, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnectionMode, vpnSiteLink);
+        }
+
+        public VpnSiteLinkConnectionResponse build() {
+            $.connectionStatus = Objects.requireNonNull($.connectionStatus, "expected parameter 'connectionStatus' to be non-null");
+            $.egressBytesTransferred = Objects.requireNonNull($.egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.ingressBytesTransferred = Objects.requireNonNull($.ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

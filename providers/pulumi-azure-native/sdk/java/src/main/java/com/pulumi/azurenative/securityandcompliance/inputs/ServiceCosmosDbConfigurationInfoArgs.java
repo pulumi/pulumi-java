@@ -5,10 +5,10 @@ package com.pulumi.azurenative.securityandcompliance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
      * 
      */
     @Import(name="keyVaultKeyUri")
-      private final @Nullable Output<String> keyVaultKeyUri;
+    private @Nullable Output<String> keyVaultKeyUri;
 
-    public Output<String> keyVaultKeyUri() {
-        return this.keyVaultKeyUri == null ? Codegen.empty() : this.keyVaultKeyUri;
+    public Optional<Output<String>> keyVaultKeyUri() {
+        return Optional.ofNullable(this.keyVaultKeyUri);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
      * 
      */
     @Import(name="offerThroughput")
-      private final @Nullable Output<Double> offerThroughput;
+    private @Nullable Output<Double> offerThroughput;
 
-    public Output<Double> offerThroughput() {
-        return this.offerThroughput == null ? Codegen.empty() : this.offerThroughput;
+    public Optional<Output<Double>> offerThroughput() {
+        return Optional.ofNullable(this.offerThroughput);
     }
 
-    public ServiceCosmosDbConfigurationInfoArgs(
-        @Nullable Output<String> keyVaultKeyUri,
-        @Nullable Output<Double> offerThroughput) {
-        this.keyVaultKeyUri = keyVaultKeyUri;
-        this.offerThroughput = offerThroughput;
-    }
+    private ServiceCosmosDbConfigurationInfoArgs() {}
 
-    private ServiceCosmosDbConfigurationInfoArgs() {
-        this.keyVaultKeyUri = Codegen.empty();
-        this.offerThroughput = Codegen.empty();
+    private ServiceCosmosDbConfigurationInfoArgs(ServiceCosmosDbConfigurationInfoArgs $) {
+        this.keyVaultKeyUri = $.keyVaultKeyUri;
+        this.offerThroughput = $.offerThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCosmosDbConfigurationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultKeyUri;
-        private @Nullable Output<Double> offerThroughput;
+        private ServiceCosmosDbConfigurationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCosmosDbConfigurationInfoArgs();
         }
 
         public Builder(ServiceCosmosDbConfigurationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultKeyUri = defaults.keyVaultKeyUri;
-    	      this.offerThroughput = defaults.offerThroughput;
+            $ = new ServiceCosmosDbConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
-            this.keyVaultKeyUri = keyVaultKeyUri;
+            $.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
-        public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
-            this.keyVaultKeyUri = Codegen.ofNullable(keyVaultKeyUri);
-            return this;
+
+        public Builder keyVaultKeyUri(String keyVaultKeyUri) {
+            return keyVaultKeyUri(Output.of(keyVaultKeyUri));
         }
+
         public Builder offerThroughput(@Nullable Output<Double> offerThroughput) {
-            this.offerThroughput = offerThroughput;
+            $.offerThroughput = offerThroughput;
             return this;
         }
-        public Builder offerThroughput(@Nullable Double offerThroughput) {
-            this.offerThroughput = Codegen.ofNullable(offerThroughput);
-            return this;
-        }        public ServiceCosmosDbConfigurationInfoArgs build() {
-            return new ServiceCosmosDbConfigurationInfoArgs(keyVaultKeyUri, offerThroughput);
+
+        public Builder offerThroughput(Double offerThroughput) {
+            return offerThroughput(Output.of(offerThroughput));
+        }
+
+        public ServiceCosmosDbConfigurationInfoArgs build() {
+            return $;
         }
     }
+
 }

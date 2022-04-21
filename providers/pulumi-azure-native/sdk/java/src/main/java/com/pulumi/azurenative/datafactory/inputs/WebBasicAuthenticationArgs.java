@@ -28,7 +28,7 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -39,7 +39,7 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="password", required=true)
-      private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
@@ -50,7 +50,7 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="url", required=true)
-      private final Output<Object> url;
+    private Output<Object> url;
 
     public Output<Object> url() {
         return this.url;
@@ -61,89 +61,82 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="username", required=true)
-      private final Output<Object> username;
+    private Output<Object> username;
 
     public Output<Object> username() {
         return this.username;
     }
 
-    public WebBasicAuthenticationArgs(
-        Output<String> authenticationType,
-        Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Output<Object> url,
-        Output<Object> username) {
-        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private WebBasicAuthenticationArgs() {}
 
-    private WebBasicAuthenticationArgs() {
-        this.authenticationType = Codegen.empty();
-        this.password = Codegen.empty();
-        this.url = Codegen.empty();
-        this.username = Codegen.empty();
+    private WebBasicAuthenticationArgs(WebBasicAuthenticationArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.password = $.password;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebBasicAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authenticationType;
-        private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Output<Object> url;
-        private Output<Object> username;
+        private WebBasicAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebBasicAuthenticationArgs();
         }
 
         public Builder(WebBasicAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.password = defaults.password;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new WebBasicAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder url(Output<Object> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
+            return url(Output.of(url));
         }
+
         public Builder username(Output<Object> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(Object username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public WebBasicAuthenticationArgs build() {
-            return new WebBasicAuthenticationArgs(authenticationType, password, url, username);
+            return username(Output.of(username));
+        }
+
+        public WebBasicAuthenticationArgs build() {
+            $.authenticationType = Codegen.stringProp("authenticationType").output().arg($.authenticationType).require();
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

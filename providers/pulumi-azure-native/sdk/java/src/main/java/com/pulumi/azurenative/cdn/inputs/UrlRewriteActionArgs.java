@@ -25,7 +25,7 @@ public final class UrlRewriteActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class UrlRewriteActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<UrlRewriteActionParametersArgs> parameters;
+    private Output<UrlRewriteActionParametersArgs> parameters;
 
     public Output<UrlRewriteActionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public UrlRewriteActionArgs(
-        Output<String> name,
-        Output<UrlRewriteActionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private UrlRewriteActionArgs() {}
 
-    private UrlRewriteActionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private UrlRewriteActionArgs(UrlRewriteActionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRewriteActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<UrlRewriteActionParametersArgs> parameters;
+        private UrlRewriteActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRewriteActionArgs();
         }
 
         public Builder(UrlRewriteActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new UrlRewriteActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<UrlRewriteActionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(UrlRewriteActionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public UrlRewriteActionArgs build() {
-            return new UrlRewriteActionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public UrlRewriteActionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

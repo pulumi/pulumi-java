@@ -17,7 +17,7 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -28,7 +28,7 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="watchlistAlias", required=true)
-      private final String watchlistAlias;
+    private String watchlistAlias;
 
     public String watchlistAlias() {
         return this.watchlistAlias;
@@ -50,73 +50,66 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetWatchlistArgs(
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String watchlistAlias,
-        String workspaceName) {
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.watchlistAlias = Objects.requireNonNull(watchlistAlias, "expected parameter 'watchlistAlias' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetWatchlistArgs() {}
 
-    private GetWatchlistArgs() {
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.watchlistAlias = null;
-        this.workspaceName = null;
+    private GetWatchlistArgs(GetWatchlistArgs $) {
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.watchlistAlias = $.watchlistAlias;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWatchlistArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String watchlistAlias;
-        private String workspaceName;
+        private GetWatchlistArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWatchlistArgs();
         }
 
         public Builder(GetWatchlistArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.watchlistAlias = defaults.watchlistAlias;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetWatchlistArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder watchlistAlias(String watchlistAlias) {
-            this.watchlistAlias = Objects.requireNonNull(watchlistAlias);
+            $.watchlistAlias = watchlistAlias;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetWatchlistArgs build() {
-            return new GetWatchlistArgs(operationalInsightsResourceProvider, resourceGroupName, watchlistAlias, workspaceName);
+        }
+
+        public GetWatchlistArgs build() {
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.watchlistAlias = Objects.requireNonNull($.watchlistAlias, "expected parameter 'watchlistAlias' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

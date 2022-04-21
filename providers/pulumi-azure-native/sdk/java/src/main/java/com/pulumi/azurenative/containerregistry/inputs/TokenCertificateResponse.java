@@ -23,10 +23,10 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encodedPemCertificate")
-      private final @Nullable String encodedPemCertificate;
+    private @Nullable String encodedPemCertificate;
 
     public Optional<String> encodedPemCertificate() {
-        return this.encodedPemCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedPemCertificate);
+        return Optional.ofNullable(this.encodedPemCertificate);
     }
 
     /**
@@ -34,17 +34,17 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expiry")
-      private final @Nullable String expiry;
+    private @Nullable String expiry;
 
     public Optional<String> expiry() {
-        return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
+        return Optional.ofNullable(this.expiry);
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class TokenCertificateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public TokenCertificateResponse(
-        @Nullable String encodedPemCertificate,
-        @Nullable String expiry,
-        @Nullable String name,
-        @Nullable String thumbprint) {
-        this.encodedPemCertificate = encodedPemCertificate;
-        this.expiry = expiry;
-        this.name = name;
-        this.thumbprint = thumbprint;
-    }
+    private TokenCertificateResponse() {}
 
-    private TokenCertificateResponse() {
-        this.encodedPemCertificate = null;
-        this.expiry = null;
-        this.name = null;
-        this.thumbprint = null;
+    private TokenCertificateResponse(TokenCertificateResponse $) {
+        this.encodedPemCertificate = $.encodedPemCertificate;
+        this.expiry = $.expiry;
+        this.name = $.name;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encodedPemCertificate;
-        private @Nullable String expiry;
-        private @Nullable String name;
-        private @Nullable String thumbprint;
+        private TokenCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenCertificateResponse();
         }
 
         public Builder(TokenCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encodedPemCertificate = defaults.encodedPemCertificate;
-    	      this.expiry = defaults.expiry;
-    	      this.name = defaults.name;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new TokenCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
-            this.encodedPemCertificate = encodedPemCertificate;
+            $.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
+
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = expiry;
+            $.expiry = expiry;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public TokenCertificateResponse build() {
-            return new TokenCertificateResponse(encodedPemCertificate, expiry, name, thumbprint);
+        }
+
+        public TokenCertificateResponse build() {
+            return $;
         }
     }
+
 }

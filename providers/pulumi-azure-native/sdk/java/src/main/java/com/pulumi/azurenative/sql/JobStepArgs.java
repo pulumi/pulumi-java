@@ -8,10 +8,10 @@ import com.pulumi.azurenative.sql.inputs.JobStepExecutionOptionsArgs;
 import com.pulumi.azurenative.sql.inputs.JobStepOutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final Output<JobStepActionArgs> action;
+    private Output<JobStepActionArgs> action;
 
     public Output<JobStepActionArgs> action() {
         return this.action;
@@ -35,7 +35,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credential", required=true)
-      private final Output<String> credential;
+    private Output<String> credential;
 
     public Output<String> credential() {
         return this.credential;
@@ -46,10 +46,10 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionOptions")
-      private final @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
+    private @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
 
-    public Output<JobStepExecutionOptionsArgs> executionOptions() {
-        return this.executionOptions == null ? Codegen.empty() : this.executionOptions;
+    public Optional<Output<JobStepExecutionOptionsArgs>> executionOptions() {
+        return Optional.ofNullable(this.executionOptions);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final Output<String> jobAgentName;
+    private Output<String> jobAgentName;
 
     public Output<String> jobAgentName() {
         return this.jobAgentName;
@@ -68,7 +68,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobName", required=true)
-      private final Output<String> jobName;
+    private Output<String> jobName;
 
     public Output<String> jobName() {
         return this.jobName;
@@ -79,10 +79,10 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="output")
-      private final @Nullable Output<JobStepOutputArgs> output;
+    private @Nullable Output<JobStepOutputArgs> output;
 
-    public Output<JobStepOutputArgs> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<JobStepOutputArgs>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -112,10 +112,10 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepId")
-      private final @Nullable Output<Integer> stepId;
+    private @Nullable Output<Integer> stepId;
 
-    public Output<Integer> stepId() {
-        return this.stepId == null ? Codegen.empty() : this.stepId;
+    public Optional<Output<Integer>> stepId() {
+        return Optional.ofNullable(this.stepId);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepName")
-      private final @Nullable Output<String> stepName;
+    private @Nullable Output<String> stepName;
 
-    public Output<String> stepName() {
-        return this.stepName == null ? Codegen.empty() : this.stepName;
+    public Optional<Output<String>> stepName() {
+        return Optional.ofNullable(this.stepName);
     }
 
     /**
@@ -134,180 +134,155 @@ public final class JobStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetGroup", required=true)
-      private final Output<String> targetGroup;
+    private Output<String> targetGroup;
 
     public Output<String> targetGroup() {
         return this.targetGroup;
     }
 
-    public JobStepArgs(
-        Output<JobStepActionArgs> action,
-        Output<String> credential,
-        @Nullable Output<JobStepExecutionOptionsArgs> executionOptions,
-        Output<String> jobAgentName,
-        Output<String> jobName,
-        @Nullable Output<JobStepOutputArgs> output,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<Integer> stepId,
-        @Nullable Output<String> stepName,
-        Output<String> targetGroup) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
-        this.executionOptions = executionOptions;
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.output = output;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.stepId = stepId;
-        this.stepName = stepName;
-        this.targetGroup = Objects.requireNonNull(targetGroup, "expected parameter 'targetGroup' to be non-null");
-    }
+    private JobStepArgs() {}
 
-    private JobStepArgs() {
-        this.action = Codegen.empty();
-        this.credential = Codegen.empty();
-        this.executionOptions = Codegen.empty();
-        this.jobAgentName = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.output = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.stepId = Codegen.empty();
-        this.stepName = Codegen.empty();
-        this.targetGroup = Codegen.empty();
+    private JobStepArgs(JobStepArgs $) {
+        this.action = $.action;
+        this.credential = $.credential;
+        this.executionOptions = $.executionOptions;
+        this.jobAgentName = $.jobAgentName;
+        this.jobName = $.jobName;
+        this.output = $.output;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.stepId = $.stepId;
+        this.stepName = $.stepName;
+        this.targetGroup = $.targetGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<JobStepActionArgs> action;
-        private Output<String> credential;
-        private @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
-        private Output<String> jobAgentName;
-        private Output<String> jobName;
-        private @Nullable Output<JobStepOutputArgs> output;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<Integer> stepId;
-        private @Nullable Output<String> stepName;
-        private Output<String> targetGroup;
+        private JobStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStepArgs();
         }
 
         public Builder(JobStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.credential = defaults.credential;
-    	      this.executionOptions = defaults.executionOptions;
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.jobName = defaults.jobName;
-    	      this.output = defaults.output;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.stepId = defaults.stepId;
-    	      this.stepName = defaults.stepName;
-    	      this.targetGroup = defaults.targetGroup;
+            $ = new JobStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<JobStepActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(JobStepActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder credential(Output<String> credential) {
-            this.credential = Objects.requireNonNull(credential);
+            $.credential = credential;
             return this;
         }
+
         public Builder credential(String credential) {
-            this.credential = Output.of(Objects.requireNonNull(credential));
-            return this;
+            return credential(Output.of(credential));
         }
+
         public Builder executionOptions(@Nullable Output<JobStepExecutionOptionsArgs> executionOptions) {
-            this.executionOptions = executionOptions;
+            $.executionOptions = executionOptions;
             return this;
         }
-        public Builder executionOptions(@Nullable JobStepExecutionOptionsArgs executionOptions) {
-            this.executionOptions = Codegen.ofNullable(executionOptions);
-            return this;
+
+        public Builder executionOptions(JobStepExecutionOptionsArgs executionOptions) {
+            return executionOptions(Output.of(executionOptions));
         }
+
         public Builder jobAgentName(Output<String> jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
-            return this;
+            return jobAgentName(Output.of(jobAgentName));
         }
+
         public Builder jobName(Output<String> jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Output.of(Objects.requireNonNull(jobName));
-            return this;
+            return jobName(Output.of(jobName));
         }
+
         public Builder output(@Nullable Output<JobStepOutputArgs> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable JobStepOutputArgs output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(JobStepOutputArgs output) {
+            return output(Output.of(output));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder stepId(@Nullable Output<Integer> stepId) {
-            this.stepId = stepId;
+            $.stepId = stepId;
             return this;
         }
-        public Builder stepId(@Nullable Integer stepId) {
-            this.stepId = Codegen.ofNullable(stepId);
-            return this;
+
+        public Builder stepId(Integer stepId) {
+            return stepId(Output.of(stepId));
         }
+
         public Builder stepName(@Nullable Output<String> stepName) {
-            this.stepName = stepName;
+            $.stepName = stepName;
             return this;
         }
-        public Builder stepName(@Nullable String stepName) {
-            this.stepName = Codegen.ofNullable(stepName);
-            return this;
+
+        public Builder stepName(String stepName) {
+            return stepName(Output.of(stepName));
         }
+
         public Builder targetGroup(Output<String> targetGroup) {
-            this.targetGroup = Objects.requireNonNull(targetGroup);
+            $.targetGroup = targetGroup;
             return this;
         }
+
         public Builder targetGroup(String targetGroup) {
-            this.targetGroup = Output.of(Objects.requireNonNull(targetGroup));
-            return this;
-        }        public JobStepArgs build() {
-            return new JobStepArgs(action, credential, executionOptions, jobAgentName, jobName, output, resourceGroupName, serverName, stepId, stepName, targetGroup);
+            return targetGroup(Output.of(targetGroup));
+        }
+
+        public JobStepArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.credential = Objects.requireNonNull($.credential, "expected parameter 'credential' to be non-null");
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.targetGroup = Objects.requireNonNull($.targetGroup, "expected parameter 'targetGroup' to be non-null");
+            return $;
         }
     }
+
 }

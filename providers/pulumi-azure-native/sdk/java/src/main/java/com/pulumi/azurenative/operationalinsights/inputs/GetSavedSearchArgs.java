@@ -17,7 +17,7 @@ public final class GetSavedSearchArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSavedSearchArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="savedSearchId", required=true)
-      private final String savedSearchId;
+    private String savedSearchId;
 
     public String savedSearchId() {
         return this.savedSearchId;
@@ -39,64 +39,59 @@ public final class GetSavedSearchArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSavedSearchArgs(
-        String resourceGroupName,
-        String savedSearchId,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.savedSearchId = Objects.requireNonNull(savedSearchId, "expected parameter 'savedSearchId' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSavedSearchArgs() {}
 
-    private GetSavedSearchArgs() {
-        this.resourceGroupName = null;
-        this.savedSearchId = null;
-        this.workspaceName = null;
+    private GetSavedSearchArgs(GetSavedSearchArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.savedSearchId = $.savedSearchId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSavedSearchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String savedSearchId;
-        private String workspaceName;
+        private GetSavedSearchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSavedSearchArgs();
         }
 
         public Builder(GetSavedSearchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.savedSearchId = defaults.savedSearchId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSavedSearchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder savedSearchId(String savedSearchId) {
-            this.savedSearchId = Objects.requireNonNull(savedSearchId);
+            $.savedSearchId = savedSearchId;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSavedSearchArgs build() {
-            return new GetSavedSearchArgs(resourceGroupName, savedSearchId, workspaceName);
+        }
+
+        public GetSavedSearchArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.savedSearchId = Objects.requireNonNull($.savedSearchId, "expected parameter 'savedSearchId' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

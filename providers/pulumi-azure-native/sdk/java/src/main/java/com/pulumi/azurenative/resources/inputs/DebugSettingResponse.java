@@ -23,45 +23,44 @@ public final class DebugSettingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="detailLevel")
-      private final @Nullable String detailLevel;
+    private @Nullable String detailLevel;
 
     public Optional<String> detailLevel() {
-        return this.detailLevel == null ? Optional.empty() : Optional.ofNullable(this.detailLevel);
+        return Optional.ofNullable(this.detailLevel);
     }
 
-    public DebugSettingResponse(@Nullable String detailLevel) {
-        this.detailLevel = detailLevel;
-    }
+    private DebugSettingResponse() {}
 
-    private DebugSettingResponse() {
-        this.detailLevel = null;
+    private DebugSettingResponse(DebugSettingResponse $) {
+        this.detailLevel = $.detailLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DebugSettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String detailLevel;
+        private DebugSettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DebugSettingResponse();
         }
 
         public Builder(DebugSettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detailLevel = defaults.detailLevel;
+            $ = new DebugSettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder detailLevel(@Nullable String detailLevel) {
-            this.detailLevel = detailLevel;
+            $.detailLevel = detailLevel;
             return this;
-        }        public DebugSettingResponse build() {
-            return new DebugSettingResponse(detailLevel);
+        }
+
+        public DebugSettingResponse build() {
+            return $;
         }
     }
+
 }

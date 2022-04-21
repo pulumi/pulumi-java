@@ -24,48 +24,48 @@ public final class AkamaiAccessControlResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
-      private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
+    private @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 
-    public List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList() {
-        return this.akamaiSignatureHeaderAuthenticationKeyList == null ? List.of() : this.akamaiSignatureHeaderAuthenticationKeyList;
+    public Optional<List<AkamaiSignatureHeaderAuthenticationKeyResponse>> akamaiSignatureHeaderAuthenticationKeyList() {
+        return Optional.ofNullable(this.akamaiSignatureHeaderAuthenticationKeyList);
     }
 
-    public AkamaiAccessControlResponse(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
-        this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
-    }
+    private AkamaiAccessControlResponse() {}
 
-    private AkamaiAccessControlResponse() {
-        this.akamaiSignatureHeaderAuthenticationKeyList = List.of();
+    private AkamaiAccessControlResponse(AkamaiAccessControlResponse $) {
+        this.akamaiSignatureHeaderAuthenticationKeyList = $.akamaiSignatureHeaderAuthenticationKeyList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AkamaiAccessControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
+        private AkamaiAccessControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AkamaiAccessControlResponse();
         }
 
         public Builder(AkamaiAccessControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.akamaiSignatureHeaderAuthenticationKeyList = defaults.akamaiSignatureHeaderAuthenticationKeyList;
+            $ = new AkamaiAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
-            this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
+            $.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
+
         public Builder akamaiSignatureHeaderAuthenticationKeyList(AkamaiSignatureHeaderAuthenticationKeyResponse... akamaiSignatureHeaderAuthenticationKeyList) {
             return akamaiSignatureHeaderAuthenticationKeyList(List.of(akamaiSignatureHeaderAuthenticationKeyList));
-        }        public AkamaiAccessControlResponse build() {
-            return new AkamaiAccessControlResponse(akamaiSignatureHeaderAuthenticationKeyList);
+        }
+
+        public AkamaiAccessControlResponse build() {
+            return $;
         }
     }
+
 }

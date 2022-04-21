@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<String> arguments;
+    private @Nullable Output<String> arguments;
 
-    public Output<String> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<String>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azPowerShellVersion", required=true)
-      private final Output<String> azPowerShellVersion;
+    private Output<String> azPowerShellVersion;
 
     public Output<String> azPowerShellVersion() {
         return this.azPowerShellVersion;
@@ -50,10 +51,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cleanupPreference")
-      private final @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
+    private @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
 
-    public Output<Either<String,CleanupOptions>> cleanupPreference() {
-        return this.cleanupPreference == null ? Codegen.empty() : this.cleanupPreference;
+    public Optional<Output<Either<String,CleanupOptions>>> cleanupPreference() {
+        return Optional.ofNullable(this.cleanupPreference);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="containerSettings")
-      private final @Nullable Output<ContainerConfigurationArgs> containerSettings;
+    private @Nullable Output<ContainerConfigurationArgs> containerSettings;
 
-    public Output<ContainerConfigurationArgs> containerSettings() {
-        return this.containerSettings == null ? Codegen.empty() : this.containerSettings;
+    public Optional<Output<ContainerConfigurationArgs>> containerSettings() {
+        return Optional.ofNullable(this.containerSettings);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+    private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable Output<String> forceUpdateTag;
+    private @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
+    public Optional<Output<String>> forceUpdateTag() {
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
+    private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -106,7 +107,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -117,10 +118,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -128,10 +129,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="primaryScriptUri")
-      private final @Nullable Output<String> primaryScriptUri;
+    private @Nullable Output<String> primaryScriptUri;
 
-    public Output<String> primaryScriptUri() {
-        return this.primaryScriptUri == null ? Codegen.empty() : this.primaryScriptUri;
+    public Optional<Output<String>> primaryScriptUri() {
+        return Optional.ofNullable(this.primaryScriptUri);
     }
 
     /**
@@ -139,7 +140,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -150,7 +151,7 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retentionInterval", required=true)
-      private final Output<String> retentionInterval;
+    private Output<String> retentionInterval;
 
     public Output<String> retentionInterval() {
         return this.retentionInterval;
@@ -161,10 +162,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scriptContent")
-      private final @Nullable Output<String> scriptContent;
+    private @Nullable Output<String> scriptContent;
 
-    public Output<String> scriptContent() {
-        return this.scriptContent == null ? Codegen.empty() : this.scriptContent;
+    public Optional<Output<String>> scriptContent() {
+        return Optional.ofNullable(this.scriptContent);
     }
 
     /**
@@ -172,10 +173,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scriptName")
-      private final @Nullable Output<String> scriptName;
+    private @Nullable Output<String> scriptName;
 
-    public Output<String> scriptName() {
-        return this.scriptName == null ? Codegen.empty() : this.scriptName;
+    public Optional<Output<String>> scriptName() {
+        return Optional.ofNullable(this.scriptName);
     }
 
     /**
@@ -183,10 +184,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="storageAccountSettings")
-      private final @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
+    private @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
 
-    public Output<StorageAccountConfigurationArgs> storageAccountSettings() {
-        return this.storageAccountSettings == null ? Codegen.empty() : this.storageAccountSettings;
+    public Optional<Output<StorageAccountConfigurationArgs>> storageAccountSettings() {
+        return Optional.ofNullable(this.storageAccountSettings);
     }
 
     /**
@@ -194,10 +195,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="supportingScriptUris")
-      private final @Nullable Output<List<String>> supportingScriptUris;
+    private @Nullable Output<List<String>> supportingScriptUris;
 
-    public Output<List<String>> supportingScriptUris() {
-        return this.supportingScriptUris == null ? Codegen.empty() : this.supportingScriptUris;
+    public Optional<Output<List<String>>> supportingScriptUris() {
+        return Optional.ofNullable(this.supportingScriptUris);
     }
 
     /**
@@ -205,10 +206,10 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -216,277 +217,232 @@ public final class AzurePowerShellScriptArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public AzurePowerShellScriptArgs(
-        @Nullable Output<String> arguments,
-        Output<String> azPowerShellVersion,
-        @Nullable Output<Either<String,CleanupOptions>> cleanupPreference,
-        @Nullable Output<ContainerConfigurationArgs> containerSettings,
-        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
-        @Nullable Output<String> forceUpdateTag,
-        @Nullable Output<ManagedServiceIdentityArgs> identity,
-        Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> primaryScriptUri,
-        Output<String> resourceGroupName,
-        Output<String> retentionInterval,
-        @Nullable Output<String> scriptContent,
-        @Nullable Output<String> scriptName,
-        @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings,
-        @Nullable Output<List<String>> supportingScriptUris,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> timeout) {
-        this.arguments = arguments;
-        this.azPowerShellVersion = Objects.requireNonNull(azPowerShellVersion, "expected parameter 'azPowerShellVersion' to be non-null");
-        this.cleanupPreference = Codegen.stringProp("cleanupPreference").left(CleanupOptions.class).output().arg(cleanupPreference).def("Always").getNullable();
-        this.containerSettings = containerSettings;
-        this.environmentVariables = environmentVariables;
-        this.forceUpdateTag = forceUpdateTag;
-        this.identity = identity;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.location = location;
-        this.primaryScriptUri = primaryScriptUri;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retentionInterval = Objects.requireNonNull(retentionInterval, "expected parameter 'retentionInterval' to be non-null");
-        this.scriptContent = scriptContent;
-        this.scriptName = scriptName;
-        this.storageAccountSettings = storageAccountSettings;
-        this.supportingScriptUris = supportingScriptUris;
-        this.tags = tags;
-        this.timeout = Codegen.stringProp("timeout").output().arg(timeout).def("P1D").getNullable();
-    }
+    private AzurePowerShellScriptArgs() {}
 
-    private AzurePowerShellScriptArgs() {
-        this.arguments = Codegen.empty();
-        this.azPowerShellVersion = Codegen.empty();
-        this.cleanupPreference = Codegen.empty();
-        this.containerSettings = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.forceUpdateTag = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.primaryScriptUri = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.retentionInterval = Codegen.empty();
-        this.scriptContent = Codegen.empty();
-        this.scriptName = Codegen.empty();
-        this.storageAccountSettings = Codegen.empty();
-        this.supportingScriptUris = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private AzurePowerShellScriptArgs(AzurePowerShellScriptArgs $) {
+        this.arguments = $.arguments;
+        this.azPowerShellVersion = $.azPowerShellVersion;
+        this.cleanupPreference = $.cleanupPreference;
+        this.containerSettings = $.containerSettings;
+        this.environmentVariables = $.environmentVariables;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.primaryScriptUri = $.primaryScriptUri;
+        this.resourceGroupName = $.resourceGroupName;
+        this.retentionInterval = $.retentionInterval;
+        this.scriptContent = $.scriptContent;
+        this.scriptName = $.scriptName;
+        this.storageAccountSettings = $.storageAccountSettings;
+        this.supportingScriptUris = $.supportingScriptUris;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzurePowerShellScriptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arguments;
-        private Output<String> azPowerShellVersion;
-        private @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
-        private @Nullable Output<ContainerConfigurationArgs> containerSettings;
-        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
-        private @Nullable Output<String> forceUpdateTag;
-        private @Nullable Output<ManagedServiceIdentityArgs> identity;
-        private Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> primaryScriptUri;
-        private Output<String> resourceGroupName;
-        private Output<String> retentionInterval;
-        private @Nullable Output<String> scriptContent;
-        private @Nullable Output<String> scriptName;
-        private @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
-        private @Nullable Output<List<String>> supportingScriptUris;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> timeout;
+        private AzurePowerShellScriptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzurePowerShellScriptArgs();
         }
 
         public Builder(AzurePowerShellScriptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.azPowerShellVersion = defaults.azPowerShellVersion;
-    	      this.cleanupPreference = defaults.cleanupPreference;
-    	      this.containerSettings = defaults.containerSettings;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.primaryScriptUri = defaults.primaryScriptUri;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retentionInterval = defaults.retentionInterval;
-    	      this.scriptContent = defaults.scriptContent;
-    	      this.scriptName = defaults.scriptName;
-    	      this.storageAccountSettings = defaults.storageAccountSettings;
-    	      this.supportingScriptUris = defaults.supportingScriptUris;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
+            $ = new AzurePowerShellScriptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<String> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable String arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(String arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder azPowerShellVersion(Output<String> azPowerShellVersion) {
-            this.azPowerShellVersion = Objects.requireNonNull(azPowerShellVersion);
+            $.azPowerShellVersion = azPowerShellVersion;
             return this;
         }
+
         public Builder azPowerShellVersion(String azPowerShellVersion) {
-            this.azPowerShellVersion = Output.of(Objects.requireNonNull(azPowerShellVersion));
-            return this;
+            return azPowerShellVersion(Output.of(azPowerShellVersion));
         }
+
         public Builder cleanupPreference(@Nullable Output<Either<String,CleanupOptions>> cleanupPreference) {
-            this.cleanupPreference = cleanupPreference;
+            $.cleanupPreference = cleanupPreference;
             return this;
         }
-        public Builder cleanupPreference(@Nullable Either<String,CleanupOptions> cleanupPreference) {
-            this.cleanupPreference = Codegen.ofNullable(cleanupPreference);
-            return this;
+
+        public Builder cleanupPreference(Either<String,CleanupOptions> cleanupPreference) {
+            return cleanupPreference(Output.of(cleanupPreference));
         }
+
         public Builder containerSettings(@Nullable Output<ContainerConfigurationArgs> containerSettings) {
-            this.containerSettings = containerSettings;
+            $.containerSettings = containerSettings;
             return this;
         }
-        public Builder containerSettings(@Nullable ContainerConfigurationArgs containerSettings) {
-            this.containerSettings = Codegen.ofNullable(containerSettings);
-            return this;
+
+        public Builder containerSettings(ContainerConfigurationArgs containerSettings) {
+            return containerSettings(Output.of(containerSettings));
         }
+
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
-        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
-            return this;
+
+        public Builder forceUpdateTag(String forceUpdateTag) {
+            return forceUpdateTag(Output.of(forceUpdateTag));
         }
+
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder primaryScriptUri(@Nullable Output<String> primaryScriptUri) {
-            this.primaryScriptUri = primaryScriptUri;
+            $.primaryScriptUri = primaryScriptUri;
             return this;
         }
-        public Builder primaryScriptUri(@Nullable String primaryScriptUri) {
-            this.primaryScriptUri = Codegen.ofNullable(primaryScriptUri);
-            return this;
+
+        public Builder primaryScriptUri(String primaryScriptUri) {
+            return primaryScriptUri(Output.of(primaryScriptUri));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder retentionInterval(Output<String> retentionInterval) {
-            this.retentionInterval = Objects.requireNonNull(retentionInterval);
+            $.retentionInterval = retentionInterval;
             return this;
         }
+
         public Builder retentionInterval(String retentionInterval) {
-            this.retentionInterval = Output.of(Objects.requireNonNull(retentionInterval));
-            return this;
+            return retentionInterval(Output.of(retentionInterval));
         }
+
         public Builder scriptContent(@Nullable Output<String> scriptContent) {
-            this.scriptContent = scriptContent;
+            $.scriptContent = scriptContent;
             return this;
         }
-        public Builder scriptContent(@Nullable String scriptContent) {
-            this.scriptContent = Codegen.ofNullable(scriptContent);
-            return this;
+
+        public Builder scriptContent(String scriptContent) {
+            return scriptContent(Output.of(scriptContent));
         }
+
         public Builder scriptName(@Nullable Output<String> scriptName) {
-            this.scriptName = scriptName;
+            $.scriptName = scriptName;
             return this;
         }
-        public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Codegen.ofNullable(scriptName);
-            return this;
+
+        public Builder scriptName(String scriptName) {
+            return scriptName(Output.of(scriptName));
         }
+
         public Builder storageAccountSettings(@Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings) {
-            this.storageAccountSettings = storageAccountSettings;
+            $.storageAccountSettings = storageAccountSettings;
             return this;
         }
-        public Builder storageAccountSettings(@Nullable StorageAccountConfigurationArgs storageAccountSettings) {
-            this.storageAccountSettings = Codegen.ofNullable(storageAccountSettings);
-            return this;
+
+        public Builder storageAccountSettings(StorageAccountConfigurationArgs storageAccountSettings) {
+            return storageAccountSettings(Output.of(storageAccountSettings));
         }
+
         public Builder supportingScriptUris(@Nullable Output<List<String>> supportingScriptUris) {
-            this.supportingScriptUris = supportingScriptUris;
+            $.supportingScriptUris = supportingScriptUris;
             return this;
         }
-        public Builder supportingScriptUris(@Nullable List<String> supportingScriptUris) {
-            this.supportingScriptUris = Codegen.ofNullable(supportingScriptUris);
-            return this;
+
+        public Builder supportingScriptUris(List<String> supportingScriptUris) {
+            return supportingScriptUris(Output.of(supportingScriptUris));
         }
+
         public Builder supportingScriptUris(String... supportingScriptUris) {
             return supportingScriptUris(List.of(supportingScriptUris));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public AzurePowerShellScriptArgs build() {
-            return new AzurePowerShellScriptArgs(arguments, azPowerShellVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, identity, kind, location, primaryScriptUri, resourceGroupName, retentionInterval, scriptContent, scriptName, storageAccountSettings, supportingScriptUris, tags, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public AzurePowerShellScriptArgs build() {
+            $.azPowerShellVersion = Objects.requireNonNull($.azPowerShellVersion, "expected parameter 'azPowerShellVersion' to be non-null");
+            $.cleanupPreference = Codegen.stringProp("cleanupPreference").left(CleanupOptions.class).output().arg($.cleanupPreference).def("Always").getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.retentionInterval = Objects.requireNonNull($.retentionInterval, "expected parameter 'retentionInterval' to be non-null");
+            $.timeout = Codegen.stringProp("timeout").output().arg($.timeout).def("P1D").getNullable();
+            return $;
         }
     }
+
 }

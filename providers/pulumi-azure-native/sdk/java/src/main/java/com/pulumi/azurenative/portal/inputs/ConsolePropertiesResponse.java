@@ -21,7 +21,7 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -32,7 +32,7 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -43,64 +43,59 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public ConsolePropertiesResponse(
-        String osType,
-        String provisioningState,
-        String uri) {
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ConsolePropertiesResponse() {}
 
-    private ConsolePropertiesResponse() {
-        this.osType = null;
-        this.provisioningState = null;
-        this.uri = null;
+    private ConsolePropertiesResponse(ConsolePropertiesResponse $) {
+        this.osType = $.osType;
+        this.provisioningState = $.provisioningState;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsolePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String osType;
-        private String provisioningState;
-        private String uri;
+        private ConsolePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsolePropertiesResponse();
         }
 
         public Builder(ConsolePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osType = defaults.osType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.uri = defaults.uri;
+            $ = new ConsolePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public ConsolePropertiesResponse build() {
-            return new ConsolePropertiesResponse(osType, provisioningState, uri);
+        }
+
+        public ConsolePropertiesResponse build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

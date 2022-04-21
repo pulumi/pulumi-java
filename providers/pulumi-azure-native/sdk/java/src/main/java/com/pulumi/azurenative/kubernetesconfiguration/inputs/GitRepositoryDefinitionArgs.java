@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="httpsCAFile")
-      private final @Nullable Output<String> httpsCAFile;
+    private @Nullable Output<String> httpsCAFile;
 
-    public Output<String> httpsCAFile() {
-        return this.httpsCAFile == null ? Codegen.empty() : this.httpsCAFile;
+    public Optional<Output<String>> httpsCAFile() {
+        return Optional.ofNullable(this.httpsCAFile);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="httpsUser")
-      private final @Nullable Output<String> httpsUser;
+    private @Nullable Output<String> httpsUser;
 
-    public Output<String> httpsUser() {
-        return this.httpsUser == null ? Codegen.empty() : this.httpsUser;
+    public Optional<Output<String>> httpsUser() {
+        return Optional.ofNullable(this.httpsUser);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="localAuthRef")
-      private final @Nullable Output<String> localAuthRef;
+    private @Nullable Output<String> localAuthRef;
 
-    public Output<String> localAuthRef() {
-        return this.localAuthRef == null ? Codegen.empty() : this.localAuthRef;
+    public Optional<Output<String>> localAuthRef() {
+        return Optional.ofNullable(this.localAuthRef);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="repositoryRef")
-      private final @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
+    private @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
 
-    public Output<RepositoryRefDefinitionArgs> repositoryRef() {
-        return this.repositoryRef == null ? Codegen.empty() : this.repositoryRef;
+    public Optional<Output<RepositoryRefDefinitionArgs>> repositoryRef() {
+        return Optional.ofNullable(this.repositoryRef);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sshKnownHosts")
-      private final @Nullable Output<String> sshKnownHosts;
+    private @Nullable Output<String> sshKnownHosts;
 
-    public Output<String> sshKnownHosts() {
-        return this.sshKnownHosts == null ? Codegen.empty() : this.sshKnownHosts;
+    public Optional<Output<String>> sshKnownHosts() {
+        return Optional.ofNullable(this.sshKnownHosts);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="syncIntervalInSeconds")
-      private final @Nullable Output<Double> syncIntervalInSeconds;
+    private @Nullable Output<Double> syncIntervalInSeconds;
 
-    public Output<Double> syncIntervalInSeconds() {
-        return this.syncIntervalInSeconds == null ? Codegen.empty() : this.syncIntervalInSeconds;
+    public Optional<Output<Double>> syncIntervalInSeconds() {
+        return Optional.ofNullable(this.syncIntervalInSeconds);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Output<Double> timeoutInSeconds;
+    private @Nullable Output<Double> timeoutInSeconds;
 
-    public Output<Double> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
+    public Optional<Output<Double>> timeoutInSeconds() {
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     /**
@@ -103,141 +104,120 @@ public final class GitRepositoryDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public GitRepositoryDefinitionArgs(
-        @Nullable Output<String> httpsCAFile,
-        @Nullable Output<String> httpsUser,
-        @Nullable Output<String> localAuthRef,
-        @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef,
-        @Nullable Output<String> sshKnownHosts,
-        @Nullable Output<Double> syncIntervalInSeconds,
-        @Nullable Output<Double> timeoutInSeconds,
-        @Nullable Output<String> url) {
-        this.httpsCAFile = httpsCAFile;
-        this.httpsUser = httpsUser;
-        this.localAuthRef = localAuthRef;
-        this.repositoryRef = repositoryRef;
-        this.sshKnownHosts = sshKnownHosts;
-        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").output().arg(syncIntervalInSeconds).def(6e+02).getNullable();
-        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").output().arg(timeoutInSeconds).def(6e+02).getNullable();
-        this.url = url;
-    }
+    private GitRepositoryDefinitionArgs() {}
 
-    private GitRepositoryDefinitionArgs() {
-        this.httpsCAFile = Codegen.empty();
-        this.httpsUser = Codegen.empty();
-        this.localAuthRef = Codegen.empty();
-        this.repositoryRef = Codegen.empty();
-        this.sshKnownHosts = Codegen.empty();
-        this.syncIntervalInSeconds = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
-        this.url = Codegen.empty();
+    private GitRepositoryDefinitionArgs(GitRepositoryDefinitionArgs $) {
+        this.httpsCAFile = $.httpsCAFile;
+        this.httpsUser = $.httpsUser;
+        this.localAuthRef = $.localAuthRef;
+        this.repositoryRef = $.repositoryRef;
+        this.sshKnownHosts = $.sshKnownHosts;
+        this.syncIntervalInSeconds = $.syncIntervalInSeconds;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitRepositoryDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> httpsCAFile;
-        private @Nullable Output<String> httpsUser;
-        private @Nullable Output<String> localAuthRef;
-        private @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
-        private @Nullable Output<String> sshKnownHosts;
-        private @Nullable Output<Double> syncIntervalInSeconds;
-        private @Nullable Output<Double> timeoutInSeconds;
-        private @Nullable Output<String> url;
+        private GitRepositoryDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitRepositoryDefinitionArgs();
         }
 
         public Builder(GitRepositoryDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpsCAFile = defaults.httpsCAFile;
-    	      this.httpsUser = defaults.httpsUser;
-    	      this.localAuthRef = defaults.localAuthRef;
-    	      this.repositoryRef = defaults.repositoryRef;
-    	      this.sshKnownHosts = defaults.sshKnownHosts;
-    	      this.syncIntervalInSeconds = defaults.syncIntervalInSeconds;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.url = defaults.url;
+            $ = new GitRepositoryDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpsCAFile(@Nullable Output<String> httpsCAFile) {
-            this.httpsCAFile = httpsCAFile;
+            $.httpsCAFile = httpsCAFile;
             return this;
         }
-        public Builder httpsCAFile(@Nullable String httpsCAFile) {
-            this.httpsCAFile = Codegen.ofNullable(httpsCAFile);
-            return this;
+
+        public Builder httpsCAFile(String httpsCAFile) {
+            return httpsCAFile(Output.of(httpsCAFile));
         }
+
         public Builder httpsUser(@Nullable Output<String> httpsUser) {
-            this.httpsUser = httpsUser;
+            $.httpsUser = httpsUser;
             return this;
         }
-        public Builder httpsUser(@Nullable String httpsUser) {
-            this.httpsUser = Codegen.ofNullable(httpsUser);
-            return this;
+
+        public Builder httpsUser(String httpsUser) {
+            return httpsUser(Output.of(httpsUser));
         }
+
         public Builder localAuthRef(@Nullable Output<String> localAuthRef) {
-            this.localAuthRef = localAuthRef;
+            $.localAuthRef = localAuthRef;
             return this;
         }
-        public Builder localAuthRef(@Nullable String localAuthRef) {
-            this.localAuthRef = Codegen.ofNullable(localAuthRef);
-            return this;
+
+        public Builder localAuthRef(String localAuthRef) {
+            return localAuthRef(Output.of(localAuthRef));
         }
+
         public Builder repositoryRef(@Nullable Output<RepositoryRefDefinitionArgs> repositoryRef) {
-            this.repositoryRef = repositoryRef;
+            $.repositoryRef = repositoryRef;
             return this;
         }
-        public Builder repositoryRef(@Nullable RepositoryRefDefinitionArgs repositoryRef) {
-            this.repositoryRef = Codegen.ofNullable(repositoryRef);
-            return this;
+
+        public Builder repositoryRef(RepositoryRefDefinitionArgs repositoryRef) {
+            return repositoryRef(Output.of(repositoryRef));
         }
+
         public Builder sshKnownHosts(@Nullable Output<String> sshKnownHosts) {
-            this.sshKnownHosts = sshKnownHosts;
+            $.sshKnownHosts = sshKnownHosts;
             return this;
         }
-        public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
-            this.sshKnownHosts = Codegen.ofNullable(sshKnownHosts);
-            return this;
+
+        public Builder sshKnownHosts(String sshKnownHosts) {
+            return sshKnownHosts(Output.of(sshKnownHosts));
         }
+
         public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = syncIntervalInSeconds;
+            $.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
-        public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = Codegen.ofNullable(syncIntervalInSeconds);
-            return this;
+
+        public Builder syncIntervalInSeconds(Double syncIntervalInSeconds) {
+            return syncIntervalInSeconds(Output.of(syncIntervalInSeconds));
         }
+
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
-            return this;
+
+        public Builder timeoutInSeconds(Double timeoutInSeconds) {
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public GitRepositoryDefinitionArgs build() {
-            return new GitRepositoryDefinitionArgs(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public GitRepositoryDefinitionArgs build() {
+            $.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").output().arg($.syncIntervalInSeconds).def(6e+02).getNullable();
+            $.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").output().arg($.timeoutInSeconds).def(6e+02).getNullable();
+            return $;
         }
     }
+
 }

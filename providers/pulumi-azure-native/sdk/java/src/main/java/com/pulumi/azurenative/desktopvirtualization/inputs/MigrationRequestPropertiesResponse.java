@@ -23,10 +23,10 @@ public final class MigrationRequestPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="migrationPath")
-      private final @Nullable String migrationPath;
+    private @Nullable String migrationPath;
 
     public Optional<String> migrationPath() {
-        return this.migrationPath == null ? Optional.empty() : Optional.ofNullable(this.migrationPath);
+        return Optional.ofNullable(this.migrationPath);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class MigrationRequestPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="operation")
-      private final @Nullable String operation;
+    private @Nullable String operation;
 
     public Optional<String> operation() {
-        return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
+        return Optional.ofNullable(this.operation);
     }
 
-    public MigrationRequestPropertiesResponse(
-        @Nullable String migrationPath,
-        @Nullable String operation) {
-        this.migrationPath = migrationPath;
-        this.operation = operation;
-    }
+    private MigrationRequestPropertiesResponse() {}
 
-    private MigrationRequestPropertiesResponse() {
-        this.migrationPath = null;
-        this.operation = null;
+    private MigrationRequestPropertiesResponse(MigrationRequestPropertiesResponse $) {
+        this.migrationPath = $.migrationPath;
+        this.operation = $.operation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationRequestPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String migrationPath;
-        private @Nullable String operation;
+        private MigrationRequestPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationRequestPropertiesResponse();
         }
 
         public Builder(MigrationRequestPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.migrationPath = defaults.migrationPath;
-    	      this.operation = defaults.operation;
+            $ = new MigrationRequestPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder migrationPath(@Nullable String migrationPath) {
-            this.migrationPath = migrationPath;
+            $.migrationPath = migrationPath;
             return this;
         }
+
         public Builder operation(@Nullable String operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
-        }        public MigrationRequestPropertiesResponse build() {
-            return new MigrationRequestPropertiesResponse(migrationPath, operation);
+        }
+
+        public MigrationRequestPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="complexity")
-      private final @Nullable String complexity;
+    private @Nullable String complexity;
 
     public Optional<String> complexity() {
-        return this.complexity == null ? Optional.empty() : Optional.ofNullable(this.complexity);
+        return Optional.ofNullable(this.complexity);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable String keyFrameInterval;
+    private @Nullable String keyFrameInterval;
 
     public Optional<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="layers")
-      private final @Nullable List<H265LayerResponse> layers;
+    private @Nullable List<H265LayerResponse> layers;
 
-    public List<H265LayerResponse> layers() {
-        return this.layers == null ? List.of() : this.layers;
+    public Optional<List<H265LayerResponse>> layers() {
+        return Optional.ofNullable(this.layers);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -83,10 +83,10 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sceneChangeDetection")
-      private final @Nullable Boolean sceneChangeDetection;
+    private @Nullable Boolean sceneChangeDetection;
 
     public Optional<Boolean> sceneChangeDetection() {
-        return this.sceneChangeDetection == null ? Optional.empty() : Optional.ofNullable(this.sceneChangeDetection);
+        return Optional.ofNullable(this.sceneChangeDetection);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable String stretchMode;
+    private @Nullable String stretchMode;
 
     public Optional<String> stretchMode() {
-        return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
+        return Optional.ofNullable(this.stretchMode);
     }
 
     /**
@@ -105,112 +105,91 @@ public final class H265VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncMode")
-      private final @Nullable String syncMode;
+    private @Nullable String syncMode;
 
     public Optional<String> syncMode() {
-        return this.syncMode == null ? Optional.empty() : Optional.ofNullable(this.syncMode);
+        return Optional.ofNullable(this.syncMode);
     }
 
-    public H265VideoResponse(
-        @Nullable String complexity,
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        @Nullable List<H265LayerResponse> layers,
-        String odataType,
-        @Nullable Boolean sceneChangeDetection,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
-        this.complexity = complexity;
-        this.keyFrameInterval = keyFrameInterval;
-        this.label = label;
-        this.layers = layers;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.sceneChangeDetection = sceneChangeDetection;
-        this.stretchMode = stretchMode;
-        this.syncMode = syncMode;
-    }
+    private H265VideoResponse() {}
 
-    private H265VideoResponse() {
-        this.complexity = null;
-        this.keyFrameInterval = null;
-        this.label = null;
-        this.layers = List.of();
-        this.odataType = null;
-        this.sceneChangeDetection = null;
-        this.stretchMode = null;
-        this.syncMode = null;
+    private H265VideoResponse(H265VideoResponse $) {
+        this.complexity = $.complexity;
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.label = $.label;
+        this.layers = $.layers;
+        this.odataType = $.odataType;
+        this.sceneChangeDetection = $.sceneChangeDetection;
+        this.stretchMode = $.stretchMode;
+        this.syncMode = $.syncMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(H265VideoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String complexity;
-        private @Nullable String keyFrameInterval;
-        private @Nullable String label;
-        private @Nullable List<H265LayerResponse> layers;
-        private String odataType;
-        private @Nullable Boolean sceneChangeDetection;
-        private @Nullable String stretchMode;
-        private @Nullable String syncMode;
+        private H265VideoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new H265VideoResponse();
         }
 
         public Builder(H265VideoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complexity = defaults.complexity;
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.label = defaults.label;
-    	      this.layers = defaults.layers;
-    	      this.odataType = defaults.odataType;
-    	      this.sceneChangeDetection = defaults.sceneChangeDetection;
-    	      this.stretchMode = defaults.stretchMode;
-    	      this.syncMode = defaults.syncMode;
+            $ = new H265VideoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder complexity(@Nullable String complexity) {
-            this.complexity = complexity;
+            $.complexity = complexity;
             return this;
         }
+
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder layers(@Nullable List<H265LayerResponse> layers) {
-            this.layers = layers;
+            $.layers = layers;
             return this;
         }
+
         public Builder layers(H265LayerResponse... layers) {
             return layers(List.of(layers));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
-            this.sceneChangeDetection = sceneChangeDetection;
+            $.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
+
         public Builder stretchMode(@Nullable String stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
         }
+
         public Builder syncMode(@Nullable String syncMode) {
-            this.syncMode = syncMode;
+            $.syncMode = syncMode;
             return this;
-        }        public H265VideoResponse build() {
-            return new H265VideoResponse(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
+        }
+
+        public H265VideoResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

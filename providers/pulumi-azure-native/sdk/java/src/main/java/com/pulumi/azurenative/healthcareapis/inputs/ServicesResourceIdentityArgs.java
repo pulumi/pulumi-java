@@ -7,9 +7,9 @@ import com.pulumi.azurenative.healthcareapis.enums.ManagedServiceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class ServicesResourceIdentityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
+    private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Output<Either<String,ManagedServiceIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ManagedServiceIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServicesResourceIdentityArgs(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
-        this.type = type;
-    }
+    private ServicesResourceIdentityArgs() {}
 
-    private ServicesResourceIdentityArgs() {
-        this.type = Codegen.empty();
+    private ServicesResourceIdentityArgs(ServicesResourceIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicesResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
+        private ServicesResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicesResourceIdentityArgs();
         }
 
         public Builder(ServicesResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServicesResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ManagedServiceIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServicesResourceIdentityArgs build() {
-            return new ServicesResourceIdentityArgs(type);
+
+        public Builder type(Either<String,ManagedServiceIdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public ServicesResourceIdentityArgs build() {
+            return $;
         }
     }
+
 }

@@ -14,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<Object> connectionString;
+    private @Nullable Output<Object> connectionString;
 
-    public Output<Object> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<Object>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> password;
+    private @Nullable Output<AzureKeyVaultSecretReferenceArgs> password;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<AzureKeyVaultSecretReferenceArgs>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -108,144 +109,123 @@ public final class AzurePostgreSqlLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzurePostgreSqlLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<Object> connectionString,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<AzureKeyVaultSecretReferenceArgs> password,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.connectionString = connectionString;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzurePostgreSqlLinkedServiceArgs() {}
 
-    private AzurePostgreSqlLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzurePostgreSqlLinkedServiceArgs(AzurePostgreSqlLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzurePostgreSqlLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<Object> connectionString;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<AzureKeyVaultSecretReferenceArgs> password;
-        private Output<String> type;
+        private AzurePostgreSqlLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzurePostgreSqlLinkedServiceArgs();
         }
 
         public Builder(AzurePostgreSqlLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
+            $ = new AzurePostgreSqlLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder connectionString(@Nullable Output<Object> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(Object connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<AzureKeyVaultSecretReferenceArgs> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable AzureKeyVaultSecretReferenceArgs password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzurePostgreSqlLinkedServiceArgs build() {
-            return new AzurePostgreSqlLinkedServiceArgs(annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type);
+            return type(Output.of(type));
+        }
+
+        public AzurePostgreSqlLinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

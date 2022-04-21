@@ -26,10 +26,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="assessmentSolutionId")
-      private final @Nullable String assessmentSolutionId;
+    private @Nullable String assessmentSolutionId;
 
     public Optional<String> assessmentSolutionId() {
-        return this.assessmentSolutionId == null ? Optional.empty() : Optional.ofNullable(this.assessmentSolutionId);
+        return Optional.ofNullable(this.assessmentSolutionId);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="createdTimestamp", required=true)
-      private final String createdTimestamp;
+    private String createdTimestamp;
 
     public String createdTimestamp() {
         return this.createdTimestamp;
@@ -48,10 +48,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="customerStorageAccountArmId")
-      private final @Nullable String customerStorageAccountArmId;
+    private @Nullable String customerStorageAccountArmId;
 
     public Optional<String> customerStorageAccountArmId() {
-        return this.customerStorageAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.customerStorageAccountArmId);
+        return Optional.ofNullable(this.customerStorageAccountArmId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="customerWorkspaceId")
-      private final @Nullable String customerWorkspaceId;
+    private @Nullable String customerWorkspaceId;
 
     public Optional<String> customerWorkspaceId() {
-        return this.customerWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceId);
+        return Optional.ofNullable(this.customerWorkspaceId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="customerWorkspaceLocation")
-      private final @Nullable String customerWorkspaceLocation;
+    private @Nullable String customerWorkspaceLocation;
 
     public Optional<String> customerWorkspaceLocation() {
-        return this.customerWorkspaceLocation == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceLocation);
+        return Optional.ofNullable(this.customerWorkspaceLocation);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastAssessmentTimestamp", required=true)
-      private final String lastAssessmentTimestamp;
+    private String lastAssessmentTimestamp;
 
     public String lastAssessmentTimestamp() {
         return this.lastAssessmentTimestamp;
@@ -92,7 +92,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="numberOfAssessments", required=true)
-      private final Integer numberOfAssessments;
+    private Integer numberOfAssessments;
 
     public Integer numberOfAssessments() {
         return this.numberOfAssessments;
@@ -103,7 +103,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="numberOfGroups", required=true)
-      private final Integer numberOfGroups;
+    private Integer numberOfGroups;
 
     public Integer numberOfGroups() {
         return this.numberOfGroups;
@@ -114,7 +114,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="numberOfMachines", required=true)
-      private final Integer numberOfMachines;
+    private Integer numberOfMachines;
 
     public Integer numberOfMachines() {
         return this.numberOfMachines;
@@ -125,7 +125,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateEndpointConnections", required=true)
-      private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -136,10 +136,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="projectStatus")
-      private final @Nullable String projectStatus;
+    private @Nullable String projectStatus;
 
     public Optional<String> projectStatus() {
-        return this.projectStatus == null ? Optional.empty() : Optional.ofNullable(this.projectStatus);
+        return Optional.ofNullable(this.projectStatus);
     }
 
     /**
@@ -147,7 +147,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -158,10 +158,10 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -169,7 +169,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceEndpoint", required=true)
-      private final String serviceEndpoint;
+    private String serviceEndpoint;
 
     public String serviceEndpoint() {
         return this.serviceEndpoint;
@@ -180,175 +180,141 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="updatedTimestamp", required=true)
-      private final String updatedTimestamp;
+    private String updatedTimestamp;
 
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 
-    public ProjectPropertiesResponse(
-        @Nullable String assessmentSolutionId,
-        String createdTimestamp,
-        @Nullable String customerStorageAccountArmId,
-        @Nullable String customerWorkspaceId,
-        @Nullable String customerWorkspaceLocation,
-        String lastAssessmentTimestamp,
-        Integer numberOfAssessments,
-        Integer numberOfGroups,
-        Integer numberOfMachines,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String projectStatus,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String serviceEndpoint,
-        String updatedTimestamp) {
-        this.assessmentSolutionId = assessmentSolutionId;
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
-        this.customerStorageAccountArmId = customerStorageAccountArmId;
-        this.customerWorkspaceId = customerWorkspaceId;
-        this.customerWorkspaceLocation = customerWorkspaceLocation;
-        this.lastAssessmentTimestamp = Objects.requireNonNull(lastAssessmentTimestamp, "expected parameter 'lastAssessmentTimestamp' to be non-null");
-        this.numberOfAssessments = Objects.requireNonNull(numberOfAssessments, "expected parameter 'numberOfAssessments' to be non-null");
-        this.numberOfGroups = Objects.requireNonNull(numberOfGroups, "expected parameter 'numberOfGroups' to be non-null");
-        this.numberOfMachines = Objects.requireNonNull(numberOfMachines, "expected parameter 'numberOfMachines' to be non-null");
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
-        this.projectStatus = projectStatus;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
-    }
+    private ProjectPropertiesResponse() {}
 
-    private ProjectPropertiesResponse() {
-        this.assessmentSolutionId = null;
-        this.createdTimestamp = null;
-        this.customerStorageAccountArmId = null;
-        this.customerWorkspaceId = null;
-        this.customerWorkspaceLocation = null;
-        this.lastAssessmentTimestamp = null;
-        this.numberOfAssessments = null;
-        this.numberOfGroups = null;
-        this.numberOfMachines = null;
-        this.privateEndpointConnections = List.of();
-        this.projectStatus = null;
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
-        this.serviceEndpoint = null;
-        this.updatedTimestamp = null;
+    private ProjectPropertiesResponse(ProjectPropertiesResponse $) {
+        this.assessmentSolutionId = $.assessmentSolutionId;
+        this.createdTimestamp = $.createdTimestamp;
+        this.customerStorageAccountArmId = $.customerStorageAccountArmId;
+        this.customerWorkspaceId = $.customerWorkspaceId;
+        this.customerWorkspaceLocation = $.customerWorkspaceLocation;
+        this.lastAssessmentTimestamp = $.lastAssessmentTimestamp;
+        this.numberOfAssessments = $.numberOfAssessments;
+        this.numberOfGroups = $.numberOfGroups;
+        this.numberOfMachines = $.numberOfMachines;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.projectStatus = $.projectStatus;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.serviceEndpoint = $.serviceEndpoint;
+        this.updatedTimestamp = $.updatedTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assessmentSolutionId;
-        private String createdTimestamp;
-        private @Nullable String customerStorageAccountArmId;
-        private @Nullable String customerWorkspaceId;
-        private @Nullable String customerWorkspaceLocation;
-        private String lastAssessmentTimestamp;
-        private Integer numberOfAssessments;
-        private Integer numberOfGroups;
-        private Integer numberOfMachines;
-        private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-        private @Nullable String projectStatus;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
-        private String serviceEndpoint;
-        private String updatedTimestamp;
+        private ProjectPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectPropertiesResponse();
         }
 
         public Builder(ProjectPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentSolutionId = defaults.assessmentSolutionId;
-    	      this.createdTimestamp = defaults.createdTimestamp;
-    	      this.customerStorageAccountArmId = defaults.customerStorageAccountArmId;
-    	      this.customerWorkspaceId = defaults.customerWorkspaceId;
-    	      this.customerWorkspaceLocation = defaults.customerWorkspaceLocation;
-    	      this.lastAssessmentTimestamp = defaults.lastAssessmentTimestamp;
-    	      this.numberOfAssessments = defaults.numberOfAssessments;
-    	      this.numberOfGroups = defaults.numberOfGroups;
-    	      this.numberOfMachines = defaults.numberOfMachines;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.projectStatus = defaults.projectStatus;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.serviceEndpoint = defaults.serviceEndpoint;
-    	      this.updatedTimestamp = defaults.updatedTimestamp;
+            $ = new ProjectPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
-            this.assessmentSolutionId = assessmentSolutionId;
+            $.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
+
         public Builder createdTimestamp(String createdTimestamp) {
-            this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+            $.createdTimestamp = createdTimestamp;
             return this;
         }
+
         public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
-            this.customerStorageAccountArmId = customerStorageAccountArmId;
+            $.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
+
         public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
-            this.customerWorkspaceId = customerWorkspaceId;
+            $.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
+
         public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
-            this.customerWorkspaceLocation = customerWorkspaceLocation;
+            $.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
+
         public Builder lastAssessmentTimestamp(String lastAssessmentTimestamp) {
-            this.lastAssessmentTimestamp = Objects.requireNonNull(lastAssessmentTimestamp);
+            $.lastAssessmentTimestamp = lastAssessmentTimestamp;
             return this;
         }
+
         public Builder numberOfAssessments(Integer numberOfAssessments) {
-            this.numberOfAssessments = Objects.requireNonNull(numberOfAssessments);
+            $.numberOfAssessments = numberOfAssessments;
             return this;
         }
+
         public Builder numberOfGroups(Integer numberOfGroups) {
-            this.numberOfGroups = Objects.requireNonNull(numberOfGroups);
+            $.numberOfGroups = numberOfGroups;
             return this;
         }
+
         public Builder numberOfMachines(Integer numberOfMachines) {
-            this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
+            $.numberOfMachines = numberOfMachines;
             return this;
         }
+
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder projectStatus(@Nullable String projectStatus) {
-            this.projectStatus = projectStatus;
+            $.projectStatus = projectStatus;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
+
         public Builder serviceEndpoint(String serviceEndpoint) {
-            this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
+            $.serviceEndpoint = serviceEndpoint;
             return this;
         }
+
         public Builder updatedTimestamp(String updatedTimestamp) {
-            this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+            $.updatedTimestamp = updatedTimestamp;
             return this;
-        }        public ProjectPropertiesResponse build() {
-            return new ProjectPropertiesResponse(assessmentSolutionId, createdTimestamp, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, lastAssessmentTimestamp, numberOfAssessments, numberOfGroups, numberOfMachines, privateEndpointConnections, projectStatus, provisioningState, publicNetworkAccess, serviceEndpoint, updatedTimestamp);
+        }
+
+        public ProjectPropertiesResponse build() {
+            $.createdTimestamp = Objects.requireNonNull($.createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
+            $.lastAssessmentTimestamp = Objects.requireNonNull($.lastAssessmentTimestamp, "expected parameter 'lastAssessmentTimestamp' to be non-null");
+            $.numberOfAssessments = Objects.requireNonNull($.numberOfAssessments, "expected parameter 'numberOfAssessments' to be non-null");
+            $.numberOfGroups = Objects.requireNonNull($.numberOfGroups, "expected parameter 'numberOfGroups' to be non-null");
+            $.numberOfMachines = Objects.requireNonNull($.numberOfMachines, "expected parameter 'numberOfMachines' to be non-null");
+            $.privateEndpointConnections = Objects.requireNonNull($.privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.serviceEndpoint = Objects.requireNonNull($.serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
+            $.updatedTimestamp = Objects.requireNonNull($.updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

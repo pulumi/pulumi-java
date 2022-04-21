@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.CustomDomainPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final Output<String> appName;
+    private Output<String> appName;
 
     public Output<String> appName() {
         return this.appName;
@@ -32,10 +32,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<CustomDomainPropertiesArgs> properties;
+    private @Nullable Output<CustomDomainPropertiesArgs> properties;
 
-    public Output<CustomDomainPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CustomDomainPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,91 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public CustomDomainArgs(
-        Output<String> appName,
-        @Nullable Output<String> domainName,
-        @Nullable Output<CustomDomainPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.domainName = domainName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private CustomDomainArgs() {}
 
-    private CustomDomainArgs() {
-        this.appName = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private CustomDomainArgs(CustomDomainArgs $) {
+        this.appName = $.appName;
+        this.domainName = $.domainName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appName;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<CustomDomainPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private CustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainArgs();
         }
 
         public Builder(CustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.domainName = defaults.domainName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new CustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(Output<String> appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder appName(String appName) {
-            this.appName = Output.of(Objects.requireNonNull(appName));
-            return this;
+            return appName(Output.of(appName));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder properties(@Nullable Output<CustomDomainPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CustomDomainPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(CustomDomainPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public CustomDomainArgs build() {
-            return new CustomDomainArgs(appName, domainName, properties, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public CustomDomainArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

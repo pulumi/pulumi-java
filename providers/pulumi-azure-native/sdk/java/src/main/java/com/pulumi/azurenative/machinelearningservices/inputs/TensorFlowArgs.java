@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributionType", required=true)
-      private final Output<String> distributionType;
+    private Output<String> distributionType;
 
     public Output<String> distributionType() {
         return this.distributionType;
@@ -37,10 +38,10 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameterServerCount")
-      private final @Nullable Output<Integer> parameterServerCount;
+    private @Nullable Output<Integer> parameterServerCount;
 
-    public Output<Integer> parameterServerCount() {
-        return this.parameterServerCount == null ? Codegen.empty() : this.parameterServerCount;
+    public Optional<Output<Integer>> parameterServerCount() {
+        return Optional.ofNullable(this.parameterServerCount);
     }
 
     /**
@@ -48,76 +49,69 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerCount")
-      private final @Nullable Output<Integer> workerCount;
+    private @Nullable Output<Integer> workerCount;
 
-    public Output<Integer> workerCount() {
-        return this.workerCount == null ? Codegen.empty() : this.workerCount;
+    public Optional<Output<Integer>> workerCount() {
+        return Optional.ofNullable(this.workerCount);
     }
 
-    public TensorFlowArgs(
-        Output<String> distributionType,
-        @Nullable Output<Integer> parameterServerCount,
-        @Nullable Output<Integer> workerCount) {
-        this.distributionType = Codegen.stringProp("distributionType").output().arg(distributionType).require();
-        this.parameterServerCount = parameterServerCount;
-        this.workerCount = workerCount;
-    }
+    private TensorFlowArgs() {}
 
-    private TensorFlowArgs() {
-        this.distributionType = Codegen.empty();
-        this.parameterServerCount = Codegen.empty();
-        this.workerCount = Codegen.empty();
+    private TensorFlowArgs(TensorFlowArgs $) {
+        this.distributionType = $.distributionType;
+        this.parameterServerCount = $.parameterServerCount;
+        this.workerCount = $.workerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TensorFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> distributionType;
-        private @Nullable Output<Integer> parameterServerCount;
-        private @Nullable Output<Integer> workerCount;
+        private TensorFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TensorFlowArgs();
         }
 
         public Builder(TensorFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionType = defaults.distributionType;
-    	      this.parameterServerCount = defaults.parameterServerCount;
-    	      this.workerCount = defaults.workerCount;
+            $ = new TensorFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionType(Output<String> distributionType) {
-            this.distributionType = Objects.requireNonNull(distributionType);
+            $.distributionType = distributionType;
             return this;
         }
+
         public Builder distributionType(String distributionType) {
-            this.distributionType = Output.of(Objects.requireNonNull(distributionType));
-            return this;
+            return distributionType(Output.of(distributionType));
         }
+
         public Builder parameterServerCount(@Nullable Output<Integer> parameterServerCount) {
-            this.parameterServerCount = parameterServerCount;
+            $.parameterServerCount = parameterServerCount;
             return this;
         }
-        public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
-            this.parameterServerCount = Codegen.ofNullable(parameterServerCount);
-            return this;
+
+        public Builder parameterServerCount(Integer parameterServerCount) {
+            return parameterServerCount(Output.of(parameterServerCount));
         }
+
         public Builder workerCount(@Nullable Output<Integer> workerCount) {
-            this.workerCount = workerCount;
+            $.workerCount = workerCount;
             return this;
         }
-        public Builder workerCount(@Nullable Integer workerCount) {
-            this.workerCount = Codegen.ofNullable(workerCount);
-            return this;
-        }        public TensorFlowArgs build() {
-            return new TensorFlowArgs(distributionType, parameterServerCount, workerCount);
+
+        public Builder workerCount(Integer workerCount) {
+            return workerCount(Output.of(workerCount));
+        }
+
+        public TensorFlowArgs build() {
+            $.distributionType = Codegen.stringProp("distributionType").output().arg($.distributionType).require();
+            return $;
         }
     }
+
 }

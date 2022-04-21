@@ -17,7 +17,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,64 +39,59 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceTopologyName", required=true)
-      private final String serviceTopologyName;
+    private String serviceTopologyName;
 
     public String serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
-    public GetServiceArgs(
-        String resourceGroupName,
-        String serviceName,
-        String serviceTopologyName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName, "expected parameter 'serviceTopologyName' to be non-null");
-    }
+    private GetServiceArgs() {}
 
-    private GetServiceArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.serviceTopologyName = null;
+    private GetServiceArgs(GetServiceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.serviceTopologyName = $.serviceTopologyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String serviceTopologyName;
+        private GetServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceArgs();
         }
 
         public Builder(GetServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceTopologyName = defaults.serviceTopologyName;
+            $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceTopologyName(String serviceTopologyName) {
-            this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
+            $.serviceTopologyName = serviceTopologyName;
             return this;
-        }        public GetServiceArgs build() {
-            return new GetServiceArgs(resourceGroupName, serviceName, serviceTopologyName);
+        }
+
+        public GetServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.serviceTopologyName = Objects.requireNonNull($.serviceTopologyName, "expected parameter 'serviceTopologyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.desktopvirtualization.enums.Operation;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="migrationPath")
-      private final @Nullable Output<String> migrationPath;
+    private @Nullable Output<String> migrationPath;
 
-    public Output<String> migrationPath() {
-        return this.migrationPath == null ? Codegen.empty() : this.migrationPath;
+    public Optional<Output<String>> migrationPath() {
+        return Optional.ofNullable(this.migrationPath);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="operation")
-      private final @Nullable Output<Either<String,Operation>> operation;
+    private @Nullable Output<Either<String,Operation>> operation;
 
-    public Output<Either<String,Operation>> operation() {
-        return this.operation == null ? Codegen.empty() : this.operation;
+    public Optional<Output<Either<String,Operation>>> operation() {
+        return Optional.ofNullable(this.operation);
     }
 
-    public MigrationRequestPropertiesArgs(
-        @Nullable Output<String> migrationPath,
-        @Nullable Output<Either<String,Operation>> operation) {
-        this.migrationPath = migrationPath;
-        this.operation = operation;
-    }
+    private MigrationRequestPropertiesArgs() {}
 
-    private MigrationRequestPropertiesArgs() {
-        this.migrationPath = Codegen.empty();
-        this.operation = Codegen.empty();
+    private MigrationRequestPropertiesArgs(MigrationRequestPropertiesArgs $) {
+        this.migrationPath = $.migrationPath;
+        this.operation = $.operation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationRequestPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> migrationPath;
-        private @Nullable Output<Either<String,Operation>> operation;
+        private MigrationRequestPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationRequestPropertiesArgs();
         }
 
         public Builder(MigrationRequestPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.migrationPath = defaults.migrationPath;
-    	      this.operation = defaults.operation;
+            $ = new MigrationRequestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder migrationPath(@Nullable Output<String> migrationPath) {
-            this.migrationPath = migrationPath;
+            $.migrationPath = migrationPath;
             return this;
         }
-        public Builder migrationPath(@Nullable String migrationPath) {
-            this.migrationPath = Codegen.ofNullable(migrationPath);
-            return this;
+
+        public Builder migrationPath(String migrationPath) {
+            return migrationPath(Output.of(migrationPath));
         }
+
         public Builder operation(@Nullable Output<Either<String,Operation>> operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
         }
-        public Builder operation(@Nullable Either<String,Operation> operation) {
-            this.operation = Codegen.ofNullable(operation);
-            return this;
-        }        public MigrationRequestPropertiesArgs build() {
-            return new MigrationRequestPropertiesArgs(migrationPath, operation);
+
+        public Builder operation(Either<String,Operation> operation) {
+            return operation(Output.of(operation));
+        }
+
+        public MigrationRequestPropertiesArgs build() {
+            return $;
         }
     }
+
 }

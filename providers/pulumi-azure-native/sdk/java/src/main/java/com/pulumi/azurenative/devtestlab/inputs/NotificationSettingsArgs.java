@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="emailRecipient")
-      private final @Nullable Output<String> emailRecipient;
+    private @Nullable Output<String> emailRecipient;
 
-    public Output<String> emailRecipient() {
-        return this.emailRecipient == null ? Codegen.empty() : this.emailRecipient;
+    public Optional<Output<String>> emailRecipient() {
+        return Optional.ofNullable(this.emailRecipient);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="notificationLocale")
-      private final @Nullable Output<String> notificationLocale;
+    private @Nullable Output<String> notificationLocale;
 
-    public Output<String> notificationLocale() {
-        return this.notificationLocale == null ? Codegen.empty() : this.notificationLocale;
+    public Optional<Output<String>> notificationLocale() {
+        return Optional.ofNullable(this.notificationLocale);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,EnableStatus>> status;
+    private @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,EnableStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="timeInMinutes")
-      private final @Nullable Output<Integer> timeInMinutes;
+    private @Nullable Output<Integer> timeInMinutes;
 
-    public Output<Integer> timeInMinutes() {
-        return this.timeInMinutes == null ? Codegen.empty() : this.timeInMinutes;
+    public Optional<Output<Integer>> timeInMinutes() {
+        return Optional.ofNullable(this.timeInMinutes);
     }
 
     /**
@@ -71,102 +72,89 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="webhookUrl")
-      private final @Nullable Output<String> webhookUrl;
+    private @Nullable Output<String> webhookUrl;
 
-    public Output<String> webhookUrl() {
-        return this.webhookUrl == null ? Codegen.empty() : this.webhookUrl;
+    public Optional<Output<String>> webhookUrl() {
+        return Optional.ofNullable(this.webhookUrl);
     }
 
-    public NotificationSettingsArgs(
-        @Nullable Output<String> emailRecipient,
-        @Nullable Output<String> notificationLocale,
-        @Nullable Output<Either<String,EnableStatus>> status,
-        @Nullable Output<Integer> timeInMinutes,
-        @Nullable Output<String> webhookUrl) {
-        this.emailRecipient = emailRecipient;
-        this.notificationLocale = notificationLocale;
-        this.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg(status).def("Disabled").getNullable();
-        this.timeInMinutes = timeInMinutes;
-        this.webhookUrl = webhookUrl;
-    }
+    private NotificationSettingsArgs() {}
 
-    private NotificationSettingsArgs() {
-        this.emailRecipient = Codegen.empty();
-        this.notificationLocale = Codegen.empty();
-        this.status = Codegen.empty();
-        this.timeInMinutes = Codegen.empty();
-        this.webhookUrl = Codegen.empty();
+    private NotificationSettingsArgs(NotificationSettingsArgs $) {
+        this.emailRecipient = $.emailRecipient;
+        this.notificationLocale = $.notificationLocale;
+        this.status = $.status;
+        this.timeInMinutes = $.timeInMinutes;
+        this.webhookUrl = $.webhookUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> emailRecipient;
-        private @Nullable Output<String> notificationLocale;
-        private @Nullable Output<Either<String,EnableStatus>> status;
-        private @Nullable Output<Integer> timeInMinutes;
-        private @Nullable Output<String> webhookUrl;
+        private NotificationSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationSettingsArgs();
         }
 
         public Builder(NotificationSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailRecipient = defaults.emailRecipient;
-    	      this.notificationLocale = defaults.notificationLocale;
-    	      this.status = defaults.status;
-    	      this.timeInMinutes = defaults.timeInMinutes;
-    	      this.webhookUrl = defaults.webhookUrl;
+            $ = new NotificationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
-            this.emailRecipient = emailRecipient;
+            $.emailRecipient = emailRecipient;
             return this;
         }
-        public Builder emailRecipient(@Nullable String emailRecipient) {
-            this.emailRecipient = Codegen.ofNullable(emailRecipient);
-            return this;
+
+        public Builder emailRecipient(String emailRecipient) {
+            return emailRecipient(Output.of(emailRecipient));
         }
+
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
-            this.notificationLocale = notificationLocale;
+            $.notificationLocale = notificationLocale;
             return this;
         }
-        public Builder notificationLocale(@Nullable String notificationLocale) {
-            this.notificationLocale = Codegen.ofNullable(notificationLocale);
-            return this;
+
+        public Builder notificationLocale(String notificationLocale) {
+            return notificationLocale(Output.of(notificationLocale));
         }
+
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,EnableStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder timeInMinutes(@Nullable Output<Integer> timeInMinutes) {
-            this.timeInMinutes = timeInMinutes;
+            $.timeInMinutes = timeInMinutes;
             return this;
         }
-        public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
-            this.timeInMinutes = Codegen.ofNullable(timeInMinutes);
-            return this;
+
+        public Builder timeInMinutes(Integer timeInMinutes) {
+            return timeInMinutes(Output.of(timeInMinutes));
         }
+
         public Builder webhookUrl(@Nullable Output<String> webhookUrl) {
-            this.webhookUrl = webhookUrl;
+            $.webhookUrl = webhookUrl;
             return this;
         }
-        public Builder webhookUrl(@Nullable String webhookUrl) {
-            this.webhookUrl = Codegen.ofNullable(webhookUrl);
-            return this;
-        }        public NotificationSettingsArgs build() {
-            return new NotificationSettingsArgs(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);
+
+        public Builder webhookUrl(String webhookUrl) {
+            return webhookUrl(Output.of(webhookUrl));
+        }
+
+        public NotificationSettingsArgs build() {
+            $.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg($.status).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

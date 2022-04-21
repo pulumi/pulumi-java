@@ -8,10 +8,10 @@ import com.pulumi.azurenative.compute.inputs.UefiSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="encryptionAtHost")
-      private final @Nullable Output<Boolean> encryptionAtHost;
+    private @Nullable Output<Boolean> encryptionAtHost;
 
-    public Output<Boolean> encryptionAtHost() {
-        return this.encryptionAtHost == null ? Codegen.empty() : this.encryptionAtHost;
+    public Optional<Output<Boolean>> encryptionAtHost() {
+        return Optional.ofNullable(this.encryptionAtHost);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="securityType")
-      private final @Nullable Output<Either<String,SecurityTypes>> securityType;
+    private @Nullable Output<Either<String,SecurityTypes>> securityType;
 
-    public Output<Either<String,SecurityTypes>> securityType() {
-        return this.securityType == null ? Codegen.empty() : this.securityType;
+    public Optional<Output<Either<String,SecurityTypes>>> securityType() {
+        return Optional.ofNullable(this.securityType);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uefiSettings")
-      private final @Nullable Output<UefiSettingsArgs> uefiSettings;
+    private @Nullable Output<UefiSettingsArgs> uefiSettings;
 
-    public Output<UefiSettingsArgs> uefiSettings() {
-        return this.uefiSettings == null ? Codegen.empty() : this.uefiSettings;
+    public Optional<Output<UefiSettingsArgs>> uefiSettings() {
+        return Optional.ofNullable(this.uefiSettings);
     }
 
-    public SecurityProfileArgs(
-        @Nullable Output<Boolean> encryptionAtHost,
-        @Nullable Output<Either<String,SecurityTypes>> securityType,
-        @Nullable Output<UefiSettingsArgs> uefiSettings) {
-        this.encryptionAtHost = encryptionAtHost;
-        this.securityType = securityType;
-        this.uefiSettings = uefiSettings;
-    }
+    private SecurityProfileArgs() {}
 
-    private SecurityProfileArgs() {
-        this.encryptionAtHost = Codegen.empty();
-        this.securityType = Codegen.empty();
-        this.uefiSettings = Codegen.empty();
+    private SecurityProfileArgs(SecurityProfileArgs $) {
+        this.encryptionAtHost = $.encryptionAtHost;
+        this.securityType = $.securityType;
+        this.uefiSettings = $.uefiSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> encryptionAtHost;
-        private @Nullable Output<Either<String,SecurityTypes>> securityType;
-        private @Nullable Output<UefiSettingsArgs> uefiSettings;
+        private SecurityProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileArgs();
         }
 
         public Builder(SecurityProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAtHost = defaults.encryptionAtHost;
-    	      this.securityType = defaults.securityType;
-    	      this.uefiSettings = defaults.uefiSettings;
+            $ = new SecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAtHost(@Nullable Output<Boolean> encryptionAtHost) {
-            this.encryptionAtHost = encryptionAtHost;
+            $.encryptionAtHost = encryptionAtHost;
             return this;
         }
-        public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
-            this.encryptionAtHost = Codegen.ofNullable(encryptionAtHost);
-            return this;
+
+        public Builder encryptionAtHost(Boolean encryptionAtHost) {
+            return encryptionAtHost(Output.of(encryptionAtHost));
         }
+
         public Builder securityType(@Nullable Output<Either<String,SecurityTypes>> securityType) {
-            this.securityType = securityType;
+            $.securityType = securityType;
             return this;
         }
-        public Builder securityType(@Nullable Either<String,SecurityTypes> securityType) {
-            this.securityType = Codegen.ofNullable(securityType);
-            return this;
+
+        public Builder securityType(Either<String,SecurityTypes> securityType) {
+            return securityType(Output.of(securityType));
         }
+
         public Builder uefiSettings(@Nullable Output<UefiSettingsArgs> uefiSettings) {
-            this.uefiSettings = uefiSettings;
+            $.uefiSettings = uefiSettings;
             return this;
         }
-        public Builder uefiSettings(@Nullable UefiSettingsArgs uefiSettings) {
-            this.uefiSettings = Codegen.ofNullable(uefiSettings);
-            return this;
-        }        public SecurityProfileArgs build() {
-            return new SecurityProfileArgs(encryptionAtHost, securityType, uefiSettings);
+
+        public Builder uefiSettings(UefiSettingsArgs uefiSettings) {
+            return uefiSettings(Output.of(uefiSettings));
+        }
+
+        public SecurityProfileArgs build() {
+            return $;
         }
     }
+
 }

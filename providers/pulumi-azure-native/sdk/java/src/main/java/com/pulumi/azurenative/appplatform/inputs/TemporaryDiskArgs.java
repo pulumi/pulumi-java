@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class TemporaryDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable Output<String> mountPath;
+    private @Nullable Output<String> mountPath;
 
-    public Output<String> mountPath() {
-        return this.mountPath == null ? Codegen.empty() : this.mountPath;
+    public Optional<Output<String>> mountPath() {
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class TemporaryDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInGB")
-      private final @Nullable Output<Integer> sizeInGB;
+    private @Nullable Output<Integer> sizeInGB;
 
-    public Output<Integer> sizeInGB() {
-        return this.sizeInGB == null ? Codegen.empty() : this.sizeInGB;
+    public Optional<Output<Integer>> sizeInGB() {
+        return Optional.ofNullable(this.sizeInGB);
     }
 
-    public TemporaryDiskArgs(
-        @Nullable Output<String> mountPath,
-        @Nullable Output<Integer> sizeInGB) {
-        this.mountPath = Codegen.stringProp("mountPath").output().arg(mountPath).def("/tmp").getNullable();
-        this.sizeInGB = sizeInGB;
-    }
+    private TemporaryDiskArgs() {}
 
-    private TemporaryDiskArgs() {
-        this.mountPath = Codegen.empty();
-        this.sizeInGB = Codegen.empty();
+    private TemporaryDiskArgs(TemporaryDiskArgs $) {
+        this.mountPath = $.mountPath;
+        this.sizeInGB = $.sizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemporaryDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mountPath;
-        private @Nullable Output<Integer> sizeInGB;
+        private TemporaryDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemporaryDiskArgs();
         }
 
         public Builder(TemporaryDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.sizeInGB = defaults.sizeInGB;
+            $ = new TemporaryDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(@Nullable Output<String> mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
-        public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Codegen.ofNullable(mountPath);
-            return this;
+
+        public Builder mountPath(String mountPath) {
+            return mountPath(Output.of(mountPath));
         }
+
         public Builder sizeInGB(@Nullable Output<Integer> sizeInGB) {
-            this.sizeInGB = sizeInGB;
+            $.sizeInGB = sizeInGB;
             return this;
         }
-        public Builder sizeInGB(@Nullable Integer sizeInGB) {
-            this.sizeInGB = Codegen.ofNullable(sizeInGB);
-            return this;
-        }        public TemporaryDiskArgs build() {
-            return new TemporaryDiskArgs(mountPath, sizeInGB);
+
+        public Builder sizeInGB(Integer sizeInGB) {
+            return sizeInGB(Output.of(sizeInGB));
+        }
+
+        public TemporaryDiskArgs build() {
+            $.mountPath = Codegen.stringProp("mountPath").output().arg($.mountPath).def("/tmp").getNullable();
+            return $;
         }
     }
+
 }

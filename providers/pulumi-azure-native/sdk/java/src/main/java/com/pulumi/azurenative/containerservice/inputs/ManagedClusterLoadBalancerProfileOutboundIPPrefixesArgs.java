@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
      * 
      */
     @Import(name="publicIPPrefixes")
-      private final @Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes;
+    private @Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes;
 
-    public Output<List<ResourceReferenceArgs>> publicIPPrefixes() {
-        return this.publicIPPrefixes == null ? Codegen.empty() : this.publicIPPrefixes;
+    public Optional<Output<List<ResourceReferenceArgs>>> publicIPPrefixes() {
+        return Optional.ofNullable(this.publicIPPrefixes);
     }
 
-    public ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(@Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes) {
-        this.publicIPPrefixes = publicIPPrefixes;
-    }
+    private ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs() {}
 
-    private ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs() {
-        this.publicIPPrefixes = Codegen.empty();
+    private ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs $) {
+        this.publicIPPrefixes = $.publicIPPrefixes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes;
+        private ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs();
         }
 
         public Builder(ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIPPrefixes = defaults.publicIPPrefixes;
+            $ = new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIPPrefixes(@Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes) {
-            this.publicIPPrefixes = publicIPPrefixes;
+            $.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
-        public Builder publicIPPrefixes(@Nullable List<ResourceReferenceArgs> publicIPPrefixes) {
-            this.publicIPPrefixes = Codegen.ofNullable(publicIPPrefixes);
-            return this;
+
+        public Builder publicIPPrefixes(List<ResourceReferenceArgs> publicIPPrefixes) {
+            return publicIPPrefixes(Output.of(publicIPPrefixes));
         }
+
         public Builder publicIPPrefixes(ResourceReferenceArgs... publicIPPrefixes) {
             return publicIPPrefixes(List.of(publicIPPrefixes));
-        }        public ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs build() {
-            return new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(publicIPPrefixes);
+        }
+
+        public ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs build() {
+            return $;
         }
     }
+
 }

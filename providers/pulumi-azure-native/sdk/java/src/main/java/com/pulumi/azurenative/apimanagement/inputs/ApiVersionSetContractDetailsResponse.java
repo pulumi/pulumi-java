@@ -23,10 +23,10 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="versionHeaderName")
-      private final @Nullable String versionHeaderName;
+    private @Nullable String versionHeaderName;
 
     public Optional<String> versionHeaderName() {
-        return this.versionHeaderName == null ? Optional.empty() : Optional.ofNullable(this.versionHeaderName);
+        return Optional.ofNullable(this.versionHeaderName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="versionQueryName")
-      private final @Nullable String versionQueryName;
+    private @Nullable String versionQueryName;
 
     public Optional<String> versionQueryName() {
-        return this.versionQueryName == null ? Optional.empty() : Optional.ofNullable(this.versionQueryName);
+        return Optional.ofNullable(this.versionQueryName);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="versioningScheme")
-      private final @Nullable String versioningScheme;
+    private @Nullable String versioningScheme;
 
     public Optional<String> versioningScheme() {
-        return this.versioningScheme == null ? Optional.empty() : Optional.ofNullable(this.versioningScheme);
+        return Optional.ofNullable(this.versioningScheme);
     }
 
-    public ApiVersionSetContractDetailsResponse(
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String versionHeaderName,
-        @Nullable String versionQueryName,
-        @Nullable String versioningScheme) {
-        this.description = description;
-        this.id = id;
-        this.name = name;
-        this.versionHeaderName = versionHeaderName;
-        this.versionQueryName = versionQueryName;
-        this.versioningScheme = versioningScheme;
-    }
+    private ApiVersionSetContractDetailsResponse() {}
 
-    private ApiVersionSetContractDetailsResponse() {
-        this.description = null;
-        this.id = null;
-        this.name = null;
-        this.versionHeaderName = null;
-        this.versionQueryName = null;
-        this.versioningScheme = null;
+    private ApiVersionSetContractDetailsResponse(ApiVersionSetContractDetailsResponse $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.name = $.name;
+        this.versionHeaderName = $.versionHeaderName;
+        this.versionQueryName = $.versionQueryName;
+        this.versioningScheme = $.versioningScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiVersionSetContractDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String versionHeaderName;
-        private @Nullable String versionQueryName;
-        private @Nullable String versioningScheme;
+        private ApiVersionSetContractDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiVersionSetContractDetailsResponse();
         }
 
         public Builder(ApiVersionSetContractDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.versionHeaderName = defaults.versionHeaderName;
-    	      this.versionQueryName = defaults.versionQueryName;
-    	      this.versioningScheme = defaults.versioningScheme;
+            $ = new ApiVersionSetContractDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
-            this.versionHeaderName = versionHeaderName;
+            $.versionHeaderName = versionHeaderName;
             return this;
         }
+
         public Builder versionQueryName(@Nullable String versionQueryName) {
-            this.versionQueryName = versionQueryName;
+            $.versionQueryName = versionQueryName;
             return this;
         }
+
         public Builder versioningScheme(@Nullable String versioningScheme) {
-            this.versioningScheme = versioningScheme;
+            $.versioningScheme = versioningScheme;
             return this;
-        }        public ApiVersionSetContractDetailsResponse build() {
-            return new ApiVersionSetContractDetailsResponse(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
+        }
+
+        public ApiVersionSetContractDetailsResponse build() {
+            return $;
         }
     }
+
 }

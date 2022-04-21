@@ -28,10 +28,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partitionOption")
-      private final @Nullable Object partitionOption;
+    private @Nullable Object partitionOption;
 
     public Optional<Object> partitionOption() {
-        return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
+        return Optional.ofNullable(this.partitionOption);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partitionSettings")
-      private final @Nullable SqlPartitionSettingsResponse partitionSettings;
+    private @Nullable SqlPartitionSettingsResponse partitionSettings;
 
     public Optional<SqlPartitionSettingsResponse> partitionSettings() {
-        return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
+        return Optional.ofNullable(this.partitionSettings);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="produceAdditionalTypes")
-      private final @Nullable Object produceAdditionalTypes;
+    private @Nullable Object produceAdditionalTypes;
 
     public Optional<Object> produceAdditionalTypes() {
-        return this.produceAdditionalTypes == null ? Optional.empty() : Optional.ofNullable(this.produceAdditionalTypes);
+        return Optional.ofNullable(this.produceAdditionalTypes);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Object queryTimeout;
+    private @Nullable Object queryTimeout;
 
     public Optional<Object> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlReaderQuery")
-      private final @Nullable Object sqlReaderQuery;
+    private @Nullable Object sqlReaderQuery;
 
     public Optional<Object> sqlReaderQuery() {
-        return this.sqlReaderQuery == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderQuery);
+        return Optional.ofNullable(this.sqlReaderQuery);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlReaderStoredProcedureName")
-      private final @Nullable Object sqlReaderStoredProcedureName;
+    private @Nullable Object sqlReaderStoredProcedureName;
 
     public Optional<Object> sqlReaderStoredProcedureName() {
-        return this.sqlReaderStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderStoredProcedureName);
+        return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storedProcedureParameters")
-      private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+    private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
-    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
-        return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
+    public Optional<Map<String,StoredProcedureParameterResponse>> storedProcedureParameters() {
+        return Optional.ofNullable(this.storedProcedureParameters);
     }
 
     /**
@@ -161,154 +161,117 @@ public final class SqlMISourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SqlMISourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionOption,
-        @Nullable SqlPartitionSettingsResponse partitionSettings,
-        @Nullable Object produceAdditionalTypes,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object sqlReaderQuery,
-        @Nullable Object sqlReaderStoredProcedureName,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.partitionOption = partitionOption;
-        this.partitionSettings = partitionSettings;
-        this.produceAdditionalTypes = produceAdditionalTypes;
-        this.queryTimeout = queryTimeout;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.sqlReaderQuery = sqlReaderQuery;
-        this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
-        this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SqlMISourceResponse() {}
 
-    private SqlMISourceResponse() {
-        this.additionalColumns = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.partitionOption = null;
-        this.partitionSettings = null;
-        this.produceAdditionalTypes = null;
-        this.queryTimeout = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.sqlReaderQuery = null;
-        this.sqlReaderStoredProcedureName = null;
-        this.storedProcedureParameters = Map.of();
-        this.type = null;
+    private SqlMISourceResponse(SqlMISourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.partitionOption = $.partitionOption;
+        this.partitionSettings = $.partitionSettings;
+        this.produceAdditionalTypes = $.produceAdditionalTypes;
+        this.queryTimeout = $.queryTimeout;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.sqlReaderQuery = $.sqlReaderQuery;
+        this.sqlReaderStoredProcedureName = $.sqlReaderStoredProcedureName;
+        this.storedProcedureParameters = $.storedProcedureParameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlMISourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object partitionOption;
-        private @Nullable SqlPartitionSettingsResponse partitionSettings;
-        private @Nullable Object produceAdditionalTypes;
-        private @Nullable Object queryTimeout;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private @Nullable Object sqlReaderQuery;
-        private @Nullable Object sqlReaderStoredProcedureName;
-        private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
-        private String type;
+        private SqlMISourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlMISourceResponse();
         }
 
         public Builder(SqlMISourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.partitionOption = defaults.partitionOption;
-    	      this.partitionSettings = defaults.partitionSettings;
-    	      this.produceAdditionalTypes = defaults.produceAdditionalTypes;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.sqlReaderQuery = defaults.sqlReaderQuery;
-    	      this.sqlReaderStoredProcedureName = defaults.sqlReaderStoredProcedureName;
-    	      this.storedProcedureParameters = defaults.storedProcedureParameters;
-    	      this.type = defaults.type;
+            $ = new SqlMISourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = partitionOption;
+            $.partitionOption = partitionOption;
             return this;
         }
+
         public Builder partitionSettings(@Nullable SqlPartitionSettingsResponse partitionSettings) {
-            this.partitionSettings = partitionSettings;
+            $.partitionSettings = partitionSettings;
             return this;
         }
+
         public Builder produceAdditionalTypes(@Nullable Object produceAdditionalTypes) {
-            this.produceAdditionalTypes = produceAdditionalTypes;
+            $.produceAdditionalTypes = produceAdditionalTypes;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder sqlReaderQuery(@Nullable Object sqlReaderQuery) {
-            this.sqlReaderQuery = sqlReaderQuery;
+            $.sqlReaderQuery = sqlReaderQuery;
             return this;
         }
+
         public Builder sqlReaderStoredProcedureName(@Nullable Object sqlReaderStoredProcedureName) {
-            this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
+            $.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
             return this;
         }
+
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
-            this.storedProcedureParameters = storedProcedureParameters;
+            $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SqlMISourceResponse build() {
-            return new SqlMISourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, produceAdditionalTypes, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
+        }
+
+        public SqlMISourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

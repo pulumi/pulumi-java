@@ -17,7 +17,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
@@ -28,7 +28,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetProductArgs(
-        String productId,
-        String resourceGroupName,
-        String serviceName) {
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetProductArgs() {}
 
-    private GetProductArgs() {
-        this.productId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetProductArgs(GetProductArgs $) {
+        this.productId = $.productId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String productId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProductArgs();
         }
 
         public Builder(GetProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.productId = defaults.productId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetProductArgs build() {
-            return new GetProductArgs(productId, resourceGroupName, serviceName);
+        }
+
+        public GetProductArgs build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

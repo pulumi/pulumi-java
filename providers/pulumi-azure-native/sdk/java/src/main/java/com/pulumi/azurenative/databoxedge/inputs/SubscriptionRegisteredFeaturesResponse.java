@@ -15,62 +15,57 @@ public final class SubscriptionRegisteredFeaturesResponse extends com.pulumi.res
     public static final SubscriptionRegisteredFeaturesResponse Empty = new SubscriptionRegisteredFeaturesResponse();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public SubscriptionRegisteredFeaturesResponse(
-        @Nullable String name,
-        @Nullable String state) {
-        this.name = name;
-        this.state = state;
-    }
+    private SubscriptionRegisteredFeaturesResponse() {}
 
-    private SubscriptionRegisteredFeaturesResponse() {
-        this.name = null;
-        this.state = null;
+    private SubscriptionRegisteredFeaturesResponse(SubscriptionRegisteredFeaturesResponse $) {
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionRegisteredFeaturesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String state;
+        private SubscriptionRegisteredFeaturesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionRegisteredFeaturesResponse();
         }
 
         public Builder(SubscriptionRegisteredFeaturesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new SubscriptionRegisteredFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public SubscriptionRegisteredFeaturesResponse build() {
-            return new SubscriptionRegisteredFeaturesResponse(name, state);
+        }
+
+        public SubscriptionRegisteredFeaturesResponse build() {
+            return $;
         }
     }
+
 }

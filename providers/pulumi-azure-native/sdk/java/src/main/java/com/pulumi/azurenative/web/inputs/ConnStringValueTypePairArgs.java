@@ -6,7 +6,6 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.ConnectionStringType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ConnectionStringType> type;
+    private Output<ConnectionStringType> type;
 
     public Output<ConnectionStringType> type() {
         return this.type;
@@ -35,63 +34,60 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ConnStringValueTypePairArgs(
-        Output<ConnectionStringType> type,
-        Output<String> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ConnStringValueTypePairArgs() {}
 
-    private ConnStringValueTypePairArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConnStringValueTypePairArgs(ConnStringValueTypePairArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnStringValueTypePairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectionStringType> type;
-        private Output<String> value;
+        private ConnStringValueTypePairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnStringValueTypePairArgs();
         }
 
         public Builder(ConnStringValueTypePairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ConnStringValueTypePairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<ConnectionStringType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ConnectionStringType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ConnStringValueTypePairArgs build() {
-            return new ConnStringValueTypePairArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public ConnStringValueTypePairArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="invitationName", required=true)
-      private final String invitationName;
+    private String invitationName;
 
     public String invitationName() {
         return this.invitationName;
@@ -39,7 +39,7 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
     }
 
-    public GetInvitationArgs(
-        String accountName,
-        String invitationName,
-        String resourceGroupName,
-        String shareName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.invitationName = Objects.requireNonNull(invitationName, "expected parameter 'invitationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private GetInvitationArgs() {}
 
-    private GetInvitationArgs() {
-        this.accountName = null;
-        this.invitationName = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
+    private GetInvitationArgs(GetInvitationArgs $) {
+        this.accountName = $.accountName;
+        this.invitationName = $.invitationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInvitationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String invitationName;
-        private String resourceGroupName;
-        private String shareName;
+        private GetInvitationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInvitationArgs();
         }
 
         public Builder(GetInvitationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.invitationName = defaults.invitationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
+            $ = new GetInvitationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder invitationName(String invitationName) {
-            this.invitationName = Objects.requireNonNull(invitationName);
+            $.invitationName = invitationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
-        }        public GetInvitationArgs build() {
-            return new GetInvitationArgs(accountName, invitationName, resourceGroupName, shareName);
+        }
+
+        public GetInvitationArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.invitationName = Objects.requireNonNull($.invitationName, "expected parameter 'invitationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

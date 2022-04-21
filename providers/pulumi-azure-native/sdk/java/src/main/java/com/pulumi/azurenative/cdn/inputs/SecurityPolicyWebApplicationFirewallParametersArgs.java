@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
      * 
      */
     @Import(name="associations")
-      private final @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
+    private @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
 
-    public Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations() {
-        return this.associations == null ? Codegen.empty() : this.associations;
+    public Optional<Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>>> associations() {
+        return Optional.ofNullable(this.associations);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -50,79 +51,73 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends co
      * 
      */
     @Import(name="wafPolicy")
-      private final @Nullable Output<ResourceReferenceArgs> wafPolicy;
+    private @Nullable Output<ResourceReferenceArgs> wafPolicy;
 
-    public Output<ResourceReferenceArgs> wafPolicy() {
-        return this.wafPolicy == null ? Codegen.empty() : this.wafPolicy;
+    public Optional<Output<ResourceReferenceArgs>> wafPolicy() {
+        return Optional.ofNullable(this.wafPolicy);
     }
 
-    public SecurityPolicyWebApplicationFirewallParametersArgs(
-        @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations,
-        Output<String> type,
-        @Nullable Output<ResourceReferenceArgs> wafPolicy) {
-        this.associations = associations;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.wafPolicy = wafPolicy;
-    }
+    private SecurityPolicyWebApplicationFirewallParametersArgs() {}
 
-    private SecurityPolicyWebApplicationFirewallParametersArgs() {
-        this.associations = Codegen.empty();
-        this.type = Codegen.empty();
-        this.wafPolicy = Codegen.empty();
+    private SecurityPolicyWebApplicationFirewallParametersArgs(SecurityPolicyWebApplicationFirewallParametersArgs $) {
+        this.associations = $.associations;
+        this.type = $.type;
+        this.wafPolicy = $.wafPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyWebApplicationFirewallParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
-        private Output<String> type;
-        private @Nullable Output<ResourceReferenceArgs> wafPolicy;
+        private SecurityPolicyWebApplicationFirewallParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyWebApplicationFirewallParametersArgs();
         }
 
         public Builder(SecurityPolicyWebApplicationFirewallParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associations = defaults.associations;
-    	      this.type = defaults.type;
-    	      this.wafPolicy = defaults.wafPolicy;
+            $ = new SecurityPolicyWebApplicationFirewallParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associations(@Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations) {
-            this.associations = associations;
+            $.associations = associations;
             return this;
         }
-        public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
-            this.associations = Codegen.ofNullable(associations);
-            return this;
+
+        public Builder associations(List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
+            return associations(Output.of(associations));
         }
+
         public Builder associations(SecurityPolicyWebApplicationFirewallAssociationArgs... associations) {
             return associations(List.of(associations));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder wafPolicy(@Nullable Output<ResourceReferenceArgs> wafPolicy) {
-            this.wafPolicy = wafPolicy;
+            $.wafPolicy = wafPolicy;
             return this;
         }
-        public Builder wafPolicy(@Nullable ResourceReferenceArgs wafPolicy) {
-            this.wafPolicy = Codegen.ofNullable(wafPolicy);
-            return this;
-        }        public SecurityPolicyWebApplicationFirewallParametersArgs build() {
-            return new SecurityPolicyWebApplicationFirewallParametersArgs(associations, type, wafPolicy);
+
+        public Builder wafPolicy(ResourceReferenceArgs wafPolicy) {
+            return wafPolicy(Output.of(wafPolicy));
+        }
+
+        public SecurityPolicyWebApplicationFirewallParametersArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

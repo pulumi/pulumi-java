@@ -17,7 +17,7 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -39,64 +39,59 @@ public final class GetComponentLinkedStorageAccountArgs extends com.pulumi.resou
      * 
      */
     @Import(name="storageType", required=true)
-      private final String storageType;
+    private String storageType;
 
     public String storageType() {
         return this.storageType;
     }
 
-    public GetComponentLinkedStorageAccountArgs(
-        String resourceGroupName,
-        String resourceName,
-        String storageType) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.storageType = Objects.requireNonNull(storageType, "expected parameter 'storageType' to be non-null");
-    }
+    private GetComponentLinkedStorageAccountArgs() {}
 
-    private GetComponentLinkedStorageAccountArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.storageType = null;
+    private GetComponentLinkedStorageAccountArgs(GetComponentLinkedStorageAccountArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.storageType = $.storageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetComponentLinkedStorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
-        private String storageType;
+        private GetComponentLinkedStorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetComponentLinkedStorageAccountArgs();
         }
 
         public Builder(GetComponentLinkedStorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.storageType = defaults.storageType;
+            $ = new GetComponentLinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder storageType(String storageType) {
-            this.storageType = Objects.requireNonNull(storageType);
+            $.storageType = storageType;
             return this;
-        }        public GetComponentLinkedStorageAccountArgs build() {
-            return new GetComponentLinkedStorageAccountArgs(resourceGroupName, resourceName, storageType);
+        }
+
+        public GetComponentLinkedStorageAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.storageType = Objects.requireNonNull($.storageType, "expected parameter 'storageType' to be non-null");
+            return $;
         }
     }
+
 }

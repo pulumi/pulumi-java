@@ -26,10 +26,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Integer instanceCount;
+    private @Nullable Integer instanceCount;
 
     public Optional<Integer> instanceCount() {
-        return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isLocal")
-      private final @Nullable Boolean isLocal;
+    private @Nullable Boolean isLocal;
 
     public Optional<Boolean> isLocal() {
-        return this.isLocal == null ? Optional.empty() : Optional.ofNullable(this.isLocal);
+        return Optional.ofNullable(this.isLocal);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public ComputeConfigurationResponse(
-        @Nullable Integer instanceCount,
-        @Nullable String instanceType,
-        @Nullable Boolean isLocal,
-        @Nullable String location,
-        @Nullable Map<String,String> properties,
-        @Nullable String target) {
-        this.instanceCount = instanceCount;
-        this.instanceType = instanceType;
-        this.isLocal = isLocal;
-        this.location = location;
-        this.properties = properties;
-        this.target = target;
-    }
+    private ComputeConfigurationResponse() {}
 
-    private ComputeConfigurationResponse() {
-        this.instanceCount = null;
-        this.instanceType = null;
-        this.isLocal = null;
-        this.location = null;
-        this.properties = Map.of();
-        this.target = null;
+    private ComputeConfigurationResponse(ComputeConfigurationResponse $) {
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.isLocal = $.isLocal;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer instanceCount;
-        private @Nullable String instanceType;
-        private @Nullable Boolean isLocal;
-        private @Nullable String location;
-        private @Nullable Map<String,String> properties;
-        private @Nullable String target;
+        private ComputeConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeConfigurationResponse();
         }
 
         public Builder(ComputeConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.isLocal = defaults.isLocal;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.target = defaults.target;
+            $ = new ComputeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder isLocal(@Nullable Boolean isLocal) {
-            this.isLocal = isLocal;
+            $.isLocal = isLocal;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public ComputeConfigurationResponse build() {
-            return new ComputeConfigurationResponse(instanceCount, instanceType, isLocal, location, properties, target);
+        }
+
+        public ComputeConfigurationResponse build() {
+            return $;
         }
     }
+
 }

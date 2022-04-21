@@ -8,9 +8,9 @@ import com.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hash")
-      private final @Nullable Output<ContentHashArgs> hash;
+    private @Nullable Output<ContentHashArgs> hash;
 
-    public Output<ContentHashArgs> hash() {
-        return this.hash == null ? Codegen.empty() : this.hash;
+    public Optional<Output<ContentHashArgs>> hash() {
+        return Optional.ofNullable(this.hash);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ContentSourceType>> type;
+    private @Nullable Output<Either<String,ContentSourceType>> type;
 
-    public Output<Either<String,ContentSourceType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ContentSourceType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ContentSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ContentSourceArgs(
-        @Nullable Output<ContentHashArgs> hash,
-        @Nullable Output<Either<String,ContentSourceType>> type,
-        @Nullable Output<String> value,
-        @Nullable Output<String> version) {
-        this.hash = hash;
-        this.type = type;
-        this.value = value;
-        this.version = version;
-    }
+    private ContentSourceArgs() {}
 
-    private ContentSourceArgs() {
-        this.hash = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
-        this.version = Codegen.empty();
+    private ContentSourceArgs(ContentSourceArgs $) {
+        this.hash = $.hash;
+        this.type = $.type;
+        this.value = $.value;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContentHashArgs> hash;
-        private @Nullable Output<Either<String,ContentSourceType>> type;
-        private @Nullable Output<String> value;
-        private @Nullable Output<String> version;
+        private ContentSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentSourceArgs();
         }
 
         public Builder(ContentSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hash = defaults.hash;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
-    	      this.version = defaults.version;
+            $ = new ContentSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hash(@Nullable Output<ContentHashArgs> hash) {
-            this.hash = hash;
+            $.hash = hash;
             return this;
         }
-        public Builder hash(@Nullable ContentHashArgs hash) {
-            this.hash = Codegen.ofNullable(hash);
-            return this;
+
+        public Builder hash(ContentHashArgs hash) {
+            return hash(Output.of(hash));
         }
+
         public Builder type(@Nullable Output<Either<String,ContentSourceType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ContentSourceType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,ContentSourceType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ContentSourceArgs build() {
-            return new ContentSourceArgs(hash, type, value, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ContentSourceArgs build() {
+            return $;
         }
     }
+
 }

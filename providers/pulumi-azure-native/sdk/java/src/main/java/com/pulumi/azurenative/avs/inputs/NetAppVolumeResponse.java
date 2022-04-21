@@ -23,10 +23,10 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nfsFilePath")
-      private final @Nullable String nfsFilePath;
+    private @Nullable String nfsFilePath;
 
     public Optional<String> nfsFilePath() {
-        return this.nfsFilePath == null ? Optional.empty() : Optional.ofNullable(this.nfsFilePath);
+        return Optional.ofNullable(this.nfsFilePath);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class NetAppVolumeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nfsProviderIp")
-      private final @Nullable String nfsProviderIp;
+    private @Nullable String nfsProviderIp;
 
     public Optional<String> nfsProviderIp() {
-        return this.nfsProviderIp == null ? Optional.empty() : Optional.ofNullable(this.nfsProviderIp);
+        return Optional.ofNullable(this.nfsProviderIp);
     }
 
-    public NetAppVolumeResponse(
-        @Nullable String nfsFilePath,
-        @Nullable String nfsProviderIp) {
-        this.nfsFilePath = nfsFilePath;
-        this.nfsProviderIp = nfsProviderIp;
-    }
+    private NetAppVolumeResponse() {}
 
-    private NetAppVolumeResponse() {
-        this.nfsFilePath = null;
-        this.nfsProviderIp = null;
+    private NetAppVolumeResponse(NetAppVolumeResponse $) {
+        this.nfsFilePath = $.nfsFilePath;
+        this.nfsProviderIp = $.nfsProviderIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetAppVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String nfsFilePath;
-        private @Nullable String nfsProviderIp;
+        private NetAppVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetAppVolumeResponse();
         }
 
         public Builder(NetAppVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nfsFilePath = defaults.nfsFilePath;
-    	      this.nfsProviderIp = defaults.nfsProviderIp;
+            $ = new NetAppVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nfsFilePath(@Nullable String nfsFilePath) {
-            this.nfsFilePath = nfsFilePath;
+            $.nfsFilePath = nfsFilePath;
             return this;
         }
+
         public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
-            this.nfsProviderIp = nfsProviderIp;
+            $.nfsProviderIp = nfsProviderIp;
             return this;
-        }        public NetAppVolumeResponse build() {
-            return new NetAppVolumeResponse(nfsFilePath, nfsProviderIp);
+        }
+
+        public NetAppVolumeResponse build() {
+            return $;
         }
     }
+
 }

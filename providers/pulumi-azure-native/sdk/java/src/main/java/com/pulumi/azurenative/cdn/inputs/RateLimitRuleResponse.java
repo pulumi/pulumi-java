@@ -26,7 +26,7 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -37,10 +37,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="matchConditions", required=true)
-      private final List<MatchConditionResponse> matchConditions;
+    private List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
@@ -59,7 +59,7 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,7 +70,7 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -81,7 +81,7 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rateLimitDurationInMinutes", required=true)
-      private final Integer rateLimitDurationInMinutes;
+    private Integer rateLimitDurationInMinutes;
 
     public Integer rateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes;
@@ -92,103 +92,90 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rateLimitThreshold", required=true)
-      private final Integer rateLimitThreshold;
+    private Integer rateLimitThreshold;
 
     public Integer rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 
-    public RateLimitRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<MatchConditionResponse> matchConditions,
-        String name,
-        Integer priority,
-        Integer rateLimitDurationInMinutes,
-        Integer rateLimitThreshold) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes, "expected parameter 'rateLimitDurationInMinutes' to be non-null");
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
-    }
+    private RateLimitRuleResponse() {}
 
-    private RateLimitRuleResponse() {
-        this.action = null;
-        this.enabledState = null;
-        this.matchConditions = List.of();
-        this.name = null;
-        this.priority = null;
-        this.rateLimitDurationInMinutes = null;
-        this.rateLimitThreshold = null;
+    private RateLimitRuleResponse(RateLimitRuleResponse $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.matchConditions = $.matchConditions;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.rateLimitDurationInMinutes = $.rateLimitDurationInMinutes;
+        this.rateLimitThreshold = $.rateLimitThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private @Nullable String enabledState;
-        private List<MatchConditionResponse> matchConditions;
-        private String name;
-        private Integer priority;
-        private Integer rateLimitDurationInMinutes;
-        private Integer rateLimitThreshold;
+        private RateLimitRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitRuleResponse();
         }
 
         public Builder(RateLimitRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.rateLimitDurationInMinutes = defaults.rateLimitDurationInMinutes;
-    	      this.rateLimitThreshold = defaults.rateLimitThreshold;
+            $ = new RateLimitRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
-            this.matchConditions = Objects.requireNonNull(matchConditions);
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(MatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
-            this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes);
+            $.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
+
         public Builder rateLimitThreshold(Integer rateLimitThreshold) {
-            this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+            $.rateLimitThreshold = rateLimitThreshold;
             return this;
-        }        public RateLimitRuleResponse build() {
-            return new RateLimitRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold);
+        }
+
+        public RateLimitRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.matchConditions = Objects.requireNonNull($.matchConditions, "expected parameter 'matchConditions' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.rateLimitDurationInMinutes = Objects.requireNonNull($.rateLimitDurationInMinutes, "expected parameter 'rateLimitDurationInMinutes' to be non-null");
+            $.rateLimitThreshold = Objects.requireNonNull($.rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
+            return $;
         }
     }
+
 }

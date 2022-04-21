@@ -7,9 +7,9 @@ import com.pulumi.azurenative.automation.enums.TokenType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Output<String> accessToken;
+    private @Nullable Output<String> accessToken;
 
-    public Output<String> accessToken() {
-        return this.accessToken == null ? Codegen.empty() : this.accessToken;
+    public Optional<Output<String>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Output<String> refreshToken;
+    private @Nullable Output<String> refreshToken;
 
-    public Output<String> refreshToken() {
-        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
+    public Optional<Output<String>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="tokenType")
-      private final @Nullable Output<Either<String,TokenType>> tokenType;
+    private @Nullable Output<Either<String,TokenType>> tokenType;
 
-    public Output<Either<String,TokenType>> tokenType() {
-        return this.tokenType == null ? Codegen.empty() : this.tokenType;
+    public Optional<Output<Either<String,TokenType>>> tokenType() {
+        return Optional.ofNullable(this.tokenType);
     }
 
-    public SourceControlSecurityTokenPropertiesArgs(
-        @Nullable Output<String> accessToken,
-        @Nullable Output<String> refreshToken,
-        @Nullable Output<Either<String,TokenType>> tokenType) {
-        this.accessToken = accessToken;
-        this.refreshToken = refreshToken;
-        this.tokenType = tokenType;
-    }
+    private SourceControlSecurityTokenPropertiesArgs() {}
 
-    private SourceControlSecurityTokenPropertiesArgs() {
-        this.accessToken = Codegen.empty();
-        this.refreshToken = Codegen.empty();
-        this.tokenType = Codegen.empty();
+    private SourceControlSecurityTokenPropertiesArgs(SourceControlSecurityTokenPropertiesArgs $) {
+        this.accessToken = $.accessToken;
+        this.refreshToken = $.refreshToken;
+        this.tokenType = $.tokenType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceControlSecurityTokenPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessToken;
-        private @Nullable Output<String> refreshToken;
-        private @Nullable Output<Either<String,TokenType>> tokenType;
+        private SourceControlSecurityTokenPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceControlSecurityTokenPropertiesArgs();
         }
 
         public Builder(SourceControlSecurityTokenPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.tokenType = defaults.tokenType;
+            $ = new SourceControlSecurityTokenPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Output<String> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
-        public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Codegen.ofNullable(accessToken);
-            return this;
+
+        public Builder accessToken(String accessToken) {
+            return accessToken(Output.of(accessToken));
         }
+
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
-        public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Codegen.ofNullable(refreshToken);
-            return this;
+
+        public Builder refreshToken(String refreshToken) {
+            return refreshToken(Output.of(refreshToken));
         }
+
         public Builder tokenType(@Nullable Output<Either<String,TokenType>> tokenType) {
-            this.tokenType = tokenType;
+            $.tokenType = tokenType;
             return this;
         }
-        public Builder tokenType(@Nullable Either<String,TokenType> tokenType) {
-            this.tokenType = Codegen.ofNullable(tokenType);
-            return this;
-        }        public SourceControlSecurityTokenPropertiesArgs build() {
-            return new SourceControlSecurityTokenPropertiesArgs(accessToken, refreshToken, tokenType);
+
+        public Builder tokenType(Either<String,TokenType> tokenType) {
+            return tokenType(Output.of(tokenType));
+        }
+
+        public SourceControlSecurityTokenPropertiesArgs build() {
+            return $;
         }
     }
+
 }

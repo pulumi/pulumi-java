@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionCon
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FirewallPolicyIntrusionDetectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
+    private @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
-    public Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<FirewallPolicyIntrusionDetectionConfigurationArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class FirewallPolicyIntrusionDetectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+    private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
-    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,FirewallPolicyIntrusionDetectionStateType>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public FirewallPolicyIntrusionDetectionArgs(
-        @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration,
-        @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
-        this.configuration = configuration;
-        this.mode = mode;
-    }
+    private FirewallPolicyIntrusionDetectionArgs() {}
 
-    private FirewallPolicyIntrusionDetectionArgs() {
-        this.configuration = Codegen.empty();
-        this.mode = Codegen.empty();
+    private FirewallPolicyIntrusionDetectionArgs(FirewallPolicyIntrusionDetectionArgs $) {
+        this.configuration = $.configuration;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIntrusionDetectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
-        private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+        private FirewallPolicyIntrusionDetectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIntrusionDetectionArgs();
         }
 
         public Builder(FirewallPolicyIntrusionDetectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.mode = defaults.mode;
+            $ = new FirewallPolicyIntrusionDetectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable FirewallPolicyIntrusionDetectionConfigurationArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(FirewallPolicyIntrusionDetectionConfigurationArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder mode(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public FirewallPolicyIntrusionDetectionArgs build() {
-            return new FirewallPolicyIntrusionDetectionArgs(configuration, mode);
+
+        public Builder mode(Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
+            return mode(Output.of(mode));
+        }
+
+        public FirewallPolicyIntrusionDetectionArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ApiEntityReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public ApiEntityReferenceResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private ApiEntityReferenceResponse() {}
 
-    private ApiEntityReferenceResponse() {
-        this.id = null;
+    private ApiEntityReferenceResponse(ApiEntityReferenceResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiEntityReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private ApiEntityReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiEntityReferenceResponse();
         }
 
         public Builder(ApiEntityReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ApiEntityReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public ApiEntityReferenceResponse build() {
-            return new ApiEntityReferenceResponse(id);
+        }
+
+        public ApiEntityReferenceResponse build() {
+            return $;
         }
     }
+
 }

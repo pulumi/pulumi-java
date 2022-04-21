@@ -27,7 +27,7 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="instances", required=true)
-      private final List<ConfigurationServiceInstanceResponse> instances;
+    private List<ConfigurationServiceInstanceResponse> instances;
 
     public List<ConfigurationServiceInstanceResponse> instances() {
         return this.instances;
@@ -38,7 +38,7 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -49,7 +49,7 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="resourceRequests", required=true)
-      private final ConfigurationServiceResourceRequestsResponse resourceRequests;
+    private ConfigurationServiceResourceRequestsResponse resourceRequests;
 
     public ConfigurationServiceResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
@@ -60,76 +60,69 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="settings")
-      private final @Nullable ConfigurationServiceSettingsResponse settings;
+    private @Nullable ConfigurationServiceSettingsResponse settings;
 
     public Optional<ConfigurationServiceSettingsResponse> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
-    public ConfigurationServicePropertiesResponse(
-        List<ConfigurationServiceInstanceResponse> instances,
-        String provisioningState,
-        ConfigurationServiceResourceRequestsResponse resourceRequests,
-        @Nullable ConfigurationServiceSettingsResponse settings) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceRequests = Objects.requireNonNull(resourceRequests, "expected parameter 'resourceRequests' to be non-null");
-        this.settings = settings;
-    }
+    private ConfigurationServicePropertiesResponse() {}
 
-    private ConfigurationServicePropertiesResponse() {
-        this.instances = List.of();
-        this.provisioningState = null;
-        this.resourceRequests = null;
-        this.settings = null;
+    private ConfigurationServicePropertiesResponse(ConfigurationServicePropertiesResponse $) {
+        this.instances = $.instances;
+        this.provisioningState = $.provisioningState;
+        this.resourceRequests = $.resourceRequests;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServicePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ConfigurationServiceInstanceResponse> instances;
-        private String provisioningState;
-        private ConfigurationServiceResourceRequestsResponse resourceRequests;
-        private @Nullable ConfigurationServiceSettingsResponse settings;
+        private ConfigurationServicePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServicePropertiesResponse();
         }
 
         public Builder(ConfigurationServicePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceRequests = defaults.resourceRequests;
-    	      this.settings = defaults.settings;
+            $ = new ConfigurationServicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(List<ConfigurationServiceInstanceResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(ConfigurationServiceInstanceResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceRequests(ConfigurationServiceResourceRequestsResponse resourceRequests) {
-            this.resourceRequests = Objects.requireNonNull(resourceRequests);
+            $.resourceRequests = resourceRequests;
             return this;
         }
+
         public Builder settings(@Nullable ConfigurationServiceSettingsResponse settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
-        }        public ConfigurationServicePropertiesResponse build() {
-            return new ConfigurationServicePropertiesResponse(instances, provisioningState, resourceRequests, settings);
+        }
+
+        public ConfigurationServicePropertiesResponse build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceRequests = Objects.requireNonNull($.resourceRequests, "expected parameter 'resourceRequests' to be non-null");
+            return $;
         }
     }
+
 }

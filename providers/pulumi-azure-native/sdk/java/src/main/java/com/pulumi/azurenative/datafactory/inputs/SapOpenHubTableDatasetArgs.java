@@ -14,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="baseRequestId")
-      private final @Nullable Output<Object> baseRequestId;
+    private @Nullable Output<Object> baseRequestId;
 
-    public Output<Object> baseRequestId() {
-        return this.baseRequestId == null ? Codegen.empty() : this.baseRequestId;
+    public Optional<Output<Object>> baseRequestId() {
+        return Optional.ofNullable(this.baseRequestId);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="excludeLastRequest")
-      private final @Nullable Output<Object> excludeLastRequest;
+    private @Nullable Output<Object> excludeLastRequest;
 
-    public Output<Object> excludeLastRequest() {
-        return this.excludeLastRequest == null ? Codegen.empty() : this.excludeLastRequest;
+    public Optional<Output<Object>> excludeLastRequest() {
+        return Optional.ofNullable(this.excludeLastRequest);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<DatasetFolderArgs> folder;
+    private @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<DatasetFolderArgs>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
@@ -96,7 +97,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="openHubDestinationName", required=true)
-      private final Output<Object> openHubDestinationName;
+    private Output<Object> openHubDestinationName;
 
     public Output<Object> openHubDestinationName() {
         return this.openHubDestinationName;
@@ -107,10 +108,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -118,10 +119,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<Object> schema;
+    private @Nullable Output<Object> schema;
 
-    public Output<Object> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<Object>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -129,10 +130,10 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="structure")
-      private final @Nullable Output<Object> structure;
+    private @Nullable Output<Object> structure;
 
-    public Output<Object> structure() {
-        return this.structure == null ? Codegen.empty() : this.structure;
+    public Optional<Output<Object>> structure() {
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -141,183 +142,155 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SapOpenHubTableDatasetArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> baseRequestId,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> excludeLastRequest,
-        @Nullable Output<DatasetFolderArgs> folder,
-        Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<Object> openHubDestinationName,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Object> schema,
-        @Nullable Output<Object> structure,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.baseRequestId = baseRequestId;
-        this.description = description;
-        this.excludeLastRequest = excludeLastRequest;
-        this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.openHubDestinationName = Objects.requireNonNull(openHubDestinationName, "expected parameter 'openHubDestinationName' to be non-null");
-        this.parameters = parameters;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SapOpenHubTableDatasetArgs() {}
 
-    private SapOpenHubTableDatasetArgs() {
-        this.annotations = Codegen.empty();
-        this.baseRequestId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.excludeLastRequest = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.openHubDestinationName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.structure = Codegen.empty();
-        this.type = Codegen.empty();
+    private SapOpenHubTableDatasetArgs(SapOpenHubTableDatasetArgs $) {
+        this.annotations = $.annotations;
+        this.baseRequestId = $.baseRequestId;
+        this.description = $.description;
+        this.excludeLastRequest = $.excludeLastRequest;
+        this.folder = $.folder;
+        this.linkedServiceName = $.linkedServiceName;
+        this.openHubDestinationName = $.openHubDestinationName;
+        this.parameters = $.parameters;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapOpenHubTableDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> baseRequestId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> excludeLastRequest;
-        private @Nullable Output<DatasetFolderArgs> folder;
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<Object> openHubDestinationName;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Object> schema;
-        private @Nullable Output<Object> structure;
-        private Output<String> type;
+        private SapOpenHubTableDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapOpenHubTableDatasetArgs();
         }
 
         public Builder(SapOpenHubTableDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.baseRequestId = defaults.baseRequestId;
-    	      this.description = defaults.description;
-    	      this.excludeLastRequest = defaults.excludeLastRequest;
-    	      this.folder = defaults.folder;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.openHubDestinationName = defaults.openHubDestinationName;
-    	      this.parameters = defaults.parameters;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
+            $ = new SapOpenHubTableDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder baseRequestId(@Nullable Output<Object> baseRequestId) {
-            this.baseRequestId = baseRequestId;
+            $.baseRequestId = baseRequestId;
             return this;
         }
-        public Builder baseRequestId(@Nullable Object baseRequestId) {
-            this.baseRequestId = Codegen.ofNullable(baseRequestId);
-            return this;
+
+        public Builder baseRequestId(Object baseRequestId) {
+            return baseRequestId(Output.of(baseRequestId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder excludeLastRequest(@Nullable Output<Object> excludeLastRequest) {
-            this.excludeLastRequest = excludeLastRequest;
+            $.excludeLastRequest = excludeLastRequest;
             return this;
         }
-        public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
-            this.excludeLastRequest = Codegen.ofNullable(excludeLastRequest);
-            return this;
+
+        public Builder excludeLastRequest(Object excludeLastRequest) {
+            return excludeLastRequest(Output.of(excludeLastRequest));
         }
+
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(DatasetFolderArgs folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder openHubDestinationName(Output<Object> openHubDestinationName) {
-            this.openHubDestinationName = Objects.requireNonNull(openHubDestinationName);
+            $.openHubDestinationName = openHubDestinationName;
             return this;
         }
+
         public Builder openHubDestinationName(Object openHubDestinationName) {
-            this.openHubDestinationName = Output.of(Objects.requireNonNull(openHubDestinationName));
-            return this;
+            return openHubDestinationName(Output.of(openHubDestinationName));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder schema(@Nullable Output<Object> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable Object schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(Object schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder structure(@Nullable Output<Object> structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
-        public Builder structure(@Nullable Object structure) {
-            this.structure = Codegen.ofNullable(structure);
-            return this;
+
+        public Builder structure(Object structure) {
+            return structure(Output.of(structure));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SapOpenHubTableDatasetArgs build() {
-            return new SapOpenHubTableDatasetArgs(annotations, baseRequestId, description, excludeLastRequest, folder, linkedServiceName, openHubDestinationName, parameters, schema, structure, type);
+            return type(Output.of(type));
+        }
+
+        public SapOpenHubTableDatasetArgs build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.openHubDestinationName = Objects.requireNonNull($.openHubDestinationName, "expected parameter 'openHubDestinationName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

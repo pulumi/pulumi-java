@@ -16,68 +16,65 @@ public final class DefaultRolloutSpecificationResponseCanary extends com.pulumi.
     public static final DefaultRolloutSpecificationResponseCanary Empty = new DefaultRolloutSpecificationResponseCanary();
 
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     @Import(name="skipRegions")
-      private final @Nullable List<String> skipRegions;
+    private @Nullable List<String> skipRegions;
 
-    public List<String> skipRegions() {
-        return this.skipRegions == null ? List.of() : this.skipRegions;
+    public Optional<List<String>> skipRegions() {
+        return Optional.ofNullable(this.skipRegions);
     }
 
-    public DefaultRolloutSpecificationResponseCanary(
-        @Nullable List<String> regions,
-        @Nullable List<String> skipRegions) {
-        this.regions = regions;
-        this.skipRegions = skipRegions;
-    }
+    private DefaultRolloutSpecificationResponseCanary() {}
 
-    private DefaultRolloutSpecificationResponseCanary() {
-        this.regions = List.of();
-        this.skipRegions = List.of();
+    private DefaultRolloutSpecificationResponseCanary(DefaultRolloutSpecificationResponseCanary $) {
+        this.regions = $.regions;
+        this.skipRegions = $.skipRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutSpecificationResponseCanary defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> regions;
-        private @Nullable List<String> skipRegions;
+        private DefaultRolloutSpecificationResponseCanary $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutSpecificationResponseCanary();
         }
 
         public Builder(DefaultRolloutSpecificationResponseCanary defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regions = defaults.regions;
-    	      this.skipRegions = defaults.skipRegions;
+            $ = new DefaultRolloutSpecificationResponseCanary(Objects.requireNonNull(defaults));
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder skipRegions(@Nullable List<String> skipRegions) {
-            this.skipRegions = skipRegions;
+            $.skipRegions = skipRegions;
             return this;
         }
+
         public Builder skipRegions(String... skipRegions) {
             return skipRegions(List.of(skipRegions));
-        }        public DefaultRolloutSpecificationResponseCanary build() {
-            return new DefaultRolloutSpecificationResponseCanary(regions, skipRegions);
+        }
+
+        public DefaultRolloutSpecificationResponseCanary build() {
+            return $;
         }
     }
+
 }

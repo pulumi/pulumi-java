@@ -7,9 +7,9 @@ import com.pulumi.azurenative.migrate.enums.ProjectStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="assessmentSolutionId")
-      private final @Nullable Output<String> assessmentSolutionId;
+    private @Nullable Output<String> assessmentSolutionId;
 
-    public Output<String> assessmentSolutionId() {
-        return this.assessmentSolutionId == null ? Codegen.empty() : this.assessmentSolutionId;
+    public Optional<Output<String>> assessmentSolutionId() {
+        return Optional.ofNullable(this.assessmentSolutionId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customerStorageAccountArmId")
-      private final @Nullable Output<String> customerStorageAccountArmId;
+    private @Nullable Output<String> customerStorageAccountArmId;
 
-    public Output<String> customerStorageAccountArmId() {
-        return this.customerStorageAccountArmId == null ? Codegen.empty() : this.customerStorageAccountArmId;
+    public Optional<Output<String>> customerStorageAccountArmId() {
+        return Optional.ofNullable(this.customerStorageAccountArmId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customerWorkspaceId")
-      private final @Nullable Output<String> customerWorkspaceId;
+    private @Nullable Output<String> customerWorkspaceId;
 
-    public Output<String> customerWorkspaceId() {
-        return this.customerWorkspaceId == null ? Codegen.empty() : this.customerWorkspaceId;
+    public Optional<Output<String>> customerWorkspaceId() {
+        return Optional.ofNullable(this.customerWorkspaceId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customerWorkspaceLocation")
-      private final @Nullable Output<String> customerWorkspaceLocation;
+    private @Nullable Output<String> customerWorkspaceLocation;
 
-    public Output<String> customerWorkspaceLocation() {
-        return this.customerWorkspaceLocation == null ? Codegen.empty() : this.customerWorkspaceLocation;
+    public Optional<Output<String>> customerWorkspaceLocation() {
+        return Optional.ofNullable(this.customerWorkspaceLocation);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="projectStatus")
-      private final @Nullable Output<Either<String,ProjectStatus>> projectStatus;
+    private @Nullable Output<Either<String,ProjectStatus>> projectStatus;
 
-    public Output<Either<String,ProjectStatus>> projectStatus() {
-        return this.projectStatus == null ? Codegen.empty() : this.projectStatus;
+    public Optional<Output<Either<String,ProjectStatus>>> projectStatus() {
+        return Optional.ofNullable(this.projectStatus);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<String> publicNetworkAccess;
+    private @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<String>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public ProjectPropertiesArgs(
-        @Nullable Output<String> assessmentSolutionId,
-        @Nullable Output<String> customerStorageAccountArmId,
-        @Nullable Output<String> customerWorkspaceId,
-        @Nullable Output<String> customerWorkspaceLocation,
-        @Nullable Output<Either<String,ProjectStatus>> projectStatus,
-        @Nullable Output<String> publicNetworkAccess) {
-        this.assessmentSolutionId = assessmentSolutionId;
-        this.customerStorageAccountArmId = customerStorageAccountArmId;
-        this.customerWorkspaceId = customerWorkspaceId;
-        this.customerWorkspaceLocation = customerWorkspaceLocation;
-        this.projectStatus = projectStatus;
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private ProjectPropertiesArgs() {}
 
-    private ProjectPropertiesArgs() {
-        this.assessmentSolutionId = Codegen.empty();
-        this.customerStorageAccountArmId = Codegen.empty();
-        this.customerWorkspaceId = Codegen.empty();
-        this.customerWorkspaceLocation = Codegen.empty();
-        this.projectStatus = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
+    private ProjectPropertiesArgs(ProjectPropertiesArgs $) {
+        this.assessmentSolutionId = $.assessmentSolutionId;
+        this.customerStorageAccountArmId = $.customerStorageAccountArmId;
+        this.customerWorkspaceId = $.customerWorkspaceId;
+        this.customerWorkspaceLocation = $.customerWorkspaceLocation;
+        this.projectStatus = $.projectStatus;
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assessmentSolutionId;
-        private @Nullable Output<String> customerStorageAccountArmId;
-        private @Nullable Output<String> customerWorkspaceId;
-        private @Nullable Output<String> customerWorkspaceLocation;
-        private @Nullable Output<Either<String,ProjectStatus>> projectStatus;
-        private @Nullable Output<String> publicNetworkAccess;
+        private ProjectPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectPropertiesArgs();
         }
 
         public Builder(ProjectPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentSolutionId = defaults.assessmentSolutionId;
-    	      this.customerStorageAccountArmId = defaults.customerStorageAccountArmId;
-    	      this.customerWorkspaceId = defaults.customerWorkspaceId;
-    	      this.customerWorkspaceLocation = defaults.customerWorkspaceLocation;
-    	      this.projectStatus = defaults.projectStatus;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new ProjectPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentSolutionId(@Nullable Output<String> assessmentSolutionId) {
-            this.assessmentSolutionId = assessmentSolutionId;
+            $.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
-        public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
-            this.assessmentSolutionId = Codegen.ofNullable(assessmentSolutionId);
-            return this;
+
+        public Builder assessmentSolutionId(String assessmentSolutionId) {
+            return assessmentSolutionId(Output.of(assessmentSolutionId));
         }
+
         public Builder customerStorageAccountArmId(@Nullable Output<String> customerStorageAccountArmId) {
-            this.customerStorageAccountArmId = customerStorageAccountArmId;
+            $.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
-        public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
-            this.customerStorageAccountArmId = Codegen.ofNullable(customerStorageAccountArmId);
-            return this;
+
+        public Builder customerStorageAccountArmId(String customerStorageAccountArmId) {
+            return customerStorageAccountArmId(Output.of(customerStorageAccountArmId));
         }
+
         public Builder customerWorkspaceId(@Nullable Output<String> customerWorkspaceId) {
-            this.customerWorkspaceId = customerWorkspaceId;
+            $.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
-        public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
-            this.customerWorkspaceId = Codegen.ofNullable(customerWorkspaceId);
-            return this;
+
+        public Builder customerWorkspaceId(String customerWorkspaceId) {
+            return customerWorkspaceId(Output.of(customerWorkspaceId));
         }
+
         public Builder customerWorkspaceLocation(@Nullable Output<String> customerWorkspaceLocation) {
-            this.customerWorkspaceLocation = customerWorkspaceLocation;
+            $.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
-        public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
-            this.customerWorkspaceLocation = Codegen.ofNullable(customerWorkspaceLocation);
-            return this;
+
+        public Builder customerWorkspaceLocation(String customerWorkspaceLocation) {
+            return customerWorkspaceLocation(Output.of(customerWorkspaceLocation));
         }
+
         public Builder projectStatus(@Nullable Output<Either<String,ProjectStatus>> projectStatus) {
-            this.projectStatus = projectStatus;
+            $.projectStatus = projectStatus;
             return this;
         }
-        public Builder projectStatus(@Nullable Either<String,ProjectStatus> projectStatus) {
-            this.projectStatus = Codegen.ofNullable(projectStatus);
-            return this;
+
+        public Builder projectStatus(Either<String,ProjectStatus> projectStatus) {
+            return projectStatus(Output.of(projectStatus));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
-        }        public ProjectPropertiesArgs build() {
-            return new ProjectPropertiesArgs(assessmentSolutionId, customerStorageAccountArmId, customerWorkspaceId, customerWorkspaceLocation, projectStatus, publicNetworkAccess);
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public ProjectPropertiesArgs build() {
+            return $;
         }
     }
+
 }

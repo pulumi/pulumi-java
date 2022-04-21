@@ -19,7 +19,7 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -30,55 +30,51 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public GetManagementGroupSubscriptionArgs(
-        String groupId,
-        @Nullable String subscriptionId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.subscriptionId = subscriptionId;
-    }
+    private GetManagementGroupSubscriptionArgs() {}
 
-    private GetManagementGroupSubscriptionArgs() {
-        this.groupId = null;
-        this.subscriptionId = null;
+    private GetManagementGroupSubscriptionArgs(GetManagementGroupSubscriptionArgs $) {
+        this.groupId = $.groupId;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementGroupSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
-        private @Nullable String subscriptionId;
+        private GetManagementGroupSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementGroupSubscriptionArgs();
         }
 
         public Builder(GetManagementGroupSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new GetManagementGroupSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public GetManagementGroupSubscriptionArgs build() {
-            return new GetManagementGroupSubscriptionArgs(groupId, subscriptionId);
+        }
+
+        public GetManagementGroupSubscriptionArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+    private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<Either<String,AuthenticationType>>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionStringPrimaryKey")
-      private final @Nullable Output<String> connectionStringPrimaryKey;
+    private @Nullable Output<String> connectionStringPrimaryKey;
 
-    public Output<String> connectionStringPrimaryKey() {
-        return this.connectionStringPrimaryKey == null ? Codegen.empty() : this.connectionStringPrimaryKey;
+    public Optional<Output<String>> connectionStringPrimaryKey() {
+        return Optional.ofNullable(this.connectionStringPrimaryKey);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionStringSecondaryKey")
-      private final @Nullable Output<String> connectionStringSecondaryKey;
+    private @Nullable Output<String> connectionStringSecondaryKey;
 
-    public Output<String> connectionStringSecondaryKey() {
-        return this.connectionStringSecondaryKey == null ? Codegen.empty() : this.connectionStringSecondaryKey;
+    public Optional<Output<String>> connectionStringSecondaryKey() {
+        return Optional.ofNullable(this.connectionStringSecondaryKey);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterSecret")
-      private final @Nullable Output<String> deadLetterSecret;
+    private @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> deadLetterSecret() {
-        return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
+    public Optional<Output<String>> deadLetterSecret() {
+        return Optional.ofNullable(this.deadLetterSecret);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterUri")
-      private final @Nullable Output<String> deadLetterUri;
+    private @Nullable Output<String> deadLetterUri;
 
-    public Output<String> deadLetterUri() {
-        return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
+    public Optional<Output<String>> deadLetterUri() {
+        return Optional.ofNullable(this.deadLetterUri);
     }
 
     /**
@@ -82,7 +83,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -93,10 +94,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable Output<String> endpointUri;
+    private @Nullable Output<String> endpointUri;
 
-    public Output<String> endpointUri() {
-        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
+    public Optional<Output<String>> endpointUri() {
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -104,141 +105,119 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entityPath")
-      private final @Nullable Output<String> entityPath;
+    private @Nullable Output<String> entityPath;
 
-    public Output<String> entityPath() {
-        return this.entityPath == null ? Codegen.empty() : this.entityPath;
+    public Optional<Output<String>> entityPath() {
+        return Optional.ofNullable(this.entityPath);
     }
 
-    public EventHubArgs(
-        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Output<String> connectionStringPrimaryKey,
-        @Nullable Output<String> connectionStringSecondaryKey,
-        @Nullable Output<String> deadLetterSecret,
-        @Nullable Output<String> deadLetterUri,
-        Output<String> endpointType,
-        @Nullable Output<String> endpointUri,
-        @Nullable Output<String> entityPath) {
-        this.authenticationType = authenticationType;
-        this.connectionStringPrimaryKey = connectionStringPrimaryKey;
-        this.connectionStringSecondaryKey = connectionStringSecondaryKey;
-        this.deadLetterSecret = deadLetterSecret;
-        this.deadLetterUri = deadLetterUri;
-        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
-        this.endpointUri = endpointUri;
-        this.entityPath = entityPath;
-    }
+    private EventHubArgs() {}
 
-    private EventHubArgs() {
-        this.authenticationType = Codegen.empty();
-        this.connectionStringPrimaryKey = Codegen.empty();
-        this.connectionStringSecondaryKey = Codegen.empty();
-        this.deadLetterSecret = Codegen.empty();
-        this.deadLetterUri = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.endpointUri = Codegen.empty();
-        this.entityPath = Codegen.empty();
+    private EventHubArgs(EventHubArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.connectionStringPrimaryKey = $.connectionStringPrimaryKey;
+        this.connectionStringSecondaryKey = $.connectionStringSecondaryKey;
+        this.deadLetterSecret = $.deadLetterSecret;
+        this.deadLetterUri = $.deadLetterUri;
+        this.endpointType = $.endpointType;
+        this.endpointUri = $.endpointUri;
+        this.entityPath = $.entityPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Output<String> connectionStringPrimaryKey;
-        private @Nullable Output<String> connectionStringSecondaryKey;
-        private @Nullable Output<String> deadLetterSecret;
-        private @Nullable Output<String> deadLetterUri;
-        private Output<String> endpointType;
-        private @Nullable Output<String> endpointUri;
-        private @Nullable Output<String> entityPath;
+        private EventHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubArgs();
         }
 
         public Builder(EventHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectionStringPrimaryKey = defaults.connectionStringPrimaryKey;
-    	      this.connectionStringSecondaryKey = defaults.connectionStringSecondaryKey;
-    	      this.deadLetterSecret = defaults.deadLetterSecret;
-    	      this.deadLetterUri = defaults.deadLetterUri;
-    	      this.endpointType = defaults.endpointType;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.entityPath = defaults.entityPath;
+            $ = new EventHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder connectionStringPrimaryKey(@Nullable Output<String> connectionStringPrimaryKey) {
-            this.connectionStringPrimaryKey = connectionStringPrimaryKey;
+            $.connectionStringPrimaryKey = connectionStringPrimaryKey;
             return this;
         }
-        public Builder connectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
-            this.connectionStringPrimaryKey = Codegen.ofNullable(connectionStringPrimaryKey);
-            return this;
+
+        public Builder connectionStringPrimaryKey(String connectionStringPrimaryKey) {
+            return connectionStringPrimaryKey(Output.of(connectionStringPrimaryKey));
         }
+
         public Builder connectionStringSecondaryKey(@Nullable Output<String> connectionStringSecondaryKey) {
-            this.connectionStringSecondaryKey = connectionStringSecondaryKey;
+            $.connectionStringSecondaryKey = connectionStringSecondaryKey;
             return this;
         }
-        public Builder connectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
-            this.connectionStringSecondaryKey = Codegen.ofNullable(connectionStringSecondaryKey);
-            return this;
+
+        public Builder connectionStringSecondaryKey(String connectionStringSecondaryKey) {
+            return connectionStringSecondaryKey(Output.of(connectionStringSecondaryKey));
         }
+
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
-            this.deadLetterSecret = deadLetterSecret;
+            $.deadLetterSecret = deadLetterSecret;
             return this;
         }
-        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Codegen.ofNullable(deadLetterSecret);
-            return this;
+
+        public Builder deadLetterSecret(String deadLetterSecret) {
+            return deadLetterSecret(Output.of(deadLetterSecret));
         }
+
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
-            this.deadLetterUri = deadLetterUri;
+            $.deadLetterUri = deadLetterUri;
             return this;
         }
-        public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Codegen.ofNullable(deadLetterUri);
-            return this;
+
+        public Builder deadLetterUri(String deadLetterUri) {
+            return deadLetterUri(Output.of(deadLetterUri));
         }
+
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
-        public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Codegen.ofNullable(endpointUri);
-            return this;
+
+        public Builder endpointUri(String endpointUri) {
+            return endpointUri(Output.of(endpointUri));
         }
+
         public Builder entityPath(@Nullable Output<String> entityPath) {
-            this.entityPath = entityPath;
+            $.entityPath = entityPath;
             return this;
         }
-        public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Codegen.ofNullable(entityPath);
-            return this;
-        }        public EventHubArgs build() {
-            return new EventHubArgs(authenticationType, connectionStringPrimaryKey, connectionStringSecondaryKey, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath);
+
+        public Builder entityPath(String entityPath) {
+            return entityPath(Output.of(entityPath));
+        }
+
+        public EventHubArgs build() {
+            $.endpointType = Codegen.stringProp("endpointType").output().arg($.endpointType).require();
+            return $;
         }
     }
+
 }

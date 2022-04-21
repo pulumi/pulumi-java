@@ -5,9 +5,9 @@ package com.pulumi.azurenative.automation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -31,7 +31,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hybridRunbookWorkerGroupName", required=true)
-      private final Output<String> hybridRunbookWorkerGroupName;
+    private Output<String> hybridRunbookWorkerGroupName;
 
     public Output<String> hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
@@ -42,10 +42,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hybridRunbookWorkerId")
-      private final @Nullable Output<String> hybridRunbookWorkerId;
+    private @Nullable Output<String> hybridRunbookWorkerId;
 
-    public Output<String> hybridRunbookWorkerId() {
-        return this.hybridRunbookWorkerId == null ? Codegen.empty() : this.hybridRunbookWorkerId;
+    public Optional<Output<String>> hybridRunbookWorkerId() {
+        return Optional.ofNullable(this.hybridRunbookWorkerId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,115 +75,101 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vmResourceId")
-      private final @Nullable Output<String> vmResourceId;
+    private @Nullable Output<String> vmResourceId;
 
-    public Output<String> vmResourceId() {
-        return this.vmResourceId == null ? Codegen.empty() : this.vmResourceId;
+    public Optional<Output<String>> vmResourceId() {
+        return Optional.ofNullable(this.vmResourceId);
     }
 
-    public HybridRunbookWorkerArgs(
-        Output<String> automationAccountName,
-        Output<String> hybridRunbookWorkerGroupName,
-        @Nullable Output<String> hybridRunbookWorkerId,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> vmResourceId) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName, "expected parameter 'hybridRunbookWorkerGroupName' to be non-null");
-        this.hybridRunbookWorkerId = hybridRunbookWorkerId;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmResourceId = vmResourceId;
-    }
+    private HybridRunbookWorkerArgs() {}
 
-    private HybridRunbookWorkerArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.hybridRunbookWorkerGroupName = Codegen.empty();
-        this.hybridRunbookWorkerId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.vmResourceId = Codegen.empty();
+    private HybridRunbookWorkerArgs(HybridRunbookWorkerArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.hybridRunbookWorkerGroupName = $.hybridRunbookWorkerGroupName;
+        this.hybridRunbookWorkerId = $.hybridRunbookWorkerId;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmResourceId = $.vmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridRunbookWorkerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private Output<String> hybridRunbookWorkerGroupName;
-        private @Nullable Output<String> hybridRunbookWorkerId;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> vmResourceId;
+        private HybridRunbookWorkerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridRunbookWorkerArgs();
         }
 
         public Builder(HybridRunbookWorkerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.hybridRunbookWorkerGroupName = defaults.hybridRunbookWorkerGroupName;
-    	      this.hybridRunbookWorkerId = defaults.hybridRunbookWorkerId;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmResourceId = defaults.vmResourceId;
+            $ = new HybridRunbookWorkerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder hybridRunbookWorkerGroupName(Output<String> hybridRunbookWorkerGroupName) {
-            this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName);
+            $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
+
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
-            this.hybridRunbookWorkerGroupName = Output.of(Objects.requireNonNull(hybridRunbookWorkerGroupName));
-            return this;
+            return hybridRunbookWorkerGroupName(Output.of(hybridRunbookWorkerGroupName));
         }
+
         public Builder hybridRunbookWorkerId(@Nullable Output<String> hybridRunbookWorkerId) {
-            this.hybridRunbookWorkerId = hybridRunbookWorkerId;
+            $.hybridRunbookWorkerId = hybridRunbookWorkerId;
             return this;
         }
-        public Builder hybridRunbookWorkerId(@Nullable String hybridRunbookWorkerId) {
-            this.hybridRunbookWorkerId = Codegen.ofNullable(hybridRunbookWorkerId);
-            return this;
+
+        public Builder hybridRunbookWorkerId(String hybridRunbookWorkerId) {
+            return hybridRunbookWorkerId(Output.of(hybridRunbookWorkerId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
-            this.vmResourceId = vmResourceId;
+            $.vmResourceId = vmResourceId;
             return this;
         }
-        public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = Codegen.ofNullable(vmResourceId);
-            return this;
-        }        public HybridRunbookWorkerArgs build() {
-            return new HybridRunbookWorkerArgs(automationAccountName, hybridRunbookWorkerGroupName, hybridRunbookWorkerId, name, resourceGroupName, vmResourceId);
+
+        public Builder vmResourceId(String vmResourceId) {
+            return vmResourceId(Output.of(vmResourceId));
+        }
+
+        public HybridRunbookWorkerArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.hybridRunbookWorkerGroupName = Objects.requireNonNull($.hybridRunbookWorkerGroupName, "expected parameter 'hybridRunbookWorkerGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

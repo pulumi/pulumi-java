@@ -8,10 +8,10 @@ import com.pulumi.azurenative.cognitiveservices.inputs.CommitmentPeriodArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="autoRenew")
-      private final @Nullable Output<Boolean> autoRenew;
+    private @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> autoRenew() {
-        return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
+    public Optional<Output<Boolean>> autoRenew() {
+        return Optional.ofNullable(this.autoRenew);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="current")
-      private final @Nullable Output<CommitmentPeriodArgs> current;
+    private @Nullable Output<CommitmentPeriodArgs> current;
 
-    public Output<CommitmentPeriodArgs> current() {
-        return this.current == null ? Codegen.empty() : this.current;
+    public Optional<Output<CommitmentPeriodArgs>> current() {
+        return Optional.ofNullable(this.current);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="hostingModel")
-      private final @Nullable Output<Either<String,HostingModel>> hostingModel;
+    private @Nullable Output<Either<String,HostingModel>> hostingModel;
 
-    public Output<Either<String,HostingModel>> hostingModel() {
-        return this.hostingModel == null ? Codegen.empty() : this.hostingModel;
+    public Optional<Output<Either<String,HostingModel>>> hostingModel() {
+        return Optional.ofNullable(this.hostingModel);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="next")
-      private final @Nullable Output<CommitmentPeriodArgs> next;
+    private @Nullable Output<CommitmentPeriodArgs> next;
 
-    public Output<CommitmentPeriodArgs> next() {
-        return this.next == null ? Codegen.empty() : this.next;
+    public Optional<Output<CommitmentPeriodArgs>> next() {
+        return Optional.ofNullable(this.next);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="planType")
-      private final @Nullable Output<String> planType;
+    private @Nullable Output<String> planType;
 
-    public Output<String> planType() {
-        return this.planType == null ? Codegen.empty() : this.planType;
+    public Optional<Output<String>> planType() {
+        return Optional.ofNullable(this.planType);
     }
 
-    public CommitmentPlanPropertiesArgs(
-        @Nullable Output<Boolean> autoRenew,
-        @Nullable Output<CommitmentPeriodArgs> current,
-        @Nullable Output<Either<String,HostingModel>> hostingModel,
-        @Nullable Output<CommitmentPeriodArgs> next,
-        @Nullable Output<String> planType) {
-        this.autoRenew = autoRenew;
-        this.current = current;
-        this.hostingModel = hostingModel;
-        this.next = next;
-        this.planType = planType;
-    }
+    private CommitmentPlanPropertiesArgs() {}
 
-    private CommitmentPlanPropertiesArgs() {
-        this.autoRenew = Codegen.empty();
-        this.current = Codegen.empty();
-        this.hostingModel = Codegen.empty();
-        this.next = Codegen.empty();
-        this.planType = Codegen.empty();
+    private CommitmentPlanPropertiesArgs(CommitmentPlanPropertiesArgs $) {
+        this.autoRenew = $.autoRenew;
+        this.current = $.current;
+        this.hostingModel = $.hostingModel;
+        this.next = $.next;
+        this.planType = $.planType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentPlanPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoRenew;
-        private @Nullable Output<CommitmentPeriodArgs> current;
-        private @Nullable Output<Either<String,HostingModel>> hostingModel;
-        private @Nullable Output<CommitmentPeriodArgs> next;
-        private @Nullable Output<String> planType;
+        private CommitmentPlanPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentPlanPropertiesArgs();
         }
 
         public Builder(CommitmentPlanPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRenew = defaults.autoRenew;
-    	      this.current = defaults.current;
-    	      this.hostingModel = defaults.hostingModel;
-    	      this.next = defaults.next;
-    	      this.planType = defaults.planType;
+            $ = new CommitmentPlanPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
-            this.autoRenew = autoRenew;
+            $.autoRenew = autoRenew;
             return this;
         }
-        public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Codegen.ofNullable(autoRenew);
-            return this;
+
+        public Builder autoRenew(Boolean autoRenew) {
+            return autoRenew(Output.of(autoRenew));
         }
+
         public Builder current(@Nullable Output<CommitmentPeriodArgs> current) {
-            this.current = current;
+            $.current = current;
             return this;
         }
-        public Builder current(@Nullable CommitmentPeriodArgs current) {
-            this.current = Codegen.ofNullable(current);
-            return this;
+
+        public Builder current(CommitmentPeriodArgs current) {
+            return current(Output.of(current));
         }
+
         public Builder hostingModel(@Nullable Output<Either<String,HostingModel>> hostingModel) {
-            this.hostingModel = hostingModel;
+            $.hostingModel = hostingModel;
             return this;
         }
-        public Builder hostingModel(@Nullable Either<String,HostingModel> hostingModel) {
-            this.hostingModel = Codegen.ofNullable(hostingModel);
-            return this;
+
+        public Builder hostingModel(Either<String,HostingModel> hostingModel) {
+            return hostingModel(Output.of(hostingModel));
         }
+
         public Builder next(@Nullable Output<CommitmentPeriodArgs> next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
-        public Builder next(@Nullable CommitmentPeriodArgs next) {
-            this.next = Codegen.ofNullable(next);
-            return this;
+
+        public Builder next(CommitmentPeriodArgs next) {
+            return next(Output.of(next));
         }
+
         public Builder planType(@Nullable Output<String> planType) {
-            this.planType = planType;
+            $.planType = planType;
             return this;
         }
-        public Builder planType(@Nullable String planType) {
-            this.planType = Codegen.ofNullable(planType);
-            return this;
-        }        public CommitmentPlanPropertiesArgs build() {
-            return new CommitmentPlanPropertiesArgs(autoRenew, current, hostingModel, next, planType);
+
+        public Builder planType(String planType) {
+            return planType(Output.of(planType));
+        }
+
+        public CommitmentPlanPropertiesArgs build() {
+            return $;
         }
     }
+
 }

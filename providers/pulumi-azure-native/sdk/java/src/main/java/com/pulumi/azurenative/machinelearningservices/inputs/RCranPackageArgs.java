@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RCranPackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class RCranPackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repository")
-      private final @Nullable Output<String> repository;
+    private @Nullable Output<String> repository;
 
-    public Output<String> repository() {
-        return this.repository == null ? Codegen.empty() : this.repository;
+    public Optional<Output<String>> repository() {
+        return Optional.ofNullable(this.repository);
     }
 
-    public RCranPackageArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> repository) {
-        this.name = name;
-        this.repository = repository;
-    }
+    private RCranPackageArgs() {}
 
-    private RCranPackageArgs() {
-        this.name = Codegen.empty();
-        this.repository = Codegen.empty();
+    private RCranPackageArgs(RCranPackageArgs $) {
+        this.name = $.name;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RCranPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> repository;
+        private RCranPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RCranPackageArgs();
         }
 
         public Builder(RCranPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.repository = defaults.repository;
+            $ = new RCranPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder repository(@Nullable Output<String> repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
-        public Builder repository(@Nullable String repository) {
-            this.repository = Codegen.ofNullable(repository);
-            return this;
-        }        public RCranPackageArgs build() {
-            return new RCranPackageArgs(name, repository);
+
+        public Builder repository(String repository) {
+            return repository(Output.of(repository));
+        }
+
+        public RCranPackageArgs build() {
+            return $;
         }
     }
+
 }

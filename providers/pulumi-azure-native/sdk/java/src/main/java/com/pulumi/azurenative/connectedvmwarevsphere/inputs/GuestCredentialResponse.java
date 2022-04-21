@@ -23,45 +23,44 @@ public final class GuestCredentialResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public GuestCredentialResponse(@Nullable String username) {
-        this.username = username;
-    }
+    private GuestCredentialResponse() {}
 
-    private GuestCredentialResponse() {
-        this.username = null;
+    private GuestCredentialResponse(GuestCredentialResponse $) {
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String username;
+        private GuestCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestCredentialResponse();
         }
 
         public Builder(GuestCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.username = defaults.username;
+            $ = new GuestCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public GuestCredentialResponse build() {
-            return new GuestCredentialResponse(username);
+        }
+
+        public GuestCredentialResponse build() {
+            return $;
         }
     }
+
 }

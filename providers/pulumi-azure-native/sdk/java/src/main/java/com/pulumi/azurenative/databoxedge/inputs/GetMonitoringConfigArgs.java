@@ -17,7 +17,7 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="roleName", required=true)
-      private final String roleName;
+    private String roleName;
 
     public String roleName() {
         return this.roleName;
     }
 
-    public GetMonitoringConfigArgs(
-        String deviceName,
-        String resourceGroupName,
-        String roleName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-    }
+    private GetMonitoringConfigArgs() {}
 
-    private GetMonitoringConfigArgs() {
-        this.deviceName = null;
-        this.resourceGroupName = null;
-        this.roleName = null;
+    private GetMonitoringConfigArgs(GetMonitoringConfigArgs $) {
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleName = $.roleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMonitoringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String resourceGroupName;
-        private String roleName;
+        private GetMonitoringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMonitoringConfigArgs();
         }
 
         public Builder(GetMonitoringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleName = defaults.roleName;
+            $ = new GetMonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder roleName(String roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
-        }        public GetMonitoringConfigArgs build() {
-            return new GetMonitoringConfigArgs(deviceName, resourceGroupName, roleName);
+        }
+
+        public GetMonitoringConfigArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            return $;
         }
     }
+
 }

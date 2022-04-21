@@ -24,10 +24,10 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -47,7 +47,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -58,7 +58,7 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -69,82 +69,72 @@ public final class NetworkResourcePropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="statusDetails", required=true)
-      private final String statusDetails;
+    private String statusDetails;
 
     public String statusDetails() {
         return this.statusDetails;
     }
 
-    public NetworkResourcePropertiesResponse(
-        @Nullable String description,
-        String kind,
-        String provisioningState,
-        String status,
-        String statusDetails) {
-        this.description = description;
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusDetails = Objects.requireNonNull(statusDetails, "expected parameter 'statusDetails' to be non-null");
-    }
+    private NetworkResourcePropertiesResponse() {}
 
-    private NetworkResourcePropertiesResponse() {
-        this.description = null;
-        this.kind = null;
-        this.provisioningState = null;
-        this.status = null;
-        this.statusDetails = null;
+    private NetworkResourcePropertiesResponse(NetworkResourcePropertiesResponse $) {
+        this.description = $.description;
+        this.kind = $.kind;
+        this.provisioningState = $.provisioningState;
+        this.status = $.status;
+        this.statusDetails = $.statusDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String kind;
-        private String provisioningState;
-        private String status;
-        private String statusDetails;
+        private NetworkResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkResourcePropertiesResponse();
         }
 
         public Builder(NetworkResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.status = defaults.status;
-    	      this.statusDetails = defaults.statusDetails;
+            $ = new NetworkResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusDetails(String statusDetails) {
-            this.statusDetails = Objects.requireNonNull(statusDetails);
+            $.statusDetails = statusDetails;
             return this;
-        }        public NetworkResourcePropertiesResponse build() {
-            return new NetworkResourcePropertiesResponse(description, kind, provisioningState, status, statusDetails);
+        }
+
+        public NetworkResourcePropertiesResponse build() {
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusDetails = Objects.requireNonNull($.statusDetails, "expected parameter 'statusDetails' to be non-null");
+            return $;
         }
     }
+
 }

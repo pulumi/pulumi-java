@@ -27,10 +27,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="copyBehavior")
-      private final @Nullable Object copyBehavior;
+    private @Nullable Object copyBehavior;
 
     public Optional<Object> copyBehavior() {
-        return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
+        return Optional.ofNullable(this.copyBehavior);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metadata")
-      private final @Nullable List<MetadataItemResponse> metadata;
+    private @Nullable List<MetadataItemResponse> metadata;
 
-    public List<MetadataItemResponse> metadata() {
-        return this.metadata == null ? List.of() : this.metadata;
+    public Optional<List<MetadataItemResponse>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Object sinkRetryCount;
+    private @Nullable Object sinkRetryCount;
 
     public Optional<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Object sinkRetryWait;
+    private @Nullable Object sinkRetryWait;
 
     public Optional<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -105,10 +105,10 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Object writeBatchSize;
+    private @Nullable Object writeBatchSize;
 
     public Optional<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -116,121 +116,97 @@ public final class AzureBlobFSSinkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Object writeBatchTimeout;
+    private @Nullable Object writeBatchTimeout;
 
     public Optional<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    public AzureBlobFSSinkResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable List<MetadataItemResponse> metadata,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
-        this.copyBehavior = copyBehavior;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.metadata = metadata;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-    }
+    private AzureBlobFSSinkResponse() {}
 
-    private AzureBlobFSSinkResponse() {
-        this.copyBehavior = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.metadata = List.of();
-        this.sinkRetryCount = null;
-        this.sinkRetryWait = null;
-        this.type = null;
-        this.writeBatchSize = null;
-        this.writeBatchTimeout = null;
+    private AzureBlobFSSinkResponse(AzureBlobFSSinkResponse $) {
+        this.copyBehavior = $.copyBehavior;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.metadata = $.metadata;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobFSSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object copyBehavior;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable List<MetadataItemResponse> metadata;
-        private @Nullable Object sinkRetryCount;
-        private @Nullable Object sinkRetryWait;
-        private String type;
-        private @Nullable Object writeBatchSize;
-        private @Nullable Object writeBatchTimeout;
+        private AzureBlobFSSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobFSSinkResponse();
         }
 
         public Builder(AzureBlobFSSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyBehavior = defaults.copyBehavior;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.metadata = defaults.metadata;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
+            $ = new AzureBlobFSSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = copyBehavior;
+            $.copyBehavior = copyBehavior;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder metadata(@Nullable List<MetadataItemResponse> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metadata(MetadataItemResponse... metadata) {
             return metadata(List.of(metadata));
         }
+
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
+
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
+
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
-        }        public AzureBlobFSSinkResponse build() {
-            return new AzureBlobFSSinkResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, metadata, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
+        }
+
+        public AzureBlobFSSinkResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

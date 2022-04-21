@@ -17,7 +17,7 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="agreementName", required=true)
-      private final String agreementName;
+    private String agreementName;
 
     public String agreementName() {
         return this.agreementName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -39,64 +39,59 @@ public final class GetIntegrationAccountAgreementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIntegrationAccountAgreementArgs(
-        String agreementName,
-        String integrationAccountName,
-        String resourceGroupName) {
-        this.agreementName = Objects.requireNonNull(agreementName, "expected parameter 'agreementName' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIntegrationAccountAgreementArgs() {}
 
-    private GetIntegrationAccountAgreementArgs() {
-        this.agreementName = null;
-        this.integrationAccountName = null;
-        this.resourceGroupName = null;
+    private GetIntegrationAccountAgreementArgs(GetIntegrationAccountAgreementArgs $) {
+        this.agreementName = $.agreementName;
+        this.integrationAccountName = $.integrationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationAccountAgreementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agreementName;
-        private String integrationAccountName;
-        private String resourceGroupName;
+        private GetIntegrationAccountAgreementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationAccountAgreementArgs();
         }
 
         public Builder(GetIntegrationAccountAgreementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreementName = defaults.agreementName;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIntegrationAccountAgreementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agreementName(String agreementName) {
-            this.agreementName = Objects.requireNonNull(agreementName);
+            $.agreementName = agreementName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIntegrationAccountAgreementArgs build() {
-            return new GetIntegrationAccountAgreementArgs(agreementName, integrationAccountName, resourceGroupName);
+        }
+
+        public GetIntegrationAccountAgreementArgs build() {
+            $.agreementName = Objects.requireNonNull($.agreementName, "expected parameter 'agreementName' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

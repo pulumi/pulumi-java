@@ -5,9 +5,9 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServiceUnitArtifactsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parametersArtifactSourceRelativePath")
-      private final @Nullable Output<String> parametersArtifactSourceRelativePath;
+    private @Nullable Output<String> parametersArtifactSourceRelativePath;
 
-    public Output<String> parametersArtifactSourceRelativePath() {
-        return this.parametersArtifactSourceRelativePath == null ? Codegen.empty() : this.parametersArtifactSourceRelativePath;
+    public Optional<Output<String>> parametersArtifactSourceRelativePath() {
+        return Optional.ofNullable(this.parametersArtifactSourceRelativePath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceUnitArtifactsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parametersUri")
-      private final @Nullable Output<String> parametersUri;
+    private @Nullable Output<String> parametersUri;
 
-    public Output<String> parametersUri() {
-        return this.parametersUri == null ? Codegen.empty() : this.parametersUri;
+    public Optional<Output<String>> parametersUri() {
+        return Optional.ofNullable(this.parametersUri);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceUnitArtifactsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="templateArtifactSourceRelativePath")
-      private final @Nullable Output<String> templateArtifactSourceRelativePath;
+    private @Nullable Output<String> templateArtifactSourceRelativePath;
 
-    public Output<String> templateArtifactSourceRelativePath() {
-        return this.templateArtifactSourceRelativePath == null ? Codegen.empty() : this.templateArtifactSourceRelativePath;
+    public Optional<Output<String>> templateArtifactSourceRelativePath() {
+        return Optional.ofNullable(this.templateArtifactSourceRelativePath);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ServiceUnitArtifactsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="templateUri")
-      private final @Nullable Output<String> templateUri;
+    private @Nullable Output<String> templateUri;
 
-    public Output<String> templateUri() {
-        return this.templateUri == null ? Codegen.empty() : this.templateUri;
+    public Optional<Output<String>> templateUri() {
+        return Optional.ofNullable(this.templateUri);
     }
 
-    public ServiceUnitArtifactsArgs(
-        @Nullable Output<String> parametersArtifactSourceRelativePath,
-        @Nullable Output<String> parametersUri,
-        @Nullable Output<String> templateArtifactSourceRelativePath,
-        @Nullable Output<String> templateUri) {
-        this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
-        this.parametersUri = parametersUri;
-        this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
-        this.templateUri = templateUri;
-    }
+    private ServiceUnitArtifactsArgs() {}
 
-    private ServiceUnitArtifactsArgs() {
-        this.parametersArtifactSourceRelativePath = Codegen.empty();
-        this.parametersUri = Codegen.empty();
-        this.templateArtifactSourceRelativePath = Codegen.empty();
-        this.templateUri = Codegen.empty();
+    private ServiceUnitArtifactsArgs(ServiceUnitArtifactsArgs $) {
+        this.parametersArtifactSourceRelativePath = $.parametersArtifactSourceRelativePath;
+        this.parametersUri = $.parametersUri;
+        this.templateArtifactSourceRelativePath = $.templateArtifactSourceRelativePath;
+        this.templateUri = $.templateUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceUnitArtifactsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> parametersArtifactSourceRelativePath;
-        private @Nullable Output<String> parametersUri;
-        private @Nullable Output<String> templateArtifactSourceRelativePath;
-        private @Nullable Output<String> templateUri;
+        private ServiceUnitArtifactsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceUnitArtifactsArgs();
         }
 
         public Builder(ServiceUnitArtifactsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parametersArtifactSourceRelativePath = defaults.parametersArtifactSourceRelativePath;
-    	      this.parametersUri = defaults.parametersUri;
-    	      this.templateArtifactSourceRelativePath = defaults.templateArtifactSourceRelativePath;
-    	      this.templateUri = defaults.templateUri;
+            $ = new ServiceUnitArtifactsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parametersArtifactSourceRelativePath(@Nullable Output<String> parametersArtifactSourceRelativePath) {
-            this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
+            $.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
-        public Builder parametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
-            this.parametersArtifactSourceRelativePath = Codegen.ofNullable(parametersArtifactSourceRelativePath);
-            return this;
+
+        public Builder parametersArtifactSourceRelativePath(String parametersArtifactSourceRelativePath) {
+            return parametersArtifactSourceRelativePath(Output.of(parametersArtifactSourceRelativePath));
         }
+
         public Builder parametersUri(@Nullable Output<String> parametersUri) {
-            this.parametersUri = parametersUri;
+            $.parametersUri = parametersUri;
             return this;
         }
-        public Builder parametersUri(@Nullable String parametersUri) {
-            this.parametersUri = Codegen.ofNullable(parametersUri);
-            return this;
+
+        public Builder parametersUri(String parametersUri) {
+            return parametersUri(Output.of(parametersUri));
         }
+
         public Builder templateArtifactSourceRelativePath(@Nullable Output<String> templateArtifactSourceRelativePath) {
-            this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
+            $.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
-        public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
-            this.templateArtifactSourceRelativePath = Codegen.ofNullable(templateArtifactSourceRelativePath);
-            return this;
+
+        public Builder templateArtifactSourceRelativePath(String templateArtifactSourceRelativePath) {
+            return templateArtifactSourceRelativePath(Output.of(templateArtifactSourceRelativePath));
         }
+
         public Builder templateUri(@Nullable Output<String> templateUri) {
-            this.templateUri = templateUri;
+            $.templateUri = templateUri;
             return this;
         }
-        public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = Codegen.ofNullable(templateUri);
-            return this;
-        }        public ServiceUnitArtifactsArgs build() {
-            return new ServiceUnitArtifactsArgs(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
+
+        public Builder templateUri(String templateUri) {
+            return templateUri(Output.of(templateUri));
+        }
+
+        public ServiceUnitArtifactsArgs build() {
+            return $;
         }
     }
+
 }

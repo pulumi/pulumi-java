@@ -5,9 +5,9 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class JsonFieldWithDefaultArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class JsonFieldWithDefaultArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceField")
-      private final @Nullable Output<String> sourceField;
+    private @Nullable Output<String> sourceField;
 
-    public Output<String> sourceField() {
-        return this.sourceField == null ? Codegen.empty() : this.sourceField;
+    public Optional<Output<String>> sourceField() {
+        return Optional.ofNullable(this.sourceField);
     }
 
-    public JsonFieldWithDefaultArgs(
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<String> sourceField) {
-        this.defaultValue = defaultValue;
-        this.sourceField = sourceField;
-    }
+    private JsonFieldWithDefaultArgs() {}
 
-    private JsonFieldWithDefaultArgs() {
-        this.defaultValue = Codegen.empty();
-        this.sourceField = Codegen.empty();
+    private JsonFieldWithDefaultArgs(JsonFieldWithDefaultArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.sourceField = $.sourceField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonFieldWithDefaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<String> sourceField;
+        private JsonFieldWithDefaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonFieldWithDefaultArgs();
         }
 
         public Builder(JsonFieldWithDefaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.sourceField = defaults.sourceField;
+            $ = new JsonFieldWithDefaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder sourceField(@Nullable Output<String> sourceField) {
-            this.sourceField = sourceField;
+            $.sourceField = sourceField;
             return this;
         }
-        public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = Codegen.ofNullable(sourceField);
-            return this;
-        }        public JsonFieldWithDefaultArgs build() {
-            return new JsonFieldWithDefaultArgs(defaultValue, sourceField);
+
+        public Builder sourceField(String sourceField) {
+            return sourceField(Output.of(sourceField));
+        }
+
+        public JsonFieldWithDefaultArgs build() {
+            return $;
         }
     }
+
 }

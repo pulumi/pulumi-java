@@ -25,7 +25,7 @@ public final class TargetCopySettingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="copyAfter", required=true)
-      private final Object copyAfter;
+    private Object copyAfter;
 
     public Object copyAfter() {
         return this.copyAfter;
@@ -36,55 +36,52 @@ public final class TargetCopySettingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataStore", required=true)
-      private final DataStoreInfoBaseResponse dataStore;
+    private DataStoreInfoBaseResponse dataStore;
 
     public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
 
-    public TargetCopySettingResponse(
-        Object copyAfter,
-        DataStoreInfoBaseResponse dataStore) {
-        this.copyAfter = Objects.requireNonNull(copyAfter, "expected parameter 'copyAfter' to be non-null");
-        this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
-    }
+    private TargetCopySettingResponse() {}
 
-    private TargetCopySettingResponse() {
-        this.copyAfter = null;
-        this.dataStore = null;
+    private TargetCopySettingResponse(TargetCopySettingResponse $) {
+        this.copyAfter = $.copyAfter;
+        this.dataStore = $.dataStore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetCopySettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object copyAfter;
-        private DataStoreInfoBaseResponse dataStore;
+        private TargetCopySettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetCopySettingResponse();
         }
 
         public Builder(TargetCopySettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyAfter = defaults.copyAfter;
-    	      this.dataStore = defaults.dataStore;
+            $ = new TargetCopySettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder copyAfter(Object copyAfter) {
-            this.copyAfter = Objects.requireNonNull(copyAfter);
+            $.copyAfter = copyAfter;
             return this;
         }
+
         public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
-            this.dataStore = Objects.requireNonNull(dataStore);
+            $.dataStore = dataStore;
             return this;
-        }        public TargetCopySettingResponse build() {
-            return new TargetCopySettingResponse(copyAfter, dataStore);
+        }
+
+        public TargetCopySettingResponse build() {
+            $.copyAfter = Objects.requireNonNull($.copyAfter, "expected parameter 'copyAfter' to be non-null");
+            $.dataStore = Objects.requireNonNull($.dataStore, "expected parameter 'dataStore' to be non-null");
+            return $;
         }
     }
+
 }

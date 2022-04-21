@@ -23,7 +23,7 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="definition", required=true)
-      private final BlobInventoryPolicyDefinitionResponse definition;
+    private BlobInventoryPolicyDefinitionResponse definition;
 
     public BlobInventoryPolicyDefinitionResponse definition() {
         return this.definition;
@@ -34,7 +34,7 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -45,64 +45,59 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public BlobInventoryPolicyRuleResponse(
-        BlobInventoryPolicyDefinitionResponse definition,
-        Boolean enabled,
-        String name) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private BlobInventoryPolicyRuleResponse() {}
 
-    private BlobInventoryPolicyRuleResponse() {
-        this.definition = null;
-        this.enabled = null;
-        this.name = null;
+    private BlobInventoryPolicyRuleResponse(BlobInventoryPolicyRuleResponse $) {
+        this.definition = $.definition;
+        this.enabled = $.enabled;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicyRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BlobInventoryPolicyDefinitionResponse definition;
-        private Boolean enabled;
-        private String name;
+        private BlobInventoryPolicyRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicyRuleResponse();
         }
 
         public Builder(BlobInventoryPolicyRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.enabled = defaults.enabled;
-    	      this.name = defaults.name;
+            $ = new BlobInventoryPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(BlobInventoryPolicyDefinitionResponse definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public BlobInventoryPolicyRuleResponse build() {
-            return new BlobInventoryPolicyRuleResponse(definition, enabled, name);
+        }
+
+        public BlobInventoryPolicyRuleResponse build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

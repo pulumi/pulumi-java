@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +23,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,7 +35,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -45,7 +46,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="recurrenceInterval", required=true)
-      private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
+    private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
     public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
@@ -56,7 +57,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +68,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="shareName", required=true)
-      private final Output<String> shareName;
+    private Output<String> shareName;
 
     public Output<String> shareName() {
         return this.shareName;
@@ -78,10 +79,10 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="synchronizationSettingName")
-      private final @Nullable Output<String> synchronizationSettingName;
+    private @Nullable Output<String> synchronizationSettingName;
 
-    public Output<String> synchronizationSettingName() {
-        return this.synchronizationSettingName == null ? Codegen.empty() : this.synchronizationSettingName;
+    public Optional<Output<String>> synchronizationSettingName() {
+        return Optional.ofNullable(this.synchronizationSettingName);
     }
 
     /**
@@ -89,128 +90,114 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="synchronizationTime", required=true)
-      private final Output<String> synchronizationTime;
+    private Output<String> synchronizationTime;
 
     public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
 
-    public ScheduledSynchronizationSettingArgs(
-        Output<String> accountName,
-        Output<String> kind,
-        Output<Either<String,RecurrenceInterval>> recurrenceInterval,
-        Output<String> resourceGroupName,
-        Output<String> shareName,
-        @Nullable Output<String> synchronizationSettingName,
-        Output<String> synchronizationTime) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.synchronizationSettingName = synchronizationSettingName;
-        this.synchronizationTime = Objects.requireNonNull(synchronizationTime, "expected parameter 'synchronizationTime' to be non-null");
-    }
+    private ScheduledSynchronizationSettingArgs() {}
 
-    private ScheduledSynchronizationSettingArgs() {
-        this.accountName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.recurrenceInterval = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.synchronizationSettingName = Codegen.empty();
-        this.synchronizationTime = Codegen.empty();
+    private ScheduledSynchronizationSettingArgs(ScheduledSynchronizationSettingArgs $) {
+        this.accountName = $.accountName;
+        this.kind = $.kind;
+        this.recurrenceInterval = $.recurrenceInterval;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
+        this.synchronizationSettingName = $.synchronizationSettingName;
+        this.synchronizationTime = $.synchronizationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledSynchronizationSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> kind;
-        private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
-        private Output<String> resourceGroupName;
-        private Output<String> shareName;
-        private @Nullable Output<String> synchronizationSettingName;
-        private Output<String> synchronizationTime;
+        private ScheduledSynchronizationSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledSynchronizationSettingArgs();
         }
 
         public Builder(ScheduledSynchronizationSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.kind = defaults.kind;
-    	      this.recurrenceInterval = defaults.recurrenceInterval;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
-    	      this.synchronizationSettingName = defaults.synchronizationSettingName;
-    	      this.synchronizationTime = defaults.synchronizationTime;
+            $ = new ScheduledSynchronizationSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
-            this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
+            $.recurrenceInterval = recurrenceInterval;
             return this;
         }
+
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
-            this.recurrenceInterval = Output.of(Objects.requireNonNull(recurrenceInterval));
-            return this;
+            return recurrenceInterval(Output.of(recurrenceInterval));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareName(Output<String> shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Output.of(Objects.requireNonNull(shareName));
-            return this;
+            return shareName(Output.of(shareName));
         }
+
         public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
-            this.synchronizationSettingName = synchronizationSettingName;
+            $.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
-        public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
-            this.synchronizationSettingName = Codegen.ofNullable(synchronizationSettingName);
-            return this;
+
+        public Builder synchronizationSettingName(String synchronizationSettingName) {
+            return synchronizationSettingName(Output.of(synchronizationSettingName));
         }
+
         public Builder synchronizationTime(Output<String> synchronizationTime) {
-            this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
+            $.synchronizationTime = synchronizationTime;
             return this;
         }
+
         public Builder synchronizationTime(String synchronizationTime) {
-            this.synchronizationTime = Output.of(Objects.requireNonNull(synchronizationTime));
-            return this;
-        }        public ScheduledSynchronizationSettingArgs build() {
-            return new ScheduledSynchronizationSettingArgs(accountName, kind, recurrenceInterval, resourceGroupName, shareName, synchronizationSettingName, synchronizationTime);
+            return synchronizationTime(Output.of(synchronizationTime));
+        }
+
+        public ScheduledSynchronizationSettingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.recurrenceInterval = Objects.requireNonNull($.recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            $.synchronizationTime = Objects.requireNonNull($.synchronizationTime, "expected parameter 'synchronizationTime' to be non-null");
+            return $;
         }
     }
+
 }

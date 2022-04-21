@@ -5,11 +5,11 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -59,10 +59,10 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="required")
-      private final @Nullable Output<Boolean> required;
+    private @Nullable Output<Boolean> required;
 
-    public Output<Boolean> required() {
-        return this.required == null ? Codegen.empty() : this.required;
+    public Optional<Output<Boolean>> required() {
+        return Optional.ofNullable(this.required);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -81,118 +81,104 @@ public final class ParameterContractArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ParameterContractArgs(
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<String> description,
-        Output<String> name,
-        @Nullable Output<Boolean> required,
-        Output<String> type,
-        @Nullable Output<List<String>> values) {
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.required = required;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.values = values;
-    }
+    private ParameterContractArgs() {}
 
-    private ParameterContractArgs() {
-        this.defaultValue = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.required = Codegen.empty();
-        this.type = Codegen.empty();
-        this.values = Codegen.empty();
+    private ParameterContractArgs(ParameterContractArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.name = $.name;
+        this.required = $.required;
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private @Nullable Output<Boolean> required;
-        private Output<String> type;
-        private @Nullable Output<List<String>> values;
+        private ParameterContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterContractArgs();
         }
 
         public Builder(ParameterContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.required = defaults.required;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new ParameterContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder required(@Nullable Output<Boolean> required) {
-            this.required = required;
+            $.required = required;
             return this;
         }
-        public Builder required(@Nullable Boolean required) {
-            this.required = Codegen.ofNullable(required);
-            return this;
+
+        public Builder required(Boolean required) {
+            return required(Output.of(required));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ParameterContractArgs build() {
-            return new ParameterContractArgs(defaultValue, description, name, required, type, values);
+        }
+
+        public ParameterContractArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

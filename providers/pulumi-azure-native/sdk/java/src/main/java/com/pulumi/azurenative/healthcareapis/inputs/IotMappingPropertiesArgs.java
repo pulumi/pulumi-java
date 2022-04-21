@@ -5,9 +5,9 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IotMappingPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<Object> content;
+    private @Nullable Output<Object> content;
 
-    public Output<Object> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<Object>> content() {
+        return Optional.ofNullable(this.content);
     }
 
-    public IotMappingPropertiesArgs(@Nullable Output<Object> content) {
-        this.content = content;
-    }
+    private IotMappingPropertiesArgs() {}
 
-    private IotMappingPropertiesArgs() {
-        this.content = Codegen.empty();
+    private IotMappingPropertiesArgs(IotMappingPropertiesArgs $) {
+        this.content = $.content;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotMappingPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> content;
+        private IotMappingPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotMappingPropertiesArgs();
         }
 
         public Builder(IotMappingPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
+            $ = new IotMappingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<Object> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable Object content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
-        }        public IotMappingPropertiesArgs build() {
-            return new IotMappingPropertiesArgs(content);
+
+        public Builder content(Object content) {
+            return content(Output.of(content));
+        }
+
+        public IotMappingPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="default")
-      private final @Nullable String default_;
+    private @Nullable String default_;
 
     public Optional<String> default_() {
-        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,73 +56,64 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ParameterDeclarationResponse(
-        @Nullable String default_,
-        @Nullable String description,
-        String name,
-        String type) {
-        this.default_ = default_;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ParameterDeclarationResponse() {}
 
-    private ParameterDeclarationResponse() {
-        this.default_ = null;
-        this.description = null;
-        this.name = null;
-        this.type = null;
+    private ParameterDeclarationResponse(ParameterDeclarationResponse $) {
+        this.default_ = $.default_;
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDeclarationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String default_;
-        private @Nullable String description;
-        private String name;
-        private String type;
+        private ParameterDeclarationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDeclarationResponse();
         }
 
         public Builder(ParameterDeclarationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ParameterDeclarationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable String default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ParameterDeclarationResponse build() {
-            return new ParameterDeclarationResponse(default_, description, name, type);
+        }
+
+        public ParameterDeclarationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

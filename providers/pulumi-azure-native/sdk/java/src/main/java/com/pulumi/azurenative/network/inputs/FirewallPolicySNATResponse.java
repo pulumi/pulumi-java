@@ -24,48 +24,48 @@ public final class FirewallPolicySNATResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateRanges")
-      private final @Nullable List<String> privateRanges;
+    private @Nullable List<String> privateRanges;
 
-    public List<String> privateRanges() {
-        return this.privateRanges == null ? List.of() : this.privateRanges;
+    public Optional<List<String>> privateRanges() {
+        return Optional.ofNullable(this.privateRanges);
     }
 
-    public FirewallPolicySNATResponse(@Nullable List<String> privateRanges) {
-        this.privateRanges = privateRanges;
-    }
+    private FirewallPolicySNATResponse() {}
 
-    private FirewallPolicySNATResponse() {
-        this.privateRanges = List.of();
+    private FirewallPolicySNATResponse(FirewallPolicySNATResponse $) {
+        this.privateRanges = $.privateRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicySNATResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> privateRanges;
+        private FirewallPolicySNATResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicySNATResponse();
         }
 
         public Builder(FirewallPolicySNATResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateRanges = defaults.privateRanges;
+            $ = new FirewallPolicySNATResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateRanges(@Nullable List<String> privateRanges) {
-            this.privateRanges = privateRanges;
+            $.privateRanges = privateRanges;
             return this;
         }
+
         public Builder privateRanges(String... privateRanges) {
             return privateRanges(List.of(privateRanges));
-        }        public FirewallPolicySNATResponse build() {
-            return new FirewallPolicySNATResponse(privateRanges);
+        }
+
+        public FirewallPolicySNATResponse build() {
+            return $;
         }
     }
+
 }

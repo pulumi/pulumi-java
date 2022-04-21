@@ -8,8 +8,8 @@ import com.pulumi.azurenative.testbase.inputs.SubscriptionReceiverValueArgs;
 import com.pulumi.azurenative.testbase.inputs.UserObjectReceiverValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="distributionGroupListReceiverValue")
-      private final @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
+    private @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
 
-    public Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue() {
-        return this.distributionGroupListReceiverValue == null ? Codegen.empty() : this.distributionGroupListReceiverValue;
+    public Optional<Output<DistributionGroupListReceiverValueArgs>> distributionGroupListReceiverValue() {
+        return Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subscriptionReceiverValue")
-      private final @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
+    private @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
 
-    public Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue() {
-        return this.subscriptionReceiverValue == null ? Codegen.empty() : this.subscriptionReceiverValue;
+    public Optional<Output<SubscriptionReceiverValueArgs>> subscriptionReceiverValue() {
+        return Optional.ofNullable(this.subscriptionReceiverValue);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class NotificationReceiverValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="userObjectReceiverValue")
-      private final @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue;
+    private @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue;
 
-    public Output<UserObjectReceiverValueArgs> userObjectReceiverValue() {
-        return this.userObjectReceiverValue == null ? Codegen.empty() : this.userObjectReceiverValue;
+    public Optional<Output<UserObjectReceiverValueArgs>> userObjectReceiverValue() {
+        return Optional.ofNullable(this.userObjectReceiverValue);
     }
 
-    public NotificationReceiverValueArgs(
-        @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue,
-        @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue,
-        @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue) {
-        this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
-        this.subscriptionReceiverValue = subscriptionReceiverValue;
-        this.userObjectReceiverValue = userObjectReceiverValue;
-    }
+    private NotificationReceiverValueArgs() {}
 
-    private NotificationReceiverValueArgs() {
-        this.distributionGroupListReceiverValue = Codegen.empty();
-        this.subscriptionReceiverValue = Codegen.empty();
-        this.userObjectReceiverValue = Codegen.empty();
+    private NotificationReceiverValueArgs(NotificationReceiverValueArgs $) {
+        this.distributionGroupListReceiverValue = $.distributionGroupListReceiverValue;
+        this.subscriptionReceiverValue = $.subscriptionReceiverValue;
+        this.userObjectReceiverValue = $.userObjectReceiverValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationReceiverValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
-        private @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
-        private @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue;
+        private NotificationReceiverValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationReceiverValueArgs();
         }
 
         public Builder(NotificationReceiverValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionGroupListReceiverValue = defaults.distributionGroupListReceiverValue;
-    	      this.subscriptionReceiverValue = defaults.subscriptionReceiverValue;
-    	      this.userObjectReceiverValue = defaults.userObjectReceiverValue;
+            $ = new NotificationReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionGroupListReceiverValue(@Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue) {
-            this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
+            $.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
-        public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueArgs distributionGroupListReceiverValue) {
-            this.distributionGroupListReceiverValue = Codegen.ofNullable(distributionGroupListReceiverValue);
-            return this;
+
+        public Builder distributionGroupListReceiverValue(DistributionGroupListReceiverValueArgs distributionGroupListReceiverValue) {
+            return distributionGroupListReceiverValue(Output.of(distributionGroupListReceiverValue));
         }
+
         public Builder subscriptionReceiverValue(@Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue) {
-            this.subscriptionReceiverValue = subscriptionReceiverValue;
+            $.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
-        public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueArgs subscriptionReceiverValue) {
-            this.subscriptionReceiverValue = Codegen.ofNullable(subscriptionReceiverValue);
-            return this;
+
+        public Builder subscriptionReceiverValue(SubscriptionReceiverValueArgs subscriptionReceiverValue) {
+            return subscriptionReceiverValue(Output.of(subscriptionReceiverValue));
         }
+
         public Builder userObjectReceiverValue(@Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue) {
-            this.userObjectReceiverValue = userObjectReceiverValue;
+            $.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }
-        public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueArgs userObjectReceiverValue) {
-            this.userObjectReceiverValue = Codegen.ofNullable(userObjectReceiverValue);
-            return this;
-        }        public NotificationReceiverValueArgs build() {
-            return new NotificationReceiverValueArgs(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);
+
+        public Builder userObjectReceiverValue(UserObjectReceiverValueArgs userObjectReceiverValue) {
+            return userObjectReceiverValue(Output.of(userObjectReceiverValue));
+        }
+
+        public NotificationReceiverValueArgs build() {
+            return $;
         }
     }
+
 }

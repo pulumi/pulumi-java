@@ -17,7 +17,7 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
@@ -28,55 +28,52 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="reportName", required=true)
-      private final String reportName;
+    private String reportName;
 
     public String reportName() {
         return this.reportName;
     }
 
-    public GetReportByBillingAccountArgs(
-        String billingAccountId,
-        String reportName) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.reportName = Objects.requireNonNull(reportName, "expected parameter 'reportName' to be non-null");
-    }
+    private GetReportByBillingAccountArgs() {}
 
-    private GetReportByBillingAccountArgs() {
-        this.billingAccountId = null;
-        this.reportName = null;
+    private GetReportByBillingAccountArgs(GetReportByBillingAccountArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.reportName = $.reportName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportByBillingAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
-        private String reportName;
+        private GetReportByBillingAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportByBillingAccountArgs();
         }
 
         public Builder(GetReportByBillingAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.reportName = defaults.reportName;
+            $ = new GetReportByBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder reportName(String reportName) {
-            this.reportName = Objects.requireNonNull(reportName);
+            $.reportName = reportName;
             return this;
-        }        public GetReportByBillingAccountArgs build() {
-            return new GetReportByBillingAccountArgs(billingAccountId, reportName);
+        }
+
+        public GetReportByBillingAccountArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.reportName = Objects.requireNonNull($.reportName, "expected parameter 'reportName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncData
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
+    private Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
     public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
@@ -36,7 +35,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+    private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -47,79 +46,75 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
+    private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ValidateSyncMigrationInputSqlServerTaskInputArgs(
-        Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases,
-        Output<SqlConnectionInfoArgs> sourceConnectionInfo,
-        Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ValidateSyncMigrationInputSqlServerTaskInputArgs() {}
 
-    private ValidateSyncMigrationInputSqlServerTaskInputArgs() {
-        this.selectedDatabases = Codegen.empty();
-        this.sourceConnectionInfo = Codegen.empty();
-        this.targetConnectionInfo = Codegen.empty();
+    private ValidateSyncMigrationInputSqlServerTaskInputArgs(ValidateSyncMigrationInputSqlServerTaskInputArgs $) {
+        this.selectedDatabases = $.selectedDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidateSyncMigrationInputSqlServerTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
-        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
-        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
+        private ValidateSyncMigrationInputSqlServerTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidateSyncMigrationInputSqlServerTaskInputArgs();
         }
 
         public Builder(ValidateSyncMigrationInputSqlServerTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ValidateSyncMigrationInputSqlServerTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputArgs> selectedDatabases) {
-            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
-            return this;
+            return selectedDatabases(Output.of(selectedDatabases));
         }
+
         public Builder selectedDatabases(MigrateSqlServerSqlDbSyncDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
-            return this;
+            return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
+
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
-            return this;
-        }        public ValidateSyncMigrationInputSqlServerTaskInputArgs build() {
-            return new ValidateSyncMigrationInputSqlServerTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
+        }
+
+        public ValidateSyncMigrationInputSqlServerTaskInputArgs build() {
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

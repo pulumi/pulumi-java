@@ -6,11 +6,11 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TriggerPipelineReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,Object>> parameters;
+    private @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,Object>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class TriggerPipelineReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pipelineReference")
-      private final @Nullable Output<PipelineReferenceArgs> pipelineReference;
+    private @Nullable Output<PipelineReferenceArgs> pipelineReference;
 
-    public Output<PipelineReferenceArgs> pipelineReference() {
-        return this.pipelineReference == null ? Codegen.empty() : this.pipelineReference;
+    public Optional<Output<PipelineReferenceArgs>> pipelineReference() {
+        return Optional.ofNullable(this.pipelineReference);
     }
 
-    public TriggerPipelineReferenceArgs(
-        @Nullable Output<Map<String,Object>> parameters,
-        @Nullable Output<PipelineReferenceArgs> pipelineReference) {
-        this.parameters = parameters;
-        this.pipelineReference = pipelineReference;
-    }
+    private TriggerPipelineReferenceArgs() {}
 
-    private TriggerPipelineReferenceArgs() {
-        this.parameters = Codegen.empty();
-        this.pipelineReference = Codegen.empty();
+    private TriggerPipelineReferenceArgs(TriggerPipelineReferenceArgs $) {
+        this.parameters = $.parameters;
+        this.pipelineReference = $.pipelineReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPipelineReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> parameters;
-        private @Nullable Output<PipelineReferenceArgs> pipelineReference;
+        private TriggerPipelineReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPipelineReferenceArgs();
         }
 
         public Builder(TriggerPipelineReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.pipelineReference = defaults.pipelineReference;
+            $ = new TriggerPipelineReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,Object> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder pipelineReference(@Nullable Output<PipelineReferenceArgs> pipelineReference) {
-            this.pipelineReference = pipelineReference;
+            $.pipelineReference = pipelineReference;
             return this;
         }
-        public Builder pipelineReference(@Nullable PipelineReferenceArgs pipelineReference) {
-            this.pipelineReference = Codegen.ofNullable(pipelineReference);
-            return this;
-        }        public TriggerPipelineReferenceArgs build() {
-            return new TriggerPipelineReferenceArgs(parameters, pipelineReference);
+
+        public Builder pipelineReference(PipelineReferenceArgs pipelineReference) {
+            return pipelineReference(Output.of(pipelineReference));
+        }
+
+        public TriggerPipelineReferenceArgs build() {
+            return $;
         }
     }
+
 }

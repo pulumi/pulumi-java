@@ -23,10 +23,10 @@ public final class AdditionalUnattendContentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="componentName")
-      private final @Nullable String componentName;
+    private @Nullable String componentName;
 
     public Optional<String> componentName() {
-        return this.componentName == null ? Optional.empty() : Optional.ofNullable(this.componentName);
+        return Optional.ofNullable(this.componentName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AdditionalUnattendContentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AdditionalUnattendContentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="passName")
-      private final @Nullable String passName;
+    private @Nullable String passName;
 
     public Optional<String> passName() {
-        return this.passName == null ? Optional.empty() : Optional.ofNullable(this.passName);
+        return Optional.ofNullable(this.passName);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class AdditionalUnattendContentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="settingName")
-      private final @Nullable String settingName;
+    private @Nullable String settingName;
 
     public Optional<String> settingName() {
-        return this.settingName == null ? Optional.empty() : Optional.ofNullable(this.settingName);
+        return Optional.ofNullable(this.settingName);
     }
 
-    public AdditionalUnattendContentResponse(
-        @Nullable String componentName,
-        @Nullable String content,
-        @Nullable String passName,
-        @Nullable String settingName) {
-        this.componentName = componentName;
-        this.content = content;
-        this.passName = passName;
-        this.settingName = settingName;
-    }
+    private AdditionalUnattendContentResponse() {}
 
-    private AdditionalUnattendContentResponse() {
-        this.componentName = null;
-        this.content = null;
-        this.passName = null;
-        this.settingName = null;
+    private AdditionalUnattendContentResponse(AdditionalUnattendContentResponse $) {
+        this.componentName = $.componentName;
+        this.content = $.content;
+        this.passName = $.passName;
+        this.settingName = $.settingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalUnattendContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String componentName;
-        private @Nullable String content;
-        private @Nullable String passName;
-        private @Nullable String settingName;
+        private AdditionalUnattendContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalUnattendContentResponse();
         }
 
         public Builder(AdditionalUnattendContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentName = defaults.componentName;
-    	      this.content = defaults.content;
-    	      this.passName = defaults.passName;
-    	      this.settingName = defaults.settingName;
+            $ = new AdditionalUnattendContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentName(@Nullable String componentName) {
-            this.componentName = componentName;
+            $.componentName = componentName;
             return this;
         }
+
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder passName(@Nullable String passName) {
-            this.passName = passName;
+            $.passName = passName;
             return this;
         }
+
         public Builder settingName(@Nullable String settingName) {
-            this.settingName = settingName;
+            $.settingName = settingName;
             return this;
-        }        public AdditionalUnattendContentResponse build() {
-            return new AdditionalUnattendContentResponse(componentName, content, passName, settingName);
+        }
+
+        public AdditionalUnattendContentResponse build() {
+            return $;
         }
     }
+
 }

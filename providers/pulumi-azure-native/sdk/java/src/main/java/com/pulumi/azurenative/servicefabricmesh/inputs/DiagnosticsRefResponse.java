@@ -25,10 +25,10 @@ public final class DiagnosticsRefResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class DiagnosticsRefResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sinkRefs")
-      private final @Nullable List<String> sinkRefs;
+    private @Nullable List<String> sinkRefs;
 
-    public List<String> sinkRefs() {
-        return this.sinkRefs == null ? List.of() : this.sinkRefs;
+    public Optional<List<String>> sinkRefs() {
+        return Optional.ofNullable(this.sinkRefs);
     }
 
-    public DiagnosticsRefResponse(
-        @Nullable Boolean enabled,
-        @Nullable List<String> sinkRefs) {
-        this.enabled = enabled;
-        this.sinkRefs = sinkRefs;
-    }
+    private DiagnosticsRefResponse() {}
 
-    private DiagnosticsRefResponse() {
-        this.enabled = null;
-        this.sinkRefs = List.of();
+    private DiagnosticsRefResponse(DiagnosticsRefResponse $) {
+        this.enabled = $.enabled;
+        this.sinkRefs = $.sinkRefs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsRefResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable List<String> sinkRefs;
+        private DiagnosticsRefResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsRefResponse();
         }
 
         public Builder(DiagnosticsRefResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.sinkRefs = defaults.sinkRefs;
+            $ = new DiagnosticsRefResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder sinkRefs(@Nullable List<String> sinkRefs) {
-            this.sinkRefs = sinkRefs;
+            $.sinkRefs = sinkRefs;
             return this;
         }
+
         public Builder sinkRefs(String... sinkRefs) {
             return sinkRefs(List.of(sinkRefs));
-        }        public DiagnosticsRefResponse build() {
-            return new DiagnosticsRefResponse(enabled, sinkRefs);
+        }
+
+        public DiagnosticsRefResponse build() {
+            return $;
         }
     }
+
 }

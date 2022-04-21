@@ -21,45 +21,45 @@ public final class TransportPreferencesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="preferredShipmentType", required=true)
-      private final String preferredShipmentType;
+    private String preferredShipmentType;
 
     public String preferredShipmentType() {
         return this.preferredShipmentType;
     }
 
-    public TransportPreferencesResponse(String preferredShipmentType) {
-        this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType, "expected parameter 'preferredShipmentType' to be non-null");
-    }
+    private TransportPreferencesResponse() {}
 
-    private TransportPreferencesResponse() {
-        this.preferredShipmentType = null;
+    private TransportPreferencesResponse(TransportPreferencesResponse $) {
+        this.preferredShipmentType = $.preferredShipmentType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransportPreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String preferredShipmentType;
+        private TransportPreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransportPreferencesResponse();
         }
 
         public Builder(TransportPreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferredShipmentType = defaults.preferredShipmentType;
+            $ = new TransportPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preferredShipmentType(String preferredShipmentType) {
-            this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
+            $.preferredShipmentType = preferredShipmentType;
             return this;
-        }        public TransportPreferencesResponse build() {
-            return new TransportPreferencesResponse(preferredShipmentType);
+        }
+
+        public TransportPreferencesResponse build() {
+            $.preferredShipmentType = Objects.requireNonNull($.preferredShipmentType, "expected parameter 'preferredShipmentType' to be non-null");
+            return $;
         }
     }
+
 }

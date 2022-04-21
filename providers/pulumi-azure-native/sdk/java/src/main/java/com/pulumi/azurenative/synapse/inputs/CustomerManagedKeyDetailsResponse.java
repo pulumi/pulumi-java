@@ -24,10 +24,10 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="key")
-      private final @Nullable WorkspaceKeyDetailsResponse key;
+    private @Nullable WorkspaceKeyDetailsResponse key;
 
     public Optional<WorkspaceKeyDetailsResponse> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public CustomerManagedKeyDetailsResponse(
-        @Nullable WorkspaceKeyDetailsResponse key,
-        String status) {
-        this.key = key;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private CustomerManagedKeyDetailsResponse() {}
 
-    private CustomerManagedKeyDetailsResponse() {
-        this.key = null;
-        this.status = null;
+    private CustomerManagedKeyDetailsResponse(CustomerManagedKeyDetailsResponse $) {
+        this.key = $.key;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerManagedKeyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WorkspaceKeyDetailsResponse key;
-        private String status;
+        private CustomerManagedKeyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerManagedKeyDetailsResponse();
         }
 
         public Builder(CustomerManagedKeyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.status = defaults.status;
+            $ = new CustomerManagedKeyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable WorkspaceKeyDetailsResponse key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public CustomerManagedKeyDetailsResponse build() {
-            return new CustomerManagedKeyDetailsResponse(key, status);
+        }
+
+        public CustomerManagedKeyDetailsResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

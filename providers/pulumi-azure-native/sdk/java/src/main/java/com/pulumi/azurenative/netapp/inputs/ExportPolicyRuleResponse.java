@@ -26,10 +26,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="allowedClients")
-      private final @Nullable String allowedClients;
+    private @Nullable String allowedClients;
 
     public Optional<String> allowedClients() {
-        return this.allowedClients == null ? Optional.empty() : Optional.ofNullable(this.allowedClients);
+        return Optional.ofNullable(this.allowedClients);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cifs")
-      private final @Nullable Boolean cifs;
+    private @Nullable Boolean cifs;
 
     public Optional<Boolean> cifs() {
-        return this.cifs == null ? Optional.empty() : Optional.ofNullable(this.cifs);
+        return Optional.ofNullable(this.cifs);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hasRootAccess")
-      private final @Nullable Boolean hasRootAccess;
+    private @Nullable Boolean hasRootAccess;
 
     public Optional<Boolean> hasRootAccess() {
-        return this.hasRootAccess == null ? Optional.empty() : Optional.ofNullable(this.hasRootAccess);
+        return Optional.ofNullable(this.hasRootAccess);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kerberos5ReadOnly")
-      private final @Nullable Boolean kerberos5ReadOnly;
+    private @Nullable Boolean kerberos5ReadOnly;
 
     public Optional<Boolean> kerberos5ReadOnly() {
-        return this.kerberos5ReadOnly == null ? Optional.empty() : Optional.ofNullable(this.kerberos5ReadOnly);
+        return Optional.ofNullable(this.kerberos5ReadOnly);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kerberos5ReadWrite")
-      private final @Nullable Boolean kerberos5ReadWrite;
+    private @Nullable Boolean kerberos5ReadWrite;
 
     public Optional<Boolean> kerberos5ReadWrite() {
-        return this.kerberos5ReadWrite == null ? Optional.empty() : Optional.ofNullable(this.kerberos5ReadWrite);
+        return Optional.ofNullable(this.kerberos5ReadWrite);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kerberos5iReadOnly")
-      private final @Nullable Boolean kerberos5iReadOnly;
+    private @Nullable Boolean kerberos5iReadOnly;
 
     public Optional<Boolean> kerberos5iReadOnly() {
-        return this.kerberos5iReadOnly == null ? Optional.empty() : Optional.ofNullable(this.kerberos5iReadOnly);
+        return Optional.ofNullable(this.kerberos5iReadOnly);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kerberos5iReadWrite")
-      private final @Nullable Boolean kerberos5iReadWrite;
+    private @Nullable Boolean kerberos5iReadWrite;
 
     public Optional<Boolean> kerberos5iReadWrite() {
-        return this.kerberos5iReadWrite == null ? Optional.empty() : Optional.ofNullable(this.kerberos5iReadWrite);
+        return Optional.ofNullable(this.kerberos5iReadWrite);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kerberos5pReadOnly")
-      private final @Nullable Boolean kerberos5pReadOnly;
+    private @Nullable Boolean kerberos5pReadOnly;
 
     public Optional<Boolean> kerberos5pReadOnly() {
-        return this.kerberos5pReadOnly == null ? Optional.empty() : Optional.ofNullable(this.kerberos5pReadOnly);
+        return Optional.ofNullable(this.kerberos5pReadOnly);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kerberos5pReadWrite")
-      private final @Nullable Boolean kerberos5pReadWrite;
+    private @Nullable Boolean kerberos5pReadWrite;
 
     public Optional<Boolean> kerberos5pReadWrite() {
-        return this.kerberos5pReadWrite == null ? Optional.empty() : Optional.ofNullable(this.kerberos5pReadWrite);
+        return Optional.ofNullable(this.kerberos5pReadWrite);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nfsv3")
-      private final @Nullable Boolean nfsv3;
+    private @Nullable Boolean nfsv3;
 
     public Optional<Boolean> nfsv3() {
-        return this.nfsv3 == null ? Optional.empty() : Optional.ofNullable(this.nfsv3);
+        return Optional.ofNullable(this.nfsv3);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nfsv41")
-      private final @Nullable Boolean nfsv41;
+    private @Nullable Boolean nfsv41;
 
     public Optional<Boolean> nfsv41() {
-        return this.nfsv41 == null ? Optional.empty() : Optional.ofNullable(this.nfsv41);
+        return Optional.ofNullable(this.nfsv41);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ruleIndex")
-      private final @Nullable Integer ruleIndex;
+    private @Nullable Integer ruleIndex;
 
     public Optional<Integer> ruleIndex() {
-        return this.ruleIndex == null ? Optional.empty() : Optional.ofNullable(this.ruleIndex);
+        return Optional.ofNullable(this.ruleIndex);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="unixReadOnly")
-      private final @Nullable Boolean unixReadOnly;
+    private @Nullable Boolean unixReadOnly;
 
     public Optional<Boolean> unixReadOnly() {
-        return this.unixReadOnly == null ? Optional.empty() : Optional.ofNullable(this.unixReadOnly);
+        return Optional.ofNullable(this.unixReadOnly);
     }
 
     /**
@@ -169,163 +169,129 @@ public final class ExportPolicyRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="unixReadWrite")
-      private final @Nullable Boolean unixReadWrite;
+    private @Nullable Boolean unixReadWrite;
 
     public Optional<Boolean> unixReadWrite() {
-        return this.unixReadWrite == null ? Optional.empty() : Optional.ofNullable(this.unixReadWrite);
+        return Optional.ofNullable(this.unixReadWrite);
     }
 
-    public ExportPolicyRuleResponse(
-        @Nullable String allowedClients,
-        @Nullable Boolean cifs,
-        @Nullable Boolean hasRootAccess,
-        @Nullable Boolean kerberos5ReadOnly,
-        @Nullable Boolean kerberos5ReadWrite,
-        @Nullable Boolean kerberos5iReadOnly,
-        @Nullable Boolean kerberos5iReadWrite,
-        @Nullable Boolean kerberos5pReadOnly,
-        @Nullable Boolean kerberos5pReadWrite,
-        @Nullable Boolean nfsv3,
-        @Nullable Boolean nfsv41,
-        @Nullable Integer ruleIndex,
-        @Nullable Boolean unixReadOnly,
-        @Nullable Boolean unixReadWrite) {
-        this.allowedClients = allowedClients;
-        this.cifs = cifs;
-        this.hasRootAccess = Codegen.booleanProp("hasRootAccess").arg(hasRootAccess).def(true).getNullable();
-        this.kerberos5ReadOnly = Codegen.booleanProp("kerberos5ReadOnly").arg(kerberos5ReadOnly).def(false).getNullable();
-        this.kerberos5ReadWrite = Codegen.booleanProp("kerberos5ReadWrite").arg(kerberos5ReadWrite).def(false).getNullable();
-        this.kerberos5iReadOnly = Codegen.booleanProp("kerberos5iReadOnly").arg(kerberos5iReadOnly).def(false).getNullable();
-        this.kerberos5iReadWrite = Codegen.booleanProp("kerberos5iReadWrite").arg(kerberos5iReadWrite).def(false).getNullable();
-        this.kerberos5pReadOnly = Codegen.booleanProp("kerberos5pReadOnly").arg(kerberos5pReadOnly).def(false).getNullable();
-        this.kerberos5pReadWrite = Codegen.booleanProp("kerberos5pReadWrite").arg(kerberos5pReadWrite).def(false).getNullable();
-        this.nfsv3 = nfsv3;
-        this.nfsv41 = nfsv41;
-        this.ruleIndex = ruleIndex;
-        this.unixReadOnly = unixReadOnly;
-        this.unixReadWrite = unixReadWrite;
-    }
+    private ExportPolicyRuleResponse() {}
 
-    private ExportPolicyRuleResponse() {
-        this.allowedClients = null;
-        this.cifs = null;
-        this.hasRootAccess = null;
-        this.kerberos5ReadOnly = null;
-        this.kerberos5ReadWrite = null;
-        this.kerberos5iReadOnly = null;
-        this.kerberos5iReadWrite = null;
-        this.kerberos5pReadOnly = null;
-        this.kerberos5pReadWrite = null;
-        this.nfsv3 = null;
-        this.nfsv41 = null;
-        this.ruleIndex = null;
-        this.unixReadOnly = null;
-        this.unixReadWrite = null;
+    private ExportPolicyRuleResponse(ExportPolicyRuleResponse $) {
+        this.allowedClients = $.allowedClients;
+        this.cifs = $.cifs;
+        this.hasRootAccess = $.hasRootAccess;
+        this.kerberos5ReadOnly = $.kerberos5ReadOnly;
+        this.kerberos5ReadWrite = $.kerberos5ReadWrite;
+        this.kerberos5iReadOnly = $.kerberos5iReadOnly;
+        this.kerberos5iReadWrite = $.kerberos5iReadWrite;
+        this.kerberos5pReadOnly = $.kerberos5pReadOnly;
+        this.kerberos5pReadWrite = $.kerberos5pReadWrite;
+        this.nfsv3 = $.nfsv3;
+        this.nfsv41 = $.nfsv41;
+        this.ruleIndex = $.ruleIndex;
+        this.unixReadOnly = $.unixReadOnly;
+        this.unixReadWrite = $.unixReadWrite;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportPolicyRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String allowedClients;
-        private @Nullable Boolean cifs;
-        private @Nullable Boolean hasRootAccess;
-        private @Nullable Boolean kerberos5ReadOnly;
-        private @Nullable Boolean kerberos5ReadWrite;
-        private @Nullable Boolean kerberos5iReadOnly;
-        private @Nullable Boolean kerberos5iReadWrite;
-        private @Nullable Boolean kerberos5pReadOnly;
-        private @Nullable Boolean kerberos5pReadWrite;
-        private @Nullable Boolean nfsv3;
-        private @Nullable Boolean nfsv41;
-        private @Nullable Integer ruleIndex;
-        private @Nullable Boolean unixReadOnly;
-        private @Nullable Boolean unixReadWrite;
+        private ExportPolicyRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportPolicyRuleResponse();
         }
 
         public Builder(ExportPolicyRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedClients = defaults.allowedClients;
-    	      this.cifs = defaults.cifs;
-    	      this.hasRootAccess = defaults.hasRootAccess;
-    	      this.kerberos5ReadOnly = defaults.kerberos5ReadOnly;
-    	      this.kerberos5ReadWrite = defaults.kerberos5ReadWrite;
-    	      this.kerberos5iReadOnly = defaults.kerberos5iReadOnly;
-    	      this.kerberos5iReadWrite = defaults.kerberos5iReadWrite;
-    	      this.kerberos5pReadOnly = defaults.kerberos5pReadOnly;
-    	      this.kerberos5pReadWrite = defaults.kerberos5pReadWrite;
-    	      this.nfsv3 = defaults.nfsv3;
-    	      this.nfsv41 = defaults.nfsv41;
-    	      this.ruleIndex = defaults.ruleIndex;
-    	      this.unixReadOnly = defaults.unixReadOnly;
-    	      this.unixReadWrite = defaults.unixReadWrite;
+            $ = new ExportPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedClients(@Nullable String allowedClients) {
-            this.allowedClients = allowedClients;
+            $.allowedClients = allowedClients;
             return this;
         }
+
         public Builder cifs(@Nullable Boolean cifs) {
-            this.cifs = cifs;
+            $.cifs = cifs;
             return this;
         }
+
         public Builder hasRootAccess(@Nullable Boolean hasRootAccess) {
-            this.hasRootAccess = hasRootAccess;
+            $.hasRootAccess = hasRootAccess;
             return this;
         }
+
         public Builder kerberos5ReadOnly(@Nullable Boolean kerberos5ReadOnly) {
-            this.kerberos5ReadOnly = kerberos5ReadOnly;
+            $.kerberos5ReadOnly = kerberos5ReadOnly;
             return this;
         }
+
         public Builder kerberos5ReadWrite(@Nullable Boolean kerberos5ReadWrite) {
-            this.kerberos5ReadWrite = kerberos5ReadWrite;
+            $.kerberos5ReadWrite = kerberos5ReadWrite;
             return this;
         }
+
         public Builder kerberos5iReadOnly(@Nullable Boolean kerberos5iReadOnly) {
-            this.kerberos5iReadOnly = kerberos5iReadOnly;
+            $.kerberos5iReadOnly = kerberos5iReadOnly;
             return this;
         }
+
         public Builder kerberos5iReadWrite(@Nullable Boolean kerberos5iReadWrite) {
-            this.kerberos5iReadWrite = kerberos5iReadWrite;
+            $.kerberos5iReadWrite = kerberos5iReadWrite;
             return this;
         }
+
         public Builder kerberos5pReadOnly(@Nullable Boolean kerberos5pReadOnly) {
-            this.kerberos5pReadOnly = kerberos5pReadOnly;
+            $.kerberos5pReadOnly = kerberos5pReadOnly;
             return this;
         }
+
         public Builder kerberos5pReadWrite(@Nullable Boolean kerberos5pReadWrite) {
-            this.kerberos5pReadWrite = kerberos5pReadWrite;
+            $.kerberos5pReadWrite = kerberos5pReadWrite;
             return this;
         }
+
         public Builder nfsv3(@Nullable Boolean nfsv3) {
-            this.nfsv3 = nfsv3;
+            $.nfsv3 = nfsv3;
             return this;
         }
+
         public Builder nfsv41(@Nullable Boolean nfsv41) {
-            this.nfsv41 = nfsv41;
+            $.nfsv41 = nfsv41;
             return this;
         }
+
         public Builder ruleIndex(@Nullable Integer ruleIndex) {
-            this.ruleIndex = ruleIndex;
+            $.ruleIndex = ruleIndex;
             return this;
         }
+
         public Builder unixReadOnly(@Nullable Boolean unixReadOnly) {
-            this.unixReadOnly = unixReadOnly;
+            $.unixReadOnly = unixReadOnly;
             return this;
         }
+
         public Builder unixReadWrite(@Nullable Boolean unixReadWrite) {
-            this.unixReadWrite = unixReadWrite;
+            $.unixReadWrite = unixReadWrite;
             return this;
-        }        public ExportPolicyRuleResponse build() {
-            return new ExportPolicyRuleResponse(allowedClients, cifs, hasRootAccess, kerberos5ReadOnly, kerberos5ReadWrite, kerberos5iReadOnly, kerberos5iReadWrite, kerberos5pReadOnly, kerberos5pReadWrite, nfsv3, nfsv41, ruleIndex, unixReadOnly, unixReadWrite);
+        }
+
+        public ExportPolicyRuleResponse build() {
+            $.hasRootAccess = Codegen.booleanProp("hasRootAccess").arg($.hasRootAccess).def(true).getNullable();
+            $.kerberos5ReadOnly = Codegen.booleanProp("kerberos5ReadOnly").arg($.kerberos5ReadOnly).def(false).getNullable();
+            $.kerberos5ReadWrite = Codegen.booleanProp("kerberos5ReadWrite").arg($.kerberos5ReadWrite).def(false).getNullable();
+            $.kerberos5iReadOnly = Codegen.booleanProp("kerberos5iReadOnly").arg($.kerberos5iReadOnly).def(false).getNullable();
+            $.kerberos5iReadWrite = Codegen.booleanProp("kerberos5iReadWrite").arg($.kerberos5iReadWrite).def(false).getNullable();
+            $.kerberos5pReadOnly = Codegen.booleanProp("kerberos5pReadOnly").arg($.kerberos5pReadOnly).def(false).getNullable();
+            $.kerberos5pReadWrite = Codegen.booleanProp("kerberos5pReadWrite").arg($.kerberos5pReadWrite).def(false).getNullable();
+            return $;
         }
     }
+
 }

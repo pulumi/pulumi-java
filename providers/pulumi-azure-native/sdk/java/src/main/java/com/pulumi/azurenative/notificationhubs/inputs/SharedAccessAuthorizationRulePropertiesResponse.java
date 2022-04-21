@@ -25,7 +25,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="claimType", required=true)
-      private final String claimType;
+    private String claimType;
 
     public String claimType() {
         return this.claimType;
@@ -36,7 +36,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="claimValue", required=true)
-      private final String claimValue;
+    private String claimValue;
 
     public String claimValue() {
         return this.claimValue;
@@ -47,7 +47,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -58,7 +58,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -69,7 +69,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="modifiedTime", required=true)
-      private final String modifiedTime;
+    private String modifiedTime;
 
     public String modifiedTime() {
         return this.modifiedTime;
@@ -80,7 +80,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="primaryKey", required=true)
-      private final String primaryKey;
+    private String primaryKey;
 
     public String primaryKey() {
         return this.primaryKey;
@@ -91,7 +91,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="revision", required=true)
-      private final Integer revision;
+    private Integer revision;
 
     public Integer revision() {
         return this.revision;
@@ -102,10 +102,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="rights")
-      private final @Nullable List<String> rights;
+    private @Nullable List<String> rights;
 
-    public List<String> rights() {
-        return this.rights == null ? List.of() : this.rights;
+    public Optional<List<String>> rights() {
+        return Optional.ofNullable(this.rights);
     }
 
     /**
@@ -113,121 +113,104 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
      * 
      */
     @Import(name="secondaryKey", required=true)
-      private final String secondaryKey;
+    private String secondaryKey;
 
     public String secondaryKey() {
         return this.secondaryKey;
     }
 
-    public SharedAccessAuthorizationRulePropertiesResponse(
-        String claimType,
-        String claimValue,
-        String createdTime,
-        String keyName,
-        String modifiedTime,
-        String primaryKey,
-        Integer revision,
-        @Nullable List<String> rights,
-        String secondaryKey) {
-        this.claimType = Objects.requireNonNull(claimType, "expected parameter 'claimType' to be non-null");
-        this.claimValue = Objects.requireNonNull(claimValue, "expected parameter 'claimValue' to be non-null");
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.modifiedTime = Objects.requireNonNull(modifiedTime, "expected parameter 'modifiedTime' to be non-null");
-        this.primaryKey = Objects.requireNonNull(primaryKey, "expected parameter 'primaryKey' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.rights = rights;
-        this.secondaryKey = Objects.requireNonNull(secondaryKey, "expected parameter 'secondaryKey' to be non-null");
-    }
+    private SharedAccessAuthorizationRulePropertiesResponse() {}
 
-    private SharedAccessAuthorizationRulePropertiesResponse() {
-        this.claimType = null;
-        this.claimValue = null;
-        this.createdTime = null;
-        this.keyName = null;
-        this.modifiedTime = null;
-        this.primaryKey = null;
-        this.revision = null;
-        this.rights = List.of();
-        this.secondaryKey = null;
+    private SharedAccessAuthorizationRulePropertiesResponse(SharedAccessAuthorizationRulePropertiesResponse $) {
+        this.claimType = $.claimType;
+        this.claimValue = $.claimValue;
+        this.createdTime = $.createdTime;
+        this.keyName = $.keyName;
+        this.modifiedTime = $.modifiedTime;
+        this.primaryKey = $.primaryKey;
+        this.revision = $.revision;
+        this.rights = $.rights;
+        this.secondaryKey = $.secondaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedAccessAuthorizationRulePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String claimType;
-        private String claimValue;
-        private String createdTime;
-        private String keyName;
-        private String modifiedTime;
-        private String primaryKey;
-        private Integer revision;
-        private @Nullable List<String> rights;
-        private String secondaryKey;
+        private SharedAccessAuthorizationRulePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedAccessAuthorizationRulePropertiesResponse();
         }
 
         public Builder(SharedAccessAuthorizationRulePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimType = defaults.claimType;
-    	      this.claimValue = defaults.claimValue;
-    	      this.createdTime = defaults.createdTime;
-    	      this.keyName = defaults.keyName;
-    	      this.modifiedTime = defaults.modifiedTime;
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.revision = defaults.revision;
-    	      this.rights = defaults.rights;
-    	      this.secondaryKey = defaults.secondaryKey;
+            $ = new SharedAccessAuthorizationRulePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder claimType(String claimType) {
-            this.claimType = Objects.requireNonNull(claimType);
+            $.claimType = claimType;
             return this;
         }
+
         public Builder claimValue(String claimValue) {
-            this.claimValue = Objects.requireNonNull(claimValue);
+            $.claimValue = claimValue;
             return this;
         }
+
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder modifiedTime(String modifiedTime) {
-            this.modifiedTime = Objects.requireNonNull(modifiedTime);
+            $.modifiedTime = modifiedTime;
             return this;
         }
+
         public Builder primaryKey(String primaryKey) {
-            this.primaryKey = Objects.requireNonNull(primaryKey);
+            $.primaryKey = primaryKey;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder rights(@Nullable List<String> rights) {
-            this.rights = rights;
+            $.rights = rights;
             return this;
         }
+
         public Builder rights(String... rights) {
             return rights(List.of(rights));
         }
+
         public Builder secondaryKey(String secondaryKey) {
-            this.secondaryKey = Objects.requireNonNull(secondaryKey);
+            $.secondaryKey = secondaryKey;
             return this;
-        }        public SharedAccessAuthorizationRulePropertiesResponse build() {
-            return new SharedAccessAuthorizationRulePropertiesResponse(claimType, claimValue, createdTime, keyName, modifiedTime, primaryKey, revision, rights, secondaryKey);
+        }
+
+        public SharedAccessAuthorizationRulePropertiesResponse build() {
+            $.claimType = Objects.requireNonNull($.claimType, "expected parameter 'claimType' to be non-null");
+            $.claimValue = Objects.requireNonNull($.claimValue, "expected parameter 'claimValue' to be non-null");
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.modifiedTime = Objects.requireNonNull($.modifiedTime, "expected parameter 'modifiedTime' to be non-null");
+            $.primaryKey = Objects.requireNonNull($.primaryKey, "expected parameter 'primaryKey' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.secondaryKey = Objects.requireNonNull($.secondaryKey, "expected parameter 'secondaryKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="credentials")
-      private final @Nullable String credentials;
+    private @Nullable String credentials;
 
     public Optional<String> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public BlobLocationResponse(
-        @Nullable String credentials,
-        String uri) {
-        this.credentials = credentials;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private BlobLocationResponse() {}
 
-    private BlobLocationResponse() {
-        this.credentials = null;
-        this.uri = null;
+    private BlobLocationResponse(BlobLocationResponse $) {
+        this.credentials = $.credentials;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String credentials;
-        private String uri;
+        private BlobLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobLocationResponse();
         }
 
         public Builder(BlobLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.uri = defaults.uri;
+            $ = new BlobLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public BlobLocationResponse build() {
-            return new BlobLocationResponse(credentials, uri);
+        }
+
+        public BlobLocationResponse build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class LabelingJobInstructionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public LabelingJobInstructionsResponse(@Nullable String uri) {
-        this.uri = uri;
-    }
+    private LabelingJobInstructionsResponse() {}
 
-    private LabelingJobInstructionsResponse() {
-        this.uri = null;
+    private LabelingJobInstructionsResponse(LabelingJobInstructionsResponse $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobInstructionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String uri;
+        private LabelingJobInstructionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobInstructionsResponse();
         }
 
         public Builder(LabelingJobInstructionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new LabelingJobInstructionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public LabelingJobInstructionsResponse build() {
-            return new LabelingJobInstructionsResponse(uri);
+        }
+
+        public LabelingJobInstructionsResponse build() {
+            return $;
         }
     }
+
 }

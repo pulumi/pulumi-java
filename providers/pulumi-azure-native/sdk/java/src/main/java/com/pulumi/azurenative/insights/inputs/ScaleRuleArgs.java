@@ -7,7 +7,6 @@ import com.pulumi.azurenative.insights.inputs.MetricTriggerArgs;
 import com.pulumi.azurenative.insights.inputs.ScaleActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +23,7 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricTrigger", required=true)
-      private final Output<MetricTriggerArgs> metricTrigger;
+    private Output<MetricTriggerArgs> metricTrigger;
 
     public Output<MetricTriggerArgs> metricTrigger() {
         return this.metricTrigger;
@@ -35,63 +34,60 @@ public final class ScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scaleAction", required=true)
-      private final Output<ScaleActionArgs> scaleAction;
+    private Output<ScaleActionArgs> scaleAction;
 
     public Output<ScaleActionArgs> scaleAction() {
         return this.scaleAction;
     }
 
-    public ScaleRuleArgs(
-        Output<MetricTriggerArgs> metricTrigger,
-        Output<ScaleActionArgs> scaleAction) {
-        this.metricTrigger = Objects.requireNonNull(metricTrigger, "expected parameter 'metricTrigger' to be non-null");
-        this.scaleAction = Objects.requireNonNull(scaleAction, "expected parameter 'scaleAction' to be non-null");
-    }
+    private ScaleRuleArgs() {}
 
-    private ScaleRuleArgs() {
-        this.metricTrigger = Codegen.empty();
-        this.scaleAction = Codegen.empty();
+    private ScaleRuleArgs(ScaleRuleArgs $) {
+        this.metricTrigger = $.metricTrigger;
+        this.scaleAction = $.scaleAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MetricTriggerArgs> metricTrigger;
-        private Output<ScaleActionArgs> scaleAction;
+        private ScaleRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleArgs();
         }
 
         public Builder(ScaleRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricTrigger = defaults.metricTrigger;
-    	      this.scaleAction = defaults.scaleAction;
+            $ = new ScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricTrigger(Output<MetricTriggerArgs> metricTrigger) {
-            this.metricTrigger = Objects.requireNonNull(metricTrigger);
+            $.metricTrigger = metricTrigger;
             return this;
         }
+
         public Builder metricTrigger(MetricTriggerArgs metricTrigger) {
-            this.metricTrigger = Output.of(Objects.requireNonNull(metricTrigger));
-            return this;
+            return metricTrigger(Output.of(metricTrigger));
         }
+
         public Builder scaleAction(Output<ScaleActionArgs> scaleAction) {
-            this.scaleAction = Objects.requireNonNull(scaleAction);
+            $.scaleAction = scaleAction;
             return this;
         }
+
         public Builder scaleAction(ScaleActionArgs scaleAction) {
-            this.scaleAction = Output.of(Objects.requireNonNull(scaleAction));
-            return this;
-        }        public ScaleRuleArgs build() {
-            return new ScaleRuleArgs(metricTrigger, scaleAction);
+            return scaleAction(Output.of(scaleAction));
+        }
+
+        public ScaleRuleArgs build() {
+            $.metricTrigger = Objects.requireNonNull($.metricTrigger, "expected parameter 'metricTrigger' to be non-null");
+            $.scaleAction = Objects.requireNonNull($.scaleAction, "expected parameter 'scaleAction' to be non-null");
+            return $;
         }
     }
+
 }

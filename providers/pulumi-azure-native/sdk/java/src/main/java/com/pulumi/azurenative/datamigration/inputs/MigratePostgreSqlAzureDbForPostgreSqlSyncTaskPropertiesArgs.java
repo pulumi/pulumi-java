@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
+    private @Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
-    public Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs(
-        @Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs() {}
 
-    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
-        private Output<String> taskType;
+        private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs();
         }
 
         public Builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs build() {
-            return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

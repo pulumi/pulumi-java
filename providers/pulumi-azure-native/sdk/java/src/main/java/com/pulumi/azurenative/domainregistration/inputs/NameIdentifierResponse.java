@@ -23,45 +23,44 @@ public final class NameIdentifierResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public NameIdentifierResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private NameIdentifierResponse() {}
 
-    private NameIdentifierResponse() {
-        this.name = null;
+    private NameIdentifierResponse(NameIdentifierResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NameIdentifierResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private NameIdentifierResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NameIdentifierResponse();
         }
 
         public Builder(NameIdentifierResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new NameIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public NameIdentifierResponse build() {
-            return new NameIdentifierResponse(name);
+        }
+
+        public NameIdentifierResponse build() {
+            return $;
         }
     }
+
 }

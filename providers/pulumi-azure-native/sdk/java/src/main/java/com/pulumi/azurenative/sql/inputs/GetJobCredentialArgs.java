@@ -17,7 +17,7 @@ public final class GetJobCredentialArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="credentialName", required=true)
-      private final String credentialName;
+    private String credentialName;
 
     public String credentialName() {
         return this.credentialName;
@@ -28,7 +28,7 @@ public final class GetJobCredentialArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final String jobAgentName;
+    private String jobAgentName;
 
     public String jobAgentName() {
         return this.jobAgentName;
@@ -39,7 +39,7 @@ public final class GetJobCredentialArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetJobCredentialArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetJobCredentialArgs(
-        String credentialName,
-        String jobAgentName,
-        String resourceGroupName,
-        String serverName) {
-        this.credentialName = Objects.requireNonNull(credentialName, "expected parameter 'credentialName' to be non-null");
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetJobCredentialArgs() {}
 
-    private GetJobCredentialArgs() {
-        this.credentialName = null;
-        this.jobAgentName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetJobCredentialArgs(GetJobCredentialArgs $) {
+        this.credentialName = $.credentialName;
+        this.jobAgentName = $.jobAgentName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String credentialName;
-        private String jobAgentName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetJobCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobCredentialArgs();
         }
 
         public Builder(GetJobCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentialName = defaults.credentialName;
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetJobCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentialName(String credentialName) {
-            this.credentialName = Objects.requireNonNull(credentialName);
+            $.credentialName = credentialName;
             return this;
         }
+
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetJobCredentialArgs build() {
-            return new GetJobCredentialArgs(credentialName, jobAgentName, resourceGroupName, serverName);
+        }
+
+        public GetJobCredentialArgs build() {
+            $.credentialName = Objects.requireNonNull($.credentialName, "expected parameter 'credentialName' to be non-null");
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

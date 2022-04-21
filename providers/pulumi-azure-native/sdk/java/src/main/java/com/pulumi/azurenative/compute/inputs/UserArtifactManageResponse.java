@@ -19,7 +19,7 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="install", required=true)
-      private final String install;
+    private String install;
 
     public String install() {
         return this.install;
@@ -30,7 +30,7 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="remove", required=true)
-      private final String remove;
+    private String remove;
 
     public String remove() {
         return this.remove;
@@ -41,64 +41,58 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="update")
-      private final @Nullable String update;
+    private @Nullable String update;
 
     public Optional<String> update() {
-        return this.update == null ? Optional.empty() : Optional.ofNullable(this.update);
+        return Optional.ofNullable(this.update);
     }
 
-    public UserArtifactManageResponse(
-        String install,
-        String remove,
-        @Nullable String update) {
-        this.install = Objects.requireNonNull(install, "expected parameter 'install' to be non-null");
-        this.remove = Objects.requireNonNull(remove, "expected parameter 'remove' to be non-null");
-        this.update = update;
-    }
+    private UserArtifactManageResponse() {}
 
-    private UserArtifactManageResponse() {
-        this.install = null;
-        this.remove = null;
-        this.update = null;
+    private UserArtifactManageResponse(UserArtifactManageResponse $) {
+        this.install = $.install;
+        this.remove = $.remove;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArtifactManageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String install;
-        private String remove;
-        private @Nullable String update;
+        private UserArtifactManageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArtifactManageResponse();
         }
 
         public Builder(UserArtifactManageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.install = defaults.install;
-    	      this.remove = defaults.remove;
-    	      this.update = defaults.update;
+            $ = new UserArtifactManageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder install(String install) {
-            this.install = Objects.requireNonNull(install);
+            $.install = install;
             return this;
         }
+
         public Builder remove(String remove) {
-            this.remove = Objects.requireNonNull(remove);
+            $.remove = remove;
             return this;
         }
+
         public Builder update(@Nullable String update) {
-            this.update = update;
+            $.update = update;
             return this;
-        }        public UserArtifactManageResponse build() {
-            return new UserArtifactManageResponse(install, remove, update);
+        }
+
+        public UserArtifactManageResponse build() {
+            $.install = Objects.requireNonNull($.install, "expected parameter 'install' to be non-null");
+            $.remove = Objects.requireNonNull($.remove, "expected parameter 'remove' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class SSISExecutionParameterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="value", required=true)
-      private final Object value;
+    private Object value;
 
     public Object value() {
         return this.value;
     }
 
-    public SSISExecutionParameterResponse(Object value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SSISExecutionParameterResponse() {}
 
-    private SSISExecutionParameterResponse() {
-        this.value = null;
+    private SSISExecutionParameterResponse(SSISExecutionParameterResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISExecutionParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object value;
+        private SSISExecutionParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISExecutionParameterResponse();
         }
 
         public Builder(SSISExecutionParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new SSISExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Object value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public SSISExecutionParameterResponse build() {
-            return new SSISExecutionParameterResponse(value);
+        }
+
+        public SSISExecutionParameterResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

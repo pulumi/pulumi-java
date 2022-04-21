@@ -25,10 +25,10 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends com.pu
      * 
      */
     @Import(name="requestHeaderConfigurations")
-      private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
+    private @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
 
-    public List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations() {
-        return this.requestHeaderConfigurations == null ? List.of() : this.requestHeaderConfigurations;
+    public Optional<List<ApplicationGatewayHeaderConfigurationResponse>> requestHeaderConfigurations() {
+        return Optional.ofNullable(this.requestHeaderConfigurations);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends com.pu
      * 
      */
     @Import(name="responseHeaderConfigurations")
-      private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
+    private @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
 
-    public List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations() {
-        return this.responseHeaderConfigurations == null ? List.of() : this.responseHeaderConfigurations;
+    public Optional<List<ApplicationGatewayHeaderConfigurationResponse>> responseHeaderConfigurations() {
+        return Optional.ofNullable(this.responseHeaderConfigurations);
     }
 
     /**
@@ -47,70 +47,64 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends com.pu
      * 
      */
     @Import(name="urlConfiguration")
-      private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
+    private @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
     public Optional<ApplicationGatewayUrlConfigurationResponse> urlConfiguration() {
-        return this.urlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.urlConfiguration);
+        return Optional.ofNullable(this.urlConfiguration);
     }
 
-    public ApplicationGatewayRewriteRuleActionSetResponse(
-        @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
-        @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
-        @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
-        this.requestHeaderConfigurations = requestHeaderConfigurations;
-        this.responseHeaderConfigurations = responseHeaderConfigurations;
-        this.urlConfiguration = urlConfiguration;
-    }
+    private ApplicationGatewayRewriteRuleActionSetResponse() {}
 
-    private ApplicationGatewayRewriteRuleActionSetResponse() {
-        this.requestHeaderConfigurations = List.of();
-        this.responseHeaderConfigurations = List.of();
-        this.urlConfiguration = null;
+    private ApplicationGatewayRewriteRuleActionSetResponse(ApplicationGatewayRewriteRuleActionSetResponse $) {
+        this.requestHeaderConfigurations = $.requestHeaderConfigurations;
+        this.responseHeaderConfigurations = $.responseHeaderConfigurations;
+        this.urlConfiguration = $.urlConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRewriteRuleActionSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
-        private @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
-        private @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
+        private ApplicationGatewayRewriteRuleActionSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRewriteRuleActionSetResponse();
         }
 
         public Builder(ApplicationGatewayRewriteRuleActionSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeaderConfigurations = defaults.requestHeaderConfigurations;
-    	      this.responseHeaderConfigurations = defaults.responseHeaderConfigurations;
-    	      this.urlConfiguration = defaults.urlConfiguration;
+            $ = new ApplicationGatewayRewriteRuleActionSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations) {
-            this.requestHeaderConfigurations = requestHeaderConfigurations;
+            $.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
+
         public Builder requestHeaderConfigurations(ApplicationGatewayHeaderConfigurationResponse... requestHeaderConfigurations) {
             return requestHeaderConfigurations(List.of(requestHeaderConfigurations));
         }
+
         public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations) {
-            this.responseHeaderConfigurations = responseHeaderConfigurations;
+            $.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
+
         public Builder responseHeaderConfigurations(ApplicationGatewayHeaderConfigurationResponse... responseHeaderConfigurations) {
             return responseHeaderConfigurations(List.of(responseHeaderConfigurations));
         }
+
         public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
-            this.urlConfiguration = urlConfiguration;
+            $.urlConfiguration = urlConfiguration;
             return this;
-        }        public ApplicationGatewayRewriteRuleActionSetResponse build() {
-            return new ApplicationGatewayRewriteRuleActionSetResponse(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
+        }
+
+        public ApplicationGatewayRewriteRuleActionSetResponse build() {
+            return $;
         }
     }
+
 }

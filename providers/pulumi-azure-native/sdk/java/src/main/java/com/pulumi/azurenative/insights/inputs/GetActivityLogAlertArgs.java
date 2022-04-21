@@ -17,7 +17,7 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="activityLogAlertName", required=true)
-      private final String activityLogAlertName;
+    private String activityLogAlertName;
 
     public String activityLogAlertName() {
         return this.activityLogAlertName;
@@ -28,55 +28,52 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetActivityLogAlertArgs(
-        String activityLogAlertName,
-        String resourceGroupName) {
-        this.activityLogAlertName = Objects.requireNonNull(activityLogAlertName, "expected parameter 'activityLogAlertName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetActivityLogAlertArgs() {}
 
-    private GetActivityLogAlertArgs() {
-        this.activityLogAlertName = null;
-        this.resourceGroupName = null;
+    private GetActivityLogAlertArgs(GetActivityLogAlertArgs $) {
+        this.activityLogAlertName = $.activityLogAlertName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActivityLogAlertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activityLogAlertName;
-        private String resourceGroupName;
+        private GetActivityLogAlertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActivityLogAlertArgs();
         }
 
         public Builder(GetActivityLogAlertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activityLogAlertName = defaults.activityLogAlertName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetActivityLogAlertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activityLogAlertName(String activityLogAlertName) {
-            this.activityLogAlertName = Objects.requireNonNull(activityLogAlertName);
+            $.activityLogAlertName = activityLogAlertName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetActivityLogAlertArgs build() {
-            return new GetActivityLogAlertArgs(activityLogAlertName, resourceGroupName);
+        }
+
+        public GetActivityLogAlertArgs build() {
+            $.activityLogAlertName = Objects.requireNonNull($.activityLogAlertName, "expected parameter 'activityLogAlertName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

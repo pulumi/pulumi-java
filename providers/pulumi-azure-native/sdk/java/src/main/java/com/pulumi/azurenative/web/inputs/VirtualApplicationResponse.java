@@ -26,10 +26,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="physicalPath")
-      private final @Nullable String physicalPath;
+    private @Nullable String physicalPath;
 
     public Optional<String> physicalPath() {
-        return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
+        return Optional.ofNullable(this.physicalPath);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preloadEnabled")
-      private final @Nullable Boolean preloadEnabled;
+    private @Nullable Boolean preloadEnabled;
 
     public Optional<Boolean> preloadEnabled() {
-        return this.preloadEnabled == null ? Optional.empty() : Optional.ofNullable(this.preloadEnabled);
+        return Optional.ofNullable(this.preloadEnabled);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualDirectories")
-      private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
+    private @Nullable List<VirtualDirectoryResponse> virtualDirectories;
 
-    public List<VirtualDirectoryResponse> virtualDirectories() {
-        return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
+    public Optional<List<VirtualDirectoryResponse>> virtualDirectories() {
+        return Optional.ofNullable(this.virtualDirectories);
     }
 
     /**
@@ -59,76 +59,66 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualPath")
-      private final @Nullable String virtualPath;
+    private @Nullable String virtualPath;
 
     public Optional<String> virtualPath() {
-        return this.virtualPath == null ? Optional.empty() : Optional.ofNullable(this.virtualPath);
+        return Optional.ofNullable(this.virtualPath);
     }
 
-    public VirtualApplicationResponse(
-        @Nullable String physicalPath,
-        @Nullable Boolean preloadEnabled,
-        @Nullable List<VirtualDirectoryResponse> virtualDirectories,
-        @Nullable String virtualPath) {
-        this.physicalPath = physicalPath;
-        this.preloadEnabled = preloadEnabled;
-        this.virtualDirectories = virtualDirectories;
-        this.virtualPath = virtualPath;
-    }
+    private VirtualApplicationResponse() {}
 
-    private VirtualApplicationResponse() {
-        this.physicalPath = null;
-        this.preloadEnabled = null;
-        this.virtualDirectories = List.of();
-        this.virtualPath = null;
+    private VirtualApplicationResponse(VirtualApplicationResponse $) {
+        this.physicalPath = $.physicalPath;
+        this.preloadEnabled = $.preloadEnabled;
+        this.virtualDirectories = $.virtualDirectories;
+        this.virtualPath = $.virtualPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualApplicationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String physicalPath;
-        private @Nullable Boolean preloadEnabled;
-        private @Nullable List<VirtualDirectoryResponse> virtualDirectories;
-        private @Nullable String virtualPath;
+        private VirtualApplicationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualApplicationResponse();
         }
 
         public Builder(VirtualApplicationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.physicalPath = defaults.physicalPath;
-    	      this.preloadEnabled = defaults.preloadEnabled;
-    	      this.virtualDirectories = defaults.virtualDirectories;
-    	      this.virtualPath = defaults.virtualPath;
+            $ = new VirtualApplicationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = physicalPath;
+            $.physicalPath = physicalPath;
             return this;
         }
+
         public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
-            this.preloadEnabled = preloadEnabled;
+            $.preloadEnabled = preloadEnabled;
             return this;
         }
+
         public Builder virtualDirectories(@Nullable List<VirtualDirectoryResponse> virtualDirectories) {
-            this.virtualDirectories = virtualDirectories;
+            $.virtualDirectories = virtualDirectories;
             return this;
         }
+
         public Builder virtualDirectories(VirtualDirectoryResponse... virtualDirectories) {
             return virtualDirectories(List.of(virtualDirectories));
         }
+
         public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = virtualPath;
+            $.virtualPath = virtualPath;
             return this;
-        }        public VirtualApplicationResponse build() {
-            return new VirtualApplicationResponse(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
+        }
+
+        public VirtualApplicationResponse build() {
+            return $;
         }
     }
+
 }

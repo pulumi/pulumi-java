@@ -19,10 +19,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exportName", required=true)
-      private final String exportName;
+    private String exportName;
 
     public String exportName() {
         return this.exportName;
@@ -41,64 +41,58 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetExportArgs(
-        @Nullable String expand,
-        String exportName,
-        String scope) {
-        this.expand = expand;
-        this.exportName = Objects.requireNonNull(exportName, "expected parameter 'exportName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetExportArgs() {}
 
-    private GetExportArgs() {
-        this.expand = null;
-        this.exportName = null;
-        this.scope = null;
+    private GetExportArgs(GetExportArgs $) {
+        this.expand = $.expand;
+        this.exportName = $.exportName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String exportName;
-        private String scope;
+        private GetExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExportArgs();
         }
 
         public Builder(GetExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.exportName = defaults.exportName;
-    	      this.scope = defaults.scope;
+            $ = new GetExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder exportName(String exportName) {
-            this.exportName = Objects.requireNonNull(exportName);
+            $.exportName = exportName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetExportArgs build() {
-            return new GetExportArgs(expand, exportName, scope);
+        }
+
+        public GetExportArgs build() {
+            $.exportName = Objects.requireNonNull($.exportName, "expected parameter 'exportName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

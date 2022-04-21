@@ -24,10 +24,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
      * 
      */
     @Import(name="status")
-      private final @Nullable InstanceViewStatusResponse status;
+    private @Nullable InstanceViewStatusResponse status;
 
     public Optional<InstanceViewStatusResponse> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends co
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable String typeHandlerVersion;
+    private @Nullable String typeHandlerVersion;
 
     public Optional<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VirtualMachineExtensionHandlerInstanceViewResponse(
-        @Nullable InstanceViewStatusResponse status,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
-        this.status = status;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VirtualMachineExtensionHandlerInstanceViewResponse() {}
 
-    private VirtualMachineExtensionHandlerInstanceViewResponse() {
-        this.status = null;
-        this.type = null;
-        this.typeHandlerVersion = null;
+    private VirtualMachineExtensionHandlerInstanceViewResponse(VirtualMachineExtensionHandlerInstanceViewResponse $) {
+        this.status = $.status;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineExtensionHandlerInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InstanceViewStatusResponse status;
-        private @Nullable String type;
-        private @Nullable String typeHandlerVersion;
+        private VirtualMachineExtensionHandlerInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineExtensionHandlerInstanceViewResponse();
         }
 
         public Builder(VirtualMachineExtensionHandlerInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VirtualMachineExtensionHandlerInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable InstanceViewStatusResponse status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }        public VirtualMachineExtensionHandlerInstanceViewResponse build() {
-            return new VirtualMachineExtensionHandlerInstanceViewResponse(status, type, typeHandlerVersion);
+        }
+
+        public VirtualMachineExtensionHandlerInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

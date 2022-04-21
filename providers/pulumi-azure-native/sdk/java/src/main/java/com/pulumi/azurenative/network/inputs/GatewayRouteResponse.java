@@ -22,7 +22,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="asPath", required=true)
-      private final String asPath;
+    private String asPath;
 
     public String asPath() {
         return this.asPath;
@@ -33,7 +33,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="localAddress", required=true)
-      private final String localAddress;
+    private String localAddress;
 
     public String localAddress() {
         return this.localAddress;
@@ -44,7 +44,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -55,7 +55,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nextHop", required=true)
-      private final String nextHop;
+    private String nextHop;
 
     public String nextHop() {
         return this.nextHop;
@@ -66,7 +66,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="origin", required=true)
-      private final String origin;
+    private String origin;
 
     public String origin() {
         return this.origin;
@@ -77,7 +77,7 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourcePeer", required=true)
-      private final String sourcePeer;
+    private String sourcePeer;
 
     public String sourcePeer() {
         return this.sourcePeer;
@@ -88,100 +88,87 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="weight", required=true)
-      private final Integer weight;
+    private Integer weight;
 
     public Integer weight() {
         return this.weight;
     }
 
-    public GatewayRouteResponse(
-        String asPath,
-        String localAddress,
-        String network,
-        String nextHop,
-        String origin,
-        String sourcePeer,
-        Integer weight) {
-        this.asPath = Objects.requireNonNull(asPath, "expected parameter 'asPath' to be non-null");
-        this.localAddress = Objects.requireNonNull(localAddress, "expected parameter 'localAddress' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.nextHop = Objects.requireNonNull(nextHop, "expected parameter 'nextHop' to be non-null");
-        this.origin = Objects.requireNonNull(origin, "expected parameter 'origin' to be non-null");
-        this.sourcePeer = Objects.requireNonNull(sourcePeer, "expected parameter 'sourcePeer' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private GatewayRouteResponse() {}
 
-    private GatewayRouteResponse() {
-        this.asPath = null;
-        this.localAddress = null;
-        this.network = null;
-        this.nextHop = null;
-        this.origin = null;
-        this.sourcePeer = null;
-        this.weight = null;
+    private GatewayRouteResponse(GatewayRouteResponse $) {
+        this.asPath = $.asPath;
+        this.localAddress = $.localAddress;
+        this.network = $.network;
+        this.nextHop = $.nextHop;
+        this.origin = $.origin;
+        this.sourcePeer = $.sourcePeer;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String asPath;
-        private String localAddress;
-        private String network;
-        private String nextHop;
-        private String origin;
-        private String sourcePeer;
-        private Integer weight;
+        private GatewayRouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteResponse();
         }
 
         public Builder(GatewayRouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asPath = defaults.asPath;
-    	      this.localAddress = defaults.localAddress;
-    	      this.network = defaults.network;
-    	      this.nextHop = defaults.nextHop;
-    	      this.origin = defaults.origin;
-    	      this.sourcePeer = defaults.sourcePeer;
-    	      this.weight = defaults.weight;
+            $ = new GatewayRouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asPath(String asPath) {
-            this.asPath = Objects.requireNonNull(asPath);
+            $.asPath = asPath;
             return this;
         }
+
         public Builder localAddress(String localAddress) {
-            this.localAddress = Objects.requireNonNull(localAddress);
+            $.localAddress = localAddress;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder nextHop(String nextHop) {
-            this.nextHop = Objects.requireNonNull(nextHop);
+            $.nextHop = nextHop;
             return this;
         }
+
         public Builder origin(String origin) {
-            this.origin = Objects.requireNonNull(origin);
+            $.origin = origin;
             return this;
         }
+
         public Builder sourcePeer(String sourcePeer) {
-            this.sourcePeer = Objects.requireNonNull(sourcePeer);
+            $.sourcePeer = sourcePeer;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
-        }        public GatewayRouteResponse build() {
-            return new GatewayRouteResponse(asPath, localAddress, network, nextHop, origin, sourcePeer, weight);
+        }
+
+        public GatewayRouteResponse build() {
+            $.asPath = Objects.requireNonNull($.asPath, "expected parameter 'asPath' to be non-null");
+            $.localAddress = Objects.requireNonNull($.localAddress, "expected parameter 'localAddress' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.nextHop = Objects.requireNonNull($.nextHop, "expected parameter 'nextHop' to be non-null");
+            $.origin = Objects.requireNonNull($.origin, "expected parameter 'origin' to be non-null");
+            $.sourcePeer = Objects.requireNonNull($.sourcePeer, "expected parameter 'sourcePeer' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

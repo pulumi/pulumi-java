@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="containerResourceId", required=true)
-      private final Output<String> containerResourceId;
+    private Output<String> containerResourceId;
 
     public Output<String> containerResourceId() {
         return this.containerResourceId;
@@ -46,10 +46,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="currentVersion")
-      private final @Nullable Output<String> currentVersion;
+    private @Nullable Output<String> currentVersion;
 
-    public Output<String> currentVersion() {
-        return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
+    public Optional<Output<String>> currentVersion() {
+        return Optional.ofNullable(this.currentVersion);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="edition")
-      private final @Nullable Output<String> edition;
+    private @Nullable Output<String> edition;
 
-    public Output<String> edition() {
-        return this.edition == null ? Codegen.empty() : this.edition;
+    public Optional<Output<String>> edition() {
+        return Optional.ofNullable(this.edition);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<String> licenseType;
+    private @Nullable Output<String> licenseType;
 
-    public Output<String> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<String>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="patchLevel")
-      private final @Nullable Output<String> patchLevel;
+    private @Nullable Output<String> patchLevel;
 
-    public Output<String> patchLevel() {
-        return this.patchLevel == null ? Codegen.empty() : this.patchLevel;
+    public Optional<Output<String>> patchLevel() {
+        return Optional.ofNullable(this.patchLevel);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
@@ -123,10 +123,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tcpDynamicPorts")
-      private final @Nullable Output<String> tcpDynamicPorts;
+    private @Nullable Output<String> tcpDynamicPorts;
 
-    public Output<String> tcpDynamicPorts() {
-        return this.tcpDynamicPorts == null ? Codegen.empty() : this.tcpDynamicPorts;
+    public Optional<Output<String>> tcpDynamicPorts() {
+        return Optional.ofNullable(this.tcpDynamicPorts);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tcpStaticPorts")
-      private final @Nullable Output<String> tcpStaticPorts;
+    private @Nullable Output<String> tcpStaticPorts;
 
-    public Output<String> tcpStaticPorts() {
-        return this.tcpStaticPorts == null ? Codegen.empty() : this.tcpStaticPorts;
+    public Optional<Output<String>> tcpStaticPorts() {
+        return Optional.ofNullable(this.tcpStaticPorts);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vCore")
-      private final @Nullable Output<String> vCore;
+    private @Nullable Output<String> vCore;
 
-    public Output<String> vCore() {
-        return this.vCore == null ? Codegen.empty() : this.vCore;
+    public Optional<Output<String>> vCore() {
+        return Optional.ofNullable(this.vCore);
     }
 
     /**
@@ -156,206 +156,170 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SqlServerInstancePropertiesArgs(
-        @Nullable Output<String> collation,
-        Output<String> containerResourceId,
-        @Nullable Output<String> currentVersion,
-        @Nullable Output<String> edition,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<String> licenseType,
-        @Nullable Output<String> patchLevel,
-        @Nullable Output<String> productId,
-        Output<String> status,
-        @Nullable Output<String> tcpDynamicPorts,
-        @Nullable Output<String> tcpStaticPorts,
-        @Nullable Output<String> vCore,
-        @Nullable Output<String> version) {
-        this.collation = collation;
-        this.containerResourceId = Objects.requireNonNull(containerResourceId, "expected parameter 'containerResourceId' to be non-null");
-        this.currentVersion = currentVersion;
-        this.edition = edition;
-        this.instanceName = instanceName;
-        this.licenseType = licenseType;
-        this.patchLevel = patchLevel;
-        this.productId = productId;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.tcpDynamicPorts = tcpDynamicPorts;
-        this.tcpStaticPorts = tcpStaticPorts;
-        this.vCore = vCore;
-        this.version = version;
-    }
+    private SqlServerInstancePropertiesArgs() {}
 
-    private SqlServerInstancePropertiesArgs() {
-        this.collation = Codegen.empty();
-        this.containerResourceId = Codegen.empty();
-        this.currentVersion = Codegen.empty();
-        this.edition = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.patchLevel = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tcpDynamicPorts = Codegen.empty();
-        this.tcpStaticPorts = Codegen.empty();
-        this.vCore = Codegen.empty();
-        this.version = Codegen.empty();
+    private SqlServerInstancePropertiesArgs(SqlServerInstancePropertiesArgs $) {
+        this.collation = $.collation;
+        this.containerResourceId = $.containerResourceId;
+        this.currentVersion = $.currentVersion;
+        this.edition = $.edition;
+        this.instanceName = $.instanceName;
+        this.licenseType = $.licenseType;
+        this.patchLevel = $.patchLevel;
+        this.productId = $.productId;
+        this.status = $.status;
+        this.tcpDynamicPorts = $.tcpDynamicPorts;
+        this.tcpStaticPorts = $.tcpStaticPorts;
+        this.vCore = $.vCore;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerInstancePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collation;
-        private Output<String> containerResourceId;
-        private @Nullable Output<String> currentVersion;
-        private @Nullable Output<String> edition;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<String> licenseType;
-        private @Nullable Output<String> patchLevel;
-        private @Nullable Output<String> productId;
-        private Output<String> status;
-        private @Nullable Output<String> tcpDynamicPorts;
-        private @Nullable Output<String> tcpStaticPorts;
-        private @Nullable Output<String> vCore;
-        private @Nullable Output<String> version;
+        private SqlServerInstancePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerInstancePropertiesArgs();
         }
 
         public Builder(SqlServerInstancePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collation = defaults.collation;
-    	      this.containerResourceId = defaults.containerResourceId;
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.edition = defaults.edition;
-    	      this.instanceName = defaults.instanceName;
-    	      this.licenseType = defaults.licenseType;
-    	      this.patchLevel = defaults.patchLevel;
-    	      this.productId = defaults.productId;
-    	      this.status = defaults.status;
-    	      this.tcpDynamicPorts = defaults.tcpDynamicPorts;
-    	      this.tcpStaticPorts = defaults.tcpStaticPorts;
-    	      this.vCore = defaults.vCore;
-    	      this.version = defaults.version;
+            $ = new SqlServerInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder containerResourceId(Output<String> containerResourceId) {
-            this.containerResourceId = Objects.requireNonNull(containerResourceId);
+            $.containerResourceId = containerResourceId;
             return this;
         }
+
         public Builder containerResourceId(String containerResourceId) {
-            this.containerResourceId = Output.of(Objects.requireNonNull(containerResourceId));
-            return this;
+            return containerResourceId(Output.of(containerResourceId));
         }
+
         public Builder currentVersion(@Nullable Output<String> currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
-        public Builder currentVersion(@Nullable String currentVersion) {
-            this.currentVersion = Codegen.ofNullable(currentVersion);
-            return this;
+
+        public Builder currentVersion(String currentVersion) {
+            return currentVersion(Output.of(currentVersion));
         }
+
         public Builder edition(@Nullable Output<String> edition) {
-            this.edition = edition;
+            $.edition = edition;
             return this;
         }
-        public Builder edition(@Nullable String edition) {
-            this.edition = Codegen.ofNullable(edition);
-            return this;
+
+        public Builder edition(String edition) {
+            return edition(Output.of(edition));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder licenseType(@Nullable Output<String> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder patchLevel(@Nullable Output<String> patchLevel) {
-            this.patchLevel = patchLevel;
+            $.patchLevel = patchLevel;
             return this;
         }
-        public Builder patchLevel(@Nullable String patchLevel) {
-            this.patchLevel = Codegen.ofNullable(patchLevel);
-            return this;
+
+        public Builder patchLevel(String patchLevel) {
+            return patchLevel(Output.of(patchLevel));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder tcpDynamicPorts(@Nullable Output<String> tcpDynamicPorts) {
-            this.tcpDynamicPorts = tcpDynamicPorts;
+            $.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
-        public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
-            this.tcpDynamicPorts = Codegen.ofNullable(tcpDynamicPorts);
-            return this;
+
+        public Builder tcpDynamicPorts(String tcpDynamicPorts) {
+            return tcpDynamicPorts(Output.of(tcpDynamicPorts));
         }
+
         public Builder tcpStaticPorts(@Nullable Output<String> tcpStaticPorts) {
-            this.tcpStaticPorts = tcpStaticPorts;
+            $.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
-        public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
-            this.tcpStaticPorts = Codegen.ofNullable(tcpStaticPorts);
-            return this;
+
+        public Builder tcpStaticPorts(String tcpStaticPorts) {
+            return tcpStaticPorts(Output.of(tcpStaticPorts));
         }
+
         public Builder vCore(@Nullable Output<String> vCore) {
-            this.vCore = vCore;
+            $.vCore = vCore;
             return this;
         }
-        public Builder vCore(@Nullable String vCore) {
-            this.vCore = Codegen.ofNullable(vCore);
-            return this;
+
+        public Builder vCore(String vCore) {
+            return vCore(Output.of(vCore));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SqlServerInstancePropertiesArgs build() {
-            return new SqlServerInstancePropertiesArgs(collation, containerResourceId, currentVersion, edition, instanceName, licenseType, patchLevel, productId, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SqlServerInstancePropertiesArgs build() {
+            $.containerResourceId = Objects.requireNonNull($.containerResourceId, "expected parameter 'containerResourceId' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

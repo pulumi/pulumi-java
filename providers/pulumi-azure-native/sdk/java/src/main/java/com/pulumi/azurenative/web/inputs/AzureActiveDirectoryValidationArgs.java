@@ -6,10 +6,10 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.JwtClaimChecksArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureActiveDirectoryValidationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedAudiences")
-      private final @Nullable Output<List<String>> allowedAudiences;
+    private @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> allowedAudiences() {
-        return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
+    public Optional<Output<List<String>>> allowedAudiences() {
+        return Optional.ofNullable(this.allowedAudiences);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class AzureActiveDirectoryValidationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="jwtClaimChecks")
-      private final @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
+    private @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
 
-    public Output<JwtClaimChecksArgs> jwtClaimChecks() {
-        return this.jwtClaimChecks == null ? Codegen.empty() : this.jwtClaimChecks;
+    public Optional<Output<JwtClaimChecksArgs>> jwtClaimChecks() {
+        return Optional.ofNullable(this.jwtClaimChecks);
     }
 
-    public AzureActiveDirectoryValidationArgs(
-        @Nullable Output<List<String>> allowedAudiences,
-        @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks) {
-        this.allowedAudiences = allowedAudiences;
-        this.jwtClaimChecks = jwtClaimChecks;
-    }
+    private AzureActiveDirectoryValidationArgs() {}
 
-    private AzureActiveDirectoryValidationArgs() {
-        this.allowedAudiences = Codegen.empty();
-        this.jwtClaimChecks = Codegen.empty();
+    private AzureActiveDirectoryValidationArgs(AzureActiveDirectoryValidationArgs $) {
+        this.allowedAudiences = $.allowedAudiences;
+        this.jwtClaimChecks = $.jwtClaimChecks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedAudiences;
-        private @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
+        private AzureActiveDirectoryValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryValidationArgs();
         }
 
         public Builder(AzureActiveDirectoryValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
-    	      this.jwtClaimChecks = defaults.jwtClaimChecks;
+            $ = new AzureActiveDirectoryValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
-            this.allowedAudiences = allowedAudiences;
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
-        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Codegen.ofNullable(allowedAudiences);
-            return this;
+
+        public Builder allowedAudiences(List<String> allowedAudiences) {
+            return allowedAudiences(Output.of(allowedAudiences));
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }
+
         public Builder jwtClaimChecks(@Nullable Output<JwtClaimChecksArgs> jwtClaimChecks) {
-            this.jwtClaimChecks = jwtClaimChecks;
+            $.jwtClaimChecks = jwtClaimChecks;
             return this;
         }
-        public Builder jwtClaimChecks(@Nullable JwtClaimChecksArgs jwtClaimChecks) {
-            this.jwtClaimChecks = Codegen.ofNullable(jwtClaimChecks);
-            return this;
-        }        public AzureActiveDirectoryValidationArgs build() {
-            return new AzureActiveDirectoryValidationArgs(allowedAudiences, jwtClaimChecks);
+
+        public Builder jwtClaimChecks(JwtClaimChecksArgs jwtClaimChecks) {
+            return jwtClaimChecks(Output.of(jwtClaimChecks));
+        }
+
+        public AzureActiveDirectoryValidationArgs build() {
+            return $;
         }
     }
+
 }

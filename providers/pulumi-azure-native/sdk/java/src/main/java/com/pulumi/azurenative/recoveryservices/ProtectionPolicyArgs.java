@@ -11,11 +11,11 @@ import com.pulumi.azurenative.recoveryservices.inputs.GenericProtectionPolicyArg
 import com.pulumi.azurenative.recoveryservices.inputs.MabProtectionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Object> properties;
+    private @Nullable Output<Object> properties;
 
-    public Output<Object> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Object>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -83,10 +83,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -94,128 +94,110 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vaultName", required=true)
-      private final Output<String> vaultName;
+    private Output<String> vaultName;
 
     public Output<String> vaultName() {
         return this.vaultName;
     }
 
-    public ProtectionPolicyArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<String> location,
-        @Nullable Output<String> policyName,
-        @Nullable Output<Object> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vaultName) {
-        this.eTag = eTag;
-        this.location = location;
-        this.policyName = policyName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private ProtectionPolicyArgs() {}
 
-    private ProtectionPolicyArgs() {
-        this.eTag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vaultName = Codegen.empty();
+    private ProtectionPolicyArgs(ProtectionPolicyArgs $) {
+        this.eTag = $.eTag;
+        this.location = $.location;
+        this.policyName = $.policyName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> policyName;
-        private @Nullable Output<Object> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vaultName;
+        private ProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionPolicyArgs();
         }
 
         public Builder(ProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.location = defaults.location;
-    	      this.policyName = defaults.policyName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vaultName = defaults.vaultName;
+            $ = new ProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
+
         public Builder properties(@Nullable Output<Object> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Object properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Object properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vaultName(Output<String> vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
-            return this;
-        }        public ProtectionPolicyArgs build() {
-            return new ProtectionPolicyArgs(eTag, location, policyName, properties, resourceGroupName, tags, vaultName);
+            return vaultName(Output.of(vaultName));
+        }
+
+        public ProtectionPolicyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

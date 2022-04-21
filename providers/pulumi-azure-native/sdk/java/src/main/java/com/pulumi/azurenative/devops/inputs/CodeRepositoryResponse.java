@@ -25,10 +25,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="authorization")
-      private final @Nullable AuthorizationResponse authorization;
+    private @Nullable AuthorizationResponse authorization;
 
     public Optional<AuthorizationResponse> authorization() {
-        return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="defaultBranch", required=true)
-      private final String defaultBranch;
+    private String defaultBranch;
 
     public String defaultBranch() {
         return this.defaultBranch;
@@ -47,7 +47,7 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -58,10 +58,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -69,82 +69,71 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="repositoryType", required=true)
-      private final String repositoryType;
+    private String repositoryType;
 
     public String repositoryType() {
         return this.repositoryType;
     }
 
-    public CodeRepositoryResponse(
-        @Nullable AuthorizationResponse authorization,
-        String defaultBranch,
-        String id,
-        @Nullable Map<String,String> properties,
-        String repositoryType) {
-        this.authorization = authorization;
-        this.defaultBranch = Objects.requireNonNull(defaultBranch, "expected parameter 'defaultBranch' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.properties = properties;
-        this.repositoryType = Objects.requireNonNull(repositoryType, "expected parameter 'repositoryType' to be non-null");
-    }
+    private CodeRepositoryResponse() {}
 
-    private CodeRepositoryResponse() {
-        this.authorization = null;
-        this.defaultBranch = null;
-        this.id = null;
-        this.properties = Map.of();
-        this.repositoryType = null;
+    private CodeRepositoryResponse(CodeRepositoryResponse $) {
+        this.authorization = $.authorization;
+        this.defaultBranch = $.defaultBranch;
+        this.id = $.id;
+        this.properties = $.properties;
+        this.repositoryType = $.repositoryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AuthorizationResponse authorization;
-        private String defaultBranch;
-        private String id;
-        private @Nullable Map<String,String> properties;
-        private String repositoryType;
+        private CodeRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeRepositoryResponse();
         }
 
         public Builder(CodeRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorization = defaults.authorization;
-    	      this.defaultBranch = defaults.defaultBranch;
-    	      this.id = defaults.id;
-    	      this.properties = defaults.properties;
-    	      this.repositoryType = defaults.repositoryType;
+            $ = new CodeRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorization(@Nullable AuthorizationResponse authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
+
         public Builder defaultBranch(String defaultBranch) {
-            this.defaultBranch = Objects.requireNonNull(defaultBranch);
+            $.defaultBranch = defaultBranch;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder repositoryType(String repositoryType) {
-            this.repositoryType = Objects.requireNonNull(repositoryType);
+            $.repositoryType = repositoryType;
             return this;
-        }        public CodeRepositoryResponse build() {
-            return new CodeRepositoryResponse(authorization, defaultBranch, id, properties, repositoryType);
+        }
+
+        public CodeRepositoryResponse build() {
+            $.defaultBranch = Objects.requireNonNull($.defaultBranch, "expected parameter 'defaultBranch' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.repositoryType = Objects.requireNonNull($.repositoryType, "expected parameter 'repositoryType' to be non-null");
+            return $;
         }
     }
+
 }

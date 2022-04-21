@@ -17,7 +17,7 @@ public final class GetHyperVCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="hyperVCollectorName", required=true)
-      private final String hyperVCollectorName;
+    private String hyperVCollectorName;
 
     public String hyperVCollectorName() {
         return this.hyperVCollectorName;
@@ -28,7 +28,7 @@ public final class GetHyperVCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -39,64 +39,59 @@ public final class GetHyperVCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetHyperVCollectorArgs(
-        String hyperVCollectorName,
-        String projectName,
-        String resourceGroupName) {
-        this.hyperVCollectorName = Objects.requireNonNull(hyperVCollectorName, "expected parameter 'hyperVCollectorName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetHyperVCollectorArgs() {}
 
-    private GetHyperVCollectorArgs() {
-        this.hyperVCollectorName = null;
-        this.projectName = null;
-        this.resourceGroupName = null;
+    private GetHyperVCollectorArgs(GetHyperVCollectorArgs $) {
+        this.hyperVCollectorName = $.hyperVCollectorName;
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHyperVCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hyperVCollectorName;
-        private String projectName;
-        private String resourceGroupName;
+        private GetHyperVCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHyperVCollectorArgs();
         }
 
         public Builder(GetHyperVCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hyperVCollectorName = defaults.hyperVCollectorName;
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetHyperVCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hyperVCollectorName(String hyperVCollectorName) {
-            this.hyperVCollectorName = Objects.requireNonNull(hyperVCollectorName);
+            $.hyperVCollectorName = hyperVCollectorName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetHyperVCollectorArgs build() {
-            return new GetHyperVCollectorArgs(hyperVCollectorName, projectName, resourceGroupName);
+        }
+
+        public GetHyperVCollectorArgs build() {
+            $.hyperVCollectorName = Objects.requireNonNull($.hyperVCollectorName, "expected parameter 'hyperVCollectorName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

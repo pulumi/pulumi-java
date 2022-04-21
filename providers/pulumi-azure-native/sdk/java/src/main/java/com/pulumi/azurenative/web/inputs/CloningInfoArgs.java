@@ -5,11 +5,11 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appSettingsOverrides")
-      private final @Nullable Output<Map<String,String>> appSettingsOverrides;
+    private @Nullable Output<Map<String,String>> appSettingsOverrides;
 
-    public Output<Map<String,String>> appSettingsOverrides() {
-        return this.appSettingsOverrides == null ? Codegen.empty() : this.appSettingsOverrides;
+    public Optional<Output<Map<String,String>>> appSettingsOverrides() {
+        return Optional.ofNullable(this.appSettingsOverrides);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloneCustomHostNames")
-      private final @Nullable Output<Boolean> cloneCustomHostNames;
+    private @Nullable Output<Boolean> cloneCustomHostNames;
 
-    public Output<Boolean> cloneCustomHostNames() {
-        return this.cloneCustomHostNames == null ? Codegen.empty() : this.cloneCustomHostNames;
+    public Optional<Output<Boolean>> cloneCustomHostNames() {
+        return Optional.ofNullable(this.cloneCustomHostNames);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloneSourceControl")
-      private final @Nullable Output<Boolean> cloneSourceControl;
+    private @Nullable Output<Boolean> cloneSourceControl;
 
-    public Output<Boolean> cloneSourceControl() {
-        return this.cloneSourceControl == null ? Codegen.empty() : this.cloneSourceControl;
+    public Optional<Output<Boolean>> cloneSourceControl() {
+        return Optional.ofNullable(this.cloneSourceControl);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configureLoadBalancing")
-      private final @Nullable Output<Boolean> configureLoadBalancing;
+    private @Nullable Output<Boolean> configureLoadBalancing;
 
-    public Output<Boolean> configureLoadBalancing() {
-        return this.configureLoadBalancing == null ? Codegen.empty() : this.configureLoadBalancing;
+    public Optional<Output<Boolean>> configureLoadBalancing() {
+        return Optional.ofNullable(this.configureLoadBalancing);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="correlationId")
-      private final @Nullable Output<String> correlationId;
+    private @Nullable Output<String> correlationId;
 
-    public Output<String> correlationId() {
-        return this.correlationId == null ? Codegen.empty() : this.correlationId;
+    public Optional<Output<String>> correlationId() {
+        return Optional.ofNullable(this.correlationId);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostingEnvironment")
-      private final @Nullable Output<String> hostingEnvironment;
+    private @Nullable Output<String> hostingEnvironment;
 
-    public Output<String> hostingEnvironment() {
-        return this.hostingEnvironment == null ? Codegen.empty() : this.hostingEnvironment;
+    public Optional<Output<String>> hostingEnvironment() {
+        return Optional.ofNullable(this.hostingEnvironment);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overwrite")
-      private final @Nullable Output<Boolean> overwrite;
+    private @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> overwrite() {
-        return this.overwrite == null ? Codegen.empty() : this.overwrite;
+    public Optional<Output<Boolean>> overwrite() {
+        return Optional.ofNullable(this.overwrite);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceWebAppId", required=true)
-      private final Output<String> sourceWebAppId;
+    private Output<String> sourceWebAppId;
 
     public Output<String> sourceWebAppId() {
         return this.sourceWebAppId;
@@ -118,10 +118,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceWebAppLocation")
-      private final @Nullable Output<String> sourceWebAppLocation;
+    private @Nullable Output<String> sourceWebAppLocation;
 
-    public Output<String> sourceWebAppLocation() {
-        return this.sourceWebAppLocation == null ? Codegen.empty() : this.sourceWebAppLocation;
+    public Optional<Output<String>> sourceWebAppLocation() {
+        return Optional.ofNullable(this.sourceWebAppLocation);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficManagerProfileId")
-      private final @Nullable Output<String> trafficManagerProfileId;
+    private @Nullable Output<String> trafficManagerProfileId;
 
-    public Output<String> trafficManagerProfileId() {
-        return this.trafficManagerProfileId == null ? Codegen.empty() : this.trafficManagerProfileId;
+    public Optional<Output<String>> trafficManagerProfileId() {
+        return Optional.ofNullable(this.trafficManagerProfileId);
     }
 
     /**
@@ -141,180 +141,149 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficManagerProfileName")
-      private final @Nullable Output<String> trafficManagerProfileName;
+    private @Nullable Output<String> trafficManagerProfileName;
 
-    public Output<String> trafficManagerProfileName() {
-        return this.trafficManagerProfileName == null ? Codegen.empty() : this.trafficManagerProfileName;
+    public Optional<Output<String>> trafficManagerProfileName() {
+        return Optional.ofNullable(this.trafficManagerProfileName);
     }
 
-    public CloningInfoArgs(
-        @Nullable Output<Map<String,String>> appSettingsOverrides,
-        @Nullable Output<Boolean> cloneCustomHostNames,
-        @Nullable Output<Boolean> cloneSourceControl,
-        @Nullable Output<Boolean> configureLoadBalancing,
-        @Nullable Output<String> correlationId,
-        @Nullable Output<String> hostingEnvironment,
-        @Nullable Output<Boolean> overwrite,
-        Output<String> sourceWebAppId,
-        @Nullable Output<String> sourceWebAppLocation,
-        @Nullable Output<String> trafficManagerProfileId,
-        @Nullable Output<String> trafficManagerProfileName) {
-        this.appSettingsOverrides = appSettingsOverrides;
-        this.cloneCustomHostNames = cloneCustomHostNames;
-        this.cloneSourceControl = cloneSourceControl;
-        this.configureLoadBalancing = configureLoadBalancing;
-        this.correlationId = correlationId;
-        this.hostingEnvironment = hostingEnvironment;
-        this.overwrite = overwrite;
-        this.sourceWebAppId = Objects.requireNonNull(sourceWebAppId, "expected parameter 'sourceWebAppId' to be non-null");
-        this.sourceWebAppLocation = sourceWebAppLocation;
-        this.trafficManagerProfileId = trafficManagerProfileId;
-        this.trafficManagerProfileName = trafficManagerProfileName;
-    }
+    private CloningInfoArgs() {}
 
-    private CloningInfoArgs() {
-        this.appSettingsOverrides = Codegen.empty();
-        this.cloneCustomHostNames = Codegen.empty();
-        this.cloneSourceControl = Codegen.empty();
-        this.configureLoadBalancing = Codegen.empty();
-        this.correlationId = Codegen.empty();
-        this.hostingEnvironment = Codegen.empty();
-        this.overwrite = Codegen.empty();
-        this.sourceWebAppId = Codegen.empty();
-        this.sourceWebAppLocation = Codegen.empty();
-        this.trafficManagerProfileId = Codegen.empty();
-        this.trafficManagerProfileName = Codegen.empty();
+    private CloningInfoArgs(CloningInfoArgs $) {
+        this.appSettingsOverrides = $.appSettingsOverrides;
+        this.cloneCustomHostNames = $.cloneCustomHostNames;
+        this.cloneSourceControl = $.cloneSourceControl;
+        this.configureLoadBalancing = $.configureLoadBalancing;
+        this.correlationId = $.correlationId;
+        this.hostingEnvironment = $.hostingEnvironment;
+        this.overwrite = $.overwrite;
+        this.sourceWebAppId = $.sourceWebAppId;
+        this.sourceWebAppLocation = $.sourceWebAppLocation;
+        this.trafficManagerProfileId = $.trafficManagerProfileId;
+        this.trafficManagerProfileName = $.trafficManagerProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloningInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> appSettingsOverrides;
-        private @Nullable Output<Boolean> cloneCustomHostNames;
-        private @Nullable Output<Boolean> cloneSourceControl;
-        private @Nullable Output<Boolean> configureLoadBalancing;
-        private @Nullable Output<String> correlationId;
-        private @Nullable Output<String> hostingEnvironment;
-        private @Nullable Output<Boolean> overwrite;
-        private Output<String> sourceWebAppId;
-        private @Nullable Output<String> sourceWebAppLocation;
-        private @Nullable Output<String> trafficManagerProfileId;
-        private @Nullable Output<String> trafficManagerProfileName;
+        private CloningInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloningInfoArgs();
         }
 
         public Builder(CloningInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appSettingsOverrides = defaults.appSettingsOverrides;
-    	      this.cloneCustomHostNames = defaults.cloneCustomHostNames;
-    	      this.cloneSourceControl = defaults.cloneSourceControl;
-    	      this.configureLoadBalancing = defaults.configureLoadBalancing;
-    	      this.correlationId = defaults.correlationId;
-    	      this.hostingEnvironment = defaults.hostingEnvironment;
-    	      this.overwrite = defaults.overwrite;
-    	      this.sourceWebAppId = defaults.sourceWebAppId;
-    	      this.sourceWebAppLocation = defaults.sourceWebAppLocation;
-    	      this.trafficManagerProfileId = defaults.trafficManagerProfileId;
-    	      this.trafficManagerProfileName = defaults.trafficManagerProfileName;
+            $ = new CloningInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appSettingsOverrides(@Nullable Output<Map<String,String>> appSettingsOverrides) {
-            this.appSettingsOverrides = appSettingsOverrides;
+            $.appSettingsOverrides = appSettingsOverrides;
             return this;
         }
-        public Builder appSettingsOverrides(@Nullable Map<String,String> appSettingsOverrides) {
-            this.appSettingsOverrides = Codegen.ofNullable(appSettingsOverrides);
-            return this;
+
+        public Builder appSettingsOverrides(Map<String,String> appSettingsOverrides) {
+            return appSettingsOverrides(Output.of(appSettingsOverrides));
         }
+
         public Builder cloneCustomHostNames(@Nullable Output<Boolean> cloneCustomHostNames) {
-            this.cloneCustomHostNames = cloneCustomHostNames;
+            $.cloneCustomHostNames = cloneCustomHostNames;
             return this;
         }
-        public Builder cloneCustomHostNames(@Nullable Boolean cloneCustomHostNames) {
-            this.cloneCustomHostNames = Codegen.ofNullable(cloneCustomHostNames);
-            return this;
+
+        public Builder cloneCustomHostNames(Boolean cloneCustomHostNames) {
+            return cloneCustomHostNames(Output.of(cloneCustomHostNames));
         }
+
         public Builder cloneSourceControl(@Nullable Output<Boolean> cloneSourceControl) {
-            this.cloneSourceControl = cloneSourceControl;
+            $.cloneSourceControl = cloneSourceControl;
             return this;
         }
-        public Builder cloneSourceControl(@Nullable Boolean cloneSourceControl) {
-            this.cloneSourceControl = Codegen.ofNullable(cloneSourceControl);
-            return this;
+
+        public Builder cloneSourceControl(Boolean cloneSourceControl) {
+            return cloneSourceControl(Output.of(cloneSourceControl));
         }
+
         public Builder configureLoadBalancing(@Nullable Output<Boolean> configureLoadBalancing) {
-            this.configureLoadBalancing = configureLoadBalancing;
+            $.configureLoadBalancing = configureLoadBalancing;
             return this;
         }
-        public Builder configureLoadBalancing(@Nullable Boolean configureLoadBalancing) {
-            this.configureLoadBalancing = Codegen.ofNullable(configureLoadBalancing);
-            return this;
+
+        public Builder configureLoadBalancing(Boolean configureLoadBalancing) {
+            return configureLoadBalancing(Output.of(configureLoadBalancing));
         }
+
         public Builder correlationId(@Nullable Output<String> correlationId) {
-            this.correlationId = correlationId;
+            $.correlationId = correlationId;
             return this;
         }
-        public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = Codegen.ofNullable(correlationId);
-            return this;
+
+        public Builder correlationId(String correlationId) {
+            return correlationId(Output.of(correlationId));
         }
+
         public Builder hostingEnvironment(@Nullable Output<String> hostingEnvironment) {
-            this.hostingEnvironment = hostingEnvironment;
+            $.hostingEnvironment = hostingEnvironment;
             return this;
         }
-        public Builder hostingEnvironment(@Nullable String hostingEnvironment) {
-            this.hostingEnvironment = Codegen.ofNullable(hostingEnvironment);
-            return this;
+
+        public Builder hostingEnvironment(String hostingEnvironment) {
+            return hostingEnvironment(Output.of(hostingEnvironment));
         }
+
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
-            this.overwrite = overwrite;
+            $.overwrite = overwrite;
             return this;
         }
-        public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Codegen.ofNullable(overwrite);
-            return this;
+
+        public Builder overwrite(Boolean overwrite) {
+            return overwrite(Output.of(overwrite));
         }
+
         public Builder sourceWebAppId(Output<String> sourceWebAppId) {
-            this.sourceWebAppId = Objects.requireNonNull(sourceWebAppId);
+            $.sourceWebAppId = sourceWebAppId;
             return this;
         }
+
         public Builder sourceWebAppId(String sourceWebAppId) {
-            this.sourceWebAppId = Output.of(Objects.requireNonNull(sourceWebAppId));
-            return this;
+            return sourceWebAppId(Output.of(sourceWebAppId));
         }
+
         public Builder sourceWebAppLocation(@Nullable Output<String> sourceWebAppLocation) {
-            this.sourceWebAppLocation = sourceWebAppLocation;
+            $.sourceWebAppLocation = sourceWebAppLocation;
             return this;
         }
-        public Builder sourceWebAppLocation(@Nullable String sourceWebAppLocation) {
-            this.sourceWebAppLocation = Codegen.ofNullable(sourceWebAppLocation);
-            return this;
+
+        public Builder sourceWebAppLocation(String sourceWebAppLocation) {
+            return sourceWebAppLocation(Output.of(sourceWebAppLocation));
         }
+
         public Builder trafficManagerProfileId(@Nullable Output<String> trafficManagerProfileId) {
-            this.trafficManagerProfileId = trafficManagerProfileId;
+            $.trafficManagerProfileId = trafficManagerProfileId;
             return this;
         }
-        public Builder trafficManagerProfileId(@Nullable String trafficManagerProfileId) {
-            this.trafficManagerProfileId = Codegen.ofNullable(trafficManagerProfileId);
-            return this;
+
+        public Builder trafficManagerProfileId(String trafficManagerProfileId) {
+            return trafficManagerProfileId(Output.of(trafficManagerProfileId));
         }
+
         public Builder trafficManagerProfileName(@Nullable Output<String> trafficManagerProfileName) {
-            this.trafficManagerProfileName = trafficManagerProfileName;
+            $.trafficManagerProfileName = trafficManagerProfileName;
             return this;
         }
-        public Builder trafficManagerProfileName(@Nullable String trafficManagerProfileName) {
-            this.trafficManagerProfileName = Codegen.ofNullable(trafficManagerProfileName);
-            return this;
-        }        public CloningInfoArgs build() {
-            return new CloningInfoArgs(appSettingsOverrides, cloneCustomHostNames, cloneSourceControl, configureLoadBalancing, correlationId, hostingEnvironment, overwrite, sourceWebAppId, sourceWebAppLocation, trafficManagerProfileId, trafficManagerProfileName);
+
+        public Builder trafficManagerProfileName(String trafficManagerProfileName) {
+            return trafficManagerProfileName(Output.of(trafficManagerProfileName));
+        }
+
+        public CloningInfoArgs build() {
+            $.sourceWebAppId = Objects.requireNonNull($.sourceWebAppId, "expected parameter 'sourceWebAppId' to be non-null");
+            return $;
         }
     }
+
 }

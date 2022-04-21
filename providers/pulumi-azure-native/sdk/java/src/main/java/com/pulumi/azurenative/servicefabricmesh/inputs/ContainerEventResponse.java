@@ -24,10 +24,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="firstTimestamp")
-      private final @Nullable String firstTimestamp;
+    private @Nullable String firstTimestamp;
 
     public Optional<String> firstTimestamp() {
-        return this.firstTimestamp == null ? Optional.empty() : Optional.ofNullable(this.firstTimestamp);
+        return Optional.ofNullable(this.firstTimestamp);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastTimestamp")
-      private final @Nullable String lastTimestamp;
+    private @Nullable String lastTimestamp;
 
     public Optional<String> lastTimestamp() {
-        return this.lastTimestamp == null ? Optional.empty() : Optional.ofNullable(this.lastTimestamp);
+        return Optional.ofNullable(this.lastTimestamp);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ContainerEventResponse(
-        @Nullable Integer count,
-        @Nullable String firstTimestamp,
-        @Nullable String lastTimestamp,
-        @Nullable String message,
-        @Nullable String name,
-        @Nullable String type) {
-        this.count = count;
-        this.firstTimestamp = firstTimestamp;
-        this.lastTimestamp = lastTimestamp;
-        this.message = message;
-        this.name = name;
-        this.type = type;
-    }
+    private ContainerEventResponse() {}
 
-    private ContainerEventResponse() {
-        this.count = null;
-        this.firstTimestamp = null;
-        this.lastTimestamp = null;
-        this.message = null;
-        this.name = null;
-        this.type = null;
+    private ContainerEventResponse(ContainerEventResponse $) {
+        this.count = $.count;
+        this.firstTimestamp = $.firstTimestamp;
+        this.lastTimestamp = $.lastTimestamp;
+        this.message = $.message;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerEventResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String firstTimestamp;
-        private @Nullable String lastTimestamp;
-        private @Nullable String message;
-        private @Nullable String name;
-        private @Nullable String type;
+        private ContainerEventResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerEventResponse();
         }
 
         public Builder(ContainerEventResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.firstTimestamp = defaults.firstTimestamp;
-    	      this.lastTimestamp = defaults.lastTimestamp;
-    	      this.message = defaults.message;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ContainerEventResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder firstTimestamp(@Nullable String firstTimestamp) {
-            this.firstTimestamp = firstTimestamp;
+            $.firstTimestamp = firstTimestamp;
             return this;
         }
+
         public Builder lastTimestamp(@Nullable String lastTimestamp) {
-            this.lastTimestamp = lastTimestamp;
+            $.lastTimestamp = lastTimestamp;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ContainerEventResponse build() {
-            return new ContainerEventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
+        }
+
+        public ContainerEventResponse build() {
+            return $;
         }
     }
+
 }

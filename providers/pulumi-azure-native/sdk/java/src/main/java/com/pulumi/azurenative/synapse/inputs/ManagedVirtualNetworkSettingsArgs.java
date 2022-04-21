@@ -5,11 +5,11 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagedVirtualNetworkSettingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="allowedAadTenantIdsForLinking")
-      private final @Nullable Output<List<String>> allowedAadTenantIdsForLinking;
+    private @Nullable Output<List<String>> allowedAadTenantIdsForLinking;
 
-    public Output<List<String>> allowedAadTenantIdsForLinking() {
-        return this.allowedAadTenantIdsForLinking == null ? Codegen.empty() : this.allowedAadTenantIdsForLinking;
+    public Optional<Output<List<String>>> allowedAadTenantIdsForLinking() {
+        return Optional.ofNullable(this.allowedAadTenantIdsForLinking);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagedVirtualNetworkSettingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkedAccessCheckOnTargetResource")
-      private final @Nullable Output<Boolean> linkedAccessCheckOnTargetResource;
+    private @Nullable Output<Boolean> linkedAccessCheckOnTargetResource;
 
-    public Output<Boolean> linkedAccessCheckOnTargetResource() {
-        return this.linkedAccessCheckOnTargetResource == null ? Codegen.empty() : this.linkedAccessCheckOnTargetResource;
+    public Optional<Output<Boolean>> linkedAccessCheckOnTargetResource() {
+        return Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class ManagedVirtualNetworkSettingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="preventDataExfiltration")
-      private final @Nullable Output<Boolean> preventDataExfiltration;
+    private @Nullable Output<Boolean> preventDataExfiltration;
 
-    public Output<Boolean> preventDataExfiltration() {
-        return this.preventDataExfiltration == null ? Codegen.empty() : this.preventDataExfiltration;
+    public Optional<Output<Boolean>> preventDataExfiltration() {
+        return Optional.ofNullable(this.preventDataExfiltration);
     }
 
-    public ManagedVirtualNetworkSettingsArgs(
-        @Nullable Output<List<String>> allowedAadTenantIdsForLinking,
-        @Nullable Output<Boolean> linkedAccessCheckOnTargetResource,
-        @Nullable Output<Boolean> preventDataExfiltration) {
-        this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
-        this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
-        this.preventDataExfiltration = preventDataExfiltration;
-    }
+    private ManagedVirtualNetworkSettingsArgs() {}
 
-    private ManagedVirtualNetworkSettingsArgs() {
-        this.allowedAadTenantIdsForLinking = Codegen.empty();
-        this.linkedAccessCheckOnTargetResource = Codegen.empty();
-        this.preventDataExfiltration = Codegen.empty();
+    private ManagedVirtualNetworkSettingsArgs(ManagedVirtualNetworkSettingsArgs $) {
+        this.allowedAadTenantIdsForLinking = $.allowedAadTenantIdsForLinking;
+        this.linkedAccessCheckOnTargetResource = $.linkedAccessCheckOnTargetResource;
+        this.preventDataExfiltration = $.preventDataExfiltration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedVirtualNetworkSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedAadTenantIdsForLinking;
-        private @Nullable Output<Boolean> linkedAccessCheckOnTargetResource;
-        private @Nullable Output<Boolean> preventDataExfiltration;
+        private ManagedVirtualNetworkSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedVirtualNetworkSettingsArgs();
         }
 
         public Builder(ManagedVirtualNetworkSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAadTenantIdsForLinking = defaults.allowedAadTenantIdsForLinking;
-    	      this.linkedAccessCheckOnTargetResource = defaults.linkedAccessCheckOnTargetResource;
-    	      this.preventDataExfiltration = defaults.preventDataExfiltration;
+            $ = new ManagedVirtualNetworkSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAadTenantIdsForLinking(@Nullable Output<List<String>> allowedAadTenantIdsForLinking) {
-            this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
+            $.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
-        public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
-            this.allowedAadTenantIdsForLinking = Codegen.ofNullable(allowedAadTenantIdsForLinking);
-            return this;
+
+        public Builder allowedAadTenantIdsForLinking(List<String> allowedAadTenantIdsForLinking) {
+            return allowedAadTenantIdsForLinking(Output.of(allowedAadTenantIdsForLinking));
         }
+
         public Builder allowedAadTenantIdsForLinking(String... allowedAadTenantIdsForLinking) {
             return allowedAadTenantIdsForLinking(List.of(allowedAadTenantIdsForLinking));
         }
+
         public Builder linkedAccessCheckOnTargetResource(@Nullable Output<Boolean> linkedAccessCheckOnTargetResource) {
-            this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
+            $.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
-        public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
-            this.linkedAccessCheckOnTargetResource = Codegen.ofNullable(linkedAccessCheckOnTargetResource);
-            return this;
+
+        public Builder linkedAccessCheckOnTargetResource(Boolean linkedAccessCheckOnTargetResource) {
+            return linkedAccessCheckOnTargetResource(Output.of(linkedAccessCheckOnTargetResource));
         }
+
         public Builder preventDataExfiltration(@Nullable Output<Boolean> preventDataExfiltration) {
-            this.preventDataExfiltration = preventDataExfiltration;
+            $.preventDataExfiltration = preventDataExfiltration;
             return this;
         }
-        public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
-            this.preventDataExfiltration = Codegen.ofNullable(preventDataExfiltration);
-            return this;
-        }        public ManagedVirtualNetworkSettingsArgs build() {
-            return new ManagedVirtualNetworkSettingsArgs(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);
+
+        public Builder preventDataExfiltration(Boolean preventDataExfiltration) {
+            return preventDataExfiltration(Output.of(preventDataExfiltration));
+        }
+
+        public ManagedVirtualNetworkSettingsArgs build() {
+            return $;
         }
     }
+
 }

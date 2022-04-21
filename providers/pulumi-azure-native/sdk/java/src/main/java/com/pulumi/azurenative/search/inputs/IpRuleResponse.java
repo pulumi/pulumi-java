@@ -23,45 +23,44 @@ public final class IpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public IpRuleResponse(@Nullable String value) {
-        this.value = value;
-    }
+    private IpRuleResponse() {}
 
-    private IpRuleResponse() {
-        this.value = null;
+    private IpRuleResponse(IpRuleResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String value;
+        private IpRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpRuleResponse();
         }
 
         public Builder(IpRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new IpRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public IpRuleResponse build() {
-            return new IpRuleResponse(value);
+        }
+
+        public IpRuleResponse build() {
+            return $;
         }
     }
+
 }

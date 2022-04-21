@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dynamicTagsJson")
-      private final @Nullable Output<String> dynamicTagsJson;
+    private @Nullable Output<String> dynamicTagsJson;
 
-    public Output<String> dynamicTagsJson() {
-        return this.dynamicTagsJson == null ? Codegen.empty() : this.dynamicTagsJson;
+    public Optional<Output<String>> dynamicTagsJson() {
+        return Optional.ofNullable(this.dynamicTagsJson);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="isPushEnabled", required=true)
-      private final Output<Boolean> isPushEnabled;
+    private Output<Boolean> isPushEnabled;
 
     public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
@@ -43,10 +43,10 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -65,7 +65,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,10 +76,10 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tagWhitelistJson")
-      private final @Nullable Output<String> tagWhitelistJson;
+    private @Nullable Output<String> tagWhitelistJson;
 
-    public Output<String> tagWhitelistJson() {
-        return this.tagWhitelistJson == null ? Codegen.empty() : this.tagWhitelistJson;
+    public Optional<Output<String>> tagWhitelistJson() {
+        return Optional.ofNullable(this.tagWhitelistJson);
     }
 
     /**
@@ -90,128 +90,111 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tagsRequiringAuth")
-      private final @Nullable Output<String> tagsRequiringAuth;
+    private @Nullable Output<String> tagsRequiringAuth;
 
-    public Output<String> tagsRequiringAuth() {
-        return this.tagsRequiringAuth == null ? Codegen.empty() : this.tagsRequiringAuth;
+    public Optional<Output<String>> tagsRequiringAuth() {
+        return Optional.ofNullable(this.tagsRequiringAuth);
     }
 
-    public WebAppSitePushSettingsArgs(
-        @Nullable Output<String> dynamicTagsJson,
-        Output<Boolean> isPushEnabled,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> tagWhitelistJson,
-        @Nullable Output<String> tagsRequiringAuth) {
-        this.dynamicTagsJson = dynamicTagsJson;
-        this.isPushEnabled = Objects.requireNonNull(isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tagWhitelistJson = tagWhitelistJson;
-        this.tagsRequiringAuth = tagsRequiringAuth;
-    }
+    private WebAppSitePushSettingsArgs() {}
 
-    private WebAppSitePushSettingsArgs() {
-        this.dynamicTagsJson = Codegen.empty();
-        this.isPushEnabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tagWhitelistJson = Codegen.empty();
-        this.tagsRequiringAuth = Codegen.empty();
+    private WebAppSitePushSettingsArgs(WebAppSitePushSettingsArgs $) {
+        this.dynamicTagsJson = $.dynamicTagsJson;
+        this.isPushEnabled = $.isPushEnabled;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tagWhitelistJson = $.tagWhitelistJson;
+        this.tagsRequiringAuth = $.tagsRequiringAuth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppSitePushSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dynamicTagsJson;
-        private Output<Boolean> isPushEnabled;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> tagWhitelistJson;
-        private @Nullable Output<String> tagsRequiringAuth;
+        private WebAppSitePushSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppSitePushSettingsArgs();
         }
 
         public Builder(WebAppSitePushSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dynamicTagsJson = defaults.dynamicTagsJson;
-    	      this.isPushEnabled = defaults.isPushEnabled;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tagWhitelistJson = defaults.tagWhitelistJson;
-    	      this.tagsRequiringAuth = defaults.tagsRequiringAuth;
+            $ = new WebAppSitePushSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dynamicTagsJson(@Nullable Output<String> dynamicTagsJson) {
-            this.dynamicTagsJson = dynamicTagsJson;
+            $.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
-        public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
-            this.dynamicTagsJson = Codegen.ofNullable(dynamicTagsJson);
-            return this;
+
+        public Builder dynamicTagsJson(String dynamicTagsJson) {
+            return dynamicTagsJson(Output.of(dynamicTagsJson));
         }
+
         public Builder isPushEnabled(Output<Boolean> isPushEnabled) {
-            this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
+            $.isPushEnabled = isPushEnabled;
             return this;
         }
+
         public Builder isPushEnabled(Boolean isPushEnabled) {
-            this.isPushEnabled = Output.of(Objects.requireNonNull(isPushEnabled));
-            return this;
+            return isPushEnabled(Output.of(isPushEnabled));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tagWhitelistJson(@Nullable Output<String> tagWhitelistJson) {
-            this.tagWhitelistJson = tagWhitelistJson;
+            $.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
-        public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
-            this.tagWhitelistJson = Codegen.ofNullable(tagWhitelistJson);
-            return this;
+
+        public Builder tagWhitelistJson(String tagWhitelistJson) {
+            return tagWhitelistJson(Output.of(tagWhitelistJson));
         }
+
         public Builder tagsRequiringAuth(@Nullable Output<String> tagsRequiringAuth) {
-            this.tagsRequiringAuth = tagsRequiringAuth;
+            $.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
-        public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
-            this.tagsRequiringAuth = Codegen.ofNullable(tagsRequiringAuth);
-            return this;
-        }        public WebAppSitePushSettingsArgs build() {
-            return new WebAppSitePushSettingsArgs(dynamicTagsJson, isPushEnabled, kind, name, resourceGroupName, tagWhitelistJson, tagsRequiringAuth);
+
+        public Builder tagsRequiringAuth(String tagsRequiringAuth) {
+            return tagsRequiringAuth(Output.of(tagsRequiringAuth));
+        }
+
+        public WebAppSitePushSettingsArgs build() {
+            $.isPushEnabled = Objects.requireNonNull($.isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

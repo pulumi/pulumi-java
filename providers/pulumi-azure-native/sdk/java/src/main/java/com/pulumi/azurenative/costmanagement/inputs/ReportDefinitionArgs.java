@@ -10,9 +10,9 @@ import com.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<ReportDatasetArgs> dataset;
+    private @Nullable Output<ReportDatasetArgs> dataset;
 
-    public Output<ReportDatasetArgs> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<ReportDatasetArgs>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timePeriod")
-      private final @Nullable Output<ReportTimePeriodArgs> timePeriod;
+    private @Nullable Output<ReportTimePeriodArgs> timePeriod;
 
-    public Output<ReportTimePeriodArgs> timePeriod() {
-        return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
+    public Optional<Output<ReportTimePeriodArgs>> timePeriod() {
+        return Optional.ofNullable(this.timePeriod);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeframe", required=true)
-      private final Output<Either<String,TimeframeType>> timeframe;
+    private Output<Either<String,TimeframeType>> timeframe;
 
     public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
@@ -62,89 +62,80 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ReportType>> type;
+    private Output<Either<String,ReportType>> type;
 
     public Output<Either<String,ReportType>> type() {
         return this.type;
     }
 
-    public ReportDefinitionArgs(
-        @Nullable Output<ReportDatasetArgs> dataset,
-        @Nullable Output<ReportTimePeriodArgs> timePeriod,
-        Output<Either<String,TimeframeType>> timeframe,
-        Output<Either<String,ReportType>> type) {
-        this.dataset = dataset;
-        this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe, "expected parameter 'timeframe' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ReportDefinitionArgs() {}
 
-    private ReportDefinitionArgs() {
-        this.dataset = Codegen.empty();
-        this.timePeriod = Codegen.empty();
-        this.timeframe = Codegen.empty();
-        this.type = Codegen.empty();
+    private ReportDefinitionArgs(ReportDefinitionArgs $) {
+        this.dataset = $.dataset;
+        this.timePeriod = $.timePeriod;
+        this.timeframe = $.timeframe;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ReportDatasetArgs> dataset;
-        private @Nullable Output<ReportTimePeriodArgs> timePeriod;
-        private Output<Either<String,TimeframeType>> timeframe;
-        private Output<Either<String,ReportType>> type;
+        private ReportDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportDefinitionArgs();
         }
 
         public Builder(ReportDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.timePeriod = defaults.timePeriod;
-    	      this.timeframe = defaults.timeframe;
-    	      this.type = defaults.type;
+            $ = new ReportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<ReportDatasetArgs> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable ReportDatasetArgs dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(ReportDatasetArgs dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder timePeriod(@Nullable Output<ReportTimePeriodArgs> timePeriod) {
-            this.timePeriod = timePeriod;
+            $.timePeriod = timePeriod;
             return this;
         }
-        public Builder timePeriod(@Nullable ReportTimePeriodArgs timePeriod) {
-            this.timePeriod = Codegen.ofNullable(timePeriod);
-            return this;
+
+        public Builder timePeriod(ReportTimePeriodArgs timePeriod) {
+            return timePeriod(Output.of(timePeriod));
         }
+
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
-            this.timeframe = Objects.requireNonNull(timeframe);
+            $.timeframe = timeframe;
             return this;
         }
+
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
-            this.timeframe = Output.of(Objects.requireNonNull(timeframe));
-            return this;
+            return timeframe(Output.of(timeframe));
         }
+
         public Builder type(Output<Either<String,ReportType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ReportType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ReportDefinitionArgs build() {
-            return new ReportDefinitionArgs(dataset, timePeriod, timeframe, type);
+            return type(Output.of(type));
+        }
+
+        public ReportDefinitionArgs build() {
+            $.timeframe = Objects.requireNonNull($.timeframe, "expected parameter 'timeframe' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

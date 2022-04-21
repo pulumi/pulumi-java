@@ -9,11 +9,11 @@ import com.pulumi.azurenative.machinelearningservices.inputs.InferenceContainerP
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="condaFile")
-      private final @Nullable Output<String> condaFile;
+    private @Nullable Output<String> condaFile;
 
-    public Output<String> condaFile() {
-        return this.condaFile == null ? Codegen.empty() : this.condaFile;
+    public Optional<Output<String>> condaFile() {
+        return Optional.ofNullable(this.condaFile);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="docker")
-      private final @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
+    private @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
-    public Output<Either<DockerBuildArgs,DockerImageArgs>> docker() {
-        return this.docker == null ? Codegen.empty() : this.docker;
+    public Optional<Output<Either<DockerBuildArgs,DockerImageArgs>>> docker() {
+        return Optional.ofNullable(this.docker);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="inferenceContainerProperties")
-      private final @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
+    private @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
-    public Output<InferenceContainerPropertiesArgs> inferenceContainerProperties() {
-        return this.inferenceContainerProperties == null ? Codegen.empty() : this.inferenceContainerProperties;
+    public Optional<Output<InferenceContainerPropertiesArgs>> inferenceContainerProperties() {
+        return Optional.ofNullable(this.inferenceContainerProperties);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="isAnonymous")
-      private final @Nullable Output<Boolean> isAnonymous;
+    private @Nullable Output<Boolean> isAnonymous;
 
-    public Output<Boolean> isAnonymous() {
-        return this.isAnonymous == null ? Codegen.empty() : this.isAnonymous;
+    public Optional<Output<Boolean>> isAnonymous() {
+        return Optional.ofNullable(this.isAnonymous);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -98,128 +98,108 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EnvironmentSpecificationVersionArgs(
-        @Nullable Output<String> condaFile,
-        @Nullable Output<String> description,
-        @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker,
-        @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties,
-        @Nullable Output<Boolean> isAnonymous,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<Map<String,String>> tags) {
-        this.condaFile = condaFile;
-        this.description = description;
-        this.docker = docker;
-        this.inferenceContainerProperties = inferenceContainerProperties;
-        this.isAnonymous = isAnonymous;
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private EnvironmentSpecificationVersionArgs() {}
 
-    private EnvironmentSpecificationVersionArgs() {
-        this.condaFile = Codegen.empty();
-        this.description = Codegen.empty();
-        this.docker = Codegen.empty();
-        this.inferenceContainerProperties = Codegen.empty();
-        this.isAnonymous = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EnvironmentSpecificationVersionArgs(EnvironmentSpecificationVersionArgs $) {
+        this.condaFile = $.condaFile;
+        this.description = $.description;
+        this.docker = $.docker;
+        this.inferenceContainerProperties = $.inferenceContainerProperties;
+        this.isAnonymous = $.isAnonymous;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentSpecificationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condaFile;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
-        private @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
-        private @Nullable Output<Boolean> isAnonymous;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<Map<String,String>> tags;
+        private EnvironmentSpecificationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentSpecificationVersionArgs();
         }
 
         public Builder(EnvironmentSpecificationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condaFile = defaults.condaFile;
-    	      this.description = defaults.description;
-    	      this.docker = defaults.docker;
-    	      this.inferenceContainerProperties = defaults.inferenceContainerProperties;
-    	      this.isAnonymous = defaults.isAnonymous;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new EnvironmentSpecificationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condaFile(@Nullable Output<String> condaFile) {
-            this.condaFile = condaFile;
+            $.condaFile = condaFile;
             return this;
         }
-        public Builder condaFile(@Nullable String condaFile) {
-            this.condaFile = Codegen.ofNullable(condaFile);
-            return this;
+
+        public Builder condaFile(String condaFile) {
+            return condaFile(Output.of(condaFile));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder docker(@Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker) {
-            this.docker = docker;
+            $.docker = docker;
             return this;
         }
-        public Builder docker(@Nullable Either<DockerBuildArgs,DockerImageArgs> docker) {
-            this.docker = Codegen.ofNullable(docker);
-            return this;
+
+        public Builder docker(Either<DockerBuildArgs,DockerImageArgs> docker) {
+            return docker(Output.of(docker));
         }
+
         public Builder inferenceContainerProperties(@Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
-            this.inferenceContainerProperties = inferenceContainerProperties;
+            $.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
-        public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesArgs inferenceContainerProperties) {
-            this.inferenceContainerProperties = Codegen.ofNullable(inferenceContainerProperties);
-            return this;
+
+        public Builder inferenceContainerProperties(InferenceContainerPropertiesArgs inferenceContainerProperties) {
+            return inferenceContainerProperties(Output.of(inferenceContainerProperties));
         }
+
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
-            this.isAnonymous = isAnonymous;
+            $.isAnonymous = isAnonymous;
             return this;
         }
-        public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = Codegen.ofNullable(isAnonymous);
-            return this;
+
+        public Builder isAnonymous(Boolean isAnonymous) {
+            return isAnonymous(Output.of(isAnonymous));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public EnvironmentSpecificationVersionArgs build() {
-            return new EnvironmentSpecificationVersionArgs(condaFile, description, docker, inferenceContainerProperties, isAnonymous, properties, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public EnvironmentSpecificationVersionArgs build() {
+            return $;
         }
     }
+
 }

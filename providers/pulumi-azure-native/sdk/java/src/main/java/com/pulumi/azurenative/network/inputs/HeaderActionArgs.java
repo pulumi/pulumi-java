@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.HeaderActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headerActionType", required=true)
-      private final Output<Either<String,HeaderActionType>> headerActionType;
+    private Output<Either<String,HeaderActionType>> headerActionType;
 
     public Output<Either<String,HeaderActionType>> headerActionType() {
         return this.headerActionType;
@@ -37,7 +37,7 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
@@ -48,76 +48,70 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public HeaderActionArgs(
-        Output<Either<String,HeaderActionType>> headerActionType,
-        Output<String> headerName,
-        @Nullable Output<String> value) {
-        this.headerActionType = Objects.requireNonNull(headerActionType, "expected parameter 'headerActionType' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.value = value;
-    }
+    private HeaderActionArgs() {}
 
-    private HeaderActionArgs() {
-        this.headerActionType = Codegen.empty();
-        this.headerName = Codegen.empty();
-        this.value = Codegen.empty();
+    private HeaderActionArgs(HeaderActionArgs $) {
+        this.headerActionType = $.headerActionType;
+        this.headerName = $.headerName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HeaderActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,HeaderActionType>> headerActionType;
-        private Output<String> headerName;
-        private @Nullable Output<String> value;
+        private HeaderActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HeaderActionArgs();
         }
 
         public Builder(HeaderActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerActionType = defaults.headerActionType;
-    	      this.headerName = defaults.headerName;
-    	      this.value = defaults.value;
+            $ = new HeaderActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerActionType(Output<Either<String,HeaderActionType>> headerActionType) {
-            this.headerActionType = Objects.requireNonNull(headerActionType);
+            $.headerActionType = headerActionType;
             return this;
         }
+
         public Builder headerActionType(Either<String,HeaderActionType> headerActionType) {
-            this.headerActionType = Output.of(Objects.requireNonNull(headerActionType));
-            return this;
+            return headerActionType(Output.of(headerActionType));
         }
+
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public HeaderActionArgs build() {
-            return new HeaderActionArgs(headerActionType, headerName, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public HeaderActionArgs build() {
+            $.headerActionType = Objects.requireNonNull($.headerActionType, "expected parameter 'headerActionType' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

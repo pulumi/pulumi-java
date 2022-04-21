@@ -25,7 +25,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -36,10 +36,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registrationPolicy", required=true)
-      private final String registrationPolicy;
+    private String registrationPolicy;
 
     public String registrationPolicy() {
         return this.registrationPolicy;
@@ -58,7 +58,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registrationState", required=true)
-      private final String registrationState;
+    private String registrationState;
 
     public String registrationState() {
         return this.registrationState;
@@ -69,85 +69,76 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceTypes", required=true)
-      private final List<ProviderResourceTypeResponse> resourceTypes;
+    private List<ProviderResourceTypeResponse> resourceTypes;
 
     public List<ProviderResourceTypeResponse> resourceTypes() {
         return this.resourceTypes;
     }
 
-    public ProviderResponse(
-        String id,
-        @Nullable String namespace,
-        String registrationPolicy,
-        String registrationState,
-        List<ProviderResourceTypeResponse> resourceTypes) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.namespace = namespace;
-        this.registrationPolicy = Objects.requireNonNull(registrationPolicy, "expected parameter 'registrationPolicy' to be non-null");
-        this.registrationState = Objects.requireNonNull(registrationState, "expected parameter 'registrationState' to be non-null");
-        this.resourceTypes = Objects.requireNonNull(resourceTypes, "expected parameter 'resourceTypes' to be non-null");
-    }
+    private ProviderResponse() {}
 
-    private ProviderResponse() {
-        this.id = null;
-        this.namespace = null;
-        this.registrationPolicy = null;
-        this.registrationState = null;
-        this.resourceTypes = List.of();
+    private ProviderResponse(ProviderResponse $) {
+        this.id = $.id;
+        this.namespace = $.namespace;
+        this.registrationPolicy = $.registrationPolicy;
+        this.registrationState = $.registrationState;
+        this.resourceTypes = $.resourceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String namespace;
-        private String registrationPolicy;
-        private String registrationState;
-        private List<ProviderResourceTypeResponse> resourceTypes;
+        private ProviderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderResponse();
         }
 
         public Builder(ProviderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.namespace = defaults.namespace;
-    	      this.registrationPolicy = defaults.registrationPolicy;
-    	      this.registrationState = defaults.registrationState;
-    	      this.resourceTypes = defaults.resourceTypes;
+            $ = new ProviderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
+
         public Builder registrationPolicy(String registrationPolicy) {
-            this.registrationPolicy = Objects.requireNonNull(registrationPolicy);
+            $.registrationPolicy = registrationPolicy;
             return this;
         }
+
         public Builder registrationState(String registrationState) {
-            this.registrationState = Objects.requireNonNull(registrationState);
+            $.registrationState = registrationState;
             return this;
         }
+
         public Builder resourceTypes(List<ProviderResourceTypeResponse> resourceTypes) {
-            this.resourceTypes = Objects.requireNonNull(resourceTypes);
+            $.resourceTypes = resourceTypes;
             return this;
         }
+
         public Builder resourceTypes(ProviderResourceTypeResponse... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
-        }        public ProviderResponse build() {
-            return new ProviderResponse(id, namespace, registrationPolicy, registrationState, resourceTypes);
+        }
+
+        public ProviderResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.registrationPolicy = Objects.requireNonNull($.registrationPolicy, "expected parameter 'registrationPolicy' to be non-null");
+            $.registrationState = Objects.requireNonNull($.registrationState, "expected parameter 'registrationState' to be non-null");
+            $.resourceTypes = Objects.requireNonNull($.resourceTypes, "expected parameter 'resourceTypes' to be non-null");
+            return $;
         }
     }
+
 }

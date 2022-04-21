@@ -7,10 +7,10 @@ import com.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import com.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frequency")
-      private final @Nullable Output<RecurrenceFrequency> frequency;
+    private @Nullable Output<RecurrenceFrequency> frequency;
 
-    public Output<RecurrenceFrequency> frequency() {
-        return this.frequency == null ? Codegen.empty() : this.frequency;
+    public Optional<Output<RecurrenceFrequency>> frequency() {
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -56,109 +56,95 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     @Import(name="schedule")
-      private final @Nullable Output<JobRecurrenceScheduleArgs> schedule;
+    private @Nullable Output<JobRecurrenceScheduleArgs> schedule;
 
-    public Output<JobRecurrenceScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<JobRecurrenceScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
-    public JobRecurrenceArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> endTime,
-        @Nullable Output<RecurrenceFrequency> frequency,
-        @Nullable Output<Integer> interval,
-        @Nullable Output<JobRecurrenceScheduleArgs> schedule) {
-        this.count = count;
-        this.endTime = endTime;
-        this.frequency = frequency;
-        this.interval = interval;
-        this.schedule = schedule;
-    }
+    private JobRecurrenceArgs() {}
 
-    private JobRecurrenceArgs() {
-        this.count = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private JobRecurrenceArgs(JobRecurrenceArgs $) {
+        this.count = $.count;
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRecurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<RecurrenceFrequency> frequency;
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<JobRecurrenceScheduleArgs> schedule;
+        private JobRecurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRecurrenceArgs();
         }
 
         public Builder(JobRecurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.schedule = defaults.schedule;
+            $ = new JobRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
-        public Builder frequency(@Nullable RecurrenceFrequency frequency) {
-            this.frequency = Codegen.ofNullable(frequency);
-            return this;
+
+        public Builder frequency(RecurrenceFrequency frequency) {
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder schedule(@Nullable Output<JobRecurrenceScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable JobRecurrenceScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
-        }        public JobRecurrenceArgs build() {
-            return new JobRecurrenceArgs(count, endTime, frequency, interval, schedule);
+
+        public Builder schedule(JobRecurrenceScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        public JobRecurrenceArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="snapshotPolicyName", required=true)
-      private final String snapshotPolicyName;
+    private String snapshotPolicyName;
 
     public String snapshotPolicyName() {
         return this.snapshotPolicyName;
     }
 
-    public GetSnapshotPolicyArgs(
-        String accountName,
-        String resourceGroupName,
-        String snapshotPolicyName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.snapshotPolicyName = Objects.requireNonNull(snapshotPolicyName, "expected parameter 'snapshotPolicyName' to be non-null");
-    }
+    private GetSnapshotPolicyArgs() {}
 
-    private GetSnapshotPolicyArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.snapshotPolicyName = null;
+    private GetSnapshotPolicyArgs(GetSnapshotPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.snapshotPolicyName = $.snapshotPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String snapshotPolicyName;
+        private GetSnapshotPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotPolicyArgs();
         }
 
         public Builder(GetSnapshotPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.snapshotPolicyName = defaults.snapshotPolicyName;
+            $ = new GetSnapshotPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder snapshotPolicyName(String snapshotPolicyName) {
-            this.snapshotPolicyName = Objects.requireNonNull(snapshotPolicyName);
+            $.snapshotPolicyName = snapshotPolicyName;
             return this;
-        }        public GetSnapshotPolicyArgs build() {
-            return new GetSnapshotPolicyArgs(accountName, resourceGroupName, snapshotPolicyName);
+        }
+
+        public GetSnapshotPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.snapshotPolicyName = Objects.requireNonNull($.snapshotPolicyName, "expected parameter 'snapshotPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

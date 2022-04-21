@@ -23,45 +23,45 @@ public final class AmlTokenResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityType", required=true)
-      private final String identityType;
+    private String identityType;
 
     public String identityType() {
         return this.identityType;
     }
 
-    public AmlTokenResponse(String identityType) {
-        this.identityType = Codegen.stringProp("identityType").arg(identityType).require();
-    }
+    private AmlTokenResponse() {}
 
-    private AmlTokenResponse() {
-        this.identityType = null;
+    private AmlTokenResponse(AmlTokenResponse $) {
+        this.identityType = $.identityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmlTokenResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identityType;
+        private AmlTokenResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmlTokenResponse();
         }
 
         public Builder(AmlTokenResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityType = defaults.identityType;
+            $ = new AmlTokenResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityType(String identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
-        }        public AmlTokenResponse build() {
-            return new AmlTokenResponse(identityType);
+        }
+
+        public AmlTokenResponse build() {
+            $.identityType = Codegen.stringProp("identityType").arg($.identityType).require();
+            return $;
         }
     }
+
 }

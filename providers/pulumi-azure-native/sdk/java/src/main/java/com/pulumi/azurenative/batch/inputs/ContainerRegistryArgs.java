@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class ContainerRegistryArgs extends com.pulumi.resources.ResourceAr
     public static final ContainerRegistryArgs Empty = new ContainerRegistryArgs();
 
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -27,83 +27,77 @@ public final class ContainerRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="registryServer")
-      private final @Nullable Output<String> registryServer;
+    private @Nullable Output<String> registryServer;
 
-    public Output<String> registryServer() {
-        return this.registryServer == null ? Codegen.empty() : this.registryServer;
+    public Optional<Output<String>> registryServer() {
+        return Optional.ofNullable(this.registryServer);
     }
 
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public ContainerRegistryArgs(
-        Output<String> password,
-        @Nullable Output<String> registryServer,
-        Output<String> userName) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.registryServer = registryServer;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ContainerRegistryArgs() {}
 
-    private ContainerRegistryArgs() {
-        this.password = Codegen.empty();
-        this.registryServer = Codegen.empty();
-        this.userName = Codegen.empty();
+    private ContainerRegistryArgs(ContainerRegistryArgs $) {
+        this.password = $.password;
+        this.registryServer = $.registryServer;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> password;
-        private @Nullable Output<String> registryServer;
-        private Output<String> userName;
+        private ContainerRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRegistryArgs();
         }
 
         public Builder(ContainerRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.registryServer = defaults.registryServer;
-    	      this.userName = defaults.userName;
+            $ = new ContainerRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder registryServer(@Nullable Output<String> registryServer) {
-            this.registryServer = registryServer;
+            $.registryServer = registryServer;
             return this;
         }
-        public Builder registryServer(@Nullable String registryServer) {
-            this.registryServer = Codegen.ofNullable(registryServer);
-            return this;
+
+        public Builder registryServer(String registryServer) {
+            return registryServer(Output.of(registryServer));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public ContainerRegistryArgs build() {
-            return new ContainerRegistryArgs(password, registryServer, userName);
+            return userName(Output.of(userName));
+        }
+
+        public ContainerRegistryArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

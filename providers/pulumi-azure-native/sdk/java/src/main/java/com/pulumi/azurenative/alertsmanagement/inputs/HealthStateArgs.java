@@ -7,7 +7,6 @@ import com.pulumi.azurenative.alertsmanagement.enums.HealthStateName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class HealthStateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthStateName", required=true)
-      private final Output<Either<String,HealthStateName>> healthStateName;
+    private Output<Either<String,HealthStateName>> healthStateName;
 
     public Output<Either<String,HealthStateName>> healthStateName() {
         return this.healthStateName;
@@ -37,63 +36,60 @@ public final class HealthStateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<Double> severity;
+    private Output<Double> severity;
 
     public Output<Double> severity() {
         return this.severity;
     }
 
-    public HealthStateArgs(
-        Output<Either<String,HealthStateName>> healthStateName,
-        Output<Double> severity) {
-        this.healthStateName = Objects.requireNonNull(healthStateName, "expected parameter 'healthStateName' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-    }
+    private HealthStateArgs() {}
 
-    private HealthStateArgs() {
-        this.healthStateName = Codegen.empty();
-        this.severity = Codegen.empty();
+    private HealthStateArgs(HealthStateArgs $) {
+        this.healthStateName = $.healthStateName;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,HealthStateName>> healthStateName;
-        private Output<Double> severity;
+        private HealthStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthStateArgs();
         }
 
         public Builder(HealthStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthStateName = defaults.healthStateName;
-    	      this.severity = defaults.severity;
+            $ = new HealthStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthStateName(Output<Either<String,HealthStateName>> healthStateName) {
-            this.healthStateName = Objects.requireNonNull(healthStateName);
+            $.healthStateName = healthStateName;
             return this;
         }
+
         public Builder healthStateName(Either<String,HealthStateName> healthStateName) {
-            this.healthStateName = Output.of(Objects.requireNonNull(healthStateName));
-            return this;
+            return healthStateName(Output.of(healthStateName));
         }
+
         public Builder severity(Output<Double> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(Double severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
-        }        public HealthStateArgs build() {
-            return new HealthStateArgs(healthStateName, severity);
+            return severity(Output.of(severity));
+        }
+
+        public HealthStateArgs build() {
+            $.healthStateName = Objects.requireNonNull($.healthStateName, "expected parameter 'healthStateName' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

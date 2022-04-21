@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HourDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minute")
-      private final @Nullable Output<Integer> minute;
+    private @Nullable Output<Integer> minute;
 
-    public Output<Integer> minute() {
-        return this.minute == null ? Codegen.empty() : this.minute;
+    public Optional<Output<Integer>> minute() {
+        return Optional.ofNullable(this.minute);
     }
 
-    public HourDetailsArgs(@Nullable Output<Integer> minute) {
-        this.minute = minute;
-    }
+    private HourDetailsArgs() {}
 
-    private HourDetailsArgs() {
-        this.minute = Codegen.empty();
+    private HourDetailsArgs(HourDetailsArgs $) {
+        this.minute = $.minute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HourDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minute;
+        private HourDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HourDetailsArgs();
         }
 
         public Builder(HourDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minute = defaults.minute;
+            $ = new HourDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minute(@Nullable Output<Integer> minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
         }
-        public Builder minute(@Nullable Integer minute) {
-            this.minute = Codegen.ofNullable(minute);
-            return this;
-        }        public HourDetailsArgs build() {
-            return new HourDetailsArgs(minute);
+
+        public Builder minute(Integer minute) {
+            return minute(Output.of(minute));
+        }
+
+        public HourDetailsArgs build() {
+            return $;
         }
     }
+
 }

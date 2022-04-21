@@ -23,10 +23,10 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="chartValues")
-      private final @Nullable String chartValues;
+    private @Nullable String chartValues;
 
     public Optional<String> chartValues() {
-        return this.chartValues == null ? Optional.empty() : Optional.ofNullable(this.chartValues);
+        return Optional.ofNullable(this.chartValues);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="chartVersion")
-      private final @Nullable String chartVersion;
+    private @Nullable String chartVersion;
 
     public Optional<String> chartVersion() {
-        return this.chartVersion == null ? Optional.empty() : Optional.ofNullable(this.chartVersion);
+        return Optional.ofNullable(this.chartVersion);
     }
 
-    public HelmOperatorPropertiesResponse(
-        @Nullable String chartValues,
-        @Nullable String chartVersion) {
-        this.chartValues = chartValues;
-        this.chartVersion = chartVersion;
-    }
+    private HelmOperatorPropertiesResponse() {}
 
-    private HelmOperatorPropertiesResponse() {
-        this.chartValues = null;
-        this.chartVersion = null;
+    private HelmOperatorPropertiesResponse(HelmOperatorPropertiesResponse $) {
+        this.chartValues = $.chartValues;
+        this.chartVersion = $.chartVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HelmOperatorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String chartValues;
-        private @Nullable String chartVersion;
+        private HelmOperatorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HelmOperatorPropertiesResponse();
         }
 
         public Builder(HelmOperatorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chartValues = defaults.chartValues;
-    	      this.chartVersion = defaults.chartVersion;
+            $ = new HelmOperatorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder chartValues(@Nullable String chartValues) {
-            this.chartValues = chartValues;
+            $.chartValues = chartValues;
             return this;
         }
+
         public Builder chartVersion(@Nullable String chartVersion) {
-            this.chartVersion = chartVersion;
+            $.chartVersion = chartVersion;
             return this;
-        }        public HelmOperatorPropertiesResponse build() {
-            return new HelmOperatorPropertiesResponse(chartValues, chartVersion);
+        }
+
+        public HelmOperatorPropertiesResponse build() {
+            return $;
         }
     }
+
 }

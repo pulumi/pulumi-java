@@ -21,7 +21,7 @@ public final class ClientAccessRightResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accessPermission", required=true)
-      private final String accessPermission;
+    private String accessPermission;
 
     public String accessPermission() {
         return this.accessPermission;
@@ -32,55 +32,52 @@ public final class ClientAccessRightResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="client", required=true)
-      private final String client;
+    private String client;
 
     public String client() {
         return this.client;
     }
 
-    public ClientAccessRightResponse(
-        String accessPermission,
-        String client) {
-        this.accessPermission = Objects.requireNonNull(accessPermission, "expected parameter 'accessPermission' to be non-null");
-        this.client = Objects.requireNonNull(client, "expected parameter 'client' to be non-null");
-    }
+    private ClientAccessRightResponse() {}
 
-    private ClientAccessRightResponse() {
-        this.accessPermission = null;
-        this.client = null;
+    private ClientAccessRightResponse(ClientAccessRightResponse $) {
+        this.accessPermission = $.accessPermission;
+        this.client = $.client;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientAccessRightResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessPermission;
-        private String client;
+        private ClientAccessRightResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientAccessRightResponse();
         }
 
         public Builder(ClientAccessRightResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPermission = defaults.accessPermission;
-    	      this.client = defaults.client;
+            $ = new ClientAccessRightResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPermission(String accessPermission) {
-            this.accessPermission = Objects.requireNonNull(accessPermission);
+            $.accessPermission = accessPermission;
             return this;
         }
+
         public Builder client(String client) {
-            this.client = Objects.requireNonNull(client);
+            $.client = client;
             return this;
-        }        public ClientAccessRightResponse build() {
-            return new ClientAccessRightResponse(accessPermission, client);
+        }
+
+        public ClientAccessRightResponse build() {
+            $.accessPermission = Objects.requireNonNull($.accessPermission, "expected parameter 'accessPermission' to be non-null");
+            $.client = Objects.requireNonNull($.client, "expected parameter 'client' to be non-null");
+            return $;
         }
     }
+
 }

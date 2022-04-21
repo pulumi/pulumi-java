@@ -23,10 +23,10 @@ public final class ExtendedLocationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class ExtendedLocationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ExtendedLocationResponse(
-        @Nullable String name,
-        String type) {
-        this.name = name;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ExtendedLocationResponse() {}
 
-    private ExtendedLocationResponse() {
-        this.name = null;
-        this.type = null;
+    private ExtendedLocationResponse(ExtendedLocationResponse $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private String type;
+        private ExtendedLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedLocationResponse();
         }
 
         public Builder(ExtendedLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ExtendedLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ExtendedLocationResponse build() {
-            return new ExtendedLocationResponse(name, type);
+        }
+
+        public ExtendedLocationResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

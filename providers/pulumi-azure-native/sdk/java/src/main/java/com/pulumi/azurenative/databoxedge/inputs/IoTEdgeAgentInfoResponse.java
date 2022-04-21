@@ -24,7 +24,7 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="imageName", required=true)
-      private final String imageName;
+    private String imageName;
 
     public String imageName() {
         return this.imageName;
@@ -35,10 +35,10 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="imageRepository")
-      private final @Nullable ImageRepositoryCredentialResponse imageRepository;
+    private @Nullable ImageRepositoryCredentialResponse imageRepository;
 
     public Optional<ImageRepositoryCredentialResponse> imageRepository() {
-        return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
+        return Optional.ofNullable(this.imageRepository);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
     }
 
-    public IoTEdgeAgentInfoResponse(
-        String imageName,
-        @Nullable ImageRepositoryCredentialResponse imageRepository,
-        String tag) {
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.imageRepository = imageRepository;
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private IoTEdgeAgentInfoResponse() {}
 
-    private IoTEdgeAgentInfoResponse() {
-        this.imageName = null;
-        this.imageRepository = null;
-        this.tag = null;
+    private IoTEdgeAgentInfoResponse(IoTEdgeAgentInfoResponse $) {
+        this.imageName = $.imageName;
+        this.imageRepository = $.imageRepository;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoTEdgeAgentInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageName;
-        private @Nullable ImageRepositoryCredentialResponse imageRepository;
-        private String tag;
+        private IoTEdgeAgentInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoTEdgeAgentInfoResponse();
         }
 
         public Builder(IoTEdgeAgentInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageName = defaults.imageName;
-    	      this.imageRepository = defaults.imageRepository;
-    	      this.tag = defaults.tag;
+            $ = new IoTEdgeAgentInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageName(String imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder imageRepository(@Nullable ImageRepositoryCredentialResponse imageRepository) {
-            this.imageRepository = imageRepository;
+            $.imageRepository = imageRepository;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public IoTEdgeAgentInfoResponse build() {
-            return new IoTEdgeAgentInfoResponse(imageName, imageRepository, tag);
+        }
+
+        public IoTEdgeAgentInfoResponse build() {
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

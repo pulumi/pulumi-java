@@ -23,7 +23,7 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="additionalInfo", required=true)
-      private final List<TypedErrorInfoResponse> additionalInfo;
+    private List<TypedErrorInfoResponse> additionalInfo;
 
     public List<TypedErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
@@ -34,7 +34,7 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -45,7 +45,7 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="details", required=true)
-      private final List<ErrorDefinitionResponse> details;
+    private List<ErrorDefinitionResponse> details;
 
     public List<ErrorDefinitionResponse> details() {
         return this.details;
@@ -56,7 +56,7 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -67,88 +67,81 @@ public final class ErrorDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
     }
 
-    public ErrorDefinitionResponse(
-        List<TypedErrorInfoResponse> additionalInfo,
-        String code,
-        List<ErrorDefinitionResponse> details,
-        String message,
-        String target) {
-        this.additionalInfo = Objects.requireNonNull(additionalInfo, "expected parameter 'additionalInfo' to be non-null");
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private ErrorDefinitionResponse() {}
 
-    private ErrorDefinitionResponse() {
-        this.additionalInfo = List.of();
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.target = null;
+    private ErrorDefinitionResponse(ErrorDefinitionResponse $) {
+        this.additionalInfo = $.additionalInfo;
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TypedErrorInfoResponse> additionalInfo;
-        private String code;
-        private List<ErrorDefinitionResponse> details;
-        private String message;
-        private String target;
+        private ErrorDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorDefinitionResponse();
         }
 
         public Builder(ErrorDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInfo = defaults.additionalInfo;
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new ErrorDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInfo(List<TypedErrorInfoResponse> additionalInfo) {
-            this.additionalInfo = Objects.requireNonNull(additionalInfo);
+            $.additionalInfo = additionalInfo;
             return this;
         }
+
         public Builder additionalInfo(TypedErrorInfoResponse... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
+
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<ErrorDefinitionResponse> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(ErrorDefinitionResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
-        }        public ErrorDefinitionResponse build() {
-            return new ErrorDefinitionResponse(additionalInfo, code, details, message, target);
+        }
+
+        public ErrorDefinitionResponse build() {
+            $.additionalInfo = Objects.requireNonNull($.additionalInfo, "expected parameter 'additionalInfo' to be non-null");
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

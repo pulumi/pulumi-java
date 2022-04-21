@@ -23,45 +23,44 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse extends com.pulum
      * 
      */
     @Import(name="logs")
-      private final @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
+    private @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
 
     public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> logs() {
-        return this.logs == null ? Optional.empty() : Optional.ofNullable(this.logs);
+        return Optional.ofNullable(this.logs);
     }
 
-    public AwsCloudTrailDataConnectorDataTypesResponse(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
-        this.logs = logs;
-    }
+    private AwsCloudTrailDataConnectorDataTypesResponse() {}
 
-    private AwsCloudTrailDataConnectorDataTypesResponse() {
-        this.logs = null;
+    private AwsCloudTrailDataConnectorDataTypesResponse(AwsCloudTrailDataConnectorDataTypesResponse $) {
+        this.logs = $.logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsCloudTrailDataConnectorDataTypesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
+        private AwsCloudTrailDataConnectorDataTypesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsCloudTrailDataConnectorDataTypesResponse();
         }
 
         public Builder(AwsCloudTrailDataConnectorDataTypesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logs = defaults.logs;
+            $ = new AwsCloudTrailDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
-        }        public AwsCloudTrailDataConnectorDataTypesResponse build() {
-            return new AwsCloudTrailDataConnectorDataTypesResponse(logs);
+        }
+
+        public AwsCloudTrailDataConnectorDataTypesResponse build() {
+            return $;
         }
     }
+
 }

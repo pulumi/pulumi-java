@@ -23,10 +23,10 @@ public final class DataLakeStorageAccountDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="accountUrl")
-      private final @Nullable String accountUrl;
+    private @Nullable String accountUrl;
 
     public Optional<String> accountUrl() {
-        return this.accountUrl == null ? Optional.empty() : Optional.ofNullable(this.accountUrl);
+        return Optional.ofNullable(this.accountUrl);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DataLakeStorageAccountDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="filesystem")
-      private final @Nullable String filesystem;
+    private @Nullable String filesystem;
 
     public Optional<String> filesystem() {
-        return this.filesystem == null ? Optional.empty() : Optional.ofNullable(this.filesystem);
+        return Optional.ofNullable(this.filesystem);
     }
 
-    public DataLakeStorageAccountDetailsResponse(
-        @Nullable String accountUrl,
-        @Nullable String filesystem) {
-        this.accountUrl = accountUrl;
-        this.filesystem = filesystem;
-    }
+    private DataLakeStorageAccountDetailsResponse() {}
 
-    private DataLakeStorageAccountDetailsResponse() {
-        this.accountUrl = null;
-        this.filesystem = null;
+    private DataLakeStorageAccountDetailsResponse(DataLakeStorageAccountDetailsResponse $) {
+        this.accountUrl = $.accountUrl;
+        this.filesystem = $.filesystem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeStorageAccountDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountUrl;
-        private @Nullable String filesystem;
+        private DataLakeStorageAccountDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeStorageAccountDetailsResponse();
         }
 
         public Builder(DataLakeStorageAccountDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountUrl = defaults.accountUrl;
-    	      this.filesystem = defaults.filesystem;
+            $ = new DataLakeStorageAccountDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountUrl(@Nullable String accountUrl) {
-            this.accountUrl = accountUrl;
+            $.accountUrl = accountUrl;
             return this;
         }
+
         public Builder filesystem(@Nullable String filesystem) {
-            this.filesystem = filesystem;
+            $.filesystem = filesystem;
             return this;
-        }        public DataLakeStorageAccountDetailsResponse build() {
-            return new DataLakeStorageAccountDetailsResponse(accountUrl, filesystem);
+        }
+
+        public DataLakeStorageAccountDetailsResponse build() {
+            return $;
         }
     }
+
 }

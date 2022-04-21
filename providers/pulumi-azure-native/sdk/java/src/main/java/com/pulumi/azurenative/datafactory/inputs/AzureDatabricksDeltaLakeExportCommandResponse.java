@@ -25,10 +25,10 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
      * 
      */
     @Import(name="dateFormat")
-      private final @Nullable Object dateFormat;
+    private @Nullable Object dateFormat;
 
     public Optional<Object> dateFormat() {
-        return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
+        return Optional.ofNullable(this.dateFormat);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
      * 
      */
     @Import(name="timestampFormat")
-      private final @Nullable Object timestampFormat;
+    private @Nullable Object timestampFormat;
 
     public Optional<Object> timestampFormat() {
-        return this.timestampFormat == null ? Optional.empty() : Optional.ofNullable(this.timestampFormat);
+        return Optional.ofNullable(this.timestampFormat);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureDatabricksDeltaLakeExportCommandResponse(
-        @Nullable Object dateFormat,
-        @Nullable Object timestampFormat,
-        String type) {
-        this.dateFormat = dateFormat;
-        this.timestampFormat = timestampFormat;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureDatabricksDeltaLakeExportCommandResponse() {}
 
-    private AzureDatabricksDeltaLakeExportCommandResponse() {
-        this.dateFormat = null;
-        this.timestampFormat = null;
-        this.type = null;
+    private AzureDatabricksDeltaLakeExportCommandResponse(AzureDatabricksDeltaLakeExportCommandResponse $) {
+        this.dateFormat = $.dateFormat;
+        this.timestampFormat = $.timestampFormat;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDatabricksDeltaLakeExportCommandResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object dateFormat;
-        private @Nullable Object timestampFormat;
-        private String type;
+        private AzureDatabricksDeltaLakeExportCommandResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDatabricksDeltaLakeExportCommandResponse();
         }
 
         public Builder(AzureDatabricksDeltaLakeExportCommandResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dateFormat = defaults.dateFormat;
-    	      this.timestampFormat = defaults.timestampFormat;
-    	      this.type = defaults.type;
+            $ = new AzureDatabricksDeltaLakeExportCommandResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dateFormat(@Nullable Object dateFormat) {
-            this.dateFormat = dateFormat;
+            $.dateFormat = dateFormat;
             return this;
         }
+
         public Builder timestampFormat(@Nullable Object timestampFormat) {
-            this.timestampFormat = timestampFormat;
+            $.timestampFormat = timestampFormat;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureDatabricksDeltaLakeExportCommandResponse build() {
-            return new AzureDatabricksDeltaLakeExportCommandResponse(dateFormat, timestampFormat, type);
+        }
+
+        public AzureDatabricksDeltaLakeExportCommandResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

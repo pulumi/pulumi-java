@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enableNodePublicIp")
-      private final @Nullable Output<Boolean> enableNodePublicIp;
+    private @Nullable Output<Boolean> enableNodePublicIp;
 
-    public Output<Boolean> enableNodePublicIp() {
-        return this.enableNodePublicIp == null ? Codegen.empty() : this.enableNodePublicIp;
+    public Optional<Output<Boolean>> enableNodePublicIp() {
+        return Optional.ofNullable(this.enableNodePublicIp);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isolatedNetwork")
-      private final @Nullable Output<Boolean> isolatedNetwork;
+    private @Nullable Output<Boolean> isolatedNetwork;
 
-    public Output<Boolean> isolatedNetwork() {
-        return this.isolatedNetwork == null ? Codegen.empty() : this.isolatedNetwork;
+    public Optional<Output<Boolean>> isolatedNetwork() {
+        return Optional.ofNullable(this.isolatedNetwork);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<Either<String,OsType>> osType;
+    private @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<Either<String,OsType>>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="remoteLoginPortPublicAccess")
-      private final @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
+    private @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
-    public Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess() {
-        return this.remoteLoginPortPublicAccess == null ? Codegen.empty() : this.remoteLoginPortPublicAccess;
+    public Optional<Output<Either<String,RemoteLoginPortPublicAccess>>> remoteLoginPortPublicAccess() {
+        return Optional.ofNullable(this.remoteLoginPortPublicAccess);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="scaleSettings")
-      private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
+    private @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
-    public Output<ScaleSettingsArgs> scaleSettings() {
-        return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
+    public Optional<Output<ScaleSettingsArgs>> scaleSettings() {
+        return Optional.ofNullable(this.scaleSettings);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<ResourceIdArgs> subnet;
+    private @Nullable Output<ResourceIdArgs> subnet;
 
-    public Output<ResourceIdArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<ResourceIdArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userAccountCredentials")
-      private final @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
+    private @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
 
-    public Output<UserAccountCredentialsArgs> userAccountCredentials() {
-        return this.userAccountCredentials == null ? Codegen.empty() : this.userAccountCredentials;
+    public Optional<Output<UserAccountCredentialsArgs>> userAccountCredentials() {
+        return Optional.ofNullable(this.userAccountCredentials);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="virtualMachineImage")
-      private final @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
+    private @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
 
-    public Output<VirtualMachineImageArgs> virtualMachineImage() {
-        return this.virtualMachineImage == null ? Codegen.empty() : this.virtualMachineImage;
+    public Optional<Output<VirtualMachineImageArgs>> virtualMachineImage() {
+        return Optional.ofNullable(this.virtualMachineImage);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vmPriority")
-      private final @Nullable Output<Either<String,VmPriority>> vmPriority;
+    private @Nullable Output<Either<String,VmPriority>> vmPriority;
 
-    public Output<Either<String,VmPriority>> vmPriority() {
-        return this.vmPriority == null ? Codegen.empty() : this.vmPriority;
+    public Optional<Output<Either<String,VmPriority>>> vmPriority() {
+        return Optional.ofNullable(this.vmPriority);
     }
 
     /**
@@ -132,167 +133,141 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public AmlComputePropertiesArgs(
-        @Nullable Output<Boolean> enableNodePublicIp,
-        @Nullable Output<Boolean> isolatedNetwork,
-        @Nullable Output<Either<String,OsType>> osType,
-        @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess,
-        @Nullable Output<ScaleSettingsArgs> scaleSettings,
-        @Nullable Output<ResourceIdArgs> subnet,
-        @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials,
-        @Nullable Output<VirtualMachineImageArgs> virtualMachineImage,
-        @Nullable Output<Either<String,VmPriority>> vmPriority,
-        @Nullable Output<String> vmSize) {
-        this.enableNodePublicIp = Codegen.booleanProp("enableNodePublicIp").output().arg(enableNodePublicIp).def(true).getNullable();
-        this.isolatedNetwork = isolatedNetwork;
-        this.osType = Codegen.stringProp("osType").left(OsType.class).output().arg(osType).def("Linux").getNullable();
-        this.remoteLoginPortPublicAccess = Codegen.stringProp("remoteLoginPortPublicAccess").left(RemoteLoginPortPublicAccess.class).output().arg(remoteLoginPortPublicAccess).def("NotSpecified").getNullable();
-        this.scaleSettings = scaleSettings;
-        this.subnet = subnet;
-        this.userAccountCredentials = userAccountCredentials;
-        this.virtualMachineImage = virtualMachineImage;
-        this.vmPriority = vmPriority;
-        this.vmSize = vmSize;
-    }
+    private AmlComputePropertiesArgs() {}
 
-    private AmlComputePropertiesArgs() {
-        this.enableNodePublicIp = Codegen.empty();
-        this.isolatedNetwork = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.remoteLoginPortPublicAccess = Codegen.empty();
-        this.scaleSettings = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.userAccountCredentials = Codegen.empty();
-        this.virtualMachineImage = Codegen.empty();
-        this.vmPriority = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private AmlComputePropertiesArgs(AmlComputePropertiesArgs $) {
+        this.enableNodePublicIp = $.enableNodePublicIp;
+        this.isolatedNetwork = $.isolatedNetwork;
+        this.osType = $.osType;
+        this.remoteLoginPortPublicAccess = $.remoteLoginPortPublicAccess;
+        this.scaleSettings = $.scaleSettings;
+        this.subnet = $.subnet;
+        this.userAccountCredentials = $.userAccountCredentials;
+        this.virtualMachineImage = $.virtualMachineImage;
+        this.vmPriority = $.vmPriority;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmlComputePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableNodePublicIp;
-        private @Nullable Output<Boolean> isolatedNetwork;
-        private @Nullable Output<Either<String,OsType>> osType;
-        private @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
-        private @Nullable Output<ScaleSettingsArgs> scaleSettings;
-        private @Nullable Output<ResourceIdArgs> subnet;
-        private @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
-        private @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
-        private @Nullable Output<Either<String,VmPriority>> vmPriority;
-        private @Nullable Output<String> vmSize;
+        private AmlComputePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmlComputePropertiesArgs();
         }
 
         public Builder(AmlComputePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableNodePublicIp = defaults.enableNodePublicIp;
-    	      this.isolatedNetwork = defaults.isolatedNetwork;
-    	      this.osType = defaults.osType;
-    	      this.remoteLoginPortPublicAccess = defaults.remoteLoginPortPublicAccess;
-    	      this.scaleSettings = defaults.scaleSettings;
-    	      this.subnet = defaults.subnet;
-    	      this.userAccountCredentials = defaults.userAccountCredentials;
-    	      this.virtualMachineImage = defaults.virtualMachineImage;
-    	      this.vmPriority = defaults.vmPriority;
-    	      this.vmSize = defaults.vmSize;
+            $ = new AmlComputePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableNodePublicIp(@Nullable Output<Boolean> enableNodePublicIp) {
-            this.enableNodePublicIp = enableNodePublicIp;
+            $.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
-        public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
-            this.enableNodePublicIp = Codegen.ofNullable(enableNodePublicIp);
-            return this;
+
+        public Builder enableNodePublicIp(Boolean enableNodePublicIp) {
+            return enableNodePublicIp(Output.of(enableNodePublicIp));
         }
+
         public Builder isolatedNetwork(@Nullable Output<Boolean> isolatedNetwork) {
-            this.isolatedNetwork = isolatedNetwork;
+            $.isolatedNetwork = isolatedNetwork;
             return this;
         }
-        public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
-            this.isolatedNetwork = Codegen.ofNullable(isolatedNetwork);
-            return this;
+
+        public Builder isolatedNetwork(Boolean isolatedNetwork) {
+            return isolatedNetwork(Output.of(isolatedNetwork));
         }
+
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(Either<String,OsType> osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder remoteLoginPortPublicAccess(@Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
-            this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
+            $.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
-        public Builder remoteLoginPortPublicAccess(@Nullable Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
-            this.remoteLoginPortPublicAccess = Codegen.ofNullable(remoteLoginPortPublicAccess);
-            return this;
+
+        public Builder remoteLoginPortPublicAccess(Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
+            return remoteLoginPortPublicAccess(Output.of(remoteLoginPortPublicAccess));
         }
+
         public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
-            this.scaleSettings = scaleSettings;
+            $.scaleSettings = scaleSettings;
             return this;
         }
-        public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Codegen.ofNullable(scaleSettings);
-            return this;
+
+        public Builder scaleSettings(ScaleSettingsArgs scaleSettings) {
+            return scaleSettings(Output.of(scaleSettings));
         }
+
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable ResourceIdArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(ResourceIdArgs subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder userAccountCredentials(@Nullable Output<UserAccountCredentialsArgs> userAccountCredentials) {
-            this.userAccountCredentials = userAccountCredentials;
+            $.userAccountCredentials = userAccountCredentials;
             return this;
         }
-        public Builder userAccountCredentials(@Nullable UserAccountCredentialsArgs userAccountCredentials) {
-            this.userAccountCredentials = Codegen.ofNullable(userAccountCredentials);
-            return this;
+
+        public Builder userAccountCredentials(UserAccountCredentialsArgs userAccountCredentials) {
+            return userAccountCredentials(Output.of(userAccountCredentials));
         }
+
         public Builder virtualMachineImage(@Nullable Output<VirtualMachineImageArgs> virtualMachineImage) {
-            this.virtualMachineImage = virtualMachineImage;
+            $.virtualMachineImage = virtualMachineImage;
             return this;
         }
-        public Builder virtualMachineImage(@Nullable VirtualMachineImageArgs virtualMachineImage) {
-            this.virtualMachineImage = Codegen.ofNullable(virtualMachineImage);
-            return this;
+
+        public Builder virtualMachineImage(VirtualMachineImageArgs virtualMachineImage) {
+            return virtualMachineImage(Output.of(virtualMachineImage));
         }
+
         public Builder vmPriority(@Nullable Output<Either<String,VmPriority>> vmPriority) {
-            this.vmPriority = vmPriority;
+            $.vmPriority = vmPriority;
             return this;
         }
-        public Builder vmPriority(@Nullable Either<String,VmPriority> vmPriority) {
-            this.vmPriority = Codegen.ofNullable(vmPriority);
-            return this;
+
+        public Builder vmPriority(Either<String,VmPriority> vmPriority) {
+            return vmPriority(Output.of(vmPriority));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public AmlComputePropertiesArgs build() {
-            return new AmlComputePropertiesArgs(enableNodePublicIp, isolatedNetwork, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public AmlComputePropertiesArgs build() {
+            $.enableNodePublicIp = Codegen.booleanProp("enableNodePublicIp").output().arg($.enableNodePublicIp).def(true).getNullable();
+            $.osType = Codegen.stringProp("osType").left(OsType.class).output().arg($.osType).def("Linux").getNullable();
+            $.remoteLoginPortPublicAccess = Codegen.stringProp("remoteLoginPortPublicAccess").left(RemoteLoginPortPublicAccess.class).output().arg($.remoteLoginPortPublicAccess).def("NotSpecified").getNullable();
+            return $;
         }
     }
+
 }

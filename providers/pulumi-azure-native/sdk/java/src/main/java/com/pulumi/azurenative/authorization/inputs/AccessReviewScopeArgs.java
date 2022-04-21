@@ -5,10 +5,10 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AccessReviewScopeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="expandNestedMemberships")
-      private final @Nullable Output<Boolean> expandNestedMemberships;
+    private @Nullable Output<Boolean> expandNestedMemberships;
 
-    public Output<Boolean> expandNestedMemberships() {
-        return this.expandNestedMemberships == null ? Codegen.empty() : this.expandNestedMemberships;
+    public Optional<Output<Boolean>> expandNestedMemberships() {
+        return Optional.ofNullable(this.expandNestedMemberships);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AccessReviewScopeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="inactiveDuration")
-      private final @Nullable Output<String> inactiveDuration;
+    private @Nullable Output<String> inactiveDuration;
 
-    public Output<String> inactiveDuration() {
-        return this.inactiveDuration == null ? Codegen.empty() : this.inactiveDuration;
+    public Optional<Output<String>> inactiveDuration() {
+        return Optional.ofNullable(this.inactiveDuration);
     }
 
-    public AccessReviewScopeArgs(
-        @Nullable Output<Boolean> expandNestedMemberships,
-        @Nullable Output<String> inactiveDuration) {
-        this.expandNestedMemberships = expandNestedMemberships;
-        this.inactiveDuration = inactiveDuration;
-    }
+    private AccessReviewScopeArgs() {}
 
-    private AccessReviewScopeArgs() {
-        this.expandNestedMemberships = Codegen.empty();
-        this.inactiveDuration = Codegen.empty();
+    private AccessReviewScopeArgs(AccessReviewScopeArgs $) {
+        this.expandNestedMemberships = $.expandNestedMemberships;
+        this.inactiveDuration = $.inactiveDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> expandNestedMemberships;
-        private @Nullable Output<String> inactiveDuration;
+        private AccessReviewScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewScopeArgs();
         }
 
         public Builder(AccessReviewScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expandNestedMemberships = defaults.expandNestedMemberships;
-    	      this.inactiveDuration = defaults.inactiveDuration;
+            $ = new AccessReviewScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expandNestedMemberships(@Nullable Output<Boolean> expandNestedMemberships) {
-            this.expandNestedMemberships = expandNestedMemberships;
+            $.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
-        public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
-            this.expandNestedMemberships = Codegen.ofNullable(expandNestedMemberships);
-            return this;
+
+        public Builder expandNestedMemberships(Boolean expandNestedMemberships) {
+            return expandNestedMemberships(Output.of(expandNestedMemberships));
         }
+
         public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
-            this.inactiveDuration = inactiveDuration;
+            $.inactiveDuration = inactiveDuration;
             return this;
         }
-        public Builder inactiveDuration(@Nullable String inactiveDuration) {
-            this.inactiveDuration = Codegen.ofNullable(inactiveDuration);
-            return this;
-        }        public AccessReviewScopeArgs build() {
-            return new AccessReviewScopeArgs(expandNestedMemberships, inactiveDuration);
+
+        public Builder inactiveDuration(String inactiveDuration) {
+            return inactiveDuration(Output.of(inactiveDuration));
+        }
+
+        public AccessReviewScopeArgs build() {
+            return $;
         }
     }
+
 }

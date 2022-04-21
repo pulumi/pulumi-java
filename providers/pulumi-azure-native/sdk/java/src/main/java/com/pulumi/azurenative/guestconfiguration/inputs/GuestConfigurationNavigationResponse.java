@@ -26,10 +26,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="assignmentType")
-      private final @Nullable String assignmentType;
+    private @Nullable String assignmentType;
 
     public Optional<String> assignmentType() {
-        return this.assignmentType == null ? Optional.empty() : Optional.ofNullable(this.assignmentType);
+        return Optional.ofNullable(this.assignmentType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="configurationParameter")
-      private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
+    private @Nullable List<ConfigurationParameterResponse> configurationParameter;
 
-    public List<ConfigurationParameterResponse> configurationParameter() {
-        return this.configurationParameter == null ? List.of() : this.configurationParameter;
+    public Optional<List<ConfigurationParameterResponse>> configurationParameter() {
+        return Optional.ofNullable(this.configurationParameter);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="configurationProtectedParameter")
-      private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
+    private @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
 
-    public List<ConfigurationParameterResponse> configurationProtectedParameter() {
-        return this.configurationProtectedParameter == null ? List.of() : this.configurationProtectedParameter;
+    public Optional<List<ConfigurationParameterResponse>> configurationProtectedParameter() {
+        return Optional.ofNullable(this.configurationProtectedParameter);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="configurationSetting")
-      private final @Nullable ConfigurationSettingResponse configurationSetting;
+    private @Nullable ConfigurationSettingResponse configurationSetting;
 
     public Optional<ConfigurationSettingResponse> configurationSetting() {
-        return this.configurationSetting == null ? Optional.empty() : Optional.ofNullable(this.configurationSetting);
+        return Optional.ofNullable(this.configurationSetting);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="contentHash")
-      private final @Nullable String contentHash;
+    private @Nullable String contentHash;
 
     public Optional<String> contentHash() {
-        return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
+        return Optional.ofNullable(this.contentHash);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
@@ -92,10 +92,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="contentUri")
-      private final @Nullable String contentUri;
+    private @Nullable String contentUri;
 
     public Optional<String> contentUri() {
-        return this.contentUri == null ? Optional.empty() : Optional.ofNullable(this.contentUri);
+        return Optional.ofNullable(this.contentUri);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -125,133 +125,107 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GuestConfigurationNavigationResponse(
-        @Nullable String assignmentType,
-        @Nullable List<ConfigurationParameterResponse> configurationParameter,
-        @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter,
-        @Nullable ConfigurationSettingResponse configurationSetting,
-        @Nullable String contentHash,
-        String contentType,
-        @Nullable String contentUri,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String version) {
-        this.assignmentType = assignmentType;
-        this.configurationParameter = configurationParameter;
-        this.configurationProtectedParameter = configurationProtectedParameter;
-        this.configurationSetting = configurationSetting;
-        this.contentHash = contentHash;
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.contentUri = contentUri;
-        this.kind = kind;
-        this.name = name;
-        this.version = version;
-    }
+    private GuestConfigurationNavigationResponse() {}
 
-    private GuestConfigurationNavigationResponse() {
-        this.assignmentType = null;
-        this.configurationParameter = List.of();
-        this.configurationProtectedParameter = List.of();
-        this.configurationSetting = null;
-        this.contentHash = null;
-        this.contentType = null;
-        this.contentUri = null;
-        this.kind = null;
-        this.name = null;
-        this.version = null;
+    private GuestConfigurationNavigationResponse(GuestConfigurationNavigationResponse $) {
+        this.assignmentType = $.assignmentType;
+        this.configurationParameter = $.configurationParameter;
+        this.configurationProtectedParameter = $.configurationProtectedParameter;
+        this.configurationSetting = $.configurationSetting;
+        this.contentHash = $.contentHash;
+        this.contentType = $.contentType;
+        this.contentUri = $.contentUri;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestConfigurationNavigationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assignmentType;
-        private @Nullable List<ConfigurationParameterResponse> configurationParameter;
-        private @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
-        private @Nullable ConfigurationSettingResponse configurationSetting;
-        private @Nullable String contentHash;
-        private String contentType;
-        private @Nullable String contentUri;
-        private @Nullable String kind;
-        private @Nullable String name;
-        private @Nullable String version;
+        private GuestConfigurationNavigationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestConfigurationNavigationResponse();
         }
 
         public Builder(GuestConfigurationNavigationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentType = defaults.assignmentType;
-    	      this.configurationParameter = defaults.configurationParameter;
-    	      this.configurationProtectedParameter = defaults.configurationProtectedParameter;
-    	      this.configurationSetting = defaults.configurationSetting;
-    	      this.contentHash = defaults.contentHash;
-    	      this.contentType = defaults.contentType;
-    	      this.contentUri = defaults.contentUri;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new GuestConfigurationNavigationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentType(@Nullable String assignmentType) {
-            this.assignmentType = assignmentType;
+            $.assignmentType = assignmentType;
             return this;
         }
+
         public Builder configurationParameter(@Nullable List<ConfigurationParameterResponse> configurationParameter) {
-            this.configurationParameter = configurationParameter;
+            $.configurationParameter = configurationParameter;
             return this;
         }
+
         public Builder configurationParameter(ConfigurationParameterResponse... configurationParameter) {
             return configurationParameter(List.of(configurationParameter));
         }
+
         public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterResponse> configurationProtectedParameter) {
-            this.configurationProtectedParameter = configurationProtectedParameter;
+            $.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
+
         public Builder configurationProtectedParameter(ConfigurationParameterResponse... configurationProtectedParameter) {
             return configurationProtectedParameter(List.of(configurationProtectedParameter));
         }
+
         public Builder configurationSetting(@Nullable ConfigurationSettingResponse configurationSetting) {
-            this.configurationSetting = configurationSetting;
+            $.configurationSetting = configurationSetting;
             return this;
         }
+
         public Builder contentHash(@Nullable String contentHash) {
-            this.contentHash = contentHash;
+            $.contentHash = contentHash;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = contentUri;
+            $.contentUri = contentUri;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GuestConfigurationNavigationResponse build() {
-            return new GuestConfigurationNavigationResponse(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentType, contentUri, kind, name, version);
+        }
+
+        public GuestConfigurationNavigationResponse build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            return $;
         }
     }
+
 }

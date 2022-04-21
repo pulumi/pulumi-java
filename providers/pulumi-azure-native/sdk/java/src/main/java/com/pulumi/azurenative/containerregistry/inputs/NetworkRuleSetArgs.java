@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultAction", required=true)
-      private final Output<Either<String,DefaultAction>> defaultAction;
+    private Output<Either<String,DefaultAction>> defaultAction;
 
     public Output<Either<String,DefaultAction>> defaultAction() {
         return this.defaultAction;
@@ -40,10 +41,10 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable Output<List<IPRuleArgs>> ipRules;
+    private @Nullable Output<List<IPRuleArgs>> ipRules;
 
-    public Output<List<IPRuleArgs>> ipRules() {
-        return this.ipRules == null ? Codegen.empty() : this.ipRules;
+    public Optional<Output<List<IPRuleArgs>>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -51,82 +52,77 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+    private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
+    public Optional<Output<List<VirtualNetworkRuleArgs>>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public NetworkRuleSetArgs(
-        Output<Either<String,DefaultAction>> defaultAction,
-        @Nullable Output<List<IPRuleArgs>> ipRules,
-        @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-        this.defaultAction = Codegen.stringProp("defaultAction").left(DefaultAction.class).output().arg(defaultAction).def("Allow").require();
-        this.ipRules = ipRules;
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private NetworkRuleSetArgs() {}
 
-    private NetworkRuleSetArgs() {
-        this.defaultAction = Codegen.empty();
-        this.ipRules = Codegen.empty();
-        this.virtualNetworkRules = Codegen.empty();
+    private NetworkRuleSetArgs(NetworkRuleSetArgs $) {
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DefaultAction>> defaultAction;
-        private @Nullable Output<List<IPRuleArgs>> ipRules;
-        private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private NetworkRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetArgs();
         }
 
         public Builder(NetworkRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new NetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultAction(Output<Either<String,DefaultAction>> defaultAction) {
-            this.defaultAction = Objects.requireNonNull(defaultAction);
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
-            this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
-            return this;
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder ipRules(@Nullable Output<List<IPRuleArgs>> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
-        public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
-            this.ipRules = Codegen.ofNullable(ipRules);
-            return this;
+
+        public Builder ipRules(List<IPRuleArgs> ipRules) {
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(IPRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
-            return this;
+
+        public Builder virtualNetworkRules(List<VirtualNetworkRuleArgs> virtualNetworkRules) {
+            return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
+
         public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public NetworkRuleSetArgs build() {
-            return new NetworkRuleSetArgs(defaultAction, ipRules, virtualNetworkRules);
+        }
+
+        public NetworkRuleSetArgs build() {
+            $.defaultAction = Codegen.stringProp("defaultAction").left(DefaultAction.class).output().arg($.defaultAction).def("Allow").require();
+            return $;
         }
     }
+
 }

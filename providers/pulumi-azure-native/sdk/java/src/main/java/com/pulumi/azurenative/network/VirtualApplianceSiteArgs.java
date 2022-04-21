@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.Office365PolicyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
-      private final Output<String> networkVirtualApplianceName;
+    private Output<String> networkVirtualApplianceName;
 
     public Output<String> networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
@@ -65,10 +65,10 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="o365Policy")
-      private final @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
+    private @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
 
-    public Output<Office365PolicyPropertiesArgs> o365Policy() {
-        return this.o365Policy == null ? Codegen.empty() : this.o365Policy;
+    public Optional<Output<Office365PolicyPropertiesArgs>> o365Policy() {
+        return Optional.ofNullable(this.o365Policy);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,128 +87,110 @@ public final class VirtualApplianceSiteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="siteName")
-      private final @Nullable Output<String> siteName;
+    private @Nullable Output<String> siteName;
 
-    public Output<String> siteName() {
-        return this.siteName == null ? Codegen.empty() : this.siteName;
+    public Optional<Output<String>> siteName() {
+        return Optional.ofNullable(this.siteName);
     }
 
-    public VirtualApplianceSiteArgs(
-        @Nullable Output<String> addressPrefix,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        Output<String> networkVirtualApplianceName,
-        @Nullable Output<Office365PolicyPropertiesArgs> o365Policy,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> siteName) {
-        this.addressPrefix = addressPrefix;
-        this.id = id;
-        this.name = name;
-        this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName, "expected parameter 'networkVirtualApplianceName' to be non-null");
-        this.o365Policy = o365Policy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = siteName;
-    }
+    private VirtualApplianceSiteArgs() {}
 
-    private VirtualApplianceSiteArgs() {
-        this.addressPrefix = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkVirtualApplianceName = Codegen.empty();
-        this.o365Policy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.siteName = Codegen.empty();
+    private VirtualApplianceSiteArgs(VirtualApplianceSiteArgs $) {
+        this.addressPrefix = $.addressPrefix;
+        this.id = $.id;
+        this.name = $.name;
+        this.networkVirtualApplianceName = $.networkVirtualApplianceName;
+        this.o365Policy = $.o365Policy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualApplianceSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private Output<String> networkVirtualApplianceName;
-        private @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> siteName;
+        private VirtualApplianceSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualApplianceSiteArgs();
         }
 
         public Builder(VirtualApplianceSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.networkVirtualApplianceName = defaults.networkVirtualApplianceName;
-    	      this.o365Policy = defaults.o365Policy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
+            $ = new VirtualApplianceSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkVirtualApplianceName(Output<String> networkVirtualApplianceName) {
-            this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
+            $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
+
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
-            this.networkVirtualApplianceName = Output.of(Objects.requireNonNull(networkVirtualApplianceName));
-            return this;
+            return networkVirtualApplianceName(Output.of(networkVirtualApplianceName));
         }
+
         public Builder o365Policy(@Nullable Output<Office365PolicyPropertiesArgs> o365Policy) {
-            this.o365Policy = o365Policy;
+            $.o365Policy = o365Policy;
             return this;
         }
-        public Builder o365Policy(@Nullable Office365PolicyPropertiesArgs o365Policy) {
-            this.o365Policy = Codegen.ofNullable(o365Policy);
-            return this;
+
+        public Builder o365Policy(Office365PolicyPropertiesArgs o365Policy) {
+            return o365Policy(Output.of(o365Policy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder siteName(@Nullable Output<String> siteName) {
-            this.siteName = siteName;
+            $.siteName = siteName;
             return this;
         }
-        public Builder siteName(@Nullable String siteName) {
-            this.siteName = Codegen.ofNullable(siteName);
-            return this;
-        }        public VirtualApplianceSiteArgs build() {
-            return new VirtualApplianceSiteArgs(addressPrefix, id, name, networkVirtualApplianceName, o365Policy, resourceGroupName, siteName);
+
+        public Builder siteName(String siteName) {
+            return siteName(Output.of(siteName));
+        }
+
+        public VirtualApplianceSiteArgs build() {
+            $.networkVirtualApplianceName = Objects.requireNonNull($.networkVirtualApplianceName, "expected parameter 'networkVirtualApplianceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

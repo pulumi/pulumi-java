@@ -21,7 +21,7 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="matchVariable", required=true)
-      private final String matchVariable;
+    private String matchVariable;
 
     public String matchVariable() {
         return this.matchVariable;
@@ -32,7 +32,7 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
@@ -43,64 +43,59 @@ public final class OwaspCrsExclusionEntryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="selectorMatchOperator", required=true)
-      private final String selectorMatchOperator;
+    private String selectorMatchOperator;
 
     public String selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 
-    public OwaspCrsExclusionEntryResponse(
-        String matchVariable,
-        String selector,
-        String selectorMatchOperator) {
-        this.matchVariable = Objects.requireNonNull(matchVariable, "expected parameter 'matchVariable' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-        this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator, "expected parameter 'selectorMatchOperator' to be non-null");
-    }
+    private OwaspCrsExclusionEntryResponse() {}
 
-    private OwaspCrsExclusionEntryResponse() {
-        this.matchVariable = null;
-        this.selector = null;
-        this.selectorMatchOperator = null;
+    private OwaspCrsExclusionEntryResponse(OwaspCrsExclusionEntryResponse $) {
+        this.matchVariable = $.matchVariable;
+        this.selector = $.selector;
+        this.selectorMatchOperator = $.selectorMatchOperator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OwaspCrsExclusionEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String matchVariable;
-        private String selector;
-        private String selectorMatchOperator;
+        private OwaspCrsExclusionEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OwaspCrsExclusionEntryResponse();
         }
 
         public Builder(OwaspCrsExclusionEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchVariable = defaults.matchVariable;
-    	      this.selector = defaults.selector;
-    	      this.selectorMatchOperator = defaults.selectorMatchOperator;
+            $ = new OwaspCrsExclusionEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder matchVariable(String matchVariable) {
-            this.matchVariable = Objects.requireNonNull(matchVariable);
+            $.matchVariable = matchVariable;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
         }
+
         public Builder selectorMatchOperator(String selectorMatchOperator) {
-            this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
+            $.selectorMatchOperator = selectorMatchOperator;
             return this;
-        }        public OwaspCrsExclusionEntryResponse build() {
-            return new OwaspCrsExclusionEntryResponse(matchVariable, selector, selectorMatchOperator);
+        }
+
+        public OwaspCrsExclusionEntryResponse build() {
+            $.matchVariable = Objects.requireNonNull($.matchVariable, "expected parameter 'matchVariable' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            $.selectorMatchOperator = Objects.requireNonNull($.selectorMatchOperator, "expected parameter 'selectorMatchOperator' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endRange", required=true)
-      private final String endRange;
+    private String endRange;
 
     public String endRange() {
         return this.endRange;
@@ -32,55 +32,52 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startRange", required=true)
-      private final String startRange;
+    private String startRange;
 
     public String startRange() {
         return this.startRange;
     }
 
-    public BlobRestoreRangeResponse(
-        String endRange,
-        String startRange) {
-        this.endRange = Objects.requireNonNull(endRange, "expected parameter 'endRange' to be non-null");
-        this.startRange = Objects.requireNonNull(startRange, "expected parameter 'startRange' to be non-null");
-    }
+    private BlobRestoreRangeResponse() {}
 
-    private BlobRestoreRangeResponse() {
-        this.endRange = null;
-        this.startRange = null;
+    private BlobRestoreRangeResponse(BlobRestoreRangeResponse $) {
+        this.endRange = $.endRange;
+        this.startRange = $.startRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobRestoreRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endRange;
-        private String startRange;
+        private BlobRestoreRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobRestoreRangeResponse();
         }
 
         public Builder(BlobRestoreRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endRange = defaults.endRange;
-    	      this.startRange = defaults.startRange;
+            $ = new BlobRestoreRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endRange(String endRange) {
-            this.endRange = Objects.requireNonNull(endRange);
+            $.endRange = endRange;
             return this;
         }
+
         public Builder startRange(String startRange) {
-            this.startRange = Objects.requireNonNull(startRange);
+            $.startRange = startRange;
             return this;
-        }        public BlobRestoreRangeResponse build() {
-            return new BlobRestoreRangeResponse(endRange, startRange);
+        }
+
+        public BlobRestoreRangeResponse build() {
+            $.endRange = Objects.requireNonNull($.endRange, "expected parameter 'endRange' to be non-null");
+            $.startRange = Objects.requireNonNull($.startRange, "expected parameter 'startRange' to be non-null");
+            return $;
         }
     }
+
 }

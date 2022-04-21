@@ -17,7 +17,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi
      * 
      */
     @Import(name="domainOwnershipIdentifierName", required=true)
-      private final String domainOwnershipIdentifierName;
+    private String domainOwnershipIdentifierName;
 
     public String domainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName;
@@ -28,7 +28,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppDomainOwnershipIdentifierSlotArgs extends com.pulumi
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppDomainOwnershipIdentifierSlotArgs(
-        String domainOwnershipIdentifierName,
-        String name,
-        String resourceGroupName,
-        String slot) {
-        this.domainOwnershipIdentifierName = Objects.requireNonNull(domainOwnershipIdentifierName, "expected parameter 'domainOwnershipIdentifierName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppDomainOwnershipIdentifierSlotArgs() {}
 
-    private GetWebAppDomainOwnershipIdentifierSlotArgs() {
-        this.domainOwnershipIdentifierName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppDomainOwnershipIdentifierSlotArgs(GetWebAppDomainOwnershipIdentifierSlotArgs $) {
+        this.domainOwnershipIdentifierName = $.domainOwnershipIdentifierName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppDomainOwnershipIdentifierSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainOwnershipIdentifierName;
-        private String name;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppDomainOwnershipIdentifierSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppDomainOwnershipIdentifierSlotArgs();
         }
 
         public Builder(GetWebAppDomainOwnershipIdentifierSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainOwnershipIdentifierName = defaults.domainOwnershipIdentifierName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppDomainOwnershipIdentifierSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainOwnershipIdentifierName(String domainOwnershipIdentifierName) {
-            this.domainOwnershipIdentifierName = Objects.requireNonNull(domainOwnershipIdentifierName);
+            $.domainOwnershipIdentifierName = domainOwnershipIdentifierName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppDomainOwnershipIdentifierSlotArgs build() {
-            return new GetWebAppDomainOwnershipIdentifierSlotArgs(domainOwnershipIdentifierName, name, resourceGroupName, slot);
+        }
+
+        public GetWebAppDomainOwnershipIdentifierSlotArgs build() {
+            $.domainOwnershipIdentifierName = Objects.requireNonNull($.domainOwnershipIdentifierName, "expected parameter 'domainOwnershipIdentifierName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

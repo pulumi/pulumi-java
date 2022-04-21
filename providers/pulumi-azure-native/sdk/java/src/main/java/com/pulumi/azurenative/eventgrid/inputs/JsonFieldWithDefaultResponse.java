@@ -26,10 +26,10 @@ public final class JsonFieldWithDefaultResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
 
     public Optional<String> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -37,55 +37,50 @@ public final class JsonFieldWithDefaultResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sourceField")
-      private final @Nullable String sourceField;
+    private @Nullable String sourceField;
 
     public Optional<String> sourceField() {
-        return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
+        return Optional.ofNullable(this.sourceField);
     }
 
-    public JsonFieldWithDefaultResponse(
-        @Nullable String defaultValue,
-        @Nullable String sourceField) {
-        this.defaultValue = defaultValue;
-        this.sourceField = sourceField;
-    }
+    private JsonFieldWithDefaultResponse() {}
 
-    private JsonFieldWithDefaultResponse() {
-        this.defaultValue = null;
-        this.sourceField = null;
+    private JsonFieldWithDefaultResponse(JsonFieldWithDefaultResponse $) {
+        this.defaultValue = $.defaultValue;
+        this.sourceField = $.sourceField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonFieldWithDefaultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultValue;
-        private @Nullable String sourceField;
+        private JsonFieldWithDefaultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonFieldWithDefaultResponse();
         }
 
         public Builder(JsonFieldWithDefaultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.sourceField = defaults.sourceField;
+            $ = new JsonFieldWithDefaultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = sourceField;
+            $.sourceField = sourceField;
             return this;
-        }        public JsonFieldWithDefaultResponse build() {
-            return new JsonFieldWithDefaultResponse(defaultValue, sourceField);
+        }
+
+        public JsonFieldWithDefaultResponse build() {
+            return $;
         }
     }
+
 }

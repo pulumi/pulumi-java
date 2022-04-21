@@ -23,7 +23,7 @@ public final class BackupVaultResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -34,58 +34,56 @@ public final class BackupVaultResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSettings", required=true)
-      private final List<StorageSettingResponse> storageSettings;
+    private List<StorageSettingResponse> storageSettings;
 
     public List<StorageSettingResponse> storageSettings() {
         return this.storageSettings;
     }
 
-    public BackupVaultResponse(
-        String provisioningState,
-        List<StorageSettingResponse> storageSettings) {
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.storageSettings = Objects.requireNonNull(storageSettings, "expected parameter 'storageSettings' to be non-null");
-    }
+    private BackupVaultResponse() {}
 
-    private BackupVaultResponse() {
-        this.provisioningState = null;
-        this.storageSettings = List.of();
+    private BackupVaultResponse(BackupVaultResponse $) {
+        this.provisioningState = $.provisioningState;
+        this.storageSettings = $.storageSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupVaultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisioningState;
-        private List<StorageSettingResponse> storageSettings;
+        private BackupVaultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupVaultResponse();
         }
 
         public Builder(BackupVaultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.storageSettings = defaults.storageSettings;
+            $ = new BackupVaultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder storageSettings(List<StorageSettingResponse> storageSettings) {
-            this.storageSettings = Objects.requireNonNull(storageSettings);
+            $.storageSettings = storageSettings;
             return this;
         }
+
         public Builder storageSettings(StorageSettingResponse... storageSettings) {
             return storageSettings(List.of(storageSettings));
-        }        public BackupVaultResponse build() {
-            return new BackupVaultResponse(provisioningState, storageSettings);
+        }
+
+        public BackupVaultResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.storageSettings = Objects.requireNonNull($.storageSettings, "expected parameter 'storageSettings' to be non-null");
+            return $;
         }
     }
+
 }

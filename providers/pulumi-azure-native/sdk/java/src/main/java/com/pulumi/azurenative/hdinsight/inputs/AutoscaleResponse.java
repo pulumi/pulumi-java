@@ -24,10 +24,10 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable AutoscaleCapacityResponse capacity;
+    private @Nullable AutoscaleCapacityResponse capacity;
 
     public Optional<AutoscaleCapacityResponse> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable AutoscaleRecurrenceResponse recurrence;
+    private @Nullable AutoscaleRecurrenceResponse recurrence;
 
     public Optional<AutoscaleRecurrenceResponse> recurrence() {
-        return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
+        return Optional.ofNullable(this.recurrence);
     }
 
-    public AutoscaleResponse(
-        @Nullable AutoscaleCapacityResponse capacity,
-        @Nullable AutoscaleRecurrenceResponse recurrence) {
-        this.capacity = capacity;
-        this.recurrence = recurrence;
-    }
+    private AutoscaleResponse() {}
 
-    private AutoscaleResponse() {
-        this.capacity = null;
-        this.recurrence = null;
+    private AutoscaleResponse(AutoscaleResponse $) {
+        this.capacity = $.capacity;
+        this.recurrence = $.recurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoscaleCapacityResponse capacity;
-        private @Nullable AutoscaleRecurrenceResponse recurrence;
+        private AutoscaleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleResponse();
         }
 
         public Builder(AutoscaleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.recurrence = defaults.recurrence;
+            $ = new AutoscaleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable AutoscaleCapacityResponse capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder recurrence(@Nullable AutoscaleRecurrenceResponse recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
-        }        public AutoscaleResponse build() {
-            return new AutoscaleResponse(capacity, recurrence);
+        }
+
+        public AutoscaleResponse build() {
+            return $;
         }
     }
+
 }

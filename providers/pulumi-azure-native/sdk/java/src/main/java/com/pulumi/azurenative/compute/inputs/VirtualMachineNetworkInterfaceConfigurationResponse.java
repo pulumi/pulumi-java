@@ -28,10 +28,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -39,17 +39,17 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
+    private @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
 
     public Optional<VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse> dnsSettings() {
-        return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     @Import(name="dscpConfiguration")
-      private final @Nullable SubResourceResponse dscpConfiguration;
+    private @Nullable SubResourceResponse dscpConfiguration;
 
     public Optional<SubResourceResponse> dscpConfiguration() {
-        return this.dscpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.dscpConfiguration);
+        return Optional.ofNullable(this.dscpConfiguration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Boolean enableAcceleratedNetworking;
+    private @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="enableFpga")
-      private final @Nullable Boolean enableFpga;
+    private @Nullable Boolean enableFpga;
 
     public Optional<Boolean> enableFpga() {
-        return this.enableFpga == null ? Optional.empty() : Optional.ofNullable(this.enableFpga);
+        return Optional.ofNullable(this.enableFpga);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="enableIPForwarding")
-      private final @Nullable Boolean enableIPForwarding;
+    private @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> enableIPForwarding() {
-        return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
+        return Optional.ofNullable(this.enableIPForwarding);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="ipConfigurations", required=true)
-      private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
+    private List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
@@ -101,7 +101,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -112,10 +112,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable SubResourceResponse networkSecurityGroup;
+    private @Nullable SubResourceResponse networkSecurityGroup;
 
     public Optional<SubResourceResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -123,130 +123,104 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
      * 
      */
     @Import(name="primary")
-      private final @Nullable Boolean primary;
+    private @Nullable Boolean primary;
 
     public Optional<Boolean> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
-    public VirtualMachineNetworkInterfaceConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
-        @Nullable SubResourceResponse dscpConfiguration,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableFpga,
-        @Nullable Boolean enableIPForwarding,
-        List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        String name,
-        @Nullable SubResourceResponse networkSecurityGroup,
-        @Nullable Boolean primary) {
-        this.deleteOption = deleteOption;
-        this.dnsSettings = dnsSettings;
-        this.dscpConfiguration = dscpConfiguration;
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.enableFpga = enableFpga;
-        this.enableIPForwarding = enableIPForwarding;
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.primary = primary;
-    }
+    private VirtualMachineNetworkInterfaceConfigurationResponse() {}
 
-    private VirtualMachineNetworkInterfaceConfigurationResponse() {
-        this.deleteOption = null;
-        this.dnsSettings = null;
-        this.dscpConfiguration = null;
-        this.enableAcceleratedNetworking = null;
-        this.enableFpga = null;
-        this.enableIPForwarding = null;
-        this.ipConfigurations = List.of();
-        this.name = null;
-        this.networkSecurityGroup = null;
-        this.primary = null;
+    private VirtualMachineNetworkInterfaceConfigurationResponse(VirtualMachineNetworkInterfaceConfigurationResponse $) {
+        this.deleteOption = $.deleteOption;
+        this.dnsSettings = $.dnsSettings;
+        this.dscpConfiguration = $.dscpConfiguration;
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.enableFpga = $.enableFpga;
+        this.enableIPForwarding = $.enableIPForwarding;
+        this.ipConfigurations = $.ipConfigurations;
+        this.name = $.name;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.primary = $.primary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineNetworkInterfaceConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deleteOption;
-        private @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
-        private @Nullable SubResourceResponse dscpConfiguration;
-        private @Nullable Boolean enableAcceleratedNetworking;
-        private @Nullable Boolean enableFpga;
-        private @Nullable Boolean enableIPForwarding;
-        private List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
-        private String name;
-        private @Nullable SubResourceResponse networkSecurityGroup;
-        private @Nullable Boolean primary;
+        private VirtualMachineNetworkInterfaceConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineNetworkInterfaceConfigurationResponse();
         }
 
         public Builder(VirtualMachineNetworkInterfaceConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.dscpConfiguration = defaults.dscpConfiguration;
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.enableFpga = defaults.enableFpga;
-    	      this.enableIPForwarding = defaults.enableIPForwarding;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.primary = defaults.primary;
+            $ = new VirtualMachineNetworkInterfaceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder dnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
+
         public Builder dscpConfiguration(@Nullable SubResourceResponse dscpConfiguration) {
-            this.dscpConfiguration = dscpConfiguration;
+            $.dscpConfiguration = dscpConfiguration;
             return this;
         }
+
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
+
         public Builder enableFpga(@Nullable Boolean enableFpga) {
-            this.enableFpga = enableFpga;
+            $.enableFpga = enableFpga;
             return this;
         }
+
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
-            this.enableIPForwarding = enableIPForwarding;
+            $.enableIPForwarding = enableIPForwarding;
             return this;
         }
+
         public Builder ipConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(VirtualMachineNetworkInterfaceIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
+
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
-        }        public VirtualMachineNetworkInterfaceConfigurationResponse build() {
-            return new VirtualMachineNetworkInterfaceConfigurationResponse(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
+        }
+
+        public VirtualMachineNetworkInterfaceConfigurationResponse build() {
+            $.ipConfigurations = Objects.requireNonNull($.ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

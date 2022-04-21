@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dataTypes")
-      private final @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
+    private @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
 
-    public Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes() {
-        return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
+    public Optional<Output<List<Either<String,AdditionalWorkspaceDataType>>>> dataTypes() {
+        return Optional.ofNullable(this.dataTypes);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
+    private @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
 
-    public Output<Either<String,AdditionalWorkspaceType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,AdditionalWorkspaceType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -50,79 +51,73 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workspace")
-      private final @Nullable Output<String> workspace;
+    private @Nullable Output<String> workspace;
 
-    public Output<String> workspace() {
-        return this.workspace == null ? Codegen.empty() : this.workspace;
+    public Optional<Output<String>> workspace() {
+        return Optional.ofNullable(this.workspace);
     }
 
-    public AdditionalWorkspacesPropertiesArgs(
-        @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes,
-        @Nullable Output<Either<String,AdditionalWorkspaceType>> type,
-        @Nullable Output<String> workspace) {
-        this.dataTypes = dataTypes;
-        this.type = Codegen.stringProp("type").left(AdditionalWorkspaceType.class).output().arg(type).def("Sentinel").getNullable();
-        this.workspace = workspace;
-    }
+    private AdditionalWorkspacesPropertiesArgs() {}
 
-    private AdditionalWorkspacesPropertiesArgs() {
-        this.dataTypes = Codegen.empty();
-        this.type = Codegen.empty();
-        this.workspace = Codegen.empty();
+    private AdditionalWorkspacesPropertiesArgs(AdditionalWorkspacesPropertiesArgs $) {
+        this.dataTypes = $.dataTypes;
+        this.type = $.type;
+        this.workspace = $.workspace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalWorkspacesPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
-        private @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
-        private @Nullable Output<String> workspace;
+        private AdditionalWorkspacesPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalWorkspacesPropertiesArgs();
         }
 
         public Builder(AdditionalWorkspacesPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTypes = defaults.dataTypes;
-    	      this.type = defaults.type;
-    	      this.workspace = defaults.workspace;
+            $ = new AdditionalWorkspacesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTypes(@Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes) {
-            this.dataTypes = dataTypes;
+            $.dataTypes = dataTypes;
             return this;
         }
-        public Builder dataTypes(@Nullable List<Either<String,AdditionalWorkspaceDataType>> dataTypes) {
-            this.dataTypes = Codegen.ofNullable(dataTypes);
-            return this;
+
+        public Builder dataTypes(List<Either<String,AdditionalWorkspaceDataType>> dataTypes) {
+            return dataTypes(Output.of(dataTypes));
         }
+
         public Builder dataTypes(Either<String,AdditionalWorkspaceDataType>... dataTypes) {
             return dataTypes(List.of(dataTypes));
         }
+
         public Builder type(@Nullable Output<Either<String,AdditionalWorkspaceType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,AdditionalWorkspaceType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,AdditionalWorkspaceType> type) {
+            return type(Output.of(type));
         }
+
         public Builder workspace(@Nullable Output<String> workspace) {
-            this.workspace = workspace;
+            $.workspace = workspace;
             return this;
         }
-        public Builder workspace(@Nullable String workspace) {
-            this.workspace = Codegen.ofNullable(workspace);
-            return this;
-        }        public AdditionalWorkspacesPropertiesArgs build() {
-            return new AdditionalWorkspacesPropertiesArgs(dataTypes, type, workspace);
+
+        public Builder workspace(String workspace) {
+            return workspace(Output.of(workspace));
+        }
+
+        public AdditionalWorkspacesPropertiesArgs build() {
+            $.type = Codegen.stringProp("type").left(AdditionalWorkspaceType.class).output().arg($.type).def("Sentinel").getNullable();
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class ManagementPolicySchemaResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="rules", required=true)
-      private final List<ManagementPolicyRuleResponse> rules;
+    private List<ManagementPolicyRuleResponse> rules;
 
     public List<ManagementPolicyRuleResponse> rules() {
         return this.rules;
     }
 
-    public ManagementPolicySchemaResponse(List<ManagementPolicyRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private ManagementPolicySchemaResponse() {}
 
-    private ManagementPolicySchemaResponse() {
-        this.rules = List.of();
+    private ManagementPolicySchemaResponse(ManagementPolicySchemaResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicySchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ManagementPolicyRuleResponse> rules;
+        private ManagementPolicySchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicySchemaResponse();
         }
 
         public Builder(ManagementPolicySchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ManagementPolicySchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<ManagementPolicyRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ManagementPolicyRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public ManagementPolicySchemaResponse build() {
-            return new ManagementPolicySchemaResponse(rules);
+        }
+
+        public ManagementPolicySchemaResponse build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

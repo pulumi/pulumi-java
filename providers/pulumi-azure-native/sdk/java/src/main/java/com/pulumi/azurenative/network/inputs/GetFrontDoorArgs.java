@@ -17,7 +17,7 @@ public final class GetFrontDoorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frontDoorName", required=true)
-      private final String frontDoorName;
+    private String frontDoorName;
 
     public String frontDoorName() {
         return this.frontDoorName;
@@ -28,55 +28,52 @@ public final class GetFrontDoorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetFrontDoorArgs(
-        String frontDoorName,
-        String resourceGroupName) {
-        this.frontDoorName = Objects.requireNonNull(frontDoorName, "expected parameter 'frontDoorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetFrontDoorArgs() {}
 
-    private GetFrontDoorArgs() {
-        this.frontDoorName = null;
-        this.resourceGroupName = null;
+    private GetFrontDoorArgs(GetFrontDoorArgs $) {
+        this.frontDoorName = $.frontDoorName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFrontDoorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String frontDoorName;
-        private String resourceGroupName;
+        private GetFrontDoorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFrontDoorArgs();
         }
 
         public Builder(GetFrontDoorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frontDoorName = defaults.frontDoorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetFrontDoorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frontDoorName(String frontDoorName) {
-            this.frontDoorName = Objects.requireNonNull(frontDoorName);
+            $.frontDoorName = frontDoorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetFrontDoorArgs build() {
-            return new GetFrontDoorArgs(frontDoorName, resourceGroupName);
+        }
+
+        public GetFrontDoorArgs build() {
+            $.frontDoorName = Objects.requireNonNull($.frontDoorName, "expected parameter 'frontDoorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

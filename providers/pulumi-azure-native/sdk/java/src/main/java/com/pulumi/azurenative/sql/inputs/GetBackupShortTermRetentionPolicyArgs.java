@@ -17,7 +17,7 @@ public final class GetBackupShortTermRetentionPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetBackupShortTermRetentionPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -39,7 +39,7 @@ public final class GetBackupShortTermRetentionPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetBackupShortTermRetentionPolicyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetBackupShortTermRetentionPolicyArgs(
-        String databaseName,
-        String policyName,
-        String resourceGroupName,
-        String serverName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetBackupShortTermRetentionPolicyArgs() {}
 
-    private GetBackupShortTermRetentionPolicyArgs() {
-        this.databaseName = null;
-        this.policyName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetBackupShortTermRetentionPolicyArgs(GetBackupShortTermRetentionPolicyArgs $) {
+        this.databaseName = $.databaseName;
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupShortTermRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String policyName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetBackupShortTermRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupShortTermRetentionPolicyArgs();
         }
 
         public Builder(GetBackupShortTermRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetBackupShortTermRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetBackupShortTermRetentionPolicyArgs build() {
-            return new GetBackupShortTermRetentionPolicyArgs(databaseName, policyName, resourceGroupName, serverName);
+        }
+
+        public GetBackupShortTermRetentionPolicyArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

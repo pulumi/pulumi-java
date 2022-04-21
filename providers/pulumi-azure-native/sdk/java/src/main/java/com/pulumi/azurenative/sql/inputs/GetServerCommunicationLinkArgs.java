@@ -17,7 +17,7 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="communicationLinkName", required=true)
-      private final String communicationLinkName;
+    private String communicationLinkName;
 
     public String communicationLinkName() {
         return this.communicationLinkName;
@@ -28,7 +28,7 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerCommunicationLinkArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerCommunicationLinkArgs(
-        String communicationLinkName,
-        String resourceGroupName,
-        String serverName) {
-        this.communicationLinkName = Objects.requireNonNull(communicationLinkName, "expected parameter 'communicationLinkName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerCommunicationLinkArgs() {}
 
-    private GetServerCommunicationLinkArgs() {
-        this.communicationLinkName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerCommunicationLinkArgs(GetServerCommunicationLinkArgs $) {
+        this.communicationLinkName = $.communicationLinkName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerCommunicationLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String communicationLinkName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerCommunicationLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerCommunicationLinkArgs();
         }
 
         public Builder(GetServerCommunicationLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.communicationLinkName = defaults.communicationLinkName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerCommunicationLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder communicationLinkName(String communicationLinkName) {
-            this.communicationLinkName = Objects.requireNonNull(communicationLinkName);
+            $.communicationLinkName = communicationLinkName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerCommunicationLinkArgs build() {
-            return new GetServerCommunicationLinkArgs(communicationLinkName, resourceGroupName, serverName);
+        }
+
+        public GetServerCommunicationLinkArgs build() {
+            $.communicationLinkName = Objects.requireNonNull($.communicationLinkName, "expected parameter 'communicationLinkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

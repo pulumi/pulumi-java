@@ -7,10 +7,10 @@ import com.pulumi.azurenative.batch.enums.CertificateStoreLocation;
 import com.pulumi.azurenative.batch.enums.CertificateVisibility;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,7 +19,7 @@ public final class CertificateReferenceArgs extends com.pulumi.resources.Resourc
     public static final CertificateReferenceArgs Empty = new CertificateReferenceArgs();
 
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -30,10 +30,10 @@ public final class CertificateReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="storeLocation")
-      private final @Nullable Output<CertificateStoreLocation> storeLocation;
+    private @Nullable Output<CertificateStoreLocation> storeLocation;
 
-    public Output<CertificateStoreLocation> storeLocation() {
-        return this.storeLocation == null ? Codegen.empty() : this.storeLocation;
+    public Optional<Output<CertificateStoreLocation>> storeLocation() {
+        return Optional.ofNullable(this.storeLocation);
     }
 
     /**
@@ -41,99 +41,90 @@ public final class CertificateReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="storeName")
-      private final @Nullable Output<String> storeName;
+    private @Nullable Output<String> storeName;
 
-    public Output<String> storeName() {
-        return this.storeName == null ? Codegen.empty() : this.storeName;
+    public Optional<Output<String>> storeName() {
+        return Optional.ofNullable(this.storeName);
     }
 
     @Import(name="visibility")
-      private final @Nullable Output<List<CertificateVisibility>> visibility;
+    private @Nullable Output<List<CertificateVisibility>> visibility;
 
-    public Output<List<CertificateVisibility>> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    public Optional<Output<List<CertificateVisibility>>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public CertificateReferenceArgs(
-        Output<String> id,
-        @Nullable Output<CertificateStoreLocation> storeLocation,
-        @Nullable Output<String> storeName,
-        @Nullable Output<List<CertificateVisibility>> visibility) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.storeLocation = storeLocation;
-        this.storeName = storeName;
-        this.visibility = visibility;
-    }
+    private CertificateReferenceArgs() {}
 
-    private CertificateReferenceArgs() {
-        this.id = Codegen.empty();
-        this.storeLocation = Codegen.empty();
-        this.storeName = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private CertificateReferenceArgs(CertificateReferenceArgs $) {
+        this.id = $.id;
+        this.storeLocation = $.storeLocation;
+        this.storeName = $.storeName;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private @Nullable Output<CertificateStoreLocation> storeLocation;
-        private @Nullable Output<String> storeName;
-        private @Nullable Output<List<CertificateVisibility>> visibility;
+        private CertificateReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateReferenceArgs();
         }
 
         public Builder(CertificateReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.storeLocation = defaults.storeLocation;
-    	      this.storeName = defaults.storeName;
-    	      this.visibility = defaults.visibility;
+            $ = new CertificateReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder storeLocation(@Nullable Output<CertificateStoreLocation> storeLocation) {
-            this.storeLocation = storeLocation;
+            $.storeLocation = storeLocation;
             return this;
         }
-        public Builder storeLocation(@Nullable CertificateStoreLocation storeLocation) {
-            this.storeLocation = Codegen.ofNullable(storeLocation);
-            return this;
+
+        public Builder storeLocation(CertificateStoreLocation storeLocation) {
+            return storeLocation(Output.of(storeLocation));
         }
+
         public Builder storeName(@Nullable Output<String> storeName) {
-            this.storeName = storeName;
+            $.storeName = storeName;
             return this;
         }
-        public Builder storeName(@Nullable String storeName) {
-            this.storeName = Codegen.ofNullable(storeName);
-            return this;
+
+        public Builder storeName(String storeName) {
+            return storeName(Output.of(storeName));
         }
+
         public Builder visibility(@Nullable Output<List<CertificateVisibility>> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable List<CertificateVisibility> visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
+
+        public Builder visibility(List<CertificateVisibility> visibility) {
+            return visibility(Output.of(visibility));
         }
+
         public Builder visibility(CertificateVisibility... visibility) {
             return visibility(List.of(visibility));
-        }        public CertificateReferenceArgs build() {
-            return new CertificateReferenceArgs(id, storeLocation, storeName, visibility);
+        }
+
+        public CertificateReferenceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

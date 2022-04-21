@@ -7,10 +7,10 @@ import com.pulumi.azurenative.chaos.inputs.SelectorArgs;
 import com.pulumi.azurenative.chaos.inputs.StepArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="selectors", required=true)
-      private final Output<List<SelectorArgs>> selectors;
+    private Output<List<SelectorArgs>> selectors;
 
     public Output<List<SelectorArgs>> selectors() {
         return this.selectors;
@@ -38,10 +38,10 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="startOnCreation")
-      private final @Nullable Output<Boolean> startOnCreation;
+    private @Nullable Output<Boolean> startOnCreation;
 
-    public Output<Boolean> startOnCreation() {
-        return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
+    public Optional<Output<Boolean>> startOnCreation() {
+        return Optional.ofNullable(this.startOnCreation);
     }
 
     /**
@@ -49,82 +49,78 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="steps", required=true)
-      private final Output<List<StepArgs>> steps;
+    private Output<List<StepArgs>> steps;
 
     public Output<List<StepArgs>> steps() {
         return this.steps;
     }
 
-    public ExperimentPropertiesArgs(
-        Output<List<SelectorArgs>> selectors,
-        @Nullable Output<Boolean> startOnCreation,
-        Output<List<StepArgs>> steps) {
-        this.selectors = Objects.requireNonNull(selectors, "expected parameter 'selectors' to be non-null");
-        this.startOnCreation = startOnCreation;
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-    }
+    private ExperimentPropertiesArgs() {}
 
-    private ExperimentPropertiesArgs() {
-        this.selectors = Codegen.empty();
-        this.startOnCreation = Codegen.empty();
-        this.steps = Codegen.empty();
+    private ExperimentPropertiesArgs(ExperimentPropertiesArgs $) {
+        this.selectors = $.selectors;
+        this.startOnCreation = $.startOnCreation;
+        this.steps = $.steps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<SelectorArgs>> selectors;
-        private @Nullable Output<Boolean> startOnCreation;
-        private Output<List<StepArgs>> steps;
+        private ExperimentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentPropertiesArgs();
         }
 
         public Builder(ExperimentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectors = defaults.selectors;
-    	      this.startOnCreation = defaults.startOnCreation;
-    	      this.steps = defaults.steps;
+            $ = new ExperimentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder selectors(Output<List<SelectorArgs>> selectors) {
-            this.selectors = Objects.requireNonNull(selectors);
+            $.selectors = selectors;
             return this;
         }
+
         public Builder selectors(List<SelectorArgs> selectors) {
-            this.selectors = Output.of(Objects.requireNonNull(selectors));
-            return this;
+            return selectors(Output.of(selectors));
         }
+
         public Builder selectors(SelectorArgs... selectors) {
             return selectors(List.of(selectors));
         }
+
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
-            this.startOnCreation = startOnCreation;
+            $.startOnCreation = startOnCreation;
             return this;
         }
-        public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Codegen.ofNullable(startOnCreation);
-            return this;
+
+        public Builder startOnCreation(Boolean startOnCreation) {
+            return startOnCreation(Output.of(startOnCreation));
         }
+
         public Builder steps(Output<List<StepArgs>> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(List<StepArgs> steps) {
-            this.steps = Output.of(Objects.requireNonNull(steps));
-            return this;
+            return steps(Output.of(steps));
         }
+
         public Builder steps(StepArgs... steps) {
             return steps(List.of(steps));
-        }        public ExperimentPropertiesArgs build() {
-            return new ExperimentPropertiesArgs(selectors, startOnCreation, steps);
+        }
+
+        public ExperimentPropertiesArgs build() {
+            $.selectors = Objects.requireNonNull($.selectors, "expected parameter 'selectors' to be non-null");
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            return $;
         }
     }
+
 }

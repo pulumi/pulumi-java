@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="agentCount")
-      private final @Nullable Output<Integer> agentCount;
+    private @Nullable Output<Integer> agentCount;
 
-    public Output<Integer> agentCount() {
-        return this.agentCount == null ? Codegen.empty() : this.agentCount;
+    public Optional<Output<Integer>> agentCount() {
+        return Optional.ofNullable(this.agentCount);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="agentVmSize")
-      private final @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
+    private @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
 
-    public Output<Either<String,AgentVMSizeTypes>> agentVmSize() {
-        return this.agentVmSize == null ? Codegen.empty() : this.agentVmSize;
+    public Optional<Output<Either<String,AgentVMSizeTypes>>> agentVmSize() {
+        return Optional.ofNullable(this.agentVmSize);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="masterCount")
-      private final @Nullable Output<Integer> masterCount;
+    private @Nullable Output<Integer> masterCount;
 
-    public Output<Integer> masterCount() {
-        return this.masterCount == null ? Codegen.empty() : this.masterCount;
+    public Optional<Output<Integer>> masterCount() {
+        return Optional.ofNullable(this.masterCount);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="orchestratorProperties")
-      private final @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
+    private @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
-    public Output<KubernetesClusterPropertiesArgs> orchestratorProperties() {
-        return this.orchestratorProperties == null ? Codegen.empty() : this.orchestratorProperties;
+    public Optional<Output<KubernetesClusterPropertiesArgs>> orchestratorProperties() {
+        return Optional.ofNullable(this.orchestratorProperties);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="orchestratorType", required=true)
-      private final Output<Either<String,OrchestratorType>> orchestratorType;
+    private Output<Either<String,OrchestratorType>> orchestratorType;
 
     public Output<Either<String,OrchestratorType>> orchestratorType() {
         return this.orchestratorType;
@@ -86,118 +87,106 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="systemServices")
-      private final @Nullable Output<List<SystemServiceArgs>> systemServices;
+    private @Nullable Output<List<SystemServiceArgs>> systemServices;
 
-    public Output<List<SystemServiceArgs>> systemServices() {
-        return this.systemServices == null ? Codegen.empty() : this.systemServices;
+    public Optional<Output<List<SystemServiceArgs>>> systemServices() {
+        return Optional.ofNullable(this.systemServices);
     }
 
-    public AcsClusterPropertiesArgs(
-        @Nullable Output<Integer> agentCount,
-        @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize,
-        @Nullable Output<Integer> masterCount,
-        @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties,
-        Output<Either<String,OrchestratorType>> orchestratorType,
-        @Nullable Output<List<SystemServiceArgs>> systemServices) {
-        this.agentCount = Codegen.integerProp("agentCount").output().arg(agentCount).def(2).getNullable();
-        this.agentVmSize = Codegen.stringProp("agentVmSize").left(AgentVMSizeTypes.class).output().arg(agentVmSize).def("Standard_D3_v2").getNullable();
-        this.masterCount = Codegen.integerProp("masterCount").output().arg(masterCount).def(1).getNullable();
-        this.orchestratorProperties = orchestratorProperties;
-        this.orchestratorType = Objects.requireNonNull(orchestratorType, "expected parameter 'orchestratorType' to be non-null");
-        this.systemServices = systemServices;
-    }
+    private AcsClusterPropertiesArgs() {}
 
-    private AcsClusterPropertiesArgs() {
-        this.agentCount = Codegen.empty();
-        this.agentVmSize = Codegen.empty();
-        this.masterCount = Codegen.empty();
-        this.orchestratorProperties = Codegen.empty();
-        this.orchestratorType = Codegen.empty();
-        this.systemServices = Codegen.empty();
+    private AcsClusterPropertiesArgs(AcsClusterPropertiesArgs $) {
+        this.agentCount = $.agentCount;
+        this.agentVmSize = $.agentVmSize;
+        this.masterCount = $.masterCount;
+        this.orchestratorProperties = $.orchestratorProperties;
+        this.orchestratorType = $.orchestratorType;
+        this.systemServices = $.systemServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcsClusterPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> agentCount;
-        private @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
-        private @Nullable Output<Integer> masterCount;
-        private @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
-        private Output<Either<String,OrchestratorType>> orchestratorType;
-        private @Nullable Output<List<SystemServiceArgs>> systemServices;
+        private AcsClusterPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcsClusterPropertiesArgs();
         }
 
         public Builder(AcsClusterPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentCount = defaults.agentCount;
-    	      this.agentVmSize = defaults.agentVmSize;
-    	      this.masterCount = defaults.masterCount;
-    	      this.orchestratorProperties = defaults.orchestratorProperties;
-    	      this.orchestratorType = defaults.orchestratorType;
-    	      this.systemServices = defaults.systemServices;
+            $ = new AcsClusterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentCount(@Nullable Output<Integer> agentCount) {
-            this.agentCount = agentCount;
+            $.agentCount = agentCount;
             return this;
         }
-        public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = Codegen.ofNullable(agentCount);
-            return this;
+
+        public Builder agentCount(Integer agentCount) {
+            return agentCount(Output.of(agentCount));
         }
+
         public Builder agentVmSize(@Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize) {
-            this.agentVmSize = agentVmSize;
+            $.agentVmSize = agentVmSize;
             return this;
         }
-        public Builder agentVmSize(@Nullable Either<String,AgentVMSizeTypes> agentVmSize) {
-            this.agentVmSize = Codegen.ofNullable(agentVmSize);
-            return this;
+
+        public Builder agentVmSize(Either<String,AgentVMSizeTypes> agentVmSize) {
+            return agentVmSize(Output.of(agentVmSize));
         }
+
         public Builder masterCount(@Nullable Output<Integer> masterCount) {
-            this.masterCount = masterCount;
+            $.masterCount = masterCount;
             return this;
         }
-        public Builder masterCount(@Nullable Integer masterCount) {
-            this.masterCount = Codegen.ofNullable(masterCount);
-            return this;
+
+        public Builder masterCount(Integer masterCount) {
+            return masterCount(Output.of(masterCount));
         }
+
         public Builder orchestratorProperties(@Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties) {
-            this.orchestratorProperties = orchestratorProperties;
+            $.orchestratorProperties = orchestratorProperties;
             return this;
         }
-        public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesArgs orchestratorProperties) {
-            this.orchestratorProperties = Codegen.ofNullable(orchestratorProperties);
-            return this;
+
+        public Builder orchestratorProperties(KubernetesClusterPropertiesArgs orchestratorProperties) {
+            return orchestratorProperties(Output.of(orchestratorProperties));
         }
+
         public Builder orchestratorType(Output<Either<String,OrchestratorType>> orchestratorType) {
-            this.orchestratorType = Objects.requireNonNull(orchestratorType);
+            $.orchestratorType = orchestratorType;
             return this;
         }
+
         public Builder orchestratorType(Either<String,OrchestratorType> orchestratorType) {
-            this.orchestratorType = Output.of(Objects.requireNonNull(orchestratorType));
-            return this;
+            return orchestratorType(Output.of(orchestratorType));
         }
+
         public Builder systemServices(@Nullable Output<List<SystemServiceArgs>> systemServices) {
-            this.systemServices = systemServices;
+            $.systemServices = systemServices;
             return this;
         }
-        public Builder systemServices(@Nullable List<SystemServiceArgs> systemServices) {
-            this.systemServices = Codegen.ofNullable(systemServices);
-            return this;
+
+        public Builder systemServices(List<SystemServiceArgs> systemServices) {
+            return systemServices(Output.of(systemServices));
         }
+
         public Builder systemServices(SystemServiceArgs... systemServices) {
             return systemServices(List.of(systemServices));
-        }        public AcsClusterPropertiesArgs build() {
-            return new AcsClusterPropertiesArgs(agentCount, agentVmSize, masterCount, orchestratorProperties, orchestratorType, systemServices);
+        }
+
+        public AcsClusterPropertiesArgs build() {
+            $.agentCount = Codegen.integerProp("agentCount").output().arg($.agentCount).def(2).getNullable();
+            $.agentVmSize = Codegen.stringProp("agentVmSize").left(AgentVMSizeTypes.class).output().arg($.agentVmSize).def("Standard_D3_v2").getNullable();
+            $.masterCount = Codegen.integerProp("masterCount").output().arg($.masterCount).def(1).getNullable();
+            $.orchestratorType = Objects.requireNonNull($.orchestratorType, "expected parameter 'orchestratorType' to be non-null");
+            return $;
         }
     }
+
 }

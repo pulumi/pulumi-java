@@ -7,7 +7,6 @@ import com.pulumi.azurenative.solutions.enums.DeploymentMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class ApplicationDeploymentPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="deploymentMode", required=true)
-      private final Output<Either<String,DeploymentMode>> deploymentMode;
+    private Output<Either<String,DeploymentMode>> deploymentMode;
 
     public Output<Either<String,DeploymentMode>> deploymentMode() {
         return this.deploymentMode;
     }
 
-    public ApplicationDeploymentPolicyArgs(Output<Either<String,DeploymentMode>> deploymentMode) {
-        this.deploymentMode = Objects.requireNonNull(deploymentMode, "expected parameter 'deploymentMode' to be non-null");
-    }
+    private ApplicationDeploymentPolicyArgs() {}
 
-    private ApplicationDeploymentPolicyArgs() {
-        this.deploymentMode = Codegen.empty();
+    private ApplicationDeploymentPolicyArgs(ApplicationDeploymentPolicyArgs $) {
+        this.deploymentMode = $.deploymentMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationDeploymentPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DeploymentMode>> deploymentMode;
+        private ApplicationDeploymentPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationDeploymentPolicyArgs();
         }
 
         public Builder(ApplicationDeploymentPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentMode = defaults.deploymentMode;
+            $ = new ApplicationDeploymentPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentMode(Output<Either<String,DeploymentMode>> deploymentMode) {
-            this.deploymentMode = Objects.requireNonNull(deploymentMode);
+            $.deploymentMode = deploymentMode;
             return this;
         }
+
         public Builder deploymentMode(Either<String,DeploymentMode> deploymentMode) {
-            this.deploymentMode = Output.of(Objects.requireNonNull(deploymentMode));
-            return this;
-        }        public ApplicationDeploymentPolicyArgs build() {
-            return new ApplicationDeploymentPolicyArgs(deploymentMode);
+            return deploymentMode(Output.of(deploymentMode));
+        }
+
+        public ApplicationDeploymentPolicyArgs build() {
+            $.deploymentMode = Objects.requireNonNull($.deploymentMode, "expected parameter 'deploymentMode' to be non-null");
+            return $;
         }
     }
+
 }

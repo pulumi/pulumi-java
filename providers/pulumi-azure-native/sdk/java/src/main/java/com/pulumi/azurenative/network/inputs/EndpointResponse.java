@@ -27,10 +27,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customHeaders")
-      private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
+    private @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
 
-    public List<EndpointPropertiesResponseCustomHeaders> customHeaders() {
-        return this.customHeaders == null ? List.of() : this.customHeaders;
+    public Optional<List<EndpointPropertiesResponseCustomHeaders>> customHeaders() {
+        return Optional.ofNullable(this.customHeaders);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointLocation")
-      private final @Nullable String endpointLocation;
+    private @Nullable String endpointLocation;
 
     public Optional<String> endpointLocation() {
-        return this.endpointLocation == null ? Optional.empty() : Optional.ofNullable(this.endpointLocation);
+        return Optional.ofNullable(this.endpointLocation);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointMonitorStatus")
-      private final @Nullable String endpointMonitorStatus;
+    private @Nullable String endpointMonitorStatus;
 
     public Optional<String> endpointMonitorStatus() {
-        return this.endpointMonitorStatus == null ? Optional.empty() : Optional.ofNullable(this.endpointMonitorStatus);
+        return Optional.ofNullable(this.endpointMonitorStatus);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointStatus")
-      private final @Nullable String endpointStatus;
+    private @Nullable String endpointStatus;
 
     public Optional<String> endpointStatus() {
-        return this.endpointStatus == null ? Optional.empty() : Optional.ofNullable(this.endpointStatus);
+        return Optional.ofNullable(this.endpointStatus);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="geoMapping")
-      private final @Nullable List<String> geoMapping;
+    private @Nullable List<String> geoMapping;
 
-    public List<String> geoMapping() {
-        return this.geoMapping == null ? List.of() : this.geoMapping;
+    public Optional<List<String>> geoMapping() {
+        return Optional.ofNullable(this.geoMapping);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minChildEndpoints")
-      private final @Nullable Double minChildEndpoints;
+    private @Nullable Double minChildEndpoints;
 
     public Optional<Double> minChildEndpoints() {
-        return this.minChildEndpoints == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpoints);
+        return Optional.ofNullable(this.minChildEndpoints);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minChildEndpointsIPv4")
-      private final @Nullable Double minChildEndpointsIPv4;
+    private @Nullable Double minChildEndpointsIPv4;
 
     public Optional<Double> minChildEndpointsIPv4() {
-        return this.minChildEndpointsIPv4 == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpointsIPv4);
+        return Optional.ofNullable(this.minChildEndpointsIPv4);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minChildEndpointsIPv6")
-      private final @Nullable Double minChildEndpointsIPv6;
+    private @Nullable Double minChildEndpointsIPv6;
 
     public Optional<Double> minChildEndpointsIPv6() {
-        return this.minChildEndpointsIPv6 == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpointsIPv6);
+        return Optional.ofNullable(this.minChildEndpointsIPv6);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Double priority;
+    private @Nullable Double priority;
 
     public Optional<Double> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnets")
-      private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
+    private @Nullable List<EndpointPropertiesResponseSubnets> subnets;
 
-    public List<EndpointPropertiesResponseSubnets> subnets() {
-        return this.subnets == null ? List.of() : this.subnets;
+    public Optional<List<EndpointPropertiesResponseSubnets>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetResourceId")
-      private final @Nullable String targetResourceId;
+    private @Nullable String targetResourceId;
 
     public Optional<String> targetResourceId() {
-        return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
+        return Optional.ofNullable(this.targetResourceId);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -192,190 +192,146 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Double weight;
+    private @Nullable Double weight;
 
     public Optional<Double> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public EndpointResponse(
-        @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders,
-        @Nullable String endpointLocation,
-        @Nullable String endpointMonitorStatus,
-        @Nullable String endpointStatus,
-        @Nullable List<String> geoMapping,
-        @Nullable String id,
-        @Nullable Double minChildEndpoints,
-        @Nullable Double minChildEndpointsIPv4,
-        @Nullable Double minChildEndpointsIPv6,
-        @Nullable String name,
-        @Nullable Double priority,
-        @Nullable List<EndpointPropertiesResponseSubnets> subnets,
-        @Nullable String target,
-        @Nullable String targetResourceId,
-        @Nullable String type,
-        @Nullable Double weight) {
-        this.customHeaders = customHeaders;
-        this.endpointLocation = endpointLocation;
-        this.endpointMonitorStatus = endpointMonitorStatus;
-        this.endpointStatus = endpointStatus;
-        this.geoMapping = geoMapping;
-        this.id = id;
-        this.minChildEndpoints = minChildEndpoints;
-        this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
-        this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
-        this.name = name;
-        this.priority = priority;
-        this.subnets = subnets;
-        this.target = target;
-        this.targetResourceId = targetResourceId;
-        this.type = type;
-        this.weight = weight;
-    }
+    private EndpointResponse() {}
 
-    private EndpointResponse() {
-        this.customHeaders = List.of();
-        this.endpointLocation = null;
-        this.endpointMonitorStatus = null;
-        this.endpointStatus = null;
-        this.geoMapping = List.of();
-        this.id = null;
-        this.minChildEndpoints = null;
-        this.minChildEndpointsIPv4 = null;
-        this.minChildEndpointsIPv6 = null;
-        this.name = null;
-        this.priority = null;
-        this.subnets = List.of();
-        this.target = null;
-        this.targetResourceId = null;
-        this.type = null;
-        this.weight = null;
+    private EndpointResponse(EndpointResponse $) {
+        this.customHeaders = $.customHeaders;
+        this.endpointLocation = $.endpointLocation;
+        this.endpointMonitorStatus = $.endpointMonitorStatus;
+        this.endpointStatus = $.endpointStatus;
+        this.geoMapping = $.geoMapping;
+        this.id = $.id;
+        this.minChildEndpoints = $.minChildEndpoints;
+        this.minChildEndpointsIPv4 = $.minChildEndpointsIPv4;
+        this.minChildEndpointsIPv6 = $.minChildEndpointsIPv6;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.subnets = $.subnets;
+        this.target = $.target;
+        this.targetResourceId = $.targetResourceId;
+        this.type = $.type;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
-        private @Nullable String endpointLocation;
-        private @Nullable String endpointMonitorStatus;
-        private @Nullable String endpointStatus;
-        private @Nullable List<String> geoMapping;
-        private @Nullable String id;
-        private @Nullable Double minChildEndpoints;
-        private @Nullable Double minChildEndpointsIPv4;
-        private @Nullable Double minChildEndpointsIPv6;
-        private @Nullable String name;
-        private @Nullable Double priority;
-        private @Nullable List<EndpointPropertiesResponseSubnets> subnets;
-        private @Nullable String target;
-        private @Nullable String targetResourceId;
-        private @Nullable String type;
-        private @Nullable Double weight;
+        private EndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointResponse();
         }
 
         public Builder(EndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customHeaders = defaults.customHeaders;
-    	      this.endpointLocation = defaults.endpointLocation;
-    	      this.endpointMonitorStatus = defaults.endpointMonitorStatus;
-    	      this.endpointStatus = defaults.endpointStatus;
-    	      this.geoMapping = defaults.geoMapping;
-    	      this.id = defaults.id;
-    	      this.minChildEndpoints = defaults.minChildEndpoints;
-    	      this.minChildEndpointsIPv4 = defaults.minChildEndpointsIPv4;
-    	      this.minChildEndpointsIPv6 = defaults.minChildEndpointsIPv6;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.subnets = defaults.subnets;
-    	      this.target = defaults.target;
-    	      this.targetResourceId = defaults.targetResourceId;
-    	      this.type = defaults.type;
-    	      this.weight = defaults.weight;
+            $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customHeaders(@Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders) {
-            this.customHeaders = customHeaders;
+            $.customHeaders = customHeaders;
             return this;
         }
+
         public Builder customHeaders(EndpointPropertiesResponseCustomHeaders... customHeaders) {
             return customHeaders(List.of(customHeaders));
         }
+
         public Builder endpointLocation(@Nullable String endpointLocation) {
-            this.endpointLocation = endpointLocation;
+            $.endpointLocation = endpointLocation;
             return this;
         }
+
         public Builder endpointMonitorStatus(@Nullable String endpointMonitorStatus) {
-            this.endpointMonitorStatus = endpointMonitorStatus;
+            $.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
+
         public Builder endpointStatus(@Nullable String endpointStatus) {
-            this.endpointStatus = endpointStatus;
+            $.endpointStatus = endpointStatus;
             return this;
         }
+
         public Builder geoMapping(@Nullable List<String> geoMapping) {
-            this.geoMapping = geoMapping;
+            $.geoMapping = geoMapping;
             return this;
         }
+
         public Builder geoMapping(String... geoMapping) {
             return geoMapping(List.of(geoMapping));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
-            this.minChildEndpoints = minChildEndpoints;
+            $.minChildEndpoints = minChildEndpoints;
             return this;
         }
+
         public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
-            this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
+            $.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
+
         public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
-            this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
+            $.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Double priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder subnets(@Nullable List<EndpointPropertiesResponseSubnets> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(EndpointPropertiesResponseSubnets... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = targetResourceId;
+            $.targetResourceId = targetResourceId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder weight(@Nullable Double weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public EndpointResponse build() {
-            return new EndpointResponse(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
+        }
+
+        public EndpointResponse build() {
+            return $;
         }
     }
+
 }

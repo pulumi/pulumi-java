@@ -24,10 +24,10 @@ public final class NetworkACLResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allow")
-      private final @Nullable List<String> allow;
+    private @Nullable List<String> allow;
 
-    public List<String> allow() {
-        return this.allow == null ? List.of() : this.allow;
+    public Optional<List<String>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class NetworkACLResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deny")
-      private final @Nullable List<String> deny;
+    private @Nullable List<String> deny;
 
-    public List<String> deny() {
-        return this.deny == null ? List.of() : this.deny;
+    public Optional<List<String>> deny() {
+        return Optional.ofNullable(this.deny);
     }
 
-    public NetworkACLResponse(
-        @Nullable List<String> allow,
-        @Nullable List<String> deny) {
-        this.allow = allow;
-        this.deny = deny;
-    }
+    private NetworkACLResponse() {}
 
-    private NetworkACLResponse() {
-        this.allow = List.of();
-        this.deny = List.of();
+    private NetworkACLResponse(NetworkACLResponse $) {
+        this.allow = $.allow;
+        this.deny = $.deny;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkACLResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allow;
-        private @Nullable List<String> deny;
+        private NetworkACLResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkACLResponse();
         }
 
         public Builder(NetworkACLResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.deny = defaults.deny;
+            $ = new NetworkACLResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable List<String> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder allow(String... allow) {
             return allow(List.of(allow));
         }
+
         public Builder deny(@Nullable List<String> deny) {
-            this.deny = deny;
+            $.deny = deny;
             return this;
         }
+
         public Builder deny(String... deny) {
             return deny(List.of(deny));
-        }        public NetworkACLResponse build() {
-            return new NetworkACLResponse(allow, deny);
+        }
+
+        public NetworkACLResponse build() {
+            return $;
         }
     }
+
 }

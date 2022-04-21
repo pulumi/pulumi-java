@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GitHubClientSecretArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="byoaSecretAkvUrl")
-      private final @Nullable Output<String> byoaSecretAkvUrl;
+    private @Nullable Output<String> byoaSecretAkvUrl;
 
-    public Output<String> byoaSecretAkvUrl() {
-        return this.byoaSecretAkvUrl == null ? Codegen.empty() : this.byoaSecretAkvUrl;
+    public Optional<Output<String>> byoaSecretAkvUrl() {
+        return Optional.ofNullable(this.byoaSecretAkvUrl);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GitHubClientSecretArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="byoaSecretName")
-      private final @Nullable Output<String> byoaSecretName;
+    private @Nullable Output<String> byoaSecretName;
 
-    public Output<String> byoaSecretName() {
-        return this.byoaSecretName == null ? Codegen.empty() : this.byoaSecretName;
+    public Optional<Output<String>> byoaSecretName() {
+        return Optional.ofNullable(this.byoaSecretName);
     }
 
-    public GitHubClientSecretArgs(
-        @Nullable Output<String> byoaSecretAkvUrl,
-        @Nullable Output<String> byoaSecretName) {
-        this.byoaSecretAkvUrl = byoaSecretAkvUrl;
-        this.byoaSecretName = byoaSecretName;
-    }
+    private GitHubClientSecretArgs() {}
 
-    private GitHubClientSecretArgs() {
-        this.byoaSecretAkvUrl = Codegen.empty();
-        this.byoaSecretName = Codegen.empty();
+    private GitHubClientSecretArgs(GitHubClientSecretArgs $) {
+        this.byoaSecretAkvUrl = $.byoaSecretAkvUrl;
+        this.byoaSecretName = $.byoaSecretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubClientSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> byoaSecretAkvUrl;
-        private @Nullable Output<String> byoaSecretName;
+        private GitHubClientSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubClientSecretArgs();
         }
 
         public Builder(GitHubClientSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byoaSecretAkvUrl = defaults.byoaSecretAkvUrl;
-    	      this.byoaSecretName = defaults.byoaSecretName;
+            $ = new GitHubClientSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder byoaSecretAkvUrl(@Nullable Output<String> byoaSecretAkvUrl) {
-            this.byoaSecretAkvUrl = byoaSecretAkvUrl;
+            $.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
-        public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
-            this.byoaSecretAkvUrl = Codegen.ofNullable(byoaSecretAkvUrl);
-            return this;
+
+        public Builder byoaSecretAkvUrl(String byoaSecretAkvUrl) {
+            return byoaSecretAkvUrl(Output.of(byoaSecretAkvUrl));
         }
+
         public Builder byoaSecretName(@Nullable Output<String> byoaSecretName) {
-            this.byoaSecretName = byoaSecretName;
+            $.byoaSecretName = byoaSecretName;
             return this;
         }
-        public Builder byoaSecretName(@Nullable String byoaSecretName) {
-            this.byoaSecretName = Codegen.ofNullable(byoaSecretName);
-            return this;
-        }        public GitHubClientSecretArgs build() {
-            return new GitHubClientSecretArgs(byoaSecretAkvUrl, byoaSecretName);
+
+        public Builder byoaSecretName(String byoaSecretName) {
+            return byoaSecretName(Output.of(byoaSecretName));
+        }
+
+        public GitHubClientSecretArgs build() {
+            return $;
         }
     }
+
 }

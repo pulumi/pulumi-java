@@ -23,45 +23,44 @@ public final class AgentPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Integer cpu;
+    private @Nullable Integer cpu;
 
     public Optional<Integer> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
-    public AgentPropertiesResponse(@Nullable Integer cpu) {
-        this.cpu = cpu;
-    }
+    private AgentPropertiesResponse() {}
 
-    private AgentPropertiesResponse() {
-        this.cpu = null;
+    private AgentPropertiesResponse(AgentPropertiesResponse $) {
+        this.cpu = $.cpu;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer cpu;
+        private AgentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPropertiesResponse();
         }
 
         public Builder(AgentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
+            $ = new AgentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
-        }        public AgentPropertiesResponse build() {
-            return new AgentPropertiesResponse(cpu);
+        }
+
+        public AgentPropertiesResponse build() {
+            return $;
         }
     }
+
 }

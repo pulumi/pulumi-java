@@ -28,7 +28,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="active", required=true)
-      private final Boolean active;
+    private Boolean active;
 
     public Boolean active() {
         return this.active;
@@ -39,7 +39,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -50,7 +50,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -61,10 +61,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="deploymentSettings")
-      private final @Nullable DeploymentSettingsResponse deploymentSettings;
+    private @Nullable DeploymentSettingsResponse deploymentSettings;
 
     public Optional<DeploymentSettingsResponse> deploymentSettings() {
-        return this.deploymentSettings == null ? Optional.empty() : Optional.ofNullable(this.deploymentSettings);
+        return Optional.ofNullable(this.deploymentSettings);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="instances", required=true)
-      private final List<DeploymentInstanceResponse> instances;
+    private List<DeploymentInstanceResponse> instances;
 
     public List<DeploymentInstanceResponse> instances() {
         return this.instances;
@@ -83,7 +83,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -94,10 +94,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="source")
-      private final @Nullable UserSourceInfoResponse source;
+    private @Nullable UserSourceInfoResponse source;
 
     public Optional<UserSourceInfoResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -105,112 +105,96 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public DeploymentResourcePropertiesResponse(
-        Boolean active,
-        String appName,
-        String createdTime,
-        @Nullable DeploymentSettingsResponse deploymentSettings,
-        List<DeploymentInstanceResponse> instances,
-        String provisioningState,
-        @Nullable UserSourceInfoResponse source,
-        String status) {
-        this.active = Objects.requireNonNull(active, "expected parameter 'active' to be non-null");
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.deploymentSettings = deploymentSettings;
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.source = source;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DeploymentResourcePropertiesResponse() {}
 
-    private DeploymentResourcePropertiesResponse() {
-        this.active = null;
-        this.appName = null;
-        this.createdTime = null;
-        this.deploymentSettings = null;
-        this.instances = List.of();
-        this.provisioningState = null;
-        this.source = null;
-        this.status = null;
+    private DeploymentResourcePropertiesResponse(DeploymentResourcePropertiesResponse $) {
+        this.active = $.active;
+        this.appName = $.appName;
+        this.createdTime = $.createdTime;
+        this.deploymentSettings = $.deploymentSettings;
+        this.instances = $.instances;
+        this.provisioningState = $.provisioningState;
+        this.source = $.source;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean active;
-        private String appName;
-        private String createdTime;
-        private @Nullable DeploymentSettingsResponse deploymentSettings;
-        private List<DeploymentInstanceResponse> instances;
-        private String provisioningState;
-        private @Nullable UserSourceInfoResponse source;
-        private String status;
+        private DeploymentResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentResourcePropertiesResponse();
         }
 
         public Builder(DeploymentResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.appName = defaults.appName;
-    	      this.createdTime = defaults.createdTime;
-    	      this.deploymentSettings = defaults.deploymentSettings;
-    	      this.instances = defaults.instances;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.source = defaults.source;
-    	      this.status = defaults.status;
+            $ = new DeploymentResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder active(Boolean active) {
-            this.active = Objects.requireNonNull(active);
+            $.active = active;
             return this;
         }
+
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder deploymentSettings(@Nullable DeploymentSettingsResponse deploymentSettings) {
-            this.deploymentSettings = deploymentSettings;
+            $.deploymentSettings = deploymentSettings;
             return this;
         }
+
         public Builder instances(List<DeploymentInstanceResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(DeploymentInstanceResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder source(@Nullable UserSourceInfoResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DeploymentResourcePropertiesResponse build() {
-            return new DeploymentResourcePropertiesResponse(active, appName, createdTime, deploymentSettings, instances, provisioningState, source, status);
+        }
+
+        public DeploymentResourcePropertiesResponse build() {
+            $.active = Objects.requireNonNull($.active, "expected parameter 'active' to be non-null");
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

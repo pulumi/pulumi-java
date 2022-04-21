@@ -24,10 +24,10 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="artifactsApplied")
-      private final @Nullable Integer artifactsApplied;
+    private @Nullable Integer artifactsApplied;
 
     public Optional<Integer> artifactsApplied() {
-        return this.artifactsApplied == null ? Optional.empty() : Optional.ofNullable(this.artifactsApplied);
+        return Optional.ofNullable(this.artifactsApplied);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="deploymentStatus")
-      private final @Nullable String deploymentStatus;
+    private @Nullable String deploymentStatus;
 
     public Optional<String> deploymentStatus() {
-        return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
+        return Optional.ofNullable(this.deploymentStatus);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="totalArtifacts")
-      private final @Nullable Integer totalArtifacts;
+    private @Nullable Integer totalArtifacts;
 
     public Optional<Integer> totalArtifacts() {
-        return this.totalArtifacts == null ? Optional.empty() : Optional.ofNullable(this.totalArtifacts);
+        return Optional.ofNullable(this.totalArtifacts);
     }
 
-    public ArtifactDeploymentStatusPropertiesResponse(
-        @Nullable Integer artifactsApplied,
-        @Nullable String deploymentStatus,
-        @Nullable Integer totalArtifacts) {
-        this.artifactsApplied = artifactsApplied;
-        this.deploymentStatus = deploymentStatus;
-        this.totalArtifacts = totalArtifacts;
-    }
+    private ArtifactDeploymentStatusPropertiesResponse() {}
 
-    private ArtifactDeploymentStatusPropertiesResponse() {
-        this.artifactsApplied = null;
-        this.deploymentStatus = null;
-        this.totalArtifacts = null;
+    private ArtifactDeploymentStatusPropertiesResponse(ArtifactDeploymentStatusPropertiesResponse $) {
+        this.artifactsApplied = $.artifactsApplied;
+        this.deploymentStatus = $.deploymentStatus;
+        this.totalArtifacts = $.totalArtifacts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactDeploymentStatusPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer artifactsApplied;
-        private @Nullable String deploymentStatus;
-        private @Nullable Integer totalArtifacts;
+        private ArtifactDeploymentStatusPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactDeploymentStatusPropertiesResponse();
         }
 
         public Builder(ArtifactDeploymentStatusPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactsApplied = defaults.artifactsApplied;
-    	      this.deploymentStatus = defaults.deploymentStatus;
-    	      this.totalArtifacts = defaults.totalArtifacts;
+            $ = new ArtifactDeploymentStatusPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactsApplied(@Nullable Integer artifactsApplied) {
-            this.artifactsApplied = artifactsApplied;
+            $.artifactsApplied = artifactsApplied;
             return this;
         }
+
         public Builder deploymentStatus(@Nullable String deploymentStatus) {
-            this.deploymentStatus = deploymentStatus;
+            $.deploymentStatus = deploymentStatus;
             return this;
         }
+
         public Builder totalArtifacts(@Nullable Integer totalArtifacts) {
-            this.totalArtifacts = totalArtifacts;
+            $.totalArtifacts = totalArtifacts;
             return this;
-        }        public ArtifactDeploymentStatusPropertiesResponse build() {
-            return new ArtifactDeploymentStatusPropertiesResponse(artifactsApplied, deploymentStatus, totalArtifacts);
+        }
+
+        public ArtifactDeploymentStatusPropertiesResponse build() {
+            return $;
         }
     }
+
 }

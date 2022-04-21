@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="identityClientId")
-      private final @Nullable Output<String> identityClientId;
+    private @Nullable Output<String> identityClientId;
 
-    public Output<String> identityClientId() {
-        return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
+    public Optional<Output<String>> identityClientId() {
+        return Optional.ofNullable(this.identityClientId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="secretIdentifier")
-      private final @Nullable Output<String> secretIdentifier;
+    private @Nullable Output<String> secretIdentifier;
 
-    public Output<String> secretIdentifier() {
-        return this.secretIdentifier == null ? Codegen.empty() : this.secretIdentifier;
+    public Optional<Output<String>> secretIdentifier() {
+        return Optional.ofNullable(this.secretIdentifier);
     }
 
-    public KeyVaultContractCreatePropertiesArgs(
-        @Nullable Output<String> identityClientId,
-        @Nullable Output<String> secretIdentifier) {
-        this.identityClientId = identityClientId;
-        this.secretIdentifier = secretIdentifier;
-    }
+    private KeyVaultContractCreatePropertiesArgs() {}
 
-    private KeyVaultContractCreatePropertiesArgs() {
-        this.identityClientId = Codegen.empty();
-        this.secretIdentifier = Codegen.empty();
+    private KeyVaultContractCreatePropertiesArgs(KeyVaultContractCreatePropertiesArgs $) {
+        this.identityClientId = $.identityClientId;
+        this.secretIdentifier = $.secretIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultContractCreatePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identityClientId;
-        private @Nullable Output<String> secretIdentifier;
+        private KeyVaultContractCreatePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultContractCreatePropertiesArgs();
         }
 
         public Builder(KeyVaultContractCreatePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityClientId = defaults.identityClientId;
-    	      this.secretIdentifier = defaults.secretIdentifier;
+            $ = new KeyVaultContractCreatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
-            this.identityClientId = identityClientId;
+            $.identityClientId = identityClientId;
             return this;
         }
-        public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Codegen.ofNullable(identityClientId);
-            return this;
+
+        public Builder identityClientId(String identityClientId) {
+            return identityClientId(Output.of(identityClientId));
         }
+
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
-            this.secretIdentifier = secretIdentifier;
+            $.secretIdentifier = secretIdentifier;
             return this;
         }
-        public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = Codegen.ofNullable(secretIdentifier);
-            return this;
-        }        public KeyVaultContractCreatePropertiesArgs build() {
-            return new KeyVaultContractCreatePropertiesArgs(identityClientId, secretIdentifier);
+
+        public Builder secretIdentifier(String secretIdentifier) {
+            return secretIdentifier(Output.of(secretIdentifier));
+        }
+
+        public KeyVaultContractCreatePropertiesArgs build() {
+            return $;
         }
     }
+
 }

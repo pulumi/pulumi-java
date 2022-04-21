@@ -8,10 +8,10 @@ import com.pulumi.azurenative.apimanagement.inputs.RequestContractArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ResponseContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -35,10 +35,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="method", required=true)
-      private final Output<String> method;
+    private Output<String> method;
 
     public Output<String> method() {
         return this.method;
@@ -68,10 +68,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationId")
-      private final @Nullable Output<String> operationId;
+    private @Nullable Output<String> operationId;
 
-    public Output<String> operationId() {
-        return this.operationId == null ? Codegen.empty() : this.operationId;
+    public Optional<Output<String>> operationId() {
+        return Optional.ofNullable(this.operationId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<String> policies;
+    private @Nullable Output<String> policies;
 
-    public Output<String> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<String>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="request")
-      private final @Nullable Output<RequestContractArgs> request;
+    private @Nullable Output<RequestContractArgs> request;
 
-    public Output<RequestContractArgs> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<RequestContractArgs>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +112,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responses")
-      private final @Nullable Output<List<ResponseContractArgs>> responses;
+    private @Nullable Output<List<ResponseContractArgs>> responses;
 
-    public Output<List<ResponseContractArgs>> responses() {
-        return this.responses == null ? Codegen.empty() : this.responses;
+    public Optional<Output<List<ResponseContractArgs>>> responses() {
+        return Optional.ofNullable(this.responses);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -134,10 +134,10 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateParameters")
-      private final @Nullable Output<List<ParameterContractArgs>> templateParameters;
+    private @Nullable Output<List<ParameterContractArgs>> templateParameters;
 
-    public Output<List<ParameterContractArgs>> templateParameters() {
-        return this.templateParameters == null ? Codegen.empty() : this.templateParameters;
+    public Optional<Output<List<ParameterContractArgs>>> templateParameters() {
+        return Optional.ofNullable(this.templateParameters);
     }
 
     /**
@@ -145,199 +145,172 @@ public final class ApiOperationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlTemplate", required=true)
-      private final Output<String> urlTemplate;
+    private Output<String> urlTemplate;
 
     public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
-    public ApiOperationArgs(
-        Output<String> apiId,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> method,
-        @Nullable Output<String> operationId,
-        @Nullable Output<String> policies,
-        @Nullable Output<RequestContractArgs> request,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<ResponseContractArgs>> responses,
-        Output<String> serviceName,
-        @Nullable Output<List<ParameterContractArgs>> templateParameters,
-        Output<String> urlTemplate) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.operationId = operationId;
-        this.policies = policies;
-        this.request = request;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.responses = responses;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.templateParameters = templateParameters;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate, "expected parameter 'urlTemplate' to be non-null");
-    }
+    private ApiOperationArgs() {}
 
-    private ApiOperationArgs() {
-        this.apiId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.method = Codegen.empty();
-        this.operationId = Codegen.empty();
-        this.policies = Codegen.empty();
-        this.request = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.responses = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.templateParameters = Codegen.empty();
-        this.urlTemplate = Codegen.empty();
+    private ApiOperationArgs(ApiOperationArgs $) {
+        this.apiId = $.apiId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.method = $.method;
+        this.operationId = $.operationId;
+        this.policies = $.policies;
+        this.request = $.request;
+        this.resourceGroupName = $.resourceGroupName;
+        this.responses = $.responses;
+        this.serviceName = $.serviceName;
+        this.templateParameters = $.templateParameters;
+        this.urlTemplate = $.urlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> method;
-        private @Nullable Output<String> operationId;
-        private @Nullable Output<String> policies;
-        private @Nullable Output<RequestContractArgs> request;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<ResponseContractArgs>> responses;
-        private Output<String> serviceName;
-        private @Nullable Output<List<ParameterContractArgs>> templateParameters;
-        private Output<String> urlTemplate;
+        private ApiOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiOperationArgs();
         }
 
         public Builder(ApiOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.method = defaults.method;
-    	      this.operationId = defaults.operationId;
-    	      this.policies = defaults.policies;
-    	      this.request = defaults.request;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.responses = defaults.responses;
-    	      this.serviceName = defaults.serviceName;
-    	      this.templateParameters = defaults.templateParameters;
-    	      this.urlTemplate = defaults.urlTemplate;
+            $ = new ApiOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder method(Output<String> method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder method(String method) {
-            this.method = Output.of(Objects.requireNonNull(method));
-            return this;
+            return method(Output.of(method));
         }
+
         public Builder operationId(@Nullable Output<String> operationId) {
-            this.operationId = operationId;
+            $.operationId = operationId;
             return this;
         }
-        public Builder operationId(@Nullable String operationId) {
-            this.operationId = Codegen.ofNullable(operationId);
-            return this;
+
+        public Builder operationId(String operationId) {
+            return operationId(Output.of(operationId));
         }
+
         public Builder policies(@Nullable Output<String> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable String policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
+
+        public Builder policies(String policies) {
+            return policies(Output.of(policies));
         }
+
         public Builder request(@Nullable Output<RequestContractArgs> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable RequestContractArgs request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(RequestContractArgs request) {
+            return request(Output.of(request));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder responses(@Nullable Output<List<ResponseContractArgs>> responses) {
-            this.responses = responses;
+            $.responses = responses;
             return this;
         }
-        public Builder responses(@Nullable List<ResponseContractArgs> responses) {
-            this.responses = Codegen.ofNullable(responses);
-            return this;
+
+        public Builder responses(List<ResponseContractArgs> responses) {
+            return responses(Output.of(responses));
         }
+
         public Builder responses(ResponseContractArgs... responses) {
             return responses(List.of(responses));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder templateParameters(@Nullable Output<List<ParameterContractArgs>> templateParameters) {
-            this.templateParameters = templateParameters;
+            $.templateParameters = templateParameters;
             return this;
         }
-        public Builder templateParameters(@Nullable List<ParameterContractArgs> templateParameters) {
-            this.templateParameters = Codegen.ofNullable(templateParameters);
-            return this;
+
+        public Builder templateParameters(List<ParameterContractArgs> templateParameters) {
+            return templateParameters(Output.of(templateParameters));
         }
+
         public Builder templateParameters(ParameterContractArgs... templateParameters) {
             return templateParameters(List.of(templateParameters));
         }
+
         public Builder urlTemplate(Output<String> urlTemplate) {
-            this.urlTemplate = Objects.requireNonNull(urlTemplate);
+            $.urlTemplate = urlTemplate;
             return this;
         }
+
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
-            return this;
-        }        public ApiOperationArgs build() {
-            return new ApiOperationArgs(apiId, description, displayName, method, operationId, policies, request, resourceGroupName, responses, serviceName, templateParameters, urlTemplate);
+            return urlTemplate(Output.of(urlTemplate));
+        }
+
+        public ApiOperationArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.urlTemplate = Objects.requireNonNull($.urlTemplate, "expected parameter 'urlTemplate' to be non-null");
+            return $;
         }
     }
+
 }

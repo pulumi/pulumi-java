@@ -23,10 +23,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable String diskEncryptionSetId;
+    private @Nullable String diskEncryptionSetId;
 
     public Optional<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public EncryptionResponse(
-        @Nullable String diskEncryptionSetId,
-        @Nullable String type) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-        this.type = type;
-    }
+    private EncryptionResponse() {}
 
-    private EncryptionResponse() {
-        this.diskEncryptionSetId = null;
-        this.type = null;
+    private EncryptionResponse(EncryptionResponse $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskEncryptionSetId;
-        private @Nullable String type;
+        private EncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionResponse();
         }
 
         public Builder(EncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.type = defaults.type;
+            $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public EncryptionResponse build() {
-            return new EncryptionResponse(diskEncryptionSetId, type);
+        }
+
+        public EncryptionResponse build() {
+            return $;
         }
     }
+
 }

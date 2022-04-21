@@ -25,14 +25,14 @@ public final class UrlSigningActionParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable String algorithm;
+    private @Nullable String algorithm;
 
     public Optional<String> algorithm() {
-        return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
+        return Optional.ofNullable(this.algorithm);
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -43,67 +43,61 @@ public final class UrlSigningActionParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="parameterNameOverride")
-      private final @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
+    private @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 
-    public List<UrlSigningParamIdentifierResponse> parameterNameOverride() {
-        return this.parameterNameOverride == null ? List.of() : this.parameterNameOverride;
+    public Optional<List<UrlSigningParamIdentifierResponse>> parameterNameOverride() {
+        return Optional.ofNullable(this.parameterNameOverride);
     }
 
-    public UrlSigningActionParametersResponse(
-        @Nullable String algorithm,
-        String odataType,
-        @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
-        this.algorithm = algorithm;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.parameterNameOverride = parameterNameOverride;
-    }
+    private UrlSigningActionParametersResponse() {}
 
-    private UrlSigningActionParametersResponse() {
-        this.algorithm = null;
-        this.odataType = null;
-        this.parameterNameOverride = List.of();
+    private UrlSigningActionParametersResponse(UrlSigningActionParametersResponse $) {
+        this.algorithm = $.algorithm;
+        this.odataType = $.odataType;
+        this.parameterNameOverride = $.parameterNameOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningActionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String algorithm;
-        private String odataType;
-        private @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
+        private UrlSigningActionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningActionParametersResponse();
         }
 
         public Builder(UrlSigningActionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.odataType = defaults.odataType;
-    	      this.parameterNameOverride = defaults.parameterNameOverride;
+            $ = new UrlSigningActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable String algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
-            this.parameterNameOverride = parameterNameOverride;
+            $.parameterNameOverride = parameterNameOverride;
             return this;
         }
+
         public Builder parameterNameOverride(UrlSigningParamIdentifierResponse... parameterNameOverride) {
             return parameterNameOverride(List.of(parameterNameOverride));
-        }        public UrlSigningActionParametersResponse build() {
-            return new UrlSigningActionParametersResponse(algorithm, odataType, parameterNameOverride);
+        }
+
+        public UrlSigningActionParametersResponse build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            return $;
         }
     }
+
 }

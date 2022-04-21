@@ -5,10 +5,10 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
-    public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(@Nullable Output<List<String>> dnsServers) {
-        this.dnsServers = dnsServers;
-    }
+    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs() {}
 
-    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs() {
-        this.dnsServers = Codegen.empty();
+    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs $) {
+        this.dnsServers = $.dnsServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dnsServers;
+        private VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs();
         }
 
         public Builder(VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServers = defaults.dnsServers;
+            $ = new VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
-        }        public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs build() {
-            return new VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs(dnsServers);
+        }
+
+        public VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

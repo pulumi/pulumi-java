@@ -24,7 +24,7 @@ public final class HealthCheckStepPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="attributes", required=true)
-      private final Output<RestHealthCheckStepAttributesArgs> attributes;
+    private Output<RestHealthCheckStepAttributesArgs> attributes;
 
     public Output<RestHealthCheckStepAttributesArgs> attributes() {
         return this.attributes;
@@ -36,63 +36,60 @@ public final class HealthCheckStepPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="stepType", required=true)
-      private final Output<String> stepType;
+    private Output<String> stepType;
 
     public Output<String> stepType() {
         return this.stepType;
     }
 
-    public HealthCheckStepPropertiesArgs(
-        Output<RestHealthCheckStepAttributesArgs> attributes,
-        Output<String> stepType) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.stepType = Codegen.stringProp("stepType").output().arg(stepType).require();
-    }
+    private HealthCheckStepPropertiesArgs() {}
 
-    private HealthCheckStepPropertiesArgs() {
-        this.attributes = Codegen.empty();
-        this.stepType = Codegen.empty();
+    private HealthCheckStepPropertiesArgs(HealthCheckStepPropertiesArgs $) {
+        this.attributes = $.attributes;
+        this.stepType = $.stepType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckStepPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RestHealthCheckStepAttributesArgs> attributes;
-        private Output<String> stepType;
+        private HealthCheckStepPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckStepPropertiesArgs();
         }
 
         public Builder(HealthCheckStepPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.stepType = defaults.stepType;
+            $ = new HealthCheckStepPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Output<RestHealthCheckStepAttributesArgs> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(RestHealthCheckStepAttributesArgs attributes) {
-            this.attributes = Output.of(Objects.requireNonNull(attributes));
-            return this;
+            return attributes(Output.of(attributes));
         }
+
         public Builder stepType(Output<String> stepType) {
-            this.stepType = Objects.requireNonNull(stepType);
+            $.stepType = stepType;
             return this;
         }
+
         public Builder stepType(String stepType) {
-            this.stepType = Output.of(Objects.requireNonNull(stepType));
-            return this;
-        }        public HealthCheckStepPropertiesArgs build() {
-            return new HealthCheckStepPropertiesArgs(attributes, stepType);
+            return stepType(Output.of(stepType));
+        }
+
+        public HealthCheckStepPropertiesArgs build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.stepType = Codegen.stringProp("stepType").output().arg($.stepType).require();
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="currentFirmwareVersion", required=true)
-      private final String currentFirmwareVersion;
+    private String currentFirmwareVersion;
 
     public String currentFirmwareVersion() {
         return this.currentFirmwareVersion;
@@ -32,7 +32,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="firmwareUpdateDeadline", required=true)
-      private final String firmwareUpdateDeadline;
+    private String firmwareUpdateDeadline;
 
     public String firmwareUpdateDeadline() {
         return this.firmwareUpdateDeadline;
@@ -43,7 +43,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="firmwareUpdateStatus", required=true)
-      private final String firmwareUpdateStatus;
+    private String firmwareUpdateStatus;
 
     public String firmwareUpdateStatus() {
         return this.firmwareUpdateStatus;
@@ -54,7 +54,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lastFirmwareUpdate", required=true)
-      private final String lastFirmwareUpdate;
+    private String lastFirmwareUpdate;
 
     public String lastFirmwareUpdate() {
         return this.lastFirmwareUpdate;
@@ -65,82 +65,73 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pendingFirmwareVersion", required=true)
-      private final String pendingFirmwareVersion;
+    private String pendingFirmwareVersion;
 
     public String pendingFirmwareVersion() {
         return this.pendingFirmwareVersion;
     }
 
-    public CacheUpgradeStatusResponse(
-        String currentFirmwareVersion,
-        String firmwareUpdateDeadline,
-        String firmwareUpdateStatus,
-        String lastFirmwareUpdate,
-        String pendingFirmwareVersion) {
-        this.currentFirmwareVersion = Objects.requireNonNull(currentFirmwareVersion, "expected parameter 'currentFirmwareVersion' to be non-null");
-        this.firmwareUpdateDeadline = Objects.requireNonNull(firmwareUpdateDeadline, "expected parameter 'firmwareUpdateDeadline' to be non-null");
-        this.firmwareUpdateStatus = Objects.requireNonNull(firmwareUpdateStatus, "expected parameter 'firmwareUpdateStatus' to be non-null");
-        this.lastFirmwareUpdate = Objects.requireNonNull(lastFirmwareUpdate, "expected parameter 'lastFirmwareUpdate' to be non-null");
-        this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion, "expected parameter 'pendingFirmwareVersion' to be non-null");
-    }
+    private CacheUpgradeStatusResponse() {}
 
-    private CacheUpgradeStatusResponse() {
-        this.currentFirmwareVersion = null;
-        this.firmwareUpdateDeadline = null;
-        this.firmwareUpdateStatus = null;
-        this.lastFirmwareUpdate = null;
-        this.pendingFirmwareVersion = null;
+    private CacheUpgradeStatusResponse(CacheUpgradeStatusResponse $) {
+        this.currentFirmwareVersion = $.currentFirmwareVersion;
+        this.firmwareUpdateDeadline = $.firmwareUpdateDeadline;
+        this.firmwareUpdateStatus = $.firmwareUpdateStatus;
+        this.lastFirmwareUpdate = $.lastFirmwareUpdate;
+        this.pendingFirmwareVersion = $.pendingFirmwareVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheUpgradeStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentFirmwareVersion;
-        private String firmwareUpdateDeadline;
-        private String firmwareUpdateStatus;
-        private String lastFirmwareUpdate;
-        private String pendingFirmwareVersion;
+        private CacheUpgradeStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheUpgradeStatusResponse();
         }
 
         public Builder(CacheUpgradeStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentFirmwareVersion = defaults.currentFirmwareVersion;
-    	      this.firmwareUpdateDeadline = defaults.firmwareUpdateDeadline;
-    	      this.firmwareUpdateStatus = defaults.firmwareUpdateStatus;
-    	      this.lastFirmwareUpdate = defaults.lastFirmwareUpdate;
-    	      this.pendingFirmwareVersion = defaults.pendingFirmwareVersion;
+            $ = new CacheUpgradeStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentFirmwareVersion(String currentFirmwareVersion) {
-            this.currentFirmwareVersion = Objects.requireNonNull(currentFirmwareVersion);
+            $.currentFirmwareVersion = currentFirmwareVersion;
             return this;
         }
+
         public Builder firmwareUpdateDeadline(String firmwareUpdateDeadline) {
-            this.firmwareUpdateDeadline = Objects.requireNonNull(firmwareUpdateDeadline);
+            $.firmwareUpdateDeadline = firmwareUpdateDeadline;
             return this;
         }
+
         public Builder firmwareUpdateStatus(String firmwareUpdateStatus) {
-            this.firmwareUpdateStatus = Objects.requireNonNull(firmwareUpdateStatus);
+            $.firmwareUpdateStatus = firmwareUpdateStatus;
             return this;
         }
+
         public Builder lastFirmwareUpdate(String lastFirmwareUpdate) {
-            this.lastFirmwareUpdate = Objects.requireNonNull(lastFirmwareUpdate);
+            $.lastFirmwareUpdate = lastFirmwareUpdate;
             return this;
         }
+
         public Builder pendingFirmwareVersion(String pendingFirmwareVersion) {
-            this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
+            $.pendingFirmwareVersion = pendingFirmwareVersion;
             return this;
-        }        public CacheUpgradeStatusResponse build() {
-            return new CacheUpgradeStatusResponse(currentFirmwareVersion, firmwareUpdateDeadline, firmwareUpdateStatus, lastFirmwareUpdate, pendingFirmwareVersion);
+        }
+
+        public CacheUpgradeStatusResponse build() {
+            $.currentFirmwareVersion = Objects.requireNonNull($.currentFirmwareVersion, "expected parameter 'currentFirmwareVersion' to be non-null");
+            $.firmwareUpdateDeadline = Objects.requireNonNull($.firmwareUpdateDeadline, "expected parameter 'firmwareUpdateDeadline' to be non-null");
+            $.firmwareUpdateStatus = Objects.requireNonNull($.firmwareUpdateStatus, "expected parameter 'firmwareUpdateStatus' to be non-null");
+            $.lastFirmwareUpdate = Objects.requireNonNull($.lastFirmwareUpdate, "expected parameter 'lastFirmwareUpdate' to be non-null");
+            $.pendingFirmwareVersion = Objects.requireNonNull($.pendingFirmwareVersion, "expected parameter 'pendingFirmwareVersion' to be non-null");
+            return $;
         }
     }
+
 }

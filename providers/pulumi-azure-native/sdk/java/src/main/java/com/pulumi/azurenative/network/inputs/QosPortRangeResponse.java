@@ -23,10 +23,10 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="end")
-      private final @Nullable Integer end;
+    private @Nullable Integer end;
 
     public Optional<Integer> end() {
-        return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="start")
-      private final @Nullable Integer start;
+    private @Nullable Integer start;
 
     public Optional<Integer> start() {
-        return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
+        return Optional.ofNullable(this.start);
     }
 
-    public QosPortRangeResponse(
-        @Nullable Integer end,
-        @Nullable Integer start) {
-        this.end = end;
-        this.start = start;
-    }
+    private QosPortRangeResponse() {}
 
-    private QosPortRangeResponse() {
-        this.end = null;
-        this.start = null;
+    private QosPortRangeResponse(QosPortRangeResponse $) {
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QosPortRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer end;
-        private @Nullable Integer start;
+        private QosPortRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QosPortRangeResponse();
         }
 
         public Builder(QosPortRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new QosPortRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Integer end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
+
         public Builder start(@Nullable Integer start) {
-            this.start = start;
+            $.start = start;
             return this;
-        }        public QosPortRangeResponse build() {
-            return new QosPortRangeResponse(end, start);
+        }
+
+        public QosPortRangeResponse build() {
+            return $;
         }
     }
+
 }

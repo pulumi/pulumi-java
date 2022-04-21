@@ -22,14 +22,14 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Boolean autoUpgradeMinorVersion;
+    private @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -40,10 +40,10 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable Object protectedSettings;
+    private @Nullable Object protectedSettings;
 
     public Optional<Object> protectedSettings() {
-        return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     /**
@@ -51,140 +51,121 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisionAfterExtensions")
-      private final @Nullable List<String> provisionAfterExtensions;
+    private @Nullable List<String> provisionAfterExtensions;
 
-    public List<String> provisionAfterExtensions() {
-        return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
+    public Optional<List<String>> provisionAfterExtensions() {
+        return Optional.ofNullable(this.provisionAfterExtensions);
     }
 
     @Import(name="publisher", required=true)
-      private final String publisher;
+    private String publisher;
 
     public String publisher() {
         return this.publisher;
     }
 
     @Import(name="settings")
-      private final @Nullable Object settings;
+    private @Nullable Object settings;
 
     public Optional<Object> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
     @Import(name="typeHandlerVersion")
-      private final @Nullable String typeHandlerVersion;
+    private @Nullable String typeHandlerVersion;
 
     public Optional<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VMExtensionResponse(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        String name,
-        @Nullable Object protectedSettings,
-        @Nullable List<String> provisionAfterExtensions,
-        String publisher,
-        @Nullable Object settings,
-        String type,
-        @Nullable String typeHandlerVersion) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.protectedSettings = protectedSettings;
-        this.provisionAfterExtensions = provisionAfterExtensions;
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.settings = settings;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VMExtensionResponse() {}
 
-    private VMExtensionResponse() {
-        this.autoUpgradeMinorVersion = null;
-        this.name = null;
-        this.protectedSettings = null;
-        this.provisionAfterExtensions = List.of();
-        this.publisher = null;
-        this.settings = null;
-        this.type = null;
-        this.typeHandlerVersion = null;
+    private VMExtensionResponse(VMExtensionResponse $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.name = $.name;
+        this.protectedSettings = $.protectedSettings;
+        this.provisionAfterExtensions = $.provisionAfterExtensions;
+        this.publisher = $.publisher;
+        this.settings = $.settings;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMExtensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean autoUpgradeMinorVersion;
-        private String name;
-        private @Nullable Object protectedSettings;
-        private @Nullable List<String> provisionAfterExtensions;
-        private String publisher;
-        private @Nullable Object settings;
-        private String type;
-        private @Nullable String typeHandlerVersion;
+        private VMExtensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMExtensionResponse();
         }
 
         public Builder(VMExtensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.name = defaults.name;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.provisionAfterExtensions = defaults.provisionAfterExtensions;
-    	      this.publisher = defaults.publisher;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VMExtensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
+
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
-            this.provisionAfterExtensions = provisionAfterExtensions;
+            $.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
+
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
             return provisionAfterExtensions(List.of(provisionAfterExtensions));
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder settings(@Nullable Object settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }        public VMExtensionResponse build() {
-            return new VMExtensionResponse(autoUpgradeMinorVersion, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
+        }
+
+        public VMExtensionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

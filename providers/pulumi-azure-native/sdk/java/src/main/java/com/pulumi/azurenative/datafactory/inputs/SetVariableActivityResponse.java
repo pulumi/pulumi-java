@@ -28,10 +28,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -62,7 +62,7 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -73,10 +73,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -95,106 +95,90 @@ public final class SetVariableActivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="variableName")
-      private final @Nullable String variableName;
+    private @Nullable String variableName;
 
     public Optional<String> variableName() {
-        return this.variableName == null ? Optional.empty() : Optional.ofNullable(this.variableName);
+        return Optional.ofNullable(this.variableName);
     }
 
-    public SetVariableActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Object value,
-        @Nullable String variableName) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-        this.value = value;
-        this.variableName = variableName;
-    }
+    private SetVariableActivityResponse() {}
 
-    private SetVariableActivityResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.name = null;
-        this.type = null;
-        this.userProperties = List.of();
-        this.value = null;
-        this.variableName = null;
+    private SetVariableActivityResponse(SetVariableActivityResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.value = $.value;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SetVariableActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private String name;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
-        private @Nullable Object value;
-        private @Nullable String variableName;
+        private SetVariableActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SetVariableActivityResponse();
         }
 
         public Builder(SetVariableActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.value = defaults.value;
-    	      this.variableName = defaults.variableName;
+            $ = new SetVariableActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
+
         public Builder variableName(@Nullable String variableName) {
-            this.variableName = variableName;
+            $.variableName = variableName;
             return this;
-        }        public SetVariableActivityResponse build() {
-            return new SetVariableActivityResponse(dependsOn, description, name, type, userProperties, value, variableName);
+        }
+
+        public SetVariableActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

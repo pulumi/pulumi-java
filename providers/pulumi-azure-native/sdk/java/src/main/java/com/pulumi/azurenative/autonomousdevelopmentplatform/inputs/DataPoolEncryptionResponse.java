@@ -23,7 +23,7 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -34,7 +34,7 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final String keyVaultUri;
+    private String keyVaultUri;
 
     public String keyVaultUri() {
         return this.keyVaultUri;
@@ -45,10 +45,10 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
     /**
@@ -56,73 +56,65 @@ public final class DataPoolEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userAssignedIdentity", required=true)
-      private final String userAssignedIdentity;
+    private String userAssignedIdentity;
 
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 
-    public DataPoolEncryptionResponse(
-        String keyName,
-        String keyVaultUri,
-        @Nullable String keyVersion,
-        String userAssignedIdentity) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.keyVersion = keyVersion;
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
-    }
+    private DataPoolEncryptionResponse() {}
 
-    private DataPoolEncryptionResponse() {
-        this.keyName = null;
-        this.keyVaultUri = null;
-        this.keyVersion = null;
-        this.userAssignedIdentity = null;
+    private DataPoolEncryptionResponse(DataPoolEncryptionResponse $) {
+        this.keyName = $.keyName;
+        this.keyVaultUri = $.keyVaultUri;
+        this.keyVersion = $.keyVersion;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPoolEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String keyVaultUri;
-        private @Nullable String keyVersion;
-        private String userAssignedIdentity;
+        private DataPoolEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPoolEncryptionResponse();
         }
 
         public Builder(DataPoolEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.keyVersion = defaults.keyVersion;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new DataPoolEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
         }
+
         public Builder userAssignedIdentity(String userAssignedIdentity) {
-            this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public DataPoolEncryptionResponse build() {
-            return new DataPoolEncryptionResponse(keyName, keyVaultUri, keyVersion, userAssignedIdentity);
+        }
+
+        public DataPoolEncryptionResponse build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            $.userAssignedIdentity = Objects.requireNonNull($.userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
+            return $;
         }
     }
+
 }

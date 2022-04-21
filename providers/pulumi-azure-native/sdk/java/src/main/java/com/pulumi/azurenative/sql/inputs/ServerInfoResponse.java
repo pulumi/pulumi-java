@@ -21,45 +21,45 @@ public final class ServerInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverId", required=true)
-      private final String serverId;
+    private String serverId;
 
     public String serverId() {
         return this.serverId;
     }
 
-    public ServerInfoResponse(String serverId) {
-        this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
-    }
+    private ServerInfoResponse() {}
 
-    private ServerInfoResponse() {
-        this.serverId = null;
+    private ServerInfoResponse(ServerInfoResponse $) {
+        this.serverId = $.serverId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serverId;
+        private ServerInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerInfoResponse();
         }
 
         public Builder(ServerInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverId = defaults.serverId;
+            $ = new ServerInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder serverId(String serverId) {
-            this.serverId = Objects.requireNonNull(serverId);
+            $.serverId = serverId;
             return this;
-        }        public ServerInfoResponse build() {
-            return new ServerInfoResponse(serverId);
+        }
+
+        public ServerInfoResponse build() {
+            $.serverId = Objects.requireNonNull($.serverId, "expected parameter 'serverId' to be non-null");
+            return $;
         }
     }
+
 }

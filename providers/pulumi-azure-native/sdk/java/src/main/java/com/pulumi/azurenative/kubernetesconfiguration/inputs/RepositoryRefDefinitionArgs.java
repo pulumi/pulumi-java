@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="commit")
-      private final @Nullable Output<String> commit;
+    private @Nullable Output<String> commit;
 
-    public Output<String> commit() {
-        return this.commit == null ? Codegen.empty() : this.commit;
+    public Optional<Output<String>> commit() {
+        return Optional.ofNullable(this.commit);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="semver")
-      private final @Nullable Output<String> semver;
+    private @Nullable Output<String> semver;
 
-    public Output<String> semver() {
-        return this.semver == null ? Codegen.empty() : this.semver;
+    public Optional<Output<String>> semver() {
+        return Optional.ofNullable(this.semver);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public RepositoryRefDefinitionArgs(
-        @Nullable Output<String> branch,
-        @Nullable Output<String> commit,
-        @Nullable Output<String> semver,
-        @Nullable Output<String> tag) {
-        this.branch = branch;
-        this.commit = commit;
-        this.semver = semver;
-        this.tag = tag;
-    }
+    private RepositoryRefDefinitionArgs() {}
 
-    private RepositoryRefDefinitionArgs() {
-        this.branch = Codegen.empty();
-        this.commit = Codegen.empty();
-        this.semver = Codegen.empty();
-        this.tag = Codegen.empty();
+    private RepositoryRefDefinitionArgs(RepositoryRefDefinitionArgs $) {
+        this.branch = $.branch;
+        this.commit = $.commit;
+        this.semver = $.semver;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryRefDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branch;
-        private @Nullable Output<String> commit;
-        private @Nullable Output<String> semver;
-        private @Nullable Output<String> tag;
+        private RepositoryRefDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryRefDefinitionArgs();
         }
 
         public Builder(RepositoryRefDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.commit = defaults.commit;
-    	      this.semver = defaults.semver;
-    	      this.tag = defaults.tag;
+            $ = new RepositoryRefDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder commit(@Nullable Output<String> commit) {
-            this.commit = commit;
+            $.commit = commit;
             return this;
         }
-        public Builder commit(@Nullable String commit) {
-            this.commit = Codegen.ofNullable(commit);
-            return this;
+
+        public Builder commit(String commit) {
+            return commit(Output.of(commit));
         }
+
         public Builder semver(@Nullable Output<String> semver) {
-            this.semver = semver;
+            $.semver = semver;
             return this;
         }
-        public Builder semver(@Nullable String semver) {
-            this.semver = Codegen.ofNullable(semver);
-            return this;
+
+        public Builder semver(String semver) {
+            return semver(Output.of(semver));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public RepositoryRefDefinitionArgs build() {
-            return new RepositoryRefDefinitionArgs(branch, commit, semver, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public RepositoryRefDefinitionArgs build() {
+            return $;
         }
     }
+
 }

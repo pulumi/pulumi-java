@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dataSource")
-      private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+    private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource() {
-        return this.dataSource == null ? Codegen.empty() : this.dataSource;
+    public Optional<Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="failedLocationCount", required=true)
-      private final Output<Integer> failedLocationCount;
+    private Output<Integer> failedLocationCount;
 
     public Output<Integer> failedLocationCount() {
         return this.failedLocationCount;
@@ -51,7 +52,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -62,89 +63,80 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="windowSize")
-      private final @Nullable Output<String> windowSize;
+    private @Nullable Output<String> windowSize;
 
-    public Output<String> windowSize() {
-        return this.windowSize == null ? Codegen.empty() : this.windowSize;
+    public Optional<Output<String>> windowSize() {
+        return Optional.ofNullable(this.windowSize);
     }
 
-    public LocationThresholdRuleConditionArgs(
-        @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
-        Output<Integer> failedLocationCount,
-        Output<String> odataType,
-        @Nullable Output<String> windowSize) {
-        this.dataSource = dataSource;
-        this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.windowSize = windowSize;
-    }
+    private LocationThresholdRuleConditionArgs() {}
 
-    private LocationThresholdRuleConditionArgs() {
-        this.dataSource = Codegen.empty();
-        this.failedLocationCount = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.windowSize = Codegen.empty();
+    private LocationThresholdRuleConditionArgs(LocationThresholdRuleConditionArgs $) {
+        this.dataSource = $.dataSource;
+        this.failedLocationCount = $.failedLocationCount;
+        this.odataType = $.odataType;
+        this.windowSize = $.windowSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationThresholdRuleConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
-        private Output<Integer> failedLocationCount;
-        private Output<String> odataType;
-        private @Nullable Output<String> windowSize;
+        private LocationThresholdRuleConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationThresholdRuleConditionArgs();
         }
 
         public Builder(LocationThresholdRuleConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSource = defaults.dataSource;
-    	      this.failedLocationCount = defaults.failedLocationCount;
-    	      this.odataType = defaults.odataType;
-    	      this.windowSize = defaults.windowSize;
+            $ = new LocationThresholdRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
-        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Codegen.ofNullable(dataSource);
-            return this;
+
+        public Builder dataSource(Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder failedLocationCount(Output<Integer> failedLocationCount) {
-            this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
+            $.failedLocationCount = failedLocationCount;
             return this;
         }
+
         public Builder failedLocationCount(Integer failedLocationCount) {
-            this.failedLocationCount = Output.of(Objects.requireNonNull(failedLocationCount));
-            return this;
+            return failedLocationCount(Output.of(failedLocationCount));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder windowSize(@Nullable Output<String> windowSize) {
-            this.windowSize = windowSize;
+            $.windowSize = windowSize;
             return this;
         }
-        public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Codegen.ofNullable(windowSize);
-            return this;
-        }        public LocationThresholdRuleConditionArgs build() {
-            return new LocationThresholdRuleConditionArgs(dataSource, failedLocationCount, odataType, windowSize);
+
+        public Builder windowSize(String windowSize) {
+            return windowSize(Output.of(windowSize));
+        }
+
+        public LocationThresholdRuleConditionArgs build() {
+            $.failedLocationCount = Objects.requireNonNull($.failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

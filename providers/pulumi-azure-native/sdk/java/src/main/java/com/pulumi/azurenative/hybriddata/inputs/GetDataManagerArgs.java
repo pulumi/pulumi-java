@@ -17,7 +17,7 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataManagerName", required=true)
-      private final String dataManagerName;
+    private String dataManagerName;
 
     public String dataManagerName() {
         return this.dataManagerName;
@@ -28,55 +28,52 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataManagerArgs(
-        String dataManagerName,
-        String resourceGroupName) {
-        this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataManagerArgs() {}
 
-    private GetDataManagerArgs() {
-        this.dataManagerName = null;
-        this.resourceGroupName = null;
+    private GetDataManagerArgs(GetDataManagerArgs $) {
+        this.dataManagerName = $.dataManagerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataManagerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataManagerName;
-        private String resourceGroupName;
+        private GetDataManagerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataManagerArgs();
         }
 
         public Builder(GetDataManagerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataManagerName = defaults.dataManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataManagerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Objects.requireNonNull(dataManagerName);
+            $.dataManagerName = dataManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataManagerArgs build() {
-            return new GetDataManagerArgs(dataManagerName, resourceGroupName);
+        }
+
+        public GetDataManagerArgs build() {
+            $.dataManagerName = Objects.requireNonNull($.dataManagerName, "expected parameter 'dataManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

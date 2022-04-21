@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="assetName", required=true)
-      private final Output<String> assetName;
+    private Output<String> assetName;
 
     public Output<String> assetName() {
         return this.assetName;
@@ -35,10 +36,10 @@ public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -47,76 +48,70 @@ public final class JobOutputAssetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public JobOutputAssetArgs(
-        Output<String> assetName,
-        @Nullable Output<String> label,
-        Output<String> odataType) {
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private JobOutputAssetArgs() {}
 
-    private JobOutputAssetArgs() {
-        this.assetName = Codegen.empty();
-        this.label = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private JobOutputAssetArgs(JobOutputAssetArgs $) {
+        this.assetName = $.assetName;
+        this.label = $.label;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputAssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> assetName;
-        private @Nullable Output<String> label;
-        private Output<String> odataType;
+        private JobOutputAssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputAssetArgs();
         }
 
         public Builder(JobOutputAssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetName = defaults.assetName;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
+            $ = new JobOutputAssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetName(Output<String> assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Output.of(Objects.requireNonNull(assetName));
-            return this;
+            return assetName(Output.of(assetName));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public JobOutputAssetArgs build() {
-            return new JobOutputAssetArgs(assetName, label, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public JobOutputAssetArgs build() {
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

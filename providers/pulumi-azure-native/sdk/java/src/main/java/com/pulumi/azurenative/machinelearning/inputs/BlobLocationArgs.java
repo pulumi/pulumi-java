@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<String> credentials;
+    private @Nullable Output<String> credentials;
 
-    public Output<String> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<String>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public BlobLocationArgs(
-        @Nullable Output<String> credentials,
-        Output<String> uri) {
-        this.credentials = credentials;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private BlobLocationArgs() {}
 
-    private BlobLocationArgs() {
-        this.credentials = Codegen.empty();
-        this.uri = Codegen.empty();
+    private BlobLocationArgs(BlobLocationArgs $) {
+        this.credentials = $.credentials;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> credentials;
-        private Output<String> uri;
+        private BlobLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobLocationArgs();
         }
 
         public Builder(BlobLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.uri = defaults.uri;
+            $ = new BlobLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<String> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable String credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(String credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public BlobLocationArgs build() {
-            return new BlobLocationArgs(credentials, uri);
+            return uri(Output.of(uri));
+        }
+
+        public BlobLocationArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="capacityReservationGroupName", required=true)
-      private final String capacityReservationGroupName;
+    private String capacityReservationGroupName;
 
     public String capacityReservationGroupName() {
         return this.capacityReservationGroupName;
@@ -30,10 +30,10 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCapacityReservationGroupArgs(
-        String capacityReservationGroupName,
-        @Nullable String expand,
-        String resourceGroupName) {
-        this.capacityReservationGroupName = Objects.requireNonNull(capacityReservationGroupName, "expected parameter 'capacityReservationGroupName' to be non-null");
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCapacityReservationGroupArgs() {}
 
-    private GetCapacityReservationGroupArgs() {
-        this.capacityReservationGroupName = null;
-        this.expand = null;
-        this.resourceGroupName = null;
+    private GetCapacityReservationGroupArgs(GetCapacityReservationGroupArgs $) {
+        this.capacityReservationGroupName = $.capacityReservationGroupName;
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCapacityReservationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String capacityReservationGroupName;
-        private @Nullable String expand;
-        private String resourceGroupName;
+        private GetCapacityReservationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCapacityReservationGroupArgs();
         }
 
         public Builder(GetCapacityReservationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityReservationGroupName = defaults.capacityReservationGroupName;
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCapacityReservationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityReservationGroupName(String capacityReservationGroupName) {
-            this.capacityReservationGroupName = Objects.requireNonNull(capacityReservationGroupName);
+            $.capacityReservationGroupName = capacityReservationGroupName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCapacityReservationGroupArgs build() {
-            return new GetCapacityReservationGroupArgs(capacityReservationGroupName, expand, resourceGroupName);
+        }
+
+        public GetCapacityReservationGroupArgs build() {
+            $.capacityReservationGroupName = Objects.requireNonNull($.capacityReservationGroupName, "expected parameter 'capacityReservationGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

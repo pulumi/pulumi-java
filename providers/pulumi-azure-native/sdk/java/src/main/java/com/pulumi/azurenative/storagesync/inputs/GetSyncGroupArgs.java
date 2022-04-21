@@ -17,7 +17,7 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-      private final String storageSyncServiceName;
+    private String storageSyncServiceName;
 
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -39,64 +39,59 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncGroupName", required=true)
-      private final String syncGroupName;
+    private String syncGroupName;
 
     public String syncGroupName() {
         return this.syncGroupName;
     }
 
-    public GetSyncGroupArgs(
-        String resourceGroupName,
-        String storageSyncServiceName,
-        String syncGroupName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
-        this.syncGroupName = Objects.requireNonNull(syncGroupName, "expected parameter 'syncGroupName' to be non-null");
-    }
+    private GetSyncGroupArgs() {}
 
-    private GetSyncGroupArgs() {
-        this.resourceGroupName = null;
-        this.storageSyncServiceName = null;
-        this.syncGroupName = null;
+    private GetSyncGroupArgs(GetSyncGroupArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageSyncServiceName = $.storageSyncServiceName;
+        this.syncGroupName = $.syncGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSyncGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String storageSyncServiceName;
-        private String syncGroupName;
+        private GetSyncGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSyncGroupArgs();
         }
 
         public Builder(GetSyncGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageSyncServiceName = defaults.storageSyncServiceName;
-    	      this.syncGroupName = defaults.syncGroupName;
+            $ = new GetSyncGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
+
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Objects.requireNonNull(syncGroupName);
+            $.syncGroupName = syncGroupName;
             return this;
-        }        public GetSyncGroupArgs build() {
-            return new GetSyncGroupArgs(resourceGroupName, storageSyncServiceName, syncGroupName);
+        }
+
+        public GetSyncGroupArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
+            $.syncGroupName = Objects.requireNonNull($.syncGroupName, "expected parameter 'syncGroupName' to be non-null");
+            return $;
         }
     }
+
 }

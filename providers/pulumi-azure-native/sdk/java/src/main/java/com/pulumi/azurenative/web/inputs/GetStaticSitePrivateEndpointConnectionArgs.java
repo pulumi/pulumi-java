@@ -17,7 +17,7 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends com.pulumi
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-      private final String privateEndpointConnectionName;
+    private String privateEndpointConnectionName;
 
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -39,64 +39,59 @@ public final class GetStaticSitePrivateEndpointConnectionArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetStaticSitePrivateEndpointConnectionArgs(
-        String name,
-        String privateEndpointConnectionName,
-        String resourceGroupName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetStaticSitePrivateEndpointConnectionArgs() {}
 
-    private GetStaticSitePrivateEndpointConnectionArgs() {
-        this.name = null;
-        this.privateEndpointConnectionName = null;
-        this.resourceGroupName = null;
+    private GetStaticSitePrivateEndpointConnectionArgs(GetStaticSitePrivateEndpointConnectionArgs $) {
+        this.name = $.name;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStaticSitePrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String privateEndpointConnectionName;
-        private String resourceGroupName;
+        private GetStaticSitePrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStaticSitePrivateEndpointConnectionArgs();
         }
 
         public Builder(GetStaticSitePrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetStaticSitePrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetStaticSitePrivateEndpointConnectionArgs build() {
-            return new GetStaticSitePrivateEndpointConnectionArgs(name, privateEndpointConnectionName, resourceGroupName);
+        }
+
+        public GetStaticSitePrivateEndpointConnectionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateEndpointConnectionName = Objects.requireNonNull($.privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

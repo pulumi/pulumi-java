@@ -13,11 +13,11 @@ import com.pulumi.azurenative.storagecache.inputs.CacheSkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheName")
-      private final @Nullable Output<String> cacheName;
+    private @Nullable Output<String> cacheName;
 
-    public Output<String> cacheName() {
-        return this.cacheName == null ? Codegen.empty() : this.cacheName;
+    public Optional<Output<String>> cacheName() {
+        return Optional.ofNullable(this.cacheName);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheSizeGB")
-      private final @Nullable Output<Integer> cacheSizeGB;
+    private @Nullable Output<Integer> cacheSizeGB;
 
-    public Output<Integer> cacheSizeGB() {
-        return this.cacheSizeGB == null ? Codegen.empty() : this.cacheSizeGB;
+    public Optional<Output<Integer>> cacheSizeGB() {
+        return Optional.ofNullable(this.cacheSizeGB);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryServicesSettings")
-      private final @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
+    private @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
 
-    public Output<CacheDirectorySettingsArgs> directoryServicesSettings() {
-        return this.directoryServicesSettings == null ? Codegen.empty() : this.directoryServicesSettings;
+    public Optional<Output<CacheDirectorySettingsArgs>> directoryServicesSettings() {
+        return Optional.ofNullable(this.directoryServicesSettings);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
+    private @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
 
-    public Output<CacheEncryptionSettingsArgs> encryptionSettings() {
-        return this.encryptionSettings == null ? Codegen.empty() : this.encryptionSettings;
+    public Optional<Output<CacheEncryptionSettingsArgs>> encryptionSettings() {
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<CacheIdentityArgs> identity;
+    private @Nullable Output<CacheIdentityArgs> identity;
 
-    public Output<CacheIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<CacheIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkSettings")
-      private final @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
+    private @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
 
-    public Output<CacheNetworkSettingsArgs> networkSettings() {
-        return this.networkSettings == null ? Codegen.empty() : this.networkSettings;
+    public Optional<Output<CacheNetworkSettingsArgs>> networkSettings() {
+        return Optional.ofNullable(this.networkSettings);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
-    public Output<Either<String,ProvisioningStateType>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningStateType>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -129,10 +129,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securitySettings")
-      private final @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
+    private @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
 
-    public Output<CacheSecuritySettingsArgs> securitySettings() {
-        return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
+    public Optional<Output<CacheSecuritySettingsArgs>> securitySettings() {
+        return Optional.ofNullable(this.securitySettings);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<CacheSkuArgs> sku;
+    private @Nullable Output<CacheSkuArgs> sku;
 
-    public Output<CacheSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<CacheSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<String> subnet;
+    private @Nullable Output<String> subnet;
 
-    public Output<String> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<String>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -162,206 +162,169 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CacheArgs(
-        @Nullable Output<String> cacheName,
-        @Nullable Output<Integer> cacheSizeGB,
-        @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings,
-        @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings,
-        @Nullable Output<CacheIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<CacheNetworkSettingsArgs> networkSettings,
-        @Nullable Output<Either<String,ProvisioningStateType>> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<CacheSecuritySettingsArgs> securitySettings,
-        @Nullable Output<CacheSkuArgs> sku,
-        @Nullable Output<String> subnet,
-        @Nullable Output<Map<String,String>> tags) {
-        this.cacheName = cacheName;
-        this.cacheSizeGB = cacheSizeGB;
-        this.directoryServicesSettings = directoryServicesSettings;
-        this.encryptionSettings = encryptionSettings;
-        this.identity = identity;
-        this.location = location;
-        this.networkSettings = networkSettings;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securitySettings = securitySettings;
-        this.sku = sku;
-        this.subnet = subnet;
-        this.tags = tags;
-    }
+    private CacheArgs() {}
 
-    private CacheArgs() {
-        this.cacheName = Codegen.empty();
-        this.cacheSizeGB = Codegen.empty();
-        this.directoryServicesSettings = Codegen.empty();
-        this.encryptionSettings = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkSettings = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securitySettings = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CacheArgs(CacheArgs $) {
+        this.cacheName = $.cacheName;
+        this.cacheSizeGB = $.cacheSizeGB;
+        this.directoryServicesSettings = $.directoryServicesSettings;
+        this.encryptionSettings = $.encryptionSettings;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.networkSettings = $.networkSettings;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securitySettings = $.securitySettings;
+        this.sku = $.sku;
+        this.subnet = $.subnet;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cacheName;
-        private @Nullable Output<Integer> cacheSizeGB;
-        private @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
-        private @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
-        private @Nullable Output<CacheIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
-        private @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
-        private @Nullable Output<CacheSkuArgs> sku;
-        private @Nullable Output<String> subnet;
-        private @Nullable Output<Map<String,String>> tags;
+        private CacheArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheArgs();
         }
 
         public Builder(CacheArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheName = defaults.cacheName;
-    	      this.cacheSizeGB = defaults.cacheSizeGB;
-    	      this.directoryServicesSettings = defaults.directoryServicesSettings;
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.networkSettings = defaults.networkSettings;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securitySettings = defaults.securitySettings;
-    	      this.sku = defaults.sku;
-    	      this.subnet = defaults.subnet;
-    	      this.tags = defaults.tags;
+            $ = new CacheArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheName(@Nullable Output<String> cacheName) {
-            this.cacheName = cacheName;
+            $.cacheName = cacheName;
             return this;
         }
-        public Builder cacheName(@Nullable String cacheName) {
-            this.cacheName = Codegen.ofNullable(cacheName);
-            return this;
+
+        public Builder cacheName(String cacheName) {
+            return cacheName(Output.of(cacheName));
         }
+
         public Builder cacheSizeGB(@Nullable Output<Integer> cacheSizeGB) {
-            this.cacheSizeGB = cacheSizeGB;
+            $.cacheSizeGB = cacheSizeGB;
             return this;
         }
-        public Builder cacheSizeGB(@Nullable Integer cacheSizeGB) {
-            this.cacheSizeGB = Codegen.ofNullable(cacheSizeGB);
-            return this;
+
+        public Builder cacheSizeGB(Integer cacheSizeGB) {
+            return cacheSizeGB(Output.of(cacheSizeGB));
         }
+
         public Builder directoryServicesSettings(@Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings) {
-            this.directoryServicesSettings = directoryServicesSettings;
+            $.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
-        public Builder directoryServicesSettings(@Nullable CacheDirectorySettingsArgs directoryServicesSettings) {
-            this.directoryServicesSettings = Codegen.ofNullable(directoryServicesSettings);
-            return this;
+
+        public Builder directoryServicesSettings(CacheDirectorySettingsArgs directoryServicesSettings) {
+            return directoryServicesSettings(Output.of(directoryServicesSettings));
         }
+
         public Builder encryptionSettings(@Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
-        public Builder encryptionSettings(@Nullable CacheEncryptionSettingsArgs encryptionSettings) {
-            this.encryptionSettings = Codegen.ofNullable(encryptionSettings);
-            return this;
+
+        public Builder encryptionSettings(CacheEncryptionSettingsArgs encryptionSettings) {
+            return encryptionSettings(Output.of(encryptionSettings));
         }
+
         public Builder identity(@Nullable Output<CacheIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable CacheIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(CacheIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkSettings(@Nullable Output<CacheNetworkSettingsArgs> networkSettings) {
-            this.networkSettings = networkSettings;
+            $.networkSettings = networkSettings;
             return this;
         }
-        public Builder networkSettings(@Nullable CacheNetworkSettingsArgs networkSettings) {
-            this.networkSettings = Codegen.ofNullable(networkSettings);
-            return this;
+
+        public Builder networkSettings(CacheNetworkSettingsArgs networkSettings) {
+            return networkSettings(Output.of(networkSettings));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningStateType>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ProvisioningStateType> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securitySettings(@Nullable Output<CacheSecuritySettingsArgs> securitySettings) {
-            this.securitySettings = securitySettings;
+            $.securitySettings = securitySettings;
             return this;
         }
-        public Builder securitySettings(@Nullable CacheSecuritySettingsArgs securitySettings) {
-            this.securitySettings = Codegen.ofNullable(securitySettings);
-            return this;
+
+        public Builder securitySettings(CacheSecuritySettingsArgs securitySettings) {
+            return securitySettings(Output.of(securitySettings));
         }
+
         public Builder sku(@Nullable Output<CacheSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable CacheSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(CacheSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder subnet(@Nullable Output<String> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable String subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(String subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public CacheArgs build() {
-            return new CacheArgs(cacheName, cacheSizeGB, directoryServicesSettings, encryptionSettings, identity, location, networkSettings, provisioningState, resourceGroupName, securitySettings, sku, subnet, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public CacheArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

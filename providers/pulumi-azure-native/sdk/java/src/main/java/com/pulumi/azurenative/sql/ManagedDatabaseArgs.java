@@ -8,11 +8,11 @@ import com.pulumi.azurenative.sql.enums.ManagedDatabaseCreateMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="autoCompleteRestore")
-      private final @Nullable Output<Boolean> autoCompleteRestore;
+    private @Nullable Output<Boolean> autoCompleteRestore;
 
-    public Output<Boolean> autoCompleteRestore() {
-        return this.autoCompleteRestore == null ? Codegen.empty() : this.autoCompleteRestore;
+    public Optional<Output<Boolean>> autoCompleteRestore() {
+        return Optional.ofNullable(this.autoCompleteRestore);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="catalogCollation")
-      private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
+    private @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
-    public Output<Either<String,CatalogCollationType>> catalogCollation() {
-        return this.catalogCollation == null ? Codegen.empty() : this.catalogCollation;
+    public Optional<Output<Either<String,CatalogCollationType>>> catalogCollation() {
+        return Optional.ofNullable(this.catalogCollation);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="createMode")
-      private final @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
+    private @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
 
-    public Output<Either<String,ManagedDatabaseCreateMode>> createMode() {
-        return this.createMode == null ? Codegen.empty() : this.createMode;
+    public Optional<Output<Either<String,ManagedDatabaseCreateMode>>> createMode() {
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lastBackupName")
-      private final @Nullable Output<String> lastBackupName;
+    private @Nullable Output<String> lastBackupName;
 
-    public Output<String> lastBackupName() {
-        return this.lastBackupName == null ? Codegen.empty() : this.lastBackupName;
+    public Optional<Output<String>> lastBackupName() {
+        return Optional.ofNullable(this.lastBackupName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="longTermRetentionBackupResourceId")
-      private final @Nullable Output<String> longTermRetentionBackupResourceId;
+    private @Nullable Output<String> longTermRetentionBackupResourceId;
 
-    public Output<String> longTermRetentionBackupResourceId() {
-        return this.longTermRetentionBackupResourceId == null ? Codegen.empty() : this.longTermRetentionBackupResourceId;
+    public Optional<Output<String>> longTermRetentionBackupResourceId() {
+        return Optional.ofNullable(this.longTermRetentionBackupResourceId);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -124,10 +124,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="recoverableDatabaseId")
-      private final @Nullable Output<String> recoverableDatabaseId;
+    private @Nullable Output<String> recoverableDatabaseId;
 
-    public Output<String> recoverableDatabaseId() {
-        return this.recoverableDatabaseId == null ? Codegen.empty() : this.recoverableDatabaseId;
+    public Optional<Output<String>> recoverableDatabaseId() {
+        return Optional.ofNullable(this.recoverableDatabaseId);
     }
 
     /**
@@ -135,7 +135,7 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -146,10 +146,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restorableDroppedDatabaseId")
-      private final @Nullable Output<String> restorableDroppedDatabaseId;
+    private @Nullable Output<String> restorableDroppedDatabaseId;
 
-    public Output<String> restorableDroppedDatabaseId() {
-        return this.restorableDroppedDatabaseId == null ? Codegen.empty() : this.restorableDroppedDatabaseId;
+    public Optional<Output<String>> restorableDroppedDatabaseId() {
+        return Optional.ofNullable(this.restorableDroppedDatabaseId);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restorePointInTime")
-      private final @Nullable Output<String> restorePointInTime;
+    private @Nullable Output<String> restorePointInTime;
 
-    public Output<String> restorePointInTime() {
-        return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
+    public Optional<Output<String>> restorePointInTime() {
+        return Optional.ofNullable(this.restorePointInTime);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceDatabaseId")
-      private final @Nullable Output<String> sourceDatabaseId;
+    private @Nullable Output<String> sourceDatabaseId;
 
-    public Output<String> sourceDatabaseId() {
-        return this.sourceDatabaseId == null ? Codegen.empty() : this.sourceDatabaseId;
+    public Optional<Output<String>> sourceDatabaseId() {
+        return Optional.ofNullable(this.sourceDatabaseId);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageContainerSasToken")
-      private final @Nullable Output<String> storageContainerSasToken;
+    private @Nullable Output<String> storageContainerSasToken;
 
-    public Output<String> storageContainerSasToken() {
-        return this.storageContainerSasToken == null ? Codegen.empty() : this.storageContainerSasToken;
+    public Optional<Output<String>> storageContainerSasToken() {
+        return Optional.ofNullable(this.storageContainerSasToken);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageContainerUri")
-      private final @Nullable Output<String> storageContainerUri;
+    private @Nullable Output<String> storageContainerUri;
 
-    public Output<String> storageContainerUri() {
-        return this.storageContainerUri == null ? Codegen.empty() : this.storageContainerUri;
+    public Optional<Output<String>> storageContainerUri() {
+        return Optional.ofNullable(this.storageContainerUri);
     }
 
     /**
@@ -201,258 +201,210 @@ public final class ManagedDatabaseArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ManagedDatabaseArgs(
-        @Nullable Output<Boolean> autoCompleteRestore,
-        @Nullable Output<Either<String,CatalogCollationType>> catalogCollation,
-        @Nullable Output<String> collation,
-        @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> lastBackupName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> longTermRetentionBackupResourceId,
-        Output<String> managedInstanceName,
-        @Nullable Output<String> recoverableDatabaseId,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> restorableDroppedDatabaseId,
-        @Nullable Output<String> restorePointInTime,
-        @Nullable Output<String> sourceDatabaseId,
-        @Nullable Output<String> storageContainerSasToken,
-        @Nullable Output<String> storageContainerUri,
-        @Nullable Output<Map<String,String>> tags) {
-        this.autoCompleteRestore = autoCompleteRestore;
-        this.catalogCollation = catalogCollation;
-        this.collation = collation;
-        this.createMode = createMode;
-        this.databaseName = databaseName;
-        this.lastBackupName = lastBackupName;
-        this.location = location;
-        this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.recoverableDatabaseId = recoverableDatabaseId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
-        this.restorePointInTime = restorePointInTime;
-        this.sourceDatabaseId = sourceDatabaseId;
-        this.storageContainerSasToken = storageContainerSasToken;
-        this.storageContainerUri = storageContainerUri;
-        this.tags = tags;
-    }
+    private ManagedDatabaseArgs() {}
 
-    private ManagedDatabaseArgs() {
-        this.autoCompleteRestore = Codegen.empty();
-        this.catalogCollation = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.createMode = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.lastBackupName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.longTermRetentionBackupResourceId = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.recoverableDatabaseId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restorableDroppedDatabaseId = Codegen.empty();
-        this.restorePointInTime = Codegen.empty();
-        this.sourceDatabaseId = Codegen.empty();
-        this.storageContainerSasToken = Codegen.empty();
-        this.storageContainerUri = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ManagedDatabaseArgs(ManagedDatabaseArgs $) {
+        this.autoCompleteRestore = $.autoCompleteRestore;
+        this.catalogCollation = $.catalogCollation;
+        this.collation = $.collation;
+        this.createMode = $.createMode;
+        this.databaseName = $.databaseName;
+        this.lastBackupName = $.lastBackupName;
+        this.location = $.location;
+        this.longTermRetentionBackupResourceId = $.longTermRetentionBackupResourceId;
+        this.managedInstanceName = $.managedInstanceName;
+        this.recoverableDatabaseId = $.recoverableDatabaseId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restorableDroppedDatabaseId = $.restorableDroppedDatabaseId;
+        this.restorePointInTime = $.restorePointInTime;
+        this.sourceDatabaseId = $.sourceDatabaseId;
+        this.storageContainerSasToken = $.storageContainerSasToken;
+        this.storageContainerUri = $.storageContainerUri;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoCompleteRestore;
-        private @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
-        private @Nullable Output<String> collation;
-        private @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> lastBackupName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> longTermRetentionBackupResourceId;
-        private Output<String> managedInstanceName;
-        private @Nullable Output<String> recoverableDatabaseId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> restorableDroppedDatabaseId;
-        private @Nullable Output<String> restorePointInTime;
-        private @Nullable Output<String> sourceDatabaseId;
-        private @Nullable Output<String> storageContainerSasToken;
-        private @Nullable Output<String> storageContainerUri;
-        private @Nullable Output<Map<String,String>> tags;
+        private ManagedDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedDatabaseArgs();
         }
 
         public Builder(ManagedDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoCompleteRestore = defaults.autoCompleteRestore;
-    	      this.catalogCollation = defaults.catalogCollation;
-    	      this.collation = defaults.collation;
-    	      this.createMode = defaults.createMode;
-    	      this.databaseName = defaults.databaseName;
-    	      this.lastBackupName = defaults.lastBackupName;
-    	      this.location = defaults.location;
-    	      this.longTermRetentionBackupResourceId = defaults.longTermRetentionBackupResourceId;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.recoverableDatabaseId = defaults.recoverableDatabaseId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restorableDroppedDatabaseId = defaults.restorableDroppedDatabaseId;
-    	      this.restorePointInTime = defaults.restorePointInTime;
-    	      this.sourceDatabaseId = defaults.sourceDatabaseId;
-    	      this.storageContainerSasToken = defaults.storageContainerSasToken;
-    	      this.storageContainerUri = defaults.storageContainerUri;
-    	      this.tags = defaults.tags;
+            $ = new ManagedDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoCompleteRestore(@Nullable Output<Boolean> autoCompleteRestore) {
-            this.autoCompleteRestore = autoCompleteRestore;
+            $.autoCompleteRestore = autoCompleteRestore;
             return this;
         }
-        public Builder autoCompleteRestore(@Nullable Boolean autoCompleteRestore) {
-            this.autoCompleteRestore = Codegen.ofNullable(autoCompleteRestore);
-            return this;
+
+        public Builder autoCompleteRestore(Boolean autoCompleteRestore) {
+            return autoCompleteRestore(Output.of(autoCompleteRestore));
         }
+
         public Builder catalogCollation(@Nullable Output<Either<String,CatalogCollationType>> catalogCollation) {
-            this.catalogCollation = catalogCollation;
+            $.catalogCollation = catalogCollation;
             return this;
         }
-        public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
-            this.catalogCollation = Codegen.ofNullable(catalogCollation);
-            return this;
+
+        public Builder catalogCollation(Either<String,CatalogCollationType> catalogCollation) {
+            return catalogCollation(Output.of(catalogCollation));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder createMode(@Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
-        public Builder createMode(@Nullable Either<String,ManagedDatabaseCreateMode> createMode) {
-            this.createMode = Codegen.ofNullable(createMode);
-            return this;
+
+        public Builder createMode(Either<String,ManagedDatabaseCreateMode> createMode) {
+            return createMode(Output.of(createMode));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder lastBackupName(@Nullable Output<String> lastBackupName) {
-            this.lastBackupName = lastBackupName;
+            $.lastBackupName = lastBackupName;
             return this;
         }
-        public Builder lastBackupName(@Nullable String lastBackupName) {
-            this.lastBackupName = Codegen.ofNullable(lastBackupName);
-            return this;
+
+        public Builder lastBackupName(String lastBackupName) {
+            return lastBackupName(Output.of(lastBackupName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder longTermRetentionBackupResourceId(@Nullable Output<String> longTermRetentionBackupResourceId) {
-            this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
+            $.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
-        public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
-            this.longTermRetentionBackupResourceId = Codegen.ofNullable(longTermRetentionBackupResourceId);
-            return this;
+
+        public Builder longTermRetentionBackupResourceId(String longTermRetentionBackupResourceId) {
+            return longTermRetentionBackupResourceId(Output.of(longTermRetentionBackupResourceId));
         }
+
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
-            this.recoverableDatabaseId = recoverableDatabaseId;
+            $.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
-        public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
-            this.recoverableDatabaseId = Codegen.ofNullable(recoverableDatabaseId);
-            return this;
+
+        public Builder recoverableDatabaseId(String recoverableDatabaseId) {
+            return recoverableDatabaseId(Output.of(recoverableDatabaseId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restorableDroppedDatabaseId(@Nullable Output<String> restorableDroppedDatabaseId) {
-            this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
+            $.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
-        public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
-            this.restorableDroppedDatabaseId = Codegen.ofNullable(restorableDroppedDatabaseId);
-            return this;
+
+        public Builder restorableDroppedDatabaseId(String restorableDroppedDatabaseId) {
+            return restorableDroppedDatabaseId(Output.of(restorableDroppedDatabaseId));
         }
+
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
-            this.restorePointInTime = restorePointInTime;
+            $.restorePointInTime = restorePointInTime;
             return this;
         }
-        public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Codegen.ofNullable(restorePointInTime);
-            return this;
+
+        public Builder restorePointInTime(String restorePointInTime) {
+            return restorePointInTime(Output.of(restorePointInTime));
         }
+
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
-            this.sourceDatabaseId = sourceDatabaseId;
+            $.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
-        public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
-            this.sourceDatabaseId = Codegen.ofNullable(sourceDatabaseId);
-            return this;
+
+        public Builder sourceDatabaseId(String sourceDatabaseId) {
+            return sourceDatabaseId(Output.of(sourceDatabaseId));
         }
+
         public Builder storageContainerSasToken(@Nullable Output<String> storageContainerSasToken) {
-            this.storageContainerSasToken = storageContainerSasToken;
+            $.storageContainerSasToken = storageContainerSasToken;
             return this;
         }
-        public Builder storageContainerSasToken(@Nullable String storageContainerSasToken) {
-            this.storageContainerSasToken = Codegen.ofNullable(storageContainerSasToken);
-            return this;
+
+        public Builder storageContainerSasToken(String storageContainerSasToken) {
+            return storageContainerSasToken(Output.of(storageContainerSasToken));
         }
+
         public Builder storageContainerUri(@Nullable Output<String> storageContainerUri) {
-            this.storageContainerUri = storageContainerUri;
+            $.storageContainerUri = storageContainerUri;
             return this;
         }
-        public Builder storageContainerUri(@Nullable String storageContainerUri) {
-            this.storageContainerUri = Codegen.ofNullable(storageContainerUri);
-            return this;
+
+        public Builder storageContainerUri(String storageContainerUri) {
+            return storageContainerUri(Output.of(storageContainerUri));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ManagedDatabaseArgs build() {
-            return new ManagedDatabaseArgs(autoCompleteRestore, catalogCollation, collation, createMode, databaseName, lastBackupName, location, longTermRetentionBackupResourceId, managedInstanceName, recoverableDatabaseId, resourceGroupName, restorableDroppedDatabaseId, restorePointInTime, sourceDatabaseId, storageContainerSasToken, storageContainerUri, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ManagedDatabaseArgs build() {
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

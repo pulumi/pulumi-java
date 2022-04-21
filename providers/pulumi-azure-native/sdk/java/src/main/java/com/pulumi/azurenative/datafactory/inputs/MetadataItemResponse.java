@@ -23,10 +23,10 @@ public final class MetadataItemResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Object name;
+    private @Nullable Object name;
 
     public Optional<Object> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class MetadataItemResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public MetadataItemResponse(
-        @Nullable Object name,
-        @Nullable Object value) {
-        this.name = name;
-        this.value = value;
-    }
+    private MetadataItemResponse() {}
 
-    private MetadataItemResponse() {
-        this.name = null;
-        this.value = null;
+    private MetadataItemResponse(MetadataItemResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object name;
-        private @Nullable Object value;
+        private MetadataItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataItemResponse();
         }
 
         public Builder(MetadataItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new MetadataItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Object name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public MetadataItemResponse build() {
-            return new MetadataItemResponse(name, value);
+        }
+
+        public MetadataItemResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nameServers", required=true)
-      private final List<String> nameServers;
+    private List<String> nameServers;
 
     public List<String> nameServers() {
         return this.nameServers;
@@ -35,10 +35,10 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="options")
-      private final @Nullable String options;
+    private @Nullable String options;
 
     public Optional<String> options() {
-        return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -46,67 +46,61 @@ public final class DnsConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="searchDomains")
-      private final @Nullable String searchDomains;
+    private @Nullable String searchDomains;
 
     public Optional<String> searchDomains() {
-        return this.searchDomains == null ? Optional.empty() : Optional.ofNullable(this.searchDomains);
+        return Optional.ofNullable(this.searchDomains);
     }
 
-    public DnsConfigurationResponse(
-        List<String> nameServers,
-        @Nullable String options,
-        @Nullable String searchDomains) {
-        this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
-        this.options = options;
-        this.searchDomains = searchDomains;
-    }
+    private DnsConfigurationResponse() {}
 
-    private DnsConfigurationResponse() {
-        this.nameServers = List.of();
-        this.options = null;
-        this.searchDomains = null;
+    private DnsConfigurationResponse(DnsConfigurationResponse $) {
+        this.nameServers = $.nameServers;
+        this.options = $.options;
+        this.searchDomains = $.searchDomains;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> nameServers;
-        private @Nullable String options;
-        private @Nullable String searchDomains;
+        private DnsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsConfigurationResponse();
         }
 
         public Builder(DnsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nameServers = defaults.nameServers;
-    	      this.options = defaults.options;
-    	      this.searchDomains = defaults.searchDomains;
+            $ = new DnsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Objects.requireNonNull(nameServers);
+            $.nameServers = nameServers;
             return this;
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
+
         public Builder options(@Nullable String options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
+
         public Builder searchDomains(@Nullable String searchDomains) {
-            this.searchDomains = searchDomains;
+            $.searchDomains = searchDomains;
             return this;
-        }        public DnsConfigurationResponse build() {
-            return new DnsConfigurationResponse(nameServers, options, searchDomains);
+        }
+
+        public DnsConfigurationResponse build() {
+            $.nameServers = Objects.requireNonNull($.nameServers, "expected parameter 'nameServers' to be non-null");
+            return $;
         }
     }
+
 }

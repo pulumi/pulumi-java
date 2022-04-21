@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web;
 import com.pulumi.azurenative.web.enums.PublicCertificateLocation;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="blob")
-      private final @Nullable Output<String> blob;
+    private @Nullable Output<String> blob;
 
-    public Output<String> blob() {
-        return this.blob == null ? Codegen.empty() : this.blob;
+    public Optional<Output<String>> blob() {
+        return Optional.ofNullable(this.blob);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -54,10 +54,10 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="publicCertificateLocation")
-      private final @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
+    private @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
 
-    public Output<PublicCertificateLocation> publicCertificateLocation() {
-        return this.publicCertificateLocation == null ? Codegen.empty() : this.publicCertificateLocation;
+    public Optional<Output<PublicCertificateLocation>> publicCertificateLocation() {
+        return Optional.ofNullable(this.publicCertificateLocation);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="publicCertificateName")
-      private final @Nullable Output<String> publicCertificateName;
+    private @Nullable Output<String> publicCertificateName;
 
-    public Output<String> publicCertificateName() {
-        return this.publicCertificateName == null ? Codegen.empty() : this.publicCertificateName;
+    public Optional<Output<String>> publicCertificateName() {
+        return Optional.ofNullable(this.publicCertificateName);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,128 +87,111 @@ public final class WebAppPublicCertificateSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
     }
 
-    public WebAppPublicCertificateSlotArgs(
-        @Nullable Output<String> blob,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        @Nullable Output<PublicCertificateLocation> publicCertificateLocation,
-        @Nullable Output<String> publicCertificateName,
-        Output<String> resourceGroupName,
-        Output<String> slot) {
-        this.blob = blob;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.publicCertificateLocation = publicCertificateLocation;
-        this.publicCertificateName = publicCertificateName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private WebAppPublicCertificateSlotArgs() {}
 
-    private WebAppPublicCertificateSlotArgs() {
-        this.blob = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.publicCertificateLocation = Codegen.empty();
-        this.publicCertificateName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.slot = Codegen.empty();
+    private WebAppPublicCertificateSlotArgs(WebAppPublicCertificateSlotArgs $) {
+        this.blob = $.blob;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.publicCertificateLocation = $.publicCertificateLocation;
+        this.publicCertificateName = $.publicCertificateName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppPublicCertificateSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blob;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
-        private @Nullable Output<String> publicCertificateName;
-        private Output<String> resourceGroupName;
-        private Output<String> slot;
+        private WebAppPublicCertificateSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppPublicCertificateSlotArgs();
         }
 
         public Builder(WebAppPublicCertificateSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blob = defaults.blob;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.publicCertificateLocation = defaults.publicCertificateLocation;
-    	      this.publicCertificateName = defaults.publicCertificateName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new WebAppPublicCertificateSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blob(@Nullable Output<String> blob) {
-            this.blob = blob;
+            $.blob = blob;
             return this;
         }
-        public Builder blob(@Nullable String blob) {
-            this.blob = Codegen.ofNullable(blob);
-            return this;
+
+        public Builder blob(String blob) {
+            return blob(Output.of(blob));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder publicCertificateLocation(@Nullable Output<PublicCertificateLocation> publicCertificateLocation) {
-            this.publicCertificateLocation = publicCertificateLocation;
+            $.publicCertificateLocation = publicCertificateLocation;
             return this;
         }
-        public Builder publicCertificateLocation(@Nullable PublicCertificateLocation publicCertificateLocation) {
-            this.publicCertificateLocation = Codegen.ofNullable(publicCertificateLocation);
-            return this;
+
+        public Builder publicCertificateLocation(PublicCertificateLocation publicCertificateLocation) {
+            return publicCertificateLocation(Output.of(publicCertificateLocation));
         }
+
         public Builder publicCertificateName(@Nullable Output<String> publicCertificateName) {
-            this.publicCertificateName = publicCertificateName;
+            $.publicCertificateName = publicCertificateName;
             return this;
         }
-        public Builder publicCertificateName(@Nullable String publicCertificateName) {
-            this.publicCertificateName = Codegen.ofNullable(publicCertificateName);
-            return this;
+
+        public Builder publicCertificateName(String publicCertificateName) {
+            return publicCertificateName(Output.of(publicCertificateName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
-        }        public WebAppPublicCertificateSlotArgs build() {
-            return new WebAppPublicCertificateSlotArgs(blob, kind, name, publicCertificateLocation, publicCertificateName, resourceGroupName, slot);
+            return slot(Output.of(slot));
+        }
+
+        public WebAppPublicCertificateSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

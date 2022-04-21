@@ -17,7 +17,7 @@ public final class GetPrivateZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateZoneName", required=true)
-      private final String privateZoneName;
+    private String privateZoneName;
 
     public String privateZoneName() {
         return this.privateZoneName;
@@ -28,55 +28,52 @@ public final class GetPrivateZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateZoneArgs(
-        String privateZoneName,
-        String resourceGroupName) {
-        this.privateZoneName = Objects.requireNonNull(privateZoneName, "expected parameter 'privateZoneName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateZoneArgs() {}
 
-    private GetPrivateZoneArgs() {
-        this.privateZoneName = null;
-        this.resourceGroupName = null;
+    private GetPrivateZoneArgs(GetPrivateZoneArgs $) {
+        this.privateZoneName = $.privateZoneName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateZoneName;
-        private String resourceGroupName;
+        private GetPrivateZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateZoneArgs();
         }
 
         public Builder(GetPrivateZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateZoneName = defaults.privateZoneName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateZoneName(String privateZoneName) {
-            this.privateZoneName = Objects.requireNonNull(privateZoneName);
+            $.privateZoneName = privateZoneName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateZoneArgs build() {
-            return new GetPrivateZoneArgs(privateZoneName, resourceGroupName);
+        }
+
+        public GetPrivateZoneArgs build() {
+            $.privateZoneName = Objects.requireNonNull($.privateZoneName, "expected parameter 'privateZoneName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

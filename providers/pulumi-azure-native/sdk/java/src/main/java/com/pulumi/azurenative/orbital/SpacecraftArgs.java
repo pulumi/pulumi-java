@@ -6,11 +6,11 @@ package com.pulumi.azurenative.orbital;
 import com.pulumi.azurenative.orbital.inputs.SpacecraftLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="links")
-      private final @Nullable Output<List<SpacecraftLinkArgs>> links;
+    private @Nullable Output<List<SpacecraftLinkArgs>> links;
 
-    public Output<List<SpacecraftLinkArgs>> links() {
-        return this.links == null ? Codegen.empty() : this.links;
+    public Optional<Output<List<SpacecraftLinkArgs>>> links() {
+        return Optional.ofNullable(this.links);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noradId", required=true)
-      private final Output<String> noradId;
+    private Output<String> noradId;
 
     public Output<String> noradId() {
         return this.noradId;
@@ -56,7 +56,7 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spacecraftName")
-      private final @Nullable Output<String> spacecraftName;
+    private @Nullable Output<String> spacecraftName;
 
-    public Output<String> spacecraftName() {
-        return this.spacecraftName == null ? Codegen.empty() : this.spacecraftName;
+    public Optional<Output<String>> spacecraftName() {
+        return Optional.ofNullable(this.spacecraftName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="titleLine")
-      private final @Nullable Output<String> titleLine;
+    private @Nullable Output<String> titleLine;
 
-    public Output<String> titleLine() {
-        return this.titleLine == null ? Codegen.empty() : this.titleLine;
+    public Optional<Output<String>> titleLine() {
+        return Optional.ofNullable(this.titleLine);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tleLine1")
-      private final @Nullable Output<String> tleLine1;
+    private @Nullable Output<String> tleLine1;
 
-    public Output<String> tleLine1() {
-        return this.tleLine1 == null ? Codegen.empty() : this.tleLine1;
+    public Optional<Output<String>> tleLine1() {
+        return Optional.ofNullable(this.tleLine1);
     }
 
     /**
@@ -111,157 +111,134 @@ public final class SpacecraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tleLine2")
-      private final @Nullable Output<String> tleLine2;
+    private @Nullable Output<String> tleLine2;
 
-    public Output<String> tleLine2() {
-        return this.tleLine2 == null ? Codegen.empty() : this.tleLine2;
+    public Optional<Output<String>> tleLine2() {
+        return Optional.ofNullable(this.tleLine2);
     }
 
-    public SpacecraftArgs(
-        @Nullable Output<List<SpacecraftLinkArgs>> links,
-        @Nullable Output<String> location,
-        Output<String> noradId,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> spacecraftName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> titleLine,
-        @Nullable Output<String> tleLine1,
-        @Nullable Output<String> tleLine2) {
-        this.links = links;
-        this.location = location;
-        this.noradId = Objects.requireNonNull(noradId, "expected parameter 'noradId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.spacecraftName = spacecraftName;
-        this.tags = tags;
-        this.titleLine = titleLine;
-        this.tleLine1 = tleLine1;
-        this.tleLine2 = tleLine2;
-    }
+    private SpacecraftArgs() {}
 
-    private SpacecraftArgs() {
-        this.links = Codegen.empty();
-        this.location = Codegen.empty();
-        this.noradId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.spacecraftName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.titleLine = Codegen.empty();
-        this.tleLine1 = Codegen.empty();
-        this.tleLine2 = Codegen.empty();
+    private SpacecraftArgs(SpacecraftArgs $) {
+        this.links = $.links;
+        this.location = $.location;
+        this.noradId = $.noradId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.spacecraftName = $.spacecraftName;
+        this.tags = $.tags;
+        this.titleLine = $.titleLine;
+        this.tleLine1 = $.tleLine1;
+        this.tleLine2 = $.tleLine2;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpacecraftArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SpacecraftLinkArgs>> links;
-        private @Nullable Output<String> location;
-        private Output<String> noradId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> spacecraftName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> titleLine;
-        private @Nullable Output<String> tleLine1;
-        private @Nullable Output<String> tleLine2;
+        private SpacecraftArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpacecraftArgs();
         }
 
         public Builder(SpacecraftArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.links = defaults.links;
-    	      this.location = defaults.location;
-    	      this.noradId = defaults.noradId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.spacecraftName = defaults.spacecraftName;
-    	      this.tags = defaults.tags;
-    	      this.titleLine = defaults.titleLine;
-    	      this.tleLine1 = defaults.tleLine1;
-    	      this.tleLine2 = defaults.tleLine2;
+            $ = new SpacecraftArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder links(@Nullable Output<List<SpacecraftLinkArgs>> links) {
-            this.links = links;
+            $.links = links;
             return this;
         }
-        public Builder links(@Nullable List<SpacecraftLinkArgs> links) {
-            this.links = Codegen.ofNullable(links);
-            return this;
+
+        public Builder links(List<SpacecraftLinkArgs> links) {
+            return links(Output.of(links));
         }
+
         public Builder links(SpacecraftLinkArgs... links) {
             return links(List.of(links));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder noradId(Output<String> noradId) {
-            this.noradId = Objects.requireNonNull(noradId);
+            $.noradId = noradId;
             return this;
         }
+
         public Builder noradId(String noradId) {
-            this.noradId = Output.of(Objects.requireNonNull(noradId));
-            return this;
+            return noradId(Output.of(noradId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder spacecraftName(@Nullable Output<String> spacecraftName) {
-            this.spacecraftName = spacecraftName;
+            $.spacecraftName = spacecraftName;
             return this;
         }
-        public Builder spacecraftName(@Nullable String spacecraftName) {
-            this.spacecraftName = Codegen.ofNullable(spacecraftName);
-            return this;
+
+        public Builder spacecraftName(String spacecraftName) {
+            return spacecraftName(Output.of(spacecraftName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder titleLine(@Nullable Output<String> titleLine) {
-            this.titleLine = titleLine;
+            $.titleLine = titleLine;
             return this;
         }
-        public Builder titleLine(@Nullable String titleLine) {
-            this.titleLine = Codegen.ofNullable(titleLine);
-            return this;
+
+        public Builder titleLine(String titleLine) {
+            return titleLine(Output.of(titleLine));
         }
+
         public Builder tleLine1(@Nullable Output<String> tleLine1) {
-            this.tleLine1 = tleLine1;
+            $.tleLine1 = tleLine1;
             return this;
         }
-        public Builder tleLine1(@Nullable String tleLine1) {
-            this.tleLine1 = Codegen.ofNullable(tleLine1);
-            return this;
+
+        public Builder tleLine1(String tleLine1) {
+            return tleLine1(Output.of(tleLine1));
         }
+
         public Builder tleLine2(@Nullable Output<String> tleLine2) {
-            this.tleLine2 = tleLine2;
+            $.tleLine2 = tleLine2;
             return this;
         }
-        public Builder tleLine2(@Nullable String tleLine2) {
-            this.tleLine2 = Codegen.ofNullable(tleLine2);
-            return this;
-        }        public SpacecraftArgs build() {
-            return new SpacecraftArgs(links, location, noradId, resourceGroupName, spacecraftName, tags, titleLine, tleLine1, tleLine2);
+
+        public Builder tleLine2(String tleLine2) {
+            return tleLine2(Output.of(tleLine2));
+        }
+
+        public SpacecraftArgs build() {
+            $.noradId = Objects.requireNonNull($.noradId, "expected parameter 'noradId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

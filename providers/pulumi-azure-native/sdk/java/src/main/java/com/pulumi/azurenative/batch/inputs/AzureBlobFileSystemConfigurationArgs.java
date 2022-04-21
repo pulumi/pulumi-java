@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Output<String> accountKey;
+    private @Nullable Output<String> accountKey;
 
-    public Output<String> accountKey() {
-        return this.accountKey == null ? Codegen.empty() : this.accountKey;
+    public Optional<Output<String>> accountKey() {
+        return Optional.ofNullable(this.accountKey);
     }
 
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -38,14 +38,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="blobfuseOptions")
-      private final @Nullable Output<String> blobfuseOptions;
+    private @Nullable Output<String> blobfuseOptions;
 
-    public Output<String> blobfuseOptions() {
-        return this.blobfuseOptions == null ? Codegen.empty() : this.blobfuseOptions;
+    public Optional<Output<String>> blobfuseOptions() {
+        return Optional.ofNullable(this.blobfuseOptions);
     }
 
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -56,7 +56,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="relativeMountPath", required=true)
-      private final Output<String> relativeMountPath;
+    private Output<String> relativeMountPath;
 
     public Output<String> relativeMountPath() {
         return this.relativeMountPath;
@@ -67,115 +67,101 @@ public final class AzureBlobFileSystemConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sasKey")
-      private final @Nullable Output<String> sasKey;
+    private @Nullable Output<String> sasKey;
 
-    public Output<String> sasKey() {
-        return this.sasKey == null ? Codegen.empty() : this.sasKey;
+    public Optional<Output<String>> sasKey() {
+        return Optional.ofNullable(this.sasKey);
     }
 
-    public AzureBlobFileSystemConfigurationArgs(
-        @Nullable Output<String> accountKey,
-        Output<String> accountName,
-        @Nullable Output<String> blobfuseOptions,
-        Output<String> containerName,
-        Output<String> relativeMountPath,
-        @Nullable Output<String> sasKey) {
-        this.accountKey = accountKey;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.blobfuseOptions = blobfuseOptions;
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
-        this.sasKey = sasKey;
-    }
+    private AzureBlobFileSystemConfigurationArgs() {}
 
-    private AzureBlobFileSystemConfigurationArgs() {
-        this.accountKey = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.blobfuseOptions = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.relativeMountPath = Codegen.empty();
-        this.sasKey = Codegen.empty();
+    private AzureBlobFileSystemConfigurationArgs(AzureBlobFileSystemConfigurationArgs $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.blobfuseOptions = $.blobfuseOptions;
+        this.containerName = $.containerName;
+        this.relativeMountPath = $.relativeMountPath;
+        this.sasKey = $.sasKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobFileSystemConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountKey;
-        private Output<String> accountName;
-        private @Nullable Output<String> blobfuseOptions;
-        private Output<String> containerName;
-        private Output<String> relativeMountPath;
-        private @Nullable Output<String> sasKey;
+        private AzureBlobFileSystemConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobFileSystemConfigurationArgs();
         }
 
         public Builder(AzureBlobFileSystemConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.blobfuseOptions = defaults.blobfuseOptions;
-    	      this.containerName = defaults.containerName;
-    	      this.relativeMountPath = defaults.relativeMountPath;
-    	      this.sasKey = defaults.sasKey;
+            $ = new AzureBlobFileSystemConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable Output<String> accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
-        public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Codegen.ofNullable(accountKey);
-            return this;
+
+        public Builder accountKey(String accountKey) {
+            return accountKey(Output.of(accountKey));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder blobfuseOptions(@Nullable Output<String> blobfuseOptions) {
-            this.blobfuseOptions = blobfuseOptions;
+            $.blobfuseOptions = blobfuseOptions;
             return this;
         }
-        public Builder blobfuseOptions(@Nullable String blobfuseOptions) {
-            this.blobfuseOptions = Codegen.ofNullable(blobfuseOptions);
-            return this;
+
+        public Builder blobfuseOptions(String blobfuseOptions) {
+            return blobfuseOptions(Output.of(blobfuseOptions));
         }
+
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder relativeMountPath(Output<String> relativeMountPath) {
-            this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
+            $.relativeMountPath = relativeMountPath;
             return this;
         }
+
         public Builder relativeMountPath(String relativeMountPath) {
-            this.relativeMountPath = Output.of(Objects.requireNonNull(relativeMountPath));
-            return this;
+            return relativeMountPath(Output.of(relativeMountPath));
         }
+
         public Builder sasKey(@Nullable Output<String> sasKey) {
-            this.sasKey = sasKey;
+            $.sasKey = sasKey;
             return this;
         }
-        public Builder sasKey(@Nullable String sasKey) {
-            this.sasKey = Codegen.ofNullable(sasKey);
-            return this;
-        }        public AzureBlobFileSystemConfigurationArgs build() {
-            return new AzureBlobFileSystemConfigurationArgs(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);
+
+        public Builder sasKey(String sasKey) {
+            return sasKey(Output.of(sasKey));
+        }
+
+        public AzureBlobFileSystemConfigurationArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.relativeMountPath = Objects.requireNonNull($.relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
+            return $;
         }
     }
+
 }

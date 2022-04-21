@@ -19,10 +19,10 @@ public final class InboundIpRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class InboundIpRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipMask")
-      private final @Nullable String ipMask;
+    private @Nullable String ipMask;
 
     public Optional<String> ipMask() {
-        return this.ipMask == null ? Optional.empty() : Optional.ofNullable(this.ipMask);
+        return Optional.ofNullable(this.ipMask);
     }
 
-    public InboundIpRuleResponse(
-        @Nullable String action,
-        @Nullable String ipMask) {
-        this.action = action;
-        this.ipMask = ipMask;
-    }
+    private InboundIpRuleResponse() {}
 
-    private InboundIpRuleResponse() {
-        this.action = null;
-        this.ipMask = null;
+    private InboundIpRuleResponse(InboundIpRuleResponse $) {
+        this.action = $.action;
+        this.ipMask = $.ipMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundIpRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private @Nullable String ipMask;
+        private InboundIpRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundIpRuleResponse();
         }
 
         public Builder(InboundIpRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.ipMask = defaults.ipMask;
+            $ = new InboundIpRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = ipMask;
+            $.ipMask = ipMask;
             return this;
-        }        public InboundIpRuleResponse build() {
-            return new InboundIpRuleResponse(action, ipMask);
+        }
+
+        public InboundIpRuleResponse build() {
+            return $;
         }
     }
+
 }

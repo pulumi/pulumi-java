@@ -9,7 +9,6 @@ import com.pulumi.azurenative.insights.inputs.MetricAlertSingleResourceMultipleM
 import com.pulumi.azurenative.insights.inputs.WebtestLocationAvailabilityCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<MetricAlertActionArgs>> actions;
+    private @Nullable Output<List<MetricAlertActionArgs>> actions;
 
-    public Output<List<MetricAlertActionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<MetricAlertActionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoMitigate")
-      private final @Nullable Output<Boolean> autoMitigate;
+    private @Nullable Output<Boolean> autoMitigate;
 
-    public Output<Boolean> autoMitigate() {
-        return this.autoMitigate == null ? Codegen.empty() : this.autoMitigate;
+    public Optional<Output<Boolean>> autoMitigate() {
+        return Optional.ofNullable(this.autoMitigate);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="criteria", required=true)
-      private final Output<Object> criteria;
+    private Output<Object> criteria;
 
     public Output<Object> criteria() {
         return this.criteria;
@@ -62,10 +62,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -84,7 +84,7 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="evaluationFrequency", required=true)
-      private final Output<String> evaluationFrequency;
+    private Output<String> evaluationFrequency;
 
     public Output<String> evaluationFrequency() {
         return this.evaluationFrequency;
@@ -95,10 +95,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -117,10 +117,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopes", required=true)
-      private final Output<List<String>> scopes;
+    private Output<List<String>> scopes;
 
     public Output<List<String>> scopes() {
         return this.scopes;
@@ -139,7 +139,7 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<Integer> severity;
+    private Output<Integer> severity;
 
     public Output<Integer> severity() {
         return this.severity;
@@ -150,10 +150,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetResourceRegion")
-      private final @Nullable Output<String> targetResourceRegion;
+    private @Nullable Output<String> targetResourceRegion;
 
-    public Output<String> targetResourceRegion() {
-        return this.targetResourceRegion == null ? Codegen.empty() : this.targetResourceRegion;
+    public Optional<Output<String>> targetResourceRegion() {
+        return Optional.ofNullable(this.targetResourceRegion);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetResourceType")
-      private final @Nullable Output<String> targetResourceType;
+    private @Nullable Output<String> targetResourceType;
 
-    public Output<String> targetResourceType() {
-        return this.targetResourceType == null ? Codegen.empty() : this.targetResourceType;
+    public Optional<Output<String>> targetResourceType() {
+        return Optional.ofNullable(this.targetResourceType);
     }
 
     /**
@@ -183,238 +183,203 @@ public final class MetricAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowSize", required=true)
-      private final Output<String> windowSize;
+    private Output<String> windowSize;
 
     public Output<String> windowSize() {
         return this.windowSize;
     }
 
-    public MetricAlertArgs(
-        @Nullable Output<List<MetricAlertActionArgs>> actions,
-        @Nullable Output<Boolean> autoMitigate,
-        Output<Object> criteria,
-        @Nullable Output<String> description,
-        Output<Boolean> enabled,
-        Output<String> evaluationFrequency,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleName,
-        Output<List<String>> scopes,
-        Output<Integer> severity,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> targetResourceRegion,
-        @Nullable Output<String> targetResourceType,
-        Output<String> windowSize) {
-        this.actions = actions;
-        this.autoMitigate = autoMitigate;
-        this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
-        this.description = description;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency, "expected parameter 'evaluationFrequency' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = ruleName;
-        this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.tags = tags;
-        this.targetResourceRegion = targetResourceRegion;
-        this.targetResourceType = targetResourceType;
-        this.windowSize = Objects.requireNonNull(windowSize, "expected parameter 'windowSize' to be non-null");
-    }
+    private MetricAlertArgs() {}
 
-    private MetricAlertArgs() {
-        this.actions = Codegen.empty();
-        this.autoMitigate = Codegen.empty();
-        this.criteria = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.evaluationFrequency = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetResourceRegion = Codegen.empty();
-        this.targetResourceType = Codegen.empty();
-        this.windowSize = Codegen.empty();
+    private MetricAlertArgs(MetricAlertArgs $) {
+        this.actions = $.actions;
+        this.autoMitigate = $.autoMitigate;
+        this.criteria = $.criteria;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.evaluationFrequency = $.evaluationFrequency;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.scopes = $.scopes;
+        this.severity = $.severity;
+        this.tags = $.tags;
+        this.targetResourceRegion = $.targetResourceRegion;
+        this.targetResourceType = $.targetResourceType;
+        this.windowSize = $.windowSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MetricAlertActionArgs>> actions;
-        private @Nullable Output<Boolean> autoMitigate;
-        private Output<Object> criteria;
-        private @Nullable Output<String> description;
-        private Output<Boolean> enabled;
-        private Output<String> evaluationFrequency;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleName;
-        private Output<List<String>> scopes;
-        private Output<Integer> severity;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> targetResourceRegion;
-        private @Nullable Output<String> targetResourceType;
-        private Output<String> windowSize;
+        private MetricAlertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlertArgs();
         }
 
         public Builder(MetricAlertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.autoMitigate = defaults.autoMitigate;
-    	      this.criteria = defaults.criteria;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.evaluationFrequency = defaults.evaluationFrequency;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.scopes = defaults.scopes;
-    	      this.severity = defaults.severity;
-    	      this.tags = defaults.tags;
-    	      this.targetResourceRegion = defaults.targetResourceRegion;
-    	      this.targetResourceType = defaults.targetResourceType;
-    	      this.windowSize = defaults.windowSize;
+            $ = new MetricAlertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<MetricAlertActionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<MetricAlertActionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<MetricAlertActionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(MetricAlertActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
-            this.autoMitigate = autoMitigate;
+            $.autoMitigate = autoMitigate;
             return this;
         }
-        public Builder autoMitigate(@Nullable Boolean autoMitigate) {
-            this.autoMitigate = Codegen.ofNullable(autoMitigate);
-            return this;
+
+        public Builder autoMitigate(Boolean autoMitigate) {
+            return autoMitigate(Output.of(autoMitigate));
         }
+
         public Builder criteria(Output<Object> criteria) {
-            this.criteria = Objects.requireNonNull(criteria);
+            $.criteria = criteria;
             return this;
         }
+
         public Builder criteria(Object criteria) {
-            this.criteria = Output.of(Objects.requireNonNull(criteria));
-            return this;
+            return criteria(Output.of(criteria));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder evaluationFrequency(Output<String> evaluationFrequency) {
-            this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
+            $.evaluationFrequency = evaluationFrequency;
             return this;
         }
+
         public Builder evaluationFrequency(String evaluationFrequency) {
-            this.evaluationFrequency = Output.of(Objects.requireNonNull(evaluationFrequency));
-            return this;
+            return evaluationFrequency(Output.of(evaluationFrequency));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder scopes(Output<List<String>> scopes) {
-            this.scopes = Objects.requireNonNull(scopes);
+            $.scopes = scopes;
             return this;
         }
+
         public Builder scopes(List<String> scopes) {
-            this.scopes = Output.of(Objects.requireNonNull(scopes));
-            return this;
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder severity(Output<Integer> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(Integer severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
+            return severity(Output.of(severity));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetResourceRegion(@Nullable Output<String> targetResourceRegion) {
-            this.targetResourceRegion = targetResourceRegion;
+            $.targetResourceRegion = targetResourceRegion;
             return this;
         }
-        public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
-            this.targetResourceRegion = Codegen.ofNullable(targetResourceRegion);
-            return this;
+
+        public Builder targetResourceRegion(String targetResourceRegion) {
+            return targetResourceRegion(Output.of(targetResourceRegion));
         }
+
         public Builder targetResourceType(@Nullable Output<String> targetResourceType) {
-            this.targetResourceType = targetResourceType;
+            $.targetResourceType = targetResourceType;
             return this;
         }
-        public Builder targetResourceType(@Nullable String targetResourceType) {
-            this.targetResourceType = Codegen.ofNullable(targetResourceType);
-            return this;
+
+        public Builder targetResourceType(String targetResourceType) {
+            return targetResourceType(Output.of(targetResourceType));
         }
+
         public Builder windowSize(Output<String> windowSize) {
-            this.windowSize = Objects.requireNonNull(windowSize);
+            $.windowSize = windowSize;
             return this;
         }
+
         public Builder windowSize(String windowSize) {
-            this.windowSize = Output.of(Objects.requireNonNull(windowSize));
-            return this;
-        }        public MetricAlertArgs build() {
-            return new MetricAlertArgs(actions, autoMitigate, criteria, description, enabled, evaluationFrequency, location, resourceGroupName, ruleName, scopes, severity, tags, targetResourceRegion, targetResourceType, windowSize);
+            return windowSize(Output.of(windowSize));
+        }
+
+        public MetricAlertArgs build() {
+            $.criteria = Objects.requireNonNull($.criteria, "expected parameter 'criteria' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.evaluationFrequency = Objects.requireNonNull($.evaluationFrequency, "expected parameter 'evaluationFrequency' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scopes = Objects.requireNonNull($.scopes, "expected parameter 'scopes' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.windowSize = Objects.requireNonNull($.windowSize, "expected parameter 'windowSize' to be non-null");
+            return $;
         }
     }
+
 }

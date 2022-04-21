@@ -22,7 +22,7 @@ public final class ErrorAdditionalInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="info", required=true)
-      private final Object info;
+    private Object info;
 
     public Object info() {
         return this.info;
@@ -33,55 +33,52 @@ public final class ErrorAdditionalInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ErrorAdditionalInfoResponse(
-        Object info,
-        String type) {
-        this.info = Objects.requireNonNull(info, "expected parameter 'info' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ErrorAdditionalInfoResponse() {}
 
-    private ErrorAdditionalInfoResponse() {
-        this.info = null;
-        this.type = null;
+    private ErrorAdditionalInfoResponse(ErrorAdditionalInfoResponse $) {
+        this.info = $.info;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorAdditionalInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object info;
-        private String type;
+        private ErrorAdditionalInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorAdditionalInfoResponse();
         }
 
         public Builder(ErrorAdditionalInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.info = defaults.info;
-    	      this.type = defaults.type;
+            $ = new ErrorAdditionalInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder info(Object info) {
-            this.info = Objects.requireNonNull(info);
+            $.info = info;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ErrorAdditionalInfoResponse build() {
-            return new ErrorAdditionalInfoResponse(info, type);
+        }
+
+        public ErrorAdditionalInfoResponse build() {
+            $.info = Objects.requireNonNull($.info, "expected parameter 'info' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

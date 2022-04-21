@@ -17,65 +17,62 @@ public final class SkuResourceResponseProperties extends com.pulumi.resources.In
     public static final SkuResourceResponseProperties Empty = new SkuResourceResponseProperties();
 
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="skuSettings", required=true)
-      private final List<SkuSettingResponse> skuSettings;
+    private List<SkuSettingResponse> skuSettings;
 
     public List<SkuSettingResponse> skuSettings() {
         return this.skuSettings;
     }
 
-    public SkuResourceResponseProperties(
-        @Nullable String provisioningState,
-        List<SkuSettingResponse> skuSettings) {
-        this.provisioningState = provisioningState;
-        this.skuSettings = Objects.requireNonNull(skuSettings, "expected parameter 'skuSettings' to be non-null");
-    }
+    private SkuResourceResponseProperties() {}
 
-    private SkuResourceResponseProperties() {
-        this.provisioningState = null;
-        this.skuSettings = List.of();
+    private SkuResourceResponseProperties(SkuResourceResponseProperties $) {
+        this.provisioningState = $.provisioningState;
+        this.skuSettings = $.skuSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuResourceResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provisioningState;
-        private List<SkuSettingResponse> skuSettings;
+        private SkuResourceResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuResourceResponseProperties();
         }
 
         public Builder(SkuResourceResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.skuSettings = defaults.skuSettings;
+            $ = new SkuResourceResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder skuSettings(List<SkuSettingResponse> skuSettings) {
-            this.skuSettings = Objects.requireNonNull(skuSettings);
+            $.skuSettings = skuSettings;
             return this;
         }
+
         public Builder skuSettings(SkuSettingResponse... skuSettings) {
             return skuSettings(List.of(skuSettings));
-        }        public SkuResourceResponseProperties build() {
-            return new SkuResourceResponseProperties(provisioningState, skuSettings);
+        }
+
+        public SkuResourceResponseProperties build() {
+            $.skuSettings = Objects.requireNonNull($.skuSettings, "expected parameter 'skuSettings' to be non-null");
+            return $;
         }
     }
+
 }

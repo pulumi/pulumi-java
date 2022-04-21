@@ -23,10 +23,10 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="field")
-      private final @Nullable String field;
+    private @Nullable String field;
 
     public Optional<String> field() {
-        return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class OrderBy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="order")
-      private final @Nullable String order;
+    private @Nullable String order;
 
     public Optional<String> order() {
-        return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
+        return Optional.ofNullable(this.order);
     }
 
-    public OrderBy(
-        @Nullable String field,
-        @Nullable String order) {
-        this.field = field;
-        this.order = order;
-    }
+    private OrderBy() {}
 
-    private OrderBy() {
-        this.field = null;
-        this.order = null;
+    private OrderBy(OrderBy $) {
+        this.field = $.field;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderBy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String field;
-        private @Nullable String order;
+        private OrderBy $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderBy();
         }
 
         public Builder(OrderBy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.order = defaults.order;
+            $ = new OrderBy(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable String field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
+
         public Builder order(@Nullable String order) {
-            this.order = order;
+            $.order = order;
             return this;
-        }        public OrderBy build() {
-            return new OrderBy(field, order);
+        }
+
+        public OrderBy build() {
+            return $;
         }
     }
+
 }

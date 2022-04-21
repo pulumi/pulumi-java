@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -31,7 +31,7 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final Output<String> workspaceId;
+    private Output<String> workspaceId;
 
     public Output<String> workspaceId() {
         return this.workspaceId;
@@ -42,76 +42,70 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workspaceSettingName")
-      private final @Nullable Output<String> workspaceSettingName;
+    private @Nullable Output<String> workspaceSettingName;
 
-    public Output<String> workspaceSettingName() {
-        return this.workspaceSettingName == null ? Codegen.empty() : this.workspaceSettingName;
+    public Optional<Output<String>> workspaceSettingName() {
+        return Optional.ofNullable(this.workspaceSettingName);
     }
 
-    public WorkspaceSettingArgs(
-        Output<String> scope,
-        Output<String> workspaceId,
-        @Nullable Output<String> workspaceSettingName) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-        this.workspaceSettingName = workspaceSettingName;
-    }
+    private WorkspaceSettingArgs() {}
 
-    private WorkspaceSettingArgs() {
-        this.scope = Codegen.empty();
-        this.workspaceId = Codegen.empty();
-        this.workspaceSettingName = Codegen.empty();
+    private WorkspaceSettingArgs(WorkspaceSettingArgs $) {
+        this.scope = $.scope;
+        this.workspaceId = $.workspaceId;
+        this.workspaceSettingName = $.workspaceSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> scope;
-        private Output<String> workspaceId;
-        private @Nullable Output<String> workspaceSettingName;
+        private WorkspaceSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceSettingArgs();
         }
 
         public Builder(WorkspaceSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceSettingName = defaults.workspaceSettingName;
+            $ = new WorkspaceSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder workspaceId(Output<String> workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
-            return this;
+            return workspaceId(Output.of(workspaceId));
         }
+
         public Builder workspaceSettingName(@Nullable Output<String> workspaceSettingName) {
-            this.workspaceSettingName = workspaceSettingName;
+            $.workspaceSettingName = workspaceSettingName;
             return this;
         }
-        public Builder workspaceSettingName(@Nullable String workspaceSettingName) {
-            this.workspaceSettingName = Codegen.ofNullable(workspaceSettingName);
-            return this;
-        }        public WorkspaceSettingArgs build() {
-            return new WorkspaceSettingArgs(scope, workspaceId, workspaceSettingName);
+
+        public Builder workspaceSettingName(String workspaceSettingName) {
+            return workspaceSettingName(Output.of(workspaceSettingName));
+        }
+
+        public WorkspaceSettingArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeArgs;
 import com.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="compute", required=true)
-      private final Output<KubernetesRoleComputeArgs> compute;
+    private Output<KubernetesRoleComputeArgs> compute;
 
     public Output<KubernetesRoleComputeArgs> compute() {
         return this.compute;
@@ -36,63 +36,59 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="storage")
-      private final @Nullable Output<KubernetesRoleStorageArgs> storage;
+    private @Nullable Output<KubernetesRoleStorageArgs> storage;
 
-    public Output<KubernetesRoleStorageArgs> storage() {
-        return this.storage == null ? Codegen.empty() : this.storage;
+    public Optional<Output<KubernetesRoleStorageArgs>> storage() {
+        return Optional.ofNullable(this.storage);
     }
 
-    public KubernetesRoleResourcesArgs(
-        Output<KubernetesRoleComputeArgs> compute,
-        @Nullable Output<KubernetesRoleStorageArgs> storage) {
-        this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
-        this.storage = storage;
-    }
+    private KubernetesRoleResourcesArgs() {}
 
-    private KubernetesRoleResourcesArgs() {
-        this.compute = Codegen.empty();
-        this.storage = Codegen.empty();
+    private KubernetesRoleResourcesArgs(KubernetesRoleResourcesArgs $) {
+        this.compute = $.compute;
+        this.storage = $.storage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<KubernetesRoleComputeArgs> compute;
-        private @Nullable Output<KubernetesRoleStorageArgs> storage;
+        private KubernetesRoleResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleResourcesArgs();
         }
 
         public Builder(KubernetesRoleResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compute = defaults.compute;
-    	      this.storage = defaults.storage;
+            $ = new KubernetesRoleResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compute(Output<KubernetesRoleComputeArgs> compute) {
-            this.compute = Objects.requireNonNull(compute);
+            $.compute = compute;
             return this;
         }
+
         public Builder compute(KubernetesRoleComputeArgs compute) {
-            this.compute = Output.of(Objects.requireNonNull(compute));
-            return this;
+            return compute(Output.of(compute));
         }
+
         public Builder storage(@Nullable Output<KubernetesRoleStorageArgs> storage) {
-            this.storage = storage;
+            $.storage = storage;
             return this;
         }
-        public Builder storage(@Nullable KubernetesRoleStorageArgs storage) {
-            this.storage = Codegen.ofNullable(storage);
-            return this;
-        }        public KubernetesRoleResourcesArgs build() {
-            return new KubernetesRoleResourcesArgs(compute, storage);
+
+        public Builder storage(KubernetesRoleStorageArgs storage) {
+            return storage(Output.of(storage));
+        }
+
+        public KubernetesRoleResourcesArgs build() {
+            $.compute = Objects.requireNonNull($.compute, "expected parameter 'compute' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.sql.inputs.ManagedInstancePrivateEndpointPropertyA
 import com.pulumi.azurenative.sql.inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -33,17 +33,17 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
+    private @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
-    public Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint() {
-        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
+    public Optional<Output<ManagedInstancePrivateEndpointPropertyArgs>> privateEndpoint() {
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     @Import(name="privateEndpointConnectionName")
-      private final @Nullable Output<String> privateEndpointConnectionName;
+    private @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> privateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
+    public Optional<Output<String>> privateEndpointConnectionName() {
+        return Optional.ofNullable(this.privateEndpointConnectionName);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
-    public Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -62,102 +62,90 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagedInstancePrivateEndpointConnectionArgs(
-        Output<String> managedInstanceName,
-        @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint,
-        @Nullable Output<String> privateEndpointConnectionName,
-        @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState,
-        Output<String> resourceGroupName) {
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.privateEndpoint = privateEndpoint;
-        this.privateEndpointConnectionName = privateEndpointConnectionName;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagedInstancePrivateEndpointConnectionArgs() {}
 
-    private ManagedInstancePrivateEndpointConnectionArgs() {
-        this.managedInstanceName = Codegen.empty();
-        this.privateEndpoint = Codegen.empty();
-        this.privateEndpointConnectionName = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagedInstancePrivateEndpointConnectionArgs(ManagedInstancePrivateEndpointConnectionArgs $) {
+        this.managedInstanceName = $.managedInstanceName;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstancePrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> managedInstanceName;
-        private @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
-        private @Nullable Output<String> privateEndpointConnectionName;
-        private @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
-        private Output<String> resourceGroupName;
+        private ManagedInstancePrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstancePrivateEndpointConnectionArgs();
         }
 
         public Builder(ManagedInstancePrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagedInstancePrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder privateEndpoint(@Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
-        public Builder privateEndpoint(@Nullable ManagedInstancePrivateEndpointPropertyArgs privateEndpoint) {
-            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
-            return this;
+
+        public Builder privateEndpoint(ManagedInstancePrivateEndpointPropertyArgs privateEndpoint) {
+            return privateEndpoint(Output.of(privateEndpoint));
         }
+
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = privateEndpointConnectionName;
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
-            return this;
+
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
+
+        public Builder privateLinkServiceConnectionState(ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagedInstancePrivateEndpointConnectionArgs build() {
-            return new ManagedInstancePrivateEndpointConnectionArgs(managedInstanceName, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagedInstancePrivateEndpointConnectionArgs build() {
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

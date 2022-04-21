@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kusto;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -31,7 +31,7 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="groupId", required=true)
-      private final Output<String> groupId;
+    private Output<String> groupId;
 
     public Output<String> groupId() {
         return this.groupId;
@@ -42,10 +42,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="managedPrivateEndpointName")
-      private final @Nullable Output<String> managedPrivateEndpointName;
+    private @Nullable Output<String> managedPrivateEndpointName;
 
-    public Output<String> managedPrivateEndpointName() {
-        return this.managedPrivateEndpointName == null ? Codegen.empty() : this.managedPrivateEndpointName;
+    public Optional<Output<String>> managedPrivateEndpointName() {
+        return Optional.ofNullable(this.managedPrivateEndpointName);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateLinkResourceId", required=true)
-      private final Output<String> privateLinkResourceId;
+    private Output<String> privateLinkResourceId;
 
     public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId;
@@ -64,10 +64,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateLinkResourceRegion")
-      private final @Nullable Output<String> privateLinkResourceRegion;
+    private @Nullable Output<String> privateLinkResourceRegion;
 
-    public Output<String> privateLinkResourceRegion() {
-        return this.privateLinkResourceRegion == null ? Codegen.empty() : this.privateLinkResourceRegion;
+    public Optional<Output<String>> privateLinkResourceRegion() {
+        return Optional.ofNullable(this.privateLinkResourceRegion);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable Output<String> requestMessage;
+    private @Nullable Output<String> requestMessage;
 
-    public Output<String> requestMessage() {
-        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
+    public Optional<Output<String>> requestMessage() {
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -86,128 +86,112 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagedPrivateEndpointArgs(
-        Output<String> clusterName,
-        Output<String> groupId,
-        @Nullable Output<String> managedPrivateEndpointName,
-        Output<String> privateLinkResourceId,
-        @Nullable Output<String> privateLinkResourceRegion,
-        @Nullable Output<String> requestMessage,
-        Output<String> resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.managedPrivateEndpointName = managedPrivateEndpointName;
-        this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId, "expected parameter 'privateLinkResourceId' to be non-null");
-        this.privateLinkResourceRegion = privateLinkResourceRegion;
-        this.requestMessage = requestMessage;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagedPrivateEndpointArgs() {}
 
-    private ManagedPrivateEndpointArgs() {
-        this.clusterName = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.managedPrivateEndpointName = Codegen.empty();
-        this.privateLinkResourceId = Codegen.empty();
-        this.privateLinkResourceRegion = Codegen.empty();
-        this.requestMessage = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagedPrivateEndpointArgs(ManagedPrivateEndpointArgs $) {
+        this.clusterName = $.clusterName;
+        this.groupId = $.groupId;
+        this.managedPrivateEndpointName = $.managedPrivateEndpointName;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.privateLinkResourceRegion = $.privateLinkResourceRegion;
+        this.requestMessage = $.requestMessage;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private Output<String> groupId;
-        private @Nullable Output<String> managedPrivateEndpointName;
-        private Output<String> privateLinkResourceId;
-        private @Nullable Output<String> privateLinkResourceRegion;
-        private @Nullable Output<String> requestMessage;
-        private Output<String> resourceGroupName;
+        private ManagedPrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrivateEndpointArgs();
         }
 
         public Builder(ManagedPrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.groupId = defaults.groupId;
-    	      this.managedPrivateEndpointName = defaults.managedPrivateEndpointName;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.privateLinkResourceRegion = defaults.privateLinkResourceRegion;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder groupId(Output<String> groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Output.of(Objects.requireNonNull(groupId));
-            return this;
+            return groupId(Output.of(groupId));
         }
+
         public Builder managedPrivateEndpointName(@Nullable Output<String> managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = managedPrivateEndpointName;
+            $.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
-        public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = Codegen.ofNullable(managedPrivateEndpointName);
-            return this;
+
+        public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
+            return managedPrivateEndpointName(Output.of(managedPrivateEndpointName));
         }
+
         public Builder privateLinkResourceId(Output<String> privateLinkResourceId) {
-            this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder privateLinkResourceId(String privateLinkResourceId) {
-            this.privateLinkResourceId = Output.of(Objects.requireNonNull(privateLinkResourceId));
-            return this;
+            return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
+
         public Builder privateLinkResourceRegion(@Nullable Output<String> privateLinkResourceRegion) {
-            this.privateLinkResourceRegion = privateLinkResourceRegion;
+            $.privateLinkResourceRegion = privateLinkResourceRegion;
             return this;
         }
-        public Builder privateLinkResourceRegion(@Nullable String privateLinkResourceRegion) {
-            this.privateLinkResourceRegion = Codegen.ofNullable(privateLinkResourceRegion);
-            return this;
+
+        public Builder privateLinkResourceRegion(String privateLinkResourceRegion) {
+            return privateLinkResourceRegion(Output.of(privateLinkResourceRegion));
         }
+
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Codegen.ofNullable(requestMessage);
-            return this;
+
+        public Builder requestMessage(String requestMessage) {
+            return requestMessage(Output.of(requestMessage));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagedPrivateEndpointArgs build() {
-            return new ManagedPrivateEndpointArgs(clusterName, groupId, managedPrivateEndpointName, privateLinkResourceId, privateLinkResourceRegion, requestMessage, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagedPrivateEndpointArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.privateLinkResourceId = Objects.requireNonNull($.privateLinkResourceId, "expected parameter 'privateLinkResourceId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class GatewayCustomDomainPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public GatewayCustomDomainPropertiesResponse(@Nullable String thumbprint) {
-        this.thumbprint = thumbprint;
-    }
+    private GatewayCustomDomainPropertiesResponse() {}
 
-    private GatewayCustomDomainPropertiesResponse() {
-        this.thumbprint = null;
+    private GatewayCustomDomainPropertiesResponse(GatewayCustomDomainPropertiesResponse $) {
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayCustomDomainPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String thumbprint;
+        private GatewayCustomDomainPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayCustomDomainPropertiesResponse();
         }
 
         public Builder(GatewayCustomDomainPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new GatewayCustomDomainPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public GatewayCustomDomainPropertiesResponse build() {
-            return new GatewayCustomDomainPropertiesResponse(thumbprint);
+        }
+
+        public GatewayCustomDomainPropertiesResponse build() {
+            return $;
         }
     }
+
 }

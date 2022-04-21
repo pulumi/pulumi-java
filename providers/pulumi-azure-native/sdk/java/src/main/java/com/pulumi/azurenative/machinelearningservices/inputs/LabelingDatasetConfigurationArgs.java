@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="assetName", required=true)
-      private final Output<String> assetName;
+    private Output<String> assetName;
 
     public Output<String> assetName() {
         return this.assetName;
@@ -36,7 +36,7 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="datasetVersion", required=true)
-      private final Output<String> datasetVersion;
+    private Output<String> datasetVersion;
 
     public Output<String> datasetVersion() {
         return this.datasetVersion;
@@ -47,76 +47,70 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enableIncrementalDatasetRefresh")
-      private final @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
+    private @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
 
-    public Output<Boolean> enableIncrementalDatasetRefresh() {
-        return this.enableIncrementalDatasetRefresh == null ? Codegen.empty() : this.enableIncrementalDatasetRefresh;
+    public Optional<Output<Boolean>> enableIncrementalDatasetRefresh() {
+        return Optional.ofNullable(this.enableIncrementalDatasetRefresh);
     }
 
-    public LabelingDatasetConfigurationArgs(
-        Output<String> assetName,
-        Output<String> datasetVersion,
-        @Nullable Output<Boolean> enableIncrementalDatasetRefresh) {
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.datasetVersion = Objects.requireNonNull(datasetVersion, "expected parameter 'datasetVersion' to be non-null");
-        this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
-    }
+    private LabelingDatasetConfigurationArgs() {}
 
-    private LabelingDatasetConfigurationArgs() {
-        this.assetName = Codegen.empty();
-        this.datasetVersion = Codegen.empty();
-        this.enableIncrementalDatasetRefresh = Codegen.empty();
+    private LabelingDatasetConfigurationArgs(LabelingDatasetConfigurationArgs $) {
+        this.assetName = $.assetName;
+        this.datasetVersion = $.datasetVersion;
+        this.enableIncrementalDatasetRefresh = $.enableIncrementalDatasetRefresh;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingDatasetConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> assetName;
-        private Output<String> datasetVersion;
-        private @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
+        private LabelingDatasetConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingDatasetConfigurationArgs();
         }
 
         public Builder(LabelingDatasetConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetName = defaults.assetName;
-    	      this.datasetVersion = defaults.datasetVersion;
-    	      this.enableIncrementalDatasetRefresh = defaults.enableIncrementalDatasetRefresh;
+            $ = new LabelingDatasetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetName(Output<String> assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Output.of(Objects.requireNonNull(assetName));
-            return this;
+            return assetName(Output.of(assetName));
         }
+
         public Builder datasetVersion(Output<String> datasetVersion) {
-            this.datasetVersion = Objects.requireNonNull(datasetVersion);
+            $.datasetVersion = datasetVersion;
             return this;
         }
+
         public Builder datasetVersion(String datasetVersion) {
-            this.datasetVersion = Output.of(Objects.requireNonNull(datasetVersion));
-            return this;
+            return datasetVersion(Output.of(datasetVersion));
         }
+
         public Builder enableIncrementalDatasetRefresh(@Nullable Output<Boolean> enableIncrementalDatasetRefresh) {
-            this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
+            $.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;
         }
-        public Builder enableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
-            this.enableIncrementalDatasetRefresh = Codegen.ofNullable(enableIncrementalDatasetRefresh);
-            return this;
-        }        public LabelingDatasetConfigurationArgs build() {
-            return new LabelingDatasetConfigurationArgs(assetName, datasetVersion, enableIncrementalDatasetRefresh);
+
+        public Builder enableIncrementalDatasetRefresh(Boolean enableIncrementalDatasetRefresh) {
+            return enableIncrementalDatasetRefresh(Output.of(enableIncrementalDatasetRefresh));
+        }
+
+        public LabelingDatasetConfigurationArgs build() {
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.datasetVersion = Objects.requireNonNull($.datasetVersion, "expected parameter 'datasetVersion' to be non-null");
+            return $;
         }
     }
+
 }

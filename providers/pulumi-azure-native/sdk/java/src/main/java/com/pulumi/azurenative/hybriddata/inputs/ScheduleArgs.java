@@ -5,10 +5,10 @@ package com.pulumi.azurenative.hybriddata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyList")
-      private final @Nullable Output<List<String>> policyList;
+    private @Nullable Output<List<String>> policyList;
 
-    public Output<List<String>> policyList() {
-        return this.policyList == null ? Codegen.empty() : this.policyList;
+    public Optional<Output<List<String>>> policyList() {
+        return Optional.ofNullable(this.policyList);
     }
 
-    public ScheduleArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> policyList) {
-        this.name = name;
-        this.policyList = policyList;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.name = Codegen.empty();
-        this.policyList = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.name = $.name;
+        this.policyList = $.policyList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> policyList;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.policyList = defaults.policyList;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyList(@Nullable Output<List<String>> policyList) {
-            this.policyList = policyList;
+            $.policyList = policyList;
             return this;
         }
-        public Builder policyList(@Nullable List<String> policyList) {
-            this.policyList = Codegen.ofNullable(policyList);
-            return this;
+
+        public Builder policyList(List<String> policyList) {
+            return policyList(Output.of(policyList));
         }
+
         public Builder policyList(String... policyList) {
             return policyList(List.of(policyList));
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(name, policyList);
+        }
+
+        public ScheduleArgs build() {
+            return $;
         }
     }
+
 }

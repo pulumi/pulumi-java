@@ -23,10 +23,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ApiKeyResponse(
-        @Nullable String keyName,
-        @Nullable String value) {
-        this.keyName = keyName;
-        this.value = value;
-    }
+    private ApiKeyResponse() {}
 
-    private ApiKeyResponse() {
-        this.keyName = null;
-        this.value = null;
+    private ApiKeyResponse(ApiKeyResponse $) {
+        this.keyName = $.keyName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyName;
-        private @Nullable String value;
+        private ApiKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyResponse();
         }
 
         public Builder(ApiKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.value = defaults.value;
+            $ = new ApiKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ApiKeyResponse build() {
-            return new ApiKeyResponse(keyName, value);
+        }
+
+        public ApiKeyResponse build() {
+            return $;
         }
     }
+
 }

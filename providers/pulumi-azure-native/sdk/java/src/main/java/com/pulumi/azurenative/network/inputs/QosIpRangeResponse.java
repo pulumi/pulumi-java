@@ -23,10 +23,10 @@ public final class QosIpRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endIP")
-      private final @Nullable String endIP;
+    private @Nullable String endIP;
 
     public Optional<String> endIP() {
-        return this.endIP == null ? Optional.empty() : Optional.ofNullable(this.endIP);
+        return Optional.ofNullable(this.endIP);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class QosIpRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startIP")
-      private final @Nullable String startIP;
+    private @Nullable String startIP;
 
     public Optional<String> startIP() {
-        return this.startIP == null ? Optional.empty() : Optional.ofNullable(this.startIP);
+        return Optional.ofNullable(this.startIP);
     }
 
-    public QosIpRangeResponse(
-        @Nullable String endIP,
-        @Nullable String startIP) {
-        this.endIP = endIP;
-        this.startIP = startIP;
-    }
+    private QosIpRangeResponse() {}
 
-    private QosIpRangeResponse() {
-        this.endIP = null;
-        this.startIP = null;
+    private QosIpRangeResponse(QosIpRangeResponse $) {
+        this.endIP = $.endIP;
+        this.startIP = $.startIP;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QosIpRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endIP;
-        private @Nullable String startIP;
+        private QosIpRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QosIpRangeResponse();
         }
 
         public Builder(QosIpRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endIP = defaults.endIP;
-    	      this.startIP = defaults.startIP;
+            $ = new QosIpRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endIP(@Nullable String endIP) {
-            this.endIP = endIP;
+            $.endIP = endIP;
             return this;
         }
+
         public Builder startIP(@Nullable String startIP) {
-            this.startIP = startIP;
+            $.startIP = startIP;
             return this;
-        }        public QosIpRangeResponse build() {
-            return new QosIpRangeResponse(endIP, startIP);
+        }
+
+        public QosIpRangeResponse build() {
+            return $;
         }
     }
+
 }

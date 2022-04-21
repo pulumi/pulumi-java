@@ -25,7 +25,7 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
+    private Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
 
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint() {
         return this.endpoint;
@@ -36,7 +36,7 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -48,7 +48,7 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -59,73 +59,66 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="transport", required=true)
-      private final String transport;
+    private String transport;
 
     public String transport() {
         return this.transport;
     }
 
-    public MediaGraphRtspSourceResponse(
-        Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
-        String name,
-        String odataType,
-        String transport) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.transport = Objects.requireNonNull(transport, "expected parameter 'transport' to be non-null");
-    }
+    private MediaGraphRtspSourceResponse() {}
 
-    private MediaGraphRtspSourceResponse() {
-        this.endpoint = null;
-        this.name = null;
-        this.odataType = null;
-        this.transport = null;
+    private MediaGraphRtspSourceResponse(MediaGraphRtspSourceResponse $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
+        this.odataType = $.odataType;
+        this.transport = $.transport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphRtspSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
-        private String name;
-        private String odataType;
-        private String transport;
+        private MediaGraphRtspSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphRtspSourceResponse();
         }
 
         public Builder(MediaGraphRtspSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
-    	      this.odataType = defaults.odataType;
-    	      this.transport = defaults.transport;
+            $ = new MediaGraphRtspSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder transport(String transport) {
-            this.transport = Objects.requireNonNull(transport);
+            $.transport = transport;
             return this;
-        }        public MediaGraphRtspSourceResponse build() {
-            return new MediaGraphRtspSourceResponse(endpoint, name, odataType, transport);
+        }
+
+        public MediaGraphRtspSourceResponse build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.transport = Objects.requireNonNull($.transport, "expected parameter 'transport' to be non-null");
+            return $;
         }
     }
+
 }

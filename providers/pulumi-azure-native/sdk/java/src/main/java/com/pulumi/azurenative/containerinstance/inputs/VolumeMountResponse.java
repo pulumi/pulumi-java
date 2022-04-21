@@ -24,7 +24,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mountPath", required=true)
-      private final String mountPath;
+    private String mountPath;
 
     public String mountPath() {
         return this.mountPath;
@@ -35,7 +35,7 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,64 +46,58 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Boolean readOnly;
+    private @Nullable Boolean readOnly;
 
     public Optional<Boolean> readOnly() {
-        return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public VolumeMountResponse(
-        String mountPath,
-        String name,
-        @Nullable Boolean readOnly) {
-        this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private VolumeMountResponse() {}
 
-    private VolumeMountResponse() {
-        this.mountPath = null;
-        this.name = null;
-        this.readOnly = null;
+    private VolumeMountResponse(VolumeMountResponse $) {
+        this.mountPath = $.mountPath;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeMountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPath;
-        private String name;
-        private @Nullable Boolean readOnly;
+        private VolumeMountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeMountResponse();
         }
 
         public Builder(VolumeMountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
+            $ = new VolumeMountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(String mountPath) {
-            this.mountPath = Objects.requireNonNull(mountPath);
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
-        }        public VolumeMountResponse build() {
-            return new VolumeMountResponse(mountPath, name, readOnly);
+        }
+
+        public VolumeMountResponse build() {
+            $.mountPath = Objects.requireNonNull($.mountPath, "expected parameter 'mountPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -11,11 +11,11 @@ import com.pulumi.azurenative.consumption.inputs.NotificationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amount", required=true)
-      private final Output<Double> amount;
+    private Output<Double> amount;
 
     public Output<Double> amount() {
         return this.amount;
@@ -39,10 +39,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="budgetName")
-      private final @Nullable Output<String> budgetName;
+    private @Nullable Output<String> budgetName;
 
-    public Output<String> budgetName() {
-        return this.budgetName == null ? Codegen.empty() : this.budgetName;
+    public Optional<Output<String>> budgetName() {
+        return Optional.ofNullable(this.budgetName);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category", required=true)
-      private final Output<Either<String,CategoryType>> category;
+    private Output<Either<String,CategoryType>> category;
 
     public Output<Either<String,CategoryType>> category() {
         return this.category;
@@ -61,10 +61,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BudgetFilterArgs> filter;
+    private @Nullable Output<BudgetFilterArgs> filter;
 
-    public Output<BudgetFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BudgetFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notifications")
-      private final @Nullable Output<Map<String,NotificationArgs>> notifications;
+    private @Nullable Output<Map<String,NotificationArgs>> notifications;
 
-    public Output<Map<String,NotificationArgs>> notifications() {
-        return this.notifications == null ? Codegen.empty() : this.notifications;
+    public Optional<Output<Map<String,NotificationArgs>>> notifications() {
+        return Optional.ofNullable(this.notifications);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -105,7 +105,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeGrain", required=true)
-      private final Output<Either<String,TimeGrainType>> timeGrain;
+    private Output<Either<String,TimeGrainType>> timeGrain;
 
     public Output<Either<String,TimeGrainType>> timeGrain() {
         return this.timeGrain;
@@ -116,154 +116,133 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timePeriod", required=true)
-      private final Output<BudgetTimePeriodArgs> timePeriod;
+    private Output<BudgetTimePeriodArgs> timePeriod;
 
     public Output<BudgetTimePeriodArgs> timePeriod() {
         return this.timePeriod;
     }
 
-    public BudgetArgs(
-        Output<Double> amount,
-        @Nullable Output<String> budgetName,
-        Output<Either<String,CategoryType>> category,
-        @Nullable Output<String> eTag,
-        @Nullable Output<BudgetFilterArgs> filter,
-        @Nullable Output<Map<String,NotificationArgs>> notifications,
-        Output<String> scope,
-        Output<Either<String,TimeGrainType>> timeGrain,
-        Output<BudgetTimePeriodArgs> timePeriod) {
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.budgetName = budgetName;
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.eTag = eTag;
-        this.filter = filter;
-        this.notifications = notifications;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.timeGrain = Objects.requireNonNull(timeGrain, "expected parameter 'timeGrain' to be non-null");
-        this.timePeriod = Objects.requireNonNull(timePeriod, "expected parameter 'timePeriod' to be non-null");
-    }
+    private BudgetArgs() {}
 
-    private BudgetArgs() {
-        this.amount = Codegen.empty();
-        this.budgetName = Codegen.empty();
-        this.category = Codegen.empty();
-        this.eTag = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.notifications = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.timeGrain = Codegen.empty();
-        this.timePeriod = Codegen.empty();
+    private BudgetArgs(BudgetArgs $) {
+        this.amount = $.amount;
+        this.budgetName = $.budgetName;
+        this.category = $.category;
+        this.eTag = $.eTag;
+        this.filter = $.filter;
+        this.notifications = $.notifications;
+        this.scope = $.scope;
+        this.timeGrain = $.timeGrain;
+        this.timePeriod = $.timePeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> amount;
-        private @Nullable Output<String> budgetName;
-        private Output<Either<String,CategoryType>> category;
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<BudgetFilterArgs> filter;
-        private @Nullable Output<Map<String,NotificationArgs>> notifications;
-        private Output<String> scope;
-        private Output<Either<String,TimeGrainType>> timeGrain;
-        private Output<BudgetTimePeriodArgs> timePeriod;
+        private BudgetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetArgs();
         }
 
         public Builder(BudgetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amount = defaults.amount;
-    	      this.budgetName = defaults.budgetName;
-    	      this.category = defaults.category;
-    	      this.eTag = defaults.eTag;
-    	      this.filter = defaults.filter;
-    	      this.notifications = defaults.notifications;
-    	      this.scope = defaults.scope;
-    	      this.timeGrain = defaults.timeGrain;
-    	      this.timePeriod = defaults.timePeriod;
+            $ = new BudgetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amount(Output<Double> amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder amount(Double amount) {
-            this.amount = Output.of(Objects.requireNonNull(amount));
-            return this;
+            return amount(Output.of(amount));
         }
+
         public Builder budgetName(@Nullable Output<String> budgetName) {
-            this.budgetName = budgetName;
+            $.budgetName = budgetName;
             return this;
         }
-        public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Codegen.ofNullable(budgetName);
-            return this;
+
+        public Builder budgetName(String budgetName) {
+            return budgetName(Output.of(budgetName));
         }
+
         public Builder category(Output<Either<String,CategoryType>> category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder category(Either<String,CategoryType> category) {
-            this.category = Output.of(Objects.requireNonNull(category));
-            return this;
+            return category(Output.of(category));
         }
+
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder filter(@Nullable Output<BudgetFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BudgetFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BudgetFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder notifications(@Nullable Output<Map<String,NotificationArgs>> notifications) {
-            this.notifications = notifications;
+            $.notifications = notifications;
             return this;
         }
-        public Builder notifications(@Nullable Map<String,NotificationArgs> notifications) {
-            this.notifications = Codegen.ofNullable(notifications);
-            return this;
+
+        public Builder notifications(Map<String,NotificationArgs> notifications) {
+            return notifications(Output.of(notifications));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder timeGrain(Output<Either<String,TimeGrainType>> timeGrain) {
-            this.timeGrain = Objects.requireNonNull(timeGrain);
+            $.timeGrain = timeGrain;
             return this;
         }
+
         public Builder timeGrain(Either<String,TimeGrainType> timeGrain) {
-            this.timeGrain = Output.of(Objects.requireNonNull(timeGrain));
-            return this;
+            return timeGrain(Output.of(timeGrain));
         }
+
         public Builder timePeriod(Output<BudgetTimePeriodArgs> timePeriod) {
-            this.timePeriod = Objects.requireNonNull(timePeriod);
+            $.timePeriod = timePeriod;
             return this;
         }
+
         public Builder timePeriod(BudgetTimePeriodArgs timePeriod) {
-            this.timePeriod = Output.of(Objects.requireNonNull(timePeriod));
-            return this;
-        }        public BudgetArgs build() {
-            return new BudgetArgs(amount, budgetName, category, eTag, filter, notifications, scope, timeGrain, timePeriod);
+            return timePeriod(Output.of(timePeriod));
+        }
+
+        public BudgetArgs build() {
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.timeGrain = Objects.requireNonNull($.timeGrain, "expected parameter 'timeGrain' to be non-null");
+            $.timePeriod = Objects.requireNonNull($.timePeriod, "expected parameter 'timePeriod' to be non-null");
+            return $;
         }
     }
+
 }

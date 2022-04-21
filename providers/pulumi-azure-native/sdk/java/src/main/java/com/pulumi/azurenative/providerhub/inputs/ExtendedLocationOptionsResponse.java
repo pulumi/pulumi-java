@@ -15,62 +15,57 @@ public final class ExtendedLocationOptionsResponse extends com.pulumi.resources.
     public static final ExtendedLocationOptionsResponse Empty = new ExtendedLocationOptionsResponse();
 
     @Import(name="supportedPolicy")
-      private final @Nullable String supportedPolicy;
+    private @Nullable String supportedPolicy;
 
     public Optional<String> supportedPolicy() {
-        return this.supportedPolicy == null ? Optional.empty() : Optional.ofNullable(this.supportedPolicy);
+        return Optional.ofNullable(this.supportedPolicy);
     }
 
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ExtendedLocationOptionsResponse(
-        @Nullable String supportedPolicy,
-        @Nullable String type) {
-        this.supportedPolicy = supportedPolicy;
-        this.type = type;
-    }
+    private ExtendedLocationOptionsResponse() {}
 
-    private ExtendedLocationOptionsResponse() {
-        this.supportedPolicy = null;
-        this.type = null;
+    private ExtendedLocationOptionsResponse(ExtendedLocationOptionsResponse $) {
+        this.supportedPolicy = $.supportedPolicy;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedLocationOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String supportedPolicy;
-        private @Nullable String type;
+        private ExtendedLocationOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedLocationOptionsResponse();
         }
 
         public Builder(ExtendedLocationOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.supportedPolicy = defaults.supportedPolicy;
-    	      this.type = defaults.type;
+            $ = new ExtendedLocationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder supportedPolicy(@Nullable String supportedPolicy) {
-            this.supportedPolicy = supportedPolicy;
+            $.supportedPolicy = supportedPolicy;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ExtendedLocationOptionsResponse build() {
-            return new ExtendedLocationOptionsResponse(supportedPolicy, type);
+        }
+
+        public ExtendedLocationOptionsResponse build() {
+            return $;
         }
     }
+
 }

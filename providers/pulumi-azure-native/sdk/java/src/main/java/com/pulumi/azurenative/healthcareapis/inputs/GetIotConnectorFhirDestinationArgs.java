@@ -17,7 +17,7 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fhirDestinationName", required=true)
-      private final String fhirDestinationName;
+    private String fhirDestinationName;
 
     public String fhirDestinationName() {
         return this.fhirDestinationName;
@@ -28,7 +28,7 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="iotConnectorName", required=true)
-      private final String iotConnectorName;
+    private String iotConnectorName;
 
     public String iotConnectorName() {
         return this.iotConnectorName;
@@ -39,7 +39,7 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetIotConnectorFhirDestinationArgs(
-        String fhirDestinationName,
-        String iotConnectorName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.fhirDestinationName = Objects.requireNonNull(fhirDestinationName, "expected parameter 'fhirDestinationName' to be non-null");
-        this.iotConnectorName = Objects.requireNonNull(iotConnectorName, "expected parameter 'iotConnectorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetIotConnectorFhirDestinationArgs() {}
 
-    private GetIotConnectorFhirDestinationArgs() {
-        this.fhirDestinationName = null;
-        this.iotConnectorName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetIotConnectorFhirDestinationArgs(GetIotConnectorFhirDestinationArgs $) {
+        this.fhirDestinationName = $.fhirDestinationName;
+        this.iotConnectorName = $.iotConnectorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIotConnectorFhirDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fhirDestinationName;
-        private String iotConnectorName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetIotConnectorFhirDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIotConnectorFhirDestinationArgs();
         }
 
         public Builder(GetIotConnectorFhirDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fhirDestinationName = defaults.fhirDestinationName;
-    	      this.iotConnectorName = defaults.iotConnectorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetIotConnectorFhirDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fhirDestinationName(String fhirDestinationName) {
-            this.fhirDestinationName = Objects.requireNonNull(fhirDestinationName);
+            $.fhirDestinationName = fhirDestinationName;
             return this;
         }
+
         public Builder iotConnectorName(String iotConnectorName) {
-            this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
+            $.iotConnectorName = iotConnectorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetIotConnectorFhirDestinationArgs build() {
-            return new GetIotConnectorFhirDestinationArgs(fhirDestinationName, iotConnectorName, resourceGroupName, workspaceName);
+        }
+
+        public GetIotConnectorFhirDestinationArgs build() {
+            $.fhirDestinationName = Objects.requireNonNull($.fhirDestinationName, "expected parameter 'fhirDestinationName' to be non-null");
+            $.iotConnectorName = Objects.requireNonNull($.iotConnectorName, "expected parameter 'iotConnectorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

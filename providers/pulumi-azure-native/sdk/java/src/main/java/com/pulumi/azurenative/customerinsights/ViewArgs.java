@@ -5,10 +5,10 @@ package com.pulumi.azurenative.customerinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition", required=true)
-      private final Output<String> definition;
+    private Output<String> definition;
 
     public Output<String> definition() {
         return this.definition;
@@ -32,10 +32,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -54,7 +54,7 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<String> userId;
+    private @Nullable Output<String> userId;
 
-    public Output<String> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
     /**
@@ -76,115 +76,101 @@ public final class ViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="viewName")
-      private final @Nullable Output<String> viewName;
+    private @Nullable Output<String> viewName;
 
-    public Output<String> viewName() {
-        return this.viewName == null ? Codegen.empty() : this.viewName;
+    public Optional<Output<String>> viewName() {
+        return Optional.ofNullable(this.viewName);
     }
 
-    public ViewArgs(
-        Output<String> definition,
-        @Nullable Output<Map<String,String>> displayName,
-        Output<String> hubName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> userId,
-        @Nullable Output<String> viewName) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.displayName = displayName;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userId = userId;
-        this.viewName = viewName;
-    }
+    private ViewArgs() {}
 
-    private ViewArgs() {
-        this.definition = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.userId = Codegen.empty();
-        this.viewName = Codegen.empty();
+    private ViewArgs(ViewArgs $) {
+        this.definition = $.definition;
+        this.displayName = $.displayName;
+        this.hubName = $.hubName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userId = $.userId;
+        this.viewName = $.viewName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> definition;
-        private @Nullable Output<Map<String,String>> displayName;
-        private Output<String> hubName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> userId;
-        private @Nullable Output<String> viewName;
+        private ViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ViewArgs();
         }
 
         public Builder(ViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.displayName = defaults.displayName;
-    	      this.hubName = defaults.hubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userId = defaults.userId;
-    	      this.viewName = defaults.viewName;
+            $ = new ViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(Output<String> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(String definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder userId(@Nullable Output<String> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable String userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
+
         public Builder viewName(@Nullable Output<String> viewName) {
-            this.viewName = viewName;
+            $.viewName = viewName;
             return this;
         }
-        public Builder viewName(@Nullable String viewName) {
-            this.viewName = Codegen.ofNullable(viewName);
-            return this;
-        }        public ViewArgs build() {
-            return new ViewArgs(definition, displayName, hubName, resourceGroupName, userId, viewName);
+
+        public Builder viewName(String viewName) {
+            return viewName(Output.of(viewName));
+        }
+
+        public ViewArgs build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

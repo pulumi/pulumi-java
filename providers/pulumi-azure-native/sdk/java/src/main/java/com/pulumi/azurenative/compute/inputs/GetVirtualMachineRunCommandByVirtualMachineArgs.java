@@ -19,10 +19,10 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="runCommandName", required=true)
-      private final String runCommandName;
+    private String runCommandName;
 
     public String runCommandName() {
         return this.runCommandName;
@@ -52,73 +52,65 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="vmName", required=true)
-      private final String vmName;
+    private String vmName;
 
     public String vmName() {
         return this.vmName;
     }
 
-    public GetVirtualMachineRunCommandByVirtualMachineArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String runCommandName,
-        String vmName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runCommandName = Objects.requireNonNull(runCommandName, "expected parameter 'runCommandName' to be non-null");
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private GetVirtualMachineRunCommandByVirtualMachineArgs() {}
 
-    private GetVirtualMachineRunCommandByVirtualMachineArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.runCommandName = null;
-        this.vmName = null;
+    private GetVirtualMachineRunCommandByVirtualMachineArgs(GetVirtualMachineRunCommandByVirtualMachineArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runCommandName = $.runCommandName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineRunCommandByVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String runCommandName;
-        private String vmName;
+        private GetVirtualMachineRunCommandByVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineRunCommandByVirtualMachineArgs();
         }
 
         public Builder(GetVirtualMachineRunCommandByVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runCommandName = defaults.runCommandName;
-    	      this.vmName = defaults.vmName;
+            $ = new GetVirtualMachineRunCommandByVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder runCommandName(String runCommandName) {
-            this.runCommandName = Objects.requireNonNull(runCommandName);
+            $.runCommandName = runCommandName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
-        }        public GetVirtualMachineRunCommandByVirtualMachineArgs build() {
-            return new GetVirtualMachineRunCommandByVirtualMachineArgs(expand, resourceGroupName, runCommandName, vmName);
+        }
+
+        public GetVirtualMachineRunCommandByVirtualMachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.runCommandName = Objects.requireNonNull($.runCommandName, "expected parameter 'runCommandName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

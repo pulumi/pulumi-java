@@ -24,10 +24,10 @@ public final class WorkloadNetworkSegmentSubnetResponse extends com.pulumi.resou
      * 
      */
     @Import(name="dhcpRanges")
-      private final @Nullable List<String> dhcpRanges;
+    private @Nullable List<String> dhcpRanges;
 
-    public List<String> dhcpRanges() {
-        return this.dhcpRanges == null ? List.of() : this.dhcpRanges;
+    public Optional<List<String>> dhcpRanges() {
+        return Optional.ofNullable(this.dhcpRanges);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class WorkloadNetworkSegmentSubnetResponse extends com.pulumi.resou
      * 
      */
     @Import(name="gatewayAddress")
-      private final @Nullable String gatewayAddress;
+    private @Nullable String gatewayAddress;
 
     public Optional<String> gatewayAddress() {
-        return this.gatewayAddress == null ? Optional.empty() : Optional.ofNullable(this.gatewayAddress);
+        return Optional.ofNullable(this.gatewayAddress);
     }
 
-    public WorkloadNetworkSegmentSubnetResponse(
-        @Nullable List<String> dhcpRanges,
-        @Nullable String gatewayAddress) {
-        this.dhcpRanges = dhcpRanges;
-        this.gatewayAddress = gatewayAddress;
-    }
+    private WorkloadNetworkSegmentSubnetResponse() {}
 
-    private WorkloadNetworkSegmentSubnetResponse() {
-        this.dhcpRanges = List.of();
-        this.gatewayAddress = null;
+    private WorkloadNetworkSegmentSubnetResponse(WorkloadNetworkSegmentSubnetResponse $) {
+        this.dhcpRanges = $.dhcpRanges;
+        this.gatewayAddress = $.gatewayAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkSegmentSubnetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dhcpRanges;
-        private @Nullable String gatewayAddress;
+        private WorkloadNetworkSegmentSubnetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkSegmentSubnetResponse();
         }
 
         public Builder(WorkloadNetworkSegmentSubnetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhcpRanges = defaults.dhcpRanges;
-    	      this.gatewayAddress = defaults.gatewayAddress;
+            $ = new WorkloadNetworkSegmentSubnetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
-            this.dhcpRanges = dhcpRanges;
+            $.dhcpRanges = dhcpRanges;
             return this;
         }
+
         public Builder dhcpRanges(String... dhcpRanges) {
             return dhcpRanges(List.of(dhcpRanges));
         }
+
         public Builder gatewayAddress(@Nullable String gatewayAddress) {
-            this.gatewayAddress = gatewayAddress;
+            $.gatewayAddress = gatewayAddress;
             return this;
-        }        public WorkloadNetworkSegmentSubnetResponse build() {
-            return new WorkloadNetworkSegmentSubnetResponse(dhcpRanges, gatewayAddress);
+        }
+
+        public WorkloadNetworkSegmentSubnetResponse build() {
+            return $;
         }
     }
+
 }

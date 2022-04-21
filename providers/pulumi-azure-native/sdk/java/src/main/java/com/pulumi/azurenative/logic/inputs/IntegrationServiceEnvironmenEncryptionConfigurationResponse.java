@@ -23,45 +23,44 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
      * 
      */
     @Import(name="encryptionKeyReference")
-      private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
+    private @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
     public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> encryptionKeyReference() {
-        return this.encryptionKeyReference == null ? Optional.empty() : Optional.ofNullable(this.encryptionKeyReference);
+        return Optional.ofNullable(this.encryptionKeyReference);
     }
 
-    public IntegrationServiceEnvironmenEncryptionConfigurationResponse(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
-        this.encryptionKeyReference = encryptionKeyReference;
-    }
+    private IntegrationServiceEnvironmenEncryptionConfigurationResponse() {}
 
-    private IntegrationServiceEnvironmenEncryptionConfigurationResponse() {
-        this.encryptionKeyReference = null;
+    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(IntegrationServiceEnvironmenEncryptionConfigurationResponse $) {
+        this.encryptionKeyReference = $.encryptionKeyReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmenEncryptionConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
+        private IntegrationServiceEnvironmenEncryptionConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmenEncryptionConfigurationResponse();
         }
 
         public Builder(IntegrationServiceEnvironmenEncryptionConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionKeyReference = defaults.encryptionKeyReference;
+            $ = new IntegrationServiceEnvironmenEncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
-            this.encryptionKeyReference = encryptionKeyReference;
+            $.encryptionKeyReference = encryptionKeyReference;
             return this;
-        }        public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
-            return new IntegrationServiceEnvironmenEncryptionConfigurationResponse(encryptionKeyReference);
+        }
+
+        public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
+            return $;
         }
     }
+
 }

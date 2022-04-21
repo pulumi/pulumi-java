@@ -8,9 +8,9 @@ import com.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PropertiesEncryptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyVault")
-      private final @Nullable Output<KeyVaultPropertiesArgs> keyVault;
+    private @Nullable Output<KeyVaultPropertiesArgs> keyVault;
 
-    public Output<KeyVaultPropertiesArgs> keyVault() {
-        return this.keyVault == null ? Codegen.empty() : this.keyVault;
+    public Optional<Output<KeyVaultPropertiesArgs>> keyVault() {
+        return Optional.ofNullable(this.keyVault);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class PropertiesEncryptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,State>> state;
+    private @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,State>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public PropertiesEncryptionArgs(
-        @Nullable Output<KeyVaultPropertiesArgs> keyVault,
-        @Nullable Output<Either<String,State>> state) {
-        this.keyVault = keyVault;
-        this.state = state;
-    }
+    private PropertiesEncryptionArgs() {}
 
-    private PropertiesEncryptionArgs() {
-        this.keyVault = Codegen.empty();
-        this.state = Codegen.empty();
+    private PropertiesEncryptionArgs(PropertiesEncryptionArgs $) {
+        this.keyVault = $.keyVault;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertiesEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyVaultPropertiesArgs> keyVault;
-        private @Nullable Output<Either<String,State>> state;
+        private PropertiesEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertiesEncryptionArgs();
         }
 
         public Builder(PropertiesEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVault = defaults.keyVault;
-    	      this.state = defaults.state;
+            $ = new PropertiesEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVault(@Nullable Output<KeyVaultPropertiesArgs> keyVault) {
-            this.keyVault = keyVault;
+            $.keyVault = keyVault;
             return this;
         }
-        public Builder keyVault(@Nullable KeyVaultPropertiesArgs keyVault) {
-            this.keyVault = Codegen.ofNullable(keyVault);
-            return this;
+
+        public Builder keyVault(KeyVaultPropertiesArgs keyVault) {
+            return keyVault(Output.of(keyVault));
         }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,State> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public PropertiesEncryptionArgs build() {
-            return new PropertiesEncryptionArgs(keyVault, state);
+
+        public Builder state(Either<String,State> state) {
+            return state(Output.of(state));
+        }
+
+        public PropertiesEncryptionArgs build() {
+            return $;
         }
     }
+
 }

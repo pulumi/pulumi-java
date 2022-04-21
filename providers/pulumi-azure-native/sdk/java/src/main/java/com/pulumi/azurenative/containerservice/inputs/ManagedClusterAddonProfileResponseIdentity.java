@@ -23,10 +23,10 @@ public final class ManagedClusterAddonProfileResponseIdentity extends com.pulumi
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ManagedClusterAddonProfileResponseIdentity extends com.pulumi
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ManagedClusterAddonProfileResponseIdentity extends com.pulumi
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ManagedClusterAddonProfileResponseIdentity(
-        @Nullable String clientId,
-        @Nullable String objectId,
-        @Nullable String resourceId) {
-        this.clientId = clientId;
-        this.objectId = objectId;
-        this.resourceId = resourceId;
-    }
+    private ManagedClusterAddonProfileResponseIdentity() {}
 
-    private ManagedClusterAddonProfileResponseIdentity() {
-        this.clientId = null;
-        this.objectId = null;
-        this.resourceId = null;
+    private ManagedClusterAddonProfileResponseIdentity(ManagedClusterAddonProfileResponseIdentity $) {
+        this.clientId = $.clientId;
+        this.objectId = $.objectId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAddonProfileResponseIdentity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private @Nullable String objectId;
-        private @Nullable String resourceId;
+        private ManagedClusterAddonProfileResponseIdentity $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAddonProfileResponseIdentity();
         }
 
         public Builder(ManagedClusterAddonProfileResponseIdentity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.objectId = defaults.objectId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ManagedClusterAddonProfileResponseIdentity(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public ManagedClusterAddonProfileResponseIdentity build() {
-            return new ManagedClusterAddonProfileResponseIdentity(clientId, objectId, resourceId);
+        }
+
+        public ManagedClusterAddonProfileResponseIdentity build() {
+            return $;
         }
     }
+
 }

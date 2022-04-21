@@ -23,10 +23,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="bundledScaleUnit")
-      private final @Nullable String bundledScaleUnit;
+    private @Nullable String bundledScaleUnit;
 
     public Optional<String> bundledScaleUnit() {
-        return this.bundledScaleUnit == null ? Optional.empty() : Optional.ofNullable(this.bundledScaleUnit);
+        return Optional.ofNullable(this.bundledScaleUnit);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="marketPlaceVersion")
-      private final @Nullable String marketPlaceVersion;
+    private @Nullable String marketPlaceVersion;
 
     public Optional<String> marketPlaceVersion() {
-        return this.marketPlaceVersion == null ? Optional.empty() : Optional.ofNullable(this.marketPlaceVersion);
+        return Optional.ofNullable(this.marketPlaceVersion);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="vendor")
-      private final @Nullable String vendor;
+    private @Nullable String vendor;
 
     public Optional<String> vendor() {
-        return this.vendor == null ? Optional.empty() : Optional.ofNullable(this.vendor);
+        return Optional.ofNullable(this.vendor);
     }
 
-    public VirtualApplianceSkuPropertiesResponse(
-        @Nullable String bundledScaleUnit,
-        @Nullable String marketPlaceVersion,
-        @Nullable String vendor) {
-        this.bundledScaleUnit = bundledScaleUnit;
-        this.marketPlaceVersion = marketPlaceVersion;
-        this.vendor = vendor;
-    }
+    private VirtualApplianceSkuPropertiesResponse() {}
 
-    private VirtualApplianceSkuPropertiesResponse() {
-        this.bundledScaleUnit = null;
-        this.marketPlaceVersion = null;
-        this.vendor = null;
+    private VirtualApplianceSkuPropertiesResponse(VirtualApplianceSkuPropertiesResponse $) {
+        this.bundledScaleUnit = $.bundledScaleUnit;
+        this.marketPlaceVersion = $.marketPlaceVersion;
+        this.vendor = $.vendor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualApplianceSkuPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bundledScaleUnit;
-        private @Nullable String marketPlaceVersion;
-        private @Nullable String vendor;
+        private VirtualApplianceSkuPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualApplianceSkuPropertiesResponse();
         }
 
         public Builder(VirtualApplianceSkuPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundledScaleUnit = defaults.bundledScaleUnit;
-    	      this.marketPlaceVersion = defaults.marketPlaceVersion;
-    	      this.vendor = defaults.vendor;
+            $ = new VirtualApplianceSkuPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
-            this.bundledScaleUnit = bundledScaleUnit;
+            $.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
+
         public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
-            this.marketPlaceVersion = marketPlaceVersion;
+            $.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
+
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = vendor;
+            $.vendor = vendor;
             return this;
-        }        public VirtualApplianceSkuPropertiesResponse build() {
-            return new VirtualApplianceSkuPropertiesResponse(bundledScaleUnit, marketPlaceVersion, vendor);
+        }
+
+        public VirtualApplianceSkuPropertiesResponse build() {
+            return $;
         }
     }
+
 }

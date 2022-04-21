@@ -24,10 +24,10 @@ public final class MyWorkbookManagedIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MyWorkbookManagedIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
+    private @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
     public Optional<MyWorkbookUserAssignedIdentitiesResponse> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentities);
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public MyWorkbookManagedIdentityResponse(
-        @Nullable String type,
-        @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private MyWorkbookManagedIdentityResponse() {}
 
-    private MyWorkbookManagedIdentityResponse() {
-        this.type = null;
-        this.userAssignedIdentities = null;
+    private MyWorkbookManagedIdentityResponse(MyWorkbookManagedIdentityResponse $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MyWorkbookManagedIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
+        private MyWorkbookManagedIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MyWorkbookManagedIdentityResponse();
         }
 
         public Builder(MyWorkbookManagedIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new MyWorkbookManagedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public MyWorkbookManagedIdentityResponse build() {
-            return new MyWorkbookManagedIdentityResponse(type, userAssignedIdentities);
+        }
+
+        public MyWorkbookManagedIdentityResponse build() {
+            return $;
         }
     }
+
 }

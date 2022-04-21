@@ -24,48 +24,48 @@ public final class TxtRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable List<String> value;
+    private @Nullable List<String> value;
 
-    public List<String> value() {
-        return this.value == null ? List.of() : this.value;
+    public Optional<List<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TxtRecordResponse(@Nullable List<String> value) {
-        this.value = value;
-    }
+    private TxtRecordResponse() {}
 
-    private TxtRecordResponse() {
-        this.value = List.of();
+    private TxtRecordResponse(TxtRecordResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TxtRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> value;
+        private TxtRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TxtRecordResponse();
         }
 
         public Builder(TxtRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new TxtRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable List<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
+
         public Builder value(String... value) {
             return value(List.of(value));
-        }        public TxtRecordResponse build() {
-            return new TxtRecordResponse(value);
+        }
+
+        public TxtRecordResponse build() {
+            return $;
         }
     }
+
 }

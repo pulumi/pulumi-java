@@ -23,7 +23,7 @@ public final class NfsAccessPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accessRules", required=true)
-      private final List<NfsAccessRuleResponse> accessRules;
+    private List<NfsAccessRuleResponse> accessRules;
 
     public List<NfsAccessRuleResponse> accessRules() {
         return this.accessRules;
@@ -34,58 +34,56 @@ public final class NfsAccessPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public NfsAccessPolicyResponse(
-        List<NfsAccessRuleResponse> accessRules,
-        String name) {
-        this.accessRules = Objects.requireNonNull(accessRules, "expected parameter 'accessRules' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private NfsAccessPolicyResponse() {}
 
-    private NfsAccessPolicyResponse() {
-        this.accessRules = List.of();
-        this.name = null;
+    private NfsAccessPolicyResponse(NfsAccessPolicyResponse $) {
+        this.accessRules = $.accessRules;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsAccessPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<NfsAccessRuleResponse> accessRules;
-        private String name;
+        private NfsAccessPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsAccessPolicyResponse();
         }
 
         public Builder(NfsAccessPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessRules = defaults.accessRules;
-    	      this.name = defaults.name;
+            $ = new NfsAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessRules(List<NfsAccessRuleResponse> accessRules) {
-            this.accessRules = Objects.requireNonNull(accessRules);
+            $.accessRules = accessRules;
             return this;
         }
+
         public Builder accessRules(NfsAccessRuleResponse... accessRules) {
             return accessRules(List.of(accessRules));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public NfsAccessPolicyResponse build() {
-            return new NfsAccessPolicyResponse(accessRules, name);
+        }
+
+        public NfsAccessPolicyResponse build() {
+            $.accessRules = Objects.requireNonNull($.accessRules, "expected parameter 'accessRules' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectorName", required=true)
-      private final String connectorName;
+    private String connectorName;
 
     public String connectorName() {
         return this.connectorName;
     }
 
-    public GetConnectorArgs(String connectorName) {
-        this.connectorName = Objects.requireNonNull(connectorName, "expected parameter 'connectorName' to be non-null");
-    }
+    private GetConnectorArgs() {}
 
-    private GetConnectorArgs() {
-        this.connectorName = null;
+    private GetConnectorArgs(GetConnectorArgs $) {
+        this.connectorName = $.connectorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectorName;
+        private GetConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectorArgs();
         }
 
         public Builder(GetConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorName = defaults.connectorName;
+            $ = new GetConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorName(String connectorName) {
-            this.connectorName = Objects.requireNonNull(connectorName);
+            $.connectorName = connectorName;
             return this;
-        }        public GetConnectorArgs build() {
-            return new GetConnectorArgs(connectorName);
+        }
+
+        public GetConnectorArgs build() {
+            $.connectorName = Objects.requireNonNull($.connectorName, "expected parameter 'connectorName' to be non-null");
+            return $;
         }
     }
+
 }

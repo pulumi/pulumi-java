@@ -10,10 +10,10 @@ import com.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionFormatArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class MonthlyRetentionScheduleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable Output<RetentionDurationArgs> retentionDuration;
+    private @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> retentionDuration() {
-        return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
+    public Optional<Output<RetentionDurationArgs>> retentionDuration() {
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MonthlyRetentionScheduleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retentionScheduleDaily")
-      private final @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
+    private @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
 
-    public Output<DailyRetentionFormatArgs> retentionScheduleDaily() {
-        return this.retentionScheduleDaily == null ? Codegen.empty() : this.retentionScheduleDaily;
+    public Optional<Output<DailyRetentionFormatArgs>> retentionScheduleDaily() {
+        return Optional.ofNullable(this.retentionScheduleDaily);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MonthlyRetentionScheduleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retentionScheduleFormatType")
-      private final @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
+    private @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
-    public Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType() {
-        return this.retentionScheduleFormatType == null ? Codegen.empty() : this.retentionScheduleFormatType;
+    public Optional<Output<Either<String,RetentionScheduleFormat>>> retentionScheduleFormatType() {
+        return Optional.ofNullable(this.retentionScheduleFormatType);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MonthlyRetentionScheduleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retentionScheduleWeekly")
-      private final @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
+    private @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
-    public Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly() {
-        return this.retentionScheduleWeekly == null ? Codegen.empty() : this.retentionScheduleWeekly;
+    public Optional<Output<WeeklyRetentionFormatArgs>> retentionScheduleWeekly() {
+        return Optional.ofNullable(this.retentionScheduleWeekly);
     }
 
     /**
@@ -74,105 +74,92 @@ public final class MonthlyRetentionScheduleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retentionTimes")
-      private final @Nullable Output<List<String>> retentionTimes;
+    private @Nullable Output<List<String>> retentionTimes;
 
-    public Output<List<String>> retentionTimes() {
-        return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
+    public Optional<Output<List<String>>> retentionTimes() {
+        return Optional.ofNullable(this.retentionTimes);
     }
 
-    public MonthlyRetentionScheduleArgs(
-        @Nullable Output<RetentionDurationArgs> retentionDuration,
-        @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily,
-        @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType,
-        @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly,
-        @Nullable Output<List<String>> retentionTimes) {
-        this.retentionDuration = retentionDuration;
-        this.retentionScheduleDaily = retentionScheduleDaily;
-        this.retentionScheduleFormatType = retentionScheduleFormatType;
-        this.retentionScheduleWeekly = retentionScheduleWeekly;
-        this.retentionTimes = retentionTimes;
-    }
+    private MonthlyRetentionScheduleArgs() {}
 
-    private MonthlyRetentionScheduleArgs() {
-        this.retentionDuration = Codegen.empty();
-        this.retentionScheduleDaily = Codegen.empty();
-        this.retentionScheduleFormatType = Codegen.empty();
-        this.retentionScheduleWeekly = Codegen.empty();
-        this.retentionTimes = Codegen.empty();
+    private MonthlyRetentionScheduleArgs(MonthlyRetentionScheduleArgs $) {
+        this.retentionDuration = $.retentionDuration;
+        this.retentionScheduleDaily = $.retentionScheduleDaily;
+        this.retentionScheduleFormatType = $.retentionScheduleFormatType;
+        this.retentionScheduleWeekly = $.retentionScheduleWeekly;
+        this.retentionTimes = $.retentionTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonthlyRetentionScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RetentionDurationArgs> retentionDuration;
-        private @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
-        private @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
-        private @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
-        private @Nullable Output<List<String>> retentionTimes;
+        private MonthlyRetentionScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonthlyRetentionScheduleArgs();
         }
 
         public Builder(MonthlyRetentionScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionScheduleDaily = defaults.retentionScheduleDaily;
-    	      this.retentionScheduleFormatType = defaults.retentionScheduleFormatType;
-    	      this.retentionScheduleWeekly = defaults.retentionScheduleWeekly;
-    	      this.retentionTimes = defaults.retentionTimes;
+            $ = new MonthlyRetentionScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
-        public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Codegen.ofNullable(retentionDuration);
-            return this;
+
+        public Builder retentionDuration(RetentionDurationArgs retentionDuration) {
+            return retentionDuration(Output.of(retentionDuration));
         }
+
         public Builder retentionScheduleDaily(@Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily) {
-            this.retentionScheduleDaily = retentionScheduleDaily;
+            $.retentionScheduleDaily = retentionScheduleDaily;
             return this;
         }
-        public Builder retentionScheduleDaily(@Nullable DailyRetentionFormatArgs retentionScheduleDaily) {
-            this.retentionScheduleDaily = Codegen.ofNullable(retentionScheduleDaily);
-            return this;
+
+        public Builder retentionScheduleDaily(DailyRetentionFormatArgs retentionScheduleDaily) {
+            return retentionScheduleDaily(Output.of(retentionScheduleDaily));
         }
+
         public Builder retentionScheduleFormatType(@Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType) {
-            this.retentionScheduleFormatType = retentionScheduleFormatType;
+            $.retentionScheduleFormatType = retentionScheduleFormatType;
             return this;
         }
-        public Builder retentionScheduleFormatType(@Nullable Either<String,RetentionScheduleFormat> retentionScheduleFormatType) {
-            this.retentionScheduleFormatType = Codegen.ofNullable(retentionScheduleFormatType);
-            return this;
+
+        public Builder retentionScheduleFormatType(Either<String,RetentionScheduleFormat> retentionScheduleFormatType) {
+            return retentionScheduleFormatType(Output.of(retentionScheduleFormatType));
         }
+
         public Builder retentionScheduleWeekly(@Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly) {
-            this.retentionScheduleWeekly = retentionScheduleWeekly;
+            $.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;
         }
-        public Builder retentionScheduleWeekly(@Nullable WeeklyRetentionFormatArgs retentionScheduleWeekly) {
-            this.retentionScheduleWeekly = Codegen.ofNullable(retentionScheduleWeekly);
-            return this;
+
+        public Builder retentionScheduleWeekly(WeeklyRetentionFormatArgs retentionScheduleWeekly) {
+            return retentionScheduleWeekly(Output.of(retentionScheduleWeekly));
         }
+
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
-            this.retentionTimes = retentionTimes;
+            $.retentionTimes = retentionTimes;
             return this;
         }
-        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = Codegen.ofNullable(retentionTimes);
-            return this;
+
+        public Builder retentionTimes(List<String> retentionTimes) {
+            return retentionTimes(Output.of(retentionTimes));
         }
+
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
-        }        public MonthlyRetentionScheduleArgs build() {
-            return new MonthlyRetentionScheduleArgs(retentionDuration, retentionScheduleDaily, retentionScheduleFormatType, retentionScheduleWeekly, retentionTimes);
+        }
+
+        public MonthlyRetentionScheduleArgs build() {
+            return $;
         }
     }
+
 }

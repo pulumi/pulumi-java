@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,PolicyStatus>> status;
+    private @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,PolicyStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -38,63 +39,60 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,TrustPolicyType>> type;
+    private @Nullable Output<Either<String,TrustPolicyType>> type;
 
-    public Output<Either<String,TrustPolicyType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,TrustPolicyType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TrustPolicyArgs(
-        @Nullable Output<Either<String,PolicyStatus>> status,
-        @Nullable Output<Either<String,TrustPolicyType>> type) {
-        this.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg(status).def("disabled").getNullable();
-        this.type = Codegen.stringProp("type").left(TrustPolicyType.class).output().arg(type).def("Notary").getNullable();
-    }
+    private TrustPolicyArgs() {}
 
-    private TrustPolicyArgs() {
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private TrustPolicyArgs(TrustPolicyArgs $) {
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrustPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PolicyStatus>> status;
-        private @Nullable Output<Either<String,TrustPolicyType>> type;
+        private TrustPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrustPolicyArgs();
         }
 
         public Builder(TrustPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new TrustPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,PolicyStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<Either<String,TrustPolicyType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,TrustPolicyType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TrustPolicyArgs build() {
-            return new TrustPolicyArgs(status, type);
+
+        public Builder type(Either<String,TrustPolicyType> type) {
+            return type(Output.of(type));
+        }
+
+        public TrustPolicyArgs build() {
+            $.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg($.status).def("disabled").getNullable();
+            $.type = Codegen.stringProp("type").left(TrustPolicyType.class).output().arg($.type).def("Notary").getNullable();
+            return $;
         }
     }
+
 }

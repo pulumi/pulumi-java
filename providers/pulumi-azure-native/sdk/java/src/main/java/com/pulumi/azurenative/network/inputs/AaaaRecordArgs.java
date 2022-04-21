@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AaaaRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6Address")
-      private final @Nullable Output<String> ipv6Address;
+    private @Nullable Output<String> ipv6Address;
 
-    public Output<String> ipv6Address() {
-        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
+    public Optional<Output<String>> ipv6Address() {
+        return Optional.ofNullable(this.ipv6Address);
     }
 
-    public AaaaRecordArgs(@Nullable Output<String> ipv6Address) {
-        this.ipv6Address = ipv6Address;
-    }
+    private AaaaRecordArgs() {}
 
-    private AaaaRecordArgs() {
-        this.ipv6Address = Codegen.empty();
+    private AaaaRecordArgs(AaaaRecordArgs $) {
+        this.ipv6Address = $.ipv6Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AaaaRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipv6Address;
+        private AaaaRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AaaaRecordArgs();
         }
 
         public Builder(AaaaRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv6Address = defaults.ipv6Address;
+            $ = new AaaaRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
-            this.ipv6Address = ipv6Address;
+            $.ipv6Address = ipv6Address;
             return this;
         }
-        public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Codegen.ofNullable(ipv6Address);
-            return this;
-        }        public AaaaRecordArgs build() {
-            return new AaaaRecordArgs(ipv6Address);
+
+        public Builder ipv6Address(String ipv6Address) {
+            return ipv6Address(Output.of(ipv6Address));
+        }
+
+        public AaaaRecordArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="affinityType", required=true)
-      private final String affinityType;
+    private String affinityType;
 
     public String affinityType() {
         return this.affinityType;
@@ -36,10 +36,10 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="hostMembers", required=true)
-      private final List<String> hostMembers;
+    private List<String> hostMembers;
 
     public List<String> hostMembers() {
         return this.hostMembers;
@@ -58,7 +58,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -69,10 +69,10 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -92,106 +92,93 @@ public final class VmHostPlacementPolicyPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="vmMembers", required=true)
-      private final List<String> vmMembers;
+    private List<String> vmMembers;
 
     public List<String> vmMembers() {
         return this.vmMembers;
     }
 
-    public VmHostPlacementPolicyPropertiesResponse(
-        String affinityType,
-        @Nullable String displayName,
-        List<String> hostMembers,
-        String provisioningState,
-        @Nullable String state,
-        String type,
-        List<String> vmMembers) {
-        this.affinityType = Objects.requireNonNull(affinityType, "expected parameter 'affinityType' to be non-null");
-        this.displayName = displayName;
-        this.hostMembers = Objects.requireNonNull(hostMembers, "expected parameter 'hostMembers' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.state = state;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.vmMembers = Objects.requireNonNull(vmMembers, "expected parameter 'vmMembers' to be non-null");
-    }
+    private VmHostPlacementPolicyPropertiesResponse() {}
 
-    private VmHostPlacementPolicyPropertiesResponse() {
-        this.affinityType = null;
-        this.displayName = null;
-        this.hostMembers = List.of();
-        this.provisioningState = null;
-        this.state = null;
-        this.type = null;
-        this.vmMembers = List.of();
+    private VmHostPlacementPolicyPropertiesResponse(VmHostPlacementPolicyPropertiesResponse $) {
+        this.affinityType = $.affinityType;
+        this.displayName = $.displayName;
+        this.hostMembers = $.hostMembers;
+        this.provisioningState = $.provisioningState;
+        this.state = $.state;
+        this.type = $.type;
+        this.vmMembers = $.vmMembers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmHostPlacementPolicyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String affinityType;
-        private @Nullable String displayName;
-        private List<String> hostMembers;
-        private String provisioningState;
-        private @Nullable String state;
-        private String type;
-        private List<String> vmMembers;
+        private VmHostPlacementPolicyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmHostPlacementPolicyPropertiesResponse();
         }
 
         public Builder(VmHostPlacementPolicyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affinityType = defaults.affinityType;
-    	      this.displayName = defaults.displayName;
-    	      this.hostMembers = defaults.hostMembers;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
-    	      this.vmMembers = defaults.vmMembers;
+            $ = new VmHostPlacementPolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder affinityType(String affinityType) {
-            this.affinityType = Objects.requireNonNull(affinityType);
+            $.affinityType = affinityType;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder hostMembers(List<String> hostMembers) {
-            this.hostMembers = Objects.requireNonNull(hostMembers);
+            $.hostMembers = hostMembers;
             return this;
         }
+
         public Builder hostMembers(String... hostMembers) {
             return hostMembers(List.of(hostMembers));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder vmMembers(List<String> vmMembers) {
-            this.vmMembers = Objects.requireNonNull(vmMembers);
+            $.vmMembers = vmMembers;
             return this;
         }
+
         public Builder vmMembers(String... vmMembers) {
             return vmMembers(List.of(vmMembers));
-        }        public VmHostPlacementPolicyPropertiesResponse build() {
-            return new VmHostPlacementPolicyPropertiesResponse(affinityType, displayName, hostMembers, provisioningState, state, type, vmMembers);
+        }
+
+        public VmHostPlacementPolicyPropertiesResponse build() {
+            $.affinityType = Objects.requireNonNull($.affinityType, "expected parameter 'affinityType' to be non-null");
+            $.hostMembers = Objects.requireNonNull($.hostMembers, "expected parameter 'hostMembers' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.vmMembers = Objects.requireNonNull($.vmMembers, "expected parameter 'vmMembers' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="licenses", required=true)
-      private final Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
+    private Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
 
     public Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses() {
         return this.licenses;
@@ -38,7 +39,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -49,79 +50,74 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="responseCustomData")
-      private final @Nullable Output<String> responseCustomData;
+    private @Nullable Output<String> responseCustomData;
 
-    public Output<String> responseCustomData() {
-        return this.responseCustomData == null ? Codegen.empty() : this.responseCustomData;
+    public Optional<Output<String>> responseCustomData() {
+        return Optional.ofNullable(this.responseCustomData);
     }
 
-    public ContentKeyPolicyPlayReadyConfigurationArgs(
-        Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses,
-        Output<String> odataType,
-        @Nullable Output<String> responseCustomData) {
-        this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.responseCustomData = responseCustomData;
-    }
+    private ContentKeyPolicyPlayReadyConfigurationArgs() {}
 
-    private ContentKeyPolicyPlayReadyConfigurationArgs() {
-        this.licenses = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.responseCustomData = Codegen.empty();
+    private ContentKeyPolicyPlayReadyConfigurationArgs(ContentKeyPolicyPlayReadyConfigurationArgs $) {
+        this.licenses = $.licenses;
+        this.odataType = $.odataType;
+        this.responseCustomData = $.responseCustomData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
-        private Output<String> odataType;
-        private @Nullable Output<String> responseCustomData;
+        private ContentKeyPolicyPlayReadyConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyConfigurationArgs();
         }
 
         public Builder(ContentKeyPolicyPlayReadyConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.licenses = defaults.licenses;
-    	      this.odataType = defaults.odataType;
-    	      this.responseCustomData = defaults.responseCustomData;
+            $ = new ContentKeyPolicyPlayReadyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder licenses(Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses) {
-            this.licenses = Objects.requireNonNull(licenses);
+            $.licenses = licenses;
             return this;
         }
+
         public Builder licenses(List<ContentKeyPolicyPlayReadyLicenseArgs> licenses) {
-            this.licenses = Output.of(Objects.requireNonNull(licenses));
-            return this;
+            return licenses(Output.of(licenses));
         }
+
         public Builder licenses(ContentKeyPolicyPlayReadyLicenseArgs... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder responseCustomData(@Nullable Output<String> responseCustomData) {
-            this.responseCustomData = responseCustomData;
+            $.responseCustomData = responseCustomData;
             return this;
         }
-        public Builder responseCustomData(@Nullable String responseCustomData) {
-            this.responseCustomData = Codegen.ofNullable(responseCustomData);
-            return this;
-        }        public ContentKeyPolicyPlayReadyConfigurationArgs build() {
-            return new ContentKeyPolicyPlayReadyConfigurationArgs(licenses, odataType, responseCustomData);
+
+        public Builder responseCustomData(String responseCustomData) {
+            return responseCustomData(Output.of(responseCustomData));
+        }
+
+        public ContentKeyPolicyPlayReadyConfigurationArgs build() {
+            $.licenses = Objects.requireNonNull($.licenses, "expected parameter 'licenses' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

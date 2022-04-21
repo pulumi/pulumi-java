@@ -6,7 +6,6 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.ComputeNodeFillType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class TaskSchedulingPolicyArgs extends com.pulumi.resources.Resourc
     public static final TaskSchedulingPolicyArgs Empty = new TaskSchedulingPolicyArgs();
 
     @Import(name="nodeFillType", required=true)
-      private final Output<ComputeNodeFillType> nodeFillType;
+    private Output<ComputeNodeFillType> nodeFillType;
 
     public Output<ComputeNodeFillType> nodeFillType() {
         return this.nodeFillType;
     }
 
-    public TaskSchedulingPolicyArgs(Output<ComputeNodeFillType> nodeFillType) {
-        this.nodeFillType = Objects.requireNonNull(nodeFillType, "expected parameter 'nodeFillType' to be non-null");
-    }
+    private TaskSchedulingPolicyArgs() {}
 
-    private TaskSchedulingPolicyArgs() {
-        this.nodeFillType = Codegen.empty();
+    private TaskSchedulingPolicyArgs(TaskSchedulingPolicyArgs $) {
+        this.nodeFillType = $.nodeFillType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSchedulingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ComputeNodeFillType> nodeFillType;
+        private TaskSchedulingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSchedulingPolicyArgs();
         }
 
         public Builder(TaskSchedulingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeFillType = defaults.nodeFillType;
+            $ = new TaskSchedulingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeFillType(Output<ComputeNodeFillType> nodeFillType) {
-            this.nodeFillType = Objects.requireNonNull(nodeFillType);
+            $.nodeFillType = nodeFillType;
             return this;
         }
+
         public Builder nodeFillType(ComputeNodeFillType nodeFillType) {
-            this.nodeFillType = Output.of(Objects.requireNonNull(nodeFillType));
-            return this;
-        }        public TaskSchedulingPolicyArgs build() {
-            return new TaskSchedulingPolicyArgs(nodeFillType);
+            return nodeFillType(Output.of(nodeFillType));
+        }
+
+        public TaskSchedulingPolicyArgs build() {
+            $.nodeFillType = Objects.requireNonNull($.nodeFillType, "expected parameter 'nodeFillType' to be non-null");
+            return $;
         }
     }
+
 }

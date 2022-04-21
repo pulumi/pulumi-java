@@ -17,7 +17,7 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="predictionName", required=true)
-      private final String predictionName;
+    private String predictionName;
 
     public String predictionName() {
         return this.predictionName;
@@ -39,64 +39,59 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPredictionTrainingResultsArgs(
-        String hubName,
-        String predictionName,
-        String resourceGroupName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.predictionName = Objects.requireNonNull(predictionName, "expected parameter 'predictionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPredictionTrainingResultsArgs() {}
 
-    private GetPredictionTrainingResultsArgs() {
-        this.hubName = null;
-        this.predictionName = null;
-        this.resourceGroupName = null;
+    private GetPredictionTrainingResultsArgs(GetPredictionTrainingResultsArgs $) {
+        this.hubName = $.hubName;
+        this.predictionName = $.predictionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPredictionTrainingResultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private String predictionName;
-        private String resourceGroupName;
+        private GetPredictionTrainingResultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPredictionTrainingResultsArgs();
         }
 
         public Builder(GetPredictionTrainingResultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.predictionName = defaults.predictionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPredictionTrainingResultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder predictionName(String predictionName) {
-            this.predictionName = Objects.requireNonNull(predictionName);
+            $.predictionName = predictionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPredictionTrainingResultsArgs build() {
-            return new GetPredictionTrainingResultsArgs(hubName, predictionName, resourceGroupName);
+        }
+
+        public GetPredictionTrainingResultsArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.predictionName = Objects.requireNonNull($.predictionName, "expected parameter 'predictionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

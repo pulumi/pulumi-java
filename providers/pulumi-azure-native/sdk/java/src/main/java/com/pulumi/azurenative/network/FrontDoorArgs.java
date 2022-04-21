@@ -13,11 +13,11 @@ import com.pulumi.azurenative.network.inputs.RoutingRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendPools")
-      private final @Nullable Output<List<BackendPoolArgs>> backendPools;
+    private @Nullable Output<List<BackendPoolArgs>> backendPools;
 
-    public Output<List<BackendPoolArgs>> backendPools() {
-        return this.backendPools == null ? Codegen.empty() : this.backendPools;
+    public Optional<Output<List<BackendPoolArgs>>> backendPools() {
+        return Optional.ofNullable(this.backendPools);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendPoolsSettings")
-      private final @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
+    private @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
 
-    public Output<BackendPoolsSettingsArgs> backendPoolsSettings() {
-        return this.backendPoolsSettings == null ? Codegen.empty() : this.backendPoolsSettings;
+    public Optional<Output<BackendPoolsSettingsArgs>> backendPoolsSettings() {
+        return Optional.ofNullable(this.backendPoolsSettings);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
+    private @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
 
-    public Output<Either<String,FrontDoorEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,FrontDoorEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frontDoorName")
-      private final @Nullable Output<String> frontDoorName;
+    private @Nullable Output<String> frontDoorName;
 
-    public Output<String> frontDoorName() {
-        return this.frontDoorName == null ? Codegen.empty() : this.frontDoorName;
+    public Optional<Output<String>> frontDoorName() {
+        return Optional.ofNullable(this.frontDoorName);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frontendEndpoints")
-      private final @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
+    private @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
 
-    public Output<List<FrontendEndpointArgs>> frontendEndpoints() {
-        return this.frontendEndpoints == null ? Codegen.empty() : this.frontendEndpoints;
+    public Optional<Output<List<FrontendEndpointArgs>>> frontendEndpoints() {
+        return Optional.ofNullable(this.frontendEndpoints);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthProbeSettings")
-      private final @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
+    private @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
-    public Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings() {
-        return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
+    public Optional<Output<List<HealthProbeSettingsModelArgs>>> healthProbeSettings() {
+        return Optional.ofNullable(this.healthProbeSettings);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancingSettings")
-      private final @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
+    private @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
-    public Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Codegen.empty() : this.loadBalancingSettings;
+    public Optional<Output<List<LoadBalancingSettingsModelArgs>>> loadBalancingSettings() {
+        return Optional.ofNullable(this.loadBalancingSettings);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -140,10 +140,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingRules")
-      private final @Nullable Output<List<RoutingRuleArgs>> routingRules;
+    private @Nullable Output<List<RoutingRuleArgs>> routingRules;
 
-    public Output<List<RoutingRuleArgs>> routingRules() {
-        return this.routingRules == null ? Codegen.empty() : this.routingRules;
+    public Optional<Output<List<RoutingRuleArgs>>> routingRules() {
+        return Optional.ofNullable(this.routingRules);
     }
 
     /**
@@ -151,208 +151,179 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FrontDoorArgs(
-        @Nullable Output<List<BackendPoolArgs>> backendPools,
-        @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings,
-        @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> frontDoorName,
-        @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints,
-        @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings,
-        @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<RoutingRuleArgs>> routingRules,
-        @Nullable Output<Map<String,String>> tags) {
-        this.backendPools = backendPools;
-        this.backendPoolsSettings = backendPoolsSettings;
-        this.enabledState = enabledState;
-        this.friendlyName = friendlyName;
-        this.frontDoorName = frontDoorName;
-        this.frontendEndpoints = frontendEndpoints;
-        this.healthProbeSettings = healthProbeSettings;
-        this.loadBalancingSettings = loadBalancingSettings;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routingRules = routingRules;
-        this.tags = tags;
-    }
+    private FrontDoorArgs() {}
 
-    private FrontDoorArgs() {
-        this.backendPools = Codegen.empty();
-        this.backendPoolsSettings = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.frontDoorName = Codegen.empty();
-        this.frontendEndpoints = Codegen.empty();
-        this.healthProbeSettings = Codegen.empty();
-        this.loadBalancingSettings = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routingRules = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FrontDoorArgs(FrontDoorArgs $) {
+        this.backendPools = $.backendPools;
+        this.backendPoolsSettings = $.backendPoolsSettings;
+        this.enabledState = $.enabledState;
+        this.friendlyName = $.friendlyName;
+        this.frontDoorName = $.frontDoorName;
+        this.frontendEndpoints = $.frontendEndpoints;
+        this.healthProbeSettings = $.healthProbeSettings;
+        this.loadBalancingSettings = $.loadBalancingSettings;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routingRules = $.routingRules;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackendPoolArgs>> backendPools;
-        private @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
-        private @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> frontDoorName;
-        private @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
-        private @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
-        private @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<RoutingRuleArgs>> routingRules;
-        private @Nullable Output<Map<String,String>> tags;
+        private FrontDoorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorArgs();
         }
 
         public Builder(FrontDoorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPools = defaults.backendPools;
-    	      this.backendPoolsSettings = defaults.backendPoolsSettings;
-    	      this.enabledState = defaults.enabledState;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.frontDoorName = defaults.frontDoorName;
-    	      this.frontendEndpoints = defaults.frontendEndpoints;
-    	      this.healthProbeSettings = defaults.healthProbeSettings;
-    	      this.loadBalancingSettings = defaults.loadBalancingSettings;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routingRules = defaults.routingRules;
-    	      this.tags = defaults.tags;
+            $ = new FrontDoorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPools(@Nullable Output<List<BackendPoolArgs>> backendPools) {
-            this.backendPools = backendPools;
+            $.backendPools = backendPools;
             return this;
         }
-        public Builder backendPools(@Nullable List<BackendPoolArgs> backendPools) {
-            this.backendPools = Codegen.ofNullable(backendPools);
-            return this;
+
+        public Builder backendPools(List<BackendPoolArgs> backendPools) {
+            return backendPools(Output.of(backendPools));
         }
+
         public Builder backendPools(BackendPoolArgs... backendPools) {
             return backendPools(List.of(backendPools));
         }
+
         public Builder backendPoolsSettings(@Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings) {
-            this.backendPoolsSettings = backendPoolsSettings;
+            $.backendPoolsSettings = backendPoolsSettings;
             return this;
         }
-        public Builder backendPoolsSettings(@Nullable BackendPoolsSettingsArgs backendPoolsSettings) {
-            this.backendPoolsSettings = Codegen.ofNullable(backendPoolsSettings);
-            return this;
+
+        public Builder backendPoolsSettings(BackendPoolsSettingsArgs backendPoolsSettings) {
+            return backendPoolsSettings(Output.of(backendPoolsSettings));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,FrontDoorEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,FrontDoorEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,FrontDoorEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder frontDoorName(@Nullable Output<String> frontDoorName) {
-            this.frontDoorName = frontDoorName;
+            $.frontDoorName = frontDoorName;
             return this;
         }
-        public Builder frontDoorName(@Nullable String frontDoorName) {
-            this.frontDoorName = Codegen.ofNullable(frontDoorName);
-            return this;
+
+        public Builder frontDoorName(String frontDoorName) {
+            return frontDoorName(Output.of(frontDoorName));
         }
+
         public Builder frontendEndpoints(@Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints) {
-            this.frontendEndpoints = frontendEndpoints;
+            $.frontendEndpoints = frontendEndpoints;
             return this;
         }
-        public Builder frontendEndpoints(@Nullable List<FrontendEndpointArgs> frontendEndpoints) {
-            this.frontendEndpoints = Codegen.ofNullable(frontendEndpoints);
-            return this;
+
+        public Builder frontendEndpoints(List<FrontendEndpointArgs> frontendEndpoints) {
+            return frontendEndpoints(Output.of(frontendEndpoints));
         }
+
         public Builder frontendEndpoints(FrontendEndpointArgs... frontendEndpoints) {
             return frontendEndpoints(List.of(frontendEndpoints));
         }
+
         public Builder healthProbeSettings(@Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings) {
-            this.healthProbeSettings = healthProbeSettings;
+            $.healthProbeSettings = healthProbeSettings;
             return this;
         }
-        public Builder healthProbeSettings(@Nullable List<HealthProbeSettingsModelArgs> healthProbeSettings) {
-            this.healthProbeSettings = Codegen.ofNullable(healthProbeSettings);
-            return this;
+
+        public Builder healthProbeSettings(List<HealthProbeSettingsModelArgs> healthProbeSettings) {
+            return healthProbeSettings(Output.of(healthProbeSettings));
         }
+
         public Builder healthProbeSettings(HealthProbeSettingsModelArgs... healthProbeSettings) {
             return healthProbeSettings(List.of(healthProbeSettings));
         }
+
         public Builder loadBalancingSettings(@Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings) {
-            this.loadBalancingSettings = loadBalancingSettings;
+            $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-        public Builder loadBalancingSettings(@Nullable List<LoadBalancingSettingsModelArgs> loadBalancingSettings) {
-            this.loadBalancingSettings = Codegen.ofNullable(loadBalancingSettings);
-            return this;
+
+        public Builder loadBalancingSettings(List<LoadBalancingSettingsModelArgs> loadBalancingSettings) {
+            return loadBalancingSettings(Output.of(loadBalancingSettings));
         }
+
         public Builder loadBalancingSettings(LoadBalancingSettingsModelArgs... loadBalancingSettings) {
             return loadBalancingSettings(List.of(loadBalancingSettings));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routingRules(@Nullable Output<List<RoutingRuleArgs>> routingRules) {
-            this.routingRules = routingRules;
+            $.routingRules = routingRules;
             return this;
         }
-        public Builder routingRules(@Nullable List<RoutingRuleArgs> routingRules) {
-            this.routingRules = Codegen.ofNullable(routingRules);
-            return this;
+
+        public Builder routingRules(List<RoutingRuleArgs> routingRules) {
+            return routingRules(Output.of(routingRules));
         }
+
         public Builder routingRules(RoutingRuleArgs... routingRules) {
             return routingRules(List.of(routingRules));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public FrontDoorArgs build() {
-            return new FrontDoorArgs(backendPools, backendPoolsSettings, enabledState, friendlyName, frontDoorName, frontendEndpoints, healthProbeSettings, loadBalancingSettings, location, resourceGroupName, routingRules, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public FrontDoorArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

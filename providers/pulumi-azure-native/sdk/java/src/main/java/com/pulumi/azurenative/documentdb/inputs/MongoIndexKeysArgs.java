@@ -5,10 +5,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MongoIndexKeysArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<List<String>> keys;
+    private @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<String>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
-    public MongoIndexKeysArgs(@Nullable Output<List<String>> keys) {
-        this.keys = keys;
-    }
+    private MongoIndexKeysArgs() {}
 
-    private MongoIndexKeysArgs() {
-        this.keys = Codegen.empty();
+    private MongoIndexKeysArgs(MongoIndexKeysArgs $) {
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoIndexKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> keys;
+        private MongoIndexKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoIndexKeysArgs();
         }
 
         public Builder(MongoIndexKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keys = defaults.keys;
+            $ = new MongoIndexKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keys(@Nullable Output<List<String>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<String> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<String> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
-        }        public MongoIndexKeysArgs build() {
-            return new MongoIndexKeysArgs(keys);
+        }
+
+        public MongoIndexKeysArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.enums.DiskSecurityTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class DiskSecurityProfileArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securityType")
-      private final @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
+    private @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
-    public Output<Either<String,DiskSecurityTypes>> securityType() {
-        return this.securityType == null ? Codegen.empty() : this.securityType;
+    public Optional<Output<Either<String,DiskSecurityTypes>>> securityType() {
+        return Optional.ofNullable(this.securityType);
     }
 
-    public DiskSecurityProfileArgs(@Nullable Output<Either<String,DiskSecurityTypes>> securityType) {
-        this.securityType = securityType;
-    }
+    private DiskSecurityProfileArgs() {}
 
-    private DiskSecurityProfileArgs() {
-        this.securityType = Codegen.empty();
+    private DiskSecurityProfileArgs(DiskSecurityProfileArgs $) {
+        this.securityType = $.securityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskSecurityProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
+        private DiskSecurityProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskSecurityProfileArgs();
         }
 
         public Builder(DiskSecurityProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityType = defaults.securityType;
+            $ = new DiskSecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityType(@Nullable Output<Either<String,DiskSecurityTypes>> securityType) {
-            this.securityType = securityType;
+            $.securityType = securityType;
             return this;
         }
-        public Builder securityType(@Nullable Either<String,DiskSecurityTypes> securityType) {
-            this.securityType = Codegen.ofNullable(securityType);
-            return this;
-        }        public DiskSecurityProfileArgs build() {
-            return new DiskSecurityProfileArgs(securityType);
+
+        public Builder securityType(Either<String,DiskSecurityTypes> securityType) {
+            return securityType(Output.of(securityType));
+        }
+
+        public DiskSecurityProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class JpgFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filenamePattern", required=true)
-      private final String filenamePattern;
+    private String filenamePattern;
 
     public String filenamePattern() {
         return this.filenamePattern;
@@ -34,55 +34,52 @@ public final class JpgFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public JpgFormatResponse(
-        String filenamePattern,
-        String odataType) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private JpgFormatResponse() {}
 
-    private JpgFormatResponse() {
-        this.filenamePattern = null;
-        this.odataType = null;
+    private JpgFormatResponse(JpgFormatResponse $) {
+        this.filenamePattern = $.filenamePattern;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JpgFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filenamePattern;
-        private String odataType;
+        private JpgFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JpgFormatResponse();
         }
 
         public Builder(JpgFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filenamePattern = defaults.filenamePattern;
-    	      this.odataType = defaults.odataType;
+            $ = new JpgFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Objects.requireNonNull(filenamePattern);
+            $.filenamePattern = filenamePattern;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public JpgFormatResponse build() {
-            return new JpgFormatResponse(filenamePattern, odataType);
+        }
+
+        public JpgFormatResponse build() {
+            $.filenamePattern = Objects.requireNonNull($.filenamePattern, "expected parameter 'filenamePattern' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -19,45 +19,44 @@ public final class PipelineSourceTriggerDescriptorResponse extends com.pulumi.re
      * 
      */
     @Import(name="timestamp")
-      private final @Nullable String timestamp;
+    private @Nullable String timestamp;
 
     public Optional<String> timestamp() {
-        return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
+        return Optional.ofNullable(this.timestamp);
     }
 
-    public PipelineSourceTriggerDescriptorResponse(@Nullable String timestamp) {
-        this.timestamp = timestamp;
-    }
+    private PipelineSourceTriggerDescriptorResponse() {}
 
-    private PipelineSourceTriggerDescriptorResponse() {
-        this.timestamp = null;
+    private PipelineSourceTriggerDescriptorResponse(PipelineSourceTriggerDescriptorResponse $) {
+        this.timestamp = $.timestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineSourceTriggerDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String timestamp;
+        private PipelineSourceTriggerDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineSourceTriggerDescriptorResponse();
         }
 
         public Builder(PipelineSourceTriggerDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timestamp = defaults.timestamp;
+            $ = new PipelineSourceTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder timestamp(@Nullable String timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
-        }        public PipelineSourceTriggerDescriptorResponse build() {
-            return new PipelineSourceTriggerDescriptorResponse(timestamp);
+        }
+
+        public PipelineSourceTriggerDescriptorResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetViewByScopeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -28,55 +28,52 @@ public final class GetViewByScopeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewName", required=true)
-      private final String viewName;
+    private String viewName;
 
     public String viewName() {
         return this.viewName;
     }
 
-    public GetViewByScopeArgs(
-        String scope,
-        String viewName) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.viewName = Objects.requireNonNull(viewName, "expected parameter 'viewName' to be non-null");
-    }
+    private GetViewByScopeArgs() {}
 
-    private GetViewByScopeArgs() {
-        this.scope = null;
-        this.viewName = null;
+    private GetViewByScopeArgs(GetViewByScopeArgs $) {
+        this.scope = $.scope;
+        this.viewName = $.viewName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetViewByScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
-        private String viewName;
+        private GetViewByScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetViewByScopeArgs();
         }
 
         public Builder(GetViewByScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.viewName = defaults.viewName;
+            $ = new GetViewByScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder viewName(String viewName) {
-            this.viewName = Objects.requireNonNull(viewName);
+            $.viewName = viewName;
             return this;
-        }        public GetViewByScopeArgs build() {
-            return new GetViewByScopeArgs(scope, viewName);
+        }
+
+        public GetViewByScopeArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.viewName = Objects.requireNonNull($.viewName, "expected parameter 'viewName' to be non-null");
+            return $;
         }
     }
+
 }

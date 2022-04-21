@@ -22,7 +22,7 @@ public final class EdifactOneWayAgreementResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="protocolSettings", required=true)
-      private final EdifactProtocolSettingsResponse protocolSettings;
+    private EdifactProtocolSettingsResponse protocolSettings;
 
     public EdifactProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
@@ -33,7 +33,7 @@ public final class EdifactOneWayAgreementResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="receiverBusinessIdentity", required=true)
-      private final BusinessIdentityResponse receiverBusinessIdentity;
+    private BusinessIdentityResponse receiverBusinessIdentity;
 
     public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -44,64 +44,59 @@ public final class EdifactOneWayAgreementResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="senderBusinessIdentity", required=true)
-      private final BusinessIdentityResponse senderBusinessIdentity;
+    private BusinessIdentityResponse senderBusinessIdentity;
 
     public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 
-    public EdifactOneWayAgreementResponse(
-        EdifactProtocolSettingsResponse protocolSettings,
-        BusinessIdentityResponse receiverBusinessIdentity,
-        BusinessIdentityResponse senderBusinessIdentity) {
-        this.protocolSettings = Objects.requireNonNull(protocolSettings, "expected parameter 'protocolSettings' to be non-null");
-        this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
-        this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
-    }
+    private EdifactOneWayAgreementResponse() {}
 
-    private EdifactOneWayAgreementResponse() {
-        this.protocolSettings = null;
-        this.receiverBusinessIdentity = null;
-        this.senderBusinessIdentity = null;
+    private EdifactOneWayAgreementResponse(EdifactOneWayAgreementResponse $) {
+        this.protocolSettings = $.protocolSettings;
+        this.receiverBusinessIdentity = $.receiverBusinessIdentity;
+        this.senderBusinessIdentity = $.senderBusinessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactOneWayAgreementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EdifactProtocolSettingsResponse protocolSettings;
-        private BusinessIdentityResponse receiverBusinessIdentity;
-        private BusinessIdentityResponse senderBusinessIdentity;
+        private EdifactOneWayAgreementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactOneWayAgreementResponse();
         }
 
         public Builder(EdifactOneWayAgreementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocolSettings = defaults.protocolSettings;
-    	      this.receiverBusinessIdentity = defaults.receiverBusinessIdentity;
-    	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
+            $ = new EdifactOneWayAgreementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder protocolSettings(EdifactProtocolSettingsResponse protocolSettings) {
-            this.protocolSettings = Objects.requireNonNull(protocolSettings);
+            $.protocolSettings = protocolSettings;
             return this;
         }
+
         public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
-            this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
+            $.receiverBusinessIdentity = receiverBusinessIdentity;
             return this;
         }
+
         public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
-            this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
+            $.senderBusinessIdentity = senderBusinessIdentity;
             return this;
-        }        public EdifactOneWayAgreementResponse build() {
-            return new EdifactOneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
+        }
+
+        public EdifactOneWayAgreementResponse build() {
+            $.protocolSettings = Objects.requireNonNull($.protocolSettings, "expected parameter 'protocolSettings' to be non-null");
+            $.receiverBusinessIdentity = Objects.requireNonNull($.receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
+            $.senderBusinessIdentity = Objects.requireNonNull($.senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.azurenative.deploymentmanager.inputs.IdentityArgs;
 import com.pulumi.azurenative.deploymentmanager.inputs.StepGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactSourceId")
-      private final @Nullable Output<String> artifactSourceId;
+    private @Nullable Output<String> artifactSourceId;
 
-    public Output<String> artifactSourceId() {
-        return this.artifactSourceId == null ? Codegen.empty() : this.artifactSourceId;
+    public Optional<Output<String>> artifactSourceId() {
+        return Optional.ofNullable(this.artifactSourceId);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildVersion", required=true)
-      private final Output<String> buildVersion;
+    private Output<String> buildVersion;
 
     public Output<String> buildVersion() {
         return this.buildVersion;
@@ -46,7 +46,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<IdentityArgs> identity;
+    private Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> identity() {
         return this.identity;
@@ -57,10 +57,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,10 +79,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rolloutName")
-      private final @Nullable Output<String> rolloutName;
+    private @Nullable Output<String> rolloutName;
 
-    public Output<String> rolloutName() {
-        return this.rolloutName == null ? Codegen.empty() : this.rolloutName;
+    public Optional<Output<String>> rolloutName() {
+        return Optional.ofNullable(this.rolloutName);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepGroups", required=true)
-      private final Output<List<StepGroupArgs>> stepGroups;
+    private Output<List<StepGroupArgs>> stepGroups;
 
     public Output<List<StepGroupArgs>> stepGroups() {
         return this.stepGroups;
@@ -101,10 +101,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -112,157 +112,137 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetServiceTopologyId", required=true)
-      private final Output<String> targetServiceTopologyId;
+    private Output<String> targetServiceTopologyId;
 
     public Output<String> targetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
 
-    public RolloutArgs(
-        @Nullable Output<String> artifactSourceId,
-        Output<String> buildVersion,
-        Output<IdentityArgs> identity,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> rolloutName,
-        Output<List<StepGroupArgs>> stepGroups,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> targetServiceTopologyId) {
-        this.artifactSourceId = artifactSourceId;
-        this.buildVersion = Objects.requireNonNull(buildVersion, "expected parameter 'buildVersion' to be non-null");
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rolloutName = rolloutName;
-        this.stepGroups = Objects.requireNonNull(stepGroups, "expected parameter 'stepGroups' to be non-null");
-        this.tags = tags;
-        this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId, "expected parameter 'targetServiceTopologyId' to be non-null");
-    }
+    private RolloutArgs() {}
 
-    private RolloutArgs() {
-        this.artifactSourceId = Codegen.empty();
-        this.buildVersion = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.rolloutName = Codegen.empty();
-        this.stepGroups = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetServiceTopologyId = Codegen.empty();
+    private RolloutArgs(RolloutArgs $) {
+        this.artifactSourceId = $.artifactSourceId;
+        this.buildVersion = $.buildVersion;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rolloutName = $.rolloutName;
+        this.stepGroups = $.stepGroups;
+        this.tags = $.tags;
+        this.targetServiceTopologyId = $.targetServiceTopologyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactSourceId;
-        private Output<String> buildVersion;
-        private Output<IdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> rolloutName;
-        private Output<List<StepGroupArgs>> stepGroups;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> targetServiceTopologyId;
+        private RolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutArgs();
         }
 
         public Builder(RolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactSourceId = defaults.artifactSourceId;
-    	      this.buildVersion = defaults.buildVersion;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rolloutName = defaults.rolloutName;
-    	      this.stepGroups = defaults.stepGroups;
-    	      this.tags = defaults.tags;
-    	      this.targetServiceTopologyId = defaults.targetServiceTopologyId;
+            $ = new RolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactSourceId(@Nullable Output<String> artifactSourceId) {
-            this.artifactSourceId = artifactSourceId;
+            $.artifactSourceId = artifactSourceId;
             return this;
         }
-        public Builder artifactSourceId(@Nullable String artifactSourceId) {
-            this.artifactSourceId = Codegen.ofNullable(artifactSourceId);
-            return this;
+
+        public Builder artifactSourceId(String artifactSourceId) {
+            return artifactSourceId(Output.of(artifactSourceId));
         }
+
         public Builder buildVersion(Output<String> buildVersion) {
-            this.buildVersion = Objects.requireNonNull(buildVersion);
+            $.buildVersion = buildVersion;
             return this;
         }
+
         public Builder buildVersion(String buildVersion) {
-            this.buildVersion = Output.of(Objects.requireNonNull(buildVersion));
-            return this;
+            return buildVersion(Output.of(buildVersion));
         }
+
         public Builder identity(Output<IdentityArgs> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(IdentityArgs identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder rolloutName(@Nullable Output<String> rolloutName) {
-            this.rolloutName = rolloutName;
+            $.rolloutName = rolloutName;
             return this;
         }
-        public Builder rolloutName(@Nullable String rolloutName) {
-            this.rolloutName = Codegen.ofNullable(rolloutName);
-            return this;
+
+        public Builder rolloutName(String rolloutName) {
+            return rolloutName(Output.of(rolloutName));
         }
+
         public Builder stepGroups(Output<List<StepGroupArgs>> stepGroups) {
-            this.stepGroups = Objects.requireNonNull(stepGroups);
+            $.stepGroups = stepGroups;
             return this;
         }
+
         public Builder stepGroups(List<StepGroupArgs> stepGroups) {
-            this.stepGroups = Output.of(Objects.requireNonNull(stepGroups));
-            return this;
+            return stepGroups(Output.of(stepGroups));
         }
+
         public Builder stepGroups(StepGroupArgs... stepGroups) {
             return stepGroups(List.of(stepGroups));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetServiceTopologyId(Output<String> targetServiceTopologyId) {
-            this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
+            $.targetServiceTopologyId = targetServiceTopologyId;
             return this;
         }
+
         public Builder targetServiceTopologyId(String targetServiceTopologyId) {
-            this.targetServiceTopologyId = Output.of(Objects.requireNonNull(targetServiceTopologyId));
-            return this;
-        }        public RolloutArgs build() {
-            return new RolloutArgs(artifactSourceId, buildVersion, identity, location, resourceGroupName, rolloutName, stepGroups, tags, targetServiceTopologyId);
+            return targetServiceTopologyId(Output.of(targetServiceTopologyId));
+        }
+
+        public RolloutArgs build() {
+            $.buildVersion = Objects.requireNonNull($.buildVersion, "expected parameter 'buildVersion' to be non-null");
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.stepGroups = Objects.requireNonNull($.stepGroups, "expected parameter 'stepGroups' to be non-null");
+            $.targetServiceTopologyId = Objects.requireNonNull($.targetServiceTopologyId, "expected parameter 'targetServiceTopologyId' to be non-null");
+            return $;
         }
     }
+
 }

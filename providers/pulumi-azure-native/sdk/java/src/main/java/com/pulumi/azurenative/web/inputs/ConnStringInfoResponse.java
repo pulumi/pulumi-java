@@ -23,10 +23,10 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable String connectionString;
+    private @Nullable String connectionString;
 
     public Optional<String> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ConnStringInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnStringInfoResponse(
-        @Nullable String connectionString,
-        @Nullable String name,
-        @Nullable String type) {
-        this.connectionString = connectionString;
-        this.name = name;
-        this.type = type;
-    }
+    private ConnStringInfoResponse() {}
 
-    private ConnStringInfoResponse() {
-        this.connectionString = null;
-        this.name = null;
-        this.type = null;
+    private ConnStringInfoResponse(ConnStringInfoResponse $) {
+        this.connectionString = $.connectionString;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnStringInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String connectionString;
-        private @Nullable String name;
-        private @Nullable String type;
+        private ConnStringInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnStringInfoResponse();
         }
 
         public Builder(ConnStringInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ConnStringInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ConnStringInfoResponse build() {
-            return new ConnStringInfoResponse(connectionString, name, type);
+        }
+
+        public ConnStringInfoResponse build() {
+            return $;
         }
     }
+
 }

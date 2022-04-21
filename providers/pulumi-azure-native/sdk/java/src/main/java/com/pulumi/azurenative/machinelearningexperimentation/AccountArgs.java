@@ -6,10 +6,10 @@ package com.pulumi.azurenative.machinelearningexperimentation;
 import com.pulumi.azurenative.machinelearningexperimentation.inputs.StorageAccountPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultId", required=true)
-      private final Output<String> keyVaultId;
+    private Output<String> keyVaultId;
 
     public Output<String> keyVaultId() {
         return this.keyVaultId;
@@ -66,10 +66,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -88,10 +88,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="seats")
-      private final @Nullable Output<String> seats;
+    private @Nullable Output<String> seats;
 
-    public Output<String> seats() {
-        return this.seats == null ? Codegen.empty() : this.seats;
+    public Optional<Output<String>> seats() {
+        return Optional.ofNullable(this.seats);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccount", required=true)
-      private final Output<StorageAccountPropertiesArgs> storageAccount;
+    private Output<StorageAccountPropertiesArgs> storageAccount;
 
     public Output<StorageAccountPropertiesArgs> storageAccount() {
         return this.storageAccount;
@@ -110,10 +110,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -121,167 +121,142 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vsoAccountId", required=true)
-      private final Output<String> vsoAccountId;
+    private Output<String> vsoAccountId;
 
     public Output<String> vsoAccountId() {
         return this.vsoAccountId;
     }
 
-    public AccountArgs(
-        @Nullable Output<String> accountName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        Output<String> keyVaultId,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> seats,
-        Output<StorageAccountPropertiesArgs> storageAccount,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vsoAccountId) {
-        this.accountName = accountName;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.keyVaultId = Objects.requireNonNull(keyVaultId, "expected parameter 'keyVaultId' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.seats = seats;
-        this.storageAccount = Objects.requireNonNull(storageAccount, "expected parameter 'storageAccount' to be non-null");
-        this.tags = tags;
-        this.vsoAccountId = Objects.requireNonNull(vsoAccountId, "expected parameter 'vsoAccountId' to be non-null");
-    }
+    private AccountArgs() {}
 
-    private AccountArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.keyVaultId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.seats = Codegen.empty();
-        this.storageAccount = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vsoAccountId = Codegen.empty();
+    private AccountArgs(AccountArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.keyVaultId = $.keyVaultId;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.seats = $.seats;
+        this.storageAccount = $.storageAccount;
+        this.tags = $.tags;
+        this.vsoAccountId = $.vsoAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private Output<String> keyVaultId;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> seats;
-        private Output<StorageAccountPropertiesArgs> storageAccount;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vsoAccountId;
+        private AccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountArgs();
         }
 
         public Builder(AccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.seats = defaults.seats;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.tags = defaults.tags;
-    	      this.vsoAccountId = defaults.vsoAccountId;
+            $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder keyVaultId(Output<String> keyVaultId) {
-            this.keyVaultId = Objects.requireNonNull(keyVaultId);
+            $.keyVaultId = keyVaultId;
             return this;
         }
+
         public Builder keyVaultId(String keyVaultId) {
-            this.keyVaultId = Output.of(Objects.requireNonNull(keyVaultId));
-            return this;
+            return keyVaultId(Output.of(keyVaultId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder seats(@Nullable Output<String> seats) {
-            this.seats = seats;
+            $.seats = seats;
             return this;
         }
-        public Builder seats(@Nullable String seats) {
-            this.seats = Codegen.ofNullable(seats);
-            return this;
+
+        public Builder seats(String seats) {
+            return seats(Output.of(seats));
         }
+
         public Builder storageAccount(Output<StorageAccountPropertiesArgs> storageAccount) {
-            this.storageAccount = Objects.requireNonNull(storageAccount);
+            $.storageAccount = storageAccount;
             return this;
         }
+
         public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
-            return this;
+            return storageAccount(Output.of(storageAccount));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vsoAccountId(Output<String> vsoAccountId) {
-            this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
+            $.vsoAccountId = vsoAccountId;
             return this;
         }
+
         public Builder vsoAccountId(String vsoAccountId) {
-            this.vsoAccountId = Output.of(Objects.requireNonNull(vsoAccountId));
-            return this;
-        }        public AccountArgs build() {
-            return new AccountArgs(accountName, description, friendlyName, keyVaultId, location, resourceGroupName, seats, storageAccount, tags, vsoAccountId);
+            return vsoAccountId(Output.of(vsoAccountId));
+        }
+
+        public AccountArgs build() {
+            $.keyVaultId = Objects.requireNonNull($.keyVaultId, "expected parameter 'keyVaultId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccount = Objects.requireNonNull($.storageAccount, "expected parameter 'storageAccount' to be non-null");
+            $.vsoAccountId = Objects.requireNonNull($.vsoAccountId, "expected parameter 'vsoAccountId' to be non-null");
+            return $;
         }
     }
+
 }

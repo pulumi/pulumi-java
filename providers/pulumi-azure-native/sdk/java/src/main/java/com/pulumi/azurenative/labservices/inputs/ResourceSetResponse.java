@@ -23,10 +23,10 @@ public final class ResourceSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceSettingId")
-      private final @Nullable String resourceSettingId;
+    private @Nullable String resourceSettingId;
 
     public Optional<String> resourceSettingId() {
-        return this.resourceSettingId == null ? Optional.empty() : Optional.ofNullable(this.resourceSettingId);
+        return Optional.ofNullable(this.resourceSettingId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmResourceId")
-      private final @Nullable String vmResourceId;
+    private @Nullable String vmResourceId;
 
     public Optional<String> vmResourceId() {
-        return this.vmResourceId == null ? Optional.empty() : Optional.ofNullable(this.vmResourceId);
+        return Optional.ofNullable(this.vmResourceId);
     }
 
-    public ResourceSetResponse(
-        @Nullable String resourceSettingId,
-        @Nullable String vmResourceId) {
-        this.resourceSettingId = resourceSettingId;
-        this.vmResourceId = vmResourceId;
-    }
+    private ResourceSetResponse() {}
 
-    private ResourceSetResponse() {
-        this.resourceSettingId = null;
-        this.vmResourceId = null;
+    private ResourceSetResponse(ResourceSetResponse $) {
+        this.resourceSettingId = $.resourceSettingId;
+        this.vmResourceId = $.vmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceSettingId;
-        private @Nullable String vmResourceId;
+        private ResourceSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetResponse();
         }
 
         public Builder(ResourceSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceSettingId = defaults.resourceSettingId;
-    	      this.vmResourceId = defaults.vmResourceId;
+            $ = new ResourceSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceSettingId(@Nullable String resourceSettingId) {
-            this.resourceSettingId = resourceSettingId;
+            $.resourceSettingId = resourceSettingId;
             return this;
         }
+
         public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = vmResourceId;
+            $.vmResourceId = vmResourceId;
             return this;
-        }        public ResourceSetResponse build() {
-            return new ResourceSetResponse(resourceSettingId, vmResourceId);
+        }
+
+        public ResourceSetResponse build() {
+            return $;
         }
     }
+
 }

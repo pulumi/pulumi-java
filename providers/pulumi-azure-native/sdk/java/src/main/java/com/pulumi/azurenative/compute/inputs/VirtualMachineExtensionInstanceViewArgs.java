@@ -6,10 +6,10 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
      * 
      */
     @Import(name="statuses")
-      private final @Nullable Output<List<InstanceViewStatusArgs>> statuses;
+    private @Nullable Output<List<InstanceViewStatusArgs>> statuses;
 
-    public Output<List<InstanceViewStatusArgs>> statuses() {
-        return this.statuses == null ? Codegen.empty() : this.statuses;
+    public Optional<Output<List<InstanceViewStatusArgs>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
      * 
      */
     @Import(name="substatuses")
-      private final @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
+    private @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
 
-    public Output<List<InstanceViewStatusArgs>> substatuses() {
-        return this.substatuses == null ? Codegen.empty() : this.substatuses;
+    public Optional<Output<List<InstanceViewStatusArgs>>> substatuses() {
+        return Optional.ofNullable(this.substatuses);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -70,108 +70,96 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable Output<String> typeHandlerVersion;
+    private @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
+    public Optional<Output<String>> typeHandlerVersion() {
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VirtualMachineExtensionInstanceViewArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<InstanceViewStatusArgs>> statuses,
-        @Nullable Output<List<InstanceViewStatusArgs>> substatuses,
-        @Nullable Output<String> type,
-        @Nullable Output<String> typeHandlerVersion) {
-        this.name = name;
-        this.statuses = statuses;
-        this.substatuses = substatuses;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VirtualMachineExtensionInstanceViewArgs() {}
 
-    private VirtualMachineExtensionInstanceViewArgs() {
-        this.name = Codegen.empty();
-        this.statuses = Codegen.empty();
-        this.substatuses = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeHandlerVersion = Codegen.empty();
+    private VirtualMachineExtensionInstanceViewArgs(VirtualMachineExtensionInstanceViewArgs $) {
+        this.name = $.name;
+        this.statuses = $.statuses;
+        this.substatuses = $.substatuses;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineExtensionInstanceViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<InstanceViewStatusArgs>> statuses;
-        private @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> typeHandlerVersion;
+        private VirtualMachineExtensionInstanceViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineExtensionInstanceViewArgs();
         }
 
         public Builder(VirtualMachineExtensionInstanceViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.statuses = defaults.statuses;
-    	      this.substatuses = defaults.substatuses;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VirtualMachineExtensionInstanceViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder statuses(@Nullable Output<List<InstanceViewStatusArgs>> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
-        public Builder statuses(@Nullable List<InstanceViewStatusArgs> statuses) {
-            this.statuses = Codegen.ofNullable(statuses);
-            return this;
+
+        public Builder statuses(List<InstanceViewStatusArgs> statuses) {
+            return statuses(Output.of(statuses));
         }
+
         public Builder statuses(InstanceViewStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder substatuses(@Nullable Output<List<InstanceViewStatusArgs>> substatuses) {
-            this.substatuses = substatuses;
+            $.substatuses = substatuses;
             return this;
         }
-        public Builder substatuses(@Nullable List<InstanceViewStatusArgs> substatuses) {
-            this.substatuses = Codegen.ofNullable(substatuses);
-            return this;
+
+        public Builder substatuses(List<InstanceViewStatusArgs> substatuses) {
+            return substatuses(Output.of(substatuses));
         }
+
         public Builder substatuses(InstanceViewStatusArgs... substatuses) {
             return substatuses(List.of(substatuses));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
-            return this;
-        }        public VirtualMachineExtensionInstanceViewArgs build() {
-            return new VirtualMachineExtensionInstanceViewArgs(name, statuses, substatuses, type, typeHandlerVersion);
+
+        public Builder typeHandlerVersion(String typeHandlerVersion) {
+            return typeHandlerVersion(Output.of(typeHandlerVersion));
+        }
+
+        public VirtualMachineExtensionInstanceViewArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
+    private @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
-    public List<ManagedRuleExclusionResponse> exclusions() {
-        return this.exclusions == null ? List.of() : this.exclusions;
+    public Optional<List<ManagedRuleExclusionResponse>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -58,76 +58,67 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
      * 
      */
     @Import(name="ruleId", required=true)
-      private final String ruleId;
+    private String ruleId;
 
     public String ruleId() {
         return this.ruleId;
     }
 
-    public FrontDoorManagedRuleOverrideResponse(
-        @Nullable String action,
-        @Nullable String enabledState,
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        String ruleId) {
-        this.action = action;
-        this.enabledState = enabledState;
-        this.exclusions = exclusions;
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-    }
+    private FrontDoorManagedRuleOverrideResponse() {}
 
-    private FrontDoorManagedRuleOverrideResponse() {
-        this.action = null;
-        this.enabledState = null;
-        this.exclusions = List.of();
-        this.ruleId = null;
+    private FrontDoorManagedRuleOverrideResponse(FrontDoorManagedRuleOverrideResponse $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.exclusions = $.exclusions;
+        this.ruleId = $.ruleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorManagedRuleOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private @Nullable String enabledState;
-        private @Nullable List<ManagedRuleExclusionResponse> exclusions;
-        private String ruleId;
+        private FrontDoorManagedRuleOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorManagedRuleOverrideResponse();
         }
 
         public Builder(FrontDoorManagedRuleOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.exclusions = defaults.exclusions;
-    	      this.ruleId = defaults.ruleId;
+            $ = new FrontDoorManagedRuleOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
+
         public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
-        }        public FrontDoorManagedRuleOverrideResponse build() {
-            return new FrontDoorManagedRuleOverrideResponse(action, enabledState, exclusions, ruleId);
+        }
+
+        public FrontDoorManagedRuleOverrideResponse build() {
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

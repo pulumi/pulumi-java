@@ -6,9 +6,9 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 import com.pulumi.azurenative.hanaonazure.inputs.IpAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<IpAddressArgs>> networkInterfaces;
+    private @Nullable Output<List<IpAddressArgs>> networkInterfaces;
 
-    public Output<List<IpAddressArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<IpAddressArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
-    public NetworkProfileArgs(@Nullable Output<List<IpAddressArgs>> networkInterfaces) {
-        this.networkInterfaces = networkInterfaces;
-    }
+    private NetworkProfileArgs() {}
 
-    private NetworkProfileArgs() {
-        this.networkInterfaces = Codegen.empty();
+    private NetworkProfileArgs(NetworkProfileArgs $) {
+        this.networkInterfaces = $.networkInterfaces;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IpAddressArgs>> networkInterfaces;
+        private NetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileArgs();
         }
 
         public Builder(NetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
+            $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable Output<List<IpAddressArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<IpAddressArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<IpAddressArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(IpAddressArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
-        }        public NetworkProfileArgs build() {
-            return new NetworkProfileArgs(networkInterfaces);
+        }
+
+        public NetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

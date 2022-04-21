@@ -24,10 +24,10 @@ public final class ResourceSetDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="elements")
-      private final @Nullable List<String> elements;
+    private @Nullable List<String> elements;
 
-    public List<String> elements() {
-        return this.elements == null ? List.of() : this.elements;
+    public Optional<List<String>> elements() {
+        return Optional.ofNullable(this.elements);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class ResourceSetDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="exceptions")
-      private final @Nullable List<String> exceptions;
+    private @Nullable List<String> exceptions;
 
-    public List<String> exceptions() {
-        return this.exceptions == null ? List.of() : this.exceptions;
+    public Optional<List<String>> exceptions() {
+        return Optional.ofNullable(this.exceptions);
     }
 
-    public ResourceSetDescriptionResponse(
-        @Nullable List<String> elements,
-        @Nullable List<String> exceptions) {
-        this.elements = elements;
-        this.exceptions = exceptions;
-    }
+    private ResourceSetDescriptionResponse() {}
 
-    private ResourceSetDescriptionResponse() {
-        this.elements = List.of();
-        this.exceptions = List.of();
+    private ResourceSetDescriptionResponse(ResourceSetDescriptionResponse $) {
+        this.elements = $.elements;
+        this.exceptions = $.exceptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> elements;
-        private @Nullable List<String> exceptions;
+        private ResourceSetDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetDescriptionResponse();
         }
 
         public Builder(ResourceSetDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elements = defaults.elements;
-    	      this.exceptions = defaults.exceptions;
+            $ = new ResourceSetDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elements(@Nullable List<String> elements) {
-            this.elements = elements;
+            $.elements = elements;
             return this;
         }
+
         public Builder elements(String... elements) {
             return elements(List.of(elements));
         }
+
         public Builder exceptions(@Nullable List<String> exceptions) {
-            this.exceptions = exceptions;
+            $.exceptions = exceptions;
             return this;
         }
+
         public Builder exceptions(String... exceptions) {
             return exceptions(List.of(exceptions));
-        }        public ResourceSetDescriptionResponse build() {
-            return new ResourceSetDescriptionResponse(elements, exceptions);
+        }
+
+        public ResourceSetDescriptionResponse build() {
+            return $;
         }
     }
+
 }

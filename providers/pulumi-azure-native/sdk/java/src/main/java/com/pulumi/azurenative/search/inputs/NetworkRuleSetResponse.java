@@ -24,48 +24,48 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable List<IpRuleResponse> ipRules;
+    private @Nullable List<IpRuleResponse> ipRules;
 
-    public List<IpRuleResponse> ipRules() {
-        return this.ipRules == null ? List.of() : this.ipRules;
+    public Optional<List<IpRuleResponse>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
-    public NetworkRuleSetResponse(@Nullable List<IpRuleResponse> ipRules) {
-        this.ipRules = ipRules;
-    }
+    private NetworkRuleSetResponse() {}
 
-    private NetworkRuleSetResponse() {
-        this.ipRules = List.of();
+    private NetworkRuleSetResponse(NetworkRuleSetResponse $) {
+        this.ipRules = $.ipRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<IpRuleResponse> ipRules;
+        private NetworkRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetResponse();
         }
 
         public Builder(NetworkRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipRules = defaults.ipRules;
+            $ = new NetworkRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipRules(@Nullable List<IpRuleResponse> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
+
         public Builder ipRules(IpRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
-        }        public NetworkRuleSetResponse build() {
-            return new NetworkRuleSetResponse(ipRules);
+        }
+
+        public NetworkRuleSetResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
      * 
      */
     @Import(name="authorizationName", required=true)
-      private final String authorizationName;
+    private String authorizationName;
 
     public String authorizationName() {
         return this.authorizationName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
      * 
      */
     @Import(name="circuitName", required=true)
-      private final String circuitName;
+    private String circuitName;
 
     public String circuitName() {
         return this.circuitName;
@@ -39,64 +39,59 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteCircuitAuthorizationArgs(
-        String authorizationName,
-        String circuitName,
-        String resourceGroupName) {
-        this.authorizationName = Objects.requireNonNull(authorizationName, "expected parameter 'authorizationName' to be non-null");
-        this.circuitName = Objects.requireNonNull(circuitName, "expected parameter 'circuitName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteCircuitAuthorizationArgs() {}
 
-    private GetExpressRouteCircuitAuthorizationArgs() {
-        this.authorizationName = null;
-        this.circuitName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteCircuitAuthorizationArgs(GetExpressRouteCircuitAuthorizationArgs $) {
+        this.authorizationName = $.authorizationName;
+        this.circuitName = $.circuitName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteCircuitAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationName;
-        private String circuitName;
-        private String resourceGroupName;
+        private GetExpressRouteCircuitAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteCircuitAuthorizationArgs();
         }
 
         public Builder(GetExpressRouteCircuitAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationName = defaults.authorizationName;
-    	      this.circuitName = defaults.circuitName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteCircuitAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationName(String authorizationName) {
-            this.authorizationName = Objects.requireNonNull(authorizationName);
+            $.authorizationName = authorizationName;
             return this;
         }
+
         public Builder circuitName(String circuitName) {
-            this.circuitName = Objects.requireNonNull(circuitName);
+            $.circuitName = circuitName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteCircuitAuthorizationArgs build() {
-            return new GetExpressRouteCircuitAuthorizationArgs(authorizationName, circuitName, resourceGroupName);
+        }
+
+        public GetExpressRouteCircuitAuthorizationArgs build() {
+            $.authorizationName = Objects.requireNonNull($.authorizationName, "expected parameter 'authorizationName' to be non-null");
+            $.circuitName = Objects.requireNonNull($.circuitName, "expected parameter 'circuitName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

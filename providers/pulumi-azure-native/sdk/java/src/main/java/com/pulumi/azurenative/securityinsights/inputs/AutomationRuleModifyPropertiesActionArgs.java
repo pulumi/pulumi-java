@@ -25,7 +25,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
      * 
      */
     @Import(name="actionConfiguration", required=true)
-      private final Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
+    private Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
 
     public Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration() {
         return this.actionConfiguration;
@@ -37,7 +37,7 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
      * 
      */
     @Import(name="actionType", required=true)
-      private final Output<String> actionType;
+    private Output<String> actionType;
 
     public Output<String> actionType() {
         return this.actionType;
@@ -48,76 +48,71 @@ public final class AutomationRuleModifyPropertiesActionArgs extends com.pulumi.r
      * 
      */
     @Import(name="order", required=true)
-      private final Output<Integer> order;
+    private Output<Integer> order;
 
     public Output<Integer> order() {
         return this.order;
     }
 
-    public AutomationRuleModifyPropertiesActionArgs(
-        Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration,
-        Output<String> actionType,
-        Output<Integer> order) {
-        this.actionConfiguration = Objects.requireNonNull(actionConfiguration, "expected parameter 'actionConfiguration' to be non-null");
-        this.actionType = Codegen.stringProp("actionType").output().arg(actionType).require();
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-    }
+    private AutomationRuleModifyPropertiesActionArgs() {}
 
-    private AutomationRuleModifyPropertiesActionArgs() {
-        this.actionConfiguration = Codegen.empty();
-        this.actionType = Codegen.empty();
-        this.order = Codegen.empty();
+    private AutomationRuleModifyPropertiesActionArgs(AutomationRuleModifyPropertiesActionArgs $) {
+        this.actionConfiguration = $.actionConfiguration;
+        this.actionType = $.actionType;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleModifyPropertiesActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
-        private Output<String> actionType;
-        private Output<Integer> order;
+        private AutomationRuleModifyPropertiesActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleModifyPropertiesActionArgs();
         }
 
         public Builder(AutomationRuleModifyPropertiesActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionConfiguration = defaults.actionConfiguration;
-    	      this.actionType = defaults.actionType;
-    	      this.order = defaults.order;
+            $ = new AutomationRuleModifyPropertiesActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionConfiguration(Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration) {
-            this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
+            $.actionConfiguration = actionConfiguration;
             return this;
         }
+
         public Builder actionConfiguration(AutomationRuleModifyPropertiesActionActionConfigurationArgs actionConfiguration) {
-            this.actionConfiguration = Output.of(Objects.requireNonNull(actionConfiguration));
-            return this;
+            return actionConfiguration(Output.of(actionConfiguration));
         }
+
         public Builder actionType(Output<String> actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder actionType(String actionType) {
-            this.actionType = Output.of(Objects.requireNonNull(actionType));
-            return this;
+            return actionType(Output.of(actionType));
         }
+
         public Builder order(Output<Integer> order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Output.of(Objects.requireNonNull(order));
-            return this;
-        }        public AutomationRuleModifyPropertiesActionArgs build() {
-            return new AutomationRuleModifyPropertiesActionArgs(actionConfiguration, actionType, order);
+            return order(Output.of(order));
+        }
+
+        public AutomationRuleModifyPropertiesActionArgs build() {
+            $.actionConfiguration = Objects.requireNonNull($.actionConfiguration, "expected parameter 'actionConfiguration' to be non-null");
+            $.actionType = Codegen.stringProp("actionType").output().arg($.actionType).require();
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            return $;
         }
     }
+
 }

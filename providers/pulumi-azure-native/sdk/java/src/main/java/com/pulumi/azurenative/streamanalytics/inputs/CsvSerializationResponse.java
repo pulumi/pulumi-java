@@ -24,10 +24,10 @@ public final class CsvSerializationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encoding")
-      private final @Nullable String encoding;
+    private @Nullable String encoding;
 
     public Optional<String> encoding() {
-        return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CsvSerializationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fieldDelimiter")
-      private final @Nullable String fieldDelimiter;
+    private @Nullable String fieldDelimiter;
 
     public Optional<String> fieldDelimiter() {
-        return this.fieldDelimiter == null ? Optional.empty() : Optional.ofNullable(this.fieldDelimiter);
+        return Optional.ofNullable(this.fieldDelimiter);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class CsvSerializationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CsvSerializationResponse(
-        @Nullable String encoding,
-        @Nullable String fieldDelimiter,
-        String type) {
-        this.encoding = encoding;
-        this.fieldDelimiter = fieldDelimiter;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private CsvSerializationResponse() {}
 
-    private CsvSerializationResponse() {
-        this.encoding = null;
-        this.fieldDelimiter = null;
-        this.type = null;
+    private CsvSerializationResponse(CsvSerializationResponse $) {
+        this.encoding = $.encoding;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CsvSerializationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encoding;
-        private @Nullable String fieldDelimiter;
-        private String type;
+        private CsvSerializationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CsvSerializationResponse();
         }
 
         public Builder(CsvSerializationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.type = defaults.type;
+            $ = new CsvSerializationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
+
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = fieldDelimiter;
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CsvSerializationResponse build() {
-            return new CsvSerializationResponse(encoding, fieldDelimiter, type);
+        }
+
+        public CsvSerializationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

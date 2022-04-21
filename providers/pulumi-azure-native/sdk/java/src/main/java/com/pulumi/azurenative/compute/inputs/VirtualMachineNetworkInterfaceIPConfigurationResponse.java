@@ -27,10 +27,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="applicationGatewayBackendAddressPools")
-      private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
+    private @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
-    public List<SubResourceResponse> applicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
+    public Optional<List<SubResourceResponse>> applicationGatewayBackendAddressPools() {
+        return Optional.ofNullable(this.applicationGatewayBackendAddressPools);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="applicationSecurityGroups")
-      private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
+    private @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
-    public List<SubResourceResponse> applicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
+    public Optional<List<SubResourceResponse>> applicationSecurityGroups() {
+        return Optional.ofNullable(this.applicationSecurityGroups);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="loadBalancerBackendAddressPools")
-      private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
+    private @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
-    public List<SubResourceResponse> loadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
+    public Optional<List<SubResourceResponse>> loadBalancerBackendAddressPools() {
+        return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -71,10 +71,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="primary")
-      private final @Nullable Boolean primary;
+    private @Nullable Boolean primary;
 
     public Optional<Boolean> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="privateIPAddressVersion")
-      private final @Nullable String privateIPAddressVersion;
+    private @Nullable String privateIPAddressVersion;
 
     public Optional<String> privateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
+        return Optional.ofNullable(this.privateIPAddressVersion);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="publicIPAddressConfiguration")
-      private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
+    private @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
     public Optional<VirtualMachinePublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
+        return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
     /**
@@ -104,118 +104,99 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubResourceResponse subnet;
+    private @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public VirtualMachineNetworkInterfaceIPConfigurationResponse(
-        @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
-        @Nullable List<SubResourceResponse> applicationSecurityGroups,
-        @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
-        String name,
-        @Nullable Boolean primary,
-        @Nullable String privateIPAddressVersion,
-        @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @Nullable SubResourceResponse subnet) {
-        this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
-        this.applicationSecurityGroups = applicationSecurityGroups;
-        this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.primary = primary;
-        this.privateIPAddressVersion = privateIPAddressVersion;
-        this.publicIPAddressConfiguration = publicIPAddressConfiguration;
-        this.subnet = subnet;
-    }
+    private VirtualMachineNetworkInterfaceIPConfigurationResponse() {}
 
-    private VirtualMachineNetworkInterfaceIPConfigurationResponse() {
-        this.applicationGatewayBackendAddressPools = List.of();
-        this.applicationSecurityGroups = List.of();
-        this.loadBalancerBackendAddressPools = List.of();
-        this.name = null;
-        this.primary = null;
-        this.privateIPAddressVersion = null;
-        this.publicIPAddressConfiguration = null;
-        this.subnet = null;
+    private VirtualMachineNetworkInterfaceIPConfigurationResponse(VirtualMachineNetworkInterfaceIPConfigurationResponse $) {
+        this.applicationGatewayBackendAddressPools = $.applicationGatewayBackendAddressPools;
+        this.applicationSecurityGroups = $.applicationSecurityGroups;
+        this.loadBalancerBackendAddressPools = $.loadBalancerBackendAddressPools;
+        this.name = $.name;
+        this.primary = $.primary;
+        this.privateIPAddressVersion = $.privateIPAddressVersion;
+        this.publicIPAddressConfiguration = $.publicIPAddressConfiguration;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineNetworkInterfaceIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
-        private @Nullable List<SubResourceResponse> applicationSecurityGroups;
-        private @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
-        private String name;
-        private @Nullable Boolean primary;
-        private @Nullable String privateIPAddressVersion;
-        private @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
-        private @Nullable SubResourceResponse subnet;
+        private VirtualMachineNetworkInterfaceIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineNetworkInterfaceIPConfigurationResponse();
         }
 
         public Builder(VirtualMachineNetworkInterfaceIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGatewayBackendAddressPools = defaults.applicationGatewayBackendAddressPools;
-    	      this.applicationSecurityGroups = defaults.applicationSecurityGroups;
-    	      this.loadBalancerBackendAddressPools = defaults.loadBalancerBackendAddressPools;
-    	      this.name = defaults.name;
-    	      this.primary = defaults.primary;
-    	      this.privateIPAddressVersion = defaults.privateIPAddressVersion;
-    	      this.publicIPAddressConfiguration = defaults.publicIPAddressConfiguration;
-    	      this.subnet = defaults.subnet;
+            $ = new VirtualMachineNetworkInterfaceIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
+            $.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
+
         public Builder applicationGatewayBackendAddressPools(SubResourceResponse... applicationGatewayBackendAddressPools) {
             return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
         }
+
         public Builder applicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
-            this.applicationSecurityGroups = applicationSecurityGroups;
+            $.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
+
         public Builder applicationSecurityGroups(SubResourceResponse... applicationSecurityGroups) {
             return applicationSecurityGroups(List.of(applicationSecurityGroups));
         }
+
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
+            $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
+
         public Builder loadBalancerBackendAddressPools(SubResourceResponse... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
+
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
-            this.privateIPAddressVersion = privateIPAddressVersion;
+            $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
+
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = publicIPAddressConfiguration;
+            $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
+
         public Builder subnet(@Nullable SubResourceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public VirtualMachineNetworkInterfaceIPConfigurationResponse build() {
-            return new VirtualMachineNetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, loadBalancerBackendAddressPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
+        }
+
+        public VirtualMachineNetworkInterfaceIPConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

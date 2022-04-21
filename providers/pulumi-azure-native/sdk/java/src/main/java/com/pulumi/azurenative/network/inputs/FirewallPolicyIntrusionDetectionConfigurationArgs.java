@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionByp
 import com.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends com
      * 
      */
     @Import(name="bypassTrafficSettings")
-      private final @Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
+    private @Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
 
-    public Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings() {
-        return this.bypassTrafficSettings == null ? Codegen.empty() : this.bypassTrafficSettings;
+    public Optional<Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>>> bypassTrafficSettings() {
+        return Optional.ofNullable(this.bypassTrafficSettings);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends com
      * 
      */
     @Import(name="signatureOverrides")
-      private final @Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;
+    private @Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;
 
-    public Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides() {
-        return this.signatureOverrides == null ? Codegen.empty() : this.signatureOverrides;
+    public Optional<Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>>> signatureOverrides() {
+        return Optional.ofNullable(this.signatureOverrides);
     }
 
-    public FirewallPolicyIntrusionDetectionConfigurationArgs(
-        @Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings,
-        @Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides) {
-        this.bypassTrafficSettings = bypassTrafficSettings;
-        this.signatureOverrides = signatureOverrides;
-    }
+    private FirewallPolicyIntrusionDetectionConfigurationArgs() {}
 
-    private FirewallPolicyIntrusionDetectionConfigurationArgs() {
-        this.bypassTrafficSettings = Codegen.empty();
-        this.signatureOverrides = Codegen.empty();
+    private FirewallPolicyIntrusionDetectionConfigurationArgs(FirewallPolicyIntrusionDetectionConfigurationArgs $) {
+        this.bypassTrafficSettings = $.bypassTrafficSettings;
+        this.signatureOverrides = $.signatureOverrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIntrusionDetectionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
-        private @Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;
+        private FirewallPolicyIntrusionDetectionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIntrusionDetectionConfigurationArgs();
         }
 
         public Builder(FirewallPolicyIntrusionDetectionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypassTrafficSettings = defaults.bypassTrafficSettings;
-    	      this.signatureOverrides = defaults.signatureOverrides;
+            $ = new FirewallPolicyIntrusionDetectionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bypassTrafficSettings(@Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings) {
-            this.bypassTrafficSettings = bypassTrafficSettings;
+            $.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
-        public Builder bypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs> bypassTrafficSettings) {
-            this.bypassTrafficSettings = Codegen.ofNullable(bypassTrafficSettings);
-            return this;
+
+        public Builder bypassTrafficSettings(List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs> bypassTrafficSettings) {
+            return bypassTrafficSettings(Output.of(bypassTrafficSettings));
         }
+
         public Builder bypassTrafficSettings(FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs... bypassTrafficSettings) {
             return bypassTrafficSettings(List.of(bypassTrafficSettings));
         }
+
         public Builder signatureOverrides(@Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides) {
-            this.signatureOverrides = signatureOverrides;
+            $.signatureOverrides = signatureOverrides;
             return this;
         }
-        public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs> signatureOverrides) {
-            this.signatureOverrides = Codegen.ofNullable(signatureOverrides);
-            return this;
+
+        public Builder signatureOverrides(List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs> signatureOverrides) {
+            return signatureOverrides(Output.of(signatureOverrides));
         }
+
         public Builder signatureOverrides(FirewallPolicyIntrusionDetectionSignatureSpecificationArgs... signatureOverrides) {
             return signatureOverrides(List.of(signatureOverrides));
-        }        public FirewallPolicyIntrusionDetectionConfigurationArgs build() {
-            return new FirewallPolicyIntrusionDetectionConfigurationArgs(bypassTrafficSettings, signatureOverrides);
+        }
+
+        public FirewallPolicyIntrusionDetectionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class UserArtifactSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="defaultConfigurationLink")
-      private final @Nullable String defaultConfigurationLink;
+    private @Nullable String defaultConfigurationLink;
 
     public Optional<String> defaultConfigurationLink() {
-        return this.defaultConfigurationLink == null ? Optional.empty() : Optional.ofNullable(this.defaultConfigurationLink);
+        return Optional.ofNullable(this.defaultConfigurationLink);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class UserArtifactSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="mediaLink", required=true)
-      private final String mediaLink;
+    private String mediaLink;
 
     public String mediaLink() {
         return this.mediaLink;
     }
 
-    public UserArtifactSourceResponse(
-        @Nullable String defaultConfigurationLink,
-        String mediaLink) {
-        this.defaultConfigurationLink = defaultConfigurationLink;
-        this.mediaLink = Objects.requireNonNull(mediaLink, "expected parameter 'mediaLink' to be non-null");
-    }
+    private UserArtifactSourceResponse() {}
 
-    private UserArtifactSourceResponse() {
-        this.defaultConfigurationLink = null;
-        this.mediaLink = null;
+    private UserArtifactSourceResponse(UserArtifactSourceResponse $) {
+        this.defaultConfigurationLink = $.defaultConfigurationLink;
+        this.mediaLink = $.mediaLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArtifactSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultConfigurationLink;
-        private String mediaLink;
+        private UserArtifactSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArtifactSourceResponse();
         }
 
         public Builder(UserArtifactSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultConfigurationLink = defaults.defaultConfigurationLink;
-    	      this.mediaLink = defaults.mediaLink;
+            $ = new UserArtifactSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
-            this.defaultConfigurationLink = defaultConfigurationLink;
+            $.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
+
         public Builder mediaLink(String mediaLink) {
-            this.mediaLink = Objects.requireNonNull(mediaLink);
+            $.mediaLink = mediaLink;
             return this;
-        }        public UserArtifactSourceResponse build() {
-            return new UserArtifactSourceResponse(defaultConfigurationLink, mediaLink);
+        }
+
+        public UserArtifactSourceResponse build() {
+            $.mediaLink = Objects.requireNonNull($.mediaLink, "expected parameter 'mediaLink' to be non-null");
+            return $;
         }
     }
+
 }

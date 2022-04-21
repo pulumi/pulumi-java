@@ -20,10 +20,10 @@ public final class DataMaskingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable List<DataMaskingEntityResponse> headers;
+    private @Nullable List<DataMaskingEntityResponse> headers;
 
-    public List<DataMaskingEntityResponse> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<DataMaskingEntityResponse>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -31,61 +31,58 @@ public final class DataMaskingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryParams")
-      private final @Nullable List<DataMaskingEntityResponse> queryParams;
+    private @Nullable List<DataMaskingEntityResponse> queryParams;
 
-    public List<DataMaskingEntityResponse> queryParams() {
-        return this.queryParams == null ? List.of() : this.queryParams;
+    public Optional<List<DataMaskingEntityResponse>> queryParams() {
+        return Optional.ofNullable(this.queryParams);
     }
 
-    public DataMaskingResponse(
-        @Nullable List<DataMaskingEntityResponse> headers,
-        @Nullable List<DataMaskingEntityResponse> queryParams) {
-        this.headers = headers;
-        this.queryParams = queryParams;
-    }
+    private DataMaskingResponse() {}
 
-    private DataMaskingResponse() {
-        this.headers = List.of();
-        this.queryParams = List.of();
+    private DataMaskingResponse(DataMaskingResponse $) {
+        this.headers = $.headers;
+        this.queryParams = $.queryParams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataMaskingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DataMaskingEntityResponse> headers;
-        private @Nullable List<DataMaskingEntityResponse> queryParams;
+        private DataMaskingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataMaskingResponse();
         }
 
         public Builder(DataMaskingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headers = defaults.headers;
-    	      this.queryParams = defaults.queryParams;
+            $ = new DataMaskingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headers(@Nullable List<DataMaskingEntityResponse> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(DataMaskingEntityResponse... headers) {
             return headers(List.of(headers));
         }
+
         public Builder queryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
-            this.queryParams = queryParams;
+            $.queryParams = queryParams;
             return this;
         }
+
         public Builder queryParams(DataMaskingEntityResponse... queryParams) {
             return queryParams(List.of(queryParams));
-        }        public DataMaskingResponse build() {
-            return new DataMaskingResponse(headers, queryParams);
+        }
+
+        public DataMaskingResponse build() {
+            return $;
         }
     }
+
 }

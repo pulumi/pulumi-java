@@ -7,9 +7,9 @@ import com.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import com.pulumi.azurenative.recoveryservices.enums.WeekOfMonth;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WeeklyRetentionFormatArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="daysOfTheWeek")
-      private final @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
+    private @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
 
-    public Output<List<DayOfWeek>> daysOfTheWeek() {
-        return this.daysOfTheWeek == null ? Codegen.empty() : this.daysOfTheWeek;
+    public Optional<Output<List<DayOfWeek>>> daysOfTheWeek() {
+        return Optional.ofNullable(this.daysOfTheWeek);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class WeeklyRetentionFormatArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="weeksOfTheMonth")
-      private final @Nullable Output<List<WeekOfMonth>> weeksOfTheMonth;
+    private @Nullable Output<List<WeekOfMonth>> weeksOfTheMonth;
 
-    public Output<List<WeekOfMonth>> weeksOfTheMonth() {
-        return this.weeksOfTheMonth == null ? Codegen.empty() : this.weeksOfTheMonth;
+    public Optional<Output<List<WeekOfMonth>>> weeksOfTheMonth() {
+        return Optional.ofNullable(this.weeksOfTheMonth);
     }
 
-    public WeeklyRetentionFormatArgs(
-        @Nullable Output<List<DayOfWeek>> daysOfTheWeek,
-        @Nullable Output<List<WeekOfMonth>> weeksOfTheMonth) {
-        this.daysOfTheWeek = daysOfTheWeek;
-        this.weeksOfTheMonth = weeksOfTheMonth;
-    }
+    private WeeklyRetentionFormatArgs() {}
 
-    private WeeklyRetentionFormatArgs() {
-        this.daysOfTheWeek = Codegen.empty();
-        this.weeksOfTheMonth = Codegen.empty();
+    private WeeklyRetentionFormatArgs(WeeklyRetentionFormatArgs $) {
+        this.daysOfTheWeek = $.daysOfTheWeek;
+        this.weeksOfTheMonth = $.weeksOfTheMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyRetentionFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
-        private @Nullable Output<List<WeekOfMonth>> weeksOfTheMonth;
+        private WeeklyRetentionFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyRetentionFormatArgs();
         }
 
         public Builder(WeeklyRetentionFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfTheWeek = defaults.daysOfTheWeek;
-    	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
+            $ = new WeeklyRetentionFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfTheWeek(@Nullable Output<List<DayOfWeek>> daysOfTheWeek) {
-            this.daysOfTheWeek = daysOfTheWeek;
+            $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-        public Builder daysOfTheWeek(@Nullable List<DayOfWeek> daysOfTheWeek) {
-            this.daysOfTheWeek = Codegen.ofNullable(daysOfTheWeek);
-            return this;
+
+        public Builder daysOfTheWeek(List<DayOfWeek> daysOfTheWeek) {
+            return daysOfTheWeek(Output.of(daysOfTheWeek));
         }
+
         public Builder daysOfTheWeek(DayOfWeek... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
+
         public Builder weeksOfTheMonth(@Nullable Output<List<WeekOfMonth>> weeksOfTheMonth) {
-            this.weeksOfTheMonth = weeksOfTheMonth;
+            $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-        public Builder weeksOfTheMonth(@Nullable List<WeekOfMonth> weeksOfTheMonth) {
-            this.weeksOfTheMonth = Codegen.ofNullable(weeksOfTheMonth);
-            return this;
+
+        public Builder weeksOfTheMonth(List<WeekOfMonth> weeksOfTheMonth) {
+            return weeksOfTheMonth(Output.of(weeksOfTheMonth));
         }
+
         public Builder weeksOfTheMonth(WeekOfMonth... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
-        }        public WeeklyRetentionFormatArgs build() {
-            return new WeeklyRetentionFormatArgs(daysOfTheWeek, weeksOfTheMonth);
+        }
+
+        public WeeklyRetentionFormatArgs build() {
+            return $;
         }
     }
+
 }

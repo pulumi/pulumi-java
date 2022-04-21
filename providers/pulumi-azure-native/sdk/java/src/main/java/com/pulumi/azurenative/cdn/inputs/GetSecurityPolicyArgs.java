@@ -17,7 +17,7 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -28,7 +28,7 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="securityPolicyName", required=true)
-      private final String securityPolicyName;
+    private String securityPolicyName;
 
     public String securityPolicyName() {
         return this.securityPolicyName;
     }
 
-    public GetSecurityPolicyArgs(
-        String profileName,
-        String resourceGroupName,
-        String securityPolicyName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityPolicyName = Objects.requireNonNull(securityPolicyName, "expected parameter 'securityPolicyName' to be non-null");
-    }
+    private GetSecurityPolicyArgs() {}
 
-    private GetSecurityPolicyArgs() {
-        this.profileName = null;
-        this.resourceGroupName = null;
-        this.securityPolicyName = null;
+    private GetSecurityPolicyArgs(GetSecurityPolicyArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityPolicyName = $.securityPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String resourceGroupName;
-        private String securityPolicyName;
+        private GetSecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityPolicyArgs();
         }
 
         public Builder(GetSecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityPolicyName = defaults.securityPolicyName;
+            $ = new GetSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder securityPolicyName(String securityPolicyName) {
-            this.securityPolicyName = Objects.requireNonNull(securityPolicyName);
+            $.securityPolicyName = securityPolicyName;
             return this;
-        }        public GetSecurityPolicyArgs build() {
-            return new GetSecurityPolicyArgs(profileName, resourceGroupName, securityPolicyName);
+        }
+
+        public GetSecurityPolicyArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityPolicyName = Objects.requireNonNull($.securityPolicyName, "expected parameter 'securityPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

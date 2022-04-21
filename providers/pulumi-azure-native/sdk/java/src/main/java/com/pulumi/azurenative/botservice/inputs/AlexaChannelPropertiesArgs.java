@@ -5,7 +5,6 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="alexaSkillId", required=true)
-      private final Output<String> alexaSkillId;
+    private Output<String> alexaSkillId;
 
     public Output<String> alexaSkillId() {
         return this.alexaSkillId;
@@ -35,63 +34,60 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
-    public AlexaChannelPropertiesArgs(
-        Output<String> alexaSkillId,
-        Output<Boolean> isEnabled) {
-        this.alexaSkillId = Objects.requireNonNull(alexaSkillId, "expected parameter 'alexaSkillId' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-    }
+    private AlexaChannelPropertiesArgs() {}
 
-    private AlexaChannelPropertiesArgs() {
-        this.alexaSkillId = Codegen.empty();
-        this.isEnabled = Codegen.empty();
+    private AlexaChannelPropertiesArgs(AlexaChannelPropertiesArgs $) {
+        this.alexaSkillId = $.alexaSkillId;
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlexaChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alexaSkillId;
-        private Output<Boolean> isEnabled;
+        private AlexaChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlexaChannelPropertiesArgs();
         }
 
         public Builder(AlexaChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alexaSkillId = defaults.alexaSkillId;
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new AlexaChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alexaSkillId(Output<String> alexaSkillId) {
-            this.alexaSkillId = Objects.requireNonNull(alexaSkillId);
+            $.alexaSkillId = alexaSkillId;
             return this;
         }
+
         public Builder alexaSkillId(String alexaSkillId) {
-            this.alexaSkillId = Output.of(Objects.requireNonNull(alexaSkillId));
-            return this;
+            return alexaSkillId(Output.of(alexaSkillId));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
-        }        public AlexaChannelPropertiesArgs build() {
-            return new AlexaChannelPropertiesArgs(alexaSkillId, isEnabled);
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        public AlexaChannelPropertiesArgs build() {
+            $.alexaSkillId = Objects.requireNonNull($.alexaSkillId, "expected parameter 'alexaSkillId' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="authenticationName")
-      private final @Nullable Output<String> authenticationName;
+    private @Nullable Output<String> authenticationName;
 
-    public Output<String> authenticationName() {
-        return this.authenticationName == null ? Codegen.empty() : this.authenticationName;
+    public Optional<Output<String>> authenticationName() {
+        return Optional.ofNullable(this.authenticationName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="azureADOnlyAuthentication", required=true)
-      private final Output<Boolean> azureADOnlyAuthentication;
+    private Output<Boolean> azureADOnlyAuthentication;
 
     public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
@@ -43,7 +43,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,81 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public ServerAzureADOnlyAuthenticationArgs(
-        @Nullable Output<String> authenticationName,
-        Output<Boolean> azureADOnlyAuthentication,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.authenticationName = authenticationName;
-        this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication, "expected parameter 'azureADOnlyAuthentication' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private ServerAzureADOnlyAuthenticationArgs() {}
 
-    private ServerAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = Codegen.empty();
-        this.azureADOnlyAuthentication = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private ServerAzureADOnlyAuthenticationArgs(ServerAzureADOnlyAuthenticationArgs $) {
+        this.authenticationName = $.authenticationName;
+        this.azureADOnlyAuthentication = $.azureADOnlyAuthentication;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerAzureADOnlyAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authenticationName;
-        private Output<Boolean> azureADOnlyAuthentication;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private ServerAzureADOnlyAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerAzureADOnlyAuthenticationArgs();
         }
 
         public Builder(ServerAzureADOnlyAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationName = defaults.authenticationName;
-    	      this.azureADOnlyAuthentication = defaults.azureADOnlyAuthentication;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new ServerAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationName(@Nullable Output<String> authenticationName) {
-            this.authenticationName = authenticationName;
+            $.authenticationName = authenticationName;
             return this;
         }
-        public Builder authenticationName(@Nullable String authenticationName) {
-            this.authenticationName = Codegen.ofNullable(authenticationName);
-            return this;
+
+        public Builder authenticationName(String authenticationName) {
+            return authenticationName(Output.of(authenticationName));
         }
+
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
+            $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
+
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Output.of(Objects.requireNonNull(azureADOnlyAuthentication));
-            return this;
+            return azureADOnlyAuthentication(Output.of(azureADOnlyAuthentication));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public ServerAzureADOnlyAuthenticationArgs build() {
-            return new ServerAzureADOnlyAuthenticationArgs(authenticationName, azureADOnlyAuthentication, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public ServerAzureADOnlyAuthenticationArgs build() {
+            $.azureADOnlyAuthentication = Objects.requireNonNull($.azureADOnlyAuthentication, "expected parameter 'azureADOnlyAuthentication' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

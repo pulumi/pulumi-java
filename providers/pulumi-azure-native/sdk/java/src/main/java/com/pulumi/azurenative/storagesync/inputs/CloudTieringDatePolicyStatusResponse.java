@@ -21,7 +21,7 @@ public final class CloudTieringDatePolicyStatusResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -32,55 +32,52 @@ public final class CloudTieringDatePolicyStatusResponse extends com.pulumi.resou
      * 
      */
     @Import(name="tieredFilesMostRecentAccessTimestamp", required=true)
-      private final String tieredFilesMostRecentAccessTimestamp;
+    private String tieredFilesMostRecentAccessTimestamp;
 
     public String tieredFilesMostRecentAccessTimestamp() {
         return this.tieredFilesMostRecentAccessTimestamp;
     }
 
-    public CloudTieringDatePolicyStatusResponse(
-        String lastUpdatedTimestamp,
-        String tieredFilesMostRecentAccessTimestamp) {
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-        this.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull(tieredFilesMostRecentAccessTimestamp, "expected parameter 'tieredFilesMostRecentAccessTimestamp' to be non-null");
-    }
+    private CloudTieringDatePolicyStatusResponse() {}
 
-    private CloudTieringDatePolicyStatusResponse() {
-        this.lastUpdatedTimestamp = null;
-        this.tieredFilesMostRecentAccessTimestamp = null;
+    private CloudTieringDatePolicyStatusResponse(CloudTieringDatePolicyStatusResponse $) {
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
+        this.tieredFilesMostRecentAccessTimestamp = $.tieredFilesMostRecentAccessTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudTieringDatePolicyStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastUpdatedTimestamp;
-        private String tieredFilesMostRecentAccessTimestamp;
+        private CloudTieringDatePolicyStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudTieringDatePolicyStatusResponse();
         }
 
         public Builder(CloudTieringDatePolicyStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
-    	      this.tieredFilesMostRecentAccessTimestamp = defaults.tieredFilesMostRecentAccessTimestamp;
+            $ = new CloudTieringDatePolicyStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
+
         public Builder tieredFilesMostRecentAccessTimestamp(String tieredFilesMostRecentAccessTimestamp) {
-            this.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull(tieredFilesMostRecentAccessTimestamp);
+            $.tieredFilesMostRecentAccessTimestamp = tieredFilesMostRecentAccessTimestamp;
             return this;
-        }        public CloudTieringDatePolicyStatusResponse build() {
-            return new CloudTieringDatePolicyStatusResponse(lastUpdatedTimestamp, tieredFilesMostRecentAccessTimestamp);
+        }
+
+        public CloudTieringDatePolicyStatusResponse build() {
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            $.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull($.tieredFilesMostRecentAccessTimestamp, "expected parameter 'tieredFilesMostRecentAccessTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

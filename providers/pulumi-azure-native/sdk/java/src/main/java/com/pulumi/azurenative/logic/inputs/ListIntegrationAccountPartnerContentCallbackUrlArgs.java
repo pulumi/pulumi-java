@@ -21,7 +21,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -32,10 +32,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Either<String,KeyType> keyType;
+    private @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> keyType() {
-        return this.keyType == null ? null : this.keyType;
+    public Optional<Either<String,KeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="notAfter")
-      private final @Nullable String notAfter;
+    private @Nullable String notAfter;
 
     public Optional<String> notAfter() {
-        return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="partnerName", required=true)
-      private final String partnerName;
+    private String partnerName;
 
     public String partnerName() {
         return this.partnerName;
@@ -65,82 +65,71 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListIntegrationAccountPartnerContentCallbackUrlArgs(
-        String integrationAccountName,
-        @Nullable Either<String,KeyType> keyType,
-        @Nullable String notAfter,
-        String partnerName,
-        String resourceGroupName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.keyType = keyType;
-        this.notAfter = notAfter;
-        this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListIntegrationAccountPartnerContentCallbackUrlArgs() {}
 
-    private ListIntegrationAccountPartnerContentCallbackUrlArgs() {
-        this.integrationAccountName = null;
-        this.keyType = null;
-        this.notAfter = null;
-        this.partnerName = null;
-        this.resourceGroupName = null;
+    private ListIntegrationAccountPartnerContentCallbackUrlArgs(ListIntegrationAccountPartnerContentCallbackUrlArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.keyType = $.keyType;
+        this.notAfter = $.notAfter;
+        this.partnerName = $.partnerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIntegrationAccountPartnerContentCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private @Nullable Either<String,KeyType> keyType;
-        private @Nullable String notAfter;
-        private String partnerName;
-        private String resourceGroupName;
+        private ListIntegrationAccountPartnerContentCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIntegrationAccountPartnerContentCallbackUrlArgs();
         }
 
         public Builder(ListIntegrationAccountPartnerContentCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.keyType = defaults.keyType;
-    	      this.notAfter = defaults.notAfter;
-    	      this.partnerName = defaults.partnerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListIntegrationAccountPartnerContentCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = notAfter;
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder partnerName(String partnerName) {
-            this.partnerName = Objects.requireNonNull(partnerName);
+            $.partnerName = partnerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListIntegrationAccountPartnerContentCallbackUrlArgs build() {
-            return new ListIntegrationAccountPartnerContentCallbackUrlArgs(integrationAccountName, keyType, notAfter, partnerName, resourceGroupName);
+        }
+
+        public ListIntegrationAccountPartnerContentCallbackUrlArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.partnerName = Objects.requireNonNull($.partnerName, "expected parameter 'partnerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

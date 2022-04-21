@@ -25,10 +25,10 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="aS2")
-      private final @Nullable AS2AgreementContentResponse aS2;
+    private @Nullable AS2AgreementContentResponse aS2;
 
     public Optional<AS2AgreementContentResponse> aS2() {
-        return this.aS2 == null ? Optional.empty() : Optional.ofNullable(this.aS2);
+        return Optional.ofNullable(this.aS2);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="edifact")
-      private final @Nullable EdifactAgreementContentResponse edifact;
+    private @Nullable EdifactAgreementContentResponse edifact;
 
     public Optional<EdifactAgreementContentResponse> edifact() {
-        return this.edifact == null ? Optional.empty() : Optional.ofNullable(this.edifact);
+        return Optional.ofNullable(this.edifact);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="x12")
-      private final @Nullable X12AgreementContentResponse x12;
+    private @Nullable X12AgreementContentResponse x12;
 
     public Optional<X12AgreementContentResponse> x12() {
-        return this.x12 == null ? Optional.empty() : Optional.ofNullable(this.x12);
+        return Optional.ofNullable(this.x12);
     }
 
-    public AgreementContentResponse(
-        @Nullable AS2AgreementContentResponse aS2,
-        @Nullable EdifactAgreementContentResponse edifact,
-        @Nullable X12AgreementContentResponse x12) {
-        this.aS2 = aS2;
-        this.edifact = edifact;
-        this.x12 = x12;
-    }
+    private AgreementContentResponse() {}
 
-    private AgreementContentResponse() {
-        this.aS2 = null;
-        this.edifact = null;
-        this.x12 = null;
+    private AgreementContentResponse(AgreementContentResponse $) {
+        this.aS2 = $.aS2;
+        this.edifact = $.edifact;
+        this.x12 = $.x12;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgreementContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AS2AgreementContentResponse aS2;
-        private @Nullable EdifactAgreementContentResponse edifact;
-        private @Nullable X12AgreementContentResponse x12;
+        private AgreementContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgreementContentResponse();
         }
 
         public Builder(AgreementContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aS2 = defaults.aS2;
-    	      this.edifact = defaults.edifact;
-    	      this.x12 = defaults.x12;
+            $ = new AgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aS2(@Nullable AS2AgreementContentResponse aS2) {
-            this.aS2 = aS2;
+            $.aS2 = aS2;
             return this;
         }
+
         public Builder edifact(@Nullable EdifactAgreementContentResponse edifact) {
-            this.edifact = edifact;
+            $.edifact = edifact;
             return this;
         }
+
         public Builder x12(@Nullable X12AgreementContentResponse x12) {
-            this.x12 = x12;
+            $.x12 = x12;
             return this;
-        }        public AgreementContentResponse build() {
-            return new AgreementContentResponse(aS2, edifact, x12);
+        }
+
+        public AgreementContentResponse build() {
+            return $;
         }
     }
+
 }

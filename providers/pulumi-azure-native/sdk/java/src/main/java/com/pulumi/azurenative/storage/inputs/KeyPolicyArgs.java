@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class KeyPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyExpirationPeriodInDays", required=true)
-      private final Output<Integer> keyExpirationPeriodInDays;
+    private Output<Integer> keyExpirationPeriodInDays;
 
     public Output<Integer> keyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
 
-    public KeyPolicyArgs(Output<Integer> keyExpirationPeriodInDays) {
-        this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays, "expected parameter 'keyExpirationPeriodInDays' to be non-null");
-    }
+    private KeyPolicyArgs() {}
 
-    private KeyPolicyArgs() {
-        this.keyExpirationPeriodInDays = Codegen.empty();
+    private KeyPolicyArgs(KeyPolicyArgs $) {
+        this.keyExpirationPeriodInDays = $.keyExpirationPeriodInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> keyExpirationPeriodInDays;
+        private KeyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPolicyArgs();
         }
 
         public Builder(KeyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyExpirationPeriodInDays = defaults.keyExpirationPeriodInDays;
+            $ = new KeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyExpirationPeriodInDays(Output<Integer> keyExpirationPeriodInDays) {
-            this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
+            $.keyExpirationPeriodInDays = keyExpirationPeriodInDays;
             return this;
         }
+
         public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
-            this.keyExpirationPeriodInDays = Output.of(Objects.requireNonNull(keyExpirationPeriodInDays));
-            return this;
-        }        public KeyPolicyArgs build() {
-            return new KeyPolicyArgs(keyExpirationPeriodInDays);
+            return keyExpirationPeriodInDays(Output.of(keyExpirationPeriodInDays));
+        }
+
+        public KeyPolicyArgs build() {
+            $.keyExpirationPeriodInDays = Objects.requireNonNull($.keyExpirationPeriodInDays, "expected parameter 'keyExpirationPeriodInDays' to be non-null");
+            return $;
         }
     }
+
 }

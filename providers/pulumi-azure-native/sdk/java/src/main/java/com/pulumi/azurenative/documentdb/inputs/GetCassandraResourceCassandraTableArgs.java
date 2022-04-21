@@ -17,7 +17,7 @@ public final class GetCassandraResourceCassandraTableArgs extends com.pulumi.res
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetCassandraResourceCassandraTableArgs extends com.pulumi.res
      * 
      */
     @Import(name="keyspaceName", required=true)
-      private final String keyspaceName;
+    private String keyspaceName;
 
     public String keyspaceName() {
         return this.keyspaceName;
@@ -39,7 +39,7 @@ public final class GetCassandraResourceCassandraTableArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetCassandraResourceCassandraTableArgs extends com.pulumi.res
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public GetCassandraResourceCassandraTableArgs(
-        String accountName,
-        String keyspaceName,
-        String resourceGroupName,
-        String tableName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private GetCassandraResourceCassandraTableArgs() {}
 
-    private GetCassandraResourceCassandraTableArgs() {
-        this.accountName = null;
-        this.keyspaceName = null;
-        this.resourceGroupName = null;
-        this.tableName = null;
+    private GetCassandraResourceCassandraTableArgs(GetCassandraResourceCassandraTableArgs $) {
+        this.accountName = $.accountName;
+        this.keyspaceName = $.keyspaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCassandraResourceCassandraTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String keyspaceName;
-        private String resourceGroupName;
-        private String tableName;
+        private GetCassandraResourceCassandraTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCassandraResourceCassandraTableArgs();
         }
 
         public Builder(GetCassandraResourceCassandraTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.keyspaceName = defaults.keyspaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tableName = defaults.tableName;
+            $ = new GetCassandraResourceCassandraTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Objects.requireNonNull(keyspaceName);
+            $.keyspaceName = keyspaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public GetCassandraResourceCassandraTableArgs build() {
-            return new GetCassandraResourceCassandraTableArgs(accountName, keyspaceName, resourceGroupName, tableName);
+        }
+
+        public GetCassandraResourceCassandraTableArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.keyspaceName = Objects.requireNonNull($.keyspaceName, "expected parameter 'keyspaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

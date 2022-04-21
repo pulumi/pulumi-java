@@ -18,48 +18,49 @@ public final class PoolEndpointConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="inboundNatPools", required=true)
-      private final List<InboundNatPoolResponse> inboundNatPools;
+    private List<InboundNatPoolResponse> inboundNatPools;
 
     public List<InboundNatPoolResponse> inboundNatPools() {
         return this.inboundNatPools;
     }
 
-    public PoolEndpointConfigurationResponse(List<InboundNatPoolResponse> inboundNatPools) {
-        this.inboundNatPools = Objects.requireNonNull(inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
-    }
+    private PoolEndpointConfigurationResponse() {}
 
-    private PoolEndpointConfigurationResponse() {
-        this.inboundNatPools = List.of();
+    private PoolEndpointConfigurationResponse(PoolEndpointConfigurationResponse $) {
+        this.inboundNatPools = $.inboundNatPools;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PoolEndpointConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<InboundNatPoolResponse> inboundNatPools;
+        private PoolEndpointConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PoolEndpointConfigurationResponse();
         }
 
         public Builder(PoolEndpointConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inboundNatPools = defaults.inboundNatPools;
+            $ = new PoolEndpointConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inboundNatPools(List<InboundNatPoolResponse> inboundNatPools) {
-            this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
+            $.inboundNatPools = inboundNatPools;
             return this;
         }
+
         public Builder inboundNatPools(InboundNatPoolResponse... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
-        }        public PoolEndpointConfigurationResponse build() {
-            return new PoolEndpointConfigurationResponse(inboundNatPools);
+        }
+
+        public PoolEndpointConfigurationResponse build() {
+            $.inboundNatPools = Objects.requireNonNull($.inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
+            return $;
         }
     }
+
 }

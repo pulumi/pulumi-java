@@ -24,7 +24,7 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recurrence", required=true)
-      private final String recurrence;
+    private String recurrence;
 
     public String recurrence() {
         return this.recurrence;
@@ -35,10 +35,10 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recurrencePeriod")
-      private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
+    private @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
 
     public Optional<ReportRecurrencePeriodResponse> recurrencePeriod() {
-        return this.recurrencePeriod == null ? Optional.empty() : Optional.ofNullable(this.recurrencePeriod);
+        return Optional.ofNullable(this.recurrencePeriod);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public ReportScheduleResponse(
-        String recurrence,
-        @Nullable ReportRecurrencePeriodResponse recurrencePeriod,
-        @Nullable String status) {
-        this.recurrence = Objects.requireNonNull(recurrence, "expected parameter 'recurrence' to be non-null");
-        this.recurrencePeriod = recurrencePeriod;
-        this.status = status;
-    }
+    private ReportScheduleResponse() {}
 
-    private ReportScheduleResponse() {
-        this.recurrence = null;
-        this.recurrencePeriod = null;
-        this.status = null;
+    private ReportScheduleResponse(ReportScheduleResponse $) {
+        this.recurrence = $.recurrence;
+        this.recurrencePeriod = $.recurrencePeriod;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recurrence;
-        private @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
-        private @Nullable String status;
+        private ReportScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportScheduleResponse();
         }
 
         public Builder(ReportScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrence = defaults.recurrence;
-    	      this.recurrencePeriod = defaults.recurrencePeriod;
-    	      this.status = defaults.status;
+            $ = new ReportScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrence(String recurrence) {
-            this.recurrence = Objects.requireNonNull(recurrence);
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder recurrencePeriod(@Nullable ReportRecurrencePeriodResponse recurrencePeriod) {
-            this.recurrencePeriod = recurrencePeriod;
+            $.recurrencePeriod = recurrencePeriod;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public ReportScheduleResponse build() {
-            return new ReportScheduleResponse(recurrence, recurrencePeriod, status);
+        }
+
+        public ReportScheduleResponse build() {
+            $.recurrence = Objects.requireNonNull($.recurrence, "expected parameter 'recurrence' to be non-null");
+            return $;
         }
     }
+
 }

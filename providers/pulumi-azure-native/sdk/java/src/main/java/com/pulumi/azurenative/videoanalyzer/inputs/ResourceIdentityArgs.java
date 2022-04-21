@@ -5,7 +5,6 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userAssignedIdentity", required=true)
-      private final Output<String> userAssignedIdentity;
+    private Output<String> userAssignedIdentity;
 
     public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 
-    public ResourceIdentityArgs(Output<String> userAssignedIdentity) {
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
-    }
+    private ResourceIdentityArgs() {}
 
-    private ResourceIdentityArgs() {
-        this.userAssignedIdentity = Codegen.empty();
+    private ResourceIdentityArgs(ResourceIdentityArgs $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> userAssignedIdentity;
+        private ResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdentityArgs();
         }
 
         public Builder(ResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(Output<String> userAssignedIdentity) {
-            this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
+
         public Builder userAssignedIdentity(String userAssignedIdentity) {
-            this.userAssignedIdentity = Output.of(Objects.requireNonNull(userAssignedIdentity));
-            return this;
-        }        public ResourceIdentityArgs build() {
-            return new ResourceIdentityArgs(userAssignedIdentity);
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public ResourceIdentityArgs build() {
+            $.userAssignedIdentity = Objects.requireNonNull($.userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
+            return $;
         }
     }
+
 }

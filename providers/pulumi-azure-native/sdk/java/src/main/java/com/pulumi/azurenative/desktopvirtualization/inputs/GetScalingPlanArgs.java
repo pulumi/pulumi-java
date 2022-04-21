@@ -17,7 +17,7 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scalingPlanName", required=true)
-      private final String scalingPlanName;
+    private String scalingPlanName;
 
     public String scalingPlanName() {
         return this.scalingPlanName;
     }
 
-    public GetScalingPlanArgs(
-        String resourceGroupName,
-        String scalingPlanName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scalingPlanName = Objects.requireNonNull(scalingPlanName, "expected parameter 'scalingPlanName' to be non-null");
-    }
+    private GetScalingPlanArgs() {}
 
-    private GetScalingPlanArgs() {
-        this.resourceGroupName = null;
-        this.scalingPlanName = null;
+    private GetScalingPlanArgs(GetScalingPlanArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.scalingPlanName = $.scalingPlanName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScalingPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String scalingPlanName;
+        private GetScalingPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScalingPlanArgs();
         }
 
         public Builder(GetScalingPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scalingPlanName = defaults.scalingPlanName;
+            $ = new GetScalingPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scalingPlanName(String scalingPlanName) {
-            this.scalingPlanName = Objects.requireNonNull(scalingPlanName);
+            $.scalingPlanName = scalingPlanName;
             return this;
-        }        public GetScalingPlanArgs build() {
-            return new GetScalingPlanArgs(resourceGroupName, scalingPlanName);
+        }
+
+        public GetScalingPlanArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scalingPlanName = Objects.requireNonNull($.scalingPlanName, "expected parameter 'scalingPlanName' to be non-null");
+            return $;
         }
     }
+
 }

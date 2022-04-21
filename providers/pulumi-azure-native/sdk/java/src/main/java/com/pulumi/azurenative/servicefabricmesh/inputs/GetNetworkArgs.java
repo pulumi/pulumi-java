@@ -17,7 +17,7 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkResourceName", required=true)
-      private final String networkResourceName;
+    private String networkResourceName;
 
     public String networkResourceName() {
         return this.networkResourceName;
@@ -28,55 +28,52 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkArgs(
-        String networkResourceName,
-        String resourceGroupName) {
-        this.networkResourceName = Objects.requireNonNull(networkResourceName, "expected parameter 'networkResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkArgs() {}
 
-    private GetNetworkArgs() {
-        this.networkResourceName = null;
-        this.resourceGroupName = null;
+    private GetNetworkArgs(GetNetworkArgs $) {
+        this.networkResourceName = $.networkResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkResourceName;
-        private String resourceGroupName;
+        private GetNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkArgs();
         }
 
         public Builder(GetNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkResourceName = defaults.networkResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkResourceName(String networkResourceName) {
-            this.networkResourceName = Objects.requireNonNull(networkResourceName);
+            $.networkResourceName = networkResourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkArgs build() {
-            return new GetNetworkArgs(networkResourceName, resourceGroupName);
+        }
+
+        public GetNetworkArgs build() {
+            $.networkResourceName = Objects.requireNonNull($.networkResourceName, "expected parameter 'networkResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

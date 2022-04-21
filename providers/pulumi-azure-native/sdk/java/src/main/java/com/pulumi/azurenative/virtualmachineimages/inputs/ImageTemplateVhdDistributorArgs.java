@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="artifactTags")
-      private final @Nullable Output<Map<String,String>> artifactTags;
+    private @Nullable Output<Map<String,String>> artifactTags;
 
-    public Output<Map<String,String>> artifactTags() {
-        return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
+    public Optional<Output<Map<String,String>>> artifactTags() {
+        return Optional.ofNullable(this.artifactTags);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="runOutputName", required=true)
-      private final Output<String> runOutputName;
+    private Output<String> runOutputName;
 
     public Output<String> runOutputName() {
         return this.runOutputName;
@@ -48,76 +49,70 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ImageTemplateVhdDistributorArgs(
-        @Nullable Output<Map<String,String>> artifactTags,
-        Output<String> runOutputName,
-        Output<String> type) {
-        this.artifactTags = artifactTags;
-        this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ImageTemplateVhdDistributorArgs() {}
 
-    private ImageTemplateVhdDistributorArgs() {
-        this.artifactTags = Codegen.empty();
-        this.runOutputName = Codegen.empty();
-        this.type = Codegen.empty();
+    private ImageTemplateVhdDistributorArgs(ImageTemplateVhdDistributorArgs $) {
+        this.artifactTags = $.artifactTags;
+        this.runOutputName = $.runOutputName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateVhdDistributorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> artifactTags;
-        private Output<String> runOutputName;
-        private Output<String> type;
+        private ImageTemplateVhdDistributorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateVhdDistributorArgs();
         }
 
         public Builder(ImageTemplateVhdDistributorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactTags = defaults.artifactTags;
-    	      this.runOutputName = defaults.runOutputName;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateVhdDistributorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactTags(@Nullable Output<Map<String,String>> artifactTags) {
-            this.artifactTags = artifactTags;
+            $.artifactTags = artifactTags;
             return this;
         }
-        public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Codegen.ofNullable(artifactTags);
-            return this;
+
+        public Builder artifactTags(Map<String,String> artifactTags) {
+            return artifactTags(Output.of(artifactTags));
         }
+
         public Builder runOutputName(Output<String> runOutputName) {
-            this.runOutputName = Objects.requireNonNull(runOutputName);
+            $.runOutputName = runOutputName;
             return this;
         }
+
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
-            return this;
+            return runOutputName(Output.of(runOutputName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ImageTemplateVhdDistributorArgs build() {
-            return new ImageTemplateVhdDistributorArgs(artifactTags, runOutputName, type);
+            return type(Output.of(type));
+        }
+
+        public ImageTemplateVhdDistributorArgs build() {
+            $.runOutputName = Objects.requireNonNull($.runOutputName, "expected parameter 'runOutputName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

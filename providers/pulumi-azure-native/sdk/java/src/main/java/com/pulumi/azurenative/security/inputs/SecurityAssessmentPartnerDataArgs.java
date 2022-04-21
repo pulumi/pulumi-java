@@ -5,7 +5,6 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
      * 
      */
     @Import(name="partnerName", required=true)
-      private final Output<String> partnerName;
+    private Output<String> partnerName;
 
     public Output<String> partnerName() {
         return this.partnerName;
@@ -34,63 +33,60 @@ public final class SecurityAssessmentPartnerDataArgs extends com.pulumi.resource
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
     }
 
-    public SecurityAssessmentPartnerDataArgs(
-        Output<String> partnerName,
-        Output<String> secret) {
-        this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private SecurityAssessmentPartnerDataArgs() {}
 
-    private SecurityAssessmentPartnerDataArgs() {
-        this.partnerName = Codegen.empty();
-        this.secret = Codegen.empty();
+    private SecurityAssessmentPartnerDataArgs(SecurityAssessmentPartnerDataArgs $) {
+        this.partnerName = $.partnerName;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityAssessmentPartnerDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> partnerName;
-        private Output<String> secret;
+        private SecurityAssessmentPartnerDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityAssessmentPartnerDataArgs();
         }
 
         public Builder(SecurityAssessmentPartnerDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerName = defaults.partnerName;
-    	      this.secret = defaults.secret;
+            $ = new SecurityAssessmentPartnerDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerName(Output<String> partnerName) {
-            this.partnerName = Objects.requireNonNull(partnerName);
+            $.partnerName = partnerName;
             return this;
         }
+
         public Builder partnerName(String partnerName) {
-            this.partnerName = Output.of(Objects.requireNonNull(partnerName));
-            return this;
+            return partnerName(Output.of(partnerName));
         }
+
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
-        }        public SecurityAssessmentPartnerDataArgs build() {
-            return new SecurityAssessmentPartnerDataArgs(partnerName, secret);
+            return secret(Output.of(secret));
+        }
+
+        public SecurityAssessmentPartnerDataArgs build() {
+            $.partnerName = Objects.requireNonNull($.partnerName, "expected parameter 'partnerName' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

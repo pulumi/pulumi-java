@@ -6,9 +6,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.DataMaskingEntityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataMaskingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<DataMaskingEntityArgs>> headers;
+    private @Nullable Output<List<DataMaskingEntityArgs>> headers;
 
-    public Output<List<DataMaskingEntityArgs>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<DataMaskingEntityArgs>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -32,69 +32,66 @@ public final class DataMaskingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryParams")
-      private final @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
+    private @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
 
-    public Output<List<DataMaskingEntityArgs>> queryParams() {
-        return this.queryParams == null ? Codegen.empty() : this.queryParams;
+    public Optional<Output<List<DataMaskingEntityArgs>>> queryParams() {
+        return Optional.ofNullable(this.queryParams);
     }
 
-    public DataMaskingArgs(
-        @Nullable Output<List<DataMaskingEntityArgs>> headers,
-        @Nullable Output<List<DataMaskingEntityArgs>> queryParams) {
-        this.headers = headers;
-        this.queryParams = queryParams;
-    }
+    private DataMaskingArgs() {}
 
-    private DataMaskingArgs() {
-        this.headers = Codegen.empty();
-        this.queryParams = Codegen.empty();
+    private DataMaskingArgs(DataMaskingArgs $) {
+        this.headers = $.headers;
+        this.queryParams = $.queryParams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataMaskingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataMaskingEntityArgs>> headers;
-        private @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
+        private DataMaskingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataMaskingArgs();
         }
 
         public Builder(DataMaskingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headers = defaults.headers;
-    	      this.queryParams = defaults.queryParams;
+            $ = new DataMaskingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headers(@Nullable Output<List<DataMaskingEntityArgs>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<DataMaskingEntityArgs> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<DataMaskingEntityArgs> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(DataMaskingEntityArgs... headers) {
             return headers(List.of(headers));
         }
+
         public Builder queryParams(@Nullable Output<List<DataMaskingEntityArgs>> queryParams) {
-            this.queryParams = queryParams;
+            $.queryParams = queryParams;
             return this;
         }
-        public Builder queryParams(@Nullable List<DataMaskingEntityArgs> queryParams) {
-            this.queryParams = Codegen.ofNullable(queryParams);
-            return this;
+
+        public Builder queryParams(List<DataMaskingEntityArgs> queryParams) {
+            return queryParams(Output.of(queryParams));
         }
+
         public Builder queryParams(DataMaskingEntityArgs... queryParams) {
             return queryParams(List.of(queryParams));
-        }        public DataMaskingArgs build() {
-            return new DataMaskingArgs(headers, queryParams);
+        }
+
+        public DataMaskingArgs build() {
+            return $;
         }
     }
+
 }

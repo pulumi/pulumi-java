@@ -9,8 +9,8 @@ import com.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsA
 import com.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
      * 
      */
     @Import(name="additionalFeaturesServerConfigurations")
-      private final @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
+    private @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
 
-    public Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations() {
-        return this.additionalFeaturesServerConfigurations == null ? Codegen.empty() : this.additionalFeaturesServerConfigurations;
+    public Optional<Output<AdditionalFeaturesServerConfigurationsArgs>> additionalFeaturesServerConfigurations() {
+        return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
      * 
      */
     @Import(name="sqlConnectivityUpdateSettings")
-      private final @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
+    private @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
 
-    public Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings() {
-        return this.sqlConnectivityUpdateSettings == null ? Codegen.empty() : this.sqlConnectivityUpdateSettings;
+    public Optional<Output<SqlConnectivityUpdateSettingsArgs>> sqlConnectivityUpdateSettings() {
+        return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
      * 
      */
     @Import(name="sqlStorageUpdateSettings")
-      private final @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
+    private @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
 
-    public Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings() {
-        return this.sqlStorageUpdateSettings == null ? Codegen.empty() : this.sqlStorageUpdateSettings;
+    public Optional<Output<SqlStorageUpdateSettingsArgs>> sqlStorageUpdateSettings() {
+        return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
      * 
      */
     @Import(name="sqlWorkloadTypeUpdateSettings")
-      private final @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
+    private @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
-    public Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings() {
-        return this.sqlWorkloadTypeUpdateSettings == null ? Codegen.empty() : this.sqlWorkloadTypeUpdateSettings;
+    public Optional<Output<SqlWorkloadTypeUpdateSettingsArgs>> sqlWorkloadTypeUpdateSettings() {
+        return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }
 
-    public ServerConfigurationsManagementSettingsArgs(
-        @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations,
-        @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings,
-        @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings,
-        @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
-        this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
-        this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
-        this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
-        this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
-    }
+    private ServerConfigurationsManagementSettingsArgs() {}
 
-    private ServerConfigurationsManagementSettingsArgs() {
-        this.additionalFeaturesServerConfigurations = Codegen.empty();
-        this.sqlConnectivityUpdateSettings = Codegen.empty();
-        this.sqlStorageUpdateSettings = Codegen.empty();
-        this.sqlWorkloadTypeUpdateSettings = Codegen.empty();
+    private ServerConfigurationsManagementSettingsArgs(ServerConfigurationsManagementSettingsArgs $) {
+        this.additionalFeaturesServerConfigurations = $.additionalFeaturesServerConfigurations;
+        this.sqlConnectivityUpdateSettings = $.sqlConnectivityUpdateSettings;
+        this.sqlStorageUpdateSettings = $.sqlStorageUpdateSettings;
+        this.sqlWorkloadTypeUpdateSettings = $.sqlWorkloadTypeUpdateSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerConfigurationsManagementSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
-        private @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
-        private @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
-        private @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
+        private ServerConfigurationsManagementSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerConfigurationsManagementSettingsArgs();
         }
 
         public Builder(ServerConfigurationsManagementSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalFeaturesServerConfigurations = defaults.additionalFeaturesServerConfigurations;
-    	      this.sqlConnectivityUpdateSettings = defaults.sqlConnectivityUpdateSettings;
-    	      this.sqlStorageUpdateSettings = defaults.sqlStorageUpdateSettings;
-    	      this.sqlWorkloadTypeUpdateSettings = defaults.sqlWorkloadTypeUpdateSettings;
+            $ = new ServerConfigurationsManagementSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalFeaturesServerConfigurations(@Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations) {
-            this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
+            $.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
-        public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
-            this.additionalFeaturesServerConfigurations = Codegen.ofNullable(additionalFeaturesServerConfigurations);
-            return this;
+
+        public Builder additionalFeaturesServerConfigurations(AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
+            return additionalFeaturesServerConfigurations(Output.of(additionalFeaturesServerConfigurations));
         }
+
         public Builder sqlConnectivityUpdateSettings(@Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
-            this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
+            $.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
-        public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
-            this.sqlConnectivityUpdateSettings = Codegen.ofNullable(sqlConnectivityUpdateSettings);
-            return this;
+
+        public Builder sqlConnectivityUpdateSettings(SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
+            return sqlConnectivityUpdateSettings(Output.of(sqlConnectivityUpdateSettings));
         }
+
         public Builder sqlStorageUpdateSettings(@Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
-            this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
+            $.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
-        public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
-            this.sqlStorageUpdateSettings = Codegen.ofNullable(sqlStorageUpdateSettings);
-            return this;
+
+        public Builder sqlStorageUpdateSettings(SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
+            return sqlStorageUpdateSettings(Output.of(sqlStorageUpdateSettings));
         }
+
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
-            this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
+            $.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
-        public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
-            this.sqlWorkloadTypeUpdateSettings = Codegen.ofNullable(sqlWorkloadTypeUpdateSettings);
-            return this;
-        }        public ServerConfigurationsManagementSettingsArgs build() {
-            return new ServerConfigurationsManagementSettingsArgs(additionalFeaturesServerConfigurations, sqlConnectivityUpdateSettings, sqlStorageUpdateSettings, sqlWorkloadTypeUpdateSettings);
+
+        public Builder sqlWorkloadTypeUpdateSettings(SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
+            return sqlWorkloadTypeUpdateSettings(Output.of(sqlWorkloadTypeUpdateSettings));
+        }
+
+        public ServerConfigurationsManagementSettingsArgs build() {
+            return $;
         }
     }
+
 }

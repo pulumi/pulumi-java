@@ -8,7 +8,6 @@ import com.pulumi.azurenative.keyvault.enums.ManagedHsmSkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="family", required=true)
-      private final Output<Either<String,ManagedHsmSkuFamily>> family;
+    private Output<Either<String,ManagedHsmSkuFamily>> family;
 
     public Output<Either<String,ManagedHsmSkuFamily>> family() {
         return this.family;
@@ -37,63 +36,60 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<ManagedHsmSkuName> name;
+    private Output<ManagedHsmSkuName> name;
 
     public Output<ManagedHsmSkuName> name() {
         return this.name;
     }
 
-    public ManagedHsmSkuArgs(
-        Output<Either<String,ManagedHsmSkuFamily>> family,
-        Output<ManagedHsmSkuName> name) {
-        this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ManagedHsmSkuArgs() {}
 
-    private ManagedHsmSkuArgs() {
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
+    private ManagedHsmSkuArgs(ManagedHsmSkuArgs $) {
+        this.family = $.family;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedHsmSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ManagedHsmSkuFamily>> family;
-        private Output<ManagedHsmSkuName> name;
+        private ManagedHsmSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedHsmSkuArgs();
         }
 
         public Builder(ManagedHsmSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
+            $ = new ManagedHsmSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder family(Output<Either<String,ManagedHsmSkuFamily>> family) {
-            this.family = Objects.requireNonNull(family);
+            $.family = family;
             return this;
         }
+
         public Builder family(Either<String,ManagedHsmSkuFamily> family) {
-            this.family = Output.of(Objects.requireNonNull(family));
-            return this;
+            return family(Output.of(family));
         }
+
         public Builder name(Output<ManagedHsmSkuName> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(ManagedHsmSkuName name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ManagedHsmSkuArgs build() {
-            return new ManagedHsmSkuArgs(family, name);
+            return name(Output.of(name));
+        }
+
+        public ManagedHsmSkuArgs build() {
+            $.family = Objects.requireNonNull($.family, "expected parameter 'family' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends com.p
      * 
      */
     @Import(name="body")
-      private final @Nullable String body;
+    private @Nullable String body;
 
     public Optional<String> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends com.p
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -42,7 +42,7 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends com.p
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -53,7 +53,7 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends com.p
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -64,82 +64,72 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends com.p
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
     }
 
-    public SqlStoredProcedureGetPropertiesResponseResource(
-        @Nullable String body,
-        String etag,
-        String id,
-        String rid,
-        Double ts) {
-        this.body = body;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-    }
+    private SqlStoredProcedureGetPropertiesResponseResource() {}
 
-    private SqlStoredProcedureGetPropertiesResponseResource() {
-        this.body = null;
-        this.etag = null;
-        this.id = null;
-        this.rid = null;
-        this.ts = null;
+    private SqlStoredProcedureGetPropertiesResponseResource(SqlStoredProcedureGetPropertiesResponseResource $) {
+        this.body = $.body;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.rid = $.rid;
+        this.ts = $.ts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlStoredProcedureGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String body;
-        private String etag;
-        private String id;
-        private String rid;
-        private Double ts;
+        private SqlStoredProcedureGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlStoredProcedureGetPropertiesResponseResource();
         }
 
         public Builder(SqlStoredProcedureGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.rid = defaults.rid;
-    	      this.ts = defaults.ts;
+            $ = new SqlStoredProcedureGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable String body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
-        }        public SqlStoredProcedureGetPropertiesResponseResource build() {
-            return new SqlStoredProcedureGetPropertiesResponseResource(body, etag, id, rid, ts);
+        }
+
+        public SqlStoredProcedureGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

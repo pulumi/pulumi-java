@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MedianStoppingPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="delayEvaluation")
-      private final @Nullable Output<Integer> delayEvaluation;
+    private @Nullable Output<Integer> delayEvaluation;
 
-    public Output<Integer> delayEvaluation() {
-        return this.delayEvaluation == null ? Codegen.empty() : this.delayEvaluation;
+    public Optional<Output<Integer>> delayEvaluation() {
+        return Optional.ofNullable(this.delayEvaluation);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class MedianStoppingPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="evaluationInterval")
-      private final @Nullable Output<Integer> evaluationInterval;
+    private @Nullable Output<Integer> evaluationInterval;
 
-    public Output<Integer> evaluationInterval() {
-        return this.evaluationInterval == null ? Codegen.empty() : this.evaluationInterval;
+    public Optional<Output<Integer>> evaluationInterval() {
+        return Optional.ofNullable(this.evaluationInterval);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class MedianStoppingPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyType", required=true)
-      private final Output<String> policyType;
+    private Output<String> policyType;
 
     public Output<String> policyType() {
         return this.policyType;
     }
 
-    public MedianStoppingPolicyArgs(
-        @Nullable Output<Integer> delayEvaluation,
-        @Nullable Output<Integer> evaluationInterval,
-        Output<String> policyType) {
-        this.delayEvaluation = delayEvaluation;
-        this.evaluationInterval = evaluationInterval;
-        this.policyType = Codegen.stringProp("policyType").output().arg(policyType).require();
-    }
+    private MedianStoppingPolicyArgs() {}
 
-    private MedianStoppingPolicyArgs() {
-        this.delayEvaluation = Codegen.empty();
-        this.evaluationInterval = Codegen.empty();
-        this.policyType = Codegen.empty();
+    private MedianStoppingPolicyArgs(MedianStoppingPolicyArgs $) {
+        this.delayEvaluation = $.delayEvaluation;
+        this.evaluationInterval = $.evaluationInterval;
+        this.policyType = $.policyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MedianStoppingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> delayEvaluation;
-        private @Nullable Output<Integer> evaluationInterval;
-        private Output<String> policyType;
+        private MedianStoppingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MedianStoppingPolicyArgs();
         }
 
         public Builder(MedianStoppingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delayEvaluation = defaults.delayEvaluation;
-    	      this.evaluationInterval = defaults.evaluationInterval;
-    	      this.policyType = defaults.policyType;
+            $ = new MedianStoppingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delayEvaluation(@Nullable Output<Integer> delayEvaluation) {
-            this.delayEvaluation = delayEvaluation;
+            $.delayEvaluation = delayEvaluation;
             return this;
         }
-        public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
-            this.delayEvaluation = Codegen.ofNullable(delayEvaluation);
-            return this;
+
+        public Builder delayEvaluation(Integer delayEvaluation) {
+            return delayEvaluation(Output.of(delayEvaluation));
         }
+
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
-            this.evaluationInterval = evaluationInterval;
+            $.evaluationInterval = evaluationInterval;
             return this;
         }
-        public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
-            this.evaluationInterval = Codegen.ofNullable(evaluationInterval);
-            return this;
+
+        public Builder evaluationInterval(Integer evaluationInterval) {
+            return evaluationInterval(Output.of(evaluationInterval));
         }
+
         public Builder policyType(Output<String> policyType) {
-            this.policyType = Objects.requireNonNull(policyType);
+            $.policyType = policyType;
             return this;
         }
+
         public Builder policyType(String policyType) {
-            this.policyType = Output.of(Objects.requireNonNull(policyType));
-            return this;
-        }        public MedianStoppingPolicyArgs build() {
-            return new MedianStoppingPolicyArgs(delayEvaluation, evaluationInterval, policyType);
+            return policyType(Output.of(policyType));
+        }
+
+        public MedianStoppingPolicyArgs build() {
+            $.policyType = Codegen.stringProp("policyType").output().arg($.policyType).require();
+            return $;
         }
     }
+
 }

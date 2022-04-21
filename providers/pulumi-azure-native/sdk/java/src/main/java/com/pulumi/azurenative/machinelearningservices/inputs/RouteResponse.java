@@ -18,7 +18,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -29,55 +29,52 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public RouteResponse(
-        String path,
-        Integer port) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private RouteResponse() {}
 
-    private RouteResponse() {
-        this.path = null;
-        this.port = null;
+    private RouteResponse(RouteResponse $) {
+        this.path = $.path;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private Integer port;
+        private RouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteResponse();
         }
 
         public Builder(RouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
+            $ = new RouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public RouteResponse build() {
-            return new RouteResponse(path, port);
+        }
+
+        public RouteResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="customIpPrefixName", required=true)
-      private final String customIpPrefixName;
+    private String customIpPrefixName;
 
     public String customIpPrefixName() {
         return this.customIpPrefixName;
@@ -30,10 +30,10 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCustomIPPrefixArgs(
-        String customIpPrefixName,
-        @Nullable String expand,
-        String resourceGroupName) {
-        this.customIpPrefixName = Objects.requireNonNull(customIpPrefixName, "expected parameter 'customIpPrefixName' to be non-null");
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCustomIPPrefixArgs() {}
 
-    private GetCustomIPPrefixArgs() {
-        this.customIpPrefixName = null;
-        this.expand = null;
-        this.resourceGroupName = null;
+    private GetCustomIPPrefixArgs(GetCustomIPPrefixArgs $) {
+        this.customIpPrefixName = $.customIpPrefixName;
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomIPPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customIpPrefixName;
-        private @Nullable String expand;
-        private String resourceGroupName;
+        private GetCustomIPPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomIPPrefixArgs();
         }
 
         public Builder(GetCustomIPPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customIpPrefixName = defaults.customIpPrefixName;
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCustomIPPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customIpPrefixName(String customIpPrefixName) {
-            this.customIpPrefixName = Objects.requireNonNull(customIpPrefixName);
+            $.customIpPrefixName = customIpPrefixName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCustomIPPrefixArgs build() {
-            return new GetCustomIPPrefixArgs(customIpPrefixName, expand, resourceGroupName);
+        }
+
+        public GetCustomIPPrefixArgs build() {
+            $.customIpPrefixName = Objects.requireNonNull($.customIpPrefixName, "expected parameter 'customIpPrefixName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

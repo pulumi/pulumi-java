@@ -6,9 +6,9 @@ package com.pulumi.azurenative.managedservices;
 import com.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
+    private @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
 
-    public Output<RegistrationAssignmentPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<RegistrationAssignmentPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="registrationAssignmentId")
-      private final @Nullable Output<String> registrationAssignmentId;
+    private @Nullable Output<String> registrationAssignmentId;
 
-    public Output<String> registrationAssignmentId() {
-        return this.registrationAssignmentId == null ? Codegen.empty() : this.registrationAssignmentId;
+    public Optional<Output<String>> registrationAssignmentId() {
+        return Optional.ofNullable(this.registrationAssignmentId);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public RegistrationAssignmentArgs(
-        @Nullable Output<RegistrationAssignmentPropertiesArgs> properties,
-        @Nullable Output<String> registrationAssignmentId,
-        Output<String> scope) {
-        this.properties = properties;
-        this.registrationAssignmentId = registrationAssignmentId;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private RegistrationAssignmentArgs() {}
 
-    private RegistrationAssignmentArgs() {
-        this.properties = Codegen.empty();
-        this.registrationAssignmentId = Codegen.empty();
-        this.scope = Codegen.empty();
+    private RegistrationAssignmentArgs(RegistrationAssignmentArgs $) {
+        this.properties = $.properties;
+        this.registrationAssignmentId = $.registrationAssignmentId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
-        private @Nullable Output<String> registrationAssignmentId;
-        private Output<String> scope;
+        private RegistrationAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationAssignmentArgs();
         }
 
         public Builder(RegistrationAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.registrationAssignmentId = defaults.registrationAssignmentId;
-    	      this.scope = defaults.scope;
+            $ = new RegistrationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<RegistrationAssignmentPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable RegistrationAssignmentPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(RegistrationAssignmentPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder registrationAssignmentId(@Nullable Output<String> registrationAssignmentId) {
-            this.registrationAssignmentId = registrationAssignmentId;
+            $.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
-        public Builder registrationAssignmentId(@Nullable String registrationAssignmentId) {
-            this.registrationAssignmentId = Codegen.ofNullable(registrationAssignmentId);
-            return this;
+
+        public Builder registrationAssignmentId(String registrationAssignmentId) {
+            return registrationAssignmentId(Output.of(registrationAssignmentId));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public RegistrationAssignmentArgs build() {
-            return new RegistrationAssignmentArgs(properties, registrationAssignmentId, scope);
+            return scope(Output.of(scope));
+        }
+
+        public RegistrationAssignmentArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

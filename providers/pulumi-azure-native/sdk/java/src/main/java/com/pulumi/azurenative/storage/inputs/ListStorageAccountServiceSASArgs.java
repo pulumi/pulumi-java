@@ -23,7 +23,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -34,10 +34,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cacheControl")
-      private final @Nullable String cacheControl;
+    private @Nullable String cacheControl;
 
     public Optional<String> cacheControl() {
-        return this.cacheControl == null ? Optional.empty() : Optional.ofNullable(this.cacheControl);
+        return Optional.ofNullable(this.cacheControl);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="canonicalizedResource", required=true)
-      private final String canonicalizedResource;
+    private String canonicalizedResource;
 
     public String canonicalizedResource() {
         return this.canonicalizedResource;
@@ -56,10 +56,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentDisposition")
-      private final @Nullable String contentDisposition;
+    private @Nullable String contentDisposition;
 
     public Optional<String> contentDisposition() {
-        return this.contentDisposition == null ? Optional.empty() : Optional.ofNullable(this.contentDisposition);
+        return Optional.ofNullable(this.contentDisposition);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentEncoding")
-      private final @Nullable String contentEncoding;
+    private @Nullable String contentEncoding;
 
     public Optional<String> contentEncoding() {
-        return this.contentEncoding == null ? Optional.empty() : Optional.ofNullable(this.contentEncoding);
+        return Optional.ofNullable(this.contentEncoding);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentLanguage")
-      private final @Nullable String contentLanguage;
+    private @Nullable String contentLanguage;
 
     public Optional<String> contentLanguage() {
-        return this.contentLanguage == null ? Optional.empty() : Optional.ofNullable(this.contentLanguage);
+        return Optional.ofNullable(this.contentLanguage);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="iPAddressOrRange")
-      private final @Nullable String iPAddressOrRange;
+    private @Nullable String iPAddressOrRange;
 
     public Optional<String> iPAddressOrRange() {
-        return this.iPAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.iPAddressOrRange);
+        return Optional.ofNullable(this.iPAddressOrRange);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="identifier")
-      private final @Nullable String identifier;
+    private @Nullable String identifier;
 
     public Optional<String> identifier() {
-        return this.identifier == null ? Optional.empty() : Optional.ofNullable(this.identifier);
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyToSign")
-      private final @Nullable String keyToSign;
+    private @Nullable String keyToSign;
 
     public Optional<String> keyToSign() {
-        return this.keyToSign == null ? Optional.empty() : Optional.ofNullable(this.keyToSign);
+        return Optional.ofNullable(this.keyToSign);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="partitionKeyEnd")
-      private final @Nullable String partitionKeyEnd;
+    private @Nullable String partitionKeyEnd;
 
     public Optional<String> partitionKeyEnd() {
-        return this.partitionKeyEnd == null ? Optional.empty() : Optional.ofNullable(this.partitionKeyEnd);
+        return Optional.ofNullable(this.partitionKeyEnd);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="partitionKeyStart")
-      private final @Nullable String partitionKeyStart;
+    private @Nullable String partitionKeyStart;
 
     public Optional<String> partitionKeyStart() {
-        return this.partitionKeyStart == null ? Optional.empty() : Optional.ofNullable(this.partitionKeyStart);
+        return Optional.ofNullable(this.partitionKeyStart);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Either<String,Permissions> permissions;
+    private @Nullable Either<String,Permissions> permissions;
 
-    public Either<String,Permissions> permissions() {
-        return this.permissions == null ? null : this.permissions;
+    public Optional<Either<String,Permissions>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="protocols")
-      private final @Nullable HttpProtocol protocols;
+    private @Nullable HttpProtocol protocols;
 
     public Optional<HttpProtocol> protocols() {
-        return this.protocols == null ? Optional.empty() : Optional.ofNullable(this.protocols);
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resource")
-      private final @Nullable Either<String,SignedResource> resource;
+    private @Nullable Either<String,SignedResource> resource;
 
-    public Either<String,SignedResource> resource() {
-        return this.resource == null ? null : this.resource;
+    public Optional<Either<String,SignedResource>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -188,7 +188,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -199,10 +199,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rowKeyEnd")
-      private final @Nullable String rowKeyEnd;
+    private @Nullable String rowKeyEnd;
 
     public Optional<String> rowKeyEnd() {
-        return this.rowKeyEnd == null ? Optional.empty() : Optional.ofNullable(this.rowKeyEnd);
+        return Optional.ofNullable(this.rowKeyEnd);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rowKeyStart")
-      private final @Nullable String rowKeyStart;
+    private @Nullable String rowKeyStart;
 
     public Optional<String> rowKeyStart() {
-        return this.rowKeyStart == null ? Optional.empty() : Optional.ofNullable(this.rowKeyStart);
+        return Optional.ofNullable(this.rowKeyStart);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharedAccessExpiryTime")
-      private final @Nullable String sharedAccessExpiryTime;
+    private @Nullable String sharedAccessExpiryTime;
 
     public Optional<String> sharedAccessExpiryTime() {
-        return this.sharedAccessExpiryTime == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessExpiryTime);
+        return Optional.ofNullable(this.sharedAccessExpiryTime);
     }
 
     /**
@@ -232,217 +232,161 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharedAccessStartTime")
-      private final @Nullable String sharedAccessStartTime;
+    private @Nullable String sharedAccessStartTime;
 
     public Optional<String> sharedAccessStartTime() {
-        return this.sharedAccessStartTime == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessStartTime);
+        return Optional.ofNullable(this.sharedAccessStartTime);
     }
 
-    public ListStorageAccountServiceSASArgs(
-        String accountName,
-        @Nullable String cacheControl,
-        String canonicalizedResource,
-        @Nullable String contentDisposition,
-        @Nullable String contentEncoding,
-        @Nullable String contentLanguage,
-        @Nullable String contentType,
-        @Nullable String iPAddressOrRange,
-        @Nullable String identifier,
-        @Nullable String keyToSign,
-        @Nullable String partitionKeyEnd,
-        @Nullable String partitionKeyStart,
-        @Nullable Either<String,Permissions> permissions,
-        @Nullable HttpProtocol protocols,
-        @Nullable Either<String,SignedResource> resource,
-        String resourceGroupName,
-        @Nullable String rowKeyEnd,
-        @Nullable String rowKeyStart,
-        @Nullable String sharedAccessExpiryTime,
-        @Nullable String sharedAccessStartTime) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.cacheControl = cacheControl;
-        this.canonicalizedResource = Objects.requireNonNull(canonicalizedResource, "expected parameter 'canonicalizedResource' to be non-null");
-        this.contentDisposition = contentDisposition;
-        this.contentEncoding = contentEncoding;
-        this.contentLanguage = contentLanguage;
-        this.contentType = contentType;
-        this.iPAddressOrRange = iPAddressOrRange;
-        this.identifier = identifier;
-        this.keyToSign = keyToSign;
-        this.partitionKeyEnd = partitionKeyEnd;
-        this.partitionKeyStart = partitionKeyStart;
-        this.permissions = permissions;
-        this.protocols = protocols;
-        this.resource = resource;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rowKeyEnd = rowKeyEnd;
-        this.rowKeyStart = rowKeyStart;
-        this.sharedAccessExpiryTime = sharedAccessExpiryTime;
-        this.sharedAccessStartTime = sharedAccessStartTime;
-    }
+    private ListStorageAccountServiceSASArgs() {}
 
-    private ListStorageAccountServiceSASArgs() {
-        this.accountName = null;
-        this.cacheControl = null;
-        this.canonicalizedResource = null;
-        this.contentDisposition = null;
-        this.contentEncoding = null;
-        this.contentLanguage = null;
-        this.contentType = null;
-        this.iPAddressOrRange = null;
-        this.identifier = null;
-        this.keyToSign = null;
-        this.partitionKeyEnd = null;
-        this.partitionKeyStart = null;
-        this.permissions = null;
-        this.protocols = null;
-        this.resource = null;
-        this.resourceGroupName = null;
-        this.rowKeyEnd = null;
-        this.rowKeyStart = null;
-        this.sharedAccessExpiryTime = null;
-        this.sharedAccessStartTime = null;
+    private ListStorageAccountServiceSASArgs(ListStorageAccountServiceSASArgs $) {
+        this.accountName = $.accountName;
+        this.cacheControl = $.cacheControl;
+        this.canonicalizedResource = $.canonicalizedResource;
+        this.contentDisposition = $.contentDisposition;
+        this.contentEncoding = $.contentEncoding;
+        this.contentLanguage = $.contentLanguage;
+        this.contentType = $.contentType;
+        this.iPAddressOrRange = $.iPAddressOrRange;
+        this.identifier = $.identifier;
+        this.keyToSign = $.keyToSign;
+        this.partitionKeyEnd = $.partitionKeyEnd;
+        this.partitionKeyStart = $.partitionKeyStart;
+        this.permissions = $.permissions;
+        this.protocols = $.protocols;
+        this.resource = $.resource;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rowKeyEnd = $.rowKeyEnd;
+        this.rowKeyStart = $.rowKeyStart;
+        this.sharedAccessExpiryTime = $.sharedAccessExpiryTime;
+        this.sharedAccessStartTime = $.sharedAccessStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListStorageAccountServiceSASArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String cacheControl;
-        private String canonicalizedResource;
-        private @Nullable String contentDisposition;
-        private @Nullable String contentEncoding;
-        private @Nullable String contentLanguage;
-        private @Nullable String contentType;
-        private @Nullable String iPAddressOrRange;
-        private @Nullable String identifier;
-        private @Nullable String keyToSign;
-        private @Nullable String partitionKeyEnd;
-        private @Nullable String partitionKeyStart;
-        private @Nullable Either<String,Permissions> permissions;
-        private @Nullable HttpProtocol protocols;
-        private @Nullable Either<String,SignedResource> resource;
-        private String resourceGroupName;
-        private @Nullable String rowKeyEnd;
-        private @Nullable String rowKeyStart;
-        private @Nullable String sharedAccessExpiryTime;
-        private @Nullable String sharedAccessStartTime;
+        private ListStorageAccountServiceSASArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListStorageAccountServiceSASArgs();
         }
 
         public Builder(ListStorageAccountServiceSASArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.cacheControl = defaults.cacheControl;
-    	      this.canonicalizedResource = defaults.canonicalizedResource;
-    	      this.contentDisposition = defaults.contentDisposition;
-    	      this.contentEncoding = defaults.contentEncoding;
-    	      this.contentLanguage = defaults.contentLanguage;
-    	      this.contentType = defaults.contentType;
-    	      this.iPAddressOrRange = defaults.iPAddressOrRange;
-    	      this.identifier = defaults.identifier;
-    	      this.keyToSign = defaults.keyToSign;
-    	      this.partitionKeyEnd = defaults.partitionKeyEnd;
-    	      this.partitionKeyStart = defaults.partitionKeyStart;
-    	      this.permissions = defaults.permissions;
-    	      this.protocols = defaults.protocols;
-    	      this.resource = defaults.resource;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rowKeyEnd = defaults.rowKeyEnd;
-    	      this.rowKeyStart = defaults.rowKeyStart;
-    	      this.sharedAccessExpiryTime = defaults.sharedAccessExpiryTime;
-    	      this.sharedAccessStartTime = defaults.sharedAccessStartTime;
+            $ = new ListStorageAccountServiceSASArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = cacheControl;
+            $.cacheControl = cacheControl;
             return this;
         }
+
         public Builder canonicalizedResource(String canonicalizedResource) {
-            this.canonicalizedResource = Objects.requireNonNull(canonicalizedResource);
+            $.canonicalizedResource = canonicalizedResource;
             return this;
         }
+
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = contentDisposition;
+            $.contentDisposition = contentDisposition;
             return this;
         }
+
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = contentEncoding;
+            $.contentEncoding = contentEncoding;
             return this;
         }
+
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = contentLanguage;
+            $.contentLanguage = contentLanguage;
             return this;
         }
+
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
-            this.iPAddressOrRange = iPAddressOrRange;
+            $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
+
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
+
         public Builder keyToSign(@Nullable String keyToSign) {
-            this.keyToSign = keyToSign;
+            $.keyToSign = keyToSign;
             return this;
         }
+
         public Builder partitionKeyEnd(@Nullable String partitionKeyEnd) {
-            this.partitionKeyEnd = partitionKeyEnd;
+            $.partitionKeyEnd = partitionKeyEnd;
             return this;
         }
+
         public Builder partitionKeyStart(@Nullable String partitionKeyStart) {
-            this.partitionKeyStart = partitionKeyStart;
+            $.partitionKeyStart = partitionKeyStart;
             return this;
         }
+
         public Builder permissions(@Nullable Either<String,Permissions> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
+
         public Builder protocols(@Nullable HttpProtocol protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
+
         public Builder resource(@Nullable Either<String,SignedResource> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder rowKeyEnd(@Nullable String rowKeyEnd) {
-            this.rowKeyEnd = rowKeyEnd;
+            $.rowKeyEnd = rowKeyEnd;
             return this;
         }
+
         public Builder rowKeyStart(@Nullable String rowKeyStart) {
-            this.rowKeyStart = rowKeyStart;
+            $.rowKeyStart = rowKeyStart;
             return this;
         }
+
         public Builder sharedAccessExpiryTime(@Nullable String sharedAccessExpiryTime) {
-            this.sharedAccessExpiryTime = sharedAccessExpiryTime;
+            $.sharedAccessExpiryTime = sharedAccessExpiryTime;
             return this;
         }
+
         public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
-            this.sharedAccessStartTime = sharedAccessStartTime;
+            $.sharedAccessStartTime = sharedAccessStartTime;
             return this;
-        }        public ListStorageAccountServiceSASArgs build() {
-            return new ListStorageAccountServiceSASArgs(accountName, cacheControl, canonicalizedResource, contentDisposition, contentEncoding, contentLanguage, contentType, iPAddressOrRange, identifier, keyToSign, partitionKeyEnd, partitionKeyStart, permissions, protocols, resource, resourceGroupName, rowKeyEnd, rowKeyStart, sharedAccessExpiryTime, sharedAccessStartTime);
+        }
+
+        public ListStorageAccountServiceSASArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.canonicalizedResource = Objects.requireNonNull($.canonicalizedResource, "expected parameter 'canonicalizedResource' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

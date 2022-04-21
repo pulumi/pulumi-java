@@ -19,10 +19,10 @@ public final class CompositePathResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="order")
-      private final @Nullable String order;
+    private @Nullable String order;
 
     public Optional<String> order() {
-        return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class CompositePathResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public CompositePathResponse(
-        @Nullable String order,
-        @Nullable String path) {
-        this.order = order;
-        this.path = path;
-    }
+    private CompositePathResponse() {}
 
-    private CompositePathResponse() {
-        this.order = null;
-        this.path = null;
+    private CompositePathResponse(CompositePathResponse $) {
+        this.order = $.order;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositePathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String order;
-        private @Nullable String path;
+        private CompositePathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositePathResponse();
         }
 
         public Builder(CompositePathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.order = defaults.order;
-    	      this.path = defaults.path;
+            $ = new CompositePathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder order(@Nullable String order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public CompositePathResponse build() {
-            return new CompositePathResponse(order, path);
+        }
+
+        public CompositePathResponse build() {
+            return $;
         }
     }
+
 }

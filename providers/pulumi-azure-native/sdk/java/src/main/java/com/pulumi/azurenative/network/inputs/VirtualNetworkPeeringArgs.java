@@ -10,10 +10,10 @@ import com.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowForwardedTraffic")
-      private final @Nullable Output<Boolean> allowForwardedTraffic;
+    private @Nullable Output<Boolean> allowForwardedTraffic;
 
-    public Output<Boolean> allowForwardedTraffic() {
-        return this.allowForwardedTraffic == null ? Codegen.empty() : this.allowForwardedTraffic;
+    public Optional<Output<Boolean>> allowForwardedTraffic() {
+        return Optional.ofNullable(this.allowForwardedTraffic);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowGatewayTransit")
-      private final @Nullable Output<Boolean> allowGatewayTransit;
+    private @Nullable Output<Boolean> allowGatewayTransit;
 
-    public Output<Boolean> allowGatewayTransit() {
-        return this.allowGatewayTransit == null ? Codegen.empty() : this.allowGatewayTransit;
+    public Optional<Output<Boolean>> allowGatewayTransit() {
+        return Optional.ofNullable(this.allowGatewayTransit);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowVirtualNetworkAccess")
-      private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
+    private @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
-    public Output<Boolean> allowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess == null ? Codegen.empty() : this.allowVirtualNetworkAccess;
+    public Optional<Output<Boolean>> allowVirtualNetworkAccess() {
+        return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="doNotVerifyRemoteGateways")
-      private final @Nullable Output<Boolean> doNotVerifyRemoteGateways;
+    private @Nullable Output<Boolean> doNotVerifyRemoteGateways;
 
-    public Output<Boolean> doNotVerifyRemoteGateways() {
-        return this.doNotVerifyRemoteGateways == null ? Codegen.empty() : this.doNotVerifyRemoteGateways;
+    public Optional<Output<Boolean>> doNotVerifyRemoteGateways() {
+        return Optional.ofNullable(this.doNotVerifyRemoteGateways);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="peeringState")
-      private final @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState;
+    private @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState;
 
-    public Output<Either<String,VirtualNetworkPeeringState>> peeringState() {
-        return this.peeringState == null ? Codegen.empty() : this.peeringState;
+    public Optional<Output<Either<String,VirtualNetworkPeeringState>>> peeringState() {
+        return Optional.ofNullable(this.peeringState);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="remoteAddressSpace")
-      private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
+    private @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
-    public Output<AddressSpaceArgs> remoteAddressSpace() {
-        return this.remoteAddressSpace == null ? Codegen.empty() : this.remoteAddressSpace;
+    public Optional<Output<AddressSpaceArgs>> remoteAddressSpace() {
+        return Optional.ofNullable(this.remoteAddressSpace);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="remoteBgpCommunities")
-      private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
+    private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
 
-    public Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities() {
-        return this.remoteBgpCommunities == null ? Codegen.empty() : this.remoteBgpCommunities;
+    public Optional<Output<VirtualNetworkBgpCommunitiesArgs>> remoteBgpCommunities() {
+        return Optional.ofNullable(this.remoteBgpCommunities);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="remoteVirtualNetwork")
-      private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
+    private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
-    public Output<SubResourceArgs> remoteVirtualNetwork() {
-        return this.remoteVirtualNetwork == null ? Codegen.empty() : this.remoteVirtualNetwork;
+    public Optional<Output<SubResourceArgs>> remoteVirtualNetwork() {
+        return Optional.ofNullable(this.remoteVirtualNetwork);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -151,193 +151,158 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="useRemoteGateways")
-      private final @Nullable Output<Boolean> useRemoteGateways;
+    private @Nullable Output<Boolean> useRemoteGateways;
 
-    public Output<Boolean> useRemoteGateways() {
-        return this.useRemoteGateways == null ? Codegen.empty() : this.useRemoteGateways;
+    public Optional<Output<Boolean>> useRemoteGateways() {
+        return Optional.ofNullable(this.useRemoteGateways);
     }
 
-    public VirtualNetworkPeeringArgs(
-        @Nullable Output<Boolean> allowForwardedTraffic,
-        @Nullable Output<Boolean> allowGatewayTransit,
-        @Nullable Output<Boolean> allowVirtualNetworkAccess,
-        @Nullable Output<Boolean> doNotVerifyRemoteGateways,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState,
-        @Nullable Output<AddressSpaceArgs> remoteAddressSpace,
-        @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities,
-        @Nullable Output<SubResourceArgs> remoteVirtualNetwork,
-        @Nullable Output<String> type,
-        @Nullable Output<Boolean> useRemoteGateways) {
-        this.allowForwardedTraffic = allowForwardedTraffic;
-        this.allowGatewayTransit = allowGatewayTransit;
-        this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
-        this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
-        this.id = id;
-        this.name = name;
-        this.peeringState = peeringState;
-        this.remoteAddressSpace = remoteAddressSpace;
-        this.remoteBgpCommunities = remoteBgpCommunities;
-        this.remoteVirtualNetwork = remoteVirtualNetwork;
-        this.type = type;
-        this.useRemoteGateways = useRemoteGateways;
-    }
+    private VirtualNetworkPeeringArgs() {}
 
-    private VirtualNetworkPeeringArgs() {
-        this.allowForwardedTraffic = Codegen.empty();
-        this.allowGatewayTransit = Codegen.empty();
-        this.allowVirtualNetworkAccess = Codegen.empty();
-        this.doNotVerifyRemoteGateways = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peeringState = Codegen.empty();
-        this.remoteAddressSpace = Codegen.empty();
-        this.remoteBgpCommunities = Codegen.empty();
-        this.remoteVirtualNetwork = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useRemoteGateways = Codegen.empty();
+    private VirtualNetworkPeeringArgs(VirtualNetworkPeeringArgs $) {
+        this.allowForwardedTraffic = $.allowForwardedTraffic;
+        this.allowGatewayTransit = $.allowGatewayTransit;
+        this.allowVirtualNetworkAccess = $.allowVirtualNetworkAccess;
+        this.doNotVerifyRemoteGateways = $.doNotVerifyRemoteGateways;
+        this.id = $.id;
+        this.name = $.name;
+        this.peeringState = $.peeringState;
+        this.remoteAddressSpace = $.remoteAddressSpace;
+        this.remoteBgpCommunities = $.remoteBgpCommunities;
+        this.remoteVirtualNetwork = $.remoteVirtualNetwork;
+        this.type = $.type;
+        this.useRemoteGateways = $.useRemoteGateways;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowForwardedTraffic;
-        private @Nullable Output<Boolean> allowGatewayTransit;
-        private @Nullable Output<Boolean> allowVirtualNetworkAccess;
-        private @Nullable Output<Boolean> doNotVerifyRemoteGateways;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState;
-        private @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
-        private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
-        private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
-        private @Nullable Output<String> type;
-        private @Nullable Output<Boolean> useRemoteGateways;
+        private VirtualNetworkPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkPeeringArgs();
         }
 
         public Builder(VirtualNetworkPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowForwardedTraffic = defaults.allowForwardedTraffic;
-    	      this.allowGatewayTransit = defaults.allowGatewayTransit;
-    	      this.allowVirtualNetworkAccess = defaults.allowVirtualNetworkAccess;
-    	      this.doNotVerifyRemoteGateways = defaults.doNotVerifyRemoteGateways;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.peeringState = defaults.peeringState;
-    	      this.remoteAddressSpace = defaults.remoteAddressSpace;
-    	      this.remoteBgpCommunities = defaults.remoteBgpCommunities;
-    	      this.remoteVirtualNetwork = defaults.remoteVirtualNetwork;
-    	      this.type = defaults.type;
-    	      this.useRemoteGateways = defaults.useRemoteGateways;
+            $ = new VirtualNetworkPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowForwardedTraffic(@Nullable Output<Boolean> allowForwardedTraffic) {
-            this.allowForwardedTraffic = allowForwardedTraffic;
+            $.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
-        public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
-            this.allowForwardedTraffic = Codegen.ofNullable(allowForwardedTraffic);
-            return this;
+
+        public Builder allowForwardedTraffic(Boolean allowForwardedTraffic) {
+            return allowForwardedTraffic(Output.of(allowForwardedTraffic));
         }
+
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
-            this.allowGatewayTransit = allowGatewayTransit;
+            $.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
-        public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
-            this.allowGatewayTransit = Codegen.ofNullable(allowGatewayTransit);
-            return this;
+
+        public Builder allowGatewayTransit(Boolean allowGatewayTransit) {
+            return allowGatewayTransit(Output.of(allowGatewayTransit));
         }
+
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
+            $.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
-        public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = Codegen.ofNullable(allowVirtualNetworkAccess);
-            return this;
+
+        public Builder allowVirtualNetworkAccess(Boolean allowVirtualNetworkAccess) {
+            return allowVirtualNetworkAccess(Output.of(allowVirtualNetworkAccess));
         }
+
         public Builder doNotVerifyRemoteGateways(@Nullable Output<Boolean> doNotVerifyRemoteGateways) {
-            this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
+            $.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
-        public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
-            this.doNotVerifyRemoteGateways = Codegen.ofNullable(doNotVerifyRemoteGateways);
-            return this;
+
+        public Builder doNotVerifyRemoteGateways(Boolean doNotVerifyRemoteGateways) {
+            return doNotVerifyRemoteGateways(Output.of(doNotVerifyRemoteGateways));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peeringState(@Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState) {
-            this.peeringState = peeringState;
+            $.peeringState = peeringState;
             return this;
         }
-        public Builder peeringState(@Nullable Either<String,VirtualNetworkPeeringState> peeringState) {
-            this.peeringState = Codegen.ofNullable(peeringState);
-            return this;
+
+        public Builder peeringState(Either<String,VirtualNetworkPeeringState> peeringState) {
+            return peeringState(Output.of(peeringState));
         }
+
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
-            this.remoteAddressSpace = remoteAddressSpace;
+            $.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
-        public Builder remoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
-            this.remoteAddressSpace = Codegen.ofNullable(remoteAddressSpace);
-            return this;
+
+        public Builder remoteAddressSpace(AddressSpaceArgs remoteAddressSpace) {
+            return remoteAddressSpace(Output.of(remoteAddressSpace));
         }
+
         public Builder remoteBgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities) {
-            this.remoteBgpCommunities = remoteBgpCommunities;
+            $.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
-        public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
-            this.remoteBgpCommunities = Codegen.ofNullable(remoteBgpCommunities);
-            return this;
+
+        public Builder remoteBgpCommunities(VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
+            return remoteBgpCommunities(Output.of(remoteBgpCommunities));
         }
+
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = remoteVirtualNetwork;
+            $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
-        public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Codegen.ofNullable(remoteVirtualNetwork);
-            return this;
+
+        public Builder remoteVirtualNetwork(SubResourceArgs remoteVirtualNetwork) {
+            return remoteVirtualNetwork(Output.of(remoteVirtualNetwork));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder useRemoteGateways(@Nullable Output<Boolean> useRemoteGateways) {
-            this.useRemoteGateways = useRemoteGateways;
+            $.useRemoteGateways = useRemoteGateways;
             return this;
         }
-        public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
-            this.useRemoteGateways = Codegen.ofNullable(useRemoteGateways);
-            return this;
-        }        public VirtualNetworkPeeringArgs build() {
-            return new VirtualNetworkPeeringArgs(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, id, name, peeringState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, type, useRemoteGateways);
+
+        public Builder useRemoteGateways(Boolean useRemoteGateways) {
+            return useRemoteGateways(Output.of(useRemoteGateways));
+        }
+
+        public VirtualNetworkPeeringArgs build() {
+            return $;
         }
     }
+
 }

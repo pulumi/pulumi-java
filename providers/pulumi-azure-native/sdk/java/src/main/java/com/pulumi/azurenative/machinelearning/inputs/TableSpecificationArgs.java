@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
+    private @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
 
-    public Output<Map<String,ColumnSpecificationArgs>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,ColumnSpecificationArgs>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -70,102 +71,89 @@ public final class TableSpecificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TableSpecificationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> format,
-        @Nullable Output<Map<String,ColumnSpecificationArgs>> properties,
-        @Nullable Output<String> title,
-        Output<String> type) {
-        this.description = description;
-        this.format = format;
-        this.properties = properties;
-        this.title = title;
-        this.type = Codegen.stringProp("type").output().arg(type).def("object").require();
-    }
+    private TableSpecificationArgs() {}
 
-    private TableSpecificationArgs() {
-        this.description = Codegen.empty();
-        this.format = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.title = Codegen.empty();
-        this.type = Codegen.empty();
+    private TableSpecificationArgs(TableSpecificationArgs $) {
+        this.description = $.description;
+        this.format = $.format;
+        this.properties = $.properties;
+        this.title = $.title;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> format;
-        private @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
-        private @Nullable Output<String> title;
-        private Output<String> type;
+        private TableSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableSpecificationArgs();
         }
 
         public Builder(TableSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.format = defaults.format;
-    	      this.properties = defaults.properties;
-    	      this.title = defaults.title;
-    	      this.type = defaults.type;
+            $ = new TableSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(String format) {
+            return format(Output.of(format));
         }
+
         public Builder properties(@Nullable Output<Map<String,ColumnSpecificationArgs>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,ColumnSpecificationArgs> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,ColumnSpecificationArgs> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TableSpecificationArgs build() {
-            return new TableSpecificationArgs(description, format, properties, title, type);
+            return type(Output.of(type));
+        }
+
+        public TableSpecificationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).def("object").require();
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="additionalDetail", required=true)
-      private final String additionalDetail;
+    private String additionalDetail;
 
     public String additionalDetail() {
         return this.additionalDetail;
@@ -35,10 +35,10 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="errorDetail")
-      private final @Nullable ErrorDetailResponse errorDetail;
+    private @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> errorDetail() {
-        return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
+        return Optional.ofNullable(this.errorDetail);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public InquiryValidationResponse(
-        String additionalDetail,
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable String status) {
-        this.additionalDetail = Objects.requireNonNull(additionalDetail, "expected parameter 'additionalDetail' to be non-null");
-        this.errorDetail = errorDetail;
-        this.status = status;
-    }
+    private InquiryValidationResponse() {}
 
-    private InquiryValidationResponse() {
-        this.additionalDetail = null;
-        this.errorDetail = null;
-        this.status = null;
+    private InquiryValidationResponse(InquiryValidationResponse $) {
+        this.additionalDetail = $.additionalDetail;
+        this.errorDetail = $.errorDetail;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InquiryValidationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String additionalDetail;
-        private @Nullable ErrorDetailResponse errorDetail;
-        private @Nullable String status;
+        private InquiryValidationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InquiryValidationResponse();
         }
 
         public Builder(InquiryValidationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalDetail = defaults.additionalDetail;
-    	      this.errorDetail = defaults.errorDetail;
-    	      this.status = defaults.status;
+            $ = new InquiryValidationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalDetail(String additionalDetail) {
-            this.additionalDetail = Objects.requireNonNull(additionalDetail);
+            $.additionalDetail = additionalDetail;
             return this;
         }
+
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
-            this.errorDetail = errorDetail;
+            $.errorDetail = errorDetail;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public InquiryValidationResponse build() {
-            return new InquiryValidationResponse(additionalDetail, errorDetail, status);
+        }
+
+        public InquiryValidationResponse build() {
+            $.additionalDetail = Objects.requireNonNull($.additionalDetail, "expected parameter 'additionalDetail' to be non-null");
+            return $;
         }
     }
+
 }

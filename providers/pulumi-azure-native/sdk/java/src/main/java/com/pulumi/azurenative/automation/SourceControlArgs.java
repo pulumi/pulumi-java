@@ -8,10 +8,10 @@ import com.pulumi.azurenative.automation.inputs.SourceControlSecurityTokenProper
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoSync")
-      private final @Nullable Output<Boolean> autoSync;
+    private @Nullable Output<Boolean> autoSync;
 
-    public Output<Boolean> autoSync() {
-        return this.autoSync == null ? Codegen.empty() : this.autoSync;
+    public Optional<Output<Boolean>> autoSync() {
+        return Optional.ofNullable(this.autoSync);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -46,10 +46,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Output<String> folderPath;
+    private @Nullable Output<String> folderPath;
 
-    public Output<String> folderPath() {
-        return this.folderPath == null ? Codegen.empty() : this.folderPath;
+    public Optional<Output<String>> folderPath() {
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishRunbook")
-      private final @Nullable Output<Boolean> publishRunbook;
+    private @Nullable Output<Boolean> publishRunbook;
 
-    public Output<Boolean> publishRunbook() {
-        return this.publishRunbook == null ? Codegen.empty() : this.publishRunbook;
+    public Optional<Output<Boolean>> publishRunbook() {
+        return Optional.ofNullable(this.publishRunbook);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoUrl")
-      private final @Nullable Output<String> repoUrl;
+    private @Nullable Output<String> repoUrl;
 
-    public Output<String> repoUrl() {
-        return this.repoUrl == null ? Codegen.empty() : this.repoUrl;
+    public Optional<Output<String>> repoUrl() {
+        return Optional.ofNullable(this.repoUrl);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +112,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityToken")
-      private final @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
+    private @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
-    public Output<SourceControlSecurityTokenPropertiesArgs> securityToken() {
-        return this.securityToken == null ? Codegen.empty() : this.securityToken;
+    public Optional<Output<SourceControlSecurityTokenPropertiesArgs>> securityToken() {
+        return Optional.ofNullable(this.securityToken);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceControlName")
-      private final @Nullable Output<String> sourceControlName;
+    private @Nullable Output<String> sourceControlName;
 
-    public Output<String> sourceControlName() {
-        return this.sourceControlName == null ? Codegen.empty() : this.sourceControlName;
+    public Optional<Output<String>> sourceControlName() {
+        return Optional.ofNullable(this.sourceControlName);
     }
 
     /**
@@ -134,180 +134,150 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable Output<Either<String,SourceType>> sourceType;
+    private @Nullable Output<Either<String,SourceType>> sourceType;
 
-    public Output<Either<String,SourceType>> sourceType() {
-        return this.sourceType == null ? Codegen.empty() : this.sourceType;
+    public Optional<Output<Either<String,SourceType>>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
-    public SourceControlArgs(
-        @Nullable Output<Boolean> autoSync,
-        Output<String> automationAccountName,
-        @Nullable Output<String> branch,
-        @Nullable Output<String> description,
-        @Nullable Output<String> folderPath,
-        @Nullable Output<Boolean> publishRunbook,
-        @Nullable Output<String> repoUrl,
-        Output<String> resourceGroupName,
-        @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken,
-        @Nullable Output<String> sourceControlName,
-        @Nullable Output<Either<String,SourceType>> sourceType) {
-        this.autoSync = autoSync;
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.branch = branch;
-        this.description = description;
-        this.folderPath = folderPath;
-        this.publishRunbook = publishRunbook;
-        this.repoUrl = repoUrl;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityToken = securityToken;
-        this.sourceControlName = sourceControlName;
-        this.sourceType = sourceType;
-    }
+    private SourceControlArgs() {}
 
-    private SourceControlArgs() {
-        this.autoSync = Codegen.empty();
-        this.automationAccountName = Codegen.empty();
-        this.branch = Codegen.empty();
-        this.description = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.publishRunbook = Codegen.empty();
-        this.repoUrl = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityToken = Codegen.empty();
-        this.sourceControlName = Codegen.empty();
-        this.sourceType = Codegen.empty();
+    private SourceControlArgs(SourceControlArgs $) {
+        this.autoSync = $.autoSync;
+        this.automationAccountName = $.automationAccountName;
+        this.branch = $.branch;
+        this.description = $.description;
+        this.folderPath = $.folderPath;
+        this.publishRunbook = $.publishRunbook;
+        this.repoUrl = $.repoUrl;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityToken = $.securityToken;
+        this.sourceControlName = $.sourceControlName;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoSync;
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> branch;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> folderPath;
-        private @Nullable Output<Boolean> publishRunbook;
-        private @Nullable Output<String> repoUrl;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
-        private @Nullable Output<String> sourceControlName;
-        private @Nullable Output<Either<String,SourceType>> sourceType;
+        private SourceControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceControlArgs();
         }
 
         public Builder(SourceControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoSync = defaults.autoSync;
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.branch = defaults.branch;
-    	      this.description = defaults.description;
-    	      this.folderPath = defaults.folderPath;
-    	      this.publishRunbook = defaults.publishRunbook;
-    	      this.repoUrl = defaults.repoUrl;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityToken = defaults.securityToken;
-    	      this.sourceControlName = defaults.sourceControlName;
-    	      this.sourceType = defaults.sourceType;
+            $ = new SourceControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoSync(@Nullable Output<Boolean> autoSync) {
-            this.autoSync = autoSync;
+            $.autoSync = autoSync;
             return this;
         }
-        public Builder autoSync(@Nullable Boolean autoSync) {
-            this.autoSync = Codegen.ofNullable(autoSync);
-            return this;
+
+        public Builder autoSync(Boolean autoSync) {
+            return autoSync(Output.of(autoSync));
         }
+
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder folderPath(@Nullable Output<String> folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
-        public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = Codegen.ofNullable(folderPath);
-            return this;
+
+        public Builder folderPath(String folderPath) {
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder publishRunbook(@Nullable Output<Boolean> publishRunbook) {
-            this.publishRunbook = publishRunbook;
+            $.publishRunbook = publishRunbook;
             return this;
         }
-        public Builder publishRunbook(@Nullable Boolean publishRunbook) {
-            this.publishRunbook = Codegen.ofNullable(publishRunbook);
-            return this;
+
+        public Builder publishRunbook(Boolean publishRunbook) {
+            return publishRunbook(Output.of(publishRunbook));
         }
+
         public Builder repoUrl(@Nullable Output<String> repoUrl) {
-            this.repoUrl = repoUrl;
+            $.repoUrl = repoUrl;
             return this;
         }
-        public Builder repoUrl(@Nullable String repoUrl) {
-            this.repoUrl = Codegen.ofNullable(repoUrl);
-            return this;
+
+        public Builder repoUrl(String repoUrl) {
+            return repoUrl(Output.of(repoUrl));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityToken(@Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken) {
-            this.securityToken = securityToken;
+            $.securityToken = securityToken;
             return this;
         }
-        public Builder securityToken(@Nullable SourceControlSecurityTokenPropertiesArgs securityToken) {
-            this.securityToken = Codegen.ofNullable(securityToken);
-            return this;
+
+        public Builder securityToken(SourceControlSecurityTokenPropertiesArgs securityToken) {
+            return securityToken(Output.of(securityToken));
         }
+
         public Builder sourceControlName(@Nullable Output<String> sourceControlName) {
-            this.sourceControlName = sourceControlName;
+            $.sourceControlName = sourceControlName;
             return this;
         }
-        public Builder sourceControlName(@Nullable String sourceControlName) {
-            this.sourceControlName = Codegen.ofNullable(sourceControlName);
-            return this;
+
+        public Builder sourceControlName(String sourceControlName) {
+            return sourceControlName(Output.of(sourceControlName));
         }
+
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
         }
-        public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
-            this.sourceType = Codegen.ofNullable(sourceType);
-            return this;
-        }        public SourceControlArgs build() {
-            return new SourceControlArgs(autoSync, automationAccountName, branch, description, folderPath, publishRunbook, repoUrl, resourceGroupName, securityToken, sourceControlName, sourceType);
+
+        public Builder sourceType(Either<String,SourceType> sourceType) {
+            return sourceType(Output.of(sourceType));
+        }
+
+        public SourceControlArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

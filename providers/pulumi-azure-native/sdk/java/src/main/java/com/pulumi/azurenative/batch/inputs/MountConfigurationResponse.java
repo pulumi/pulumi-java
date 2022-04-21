@@ -22,10 +22,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="azureBlobFileSystemConfiguration")
-      private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
+    private @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
 
     public Optional<AzureBlobFileSystemConfigurationResponse> azureBlobFileSystemConfiguration() {
-        return this.azureBlobFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureBlobFileSystemConfiguration);
+        return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="azureFileShareConfiguration")
-      private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
+    private @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
 
     public Optional<AzureFileShareConfigurationResponse> azureFileShareConfiguration() {
-        return this.azureFileShareConfiguration == null ? Optional.empty() : Optional.ofNullable(this.azureFileShareConfiguration);
+        return Optional.ofNullable(this.azureFileShareConfiguration);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cifsMountConfiguration")
-      private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
+    private @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
 
     public Optional<CIFSMountConfigurationResponse> cifsMountConfiguration() {
-        return this.cifsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cifsMountConfiguration);
+        return Optional.ofNullable(this.cifsMountConfiguration);
     }
 
     /**
@@ -55,73 +55,62 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nfsMountConfiguration")
-      private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
+    private @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
     public Optional<NFSMountConfigurationResponse> nfsMountConfiguration() {
-        return this.nfsMountConfiguration == null ? Optional.empty() : Optional.ofNullable(this.nfsMountConfiguration);
+        return Optional.ofNullable(this.nfsMountConfiguration);
     }
 
-    public MountConfigurationResponse(
-        @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration,
-        @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration,
-        @Nullable CIFSMountConfigurationResponse cifsMountConfiguration,
-        @Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
-        this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
-        this.azureFileShareConfiguration = azureFileShareConfiguration;
-        this.cifsMountConfiguration = cifsMountConfiguration;
-        this.nfsMountConfiguration = nfsMountConfiguration;
-    }
+    private MountConfigurationResponse() {}
 
-    private MountConfigurationResponse() {
-        this.azureBlobFileSystemConfiguration = null;
-        this.azureFileShareConfiguration = null;
-        this.cifsMountConfiguration = null;
-        this.nfsMountConfiguration = null;
+    private MountConfigurationResponse(MountConfigurationResponse $) {
+        this.azureBlobFileSystemConfiguration = $.azureBlobFileSystemConfiguration;
+        this.azureFileShareConfiguration = $.azureFileShareConfiguration;
+        this.cifsMountConfiguration = $.cifsMountConfiguration;
+        this.nfsMountConfiguration = $.nfsMountConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MountConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
-        private @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
-        private @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
-        private @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
+        private MountConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MountConfigurationResponse();
         }
 
         public Builder(MountConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBlobFileSystemConfiguration = defaults.azureBlobFileSystemConfiguration;
-    	      this.azureFileShareConfiguration = defaults.azureFileShareConfiguration;
-    	      this.cifsMountConfiguration = defaults.cifsMountConfiguration;
-    	      this.nfsMountConfiguration = defaults.nfsMountConfiguration;
+            $ = new MountConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBlobFileSystemConfiguration(@Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration) {
-            this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
+            $.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
             return this;
         }
+
         public Builder azureFileShareConfiguration(@Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration) {
-            this.azureFileShareConfiguration = azureFileShareConfiguration;
+            $.azureFileShareConfiguration = azureFileShareConfiguration;
             return this;
         }
+
         public Builder cifsMountConfiguration(@Nullable CIFSMountConfigurationResponse cifsMountConfiguration) {
-            this.cifsMountConfiguration = cifsMountConfiguration;
+            $.cifsMountConfiguration = cifsMountConfiguration;
             return this;
         }
+
         public Builder nfsMountConfiguration(@Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
-            this.nfsMountConfiguration = nfsMountConfiguration;
+            $.nfsMountConfiguration = nfsMountConfiguration;
             return this;
-        }        public MountConfigurationResponse build() {
-            return new MountConfigurationResponse(azureBlobFileSystemConfiguration, azureFileShareConfiguration, cifsMountConfiguration, nfsMountConfiguration);
+        }
+
+        public MountConfigurationResponse build() {
+            return $;
         }
     }
+
 }

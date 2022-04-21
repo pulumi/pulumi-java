@@ -9,9 +9,9 @@ import com.pulumi.azurenative.machinelearningservices.inputs.KeyVaultPropertiesA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityForCmkArgs> identity;
+    private @Nullable Output<IdentityForCmkArgs> identity;
 
-    public Output<IdentityForCmkArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityForCmkArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyVaultProperties", required=true)
-      private final Output<KeyVaultPropertiesArgs> keyVaultProperties;
+    private Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties;
@@ -46,76 +46,70 @@ public final class EncryptionPropertyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,EncryptionStatus>> status;
+    private Output<Either<String,EncryptionStatus>> status;
 
     public Output<Either<String,EncryptionStatus>> status() {
         return this.status;
     }
 
-    public EncryptionPropertyArgs(
-        @Nullable Output<IdentityForCmkArgs> identity,
-        Output<KeyVaultPropertiesArgs> keyVaultProperties,
-        Output<Either<String,EncryptionStatus>> status) {
-        this.identity = identity;
-        this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties, "expected parameter 'keyVaultProperties' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private EncryptionPropertyArgs() {}
 
-    private EncryptionPropertyArgs() {
-        this.identity = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
-        this.status = Codegen.empty();
+    private EncryptionPropertyArgs(EncryptionPropertyArgs $) {
+        this.identity = $.identity;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IdentityForCmkArgs> identity;
-        private Output<KeyVaultPropertiesArgs> keyVaultProperties;
-        private Output<Either<String,EncryptionStatus>> status;
+        private EncryptionPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertyArgs();
         }
 
         public Builder(EncryptionPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.status = defaults.status;
+            $ = new EncryptionPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<IdentityForCmkArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityForCmkArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityForCmkArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder keyVaultProperties(Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
+
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.of(Objects.requireNonNull(keyVaultProperties));
-            return this;
+            return keyVaultProperties(Output.of(keyVaultProperties));
         }
+
         public Builder status(Output<Either<String,EncryptionStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,EncryptionStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public EncryptionPropertyArgs build() {
-            return new EncryptionPropertyArgs(identity, keyVaultProperties, status);
+            return status(Output.of(status));
+        }
+
+        public EncryptionPropertyArgs build() {
+            $.keyVaultProperties = Objects.requireNonNull($.keyVaultProperties, "expected parameter 'keyVaultProperties' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

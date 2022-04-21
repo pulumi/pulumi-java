@@ -5,10 +5,10 @@ package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="hostName")
-      private final @Nullable Output<String> hostName;
+    private @Nullable Output<String> hostName;
 
-    public Output<String> hostName() {
-        return this.hostName == null ? Codegen.empty() : this.hostName;
+    public Optional<Output<String>> hostName() {
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -69,105 +69,92 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public GuestOSCustomizationArgs(
-        @Nullable Output<List<String>> dnsServers,
-        @Nullable Output<String> hostName,
-        @Nullable Output<String> password,
-        @Nullable Output<String> policyId,
-        @Nullable Output<String> username) {
-        this.dnsServers = dnsServers;
-        this.hostName = hostName;
-        this.password = password;
-        this.policyId = policyId;
-        this.username = username;
-    }
+    private GuestOSCustomizationArgs() {}
 
-    private GuestOSCustomizationArgs() {
-        this.dnsServers = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.policyId = Codegen.empty();
-        this.username = Codegen.empty();
+    private GuestOSCustomizationArgs(GuestOSCustomizationArgs $) {
+        this.dnsServers = $.dnsServers;
+        this.hostName = $.hostName;
+        this.password = $.password;
+        this.policyId = $.policyId;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestOSCustomizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dnsServers;
-        private @Nullable Output<String> hostName;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> policyId;
-        private @Nullable Output<String> username;
+        private GuestOSCustomizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestOSCustomizationArgs();
         }
 
         public Builder(GuestOSCustomizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.hostName = defaults.hostName;
-    	      this.password = defaults.password;
-    	      this.policyId = defaults.policyId;
-    	      this.username = defaults.username;
+            $ = new GuestOSCustomizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder hostName(@Nullable Output<String> hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
-        public Builder hostName(@Nullable String hostName) {
-            this.hostName = Codegen.ofNullable(hostName);
-            return this;
+
+        public Builder hostName(String hostName) {
+            return hostName(Output.of(hostName));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public GuestOSCustomizationArgs build() {
-            return new GuestOSCustomizationArgs(dnsServers, hostName, password, policyId, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public GuestOSCustomizationArgs build() {
+            return $;
         }
     }
+
 }

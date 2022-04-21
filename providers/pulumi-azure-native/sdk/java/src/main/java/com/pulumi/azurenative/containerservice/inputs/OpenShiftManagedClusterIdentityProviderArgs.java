@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterAADIdentityProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends com.pulum
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
+    private @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
 
-    public Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<OpenShiftManagedClusterAADIdentityProviderArgs>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
-    public OpenShiftManagedClusterIdentityProviderArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider) {
-        this.name = name;
-        this.provider = provider;
-    }
+    private OpenShiftManagedClusterIdentityProviderArgs() {}
 
-    private OpenShiftManagedClusterIdentityProviderArgs() {
-        this.name = Codegen.empty();
-        this.provider = Codegen.empty();
+    private OpenShiftManagedClusterIdentityProviderArgs(OpenShiftManagedClusterIdentityProviderArgs $) {
+        this.name = $.name;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterIdentityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
+        private OpenShiftManagedClusterIdentityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterIdentityProviderArgs();
         }
 
         public Builder(OpenShiftManagedClusterIdentityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.provider = defaults.provider;
+            $ = new OpenShiftManagedClusterIdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder provider(@Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderArgs provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
-        }        public OpenShiftManagedClusterIdentityProviderArgs build() {
-            return new OpenShiftManagedClusterIdentityProviderArgs(name, provider);
+
+        public Builder provider(OpenShiftManagedClusterAADIdentityProviderArgs provider) {
+            return provider(Output.of(provider));
+        }
+
+        public OpenShiftManagedClusterIdentityProviderArgs build() {
+            return $;
         }
     }
+
 }

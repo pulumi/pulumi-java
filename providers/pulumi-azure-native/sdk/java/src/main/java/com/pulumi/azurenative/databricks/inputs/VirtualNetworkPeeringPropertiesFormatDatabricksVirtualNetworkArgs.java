@@ -5,9 +5,9 @@ package com.pulumi.azurenative.databricks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetwork
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs() {}
 
-    private VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs() {
-        this.id = Codegen.empty();
+    private VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs(VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs();
         }
 
         public Builder(VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs build() {
-            return new VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs build() {
+            return $;
         }
     }
+
 }

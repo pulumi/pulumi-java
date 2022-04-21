@@ -10,10 +10,10 @@ import com.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabase
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * 
      */
     @Import(name="azureApp", required=true)
-      private final Output<AzureActiveDirectoryAppArgs> azureApp;
+    private Output<AzureActiveDirectoryAppArgs> azureApp;
 
     public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
@@ -41,10 +41,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * 
      */
     @Import(name="backupFileShare")
-      private final @Nullable Output<FileShareArgs> backupFileShare;
+    private @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> backupFileShare() {
-        return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
+    public Optional<Output<FileShareArgs>> backupFileShare() {
+        return Optional.ofNullable(this.backupFileShare);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
+    private Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
     public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
@@ -63,7 +63,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+    private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -74,7 +74,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * 
      */
     @Import(name="storageResourceId", required=true)
-      private final Output<String> storageResourceId;
+    private Output<String> storageResourceId;
 
     public Output<String> storageResourceId() {
         return this.storageResourceId;
@@ -85,118 +85,107 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
+    private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs(
-        Output<AzureActiveDirectoryAppArgs> azureApp,
-        @Nullable Output<FileShareArgs> backupFileShare,
-        Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases,
-        Output<SqlConnectionInfoArgs> sourceConnectionInfo,
-        Output<String> storageResourceId,
-        Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
-        this.azureApp = Objects.requireNonNull(azureApp, "expected parameter 'azureApp' to be non-null");
-        this.backupFileShare = backupFileShare;
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.storageResourceId = Objects.requireNonNull(storageResourceId, "expected parameter 'storageResourceId' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs() {}
 
-    private ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs() {
-        this.azureApp = Codegen.empty();
-        this.backupFileShare = Codegen.empty();
-        this.selectedDatabases = Codegen.empty();
-        this.sourceConnectionInfo = Codegen.empty();
-        this.storageResourceId = Codegen.empty();
-        this.targetConnectionInfo = Codegen.empty();
+    private ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs(ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs $) {
+        this.azureApp = $.azureApp;
+        this.backupFileShare = $.backupFileShare;
+        this.selectedDatabases = $.selectedDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.storageResourceId = $.storageResourceId;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AzureActiveDirectoryAppArgs> azureApp;
-        private @Nullable Output<FileShareArgs> backupFileShare;
-        private Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
-        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
-        private Output<String> storageResourceId;
-        private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
+        private ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs();
         }
 
         public Builder(ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureApp = defaults.azureApp;
-    	      this.backupFileShare = defaults.backupFileShare;
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.storageResourceId = defaults.storageResourceId;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureApp(Output<AzureActiveDirectoryAppArgs> azureApp) {
-            this.azureApp = Objects.requireNonNull(azureApp);
+            $.azureApp = azureApp;
             return this;
         }
+
         public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
-            this.azureApp = Output.of(Objects.requireNonNull(azureApp));
-            return this;
+            return azureApp(Output.of(azureApp));
         }
+
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
-            this.backupFileShare = backupFileShare;
+            $.backupFileShare = backupFileShare;
             return this;
         }
-        public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
-            this.backupFileShare = Codegen.ofNullable(backupFileShare);
-            return this;
+
+        public Builder backupFileShare(FileShareArgs backupFileShare) {
+            return backupFileShare(Output.of(backupFileShare));
         }
+
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
-            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
-            return this;
+            return selectedDatabases(Output.of(selectedDatabases));
         }
+
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
-            return this;
+            return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
+
         public Builder storageResourceId(Output<String> storageResourceId) {
-            this.storageResourceId = Objects.requireNonNull(storageResourceId);
+            $.storageResourceId = storageResourceId;
             return this;
         }
+
         public Builder storageResourceId(String storageResourceId) {
-            this.storageResourceId = Output.of(Objects.requireNonNull(storageResourceId));
-            return this;
+            return storageResourceId(Output.of(storageResourceId));
         }
+
         public Builder targetConnectionInfo(Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
-            return this;
-        }        public ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs build() {
-            return new ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
+        }
+
+        public ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs build() {
+            $.azureApp = Objects.requireNonNull($.azureApp, "expected parameter 'azureApp' to be non-null");
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.storageResourceId = Objects.requireNonNull($.storageResourceId, "expected parameter 'storageResourceId' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

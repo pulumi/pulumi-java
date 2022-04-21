@@ -8,7 +8,6 @@ import com.pulumi.azurenative.orbital.enums.Polarization;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +26,7 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="bandwidthMHz", required=true)
-      private final Output<Double> bandwidthMHz;
+    private Output<Double> bandwidthMHz;
 
     public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
@@ -38,7 +37,7 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="centerFrequencyMHz", required=true)
-      private final Output<Double> centerFrequencyMHz;
+    private Output<Double> centerFrequencyMHz;
 
     public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
@@ -49,7 +48,7 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<Either<String,Direction>> direction;
+    private Output<Either<String,Direction>> direction;
 
     public Output<Either<String,Direction>> direction() {
         return this.direction;
@@ -60,89 +59,82 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="polarization", required=true)
-      private final Output<Either<String,Polarization>> polarization;
+    private Output<Either<String,Polarization>> polarization;
 
     public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
 
-    public SpacecraftLinkArgs(
-        Output<Double> bandwidthMHz,
-        Output<Double> centerFrequencyMHz,
-        Output<Either<String,Direction>> direction,
-        Output<Either<String,Polarization>> polarization) {
-        this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz, "expected parameter 'bandwidthMHz' to be non-null");
-        this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz, "expected parameter 'centerFrequencyMHz' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.polarization = Objects.requireNonNull(polarization, "expected parameter 'polarization' to be non-null");
-    }
+    private SpacecraftLinkArgs() {}
 
-    private SpacecraftLinkArgs() {
-        this.bandwidthMHz = Codegen.empty();
-        this.centerFrequencyMHz = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.polarization = Codegen.empty();
+    private SpacecraftLinkArgs(SpacecraftLinkArgs $) {
+        this.bandwidthMHz = $.bandwidthMHz;
+        this.centerFrequencyMHz = $.centerFrequencyMHz;
+        this.direction = $.direction;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpacecraftLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> bandwidthMHz;
-        private Output<Double> centerFrequencyMHz;
-        private Output<Either<String,Direction>> direction;
-        private Output<Either<String,Polarization>> polarization;
+        private SpacecraftLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpacecraftLinkArgs();
         }
 
         public Builder(SpacecraftLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidthMHz = defaults.bandwidthMHz;
-    	      this.centerFrequencyMHz = defaults.centerFrequencyMHz;
-    	      this.direction = defaults.direction;
-    	      this.polarization = defaults.polarization;
+            $ = new SpacecraftLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidthMHz(Output<Double> bandwidthMHz) {
-            this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
+            $.bandwidthMHz = bandwidthMHz;
             return this;
         }
+
         public Builder bandwidthMHz(Double bandwidthMHz) {
-            this.bandwidthMHz = Output.of(Objects.requireNonNull(bandwidthMHz));
-            return this;
+            return bandwidthMHz(Output.of(bandwidthMHz));
         }
+
         public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
-            this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
+            $.centerFrequencyMHz = centerFrequencyMHz;
             return this;
         }
+
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
-            this.centerFrequencyMHz = Output.of(Objects.requireNonNull(centerFrequencyMHz));
-            return this;
+            return centerFrequencyMHz(Output.of(centerFrequencyMHz));
         }
+
         public Builder direction(Output<Either<String,Direction>> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(Either<String,Direction> direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
-            this.polarization = Objects.requireNonNull(polarization);
+            $.polarization = polarization;
             return this;
         }
+
         public Builder polarization(Either<String,Polarization> polarization) {
-            this.polarization = Output.of(Objects.requireNonNull(polarization));
-            return this;
-        }        public SpacecraftLinkArgs build() {
-            return new SpacecraftLinkArgs(bandwidthMHz, centerFrequencyMHz, direction, polarization);
+            return polarization(Output.of(polarization));
+        }
+
+        public SpacecraftLinkArgs build() {
+            $.bandwidthMHz = Objects.requireNonNull($.bandwidthMHz, "expected parameter 'bandwidthMHz' to be non-null");
+            $.centerFrequencyMHz = Objects.requireNonNull($.centerFrequencyMHz, "expected parameter 'centerFrequencyMHz' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.polarization = Objects.requireNonNull($.polarization, "expected parameter 'polarization' to be non-null");
+            return $;
         }
     }
+
 }

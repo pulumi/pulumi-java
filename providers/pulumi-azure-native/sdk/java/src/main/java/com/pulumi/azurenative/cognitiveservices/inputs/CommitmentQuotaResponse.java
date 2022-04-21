@@ -24,10 +24,10 @@ public final class CommitmentQuotaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="quantity")
-      private final @Nullable Double quantity;
+    private @Nullable Double quantity;
 
     public Optional<Double> quantity() {
-        return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
+        return Optional.ofNullable(this.quantity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class CommitmentQuotaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="unit")
-      private final @Nullable String unit;
+    private @Nullable String unit;
 
     public Optional<String> unit() {
-        return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
+        return Optional.ofNullable(this.unit);
     }
 
-    public CommitmentQuotaResponse(
-        @Nullable Double quantity,
-        @Nullable String unit) {
-        this.quantity = quantity;
-        this.unit = unit;
-    }
+    private CommitmentQuotaResponse() {}
 
-    private CommitmentQuotaResponse() {
-        this.quantity = null;
-        this.unit = null;
+    private CommitmentQuotaResponse(CommitmentQuotaResponse $) {
+        this.quantity = $.quantity;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentQuotaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double quantity;
-        private @Nullable String unit;
+        private CommitmentQuotaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentQuotaResponse();
         }
 
         public Builder(CommitmentQuotaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quantity = defaults.quantity;
-    	      this.unit = defaults.unit;
+            $ = new CommitmentQuotaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder quantity(@Nullable Double quantity) {
-            this.quantity = quantity;
+            $.quantity = quantity;
             return this;
         }
+
         public Builder unit(@Nullable String unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
-        }        public CommitmentQuotaResponse build() {
-            return new CommitmentQuotaResponse(quantity, unit);
+        }
+
+        public CommitmentQuotaResponse build() {
+            return $;
         }
     }
+
 }

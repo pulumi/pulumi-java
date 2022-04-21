@@ -19,10 +19,10 @@ public final class GetNetworkProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetNetworkProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkProfileName", required=true)
-      private final String networkProfileName;
+    private String networkProfileName;
 
     public String networkProfileName() {
         return this.networkProfileName;
@@ -41,64 +41,58 @@ public final class GetNetworkProfileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkProfileArgs(
-        @Nullable String expand,
-        String networkProfileName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.networkProfileName = Objects.requireNonNull(networkProfileName, "expected parameter 'networkProfileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkProfileArgs() {}
 
-    private GetNetworkProfileArgs() {
-        this.expand = null;
-        this.networkProfileName = null;
-        this.resourceGroupName = null;
+    private GetNetworkProfileArgs(GetNetworkProfileArgs $) {
+        this.expand = $.expand;
+        this.networkProfileName = $.networkProfileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String networkProfileName;
-        private String resourceGroupName;
+        private GetNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkProfileArgs();
         }
 
         public Builder(GetNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.networkProfileName = defaults.networkProfileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder networkProfileName(String networkProfileName) {
-            this.networkProfileName = Objects.requireNonNull(networkProfileName);
+            $.networkProfileName = networkProfileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkProfileArgs build() {
-            return new GetNetworkProfileArgs(expand, networkProfileName, resourceGroupName);
+        }
+
+        public GetNetworkProfileArgs build() {
+            $.networkProfileName = Objects.requireNonNull($.networkProfileName, "expected parameter 'networkProfileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDscNodeConfigurationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetDscNodeConfigurationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="nodeConfigurationName", required=true)
-      private final String nodeConfigurationName;
+    private String nodeConfigurationName;
 
     public String nodeConfigurationName() {
         return this.nodeConfigurationName;
@@ -39,64 +39,59 @@ public final class GetDscNodeConfigurationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDscNodeConfigurationArgs(
-        String automationAccountName,
-        String nodeConfigurationName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.nodeConfigurationName = Objects.requireNonNull(nodeConfigurationName, "expected parameter 'nodeConfigurationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDscNodeConfigurationArgs() {}
 
-    private GetDscNodeConfigurationArgs() {
-        this.automationAccountName = null;
-        this.nodeConfigurationName = null;
-        this.resourceGroupName = null;
+    private GetDscNodeConfigurationArgs(GetDscNodeConfigurationArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.nodeConfigurationName = $.nodeConfigurationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDscNodeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String nodeConfigurationName;
-        private String resourceGroupName;
+        private GetDscNodeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDscNodeConfigurationArgs();
         }
 
         public Builder(GetDscNodeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.nodeConfigurationName = defaults.nodeConfigurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDscNodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder nodeConfigurationName(String nodeConfigurationName) {
-            this.nodeConfigurationName = Objects.requireNonNull(nodeConfigurationName);
+            $.nodeConfigurationName = nodeConfigurationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDscNodeConfigurationArgs build() {
-            return new GetDscNodeConfigurationArgs(automationAccountName, nodeConfigurationName, resourceGroupName);
+        }
+
+        public GetDscNodeConfigurationArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.nodeConfigurationName = Objects.requireNonNull($.nodeConfigurationName, "expected parameter 'nodeConfigurationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

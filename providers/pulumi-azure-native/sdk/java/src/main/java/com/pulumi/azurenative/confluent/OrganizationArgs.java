@@ -7,10 +7,10 @@ import com.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesOff
 import com.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesUserDetailArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="offerDetail")
-      private final @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
+    private @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
-    public Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail() {
-        return this.offerDetail == null ? Codegen.empty() : this.offerDetail;
+    public Optional<Output<OrganizationResourcePropertiesOfferDetailArgs>> offerDetail() {
+        return Optional.ofNullable(this.offerDetail);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="organizationName")
-      private final @Nullable Output<String> organizationName;
+    private @Nullable Output<String> organizationName;
 
-    public Output<String> organizationName() {
-        return this.organizationName == null ? Codegen.empty() : this.organizationName;
+    public Optional<Output<String>> organizationName() {
+        return Optional.ofNullable(this.organizationName);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,115 +78,99 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userDetail")
-      private final @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
+    private @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
-    public Output<OrganizationResourcePropertiesUserDetailArgs> userDetail() {
-        return this.userDetail == null ? Codegen.empty() : this.userDetail;
+    public Optional<Output<OrganizationResourcePropertiesUserDetailArgs>> userDetail() {
+        return Optional.ofNullable(this.userDetail);
     }
 
-    public OrganizationArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail,
-        @Nullable Output<String> organizationName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
-        this.location = location;
-        this.offerDetail = offerDetail;
-        this.organizationName = organizationName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.userDetail = userDetail;
-    }
+    private OrganizationArgs() {}
 
-    private OrganizationArgs() {
-        this.location = Codegen.empty();
-        this.offerDetail = Codegen.empty();
-        this.organizationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userDetail = Codegen.empty();
+    private OrganizationArgs(OrganizationArgs $) {
+        this.location = $.location;
+        this.offerDetail = $.offerDetail;
+        this.organizationName = $.organizationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.userDetail = $.userDetail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
-        private @Nullable Output<String> organizationName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
+        private OrganizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationArgs();
         }
 
         public Builder(OrganizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.offerDetail = defaults.offerDetail;
-    	      this.organizationName = defaults.organizationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.userDetail = defaults.userDetail;
+            $ = new OrganizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder offerDetail(@Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
-            this.offerDetail = offerDetail;
+            $.offerDetail = offerDetail;
             return this;
         }
-        public Builder offerDetail(@Nullable OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
-            this.offerDetail = Codegen.ofNullable(offerDetail);
-            return this;
+
+        public Builder offerDetail(OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
+            return offerDetail(Output.of(offerDetail));
         }
+
         public Builder organizationName(@Nullable Output<String> organizationName) {
-            this.organizationName = organizationName;
+            $.organizationName = organizationName;
             return this;
         }
-        public Builder organizationName(@Nullable String organizationName) {
-            this.organizationName = Codegen.ofNullable(organizationName);
-            return this;
+
+        public Builder organizationName(String organizationName) {
+            return organizationName(Output.of(organizationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userDetail(@Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
-            this.userDetail = userDetail;
+            $.userDetail = userDetail;
             return this;
         }
-        public Builder userDetail(@Nullable OrganizationResourcePropertiesUserDetailArgs userDetail) {
-            this.userDetail = Codegen.ofNullable(userDetail);
-            return this;
-        }        public OrganizationArgs build() {
-            return new OrganizationArgs(location, offerDetail, organizationName, resourceGroupName, tags, userDetail);
+
+        public Builder userDetail(OrganizationResourcePropertiesUserDetailArgs userDetail) {
+            return userDetail(Output.of(userDetail));
+        }
+
+        public OrganizationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

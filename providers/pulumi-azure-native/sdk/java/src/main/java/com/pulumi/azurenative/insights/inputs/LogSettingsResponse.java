@@ -25,10 +25,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable String category;
+    private @Nullable String category;
 
     public Optional<String> category() {
-        return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -47,64 +47,57 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable RetentionPolicyResponse retentionPolicy;
+    private @Nullable RetentionPolicyResponse retentionPolicy;
 
     public Optional<RetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
-    public LogSettingsResponse(
-        @Nullable String category,
-        Boolean enabled,
-        @Nullable RetentionPolicyResponse retentionPolicy) {
-        this.category = category;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.retentionPolicy = retentionPolicy;
-    }
+    private LogSettingsResponse() {}
 
-    private LogSettingsResponse() {
-        this.category = null;
-        this.enabled = null;
-        this.retentionPolicy = null;
+    private LogSettingsResponse(LogSettingsResponse $) {
+        this.category = $.category;
+        this.enabled = $.enabled;
+        this.retentionPolicy = $.retentionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String category;
-        private Boolean enabled;
-        private @Nullable RetentionPolicyResponse retentionPolicy;
+        private LogSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogSettingsResponse();
         }
 
         public Builder(LogSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.enabled = defaults.enabled;
-    	      this.retentionPolicy = defaults.retentionPolicy;
+            $ = new LogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable String category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
-        }        public LogSettingsResponse build() {
-            return new LogSettingsResponse(category, enabled, retentionPolicy);
+        }
+
+        public LogSettingsResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

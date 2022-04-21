@@ -30,10 +30,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="codeId")
-      private final @Nullable String codeId;
+    private @Nullable String codeId;
 
     public Optional<String> codeId() {
-        return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
+        return Optional.ofNullable(this.codeId);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="command", required=true)
-      private final String command;
+    private String command;
 
     public String command() {
         return this.command;
@@ -52,10 +52,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Object distribution;
+    private @Nullable Object distribution;
 
-    public Object distribution() {
-        return this.distribution == null ? null : this.distribution;
+    public Optional<Object> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable String environmentId;
+    private @Nullable String environmentId;
 
     public Optional<String> environmentId() {
-        return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Map<String,String> environmentVariables;
+    private @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> environmentVariables() {
-        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
+    public Optional<Map<String,String>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inputDataBindings")
-      private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
+    private @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
-    public Map<String,InputDataBindingResponse> inputDataBindings() {
-        return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
+    public Optional<Map<String,InputDataBindingResponse>> inputDataBindings() {
+        return Optional.ofNullable(this.inputDataBindings);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="outputDataBindings")
-      private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
+    private @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
-    public Map<String,OutputDataBindingResponse> outputDataBindings() {
-        return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
+    public Optional<Map<String,OutputDataBindingResponse>> outputDataBindings() {
+        return Optional.ofNullable(this.outputDataBindings);
     }
 
     /**
@@ -108,109 +108,87 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public TrialComponentResponse(
-        @Nullable String codeId,
-        String command,
-        @Nullable Object distribution,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        @Nullable String timeout) {
-        this.codeId = codeId;
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.distribution = distribution;
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.inputDataBindings = inputDataBindings;
-        this.outputDataBindings = outputDataBindings;
-        this.timeout = timeout;
-    }
+    private TrialComponentResponse() {}
 
-    private TrialComponentResponse() {
-        this.codeId = null;
-        this.command = null;
-        this.distribution = null;
-        this.environmentId = null;
-        this.environmentVariables = Map.of();
-        this.inputDataBindings = Map.of();
-        this.outputDataBindings = Map.of();
-        this.timeout = null;
+    private TrialComponentResponse(TrialComponentResponse $) {
+        this.codeId = $.codeId;
+        this.command = $.command;
+        this.distribution = $.distribution;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.inputDataBindings = $.inputDataBindings;
+        this.outputDataBindings = $.outputDataBindings;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrialComponentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String codeId;
-        private String command;
-        private @Nullable Object distribution;
-        private @Nullable String environmentId;
-        private @Nullable Map<String,String> environmentVariables;
-        private @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
-        private @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
-        private @Nullable String timeout;
+        private TrialComponentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrialComponentResponse();
         }
 
         public Builder(TrialComponentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeId = defaults.codeId;
-    	      this.command = defaults.command;
-    	      this.distribution = defaults.distribution;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.inputDataBindings = defaults.inputDataBindings;
-    	      this.outputDataBindings = defaults.outputDataBindings;
-    	      this.timeout = defaults.timeout;
+            $ = new TrialComponentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = codeId;
+            $.codeId = codeId;
             return this;
         }
+
         public Builder command(String command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder distribution(@Nullable Object distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
+
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
-            this.inputDataBindings = inputDataBindings;
+            $.inputDataBindings = inputDataBindings;
             return this;
         }
+
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
-            this.outputDataBindings = outputDataBindings;
+            $.outputDataBindings = outputDataBindings;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public TrialComponentResponse build() {
-            return new TrialComponentResponse(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
+        }
+
+        public TrialComponentResponse build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="queryText", required=true)
-      private final String queryText;
+    private String queryText;
 
     public String queryText() {
         return this.queryText;
@@ -34,7 +34,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sourceResult", required=true)
-      private final ExecutionStatisticsResponse sourceResult;
+    private ExecutionStatisticsResponse sourceResult;
 
     public ExecutionStatisticsResponse sourceResult() {
         return this.sourceResult;
@@ -45,7 +45,7 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="statementsInBatch", required=true)
-      private final Double statementsInBatch;
+    private Double statementsInBatch;
 
     public Double statementsInBatch() {
         return this.statementsInBatch;
@@ -56,73 +56,66 @@ public final class QueryExecutionResultResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetResult", required=true)
-      private final ExecutionStatisticsResponse targetResult;
+    private ExecutionStatisticsResponse targetResult;
 
     public ExecutionStatisticsResponse targetResult() {
         return this.targetResult;
     }
 
-    public QueryExecutionResultResponse(
-        String queryText,
-        ExecutionStatisticsResponse sourceResult,
-        Double statementsInBatch,
-        ExecutionStatisticsResponse targetResult) {
-        this.queryText = Objects.requireNonNull(queryText, "expected parameter 'queryText' to be non-null");
-        this.sourceResult = Objects.requireNonNull(sourceResult, "expected parameter 'sourceResult' to be non-null");
-        this.statementsInBatch = Objects.requireNonNull(statementsInBatch, "expected parameter 'statementsInBatch' to be non-null");
-        this.targetResult = Objects.requireNonNull(targetResult, "expected parameter 'targetResult' to be non-null");
-    }
+    private QueryExecutionResultResponse() {}
 
-    private QueryExecutionResultResponse() {
-        this.queryText = null;
-        this.sourceResult = null;
-        this.statementsInBatch = null;
-        this.targetResult = null;
+    private QueryExecutionResultResponse(QueryExecutionResultResponse $) {
+        this.queryText = $.queryText;
+        this.sourceResult = $.sourceResult;
+        this.statementsInBatch = $.statementsInBatch;
+        this.targetResult = $.targetResult;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryExecutionResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String queryText;
-        private ExecutionStatisticsResponse sourceResult;
-        private Double statementsInBatch;
-        private ExecutionStatisticsResponse targetResult;
+        private QueryExecutionResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryExecutionResultResponse();
         }
 
         public Builder(QueryExecutionResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryText = defaults.queryText;
-    	      this.sourceResult = defaults.sourceResult;
-    	      this.statementsInBatch = defaults.statementsInBatch;
-    	      this.targetResult = defaults.targetResult;
+            $ = new QueryExecutionResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder queryText(String queryText) {
-            this.queryText = Objects.requireNonNull(queryText);
+            $.queryText = queryText;
             return this;
         }
+
         public Builder sourceResult(ExecutionStatisticsResponse sourceResult) {
-            this.sourceResult = Objects.requireNonNull(sourceResult);
+            $.sourceResult = sourceResult;
             return this;
         }
+
         public Builder statementsInBatch(Double statementsInBatch) {
-            this.statementsInBatch = Objects.requireNonNull(statementsInBatch);
+            $.statementsInBatch = statementsInBatch;
             return this;
         }
+
         public Builder targetResult(ExecutionStatisticsResponse targetResult) {
-            this.targetResult = Objects.requireNonNull(targetResult);
+            $.targetResult = targetResult;
             return this;
-        }        public QueryExecutionResultResponse build() {
-            return new QueryExecutionResultResponse(queryText, sourceResult, statementsInBatch, targetResult);
+        }
+
+        public QueryExecutionResultResponse build() {
+            $.queryText = Objects.requireNonNull($.queryText, "expected parameter 'queryText' to be non-null");
+            $.sourceResult = Objects.requireNonNull($.sourceResult, "expected parameter 'sourceResult' to be non-null");
+            $.statementsInBatch = Objects.requireNonNull($.statementsInBatch, "expected parameter 'statementsInBatch' to be non-null");
+            $.targetResult = Objects.requireNonNull($.targetResult, "expected parameter 'targetResult' to be non-null");
+            return $;
         }
     }
+
 }

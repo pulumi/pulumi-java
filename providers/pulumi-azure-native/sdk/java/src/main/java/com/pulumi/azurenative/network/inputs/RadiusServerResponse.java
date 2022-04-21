@@ -24,7 +24,7 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="radiusServerAddress", required=true)
-      private final String radiusServerAddress;
+    private String radiusServerAddress;
 
     public String radiusServerAddress() {
         return this.radiusServerAddress;
@@ -35,10 +35,10 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="radiusServerScore")
-      private final @Nullable Double radiusServerScore;
+    private @Nullable Double radiusServerScore;
 
     public Optional<Double> radiusServerScore() {
-        return this.radiusServerScore == null ? Optional.empty() : Optional.ofNullable(this.radiusServerScore);
+        return Optional.ofNullable(this.radiusServerScore);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="radiusServerSecret")
-      private final @Nullable String radiusServerSecret;
+    private @Nullable String radiusServerSecret;
 
     public Optional<String> radiusServerSecret() {
-        return this.radiusServerSecret == null ? Optional.empty() : Optional.ofNullable(this.radiusServerSecret);
+        return Optional.ofNullable(this.radiusServerSecret);
     }
 
-    public RadiusServerResponse(
-        String radiusServerAddress,
-        @Nullable Double radiusServerScore,
-        @Nullable String radiusServerSecret) {
-        this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress, "expected parameter 'radiusServerAddress' to be non-null");
-        this.radiusServerScore = radiusServerScore;
-        this.radiusServerSecret = radiusServerSecret;
-    }
+    private RadiusServerResponse() {}
 
-    private RadiusServerResponse() {
-        this.radiusServerAddress = null;
-        this.radiusServerScore = null;
-        this.radiusServerSecret = null;
+    private RadiusServerResponse(RadiusServerResponse $) {
+        this.radiusServerAddress = $.radiusServerAddress;
+        this.radiusServerScore = $.radiusServerScore;
+        this.radiusServerSecret = $.radiusServerSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RadiusServerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String radiusServerAddress;
-        private @Nullable Double radiusServerScore;
-        private @Nullable String radiusServerSecret;
+        private RadiusServerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RadiusServerResponse();
         }
 
         public Builder(RadiusServerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.radiusServerAddress = defaults.radiusServerAddress;
-    	      this.radiusServerScore = defaults.radiusServerScore;
-    	      this.radiusServerSecret = defaults.radiusServerSecret;
+            $ = new RadiusServerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder radiusServerAddress(String radiusServerAddress) {
-            this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
+            $.radiusServerAddress = radiusServerAddress;
             return this;
         }
+
         public Builder radiusServerScore(@Nullable Double radiusServerScore) {
-            this.radiusServerScore = radiusServerScore;
+            $.radiusServerScore = radiusServerScore;
             return this;
         }
+
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
-            this.radiusServerSecret = radiusServerSecret;
+            $.radiusServerSecret = radiusServerSecret;
             return this;
-        }        public RadiusServerResponse build() {
-            return new RadiusServerResponse(radiusServerAddress, radiusServerScore, radiusServerSecret);
+        }
+
+        public RadiusServerResponse build() {
+            $.radiusServerAddress = Objects.requireNonNull($.radiusServerAddress, "expected parameter 'radiusServerAddress' to be non-null");
+            return $;
         }
     }
+
 }

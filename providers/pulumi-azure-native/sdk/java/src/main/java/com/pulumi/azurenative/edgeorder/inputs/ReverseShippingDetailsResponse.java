@@ -21,7 +21,7 @@ public final class ReverseShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="carrierDisplayName", required=true)
-      private final String carrierDisplayName;
+    private String carrierDisplayName;
 
     public String carrierDisplayName() {
         return this.carrierDisplayName;
@@ -32,7 +32,7 @@ public final class ReverseShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="carrierName", required=true)
-      private final String carrierName;
+    private String carrierName;
 
     public String carrierName() {
         return this.carrierName;
@@ -43,7 +43,7 @@ public final class ReverseShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sasKeyForLabel", required=true)
-      private final String sasKeyForLabel;
+    private String sasKeyForLabel;
 
     public String sasKeyForLabel() {
         return this.sasKeyForLabel;
@@ -54,7 +54,7 @@ public final class ReverseShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="trackingId", required=true)
-      private final String trackingId;
+    private String trackingId;
 
     public String trackingId() {
         return this.trackingId;
@@ -65,82 +65,73 @@ public final class ReverseShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="trackingUrl", required=true)
-      private final String trackingUrl;
+    private String trackingUrl;
 
     public String trackingUrl() {
         return this.trackingUrl;
     }
 
-    public ReverseShippingDetailsResponse(
-        String carrierDisplayName,
-        String carrierName,
-        String sasKeyForLabel,
-        String trackingId,
-        String trackingUrl) {
-        this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName, "expected parameter 'carrierDisplayName' to be non-null");
-        this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
-        this.sasKeyForLabel = Objects.requireNonNull(sasKeyForLabel, "expected parameter 'sasKeyForLabel' to be non-null");
-        this.trackingId = Objects.requireNonNull(trackingId, "expected parameter 'trackingId' to be non-null");
-        this.trackingUrl = Objects.requireNonNull(trackingUrl, "expected parameter 'trackingUrl' to be non-null");
-    }
+    private ReverseShippingDetailsResponse() {}
 
-    private ReverseShippingDetailsResponse() {
-        this.carrierDisplayName = null;
-        this.carrierName = null;
-        this.sasKeyForLabel = null;
-        this.trackingId = null;
-        this.trackingUrl = null;
+    private ReverseShippingDetailsResponse(ReverseShippingDetailsResponse $) {
+        this.carrierDisplayName = $.carrierDisplayName;
+        this.carrierName = $.carrierName;
+        this.sasKeyForLabel = $.sasKeyForLabel;
+        this.trackingId = $.trackingId;
+        this.trackingUrl = $.trackingUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReverseShippingDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String carrierDisplayName;
-        private String carrierName;
-        private String sasKeyForLabel;
-        private String trackingId;
-        private String trackingUrl;
+        private ReverseShippingDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReverseShippingDetailsResponse();
         }
 
         public Builder(ReverseShippingDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierDisplayName = defaults.carrierDisplayName;
-    	      this.carrierName = defaults.carrierName;
-    	      this.sasKeyForLabel = defaults.sasKeyForLabel;
-    	      this.trackingId = defaults.trackingId;
-    	      this.trackingUrl = defaults.trackingUrl;
+            $ = new ReverseShippingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierDisplayName(String carrierDisplayName) {
-            this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
+            $.carrierDisplayName = carrierDisplayName;
             return this;
         }
+
         public Builder carrierName(String carrierName) {
-            this.carrierName = Objects.requireNonNull(carrierName);
+            $.carrierName = carrierName;
             return this;
         }
+
         public Builder sasKeyForLabel(String sasKeyForLabel) {
-            this.sasKeyForLabel = Objects.requireNonNull(sasKeyForLabel);
+            $.sasKeyForLabel = sasKeyForLabel;
             return this;
         }
+
         public Builder trackingId(String trackingId) {
-            this.trackingId = Objects.requireNonNull(trackingId);
+            $.trackingId = trackingId;
             return this;
         }
+
         public Builder trackingUrl(String trackingUrl) {
-            this.trackingUrl = Objects.requireNonNull(trackingUrl);
+            $.trackingUrl = trackingUrl;
             return this;
-        }        public ReverseShippingDetailsResponse build() {
-            return new ReverseShippingDetailsResponse(carrierDisplayName, carrierName, sasKeyForLabel, trackingId, trackingUrl);
+        }
+
+        public ReverseShippingDetailsResponse build() {
+            $.carrierDisplayName = Objects.requireNonNull($.carrierDisplayName, "expected parameter 'carrierDisplayName' to be non-null");
+            $.carrierName = Objects.requireNonNull($.carrierName, "expected parameter 'carrierName' to be non-null");
+            $.sasKeyForLabel = Objects.requireNonNull($.sasKeyForLabel, "expected parameter 'sasKeyForLabel' to be non-null");
+            $.trackingId = Objects.requireNonNull($.trackingId, "expected parameter 'trackingId' to be non-null");
+            $.trackingUrl = Objects.requireNonNull($.trackingUrl, "expected parameter 'trackingUrl' to be non-null");
+            return $;
         }
     }
+
 }

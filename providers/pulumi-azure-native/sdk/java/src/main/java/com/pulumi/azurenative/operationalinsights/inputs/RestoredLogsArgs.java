@@ -5,9 +5,9 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endRestoreTime")
-      private final @Nullable Output<String> endRestoreTime;
+    private @Nullable Output<String> endRestoreTime;
 
-    public Output<String> endRestoreTime() {
-        return this.endRestoreTime == null ? Codegen.empty() : this.endRestoreTime;
+    public Optional<Output<String>> endRestoreTime() {
+        return Optional.ofNullable(this.endRestoreTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startRestoreTime")
-      private final @Nullable Output<String> startRestoreTime;
+    private @Nullable Output<String> startRestoreTime;
 
-    public Output<String> startRestoreTime() {
-        return this.startRestoreTime == null ? Codegen.empty() : this.startRestoreTime;
+    public Optional<Output<String>> startRestoreTime() {
+        return Optional.ofNullable(this.startRestoreTime);
     }
 
-    public RestoredLogsArgs(
-        @Nullable Output<String> endRestoreTime,
-        @Nullable Output<String> startRestoreTime) {
-        this.endRestoreTime = endRestoreTime;
-        this.startRestoreTime = startRestoreTime;
-    }
+    private RestoredLogsArgs() {}
 
-    private RestoredLogsArgs() {
-        this.endRestoreTime = Codegen.empty();
-        this.startRestoreTime = Codegen.empty();
+    private RestoredLogsArgs(RestoredLogsArgs $) {
+        this.endRestoreTime = $.endRestoreTime;
+        this.startRestoreTime = $.startRestoreTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestoredLogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endRestoreTime;
-        private @Nullable Output<String> startRestoreTime;
+        private RestoredLogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestoredLogsArgs();
         }
 
         public Builder(RestoredLogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endRestoreTime = defaults.endRestoreTime;
-    	      this.startRestoreTime = defaults.startRestoreTime;
+            $ = new RestoredLogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endRestoreTime(@Nullable Output<String> endRestoreTime) {
-            this.endRestoreTime = endRestoreTime;
+            $.endRestoreTime = endRestoreTime;
             return this;
         }
-        public Builder endRestoreTime(@Nullable String endRestoreTime) {
-            this.endRestoreTime = Codegen.ofNullable(endRestoreTime);
-            return this;
+
+        public Builder endRestoreTime(String endRestoreTime) {
+            return endRestoreTime(Output.of(endRestoreTime));
         }
+
         public Builder startRestoreTime(@Nullable Output<String> startRestoreTime) {
-            this.startRestoreTime = startRestoreTime;
+            $.startRestoreTime = startRestoreTime;
             return this;
         }
-        public Builder startRestoreTime(@Nullable String startRestoreTime) {
-            this.startRestoreTime = Codegen.ofNullable(startRestoreTime);
-            return this;
-        }        public RestoredLogsArgs build() {
-            return new RestoredLogsArgs(endRestoreTime, startRestoreTime);
+
+        public Builder startRestoreTime(String startRestoreTime) {
+            return startRestoreTime(Output.of(startRestoreTime));
+        }
+
+        public RestoredLogsArgs build() {
+            return $;
         }
     }
+
 }

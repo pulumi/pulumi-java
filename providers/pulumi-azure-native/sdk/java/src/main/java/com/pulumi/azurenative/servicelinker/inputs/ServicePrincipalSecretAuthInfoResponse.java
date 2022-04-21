@@ -23,7 +23,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="authType", required=true)
-      private final String authType;
+    private String authType;
 
     public String authType() {
         return this.authType;
@@ -34,7 +34,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -45,7 +45,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -56,73 +56,66 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
     }
 
-    public ServicePrincipalSecretAuthInfoResponse(
-        String authType,
-        String clientId,
-        String principalId,
-        String secret) {
-        this.authType = Codegen.stringProp("authType").arg(authType).require();
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private ServicePrincipalSecretAuthInfoResponse() {}
 
-    private ServicePrincipalSecretAuthInfoResponse() {
-        this.authType = null;
-        this.clientId = null;
-        this.principalId = null;
-        this.secret = null;
+    private ServicePrincipalSecretAuthInfoResponse(ServicePrincipalSecretAuthInfoResponse $) {
+        this.authType = $.authType;
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalSecretAuthInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authType;
-        private String clientId;
-        private String principalId;
-        private String secret;
+        private ServicePrincipalSecretAuthInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalSecretAuthInfoResponse();
         }
 
         public Builder(ServicePrincipalSecretAuthInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
-    	      this.secret = defaults.secret;
+            $ = new ServicePrincipalSecretAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(String authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
-        }        public ServicePrincipalSecretAuthInfoResponse build() {
-            return new ServicePrincipalSecretAuthInfoResponse(authType, clientId, principalId, secret);
+        }
+
+        public ServicePrincipalSecretAuthInfoResponse build() {
+            $.authType = Codegen.stringProp("authType").arg($.authType).require();
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

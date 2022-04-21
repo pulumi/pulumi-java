@@ -6,10 +6,10 @@ package com.pulumi.azurenative.labservices;
 import com.pulumi.azurenative.labservices.inputs.ResourceSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentName")
-      private final @Nullable Output<String> environmentName;
+    private @Nullable Output<String> environmentName;
 
-    public Output<String> environmentName() {
-        return this.environmentName == null ? Codegen.empty() : this.environmentName;
+    public Optional<Output<String>> environmentName() {
+        return Optional.ofNullable(this.environmentName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentSettingName", required=true)
-      private final Output<String> environmentSettingName;
+    private Output<String> environmentSettingName;
 
     public Output<String> environmentSettingName() {
         return this.environmentSettingName;
@@ -44,7 +44,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labAccountName", required=true)
-      private final Output<String> labAccountName;
+    private Output<String> labAccountName;
 
     public Output<String> labAccountName() {
         return this.labAccountName;
@@ -55,7 +55,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -66,10 +66,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,10 +99,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSets")
-      private final @Nullable Output<ResourceSetArgs> resourceSets;
+    private @Nullable Output<ResourceSetArgs> resourceSets;
 
-    public Output<ResourceSetArgs> resourceSets() {
-        return this.resourceSets == null ? Codegen.empty() : this.resourceSets;
+    public Optional<Output<ResourceSetArgs>> resourceSets() {
+        return Optional.ofNullable(this.resourceSets);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -121,167 +121,142 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uniqueIdentifier")
-      private final @Nullable Output<String> uniqueIdentifier;
+    private @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> uniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
+    public Optional<Output<String>> uniqueIdentifier() {
+        return Optional.ofNullable(this.uniqueIdentifier);
     }
 
-    public EnvironmentArgs(
-        @Nullable Output<String> environmentName,
-        Output<String> environmentSettingName,
-        Output<String> labAccountName,
-        Output<String> labName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<ResourceSetArgs> resourceSets,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> uniqueIdentifier) {
-        this.environmentName = environmentName;
-        this.environmentSettingName = Objects.requireNonNull(environmentSettingName, "expected parameter 'environmentSettingName' to be non-null");
-        this.labAccountName = Objects.requireNonNull(labAccountName, "expected parameter 'labAccountName' to be non-null");
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.location = location;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceSets = resourceSets;
-        this.tags = tags;
-        this.uniqueIdentifier = uniqueIdentifier;
-    }
+    private EnvironmentArgs() {}
 
-    private EnvironmentArgs() {
-        this.environmentName = Codegen.empty();
-        this.environmentSettingName = Codegen.empty();
-        this.labAccountName = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceSets = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.uniqueIdentifier = Codegen.empty();
+    private EnvironmentArgs(EnvironmentArgs $) {
+        this.environmentName = $.environmentName;
+        this.environmentSettingName = $.environmentSettingName;
+        this.labAccountName = $.labAccountName;
+        this.labName = $.labName;
+        this.location = $.location;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceSets = $.resourceSets;
+        this.tags = $.tags;
+        this.uniqueIdentifier = $.uniqueIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> environmentName;
-        private Output<String> environmentSettingName;
-        private Output<String> labAccountName;
-        private Output<String> labName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ResourceSetArgs> resourceSets;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> uniqueIdentifier;
+        private EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentArgs();
         }
 
         public Builder(EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.environmentSettingName = defaults.environmentSettingName;
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.labName = defaults.labName;
-    	      this.location = defaults.location;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceSets = defaults.resourceSets;
-    	      this.tags = defaults.tags;
-    	      this.uniqueIdentifier = defaults.uniqueIdentifier;
+            $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(@Nullable Output<String> environmentName) {
-            this.environmentName = environmentName;
+            $.environmentName = environmentName;
             return this;
         }
-        public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Codegen.ofNullable(environmentName);
-            return this;
+
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder environmentSettingName(Output<String> environmentSettingName) {
-            this.environmentSettingName = Objects.requireNonNull(environmentSettingName);
+            $.environmentSettingName = environmentSettingName;
             return this;
         }
+
         public Builder environmentSettingName(String environmentSettingName) {
-            this.environmentSettingName = Output.of(Objects.requireNonNull(environmentSettingName));
-            return this;
+            return environmentSettingName(Output.of(environmentSettingName));
         }
+
         public Builder labAccountName(Output<String> labAccountName) {
-            this.labAccountName = Objects.requireNonNull(labAccountName);
+            $.labAccountName = labAccountName;
             return this;
         }
+
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Output.of(Objects.requireNonNull(labAccountName));
-            return this;
+            return labAccountName(Output.of(labAccountName));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceSets(@Nullable Output<ResourceSetArgs> resourceSets) {
-            this.resourceSets = resourceSets;
+            $.resourceSets = resourceSets;
             return this;
         }
-        public Builder resourceSets(@Nullable ResourceSetArgs resourceSets) {
-            this.resourceSets = Codegen.ofNullable(resourceSets);
-            return this;
+
+        public Builder resourceSets(ResourceSetArgs resourceSets) {
+            return resourceSets(Output.of(resourceSets));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
-            this.uniqueIdentifier = uniqueIdentifier;
+            $.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
-            return this;
-        }        public EnvironmentArgs build() {
-            return new EnvironmentArgs(environmentName, environmentSettingName, labAccountName, labName, location, provisioningState, resourceGroupName, resourceSets, tags, uniqueIdentifier);
+
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
+            return uniqueIdentifier(Output.of(uniqueIdentifier));
+        }
+
+        public EnvironmentArgs build() {
+            $.environmentSettingName = Objects.requireNonNull($.environmentSettingName, "expected parameter 'environmentSettingName' to be non-null");
+            $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

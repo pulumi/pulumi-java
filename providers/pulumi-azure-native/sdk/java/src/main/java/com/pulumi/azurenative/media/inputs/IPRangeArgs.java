@@ -5,10 +5,10 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetPrefixLength")
-      private final @Nullable Output<Integer> subnetPrefixLength;
+    private @Nullable Output<Integer> subnetPrefixLength;
 
-    public Output<Integer> subnetPrefixLength() {
-        return this.subnetPrefixLength == null ? Codegen.empty() : this.subnetPrefixLength;
+    public Optional<Output<Integer>> subnetPrefixLength() {
+        return Optional.ofNullable(this.subnetPrefixLength);
     }
 
-    public IPRangeArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> subnetPrefixLength) {
-        this.address = address;
-        this.name = name;
-        this.subnetPrefixLength = subnetPrefixLength;
-    }
+    private IPRangeArgs() {}
 
-    private IPRangeArgs() {
-        this.address = Codegen.empty();
-        this.name = Codegen.empty();
-        this.subnetPrefixLength = Codegen.empty();
+    private IPRangeArgs(IPRangeArgs $) {
+        this.address = $.address;
+        this.name = $.name;
+        this.subnetPrefixLength = $.subnetPrefixLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> subnetPrefixLength;
+        private IPRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPRangeArgs();
         }
 
         public Builder(IPRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.name = defaults.name;
-    	      this.subnetPrefixLength = defaults.subnetPrefixLength;
+            $ = new IPRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder subnetPrefixLength(@Nullable Output<Integer> subnetPrefixLength) {
-            this.subnetPrefixLength = subnetPrefixLength;
+            $.subnetPrefixLength = subnetPrefixLength;
             return this;
         }
-        public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
-            this.subnetPrefixLength = Codegen.ofNullable(subnetPrefixLength);
-            return this;
-        }        public IPRangeArgs build() {
-            return new IPRangeArgs(address, name, subnetPrefixLength);
+
+        public Builder subnetPrefixLength(Integer subnetPrefixLength) {
+            return subnetPrefixLength(Output.of(subnetPrefixLength));
+        }
+
+        public IPRangeArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final String roleDefinitionId;
+    private String roleDefinitionId;
 
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public GetSqlResourceSqlRoleDefinitionArgs(
-        String accountName,
-        String resourceGroupName,
-        String roleDefinitionId) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private GetSqlResourceSqlRoleDefinitionArgs() {}
 
-    private GetSqlResourceSqlRoleDefinitionArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.roleDefinitionId = null;
+    private GetSqlResourceSqlRoleDefinitionArgs(GetSqlResourceSqlRoleDefinitionArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlResourceSqlRoleDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String roleDefinitionId;
+        private GetSqlResourceSqlRoleDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlResourceSqlRoleDefinitionArgs();
         }
 
         public Builder(GetSqlResourceSqlRoleDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new GetSqlResourceSqlRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
-        }        public GetSqlResourceSqlRoleDefinitionArgs build() {
-            return new GetSqlResourceSqlRoleDefinitionArgs(accountName, resourceGroupName, roleDefinitionId);
+        }
+
+        public GetSqlResourceSqlRoleDefinitionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

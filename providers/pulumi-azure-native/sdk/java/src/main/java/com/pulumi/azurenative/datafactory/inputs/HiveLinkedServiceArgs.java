@@ -19,6 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +36,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="allowHostNameCNMismatch")
-      private final @Nullable Output<Object> allowHostNameCNMismatch;
+    private @Nullable Output<Object> allowHostNameCNMismatch;
 
-    public Output<Object> allowHostNameCNMismatch() {
-        return this.allowHostNameCNMismatch == null ? Codegen.empty() : this.allowHostNameCNMismatch;
+    public Optional<Output<Object>> allowHostNameCNMismatch() {
+        return Optional.ofNullable(this.allowHostNameCNMismatch);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="allowSelfSignedServerCert")
-      private final @Nullable Output<Object> allowSelfSignedServerCert;
+    private @Nullable Output<Object> allowSelfSignedServerCert;
 
-    public Output<Object> allowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Codegen.empty() : this.allowSelfSignedServerCert;
+    public Optional<Output<Object>> allowSelfSignedServerCert() {
+        return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -68,7 +69,7 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<Either<String,HiveAuthenticationType>> authenticationType;
+    private Output<Either<String,HiveAuthenticationType>> authenticationType;
 
     public Output<Either<String,HiveAuthenticationType>> authenticationType() {
         return this.authenticationType;
@@ -79,10 +80,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -101,10 +102,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enableSsl")
-      private final @Nullable Output<Object> enableSsl;
+    private @Nullable Output<Object> enableSsl;
 
-    public Output<Object> enableSsl() {
-        return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
+    public Optional<Output<Object>> enableSsl() {
+        return Optional.ofNullable(this.enableSsl);
     }
 
     /**
@@ -112,10 +113,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -123,7 +124,7 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="host", required=true)
-      private final Output<Object> host;
+    private Output<Object> host;
 
     public Output<Object> host() {
         return this.host;
@@ -134,10 +135,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="httpPath")
-      private final @Nullable Output<Object> httpPath;
+    private @Nullable Output<Object> httpPath;
 
-    public Output<Object> httpPath() {
-        return this.httpPath == null ? Codegen.empty() : this.httpPath;
+    public Optional<Output<Object>> httpPath() {
+        return Optional.ofNullable(this.httpPath);
     }
 
     /**
@@ -145,10 +146,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -156,10 +157,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -167,10 +168,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Object> port;
+    private @Nullable Output<Object> port;
 
-    public Output<Object> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Object>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -178,10 +179,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serverType")
-      private final @Nullable Output<Either<String,HiveServerType>> serverType;
+    private @Nullable Output<Either<String,HiveServerType>> serverType;
 
-    public Output<Either<String,HiveServerType>> serverType() {
-        return this.serverType == null ? Codegen.empty() : this.serverType;
+    public Optional<Output<Either<String,HiveServerType>>> serverType() {
+        return Optional.ofNullable(this.serverType);
     }
 
     /**
@@ -189,10 +190,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceDiscoveryMode")
-      private final @Nullable Output<Object> serviceDiscoveryMode;
+    private @Nullable Output<Object> serviceDiscoveryMode;
 
-    public Output<Object> serviceDiscoveryMode() {
-        return this.serviceDiscoveryMode == null ? Codegen.empty() : this.serviceDiscoveryMode;
+    public Optional<Output<Object>> serviceDiscoveryMode() {
+        return Optional.ofNullable(this.serviceDiscoveryMode);
     }
 
     /**
@@ -200,10 +201,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="thriftTransportProtocol")
-      private final @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
+    private @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
 
-    public Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol() {
-        return this.thriftTransportProtocol == null ? Codegen.empty() : this.thriftTransportProtocol;
+    public Optional<Output<Either<String,HiveThriftTransportProtocol>>> thriftTransportProtocol() {
+        return Optional.ofNullable(this.thriftTransportProtocol);
     }
 
     /**
@@ -211,10 +212,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="trustedCertPath")
-      private final @Nullable Output<Object> trustedCertPath;
+    private @Nullable Output<Object> trustedCertPath;
 
-    public Output<Object> trustedCertPath() {
-        return this.trustedCertPath == null ? Codegen.empty() : this.trustedCertPath;
+    public Optional<Output<Object>> trustedCertPath() {
+        return Optional.ofNullable(this.trustedCertPath);
     }
 
     /**
@@ -223,7 +224,7 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -234,10 +235,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="useNativeQuery")
-      private final @Nullable Output<Object> useNativeQuery;
+    private @Nullable Output<Object> useNativeQuery;
 
-    public Output<Object> useNativeQuery() {
-        return this.useNativeQuery == null ? Codegen.empty() : this.useNativeQuery;
+    public Optional<Output<Object>> useNativeQuery() {
+        return Optional.ofNullable(this.useNativeQuery);
     }
 
     /**
@@ -245,10 +246,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="useSystemTrustStore")
-      private final @Nullable Output<Object> useSystemTrustStore;
+    private @Nullable Output<Object> useSystemTrustStore;
 
-    public Output<Object> useSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Codegen.empty() : this.useSystemTrustStore;
+    public Optional<Output<Object>> useSystemTrustStore() {
+        return Optional.ofNullable(this.useSystemTrustStore);
     }
 
     /**
@@ -256,10 +257,10 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<Object> username;
+    private @Nullable Output<Object> username;
 
-    public Output<Object> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<Object>> username() {
+        return Optional.ofNullable(this.username);
     }
 
     /**
@@ -267,326 +268,265 @@ public final class HiveLinkedServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="zooKeeperNameSpace")
-      private final @Nullable Output<Object> zooKeeperNameSpace;
+    private @Nullable Output<Object> zooKeeperNameSpace;
 
-    public Output<Object> zooKeeperNameSpace() {
-        return this.zooKeeperNameSpace == null ? Codegen.empty() : this.zooKeeperNameSpace;
+    public Optional<Output<Object>> zooKeeperNameSpace() {
+        return Optional.ofNullable(this.zooKeeperNameSpace);
     }
 
-    public HiveLinkedServiceArgs(
-        @Nullable Output<Object> allowHostNameCNMismatch,
-        @Nullable Output<Object> allowSelfSignedServerCert,
-        @Nullable Output<List<Object>> annotations,
-        Output<Either<String,HiveAuthenticationType>> authenticationType,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> enableSsl,
-        @Nullable Output<Object> encryptedCredential,
-        Output<Object> host,
-        @Nullable Output<Object> httpPath,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Output<Object> port,
-        @Nullable Output<Either<String,HiveServerType>> serverType,
-        @Nullable Output<Object> serviceDiscoveryMode,
-        @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol,
-        @Nullable Output<Object> trustedCertPath,
-        Output<String> type,
-        @Nullable Output<Object> useNativeQuery,
-        @Nullable Output<Object> useSystemTrustStore,
-        @Nullable Output<Object> username,
-        @Nullable Output<Object> zooKeeperNameSpace) {
-        this.allowHostNameCNMismatch = allowHostNameCNMismatch;
-        this.allowSelfSignedServerCert = allowSelfSignedServerCert;
-        this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.connectVia = connectVia;
-        this.description = description;
-        this.enableSsl = enableSsl;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.httpPath = httpPath;
-        this.parameters = parameters;
-        this.password = password;
-        this.port = port;
-        this.serverType = serverType;
-        this.serviceDiscoveryMode = serviceDiscoveryMode;
-        this.thriftTransportProtocol = thriftTransportProtocol;
-        this.trustedCertPath = trustedCertPath;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useNativeQuery = useNativeQuery;
-        this.useSystemTrustStore = useSystemTrustStore;
-        this.username = username;
-        this.zooKeeperNameSpace = zooKeeperNameSpace;
-    }
+    private HiveLinkedServiceArgs() {}
 
-    private HiveLinkedServiceArgs() {
-        this.allowHostNameCNMismatch = Codegen.empty();
-        this.allowSelfSignedServerCert = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enableSsl = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.host = Codegen.empty();
-        this.httpPath = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.serverType = Codegen.empty();
-        this.serviceDiscoveryMode = Codegen.empty();
-        this.thriftTransportProtocol = Codegen.empty();
-        this.trustedCertPath = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useNativeQuery = Codegen.empty();
-        this.useSystemTrustStore = Codegen.empty();
-        this.username = Codegen.empty();
-        this.zooKeeperNameSpace = Codegen.empty();
+    private HiveLinkedServiceArgs(HiveLinkedServiceArgs $) {
+        this.allowHostNameCNMismatch = $.allowHostNameCNMismatch;
+        this.allowSelfSignedServerCert = $.allowSelfSignedServerCert;
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.enableSsl = $.enableSsl;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.httpPath = $.httpPath;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.port = $.port;
+        this.serverType = $.serverType;
+        this.serviceDiscoveryMode = $.serviceDiscoveryMode;
+        this.thriftTransportProtocol = $.thriftTransportProtocol;
+        this.trustedCertPath = $.trustedCertPath;
+        this.type = $.type;
+        this.useNativeQuery = $.useNativeQuery;
+        this.useSystemTrustStore = $.useSystemTrustStore;
+        this.username = $.username;
+        this.zooKeeperNameSpace = $.zooKeeperNameSpace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HiveLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> allowHostNameCNMismatch;
-        private @Nullable Output<Object> allowSelfSignedServerCert;
-        private @Nullable Output<List<Object>> annotations;
-        private Output<Either<String,HiveAuthenticationType>> authenticationType;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> enableSsl;
-        private @Nullable Output<Object> encryptedCredential;
-        private Output<Object> host;
-        private @Nullable Output<Object> httpPath;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Output<Object> port;
-        private @Nullable Output<Either<String,HiveServerType>> serverType;
-        private @Nullable Output<Object> serviceDiscoveryMode;
-        private @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
-        private @Nullable Output<Object> trustedCertPath;
-        private Output<String> type;
-        private @Nullable Output<Object> useNativeQuery;
-        private @Nullable Output<Object> useSystemTrustStore;
-        private @Nullable Output<Object> username;
-        private @Nullable Output<Object> zooKeeperNameSpace;
+        private HiveLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HiveLinkedServiceArgs();
         }
 
         public Builder(HiveLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowHostNameCNMismatch = defaults.allowHostNameCNMismatch;
-    	      this.allowSelfSignedServerCert = defaults.allowSelfSignedServerCert;
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.enableSsl = defaults.enableSsl;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.httpPath = defaults.httpPath;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.serverType = defaults.serverType;
-    	      this.serviceDiscoveryMode = defaults.serviceDiscoveryMode;
-    	      this.thriftTransportProtocol = defaults.thriftTransportProtocol;
-    	      this.trustedCertPath = defaults.trustedCertPath;
-    	      this.type = defaults.type;
-    	      this.useNativeQuery = defaults.useNativeQuery;
-    	      this.useSystemTrustStore = defaults.useSystemTrustStore;
-    	      this.username = defaults.username;
-    	      this.zooKeeperNameSpace = defaults.zooKeeperNameSpace;
+            $ = new HiveLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowHostNameCNMismatch(@Nullable Output<Object> allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = allowHostNameCNMismatch;
+            $.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
-        public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = Codegen.ofNullable(allowHostNameCNMismatch);
-            return this;
+
+        public Builder allowHostNameCNMismatch(Object allowHostNameCNMismatch) {
+            return allowHostNameCNMismatch(Output.of(allowHostNameCNMismatch));
         }
+
         public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = allowSelfSignedServerCert;
+            $.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
-        public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = Codegen.ofNullable(allowSelfSignedServerCert);
-            return this;
+
+        public Builder allowSelfSignedServerCert(Object allowSelfSignedServerCert) {
+            return allowSelfSignedServerCert(Output.of(allowSelfSignedServerCert));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(Output<Either<String,HiveAuthenticationType>> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(Either<String,HiveAuthenticationType> authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
-            this.enableSsl = enableSsl;
+            $.enableSsl = enableSsl;
             return this;
         }
-        public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = Codegen.ofNullable(enableSsl);
-            return this;
+
+        public Builder enableSsl(Object enableSsl) {
+            return enableSsl(Output.of(enableSsl));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder host(Output<Object> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder httpPath(@Nullable Output<Object> httpPath) {
-            this.httpPath = httpPath;
+            $.httpPath = httpPath;
             return this;
         }
-        public Builder httpPath(@Nullable Object httpPath) {
-            this.httpPath = Codegen.ofNullable(httpPath);
-            return this;
+
+        public Builder httpPath(Object httpPath) {
+            return httpPath(Output.of(httpPath));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder port(@Nullable Output<Object> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Object port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Object port) {
+            return port(Output.of(port));
         }
+
         public Builder serverType(@Nullable Output<Either<String,HiveServerType>> serverType) {
-            this.serverType = serverType;
+            $.serverType = serverType;
             return this;
         }
-        public Builder serverType(@Nullable Either<String,HiveServerType> serverType) {
-            this.serverType = Codegen.ofNullable(serverType);
-            return this;
+
+        public Builder serverType(Either<String,HiveServerType> serverType) {
+            return serverType(Output.of(serverType));
         }
+
         public Builder serviceDiscoveryMode(@Nullable Output<Object> serviceDiscoveryMode) {
-            this.serviceDiscoveryMode = serviceDiscoveryMode;
+            $.serviceDiscoveryMode = serviceDiscoveryMode;
             return this;
         }
-        public Builder serviceDiscoveryMode(@Nullable Object serviceDiscoveryMode) {
-            this.serviceDiscoveryMode = Codegen.ofNullable(serviceDiscoveryMode);
-            return this;
+
+        public Builder serviceDiscoveryMode(Object serviceDiscoveryMode) {
+            return serviceDiscoveryMode(Output.of(serviceDiscoveryMode));
         }
+
         public Builder thriftTransportProtocol(@Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol) {
-            this.thriftTransportProtocol = thriftTransportProtocol;
+            $.thriftTransportProtocol = thriftTransportProtocol;
             return this;
         }
-        public Builder thriftTransportProtocol(@Nullable Either<String,HiveThriftTransportProtocol> thriftTransportProtocol) {
-            this.thriftTransportProtocol = Codegen.ofNullable(thriftTransportProtocol);
-            return this;
+
+        public Builder thriftTransportProtocol(Either<String,HiveThriftTransportProtocol> thriftTransportProtocol) {
+            return thriftTransportProtocol(Output.of(thriftTransportProtocol));
         }
+
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
-            this.trustedCertPath = trustedCertPath;
+            $.trustedCertPath = trustedCertPath;
             return this;
         }
-        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Codegen.ofNullable(trustedCertPath);
-            return this;
+
+        public Builder trustedCertPath(Object trustedCertPath) {
+            return trustedCertPath(Output.of(trustedCertPath));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useNativeQuery(@Nullable Output<Object> useNativeQuery) {
-            this.useNativeQuery = useNativeQuery;
+            $.useNativeQuery = useNativeQuery;
             return this;
         }
-        public Builder useNativeQuery(@Nullable Object useNativeQuery) {
-            this.useNativeQuery = Codegen.ofNullable(useNativeQuery);
-            return this;
+
+        public Builder useNativeQuery(Object useNativeQuery) {
+            return useNativeQuery(Output.of(useNativeQuery));
         }
+
         public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
-            this.useSystemTrustStore = useSystemTrustStore;
+            $.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
-        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Codegen.ofNullable(useSystemTrustStore);
-            return this;
+
+        public Builder useSystemTrustStore(Object useSystemTrustStore) {
+            return useSystemTrustStore(Output.of(useSystemTrustStore));
         }
+
         public Builder username(@Nullable Output<Object> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable Object username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
+
+        public Builder username(Object username) {
+            return username(Output.of(username));
         }
+
         public Builder zooKeeperNameSpace(@Nullable Output<Object> zooKeeperNameSpace) {
-            this.zooKeeperNameSpace = zooKeeperNameSpace;
+            $.zooKeeperNameSpace = zooKeeperNameSpace;
             return this;
         }
-        public Builder zooKeeperNameSpace(@Nullable Object zooKeeperNameSpace) {
-            this.zooKeeperNameSpace = Codegen.ofNullable(zooKeeperNameSpace);
-            return this;
-        }        public HiveLinkedServiceArgs build() {
-            return new HiveLinkedServiceArgs(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, serviceDiscoveryMode, thriftTransportProtocol, trustedCertPath, type, useNativeQuery, useSystemTrustStore, username, zooKeeperNameSpace);
+
+        public Builder zooKeeperNameSpace(Object zooKeeperNameSpace) {
+            return zooKeeperNameSpace(Output.of(zooKeeperNameSpace));
+        }
+
+        public HiveLinkedServiceArgs build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

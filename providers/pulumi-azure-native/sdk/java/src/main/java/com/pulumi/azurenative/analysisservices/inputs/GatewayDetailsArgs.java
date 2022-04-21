@@ -5,9 +5,9 @@ package com.pulumi.azurenative.analysisservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GatewayDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="gatewayResourceId")
-      private final @Nullable Output<String> gatewayResourceId;
+    private @Nullable Output<String> gatewayResourceId;
 
-    public Output<String> gatewayResourceId() {
-        return this.gatewayResourceId == null ? Codegen.empty() : this.gatewayResourceId;
+    public Optional<Output<String>> gatewayResourceId() {
+        return Optional.ofNullable(this.gatewayResourceId);
     }
 
-    public GatewayDetailsArgs(@Nullable Output<String> gatewayResourceId) {
-        this.gatewayResourceId = gatewayResourceId;
-    }
+    private GatewayDetailsArgs() {}
 
-    private GatewayDetailsArgs() {
-        this.gatewayResourceId = Codegen.empty();
+    private GatewayDetailsArgs(GatewayDetailsArgs $) {
+        this.gatewayResourceId = $.gatewayResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gatewayResourceId;
+        private GatewayDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayDetailsArgs();
         }
 
         public Builder(GatewayDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayResourceId = defaults.gatewayResourceId;
+            $ = new GatewayDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayResourceId(@Nullable Output<String> gatewayResourceId) {
-            this.gatewayResourceId = gatewayResourceId;
+            $.gatewayResourceId = gatewayResourceId;
             return this;
         }
-        public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
-            this.gatewayResourceId = Codegen.ofNullable(gatewayResourceId);
-            return this;
-        }        public GatewayDetailsArgs build() {
-            return new GatewayDetailsArgs(gatewayResourceId);
+
+        public Builder gatewayResourceId(String gatewayResourceId) {
+            return gatewayResourceId(Output.of(gatewayResourceId));
+        }
+
+        public GatewayDetailsArgs build() {
+            return $;
         }
     }
+
 }

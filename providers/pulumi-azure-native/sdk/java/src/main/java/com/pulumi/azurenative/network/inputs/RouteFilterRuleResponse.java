@@ -24,7 +24,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="access", required=true)
-      private final String access;
+    private String access;
 
     public String access() {
         return this.access;
@@ -35,7 +35,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="communities", required=true)
-      private final List<String> communities;
+    private List<String> communities;
 
     public List<String> communities() {
         return this.communities;
@@ -46,7 +46,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -57,10 +57,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -101,112 +101,95 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="routeFilterRuleType", required=true)
-      private final String routeFilterRuleType;
+    private String routeFilterRuleType;
 
     public String routeFilterRuleType() {
         return this.routeFilterRuleType;
     }
 
-    public RouteFilterRuleResponse(
-        String access,
-        List<String> communities,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String name,
-        String provisioningState,
-        String routeFilterRuleType) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.communities = Objects.requireNonNull(communities, "expected parameter 'communities' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.location = location;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType, "expected parameter 'routeFilterRuleType' to be non-null");
-    }
+    private RouteFilterRuleResponse() {}
 
-    private RouteFilterRuleResponse() {
-        this.access = null;
-        this.communities = List.of();
-        this.etag = null;
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.routeFilterRuleType = null;
+    private RouteFilterRuleResponse(RouteFilterRuleResponse $) {
+        this.access = $.access;
+        this.communities = $.communities;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.routeFilterRuleType = $.routeFilterRuleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteFilterRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String access;
-        private List<String> communities;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String location;
-        private @Nullable String name;
-        private String provisioningState;
-        private String routeFilterRuleType;
+        private RouteFilterRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteFilterRuleResponse();
         }
 
         public Builder(RouteFilterRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.communities = defaults.communities;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.routeFilterRuleType = defaults.routeFilterRuleType;
+            $ = new RouteFilterRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder access(String access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder communities(List<String> communities) {
-            this.communities = Objects.requireNonNull(communities);
+            $.communities = communities;
             return this;
         }
+
         public Builder communities(String... communities) {
             return communities(List.of(communities));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder routeFilterRuleType(String routeFilterRuleType) {
-            this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
+            $.routeFilterRuleType = routeFilterRuleType;
             return this;
-        }        public RouteFilterRuleResponse build() {
-            return new RouteFilterRuleResponse(access, communities, etag, id, location, name, provisioningState, routeFilterRuleType);
+        }
+
+        public RouteFilterRuleResponse build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.communities = Objects.requireNonNull($.communities, "expected parameter 'communities' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.routeFilterRuleType = Objects.requireNonNull($.routeFilterRuleType, "expected parameter 'routeFilterRuleType' to be non-null");
+            return $;
         }
     }
+
 }

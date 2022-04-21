@@ -8,9 +8,9 @@ import com.pulumi.azurenative.costmanagement.inputs.CostAllocationRuleDetailsArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="details", required=true)
-      private final Output<CostAllocationRuleDetailsArgs> details;
+    private Output<CostAllocationRuleDetailsArgs> details;
 
     public Output<CostAllocationRuleDetailsArgs> details() {
         return this.details;
@@ -49,76 +49,70 @@ public final class CostAllocationRulePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,RuleStatus>> status;
+    private Output<Either<String,RuleStatus>> status;
 
     public Output<Either<String,RuleStatus>> status() {
         return this.status;
     }
 
-    public CostAllocationRulePropertiesArgs(
-        @Nullable Output<String> description,
-        Output<CostAllocationRuleDetailsArgs> details,
-        Output<Either<String,RuleStatus>> status) {
-        this.description = description;
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private CostAllocationRulePropertiesArgs() {}
 
-    private CostAllocationRulePropertiesArgs() {
-        this.description = Codegen.empty();
-        this.details = Codegen.empty();
-        this.status = Codegen.empty();
+    private CostAllocationRulePropertiesArgs(CostAllocationRulePropertiesArgs $) {
+        this.description = $.description;
+        this.details = $.details;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationRulePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<CostAllocationRuleDetailsArgs> details;
-        private Output<Either<String,RuleStatus>> status;
+        private CostAllocationRulePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationRulePropertiesArgs();
         }
 
         public Builder(CostAllocationRulePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.details = defaults.details;
-    	      this.status = defaults.status;
+            $ = new CostAllocationRulePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder details(Output<CostAllocationRuleDetailsArgs> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(CostAllocationRuleDetailsArgs details) {
-            this.details = Output.of(Objects.requireNonNull(details));
-            return this;
+            return details(Output.of(details));
         }
+
         public Builder status(Output<Either<String,RuleStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,RuleStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public CostAllocationRulePropertiesArgs build() {
-            return new CostAllocationRulePropertiesArgs(description, details, status);
+            return status(Output.of(status));
+        }
+
+        public CostAllocationRulePropertiesArgs build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ids")
-      private final @Nullable List<SubResourceResponse> ids;
+    private @Nullable List<SubResourceResponse> ids;
 
-    public List<SubResourceResponse> ids() {
-        return this.ids == null ? List.of() : this.ids;
+    public Optional<List<SubResourceResponse>> ids() {
+        return Optional.ofNullable(this.ids);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="labels")
-      private final @Nullable List<String> labels;
+    private @Nullable List<String> labels;
 
-    public List<String> labels() {
-        return this.labels == null ? List.of() : this.labels;
+    public Optional<List<String>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public PropagatedRouteTableResponse(
-        @Nullable List<SubResourceResponse> ids,
-        @Nullable List<String> labels) {
-        this.ids = ids;
-        this.labels = labels;
-    }
+    private PropagatedRouteTableResponse() {}
 
-    private PropagatedRouteTableResponse() {
-        this.ids = List.of();
-        this.labels = List.of();
+    private PropagatedRouteTableResponse(PropagatedRouteTableResponse $) {
+        this.ids = $.ids;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropagatedRouteTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SubResourceResponse> ids;
-        private @Nullable List<String> labels;
+        private PropagatedRouteTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropagatedRouteTableResponse();
         }
 
         public Builder(PropagatedRouteTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ids = defaults.ids;
-    	      this.labels = defaults.labels;
+            $ = new PropagatedRouteTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ids(@Nullable List<SubResourceResponse> ids) {
-            this.ids = ids;
+            $.ids = ids;
             return this;
         }
+
         public Builder ids(SubResourceResponse... ids) {
             return ids(List.of(ids));
         }
+
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
-        }        public PropagatedRouteTableResponse build() {
-            return new PropagatedRouteTableResponse(ids, labels);
+        }
+
+        public PropagatedRouteTableResponse build() {
+            return $;
         }
     }
+
 }

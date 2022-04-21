@@ -5,10 +5,10 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -32,7 +32,7 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -43,10 +43,10 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definitions")
-      private final @Nullable Output<Object> definitions;
+    private @Nullable Output<Object> definitions;
 
-    public Output<Object> definitions() {
-        return this.definitions == null ? Codegen.empty() : this.definitions;
+    public Optional<Output<Object>> definitions() {
+        return Optional.ofNullable(this.definitions);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaId")
-      private final @Nullable Output<String> schemaId;
+    private @Nullable Output<String> schemaId;
 
-    public Output<String> schemaId() {
-        return this.schemaId == null ? Codegen.empty() : this.schemaId;
+    public Optional<Output<String>> schemaId() {
+        return Optional.ofNullable(this.schemaId);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -87,128 +87,112 @@ public final class ApiSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApiSchemaArgs(
-        Output<String> apiId,
-        Output<String> contentType,
-        @Nullable Output<Object> definitions,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> schemaId,
-        Output<String> serviceName,
-        @Nullable Output<String> value) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.definitions = definitions;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaId = schemaId;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.value = value;
-    }
+    private ApiSchemaArgs() {}
 
-    private ApiSchemaArgs() {
-        this.apiId = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.definitions = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schemaId = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApiSchemaArgs(ApiSchemaArgs $) {
+        this.apiId = $.apiId;
+        this.contentType = $.contentType;
+        this.definitions = $.definitions;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaId = $.schemaId;
+        this.serviceName = $.serviceName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private Output<String> contentType;
-        private @Nullable Output<Object> definitions;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> schemaId;
-        private Output<String> serviceName;
-        private @Nullable Output<String> value;
+        private ApiSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiSchemaArgs();
         }
 
         public Builder(ApiSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.contentType = defaults.contentType;
-    	      this.definitions = defaults.definitions;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaId = defaults.schemaId;
-    	      this.serviceName = defaults.serviceName;
-    	      this.value = defaults.value;
+            $ = new ApiSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder definitions(@Nullable Output<Object> definitions) {
-            this.definitions = definitions;
+            $.definitions = definitions;
             return this;
         }
-        public Builder definitions(@Nullable Object definitions) {
-            this.definitions = Codegen.ofNullable(definitions);
-            return this;
+
+        public Builder definitions(Object definitions) {
+            return definitions(Output.of(definitions));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schemaId(@Nullable Output<String> schemaId) {
-            this.schemaId = schemaId;
+            $.schemaId = schemaId;
             return this;
         }
-        public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Codegen.ofNullable(schemaId);
-            return this;
+
+        public Builder schemaId(String schemaId) {
+            return schemaId(Output.of(schemaId));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApiSchemaArgs build() {
-            return new ApiSchemaArgs(apiId, contentType, definitions, resourceGroupName, schemaId, serviceName, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApiSchemaArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

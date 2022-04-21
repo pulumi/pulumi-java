@@ -23,45 +23,44 @@ public final class AssignmentPropertiesResponseAdditionalData extends com.pulumi
      * 
      */
     @Import(name="exemptionCategory")
-      private final @Nullable String exemptionCategory;
+    private @Nullable String exemptionCategory;
 
     public Optional<String> exemptionCategory() {
-        return this.exemptionCategory == null ? Optional.empty() : Optional.ofNullable(this.exemptionCategory);
+        return Optional.ofNullable(this.exemptionCategory);
     }
 
-    public AssignmentPropertiesResponseAdditionalData(@Nullable String exemptionCategory) {
-        this.exemptionCategory = exemptionCategory;
-    }
+    private AssignmentPropertiesResponseAdditionalData() {}
 
-    private AssignmentPropertiesResponseAdditionalData() {
-        this.exemptionCategory = null;
+    private AssignmentPropertiesResponseAdditionalData(AssignmentPropertiesResponseAdditionalData $) {
+        this.exemptionCategory = $.exemptionCategory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentPropertiesResponseAdditionalData defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String exemptionCategory;
+        private AssignmentPropertiesResponseAdditionalData $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentPropertiesResponseAdditionalData();
         }
 
         public Builder(AssignmentPropertiesResponseAdditionalData defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptionCategory = defaults.exemptionCategory;
+            $ = new AssignmentPropertiesResponseAdditionalData(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptionCategory(@Nullable String exemptionCategory) {
-            this.exemptionCategory = exemptionCategory;
+            $.exemptionCategory = exemptionCategory;
             return this;
-        }        public AssignmentPropertiesResponseAdditionalData build() {
-            return new AssignmentPropertiesResponseAdditionalData(exemptionCategory);
+        }
+
+        public AssignmentPropertiesResponseAdditionalData build() {
+            return $;
         }
     }
+
 }

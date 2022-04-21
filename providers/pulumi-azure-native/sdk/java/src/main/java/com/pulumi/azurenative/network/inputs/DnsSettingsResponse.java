@@ -25,10 +25,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enableProxy")
-      private final @Nullable Boolean enableProxy;
+    private @Nullable Boolean enableProxy;
 
     public Optional<Boolean> enableProxy() {
-        return this.enableProxy == null ? Optional.empty() : Optional.ofNullable(this.enableProxy);
+        return Optional.ofNullable(this.enableProxy);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requireProxyForNetworkRules")
-      private final @Nullable Boolean requireProxyForNetworkRules;
+    private @Nullable Boolean requireProxyForNetworkRules;
 
     public Optional<Boolean> requireProxyForNetworkRules() {
-        return this.requireProxyForNetworkRules == null ? Optional.empty() : Optional.ofNullable(this.requireProxyForNetworkRules);
+        return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="servers")
-      private final @Nullable List<String> servers;
+    private @Nullable List<String> servers;
 
-    public List<String> servers() {
-        return this.servers == null ? List.of() : this.servers;
+    public Optional<List<String>> servers() {
+        return Optional.ofNullable(this.servers);
     }
 
-    public DnsSettingsResponse(
-        @Nullable Boolean enableProxy,
-        @Nullable Boolean requireProxyForNetworkRules,
-        @Nullable List<String> servers) {
-        this.enableProxy = enableProxy;
-        this.requireProxyForNetworkRules = requireProxyForNetworkRules;
-        this.servers = servers;
-    }
+    private DnsSettingsResponse() {}
 
-    private DnsSettingsResponse() {
-        this.enableProxy = null;
-        this.requireProxyForNetworkRules = null;
-        this.servers = List.of();
+    private DnsSettingsResponse(DnsSettingsResponse $) {
+        this.enableProxy = $.enableProxy;
+        this.requireProxyForNetworkRules = $.requireProxyForNetworkRules;
+        this.servers = $.servers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableProxy;
-        private @Nullable Boolean requireProxyForNetworkRules;
-        private @Nullable List<String> servers;
+        private DnsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsSettingsResponse();
         }
 
         public Builder(DnsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableProxy = defaults.enableProxy;
-    	      this.requireProxyForNetworkRules = defaults.requireProxyForNetworkRules;
-    	      this.servers = defaults.servers;
+            $ = new DnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableProxy(@Nullable Boolean enableProxy) {
-            this.enableProxy = enableProxy;
+            $.enableProxy = enableProxy;
             return this;
         }
+
         public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
-            this.requireProxyForNetworkRules = requireProxyForNetworkRules;
+            $.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
+
         public Builder servers(@Nullable List<String> servers) {
-            this.servers = servers;
+            $.servers = servers;
             return this;
         }
+
         public Builder servers(String... servers) {
             return servers(List.of(servers));
-        }        public DnsSettingsResponse build() {
-            return new DnsSettingsResponse(enableProxy, requireProxyForNetworkRules, servers);
+        }
+
+        public DnsSettingsResponse build() {
+            return $;
         }
     }
+
 }

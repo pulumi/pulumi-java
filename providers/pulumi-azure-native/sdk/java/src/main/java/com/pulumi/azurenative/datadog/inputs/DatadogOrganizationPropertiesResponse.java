@@ -21,7 +21,7 @@ public final class DatadogOrganizationPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,55 +32,52 @@ public final class DatadogOrganizationPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public DatadogOrganizationPropertiesResponse(
-        String id,
-        String name) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DatadogOrganizationPropertiesResponse() {}
 
-    private DatadogOrganizationPropertiesResponse() {
-        this.id = null;
-        this.name = null;
+    private DatadogOrganizationPropertiesResponse(DatadogOrganizationPropertiesResponse $) {
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogOrganizationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
+        private DatadogOrganizationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogOrganizationPropertiesResponse();
         }
 
         public Builder(DatadogOrganizationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new DatadogOrganizationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public DatadogOrganizationPropertiesResponse build() {
-            return new DatadogOrganizationPropertiesResponse(id, name);
+        }
+
+        public DatadogOrganizationPropertiesResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

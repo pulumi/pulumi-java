@@ -6,8 +6,8 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.O365BreakOutCategoryPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class O365PolicyPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="breakOutCategories")
-      private final @Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
+    private @Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
 
-    public Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories() {
-        return this.breakOutCategories == null ? Codegen.empty() : this.breakOutCategories;
+    public Optional<Output<O365BreakOutCategoryPoliciesArgs>> breakOutCategories() {
+        return Optional.ofNullable(this.breakOutCategories);
     }
 
-    public O365PolicyPropertiesArgs(@Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
-        this.breakOutCategories = breakOutCategories;
-    }
+    private O365PolicyPropertiesArgs() {}
 
-    private O365PolicyPropertiesArgs() {
-        this.breakOutCategories = Codegen.empty();
+    private O365PolicyPropertiesArgs(O365PolicyPropertiesArgs $) {
+        this.breakOutCategories = $.breakOutCategories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(O365PolicyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
+        private O365PolicyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new O365PolicyPropertiesArgs();
         }
 
         public Builder(O365PolicyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.breakOutCategories = defaults.breakOutCategories;
+            $ = new O365PolicyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder breakOutCategories(@Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
-            this.breakOutCategories = breakOutCategories;
+            $.breakOutCategories = breakOutCategories;
             return this;
         }
-        public Builder breakOutCategories(@Nullable O365BreakOutCategoryPoliciesArgs breakOutCategories) {
-            this.breakOutCategories = Codegen.ofNullable(breakOutCategories);
-            return this;
-        }        public O365PolicyPropertiesArgs build() {
-            return new O365PolicyPropertiesArgs(breakOutCategories);
+
+        public Builder breakOutCategories(O365BreakOutCategoryPoliciesArgs breakOutCategories) {
+            return breakOutCategories(Output.of(breakOutCategories));
+        }
+
+        public O365PolicyPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
      * 
      */
     @Import(name="deploymentName")
-      private final @Nullable String deploymentName;
+    private @Nullable String deploymentName;
 
     public Optional<String> deploymentName() {
-        return this.deploymentName == null ? Optional.empty() : Optional.ofNullable(this.deploymentName);
+        return Optional.ofNullable(this.deploymentName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -45,64 +45,57 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public OnErrorDeploymentExtendedResponse(
-        @Nullable String deploymentName,
-        String provisioningState,
-        @Nullable String type) {
-        this.deploymentName = deploymentName;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = type;
-    }
+    private OnErrorDeploymentExtendedResponse() {}
 
-    private OnErrorDeploymentExtendedResponse() {
-        this.deploymentName = null;
-        this.provisioningState = null;
-        this.type = null;
+    private OnErrorDeploymentExtendedResponse(OnErrorDeploymentExtendedResponse $) {
+        this.deploymentName = $.deploymentName;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnErrorDeploymentExtendedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deploymentName;
-        private String provisioningState;
-        private @Nullable String type;
+        private OnErrorDeploymentExtendedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnErrorDeploymentExtendedResponse();
         }
 
         public Builder(OnErrorDeploymentExtendedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new OnErrorDeploymentExtendedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = deploymentName;
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public OnErrorDeploymentExtendedResponse build() {
-            return new OnErrorDeploymentExtendedResponse(deploymentName, provisioningState, type);
+        }
+
+        public OnErrorDeploymentExtendedResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

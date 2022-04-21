@@ -23,10 +23,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @Import(name="etag")
-      private final @Nullable String etag;
+    private @Nullable String etag;
 
     public Optional<String> etag() {
-        return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -67,82 +67,69 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public P2SVpnServerConfigVpnClientRevokedCertificateResponse(
-        @Nullable String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable String thumbprint) {
-        this.etag = etag;
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.thumbprint = thumbprint;
-    }
+    private P2SVpnServerConfigVpnClientRevokedCertificateResponse() {}
 
-    private P2SVpnServerConfigVpnClientRevokedCertificateResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.thumbprint = null;
+    private P2SVpnServerConfigVpnClientRevokedCertificateResponse(P2SVpnServerConfigVpnClientRevokedCertificateResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(P2SVpnServerConfigVpnClientRevokedCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable String thumbprint;
+        private P2SVpnServerConfigVpnClientRevokedCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new P2SVpnServerConfigVpnClientRevokedCertificateResponse();
         }
 
         public Builder(P2SVpnServerConfigVpnClientRevokedCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new P2SVpnServerConfigVpnClientRevokedCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public P2SVpnServerConfigVpnClientRevokedCertificateResponse build() {
-            return new P2SVpnServerConfigVpnClientRevokedCertificateResponse(etag, id, name, provisioningState, thumbprint);
+        }
+
+        public P2SVpnServerConfigVpnClientRevokedCertificateResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="cleanup")
-      private final @Nullable Boolean cleanup;
+    private @Nullable Boolean cleanup;
 
     public Optional<Boolean> cleanup() {
-        return this.cleanup == null ? Optional.empty() : Optional.ofNullable(this.cleanup);
+        return Optional.ofNullable(this.cleanup);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="computeType")
-      private final @Nullable String computeType;
+    private @Nullable String computeType;
 
     public Optional<String> computeType() {
-        return this.computeType == null ? Optional.empty() : Optional.ofNullable(this.computeType);
+        return Optional.ofNullable(this.computeType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Integer coreCount;
+    private @Nullable Integer coreCount;
 
     public Optional<Integer> coreCount() {
-        return this.coreCount == null ? Optional.empty() : Optional.ofNullable(this.coreCount);
+        return Optional.ofNullable(this.coreCount);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="timeToLive")
-      private final @Nullable Integer timeToLive;
+    private @Nullable Integer timeToLive;
 
     public Optional<Integer> timeToLive() {
-        return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
+        return Optional.ofNullable(this.timeToLive);
     }
 
-    public IntegrationRuntimeDataFlowPropertiesResponse(
-        @Nullable Boolean cleanup,
-        @Nullable String computeType,
-        @Nullable Integer coreCount,
-        @Nullable Integer timeToLive) {
-        this.cleanup = cleanup;
-        this.computeType = computeType;
-        this.coreCount = coreCount;
-        this.timeToLive = timeToLive;
-    }
+    private IntegrationRuntimeDataFlowPropertiesResponse() {}
 
-    private IntegrationRuntimeDataFlowPropertiesResponse() {
-        this.cleanup = null;
-        this.computeType = null;
-        this.coreCount = null;
-        this.timeToLive = null;
+    private IntegrationRuntimeDataFlowPropertiesResponse(IntegrationRuntimeDataFlowPropertiesResponse $) {
+        this.cleanup = $.cleanup;
+        this.computeType = $.computeType;
+        this.coreCount = $.coreCount;
+        this.timeToLive = $.timeToLive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeDataFlowPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean cleanup;
-        private @Nullable String computeType;
-        private @Nullable Integer coreCount;
-        private @Nullable Integer timeToLive;
+        private IntegrationRuntimeDataFlowPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeDataFlowPropertiesResponse();
         }
 
         public Builder(IntegrationRuntimeDataFlowPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cleanup = defaults.cleanup;
-    	      this.computeType = defaults.computeType;
-    	      this.coreCount = defaults.coreCount;
-    	      this.timeToLive = defaults.timeToLive;
+            $ = new IntegrationRuntimeDataFlowPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cleanup(@Nullable Boolean cleanup) {
-            this.cleanup = cleanup;
+            $.cleanup = cleanup;
             return this;
         }
+
         public Builder computeType(@Nullable String computeType) {
-            this.computeType = computeType;
+            $.computeType = computeType;
             return this;
         }
+
         public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
+
         public Builder timeToLive(@Nullable Integer timeToLive) {
-            this.timeToLive = timeToLive;
+            $.timeToLive = timeToLive;
             return this;
-        }        public IntegrationRuntimeDataFlowPropertiesResponse build() {
-            return new IntegrationRuntimeDataFlowPropertiesResponse(cleanup, computeType, coreCount, timeToLive);
+        }
+
+        public IntegrationRuntimeDataFlowPropertiesResponse build() {
+            return $;
         }
     }
+
 }

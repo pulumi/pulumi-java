@@ -5,10 +5,10 @@ package com.pulumi.azurenative.signalrservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SignalRCorsSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allowedOrigins")
-      private final @Nullable Output<List<String>> allowedOrigins;
+    private @Nullable Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> allowedOrigins() {
-        return this.allowedOrigins == null ? Codegen.empty() : this.allowedOrigins;
+    public Optional<Output<List<String>>> allowedOrigins() {
+        return Optional.ofNullable(this.allowedOrigins);
     }
 
-    public SignalRCorsSettingsArgs(@Nullable Output<List<String>> allowedOrigins) {
-        this.allowedOrigins = allowedOrigins;
-    }
+    private SignalRCorsSettingsArgs() {}
 
-    private SignalRCorsSettingsArgs() {
-        this.allowedOrigins = Codegen.empty();
+    private SignalRCorsSettingsArgs(SignalRCorsSettingsArgs $) {
+        this.allowedOrigins = $.allowedOrigins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignalRCorsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedOrigins;
+        private SignalRCorsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignalRCorsSettingsArgs();
         }
 
         public Builder(SignalRCorsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOrigins = defaults.allowedOrigins;
+            $ = new SignalRCorsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
-            this.allowedOrigins = allowedOrigins;
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
-        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = Codegen.ofNullable(allowedOrigins);
-            return this;
+
+        public Builder allowedOrigins(List<String> allowedOrigins) {
+            return allowedOrigins(Output.of(allowedOrigins));
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
-        }        public SignalRCorsSettingsArgs build() {
-            return new SignalRCorsSettingsArgs(allowedOrigins);
+        }
+
+        public SignalRCorsSettingsArgs build() {
+            return $;
         }
     }
+
 }

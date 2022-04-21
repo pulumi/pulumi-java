@@ -17,7 +17,7 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetReplicationFabricArgs(
-        String fabricName,
-        String resourceGroupName,
-        String resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetReplicationFabricArgs() {}
 
-    private GetReplicationFabricArgs() {
-        this.fabricName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetReplicationFabricArgs(GetReplicationFabricArgs $) {
+        this.fabricName = $.fabricName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationFabricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetReplicationFabricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationFabricArgs();
         }
 
         public Builder(GetReplicationFabricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetReplicationFabricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetReplicationFabricArgs build() {
-            return new GetReplicationFabricArgs(fabricName, resourceGroupName, resourceName);
+        }
+
+        public GetReplicationFabricArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

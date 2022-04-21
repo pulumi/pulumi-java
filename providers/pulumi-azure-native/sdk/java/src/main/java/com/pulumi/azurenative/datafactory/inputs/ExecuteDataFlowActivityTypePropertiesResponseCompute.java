@@ -23,10 +23,10 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
      * 
      */
     @Import(name="computeType")
-      private final @Nullable Object computeType;
+    private @Nullable Object computeType;
 
     public Optional<Object> computeType() {
-        return this.computeType == null ? Optional.empty() : Optional.ofNullable(this.computeType);
+        return Optional.ofNullable(this.computeType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute extends 
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Object coreCount;
+    private @Nullable Object coreCount;
 
     public Optional<Object> coreCount() {
-        return this.coreCount == null ? Optional.empty() : Optional.ofNullable(this.coreCount);
+        return Optional.ofNullable(this.coreCount);
     }
 
-    public ExecuteDataFlowActivityTypePropertiesResponseCompute(
-        @Nullable Object computeType,
-        @Nullable Object coreCount) {
-        this.computeType = computeType;
-        this.coreCount = coreCount;
-    }
+    private ExecuteDataFlowActivityTypePropertiesResponseCompute() {}
 
-    private ExecuteDataFlowActivityTypePropertiesResponseCompute() {
-        this.computeType = null;
-        this.coreCount = null;
+    private ExecuteDataFlowActivityTypePropertiesResponseCompute(ExecuteDataFlowActivityTypePropertiesResponseCompute $) {
+        this.computeType = $.computeType;
+        this.coreCount = $.coreCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecuteDataFlowActivityTypePropertiesResponseCompute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object computeType;
-        private @Nullable Object coreCount;
+        private ExecuteDataFlowActivityTypePropertiesResponseCompute $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecuteDataFlowActivityTypePropertiesResponseCompute();
         }
 
         public Builder(ExecuteDataFlowActivityTypePropertiesResponseCompute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.coreCount = defaults.coreCount;
+            $ = new ExecuteDataFlowActivityTypePropertiesResponseCompute(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(@Nullable Object computeType) {
-            this.computeType = computeType;
+            $.computeType = computeType;
             return this;
         }
+
         public Builder coreCount(@Nullable Object coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
-        }        public ExecuteDataFlowActivityTypePropertiesResponseCompute build() {
-            return new ExecuteDataFlowActivityTypePropertiesResponseCompute(computeType, coreCount);
+        }
+
+        public ExecuteDataFlowActivityTypePropertiesResponseCompute build() {
+            return $;
         }
     }
+
 }

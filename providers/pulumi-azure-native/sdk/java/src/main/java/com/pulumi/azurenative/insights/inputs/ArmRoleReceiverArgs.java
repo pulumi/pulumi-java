@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,7 +37,7 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="roleId", required=true)
-      private final Output<String> roleId;
+    private Output<String> roleId;
 
     public Output<String> roleId() {
         return this.roleId;
@@ -47,76 +48,71 @@ public final class ArmRoleReceiverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Output<Boolean> useCommonAlertSchema;
+    private @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
+    public Optional<Output<Boolean>> useCommonAlertSchema() {
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    public ArmRoleReceiverArgs(
-        Output<String> name,
-        Output<String> roleId,
-        @Nullable Output<Boolean> useCommonAlertSchema) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
-    }
+    private ArmRoleReceiverArgs() {}
 
-    private ArmRoleReceiverArgs() {
-        this.name = Codegen.empty();
-        this.roleId = Codegen.empty();
-        this.useCommonAlertSchema = Codegen.empty();
+    private ArmRoleReceiverArgs(ArmRoleReceiverArgs $) {
+        this.name = $.name;
+        this.roleId = $.roleId;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArmRoleReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> roleId;
-        private @Nullable Output<Boolean> useCommonAlertSchema;
+        private ArmRoleReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArmRoleReceiverArgs();
         }
 
         public Builder(ArmRoleReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.roleId = defaults.roleId;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
+            $ = new ArmRoleReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder roleId(Output<String> roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
         }
+
         public Builder roleId(String roleId) {
-            this.roleId = Output.of(Objects.requireNonNull(roleId));
-            return this;
+            return roleId(Output.of(roleId));
         }
+
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
-            return this;
-        }        public ArmRoleReceiverArgs build() {
-            return new ArmRoleReceiverArgs(name, roleId, useCommonAlertSchema);
+
+        public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
+            return useCommonAlertSchema(Output.of(useCommonAlertSchema));
+        }
+
+        public ArmRoleReceiverArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg($.useCommonAlertSchema).def(false).getNullable();
+            return $;
         }
     }
+
 }

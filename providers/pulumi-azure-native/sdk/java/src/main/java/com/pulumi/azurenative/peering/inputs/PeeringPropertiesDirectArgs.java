@@ -9,10 +9,10 @@ import com.pulumi.azurenative.peering.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connections")
-      private final @Nullable Output<List<DirectConnectionArgs>> connections;
+    private @Nullable Output<List<DirectConnectionArgs>> connections;
 
-    public Output<List<DirectConnectionArgs>> connections() {
-        return this.connections == null ? Codegen.empty() : this.connections;
+    public Optional<Output<List<DirectConnectionArgs>>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="directPeeringType")
-      private final @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
+    private @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
 
-    public Output<Either<String,DirectPeeringType>> directPeeringType() {
-        return this.directPeeringType == null ? Codegen.empty() : this.directPeeringType;
+    public Optional<Output<Either<String,DirectPeeringType>>> directPeeringType() {
+        return Optional.ofNullable(this.directPeeringType);
     }
 
     /**
@@ -51,79 +51,72 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable Output<SubResourceArgs> peerAsn;
+    private @Nullable Output<SubResourceArgs> peerAsn;
 
-    public Output<SubResourceArgs> peerAsn() {
-        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
+    public Optional<Output<SubResourceArgs>> peerAsn() {
+        return Optional.ofNullable(this.peerAsn);
     }
 
-    public PeeringPropertiesDirectArgs(
-        @Nullable Output<List<DirectConnectionArgs>> connections,
-        @Nullable Output<Either<String,DirectPeeringType>> directPeeringType,
-        @Nullable Output<SubResourceArgs> peerAsn) {
-        this.connections = connections;
-        this.directPeeringType = directPeeringType;
-        this.peerAsn = peerAsn;
-    }
+    private PeeringPropertiesDirectArgs() {}
 
-    private PeeringPropertiesDirectArgs() {
-        this.connections = Codegen.empty();
-        this.directPeeringType = Codegen.empty();
-        this.peerAsn = Codegen.empty();
+    private PeeringPropertiesDirectArgs(PeeringPropertiesDirectArgs $) {
+        this.connections = $.connections;
+        this.directPeeringType = $.directPeeringType;
+        this.peerAsn = $.peerAsn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringPropertiesDirectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DirectConnectionArgs>> connections;
-        private @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
-        private @Nullable Output<SubResourceArgs> peerAsn;
+        private PeeringPropertiesDirectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringPropertiesDirectArgs();
         }
 
         public Builder(PeeringPropertiesDirectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connections = defaults.connections;
-    	      this.directPeeringType = defaults.directPeeringType;
-    	      this.peerAsn = defaults.peerAsn;
+            $ = new PeeringPropertiesDirectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connections(@Nullable Output<List<DirectConnectionArgs>> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
-        public Builder connections(@Nullable List<DirectConnectionArgs> connections) {
-            this.connections = Codegen.ofNullable(connections);
-            return this;
+
+        public Builder connections(List<DirectConnectionArgs> connections) {
+            return connections(Output.of(connections));
         }
+
         public Builder connections(DirectConnectionArgs... connections) {
             return connections(List.of(connections));
         }
+
         public Builder directPeeringType(@Nullable Output<Either<String,DirectPeeringType>> directPeeringType) {
-            this.directPeeringType = directPeeringType;
+            $.directPeeringType = directPeeringType;
             return this;
         }
-        public Builder directPeeringType(@Nullable Either<String,DirectPeeringType> directPeeringType) {
-            this.directPeeringType = Codegen.ofNullable(directPeeringType);
-            return this;
+
+        public Builder directPeeringType(Either<String,DirectPeeringType> directPeeringType) {
+            return directPeeringType(Output.of(directPeeringType));
         }
+
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
         }
-        public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
-            this.peerAsn = Codegen.ofNullable(peerAsn);
-            return this;
-        }        public PeeringPropertiesDirectArgs build() {
-            return new PeeringPropertiesDirectArgs(connections, directPeeringType, peerAsn);
+
+        public Builder peerAsn(SubResourceArgs peerAsn) {
+            return peerAsn(Output.of(peerAsn));
+        }
+
+        public PeeringPropertiesDirectArgs build() {
+            return $;
         }
     }
+
 }

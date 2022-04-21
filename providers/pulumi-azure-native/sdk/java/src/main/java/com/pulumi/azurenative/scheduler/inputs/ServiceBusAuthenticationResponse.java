@@ -19,10 +19,10 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sasKey")
-      private final @Nullable String sasKey;
+    private @Nullable String sasKey;
 
     public Optional<String> sasKey() {
-        return this.sasKey == null ? Optional.empty() : Optional.ofNullable(this.sasKey);
+        return Optional.ofNullable(this.sasKey);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sasKeyName")
-      private final @Nullable String sasKeyName;
+    private @Nullable String sasKeyName;
 
     public Optional<String> sasKeyName() {
-        return this.sasKeyName == null ? Optional.empty() : Optional.ofNullable(this.sasKeyName);
+        return Optional.ofNullable(this.sasKeyName);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class ServiceBusAuthenticationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceBusAuthenticationResponse(
-        @Nullable String sasKey,
-        @Nullable String sasKeyName,
-        @Nullable String type) {
-        this.sasKey = sasKey;
-        this.sasKeyName = sasKeyName;
-        this.type = type;
-    }
+    private ServiceBusAuthenticationResponse() {}
 
-    private ServiceBusAuthenticationResponse() {
-        this.sasKey = null;
-        this.sasKeyName = null;
-        this.type = null;
+    private ServiceBusAuthenticationResponse(ServiceBusAuthenticationResponse $) {
+        this.sasKey = $.sasKey;
+        this.sasKeyName = $.sasKeyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sasKey;
-        private @Nullable String sasKeyName;
-        private @Nullable String type;
+        private ServiceBusAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusAuthenticationResponse();
         }
 
         public Builder(ServiceBusAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasKey = defaults.sasKey;
-    	      this.sasKeyName = defaults.sasKeyName;
-    	      this.type = defaults.type;
+            $ = new ServiceBusAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sasKey(@Nullable String sasKey) {
-            this.sasKey = sasKey;
+            $.sasKey = sasKey;
             return this;
         }
+
         public Builder sasKeyName(@Nullable String sasKeyName) {
-            this.sasKeyName = sasKeyName;
+            $.sasKeyName = sasKeyName;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ServiceBusAuthenticationResponse build() {
-            return new ServiceBusAuthenticationResponse(sasKey, sasKeyName, type);
+        }
+
+        public ServiceBusAuthenticationResponse build() {
+            return $;
         }
     }
+
 }

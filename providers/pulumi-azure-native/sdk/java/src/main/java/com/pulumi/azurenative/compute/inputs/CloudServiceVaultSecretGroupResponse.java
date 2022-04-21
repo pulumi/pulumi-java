@@ -25,10 +25,10 @@ public final class CloudServiceVaultSecretGroupResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceVault")
-      private final @Nullable SubResourceResponse sourceVault;
+    private @Nullable SubResourceResponse sourceVault;
 
     public Optional<SubResourceResponse> sourceVault() {
-        return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
+        return Optional.ofNullable(this.sourceVault);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class CloudServiceVaultSecretGroupResponse extends com.pulumi.resou
      * 
      */
     @Import(name="vaultCertificates")
-      private final @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
+    private @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
 
-    public List<CloudServiceVaultCertificateResponse> vaultCertificates() {
-        return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
+    public Optional<List<CloudServiceVaultCertificateResponse>> vaultCertificates() {
+        return Optional.ofNullable(this.vaultCertificates);
     }
 
-    public CloudServiceVaultSecretGroupResponse(
-        @Nullable SubResourceResponse sourceVault,
-        @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates) {
-        this.sourceVault = sourceVault;
-        this.vaultCertificates = vaultCertificates;
-    }
+    private CloudServiceVaultSecretGroupResponse() {}
 
-    private CloudServiceVaultSecretGroupResponse() {
-        this.sourceVault = null;
-        this.vaultCertificates = List.of();
+    private CloudServiceVaultSecretGroupResponse(CloudServiceVaultSecretGroupResponse $) {
+        this.sourceVault = $.sourceVault;
+        this.vaultCertificates = $.vaultCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceVaultSecretGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse sourceVault;
-        private @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
+        private CloudServiceVaultSecretGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceVaultSecretGroupResponse();
         }
 
         public Builder(CloudServiceVaultSecretGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceVault = defaults.sourceVault;
-    	      this.vaultCertificates = defaults.vaultCertificates;
+            $ = new CloudServiceVaultSecretGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
-            this.sourceVault = sourceVault;
+            $.sourceVault = sourceVault;
             return this;
         }
+
         public Builder vaultCertificates(@Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates) {
-            this.vaultCertificates = vaultCertificates;
+            $.vaultCertificates = vaultCertificates;
             return this;
         }
+
         public Builder vaultCertificates(CloudServiceVaultCertificateResponse... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
-        }        public CloudServiceVaultSecretGroupResponse build() {
-            return new CloudServiceVaultSecretGroupResponse(sourceVault, vaultCertificates);
+        }
+
+        public CloudServiceVaultSecretGroupResponse build() {
+            return $;
         }
     }
+
 }

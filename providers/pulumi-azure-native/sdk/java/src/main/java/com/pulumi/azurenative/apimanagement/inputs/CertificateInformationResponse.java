@@ -21,7 +21,7 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="expiry", required=true)
-      private final String expiry;
+    private String expiry;
 
     public String expiry() {
         return this.expiry;
@@ -32,7 +32,7 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
@@ -43,64 +43,59 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
     }
 
-    public CertificateInformationResponse(
-        String expiry,
-        String subject,
-        String thumbprint) {
-        this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-    }
+    private CertificateInformationResponse() {}
 
-    private CertificateInformationResponse() {
-        this.expiry = null;
-        this.subject = null;
-        this.thumbprint = null;
+    private CertificateInformationResponse(CertificateInformationResponse $) {
+        this.expiry = $.expiry;
+        this.subject = $.subject;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expiry;
-        private String subject;
-        private String thumbprint;
+        private CertificateInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateInformationResponse();
         }
 
         public Builder(CertificateInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiry = defaults.expiry;
-    	      this.subject = defaults.subject;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new CertificateInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expiry(String expiry) {
-            this.expiry = Objects.requireNonNull(expiry);
+            $.expiry = expiry;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
-        }        public CertificateInformationResponse build() {
-            return new CertificateInformationResponse(expiry, subject, thumbprint);
+        }
+
+        public CertificateInformationResponse build() {
+            $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            return $;
         }
     }
+
 }

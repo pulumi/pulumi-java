@@ -25,10 +25,10 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="armTemplateId")
-      private final @Nullable String armTemplateId;
+    private @Nullable String armTemplateId;
 
     public Optional<String> armTemplateId() {
-        return this.armTemplateId == null ? Optional.empty() : Optional.ofNullable(this.armTemplateId);
+        return Optional.ofNullable(this.armTemplateId);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
+    private @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
 
-    public List<ArmTemplateParameterPropertiesResponse> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ArmTemplateParameterPropertiesResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public EnvironmentDeploymentPropertiesResponse(
-        @Nullable String armTemplateId,
-        @Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
-        this.armTemplateId = armTemplateId;
-        this.parameters = parameters;
-    }
+    private EnvironmentDeploymentPropertiesResponse() {}
 
-    private EnvironmentDeploymentPropertiesResponse() {
-        this.armTemplateId = null;
-        this.parameters = List.of();
+    private EnvironmentDeploymentPropertiesResponse(EnvironmentDeploymentPropertiesResponse $) {
+        this.armTemplateId = $.armTemplateId;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentDeploymentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String armTemplateId;
-        private @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
+        private EnvironmentDeploymentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentDeploymentPropertiesResponse();
         }
 
         public Builder(EnvironmentDeploymentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.armTemplateId = defaults.armTemplateId;
-    	      this.parameters = defaults.parameters;
+            $ = new EnvironmentDeploymentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder armTemplateId(@Nullable String armTemplateId) {
-            this.armTemplateId = armTemplateId;
+            $.armTemplateId = armTemplateId;
             return this;
         }
+
         public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ArmTemplateParameterPropertiesResponse... parameters) {
             return parameters(List.of(parameters));
-        }        public EnvironmentDeploymentPropertiesResponse build() {
-            return new EnvironmentDeploymentPropertiesResponse(armTemplateId, parameters);
+        }
+
+        public EnvironmentDeploymentPropertiesResponse build() {
+            return $;
         }
     }
+
 }

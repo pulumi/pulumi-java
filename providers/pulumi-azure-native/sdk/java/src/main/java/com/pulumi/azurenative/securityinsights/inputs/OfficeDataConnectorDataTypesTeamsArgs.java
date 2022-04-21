@@ -7,9 +7,9 @@ import com.pulumi.azurenative.securityinsights.enums.DataTypeState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,DataTypeState>> state;
+    private @Nullable Output<Either<String,DataTypeState>> state;
 
-    public Output<Either<String,DataTypeState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,DataTypeState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public OfficeDataConnectorDataTypesTeamsArgs(@Nullable Output<Either<String,DataTypeState>> state) {
-        this.state = state;
-    }
+    private OfficeDataConnectorDataTypesTeamsArgs() {}
 
-    private OfficeDataConnectorDataTypesTeamsArgs() {
-        this.state = Codegen.empty();
+    private OfficeDataConnectorDataTypesTeamsArgs(OfficeDataConnectorDataTypesTeamsArgs $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OfficeDataConnectorDataTypesTeamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DataTypeState>> state;
+        private OfficeDataConnectorDataTypesTeamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OfficeDataConnectorDataTypesTeamsArgs();
         }
 
         public Builder(OfficeDataConnectorDataTypesTeamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new OfficeDataConnectorDataTypesTeamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable Output<Either<String,DataTypeState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,DataTypeState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public OfficeDataConnectorDataTypesTeamsArgs build() {
-            return new OfficeDataConnectorDataTypesTeamsArgs(state);
+
+        public Builder state(Either<String,DataTypeState> state) {
+            return state(Output.of(state));
+        }
+
+        public OfficeDataConnectorDataTypesTeamsArgs build() {
+            return $;
         }
     }
+
 }

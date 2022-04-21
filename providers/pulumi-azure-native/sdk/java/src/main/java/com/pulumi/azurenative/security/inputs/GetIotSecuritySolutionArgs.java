@@ -17,7 +17,7 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="solutionName", required=true)
-      private final String solutionName;
+    private String solutionName;
 
     public String solutionName() {
         return this.solutionName;
     }
 
-    public GetIotSecuritySolutionArgs(
-        String resourceGroupName,
-        String solutionName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.solutionName = Objects.requireNonNull(solutionName, "expected parameter 'solutionName' to be non-null");
-    }
+    private GetIotSecuritySolutionArgs() {}
 
-    private GetIotSecuritySolutionArgs() {
-        this.resourceGroupName = null;
-        this.solutionName = null;
+    private GetIotSecuritySolutionArgs(GetIotSecuritySolutionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.solutionName = $.solutionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIotSecuritySolutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String solutionName;
+        private GetIotSecuritySolutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIotSecuritySolutionArgs();
         }
 
         public Builder(GetIotSecuritySolutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.solutionName = defaults.solutionName;
+            $ = new GetIotSecuritySolutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder solutionName(String solutionName) {
-            this.solutionName = Objects.requireNonNull(solutionName);
+            $.solutionName = solutionName;
             return this;
-        }        public GetIotSecuritySolutionArgs build() {
-            return new GetIotSecuritySolutionArgs(resourceGroupName, solutionName);
+        }
+
+        public GetIotSecuritySolutionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.solutionName = Objects.requireNonNull($.solutionName, "expected parameter 'solutionName' to be non-null");
+            return $;
         }
     }
+
 }

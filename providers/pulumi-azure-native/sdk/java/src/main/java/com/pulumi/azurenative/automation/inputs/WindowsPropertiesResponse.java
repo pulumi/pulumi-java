@@ -24,10 +24,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="excludedKbNumbers")
-      private final @Nullable List<String> excludedKbNumbers;
+    private @Nullable List<String> excludedKbNumbers;
 
-    public List<String> excludedKbNumbers() {
-        return this.excludedKbNumbers == null ? List.of() : this.excludedKbNumbers;
+    public Optional<List<String>> excludedKbNumbers() {
+        return Optional.ofNullable(this.excludedKbNumbers);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="includedKbNumbers")
-      private final @Nullable List<String> includedKbNumbers;
+    private @Nullable List<String> includedKbNumbers;
 
-    public List<String> includedKbNumbers() {
-        return this.includedKbNumbers == null ? List.of() : this.includedKbNumbers;
+    public Optional<List<String>> includedKbNumbers() {
+        return Optional.ofNullable(this.includedKbNumbers);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="includedUpdateClassifications")
-      private final @Nullable String includedUpdateClassifications;
+    private @Nullable String includedUpdateClassifications;
 
     public Optional<String> includedUpdateClassifications() {
-        return this.includedUpdateClassifications == null ? Optional.empty() : Optional.ofNullable(this.includedUpdateClassifications);
+        return Optional.ofNullable(this.includedUpdateClassifications);
     }
 
     /**
@@ -57,79 +57,70 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rebootSetting")
-      private final @Nullable String rebootSetting;
+    private @Nullable String rebootSetting;
 
     public Optional<String> rebootSetting() {
-        return this.rebootSetting == null ? Optional.empty() : Optional.ofNullable(this.rebootSetting);
+        return Optional.ofNullable(this.rebootSetting);
     }
 
-    public WindowsPropertiesResponse(
-        @Nullable List<String> excludedKbNumbers,
-        @Nullable List<String> includedKbNumbers,
-        @Nullable String includedUpdateClassifications,
-        @Nullable String rebootSetting) {
-        this.excludedKbNumbers = excludedKbNumbers;
-        this.includedKbNumbers = includedKbNumbers;
-        this.includedUpdateClassifications = includedUpdateClassifications;
-        this.rebootSetting = rebootSetting;
-    }
+    private WindowsPropertiesResponse() {}
 
-    private WindowsPropertiesResponse() {
-        this.excludedKbNumbers = List.of();
-        this.includedKbNumbers = List.of();
-        this.includedUpdateClassifications = null;
-        this.rebootSetting = null;
+    private WindowsPropertiesResponse(WindowsPropertiesResponse $) {
+        this.excludedKbNumbers = $.excludedKbNumbers;
+        this.includedKbNumbers = $.includedKbNumbers;
+        this.includedUpdateClassifications = $.includedUpdateClassifications;
+        this.rebootSetting = $.rebootSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> excludedKbNumbers;
-        private @Nullable List<String> includedKbNumbers;
-        private @Nullable String includedUpdateClassifications;
-        private @Nullable String rebootSetting;
+        private WindowsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsPropertiesResponse();
         }
 
         public Builder(WindowsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedKbNumbers = defaults.excludedKbNumbers;
-    	      this.includedKbNumbers = defaults.includedKbNumbers;
-    	      this.includedUpdateClassifications = defaults.includedUpdateClassifications;
-    	      this.rebootSetting = defaults.rebootSetting;
+            $ = new WindowsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
-            this.excludedKbNumbers = excludedKbNumbers;
+            $.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
+
         public Builder excludedKbNumbers(String... excludedKbNumbers) {
             return excludedKbNumbers(List.of(excludedKbNumbers));
         }
+
         public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
-            this.includedKbNumbers = includedKbNumbers;
+            $.includedKbNumbers = includedKbNumbers;
             return this;
         }
+
         public Builder includedKbNumbers(String... includedKbNumbers) {
             return includedKbNumbers(List.of(includedKbNumbers));
         }
+
         public Builder includedUpdateClassifications(@Nullable String includedUpdateClassifications) {
-            this.includedUpdateClassifications = includedUpdateClassifications;
+            $.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
+
         public Builder rebootSetting(@Nullable String rebootSetting) {
-            this.rebootSetting = rebootSetting;
+            $.rebootSetting = rebootSetting;
             return this;
-        }        public WindowsPropertiesResponse build() {
-            return new WindowsPropertiesResponse(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);
+        }
+
+        public WindowsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

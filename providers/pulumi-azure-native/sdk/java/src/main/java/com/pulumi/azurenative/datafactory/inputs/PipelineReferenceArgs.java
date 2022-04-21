@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="referenceName", required=true)
-      private final Output<String> referenceName;
+    private Output<String> referenceName;
 
     public Output<String> referenceName() {
         return this.referenceName;
@@ -46,76 +46,70 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PipelineReferenceArgs(
-        @Nullable Output<String> name,
-        Output<String> referenceName,
-        Output<String> type) {
-        this.name = name;
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PipelineReferenceArgs() {}
 
-    private PipelineReferenceArgs() {
-        this.name = Codegen.empty();
-        this.referenceName = Codegen.empty();
-        this.type = Codegen.empty();
+    private PipelineReferenceArgs(PipelineReferenceArgs $) {
+        this.name = $.name;
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> referenceName;
-        private Output<String> type;
+        private PipelineReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineReferenceArgs();
         }
 
         public Builder(PipelineReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new PipelineReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder referenceName(Output<String> referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder referenceName(String referenceName) {
-            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
-            return this;
+            return referenceName(Output.of(referenceName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PipelineReferenceArgs build() {
-            return new PipelineReferenceArgs(name, referenceName, type);
+            return type(Output.of(type));
+        }
+
+        public PipelineReferenceArgs build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.azurenative.securityinsights.inputs;
 import com.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AlertsDataTypeOfDataConnectorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="alerts")
-      private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
+    private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
-    public Output<DataConnectorDataTypeCommonArgs> alerts() {
-        return this.alerts == null ? Codegen.empty() : this.alerts;
+    public Optional<Output<DataConnectorDataTypeCommonArgs>> alerts() {
+        return Optional.ofNullable(this.alerts);
     }
 
-    public AlertsDataTypeOfDataConnectorArgs(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
-        this.alerts = alerts;
-    }
+    private AlertsDataTypeOfDataConnectorArgs() {}
 
-    private AlertsDataTypeOfDataConnectorArgs() {
-        this.alerts = Codegen.empty();
+    private AlertsDataTypeOfDataConnectorArgs(AlertsDataTypeOfDataConnectorArgs $) {
+        this.alerts = $.alerts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertsDataTypeOfDataConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
+        private AlertsDataTypeOfDataConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertsDataTypeOfDataConnectorArgs();
         }
 
         public Builder(AlertsDataTypeOfDataConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alerts = defaults.alerts;
+            $ = new AlertsDataTypeOfDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alerts(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
-            this.alerts = alerts;
+            $.alerts = alerts;
             return this;
         }
-        public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
-            this.alerts = Codegen.ofNullable(alerts);
-            return this;
-        }        public AlertsDataTypeOfDataConnectorArgs build() {
-            return new AlertsDataTypeOfDataConnectorArgs(alerts);
+
+        public Builder alerts(DataConnectorDataTypeCommonArgs alerts) {
+            return alerts(Output.of(alerts));
+        }
+
+        public AlertsDataTypeOfDataConnectorArgs build() {
+            return $;
         }
     }
+
 }

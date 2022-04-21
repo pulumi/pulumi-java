@@ -24,7 +24,7 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -35,7 +35,7 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="recallErrors", required=true)
-      private final List<ServerEndpointRecallErrorResponse> recallErrors;
+    private List<ServerEndpointRecallErrorResponse> recallErrors;
 
     public List<ServerEndpointRecallErrorResponse> recallErrors() {
         return this.recallErrors;
@@ -46,67 +46,63 @@ public final class ServerEndpointRecallStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="totalRecallErrorsCount", required=true)
-      private final Double totalRecallErrorsCount;
+    private Double totalRecallErrorsCount;
 
     public Double totalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }
 
-    public ServerEndpointRecallStatusResponse(
-        String lastUpdatedTimestamp,
-        List<ServerEndpointRecallErrorResponse> recallErrors,
-        Double totalRecallErrorsCount) {
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-        this.recallErrors = Objects.requireNonNull(recallErrors, "expected parameter 'recallErrors' to be non-null");
-        this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount, "expected parameter 'totalRecallErrorsCount' to be non-null");
-    }
+    private ServerEndpointRecallStatusResponse() {}
 
-    private ServerEndpointRecallStatusResponse() {
-        this.lastUpdatedTimestamp = null;
-        this.recallErrors = List.of();
-        this.totalRecallErrorsCount = null;
+    private ServerEndpointRecallStatusResponse(ServerEndpointRecallStatusResponse $) {
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
+        this.recallErrors = $.recallErrors;
+        this.totalRecallErrorsCount = $.totalRecallErrorsCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointRecallStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastUpdatedTimestamp;
-        private List<ServerEndpointRecallErrorResponse> recallErrors;
-        private Double totalRecallErrorsCount;
+        private ServerEndpointRecallStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointRecallStatusResponse();
         }
 
         public Builder(ServerEndpointRecallStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
-    	      this.recallErrors = defaults.recallErrors;
-    	      this.totalRecallErrorsCount = defaults.totalRecallErrorsCount;
+            $ = new ServerEndpointRecallStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
+
         public Builder recallErrors(List<ServerEndpointRecallErrorResponse> recallErrors) {
-            this.recallErrors = Objects.requireNonNull(recallErrors);
+            $.recallErrors = recallErrors;
             return this;
         }
+
         public Builder recallErrors(ServerEndpointRecallErrorResponse... recallErrors) {
             return recallErrors(List.of(recallErrors));
         }
+
         public Builder totalRecallErrorsCount(Double totalRecallErrorsCount) {
-            this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
+            $.totalRecallErrorsCount = totalRecallErrorsCount;
             return this;
-        }        public ServerEndpointRecallStatusResponse build() {
-            return new ServerEndpointRecallStatusResponse(lastUpdatedTimestamp, recallErrors, totalRecallErrorsCount);
+        }
+
+        public ServerEndpointRecallStatusResponse build() {
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            $.recallErrors = Objects.requireNonNull($.recallErrors, "expected parameter 'recallErrors' to be non-null");
+            $.totalRecallErrorsCount = Objects.requireNonNull($.totalRecallErrorsCount, "expected parameter 'totalRecallErrorsCount' to be non-null");
+            return $;
         }
     }
+
 }

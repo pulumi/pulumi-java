@@ -26,10 +26,10 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="streams")
-      private final @Nullable List<String> streams;
+    private @Nullable List<String> streams;
 
-    public List<String> streams() {
-        return this.streams == null ? List.of() : this.streams;
+    public Optional<List<String>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
     /**
@@ -49,70 +49,64 @@ public final class WindowsEventLogDataSourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="xPathQueries")
-      private final @Nullable List<String> xPathQueries;
+    private @Nullable List<String> xPathQueries;
 
-    public List<String> xPathQueries() {
-        return this.xPathQueries == null ? List.of() : this.xPathQueries;
+    public Optional<List<String>> xPathQueries() {
+        return Optional.ofNullable(this.xPathQueries);
     }
 
-    public WindowsEventLogDataSourceResponse(
-        @Nullable String name,
-        @Nullable List<String> streams,
-        @Nullable List<String> xPathQueries) {
-        this.name = name;
-        this.streams = streams;
-        this.xPathQueries = xPathQueries;
-    }
+    private WindowsEventLogDataSourceResponse() {}
 
-    private WindowsEventLogDataSourceResponse() {
-        this.name = null;
-        this.streams = List.of();
-        this.xPathQueries = List.of();
+    private WindowsEventLogDataSourceResponse(WindowsEventLogDataSourceResponse $) {
+        this.name = $.name;
+        this.streams = $.streams;
+        this.xPathQueries = $.xPathQueries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsEventLogDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable List<String> streams;
-        private @Nullable List<String> xPathQueries;
+        private WindowsEventLogDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsEventLogDataSourceResponse();
         }
 
         public Builder(WindowsEventLogDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.streams = defaults.streams;
-    	      this.xPathQueries = defaults.xPathQueries;
+            $ = new WindowsEventLogDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder streams(@Nullable List<String> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
+
         public Builder streams(String... streams) {
             return streams(List.of(streams));
         }
+
         public Builder xPathQueries(@Nullable List<String> xPathQueries) {
-            this.xPathQueries = xPathQueries;
+            $.xPathQueries = xPathQueries;
             return this;
         }
+
         public Builder xPathQueries(String... xPathQueries) {
             return xPathQueries(List.of(xPathQueries));
-        }        public WindowsEventLogDataSourceResponse build() {
-            return new WindowsEventLogDataSourceResponse(name, streams, xPathQueries);
+        }
+
+        public WindowsEventLogDataSourceResponse build() {
+            return $;
         }
     }
+
 }

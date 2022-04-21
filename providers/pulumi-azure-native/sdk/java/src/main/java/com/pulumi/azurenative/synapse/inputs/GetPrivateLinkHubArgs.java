@@ -17,7 +17,7 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privateLinkHubName", required=true)
-      private final String privateLinkHubName;
+    private String privateLinkHubName;
 
     public String privateLinkHubName() {
         return this.privateLinkHubName;
@@ -28,55 +28,52 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateLinkHubArgs(
-        String privateLinkHubName,
-        String resourceGroupName) {
-        this.privateLinkHubName = Objects.requireNonNull(privateLinkHubName, "expected parameter 'privateLinkHubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateLinkHubArgs() {}
 
-    private GetPrivateLinkHubArgs() {
-        this.privateLinkHubName = null;
-        this.resourceGroupName = null;
+    private GetPrivateLinkHubArgs(GetPrivateLinkHubArgs $) {
+        this.privateLinkHubName = $.privateLinkHubName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateLinkHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateLinkHubName;
-        private String resourceGroupName;
+        private GetPrivateLinkHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateLinkHubArgs();
         }
 
         public Builder(GetPrivateLinkHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateLinkHubName = defaults.privateLinkHubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateLinkHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateLinkHubName(String privateLinkHubName) {
-            this.privateLinkHubName = Objects.requireNonNull(privateLinkHubName);
+            $.privateLinkHubName = privateLinkHubName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateLinkHubArgs build() {
-            return new GetPrivateLinkHubArgs(privateLinkHubName, resourceGroupName);
+        }
+
+        public GetPrivateLinkHubArgs build() {
+            $.privateLinkHubName = Objects.requireNonNull($.privateLinkHubName, "expected parameter 'privateLinkHubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

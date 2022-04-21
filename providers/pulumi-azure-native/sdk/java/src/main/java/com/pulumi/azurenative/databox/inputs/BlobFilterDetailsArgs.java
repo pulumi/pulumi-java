@@ -5,10 +5,10 @@ package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BlobFilterDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="blobPathList")
-      private final @Nullable Output<List<String>> blobPathList;
+    private @Nullable Output<List<String>> blobPathList;
 
-    public Output<List<String>> blobPathList() {
-        return this.blobPathList == null ? Codegen.empty() : this.blobPathList;
+    public Optional<Output<List<String>>> blobPathList() {
+        return Optional.ofNullable(this.blobPathList);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BlobFilterDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="blobPrefixList")
-      private final @Nullable Output<List<String>> blobPrefixList;
+    private @Nullable Output<List<String>> blobPrefixList;
 
-    public Output<List<String>> blobPrefixList() {
-        return this.blobPrefixList == null ? Codegen.empty() : this.blobPrefixList;
+    public Optional<Output<List<String>>> blobPrefixList() {
+        return Optional.ofNullable(this.blobPrefixList);
     }
 
     /**
@@ -47,85 +47,80 @@ public final class BlobFilterDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="containerList")
-      private final @Nullable Output<List<String>> containerList;
+    private @Nullable Output<List<String>> containerList;
 
-    public Output<List<String>> containerList() {
-        return this.containerList == null ? Codegen.empty() : this.containerList;
+    public Optional<Output<List<String>>> containerList() {
+        return Optional.ofNullable(this.containerList);
     }
 
-    public BlobFilterDetailsArgs(
-        @Nullable Output<List<String>> blobPathList,
-        @Nullable Output<List<String>> blobPrefixList,
-        @Nullable Output<List<String>> containerList) {
-        this.blobPathList = blobPathList;
-        this.blobPrefixList = blobPrefixList;
-        this.containerList = containerList;
-    }
+    private BlobFilterDetailsArgs() {}
 
-    private BlobFilterDetailsArgs() {
-        this.blobPathList = Codegen.empty();
-        this.blobPrefixList = Codegen.empty();
-        this.containerList = Codegen.empty();
+    private BlobFilterDetailsArgs(BlobFilterDetailsArgs $) {
+        this.blobPathList = $.blobPathList;
+        this.blobPrefixList = $.blobPrefixList;
+        this.containerList = $.containerList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobFilterDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> blobPathList;
-        private @Nullable Output<List<String>> blobPrefixList;
-        private @Nullable Output<List<String>> containerList;
+        private BlobFilterDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobFilterDetailsArgs();
         }
 
         public Builder(BlobFilterDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobPathList = defaults.blobPathList;
-    	      this.blobPrefixList = defaults.blobPrefixList;
-    	      this.containerList = defaults.containerList;
+            $ = new BlobFilterDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobPathList(@Nullable Output<List<String>> blobPathList) {
-            this.blobPathList = blobPathList;
+            $.blobPathList = blobPathList;
             return this;
         }
-        public Builder blobPathList(@Nullable List<String> blobPathList) {
-            this.blobPathList = Codegen.ofNullable(blobPathList);
-            return this;
+
+        public Builder blobPathList(List<String> blobPathList) {
+            return blobPathList(Output.of(blobPathList));
         }
+
         public Builder blobPathList(String... blobPathList) {
             return blobPathList(List.of(blobPathList));
         }
+
         public Builder blobPrefixList(@Nullable Output<List<String>> blobPrefixList) {
-            this.blobPrefixList = blobPrefixList;
+            $.blobPrefixList = blobPrefixList;
             return this;
         }
-        public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
-            this.blobPrefixList = Codegen.ofNullable(blobPrefixList);
-            return this;
+
+        public Builder blobPrefixList(List<String> blobPrefixList) {
+            return blobPrefixList(Output.of(blobPrefixList));
         }
+
         public Builder blobPrefixList(String... blobPrefixList) {
             return blobPrefixList(List.of(blobPrefixList));
         }
+
         public Builder containerList(@Nullable Output<List<String>> containerList) {
-            this.containerList = containerList;
+            $.containerList = containerList;
             return this;
         }
-        public Builder containerList(@Nullable List<String> containerList) {
-            this.containerList = Codegen.ofNullable(containerList);
-            return this;
+
+        public Builder containerList(List<String> containerList) {
+            return containerList(Output.of(containerList));
         }
+
         public Builder containerList(String... containerList) {
             return containerList(List.of(containerList));
-        }        public BlobFilterDetailsArgs build() {
-            return new BlobFilterDetailsArgs(blobPathList, blobPrefixList, containerList);
+        }
+
+        public BlobFilterDetailsArgs build() {
+            return $;
         }
     }
+
 }

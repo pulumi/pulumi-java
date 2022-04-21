@@ -24,7 +24,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
      * 
      */
     @Import(name="fabricLocation", required=true)
-      private final String fabricLocation;
+    private String fabricLocation;
 
     public String fabricLocation() {
         return this.fabricLocation;
@@ -36,7 +36,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -47,10 +47,10 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
      * 
      */
     @Import(name="runbookId")
-      private final @Nullable String runbookId;
+    private @Nullable String runbookId;
 
     public Optional<String> runbookId() {
-        return this.runbookId == null ? Optional.empty() : Optional.ofNullable(this.runbookId);
+        return Optional.ofNullable(this.runbookId);
     }
 
     /**
@@ -58,73 +58,64 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends co
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public RecoveryPlanAutomationRunbookActionDetailsResponse(
-        String fabricLocation,
-        String instanceType,
-        @Nullable String runbookId,
-        @Nullable String timeout) {
-        this.fabricLocation = Objects.requireNonNull(fabricLocation, "expected parameter 'fabricLocation' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.runbookId = runbookId;
-        this.timeout = timeout;
-    }
+    private RecoveryPlanAutomationRunbookActionDetailsResponse() {}
 
-    private RecoveryPlanAutomationRunbookActionDetailsResponse() {
-        this.fabricLocation = null;
-        this.instanceType = null;
-        this.runbookId = null;
-        this.timeout = null;
+    private RecoveryPlanAutomationRunbookActionDetailsResponse(RecoveryPlanAutomationRunbookActionDetailsResponse $) {
+        this.fabricLocation = $.fabricLocation;
+        this.instanceType = $.instanceType;
+        this.runbookId = $.runbookId;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanAutomationRunbookActionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricLocation;
-        private String instanceType;
-        private @Nullable String runbookId;
-        private @Nullable String timeout;
+        private RecoveryPlanAutomationRunbookActionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanAutomationRunbookActionDetailsResponse();
         }
 
         public Builder(RecoveryPlanAutomationRunbookActionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricLocation = defaults.fabricLocation;
-    	      this.instanceType = defaults.instanceType;
-    	      this.runbookId = defaults.runbookId;
-    	      this.timeout = defaults.timeout;
+            $ = new RecoveryPlanAutomationRunbookActionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricLocation(String fabricLocation) {
-            this.fabricLocation = Objects.requireNonNull(fabricLocation);
+            $.fabricLocation = fabricLocation;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder runbookId(@Nullable String runbookId) {
-            this.runbookId = runbookId;
+            $.runbookId = runbookId;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public RecoveryPlanAutomationRunbookActionDetailsResponse build() {
-            return new RecoveryPlanAutomationRunbookActionDetailsResponse(fabricLocation, instanceType, runbookId, timeout);
+        }
+
+        public RecoveryPlanAutomationRunbookActionDetailsResponse build() {
+            $.fabricLocation = Objects.requireNonNull($.fabricLocation, "expected parameter 'fabricLocation' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

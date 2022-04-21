@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
      * 
      */
     @Import(name="managementGroupId", required=true)
-      private final String managementGroupId;
+    private String managementGroupId;
 
     public String managementGroupId() {
         return this.managementGroupId;
@@ -31,7 +31,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
      * 
      */
     @Import(name="managementGroupsNamespace", required=true)
-      private final String managementGroupsNamespace;
+    private String managementGroupsNamespace;
 
     public String managementGroupsNamespace() {
         return this.managementGroupsNamespace;
@@ -42,7 +42,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
      * 
      */
     @Import(name="remediationName", required=true)
-      private final String remediationName;
+    private String remediationName;
 
     public String remediationName() {
         return this.remediationName;
@@ -53,73 +53,65 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends com.p
      * 
      */
     @Import(name="top")
-      private final @Nullable Integer top;
+    private @Nullable Integer top;
 
     public Optional<Integer> top() {
-        return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
+        return Optional.ofNullable(this.top);
     }
 
-    public ListRemediationDeploymentsAtManagementGroupArgs(
-        String managementGroupId,
-        String managementGroupsNamespace,
-        String remediationName,
-        @Nullable Integer top) {
-        this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
-        this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace, "expected parameter 'managementGroupsNamespace' to be non-null");
-        this.remediationName = Objects.requireNonNull(remediationName, "expected parameter 'remediationName' to be non-null");
-        this.top = top;
-    }
+    private ListRemediationDeploymentsAtManagementGroupArgs() {}
 
-    private ListRemediationDeploymentsAtManagementGroupArgs() {
-        this.managementGroupId = null;
-        this.managementGroupsNamespace = null;
-        this.remediationName = null;
-        this.top = null;
+    private ListRemediationDeploymentsAtManagementGroupArgs(ListRemediationDeploymentsAtManagementGroupArgs $) {
+        this.managementGroupId = $.managementGroupId;
+        this.managementGroupsNamespace = $.managementGroupsNamespace;
+        this.remediationName = $.remediationName;
+        this.top = $.top;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListRemediationDeploymentsAtManagementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementGroupId;
-        private String managementGroupsNamespace;
-        private String remediationName;
-        private @Nullable Integer top;
+        private ListRemediationDeploymentsAtManagementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListRemediationDeploymentsAtManagementGroupArgs();
         }
 
         public Builder(ListRemediationDeploymentsAtManagementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroupId = defaults.managementGroupId;
-    	      this.managementGroupsNamespace = defaults.managementGroupsNamespace;
-    	      this.remediationName = defaults.remediationName;
-    	      this.top = defaults.top;
+            $ = new ListRemediationDeploymentsAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Objects.requireNonNull(managementGroupId);
+            $.managementGroupId = managementGroupId;
             return this;
         }
+
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
-            this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace);
+            $.managementGroupsNamespace = managementGroupsNamespace;
             return this;
         }
+
         public Builder remediationName(String remediationName) {
-            this.remediationName = Objects.requireNonNull(remediationName);
+            $.remediationName = remediationName;
             return this;
         }
+
         public Builder top(@Nullable Integer top) {
-            this.top = top;
+            $.top = top;
             return this;
-        }        public ListRemediationDeploymentsAtManagementGroupArgs build() {
-            return new ListRemediationDeploymentsAtManagementGroupArgs(managementGroupId, managementGroupsNamespace, remediationName, top);
+        }
+
+        public ListRemediationDeploymentsAtManagementGroupArgs build() {
+            $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
+            $.managementGroupsNamespace = Objects.requireNonNull($.managementGroupsNamespace, "expected parameter 'managementGroupsNamespace' to be non-null");
+            $.remediationName = Objects.requireNonNull($.remediationName, "expected parameter 'remediationName' to be non-null");
+            return $;
         }
     }
+
 }

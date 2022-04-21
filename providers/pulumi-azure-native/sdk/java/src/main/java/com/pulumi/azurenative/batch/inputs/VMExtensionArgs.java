@@ -5,12 +5,12 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
+    private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
+    public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -41,10 +41,10 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable Output<Object> protectedSettings;
+    private @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> protectedSettings() {
-        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
+    public Optional<Output<Object>> protectedSettings() {
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     /**
@@ -52,172 +52,153 @@ public final class VMExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionAfterExtensions")
-      private final @Nullable Output<List<String>> provisionAfterExtensions;
+    private @Nullable Output<List<String>> provisionAfterExtensions;
 
-    public Output<List<String>> provisionAfterExtensions() {
-        return this.provisionAfterExtensions == null ? Codegen.empty() : this.provisionAfterExtensions;
+    public Optional<Output<List<String>>> provisionAfterExtensions() {
+        return Optional.ofNullable(this.provisionAfterExtensions);
     }
 
     @Import(name="publisher", required=true)
-      private final Output<String> publisher;
+    private Output<String> publisher;
 
     public Output<String> publisher() {
         return this.publisher;
     }
 
     @Import(name="settings")
-      private final @Nullable Output<Object> settings;
+    private @Nullable Output<Object> settings;
 
-    public Output<Object> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<Object>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
     @Import(name="typeHandlerVersion")
-      private final @Nullable Output<String> typeHandlerVersion;
+    private @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
+    public Optional<Output<String>> typeHandlerVersion() {
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VMExtensionArgs(
-        @Nullable Output<Boolean> autoUpgradeMinorVersion,
-        Output<String> name,
-        @Nullable Output<Object> protectedSettings,
-        @Nullable Output<List<String>> provisionAfterExtensions,
-        Output<String> publisher,
-        @Nullable Output<Object> settings,
-        Output<String> type,
-        @Nullable Output<String> typeHandlerVersion) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.protectedSettings = protectedSettings;
-        this.provisionAfterExtensions = provisionAfterExtensions;
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.settings = settings;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VMExtensionArgs() {}
 
-    private VMExtensionArgs() {
-        this.autoUpgradeMinorVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protectedSettings = Codegen.empty();
-        this.provisionAfterExtensions = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeHandlerVersion = Codegen.empty();
+    private VMExtensionArgs(VMExtensionArgs $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.name = $.name;
+        this.protectedSettings = $.protectedSettings;
+        this.provisionAfterExtensions = $.provisionAfterExtensions;
+        this.publisher = $.publisher;
+        this.settings = $.settings;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
-        private Output<String> name;
-        private @Nullable Output<Object> protectedSettings;
-        private @Nullable Output<List<String>> provisionAfterExtensions;
-        private Output<String> publisher;
-        private @Nullable Output<Object> settings;
-        private Output<String> type;
-        private @Nullable Output<String> typeHandlerVersion;
+        private VMExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMExtensionArgs();
         }
 
         public Builder(VMExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.name = defaults.name;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.provisionAfterExtensions = defaults.provisionAfterExtensions;
-    	      this.publisher = defaults.publisher;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VMExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
-            return this;
+
+        public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
+            return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
-        public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Codegen.ofNullable(protectedSettings);
-            return this;
+
+        public Builder protectedSettings(Object protectedSettings) {
+            return protectedSettings(Output.of(protectedSettings));
         }
+
         public Builder provisionAfterExtensions(@Nullable Output<List<String>> provisionAfterExtensions) {
-            this.provisionAfterExtensions = provisionAfterExtensions;
+            $.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
-        public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
-            this.provisionAfterExtensions = Codegen.ofNullable(provisionAfterExtensions);
-            return this;
+
+        public Builder provisionAfterExtensions(List<String> provisionAfterExtensions) {
+            return provisionAfterExtensions(Output.of(provisionAfterExtensions));
         }
+
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
             return provisionAfterExtensions(List.of(provisionAfterExtensions));
         }
+
         public Builder publisher(Output<String> publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Output.of(Objects.requireNonNull(publisher));
-            return this;
+            return publisher(Output.of(publisher));
         }
+
         public Builder settings(@Nullable Output<Object> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable Object settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(Object settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
-            return this;
-        }        public VMExtensionArgs build() {
-            return new VMExtensionArgs(autoUpgradeMinorVersion, name, protectedSettings, provisionAfterExtensions, publisher, settings, type, typeHandlerVersion);
+
+        public Builder typeHandlerVersion(String typeHandlerVersion) {
+            return typeHandlerVersion(Output.of(typeHandlerVersion));
+        }
+
+        public VMExtensionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

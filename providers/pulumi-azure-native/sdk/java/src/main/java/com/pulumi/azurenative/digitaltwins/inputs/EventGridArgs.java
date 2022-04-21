@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessKey1", required=true)
-      private final Output<String> accessKey1;
+    private Output<String> accessKey1;
 
     public Output<String> accessKey1() {
         return this.accessKey1;
@@ -37,10 +38,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessKey2")
-      private final @Nullable Output<String> accessKey2;
+    private @Nullable Output<String> accessKey2;
 
-    public Output<String> accessKey2() {
-        return this.accessKey2 == null ? Codegen.empty() : this.accessKey2;
+    public Optional<Output<String>> accessKey2() {
+        return Optional.ofNullable(this.accessKey2);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+    private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<Either<String,AuthenticationType>>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterSecret")
-      private final @Nullable Output<String> deadLetterSecret;
+    private @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> deadLetterSecret() {
-        return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
+    public Optional<Output<String>> deadLetterSecret() {
+        return Optional.ofNullable(this.deadLetterSecret);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterUri")
-      private final @Nullable Output<String> deadLetterUri;
+    private @Nullable Output<String> deadLetterUri;
 
-    public Output<String> deadLetterUri() {
-        return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
+    public Optional<Output<String>> deadLetterUri() {
+        return Optional.ofNullable(this.deadLetterUri);
     }
 
     /**
@@ -82,7 +83,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -93,128 +94,111 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicEndpoint", required=true)
-      private final Output<String> topicEndpoint;
+    private Output<String> topicEndpoint;
 
     public Output<String> topicEndpoint() {
         return this.topicEndpoint;
     }
 
-    public EventGridArgs(
-        Output<String> accessKey1,
-        @Nullable Output<String> accessKey2,
-        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Output<String> deadLetterSecret,
-        @Nullable Output<String> deadLetterUri,
-        Output<String> endpointType,
-        Output<String> topicEndpoint) {
-        this.accessKey1 = Objects.requireNonNull(accessKey1, "expected parameter 'accessKey1' to be non-null");
-        this.accessKey2 = accessKey2;
-        this.authenticationType = authenticationType;
-        this.deadLetterSecret = deadLetterSecret;
-        this.deadLetterUri = deadLetterUri;
-        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
-        this.topicEndpoint = Objects.requireNonNull(topicEndpoint, "expected parameter 'topicEndpoint' to be non-null");
-    }
+    private EventGridArgs() {}
 
-    private EventGridArgs() {
-        this.accessKey1 = Codegen.empty();
-        this.accessKey2 = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.deadLetterSecret = Codegen.empty();
-        this.deadLetterUri = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.topicEndpoint = Codegen.empty();
+    private EventGridArgs(EventGridArgs $) {
+        this.accessKey1 = $.accessKey1;
+        this.accessKey2 = $.accessKey2;
+        this.authenticationType = $.authenticationType;
+        this.deadLetterSecret = $.deadLetterSecret;
+        this.deadLetterUri = $.deadLetterUri;
+        this.endpointType = $.endpointType;
+        this.topicEndpoint = $.topicEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventGridArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessKey1;
-        private @Nullable Output<String> accessKey2;
-        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Output<String> deadLetterSecret;
-        private @Nullable Output<String> deadLetterUri;
-        private Output<String> endpointType;
-        private Output<String> topicEndpoint;
+        private EventGridArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventGridArgs();
         }
 
         public Builder(EventGridArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey1 = defaults.accessKey1;
-    	      this.accessKey2 = defaults.accessKey2;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.deadLetterSecret = defaults.deadLetterSecret;
-    	      this.deadLetterUri = defaults.deadLetterUri;
-    	      this.endpointType = defaults.endpointType;
-    	      this.topicEndpoint = defaults.topicEndpoint;
+            $ = new EventGridArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey1(Output<String> accessKey1) {
-            this.accessKey1 = Objects.requireNonNull(accessKey1);
+            $.accessKey1 = accessKey1;
             return this;
         }
+
         public Builder accessKey1(String accessKey1) {
-            this.accessKey1 = Output.of(Objects.requireNonNull(accessKey1));
-            return this;
+            return accessKey1(Output.of(accessKey1));
         }
+
         public Builder accessKey2(@Nullable Output<String> accessKey2) {
-            this.accessKey2 = accessKey2;
+            $.accessKey2 = accessKey2;
             return this;
         }
-        public Builder accessKey2(@Nullable String accessKey2) {
-            this.accessKey2 = Codegen.ofNullable(accessKey2);
-            return this;
+
+        public Builder accessKey2(String accessKey2) {
+            return accessKey2(Output.of(accessKey2));
         }
+
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
-            this.deadLetterSecret = deadLetterSecret;
+            $.deadLetterSecret = deadLetterSecret;
             return this;
         }
-        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Codegen.ofNullable(deadLetterSecret);
-            return this;
+
+        public Builder deadLetterSecret(String deadLetterSecret) {
+            return deadLetterSecret(Output.of(deadLetterSecret));
         }
+
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
-            this.deadLetterUri = deadLetterUri;
+            $.deadLetterUri = deadLetterUri;
             return this;
         }
-        public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Codegen.ofNullable(deadLetterUri);
-            return this;
+
+        public Builder deadLetterUri(String deadLetterUri) {
+            return deadLetterUri(Output.of(deadLetterUri));
         }
+
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder topicEndpoint(Output<String> topicEndpoint) {
-            this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
+            $.topicEndpoint = topicEndpoint;
             return this;
         }
+
         public Builder topicEndpoint(String topicEndpoint) {
-            this.topicEndpoint = Output.of(Objects.requireNonNull(topicEndpoint));
-            return this;
-        }        public EventGridArgs build() {
-            return new EventGridArgs(accessKey1, accessKey2, authenticationType, deadLetterSecret, deadLetterUri, endpointType, topicEndpoint);
+            return topicEndpoint(Output.of(topicEndpoint));
+        }
+
+        public EventGridArgs build() {
+            $.accessKey1 = Objects.requireNonNull($.accessKey1, "expected parameter 'accessKey1' to be non-null");
+            $.endpointType = Codegen.stringProp("endpointType").output().arg($.endpointType).require();
+            $.topicEndpoint = Objects.requireNonNull($.topicEndpoint, "expected parameter 'topicEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

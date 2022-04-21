@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,7 +33,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="alertSensitivity", required=true)
-      private final Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
+    private Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
 
     public Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity() {
         return this.alertSensitivity;
@@ -44,7 +45,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="criterionType", required=true)
-      private final Output<String> criterionType;
+    private Output<String> criterionType;
 
     public Output<String> criterionType() {
         return this.criterionType;
@@ -55,10 +56,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
+    private @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Output<List<MetricDimensionArgs>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<List<MetricDimensionArgs>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -66,7 +67,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="failingPeriods", required=true)
-      private final Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
+    private Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
 
     public Output<DynamicThresholdFailingPeriodsArgs> failingPeriods() {
         return this.failingPeriods;
@@ -77,10 +78,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ignoreDataBefore")
-      private final @Nullable Output<String> ignoreDataBefore;
+    private @Nullable Output<String> ignoreDataBefore;
 
-    public Output<String> ignoreDataBefore() {
-        return this.ignoreDataBefore == null ? Codegen.empty() : this.ignoreDataBefore;
+    public Optional<Output<String>> ignoreDataBefore() {
+        return Optional.ofNullable(this.ignoreDataBefore);
     }
 
     /**
@@ -88,7 +89,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -99,10 +100,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metricNamespace")
-      private final @Nullable Output<String> metricNamespace;
+    private @Nullable Output<String> metricNamespace;
 
-    public Output<String> metricNamespace() {
-        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
+    public Optional<Output<String>> metricNamespace() {
+        return Optional.ofNullable(this.metricNamespace);
     }
 
     /**
@@ -110,7 +111,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -121,7 +122,7 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<Either<String,DynamicThresholdOperator>> operator;
+    private Output<Either<String,DynamicThresholdOperator>> operator;
 
     public Output<Either<String,DynamicThresholdOperator>> operator() {
         return this.operator;
@@ -132,10 +133,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="skipMetricValidation")
-      private final @Nullable Output<Boolean> skipMetricValidation;
+    private @Nullable Output<Boolean> skipMetricValidation;
 
-    public Output<Boolean> skipMetricValidation() {
-        return this.skipMetricValidation == null ? Codegen.empty() : this.skipMetricValidation;
+    public Optional<Output<Boolean>> skipMetricValidation() {
+        return Optional.ofNullable(this.skipMetricValidation);
     }
 
     /**
@@ -143,183 +144,159 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="timeAggregation", required=true)
-      private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
+    private Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
     public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
 
-    public DynamicMetricCriteriaArgs(
-        Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity,
-        Output<String> criterionType,
-        @Nullable Output<List<MetricDimensionArgs>> dimensions,
-        Output<DynamicThresholdFailingPeriodsArgs> failingPeriods,
-        @Nullable Output<String> ignoreDataBefore,
-        Output<String> metricName,
-        @Nullable Output<String> metricNamespace,
-        Output<String> name,
-        Output<Either<String,DynamicThresholdOperator>> operator,
-        @Nullable Output<Boolean> skipMetricValidation,
-        Output<Either<String,AggregationTypeEnum>> timeAggregation) {
-        this.alertSensitivity = Objects.requireNonNull(alertSensitivity, "expected parameter 'alertSensitivity' to be non-null");
-        this.criterionType = Codegen.stringProp("criterionType").output().arg(criterionType).require();
-        this.dimensions = dimensions;
-        this.failingPeriods = Objects.requireNonNull(failingPeriods, "expected parameter 'failingPeriods' to be non-null");
-        this.ignoreDataBefore = ignoreDataBefore;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.metricNamespace = metricNamespace;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.skipMetricValidation = skipMetricValidation;
-        this.timeAggregation = Objects.requireNonNull(timeAggregation, "expected parameter 'timeAggregation' to be non-null");
-    }
+    private DynamicMetricCriteriaArgs() {}
 
-    private DynamicMetricCriteriaArgs() {
-        this.alertSensitivity = Codegen.empty();
-        this.criterionType = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.failingPeriods = Codegen.empty();
-        this.ignoreDataBefore = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.metricNamespace = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.skipMetricValidation = Codegen.empty();
-        this.timeAggregation = Codegen.empty();
+    private DynamicMetricCriteriaArgs(DynamicMetricCriteriaArgs $) {
+        this.alertSensitivity = $.alertSensitivity;
+        this.criterionType = $.criterionType;
+        this.dimensions = $.dimensions;
+        this.failingPeriods = $.failingPeriods;
+        this.ignoreDataBefore = $.ignoreDataBefore;
+        this.metricName = $.metricName;
+        this.metricNamespace = $.metricNamespace;
+        this.name = $.name;
+        this.operator = $.operator;
+        this.skipMetricValidation = $.skipMetricValidation;
+        this.timeAggregation = $.timeAggregation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicMetricCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
-        private Output<String> criterionType;
-        private @Nullable Output<List<MetricDimensionArgs>> dimensions;
-        private Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
-        private @Nullable Output<String> ignoreDataBefore;
-        private Output<String> metricName;
-        private @Nullable Output<String> metricNamespace;
-        private Output<String> name;
-        private Output<Either<String,DynamicThresholdOperator>> operator;
-        private @Nullable Output<Boolean> skipMetricValidation;
-        private Output<Either<String,AggregationTypeEnum>> timeAggregation;
+        private DynamicMetricCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicMetricCriteriaArgs();
         }
 
         public Builder(DynamicMetricCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertSensitivity = defaults.alertSensitivity;
-    	      this.criterionType = defaults.criterionType;
-    	      this.dimensions = defaults.dimensions;
-    	      this.failingPeriods = defaults.failingPeriods;
-    	      this.ignoreDataBefore = defaults.ignoreDataBefore;
-    	      this.metricName = defaults.metricName;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.name = defaults.name;
-    	      this.operator = defaults.operator;
-    	      this.skipMetricValidation = defaults.skipMetricValidation;
-    	      this.timeAggregation = defaults.timeAggregation;
+            $ = new DynamicMetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertSensitivity(Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity) {
-            this.alertSensitivity = Objects.requireNonNull(alertSensitivity);
+            $.alertSensitivity = alertSensitivity;
             return this;
         }
+
         public Builder alertSensitivity(Either<String,DynamicThresholdSensitivity> alertSensitivity) {
-            this.alertSensitivity = Output.of(Objects.requireNonNull(alertSensitivity));
-            return this;
+            return alertSensitivity(Output.of(alertSensitivity));
         }
+
         public Builder criterionType(Output<String> criterionType) {
-            this.criterionType = Objects.requireNonNull(criterionType);
+            $.criterionType = criterionType;
             return this;
         }
+
         public Builder criterionType(String criterionType) {
-            this.criterionType = Output.of(Objects.requireNonNull(criterionType));
-            return this;
+            return criterionType(Output.of(criterionType));
         }
+
         public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(List<MetricDimensionArgs> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(MetricDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder failingPeriods(Output<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
-            this.failingPeriods = Objects.requireNonNull(failingPeriods);
+            $.failingPeriods = failingPeriods;
             return this;
         }
+
         public Builder failingPeriods(DynamicThresholdFailingPeriodsArgs failingPeriods) {
-            this.failingPeriods = Output.of(Objects.requireNonNull(failingPeriods));
-            return this;
+            return failingPeriods(Output.of(failingPeriods));
         }
+
         public Builder ignoreDataBefore(@Nullable Output<String> ignoreDataBefore) {
-            this.ignoreDataBefore = ignoreDataBefore;
+            $.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
-        public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
-            this.ignoreDataBefore = Codegen.ofNullable(ignoreDataBefore);
-            return this;
+
+        public Builder ignoreDataBefore(String ignoreDataBefore) {
+            return ignoreDataBefore(Output.of(ignoreDataBefore));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
-            this.metricNamespace = metricNamespace;
+            $.metricNamespace = metricNamespace;
             return this;
         }
-        public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Codegen.ofNullable(metricNamespace);
-            return this;
+
+        public Builder metricNamespace(String metricNamespace) {
+            return metricNamespace(Output.of(metricNamespace));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder operator(Output<Either<String,DynamicThresholdOperator>> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(Either<String,DynamicThresholdOperator> operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
-            this.skipMetricValidation = skipMetricValidation;
+            $.skipMetricValidation = skipMetricValidation;
             return this;
         }
-        public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
-            this.skipMetricValidation = Codegen.ofNullable(skipMetricValidation);
-            return this;
+
+        public Builder skipMetricValidation(Boolean skipMetricValidation) {
+            return skipMetricValidation(Output.of(skipMetricValidation));
         }
+
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
-            this.timeAggregation = Objects.requireNonNull(timeAggregation);
+            $.timeAggregation = timeAggregation;
             return this;
         }
+
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
-            this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
-            return this;
-        }        public DynamicMetricCriteriaArgs build() {
-            return new DynamicMetricCriteriaArgs(alertSensitivity, criterionType, dimensions, failingPeriods, ignoreDataBefore, metricName, metricNamespace, name, operator, skipMetricValidation, timeAggregation);
+            return timeAggregation(Output.of(timeAggregation));
+        }
+
+        public DynamicMetricCriteriaArgs build() {
+            $.alertSensitivity = Objects.requireNonNull($.alertSensitivity, "expected parameter 'alertSensitivity' to be non-null");
+            $.criterionType = Codegen.stringProp("criterionType").output().arg($.criterionType).require();
+            $.failingPeriods = Objects.requireNonNull($.failingPeriods, "expected parameter 'failingPeriods' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.timeAggregation = Objects.requireNonNull($.timeAggregation, "expected parameter 'timeAggregation' to be non-null");
+            return $;
         }
     }
+
 }

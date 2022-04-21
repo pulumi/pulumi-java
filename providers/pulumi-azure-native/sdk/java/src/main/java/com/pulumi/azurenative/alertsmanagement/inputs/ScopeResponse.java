@@ -24,10 +24,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scopeType")
-      private final @Nullable String scopeType;
+    private @Nullable String scopeType;
 
     public Optional<String> scopeType() {
-        return this.scopeType == null ? Optional.empty() : Optional.ofNullable(this.scopeType);
+        return Optional.ofNullable(this.scopeType);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ScopeResponse(
-        @Nullable String scopeType,
-        @Nullable List<String> values) {
-        this.scopeType = scopeType;
-        this.values = values;
-    }
+    private ScopeResponse() {}
 
-    private ScopeResponse() {
-        this.scopeType = null;
-        this.values = List.of();
+    private ScopeResponse(ScopeResponse $) {
+        this.scopeType = $.scopeType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String scopeType;
-        private @Nullable List<String> values;
+        private ScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeResponse();
         }
 
         public Builder(ScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scopeType = defaults.scopeType;
-    	      this.values = defaults.values;
+            $ = new ScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scopeType(@Nullable String scopeType) {
-            this.scopeType = scopeType;
+            $.scopeType = scopeType;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ScopeResponse build() {
-            return new ScopeResponse(scopeType, values);
+        }
+
+        public ScopeResponse build() {
+            return $;
         }
     }
+
 }

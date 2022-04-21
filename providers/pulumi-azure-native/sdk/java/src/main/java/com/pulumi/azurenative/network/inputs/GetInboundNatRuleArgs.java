@@ -19,10 +19,10 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="inboundNatRuleName", required=true)
-      private final String inboundNatRuleName;
+    private String inboundNatRuleName;
 
     public String inboundNatRuleName() {
         return this.inboundNatRuleName;
@@ -41,7 +41,7 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final String loadBalancerName;
+    private String loadBalancerName;
 
     public String loadBalancerName() {
         return this.loadBalancerName;
@@ -52,73 +52,65 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetInboundNatRuleArgs(
-        @Nullable String expand,
-        String inboundNatRuleName,
-        String loadBalancerName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.inboundNatRuleName = Objects.requireNonNull(inboundNatRuleName, "expected parameter 'inboundNatRuleName' to be non-null");
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetInboundNatRuleArgs() {}
 
-    private GetInboundNatRuleArgs() {
-        this.expand = null;
-        this.inboundNatRuleName = null;
-        this.loadBalancerName = null;
-        this.resourceGroupName = null;
+    private GetInboundNatRuleArgs(GetInboundNatRuleArgs $) {
+        this.expand = $.expand;
+        this.inboundNatRuleName = $.inboundNatRuleName;
+        this.loadBalancerName = $.loadBalancerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInboundNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String inboundNatRuleName;
-        private String loadBalancerName;
-        private String resourceGroupName;
+        private GetInboundNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInboundNatRuleArgs();
         }
 
         public Builder(GetInboundNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.inboundNatRuleName = defaults.inboundNatRuleName;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetInboundNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder inboundNatRuleName(String inboundNatRuleName) {
-            this.inboundNatRuleName = Objects.requireNonNull(inboundNatRuleName);
+            $.inboundNatRuleName = inboundNatRuleName;
             return this;
         }
+
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetInboundNatRuleArgs build() {
-            return new GetInboundNatRuleArgs(expand, inboundNatRuleName, loadBalancerName, resourceGroupName);
+        }
+
+        public GetInboundNatRuleArgs build() {
+            $.inboundNatRuleName = Objects.requireNonNull($.inboundNatRuleName, "expected parameter 'inboundNatRuleName' to be non-null");
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

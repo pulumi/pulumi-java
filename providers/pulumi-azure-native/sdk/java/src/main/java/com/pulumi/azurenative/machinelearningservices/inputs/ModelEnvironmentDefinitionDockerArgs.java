@@ -6,9 +6,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ModelDockerSectionBaseImageRegistryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
      * 
      */
     @Import(name="baseDockerfile")
-      private final @Nullable Output<String> baseDockerfile;
+    private @Nullable Output<String> baseDockerfile;
 
-    public Output<String> baseDockerfile() {
-        return this.baseDockerfile == null ? Codegen.empty() : this.baseDockerfile;
+    public Optional<Output<String>> baseDockerfile() {
+        return Optional.ofNullable(this.baseDockerfile);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
      * 
      */
     @Import(name="baseImage")
-      private final @Nullable Output<String> baseImage;
+    private @Nullable Output<String> baseImage;
 
-    public Output<String> baseImage() {
-        return this.baseImage == null ? Codegen.empty() : this.baseImage;
+    public Optional<Output<String>> baseImage() {
+        return Optional.ofNullable(this.baseImage);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
      * 
      */
     @Import(name="baseImageRegistry")
-      private final @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
+    private @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
 
-    public Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry() {
-        return this.baseImageRegistry == null ? Codegen.empty() : this.baseImageRegistry;
+    public Optional<Output<ModelDockerSectionBaseImageRegistryArgs>> baseImageRegistry() {
+        return Optional.ofNullable(this.baseImageRegistry);
     }
 
-    public ModelEnvironmentDefinitionDockerArgs(
-        @Nullable Output<String> baseDockerfile,
-        @Nullable Output<String> baseImage,
-        @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
-        this.baseDockerfile = baseDockerfile;
-        this.baseImage = baseImage;
-        this.baseImageRegistry = baseImageRegistry;
-    }
+    private ModelEnvironmentDefinitionDockerArgs() {}
 
-    private ModelEnvironmentDefinitionDockerArgs() {
-        this.baseDockerfile = Codegen.empty();
-        this.baseImage = Codegen.empty();
-        this.baseImageRegistry = Codegen.empty();
+    private ModelEnvironmentDefinitionDockerArgs(ModelEnvironmentDefinitionDockerArgs $) {
+        this.baseDockerfile = $.baseDockerfile;
+        this.baseImage = $.baseImage;
+        this.baseImageRegistry = $.baseImageRegistry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionDockerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baseDockerfile;
-        private @Nullable Output<String> baseImage;
-        private @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
+        private ModelEnvironmentDefinitionDockerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionDockerArgs();
         }
 
         public Builder(ModelEnvironmentDefinitionDockerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseDockerfile = defaults.baseDockerfile;
-    	      this.baseImage = defaults.baseImage;
-    	      this.baseImageRegistry = defaults.baseImageRegistry;
+            $ = new ModelEnvironmentDefinitionDockerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseDockerfile(@Nullable Output<String> baseDockerfile) {
-            this.baseDockerfile = baseDockerfile;
+            $.baseDockerfile = baseDockerfile;
             return this;
         }
-        public Builder baseDockerfile(@Nullable String baseDockerfile) {
-            this.baseDockerfile = Codegen.ofNullable(baseDockerfile);
-            return this;
+
+        public Builder baseDockerfile(String baseDockerfile) {
+            return baseDockerfile(Output.of(baseDockerfile));
         }
+
         public Builder baseImage(@Nullable Output<String> baseImage) {
-            this.baseImage = baseImage;
+            $.baseImage = baseImage;
             return this;
         }
-        public Builder baseImage(@Nullable String baseImage) {
-            this.baseImage = Codegen.ofNullable(baseImage);
-            return this;
+
+        public Builder baseImage(String baseImage) {
+            return baseImage(Output.of(baseImage));
         }
+
         public Builder baseImageRegistry(@Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
-            this.baseImageRegistry = baseImageRegistry;
+            $.baseImageRegistry = baseImageRegistry;
             return this;
         }
-        public Builder baseImageRegistry(@Nullable ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
-            this.baseImageRegistry = Codegen.ofNullable(baseImageRegistry);
-            return this;
-        }        public ModelEnvironmentDefinitionDockerArgs build() {
-            return new ModelEnvironmentDefinitionDockerArgs(baseDockerfile, baseImage, baseImageRegistry);
+
+        public Builder baseImageRegistry(ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
+            return baseImageRegistry(Output.of(baseImageRegistry));
+        }
+
+        public ModelEnvironmentDefinitionDockerArgs build() {
+            return $;
         }
     }
+
 }

@@ -9,9 +9,9 @@ import com.pulumi.azurenative.automation.inputs.SoftwareUpdateConfigurationTasks
 import com.pulumi.azurenative.automation.inputs.UpdateConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -35,10 +35,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<ErrorResponseArgs> error;
+    private @Nullable Output<ErrorResponseArgs> error;
 
-    public Output<ErrorResponseArgs> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<ErrorResponseArgs>> error() {
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -57,7 +57,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scheduleInfo", required=true)
-      private final Output<SUCSchedulePropertiesArgs> scheduleInfo;
+    private Output<SUCSchedulePropertiesArgs> scheduleInfo;
 
     public Output<SUCSchedulePropertiesArgs> scheduleInfo() {
         return this.scheduleInfo;
@@ -68,10 +68,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="softwareUpdateConfigurationName")
-      private final @Nullable Output<String> softwareUpdateConfigurationName;
+    private @Nullable Output<String> softwareUpdateConfigurationName;
 
-    public Output<String> softwareUpdateConfigurationName() {
-        return this.softwareUpdateConfigurationName == null ? Codegen.empty() : this.softwareUpdateConfigurationName;
+    public Optional<Output<String>> softwareUpdateConfigurationName() {
+        return Optional.ofNullable(this.softwareUpdateConfigurationName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="tasks")
-      private final @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
+    private @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
 
-    public Output<SoftwareUpdateConfigurationTasksArgs> tasks() {
-        return this.tasks == null ? Codegen.empty() : this.tasks;
+    public Optional<Output<SoftwareUpdateConfigurationTasksArgs>> tasks() {
+        return Optional.ofNullable(this.tasks);
     }
 
     /**
@@ -90,128 +90,112 @@ public final class SoftwareUpdateConfigurationByNameArgs extends com.pulumi.reso
      * 
      */
     @Import(name="updateConfiguration", required=true)
-      private final Output<UpdateConfigurationArgs> updateConfiguration;
+    private Output<UpdateConfigurationArgs> updateConfiguration;
 
     public Output<UpdateConfigurationArgs> updateConfiguration() {
         return this.updateConfiguration;
     }
 
-    public SoftwareUpdateConfigurationByNameArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<ErrorResponseArgs> error,
-        Output<String> resourceGroupName,
-        Output<SUCSchedulePropertiesArgs> scheduleInfo,
-        @Nullable Output<String> softwareUpdateConfigurationName,
-        @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks,
-        Output<UpdateConfigurationArgs> updateConfiguration) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.error = error;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scheduleInfo = Objects.requireNonNull(scheduleInfo, "expected parameter 'scheduleInfo' to be non-null");
-        this.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
-        this.tasks = tasks;
-        this.updateConfiguration = Objects.requireNonNull(updateConfiguration, "expected parameter 'updateConfiguration' to be non-null");
-    }
+    private SoftwareUpdateConfigurationByNameArgs() {}
 
-    private SoftwareUpdateConfigurationByNameArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.error = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scheduleInfo = Codegen.empty();
-        this.softwareUpdateConfigurationName = Codegen.empty();
-        this.tasks = Codegen.empty();
-        this.updateConfiguration = Codegen.empty();
+    private SoftwareUpdateConfigurationByNameArgs(SoftwareUpdateConfigurationByNameArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.error = $.error;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scheduleInfo = $.scheduleInfo;
+        this.softwareUpdateConfigurationName = $.softwareUpdateConfigurationName;
+        this.tasks = $.tasks;
+        this.updateConfiguration = $.updateConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareUpdateConfigurationByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<ErrorResponseArgs> error;
-        private Output<String> resourceGroupName;
-        private Output<SUCSchedulePropertiesArgs> scheduleInfo;
-        private @Nullable Output<String> softwareUpdateConfigurationName;
-        private @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
-        private Output<UpdateConfigurationArgs> updateConfiguration;
+        private SoftwareUpdateConfigurationByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareUpdateConfigurationByNameArgs();
         }
 
         public Builder(SoftwareUpdateConfigurationByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.error = defaults.error;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scheduleInfo = defaults.scheduleInfo;
-    	      this.softwareUpdateConfigurationName = defaults.softwareUpdateConfigurationName;
-    	      this.tasks = defaults.tasks;
-    	      this.updateConfiguration = defaults.updateConfiguration;
+            $ = new SoftwareUpdateConfigurationByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder error(@Nullable Output<ErrorResponseArgs> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable ErrorResponseArgs error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
+
+        public Builder error(ErrorResponseArgs error) {
+            return error(Output.of(error));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scheduleInfo(Output<SUCSchedulePropertiesArgs> scheduleInfo) {
-            this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
+            $.scheduleInfo = scheduleInfo;
             return this;
         }
+
         public Builder scheduleInfo(SUCSchedulePropertiesArgs scheduleInfo) {
-            this.scheduleInfo = Output.of(Objects.requireNonNull(scheduleInfo));
-            return this;
+            return scheduleInfo(Output.of(scheduleInfo));
         }
+
         public Builder softwareUpdateConfigurationName(@Nullable Output<String> softwareUpdateConfigurationName) {
-            this.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
+            $.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
         }
-        public Builder softwareUpdateConfigurationName(@Nullable String softwareUpdateConfigurationName) {
-            this.softwareUpdateConfigurationName = Codegen.ofNullable(softwareUpdateConfigurationName);
-            return this;
+
+        public Builder softwareUpdateConfigurationName(String softwareUpdateConfigurationName) {
+            return softwareUpdateConfigurationName(Output.of(softwareUpdateConfigurationName));
         }
+
         public Builder tasks(@Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks) {
-            this.tasks = tasks;
+            $.tasks = tasks;
             return this;
         }
-        public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksArgs tasks) {
-            this.tasks = Codegen.ofNullable(tasks);
-            return this;
+
+        public Builder tasks(SoftwareUpdateConfigurationTasksArgs tasks) {
+            return tasks(Output.of(tasks));
         }
+
         public Builder updateConfiguration(Output<UpdateConfigurationArgs> updateConfiguration) {
-            this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
+            $.updateConfiguration = updateConfiguration;
             return this;
         }
+
         public Builder updateConfiguration(UpdateConfigurationArgs updateConfiguration) {
-            this.updateConfiguration = Output.of(Objects.requireNonNull(updateConfiguration));
-            return this;
-        }        public SoftwareUpdateConfigurationByNameArgs build() {
-            return new SoftwareUpdateConfigurationByNameArgs(automationAccountName, error, resourceGroupName, scheduleInfo, softwareUpdateConfigurationName, tasks, updateConfiguration);
+            return updateConfiguration(Output.of(updateConfiguration));
+        }
+
+        public SoftwareUpdateConfigurationByNameArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scheduleInfo = Objects.requireNonNull($.scheduleInfo, "expected parameter 'scheduleInfo' to be non-null");
+            $.updateConfiguration = Objects.requireNonNull($.updateConfiguration, "expected parameter 'updateConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

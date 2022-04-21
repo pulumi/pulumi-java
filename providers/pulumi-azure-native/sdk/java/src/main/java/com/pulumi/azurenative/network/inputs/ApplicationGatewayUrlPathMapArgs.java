@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.inputs.ApplicationGatewayPathRuleArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="defaultBackendAddressPool")
-      private final @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
+    private @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
 
-    public Output<SubResourceArgs> defaultBackendAddressPool() {
-        return this.defaultBackendAddressPool == null ? Codegen.empty() : this.defaultBackendAddressPool;
+    public Optional<Output<SubResourceArgs>> defaultBackendAddressPool() {
+        return Optional.ofNullable(this.defaultBackendAddressPool);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="defaultBackendHttpSettings")
-      private final @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
+    private @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
 
-    public Output<SubResourceArgs> defaultBackendHttpSettings() {
-        return this.defaultBackendHttpSettings == null ? Codegen.empty() : this.defaultBackendHttpSettings;
+    public Optional<Output<SubResourceArgs>> defaultBackendHttpSettings() {
+        return Optional.ofNullable(this.defaultBackendHttpSettings);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="defaultRedirectConfiguration")
-      private final @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
+    private @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
 
-    public Output<SubResourceArgs> defaultRedirectConfiguration() {
-        return this.defaultRedirectConfiguration == null ? Codegen.empty() : this.defaultRedirectConfiguration;
+    public Optional<Output<SubResourceArgs>> defaultRedirectConfiguration() {
+        return Optional.ofNullable(this.defaultRedirectConfiguration);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="defaultRewriteRuleSet")
-      private final @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
+    private @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
 
-    public Output<SubResourceArgs> defaultRewriteRuleSet() {
-        return this.defaultRewriteRuleSet == null ? Codegen.empty() : this.defaultRewriteRuleSet;
+    public Optional<Output<SubResourceArgs>> defaultRewriteRuleSet() {
+        return Optional.ofNullable(this.defaultRewriteRuleSet);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,131 +93,112 @@ public final class ApplicationGatewayUrlPathMapArgs extends com.pulumi.resources
      * 
      */
     @Import(name="pathRules")
-      private final @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
+    private @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
-    public Output<List<ApplicationGatewayPathRuleArgs>> pathRules() {
-        return this.pathRules == null ? Codegen.empty() : this.pathRules;
+    public Optional<Output<List<ApplicationGatewayPathRuleArgs>>> pathRules() {
+        return Optional.ofNullable(this.pathRules);
     }
 
-    public ApplicationGatewayUrlPathMapArgs(
-        @Nullable Output<SubResourceArgs> defaultBackendAddressPool,
-        @Nullable Output<SubResourceArgs> defaultBackendHttpSettings,
-        @Nullable Output<SubResourceArgs> defaultRedirectConfiguration,
-        @Nullable Output<SubResourceArgs> defaultRewriteRuleSet,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules) {
-        this.defaultBackendAddressPool = defaultBackendAddressPool;
-        this.defaultBackendHttpSettings = defaultBackendHttpSettings;
-        this.defaultRedirectConfiguration = defaultRedirectConfiguration;
-        this.defaultRewriteRuleSet = defaultRewriteRuleSet;
-        this.id = id;
-        this.name = name;
-        this.pathRules = pathRules;
-    }
+    private ApplicationGatewayUrlPathMapArgs() {}
 
-    private ApplicationGatewayUrlPathMapArgs() {
-        this.defaultBackendAddressPool = Codegen.empty();
-        this.defaultBackendHttpSettings = Codegen.empty();
-        this.defaultRedirectConfiguration = Codegen.empty();
-        this.defaultRewriteRuleSet = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pathRules = Codegen.empty();
+    private ApplicationGatewayUrlPathMapArgs(ApplicationGatewayUrlPathMapArgs $) {
+        this.defaultBackendAddressPool = $.defaultBackendAddressPool;
+        this.defaultBackendHttpSettings = $.defaultBackendHttpSettings;
+        this.defaultRedirectConfiguration = $.defaultRedirectConfiguration;
+        this.defaultRewriteRuleSet = $.defaultRewriteRuleSet;
+        this.id = $.id;
+        this.name = $.name;
+        this.pathRules = $.pathRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayUrlPathMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
-        private @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
-        private @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
-        private @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
+        private ApplicationGatewayUrlPathMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayUrlPathMapArgs();
         }
 
         public Builder(ApplicationGatewayUrlPathMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultBackendAddressPool = defaults.defaultBackendAddressPool;
-    	      this.defaultBackendHttpSettings = defaults.defaultBackendHttpSettings;
-    	      this.defaultRedirectConfiguration = defaults.defaultRedirectConfiguration;
-    	      this.defaultRewriteRuleSet = defaults.defaultRewriteRuleSet;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.pathRules = defaults.pathRules;
+            $ = new ApplicationGatewayUrlPathMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultBackendAddressPool(@Nullable Output<SubResourceArgs> defaultBackendAddressPool) {
-            this.defaultBackendAddressPool = defaultBackendAddressPool;
+            $.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
-        public Builder defaultBackendAddressPool(@Nullable SubResourceArgs defaultBackendAddressPool) {
-            this.defaultBackendAddressPool = Codegen.ofNullable(defaultBackendAddressPool);
-            return this;
+
+        public Builder defaultBackendAddressPool(SubResourceArgs defaultBackendAddressPool) {
+            return defaultBackendAddressPool(Output.of(defaultBackendAddressPool));
         }
+
         public Builder defaultBackendHttpSettings(@Nullable Output<SubResourceArgs> defaultBackendHttpSettings) {
-            this.defaultBackendHttpSettings = defaultBackendHttpSettings;
+            $.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
-        public Builder defaultBackendHttpSettings(@Nullable SubResourceArgs defaultBackendHttpSettings) {
-            this.defaultBackendHttpSettings = Codegen.ofNullable(defaultBackendHttpSettings);
-            return this;
+
+        public Builder defaultBackendHttpSettings(SubResourceArgs defaultBackendHttpSettings) {
+            return defaultBackendHttpSettings(Output.of(defaultBackendHttpSettings));
         }
+
         public Builder defaultRedirectConfiguration(@Nullable Output<SubResourceArgs> defaultRedirectConfiguration) {
-            this.defaultRedirectConfiguration = defaultRedirectConfiguration;
+            $.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
-        public Builder defaultRedirectConfiguration(@Nullable SubResourceArgs defaultRedirectConfiguration) {
-            this.defaultRedirectConfiguration = Codegen.ofNullable(defaultRedirectConfiguration);
-            return this;
+
+        public Builder defaultRedirectConfiguration(SubResourceArgs defaultRedirectConfiguration) {
+            return defaultRedirectConfiguration(Output.of(defaultRedirectConfiguration));
         }
+
         public Builder defaultRewriteRuleSet(@Nullable Output<SubResourceArgs> defaultRewriteRuleSet) {
-            this.defaultRewriteRuleSet = defaultRewriteRuleSet;
+            $.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
-        public Builder defaultRewriteRuleSet(@Nullable SubResourceArgs defaultRewriteRuleSet) {
-            this.defaultRewriteRuleSet = Codegen.ofNullable(defaultRewriteRuleSet);
-            return this;
+
+        public Builder defaultRewriteRuleSet(SubResourceArgs defaultRewriteRuleSet) {
+            return defaultRewriteRuleSet(Output.of(defaultRewriteRuleSet));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pathRules(@Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules) {
-            this.pathRules = pathRules;
+            $.pathRules = pathRules;
             return this;
         }
-        public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleArgs> pathRules) {
-            this.pathRules = Codegen.ofNullable(pathRules);
-            return this;
+
+        public Builder pathRules(List<ApplicationGatewayPathRuleArgs> pathRules) {
+            return pathRules(Output.of(pathRules));
         }
+
         public Builder pathRules(ApplicationGatewayPathRuleArgs... pathRules) {
             return pathRules(List.of(pathRules));
-        }        public ApplicationGatewayUrlPathMapArgs build() {
-            return new ApplicationGatewayUrlPathMapArgs(defaultBackendAddressPool, defaultBackendHttpSettings, defaultRedirectConfiguration, defaultRewriteRuleSet, id, name, pathRules);
+        }
+
+        public ApplicationGatewayUrlPathMapArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
      * 
      */
     @Import(name="actions")
-      private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
+    private @Nullable FlowAccessControlConfigurationPolicyResponse actions;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> actions() {
-        return this.actions == null ? Optional.empty() : Optional.ofNullable(this.actions);
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
      * 
      */
     @Import(name="contents")
-      private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
+    private @Nullable FlowAccessControlConfigurationPolicyResponse contents;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> contents() {
-        return this.contents == null ? Optional.empty() : Optional.ofNullable(this.contents);
+        return Optional.ofNullable(this.contents);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
      * 
      */
     @Import(name="triggers")
-      private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
+    private @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> triggers() {
-        return this.triggers == null ? Optional.empty() : Optional.ofNullable(this.triggers);
+        return Optional.ofNullable(this.triggers);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
      * 
      */
     @Import(name="workflowManagement")
-      private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
+    private @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
     public Optional<FlowAccessControlConfigurationPolicyResponse> workflowManagement() {
-        return this.workflowManagement == null ? Optional.empty() : Optional.ofNullable(this.workflowManagement);
+        return Optional.ofNullable(this.workflowManagement);
     }
 
-    public FlowAccessControlConfigurationResponse(
-        @Nullable FlowAccessControlConfigurationPolicyResponse actions,
-        @Nullable FlowAccessControlConfigurationPolicyResponse contents,
-        @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
-        @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
-        this.actions = actions;
-        this.contents = contents;
-        this.triggers = triggers;
-        this.workflowManagement = workflowManagement;
-    }
+    private FlowAccessControlConfigurationResponse() {}
 
-    private FlowAccessControlConfigurationResponse() {
-        this.actions = null;
-        this.contents = null;
-        this.triggers = null;
-        this.workflowManagement = null;
+    private FlowAccessControlConfigurationResponse(FlowAccessControlConfigurationResponse $) {
+        this.actions = $.actions;
+        this.contents = $.contents;
+        this.triggers = $.triggers;
+        this.workflowManagement = $.workflowManagement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAccessControlConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowAccessControlConfigurationPolicyResponse actions;
-        private @Nullable FlowAccessControlConfigurationPolicyResponse contents;
-        private @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
-        private @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
+        private FlowAccessControlConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAccessControlConfigurationResponse();
         }
 
         public Builder(FlowAccessControlConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.contents = defaults.contents;
-    	      this.triggers = defaults.triggers;
-    	      this.workflowManagement = defaults.workflowManagement;
+            $ = new FlowAccessControlConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable FlowAccessControlConfigurationPolicyResponse actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder contents(@Nullable FlowAccessControlConfigurationPolicyResponse contents) {
-            this.contents = contents;
+            $.contents = contents;
             return this;
         }
+
         public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyResponse triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
+
         public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
-            this.workflowManagement = workflowManagement;
+            $.workflowManagement = workflowManagement;
             return this;
-        }        public FlowAccessControlConfigurationResponse build() {
-            return new FlowAccessControlConfigurationResponse(actions, contents, triggers, workflowManagement);
+        }
+
+        public FlowAccessControlConfigurationResponse build() {
+            return $;
         }
     }
+
 }

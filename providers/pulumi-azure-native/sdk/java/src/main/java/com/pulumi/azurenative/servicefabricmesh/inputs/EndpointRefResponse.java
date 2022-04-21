@@ -23,45 +23,44 @@ public final class EndpointRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public EndpointRefResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private EndpointRefResponse() {}
 
-    private EndpointRefResponse() {
-        this.name = null;
+    private EndpointRefResponse(EndpointRefResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointRefResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private EndpointRefResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointRefResponse();
         }
 
         public Builder(EndpointRefResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new EndpointRefResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public EndpointRefResponse build() {
-            return new EndpointRefResponse(name);
+        }
+
+        public EndpointRefResponse build() {
+            return $;
         }
     }
+
 }

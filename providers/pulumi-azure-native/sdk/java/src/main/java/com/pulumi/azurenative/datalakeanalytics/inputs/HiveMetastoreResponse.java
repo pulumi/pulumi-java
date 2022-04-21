@@ -17,7 +17,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -39,7 +39,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -50,7 +50,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="nestedResourceProvisioningState", required=true)
-      private final String nestedResourceProvisioningState;
+    private String nestedResourceProvisioningState;
 
     public String nestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
@@ -61,7 +61,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -72,7 +72,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final String runtimeVersion;
+    private String runtimeVersion;
 
     public String runtimeVersion() {
         return this.runtimeVersion;
@@ -83,7 +83,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serverUri", required=true)
-      private final String serverUri;
+    private String serverUri;
 
     public String serverUri() {
         return this.serverUri;
@@ -94,7 +94,7 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -105,118 +105,101 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public HiveMetastoreResponse(
-        String databaseName,
-        String id,
-        String name,
-        String nestedResourceProvisioningState,
-        String password,
-        String runtimeVersion,
-        String serverUri,
-        String type,
-        String userName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nestedResourceProvisioningState = Objects.requireNonNull(nestedResourceProvisioningState, "expected parameter 'nestedResourceProvisioningState' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-        this.serverUri = Objects.requireNonNull(serverUri, "expected parameter 'serverUri' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private HiveMetastoreResponse() {}
 
-    private HiveMetastoreResponse() {
-        this.databaseName = null;
-        this.id = null;
-        this.name = null;
-        this.nestedResourceProvisioningState = null;
-        this.password = null;
-        this.runtimeVersion = null;
-        this.serverUri = null;
-        this.type = null;
-        this.userName = null;
+    private HiveMetastoreResponse(HiveMetastoreResponse $) {
+        this.databaseName = $.databaseName;
+        this.id = $.id;
+        this.name = $.name;
+        this.nestedResourceProvisioningState = $.nestedResourceProvisioningState;
+        this.password = $.password;
+        this.runtimeVersion = $.runtimeVersion;
+        this.serverUri = $.serverUri;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HiveMetastoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String id;
-        private String name;
-        private String nestedResourceProvisioningState;
-        private String password;
-        private String runtimeVersion;
-        private String serverUri;
-        private String type;
-        private String userName;
+        private HiveMetastoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HiveMetastoreResponse();
         }
 
         public Builder(HiveMetastoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.nestedResourceProvisioningState = defaults.nestedResourceProvisioningState;
-    	      this.password = defaults.password;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.serverUri = defaults.serverUri;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new HiveMetastoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder nestedResourceProvisioningState(String nestedResourceProvisioningState) {
-            this.nestedResourceProvisioningState = Objects.requireNonNull(nestedResourceProvisioningState);
+            $.nestedResourceProvisioningState = nestedResourceProvisioningState;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder serverUri(String serverUri) {
-            this.serverUri = Objects.requireNonNull(serverUri);
+            $.serverUri = serverUri;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public HiveMetastoreResponse build() {
-            return new HiveMetastoreResponse(databaseName, id, name, nestedResourceProvisioningState, password, runtimeVersion, serverUri, type, userName);
+        }
+
+        public HiveMetastoreResponse build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nestedResourceProvisioningState = Objects.requireNonNull($.nestedResourceProvisioningState, "expected parameter 'nestedResourceProvisioningState' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            $.serverUri = Objects.requireNonNull($.serverUri, "expected parameter 'serverUri' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

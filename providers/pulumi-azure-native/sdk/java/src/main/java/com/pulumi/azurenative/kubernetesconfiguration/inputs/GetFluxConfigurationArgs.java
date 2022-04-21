@@ -17,7 +17,7 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clusterResourceName", required=true)
-      private final String clusterResourceName;
+    private String clusterResourceName;
 
     public String clusterResourceName() {
         return this.clusterResourceName;
@@ -39,7 +39,7 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clusterRp", required=true)
-      private final String clusterRp;
+    private String clusterRp;
 
     public String clusterRp() {
         return this.clusterRp;
@@ -50,7 +50,7 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fluxConfigurationName", required=true)
-      private final String fluxConfigurationName;
+    private String fluxConfigurationName;
 
     public String fluxConfigurationName() {
         return this.fluxConfigurationName;
@@ -61,82 +61,73 @@ public final class GetFluxConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetFluxConfigurationArgs(
-        String clusterName,
-        String clusterResourceName,
-        String clusterRp,
-        String fluxConfigurationName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterResourceName = Objects.requireNonNull(clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
-        this.clusterRp = Objects.requireNonNull(clusterRp, "expected parameter 'clusterRp' to be non-null");
-        this.fluxConfigurationName = Objects.requireNonNull(fluxConfigurationName, "expected parameter 'fluxConfigurationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetFluxConfigurationArgs() {}
 
-    private GetFluxConfigurationArgs() {
-        this.clusterName = null;
-        this.clusterResourceName = null;
-        this.clusterRp = null;
-        this.fluxConfigurationName = null;
-        this.resourceGroupName = null;
+    private GetFluxConfigurationArgs(GetFluxConfigurationArgs $) {
+        this.clusterName = $.clusterName;
+        this.clusterResourceName = $.clusterResourceName;
+        this.clusterRp = $.clusterRp;
+        this.fluxConfigurationName = $.fluxConfigurationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFluxConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String clusterResourceName;
-        private String clusterRp;
-        private String fluxConfigurationName;
-        private String resourceGroupName;
+        private GetFluxConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFluxConfigurationArgs();
         }
 
         public Builder(GetFluxConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterResourceName = defaults.clusterResourceName;
-    	      this.clusterRp = defaults.clusterRp;
-    	      this.fluxConfigurationName = defaults.fluxConfigurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetFluxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterResourceName(String clusterResourceName) {
-            this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
+            $.clusterResourceName = clusterResourceName;
             return this;
         }
+
         public Builder clusterRp(String clusterRp) {
-            this.clusterRp = Objects.requireNonNull(clusterRp);
+            $.clusterRp = clusterRp;
             return this;
         }
+
         public Builder fluxConfigurationName(String fluxConfigurationName) {
-            this.fluxConfigurationName = Objects.requireNonNull(fluxConfigurationName);
+            $.fluxConfigurationName = fluxConfigurationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetFluxConfigurationArgs build() {
-            return new GetFluxConfigurationArgs(clusterName, clusterResourceName, clusterRp, fluxConfigurationName, resourceGroupName);
+        }
+
+        public GetFluxConfigurationArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterResourceName = Objects.requireNonNull($.clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
+            $.clusterRp = Objects.requireNonNull($.clusterRp, "expected parameter 'clusterRp' to be non-null");
+            $.fluxConfigurationName = Objects.requireNonNull($.fluxConfigurationName, "expected parameter 'fluxConfigurationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

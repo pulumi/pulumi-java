@@ -20,10 +20,10 @@ public final class LinuxUserConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="gid")
-      private final @Nullable Integer gid;
+    private @Nullable Integer gid;
 
     public Optional<Integer> gid() {
-        return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
+        return Optional.ofNullable(this.gid);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LinuxUserConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sshPrivateKey")
-      private final @Nullable String sshPrivateKey;
+    private @Nullable String sshPrivateKey;
 
     public Optional<String> sshPrivateKey() {
-        return this.sshPrivateKey == null ? Optional.empty() : Optional.ofNullable(this.sshPrivateKey);
+        return Optional.ofNullable(this.sshPrivateKey);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class LinuxUserConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="uid")
-      private final @Nullable Integer uid;
+    private @Nullable Integer uid;
 
     public Optional<Integer> uid() {
-        return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
+        return Optional.ofNullable(this.uid);
     }
 
-    public LinuxUserConfigurationResponse(
-        @Nullable Integer gid,
-        @Nullable String sshPrivateKey,
-        @Nullable Integer uid) {
-        this.gid = gid;
-        this.sshPrivateKey = sshPrivateKey;
-        this.uid = uid;
-    }
+    private LinuxUserConfigurationResponse() {}
 
-    private LinuxUserConfigurationResponse() {
-        this.gid = null;
-        this.sshPrivateKey = null;
-        this.uid = null;
+    private LinuxUserConfigurationResponse(LinuxUserConfigurationResponse $) {
+        this.gid = $.gid;
+        this.sshPrivateKey = $.sshPrivateKey;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxUserConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer gid;
-        private @Nullable String sshPrivateKey;
-        private @Nullable Integer uid;
+        private LinuxUserConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxUserConfigurationResponse();
         }
 
         public Builder(LinuxUserConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.sshPrivateKey = defaults.sshPrivateKey;
-    	      this.uid = defaults.uid;
+            $ = new LinuxUserConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(@Nullable Integer gid) {
-            this.gid = gid;
+            $.gid = gid;
             return this;
         }
+
         public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
-            this.sshPrivateKey = sshPrivateKey;
+            $.sshPrivateKey = sshPrivateKey;
             return this;
         }
+
         public Builder uid(@Nullable Integer uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
-        }        public LinuxUserConfigurationResponse build() {
-            return new LinuxUserConfigurationResponse(gid, sshPrivateKey, uid);
+        }
+
+        public LinuxUserConfigurationResponse build() {
+            return $;
         }
     }
+
 }

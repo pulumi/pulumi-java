@@ -7,7 +7,6 @@ import com.pulumi.azurenative.costmanagement.enums.FunctionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class ReportConfigAggregationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="function", required=true)
-      private final Output<Either<String,FunctionType>> function;
+    private Output<Either<String,FunctionType>> function;
 
     public Output<Either<String,FunctionType>> function() {
         return this.function;
@@ -36,63 +35,60 @@ public final class ReportConfigAggregationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ReportConfigAggregationArgs(
-        Output<Either<String,FunctionType>> function,
-        Output<String> name) {
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ReportConfigAggregationArgs() {}
 
-    private ReportConfigAggregationArgs() {
-        this.function = Codegen.empty();
-        this.name = Codegen.empty();
+    private ReportConfigAggregationArgs(ReportConfigAggregationArgs $) {
+        this.function = $.function;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigAggregationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,FunctionType>> function;
-        private Output<String> name;
+        private ReportConfigAggregationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigAggregationArgs();
         }
 
         public Builder(ReportConfigAggregationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.function = defaults.function;
-    	      this.name = defaults.name;
+            $ = new ReportConfigAggregationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder function(Output<Either<String,FunctionType>> function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
         public Builder function(Either<String,FunctionType> function) {
-            this.function = Output.of(Objects.requireNonNull(function));
-            return this;
+            return function(Output.of(function));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ReportConfigAggregationArgs build() {
-            return new ReportConfigAggregationArgs(function, name);
+            return name(Output.of(name));
+        }
+
+        public ReportConfigAggregationArgs build() {
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

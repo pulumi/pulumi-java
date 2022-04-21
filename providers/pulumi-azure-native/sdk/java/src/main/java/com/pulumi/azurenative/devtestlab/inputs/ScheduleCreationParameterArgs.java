@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dailyRecurrence")
-      private final @Nullable Output<DayDetailsArgs> dailyRecurrence;
+    private @Nullable Output<DayDetailsArgs> dailyRecurrence;
 
-    public Output<DayDetailsArgs> dailyRecurrence() {
-        return this.dailyRecurrence == null ? Codegen.empty() : this.dailyRecurrence;
+    public Optional<Output<DayDetailsArgs>> dailyRecurrence() {
+        return Optional.ofNullable(this.dailyRecurrence);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="hourlyRecurrence")
-      private final @Nullable Output<HourDetailsArgs> hourlyRecurrence;
+    private @Nullable Output<HourDetailsArgs> hourlyRecurrence;
 
-    public Output<HourDetailsArgs> hourlyRecurrence() {
-        return this.hourlyRecurrence == null ? Codegen.empty() : this.hourlyRecurrence;
+    public Optional<Output<HourDetailsArgs>> hourlyRecurrence() {
+        return Optional.ofNullable(this.hourlyRecurrence);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="notificationSettings")
-      private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
+    private @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Output<NotificationSettingsArgs> notificationSettings() {
-        return this.notificationSettings == null ? Codegen.empty() : this.notificationSettings;
+    public Optional<Output<NotificationSettingsArgs>> notificationSettings() {
+        return Optional.ofNullable(this.notificationSettings);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,EnableStatus>> status;
+    private @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,EnableStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="targetResourceId")
-      private final @Nullable Output<String> targetResourceId;
+    private @Nullable Output<String> targetResourceId;
 
-    public Output<String> targetResourceId() {
-        return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
+    public Optional<Output<String>> targetResourceId() {
+        return Optional.ofNullable(this.targetResourceId);
     }
 
     /**
@@ -108,10 +109,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="taskType")
-      private final @Nullable Output<String> taskType;
+    private @Nullable Output<String> taskType;
 
-    public Output<String> taskType() {
-        return this.taskType == null ? Codegen.empty() : this.taskType;
+    public Optional<Output<String>> taskType() {
+        return Optional.ofNullable(this.taskType);
     }
 
     /**
@@ -119,10 +120,10 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="timeZoneId")
-      private final @Nullable Output<String> timeZoneId;
+    private @Nullable Output<String> timeZoneId;
 
-    public Output<String> timeZoneId() {
-        return this.timeZoneId == null ? Codegen.empty() : this.timeZoneId;
+    public Optional<Output<String>> timeZoneId() {
+        return Optional.ofNullable(this.timeZoneId);
     }
 
     /**
@@ -130,167 +131,139 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="weeklyRecurrence")
-      private final @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
+    private @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
 
-    public Output<WeekDetailsArgs> weeklyRecurrence() {
-        return this.weeklyRecurrence == null ? Codegen.empty() : this.weeklyRecurrence;
+    public Optional<Output<WeekDetailsArgs>> weeklyRecurrence() {
+        return Optional.ofNullable(this.weeklyRecurrence);
     }
 
-    public ScheduleCreationParameterArgs(
-        @Nullable Output<DayDetailsArgs> dailyRecurrence,
-        @Nullable Output<HourDetailsArgs> hourlyRecurrence,
-        @Nullable Output<String> name,
-        @Nullable Output<NotificationSettingsArgs> notificationSettings,
-        @Nullable Output<Either<String,EnableStatus>> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> targetResourceId,
-        @Nullable Output<String> taskType,
-        @Nullable Output<String> timeZoneId,
-        @Nullable Output<WeekDetailsArgs> weeklyRecurrence) {
-        this.dailyRecurrence = dailyRecurrence;
-        this.hourlyRecurrence = hourlyRecurrence;
-        this.name = name;
-        this.notificationSettings = notificationSettings;
-        this.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg(status).def("Disabled").getNullable();
-        this.tags = tags;
-        this.targetResourceId = targetResourceId;
-        this.taskType = taskType;
-        this.timeZoneId = timeZoneId;
-        this.weeklyRecurrence = weeklyRecurrence;
-    }
+    private ScheduleCreationParameterArgs() {}
 
-    private ScheduleCreationParameterArgs() {
-        this.dailyRecurrence = Codegen.empty();
-        this.hourlyRecurrence = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationSettings = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetResourceId = Codegen.empty();
-        this.taskType = Codegen.empty();
-        this.timeZoneId = Codegen.empty();
-        this.weeklyRecurrence = Codegen.empty();
+    private ScheduleCreationParameterArgs(ScheduleCreationParameterArgs $) {
+        this.dailyRecurrence = $.dailyRecurrence;
+        this.hourlyRecurrence = $.hourlyRecurrence;
+        this.name = $.name;
+        this.notificationSettings = $.notificationSettings;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.targetResourceId = $.targetResourceId;
+        this.taskType = $.taskType;
+        this.timeZoneId = $.timeZoneId;
+        this.weeklyRecurrence = $.weeklyRecurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleCreationParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DayDetailsArgs> dailyRecurrence;
-        private @Nullable Output<HourDetailsArgs> hourlyRecurrence;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NotificationSettingsArgs> notificationSettings;
-        private @Nullable Output<Either<String,EnableStatus>> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> targetResourceId;
-        private @Nullable Output<String> taskType;
-        private @Nullable Output<String> timeZoneId;
-        private @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
+        private ScheduleCreationParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleCreationParameterArgs();
         }
 
         public Builder(ScheduleCreationParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyRecurrence = defaults.dailyRecurrence;
-    	      this.hourlyRecurrence = defaults.hourlyRecurrence;
-    	      this.name = defaults.name;
-    	      this.notificationSettings = defaults.notificationSettings;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.targetResourceId = defaults.targetResourceId;
-    	      this.taskType = defaults.taskType;
-    	      this.timeZoneId = defaults.timeZoneId;
-    	      this.weeklyRecurrence = defaults.weeklyRecurrence;
+            $ = new ScheduleCreationParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyRecurrence(@Nullable Output<DayDetailsArgs> dailyRecurrence) {
-            this.dailyRecurrence = dailyRecurrence;
+            $.dailyRecurrence = dailyRecurrence;
             return this;
         }
-        public Builder dailyRecurrence(@Nullable DayDetailsArgs dailyRecurrence) {
-            this.dailyRecurrence = Codegen.ofNullable(dailyRecurrence);
-            return this;
+
+        public Builder dailyRecurrence(DayDetailsArgs dailyRecurrence) {
+            return dailyRecurrence(Output.of(dailyRecurrence));
         }
+
         public Builder hourlyRecurrence(@Nullable Output<HourDetailsArgs> hourlyRecurrence) {
-            this.hourlyRecurrence = hourlyRecurrence;
+            $.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
-        public Builder hourlyRecurrence(@Nullable HourDetailsArgs hourlyRecurrence) {
-            this.hourlyRecurrence = Codegen.ofNullable(hourlyRecurrence);
-            return this;
+
+        public Builder hourlyRecurrence(HourDetailsArgs hourlyRecurrence) {
+            return hourlyRecurrence(Output.of(hourlyRecurrence));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
-            this.notificationSettings = notificationSettings;
+            $.notificationSettings = notificationSettings;
             return this;
         }
-        public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
-            this.notificationSettings = Codegen.ofNullable(notificationSettings);
-            return this;
+
+        public Builder notificationSettings(NotificationSettingsArgs notificationSettings) {
+            return notificationSettings(Output.of(notificationSettings));
         }
+
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,EnableStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
-            this.targetResourceId = targetResourceId;
+            $.targetResourceId = targetResourceId;
             return this;
         }
-        public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Codegen.ofNullable(targetResourceId);
-            return this;
+
+        public Builder targetResourceId(String targetResourceId) {
+            return targetResourceId(Output.of(targetResourceId));
         }
+
         public Builder taskType(@Nullable Output<String> taskType) {
-            this.taskType = taskType;
+            $.taskType = taskType;
             return this;
         }
-        public Builder taskType(@Nullable String taskType) {
-            this.taskType = Codegen.ofNullable(taskType);
-            return this;
+
+        public Builder taskType(String taskType) {
+            return taskType(Output.of(taskType));
         }
+
         public Builder timeZoneId(@Nullable Output<String> timeZoneId) {
-            this.timeZoneId = timeZoneId;
+            $.timeZoneId = timeZoneId;
             return this;
         }
-        public Builder timeZoneId(@Nullable String timeZoneId) {
-            this.timeZoneId = Codegen.ofNullable(timeZoneId);
-            return this;
+
+        public Builder timeZoneId(String timeZoneId) {
+            return timeZoneId(Output.of(timeZoneId));
         }
+
         public Builder weeklyRecurrence(@Nullable Output<WeekDetailsArgs> weeklyRecurrence) {
-            this.weeklyRecurrence = weeklyRecurrence;
+            $.weeklyRecurrence = weeklyRecurrence;
             return this;
         }
-        public Builder weeklyRecurrence(@Nullable WeekDetailsArgs weeklyRecurrence) {
-            this.weeklyRecurrence = Codegen.ofNullable(weeklyRecurrence);
-            return this;
-        }        public ScheduleCreationParameterArgs build() {
-            return new ScheduleCreationParameterArgs(dailyRecurrence, hourlyRecurrence, name, notificationSettings, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
+
+        public Builder weeklyRecurrence(WeekDetailsArgs weeklyRecurrence) {
+            return weeklyRecurrence(Output.of(weeklyRecurrence));
+        }
+
+        public ScheduleCreationParameterArgs build() {
+            $.status = Codegen.stringProp("status").left(EnableStatus.class).output().arg($.status).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

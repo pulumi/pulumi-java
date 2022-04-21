@@ -7,9 +7,9 @@ import com.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable Output<String> datastoreId;
+    private @Nullable Output<String> datastoreId;
 
-    public Output<String> datastoreId() {
-        return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
+    public Optional<Output<String>> datastoreId() {
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,DataBindingMode>> mode;
+    private @Nullable Output<Either<String,DataBindingMode>> mode;
 
-    public Output<Either<String,DataBindingMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,DataBindingMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="pathOnCompute")
-      private final @Nullable Output<String> pathOnCompute;
+    private @Nullable Output<String> pathOnCompute;
 
-    public Output<String> pathOnCompute() {
-        return this.pathOnCompute == null ? Codegen.empty() : this.pathOnCompute;
+    public Optional<Output<String>> pathOnCompute() {
+        return Optional.ofNullable(this.pathOnCompute);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="pathOnDatastore")
-      private final @Nullable Output<String> pathOnDatastore;
+    private @Nullable Output<String> pathOnDatastore;
 
-    public Output<String> pathOnDatastore() {
-        return this.pathOnDatastore == null ? Codegen.empty() : this.pathOnDatastore;
+    public Optional<Output<String>> pathOnDatastore() {
+        return Optional.ofNullable(this.pathOnDatastore);
     }
 
-    public OutputDataBindingArgs(
-        @Nullable Output<String> datastoreId,
-        @Nullable Output<Either<String,DataBindingMode>> mode,
-        @Nullable Output<String> pathOnCompute,
-        @Nullable Output<String> pathOnDatastore) {
-        this.datastoreId = datastoreId;
-        this.mode = mode;
-        this.pathOnCompute = pathOnCompute;
-        this.pathOnDatastore = pathOnDatastore;
-    }
+    private OutputDataBindingArgs() {}
 
-    private OutputDataBindingArgs() {
-        this.datastoreId = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.pathOnCompute = Codegen.empty();
-        this.pathOnDatastore = Codegen.empty();
+    private OutputDataBindingArgs(OutputDataBindingArgs $) {
+        this.datastoreId = $.datastoreId;
+        this.mode = $.mode;
+        this.pathOnCompute = $.pathOnCompute;
+        this.pathOnDatastore = $.pathOnDatastore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputDataBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datastoreId;
-        private @Nullable Output<Either<String,DataBindingMode>> mode;
-        private @Nullable Output<String> pathOnCompute;
-        private @Nullable Output<String> pathOnDatastore;
+        private OutputDataBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputDataBindingArgs();
         }
 
         public Builder(OutputDataBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.mode = defaults.mode;
-    	      this.pathOnCompute = defaults.pathOnCompute;
-    	      this.pathOnDatastore = defaults.pathOnDatastore;
+            $ = new OutputDataBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
-        public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Codegen.ofNullable(datastoreId);
-            return this;
+
+        public Builder datastoreId(String datastoreId) {
+            return datastoreId(Output.of(datastoreId));
         }
+
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,DataBindingMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
-            this.pathOnCompute = pathOnCompute;
+            $.pathOnCompute = pathOnCompute;
             return this;
         }
-        public Builder pathOnCompute(@Nullable String pathOnCompute) {
-            this.pathOnCompute = Codegen.ofNullable(pathOnCompute);
-            return this;
+
+        public Builder pathOnCompute(String pathOnCompute) {
+            return pathOnCompute(Output.of(pathOnCompute));
         }
+
         public Builder pathOnDatastore(@Nullable Output<String> pathOnDatastore) {
-            this.pathOnDatastore = pathOnDatastore;
+            $.pathOnDatastore = pathOnDatastore;
             return this;
         }
-        public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
-            this.pathOnDatastore = Codegen.ofNullable(pathOnDatastore);
-            return this;
-        }        public OutputDataBindingArgs build() {
-            return new OutputDataBindingArgs(datastoreId, mode, pathOnCompute, pathOnDatastore);
+
+        public Builder pathOnDatastore(String pathOnDatastore) {
+            return pathOnDatastore(Output.of(pathOnDatastore));
+        }
+
+        public OutputDataBindingArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
      * 
      */
     @Import(name="rules", required=true)
-      private final List<DeliveryRuleResponse> rules;
+    private List<DeliveryRuleResponse> rules;
 
     public List<DeliveryRuleResponse> rules() {
         return this.rules;
     }
 
-    public EndpointPropertiesUpdateParametersResponseDeliveryPolicy(
-        @Nullable String description,
-        List<DeliveryRuleResponse> rules) {
-        this.description = description;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private EndpointPropertiesUpdateParametersResponseDeliveryPolicy() {}
 
-    private EndpointPropertiesUpdateParametersResponseDeliveryPolicy() {
-        this.description = null;
-        this.rules = List.of();
+    private EndpointPropertiesUpdateParametersResponseDeliveryPolicy(EndpointPropertiesUpdateParametersResponseDeliveryPolicy $) {
+        this.description = $.description;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesUpdateParametersResponseDeliveryPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private List<DeliveryRuleResponse> rules;
+        private EndpointPropertiesUpdateParametersResponseDeliveryPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesUpdateParametersResponseDeliveryPolicy();
         }
 
         public Builder(EndpointPropertiesUpdateParametersResponseDeliveryPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.rules = defaults.rules;
+            $ = new EndpointPropertiesUpdateParametersResponseDeliveryPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder rules(List<DeliveryRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(DeliveryRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public EndpointPropertiesUpdateParametersResponseDeliveryPolicy build() {
-            return new EndpointPropertiesUpdateParametersResponseDeliveryPolicy(description, rules);
+        }
+
+        public EndpointPropertiesUpdateParametersResponseDeliveryPolicy build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

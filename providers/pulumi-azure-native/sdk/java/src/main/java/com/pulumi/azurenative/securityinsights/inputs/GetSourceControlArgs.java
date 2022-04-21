@@ -17,7 +17,7 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -28,7 +28,7 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceControlId", required=true)
-      private final String sourceControlId;
+    private String sourceControlId;
 
     public String sourceControlId() {
         return this.sourceControlId;
@@ -50,73 +50,66 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSourceControlArgs(
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String sourceControlId,
-        String workspaceName) {
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceControlId = Objects.requireNonNull(sourceControlId, "expected parameter 'sourceControlId' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSourceControlArgs() {}
 
-    private GetSourceControlArgs() {
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.sourceControlId = null;
-        this.workspaceName = null;
+    private GetSourceControlArgs(GetSourceControlArgs $) {
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceControlId = $.sourceControlId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSourceControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String sourceControlId;
-        private String workspaceName;
+        private GetSourceControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSourceControlArgs();
         }
 
         public Builder(GetSourceControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceControlId = defaults.sourceControlId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSourceControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sourceControlId(String sourceControlId) {
-            this.sourceControlId = Objects.requireNonNull(sourceControlId);
+            $.sourceControlId = sourceControlId;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSourceControlArgs build() {
-            return new GetSourceControlArgs(operationalInsightsResourceProvider, resourceGroupName, sourceControlId, workspaceName);
+        }
+
+        public GetSourceControlArgs build() {
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceControlId = Objects.requireNonNull($.sourceControlId, "expected parameter 'sourceControlId' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

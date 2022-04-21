@@ -17,7 +17,7 @@ public final class GetVideoAnalyzerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,55 +28,52 @@ public final class GetVideoAnalyzerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetVideoAnalyzerArgs(
-        String accountName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetVideoAnalyzerArgs() {}
 
-    private GetVideoAnalyzerArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
+    private GetVideoAnalyzerArgs(GetVideoAnalyzerArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVideoAnalyzerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
+        private GetVideoAnalyzerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVideoAnalyzerArgs();
         }
 
         public Builder(GetVideoAnalyzerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetVideoAnalyzerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetVideoAnalyzerArgs build() {
-            return new GetVideoAnalyzerArgs(accountName, resourceGroupName);
+        }
+
+        public GetVideoAnalyzerArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

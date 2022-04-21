@@ -27,10 +27,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="diskRestorePoint")
-      private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
+    private @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
     public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
-        return this.diskRestorePoint == null ? Optional.empty() : Optional.ofNullable(this.diskRestorePoint);
+        return Optional.ofNullable(this.diskRestorePoint);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
+    private @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
     public Optional<DiskEncryptionSettingsResponse> encryptionSettings() {
-        return this.encryptionSettings == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettings);
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable ManagedDiskParametersResponse managedDisk;
+    private @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> managedDisk() {
-        return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,100 +93,80 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
-    public RestorePointSourceVMOSDiskResponse(
-        @Nullable String caching,
-        @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @Nullable Integer diskSizeGB,
-        @Nullable DiskEncryptionSettingsResponse encryptionSettings,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType) {
-        this.caching = caching;
-        this.diskRestorePoint = diskRestorePoint;
-        this.diskSizeGB = diskSizeGB;
-        this.encryptionSettings = encryptionSettings;
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.osType = osType;
-    }
+    private RestorePointSourceVMOSDiskResponse() {}
 
-    private RestorePointSourceVMOSDiskResponse() {
-        this.caching = null;
-        this.diskRestorePoint = null;
-        this.diskSizeGB = null;
-        this.encryptionSettings = null;
-        this.managedDisk = null;
-        this.name = null;
-        this.osType = null;
+    private RestorePointSourceVMOSDiskResponse(RestorePointSourceVMOSDiskResponse $) {
+        this.caching = $.caching;
+        this.diskRestorePoint = $.diskRestorePoint;
+        this.diskSizeGB = $.diskSizeGB;
+        this.encryptionSettings = $.encryptionSettings;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.osType = $.osType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointSourceVMOSDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String caching;
-        private @Nullable ApiEntityReferenceResponse diskRestorePoint;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable DiskEncryptionSettingsResponse encryptionSettings;
-        private @Nullable ManagedDiskParametersResponse managedDisk;
-        private @Nullable String name;
-        private @Nullable String osType;
+        private RestorePointSourceVMOSDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointSourceVMOSDiskResponse();
         }
 
         public Builder(RestorePointSourceVMOSDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.diskRestorePoint = defaults.diskRestorePoint;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
+            $ = new RestorePointSourceVMOSDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
-            this.diskRestorePoint = diskRestorePoint;
+            $.diskRestorePoint = diskRestorePoint;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
+
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
-        }        public RestorePointSourceVMOSDiskResponse build() {
-            return new RestorePointSourceVMOSDiskResponse(caching, diskRestorePoint, diskSizeGB, encryptionSettings, managedDisk, name, osType);
+        }
+
+        public RestorePointSourceVMOSDiskResponse build() {
+            return $;
         }
     }
+
 }

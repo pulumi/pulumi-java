@@ -24,10 +24,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="additionalLatencyMilliseconds")
-      private final @Nullable Integer additionalLatencyMilliseconds;
+    private @Nullable Integer additionalLatencyMilliseconds;
 
     public Optional<Integer> additionalLatencyMilliseconds() {
-        return this.additionalLatencyMilliseconds == null ? Optional.empty() : Optional.ofNullable(this.additionalLatencyMilliseconds);
+        return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -68,10 +68,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sampleSize")
-      private final @Nullable Integer sampleSize;
+    private @Nullable Integer sampleSize;
 
     public Optional<Integer> sampleSize() {
-        return this.sampleSize == null ? Optional.empty() : Optional.ofNullable(this.sampleSize);
+        return Optional.ofNullable(this.sampleSize);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="successfulSamplesRequired")
-      private final @Nullable Integer successfulSamplesRequired;
+    private @Nullable Integer successfulSamplesRequired;
 
     public Optional<Integer> successfulSamplesRequired() {
-        return this.successfulSamplesRequired == null ? Optional.empty() : Optional.ofNullable(this.successfulSamplesRequired);
+        return Optional.ofNullable(this.successfulSamplesRequired);
     }
 
     /**
@@ -90,100 +90,82 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public LoadBalancingSettingsModelResponse(
-        @Nullable Integer additionalLatencyMilliseconds,
-        @Nullable String id,
-        @Nullable String name,
-        String resourceState,
-        @Nullable Integer sampleSize,
-        @Nullable Integer successfulSamplesRequired,
-        String type) {
-        this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
-        this.id = id;
-        this.name = name;
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.sampleSize = sampleSize;
-        this.successfulSamplesRequired = successfulSamplesRequired;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LoadBalancingSettingsModelResponse() {}
 
-    private LoadBalancingSettingsModelResponse() {
-        this.additionalLatencyMilliseconds = null;
-        this.id = null;
-        this.name = null;
-        this.resourceState = null;
-        this.sampleSize = null;
-        this.successfulSamplesRequired = null;
-        this.type = null;
+    private LoadBalancingSettingsModelResponse(LoadBalancingSettingsModelResponse $) {
+        this.additionalLatencyMilliseconds = $.additionalLatencyMilliseconds;
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceState = $.resourceState;
+        this.sampleSize = $.sampleSize;
+        this.successfulSamplesRequired = $.successfulSamplesRequired;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingSettingsModelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer additionalLatencyMilliseconds;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String resourceState;
-        private @Nullable Integer sampleSize;
-        private @Nullable Integer successfulSamplesRequired;
-        private String type;
+        private LoadBalancingSettingsModelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingSettingsModelResponse();
         }
 
         public Builder(LoadBalancingSettingsModelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalLatencyMilliseconds = defaults.additionalLatencyMilliseconds;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceState = defaults.resourceState;
-    	      this.sampleSize = defaults.sampleSize;
-    	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
-    	      this.type = defaults.type;
+            $ = new LoadBalancingSettingsModelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
-            this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
+            $.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = sampleSize;
+            $.sampleSize = sampleSize;
             return this;
         }
+
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
-            this.successfulSamplesRequired = successfulSamplesRequired;
+            $.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public LoadBalancingSettingsModelResponse build() {
-            return new LoadBalancingSettingsModelResponse(additionalLatencyMilliseconds, id, name, resourceState, sampleSize, successfulSamplesRequired, type);
+        }
+
+        public LoadBalancingSettingsModelResponse build() {
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

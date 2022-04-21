@@ -17,7 +17,7 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="administratorName", required=true)
-      private final String administratorName;
+    private String administratorName;
 
     public String administratorName() {
         return this.administratorName;
@@ -28,7 +28,7 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerAzureADAdministratorArgs(
-        String administratorName,
-        String resourceGroupName,
-        String serverName) {
-        this.administratorName = Objects.requireNonNull(administratorName, "expected parameter 'administratorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerAzureADAdministratorArgs() {}
 
-    private GetServerAzureADAdministratorArgs() {
-        this.administratorName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerAzureADAdministratorArgs(GetServerAzureADAdministratorArgs $) {
+        this.administratorName = $.administratorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerAzureADAdministratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String administratorName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerAzureADAdministratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerAzureADAdministratorArgs();
         }
 
         public Builder(GetServerAzureADAdministratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorName = defaults.administratorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerAzureADAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorName(String administratorName) {
-            this.administratorName = Objects.requireNonNull(administratorName);
+            $.administratorName = administratorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerAzureADAdministratorArgs build() {
-            return new GetServerAzureADAdministratorArgs(administratorName, resourceGroupName, serverName);
+        }
+
+        public GetServerAzureADAdministratorArgs build() {
+            $.administratorName = Objects.requireNonNull($.administratorName, "expected parameter 'administratorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

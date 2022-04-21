@@ -15,62 +15,57 @@ public final class InstantRPAdditionalDetailsResponse extends com.pulumi.resourc
     public static final InstantRPAdditionalDetailsResponse Empty = new InstantRPAdditionalDetailsResponse();
 
     @Import(name="azureBackupRGNamePrefix")
-      private final @Nullable String azureBackupRGNamePrefix;
+    private @Nullable String azureBackupRGNamePrefix;
 
     public Optional<String> azureBackupRGNamePrefix() {
-        return this.azureBackupRGNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.azureBackupRGNamePrefix);
+        return Optional.ofNullable(this.azureBackupRGNamePrefix);
     }
 
     @Import(name="azureBackupRGNameSuffix")
-      private final @Nullable String azureBackupRGNameSuffix;
+    private @Nullable String azureBackupRGNameSuffix;
 
     public Optional<String> azureBackupRGNameSuffix() {
-        return this.azureBackupRGNameSuffix == null ? Optional.empty() : Optional.ofNullable(this.azureBackupRGNameSuffix);
+        return Optional.ofNullable(this.azureBackupRGNameSuffix);
     }
 
-    public InstantRPAdditionalDetailsResponse(
-        @Nullable String azureBackupRGNamePrefix,
-        @Nullable String azureBackupRGNameSuffix) {
-        this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
-        this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
-    }
+    private InstantRPAdditionalDetailsResponse() {}
 
-    private InstantRPAdditionalDetailsResponse() {
-        this.azureBackupRGNamePrefix = null;
-        this.azureBackupRGNameSuffix = null;
+    private InstantRPAdditionalDetailsResponse(InstantRPAdditionalDetailsResponse $) {
+        this.azureBackupRGNamePrefix = $.azureBackupRGNamePrefix;
+        this.azureBackupRGNameSuffix = $.azureBackupRGNameSuffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstantRPAdditionalDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String azureBackupRGNamePrefix;
-        private @Nullable String azureBackupRGNameSuffix;
+        private InstantRPAdditionalDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstantRPAdditionalDetailsResponse();
         }
 
         public Builder(InstantRPAdditionalDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBackupRGNamePrefix = defaults.azureBackupRGNamePrefix;
-    	      this.azureBackupRGNameSuffix = defaults.azureBackupRGNameSuffix;
+            $ = new InstantRPAdditionalDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
-            this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
+            $.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
             return this;
         }
+
         public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
-            this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
+            $.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
-        }        public InstantRPAdditionalDetailsResponse build() {
-            return new InstantRPAdditionalDetailsResponse(azureBackupRGNamePrefix, azureBackupRGNameSuffix);
+        }
+
+        public InstantRPAdditionalDetailsResponse build() {
+            return $;
         }
     }
+
 }

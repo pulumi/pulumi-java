@@ -17,7 +17,7 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="configName", required=true)
-      private final String configName;
+    private String configName;
 
     public String configName() {
         return this.configName;
@@ -28,7 +28,7 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetMaintenanceConfigurationArgs(
-        String configName,
-        String resourceGroupName,
-        String resourceName) {
-        this.configName = Objects.requireNonNull(configName, "expected parameter 'configName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetMaintenanceConfigurationArgs() {}
 
-    private GetMaintenanceConfigurationArgs() {
-        this.configName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetMaintenanceConfigurationArgs(GetMaintenanceConfigurationArgs $) {
+        this.configName = $.configName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMaintenanceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetMaintenanceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMaintenanceConfigurationArgs();
         }
 
         public Builder(GetMaintenanceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configName = defaults.configName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetMaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configName(String configName) {
-            this.configName = Objects.requireNonNull(configName);
+            $.configName = configName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetMaintenanceConfigurationArgs build() {
-            return new GetMaintenanceConfigurationArgs(configName, resourceGroupName, resourceName);
+        }
+
+        public GetMaintenanceConfigurationArgs build() {
+            $.configName = Objects.requireNonNull($.configName, "expected parameter 'configName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

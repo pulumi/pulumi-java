@@ -23,10 +23,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameterName")
-      private final @Nullable String parameterName;
+    private @Nullable String parameterName;
 
     public Optional<String> parameterName() {
-        return this.parameterName == null ? Optional.empty() : Optional.ofNullable(this.parameterName);
+        return Optional.ofNullable(this.parameterName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="redirectUrl")
-      private final @Nullable String redirectUrl;
+    private @Nullable String redirectUrl;
 
     public Optional<String> redirectUrl() {
-        return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
+        return Optional.ofNullable(this.redirectUrl);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ConsentLinkParameterDefinition(
-        @Nullable String objectId,
-        @Nullable String parameterName,
-        @Nullable String redirectUrl,
-        @Nullable String tenantId) {
-        this.objectId = objectId;
-        this.parameterName = parameterName;
-        this.redirectUrl = redirectUrl;
-        this.tenantId = tenantId;
-    }
+    private ConsentLinkParameterDefinition() {}
 
-    private ConsentLinkParameterDefinition() {
-        this.objectId = null;
-        this.parameterName = null;
-        this.redirectUrl = null;
-        this.tenantId = null;
+    private ConsentLinkParameterDefinition(ConsentLinkParameterDefinition $) {
+        this.objectId = $.objectId;
+        this.parameterName = $.parameterName;
+        this.redirectUrl = $.redirectUrl;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentLinkParameterDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String objectId;
-        private @Nullable String parameterName;
-        private @Nullable String redirectUrl;
-        private @Nullable String tenantId;
+        private ConsentLinkParameterDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentLinkParameterDefinition();
         }
 
         public Builder(ConsentLinkParameterDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
-    	      this.parameterName = defaults.parameterName;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ConsentLinkParameterDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder parameterName(@Nullable String parameterName) {
-            this.parameterName = parameterName;
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = redirectUrl;
+            $.redirectUrl = redirectUrl;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public ConsentLinkParameterDefinition build() {
-            return new ConsentLinkParameterDefinition(objectId, parameterName, redirectUrl, tenantId);
+        }
+
+        public ConsentLinkParameterDefinition build() {
+            return $;
         }
     }
+
 }

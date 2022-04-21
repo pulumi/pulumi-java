@@ -24,10 +24,10 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operator")
-      private final @Nullable String operator;
+    private @Nullable String operator;
 
     public Optional<String> operator() {
-        return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ConditionResponse(
-        @Nullable String operator,
-        @Nullable List<String> values) {
-        this.operator = operator;
-        this.values = values;
-    }
+    private ConditionResponse() {}
 
-    private ConditionResponse() {
-        this.operator = null;
-        this.values = List.of();
+    private ConditionResponse(ConditionResponse $) {
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String operator;
-        private @Nullable List<String> values;
+        private ConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionResponse();
         }
 
         public Builder(ConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(@Nullable String operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ConditionResponse build() {
-            return new ConditionResponse(operator, values);
+        }
+
+        public ConditionResponse build() {
+            return $;
         }
     }
+
 }

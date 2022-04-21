@@ -5,10 +5,10 @@ package com.pulumi.azurenative.management;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HierarchySettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="defaultManagementGroup")
-      private final @Nullable Output<String> defaultManagementGroup;
+    private @Nullable Output<String> defaultManagementGroup;
 
-    public Output<String> defaultManagementGroup() {
-        return this.defaultManagementGroup == null ? Codegen.empty() : this.defaultManagementGroup;
+    public Optional<Output<String>> defaultManagementGroup() {
+        return Optional.ofNullable(this.defaultManagementGroup);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class HierarchySettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="groupId", required=true)
-      private final Output<String> groupId;
+    private Output<String> groupId;
 
     public Output<String> groupId() {
         return this.groupId;
@@ -43,76 +43,69 @@ public final class HierarchySettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requireAuthorizationForGroupCreation")
-      private final @Nullable Output<Boolean> requireAuthorizationForGroupCreation;
+    private @Nullable Output<Boolean> requireAuthorizationForGroupCreation;
 
-    public Output<Boolean> requireAuthorizationForGroupCreation() {
-        return this.requireAuthorizationForGroupCreation == null ? Codegen.empty() : this.requireAuthorizationForGroupCreation;
+    public Optional<Output<Boolean>> requireAuthorizationForGroupCreation() {
+        return Optional.ofNullable(this.requireAuthorizationForGroupCreation);
     }
 
-    public HierarchySettingArgs(
-        @Nullable Output<String> defaultManagementGroup,
-        Output<String> groupId,
-        @Nullable Output<Boolean> requireAuthorizationForGroupCreation) {
-        this.defaultManagementGroup = defaultManagementGroup;
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
-    }
+    private HierarchySettingArgs() {}
 
-    private HierarchySettingArgs() {
-        this.defaultManagementGroup = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.requireAuthorizationForGroupCreation = Codegen.empty();
+    private HierarchySettingArgs(HierarchySettingArgs $) {
+        this.defaultManagementGroup = $.defaultManagementGroup;
+        this.groupId = $.groupId;
+        this.requireAuthorizationForGroupCreation = $.requireAuthorizationForGroupCreation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HierarchySettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultManagementGroup;
-        private Output<String> groupId;
-        private @Nullable Output<Boolean> requireAuthorizationForGroupCreation;
+        private HierarchySettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HierarchySettingArgs();
         }
 
         public Builder(HierarchySettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultManagementGroup = defaults.defaultManagementGroup;
-    	      this.groupId = defaults.groupId;
-    	      this.requireAuthorizationForGroupCreation = defaults.requireAuthorizationForGroupCreation;
+            $ = new HierarchySettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultManagementGroup(@Nullable Output<String> defaultManagementGroup) {
-            this.defaultManagementGroup = defaultManagementGroup;
+            $.defaultManagementGroup = defaultManagementGroup;
             return this;
         }
-        public Builder defaultManagementGroup(@Nullable String defaultManagementGroup) {
-            this.defaultManagementGroup = Codegen.ofNullable(defaultManagementGroup);
-            return this;
+
+        public Builder defaultManagementGroup(String defaultManagementGroup) {
+            return defaultManagementGroup(Output.of(defaultManagementGroup));
         }
+
         public Builder groupId(Output<String> groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Output.of(Objects.requireNonNull(groupId));
-            return this;
+            return groupId(Output.of(groupId));
         }
+
         public Builder requireAuthorizationForGroupCreation(@Nullable Output<Boolean> requireAuthorizationForGroupCreation) {
-            this.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
+            $.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
             return this;
         }
-        public Builder requireAuthorizationForGroupCreation(@Nullable Boolean requireAuthorizationForGroupCreation) {
-            this.requireAuthorizationForGroupCreation = Codegen.ofNullable(requireAuthorizationForGroupCreation);
-            return this;
-        }        public HierarchySettingArgs build() {
-            return new HierarchySettingArgs(defaultManagementGroup, groupId, requireAuthorizationForGroupCreation);
+
+        public Builder requireAuthorizationForGroupCreation(Boolean requireAuthorizationForGroupCreation) {
+            return requireAuthorizationForGroupCreation(Output.of(requireAuthorizationForGroupCreation));
+        }
+
+        public HierarchySettingArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

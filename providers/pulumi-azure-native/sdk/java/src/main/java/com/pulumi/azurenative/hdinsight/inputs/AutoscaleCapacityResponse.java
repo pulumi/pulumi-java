@@ -23,10 +23,10 @@ public final class AutoscaleCapacityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxInstanceCount")
-      private final @Nullable Integer maxInstanceCount;
+    private @Nullable Integer maxInstanceCount;
 
     public Optional<Integer> maxInstanceCount() {
-        return this.maxInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.maxInstanceCount);
+        return Optional.ofNullable(this.maxInstanceCount);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AutoscaleCapacityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minInstanceCount")
-      private final @Nullable Integer minInstanceCount;
+    private @Nullable Integer minInstanceCount;
 
     public Optional<Integer> minInstanceCount() {
-        return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
+        return Optional.ofNullable(this.minInstanceCount);
     }
 
-    public AutoscaleCapacityResponse(
-        @Nullable Integer maxInstanceCount,
-        @Nullable Integer minInstanceCount) {
-        this.maxInstanceCount = maxInstanceCount;
-        this.minInstanceCount = minInstanceCount;
-    }
+    private AutoscaleCapacityResponse() {}
 
-    private AutoscaleCapacityResponse() {
-        this.maxInstanceCount = null;
-        this.minInstanceCount = null;
+    private AutoscaleCapacityResponse(AutoscaleCapacityResponse $) {
+        this.maxInstanceCount = $.maxInstanceCount;
+        this.minInstanceCount = $.minInstanceCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleCapacityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxInstanceCount;
-        private @Nullable Integer minInstanceCount;
+        private AutoscaleCapacityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleCapacityResponse();
         }
 
         public Builder(AutoscaleCapacityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstanceCount = defaults.maxInstanceCount;
-    	      this.minInstanceCount = defaults.minInstanceCount;
+            $ = new AutoscaleCapacityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = maxInstanceCount;
+            $.maxInstanceCount = maxInstanceCount;
             return this;
         }
+
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = minInstanceCount;
+            $.minInstanceCount = minInstanceCount;
             return this;
-        }        public AutoscaleCapacityResponse build() {
-            return new AutoscaleCapacityResponse(maxInstanceCount, minInstanceCount);
+        }
+
+        public AutoscaleCapacityResponse build() {
+            return $;
         }
     }
+
 }

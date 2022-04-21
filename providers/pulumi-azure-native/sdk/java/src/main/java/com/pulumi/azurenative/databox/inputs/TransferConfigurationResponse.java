@@ -25,10 +25,10 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="transferAllDetails")
-      private final @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
+    private @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
 
     public Optional<TransferConfigurationResponseTransferAllDetails> transferAllDetails() {
-        return this.transferAllDetails == null ? Optional.empty() : Optional.ofNullable(this.transferAllDetails);
+        return Optional.ofNullable(this.transferAllDetails);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="transferConfigurationType", required=true)
-      private final String transferConfigurationType;
+    private String transferConfigurationType;
 
     public String transferConfigurationType() {
         return this.transferConfigurationType;
@@ -47,64 +47,57 @@ public final class TransferConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="transferFilterDetails")
-      private final @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
+    private @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
     public Optional<TransferConfigurationResponseTransferFilterDetails> transferFilterDetails() {
-        return this.transferFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.transferFilterDetails);
+        return Optional.ofNullable(this.transferFilterDetails);
     }
 
-    public TransferConfigurationResponse(
-        @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails,
-        String transferConfigurationType,
-        @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
-        this.transferAllDetails = transferAllDetails;
-        this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType, "expected parameter 'transferConfigurationType' to be non-null");
-        this.transferFilterDetails = transferFilterDetails;
-    }
+    private TransferConfigurationResponse() {}
 
-    private TransferConfigurationResponse() {
-        this.transferAllDetails = null;
-        this.transferConfigurationType = null;
-        this.transferFilterDetails = null;
+    private TransferConfigurationResponse(TransferConfigurationResponse $) {
+        this.transferAllDetails = $.transferAllDetails;
+        this.transferConfigurationType = $.transferConfigurationType;
+        this.transferFilterDetails = $.transferFilterDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
-        private String transferConfigurationType;
-        private @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
+        private TransferConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferConfigurationResponse();
         }
 
         public Builder(TransferConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transferAllDetails = defaults.transferAllDetails;
-    	      this.transferConfigurationType = defaults.transferConfigurationType;
-    	      this.transferFilterDetails = defaults.transferFilterDetails;
+            $ = new TransferConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder transferAllDetails(@Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails) {
-            this.transferAllDetails = transferAllDetails;
+            $.transferAllDetails = transferAllDetails;
             return this;
         }
+
         public Builder transferConfigurationType(String transferConfigurationType) {
-            this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
+            $.transferConfigurationType = transferConfigurationType;
             return this;
         }
+
         public Builder transferFilterDetails(@Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
-            this.transferFilterDetails = transferFilterDetails;
+            $.transferFilterDetails = transferFilterDetails;
             return this;
-        }        public TransferConfigurationResponse build() {
-            return new TransferConfigurationResponse(transferAllDetails, transferConfigurationType, transferFilterDetails);
+        }
+
+        public TransferConfigurationResponse build() {
+            $.transferConfigurationType = Objects.requireNonNull($.transferConfigurationType, "expected parameter 'transferConfigurationType' to be non-null");
+            return $;
         }
     }
+
 }

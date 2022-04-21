@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -50,73 +50,66 @@ public final class GetSqlResourceSqlContainerArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetSqlResourceSqlContainerArgs(
-        String accountName,
-        String containerName,
-        String databaseName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetSqlResourceSqlContainerArgs() {}
 
-    private GetSqlResourceSqlContainerArgs() {
-        this.accountName = null;
-        this.containerName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
+    private GetSqlResourceSqlContainerArgs(GetSqlResourceSqlContainerArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlResourceSqlContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String containerName;
-        private String databaseName;
-        private String resourceGroupName;
+        private GetSqlResourceSqlContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlResourceSqlContainerArgs();
         }
 
         public Builder(GetSqlResourceSqlContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetSqlResourceSqlContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetSqlResourceSqlContainerArgs build() {
-            return new GetSqlResourceSqlContainerArgs(accountName, containerName, databaseName, resourceGroupName);
+        }
+
+        public GetSqlResourceSqlContainerArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class TargetEligibilityResultResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="eligibilityStatus")
-      private final @Nullable String eligibilityStatus;
+    private @Nullable String eligibilityStatus;
 
     public Optional<String> eligibilityStatus() {
-        return this.eligibilityStatus == null ? Optional.empty() : Optional.ofNullable(this.eligibilityStatus);
+        return Optional.ofNullable(this.eligibilityStatus);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class TargetEligibilityResultResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="messages")
-      private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
+    private @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
-    public List<TargetEligibilityErrorMessageResponse> messages() {
-        return this.messages == null ? List.of() : this.messages;
+    public Optional<List<TargetEligibilityErrorMessageResponse>> messages() {
+        return Optional.ofNullable(this.messages);
     }
 
-    public TargetEligibilityResultResponse(
-        @Nullable String eligibilityStatus,
-        @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
-        this.eligibilityStatus = eligibilityStatus;
-        this.messages = messages;
-    }
+    private TargetEligibilityResultResponse() {}
 
-    private TargetEligibilityResultResponse() {
-        this.eligibilityStatus = null;
-        this.messages = List.of();
+    private TargetEligibilityResultResponse(TargetEligibilityResultResponse $) {
+        this.eligibilityStatus = $.eligibilityStatus;
+        this.messages = $.messages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetEligibilityResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eligibilityStatus;
-        private @Nullable List<TargetEligibilityErrorMessageResponse> messages;
+        private TargetEligibilityResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetEligibilityResultResponse();
         }
 
         public Builder(TargetEligibilityResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eligibilityStatus = defaults.eligibilityStatus;
-    	      this.messages = defaults.messages;
+            $ = new TargetEligibilityResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eligibilityStatus(@Nullable String eligibilityStatus) {
-            this.eligibilityStatus = eligibilityStatus;
+            $.eligibilityStatus = eligibilityStatus;
             return this;
         }
+
         public Builder messages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
-            this.messages = messages;
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(TargetEligibilityErrorMessageResponse... messages) {
             return messages(List.of(messages));
-        }        public TargetEligibilityResultResponse build() {
-            return new TargetEligibilityResultResponse(eligibilityStatus, messages);
+        }
+
+        public TargetEligibilityResultResponse build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class UrlRedirectActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class UrlRedirectActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<UrlRedirectActionParametersArgs> parameters;
+    private Output<UrlRedirectActionParametersArgs> parameters;
 
     public Output<UrlRedirectActionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public UrlRedirectActionArgs(
-        Output<String> name,
-        Output<UrlRedirectActionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private UrlRedirectActionArgs() {}
 
-    private UrlRedirectActionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private UrlRedirectActionArgs(UrlRedirectActionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRedirectActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<UrlRedirectActionParametersArgs> parameters;
+        private UrlRedirectActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRedirectActionArgs();
         }
 
         public Builder(UrlRedirectActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new UrlRedirectActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<UrlRedirectActionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(UrlRedirectActionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public UrlRedirectActionArgs build() {
-            return new UrlRedirectActionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public UrlRedirectActionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

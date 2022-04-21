@@ -6,7 +6,6 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicyRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class ManagementPolicySchemaArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<ManagementPolicyRuleArgs>> rules;
+    private Output<List<ManagementPolicyRuleArgs>> rules;
 
     public Output<List<ManagementPolicyRuleArgs>> rules() {
         return this.rules;
     }
 
-    public ManagementPolicySchemaArgs(Output<List<ManagementPolicyRuleArgs>> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private ManagementPolicySchemaArgs() {}
 
-    private ManagementPolicySchemaArgs() {
-        this.rules = Codegen.empty();
+    private ManagementPolicySchemaArgs(ManagementPolicySchemaArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicySchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ManagementPolicyRuleArgs>> rules;
+        private ManagementPolicySchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicySchemaArgs();
         }
 
         public Builder(ManagementPolicySchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ManagementPolicySchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(Output<List<ManagementPolicyRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<ManagementPolicyRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(ManagementPolicyRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public ManagementPolicySchemaArgs build() {
-            return new ManagementPolicySchemaArgs(rules);
+        }
+
+        public ManagementPolicySchemaArgs build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

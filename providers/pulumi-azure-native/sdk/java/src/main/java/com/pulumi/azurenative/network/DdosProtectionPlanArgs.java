@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ddosProtectionPlanName")
-      private final @Nullable Output<String> ddosProtectionPlanName;
+    private @Nullable Output<String> ddosProtectionPlanName;
 
-    public Output<String> ddosProtectionPlanName() {
-        return this.ddosProtectionPlanName == null ? Codegen.empty() : this.ddosProtectionPlanName;
+    public Optional<Output<String>> ddosProtectionPlanName() {
+        return Optional.ofNullable(this.ddosProtectionPlanName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,79 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DdosProtectionPlanArgs(
-        @Nullable Output<String> ddosProtectionPlanName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.ddosProtectionPlanName = ddosProtectionPlanName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private DdosProtectionPlanArgs() {}
 
-    private DdosProtectionPlanArgs() {
-        this.ddosProtectionPlanName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DdosProtectionPlanArgs(DdosProtectionPlanArgs $) {
+        this.ddosProtectionPlanName = $.ddosProtectionPlanName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DdosProtectionPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ddosProtectionPlanName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private DdosProtectionPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DdosProtectionPlanArgs();
         }
 
         public Builder(DdosProtectionPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosProtectionPlanName = defaults.ddosProtectionPlanName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new DdosProtectionPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosProtectionPlanName(@Nullable Output<String> ddosProtectionPlanName) {
-            this.ddosProtectionPlanName = ddosProtectionPlanName;
+            $.ddosProtectionPlanName = ddosProtectionPlanName;
             return this;
         }
-        public Builder ddosProtectionPlanName(@Nullable String ddosProtectionPlanName) {
-            this.ddosProtectionPlanName = Codegen.ofNullable(ddosProtectionPlanName);
-            return this;
+
+        public Builder ddosProtectionPlanName(String ddosProtectionPlanName) {
+            return ddosProtectionPlanName(Output.of(ddosProtectionPlanName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DdosProtectionPlanArgs build() {
-            return new DdosProtectionPlanArgs(ddosProtectionPlanName, location, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DdosProtectionPlanArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

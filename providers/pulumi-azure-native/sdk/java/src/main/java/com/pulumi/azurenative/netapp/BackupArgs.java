@@ -5,9 +5,9 @@ package com.pulumi.azurenative.netapp;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupName")
-      private final @Nullable Output<String> backupName;
+    private @Nullable Output<String> backupName;
 
-    public Output<String> backupName() {
-        return this.backupName == null ? Codegen.empty() : this.backupName;
+    public Optional<Output<String>> backupName() {
+        return Optional.ofNullable(this.backupName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolName", required=true)
-      private final Output<String> poolName;
+    private Output<String> poolName;
 
     public Output<String> poolName() {
         return this.poolName;
@@ -75,7 +75,7 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -86,128 +86,112 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeName", required=true)
-      private final Output<String> volumeName;
+    private Output<String> volumeName;
 
     public Output<String> volumeName() {
         return this.volumeName;
     }
 
-    public BackupArgs(
-        Output<String> accountName,
-        @Nullable Output<String> backupName,
-        @Nullable Output<String> label,
-        @Nullable Output<String> location,
-        Output<String> poolName,
-        Output<String> resourceGroupName,
-        Output<String> volumeName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.backupName = backupName;
-        this.label = label;
-        this.location = location;
-        this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.volumeName = Objects.requireNonNull(volumeName, "expected parameter 'volumeName' to be non-null");
-    }
+    private BackupArgs() {}
 
-    private BackupArgs() {
-        this.accountName = Codegen.empty();
-        this.backupName = Codegen.empty();
-        this.label = Codegen.empty();
-        this.location = Codegen.empty();
-        this.poolName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.volumeName = Codegen.empty();
+    private BackupArgs(BackupArgs $) {
+        this.accountName = $.accountName;
+        this.backupName = $.backupName;
+        this.label = $.label;
+        this.location = $.location;
+        this.poolName = $.poolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> backupName;
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> location;
-        private Output<String> poolName;
-        private Output<String> resourceGroupName;
-        private Output<String> volumeName;
+        private BackupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupArgs();
         }
 
         public Builder(BackupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.backupName = defaults.backupName;
-    	      this.label = defaults.label;
-    	      this.location = defaults.location;
-    	      this.poolName = defaults.poolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.volumeName = defaults.volumeName;
+            $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder backupName(@Nullable Output<String> backupName) {
-            this.backupName = backupName;
+            $.backupName = backupName;
             return this;
         }
-        public Builder backupName(@Nullable String backupName) {
-            this.backupName = Codegen.ofNullable(backupName);
-            return this;
+
+        public Builder backupName(String backupName) {
+            return backupName(Output.of(backupName));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder poolName(Output<String> poolName) {
-            this.poolName = Objects.requireNonNull(poolName);
+            $.poolName = poolName;
             return this;
         }
+
         public Builder poolName(String poolName) {
-            this.poolName = Output.of(Objects.requireNonNull(poolName));
-            return this;
+            return poolName(Output.of(poolName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder volumeName(Output<String> volumeName) {
-            this.volumeName = Objects.requireNonNull(volumeName);
+            $.volumeName = volumeName;
             return this;
         }
+
         public Builder volumeName(String volumeName) {
-            this.volumeName = Output.of(Objects.requireNonNull(volumeName));
-            return this;
-        }        public BackupArgs build() {
-            return new BackupArgs(accountName, backupName, label, location, poolName, resourceGroupName, volumeName);
+            return volumeName(Output.of(volumeName));
+        }
+
+        public BackupArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.poolName = Objects.requireNonNull($.poolName, "expected parameter 'poolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.volumeName = Objects.requireNonNull($.volumeName, "expected parameter 'volumeName' to be non-null");
+            return $;
         }
     }
+
 }

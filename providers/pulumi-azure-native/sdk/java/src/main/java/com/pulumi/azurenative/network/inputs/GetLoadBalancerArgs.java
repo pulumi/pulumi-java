@@ -19,10 +19,10 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final String loadBalancerName;
+    private String loadBalancerName;
 
     public String loadBalancerName() {
         return this.loadBalancerName;
@@ -41,64 +41,58 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLoadBalancerArgs(
-        @Nullable String expand,
-        String loadBalancerName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLoadBalancerArgs() {}
 
-    private GetLoadBalancerArgs() {
-        this.expand = null;
-        this.loadBalancerName = null;
-        this.resourceGroupName = null;
+    private GetLoadBalancerArgs(GetLoadBalancerArgs $) {
+        this.expand = $.expand;
+        this.loadBalancerName = $.loadBalancerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String loadBalancerName;
-        private String resourceGroupName;
+        private GetLoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerArgs();
         }
 
         public Builder(GetLoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLoadBalancerArgs build() {
-            return new GetLoadBalancerArgs(expand, loadBalancerName, resourceGroupName);
+        }
+
+        public GetLoadBalancerArgs build() {
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

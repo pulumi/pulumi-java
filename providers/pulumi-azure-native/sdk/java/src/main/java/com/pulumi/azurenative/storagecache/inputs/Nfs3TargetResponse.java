@@ -23,10 +23,10 @@ public final class Nfs3TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class Nfs3TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="usageModel")
-      private final @Nullable String usageModel;
+    private @Nullable String usageModel;
 
     public Optional<String> usageModel() {
-        return this.usageModel == null ? Optional.empty() : Optional.ofNullable(this.usageModel);
+        return Optional.ofNullable(this.usageModel);
     }
 
-    public Nfs3TargetResponse(
-        @Nullable String target,
-        @Nullable String usageModel) {
-        this.target = target;
-        this.usageModel = usageModel;
-    }
+    private Nfs3TargetResponse() {}
 
-    private Nfs3TargetResponse() {
-        this.target = null;
-        this.usageModel = null;
+    private Nfs3TargetResponse(Nfs3TargetResponse $) {
+        this.target = $.target;
+        this.usageModel = $.usageModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Nfs3TargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String target;
-        private @Nullable String usageModel;
+        private Nfs3TargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Nfs3TargetResponse();
         }
 
         public Builder(Nfs3TargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
-    	      this.usageModel = defaults.usageModel;
+            $ = new Nfs3TargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder usageModel(@Nullable String usageModel) {
-            this.usageModel = usageModel;
+            $.usageModel = usageModel;
             return this;
-        }        public Nfs3TargetResponse build() {
-            return new Nfs3TargetResponse(target, usageModel);
+        }
+
+        public Nfs3TargetResponse build() {
+            return $;
         }
     }
+
 }

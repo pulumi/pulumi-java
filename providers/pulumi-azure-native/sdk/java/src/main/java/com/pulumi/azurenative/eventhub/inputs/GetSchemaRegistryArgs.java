@@ -17,7 +17,7 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="schemaGroupName", required=true)
-      private final String schemaGroupName;
+    private String schemaGroupName;
 
     public String schemaGroupName() {
         return this.schemaGroupName;
     }
 
-    public GetSchemaRegistryArgs(
-        String namespaceName,
-        String resourceGroupName,
-        String schemaGroupName) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaGroupName = Objects.requireNonNull(schemaGroupName, "expected parameter 'schemaGroupName' to be non-null");
-    }
+    private GetSchemaRegistryArgs() {}
 
-    private GetSchemaRegistryArgs() {
-        this.namespaceName = null;
-        this.resourceGroupName = null;
-        this.schemaGroupName = null;
+    private GetSchemaRegistryArgs(GetSchemaRegistryArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaGroupName = $.schemaGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchemaRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceName;
-        private String resourceGroupName;
-        private String schemaGroupName;
+        private GetSchemaRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchemaRegistryArgs();
         }
 
         public Builder(GetSchemaRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaGroupName = defaults.schemaGroupName;
+            $ = new GetSchemaRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaGroupName(String schemaGroupName) {
-            this.schemaGroupName = Objects.requireNonNull(schemaGroupName);
+            $.schemaGroupName = schemaGroupName;
             return this;
-        }        public GetSchemaRegistryArgs build() {
-            return new GetSchemaRegistryArgs(namespaceName, resourceGroupName, schemaGroupName);
+        }
+
+        public GetSchemaRegistryArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaGroupName = Objects.requireNonNull($.schemaGroupName, "expected parameter 'schemaGroupName' to be non-null");
+            return $;
         }
     }
+
 }

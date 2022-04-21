@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,82 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends com.pulumi.re
     public static final ModelDockerSectionBaseImageRegistryArgs Empty = new ModelDockerSectionBaseImageRegistryArgs();
 
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ModelDockerSectionBaseImageRegistryArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> password,
-        @Nullable Output<String> username) {
-        this.address = address;
-        this.password = password;
-        this.username = username;
-    }
+    private ModelDockerSectionBaseImageRegistryArgs() {}
 
-    private ModelDockerSectionBaseImageRegistryArgs() {
-        this.address = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private ModelDockerSectionBaseImageRegistryArgs(ModelDockerSectionBaseImageRegistryArgs $) {
+        this.address = $.address;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelDockerSectionBaseImageRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> username;
+        private ModelDockerSectionBaseImageRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelDockerSectionBaseImageRegistryArgs();
         }
 
         public Builder(ModelDockerSectionBaseImageRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new ModelDockerSectionBaseImageRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ModelDockerSectionBaseImageRegistryArgs build() {
-            return new ModelDockerSectionBaseImageRegistryArgs(address, password, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ModelDockerSectionBaseImageRegistryArgs build() {
+            return $;
         }
     }
+
 }

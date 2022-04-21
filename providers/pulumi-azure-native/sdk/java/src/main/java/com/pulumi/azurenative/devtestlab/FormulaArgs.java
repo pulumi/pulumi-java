@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devtestlab.inputs.FormulaPropertiesFromVmArgs;
 import com.pulumi.azurenative.devtestlab.inputs.LabVirtualMachineCreationParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="formulaContent")
-      private final @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
+    private @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
 
-    public Output<LabVirtualMachineCreationParameterArgs> formulaContent() {
-        return this.formulaContent == null ? Codegen.empty() : this.formulaContent;
+    public Optional<Output<LabVirtualMachineCreationParameterArgs>> formulaContent() {
+        return Optional.ofNullable(this.formulaContent);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -56,10 +56,10 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<String> osType;
+    private @Nullable Output<String> osType;
 
-    public Output<String> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<String>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,10 +100,10 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -111,154 +111,130 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vm")
-      private final @Nullable Output<FormulaPropertiesFromVmArgs> vm;
+    private @Nullable Output<FormulaPropertiesFromVmArgs> vm;
 
-    public Output<FormulaPropertiesFromVmArgs> vm() {
-        return this.vm == null ? Codegen.empty() : this.vm;
+    public Optional<Output<FormulaPropertiesFromVmArgs>> vm() {
+        return Optional.ofNullable(this.vm);
     }
 
-    public FormulaArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent,
-        Output<String> labName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> osType,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<FormulaPropertiesFromVmArgs> vm) {
-        this.description = description;
-        this.formulaContent = formulaContent;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.osType = osType;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vm = vm;
-    }
+    private FormulaArgs() {}
 
-    private FormulaArgs() {
-        this.description = Codegen.empty();
-        this.formulaContent = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vm = Codegen.empty();
+    private FormulaArgs(FormulaArgs $) {
+        this.description = $.description;
+        this.formulaContent = $.formulaContent;
+        this.labName = $.labName;
+        this.location = $.location;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vm = $.vm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FormulaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
-        private Output<String> labName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> osType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<FormulaPropertiesFromVmArgs> vm;
+        private FormulaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FormulaArgs();
         }
 
         public Builder(FormulaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.formulaContent = defaults.formulaContent;
-    	      this.labName = defaults.labName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vm = defaults.vm;
+            $ = new FormulaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder formulaContent(@Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent) {
-            this.formulaContent = formulaContent;
+            $.formulaContent = formulaContent;
             return this;
         }
-        public Builder formulaContent(@Nullable LabVirtualMachineCreationParameterArgs formulaContent) {
-            this.formulaContent = Codegen.ofNullable(formulaContent);
-            return this;
+
+        public Builder formulaContent(LabVirtualMachineCreationParameterArgs formulaContent) {
+            return formulaContent(Output.of(formulaContent));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osType(@Nullable Output<String> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable String osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(String osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vm(@Nullable Output<FormulaPropertiesFromVmArgs> vm) {
-            this.vm = vm;
+            $.vm = vm;
             return this;
         }
-        public Builder vm(@Nullable FormulaPropertiesFromVmArgs vm) {
-            this.vm = Codegen.ofNullable(vm);
-            return this;
-        }        public FormulaArgs build() {
-            return new FormulaArgs(description, formulaContent, labName, location, name, osType, resourceGroupName, tags, vm);
+
+        public Builder vm(FormulaPropertiesFromVmArgs vm) {
+            return vm(Output.of(vm));
+        }
+
+        public FormulaArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

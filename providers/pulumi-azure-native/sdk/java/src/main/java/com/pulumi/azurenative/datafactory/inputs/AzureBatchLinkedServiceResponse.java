@@ -34,10 +34,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey() {
-        return this.accessKey == null ? null : this.accessKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="accountName", required=true)
-      private final Object accountName;
+    private Object accountName;
 
     public Object accountName() {
         return this.accountName;
@@ -56,10 +56,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="batchUri", required=true)
-      private final Object batchUri;
+    private Object batchUri;
 
     public Object batchUri() {
         return this.batchUri;
@@ -78,10 +78,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -122,7 +122,7 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -133,10 +133,10 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="poolName", required=true)
-      private final Object poolName;
+    private Object poolName;
 
     public Object poolName() {
         return this.poolName;
@@ -156,148 +156,119 @@ public final class AzureBatchLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureBatchLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey,
-        Object accountName,
-        @Nullable List<Object> annotations,
-        Object batchUri,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object poolName,
-        String type) {
-        this.accessKey = accessKey;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.annotations = annotations;
-        this.batchUri = Objects.requireNonNull(batchUri, "expected parameter 'batchUri' to be non-null");
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureBatchLinkedServiceResponse() {}
 
-    private AzureBatchLinkedServiceResponse() {
-        this.accessKey = null;
-        this.accountName = null;
-        this.annotations = List.of();
-        this.batchUri = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.linkedServiceName = null;
-        this.parameters = Map.of();
-        this.poolName = null;
-        this.type = null;
+    private AzureBatchLinkedServiceResponse(AzureBatchLinkedServiceResponse $) {
+        this.accessKey = $.accessKey;
+        this.accountName = $.accountName;
+        this.annotations = $.annotations;
+        this.batchUri = $.batchUri;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.poolName = $.poolName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBatchLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
-        private Object accountName;
-        private @Nullable List<Object> annotations;
-        private Object batchUri;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private Object poolName;
-        private String type;
+        private AzureBatchLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBatchLinkedServiceResponse();
         }
 
         public Builder(AzureBatchLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.accountName = defaults.accountName;
-    	      this.annotations = defaults.annotations;
-    	      this.batchUri = defaults.batchUri;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.poolName = defaults.poolName;
-    	      this.type = defaults.type;
+            $ = new AzureBatchLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
+
         public Builder accountName(Object accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder batchUri(Object batchUri) {
-            this.batchUri = Objects.requireNonNull(batchUri);
+            $.batchUri = batchUri;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder poolName(Object poolName) {
-            this.poolName = Objects.requireNonNull(poolName);
+            $.poolName = poolName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureBatchLinkedServiceResponse build() {
-            return new AzureBatchLinkedServiceResponse(accessKey, accountName, annotations, batchUri, connectVia, credential, description, encryptedCredential, linkedServiceName, parameters, poolName, type);
+        }
+
+        public AzureBatchLinkedServiceResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.batchUri = Objects.requireNonNull($.batchUri, "expected parameter 'batchUri' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.poolName = Objects.requireNonNull($.poolName, "expected parameter 'poolName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

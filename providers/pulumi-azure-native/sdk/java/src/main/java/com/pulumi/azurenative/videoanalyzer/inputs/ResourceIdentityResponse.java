@@ -21,45 +21,45 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="userAssignedIdentity", required=true)
-      private final String userAssignedIdentity;
+    private String userAssignedIdentity;
 
     public String userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 
-    public ResourceIdentityResponse(String userAssignedIdentity) {
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
-    }
+    private ResourceIdentityResponse() {}
 
-    private ResourceIdentityResponse() {
-        this.userAssignedIdentity = null;
+    private ResourceIdentityResponse(ResourceIdentityResponse $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userAssignedIdentity;
+        private ResourceIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdentityResponse();
         }
 
         public Builder(ResourceIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new ResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(String userAssignedIdentity) {
-            this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public ResourceIdentityResponse build() {
-            return new ResourceIdentityResponse(userAssignedIdentity);
+        }
+
+        public ResourceIdentityResponse build() {
+            $.userAssignedIdentity = Objects.requireNonNull($.userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
+            return $;
         }
     }
+
 }

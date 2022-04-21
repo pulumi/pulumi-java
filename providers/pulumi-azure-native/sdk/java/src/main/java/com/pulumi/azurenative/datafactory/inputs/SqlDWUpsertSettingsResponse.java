@@ -23,10 +23,10 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="interimSchemaName")
-      private final @Nullable Object interimSchemaName;
+    private @Nullable Object interimSchemaName;
 
     public Optional<Object> interimSchemaName() {
-        return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
+        return Optional.ofNullable(this.interimSchemaName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keys")
-      private final @Nullable Object keys;
+    private @Nullable Object keys;
 
     public Optional<Object> keys() {
-        return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
+        return Optional.ofNullable(this.keys);
     }
 
-    public SqlDWUpsertSettingsResponse(
-        @Nullable Object interimSchemaName,
-        @Nullable Object keys) {
-        this.interimSchemaName = interimSchemaName;
-        this.keys = keys;
-    }
+    private SqlDWUpsertSettingsResponse() {}
 
-    private SqlDWUpsertSettingsResponse() {
-        this.interimSchemaName = null;
-        this.keys = null;
+    private SqlDWUpsertSettingsResponse(SqlDWUpsertSettingsResponse $) {
+        this.interimSchemaName = $.interimSchemaName;
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlDWUpsertSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object interimSchemaName;
-        private @Nullable Object keys;
+        private SqlDWUpsertSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlDWUpsertSettingsResponse();
         }
 
         public Builder(SqlDWUpsertSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interimSchemaName = defaults.interimSchemaName;
-    	      this.keys = defaults.keys;
+            $ = new SqlDWUpsertSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = interimSchemaName;
+            $.interimSchemaName = interimSchemaName;
             return this;
         }
+
         public Builder keys(@Nullable Object keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
-        }        public SqlDWUpsertSettingsResponse build() {
-            return new SqlDWUpsertSettingsResponse(interimSchemaName, keys);
+        }
+
+        public SqlDWUpsertSettingsResponse build() {
+            return $;
         }
     }
+
 }

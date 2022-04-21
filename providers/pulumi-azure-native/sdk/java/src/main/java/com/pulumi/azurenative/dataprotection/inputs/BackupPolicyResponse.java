@@ -26,7 +26,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="datasourceTypes", required=true)
-      private final List<String> datasourceTypes;
+    private List<String> datasourceTypes;
 
     public List<String> datasourceTypes() {
         return this.datasourceTypes;
@@ -37,7 +37,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -48,70 +48,67 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="policyRules", required=true)
-      private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
+    private List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
     public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules() {
         return this.policyRules;
     }
 
-    public BackupPolicyResponse(
-        List<String> datasourceTypes,
-        String objectType,
-        List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
-        this.datasourceTypes = Objects.requireNonNull(datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-        this.policyRules = Objects.requireNonNull(policyRules, "expected parameter 'policyRules' to be non-null");
-    }
+    private BackupPolicyResponse() {}
 
-    private BackupPolicyResponse() {
-        this.datasourceTypes = List.of();
-        this.objectType = null;
-        this.policyRules = List.of();
+    private BackupPolicyResponse(BackupPolicyResponse $) {
+        this.datasourceTypes = $.datasourceTypes;
+        this.objectType = $.objectType;
+        this.policyRules = $.policyRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> datasourceTypes;
-        private String objectType;
-        private List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
+        private BackupPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyResponse();
         }
 
         public Builder(BackupPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasourceTypes = defaults.datasourceTypes;
-    	      this.objectType = defaults.objectType;
-    	      this.policyRules = defaults.policyRules;
+            $ = new BackupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasourceTypes(List<String> datasourceTypes) {
-            this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
+            $.datasourceTypes = datasourceTypes;
             return this;
         }
+
         public Builder datasourceTypes(String... datasourceTypes) {
             return datasourceTypes(List.of(datasourceTypes));
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder policyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
-            this.policyRules = Objects.requireNonNull(policyRules);
+            $.policyRules = policyRules;
             return this;
         }
+
         public Builder policyRules(Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>... policyRules) {
             return policyRules(List.of(policyRules));
-        }        public BackupPolicyResponse build() {
-            return new BackupPolicyResponse(datasourceTypes, objectType, policyRules);
+        }
+
+        public BackupPolicyResponse build() {
+            $.datasourceTypes = Objects.requireNonNull($.datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            $.policyRules = Objects.requireNonNull($.policyRules, "expected parameter 'policyRules' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class EndpointPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,59 @@ public final class EndpointPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public EndpointPropertiesArgs(
-        Output<String> name,
-        @Nullable Output<Integer> port) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = port;
-    }
+    private EndpointPropertiesArgs() {}
 
-    private EndpointPropertiesArgs() {
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
+    private EndpointPropertiesArgs(EndpointPropertiesArgs $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<Integer> port;
+        private EndpointPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesArgs();
         }
 
         public Builder(EndpointPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new EndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public EndpointPropertiesArgs build() {
-            return new EndpointPropertiesArgs(name, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public EndpointPropertiesArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.LinkTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="linkType")
-      private final @Nullable Output<LinkTypes> linkType;
+    private @Nullable Output<LinkTypes> linkType;
 
-    public Output<LinkTypes> linkType() {
-        return this.linkType == null ? Codegen.empty() : this.linkType;
+    public Optional<Output<LinkTypes>> linkType() {
+        return Optional.ofNullable(this.linkType);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sourcePropertyName", required=true)
-      private final Output<String> sourcePropertyName;
+    private Output<String> sourcePropertyName;
 
     public Output<String> sourcePropertyName() {
         return this.sourcePropertyName;
@@ -47,76 +47,70 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="targetPropertyName", required=true)
-      private final Output<String> targetPropertyName;
+    private Output<String> targetPropertyName;
 
     public Output<String> targetPropertyName() {
         return this.targetPropertyName;
     }
 
-    public TypePropertiesMappingArgs(
-        @Nullable Output<LinkTypes> linkType,
-        Output<String> sourcePropertyName,
-        Output<String> targetPropertyName) {
-        this.linkType = linkType;
-        this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
-        this.targetPropertyName = Objects.requireNonNull(targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
-    }
+    private TypePropertiesMappingArgs() {}
 
-    private TypePropertiesMappingArgs() {
-        this.linkType = Codegen.empty();
-        this.sourcePropertyName = Codegen.empty();
-        this.targetPropertyName = Codegen.empty();
+    private TypePropertiesMappingArgs(TypePropertiesMappingArgs $) {
+        this.linkType = $.linkType;
+        this.sourcePropertyName = $.sourcePropertyName;
+        this.targetPropertyName = $.targetPropertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypePropertiesMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LinkTypes> linkType;
-        private Output<String> sourcePropertyName;
-        private Output<String> targetPropertyName;
+        private TypePropertiesMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypePropertiesMappingArgs();
         }
 
         public Builder(TypePropertiesMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkType = defaults.linkType;
-    	      this.sourcePropertyName = defaults.sourcePropertyName;
-    	      this.targetPropertyName = defaults.targetPropertyName;
+            $ = new TypePropertiesMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkType(@Nullable Output<LinkTypes> linkType) {
-            this.linkType = linkType;
+            $.linkType = linkType;
             return this;
         }
-        public Builder linkType(@Nullable LinkTypes linkType) {
-            this.linkType = Codegen.ofNullable(linkType);
-            return this;
+
+        public Builder linkType(LinkTypes linkType) {
+            return linkType(Output.of(linkType));
         }
+
         public Builder sourcePropertyName(Output<String> sourcePropertyName) {
-            this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
+            $.sourcePropertyName = sourcePropertyName;
             return this;
         }
+
         public Builder sourcePropertyName(String sourcePropertyName) {
-            this.sourcePropertyName = Output.of(Objects.requireNonNull(sourcePropertyName));
-            return this;
+            return sourcePropertyName(Output.of(sourcePropertyName));
         }
+
         public Builder targetPropertyName(Output<String> targetPropertyName) {
-            this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
+            $.targetPropertyName = targetPropertyName;
             return this;
         }
+
         public Builder targetPropertyName(String targetPropertyName) {
-            this.targetPropertyName = Output.of(Objects.requireNonNull(targetPropertyName));
-            return this;
-        }        public TypePropertiesMappingArgs build() {
-            return new TypePropertiesMappingArgs(linkType, sourcePropertyName, targetPropertyName);
+            return targetPropertyName(Output.of(targetPropertyName));
+        }
+
+        public TypePropertiesMappingArgs build() {
+            $.sourcePropertyName = Objects.requireNonNull($.sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
+            $.targetPropertyName = Objects.requireNonNull($.targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
+            return $;
         }
     }
+
 }

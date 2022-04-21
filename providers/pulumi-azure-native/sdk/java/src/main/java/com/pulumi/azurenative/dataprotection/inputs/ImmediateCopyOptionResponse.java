@@ -23,45 +23,45 @@ public final class ImmediateCopyOptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public ImmediateCopyOptionResponse(String objectType) {
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-    }
+    private ImmediateCopyOptionResponse() {}
 
-    private ImmediateCopyOptionResponse() {
-        this.objectType = null;
+    private ImmediateCopyOptionResponse(ImmediateCopyOptionResponse $) {
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImmediateCopyOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectType;
+        private ImmediateCopyOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImmediateCopyOptionResponse();
         }
 
         public Builder(ImmediateCopyOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectType = defaults.objectType;
+            $ = new ImmediateCopyOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public ImmediateCopyOptionResponse build() {
-            return new ImmediateCopyOptionResponse(objectType);
+        }
+
+        public ImmediateCopyOptionResponse build() {
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="includeColocationStatus")
-      private final @Nullable String includeColocationStatus;
+    private @Nullable String includeColocationStatus;
 
     public Optional<String> includeColocationStatus() {
-        return this.includeColocationStatus == null ? Optional.empty() : Optional.ofNullable(this.includeColocationStatus);
+        return Optional.ofNullable(this.includeColocationStatus);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="proximityPlacementGroupName", required=true)
-      private final String proximityPlacementGroupName;
+    private String proximityPlacementGroupName;
 
     public String proximityPlacementGroupName() {
         return this.proximityPlacementGroupName;
@@ -41,64 +41,58 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetProximityPlacementGroupArgs(
-        @Nullable String includeColocationStatus,
-        String proximityPlacementGroupName,
-        String resourceGroupName) {
-        this.includeColocationStatus = includeColocationStatus;
-        this.proximityPlacementGroupName = Objects.requireNonNull(proximityPlacementGroupName, "expected parameter 'proximityPlacementGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetProximityPlacementGroupArgs() {}
 
-    private GetProximityPlacementGroupArgs() {
-        this.includeColocationStatus = null;
-        this.proximityPlacementGroupName = null;
-        this.resourceGroupName = null;
+    private GetProximityPlacementGroupArgs(GetProximityPlacementGroupArgs $) {
+        this.includeColocationStatus = $.includeColocationStatus;
+        this.proximityPlacementGroupName = $.proximityPlacementGroupName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProximityPlacementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String includeColocationStatus;
-        private String proximityPlacementGroupName;
-        private String resourceGroupName;
+        private GetProximityPlacementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProximityPlacementGroupArgs();
         }
 
         public Builder(GetProximityPlacementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeColocationStatus = defaults.includeColocationStatus;
-    	      this.proximityPlacementGroupName = defaults.proximityPlacementGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetProximityPlacementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includeColocationStatus(@Nullable String includeColocationStatus) {
-            this.includeColocationStatus = includeColocationStatus;
+            $.includeColocationStatus = includeColocationStatus;
             return this;
         }
+
         public Builder proximityPlacementGroupName(String proximityPlacementGroupName) {
-            this.proximityPlacementGroupName = Objects.requireNonNull(proximityPlacementGroupName);
+            $.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetProximityPlacementGroupArgs build() {
-            return new GetProximityPlacementGroupArgs(includeColocationStatus, proximityPlacementGroupName, resourceGroupName);
+        }
+
+        public GetProximityPlacementGroupArgs build() {
+            $.proximityPlacementGroupName = Objects.requireNonNull($.proximityPlacementGroupName, "expected parameter 'proximityPlacementGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="approvalType", required=true)
-      private final String approvalType;
+    private String approvalType;
 
     public String approvalType() {
         return this.approvalType;
@@ -34,10 +34,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="authorizationProfile")
-      private final @Nullable AuthorizationProfileResponse authorizationProfile;
+    private @Nullable AuthorizationProfileResponse authorizationProfile;
 
     public Optional<AuthorizationProfileResponse> authorizationProfile() {
-        return this.authorizationProfile == null ? Optional.empty() : Optional.ofNullable(this.authorizationProfile);
+        return Optional.ofNullable(this.authorizationProfile);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -67,7 +67,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="documentationLink", required=true)
-      private final String documentationLink;
+    private String documentationLink;
 
     public String documentationLink() {
         return this.documentationLink;
@@ -78,7 +78,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="featureName", required=true)
-      private final String featureName;
+    private String featureName;
 
     public String featureName() {
         return this.featureName;
@@ -89,10 +89,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,String> metadata;
+    private @Nullable Map<String,String> metadata;
 
-    public Map<String,String> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,String>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
@@ -111,7 +111,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="registrationDate", required=true)
-      private final String registrationDate;
+    private String registrationDate;
 
     public String registrationDate() {
         return this.registrationDate;
@@ -122,7 +122,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="releaseDate", required=true)
-      private final String releaseDate;
+    private String releaseDate;
 
     public String releaseDate() {
         return this.releaseDate;
@@ -133,10 +133,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="shouldFeatureDisplayInPortal")
-      private final @Nullable Boolean shouldFeatureDisplayInPortal;
+    private @Nullable Boolean shouldFeatureDisplayInPortal;
 
     public Optional<Boolean> shouldFeatureDisplayInPortal() {
-        return this.shouldFeatureDisplayInPortal == null ? Optional.empty() : Optional.ofNullable(this.shouldFeatureDisplayInPortal);
+        return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -155,7 +155,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
@@ -166,163 +166,132 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public SubscriptionFeatureRegistrationResponseProperties(
-        String approvalType,
-        @Nullable AuthorizationProfileResponse authorizationProfile,
-        @Nullable String description,
-        String displayName,
-        String documentationLink,
-        String featureName,
-        @Nullable Map<String,String> metadata,
-        String providerNamespace,
-        String registrationDate,
-        String releaseDate,
-        @Nullable Boolean shouldFeatureDisplayInPortal,
-        @Nullable String state,
-        String subscriptionId,
-        String tenantId) {
-        this.approvalType = Objects.requireNonNull(approvalType, "expected parameter 'approvalType' to be non-null");
-        this.authorizationProfile = authorizationProfile;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.documentationLink = Objects.requireNonNull(documentationLink, "expected parameter 'documentationLink' to be non-null");
-        this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
-        this.metadata = metadata;
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.registrationDate = Objects.requireNonNull(registrationDate, "expected parameter 'registrationDate' to be non-null");
-        this.releaseDate = Objects.requireNonNull(releaseDate, "expected parameter 'releaseDate' to be non-null");
-        this.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").arg(shouldFeatureDisplayInPortal).def(false).getNullable();
-        this.state = state;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private SubscriptionFeatureRegistrationResponseProperties() {}
 
-    private SubscriptionFeatureRegistrationResponseProperties() {
-        this.approvalType = null;
-        this.authorizationProfile = null;
-        this.description = null;
-        this.displayName = null;
-        this.documentationLink = null;
-        this.featureName = null;
-        this.metadata = Map.of();
-        this.providerNamespace = null;
-        this.registrationDate = null;
-        this.releaseDate = null;
-        this.shouldFeatureDisplayInPortal = null;
-        this.state = null;
-        this.subscriptionId = null;
-        this.tenantId = null;
+    private SubscriptionFeatureRegistrationResponseProperties(SubscriptionFeatureRegistrationResponseProperties $) {
+        this.approvalType = $.approvalType;
+        this.authorizationProfile = $.authorizationProfile;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.documentationLink = $.documentationLink;
+        this.featureName = $.featureName;
+        this.metadata = $.metadata;
+        this.providerNamespace = $.providerNamespace;
+        this.registrationDate = $.registrationDate;
+        this.releaseDate = $.releaseDate;
+        this.shouldFeatureDisplayInPortal = $.shouldFeatureDisplayInPortal;
+        this.state = $.state;
+        this.subscriptionId = $.subscriptionId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionFeatureRegistrationResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String approvalType;
-        private @Nullable AuthorizationProfileResponse authorizationProfile;
-        private @Nullable String description;
-        private String displayName;
-        private String documentationLink;
-        private String featureName;
-        private @Nullable Map<String,String> metadata;
-        private String providerNamespace;
-        private String registrationDate;
-        private String releaseDate;
-        private @Nullable Boolean shouldFeatureDisplayInPortal;
-        private @Nullable String state;
-        private String subscriptionId;
-        private String tenantId;
+        private SubscriptionFeatureRegistrationResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionFeatureRegistrationResponseProperties();
         }
 
         public Builder(SubscriptionFeatureRegistrationResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalType = defaults.approvalType;
-    	      this.authorizationProfile = defaults.authorizationProfile;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.documentationLink = defaults.documentationLink;
-    	      this.featureName = defaults.featureName;
-    	      this.metadata = defaults.metadata;
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.registrationDate = defaults.registrationDate;
-    	      this.releaseDate = defaults.releaseDate;
-    	      this.shouldFeatureDisplayInPortal = defaults.shouldFeatureDisplayInPortal;
-    	      this.state = defaults.state;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new SubscriptionFeatureRegistrationResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalType(String approvalType) {
-            this.approvalType = Objects.requireNonNull(approvalType);
+            $.approvalType = approvalType;
             return this;
         }
+
         public Builder authorizationProfile(@Nullable AuthorizationProfileResponse authorizationProfile) {
-            this.authorizationProfile = authorizationProfile;
+            $.authorizationProfile = authorizationProfile;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder documentationLink(String documentationLink) {
-            this.documentationLink = Objects.requireNonNull(documentationLink);
+            $.documentationLink = documentationLink;
             return this;
         }
+
         public Builder featureName(String featureName) {
-            this.featureName = Objects.requireNonNull(featureName);
+            $.featureName = featureName;
             return this;
         }
+
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder registrationDate(String registrationDate) {
-            this.registrationDate = Objects.requireNonNull(registrationDate);
+            $.registrationDate = registrationDate;
             return this;
         }
+
         public Builder releaseDate(String releaseDate) {
-            this.releaseDate = Objects.requireNonNull(releaseDate);
+            $.releaseDate = releaseDate;
             return this;
         }
+
         public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
-            this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
+            $.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public SubscriptionFeatureRegistrationResponseProperties build() {
-            return new SubscriptionFeatureRegistrationResponseProperties(approvalType, authorizationProfile, description, displayName, documentationLink, featureName, metadata, providerNamespace, registrationDate, releaseDate, shouldFeatureDisplayInPortal, state, subscriptionId, tenantId);
+        }
+
+        public SubscriptionFeatureRegistrationResponseProperties build() {
+            $.approvalType = Objects.requireNonNull($.approvalType, "expected parameter 'approvalType' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.documentationLink = Objects.requireNonNull($.documentationLink, "expected parameter 'documentationLink' to be non-null");
+            $.featureName = Objects.requireNonNull($.featureName, "expected parameter 'featureName' to be non-null");
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            $.registrationDate = Objects.requireNonNull($.registrationDate, "expected parameter 'registrationDate' to be non-null");
+            $.releaseDate = Objects.requireNonNull($.releaseDate, "expected parameter 'releaseDate' to be non-null");
+            $.shouldFeatureDisplayInPortal = Codegen.booleanProp("shouldFeatureDisplayInPortal").arg($.shouldFeatureDisplayInPortal).def(false).getNullable();
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

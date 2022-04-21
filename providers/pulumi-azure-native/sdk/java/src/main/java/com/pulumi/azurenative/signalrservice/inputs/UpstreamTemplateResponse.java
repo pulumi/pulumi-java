@@ -28,10 +28,10 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="categoryPattern")
-      private final @Nullable String categoryPattern;
+    private @Nullable String categoryPattern;
 
     public Optional<String> categoryPattern() {
-        return this.categoryPattern == null ? Optional.empty() : Optional.ofNullable(this.categoryPattern);
+        return Optional.ofNullable(this.categoryPattern);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="eventPattern")
-      private final @Nullable String eventPattern;
+    private @Nullable String eventPattern;
 
     public Optional<String> eventPattern() {
-        return this.eventPattern == null ? Optional.empty() : Optional.ofNullable(this.eventPattern);
+        return Optional.ofNullable(this.eventPattern);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hubPattern")
-      private final @Nullable String hubPattern;
+    private @Nullable String hubPattern;
 
     public Optional<String> hubPattern() {
-        return this.hubPattern == null ? Optional.empty() : Optional.ofNullable(this.hubPattern);
+        return Optional.ofNullable(this.hubPattern);
     }
 
     /**
@@ -70,73 +70,63 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="urlTemplate", required=true)
-      private final String urlTemplate;
+    private String urlTemplate;
 
     public String urlTemplate() {
         return this.urlTemplate;
     }
 
-    public UpstreamTemplateResponse(
-        @Nullable String categoryPattern,
-        @Nullable String eventPattern,
-        @Nullable String hubPattern,
-        String urlTemplate) {
-        this.categoryPattern = categoryPattern;
-        this.eventPattern = eventPattern;
-        this.hubPattern = hubPattern;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate, "expected parameter 'urlTemplate' to be non-null");
-    }
+    private UpstreamTemplateResponse() {}
 
-    private UpstreamTemplateResponse() {
-        this.categoryPattern = null;
-        this.eventPattern = null;
-        this.hubPattern = null;
-        this.urlTemplate = null;
+    private UpstreamTemplateResponse(UpstreamTemplateResponse $) {
+        this.categoryPattern = $.categoryPattern;
+        this.eventPattern = $.eventPattern;
+        this.hubPattern = $.hubPattern;
+        this.urlTemplate = $.urlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpstreamTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String categoryPattern;
-        private @Nullable String eventPattern;
-        private @Nullable String hubPattern;
-        private String urlTemplate;
+        private UpstreamTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpstreamTemplateResponse();
         }
 
         public Builder(UpstreamTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoryPattern = defaults.categoryPattern;
-    	      this.eventPattern = defaults.eventPattern;
-    	      this.hubPattern = defaults.hubPattern;
-    	      this.urlTemplate = defaults.urlTemplate;
+            $ = new UpstreamTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categoryPattern(@Nullable String categoryPattern) {
-            this.categoryPattern = categoryPattern;
+            $.categoryPattern = categoryPattern;
             return this;
         }
+
         public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = eventPattern;
+            $.eventPattern = eventPattern;
             return this;
         }
+
         public Builder hubPattern(@Nullable String hubPattern) {
-            this.hubPattern = hubPattern;
+            $.hubPattern = hubPattern;
             return this;
         }
+
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Objects.requireNonNull(urlTemplate);
+            $.urlTemplate = urlTemplate;
             return this;
-        }        public UpstreamTemplateResponse build() {
-            return new UpstreamTemplateResponse(categoryPattern, eventPattern, hubPattern, urlTemplate);
+        }
+
+        public UpstreamTemplateResponse build() {
+            $.urlTemplate = Objects.requireNonNull($.urlTemplate, "expected parameter 'urlTemplate' to be non-null");
+            return $;
         }
     }
+
 }

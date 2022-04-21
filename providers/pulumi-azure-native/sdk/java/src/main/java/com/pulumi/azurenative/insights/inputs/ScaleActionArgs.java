@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cooldown", required=true)
-      private final Output<String> cooldown;
+    private Output<String> cooldown;
 
     public Output<String> cooldown() {
         return this.cooldown;
@@ -37,7 +38,7 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<ScaleDirection> direction;
+    private Output<ScaleDirection> direction;
 
     public Output<ScaleDirection> direction() {
         return this.direction;
@@ -48,7 +49,7 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ScaleType> type;
+    private Output<ScaleType> type;
 
     public Output<ScaleType> type() {
         return this.type;
@@ -59,89 +60,82 @@ public final class ScaleActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ScaleActionArgs(
-        Output<String> cooldown,
-        Output<ScaleDirection> direction,
-        Output<ScaleType> type,
-        @Nullable Output<String> value) {
-        this.cooldown = Objects.requireNonNull(cooldown, "expected parameter 'cooldown' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Codegen.stringProp("value").output().arg(value).def("1").getNullable();
-    }
+    private ScaleActionArgs() {}
 
-    private ScaleActionArgs() {
-        this.cooldown = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private ScaleActionArgs(ScaleActionArgs $) {
+        this.cooldown = $.cooldown;
+        this.direction = $.direction;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cooldown;
-        private Output<ScaleDirection> direction;
-        private Output<ScaleType> type;
-        private @Nullable Output<String> value;
+        private ScaleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleActionArgs();
         }
 
         public Builder(ScaleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cooldown = defaults.cooldown;
-    	      this.direction = defaults.direction;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ScaleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cooldown(Output<String> cooldown) {
-            this.cooldown = Objects.requireNonNull(cooldown);
+            $.cooldown = cooldown;
             return this;
         }
+
         public Builder cooldown(String cooldown) {
-            this.cooldown = Output.of(Objects.requireNonNull(cooldown));
-            return this;
+            return cooldown(Output.of(cooldown));
         }
+
         public Builder direction(Output<ScaleDirection> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(ScaleDirection direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder type(Output<ScaleType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ScaleType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ScaleActionArgs build() {
-            return new ScaleActionArgs(cooldown, direction, type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ScaleActionArgs build() {
+            $.cooldown = Objects.requireNonNull($.cooldown, "expected parameter 'cooldown' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Codegen.stringProp("value").output().arg($.value).def("1").getNullable();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="buildTaskName", required=true)
-      private final String buildTaskName;
+    private String buildTaskName;
 
     public String buildTaskName() {
         return this.buildTaskName;
@@ -28,7 +28,7 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,7 +39,7 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="stepName", required=true)
-      private final String stepName;
+    private String stepName;
 
     public String stepName() {
         return this.stepName;
     }
 
-    public ListBuildStepBuildArgumentsArgs(
-        String buildTaskName,
-        String registryName,
-        String resourceGroupName,
-        String stepName) {
-        this.buildTaskName = Objects.requireNonNull(buildTaskName, "expected parameter 'buildTaskName' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.stepName = Objects.requireNonNull(stepName, "expected parameter 'stepName' to be non-null");
-    }
+    private ListBuildStepBuildArgumentsArgs() {}
 
-    private ListBuildStepBuildArgumentsArgs() {
-        this.buildTaskName = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
-        this.stepName = null;
+    private ListBuildStepBuildArgumentsArgs(ListBuildStepBuildArgumentsArgs $) {
+        this.buildTaskName = $.buildTaskName;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.stepName = $.stepName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListBuildStepBuildArgumentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildTaskName;
-        private String registryName;
-        private String resourceGroupName;
-        private String stepName;
+        private ListBuildStepBuildArgumentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListBuildStepBuildArgumentsArgs();
         }
 
         public Builder(ListBuildStepBuildArgumentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildTaskName = defaults.buildTaskName;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.stepName = defaults.stepName;
+            $ = new ListBuildStepBuildArgumentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildTaskName(String buildTaskName) {
-            this.buildTaskName = Objects.requireNonNull(buildTaskName);
+            $.buildTaskName = buildTaskName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder stepName(String stepName) {
-            this.stepName = Objects.requireNonNull(stepName);
+            $.stepName = stepName;
             return this;
-        }        public ListBuildStepBuildArgumentsArgs build() {
-            return new ListBuildStepBuildArgumentsArgs(buildTaskName, registryName, resourceGroupName, stepName);
+        }
+
+        public ListBuildStepBuildArgumentsArgs build() {
+            $.buildTaskName = Objects.requireNonNull($.buildTaskName, "expected parameter 'buildTaskName' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.stepName = Objects.requireNonNull($.stepName, "expected parameter 'stepName' to be non-null");
+            return $;
         }
     }
+
 }

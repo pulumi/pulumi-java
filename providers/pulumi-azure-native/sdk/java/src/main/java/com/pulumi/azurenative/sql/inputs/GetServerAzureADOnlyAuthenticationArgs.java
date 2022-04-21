@@ -17,7 +17,7 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
      * 
      */
     @Import(name="authenticationName", required=true)
-      private final String authenticationName;
+    private String authenticationName;
 
     public String authenticationName() {
         return this.authenticationName;
@@ -28,7 +28,7 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends com.pulumi.res
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerAzureADOnlyAuthenticationArgs(
-        String authenticationName,
-        String resourceGroupName,
-        String serverName) {
-        this.authenticationName = Objects.requireNonNull(authenticationName, "expected parameter 'authenticationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerAzureADOnlyAuthenticationArgs() {}
 
-    private GetServerAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerAzureADOnlyAuthenticationArgs(GetServerAzureADOnlyAuthenticationArgs $) {
+        this.authenticationName = $.authenticationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerAzureADOnlyAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authenticationName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerAzureADOnlyAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerAzureADOnlyAuthenticationArgs();
         }
 
         public Builder(GetServerAzureADOnlyAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationName = defaults.authenticationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationName(String authenticationName) {
-            this.authenticationName = Objects.requireNonNull(authenticationName);
+            $.authenticationName = authenticationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerAzureADOnlyAuthenticationArgs build() {
-            return new GetServerAzureADOnlyAuthenticationArgs(authenticationName, resourceGroupName, serverName);
+        }
+
+        public GetServerAzureADOnlyAuthenticationArgs build() {
+            $.authenticationName = Objects.requireNonNull($.authenticationName, "expected parameter 'authenticationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
      * 
      */
     @Import(name="servicePrincipalSecretMetadata")
-      private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
+    private @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
     public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> servicePrincipalSecretMetadata() {
-        return this.servicePrincipalSecretMetadata == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalSecretMetadata);
+        return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }
 
-    public DefenderForServersAwsOfferingResponseArcAutoProvisioning(
-        @Nullable Boolean enabled,
-        @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
-        this.enabled = enabled;
-        this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
-    }
+    private DefenderForServersAwsOfferingResponseArcAutoProvisioning() {}
 
-    private DefenderForServersAwsOfferingResponseArcAutoProvisioning() {
-        this.enabled = null;
-        this.servicePrincipalSecretMetadata = null;
+    private DefenderForServersAwsOfferingResponseArcAutoProvisioning(DefenderForServersAwsOfferingResponseArcAutoProvisioning $) {
+        this.enabled = $.enabled;
+        this.servicePrincipalSecretMetadata = $.servicePrincipalSecretMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForServersAwsOfferingResponseArcAutoProvisioning defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
+        private DefenderForServersAwsOfferingResponseArcAutoProvisioning $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForServersAwsOfferingResponseArcAutoProvisioning();
         }
 
         public Builder(DefenderForServersAwsOfferingResponseArcAutoProvisioning defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.servicePrincipalSecretMetadata = defaults.servicePrincipalSecretMetadata;
+            $ = new DefenderForServersAwsOfferingResponseArcAutoProvisioning(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
-            this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
+            $.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
-        }        public DefenderForServersAwsOfferingResponseArcAutoProvisioning build() {
-            return new DefenderForServersAwsOfferingResponseArcAutoProvisioning(enabled, servicePrincipalSecretMetadata);
+        }
+
+        public DefenderForServersAwsOfferingResponseArcAutoProvisioning build() {
+            return $;
         }
     }
+
 }

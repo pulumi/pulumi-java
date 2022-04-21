@@ -17,45 +17,45 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends com.pulum
      * 
      */
     @Import(name="networkManagerConnectionName", required=true)
-      private final String networkManagerConnectionName;
+    private String networkManagerConnectionName;
 
     public String networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
 
-    public GetSubscriptionNetworkManagerConnectionArgs(String networkManagerConnectionName) {
-        this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName, "expected parameter 'networkManagerConnectionName' to be non-null");
-    }
+    private GetSubscriptionNetworkManagerConnectionArgs() {}
 
-    private GetSubscriptionNetworkManagerConnectionArgs() {
-        this.networkManagerConnectionName = null;
+    private GetSubscriptionNetworkManagerConnectionArgs(GetSubscriptionNetworkManagerConnectionArgs $) {
+        this.networkManagerConnectionName = $.networkManagerConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubscriptionNetworkManagerConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkManagerConnectionName;
+        private GetSubscriptionNetworkManagerConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubscriptionNetworkManagerConnectionArgs();
         }
 
         public Builder(GetSubscriptionNetworkManagerConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkManagerConnectionName = defaults.networkManagerConnectionName;
+            $ = new GetSubscriptionNetworkManagerConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
-            this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName);
+            $.networkManagerConnectionName = networkManagerConnectionName;
             return this;
-        }        public GetSubscriptionNetworkManagerConnectionArgs build() {
-            return new GetSubscriptionNetworkManagerConnectionArgs(networkManagerConnectionName);
+        }
+
+        public GetSubscriptionNetworkManagerConnectionArgs build() {
+            $.networkManagerConnectionName = Objects.requireNonNull($.networkManagerConnectionName, "expected parameter 'networkManagerConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

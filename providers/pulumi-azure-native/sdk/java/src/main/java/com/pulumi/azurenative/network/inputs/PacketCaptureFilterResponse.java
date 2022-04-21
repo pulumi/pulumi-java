@@ -24,10 +24,10 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="localIPAddress")
-      private final @Nullable String localIPAddress;
+    private @Nullable String localIPAddress;
 
     public Optional<String> localIPAddress() {
-        return this.localIPAddress == null ? Optional.empty() : Optional.ofNullable(this.localIPAddress);
+        return Optional.ofNullable(this.localIPAddress);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="localPort")
-      private final @Nullable String localPort;
+    private @Nullable String localPort;
 
     public Optional<String> localPort() {
-        return this.localPort == null ? Optional.empty() : Optional.ofNullable(this.localPort);
+        return Optional.ofNullable(this.localPort);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="remoteIPAddress")
-      private final @Nullable String remoteIPAddress;
+    private @Nullable String remoteIPAddress;
 
     public Optional<String> remoteIPAddress() {
-        return this.remoteIPAddress == null ? Optional.empty() : Optional.ofNullable(this.remoteIPAddress);
+        return Optional.ofNullable(this.remoteIPAddress);
     }
 
     /**
@@ -68,82 +68,69 @@ public final class PacketCaptureFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="remotePort")
-      private final @Nullable String remotePort;
+    private @Nullable String remotePort;
 
     public Optional<String> remotePort() {
-        return this.remotePort == null ? Optional.empty() : Optional.ofNullable(this.remotePort);
+        return Optional.ofNullable(this.remotePort);
     }
 
-    public PacketCaptureFilterResponse(
-        @Nullable String localIPAddress,
-        @Nullable String localPort,
-        @Nullable String protocol,
-        @Nullable String remoteIPAddress,
-        @Nullable String remotePort) {
-        this.localIPAddress = localIPAddress;
-        this.localPort = localPort;
-        this.protocol = Codegen.stringProp("protocol").arg(protocol).def("Any").getNullable();
-        this.remoteIPAddress = remoteIPAddress;
-        this.remotePort = remotePort;
-    }
+    private PacketCaptureFilterResponse() {}
 
-    private PacketCaptureFilterResponse() {
-        this.localIPAddress = null;
-        this.localPort = null;
-        this.protocol = null;
-        this.remoteIPAddress = null;
-        this.remotePort = null;
+    private PacketCaptureFilterResponse(PacketCaptureFilterResponse $) {
+        this.localIPAddress = $.localIPAddress;
+        this.localPort = $.localPort;
+        this.protocol = $.protocol;
+        this.remoteIPAddress = $.remoteIPAddress;
+        this.remotePort = $.remotePort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketCaptureFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String localIPAddress;
-        private @Nullable String localPort;
-        private @Nullable String protocol;
-        private @Nullable String remoteIPAddress;
-        private @Nullable String remotePort;
+        private PacketCaptureFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketCaptureFilterResponse();
         }
 
         public Builder(PacketCaptureFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localIPAddress = defaults.localIPAddress;
-    	      this.localPort = defaults.localPort;
-    	      this.protocol = defaults.protocol;
-    	      this.remoteIPAddress = defaults.remoteIPAddress;
-    	      this.remotePort = defaults.remotePort;
+            $ = new PacketCaptureFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localIPAddress(@Nullable String localIPAddress) {
-            this.localIPAddress = localIPAddress;
+            $.localIPAddress = localIPAddress;
             return this;
         }
+
         public Builder localPort(@Nullable String localPort) {
-            this.localPort = localPort;
+            $.localPort = localPort;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder remoteIPAddress(@Nullable String remoteIPAddress) {
-            this.remoteIPAddress = remoteIPAddress;
+            $.remoteIPAddress = remoteIPAddress;
             return this;
         }
+
         public Builder remotePort(@Nullable String remotePort) {
-            this.remotePort = remotePort;
+            $.remotePort = remotePort;
             return this;
-        }        public PacketCaptureFilterResponse build() {
-            return new PacketCaptureFilterResponse(localIPAddress, localPort, protocol, remoteIPAddress, remotePort);
+        }
+
+        public PacketCaptureFilterResponse build() {
+            $.protocol = Codegen.stringProp("protocol").arg($.protocol).def("Any").getNullable();
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends com.pul
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,52 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends com.pul
      * 
      */
     @Import(name="parameters", required=true)
-      private final CacheKeyQueryStringActionParametersResponse parameters;
+    private CacheKeyQueryStringActionParametersResponse parameters;
 
     public CacheKeyQueryStringActionParametersResponse parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleCacheKeyQueryStringActionResponse(
-        String name,
-        CacheKeyQueryStringActionParametersResponse parameters) {
-        this.name = Codegen.stringProp("name").arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleCacheKeyQueryStringActionResponse() {}
 
-    private DeliveryRuleCacheKeyQueryStringActionResponse() {
-        this.name = null;
-        this.parameters = null;
+    private DeliveryRuleCacheKeyQueryStringActionResponse(DeliveryRuleCacheKeyQueryStringActionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleCacheKeyQueryStringActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private CacheKeyQueryStringActionParametersResponse parameters;
+        private DeliveryRuleCacheKeyQueryStringActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleCacheKeyQueryStringActionResponse();
         }
 
         public Builder(DeliveryRuleCacheKeyQueryStringActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleCacheKeyQueryStringActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(CacheKeyQueryStringActionParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
-        }        public DeliveryRuleCacheKeyQueryStringActionResponse build() {
-            return new DeliveryRuleCacheKeyQueryStringActionResponse(name, parameters);
+        }
+
+        public DeliveryRuleCacheKeyQueryStringActionResponse build() {
+            $.name = Codegen.stringProp("name").arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

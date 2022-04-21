@@ -21,7 +21,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -32,7 +32,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rdpAuthority", required=true)
-      private final String rdpAuthority;
+    private String rdpAuthority;
 
     public String rdpAuthority() {
         return this.rdpAuthority;
@@ -43,7 +43,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sshAuthority", required=true)
-      private final String sshAuthority;
+    private String sshAuthority;
 
     public String sshAuthority() {
         return this.sshAuthority;
@@ -54,73 +54,66 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public NetworkInterfaceResponse(
-        String privateIpAddress,
-        String rdpAuthority,
-        String sshAuthority,
-        String username) {
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.rdpAuthority = Objects.requireNonNull(rdpAuthority, "expected parameter 'rdpAuthority' to be non-null");
-        this.sshAuthority = Objects.requireNonNull(sshAuthority, "expected parameter 'sshAuthority' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.privateIpAddress = null;
-        this.rdpAuthority = null;
-        this.sshAuthority = null;
-        this.username = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.privateIpAddress = $.privateIpAddress;
+        this.rdpAuthority = $.rdpAuthority;
+        this.sshAuthority = $.sshAuthority;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateIpAddress;
-        private String rdpAuthority;
-        private String sshAuthority;
-        private String username;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.rdpAuthority = defaults.rdpAuthority;
-    	      this.sshAuthority = defaults.sshAuthority;
-    	      this.username = defaults.username;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder rdpAuthority(String rdpAuthority) {
-            this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
+            $.rdpAuthority = rdpAuthority;
             return this;
         }
+
         public Builder sshAuthority(String sshAuthority) {
-            this.sshAuthority = Objects.requireNonNull(sshAuthority);
+            $.sshAuthority = sshAuthority;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(privateIpAddress, rdpAuthority, sshAuthority, username);
+        }
+
+        public NetworkInterfaceResponse build() {
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.rdpAuthority = Objects.requireNonNull($.rdpAuthority, "expected parameter 'rdpAuthority' to be non-null");
+            $.sshAuthority = Objects.requireNonNull($.sshAuthority, "expected parameter 'sshAuthority' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

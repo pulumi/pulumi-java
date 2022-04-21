@@ -30,10 +30,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="folder")
-      private final @Nullable DataFlowResponseFolder folder;
+    private @Nullable DataFlowResponseFolder folder;
 
     public Optional<DataFlowResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="script")
-      private final @Nullable String script;
+    private @Nullable String script;
 
     public Optional<String> script() {
-        return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scriptLines")
-      private final @Nullable List<String> scriptLines;
+    private @Nullable List<String> scriptLines;
 
-    public List<String> scriptLines() {
-        return this.scriptLines == null ? List.of() : this.scriptLines;
+    public Optional<List<String>> scriptLines() {
+        return Optional.ofNullable(this.scriptLines);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sinks")
-      private final @Nullable List<DataFlowSinkResponse> sinks;
+    private @Nullable List<DataFlowSinkResponse> sinks;
 
-    public List<DataFlowSinkResponse> sinks() {
-        return this.sinks == null ? List.of() : this.sinks;
+    public Optional<List<DataFlowSinkResponse>> sinks() {
+        return Optional.ofNullable(this.sinks);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sources")
-      private final @Nullable List<DataFlowSourceResponse> sources;
+    private @Nullable List<DataFlowSourceResponse> sources;
 
-    public List<DataFlowSourceResponse> sources() {
-        return this.sources == null ? List.of() : this.sources;
+    public Optional<List<DataFlowSourceResponse>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="transformations")
-      private final @Nullable List<TransformationResponse> transformations;
+    private @Nullable List<TransformationResponse> transformations;
 
-    public List<TransformationResponse> transformations() {
-        return this.transformations == null ? List.of() : this.transformations;
+    public Optional<List<TransformationResponse>> transformations() {
+        return Optional.ofNullable(this.transformations);
     }
 
     /**
@@ -119,133 +119,113 @@ public final class MappingDataFlowResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MappingDataFlowResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DataFlowResponseFolder folder,
-        @Nullable String script,
-        @Nullable List<String> scriptLines,
-        @Nullable List<DataFlowSinkResponse> sinks,
-        @Nullable List<DataFlowSourceResponse> sources,
-        @Nullable List<TransformationResponse> transformations,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.folder = folder;
-        this.script = script;
-        this.scriptLines = scriptLines;
-        this.sinks = sinks;
-        this.sources = sources;
-        this.transformations = transformations;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private MappingDataFlowResponse() {}
 
-    private MappingDataFlowResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.folder = null;
-        this.script = null;
-        this.scriptLines = List.of();
-        this.sinks = List.of();
-        this.sources = List.of();
-        this.transformations = List.of();
-        this.type = null;
+    private MappingDataFlowResponse(MappingDataFlowResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.script = $.script;
+        this.scriptLines = $.scriptLines;
+        this.sinks = $.sinks;
+        this.sources = $.sources;
+        this.transformations = $.transformations;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MappingDataFlowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private @Nullable DataFlowResponseFolder folder;
-        private @Nullable String script;
-        private @Nullable List<String> scriptLines;
-        private @Nullable List<DataFlowSinkResponse> sinks;
-        private @Nullable List<DataFlowSourceResponse> sources;
-        private @Nullable List<TransformationResponse> transformations;
-        private String type;
+        private MappingDataFlowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MappingDataFlowResponse();
         }
 
         public Builder(MappingDataFlowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.script = defaults.script;
-    	      this.scriptLines = defaults.scriptLines;
-    	      this.sinks = defaults.sinks;
-    	      this.sources = defaults.sources;
-    	      this.transformations = defaults.transformations;
-    	      this.type = defaults.type;
+            $ = new MappingDataFlowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folder(@Nullable DataFlowResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder script(@Nullable String script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
+
         public Builder scriptLines(@Nullable List<String> scriptLines) {
-            this.scriptLines = scriptLines;
+            $.scriptLines = scriptLines;
             return this;
         }
+
         public Builder scriptLines(String... scriptLines) {
             return scriptLines(List.of(scriptLines));
         }
+
         public Builder sinks(@Nullable List<DataFlowSinkResponse> sinks) {
-            this.sinks = sinks;
+            $.sinks = sinks;
             return this;
         }
+
         public Builder sinks(DataFlowSinkResponse... sinks) {
             return sinks(List.of(sinks));
         }
+
         public Builder sources(@Nullable List<DataFlowSourceResponse> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(DataFlowSourceResponse... sources) {
             return sources(List.of(sources));
         }
+
         public Builder transformations(@Nullable List<TransformationResponse> transformations) {
-            this.transformations = transformations;
+            $.transformations = transformations;
             return this;
         }
+
         public Builder transformations(TransformationResponse... transformations) {
             return transformations(List.of(transformations));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MappingDataFlowResponse build() {
-            return new MappingDataFlowResponse(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
+        }
+
+        public MappingDataFlowResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

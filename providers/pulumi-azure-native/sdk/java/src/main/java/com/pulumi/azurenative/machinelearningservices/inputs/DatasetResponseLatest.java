@@ -29,10 +29,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable UserInfoResponse createdBy;
+    private @Nullable UserInfoResponse createdBy;
 
     public Optional<UserInfoResponse> createdBy() {
-        return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -51,10 +51,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dataPath")
-      private final @Nullable DatasetResponseDataPath dataPath;
+    private @Nullable DatasetResponseDataPath dataPath;
 
     public Optional<DatasetResponseDataPath> dataPath() {
-        return this.dataPath == null ? Optional.empty() : Optional.ofNullable(this.dataPath);
+        return Optional.ofNullable(this.dataPath);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dataflow", required=true)
-      private final String dataflow;
+    private String dataflow;
 
     public String dataflow() {
         return this.dataflow;
@@ -73,10 +73,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="datasetDefinitionState")
-      private final @Nullable DatasetStateResponse datasetDefinitionState;
+    private @Nullable DatasetStateResponse datasetDefinitionState;
 
     public Optional<DatasetStateResponse> datasetDefinitionState() {
-        return this.datasetDefinitionState == null ? Optional.empty() : Optional.ofNullable(this.datasetDefinitionState);
+        return Optional.ofNullable(this.datasetDefinitionState);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -95,7 +95,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -106,7 +106,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -117,7 +117,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fileType", required=true)
-      private final String fileType;
+    private String fileType;
 
     public String fileType() {
         return this.fileType;
@@ -128,7 +128,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="modifiedTime", required=true)
-      private final String modifiedTime;
+    private String modifiedTime;
 
     public String modifiedTime() {
         return this.modifiedTime;
@@ -139,7 +139,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="notes", required=true)
-      private final String notes;
+    private String notes;
 
     public String notes() {
         return this.notes;
@@ -150,7 +150,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="partitionFormatInPath", required=true)
-      private final Boolean partitionFormatInPath;
+    private Boolean partitionFormatInPath;
 
     public Boolean partitionFormatInPath() {
         return this.partitionFormatInPath;
@@ -161,10 +161,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,Object> properties;
+    private @Nullable Map<String,Object> properties;
 
-    public Map<String,Object> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,Object>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -172,7 +172,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="savedDatasetId", required=true)
-      private final String savedDatasetId;
+    private String savedDatasetId;
 
     public String savedDatasetId() {
         return this.savedDatasetId;
@@ -183,7 +183,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
@@ -194,7 +194,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="telemetryInfo", required=true)
-      private final Map<String,String> telemetryInfo;
+    private Map<String,String> telemetryInfo;
 
     public Map<String,String> telemetryInfo() {
         return this.telemetryInfo;
@@ -205,7 +205,7 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="useDescriptionTagsFromDefinition", required=true)
-      private final Boolean useDescriptionTagsFromDefinition;
+    private Boolean useDescriptionTagsFromDefinition;
 
     public Boolean useDescriptionTagsFromDefinition() {
         return this.useDescriptionTagsFromDefinition;
@@ -216,199 +216,160 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="versionId", required=true)
-      private final String versionId;
+    private String versionId;
 
     public String versionId() {
         return this.versionId;
     }
 
-    public DatasetResponseLatest(
-        @Nullable UserInfoResponse createdBy,
-        String createdTime,
-        @Nullable DatasetResponseDataPath dataPath,
-        String dataflow,
-        @Nullable DatasetStateResponse datasetDefinitionState,
-        String datasetId,
-        String description,
-        String etag,
-        String fileType,
-        String modifiedTime,
-        String notes,
-        Boolean partitionFormatInPath,
-        @Nullable Map<String,Object> properties,
-        String savedDatasetId,
-        Map<String,String> tags,
-        Map<String,String> telemetryInfo,
-        Boolean useDescriptionTagsFromDefinition,
-        String versionId) {
-        this.createdBy = createdBy;
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.dataPath = dataPath;
-        this.dataflow = Objects.requireNonNull(dataflow, "expected parameter 'dataflow' to be non-null");
-        this.datasetDefinitionState = datasetDefinitionState;
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.fileType = Objects.requireNonNull(fileType, "expected parameter 'fileType' to be non-null");
-        this.modifiedTime = Objects.requireNonNull(modifiedTime, "expected parameter 'modifiedTime' to be non-null");
-        this.notes = Objects.requireNonNull(notes, "expected parameter 'notes' to be non-null");
-        this.partitionFormatInPath = Objects.requireNonNull(partitionFormatInPath, "expected parameter 'partitionFormatInPath' to be non-null");
-        this.properties = properties;
-        this.savedDatasetId = Objects.requireNonNull(savedDatasetId, "expected parameter 'savedDatasetId' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.telemetryInfo = Objects.requireNonNull(telemetryInfo, "expected parameter 'telemetryInfo' to be non-null");
-        this.useDescriptionTagsFromDefinition = Objects.requireNonNull(useDescriptionTagsFromDefinition, "expected parameter 'useDescriptionTagsFromDefinition' to be non-null");
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-    }
+    private DatasetResponseLatest() {}
 
-    private DatasetResponseLatest() {
-        this.createdBy = null;
-        this.createdTime = null;
-        this.dataPath = null;
-        this.dataflow = null;
-        this.datasetDefinitionState = null;
-        this.datasetId = null;
-        this.description = null;
-        this.etag = null;
-        this.fileType = null;
-        this.modifiedTime = null;
-        this.notes = null;
-        this.partitionFormatInPath = null;
-        this.properties = Map.of();
-        this.savedDatasetId = null;
-        this.tags = Map.of();
-        this.telemetryInfo = Map.of();
-        this.useDescriptionTagsFromDefinition = null;
-        this.versionId = null;
+    private DatasetResponseLatest(DatasetResponseLatest $) {
+        this.createdBy = $.createdBy;
+        this.createdTime = $.createdTime;
+        this.dataPath = $.dataPath;
+        this.dataflow = $.dataflow;
+        this.datasetDefinitionState = $.datasetDefinitionState;
+        this.datasetId = $.datasetId;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.fileType = $.fileType;
+        this.modifiedTime = $.modifiedTime;
+        this.notes = $.notes;
+        this.partitionFormatInPath = $.partitionFormatInPath;
+        this.properties = $.properties;
+        this.savedDatasetId = $.savedDatasetId;
+        this.tags = $.tags;
+        this.telemetryInfo = $.telemetryInfo;
+        this.useDescriptionTagsFromDefinition = $.useDescriptionTagsFromDefinition;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetResponseLatest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable UserInfoResponse createdBy;
-        private String createdTime;
-        private @Nullable DatasetResponseDataPath dataPath;
-        private String dataflow;
-        private @Nullable DatasetStateResponse datasetDefinitionState;
-        private String datasetId;
-        private String description;
-        private String etag;
-        private String fileType;
-        private String modifiedTime;
-        private String notes;
-        private Boolean partitionFormatInPath;
-        private @Nullable Map<String,Object> properties;
-        private String savedDatasetId;
-        private Map<String,String> tags;
-        private Map<String,String> telemetryInfo;
-        private Boolean useDescriptionTagsFromDefinition;
-        private String versionId;
+        private DatasetResponseLatest $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetResponseLatest();
         }
 
         public Builder(DatasetResponseLatest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdTime = defaults.createdTime;
-    	      this.dataPath = defaults.dataPath;
-    	      this.dataflow = defaults.dataflow;
-    	      this.datasetDefinitionState = defaults.datasetDefinitionState;
-    	      this.datasetId = defaults.datasetId;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.fileType = defaults.fileType;
-    	      this.modifiedTime = defaults.modifiedTime;
-    	      this.notes = defaults.notes;
-    	      this.partitionFormatInPath = defaults.partitionFormatInPath;
-    	      this.properties = defaults.properties;
-    	      this.savedDatasetId = defaults.savedDatasetId;
-    	      this.tags = defaults.tags;
-    	      this.telemetryInfo = defaults.telemetryInfo;
-    	      this.useDescriptionTagsFromDefinition = defaults.useDescriptionTagsFromDefinition;
-    	      this.versionId = defaults.versionId;
+            $ = new DatasetResponseLatest(Objects.requireNonNull(defaults));
         }
 
         public Builder createdBy(@Nullable UserInfoResponse createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder dataPath(@Nullable DatasetResponseDataPath dataPath) {
-            this.dataPath = dataPath;
+            $.dataPath = dataPath;
             return this;
         }
+
         public Builder dataflow(String dataflow) {
-            this.dataflow = Objects.requireNonNull(dataflow);
+            $.dataflow = dataflow;
             return this;
         }
+
         public Builder datasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
-            this.datasetDefinitionState = datasetDefinitionState;
+            $.datasetDefinitionState = datasetDefinitionState;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder fileType(String fileType) {
-            this.fileType = Objects.requireNonNull(fileType);
+            $.fileType = fileType;
             return this;
         }
+
         public Builder modifiedTime(String modifiedTime) {
-            this.modifiedTime = Objects.requireNonNull(modifiedTime);
+            $.modifiedTime = modifiedTime;
             return this;
         }
+
         public Builder notes(String notes) {
-            this.notes = Objects.requireNonNull(notes);
+            $.notes = notes;
             return this;
         }
+
         public Builder partitionFormatInPath(Boolean partitionFormatInPath) {
-            this.partitionFormatInPath = Objects.requireNonNull(partitionFormatInPath);
+            $.partitionFormatInPath = partitionFormatInPath;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,Object> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder savedDatasetId(String savedDatasetId) {
-            this.savedDatasetId = Objects.requireNonNull(savedDatasetId);
+            $.savedDatasetId = savedDatasetId;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder telemetryInfo(Map<String,String> telemetryInfo) {
-            this.telemetryInfo = Objects.requireNonNull(telemetryInfo);
+            $.telemetryInfo = telemetryInfo;
             return this;
         }
+
         public Builder useDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
-            this.useDescriptionTagsFromDefinition = Objects.requireNonNull(useDescriptionTagsFromDefinition);
+            $.useDescriptionTagsFromDefinition = useDescriptionTagsFromDefinition;
             return this;
         }
+
         public Builder versionId(String versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
-        }        public DatasetResponseLatest build() {
-            return new DatasetResponseLatest(createdBy, createdTime, dataPath, dataflow, datasetDefinitionState, datasetId, description, etag, fileType, modifiedTime, notes, partitionFormatInPath, properties, savedDatasetId, tags, telemetryInfo, useDescriptionTagsFromDefinition, versionId);
+        }
+
+        public DatasetResponseLatest build() {
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.dataflow = Objects.requireNonNull($.dataflow, "expected parameter 'dataflow' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.fileType = Objects.requireNonNull($.fileType, "expected parameter 'fileType' to be non-null");
+            $.modifiedTime = Objects.requireNonNull($.modifiedTime, "expected parameter 'modifiedTime' to be non-null");
+            $.notes = Objects.requireNonNull($.notes, "expected parameter 'notes' to be non-null");
+            $.partitionFormatInPath = Objects.requireNonNull($.partitionFormatInPath, "expected parameter 'partitionFormatInPath' to be non-null");
+            $.savedDatasetId = Objects.requireNonNull($.savedDatasetId, "expected parameter 'savedDatasetId' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.telemetryInfo = Objects.requireNonNull($.telemetryInfo, "expected parameter 'telemetryInfo' to be non-null");
+            $.useDescriptionTagsFromDefinition = Objects.requireNonNull($.useDescriptionTagsFromDefinition, "expected parameter 'useDescriptionTagsFromDefinition' to be non-null");
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            return $;
         }
     }
+
 }

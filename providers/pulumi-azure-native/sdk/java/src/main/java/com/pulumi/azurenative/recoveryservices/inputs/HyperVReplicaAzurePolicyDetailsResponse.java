@@ -25,10 +25,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="activeStorageAccountId")
-      private final @Nullable String activeStorageAccountId;
+    private @Nullable String activeStorageAccountId;
 
     public Optional<String> activeStorageAccountId() {
-        return this.activeStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.activeStorageAccountId);
+        return Optional.ofNullable(this.activeStorageAccountId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
-      private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
+    private @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
     public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
-        return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
+        return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="encryption")
-      private final @Nullable String encryption;
+    private @Nullable String encryption;
 
     public Optional<String> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -70,10 +70,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="onlineReplicationStartTime")
-      private final @Nullable String onlineReplicationStartTime;
+    private @Nullable String onlineReplicationStartTime;
 
     public Optional<String> onlineReplicationStartTime() {
-        return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
+        return Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="recoveryPointHistoryDurationInHours")
-      private final @Nullable Integer recoveryPointHistoryDurationInHours;
+    private @Nullable Integer recoveryPointHistoryDurationInHours;
 
     public Optional<Integer> recoveryPointHistoryDurationInHours() {
-        return this.recoveryPointHistoryDurationInHours == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
+        return Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
 
     /**
@@ -92,100 +92,81 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="replicationInterval")
-      private final @Nullable Integer replicationInterval;
+    private @Nullable Integer replicationInterval;
 
     public Optional<Integer> replicationInterval() {
-        return this.replicationInterval == null ? Optional.empty() : Optional.ofNullable(this.replicationInterval);
+        return Optional.ofNullable(this.replicationInterval);
     }
 
-    public HyperVReplicaAzurePolicyDetailsResponse(
-        @Nullable String activeStorageAccountId,
-        @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @Nullable String encryption,
-        String instanceType,
-        @Nullable String onlineReplicationStartTime,
-        @Nullable Integer recoveryPointHistoryDurationInHours,
-        @Nullable Integer replicationInterval) {
-        this.activeStorageAccountId = activeStorageAccountId;
-        this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
-        this.encryption = encryption;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.onlineReplicationStartTime = onlineReplicationStartTime;
-        this.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
-        this.replicationInterval = replicationInterval;
-    }
+    private HyperVReplicaAzurePolicyDetailsResponse() {}
 
-    private HyperVReplicaAzurePolicyDetailsResponse() {
-        this.activeStorageAccountId = null;
-        this.applicationConsistentSnapshotFrequencyInHours = null;
-        this.encryption = null;
-        this.instanceType = null;
-        this.onlineReplicationStartTime = null;
-        this.recoveryPointHistoryDurationInHours = null;
-        this.replicationInterval = null;
+    private HyperVReplicaAzurePolicyDetailsResponse(HyperVReplicaAzurePolicyDetailsResponse $) {
+        this.activeStorageAccountId = $.activeStorageAccountId;
+        this.applicationConsistentSnapshotFrequencyInHours = $.applicationConsistentSnapshotFrequencyInHours;
+        this.encryption = $.encryption;
+        this.instanceType = $.instanceType;
+        this.onlineReplicationStartTime = $.onlineReplicationStartTime;
+        this.recoveryPointHistoryDurationInHours = $.recoveryPointHistoryDurationInHours;
+        this.replicationInterval = $.replicationInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVReplicaAzurePolicyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeStorageAccountId;
-        private @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
-        private @Nullable String encryption;
-        private String instanceType;
-        private @Nullable String onlineReplicationStartTime;
-        private @Nullable Integer recoveryPointHistoryDurationInHours;
-        private @Nullable Integer replicationInterval;
+        private HyperVReplicaAzurePolicyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVReplicaAzurePolicyDetailsResponse();
         }
 
         public Builder(HyperVReplicaAzurePolicyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeStorageAccountId = defaults.activeStorageAccountId;
-    	      this.applicationConsistentSnapshotFrequencyInHours = defaults.applicationConsistentSnapshotFrequencyInHours;
-    	      this.encryption = defaults.encryption;
-    	      this.instanceType = defaults.instanceType;
-    	      this.onlineReplicationStartTime = defaults.onlineReplicationStartTime;
-    	      this.recoveryPointHistoryDurationInHours = defaults.recoveryPointHistoryDurationInHours;
-    	      this.replicationInterval = defaults.replicationInterval;
+            $ = new HyperVReplicaAzurePolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeStorageAccountId(@Nullable String activeStorageAccountId) {
-            this.activeStorageAccountId = activeStorageAccountId;
+            $.activeStorageAccountId = activeStorageAccountId;
             return this;
         }
+
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
-            this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
+            $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
+
         public Builder encryption(@Nullable String encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
-            this.onlineReplicationStartTime = onlineReplicationStartTime;
+            $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
+
         public Builder recoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
-            this.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
+            $.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
             return this;
         }
+
         public Builder replicationInterval(@Nullable Integer replicationInterval) {
-            this.replicationInterval = replicationInterval;
+            $.replicationInterval = replicationInterval;
             return this;
-        }        public HyperVReplicaAzurePolicyDetailsResponse build() {
-            return new HyperVReplicaAzurePolicyDetailsResponse(activeStorageAccountId, applicationConsistentSnapshotFrequencyInHours, encryption, instanceType, onlineReplicationStartTime, recoveryPointHistoryDurationInHours, replicationInterval);
+        }
+
+        public HyperVReplicaAzurePolicyDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

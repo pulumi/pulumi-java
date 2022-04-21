@@ -17,7 +17,7 @@ public final class GetUebaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -28,7 +28,7 @@ public final class GetUebaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetUebaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="settingsName", required=true)
-      private final String settingsName;
+    private String settingsName;
 
     public String settingsName() {
         return this.settingsName;
@@ -50,73 +50,66 @@ public final class GetUebaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetUebaArgs(
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String settingsName,
-        String workspaceName) {
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.settingsName = Objects.requireNonNull(settingsName, "expected parameter 'settingsName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetUebaArgs() {}
 
-    private GetUebaArgs() {
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.settingsName = null;
-        this.workspaceName = null;
+    private GetUebaArgs(GetUebaArgs $) {
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.settingsName = $.settingsName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUebaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String settingsName;
-        private String workspaceName;
+        private GetUebaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUebaArgs();
         }
 
         public Builder(GetUebaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.settingsName = defaults.settingsName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetUebaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder settingsName(String settingsName) {
-            this.settingsName = Objects.requireNonNull(settingsName);
+            $.settingsName = settingsName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetUebaArgs build() {
-            return new GetUebaArgs(operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
+        }
+
+        public GetUebaArgs build() {
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.settingsName = Objects.requireNonNull($.settingsName, "expected parameter 'settingsName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

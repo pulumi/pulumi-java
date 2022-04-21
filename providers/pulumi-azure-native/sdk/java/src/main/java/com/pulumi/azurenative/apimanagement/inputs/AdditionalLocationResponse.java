@@ -28,10 +28,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="disableGateway")
-      private final @Nullable Boolean disableGateway;
+    private @Nullable Boolean disableGateway;
 
     public Optional<Boolean> disableGateway() {
-        return this.disableGateway == null ? Optional.empty() : Optional.ofNullable(this.disableGateway);
+        return Optional.ofNullable(this.disableGateway);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="gatewayRegionalUrl", required=true)
-      private final String gatewayRegionalUrl;
+    private String gatewayRegionalUrl;
 
     public String gatewayRegionalUrl() {
         return this.gatewayRegionalUrl;
@@ -50,7 +50,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -61,7 +61,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateIPAddresses", required=true)
-      private final List<String> privateIPAddresses;
+    private List<String> privateIPAddresses;
 
     public List<String> privateIPAddresses() {
         return this.privateIPAddresses;
@@ -72,7 +72,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicIPAddresses", required=true)
-      private final List<String> publicIPAddresses;
+    private List<String> publicIPAddresses;
 
     public List<String> publicIPAddresses() {
         return this.publicIPAddresses;
@@ -83,7 +83,7 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sku", required=true)
-      private final ApiManagementServiceSkuPropertiesResponse sku;
+    private ApiManagementServiceSkuPropertiesResponse sku;
 
     public ApiManagementServiceSkuPropertiesResponse sku() {
         return this.sku;
@@ -94,10 +94,10 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualNetworkConfiguration")
-      private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
+    private @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
 
     public Optional<VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkConfiguration);
+        return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
 
     /**
@@ -105,118 +105,104 @@ public final class AdditionalLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public AdditionalLocationResponse(
-        @Nullable Boolean disableGateway,
-        String gatewayRegionalUrl,
-        String location,
-        List<String> privateIPAddresses,
-        List<String> publicIPAddresses,
-        ApiManagementServiceSkuPropertiesResponse sku,
-        @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @Nullable List<String> zones) {
-        this.disableGateway = Codegen.booleanProp("disableGateway").arg(disableGateway).def(false).getNullable();
-        this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl, "expected parameter 'gatewayRegionalUrl' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses, "expected parameter 'privateIPAddresses' to be non-null");
-        this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses, "expected parameter 'publicIPAddresses' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.virtualNetworkConfiguration = virtualNetworkConfiguration;
-        this.zones = zones;
-    }
+    private AdditionalLocationResponse() {}
 
-    private AdditionalLocationResponse() {
-        this.disableGateway = null;
-        this.gatewayRegionalUrl = null;
-        this.location = null;
-        this.privateIPAddresses = List.of();
-        this.publicIPAddresses = List.of();
-        this.sku = null;
-        this.virtualNetworkConfiguration = null;
-        this.zones = List.of();
+    private AdditionalLocationResponse(AdditionalLocationResponse $) {
+        this.disableGateway = $.disableGateway;
+        this.gatewayRegionalUrl = $.gatewayRegionalUrl;
+        this.location = $.location;
+        this.privateIPAddresses = $.privateIPAddresses;
+        this.publicIPAddresses = $.publicIPAddresses;
+        this.sku = $.sku;
+        this.virtualNetworkConfiguration = $.virtualNetworkConfiguration;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean disableGateway;
-        private String gatewayRegionalUrl;
-        private String location;
-        private List<String> privateIPAddresses;
-        private List<String> publicIPAddresses;
-        private ApiManagementServiceSkuPropertiesResponse sku;
-        private @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
-        private @Nullable List<String> zones;
+        private AdditionalLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalLocationResponse();
         }
 
         public Builder(AdditionalLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableGateway = defaults.disableGateway;
-    	      this.gatewayRegionalUrl = defaults.gatewayRegionalUrl;
-    	      this.location = defaults.location;
-    	      this.privateIPAddresses = defaults.privateIPAddresses;
-    	      this.publicIPAddresses = defaults.publicIPAddresses;
-    	      this.sku = defaults.sku;
-    	      this.virtualNetworkConfiguration = defaults.virtualNetworkConfiguration;
-    	      this.zones = defaults.zones;
+            $ = new AdditionalLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableGateway(@Nullable Boolean disableGateway) {
-            this.disableGateway = disableGateway;
+            $.disableGateway = disableGateway;
             return this;
         }
+
         public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
-            this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
+            $.gatewayRegionalUrl = gatewayRegionalUrl;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder privateIPAddresses(List<String> privateIPAddresses) {
-            this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
+            $.privateIPAddresses = privateIPAddresses;
             return this;
         }
+
         public Builder privateIPAddresses(String... privateIPAddresses) {
             return privateIPAddresses(List.of(privateIPAddresses));
         }
+
         public Builder publicIPAddresses(List<String> publicIPAddresses) {
-            this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
+            $.publicIPAddresses = publicIPAddresses;
             return this;
         }
+
         public Builder publicIPAddresses(String... publicIPAddresses) {
             return publicIPAddresses(List.of(publicIPAddresses));
         }
+
         public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = virtualNetworkConfiguration;
+            $.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public AdditionalLocationResponse build() {
-            return new AdditionalLocationResponse(disableGateway, gatewayRegionalUrl, location, privateIPAddresses, publicIPAddresses, sku, virtualNetworkConfiguration, zones);
+        }
+
+        public AdditionalLocationResponse build() {
+            $.disableGateway = Codegen.booleanProp("disableGateway").arg($.disableGateway).def(false).getNullable();
+            $.gatewayRegionalUrl = Objects.requireNonNull($.gatewayRegionalUrl, "expected parameter 'gatewayRegionalUrl' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.privateIPAddresses = Objects.requireNonNull($.privateIPAddresses, "expected parameter 'privateIPAddresses' to be non-null");
+            $.publicIPAddresses = Objects.requireNonNull($.publicIPAddresses, "expected parameter 'publicIPAddresses' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

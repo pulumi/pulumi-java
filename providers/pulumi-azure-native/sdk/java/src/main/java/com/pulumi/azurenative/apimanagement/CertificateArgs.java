@@ -6,9 +6,9 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVault")
-      private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
+    private @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
-    public Output<KeyVaultContractCreatePropertiesArgs> keyVault() {
-        return this.keyVault == null ? Codegen.empty() : this.keyVault;
+    public Optional<Output<KeyVaultContractCreatePropertiesArgs>> keyVault() {
+        return Optional.ofNullable(this.keyVault);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,100 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public CertificateArgs(
-        @Nullable Output<String> certificateId,
-        @Nullable Output<String> data,
-        @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.certificateId = certificateId;
-        this.data = data;
-        this.keyVault = keyVault;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.certificateId = Codegen.empty();
-        this.data = Codegen.empty();
-        this.keyVault = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.certificateId = $.certificateId;
+        this.data = $.data;
+        this.keyVault = $.keyVault;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateId;
-        private @Nullable Output<String> data;
-        private @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.data = defaults.data;
-    	      this.keyVault = defaults.keyVault;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder keyVault(@Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault) {
-            this.keyVault = keyVault;
+            $.keyVault = keyVault;
             return this;
         }
-        public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
-            this.keyVault = Codegen.ofNullable(keyVault);
-            return this;
+
+        public Builder keyVault(KeyVaultContractCreatePropertiesArgs keyVault) {
+            return keyVault(Output.of(keyVault));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(certificateId, data, keyVault, password, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public CertificateArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetPeeringArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -28,55 +28,52 @@ public final class GetPeeringArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPeeringArgs(
-        String peeringName,
-        String resourceGroupName) {
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPeeringArgs() {}
 
-    private GetPeeringArgs() {
-        this.peeringName = null;
-        this.resourceGroupName = null;
+    private GetPeeringArgs(GetPeeringArgs $) {
+        this.peeringName = $.peeringName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peeringName;
-        private String resourceGroupName;
+        private GetPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPeeringArgs();
         }
 
         public Builder(GetPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeringName = defaults.peeringName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPeeringArgs build() {
-            return new GetPeeringArgs(peeringName, resourceGroupName);
+        }
+
+        public GetPeeringArgs build() {
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

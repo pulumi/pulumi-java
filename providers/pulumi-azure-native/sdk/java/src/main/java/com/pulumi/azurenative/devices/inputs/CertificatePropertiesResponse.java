@@ -22,7 +22,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="certificate", required=true)
-      private final String certificate;
+    private String certificate;
 
     public String certificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="created", required=true)
-      private final String created;
+    private String created;
 
     public String created() {
         return this.created;
@@ -44,7 +44,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="expiry", required=true)
-      private final String expiry;
+    private String expiry;
 
     public String expiry() {
         return this.expiry;
@@ -55,7 +55,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isVerified", required=true)
-      private final Boolean isVerified;
+    private Boolean isVerified;
 
     public Boolean isVerified() {
         return this.isVerified;
@@ -66,7 +66,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
@@ -77,7 +77,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
@@ -88,100 +88,87 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="updated", required=true)
-      private final String updated;
+    private String updated;
 
     public String updated() {
         return this.updated;
     }
 
-    public CertificatePropertiesResponse(
-        String certificate,
-        String created,
-        String expiry,
-        Boolean isVerified,
-        String subject,
-        String thumbprint,
-        String updated) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.created = Objects.requireNonNull(created, "expected parameter 'created' to be non-null");
-        this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.isVerified = Objects.requireNonNull(isVerified, "expected parameter 'isVerified' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.updated = Objects.requireNonNull(updated, "expected parameter 'updated' to be non-null");
-    }
+    private CertificatePropertiesResponse() {}
 
-    private CertificatePropertiesResponse() {
-        this.certificate = null;
-        this.created = null;
-        this.expiry = null;
-        this.isVerified = null;
-        this.subject = null;
-        this.thumbprint = null;
-        this.updated = null;
+    private CertificatePropertiesResponse(CertificatePropertiesResponse $) {
+        this.certificate = $.certificate;
+        this.created = $.created;
+        this.expiry = $.expiry;
+        this.isVerified = $.isVerified;
+        this.subject = $.subject;
+        this.thumbprint = $.thumbprint;
+        this.updated = $.updated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificatePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificate;
-        private String created;
-        private String expiry;
-        private Boolean isVerified;
-        private String subject;
-        private String thumbprint;
-        private String updated;
+        private CertificatePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificatePropertiesResponse();
         }
 
         public Builder(CertificatePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.created = defaults.created;
-    	      this.expiry = defaults.expiry;
-    	      this.isVerified = defaults.isVerified;
-    	      this.subject = defaults.subject;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.updated = defaults.updated;
+            $ = new CertificatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder created(String created) {
-            this.created = Objects.requireNonNull(created);
+            $.created = created;
             return this;
         }
+
         public Builder expiry(String expiry) {
-            this.expiry = Objects.requireNonNull(expiry);
+            $.expiry = expiry;
             return this;
         }
+
         public Builder isVerified(Boolean isVerified) {
-            this.isVerified = Objects.requireNonNull(isVerified);
+            $.isVerified = isVerified;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder updated(String updated) {
-            this.updated = Objects.requireNonNull(updated);
+            $.updated = updated;
             return this;
-        }        public CertificatePropertiesResponse build() {
-            return new CertificatePropertiesResponse(certificate, created, expiry, isVerified, subject, thumbprint, updated);
+        }
+
+        public CertificatePropertiesResponse build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.created = Objects.requireNonNull($.created, "expected parameter 'created' to be non-null");
+            $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
+            $.isVerified = Objects.requireNonNull($.isVerified, "expected parameter 'isVerified' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            $.updated = Objects.requireNonNull($.updated, "expected parameter 'updated' to be non-null");
+            return $;
         }
     }
+
 }

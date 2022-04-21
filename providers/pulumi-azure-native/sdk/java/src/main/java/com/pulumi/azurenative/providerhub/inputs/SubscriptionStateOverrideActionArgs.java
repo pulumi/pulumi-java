@@ -8,7 +8,6 @@ import com.pulumi.azurenative.providerhub.enums.SubscriptionTransitioningState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,70 +17,67 @@ public final class SubscriptionStateOverrideActionArgs extends com.pulumi.resour
     public static final SubscriptionStateOverrideActionArgs Empty = new SubscriptionStateOverrideActionArgs();
 
     @Import(name="action", required=true)
-      private final Output<Either<String,SubscriptionNotificationOperation>> action;
+    private Output<Either<String,SubscriptionNotificationOperation>> action;
 
     public Output<Either<String,SubscriptionNotificationOperation>> action() {
         return this.action;
     }
 
     @Import(name="state", required=true)
-      private final Output<Either<String,SubscriptionTransitioningState>> state;
+    private Output<Either<String,SubscriptionTransitioningState>> state;
 
     public Output<Either<String,SubscriptionTransitioningState>> state() {
         return this.state;
     }
 
-    public SubscriptionStateOverrideActionArgs(
-        Output<Either<String,SubscriptionNotificationOperation>> action,
-        Output<Either<String,SubscriptionTransitioningState>> state) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private SubscriptionStateOverrideActionArgs() {}
 
-    private SubscriptionStateOverrideActionArgs() {
-        this.action = Codegen.empty();
-        this.state = Codegen.empty();
+    private SubscriptionStateOverrideActionArgs(SubscriptionStateOverrideActionArgs $) {
+        this.action = $.action;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionStateOverrideActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SubscriptionNotificationOperation>> action;
-        private Output<Either<String,SubscriptionTransitioningState>> state;
+        private SubscriptionStateOverrideActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionStateOverrideActionArgs();
         }
 
         public Builder(SubscriptionStateOverrideActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.state = defaults.state;
+            $ = new SubscriptionStateOverrideActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<Either<String,SubscriptionNotificationOperation>> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(Either<String,SubscriptionNotificationOperation> action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder state(Output<Either<String,SubscriptionTransitioningState>> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(Either<String,SubscriptionTransitioningState> state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
-        }        public SubscriptionStateOverrideActionArgs build() {
-            return new SubscriptionStateOverrideActionArgs(action, state);
+            return state(Output.of(state));
+        }
+
+        public SubscriptionStateOverrideActionArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

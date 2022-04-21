@@ -5,12 +5,12 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<Object> config;
+    private @Nullable Output<Object> config;
 
-    public Output<Object> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<Object>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="configHref")
-      private final @Nullable Output<String> configHref;
+    private @Nullable Output<String> configHref;
 
-    public Output<String> configHref() {
-        return this.configHref == null ? Codegen.empty() : this.configHref;
+    public Optional<Output<String>> configHref() {
+        return Optional.ofNullable(this.configHref);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="files")
-      private final @Nullable Output<Map<String,String>> files;
+    private @Nullable Output<Map<String,String>> files;
 
-    public Output<Map<String,String>> files() {
-        return this.files == null ? Codegen.empty() : this.files;
+    public Optional<Output<Map<String,String>>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="functionAppId")
-      private final @Nullable Output<String> functionAppId;
+    private @Nullable Output<String> functionAppId;
 
-    public Output<String> functionAppId() {
-        return this.functionAppId == null ? Codegen.empty() : this.functionAppId;
+    public Optional<Output<String>> functionAppId() {
+        return Optional.ofNullable(this.functionAppId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="functionName")
-      private final @Nullable Output<String> functionName;
+    private @Nullable Output<String> functionName;
 
-    public Output<String> functionName() {
-        return this.functionName == null ? Codegen.empty() : this.functionName;
+    public Optional<Output<String>> functionName() {
+        return Optional.ofNullable(this.functionName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="href")
-      private final @Nullable Output<String> href;
+    private @Nullable Output<String> href;
 
-    public Output<String> href() {
-        return this.href == null ? Codegen.empty() : this.href;
+    public Optional<Output<String>> href() {
+        return Optional.ofNullable(this.href);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="invokeUrlTemplate")
-      private final @Nullable Output<String> invokeUrlTemplate;
+    private @Nullable Output<String> invokeUrlTemplate;
 
-    public Output<String> invokeUrlTemplate() {
-        return this.invokeUrlTemplate == null ? Codegen.empty() : this.invokeUrlTemplate;
+    public Optional<Output<String>> invokeUrlTemplate() {
+        return Optional.ofNullable(this.invokeUrlTemplate);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isDisabled")
-      private final @Nullable Output<Boolean> isDisabled;
+    private @Nullable Output<Boolean> isDisabled;
 
-    public Output<Boolean> isDisabled() {
-        return this.isDisabled == null ? Codegen.empty() : this.isDisabled;
+    public Optional<Output<Boolean>> isDisabled() {
+        return Optional.ofNullable(this.isDisabled);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<String> language;
+    private @Nullable Output<String> language;
 
-    public Output<String> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -133,7 +133,7 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -144,7 +144,7 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -155,10 +155,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scriptHref")
-      private final @Nullable Output<String> scriptHref;
+    private @Nullable Output<String> scriptHref;
 
-    public Output<String> scriptHref() {
-        return this.scriptHref == null ? Codegen.empty() : this.scriptHref;
+    public Optional<Output<String>> scriptHref() {
+        return Optional.ofNullable(this.scriptHref);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scriptRootPathHref")
-      private final @Nullable Output<String> scriptRootPathHref;
+    private @Nullable Output<String> scriptRootPathHref;
 
-    public Output<String> scriptRootPathHref() {
-        return this.scriptRootPathHref == null ? Codegen.empty() : this.scriptRootPathHref;
+    public Optional<Output<String>> scriptRootPathHref() {
+        return Optional.ofNullable(this.scriptRootPathHref);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secretsFileHref")
-      private final @Nullable Output<String> secretsFileHref;
+    private @Nullable Output<String> secretsFileHref;
 
-    public Output<String> secretsFileHref() {
-        return this.secretsFileHref == null ? Codegen.empty() : this.secretsFileHref;
+    public Optional<Output<String>> secretsFileHref() {
+        return Optional.ofNullable(this.secretsFileHref);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="testData")
-      private final @Nullable Output<String> testData;
+    private @Nullable Output<String> testData;
 
-    public Output<String> testData() {
-        return this.testData == null ? Codegen.empty() : this.testData;
+    public Optional<Output<String>> testData() {
+        return Optional.ofNullable(this.testData);
     }
 
     /**
@@ -199,258 +199,210 @@ public final class WebAppFunctionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="testDataHref")
-      private final @Nullable Output<String> testDataHref;
+    private @Nullable Output<String> testDataHref;
 
-    public Output<String> testDataHref() {
-        return this.testDataHref == null ? Codegen.empty() : this.testDataHref;
+    public Optional<Output<String>> testDataHref() {
+        return Optional.ofNullable(this.testDataHref);
     }
 
-    public WebAppFunctionArgs(
-        @Nullable Output<Object> config,
-        @Nullable Output<String> configHref,
-        @Nullable Output<Map<String,String>> files,
-        @Nullable Output<String> functionAppId,
-        @Nullable Output<String> functionName,
-        @Nullable Output<String> href,
-        @Nullable Output<String> invokeUrlTemplate,
-        @Nullable Output<Boolean> isDisabled,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> language,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scriptHref,
-        @Nullable Output<String> scriptRootPathHref,
-        @Nullable Output<String> secretsFileHref,
-        @Nullable Output<String> testData,
-        @Nullable Output<String> testDataHref) {
-        this.config = config;
-        this.configHref = configHref;
-        this.files = files;
-        this.functionAppId = functionAppId;
-        this.functionName = functionName;
-        this.href = href;
-        this.invokeUrlTemplate = invokeUrlTemplate;
-        this.isDisabled = isDisabled;
-        this.kind = kind;
-        this.language = language;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scriptHref = scriptHref;
-        this.scriptRootPathHref = scriptRootPathHref;
-        this.secretsFileHref = secretsFileHref;
-        this.testData = testData;
-        this.testDataHref = testDataHref;
-    }
+    private WebAppFunctionArgs() {}
 
-    private WebAppFunctionArgs() {
-        this.config = Codegen.empty();
-        this.configHref = Codegen.empty();
-        this.files = Codegen.empty();
-        this.functionAppId = Codegen.empty();
-        this.functionName = Codegen.empty();
-        this.href = Codegen.empty();
-        this.invokeUrlTemplate = Codegen.empty();
-        this.isDisabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.language = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scriptHref = Codegen.empty();
-        this.scriptRootPathHref = Codegen.empty();
-        this.secretsFileHref = Codegen.empty();
-        this.testData = Codegen.empty();
-        this.testDataHref = Codegen.empty();
+    private WebAppFunctionArgs(WebAppFunctionArgs $) {
+        this.config = $.config;
+        this.configHref = $.configHref;
+        this.files = $.files;
+        this.functionAppId = $.functionAppId;
+        this.functionName = $.functionName;
+        this.href = $.href;
+        this.invokeUrlTemplate = $.invokeUrlTemplate;
+        this.isDisabled = $.isDisabled;
+        this.kind = $.kind;
+        this.language = $.language;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scriptHref = $.scriptHref;
+        this.scriptRootPathHref = $.scriptRootPathHref;
+        this.secretsFileHref = $.secretsFileHref;
+        this.testData = $.testData;
+        this.testDataHref = $.testDataHref;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> config;
-        private @Nullable Output<String> configHref;
-        private @Nullable Output<Map<String,String>> files;
-        private @Nullable Output<String> functionAppId;
-        private @Nullable Output<String> functionName;
-        private @Nullable Output<String> href;
-        private @Nullable Output<String> invokeUrlTemplate;
-        private @Nullable Output<Boolean> isDisabled;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> language;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scriptHref;
-        private @Nullable Output<String> scriptRootPathHref;
-        private @Nullable Output<String> secretsFileHref;
-        private @Nullable Output<String> testData;
-        private @Nullable Output<String> testDataHref;
+        private WebAppFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppFunctionArgs();
         }
 
         public Builder(WebAppFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.configHref = defaults.configHref;
-    	      this.files = defaults.files;
-    	      this.functionAppId = defaults.functionAppId;
-    	      this.functionName = defaults.functionName;
-    	      this.href = defaults.href;
-    	      this.invokeUrlTemplate = defaults.invokeUrlTemplate;
-    	      this.isDisabled = defaults.isDisabled;
-    	      this.kind = defaults.kind;
-    	      this.language = defaults.language;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scriptHref = defaults.scriptHref;
-    	      this.scriptRootPathHref = defaults.scriptRootPathHref;
-    	      this.secretsFileHref = defaults.secretsFileHref;
-    	      this.testData = defaults.testData;
-    	      this.testDataHref = defaults.testDataHref;
+            $ = new WebAppFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<Object> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable Object config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(Object config) {
+            return config(Output.of(config));
         }
+
         public Builder configHref(@Nullable Output<String> configHref) {
-            this.configHref = configHref;
+            $.configHref = configHref;
             return this;
         }
-        public Builder configHref(@Nullable String configHref) {
-            this.configHref = Codegen.ofNullable(configHref);
-            return this;
+
+        public Builder configHref(String configHref) {
+            return configHref(Output.of(configHref));
         }
+
         public Builder files(@Nullable Output<Map<String,String>> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
-        public Builder files(@Nullable Map<String,String> files) {
-            this.files = Codegen.ofNullable(files);
-            return this;
+
+        public Builder files(Map<String,String> files) {
+            return files(Output.of(files));
         }
+
         public Builder functionAppId(@Nullable Output<String> functionAppId) {
-            this.functionAppId = functionAppId;
+            $.functionAppId = functionAppId;
             return this;
         }
-        public Builder functionAppId(@Nullable String functionAppId) {
-            this.functionAppId = Codegen.ofNullable(functionAppId);
-            return this;
+
+        public Builder functionAppId(String functionAppId) {
+            return functionAppId(Output.of(functionAppId));
         }
+
         public Builder functionName(@Nullable Output<String> functionName) {
-            this.functionName = functionName;
+            $.functionName = functionName;
             return this;
         }
-        public Builder functionName(@Nullable String functionName) {
-            this.functionName = Codegen.ofNullable(functionName);
-            return this;
+
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
         }
+
         public Builder href(@Nullable Output<String> href) {
-            this.href = href;
+            $.href = href;
             return this;
         }
-        public Builder href(@Nullable String href) {
-            this.href = Codegen.ofNullable(href);
-            return this;
+
+        public Builder href(String href) {
+            return href(Output.of(href));
         }
+
         public Builder invokeUrlTemplate(@Nullable Output<String> invokeUrlTemplate) {
-            this.invokeUrlTemplate = invokeUrlTemplate;
+            $.invokeUrlTemplate = invokeUrlTemplate;
             return this;
         }
-        public Builder invokeUrlTemplate(@Nullable String invokeUrlTemplate) {
-            this.invokeUrlTemplate = Codegen.ofNullable(invokeUrlTemplate);
-            return this;
+
+        public Builder invokeUrlTemplate(String invokeUrlTemplate) {
+            return invokeUrlTemplate(Output.of(invokeUrlTemplate));
         }
+
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
-            this.isDisabled = isDisabled;
+            $.isDisabled = isDisabled;
             return this;
         }
-        public Builder isDisabled(@Nullable Boolean isDisabled) {
-            this.isDisabled = Codegen.ofNullable(isDisabled);
-            return this;
+
+        public Builder isDisabled(Boolean isDisabled) {
+            return isDisabled(Output.of(isDisabled));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder language(@Nullable Output<String> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable String language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(String language) {
+            return language(Output.of(language));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scriptHref(@Nullable Output<String> scriptHref) {
-            this.scriptHref = scriptHref;
+            $.scriptHref = scriptHref;
             return this;
         }
-        public Builder scriptHref(@Nullable String scriptHref) {
-            this.scriptHref = Codegen.ofNullable(scriptHref);
-            return this;
+
+        public Builder scriptHref(String scriptHref) {
+            return scriptHref(Output.of(scriptHref));
         }
+
         public Builder scriptRootPathHref(@Nullable Output<String> scriptRootPathHref) {
-            this.scriptRootPathHref = scriptRootPathHref;
+            $.scriptRootPathHref = scriptRootPathHref;
             return this;
         }
-        public Builder scriptRootPathHref(@Nullable String scriptRootPathHref) {
-            this.scriptRootPathHref = Codegen.ofNullable(scriptRootPathHref);
-            return this;
+
+        public Builder scriptRootPathHref(String scriptRootPathHref) {
+            return scriptRootPathHref(Output.of(scriptRootPathHref));
         }
+
         public Builder secretsFileHref(@Nullable Output<String> secretsFileHref) {
-            this.secretsFileHref = secretsFileHref;
+            $.secretsFileHref = secretsFileHref;
             return this;
         }
-        public Builder secretsFileHref(@Nullable String secretsFileHref) {
-            this.secretsFileHref = Codegen.ofNullable(secretsFileHref);
-            return this;
+
+        public Builder secretsFileHref(String secretsFileHref) {
+            return secretsFileHref(Output.of(secretsFileHref));
         }
+
         public Builder testData(@Nullable Output<String> testData) {
-            this.testData = testData;
+            $.testData = testData;
             return this;
         }
-        public Builder testData(@Nullable String testData) {
-            this.testData = Codegen.ofNullable(testData);
-            return this;
+
+        public Builder testData(String testData) {
+            return testData(Output.of(testData));
         }
+
         public Builder testDataHref(@Nullable Output<String> testDataHref) {
-            this.testDataHref = testDataHref;
+            $.testDataHref = testDataHref;
             return this;
         }
-        public Builder testDataHref(@Nullable String testDataHref) {
-            this.testDataHref = Codegen.ofNullable(testDataHref);
-            return this;
-        }        public WebAppFunctionArgs build() {
-            return new WebAppFunctionArgs(config, configHref, files, functionAppId, functionName, href, invokeUrlTemplate, isDisabled, kind, language, name, resourceGroupName, scriptHref, scriptRootPathHref, secretsFileHref, testData, testDataHref);
+
+        public Builder testDataHref(String testDataHref) {
+            return testDataHref(Output.of(testDataHref));
+        }
+
+        public WebAppFunctionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

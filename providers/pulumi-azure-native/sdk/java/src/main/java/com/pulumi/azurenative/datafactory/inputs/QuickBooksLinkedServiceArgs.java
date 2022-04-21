@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken() {
-        return this.accessToken == null ? Codegen.empty() : this.accessToken;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="accessTokenSecret")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret() {
-        return this.accessTokenSecret == null ? Codegen.empty() : this.accessTokenSecret;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessTokenSecret() {
+        return Optional.ofNullable(this.accessTokenSecret);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="companyId")
-      private final @Nullable Output<Object> companyId;
+    private @Nullable Output<Object> companyId;
 
-    public Output<Object> companyId() {
-        return this.companyId == null ? Codegen.empty() : this.companyId;
+    public Optional<Output<Object>> companyId() {
+        return Optional.ofNullable(this.companyId);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectionProperties")
-      private final @Nullable Output<Object> connectionProperties;
+    private @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> connectionProperties() {
-        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
+    public Optional<Output<Object>> connectionProperties() {
+        return Optional.ofNullable(this.connectionProperties);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="consumerKey")
-      private final @Nullable Output<Object> consumerKey;
+    private @Nullable Output<Object> consumerKey;
 
-    public Output<Object> consumerKey() {
-        return this.consumerKey == null ? Codegen.empty() : this.consumerKey;
+    public Optional<Output<Object>> consumerKey() {
+        return Optional.ofNullable(this.consumerKey);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="consumerSecret")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret() {
-        return this.consumerSecret == null ? Codegen.empty() : this.consumerSecret;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> consumerSecret() {
+        return Optional.ofNullable(this.consumerSecret);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -142,10 +143,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<Object> endpoint;
+    private @Nullable Output<Object> endpoint;
 
-    public Output<Object> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<Object>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -153,10 +154,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -165,7 +166,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -176,222 +177,183 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Output<Object> useEncryptedEndpoints;
+    private @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
+    public Optional<Output<Object>> useEncryptedEndpoints() {
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
-    public QuickBooksLinkedServiceArgs(
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret,
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> companyId,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<Object> connectionProperties,
-        @Nullable Output<Object> consumerKey,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Object> endpoint,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        Output<String> type,
-        @Nullable Output<Object> useEncryptedEndpoints) {
-        this.accessToken = accessToken;
-        this.accessTokenSecret = accessTokenSecret;
-        this.annotations = annotations;
-        this.companyId = companyId;
-        this.connectVia = connectVia;
-        this.connectionProperties = connectionProperties;
-        this.consumerKey = consumerKey;
-        this.consumerSecret = consumerSecret;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.endpoint = endpoint;
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-    }
+    private QuickBooksLinkedServiceArgs() {}
 
-    private QuickBooksLinkedServiceArgs() {
-        this.accessToken = Codegen.empty();
-        this.accessTokenSecret = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.companyId = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.connectionProperties = Codegen.empty();
-        this.consumerKey = Codegen.empty();
-        this.consumerSecret = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useEncryptedEndpoints = Codegen.empty();
+    private QuickBooksLinkedServiceArgs(QuickBooksLinkedServiceArgs $) {
+        this.accessToken = $.accessToken;
+        this.accessTokenSecret = $.accessTokenSecret;
+        this.annotations = $.annotations;
+        this.companyId = $.companyId;
+        this.connectVia = $.connectVia;
+        this.connectionProperties = $.connectionProperties;
+        this.consumerKey = $.consumerKey;
+        this.consumerSecret = $.consumerSecret;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.endpoint = $.endpoint;
+        this.parameters = $.parameters;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickBooksLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> companyId;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<Object> connectionProperties;
-        private @Nullable Output<Object> consumerKey;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Object> endpoint;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private Output<String> type;
-        private @Nullable Output<Object> useEncryptedEndpoints;
+        private QuickBooksLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickBooksLinkedServiceArgs();
         }
 
         public Builder(QuickBooksLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.accessTokenSecret = defaults.accessTokenSecret;
-    	      this.annotations = defaults.annotations;
-    	      this.companyId = defaults.companyId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.consumerKey = defaults.consumerKey;
-    	      this.consumerSecret = defaults.consumerSecret;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.endpoint = defaults.endpoint;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
+            $ = new QuickBooksLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
-        public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
-            this.accessToken = Codegen.ofNullable(accessToken);
-            return this;
+
+        public Builder accessToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
+            return accessToken(Output.of(accessToken));
         }
+
         public Builder accessTokenSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
-            this.accessTokenSecret = accessTokenSecret;
+            $.accessTokenSecret = accessTokenSecret;
             return this;
         }
-        public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
-            this.accessTokenSecret = Codegen.ofNullable(accessTokenSecret);
-            return this;
+
+        public Builder accessTokenSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
+            return accessTokenSecret(Output.of(accessTokenSecret));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder companyId(@Nullable Output<Object> companyId) {
-            this.companyId = companyId;
+            $.companyId = companyId;
             return this;
         }
-        public Builder companyId(@Nullable Object companyId) {
-            this.companyId = Codegen.ofNullable(companyId);
-            return this;
+
+        public Builder companyId(Object companyId) {
+            return companyId(Output.of(companyId));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
-            this.connectionProperties = connectionProperties;
+            $.connectionProperties = connectionProperties;
             return this;
         }
-        public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Codegen.ofNullable(connectionProperties);
-            return this;
+
+        public Builder connectionProperties(Object connectionProperties) {
+            return connectionProperties(Output.of(connectionProperties));
         }
+
         public Builder consumerKey(@Nullable Output<Object> consumerKey) {
-            this.consumerKey = consumerKey;
+            $.consumerKey = consumerKey;
             return this;
         }
-        public Builder consumerKey(@Nullable Object consumerKey) {
-            this.consumerKey = Codegen.ofNullable(consumerKey);
-            return this;
+
+        public Builder consumerKey(Object consumerKey) {
+            return consumerKey(Output.of(consumerKey));
         }
+
         public Builder consumerSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret) {
-            this.consumerSecret = consumerSecret;
+            $.consumerSecret = consumerSecret;
             return this;
         }
-        public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
-            this.consumerSecret = Codegen.ofNullable(consumerSecret);
-            return this;
+
+        public Builder consumerSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
+            return consumerSecret(Output.of(consumerSecret));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder endpoint(@Nullable Output<Object> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable Object endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(Object endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Codegen.ofNullable(useEncryptedEndpoints);
-            return this;
-        }        public QuickBooksLinkedServiceArgs build() {
-            return new QuickBooksLinkedServiceArgs(accessToken, accessTokenSecret, annotations, companyId, connectVia, connectionProperties, consumerKey, consumerSecret, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints);
+
+        public Builder useEncryptedEndpoints(Object useEncryptedEndpoints) {
+            return useEncryptedEndpoints(Output.of(useEncryptedEndpoints));
+        }
+
+        public QuickBooksLinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class SourceCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class SourceCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -44,67 +44,63 @@ public final class SourceCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public SourceCostAllocationResourceResponse(
-        String name,
-        String resourceType,
-        List<String> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private SourceCostAllocationResourceResponse() {}
 
-    private SourceCostAllocationResourceResponse() {
-        this.name = null;
-        this.resourceType = null;
-        this.values = List.of();
+    private SourceCostAllocationResourceResponse(SourceCostAllocationResourceResponse $) {
+        this.name = $.name;
+        this.resourceType = $.resourceType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceCostAllocationResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceType;
-        private List<String> values;
+        private SourceCostAllocationResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceCostAllocationResourceResponse();
         }
 
         public Builder(SourceCostAllocationResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceType = defaults.resourceType;
-    	      this.values = defaults.values;
+            $ = new SourceCostAllocationResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public SourceCostAllocationResourceResponse build() {
-            return new SourceCostAllocationResourceResponse(name, resourceType, values);
+        }
+
+        public SourceCostAllocationResourceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

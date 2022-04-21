@@ -22,7 +22,7 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filePath", required=true)
-      private final Object filePath;
+    private Object filePath;
 
     public Object filePath() {
         return this.filePath;
@@ -33,55 +33,52 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
-    public AzureMLWebServiceFileResponse(
-        Object filePath,
-        LinkedServiceReferenceResponse linkedServiceName) {
-        this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-    }
+    private AzureMLWebServiceFileResponse() {}
 
-    private AzureMLWebServiceFileResponse() {
-        this.filePath = null;
-        this.linkedServiceName = null;
+    private AzureMLWebServiceFileResponse(AzureMLWebServiceFileResponse $) {
+        this.filePath = $.filePath;
+        this.linkedServiceName = $.linkedServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLWebServiceFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object filePath;
-        private LinkedServiceReferenceResponse linkedServiceName;
+        private AzureMLWebServiceFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLWebServiceFileResponse();
         }
 
         public Builder(AzureMLWebServiceFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePath = defaults.filePath;
-    	      this.linkedServiceName = defaults.linkedServiceName;
+            $ = new AzureMLWebServiceFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePath(Object filePath) {
-            this.filePath = Objects.requireNonNull(filePath);
+            $.filePath = filePath;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
-        }        public AzureMLWebServiceFileResponse build() {
-            return new AzureMLWebServiceFileResponse(filePath, linkedServiceName);
+        }
+
+        public AzureMLWebServiceFileResponse build() {
+            $.filePath = Objects.requireNonNull($.filePath, "expected parameter 'filePath' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

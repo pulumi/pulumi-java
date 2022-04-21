@@ -23,7 +23,7 @@ public final class DataIntegrityValidationResultResponse extends com.pulumi.reso
      * 
      */
     @Import(name="failedObjects", required=true)
-      private final Map<String,String> failedObjects;
+    private Map<String,String> failedObjects;
 
     public Map<String,String> failedObjects() {
         return this.failedObjects;
@@ -34,55 +34,52 @@ public final class DataIntegrityValidationResultResponse extends com.pulumi.reso
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final ValidationErrorResponse validationErrors;
+    private ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
 
-    public DataIntegrityValidationResultResponse(
-        Map<String,String> failedObjects,
-        ValidationErrorResponse validationErrors) {
-        this.failedObjects = Objects.requireNonNull(failedObjects, "expected parameter 'failedObjects' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private DataIntegrityValidationResultResponse() {}
 
-    private DataIntegrityValidationResultResponse() {
-        this.failedObjects = Map.of();
-        this.validationErrors = null;
+    private DataIntegrityValidationResultResponse(DataIntegrityValidationResultResponse $) {
+        this.failedObjects = $.failedObjects;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataIntegrityValidationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> failedObjects;
-        private ValidationErrorResponse validationErrors;
+        private DataIntegrityValidationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataIntegrityValidationResultResponse();
         }
 
         public Builder(DataIntegrityValidationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failedObjects = defaults.failedObjects;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new DataIntegrityValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failedObjects(Map<String,String> failedObjects) {
-            this.failedObjects = Objects.requireNonNull(failedObjects);
+            $.failedObjects = failedObjects;
             return this;
         }
+
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
-        }        public DataIntegrityValidationResultResponse build() {
-            return new DataIntegrityValidationResultResponse(failedObjects, validationErrors);
+        }
+
+        public DataIntegrityValidationResultResponse build() {
+            $.failedObjects = Objects.requireNonNull($.failedObjects, "expected parameter 'failedObjects' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

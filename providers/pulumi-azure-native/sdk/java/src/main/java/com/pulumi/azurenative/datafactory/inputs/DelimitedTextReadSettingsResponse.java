@@ -28,10 +28,10 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Object compressionProperties;
+    private @Nullable Object compressionProperties;
 
-    public Object compressionProperties() {
-        return this.compressionProperties == null ? null : this.compressionProperties;
+    public Optional<Object> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="skipLineCount")
-      private final @Nullable Object skipLineCount;
+    private @Nullable Object skipLineCount;
 
     public Optional<Object> skipLineCount() {
-        return this.skipLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipLineCount);
+        return Optional.ofNullable(this.skipLineCount);
     }
 
     /**
@@ -51,64 +51,57 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DelimitedTextReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        @Nullable Object skipLineCount,
-        String type) {
-        this.compressionProperties = compressionProperties;
-        this.skipLineCount = skipLineCount;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DelimitedTextReadSettingsResponse() {}
 
-    private DelimitedTextReadSettingsResponse() {
-        this.compressionProperties = null;
-        this.skipLineCount = null;
-        this.type = null;
+    private DelimitedTextReadSettingsResponse(DelimitedTextReadSettingsResponse $) {
+        this.compressionProperties = $.compressionProperties;
+        this.skipLineCount = $.skipLineCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelimitedTextReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object compressionProperties;
-        private @Nullable Object skipLineCount;
-        private String type;
+        private DelimitedTextReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelimitedTextReadSettingsResponse();
         }
 
         public Builder(DelimitedTextReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.skipLineCount = defaults.skipLineCount;
-    	      this.type = defaults.type;
+            $ = new DelimitedTextReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
+
         public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = skipLineCount;
+            $.skipLineCount = skipLineCount;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DelimitedTextReadSettingsResponse build() {
-            return new DelimitedTextReadSettingsResponse(compressionProperties, skipLineCount, type);
+        }
+
+        public DelimitedTextReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

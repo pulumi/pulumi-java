@@ -21,7 +21,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends com.pulu
      * 
      */
     @Import(name="ignoreCertificateNameMismatch", required=true)
-      private final Boolean ignoreCertificateNameMismatch;
+    private Boolean ignoreCertificateNameMismatch;
 
     public Boolean ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
@@ -32,7 +32,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends com.pulu
      * 
      */
     @Import(name="keepHttpConnectionAlive", required=true)
-      private final Boolean keepHttpConnectionAlive;
+    private Boolean keepHttpConnectionAlive;
 
     public Boolean keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
@@ -43,7 +43,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends com.pulu
      * 
      */
     @Import(name="supportHttpStatusCodeContinue", required=true)
-      private final Boolean supportHttpStatusCodeContinue;
+    private Boolean supportHttpStatusCodeContinue;
 
     public Boolean supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
@@ -54,73 +54,66 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends com.pulu
      * 
      */
     @Import(name="unfoldHttpHeaders", required=true)
-      private final Boolean unfoldHttpHeaders;
+    private Boolean unfoldHttpHeaders;
 
     public Boolean unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 
-    public AS2AcknowledgementConnectionSettingsResponse(
-        Boolean ignoreCertificateNameMismatch,
-        Boolean keepHttpConnectionAlive,
-        Boolean supportHttpStatusCodeContinue,
-        Boolean unfoldHttpHeaders) {
-        this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch, "expected parameter 'ignoreCertificateNameMismatch' to be non-null");
-        this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive, "expected parameter 'keepHttpConnectionAlive' to be non-null");
-        this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue, "expected parameter 'supportHttpStatusCodeContinue' to be non-null");
-        this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders, "expected parameter 'unfoldHttpHeaders' to be non-null");
-    }
+    private AS2AcknowledgementConnectionSettingsResponse() {}
 
-    private AS2AcknowledgementConnectionSettingsResponse() {
-        this.ignoreCertificateNameMismatch = null;
-        this.keepHttpConnectionAlive = null;
-        this.supportHttpStatusCodeContinue = null;
-        this.unfoldHttpHeaders = null;
+    private AS2AcknowledgementConnectionSettingsResponse(AS2AcknowledgementConnectionSettingsResponse $) {
+        this.ignoreCertificateNameMismatch = $.ignoreCertificateNameMismatch;
+        this.keepHttpConnectionAlive = $.keepHttpConnectionAlive;
+        this.supportHttpStatusCodeContinue = $.supportHttpStatusCodeContinue;
+        this.unfoldHttpHeaders = $.unfoldHttpHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2AcknowledgementConnectionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean ignoreCertificateNameMismatch;
-        private Boolean keepHttpConnectionAlive;
-        private Boolean supportHttpStatusCodeContinue;
-        private Boolean unfoldHttpHeaders;
+        private AS2AcknowledgementConnectionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2AcknowledgementConnectionSettingsResponse();
         }
 
         public Builder(AS2AcknowledgementConnectionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreCertificateNameMismatch = defaults.ignoreCertificateNameMismatch;
-    	      this.keepHttpConnectionAlive = defaults.keepHttpConnectionAlive;
-    	      this.supportHttpStatusCodeContinue = defaults.supportHttpStatusCodeContinue;
-    	      this.unfoldHttpHeaders = defaults.unfoldHttpHeaders;
+            $ = new AS2AcknowledgementConnectionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
-            this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
+            $.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
             return this;
         }
+
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
-            this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
+            $.keepHttpConnectionAlive = keepHttpConnectionAlive;
             return this;
         }
+
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
-            this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
+            $.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;
             return this;
         }
+
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
-            this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
+            $.unfoldHttpHeaders = unfoldHttpHeaders;
             return this;
-        }        public AS2AcknowledgementConnectionSettingsResponse build() {
-            return new AS2AcknowledgementConnectionSettingsResponse(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
+        }
+
+        public AS2AcknowledgementConnectionSettingsResponse build() {
+            $.ignoreCertificateNameMismatch = Objects.requireNonNull($.ignoreCertificateNameMismatch, "expected parameter 'ignoreCertificateNameMismatch' to be non-null");
+            $.keepHttpConnectionAlive = Objects.requireNonNull($.keepHttpConnectionAlive, "expected parameter 'keepHttpConnectionAlive' to be non-null");
+            $.supportHttpStatusCodeContinue = Objects.requireNonNull($.supportHttpStatusCodeContinue, "expected parameter 'supportHttpStatusCodeContinue' to be non-null");
+            $.unfoldHttpHeaders = Objects.requireNonNull($.unfoldHttpHeaders, "expected parameter 'unfoldHttpHeaders' to be non-null");
+            return $;
         }
     }
+
 }

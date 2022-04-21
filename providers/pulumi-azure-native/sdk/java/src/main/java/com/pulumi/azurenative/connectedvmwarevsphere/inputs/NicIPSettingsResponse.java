@@ -25,10 +25,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allocationMethod")
-      private final @Nullable String allocationMethod;
+    private @Nullable String allocationMethod;
 
     public Optional<String> allocationMethod() {
-        return this.allocationMethod == null ? Optional.empty() : Optional.ofNullable(this.allocationMethod);
+        return Optional.ofNullable(this.allocationMethod);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gateway")
-      private final @Nullable List<String> gateway;
+    private @Nullable List<String> gateway;
 
-    public List<String> gateway() {
-        return this.gateway == null ? List.of() : this.gateway;
+    public Optional<List<String>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipAddressInfo", required=true)
-      private final List<NicIPAddressSettingsResponse> ipAddressInfo;
+    private List<NicIPAddressSettingsResponse> ipAddressInfo;
 
     public List<NicIPAddressSettingsResponse> ipAddressInfo() {
         return this.ipAddressInfo;
@@ -80,7 +80,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="primaryWinsServer", required=true)
-      private final String primaryWinsServer;
+    private String primaryWinsServer;
 
     public String primaryWinsServer() {
         return this.primaryWinsServer;
@@ -91,7 +91,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secondaryWinsServer", required=true)
-      private final String secondaryWinsServer;
+    private String secondaryWinsServer;
 
     public String secondaryWinsServer() {
         return this.secondaryWinsServer;
@@ -102,118 +102,101 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subnetMask")
-      private final @Nullable String subnetMask;
+    private @Nullable String subnetMask;
 
     public Optional<String> subnetMask() {
-        return this.subnetMask == null ? Optional.empty() : Optional.ofNullable(this.subnetMask);
+        return Optional.ofNullable(this.subnetMask);
     }
 
-    public NicIPSettingsResponse(
-        @Nullable String allocationMethod,
-        @Nullable List<String> dnsServers,
-        @Nullable List<String> gateway,
-        @Nullable String ipAddress,
-        List<NicIPAddressSettingsResponse> ipAddressInfo,
-        String primaryWinsServer,
-        String secondaryWinsServer,
-        @Nullable String subnetMask) {
-        this.allocationMethod = allocationMethod;
-        this.dnsServers = dnsServers;
-        this.gateway = gateway;
-        this.ipAddress = ipAddress;
-        this.ipAddressInfo = Objects.requireNonNull(ipAddressInfo, "expected parameter 'ipAddressInfo' to be non-null");
-        this.primaryWinsServer = Objects.requireNonNull(primaryWinsServer, "expected parameter 'primaryWinsServer' to be non-null");
-        this.secondaryWinsServer = Objects.requireNonNull(secondaryWinsServer, "expected parameter 'secondaryWinsServer' to be non-null");
-        this.subnetMask = subnetMask;
-    }
+    private NicIPSettingsResponse() {}
 
-    private NicIPSettingsResponse() {
-        this.allocationMethod = null;
-        this.dnsServers = List.of();
-        this.gateway = List.of();
-        this.ipAddress = null;
-        this.ipAddressInfo = List.of();
-        this.primaryWinsServer = null;
-        this.secondaryWinsServer = null;
-        this.subnetMask = null;
+    private NicIPSettingsResponse(NicIPSettingsResponse $) {
+        this.allocationMethod = $.allocationMethod;
+        this.dnsServers = $.dnsServers;
+        this.gateway = $.gateway;
+        this.ipAddress = $.ipAddress;
+        this.ipAddressInfo = $.ipAddressInfo;
+        this.primaryWinsServer = $.primaryWinsServer;
+        this.secondaryWinsServer = $.secondaryWinsServer;
+        this.subnetMask = $.subnetMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NicIPSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String allocationMethod;
-        private @Nullable List<String> dnsServers;
-        private @Nullable List<String> gateway;
-        private @Nullable String ipAddress;
-        private List<NicIPAddressSettingsResponse> ipAddressInfo;
-        private String primaryWinsServer;
-        private String secondaryWinsServer;
-        private @Nullable String subnetMask;
+        private NicIPSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NicIPSettingsResponse();
         }
 
         public Builder(NicIPSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationMethod = defaults.allocationMethod;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.gateway = defaults.gateway;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipAddressInfo = defaults.ipAddressInfo;
-    	      this.primaryWinsServer = defaults.primaryWinsServer;
-    	      this.secondaryWinsServer = defaults.secondaryWinsServer;
-    	      this.subnetMask = defaults.subnetMask;
+            $ = new NicIPSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationMethod(@Nullable String allocationMethod) {
-            this.allocationMethod = allocationMethod;
+            $.allocationMethod = allocationMethod;
             return this;
         }
+
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder gateway(@Nullable List<String> gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
+
         public Builder gateway(String... gateway) {
             return gateway(List.of(gateway));
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipAddressInfo(List<NicIPAddressSettingsResponse> ipAddressInfo) {
-            this.ipAddressInfo = Objects.requireNonNull(ipAddressInfo);
+            $.ipAddressInfo = ipAddressInfo;
             return this;
         }
+
         public Builder ipAddressInfo(NicIPAddressSettingsResponse... ipAddressInfo) {
             return ipAddressInfo(List.of(ipAddressInfo));
         }
+
         public Builder primaryWinsServer(String primaryWinsServer) {
-            this.primaryWinsServer = Objects.requireNonNull(primaryWinsServer);
+            $.primaryWinsServer = primaryWinsServer;
             return this;
         }
+
         public Builder secondaryWinsServer(String secondaryWinsServer) {
-            this.secondaryWinsServer = Objects.requireNonNull(secondaryWinsServer);
+            $.secondaryWinsServer = secondaryWinsServer;
             return this;
         }
+
         public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = subnetMask;
+            $.subnetMask = subnetMask;
             return this;
-        }        public NicIPSettingsResponse build() {
-            return new NicIPSettingsResponse(allocationMethod, dnsServers, gateway, ipAddress, ipAddressInfo, primaryWinsServer, secondaryWinsServer, subnetMask);
+        }
+
+        public NicIPSettingsResponse build() {
+            $.ipAddressInfo = Objects.requireNonNull($.ipAddressInfo, "expected parameter 'ipAddressInfo' to be non-null");
+            $.primaryWinsServer = Objects.requireNonNull($.primaryWinsServer, "expected parameter 'primaryWinsServer' to be non-null");
+            $.secondaryWinsServer = Objects.requireNonNull($.secondaryWinsServer, "expected parameter 'secondaryWinsServer' to be non-null");
+            return $;
         }
     }
+
 }

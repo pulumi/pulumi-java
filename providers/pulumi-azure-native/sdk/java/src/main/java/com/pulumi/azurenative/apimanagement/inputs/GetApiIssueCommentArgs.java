@@ -17,7 +17,7 @@ public final class GetApiIssueCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiIssueCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="commentId", required=true)
-      private final String commentId;
+    private String commentId;
 
     public String commentId() {
         return this.commentId;
@@ -39,7 +39,7 @@ public final class GetApiIssueCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="issueId", required=true)
-      private final String issueId;
+    private String issueId;
 
     public String issueId() {
         return this.issueId;
@@ -50,7 +50,7 @@ public final class GetApiIssueCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetApiIssueCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetApiIssueCommentArgs(
-        String apiId,
-        String commentId,
-        String issueId,
-        String resourceGroupName,
-        String serviceName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.commentId = Objects.requireNonNull(commentId, "expected parameter 'commentId' to be non-null");
-        this.issueId = Objects.requireNonNull(issueId, "expected parameter 'issueId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetApiIssueCommentArgs() {}
 
-    private GetApiIssueCommentArgs() {
-        this.apiId = null;
-        this.commentId = null;
-        this.issueId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetApiIssueCommentArgs(GetApiIssueCommentArgs $) {
+        this.apiId = $.apiId;
+        this.commentId = $.commentId;
+        this.issueId = $.issueId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiIssueCommentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String commentId;
-        private String issueId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetApiIssueCommentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiIssueCommentArgs();
         }
 
         public Builder(GetApiIssueCommentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.commentId = defaults.commentId;
-    	      this.issueId = defaults.issueId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetApiIssueCommentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder commentId(String commentId) {
-            this.commentId = Objects.requireNonNull(commentId);
+            $.commentId = commentId;
             return this;
         }
+
         public Builder issueId(String issueId) {
-            this.issueId = Objects.requireNonNull(issueId);
+            $.issueId = issueId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetApiIssueCommentArgs build() {
-            return new GetApiIssueCommentArgs(apiId, commentId, issueId, resourceGroupName, serviceName);
+        }
+
+        public GetApiIssueCommentArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.commentId = Objects.requireNonNull($.commentId, "expected parameter 'commentId' to be non-null");
+            $.issueId = Objects.requireNonNull($.issueId, "expected parameter 'issueId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConfigurationServiceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="gitProperty")
-      private final @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
+    private @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
 
-    public Output<ConfigurationServiceGitPropertyArgs> gitProperty() {
-        return this.gitProperty == null ? Codegen.empty() : this.gitProperty;
+    public Optional<Output<ConfigurationServiceGitPropertyArgs>> gitProperty() {
+        return Optional.ofNullable(this.gitProperty);
     }
 
-    public ConfigurationServiceSettingsArgs(@Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty) {
-        this.gitProperty = gitProperty;
-    }
+    private ConfigurationServiceSettingsArgs() {}
 
-    private ConfigurationServiceSettingsArgs() {
-        this.gitProperty = Codegen.empty();
+    private ConfigurationServiceSettingsArgs(ConfigurationServiceSettingsArgs $) {
+        this.gitProperty = $.gitProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
+        private ConfigurationServiceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceSettingsArgs();
         }
 
         public Builder(ConfigurationServiceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gitProperty = defaults.gitProperty;
+            $ = new ConfigurationServiceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gitProperty(@Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty) {
-            this.gitProperty = gitProperty;
+            $.gitProperty = gitProperty;
             return this;
         }
-        public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyArgs gitProperty) {
-            this.gitProperty = Codegen.ofNullable(gitProperty);
-            return this;
-        }        public ConfigurationServiceSettingsArgs build() {
-            return new ConfigurationServiceSettingsArgs(gitProperty);
+
+        public Builder gitProperty(ConfigurationServiceGitPropertyArgs gitProperty) {
+            return gitProperty(Output.of(gitProperty));
+        }
+
+        public ConfigurationServiceSettingsArgs build() {
+            return $;
         }
     }
+
 }

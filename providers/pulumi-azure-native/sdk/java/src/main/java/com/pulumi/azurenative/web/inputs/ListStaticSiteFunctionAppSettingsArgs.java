@@ -17,7 +17,7 @@ public final class ListStaticSiteFunctionAppSettingsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class ListStaticSiteFunctionAppSettingsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListStaticSiteFunctionAppSettingsArgs(
-        String name,
-        String resourceGroupName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListStaticSiteFunctionAppSettingsArgs() {}
 
-    private ListStaticSiteFunctionAppSettingsArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
+    private ListStaticSiteFunctionAppSettingsArgs(ListStaticSiteFunctionAppSettingsArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListStaticSiteFunctionAppSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
+        private ListStaticSiteFunctionAppSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListStaticSiteFunctionAppSettingsArgs();
         }
 
         public Builder(ListStaticSiteFunctionAppSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListStaticSiteFunctionAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListStaticSiteFunctionAppSettingsArgs build() {
-            return new ListStaticSiteFunctionAppSettingsArgs(name, resourceGroupName);
+        }
+
+        public ListStaticSiteFunctionAppSettingsArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

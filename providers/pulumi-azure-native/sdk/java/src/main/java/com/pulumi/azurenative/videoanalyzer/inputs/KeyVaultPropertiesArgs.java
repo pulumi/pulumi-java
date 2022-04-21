@@ -5,7 +5,6 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyIdentifier", required=true)
-      private final Output<String> keyIdentifier;
+    private Output<String> keyIdentifier;
 
     public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
 
-    public KeyVaultPropertiesArgs(Output<String> keyIdentifier) {
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
-    }
+    private KeyVaultPropertiesArgs() {}
 
-    private KeyVaultPropertiesArgs() {
-        this.keyIdentifier = Codegen.empty();
+    private KeyVaultPropertiesArgs(KeyVaultPropertiesArgs $) {
+        this.keyIdentifier = $.keyIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyIdentifier;
+        private KeyVaultPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesArgs();
         }
 
         public Builder(KeyVaultPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyIdentifier = defaults.keyIdentifier;
+            $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyIdentifier(Output<String> keyIdentifier) {
-            this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
+
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
-            return this;
-        }        public KeyVaultPropertiesArgs build() {
-            return new KeyVaultPropertiesArgs(keyIdentifier);
+            return keyIdentifier(Output.of(keyIdentifier));
+        }
+
+        public KeyVaultPropertiesArgs build() {
+            $.keyIdentifier = Objects.requireNonNull($.keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

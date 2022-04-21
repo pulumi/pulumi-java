@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frequencyInMinutes", required=true)
-      private final Output<Integer> frequencyInMinutes;
+    private Output<Integer> frequencyInMinutes;
 
     public Output<Integer> frequencyInMinutes() {
         return this.frequencyInMinutes;
@@ -34,63 +33,60 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeWindowInMinutes", required=true)
-      private final Output<Integer> timeWindowInMinutes;
+    private Output<Integer> timeWindowInMinutes;
 
     public Output<Integer> timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
 
-    public ScheduleArgs(
-        Output<Integer> frequencyInMinutes,
-        Output<Integer> timeWindowInMinutes) {
-        this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes, "expected parameter 'frequencyInMinutes' to be non-null");
-        this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes, "expected parameter 'timeWindowInMinutes' to be non-null");
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.frequencyInMinutes = Codegen.empty();
-        this.timeWindowInMinutes = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.frequencyInMinutes = $.frequencyInMinutes;
+        this.timeWindowInMinutes = $.timeWindowInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> frequencyInMinutes;
-        private Output<Integer> timeWindowInMinutes;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequencyInMinutes = defaults.frequencyInMinutes;
-    	      this.timeWindowInMinutes = defaults.timeWindowInMinutes;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frequencyInMinutes(Output<Integer> frequencyInMinutes) {
-            this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
+            $.frequencyInMinutes = frequencyInMinutes;
             return this;
         }
+
         public Builder frequencyInMinutes(Integer frequencyInMinutes) {
-            this.frequencyInMinutes = Output.of(Objects.requireNonNull(frequencyInMinutes));
-            return this;
+            return frequencyInMinutes(Output.of(frequencyInMinutes));
         }
+
         public Builder timeWindowInMinutes(Output<Integer> timeWindowInMinutes) {
-            this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
+            $.timeWindowInMinutes = timeWindowInMinutes;
             return this;
         }
+
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
-            this.timeWindowInMinutes = Output.of(Objects.requireNonNull(timeWindowInMinutes));
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(frequencyInMinutes, timeWindowInMinutes);
+            return timeWindowInMinutes(Output.of(timeWindowInMinutes));
+        }
+
+        public ScheduleArgs build() {
+            $.frequencyInMinutes = Objects.requireNonNull($.frequencyInMinutes, "expected parameter 'frequencyInMinutes' to be non-null");
+            $.timeWindowInMinutes = Objects.requireNonNull($.timeWindowInMinutes, "expected parameter 'timeWindowInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

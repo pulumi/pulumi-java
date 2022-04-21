@@ -24,10 +24,10 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="azureSubscriptionId")
-      private final @Nullable String azureSubscriptionId;
+    private @Nullable String azureSubscriptionId;
 
     public Optional<String> azureSubscriptionId() {
-        return this.azureSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.azureSubscriptionId);
+        return Optional.ofNullable(this.azureSubscriptionId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="partnerTopicName")
-      private final @Nullable String partnerTopicName;
+    private @Nullable String partnerTopicName;
 
     public Optional<String> partnerTopicName() {
-        return this.partnerTopicName == null ? Optional.empty() : Optional.ofNullable(this.partnerTopicName);
+        return Optional.ofNullable(this.partnerTopicName);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
-    public EventChannelDestinationResponse(
-        @Nullable String azureSubscriptionId,
-        @Nullable String partnerTopicName,
-        @Nullable String resourceGroup) {
-        this.azureSubscriptionId = azureSubscriptionId;
-        this.partnerTopicName = partnerTopicName;
-        this.resourceGroup = resourceGroup;
-    }
+    private EventChannelDestinationResponse() {}
 
-    private EventChannelDestinationResponse() {
-        this.azureSubscriptionId = null;
-        this.partnerTopicName = null;
-        this.resourceGroup = null;
+    private EventChannelDestinationResponse(EventChannelDestinationResponse $) {
+        this.azureSubscriptionId = $.azureSubscriptionId;
+        this.partnerTopicName = $.partnerTopicName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventChannelDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String azureSubscriptionId;
-        private @Nullable String partnerTopicName;
-        private @Nullable String resourceGroup;
+        private EventChannelDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventChannelDestinationResponse();
         }
 
         public Builder(EventChannelDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureSubscriptionId = defaults.azureSubscriptionId;
-    	      this.partnerTopicName = defaults.partnerTopicName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new EventChannelDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureSubscriptionId(@Nullable String azureSubscriptionId) {
-            this.azureSubscriptionId = azureSubscriptionId;
+            $.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
+
         public Builder partnerTopicName(@Nullable String partnerTopicName) {
-            this.partnerTopicName = partnerTopicName;
+            $.partnerTopicName = partnerTopicName;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public EventChannelDestinationResponse build() {
-            return new EventChannelDestinationResponse(azureSubscriptionId, partnerTopicName, resourceGroup);
+        }
+
+        public EventChannelDestinationResponse build() {
+            return $;
         }
     }
+
 }

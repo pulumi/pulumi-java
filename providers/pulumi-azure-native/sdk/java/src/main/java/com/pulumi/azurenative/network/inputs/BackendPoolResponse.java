@@ -26,10 +26,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backends")
-      private final @Nullable List<BackendResponse> backends;
+    private @Nullable List<BackendResponse> backends;
 
-    public List<BackendResponse> backends() {
-        return this.backends == null ? List.of() : this.backends;
+    public Optional<List<BackendResponse>> backends() {
+        return Optional.ofNullable(this.backends);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="healthProbeSettings")
-      private final @Nullable SubResourceResponse healthProbeSettings;
+    private @Nullable SubResourceResponse healthProbeSettings;
 
     public Optional<SubResourceResponse> healthProbeSettings() {
-        return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
+        return Optional.ofNullable(this.healthProbeSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancingSettings")
-      private final @Nullable SubResourceResponse loadBalancingSettings;
+    private @Nullable SubResourceResponse loadBalancingSettings;
 
     public Optional<SubResourceResponse> loadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Optional.empty() : Optional.ofNullable(this.loadBalancingSettings);
+        return Optional.ofNullable(this.loadBalancingSettings);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -92,103 +92,86 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BackendPoolResponse(
-        @Nullable List<BackendResponse> backends,
-        @Nullable SubResourceResponse healthProbeSettings,
-        @Nullable String id,
-        @Nullable SubResourceResponse loadBalancingSettings,
-        @Nullable String name,
-        String resourceState,
-        String type) {
-        this.backends = backends;
-        this.healthProbeSettings = healthProbeSettings;
-        this.id = id;
-        this.loadBalancingSettings = loadBalancingSettings;
-        this.name = name;
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BackendPoolResponse() {}
 
-    private BackendPoolResponse() {
-        this.backends = List.of();
-        this.healthProbeSettings = null;
-        this.id = null;
-        this.loadBalancingSettings = null;
-        this.name = null;
-        this.resourceState = null;
-        this.type = null;
+    private BackendPoolResponse(BackendPoolResponse $) {
+        this.backends = $.backends;
+        this.healthProbeSettings = $.healthProbeSettings;
+        this.id = $.id;
+        this.loadBalancingSettings = $.loadBalancingSettings;
+        this.name = $.name;
+        this.resourceState = $.resourceState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<BackendResponse> backends;
-        private @Nullable SubResourceResponse healthProbeSettings;
-        private @Nullable String id;
-        private @Nullable SubResourceResponse loadBalancingSettings;
-        private @Nullable String name;
-        private String resourceState;
-        private String type;
+        private BackendPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendPoolResponse();
         }
 
         public Builder(BackendPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backends = defaults.backends;
-    	      this.healthProbeSettings = defaults.healthProbeSettings;
-    	      this.id = defaults.id;
-    	      this.loadBalancingSettings = defaults.loadBalancingSettings;
-    	      this.name = defaults.name;
-    	      this.resourceState = defaults.resourceState;
-    	      this.type = defaults.type;
+            $ = new BackendPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backends(@Nullable List<BackendResponse> backends) {
-            this.backends = backends;
+            $.backends = backends;
             return this;
         }
+
         public Builder backends(BackendResponse... backends) {
             return backends(List.of(backends));
         }
+
         public Builder healthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
-            this.healthProbeSettings = healthProbeSettings;
+            $.healthProbeSettings = healthProbeSettings;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder loadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
-            this.loadBalancingSettings = loadBalancingSettings;
+            $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BackendPoolResponse build() {
-            return new BackendPoolResponse(backends, healthProbeSettings, id, loadBalancingSettings, name, resourceState, type);
+        }
+
+        public BackendPoolResponse build() {
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

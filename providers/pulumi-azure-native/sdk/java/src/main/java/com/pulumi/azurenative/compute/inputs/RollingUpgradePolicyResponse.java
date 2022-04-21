@@ -25,10 +25,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableCrossZoneUpgrade")
-      private final @Nullable Boolean enableCrossZoneUpgrade;
+    private @Nullable Boolean enableCrossZoneUpgrade;
 
     public Optional<Boolean> enableCrossZoneUpgrade() {
-        return this.enableCrossZoneUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableCrossZoneUpgrade);
+        return Optional.ofNullable(this.enableCrossZoneUpgrade);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maxBatchInstancePercent")
-      private final @Nullable Integer maxBatchInstancePercent;
+    private @Nullable Integer maxBatchInstancePercent;
 
     public Optional<Integer> maxBatchInstancePercent() {
-        return this.maxBatchInstancePercent == null ? Optional.empty() : Optional.ofNullable(this.maxBatchInstancePercent);
+        return Optional.ofNullable(this.maxBatchInstancePercent);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maxUnhealthyInstancePercent")
-      private final @Nullable Integer maxUnhealthyInstancePercent;
+    private @Nullable Integer maxUnhealthyInstancePercent;
 
     public Optional<Integer> maxUnhealthyInstancePercent() {
-        return this.maxUnhealthyInstancePercent == null ? Optional.empty() : Optional.ofNullable(this.maxUnhealthyInstancePercent);
+        return Optional.ofNullable(this.maxUnhealthyInstancePercent);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maxUnhealthyUpgradedInstancePercent")
-      private final @Nullable Integer maxUnhealthyUpgradedInstancePercent;
+    private @Nullable Integer maxUnhealthyUpgradedInstancePercent;
 
     public Optional<Integer> maxUnhealthyUpgradedInstancePercent() {
-        return this.maxUnhealthyUpgradedInstancePercent == null ? Optional.empty() : Optional.ofNullable(this.maxUnhealthyUpgradedInstancePercent);
+        return Optional.ofNullable(this.maxUnhealthyUpgradedInstancePercent);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="pauseTimeBetweenBatches")
-      private final @Nullable String pauseTimeBetweenBatches;
+    private @Nullable String pauseTimeBetweenBatches;
 
     public Optional<String> pauseTimeBetweenBatches() {
-        return this.pauseTimeBetweenBatches == null ? Optional.empty() : Optional.ofNullable(this.pauseTimeBetweenBatches);
+        return Optional.ofNullable(this.pauseTimeBetweenBatches);
     }
 
     /**
@@ -80,91 +80,74 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="prioritizeUnhealthyInstances")
-      private final @Nullable Boolean prioritizeUnhealthyInstances;
+    private @Nullable Boolean prioritizeUnhealthyInstances;
 
     public Optional<Boolean> prioritizeUnhealthyInstances() {
-        return this.prioritizeUnhealthyInstances == null ? Optional.empty() : Optional.ofNullable(this.prioritizeUnhealthyInstances);
+        return Optional.ofNullable(this.prioritizeUnhealthyInstances);
     }
 
-    public RollingUpgradePolicyResponse(
-        @Nullable Boolean enableCrossZoneUpgrade,
-        @Nullable Integer maxBatchInstancePercent,
-        @Nullable Integer maxUnhealthyInstancePercent,
-        @Nullable Integer maxUnhealthyUpgradedInstancePercent,
-        @Nullable String pauseTimeBetweenBatches,
-        @Nullable Boolean prioritizeUnhealthyInstances) {
-        this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
-        this.maxBatchInstancePercent = maxBatchInstancePercent;
-        this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
-        this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
-        this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
-        this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
-    }
+    private RollingUpgradePolicyResponse() {}
 
-    private RollingUpgradePolicyResponse() {
-        this.enableCrossZoneUpgrade = null;
-        this.maxBatchInstancePercent = null;
-        this.maxUnhealthyInstancePercent = null;
-        this.maxUnhealthyUpgradedInstancePercent = null;
-        this.pauseTimeBetweenBatches = null;
-        this.prioritizeUnhealthyInstances = null;
+    private RollingUpgradePolicyResponse(RollingUpgradePolicyResponse $) {
+        this.enableCrossZoneUpgrade = $.enableCrossZoneUpgrade;
+        this.maxBatchInstancePercent = $.maxBatchInstancePercent;
+        this.maxUnhealthyInstancePercent = $.maxUnhealthyInstancePercent;
+        this.maxUnhealthyUpgradedInstancePercent = $.maxUnhealthyUpgradedInstancePercent;
+        this.pauseTimeBetweenBatches = $.pauseTimeBetweenBatches;
+        this.prioritizeUnhealthyInstances = $.prioritizeUnhealthyInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RollingUpgradePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableCrossZoneUpgrade;
-        private @Nullable Integer maxBatchInstancePercent;
-        private @Nullable Integer maxUnhealthyInstancePercent;
-        private @Nullable Integer maxUnhealthyUpgradedInstancePercent;
-        private @Nullable String pauseTimeBetweenBatches;
-        private @Nullable Boolean prioritizeUnhealthyInstances;
+        private RollingUpgradePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RollingUpgradePolicyResponse();
         }
 
         public Builder(RollingUpgradePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableCrossZoneUpgrade = defaults.enableCrossZoneUpgrade;
-    	      this.maxBatchInstancePercent = defaults.maxBatchInstancePercent;
-    	      this.maxUnhealthyInstancePercent = defaults.maxUnhealthyInstancePercent;
-    	      this.maxUnhealthyUpgradedInstancePercent = defaults.maxUnhealthyUpgradedInstancePercent;
-    	      this.pauseTimeBetweenBatches = defaults.pauseTimeBetweenBatches;
-    	      this.prioritizeUnhealthyInstances = defaults.prioritizeUnhealthyInstances;
+            $ = new RollingUpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
-            this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
+            $.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
+
         public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
-            this.maxBatchInstancePercent = maxBatchInstancePercent;
+            $.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
+
         public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
-            this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
+            $.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
+
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
-            this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
+            $.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
+
         public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
-            this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
+            $.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
+
         public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
-            this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
+            $.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
-        }        public RollingUpgradePolicyResponse build() {
-            return new RollingUpgradePolicyResponse(enableCrossZoneUpgrade, maxBatchInstancePercent, maxUnhealthyInstancePercent, maxUnhealthyUpgradedInstancePercent, pauseTimeBetweenBatches, prioritizeUnhealthyInstances);
+        }
+
+        public RollingUpgradePolicyResponse build() {
+            return $;
         }
     }
+
 }

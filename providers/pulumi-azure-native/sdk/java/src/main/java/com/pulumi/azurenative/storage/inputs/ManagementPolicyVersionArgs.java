@@ -6,8 +6,8 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.DateAfterCreationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ManagementPolicyVersionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="delete")
-      private final @Nullable Output<DateAfterCreationArgs> delete;
+    private @Nullable Output<DateAfterCreationArgs> delete;
 
-    public Output<DateAfterCreationArgs> delete() {
-        return this.delete == null ? Codegen.empty() : this.delete;
+    public Optional<Output<DateAfterCreationArgs>> delete() {
+        return Optional.ofNullable(this.delete);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagementPolicyVersionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tierToArchive")
-      private final @Nullable Output<DateAfterCreationArgs> tierToArchive;
+    private @Nullable Output<DateAfterCreationArgs> tierToArchive;
 
-    public Output<DateAfterCreationArgs> tierToArchive() {
-        return this.tierToArchive == null ? Codegen.empty() : this.tierToArchive;
+    public Optional<Output<DateAfterCreationArgs>> tierToArchive() {
+        return Optional.ofNullable(this.tierToArchive);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ManagementPolicyVersionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tierToCool")
-      private final @Nullable Output<DateAfterCreationArgs> tierToCool;
+    private @Nullable Output<DateAfterCreationArgs> tierToCool;
 
-    public Output<DateAfterCreationArgs> tierToCool() {
-        return this.tierToCool == null ? Codegen.empty() : this.tierToCool;
+    public Optional<Output<DateAfterCreationArgs>> tierToCool() {
+        return Optional.ofNullable(this.tierToCool);
     }
 
-    public ManagementPolicyVersionArgs(
-        @Nullable Output<DateAfterCreationArgs> delete,
-        @Nullable Output<DateAfterCreationArgs> tierToArchive,
-        @Nullable Output<DateAfterCreationArgs> tierToCool) {
-        this.delete = delete;
-        this.tierToArchive = tierToArchive;
-        this.tierToCool = tierToCool;
-    }
+    private ManagementPolicyVersionArgs() {}
 
-    private ManagementPolicyVersionArgs() {
-        this.delete = Codegen.empty();
-        this.tierToArchive = Codegen.empty();
-        this.tierToCool = Codegen.empty();
+    private ManagementPolicyVersionArgs(ManagementPolicyVersionArgs $) {
+        this.delete = $.delete;
+        this.tierToArchive = $.tierToArchive;
+        this.tierToCool = $.tierToCool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DateAfterCreationArgs> delete;
-        private @Nullable Output<DateAfterCreationArgs> tierToArchive;
-        private @Nullable Output<DateAfterCreationArgs> tierToCool;
+        private ManagementPolicyVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyVersionArgs();
         }
 
         public Builder(ManagementPolicyVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delete = defaults.delete;
-    	      this.tierToArchive = defaults.tierToArchive;
-    	      this.tierToCool = defaults.tierToCool;
+            $ = new ManagementPolicyVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delete(@Nullable Output<DateAfterCreationArgs> delete) {
-            this.delete = delete;
+            $.delete = delete;
             return this;
         }
-        public Builder delete(@Nullable DateAfterCreationArgs delete) {
-            this.delete = Codegen.ofNullable(delete);
-            return this;
+
+        public Builder delete(DateAfterCreationArgs delete) {
+            return delete(Output.of(delete));
         }
+
         public Builder tierToArchive(@Nullable Output<DateAfterCreationArgs> tierToArchive) {
-            this.tierToArchive = tierToArchive;
+            $.tierToArchive = tierToArchive;
             return this;
         }
-        public Builder tierToArchive(@Nullable DateAfterCreationArgs tierToArchive) {
-            this.tierToArchive = Codegen.ofNullable(tierToArchive);
-            return this;
+
+        public Builder tierToArchive(DateAfterCreationArgs tierToArchive) {
+            return tierToArchive(Output.of(tierToArchive));
         }
+
         public Builder tierToCool(@Nullable Output<DateAfterCreationArgs> tierToCool) {
-            this.tierToCool = tierToCool;
+            $.tierToCool = tierToCool;
             return this;
         }
-        public Builder tierToCool(@Nullable DateAfterCreationArgs tierToCool) {
-            this.tierToCool = Codegen.ofNullable(tierToCool);
-            return this;
-        }        public ManagementPolicyVersionArgs build() {
-            return new ManagementPolicyVersionArgs(delete, tierToArchive, tierToCool);
+
+        public Builder tierToCool(DateAfterCreationArgs tierToCool) {
+            return tierToCool(Output.of(tierToCool));
+        }
+
+        public ManagementPolicyVersionArgs build() {
+            return $;
         }
     }
+
 }

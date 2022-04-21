@@ -7,11 +7,11 @@ import com.pulumi.azurenative.containerservice.enums.WeekDay;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<Either<String,WeekDay>> day;
+    private @Nullable Output<Either<String,WeekDay>> day;
 
-    public Output<Either<String,WeekDay>> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<Either<String,WeekDay>>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -39,66 +39,62 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hourSlots")
-      private final @Nullable Output<List<Integer>> hourSlots;
+    private @Nullable Output<List<Integer>> hourSlots;
 
-    public Output<List<Integer>> hourSlots() {
-        return this.hourSlots == null ? Codegen.empty() : this.hourSlots;
+    public Optional<Output<List<Integer>>> hourSlots() {
+        return Optional.ofNullable(this.hourSlots);
     }
 
-    public TimeInWeekArgs(
-        @Nullable Output<Either<String,WeekDay>> day,
-        @Nullable Output<List<Integer>> hourSlots) {
-        this.day = day;
-        this.hourSlots = hourSlots;
-    }
+    private TimeInWeekArgs() {}
 
-    private TimeInWeekArgs() {
-        this.day = Codegen.empty();
-        this.hourSlots = Codegen.empty();
+    private TimeInWeekArgs(TimeInWeekArgs $) {
+        this.day = $.day;
+        this.hourSlots = $.hourSlots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeInWeekArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,WeekDay>> day;
-        private @Nullable Output<List<Integer>> hourSlots;
+        private TimeInWeekArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeInWeekArgs();
         }
 
         public Builder(TimeInWeekArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hourSlots = defaults.hourSlots;
+            $ = new TimeInWeekArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<Either<String,WeekDay>> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable Either<String,WeekDay> day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(Either<String,WeekDay> day) {
+            return day(Output.of(day));
         }
+
         public Builder hourSlots(@Nullable Output<List<Integer>> hourSlots) {
-            this.hourSlots = hourSlots;
+            $.hourSlots = hourSlots;
             return this;
         }
-        public Builder hourSlots(@Nullable List<Integer> hourSlots) {
-            this.hourSlots = Codegen.ofNullable(hourSlots);
-            return this;
+
+        public Builder hourSlots(List<Integer> hourSlots) {
+            return hourSlots(Output.of(hourSlots));
         }
+
         public Builder hourSlots(Integer... hourSlots) {
             return hourSlots(List.of(hourSlots));
-        }        public TimeInWeekArgs build() {
-            return new TimeInWeekArgs(day, hourSlots);
+        }
+
+        public TimeInWeekArgs build() {
+            return $;
         }
     }
+
 }

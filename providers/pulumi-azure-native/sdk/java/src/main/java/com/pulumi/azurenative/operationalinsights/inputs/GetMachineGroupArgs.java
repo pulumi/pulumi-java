@@ -19,10 +19,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="machineGroupName", required=true)
-      private final String machineGroupName;
+    private String machineGroupName;
 
     public String machineGroupName() {
         return this.machineGroupName;
@@ -41,7 +41,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,10 +52,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -63,82 +63,71 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetMachineGroupArgs(
-        @Nullable String endTime,
-        String machineGroupName,
-        String resourceGroupName,
-        @Nullable String startTime,
-        String workspaceName) {
-        this.endTime = endTime;
-        this.machineGroupName = Objects.requireNonNull(machineGroupName, "expected parameter 'machineGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.startTime = startTime;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetMachineGroupArgs() {}
 
-    private GetMachineGroupArgs() {
-        this.endTime = null;
-        this.machineGroupName = null;
-        this.resourceGroupName = null;
-        this.startTime = null;
-        this.workspaceName = null;
+    private GetMachineGroupArgs(GetMachineGroupArgs $) {
+        this.endTime = $.endTime;
+        this.machineGroupName = $.machineGroupName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.startTime = $.startTime;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMachineGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endTime;
-        private String machineGroupName;
-        private String resourceGroupName;
-        private @Nullable String startTime;
-        private String workspaceName;
+        private GetMachineGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMachineGroupArgs();
         }
 
         public Builder(GetMachineGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.machineGroupName = defaults.machineGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.startTime = defaults.startTime;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetMachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder machineGroupName(String machineGroupName) {
-            this.machineGroupName = Objects.requireNonNull(machineGroupName);
+            $.machineGroupName = machineGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetMachineGroupArgs build() {
-            return new GetMachineGroupArgs(endTime, machineGroupName, resourceGroupName, startTime, workspaceName);
+        }
+
+        public GetMachineGroupArgs build() {
+            $.machineGroupName = Objects.requireNonNull($.machineGroupName, "expected parameter 'machineGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

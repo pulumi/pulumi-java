@@ -6,9 +6,9 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.azurenative.dataprotection.inputs.PolicyParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PolicyInfoArgs extends com.pulumi.resources.ResourceArgs {
     public static final PolicyInfoArgs Empty = new PolicyInfoArgs();
 
     @Import(name="policyId", required=true)
-      private final Output<String> policyId;
+    private Output<String> policyId;
 
     public Output<String> policyId() {
         return this.policyId;
@@ -32,63 +32,59 @@ public final class PolicyInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyParameters")
-      private final @Nullable Output<PolicyParametersArgs> policyParameters;
+    private @Nullable Output<PolicyParametersArgs> policyParameters;
 
-    public Output<PolicyParametersArgs> policyParameters() {
-        return this.policyParameters == null ? Codegen.empty() : this.policyParameters;
+    public Optional<Output<PolicyParametersArgs>> policyParameters() {
+        return Optional.ofNullable(this.policyParameters);
     }
 
-    public PolicyInfoArgs(
-        Output<String> policyId,
-        @Nullable Output<PolicyParametersArgs> policyParameters) {
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.policyParameters = policyParameters;
-    }
+    private PolicyInfoArgs() {}
 
-    private PolicyInfoArgs() {
-        this.policyId = Codegen.empty();
-        this.policyParameters = Codegen.empty();
+    private PolicyInfoArgs(PolicyInfoArgs $) {
+        this.policyId = $.policyId;
+        this.policyParameters = $.policyParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyId;
-        private @Nullable Output<PolicyParametersArgs> policyParameters;
+        private PolicyInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyInfoArgs();
         }
 
         public Builder(PolicyInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.policyParameters = defaults.policyParameters;
+            $ = new PolicyInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(Output<String> policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Output.of(Objects.requireNonNull(policyId));
-            return this;
+            return policyId(Output.of(policyId));
         }
+
         public Builder policyParameters(@Nullable Output<PolicyParametersArgs> policyParameters) {
-            this.policyParameters = policyParameters;
+            $.policyParameters = policyParameters;
             return this;
         }
-        public Builder policyParameters(@Nullable PolicyParametersArgs policyParameters) {
-            this.policyParameters = Codegen.ofNullable(policyParameters);
-            return this;
-        }        public PolicyInfoArgs build() {
-            return new PolicyInfoArgs(policyId, policyParameters);
+
+        public Builder policyParameters(PolicyParametersArgs policyParameters) {
+            return policyParameters(Output.of(policyParameters));
+        }
+
+        public PolicyInfoArgs build() {
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            return $;
         }
     }
+
 }

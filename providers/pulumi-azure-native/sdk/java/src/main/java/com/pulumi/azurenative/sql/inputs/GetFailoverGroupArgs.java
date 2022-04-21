@@ -17,7 +17,7 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="failoverGroupName", required=true)
-      private final String failoverGroupName;
+    private String failoverGroupName;
 
     public String failoverGroupName() {
         return this.failoverGroupName;
@@ -28,7 +28,7 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetFailoverGroupArgs(
-        String failoverGroupName,
-        String resourceGroupName,
-        String serverName) {
-        this.failoverGroupName = Objects.requireNonNull(failoverGroupName, "expected parameter 'failoverGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetFailoverGroupArgs() {}
 
-    private GetFailoverGroupArgs() {
-        this.failoverGroupName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetFailoverGroupArgs(GetFailoverGroupArgs $) {
+        this.failoverGroupName = $.failoverGroupName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFailoverGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String failoverGroupName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetFailoverGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFailoverGroupArgs();
         }
 
         public Builder(GetFailoverGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverGroupName = defaults.failoverGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetFailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverGroupName(String failoverGroupName) {
-            this.failoverGroupName = Objects.requireNonNull(failoverGroupName);
+            $.failoverGroupName = failoverGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetFailoverGroupArgs build() {
-            return new GetFailoverGroupArgs(failoverGroupName, resourceGroupName, serverName);
+        }
+
+        public GetFailoverGroupArgs build() {
+            $.failoverGroupName = Objects.requireNonNull($.failoverGroupName, "expected parameter 'failoverGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

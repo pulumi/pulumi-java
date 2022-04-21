@@ -23,45 +23,44 @@ public final class PowerStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
-    public PowerStateResponse(@Nullable String code) {
-        this.code = code;
-    }
+    private PowerStateResponse() {}
 
-    private PowerStateResponse() {
-        this.code = null;
+    private PowerStateResponse(PowerStateResponse $) {
+        this.code = $.code;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PowerStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
+        private PowerStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PowerStateResponse();
         }
 
         public Builder(PowerStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
+            $ = new PowerStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
-        }        public PowerStateResponse build() {
-            return new PowerStateResponse(code);
+        }
+
+        public PowerStateResponse build() {
+            return $;
         }
     }
+
 }

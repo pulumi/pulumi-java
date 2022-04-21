@@ -23,45 +23,44 @@ public final class HlsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fragmentsPerTsSegment")
-      private final @Nullable Integer fragmentsPerTsSegment;
+    private @Nullable Integer fragmentsPerTsSegment;
 
     public Optional<Integer> fragmentsPerTsSegment() {
-        return this.fragmentsPerTsSegment == null ? Optional.empty() : Optional.ofNullable(this.fragmentsPerTsSegment);
+        return Optional.ofNullable(this.fragmentsPerTsSegment);
     }
 
-    public HlsResponse(@Nullable Integer fragmentsPerTsSegment) {
-        this.fragmentsPerTsSegment = fragmentsPerTsSegment;
-    }
+    private HlsResponse() {}
 
-    private HlsResponse() {
-        this.fragmentsPerTsSegment = null;
+    private HlsResponse(HlsResponse $) {
+        this.fragmentsPerTsSegment = $.fragmentsPerTsSegment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HlsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer fragmentsPerTsSegment;
+        private HlsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HlsResponse();
         }
 
         public Builder(HlsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fragmentsPerTsSegment = defaults.fragmentsPerTsSegment;
+            $ = new HlsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
-            this.fragmentsPerTsSegment = fragmentsPerTsSegment;
+            $.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
-        }        public HlsResponse build() {
-            return new HlsResponse(fragmentsPerTsSegment);
+        }
+
+        public HlsResponse build() {
+            return $;
         }
     }
+
 }

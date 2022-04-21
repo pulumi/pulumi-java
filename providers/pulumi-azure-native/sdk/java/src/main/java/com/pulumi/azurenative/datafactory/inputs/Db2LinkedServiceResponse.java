@@ -32,10 +32,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="certificateCommonName")
-      private final @Nullable Object certificateCommonName;
+    private @Nullable Object certificateCommonName;
 
     public Optional<Object> certificateCommonName() {
-        return this.certificateCommonName == null ? Optional.empty() : Optional.ofNullable(this.certificateCommonName);
+        return Optional.ofNullable(this.certificateCommonName);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Object connectionString;
+    private @Nullable Object connectionString;
 
     public Optional<Object> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="database")
-      private final @Nullable Object database;
+    private @Nullable Object database;
 
     public Optional<Object> database() {
-        return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="packageCollection")
-      private final @Nullable Object packageCollection;
+    private @Nullable Object packageCollection;
 
     public Optional<Object> packageCollection() {
-        return this.packageCollection == null ? Optional.empty() : Optional.ofNullable(this.packageCollection);
+        return Optional.ofNullable(this.packageCollection);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="server")
-      private final @Nullable Object server;
+    private @Nullable Object server;
 
     public Optional<Object> server() {
-        return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
+        return Optional.ofNullable(this.server);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -176,166 +176,127 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public Db2LinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String authenticationType,
-        @Nullable Object certificateCommonName,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable Object database,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object packageCollection,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object server,
-        String type,
-        @Nullable Object username) {
-        this.annotations = annotations;
-        this.authenticationType = authenticationType;
-        this.certificateCommonName = certificateCommonName;
-        this.connectVia = connectVia;
-        this.connectionString = connectionString;
-        this.database = database;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.packageCollection = packageCollection;
-        this.parameters = parameters;
-        this.password = password;
-        this.server = server;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private Db2LinkedServiceResponse() {}
 
-    private Db2LinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.certificateCommonName = null;
-        this.connectVia = null;
-        this.connectionString = null;
-        this.database = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.packageCollection = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.server = null;
-        this.type = null;
-        this.username = null;
+    private Db2LinkedServiceResponse(Db2LinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.certificateCommonName = $.certificateCommonName;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.database = $.database;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.packageCollection = $.packageCollection;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.server = $.server;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Db2LinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String authenticationType;
-        private @Nullable Object certificateCommonName;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object connectionString;
-        private @Nullable Object database;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object packageCollection;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object server;
-        private String type;
-        private @Nullable Object username;
+        private Db2LinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Db2LinkedServiceResponse();
         }
 
         public Builder(Db2LinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.certificateCommonName = defaults.certificateCommonName;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.database = defaults.database;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.packageCollection = defaults.packageCollection;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.server = defaults.server;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new Db2LinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder certificateCommonName(@Nullable Object certificateCommonName) {
-            this.certificateCommonName = certificateCommonName;
+            $.certificateCommonName = certificateCommonName;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder database(@Nullable Object database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder packageCollection(@Nullable Object packageCollection) {
-            this.packageCollection = packageCollection;
+            $.packageCollection = packageCollection;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder server(@Nullable Object server) {
-            this.server = server;
+            $.server = server;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public Db2LinkedServiceResponse build() {
-            return new Db2LinkedServiceResponse(annotations, authenticationType, certificateCommonName, connectVia, connectionString, database, description, encryptedCredential, packageCollection, parameters, password, server, type, username);
+        }
+
+        public Db2LinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

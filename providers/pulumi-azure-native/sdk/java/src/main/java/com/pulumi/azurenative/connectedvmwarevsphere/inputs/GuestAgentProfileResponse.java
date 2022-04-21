@@ -23,7 +23,7 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="agentVersion", required=true)
-      private final String agentVersion;
+    private String agentVersion;
 
     public String agentVersion() {
         return this.agentVersion;
@@ -34,7 +34,7 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="errorDetails", required=true)
-      private final List<ErrorDetailResponse> errorDetails;
+    private List<ErrorDetailResponse> errorDetails;
 
     public List<ErrorDetailResponse> errorDetails() {
         return this.errorDetails;
@@ -45,7 +45,7 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastStatusChange", required=true)
-      private final String lastStatusChange;
+    private String lastStatusChange;
 
     public String lastStatusChange() {
         return this.lastStatusChange;
@@ -56,7 +56,7 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -67,85 +67,77 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vmUuid", required=true)
-      private final String vmUuid;
+    private String vmUuid;
 
     public String vmUuid() {
         return this.vmUuid;
     }
 
-    public GuestAgentProfileResponse(
-        String agentVersion,
-        List<ErrorDetailResponse> errorDetails,
-        String lastStatusChange,
-        String status,
-        String vmUuid) {
-        this.agentVersion = Objects.requireNonNull(agentVersion, "expected parameter 'agentVersion' to be non-null");
-        this.errorDetails = Objects.requireNonNull(errorDetails, "expected parameter 'errorDetails' to be non-null");
-        this.lastStatusChange = Objects.requireNonNull(lastStatusChange, "expected parameter 'lastStatusChange' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.vmUuid = Objects.requireNonNull(vmUuid, "expected parameter 'vmUuid' to be non-null");
-    }
+    private GuestAgentProfileResponse() {}
 
-    private GuestAgentProfileResponse() {
-        this.agentVersion = null;
-        this.errorDetails = List.of();
-        this.lastStatusChange = null;
-        this.status = null;
-        this.vmUuid = null;
+    private GuestAgentProfileResponse(GuestAgentProfileResponse $) {
+        this.agentVersion = $.agentVersion;
+        this.errorDetails = $.errorDetails;
+        this.lastStatusChange = $.lastStatusChange;
+        this.status = $.status;
+        this.vmUuid = $.vmUuid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestAgentProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentVersion;
-        private List<ErrorDetailResponse> errorDetails;
-        private String lastStatusChange;
-        private String status;
-        private String vmUuid;
+        private GuestAgentProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestAgentProfileResponse();
         }
 
         public Builder(GuestAgentProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.errorDetails = defaults.errorDetails;
-    	      this.lastStatusChange = defaults.lastStatusChange;
-    	      this.status = defaults.status;
-    	      this.vmUuid = defaults.vmUuid;
+            $ = new GuestAgentProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(String agentVersion) {
-            this.agentVersion = Objects.requireNonNull(agentVersion);
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder errorDetails(List<ErrorDetailResponse> errorDetails) {
-            this.errorDetails = Objects.requireNonNull(errorDetails);
+            $.errorDetails = errorDetails;
             return this;
         }
+
         public Builder errorDetails(ErrorDetailResponse... errorDetails) {
             return errorDetails(List.of(errorDetails));
         }
+
         public Builder lastStatusChange(String lastStatusChange) {
-            this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
+            $.lastStatusChange = lastStatusChange;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder vmUuid(String vmUuid) {
-            this.vmUuid = Objects.requireNonNull(vmUuid);
+            $.vmUuid = vmUuid;
             return this;
-        }        public GuestAgentProfileResponse build() {
-            return new GuestAgentProfileResponse(agentVersion, errorDetails, lastStatusChange, status, vmUuid);
+        }
+
+        public GuestAgentProfileResponse build() {
+            $.agentVersion = Objects.requireNonNull($.agentVersion, "expected parameter 'agentVersion' to be non-null");
+            $.errorDetails = Objects.requireNonNull($.errorDetails, "expected parameter 'errorDetails' to be non-null");
+            $.lastStatusChange = Objects.requireNonNull($.lastStatusChange, "expected parameter 'lastStatusChange' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.vmUuid = Objects.requireNonNull($.vmUuid, "expected parameter 'vmUuid' to be non-null");
+            return $;
         }
     }
+
 }

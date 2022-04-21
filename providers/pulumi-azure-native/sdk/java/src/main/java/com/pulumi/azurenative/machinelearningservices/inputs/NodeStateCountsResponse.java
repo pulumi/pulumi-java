@@ -21,7 +21,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="idleNodeCount", required=true)
-      private final Integer idleNodeCount;
+    private Integer idleNodeCount;
 
     public Integer idleNodeCount() {
         return this.idleNodeCount;
@@ -32,7 +32,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="leavingNodeCount", required=true)
-      private final Integer leavingNodeCount;
+    private Integer leavingNodeCount;
 
     public Integer leavingNodeCount() {
         return this.leavingNodeCount;
@@ -43,7 +43,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="preemptedNodeCount", required=true)
-      private final Integer preemptedNodeCount;
+    private Integer preemptedNodeCount;
 
     public Integer preemptedNodeCount() {
         return this.preemptedNodeCount;
@@ -54,7 +54,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="preparingNodeCount", required=true)
-      private final Integer preparingNodeCount;
+    private Integer preparingNodeCount;
 
     public Integer preparingNodeCount() {
         return this.preparingNodeCount;
@@ -65,7 +65,7 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="runningNodeCount", required=true)
-      private final Integer runningNodeCount;
+    private Integer runningNodeCount;
 
     public Integer runningNodeCount() {
         return this.runningNodeCount;
@@ -76,91 +76,80 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="unusableNodeCount", required=true)
-      private final Integer unusableNodeCount;
+    private Integer unusableNodeCount;
 
     public Integer unusableNodeCount() {
         return this.unusableNodeCount;
     }
 
-    public NodeStateCountsResponse(
-        Integer idleNodeCount,
-        Integer leavingNodeCount,
-        Integer preemptedNodeCount,
-        Integer preparingNodeCount,
-        Integer runningNodeCount,
-        Integer unusableNodeCount) {
-        this.idleNodeCount = Objects.requireNonNull(idleNodeCount, "expected parameter 'idleNodeCount' to be non-null");
-        this.leavingNodeCount = Objects.requireNonNull(leavingNodeCount, "expected parameter 'leavingNodeCount' to be non-null");
-        this.preemptedNodeCount = Objects.requireNonNull(preemptedNodeCount, "expected parameter 'preemptedNodeCount' to be non-null");
-        this.preparingNodeCount = Objects.requireNonNull(preparingNodeCount, "expected parameter 'preparingNodeCount' to be non-null");
-        this.runningNodeCount = Objects.requireNonNull(runningNodeCount, "expected parameter 'runningNodeCount' to be non-null");
-        this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount, "expected parameter 'unusableNodeCount' to be non-null");
-    }
+    private NodeStateCountsResponse() {}
 
-    private NodeStateCountsResponse() {
-        this.idleNodeCount = null;
-        this.leavingNodeCount = null;
-        this.preemptedNodeCount = null;
-        this.preparingNodeCount = null;
-        this.runningNodeCount = null;
-        this.unusableNodeCount = null;
+    private NodeStateCountsResponse(NodeStateCountsResponse $) {
+        this.idleNodeCount = $.idleNodeCount;
+        this.leavingNodeCount = $.leavingNodeCount;
+        this.preemptedNodeCount = $.preemptedNodeCount;
+        this.preparingNodeCount = $.preparingNodeCount;
+        this.runningNodeCount = $.runningNodeCount;
+        this.unusableNodeCount = $.unusableNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeStateCountsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer idleNodeCount;
-        private Integer leavingNodeCount;
-        private Integer preemptedNodeCount;
-        private Integer preparingNodeCount;
-        private Integer runningNodeCount;
-        private Integer unusableNodeCount;
+        private NodeStateCountsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeStateCountsResponse();
         }
 
         public Builder(NodeStateCountsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleNodeCount = defaults.idleNodeCount;
-    	      this.leavingNodeCount = defaults.leavingNodeCount;
-    	      this.preemptedNodeCount = defaults.preemptedNodeCount;
-    	      this.preparingNodeCount = defaults.preparingNodeCount;
-    	      this.runningNodeCount = defaults.runningNodeCount;
-    	      this.unusableNodeCount = defaults.unusableNodeCount;
+            $ = new NodeStateCountsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder idleNodeCount(Integer idleNodeCount) {
-            this.idleNodeCount = Objects.requireNonNull(idleNodeCount);
+            $.idleNodeCount = idleNodeCount;
             return this;
         }
+
         public Builder leavingNodeCount(Integer leavingNodeCount) {
-            this.leavingNodeCount = Objects.requireNonNull(leavingNodeCount);
+            $.leavingNodeCount = leavingNodeCount;
             return this;
         }
+
         public Builder preemptedNodeCount(Integer preemptedNodeCount) {
-            this.preemptedNodeCount = Objects.requireNonNull(preemptedNodeCount);
+            $.preemptedNodeCount = preemptedNodeCount;
             return this;
         }
+
         public Builder preparingNodeCount(Integer preparingNodeCount) {
-            this.preparingNodeCount = Objects.requireNonNull(preparingNodeCount);
+            $.preparingNodeCount = preparingNodeCount;
             return this;
         }
+
         public Builder runningNodeCount(Integer runningNodeCount) {
-            this.runningNodeCount = Objects.requireNonNull(runningNodeCount);
+            $.runningNodeCount = runningNodeCount;
             return this;
         }
+
         public Builder unusableNodeCount(Integer unusableNodeCount) {
-            this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount);
+            $.unusableNodeCount = unusableNodeCount;
             return this;
-        }        public NodeStateCountsResponse build() {
-            return new NodeStateCountsResponse(idleNodeCount, leavingNodeCount, preemptedNodeCount, preparingNodeCount, runningNodeCount, unusableNodeCount);
+        }
+
+        public NodeStateCountsResponse build() {
+            $.idleNodeCount = Objects.requireNonNull($.idleNodeCount, "expected parameter 'idleNodeCount' to be non-null");
+            $.leavingNodeCount = Objects.requireNonNull($.leavingNodeCount, "expected parameter 'leavingNodeCount' to be non-null");
+            $.preemptedNodeCount = Objects.requireNonNull($.preemptedNodeCount, "expected parameter 'preemptedNodeCount' to be non-null");
+            $.preparingNodeCount = Objects.requireNonNull($.preparingNodeCount, "expected parameter 'preparingNodeCount' to be non-null");
+            $.runningNodeCount = Objects.requireNonNull($.runningNodeCount, "expected parameter 'runningNodeCount' to be non-null");
+            $.unusableNodeCount = Objects.requireNonNull($.unusableNodeCount, "expected parameter 'unusableNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

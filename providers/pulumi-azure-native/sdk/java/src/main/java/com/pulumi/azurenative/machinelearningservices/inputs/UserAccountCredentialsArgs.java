@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="adminUserName", required=true)
-      private final Output<String> adminUserName;
+    private Output<String> adminUserName;
 
     public Output<String> adminUserName() {
         return this.adminUserName;
@@ -35,10 +35,10 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="adminUserPassword")
-      private final @Nullable Output<String> adminUserPassword;
+    private @Nullable Output<String> adminUserPassword;
 
-    public Output<String> adminUserPassword() {
-        return this.adminUserPassword == null ? Codegen.empty() : this.adminUserPassword;
+    public Optional<Output<String>> adminUserPassword() {
+        return Optional.ofNullable(this.adminUserPassword);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="adminUserSshPublicKey")
-      private final @Nullable Output<String> adminUserSshPublicKey;
+    private @Nullable Output<String> adminUserSshPublicKey;
 
-    public Output<String> adminUserSshPublicKey() {
-        return this.adminUserSshPublicKey == null ? Codegen.empty() : this.adminUserSshPublicKey;
+    public Optional<Output<String>> adminUserSshPublicKey() {
+        return Optional.ofNullable(this.adminUserSshPublicKey);
     }
 
-    public UserAccountCredentialsArgs(
-        Output<String> adminUserName,
-        @Nullable Output<String> adminUserPassword,
-        @Nullable Output<String> adminUserSshPublicKey) {
-        this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
-        this.adminUserPassword = adminUserPassword;
-        this.adminUserSshPublicKey = adminUserSshPublicKey;
-    }
+    private UserAccountCredentialsArgs() {}
 
-    private UserAccountCredentialsArgs() {
-        this.adminUserName = Codegen.empty();
-        this.adminUserPassword = Codegen.empty();
-        this.adminUserSshPublicKey = Codegen.empty();
+    private UserAccountCredentialsArgs(UserAccountCredentialsArgs $) {
+        this.adminUserName = $.adminUserName;
+        this.adminUserPassword = $.adminUserPassword;
+        this.adminUserSshPublicKey = $.adminUserSshPublicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAccountCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> adminUserName;
-        private @Nullable Output<String> adminUserPassword;
-        private @Nullable Output<String> adminUserSshPublicKey;
+        private UserAccountCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAccountCredentialsArgs();
         }
 
         public Builder(UserAccountCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUserName = defaults.adminUserName;
-    	      this.adminUserPassword = defaults.adminUserPassword;
-    	      this.adminUserSshPublicKey = defaults.adminUserSshPublicKey;
+            $ = new UserAccountCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUserName(Output<String> adminUserName) {
-            this.adminUserName = Objects.requireNonNull(adminUserName);
+            $.adminUserName = adminUserName;
             return this;
         }
+
         public Builder adminUserName(String adminUserName) {
-            this.adminUserName = Output.of(Objects.requireNonNull(adminUserName));
-            return this;
+            return adminUserName(Output.of(adminUserName));
         }
+
         public Builder adminUserPassword(@Nullable Output<String> adminUserPassword) {
-            this.adminUserPassword = adminUserPassword;
+            $.adminUserPassword = adminUserPassword;
             return this;
         }
-        public Builder adminUserPassword(@Nullable String adminUserPassword) {
-            this.adminUserPassword = Codegen.ofNullable(adminUserPassword);
-            return this;
+
+        public Builder adminUserPassword(String adminUserPassword) {
+            return adminUserPassword(Output.of(adminUserPassword));
         }
+
         public Builder adminUserSshPublicKey(@Nullable Output<String> adminUserSshPublicKey) {
-            this.adminUserSshPublicKey = adminUserSshPublicKey;
+            $.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
-        public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
-            this.adminUserSshPublicKey = Codegen.ofNullable(adminUserSshPublicKey);
-            return this;
-        }        public UserAccountCredentialsArgs build() {
-            return new UserAccountCredentialsArgs(adminUserName, adminUserPassword, adminUserSshPublicKey);
+
+        public Builder adminUserSshPublicKey(String adminUserSshPublicKey) {
+            return adminUserSshPublicKey(Output.of(adminUserSshPublicKey));
+        }
+
+        public UserAccountCredentialsArgs build() {
+            $.adminUserName = Objects.requireNonNull($.adminUserName, "expected parameter 'adminUserName' to be non-null");
+            return $;
         }
     }
+
 }

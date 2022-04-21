@@ -24,10 +24,10 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="actionGroup")
-      private final @Nullable List<String> actionGroup;
+    private @Nullable List<String> actionGroup;
 
-    public List<String> actionGroup() {
-        return this.actionGroup == null ? List.of() : this.actionGroup;
+    public Optional<List<String>> actionGroup() {
+        return Optional.ofNullable(this.actionGroup);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customWebhookPayload")
-      private final @Nullable String customWebhookPayload;
+    private @Nullable String customWebhookPayload;
 
     public Optional<String> customWebhookPayload() {
-        return this.customWebhookPayload == null ? Optional.empty() : Optional.ofNullable(this.customWebhookPayload);
+        return Optional.ofNullable(this.customWebhookPayload);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="emailSubject")
-      private final @Nullable String emailSubject;
+    private @Nullable String emailSubject;
 
     public Optional<String> emailSubject() {
-        return this.emailSubject == null ? Optional.empty() : Optional.ofNullable(this.emailSubject);
+        return Optional.ofNullable(this.emailSubject);
     }
 
-    public AzNsActionGroupResponse(
-        @Nullable List<String> actionGroup,
-        @Nullable String customWebhookPayload,
-        @Nullable String emailSubject) {
-        this.actionGroup = actionGroup;
-        this.customWebhookPayload = customWebhookPayload;
-        this.emailSubject = emailSubject;
-    }
+    private AzNsActionGroupResponse() {}
 
-    private AzNsActionGroupResponse() {
-        this.actionGroup = List.of();
-        this.customWebhookPayload = null;
-        this.emailSubject = null;
+    private AzNsActionGroupResponse(AzNsActionGroupResponse $) {
+        this.actionGroup = $.actionGroup;
+        this.customWebhookPayload = $.customWebhookPayload;
+        this.emailSubject = $.emailSubject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzNsActionGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> actionGroup;
-        private @Nullable String customWebhookPayload;
-        private @Nullable String emailSubject;
+        private AzNsActionGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzNsActionGroupResponse();
         }
 
         public Builder(AzNsActionGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroup = defaults.actionGroup;
-    	      this.customWebhookPayload = defaults.customWebhookPayload;
-    	      this.emailSubject = defaults.emailSubject;
+            $ = new AzNsActionGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroup(@Nullable List<String> actionGroup) {
-            this.actionGroup = actionGroup;
+            $.actionGroup = actionGroup;
             return this;
         }
+
         public Builder actionGroup(String... actionGroup) {
             return actionGroup(List.of(actionGroup));
         }
+
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
-            this.customWebhookPayload = customWebhookPayload;
+            $.customWebhookPayload = customWebhookPayload;
             return this;
         }
+
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = emailSubject;
+            $.emailSubject = emailSubject;
             return this;
-        }        public AzNsActionGroupResponse build() {
-            return new AzNsActionGroupResponse(actionGroup, customWebhookPayload, emailSubject);
+        }
+
+        public AzNsActionGroupResponse build() {
+            return $;
         }
     }
+
 }

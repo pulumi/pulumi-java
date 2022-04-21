@@ -30,10 +30,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accessCredential")
-      private final @Nullable SSISAccessCredentialResponse accessCredential;
+    private @Nullable SSISAccessCredentialResponse accessCredential;
 
     public Optional<SSISAccessCredentialResponse> accessCredential() {
-        return this.accessCredential == null ? Optional.empty() : Optional.ofNullable(this.accessCredential);
+        return Optional.ofNullable(this.accessCredential);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="childPackages")
-      private final @Nullable List<SSISChildPackageResponse> childPackages;
+    private @Nullable List<SSISChildPackageResponse> childPackages;
 
-    public List<SSISChildPackageResponse> childPackages() {
-        return this.childPackages == null ? List.of() : this.childPackages;
+    public Optional<List<SSISChildPackageResponse>> childPackages() {
+        return Optional.ofNullable(this.childPackages);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configurationAccessCredential")
-      private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
+    private @Nullable SSISAccessCredentialResponse configurationAccessCredential;
 
     public Optional<SSISAccessCredentialResponse> configurationAccessCredential() {
-        return this.configurationAccessCredential == null ? Optional.empty() : Optional.ofNullable(this.configurationAccessCredential);
+        return Optional.ofNullable(this.configurationAccessCredential);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configurationPath")
-      private final @Nullable Object configurationPath;
+    private @Nullable Object configurationPath;
 
     public Optional<Object> configurationPath() {
-        return this.configurationPath == null ? Optional.empty() : Optional.ofNullable(this.configurationPath);
+        return Optional.ofNullable(this.configurationPath);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="packageContent")
-      private final @Nullable Object packageContent;
+    private @Nullable Object packageContent;
 
     public Optional<Object> packageContent() {
-        return this.packageContent == null ? Optional.empty() : Optional.ofNullable(this.packageContent);
+        return Optional.ofNullable(this.packageContent);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="packageLastModifiedDate")
-      private final @Nullable String packageLastModifiedDate;
+    private @Nullable String packageLastModifiedDate;
 
     public Optional<String> packageLastModifiedDate() {
-        return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
+        return Optional.ofNullable(this.packageLastModifiedDate);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="packageName")
-      private final @Nullable String packageName;
+    private @Nullable String packageName;
 
     public Optional<String> packageName() {
-        return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="packagePassword")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword() {
-        return this.packagePassword == null ? null : this.packagePassword;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> packagePassword() {
+        return Optional.ofNullable(this.packagePassword);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="packagePath")
-      private final @Nullable Object packagePath;
+    private @Nullable Object packagePath;
 
     public Optional<Object> packagePath() {
-        return this.packagePath == null ? Optional.empty() : Optional.ofNullable(this.packagePath);
+        return Optional.ofNullable(this.packagePath);
     }
 
     /**
@@ -129,130 +129,102 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public SSISPackageLocationResponse(
-        @Nullable SSISAccessCredentialResponse accessCredential,
-        @Nullable List<SSISChildPackageResponse> childPackages,
-        @Nullable SSISAccessCredentialResponse configurationAccessCredential,
-        @Nullable Object configurationPath,
-        @Nullable Object packageContent,
-        @Nullable String packageLastModifiedDate,
-        @Nullable String packageName,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
-        @Nullable Object packagePath,
-        @Nullable String type) {
-        this.accessCredential = accessCredential;
-        this.childPackages = childPackages;
-        this.configurationAccessCredential = configurationAccessCredential;
-        this.configurationPath = configurationPath;
-        this.packageContent = packageContent;
-        this.packageLastModifiedDate = packageLastModifiedDate;
-        this.packageName = packageName;
-        this.packagePassword = packagePassword;
-        this.packagePath = packagePath;
-        this.type = type;
-    }
+    private SSISPackageLocationResponse() {}
 
-    private SSISPackageLocationResponse() {
-        this.accessCredential = null;
-        this.childPackages = List.of();
-        this.configurationAccessCredential = null;
-        this.configurationPath = null;
-        this.packageContent = null;
-        this.packageLastModifiedDate = null;
-        this.packageName = null;
-        this.packagePassword = null;
-        this.packagePath = null;
-        this.type = null;
+    private SSISPackageLocationResponse(SSISPackageLocationResponse $) {
+        this.accessCredential = $.accessCredential;
+        this.childPackages = $.childPackages;
+        this.configurationAccessCredential = $.configurationAccessCredential;
+        this.configurationPath = $.configurationPath;
+        this.packageContent = $.packageContent;
+        this.packageLastModifiedDate = $.packageLastModifiedDate;
+        this.packageName = $.packageName;
+        this.packagePassword = $.packagePassword;
+        this.packagePath = $.packagePath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISPackageLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SSISAccessCredentialResponse accessCredential;
-        private @Nullable List<SSISChildPackageResponse> childPackages;
-        private @Nullable SSISAccessCredentialResponse configurationAccessCredential;
-        private @Nullable Object configurationPath;
-        private @Nullable Object packageContent;
-        private @Nullable String packageLastModifiedDate;
-        private @Nullable String packageName;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
-        private @Nullable Object packagePath;
-        private @Nullable String type;
+        private SSISPackageLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISPackageLocationResponse();
         }
 
         public Builder(SSISPackageLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessCredential = defaults.accessCredential;
-    	      this.childPackages = defaults.childPackages;
-    	      this.configurationAccessCredential = defaults.configurationAccessCredential;
-    	      this.configurationPath = defaults.configurationPath;
-    	      this.packageContent = defaults.packageContent;
-    	      this.packageLastModifiedDate = defaults.packageLastModifiedDate;
-    	      this.packageName = defaults.packageName;
-    	      this.packagePassword = defaults.packagePassword;
-    	      this.packagePath = defaults.packagePath;
-    	      this.type = defaults.type;
+            $ = new SSISPackageLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
-            this.accessCredential = accessCredential;
+            $.accessCredential = accessCredential;
             return this;
         }
+
         public Builder childPackages(@Nullable List<SSISChildPackageResponse> childPackages) {
-            this.childPackages = childPackages;
+            $.childPackages = childPackages;
             return this;
         }
+
         public Builder childPackages(SSISChildPackageResponse... childPackages) {
             return childPackages(List.of(childPackages));
         }
+
         public Builder configurationAccessCredential(@Nullable SSISAccessCredentialResponse configurationAccessCredential) {
-            this.configurationAccessCredential = configurationAccessCredential;
+            $.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
+
         public Builder configurationPath(@Nullable Object configurationPath) {
-            this.configurationPath = configurationPath;
+            $.configurationPath = configurationPath;
             return this;
         }
+
         public Builder packageContent(@Nullable Object packageContent) {
-            this.packageContent = packageContent;
+            $.packageContent = packageContent;
             return this;
         }
+
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
-            this.packageLastModifiedDate = packageLastModifiedDate;
+            $.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
+
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
+
         public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword) {
-            this.packagePassword = packagePassword;
+            $.packagePassword = packagePassword;
             return this;
         }
+
         public Builder packagePath(@Nullable Object packagePath) {
-            this.packagePath = packagePath;
+            $.packagePath = packagePath;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public SSISPackageLocationResponse build() {
-            return new SSISPackageLocationResponse(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
+        }
+
+        public SSISPackageLocationResponse build() {
+            return $;
         }
     }
+
 }

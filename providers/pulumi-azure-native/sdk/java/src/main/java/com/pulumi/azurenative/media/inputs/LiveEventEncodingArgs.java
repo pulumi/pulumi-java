@@ -8,9 +8,9 @@ import com.pulumi.azurenative.media.enums.StretchMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="encodingType")
-      private final @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
+    private @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
 
-    public Output<Either<String,LiveEventEncodingType>> encodingType() {
-        return this.encodingType == null ? Codegen.empty() : this.encodingType;
+    public Optional<Output<Either<String,LiveEventEncodingType>>> encodingType() {
+        return Optional.ofNullable(this.encodingType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable Output<String> keyFrameInterval;
+    private @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
+    public Optional<Output<String>> keyFrameInterval() {
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="presetName")
-      private final @Nullable Output<String> presetName;
+    private @Nullable Output<String> presetName;
 
-    public Output<String> presetName() {
-        return this.presetName == null ? Codegen.empty() : this.presetName;
+    public Optional<Output<String>> presetName() {
+        return Optional.ofNullable(this.presetName);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable Output<Either<String,StretchMode>> stretchMode;
+    private @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> stretchMode() {
-        return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
+    public Optional<Output<Either<String,StretchMode>>> stretchMode() {
+        return Optional.ofNullable(this.stretchMode);
     }
 
-    public LiveEventEncodingArgs(
-        @Nullable Output<Either<String,LiveEventEncodingType>> encodingType,
-        @Nullable Output<String> keyFrameInterval,
-        @Nullable Output<String> presetName,
-        @Nullable Output<Either<String,StretchMode>> stretchMode) {
-        this.encodingType = encodingType;
-        this.keyFrameInterval = keyFrameInterval;
-        this.presetName = presetName;
-        this.stretchMode = stretchMode;
-    }
+    private LiveEventEncodingArgs() {}
 
-    private LiveEventEncodingArgs() {
-        this.encodingType = Codegen.empty();
-        this.keyFrameInterval = Codegen.empty();
-        this.presetName = Codegen.empty();
-        this.stretchMode = Codegen.empty();
+    private LiveEventEncodingArgs(LiveEventEncodingArgs $) {
+        this.encodingType = $.encodingType;
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.presetName = $.presetName;
+        this.stretchMode = $.stretchMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventEncodingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
-        private @Nullable Output<String> keyFrameInterval;
-        private @Nullable Output<String> presetName;
-        private @Nullable Output<Either<String,StretchMode>> stretchMode;
+        private LiveEventEncodingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventEncodingArgs();
         }
 
         public Builder(LiveEventEncodingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encodingType = defaults.encodingType;
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.presetName = defaults.presetName;
-    	      this.stretchMode = defaults.stretchMode;
+            $ = new LiveEventEncodingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encodingType(@Nullable Output<Either<String,LiveEventEncodingType>> encodingType) {
-            this.encodingType = encodingType;
+            $.encodingType = encodingType;
             return this;
         }
-        public Builder encodingType(@Nullable Either<String,LiveEventEncodingType> encodingType) {
-            this.encodingType = Codegen.ofNullable(encodingType);
-            return this;
+
+        public Builder encodingType(Either<String,LiveEventEncodingType> encodingType) {
+            return encodingType(Output.of(encodingType));
         }
+
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
-        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Codegen.ofNullable(keyFrameInterval);
-            return this;
+
+        public Builder keyFrameInterval(String keyFrameInterval) {
+            return keyFrameInterval(Output.of(keyFrameInterval));
         }
+
         public Builder presetName(@Nullable Output<String> presetName) {
-            this.presetName = presetName;
+            $.presetName = presetName;
             return this;
         }
-        public Builder presetName(@Nullable String presetName) {
-            this.presetName = Codegen.ofNullable(presetName);
-            return this;
+
+        public Builder presetName(String presetName) {
+            return presetName(Output.of(presetName));
         }
+
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
         }
-        public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Codegen.ofNullable(stretchMode);
-            return this;
-        }        public LiveEventEncodingArgs build() {
-            return new LiveEventEncodingArgs(encodingType, keyFrameInterval, presetName, stretchMode);
+
+        public Builder stretchMode(Either<String,StretchMode> stretchMode) {
+            return stretchMode(Output.of(stretchMode));
+        }
+
+        public LiveEventEncodingArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clientApplication")
-      private final @Nullable String clientApplication;
+    private @Nullable String clientApplication;
 
     public Optional<String> clientApplication() {
-        return this.clientApplication == null ? Optional.empty() : Optional.ofNullable(this.clientApplication);
+        return Optional.ofNullable(this.clientApplication);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterApplication")
-      private final @Nullable String clusterApplication;
+    private @Nullable String clusterApplication;
 
     public Optional<String> clusterApplication() {
-        return this.clusterApplication == null ? Optional.empty() : Optional.ofNullable(this.clusterApplication);
+        return Optional.ofNullable(this.clusterApplication);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AzureActiveDirectoryResponse(
-        @Nullable String clientApplication,
-        @Nullable String clusterApplication,
-        @Nullable String tenantId) {
-        this.clientApplication = clientApplication;
-        this.clusterApplication = clusterApplication;
-        this.tenantId = tenantId;
-    }
+    private AzureActiveDirectoryResponse() {}
 
-    private AzureActiveDirectoryResponse() {
-        this.clientApplication = null;
-        this.clusterApplication = null;
-        this.tenantId = null;
+    private AzureActiveDirectoryResponse(AzureActiveDirectoryResponse $) {
+        this.clientApplication = $.clientApplication;
+        this.clusterApplication = $.clusterApplication;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientApplication;
-        private @Nullable String clusterApplication;
-        private @Nullable String tenantId;
+        private AzureActiveDirectoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryResponse();
         }
 
         public Builder(AzureActiveDirectoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientApplication = defaults.clientApplication;
-    	      this.clusterApplication = defaults.clusterApplication;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AzureActiveDirectoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientApplication(@Nullable String clientApplication) {
-            this.clientApplication = clientApplication;
+            $.clientApplication = clientApplication;
             return this;
         }
+
         public Builder clusterApplication(@Nullable String clusterApplication) {
-            this.clusterApplication = clusterApplication;
+            $.clusterApplication = clusterApplication;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public AzureActiveDirectoryResponse build() {
-            return new AzureActiveDirectoryResponse(clientApplication, clusterApplication, tenantId);
+        }
+
+        public AzureActiveDirectoryResponse build() {
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+    private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
+    public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="publicIPAddress", required=true)
-      private final Output<SubResourceArgs> publicIPAddress;
+    private Output<SubResourceArgs> publicIPAddress;
 
     public Output<SubResourceArgs> publicIPAddress() {
         return this.publicIPAddress;
@@ -71,102 +71,90 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="subnet", required=true)
-      private final Output<SubResourceArgs> subnet;
+    private Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> subnet() {
         return this.subnet;
     }
 
-    public BastionHostIPConfigurationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
-        Output<SubResourceArgs> publicIPAddress,
-        Output<SubResourceArgs> subnet) {
-        this.id = id;
-        this.name = name;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.publicIPAddress = Objects.requireNonNull(publicIPAddress, "expected parameter 'publicIPAddress' to be non-null");
-        this.subnet = Objects.requireNonNull(subnet, "expected parameter 'subnet' to be non-null");
-    }
+    private BastionHostIPConfigurationArgs() {}
 
-    private BastionHostIPConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateIPAllocationMethod = Codegen.empty();
-        this.publicIPAddress = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private BastionHostIPConfigurationArgs(BastionHostIPConfigurationArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BastionHostIPConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
-        private Output<SubResourceArgs> publicIPAddress;
-        private Output<SubResourceArgs> subnet;
+        private BastionHostIPConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BastionHostIPConfigurationArgs();
         }
 
         public Builder(BastionHostIPConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
+            $ = new BastionHostIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
-            return this;
+
+        public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
+
         public Builder publicIPAddress(Output<SubResourceArgs> publicIPAddress) {
-            this.publicIPAddress = Objects.requireNonNull(publicIPAddress);
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
-            this.publicIPAddress = Output.of(Objects.requireNonNull(publicIPAddress));
-            return this;
+            return publicIPAddress(Output.of(publicIPAddress));
         }
+
         public Builder subnet(Output<SubResourceArgs> subnet) {
-            this.subnet = Objects.requireNonNull(subnet);
+            $.subnet = subnet;
             return this;
         }
+
         public Builder subnet(SubResourceArgs subnet) {
-            this.subnet = Output.of(Objects.requireNonNull(subnet));
-            return this;
-        }        public BastionHostIPConfigurationArgs build() {
-            return new BastionHostIPConfigurationArgs(id, name, privateIPAllocationMethod, publicIPAddress, subnet);
+            return subnet(Output.of(subnet));
+        }
+
+        public BastionHostIPConfigurationArgs build() {
+            $.publicIPAddress = Objects.requireNonNull($.publicIPAddress, "expected parameter 'publicIPAddress' to be non-null");
+            $.subnet = Objects.requireNonNull($.subnet, "expected parameter 'subnet' to be non-null");
+            return $;
         }
     }
+
 }

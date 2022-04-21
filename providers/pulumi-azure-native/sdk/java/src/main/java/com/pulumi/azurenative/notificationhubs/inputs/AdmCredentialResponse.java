@@ -23,10 +23,10 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="authTokenUrl")
-      private final @Nullable String authTokenUrl;
+    private @Nullable String authTokenUrl;
 
     public Optional<String> authTokenUrl() {
-        return this.authTokenUrl == null ? Optional.empty() : Optional.ofNullable(this.authTokenUrl);
+        return Optional.ofNullable(this.authTokenUrl);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
-    public AdmCredentialResponse(
-        @Nullable String authTokenUrl,
-        @Nullable String clientId,
-        @Nullable String clientSecret) {
-        this.authTokenUrl = authTokenUrl;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-    }
+    private AdmCredentialResponse() {}
 
-    private AdmCredentialResponse() {
-        this.authTokenUrl = null;
-        this.clientId = null;
-        this.clientSecret = null;
+    private AdmCredentialResponse(AdmCredentialResponse $) {
+        this.authTokenUrl = $.authTokenUrl;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdmCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authTokenUrl;
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
+        private AdmCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdmCredentialResponse();
         }
 
         public Builder(AdmCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authTokenUrl = defaults.authTokenUrl;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new AdmCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authTokenUrl(@Nullable String authTokenUrl) {
-            this.authTokenUrl = authTokenUrl;
+            $.authTokenUrl = authTokenUrl;
             return this;
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
-        }        public AdmCredentialResponse build() {
-            return new AdmCredentialResponse(authTokenUrl, clientId, clientSecret);
+        }
+
+        public AdmCredentialResponse build() {
+            return $;
         }
     }
+
 }

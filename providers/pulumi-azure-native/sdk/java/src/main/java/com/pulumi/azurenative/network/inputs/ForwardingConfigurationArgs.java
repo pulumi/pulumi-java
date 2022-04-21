@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="backendPool")
-      private final @Nullable Output<SubResourceArgs> backendPool;
+    private @Nullable Output<SubResourceArgs> backendPool;
 
-    public Output<SubResourceArgs> backendPool() {
-        return this.backendPool == null ? Codegen.empty() : this.backendPool;
+    public Optional<Output<SubResourceArgs>> backendPool() {
+        return Optional.ofNullable(this.backendPool);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cacheConfiguration")
-      private final @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
+    private @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
 
-    public Output<CacheConfigurationArgs> cacheConfiguration() {
-        return this.cacheConfiguration == null ? Codegen.empty() : this.cacheConfiguration;
+    public Optional<Output<CacheConfigurationArgs>> cacheConfiguration() {
+        return Optional.ofNullable(this.cacheConfiguration);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="customForwardingPath")
-      private final @Nullable Output<String> customForwardingPath;
+    private @Nullable Output<String> customForwardingPath;
 
-    public Output<String> customForwardingPath() {
-        return this.customForwardingPath == null ? Codegen.empty() : this.customForwardingPath;
+    public Optional<Output<String>> customForwardingPath() {
+        return Optional.ofNullable(this.customForwardingPath);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="forwardingProtocol")
-      private final @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
+    private @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
-    public Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol() {
-        return this.forwardingProtocol == null ? Codegen.empty() : this.forwardingProtocol;
+    public Optional<Output<Either<String,FrontDoorForwardingProtocol>>> forwardingProtocol() {
+        return Optional.ofNullable(this.forwardingProtocol);
     }
 
     /**
@@ -72,102 +73,89 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public ForwardingConfigurationArgs(
-        @Nullable Output<SubResourceArgs> backendPool,
-        @Nullable Output<CacheConfigurationArgs> cacheConfiguration,
-        @Nullable Output<String> customForwardingPath,
-        @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol,
-        Output<String> odataType) {
-        this.backendPool = backendPool;
-        this.cacheConfiguration = cacheConfiguration;
-        this.customForwardingPath = customForwardingPath;
-        this.forwardingProtocol = forwardingProtocol;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private ForwardingConfigurationArgs() {}
 
-    private ForwardingConfigurationArgs() {
-        this.backendPool = Codegen.empty();
-        this.cacheConfiguration = Codegen.empty();
-        this.customForwardingPath = Codegen.empty();
-        this.forwardingProtocol = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private ForwardingConfigurationArgs(ForwardingConfigurationArgs $) {
+        this.backendPool = $.backendPool;
+        this.cacheConfiguration = $.cacheConfiguration;
+        this.customForwardingPath = $.customForwardingPath;
+        this.forwardingProtocol = $.forwardingProtocol;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForwardingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> backendPool;
-        private @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
-        private @Nullable Output<String> customForwardingPath;
-        private @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
-        private Output<String> odataType;
+        private ForwardingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForwardingConfigurationArgs();
         }
 
         public Builder(ForwardingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPool = defaults.backendPool;
-    	      this.cacheConfiguration = defaults.cacheConfiguration;
-    	      this.customForwardingPath = defaults.customForwardingPath;
-    	      this.forwardingProtocol = defaults.forwardingProtocol;
-    	      this.odataType = defaults.odataType;
+            $ = new ForwardingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPool(@Nullable Output<SubResourceArgs> backendPool) {
-            this.backendPool = backendPool;
+            $.backendPool = backendPool;
             return this;
         }
-        public Builder backendPool(@Nullable SubResourceArgs backendPool) {
-            this.backendPool = Codegen.ofNullable(backendPool);
-            return this;
+
+        public Builder backendPool(SubResourceArgs backendPool) {
+            return backendPool(Output.of(backendPool));
         }
+
         public Builder cacheConfiguration(@Nullable Output<CacheConfigurationArgs> cacheConfiguration) {
-            this.cacheConfiguration = cacheConfiguration;
+            $.cacheConfiguration = cacheConfiguration;
             return this;
         }
-        public Builder cacheConfiguration(@Nullable CacheConfigurationArgs cacheConfiguration) {
-            this.cacheConfiguration = Codegen.ofNullable(cacheConfiguration);
-            return this;
+
+        public Builder cacheConfiguration(CacheConfigurationArgs cacheConfiguration) {
+            return cacheConfiguration(Output.of(cacheConfiguration));
         }
+
         public Builder customForwardingPath(@Nullable Output<String> customForwardingPath) {
-            this.customForwardingPath = customForwardingPath;
+            $.customForwardingPath = customForwardingPath;
             return this;
         }
-        public Builder customForwardingPath(@Nullable String customForwardingPath) {
-            this.customForwardingPath = Codegen.ofNullable(customForwardingPath);
-            return this;
+
+        public Builder customForwardingPath(String customForwardingPath) {
+            return customForwardingPath(Output.of(customForwardingPath));
         }
+
         public Builder forwardingProtocol(@Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
-            this.forwardingProtocol = forwardingProtocol;
+            $.forwardingProtocol = forwardingProtocol;
             return this;
         }
-        public Builder forwardingProtocol(@Nullable Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
-            this.forwardingProtocol = Codegen.ofNullable(forwardingProtocol);
-            return this;
+
+        public Builder forwardingProtocol(Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
+            return forwardingProtocol(Output.of(forwardingProtocol));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public ForwardingConfigurationArgs build() {
-            return new ForwardingConfigurationArgs(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public ForwardingConfigurationArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

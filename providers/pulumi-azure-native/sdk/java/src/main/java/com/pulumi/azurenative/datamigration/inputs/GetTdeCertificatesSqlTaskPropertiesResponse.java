@@ -31,7 +31,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="commands", required=true)
-      private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+    private List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
@@ -42,7 +42,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="errors", required=true)
-      private final List<ODataErrorResponse> errors;
+    private List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> errors() {
         return this.errors;
@@ -53,10 +53,10 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="input")
-      private final @Nullable GetTdeCertificatesSqlTaskInputResponse input;
+    private @Nullable GetTdeCertificatesSqlTaskInputResponse input;
 
     public Optional<GetTdeCertificatesSqlTaskInputResponse> input() {
-        return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="output", required=true)
-      private final List<GetTdeCertificatesSqlTaskOutputResponse> output;
+    private List<GetTdeCertificatesSqlTaskOutputResponse> output;
 
     public List<GetTdeCertificatesSqlTaskOutputResponse> output() {
         return this.output;
@@ -75,7 +75,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -87,100 +87,91 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="taskType", required=true)
-      private final String taskType;
+    private String taskType;
 
     public String taskType() {
         return this.taskType;
     }
 
-    public GetTdeCertificatesSqlTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable GetTdeCertificatesSqlTaskInputResponse input,
-        List<GetTdeCertificatesSqlTaskOutputResponse> output,
-        String state,
-        String taskType) {
-        this.commands = Objects.requireNonNull(commands, "expected parameter 'commands' to be non-null");
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.input = input;
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.taskType = Codegen.stringProp("taskType").arg(taskType).require();
-    }
+    private GetTdeCertificatesSqlTaskPropertiesResponse() {}
 
-    private GetTdeCertificatesSqlTaskPropertiesResponse() {
-        this.commands = List.of();
-        this.errors = List.of();
-        this.input = null;
-        this.output = List.of();
-        this.state = null;
-        this.taskType = null;
+    private GetTdeCertificatesSqlTaskPropertiesResponse(GetTdeCertificatesSqlTaskPropertiesResponse $) {
+        this.commands = $.commands;
+        this.errors = $.errors;
+        this.input = $.input;
+        this.output = $.output;
+        this.state = $.state;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTdeCertificatesSqlTaskPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
-        private List<ODataErrorResponse> errors;
-        private @Nullable GetTdeCertificatesSqlTaskInputResponse input;
-        private List<GetTdeCertificatesSqlTaskOutputResponse> output;
-        private String state;
-        private String taskType;
+        private GetTdeCertificatesSqlTaskPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTdeCertificatesSqlTaskPropertiesResponse();
         }
 
         public Builder(GetTdeCertificatesSqlTaskPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commands = defaults.commands;
-    	      this.errors = defaults.errors;
-    	      this.input = defaults.input;
-    	      this.output = defaults.output;
-    	      this.state = defaults.state;
-    	      this.taskType = defaults.taskType;
+            $ = new GetTdeCertificatesSqlTaskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
-            this.commands = Objects.requireNonNull(commands);
+            $.commands = commands;
             return this;
         }
+
         public Builder commands(Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>... commands) {
             return commands(List.of(commands));
         }
+
         public Builder errors(List<ODataErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ODataErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder input(@Nullable GetTdeCertificatesSqlTaskInputResponse input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
+
         public Builder output(List<GetTdeCertificatesSqlTaskOutputResponse> output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder output(GetTdeCertificatesSqlTaskOutputResponse... output) {
             return output(List.of(output));
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
-        }        public GetTdeCertificatesSqlTaskPropertiesResponse build() {
-            return new GetTdeCertificatesSqlTaskPropertiesResponse(commands, errors, input, output, state, taskType);
+        }
+
+        public GetTdeCertificatesSqlTaskPropertiesResponse build() {
+            $.commands = Objects.requireNonNull($.commands, "expected parameter 'commands' to be non-null");
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.taskType = Codegen.stringProp("taskType").arg($.taskType).require();
+            return $;
         }
     }
+
 }

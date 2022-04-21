@@ -22,7 +22,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createdOn", required=true)
-      private final String createdOn;
+    private String createdOn;
 
     public String createdOn() {
         return this.createdOn;
@@ -33,7 +33,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="deploymentId", required=true)
-      private final String deploymentId;
+    private String deploymentId;
 
     public String deploymentId() {
         return this.deploymentId;
@@ -44,7 +44,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="error", required=true)
-      private final ErrorDefinitionResponse error;
+    private ErrorDefinitionResponse error;
 
     public ErrorDefinitionResponse error() {
         return this.error;
@@ -55,7 +55,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastUpdatedOn", required=true)
-      private final String lastUpdatedOn;
+    private String lastUpdatedOn;
 
     public String lastUpdatedOn() {
         return this.lastUpdatedOn;
@@ -66,7 +66,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="remediatedResourceId", required=true)
-      private final String remediatedResourceId;
+    private String remediatedResourceId;
 
     public String remediatedResourceId() {
         return this.remediatedResourceId;
@@ -77,7 +77,7 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceLocation", required=true)
-      private final String resourceLocation;
+    private String resourceLocation;
 
     public String resourceLocation() {
         return this.resourceLocation;
@@ -88,100 +88,87 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public RemediationDeploymentResponse(
-        String createdOn,
-        String deploymentId,
-        ErrorDefinitionResponse error,
-        String lastUpdatedOn,
-        String remediatedResourceId,
-        String resourceLocation,
-        String status) {
-        this.createdOn = Objects.requireNonNull(createdOn, "expected parameter 'createdOn' to be non-null");
-        this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn, "expected parameter 'lastUpdatedOn' to be non-null");
-        this.remediatedResourceId = Objects.requireNonNull(remediatedResourceId, "expected parameter 'remediatedResourceId' to be non-null");
-        this.resourceLocation = Objects.requireNonNull(resourceLocation, "expected parameter 'resourceLocation' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private RemediationDeploymentResponse() {}
 
-    private RemediationDeploymentResponse() {
-        this.createdOn = null;
-        this.deploymentId = null;
-        this.error = null;
-        this.lastUpdatedOn = null;
-        this.remediatedResourceId = null;
-        this.resourceLocation = null;
-        this.status = null;
+    private RemediationDeploymentResponse(RemediationDeploymentResponse $) {
+        this.createdOn = $.createdOn;
+        this.deploymentId = $.deploymentId;
+        this.error = $.error;
+        this.lastUpdatedOn = $.lastUpdatedOn;
+        this.remediatedResourceId = $.remediatedResourceId;
+        this.resourceLocation = $.resourceLocation;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationDeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdOn;
-        private String deploymentId;
-        private ErrorDefinitionResponse error;
-        private String lastUpdatedOn;
-        private String remediatedResourceId;
-        private String resourceLocation;
-        private String status;
+        private RemediationDeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationDeploymentResponse();
         }
 
         public Builder(RemediationDeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdOn = defaults.createdOn;
-    	      this.deploymentId = defaults.deploymentId;
-    	      this.error = defaults.error;
-    	      this.lastUpdatedOn = defaults.lastUpdatedOn;
-    	      this.remediatedResourceId = defaults.remediatedResourceId;
-    	      this.resourceLocation = defaults.resourceLocation;
-    	      this.status = defaults.status;
+            $ = new RemediationDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdOn(String createdOn) {
-            this.createdOn = Objects.requireNonNull(createdOn);
+            $.createdOn = createdOn;
             return this;
         }
+
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Objects.requireNonNull(deploymentId);
+            $.deploymentId = deploymentId;
             return this;
         }
+
         public Builder error(ErrorDefinitionResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder lastUpdatedOn(String lastUpdatedOn) {
-            this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn);
+            $.lastUpdatedOn = lastUpdatedOn;
             return this;
         }
+
         public Builder remediatedResourceId(String remediatedResourceId) {
-            this.remediatedResourceId = Objects.requireNonNull(remediatedResourceId);
+            $.remediatedResourceId = remediatedResourceId;
             return this;
         }
+
         public Builder resourceLocation(String resourceLocation) {
-            this.resourceLocation = Objects.requireNonNull(resourceLocation);
+            $.resourceLocation = resourceLocation;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public RemediationDeploymentResponse build() {
-            return new RemediationDeploymentResponse(createdOn, deploymentId, error, lastUpdatedOn, remediatedResourceId, resourceLocation, status);
+        }
+
+        public RemediationDeploymentResponse build() {
+            $.createdOn = Objects.requireNonNull($.createdOn, "expected parameter 'createdOn' to be non-null");
+            $.deploymentId = Objects.requireNonNull($.deploymentId, "expected parameter 'deploymentId' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.lastUpdatedOn = Objects.requireNonNull($.lastUpdatedOn, "expected parameter 'lastUpdatedOn' to be non-null");
+            $.remediatedResourceId = Objects.requireNonNull($.remediatedResourceId, "expected parameter 'remediatedResourceId' to be non-null");
+            $.resourceLocation = Objects.requireNonNull($.resourceLocation, "expected parameter 'resourceLocation' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

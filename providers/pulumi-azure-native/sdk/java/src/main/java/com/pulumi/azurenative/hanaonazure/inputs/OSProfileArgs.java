@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computerName")
-      private final @Nullable Output<String> computerName;
+    private @Nullable Output<String> computerName;
 
-    public Output<String> computerName() {
-        return this.computerName == null ? Codegen.empty() : this.computerName;
+    public Optional<Output<String>> computerName() {
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshPublicKey")
-      private final @Nullable Output<String> sshPublicKey;
+    private @Nullable Output<String> sshPublicKey;
 
-    public Output<String> sshPublicKey() {
-        return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
+    public Optional<Output<String>> sshPublicKey() {
+        return Optional.ofNullable(this.sshPublicKey);
     }
 
-    public OSProfileArgs(
-        @Nullable Output<String> computerName,
-        @Nullable Output<String> sshPublicKey) {
-        this.computerName = computerName;
-        this.sshPublicKey = sshPublicKey;
-    }
+    private OSProfileArgs() {}
 
-    private OSProfileArgs() {
-        this.computerName = Codegen.empty();
-        this.sshPublicKey = Codegen.empty();
+    private OSProfileArgs(OSProfileArgs $) {
+        this.computerName = $.computerName;
+        this.sshPublicKey = $.sshPublicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> computerName;
-        private @Nullable Output<String> sshPublicKey;
+        private OSProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSProfileArgs();
         }
 
         public Builder(OSProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computerName = defaults.computerName;
-    	      this.sshPublicKey = defaults.sshPublicKey;
+            $ = new OSProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computerName(@Nullable Output<String> computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
-        public Builder computerName(@Nullable String computerName) {
-            this.computerName = Codegen.ofNullable(computerName);
-            return this;
+
+        public Builder computerName(String computerName) {
+            return computerName(Output.of(computerName));
         }
+
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
-            this.sshPublicKey = sshPublicKey;
+            $.sshPublicKey = sshPublicKey;
             return this;
         }
-        public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Codegen.ofNullable(sshPublicKey);
-            return this;
-        }        public OSProfileArgs build() {
-            return new OSProfileArgs(computerName, sshPublicKey);
+
+        public Builder sshPublicKey(String sshPublicKey) {
+            return sshPublicKey(Output.of(sshPublicKey));
+        }
+
+        public OSProfileArgs build() {
+            return $;
         }
     }
+
 }

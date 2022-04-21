@@ -26,10 +26,10 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="customEmails")
-      private final @Nullable List<String> customEmails;
+    private @Nullable List<String> customEmails;
 
-    public List<String> customEmails() {
-        return this.customEmails == null ? List.of() : this.customEmails;
+    public Optional<List<String>> customEmails() {
+        return Optional.ofNullable(this.customEmails);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sendToSubscriptionAdministrator")
-      private final @Nullable Boolean sendToSubscriptionAdministrator;
+    private @Nullable Boolean sendToSubscriptionAdministrator;
 
     public Optional<Boolean> sendToSubscriptionAdministrator() {
-        return this.sendToSubscriptionAdministrator == null ? Optional.empty() : Optional.ofNullable(this.sendToSubscriptionAdministrator);
+        return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
 
     /**
@@ -48,67 +48,62 @@ public final class EmailNotificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sendToSubscriptionCoAdministrators")
-      private final @Nullable Boolean sendToSubscriptionCoAdministrators;
+    private @Nullable Boolean sendToSubscriptionCoAdministrators;
 
     public Optional<Boolean> sendToSubscriptionCoAdministrators() {
-        return this.sendToSubscriptionCoAdministrators == null ? Optional.empty() : Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
+        return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }
 
-    public EmailNotificationResponse(
-        @Nullable List<String> customEmails,
-        @Nullable Boolean sendToSubscriptionAdministrator,
-        @Nullable Boolean sendToSubscriptionCoAdministrators) {
-        this.customEmails = customEmails;
-        this.sendToSubscriptionAdministrator = Codegen.booleanProp("sendToSubscriptionAdministrator").arg(sendToSubscriptionAdministrator).def(false).getNullable();
-        this.sendToSubscriptionCoAdministrators = Codegen.booleanProp("sendToSubscriptionCoAdministrators").arg(sendToSubscriptionCoAdministrators).def(false).getNullable();
-    }
+    private EmailNotificationResponse() {}
 
-    private EmailNotificationResponse() {
-        this.customEmails = List.of();
-        this.sendToSubscriptionAdministrator = null;
-        this.sendToSubscriptionCoAdministrators = null;
+    private EmailNotificationResponse(EmailNotificationResponse $) {
+        this.customEmails = $.customEmails;
+        this.sendToSubscriptionAdministrator = $.sendToSubscriptionAdministrator;
+        this.sendToSubscriptionCoAdministrators = $.sendToSubscriptionCoAdministrators;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailNotificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> customEmails;
-        private @Nullable Boolean sendToSubscriptionAdministrator;
-        private @Nullable Boolean sendToSubscriptionCoAdministrators;
+        private EmailNotificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailNotificationResponse();
         }
 
         public Builder(EmailNotificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEmails = defaults.customEmails;
-    	      this.sendToSubscriptionAdministrator = defaults.sendToSubscriptionAdministrator;
-    	      this.sendToSubscriptionCoAdministrators = defaults.sendToSubscriptionCoAdministrators;
+            $ = new EmailNotificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = customEmails;
+            $.customEmails = customEmails;
             return this;
         }
+
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
+
         public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
-            this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
+            $.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
+
         public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
-            this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
+            $.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
-        }        public EmailNotificationResponse build() {
-            return new EmailNotificationResponse(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
+        }
+
+        public EmailNotificationResponse build() {
+            $.sendToSubscriptionAdministrator = Codegen.booleanProp("sendToSubscriptionAdministrator").arg($.sendToSubscriptionAdministrator).def(false).getNullable();
+            $.sendToSubscriptionCoAdministrators = Codegen.booleanProp("sendToSubscriptionCoAdministrators").arg($.sendToSubscriptionCoAdministrators).def(false).getNullable();
+            return $;
         }
     }
+
 }

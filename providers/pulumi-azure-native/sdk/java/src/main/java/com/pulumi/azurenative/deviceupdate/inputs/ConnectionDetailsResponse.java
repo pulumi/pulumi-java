@@ -21,7 +21,7 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -32,7 +32,7 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,7 +43,7 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="linkIdentifier", required=true)
-      private final String linkIdentifier;
+    private String linkIdentifier;
 
     public String linkIdentifier() {
         return this.linkIdentifier;
@@ -54,7 +54,7 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="memberName", required=true)
-      private final String memberName;
+    private String memberName;
 
     public String memberName() {
         return this.memberName;
@@ -65,82 +65,73 @@ public final class ConnectionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
-    public ConnectionDetailsResponse(
-        String groupId,
-        String id,
-        String linkIdentifier,
-        String memberName,
-        String privateIpAddress) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.linkIdentifier = Objects.requireNonNull(linkIdentifier, "expected parameter 'linkIdentifier' to be non-null");
-        this.memberName = Objects.requireNonNull(memberName, "expected parameter 'memberName' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-    }
+    private ConnectionDetailsResponse() {}
 
-    private ConnectionDetailsResponse() {
-        this.groupId = null;
-        this.id = null;
-        this.linkIdentifier = null;
-        this.memberName = null;
-        this.privateIpAddress = null;
+    private ConnectionDetailsResponse(ConnectionDetailsResponse $) {
+        this.groupId = $.groupId;
+        this.id = $.id;
+        this.linkIdentifier = $.linkIdentifier;
+        this.memberName = $.memberName;
+        this.privateIpAddress = $.privateIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
-        private String id;
-        private String linkIdentifier;
-        private String memberName;
-        private String privateIpAddress;
+        private ConnectionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionDetailsResponse();
         }
 
         public Builder(ConnectionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.id = defaults.id;
-    	      this.linkIdentifier = defaults.linkIdentifier;
-    	      this.memberName = defaults.memberName;
-    	      this.privateIpAddress = defaults.privateIpAddress;
+            $ = new ConnectionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder linkIdentifier(String linkIdentifier) {
-            this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
+            $.linkIdentifier = linkIdentifier;
             return this;
         }
+
         public Builder memberName(String memberName) {
-            this.memberName = Objects.requireNonNull(memberName);
+            $.memberName = memberName;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
-        }        public ConnectionDetailsResponse build() {
-            return new ConnectionDetailsResponse(groupId, id, linkIdentifier, memberName, privateIpAddress);
+        }
+
+        public ConnectionDetailsResponse build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.linkIdentifier = Objects.requireNonNull($.linkIdentifier, "expected parameter 'linkIdentifier' to be non-null");
+            $.memberName = Objects.requireNonNull($.memberName, "expected parameter 'memberName' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

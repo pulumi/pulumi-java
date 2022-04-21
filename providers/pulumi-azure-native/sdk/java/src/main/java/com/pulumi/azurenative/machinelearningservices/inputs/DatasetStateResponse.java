@@ -24,10 +24,10 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="deprecatedBy")
-      private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
+    private @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
 
     public Optional<DatasetStateResponseDeprecatedBy> deprecatedBy() {
-        return this.deprecatedBy == null ? Optional.empty() : Optional.ofNullable(this.deprecatedBy);
+        return Optional.ofNullable(this.deprecatedBy);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -46,64 +46,57 @@ public final class DatasetStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public DatasetStateResponse(
-        @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
-        String etag,
-        @Nullable String state) {
-        this.deprecatedBy = deprecatedBy;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.state = state;
-    }
+    private DatasetStateResponse() {}
 
-    private DatasetStateResponse() {
-        this.deprecatedBy = null;
-        this.etag = null;
-        this.state = null;
+    private DatasetStateResponse(DatasetStateResponse $) {
+        this.deprecatedBy = $.deprecatedBy;
+        this.etag = $.etag;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
-        private String etag;
-        private @Nullable String state;
+        private DatasetStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetStateResponse();
         }
 
         public Builder(DatasetStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deprecatedBy = defaults.deprecatedBy;
-    	      this.etag = defaults.etag;
-    	      this.state = defaults.state;
+            $ = new DatasetStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deprecatedBy(@Nullable DatasetStateResponseDeprecatedBy deprecatedBy) {
-            this.deprecatedBy = deprecatedBy;
+            $.deprecatedBy = deprecatedBy;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public DatasetStateResponse build() {
-            return new DatasetStateResponse(deprecatedBy, etag, state);
+        }
+
+        public DatasetStateResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            return $;
         }
     }
+
 }

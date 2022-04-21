@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +21,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateExpirationDate")
-      private final @Nullable Output<String> certificateExpirationDate;
+    private @Nullable Output<String> certificateExpirationDate;
 
-    public Output<String> certificateExpirationDate() {
-        return this.certificateExpirationDate == null ? Codegen.empty() : this.certificateExpirationDate;
+    public Optional<Output<String>> certificateExpirationDate() {
+        return Optional.ofNullable(this.certificateExpirationDate);
     }
 
     /**
@@ -31,10 +32,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateSubjectName")
-      private final @Nullable Output<String> certificateSubjectName;
+    private @Nullable Output<String> certificateSubjectName;
 
-    public Output<String> certificateSubjectName() {
-        return this.certificateSubjectName == null ? Codegen.empty() : this.certificateSubjectName;
+    public Optional<Output<String>> certificateSubjectName() {
+        return Optional.ofNullable(this.certificateSubjectName);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateThumbprint")
-      private final @Nullable Output<String> certificateThumbprint;
+    private @Nullable Output<String> certificateThumbprint;
 
-    public Output<String> certificateThumbprint() {
-        return this.certificateThumbprint == null ? Codegen.empty() : this.certificateThumbprint;
+    public Optional<Output<String>> certificateThumbprint() {
+        return Optional.ofNullable(this.certificateThumbprint);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pfx")
-      private final @Nullable Output<String> pfx;
+    private @Nullable Output<String> pfx;
 
-    public Output<String> pfx() {
-        return this.pfx == null ? Codegen.empty() : this.pfx;
+    public Optional<Output<String>> pfx() {
+        return Optional.ofNullable(this.pfx);
     }
 
     /**
@@ -76,115 +77,99 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ClientCertAuthenticationArgs(
-        @Nullable Output<String> certificateExpirationDate,
-        @Nullable Output<String> certificateSubjectName,
-        @Nullable Output<String> certificateThumbprint,
-        @Nullable Output<String> password,
-        @Nullable Output<String> pfx,
-        Output<String> type) {
-        this.certificateExpirationDate = certificateExpirationDate;
-        this.certificateSubjectName = certificateSubjectName;
-        this.certificateThumbprint = certificateThumbprint;
-        this.password = password;
-        this.pfx = pfx;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ClientCertAuthenticationArgs() {}
 
-    private ClientCertAuthenticationArgs() {
-        this.certificateExpirationDate = Codegen.empty();
-        this.certificateSubjectName = Codegen.empty();
-        this.certificateThumbprint = Codegen.empty();
-        this.password = Codegen.empty();
-        this.pfx = Codegen.empty();
-        this.type = Codegen.empty();
+    private ClientCertAuthenticationArgs(ClientCertAuthenticationArgs $) {
+        this.certificateExpirationDate = $.certificateExpirationDate;
+        this.certificateSubjectName = $.certificateSubjectName;
+        this.certificateThumbprint = $.certificateThumbprint;
+        this.password = $.password;
+        this.pfx = $.pfx;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateExpirationDate;
-        private @Nullable Output<String> certificateSubjectName;
-        private @Nullable Output<String> certificateThumbprint;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> pfx;
-        private Output<String> type;
+        private ClientCertAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertAuthenticationArgs();
         }
 
         public Builder(ClientCertAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateExpirationDate = defaults.certificateExpirationDate;
-    	      this.certificateSubjectName = defaults.certificateSubjectName;
-    	      this.certificateThumbprint = defaults.certificateThumbprint;
-    	      this.password = defaults.password;
-    	      this.pfx = defaults.pfx;
-    	      this.type = defaults.type;
+            $ = new ClientCertAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateExpirationDate(@Nullable Output<String> certificateExpirationDate) {
-            this.certificateExpirationDate = certificateExpirationDate;
+            $.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
-        public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
-            this.certificateExpirationDate = Codegen.ofNullable(certificateExpirationDate);
-            return this;
+
+        public Builder certificateExpirationDate(String certificateExpirationDate) {
+            return certificateExpirationDate(Output.of(certificateExpirationDate));
         }
+
         public Builder certificateSubjectName(@Nullable Output<String> certificateSubjectName) {
-            this.certificateSubjectName = certificateSubjectName;
+            $.certificateSubjectName = certificateSubjectName;
             return this;
         }
-        public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
-            this.certificateSubjectName = Codegen.ofNullable(certificateSubjectName);
-            return this;
+
+        public Builder certificateSubjectName(String certificateSubjectName) {
+            return certificateSubjectName(Output.of(certificateSubjectName));
         }
+
         public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
-            this.certificateThumbprint = certificateThumbprint;
+            $.certificateThumbprint = certificateThumbprint;
             return this;
         }
-        public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = Codegen.ofNullable(certificateThumbprint);
-            return this;
+
+        public Builder certificateThumbprint(String certificateThumbprint) {
+            return certificateThumbprint(Output.of(certificateThumbprint));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder pfx(@Nullable Output<String> pfx) {
-            this.pfx = pfx;
+            $.pfx = pfx;
             return this;
         }
-        public Builder pfx(@Nullable String pfx) {
-            this.pfx = Codegen.ofNullable(pfx);
-            return this;
+
+        public Builder pfx(String pfx) {
+            return pfx(Output.of(pfx));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ClientCertAuthenticationArgs build() {
-            return new ClientCertAuthenticationArgs(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
+            return type(Output.of(type));
+        }
+
+        public ClientCertAuthenticationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

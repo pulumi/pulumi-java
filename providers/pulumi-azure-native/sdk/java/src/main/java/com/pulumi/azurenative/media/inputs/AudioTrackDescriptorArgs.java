@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class AudioTrackDescriptorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="channelMapping")
-      private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
+    private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Output<Either<String,ChannelMapping>> channelMapping() {
-        return this.channelMapping == null ? Codegen.empty() : this.channelMapping;
+    public Optional<Output<Either<String,ChannelMapping>>> channelMapping() {
+        return Optional.ofNullable(this.channelMapping);
     }
 
     /**
@@ -38,63 +39,59 @@ public final class AudioTrackDescriptorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public AudioTrackDescriptorArgs(
-        @Nullable Output<Either<String,ChannelMapping>> channelMapping,
-        Output<String> odataType) {
-        this.channelMapping = channelMapping;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private AudioTrackDescriptorArgs() {}
 
-    private AudioTrackDescriptorArgs() {
-        this.channelMapping = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private AudioTrackDescriptorArgs(AudioTrackDescriptorArgs $) {
+        this.channelMapping = $.channelMapping;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioTrackDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
-        private Output<String> odataType;
+        private AudioTrackDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioTrackDescriptorArgs();
         }
 
         public Builder(AudioTrackDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelMapping = defaults.channelMapping;
-    	      this.odataType = defaults.odataType;
+            $ = new AudioTrackDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
-            this.channelMapping = channelMapping;
+            $.channelMapping = channelMapping;
             return this;
         }
-        public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
-            this.channelMapping = Codegen.ofNullable(channelMapping);
-            return this;
+
+        public Builder channelMapping(Either<String,ChannelMapping> channelMapping) {
+            return channelMapping(Output.of(channelMapping));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public AudioTrackDescriptorArgs build() {
-            return new AudioTrackDescriptorArgs(channelMapping, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public AudioTrackDescriptorArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

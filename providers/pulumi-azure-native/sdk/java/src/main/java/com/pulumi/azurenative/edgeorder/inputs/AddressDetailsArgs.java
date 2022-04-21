@@ -6,7 +6,6 @@ package com.pulumi.azurenative.edgeorder.inputs;
 import com.pulumi.azurenative.edgeorder.inputs.AddressPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class AddressDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="forwardAddress", required=true)
-      private final Output<AddressPropertiesArgs> forwardAddress;
+    private Output<AddressPropertiesArgs> forwardAddress;
 
     public Output<AddressPropertiesArgs> forwardAddress() {
         return this.forwardAddress;
     }
 
-    public AddressDetailsArgs(Output<AddressPropertiesArgs> forwardAddress) {
-        this.forwardAddress = Objects.requireNonNull(forwardAddress, "expected parameter 'forwardAddress' to be non-null");
-    }
+    private AddressDetailsArgs() {}
 
-    private AddressDetailsArgs() {
-        this.forwardAddress = Codegen.empty();
+    private AddressDetailsArgs(AddressDetailsArgs $) {
+        this.forwardAddress = $.forwardAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AddressPropertiesArgs> forwardAddress;
+        private AddressDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressDetailsArgs();
         }
 
         public Builder(AddressDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardAddress = defaults.forwardAddress;
+            $ = new AddressDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardAddress(Output<AddressPropertiesArgs> forwardAddress) {
-            this.forwardAddress = Objects.requireNonNull(forwardAddress);
+            $.forwardAddress = forwardAddress;
             return this;
         }
+
         public Builder forwardAddress(AddressPropertiesArgs forwardAddress) {
-            this.forwardAddress = Output.of(Objects.requireNonNull(forwardAddress));
-            return this;
-        }        public AddressDetailsArgs build() {
-            return new AddressDetailsArgs(forwardAddress);
+            return forwardAddress(Output.of(forwardAddress));
+        }
+
+        public AddressDetailsArgs build() {
+            $.forwardAddress = Objects.requireNonNull($.forwardAddress, "expected parameter 'forwardAddress' to be non-null");
+            return $;
         }
     }
+
 }

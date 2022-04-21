@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enableAutomaticUpdates")
-      private final @Nullable Output<Boolean> enableAutomaticUpdates;
+    private @Nullable Output<Boolean> enableAutomaticUpdates;
 
-    public Output<Boolean> enableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Codegen.empty() : this.enableAutomaticUpdates;
+    public Optional<Output<Boolean>> enableAutomaticUpdates() {
+        return Optional.ofNullable(this.enableAutomaticUpdates);
     }
 
-    public WindowsConfigurationArgs(@Nullable Output<Boolean> enableAutomaticUpdates) {
-        this.enableAutomaticUpdates = enableAutomaticUpdates;
-    }
+    private WindowsConfigurationArgs() {}
 
-    private WindowsConfigurationArgs() {
-        this.enableAutomaticUpdates = Codegen.empty();
+    private WindowsConfigurationArgs(WindowsConfigurationArgs $) {
+        this.enableAutomaticUpdates = $.enableAutomaticUpdates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableAutomaticUpdates;
+        private WindowsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsConfigurationArgs();
         }
 
         public Builder(WindowsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableAutomaticUpdates = defaults.enableAutomaticUpdates;
+            $ = new WindowsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableAutomaticUpdates(@Nullable Output<Boolean> enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = enableAutomaticUpdates;
+            $.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
-        public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = Codegen.ofNullable(enableAutomaticUpdates);
-            return this;
-        }        public WindowsConfigurationArgs build() {
-            return new WindowsConfigurationArgs(enableAutomaticUpdates);
+
+        public Builder enableAutomaticUpdates(Boolean enableAutomaticUpdates) {
+            return enableAutomaticUpdates(Output.of(enableAutomaticUpdates));
+        }
+
+        public WindowsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
      * 
      */
     @Import(name="allowedActions")
-      private final @Nullable Output<List<String>> allowedActions;
+    private @Nullable Output<List<String>> allowedActions;
 
-    public Output<List<String>> allowedActions() {
-        return this.allowedActions == null ? Codegen.empty() : this.allowedActions;
+    public Optional<Output<List<String>>> allowedActions() {
+        return Optional.ofNullable(this.allowedActions);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
      * 
      */
     @Import(name="allowedDataActions")
-      private final @Nullable Output<List<String>> allowedDataActions;
+    private @Nullable Output<List<String>> allowedDataActions;
 
-    public Output<List<String>> allowedDataActions() {
-        return this.allowedDataActions == null ? Codegen.empty() : this.allowedDataActions;
+    public Optional<Output<List<String>>> allowedDataActions() {
+        return Optional.ofNullable(this.allowedDataActions);
     }
 
-    public ApplicationPackageLockingPolicyDefinitionArgs(
-        @Nullable Output<List<String>> allowedActions,
-        @Nullable Output<List<String>> allowedDataActions) {
-        this.allowedActions = allowedActions;
-        this.allowedDataActions = allowedDataActions;
-    }
+    private ApplicationPackageLockingPolicyDefinitionArgs() {}
 
-    private ApplicationPackageLockingPolicyDefinitionArgs() {
-        this.allowedActions = Codegen.empty();
-        this.allowedDataActions = Codegen.empty();
+    private ApplicationPackageLockingPolicyDefinitionArgs(ApplicationPackageLockingPolicyDefinitionArgs $) {
+        this.allowedActions = $.allowedActions;
+        this.allowedDataActions = $.allowedDataActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageLockingPolicyDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedActions;
-        private @Nullable Output<List<String>> allowedDataActions;
+        private ApplicationPackageLockingPolicyDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageLockingPolicyDefinitionArgs();
         }
 
         public Builder(ApplicationPackageLockingPolicyDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedActions = defaults.allowedActions;
-    	      this.allowedDataActions = defaults.allowedDataActions;
+            $ = new ApplicationPackageLockingPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedActions(@Nullable Output<List<String>> allowedActions) {
-            this.allowedActions = allowedActions;
+            $.allowedActions = allowedActions;
             return this;
         }
-        public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = Codegen.ofNullable(allowedActions);
-            return this;
+
+        public Builder allowedActions(List<String> allowedActions) {
+            return allowedActions(Output.of(allowedActions));
         }
+
         public Builder allowedActions(String... allowedActions) {
             return allowedActions(List.of(allowedActions));
         }
+
         public Builder allowedDataActions(@Nullable Output<List<String>> allowedDataActions) {
-            this.allowedDataActions = allowedDataActions;
+            $.allowedDataActions = allowedDataActions;
             return this;
         }
-        public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
-            this.allowedDataActions = Codegen.ofNullable(allowedDataActions);
-            return this;
+
+        public Builder allowedDataActions(List<String> allowedDataActions) {
+            return allowedDataActions(Output.of(allowedDataActions));
         }
+
         public Builder allowedDataActions(String... allowedDataActions) {
             return allowedDataActions(List.of(allowedDataActions));
-        }        public ApplicationPackageLockingPolicyDefinitionArgs build() {
-            return new ApplicationPackageLockingPolicyDefinitionArgs(allowedActions, allowedDataActions);
+        }
+
+        public ApplicationPackageLockingPolicyDefinitionArgs build() {
+            return $;
         }
     }
+
 }

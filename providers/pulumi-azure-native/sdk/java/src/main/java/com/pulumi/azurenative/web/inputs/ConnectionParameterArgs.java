@@ -7,8 +7,8 @@ import com.pulumi.azurenative.web.enums.ConnectionParameterType;
 import com.pulumi.azurenative.web.inputs.ApiOAuthSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="oAuthSettings")
-      private final @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
+    private @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
 
-    public Output<ApiOAuthSettingsArgs> oAuthSettings() {
-        return this.oAuthSettings == null ? Codegen.empty() : this.oAuthSettings;
+    public Optional<Output<ApiOAuthSettingsArgs>> oAuthSettings() {
+        return Optional.ofNullable(this.oAuthSettings);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ConnectionParameterType> type;
+    private @Nullable Output<ConnectionParameterType> type;
 
-    public Output<ConnectionParameterType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ConnectionParameterType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionParameterArgs(
-        @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings,
-        @Nullable Output<ConnectionParameterType> type) {
-        this.oAuthSettings = oAuthSettings;
-        this.type = type;
-    }
+    private ConnectionParameterArgs() {}
 
-    private ConnectionParameterArgs() {
-        this.oAuthSettings = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConnectionParameterArgs(ConnectionParameterArgs $) {
+        this.oAuthSettings = $.oAuthSettings;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
-        private @Nullable Output<ConnectionParameterType> type;
+        private ConnectionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionParameterArgs();
         }
 
         public Builder(ConnectionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oAuthSettings = defaults.oAuthSettings;
-    	      this.type = defaults.type;
+            $ = new ConnectionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oAuthSettings(@Nullable Output<ApiOAuthSettingsArgs> oAuthSettings) {
-            this.oAuthSettings = oAuthSettings;
+            $.oAuthSettings = oAuthSettings;
             return this;
         }
-        public Builder oAuthSettings(@Nullable ApiOAuthSettingsArgs oAuthSettings) {
-            this.oAuthSettings = Codegen.ofNullable(oAuthSettings);
-            return this;
+
+        public Builder oAuthSettings(ApiOAuthSettingsArgs oAuthSettings) {
+            return oAuthSettings(Output.of(oAuthSettings));
         }
+
         public Builder type(@Nullable Output<ConnectionParameterType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ConnectionParameterType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ConnectionParameterArgs build() {
-            return new ConnectionParameterArgs(oAuthSettings, type);
+
+        public Builder type(ConnectionParameterType type) {
+            return type(Output.of(type));
+        }
+
+        public ConnectionParameterArgs build() {
+            return $;
         }
     }
+
 }

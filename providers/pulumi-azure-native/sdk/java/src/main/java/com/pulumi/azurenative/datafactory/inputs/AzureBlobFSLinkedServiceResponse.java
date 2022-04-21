@@ -33,10 +33,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Object accountKey;
+    private @Nullable Object accountKey;
 
     public Optional<Object> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="azureCloudType")
-      private final @Nullable Object azureCloudType;
+    private @Nullable Object azureCloudType;
 
     public Optional<Object> azureCloudType() {
-        return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
+        return Optional.ofNullable(this.azureCloudType);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="servicePrincipalCredential")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential() {
-        return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalCredential() {
+        return Optional.ofNullable(this.servicePrincipalCredential);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="servicePrincipalCredentialType")
-      private final @Nullable Object servicePrincipalCredentialType;
+    private @Nullable Object servicePrincipalCredentialType;
 
     public Optional<Object> servicePrincipalCredentialType() {
-        return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
+        return Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Object tenant;
+    private @Nullable Object tenant;
 
     public Optional<Object> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -177,7 +177,7 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -188,175 +188,134 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
     }
 
-    public AzureBlobFSLinkedServiceResponse(
-        @Nullable Object accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
-        @Nullable Object servicePrincipalCredentialType,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type,
-        Object url) {
-        this.accountKey = accountKey;
-        this.annotations = annotations;
-        this.azureCloudType = azureCloudType;
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.servicePrincipalCredential = servicePrincipalCredential;
-        this.servicePrincipalCredentialType = servicePrincipalCredentialType;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private AzureBlobFSLinkedServiceResponse() {}
 
-    private AzureBlobFSLinkedServiceResponse() {
-        this.accountKey = null;
-        this.annotations = List.of();
-        this.azureCloudType = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.servicePrincipalCredential = null;
-        this.servicePrincipalCredentialType = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.tenant = null;
-        this.type = null;
-        this.url = null;
+    private AzureBlobFSLinkedServiceResponse(AzureBlobFSLinkedServiceResponse $) {
+        this.accountKey = $.accountKey;
+        this.annotations = $.annotations;
+        this.azureCloudType = $.azureCloudType;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.servicePrincipalCredential = $.servicePrincipalCredential;
+        this.servicePrincipalCredentialType = $.servicePrincipalCredentialType;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.tenant = $.tenant;
+        this.type = $.type;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobFSLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object accountKey;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object azureCloudType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
-        private @Nullable Object servicePrincipalCredentialType;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private @Nullable Object tenant;
-        private String type;
-        private Object url;
+        private AzureBlobFSLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobFSLinkedServiceResponse();
         }
 
         public Builder(AzureBlobFSLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.annotations = defaults.annotations;
-    	      this.azureCloudType = defaults.azureCloudType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.servicePrincipalCredential = defaults.servicePrincipalCredential;
-    	      this.servicePrincipalCredentialType = defaults.servicePrincipalCredentialType;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
+            $ = new AzureBlobFSLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable Object accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = azureCloudType;
+            $.azureCloudType = azureCloudType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential) {
-            this.servicePrincipalCredential = servicePrincipalCredential;
+            $.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
+
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
-            this.servicePrincipalCredentialType = servicePrincipalCredentialType;
+            $.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public AzureBlobFSLinkedServiceResponse build() {
-            return new AzureBlobFSLinkedServiceResponse(accountKey, annotations, azureCloudType, connectVia, credential, description, encryptedCredential, parameters, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, servicePrincipalKey, tenant, type, url);
+        }
+
+        public AzureBlobFSLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

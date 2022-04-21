@@ -23,10 +23,10 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="certificateKey")
-      private final @Nullable String certificateKey;
+    private @Nullable String certificateKey;
 
     public Optional<String> certificateKey() {
-        return this.certificateKey == null ? Optional.empty() : Optional.ofNullable(this.certificateKey);
+        return Optional.ofNullable(this.certificateKey);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mpnsCertificate")
-      private final @Nullable String mpnsCertificate;
+    private @Nullable String mpnsCertificate;
 
     public Optional<String> mpnsCertificate() {
-        return this.mpnsCertificate == null ? Optional.empty() : Optional.ofNullable(this.mpnsCertificate);
+        return Optional.ofNullable(this.mpnsCertificate);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public MpnsCredentialResponse(
-        @Nullable String certificateKey,
-        @Nullable String mpnsCertificate,
-        @Nullable String thumbprint) {
-        this.certificateKey = certificateKey;
-        this.mpnsCertificate = mpnsCertificate;
-        this.thumbprint = thumbprint;
-    }
+    private MpnsCredentialResponse() {}
 
-    private MpnsCredentialResponse() {
-        this.certificateKey = null;
-        this.mpnsCertificate = null;
-        this.thumbprint = null;
+    private MpnsCredentialResponse(MpnsCredentialResponse $) {
+        this.certificateKey = $.certificateKey;
+        this.mpnsCertificate = $.mpnsCertificate;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MpnsCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateKey;
-        private @Nullable String mpnsCertificate;
-        private @Nullable String thumbprint;
+        private MpnsCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MpnsCredentialResponse();
         }
 
         public Builder(MpnsCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateKey = defaults.certificateKey;
-    	      this.mpnsCertificate = defaults.mpnsCertificate;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new MpnsCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = certificateKey;
+            $.certificateKey = certificateKey;
             return this;
         }
+
         public Builder mpnsCertificate(@Nullable String mpnsCertificate) {
-            this.mpnsCertificate = mpnsCertificate;
+            $.mpnsCertificate = mpnsCertificate;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public MpnsCredentialResponse build() {
-            return new MpnsCredentialResponse(certificateKey, mpnsCertificate, thumbprint);
+        }
+
+        public MpnsCredentialResponse build() {
+            return $;
         }
     }
+
 }

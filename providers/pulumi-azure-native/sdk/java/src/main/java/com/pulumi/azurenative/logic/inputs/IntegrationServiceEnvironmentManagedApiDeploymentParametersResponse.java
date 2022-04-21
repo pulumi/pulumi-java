@@ -23,45 +23,44 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
      * 
      */
     @Import(name="contentLinkDefinition")
-      private final @Nullable ContentLinkResponse contentLinkDefinition;
+    private @Nullable ContentLinkResponse contentLinkDefinition;
 
     public Optional<ContentLinkResponse> contentLinkDefinition() {
-        return this.contentLinkDefinition == null ? Optional.empty() : Optional.ofNullable(this.contentLinkDefinition);
+        return Optional.ofNullable(this.contentLinkDefinition);
     }
 
-    public IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(@Nullable ContentLinkResponse contentLinkDefinition) {
-        this.contentLinkDefinition = contentLinkDefinition;
-    }
+    private IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse() {}
 
-    private IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse() {
-        this.contentLinkDefinition = null;
+    private IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse $) {
+        this.contentLinkDefinition = $.contentLinkDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ContentLinkResponse contentLinkDefinition;
+        private IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse();
         }
 
         public Builder(IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentLinkDefinition = defaults.contentLinkDefinition;
+            $ = new IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentLinkDefinition(@Nullable ContentLinkResponse contentLinkDefinition) {
-            this.contentLinkDefinition = contentLinkDefinition;
+            $.contentLinkDefinition = contentLinkDefinition;
             return this;
-        }        public IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse build() {
-            return new IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(contentLinkDefinition);
+        }
+
+        public IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse build() {
+            return $;
         }
     }
+
 }

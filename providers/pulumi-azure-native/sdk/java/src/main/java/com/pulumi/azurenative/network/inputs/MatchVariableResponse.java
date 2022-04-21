@@ -23,10 +23,10 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="selector")
-      private final @Nullable String selector;
+    private @Nullable String selector;
 
     public Optional<String> selector() {
-        return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="variableName", required=true)
-      private final String variableName;
+    private String variableName;
 
     public String variableName() {
         return this.variableName;
     }
 
-    public MatchVariableResponse(
-        @Nullable String selector,
-        String variableName) {
-        this.selector = selector;
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-    }
+    private MatchVariableResponse() {}
 
-    private MatchVariableResponse() {
-        this.selector = null;
-        this.variableName = null;
+    private MatchVariableResponse(MatchVariableResponse $) {
+        this.selector = $.selector;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MatchVariableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String selector;
-        private String variableName;
+        private MatchVariableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MatchVariableResponse();
         }
 
         public Builder(MatchVariableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selector = defaults.selector;
-    	      this.variableName = defaults.variableName;
+            $ = new MatchVariableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
-        }        public MatchVariableResponse build() {
-            return new MatchVariableResponse(selector, variableName);
+        }
+
+        public MatchVariableResponse build() {
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            return $;
         }
     }
+
 }

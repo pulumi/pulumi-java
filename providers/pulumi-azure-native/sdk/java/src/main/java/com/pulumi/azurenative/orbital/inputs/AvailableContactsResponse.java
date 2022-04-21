@@ -25,7 +25,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endAzimuthDegrees", required=true)
-      private final Double endAzimuthDegrees;
+    private Double endAzimuthDegrees;
 
     public Double endAzimuthDegrees() {
         return this.endAzimuthDegrees;
@@ -36,7 +36,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endElevationDegrees", required=true)
-      private final Double endElevationDegrees;
+    private Double endElevationDegrees;
 
     public Double endElevationDegrees() {
         return this.endElevationDegrees;
@@ -47,7 +47,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="groundStationName", required=true)
-      private final String groundStationName;
+    private String groundStationName;
 
     public String groundStationName() {
         return this.groundStationName;
@@ -58,7 +58,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maximumElevationDegrees", required=true)
-      private final Double maximumElevationDegrees;
+    private Double maximumElevationDegrees;
 
     public Double maximumElevationDegrees() {
         return this.maximumElevationDegrees;
@@ -69,7 +69,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rxEndTime", required=true)
-      private final String rxEndTime;
+    private String rxEndTime;
 
     public String rxEndTime() {
         return this.rxEndTime;
@@ -80,7 +80,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rxStartTime", required=true)
-      private final String rxStartTime;
+    private String rxStartTime;
 
     public String rxStartTime() {
         return this.rxStartTime;
@@ -91,10 +91,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="spacecraft")
-      private final @Nullable ResourceReferenceResponse spacecraft;
+    private @Nullable ResourceReferenceResponse spacecraft;
 
     public Optional<ResourceReferenceResponse> spacecraft() {
-        return this.spacecraft == null ? Optional.empty() : Optional.ofNullable(this.spacecraft);
+        return Optional.ofNullable(this.spacecraft);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startAzimuthDegrees", required=true)
-      private final Double startAzimuthDegrees;
+    private Double startAzimuthDegrees;
 
     public Double startAzimuthDegrees() {
         return this.startAzimuthDegrees;
@@ -113,7 +113,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startElevationDegrees", required=true)
-      private final Double startElevationDegrees;
+    private Double startElevationDegrees;
 
     public Double startElevationDegrees() {
         return this.startElevationDegrees;
@@ -124,7 +124,7 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="txEndTime", required=true)
-      private final String txEndTime;
+    private String txEndTime;
 
     public String txEndTime() {
         return this.txEndTime;
@@ -135,136 +135,114 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="txStartTime", required=true)
-      private final String txStartTime;
+    private String txStartTime;
 
     public String txStartTime() {
         return this.txStartTime;
     }
 
-    public AvailableContactsResponse(
-        Double endAzimuthDegrees,
-        Double endElevationDegrees,
-        String groundStationName,
-        Double maximumElevationDegrees,
-        String rxEndTime,
-        String rxStartTime,
-        @Nullable ResourceReferenceResponse spacecraft,
-        Double startAzimuthDegrees,
-        Double startElevationDegrees,
-        String txEndTime,
-        String txStartTime) {
-        this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees, "expected parameter 'endAzimuthDegrees' to be non-null");
-        this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees, "expected parameter 'endElevationDegrees' to be non-null");
-        this.groundStationName = Objects.requireNonNull(groundStationName, "expected parameter 'groundStationName' to be non-null");
-        this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees, "expected parameter 'maximumElevationDegrees' to be non-null");
-        this.rxEndTime = Objects.requireNonNull(rxEndTime, "expected parameter 'rxEndTime' to be non-null");
-        this.rxStartTime = Objects.requireNonNull(rxStartTime, "expected parameter 'rxStartTime' to be non-null");
-        this.spacecraft = spacecraft;
-        this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees, "expected parameter 'startAzimuthDegrees' to be non-null");
-        this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees, "expected parameter 'startElevationDegrees' to be non-null");
-        this.txEndTime = Objects.requireNonNull(txEndTime, "expected parameter 'txEndTime' to be non-null");
-        this.txStartTime = Objects.requireNonNull(txStartTime, "expected parameter 'txStartTime' to be non-null");
-    }
+    private AvailableContactsResponse() {}
 
-    private AvailableContactsResponse() {
-        this.endAzimuthDegrees = null;
-        this.endElevationDegrees = null;
-        this.groundStationName = null;
-        this.maximumElevationDegrees = null;
-        this.rxEndTime = null;
-        this.rxStartTime = null;
-        this.spacecraft = null;
-        this.startAzimuthDegrees = null;
-        this.startElevationDegrees = null;
-        this.txEndTime = null;
-        this.txStartTime = null;
+    private AvailableContactsResponse(AvailableContactsResponse $) {
+        this.endAzimuthDegrees = $.endAzimuthDegrees;
+        this.endElevationDegrees = $.endElevationDegrees;
+        this.groundStationName = $.groundStationName;
+        this.maximumElevationDegrees = $.maximumElevationDegrees;
+        this.rxEndTime = $.rxEndTime;
+        this.rxStartTime = $.rxStartTime;
+        this.spacecraft = $.spacecraft;
+        this.startAzimuthDegrees = $.startAzimuthDegrees;
+        this.startElevationDegrees = $.startElevationDegrees;
+        this.txEndTime = $.txEndTime;
+        this.txStartTime = $.txStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailableContactsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double endAzimuthDegrees;
-        private Double endElevationDegrees;
-        private String groundStationName;
-        private Double maximumElevationDegrees;
-        private String rxEndTime;
-        private String rxStartTime;
-        private @Nullable ResourceReferenceResponse spacecraft;
-        private Double startAzimuthDegrees;
-        private Double startElevationDegrees;
-        private String txEndTime;
-        private String txStartTime;
+        private AvailableContactsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailableContactsResponse();
         }
 
         public Builder(AvailableContactsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endAzimuthDegrees = defaults.endAzimuthDegrees;
-    	      this.endElevationDegrees = defaults.endElevationDegrees;
-    	      this.groundStationName = defaults.groundStationName;
-    	      this.maximumElevationDegrees = defaults.maximumElevationDegrees;
-    	      this.rxEndTime = defaults.rxEndTime;
-    	      this.rxStartTime = defaults.rxStartTime;
-    	      this.spacecraft = defaults.spacecraft;
-    	      this.startAzimuthDegrees = defaults.startAzimuthDegrees;
-    	      this.startElevationDegrees = defaults.startElevationDegrees;
-    	      this.txEndTime = defaults.txEndTime;
-    	      this.txStartTime = defaults.txStartTime;
+            $ = new AvailableContactsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endAzimuthDegrees(Double endAzimuthDegrees) {
-            this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
+            $.endAzimuthDegrees = endAzimuthDegrees;
             return this;
         }
+
         public Builder endElevationDegrees(Double endElevationDegrees) {
-            this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
+            $.endElevationDegrees = endElevationDegrees;
             return this;
         }
+
         public Builder groundStationName(String groundStationName) {
-            this.groundStationName = Objects.requireNonNull(groundStationName);
+            $.groundStationName = groundStationName;
             return this;
         }
+
         public Builder maximumElevationDegrees(Double maximumElevationDegrees) {
-            this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
+            $.maximumElevationDegrees = maximumElevationDegrees;
             return this;
         }
+
         public Builder rxEndTime(String rxEndTime) {
-            this.rxEndTime = Objects.requireNonNull(rxEndTime);
+            $.rxEndTime = rxEndTime;
             return this;
         }
+
         public Builder rxStartTime(String rxStartTime) {
-            this.rxStartTime = Objects.requireNonNull(rxStartTime);
+            $.rxStartTime = rxStartTime;
             return this;
         }
+
         public Builder spacecraft(@Nullable ResourceReferenceResponse spacecraft) {
-            this.spacecraft = spacecraft;
+            $.spacecraft = spacecraft;
             return this;
         }
+
         public Builder startAzimuthDegrees(Double startAzimuthDegrees) {
-            this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
+            $.startAzimuthDegrees = startAzimuthDegrees;
             return this;
         }
+
         public Builder startElevationDegrees(Double startElevationDegrees) {
-            this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
+            $.startElevationDegrees = startElevationDegrees;
             return this;
         }
+
         public Builder txEndTime(String txEndTime) {
-            this.txEndTime = Objects.requireNonNull(txEndTime);
+            $.txEndTime = txEndTime;
             return this;
         }
+
         public Builder txStartTime(String txStartTime) {
-            this.txStartTime = Objects.requireNonNull(txStartTime);
+            $.txStartTime = txStartTime;
             return this;
-        }        public AvailableContactsResponse build() {
-            return new AvailableContactsResponse(endAzimuthDegrees, endElevationDegrees, groundStationName, maximumElevationDegrees, rxEndTime, rxStartTime, spacecraft, startAzimuthDegrees, startElevationDegrees, txEndTime, txStartTime);
+        }
+
+        public AvailableContactsResponse build() {
+            $.endAzimuthDegrees = Objects.requireNonNull($.endAzimuthDegrees, "expected parameter 'endAzimuthDegrees' to be non-null");
+            $.endElevationDegrees = Objects.requireNonNull($.endElevationDegrees, "expected parameter 'endElevationDegrees' to be non-null");
+            $.groundStationName = Objects.requireNonNull($.groundStationName, "expected parameter 'groundStationName' to be non-null");
+            $.maximumElevationDegrees = Objects.requireNonNull($.maximumElevationDegrees, "expected parameter 'maximumElevationDegrees' to be non-null");
+            $.rxEndTime = Objects.requireNonNull($.rxEndTime, "expected parameter 'rxEndTime' to be non-null");
+            $.rxStartTime = Objects.requireNonNull($.rxStartTime, "expected parameter 'rxStartTime' to be non-null");
+            $.startAzimuthDegrees = Objects.requireNonNull($.startAzimuthDegrees, "expected parameter 'startAzimuthDegrees' to be non-null");
+            $.startElevationDegrees = Objects.requireNonNull($.startElevationDegrees, "expected parameter 'startElevationDegrees' to be non-null");
+            $.txEndTime = Objects.requireNonNull($.txEndTime, "expected parameter 'txEndTime' to be non-null");
+            $.txStartTime = Objects.requireNonNull($.txStartTime, "expected parameter 'txStartTime' to be non-null");
+            return $;
         }
     }
+
 }

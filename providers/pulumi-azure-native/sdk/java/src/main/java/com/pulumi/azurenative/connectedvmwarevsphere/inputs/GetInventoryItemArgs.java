@@ -17,7 +17,7 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inventoryItemName", required=true)
-      private final String inventoryItemName;
+    private String inventoryItemName;
 
     public String inventoryItemName() {
         return this.inventoryItemName;
@@ -28,7 +28,7 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetInventoryItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vcenterName", required=true)
-      private final String vcenterName;
+    private String vcenterName;
 
     public String vcenterName() {
         return this.vcenterName;
     }
 
-    public GetInventoryItemArgs(
-        String inventoryItemName,
-        String resourceGroupName,
-        String vcenterName) {
-        this.inventoryItemName = Objects.requireNonNull(inventoryItemName, "expected parameter 'inventoryItemName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vcenterName = Objects.requireNonNull(vcenterName, "expected parameter 'vcenterName' to be non-null");
-    }
+    private GetInventoryItemArgs() {}
 
-    private GetInventoryItemArgs() {
-        this.inventoryItemName = null;
-        this.resourceGroupName = null;
-        this.vcenterName = null;
+    private GetInventoryItemArgs(GetInventoryItemArgs $) {
+        this.inventoryItemName = $.inventoryItemName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vcenterName = $.vcenterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInventoryItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String inventoryItemName;
-        private String resourceGroupName;
-        private String vcenterName;
+        private GetInventoryItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInventoryItemArgs();
         }
 
         public Builder(GetInventoryItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inventoryItemName = defaults.inventoryItemName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vcenterName = defaults.vcenterName;
+            $ = new GetInventoryItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inventoryItemName(String inventoryItemName) {
-            this.inventoryItemName = Objects.requireNonNull(inventoryItemName);
+            $.inventoryItemName = inventoryItemName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vcenterName(String vcenterName) {
-            this.vcenterName = Objects.requireNonNull(vcenterName);
+            $.vcenterName = vcenterName;
             return this;
-        }        public GetInventoryItemArgs build() {
-            return new GetInventoryItemArgs(inventoryItemName, resourceGroupName, vcenterName);
+        }
+
+        public GetInventoryItemArgs build() {
+            $.inventoryItemName = Objects.requireNonNull($.inventoryItemName, "expected parameter 'inventoryItemName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vcenterName = Objects.requireNonNull($.vcenterName, "expected parameter 'vcenterName' to be non-null");
+            return $;
         }
     }
+
 }

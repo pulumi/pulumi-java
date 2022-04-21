@@ -13,45 +13,45 @@ public final class ResourceTypeEndpointResponseFeaturesRule extends com.pulumi.r
     public static final ResourceTypeEndpointResponseFeaturesRule Empty = new ResourceTypeEndpointResponseFeaturesRule();
 
     @Import(name="requiredFeaturesPolicy", required=true)
-      private final String requiredFeaturesPolicy;
+    private String requiredFeaturesPolicy;
 
     public String requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 
-    public ResourceTypeEndpointResponseFeaturesRule(String requiredFeaturesPolicy) {
-        this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
-    }
+    private ResourceTypeEndpointResponseFeaturesRule() {}
 
-    private ResourceTypeEndpointResponseFeaturesRule() {
-        this.requiredFeaturesPolicy = null;
+    private ResourceTypeEndpointResponseFeaturesRule(ResourceTypeEndpointResponseFeaturesRule $) {
+        this.requiredFeaturesPolicy = $.requiredFeaturesPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeEndpointResponseFeaturesRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String requiredFeaturesPolicy;
+        private ResourceTypeEndpointResponseFeaturesRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeEndpointResponseFeaturesRule();
         }
 
         public Builder(ResourceTypeEndpointResponseFeaturesRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
+            $ = new ResourceTypeEndpointResponseFeaturesRule(Objects.requireNonNull(defaults));
         }
 
         public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
-            this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
+            $.requiredFeaturesPolicy = requiredFeaturesPolicy;
             return this;
-        }        public ResourceTypeEndpointResponseFeaturesRule build() {
-            return new ResourceTypeEndpointResponseFeaturesRule(requiredFeaturesPolicy);
+        }
+
+        public ResourceTypeEndpointResponseFeaturesRule build() {
+            $.requiredFeaturesPolicy = Objects.requireNonNull($.requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
+            return $;
         }
     }
+
 }

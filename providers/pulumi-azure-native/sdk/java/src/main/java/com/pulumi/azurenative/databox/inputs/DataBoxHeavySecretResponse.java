@@ -24,7 +24,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accountCredentialDetails", required=true)
-      private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
+    private List<AccountCredentialDetailsResponse> accountCredentialDetails;
 
     public List<AccountCredentialDetailsResponse> accountCredentialDetails() {
         return this.accountCredentialDetails;
@@ -35,7 +35,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="devicePassword", required=true)
-      private final String devicePassword;
+    private String devicePassword;
 
     public String devicePassword() {
         return this.devicePassword;
@@ -46,7 +46,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deviceSerialNumber", required=true)
-      private final String deviceSerialNumber;
+    private String deviceSerialNumber;
 
     public String deviceSerialNumber() {
         return this.deviceSerialNumber;
@@ -57,7 +57,7 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="encodedValidationCertPubKey", required=true)
-      private final String encodedValidationCertPubKey;
+    private String encodedValidationCertPubKey;
 
     public String encodedValidationCertPubKey() {
         return this.encodedValidationCertPubKey;
@@ -68,88 +68,81 @@ public final class DataBoxHeavySecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="networkConfigurations", required=true)
-      private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
+    private List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
     public List<ApplianceNetworkConfigurationResponse> networkConfigurations() {
         return this.networkConfigurations;
     }
 
-    public DataBoxHeavySecretResponse(
-        List<AccountCredentialDetailsResponse> accountCredentialDetails,
-        String devicePassword,
-        String deviceSerialNumber,
-        String encodedValidationCertPubKey,
-        List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
-        this.accountCredentialDetails = Objects.requireNonNull(accountCredentialDetails, "expected parameter 'accountCredentialDetails' to be non-null");
-        this.devicePassword = Objects.requireNonNull(devicePassword, "expected parameter 'devicePassword' to be non-null");
-        this.deviceSerialNumber = Objects.requireNonNull(deviceSerialNumber, "expected parameter 'deviceSerialNumber' to be non-null");
-        this.encodedValidationCertPubKey = Objects.requireNonNull(encodedValidationCertPubKey, "expected parameter 'encodedValidationCertPubKey' to be non-null");
-        this.networkConfigurations = Objects.requireNonNull(networkConfigurations, "expected parameter 'networkConfigurations' to be non-null");
-    }
+    private DataBoxHeavySecretResponse() {}
 
-    private DataBoxHeavySecretResponse() {
-        this.accountCredentialDetails = List.of();
-        this.devicePassword = null;
-        this.deviceSerialNumber = null;
-        this.encodedValidationCertPubKey = null;
-        this.networkConfigurations = List.of();
+    private DataBoxHeavySecretResponse(DataBoxHeavySecretResponse $) {
+        this.accountCredentialDetails = $.accountCredentialDetails;
+        this.devicePassword = $.devicePassword;
+        this.deviceSerialNumber = $.deviceSerialNumber;
+        this.encodedValidationCertPubKey = $.encodedValidationCertPubKey;
+        this.networkConfigurations = $.networkConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxHeavySecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AccountCredentialDetailsResponse> accountCredentialDetails;
-        private String devicePassword;
-        private String deviceSerialNumber;
-        private String encodedValidationCertPubKey;
-        private List<ApplianceNetworkConfigurationResponse> networkConfigurations;
+        private DataBoxHeavySecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxHeavySecretResponse();
         }
 
         public Builder(DataBoxHeavySecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountCredentialDetails = defaults.accountCredentialDetails;
-    	      this.devicePassword = defaults.devicePassword;
-    	      this.deviceSerialNumber = defaults.deviceSerialNumber;
-    	      this.encodedValidationCertPubKey = defaults.encodedValidationCertPubKey;
-    	      this.networkConfigurations = defaults.networkConfigurations;
+            $ = new DataBoxHeavySecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountCredentialDetails(List<AccountCredentialDetailsResponse> accountCredentialDetails) {
-            this.accountCredentialDetails = Objects.requireNonNull(accountCredentialDetails);
+            $.accountCredentialDetails = accountCredentialDetails;
             return this;
         }
+
         public Builder accountCredentialDetails(AccountCredentialDetailsResponse... accountCredentialDetails) {
             return accountCredentialDetails(List.of(accountCredentialDetails));
         }
+
         public Builder devicePassword(String devicePassword) {
-            this.devicePassword = Objects.requireNonNull(devicePassword);
+            $.devicePassword = devicePassword;
             return this;
         }
+
         public Builder deviceSerialNumber(String deviceSerialNumber) {
-            this.deviceSerialNumber = Objects.requireNonNull(deviceSerialNumber);
+            $.deviceSerialNumber = deviceSerialNumber;
             return this;
         }
+
         public Builder encodedValidationCertPubKey(String encodedValidationCertPubKey) {
-            this.encodedValidationCertPubKey = Objects.requireNonNull(encodedValidationCertPubKey);
+            $.encodedValidationCertPubKey = encodedValidationCertPubKey;
             return this;
         }
+
         public Builder networkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
-            this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
+            $.networkConfigurations = networkConfigurations;
             return this;
         }
+
         public Builder networkConfigurations(ApplianceNetworkConfigurationResponse... networkConfigurations) {
             return networkConfigurations(List.of(networkConfigurations));
-        }        public DataBoxHeavySecretResponse build() {
-            return new DataBoxHeavySecretResponse(accountCredentialDetails, devicePassword, deviceSerialNumber, encodedValidationCertPubKey, networkConfigurations);
+        }
+
+        public DataBoxHeavySecretResponse build() {
+            $.accountCredentialDetails = Objects.requireNonNull($.accountCredentialDetails, "expected parameter 'accountCredentialDetails' to be non-null");
+            $.devicePassword = Objects.requireNonNull($.devicePassword, "expected parameter 'devicePassword' to be non-null");
+            $.deviceSerialNumber = Objects.requireNonNull($.deviceSerialNumber, "expected parameter 'deviceSerialNumber' to be non-null");
+            $.encodedValidationCertPubKey = Objects.requireNonNull($.encodedValidationCertPubKey, "expected parameter 'encodedValidationCertPubKey' to be non-null");
+            $.networkConfigurations = Objects.requireNonNull($.networkConfigurations, "expected parameter 'networkConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

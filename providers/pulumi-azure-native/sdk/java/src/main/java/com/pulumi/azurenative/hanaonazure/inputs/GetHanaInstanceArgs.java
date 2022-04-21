@@ -17,7 +17,7 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hanaInstanceName", required=true)
-      private final String hanaInstanceName;
+    private String hanaInstanceName;
 
     public String hanaInstanceName() {
         return this.hanaInstanceName;
@@ -28,55 +28,52 @@ public final class GetHanaInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetHanaInstanceArgs(
-        String hanaInstanceName,
-        String resourceGroupName) {
-        this.hanaInstanceName = Objects.requireNonNull(hanaInstanceName, "expected parameter 'hanaInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetHanaInstanceArgs() {}
 
-    private GetHanaInstanceArgs() {
-        this.hanaInstanceName = null;
-        this.resourceGroupName = null;
+    private GetHanaInstanceArgs(GetHanaInstanceArgs $) {
+        this.hanaInstanceName = $.hanaInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHanaInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hanaInstanceName;
-        private String resourceGroupName;
+        private GetHanaInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHanaInstanceArgs();
         }
 
         public Builder(GetHanaInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hanaInstanceName = defaults.hanaInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetHanaInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hanaInstanceName(String hanaInstanceName) {
-            this.hanaInstanceName = Objects.requireNonNull(hanaInstanceName);
+            $.hanaInstanceName = hanaInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetHanaInstanceArgs build() {
-            return new GetHanaInstanceArgs(hanaInstanceName, resourceGroupName);
+        }
+
+        public GetHanaInstanceArgs build() {
+            $.hanaInstanceName = Objects.requireNonNull($.hanaInstanceName, "expected parameter 'hanaInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

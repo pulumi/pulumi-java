@@ -7,10 +7,10 @@ import com.pulumi.azurenative.automation.enums.WindowsUpdateClasses;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="excludedKbNumbers")
-      private final @Nullable Output<List<String>> excludedKbNumbers;
+    private @Nullable Output<List<String>> excludedKbNumbers;
 
-    public Output<List<String>> excludedKbNumbers() {
-        return this.excludedKbNumbers == null ? Codegen.empty() : this.excludedKbNumbers;
+    public Optional<Output<List<String>>> excludedKbNumbers() {
+        return Optional.ofNullable(this.excludedKbNumbers);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="includedKbNumbers")
-      private final @Nullable Output<List<String>> includedKbNumbers;
+    private @Nullable Output<List<String>> includedKbNumbers;
 
-    public Output<List<String>> includedKbNumbers() {
-        return this.includedKbNumbers == null ? Codegen.empty() : this.includedKbNumbers;
+    public Optional<Output<List<String>>> includedKbNumbers() {
+        return Optional.ofNullable(this.includedKbNumbers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="includedUpdateClassifications")
-      private final @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
+    private @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
-    public Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications() {
-        return this.includedUpdateClassifications == null ? Codegen.empty() : this.includedUpdateClassifications;
+    public Optional<Output<Either<String,WindowsUpdateClasses>>> includedUpdateClassifications() {
+        return Optional.ofNullable(this.includedUpdateClassifications);
     }
 
     /**
@@ -60,95 +60,86 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rebootSetting")
-      private final @Nullable Output<String> rebootSetting;
+    private @Nullable Output<String> rebootSetting;
 
-    public Output<String> rebootSetting() {
-        return this.rebootSetting == null ? Codegen.empty() : this.rebootSetting;
+    public Optional<Output<String>> rebootSetting() {
+        return Optional.ofNullable(this.rebootSetting);
     }
 
-    public WindowsPropertiesArgs(
-        @Nullable Output<List<String>> excludedKbNumbers,
-        @Nullable Output<List<String>> includedKbNumbers,
-        @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications,
-        @Nullable Output<String> rebootSetting) {
-        this.excludedKbNumbers = excludedKbNumbers;
-        this.includedKbNumbers = includedKbNumbers;
-        this.includedUpdateClassifications = includedUpdateClassifications;
-        this.rebootSetting = rebootSetting;
-    }
+    private WindowsPropertiesArgs() {}
 
-    private WindowsPropertiesArgs() {
-        this.excludedKbNumbers = Codegen.empty();
-        this.includedKbNumbers = Codegen.empty();
-        this.includedUpdateClassifications = Codegen.empty();
-        this.rebootSetting = Codegen.empty();
+    private WindowsPropertiesArgs(WindowsPropertiesArgs $) {
+        this.excludedKbNumbers = $.excludedKbNumbers;
+        this.includedKbNumbers = $.includedKbNumbers;
+        this.includedUpdateClassifications = $.includedUpdateClassifications;
+        this.rebootSetting = $.rebootSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedKbNumbers;
-        private @Nullable Output<List<String>> includedKbNumbers;
-        private @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
-        private @Nullable Output<String> rebootSetting;
+        private WindowsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsPropertiesArgs();
         }
 
         public Builder(WindowsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedKbNumbers = defaults.excludedKbNumbers;
-    	      this.includedKbNumbers = defaults.includedKbNumbers;
-    	      this.includedUpdateClassifications = defaults.includedUpdateClassifications;
-    	      this.rebootSetting = defaults.rebootSetting;
+            $ = new WindowsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedKbNumbers(@Nullable Output<List<String>> excludedKbNumbers) {
-            this.excludedKbNumbers = excludedKbNumbers;
+            $.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
-        public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
-            this.excludedKbNumbers = Codegen.ofNullable(excludedKbNumbers);
-            return this;
+
+        public Builder excludedKbNumbers(List<String> excludedKbNumbers) {
+            return excludedKbNumbers(Output.of(excludedKbNumbers));
         }
+
         public Builder excludedKbNumbers(String... excludedKbNumbers) {
             return excludedKbNumbers(List.of(excludedKbNumbers));
         }
+
         public Builder includedKbNumbers(@Nullable Output<List<String>> includedKbNumbers) {
-            this.includedKbNumbers = includedKbNumbers;
+            $.includedKbNumbers = includedKbNumbers;
             return this;
         }
-        public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
-            this.includedKbNumbers = Codegen.ofNullable(includedKbNumbers);
-            return this;
+
+        public Builder includedKbNumbers(List<String> includedKbNumbers) {
+            return includedKbNumbers(Output.of(includedKbNumbers));
         }
+
         public Builder includedKbNumbers(String... includedKbNumbers) {
             return includedKbNumbers(List.of(includedKbNumbers));
         }
+
         public Builder includedUpdateClassifications(@Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications) {
-            this.includedUpdateClassifications = includedUpdateClassifications;
+            $.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
-        public Builder includedUpdateClassifications(@Nullable Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
-            this.includedUpdateClassifications = Codegen.ofNullable(includedUpdateClassifications);
-            return this;
+
+        public Builder includedUpdateClassifications(Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
+            return includedUpdateClassifications(Output.of(includedUpdateClassifications));
         }
+
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
-            this.rebootSetting = rebootSetting;
+            $.rebootSetting = rebootSetting;
             return this;
         }
-        public Builder rebootSetting(@Nullable String rebootSetting) {
-            this.rebootSetting = Codegen.ofNullable(rebootSetting);
-            return this;
-        }        public WindowsPropertiesArgs build() {
-            return new WindowsPropertiesArgs(excludedKbNumbers, includedKbNumbers, includedUpdateClassifications, rebootSetting);
+
+        public Builder rebootSetting(String rebootSetting) {
+            return rebootSetting(Output.of(rebootSetting));
+        }
+
+        public WindowsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

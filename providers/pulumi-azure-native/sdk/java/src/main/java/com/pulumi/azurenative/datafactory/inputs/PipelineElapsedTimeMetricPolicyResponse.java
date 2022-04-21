@@ -23,45 +23,44 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="duration")
-      private final @Nullable Object duration;
+    private @Nullable Object duration;
 
     public Optional<Object> duration() {
-        return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
+        return Optional.ofNullable(this.duration);
     }
 
-    public PipelineElapsedTimeMetricPolicyResponse(@Nullable Object duration) {
-        this.duration = duration;
-    }
+    private PipelineElapsedTimeMetricPolicyResponse() {}
 
-    private PipelineElapsedTimeMetricPolicyResponse() {
-        this.duration = null;
+    private PipelineElapsedTimeMetricPolicyResponse(PipelineElapsedTimeMetricPolicyResponse $) {
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineElapsedTimeMetricPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object duration;
+        private PipelineElapsedTimeMetricPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineElapsedTimeMetricPolicyResponse();
         }
 
         public Builder(PipelineElapsedTimeMetricPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
+            $ = new PipelineElapsedTimeMetricPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Object duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
-        }        public PipelineElapsedTimeMetricPolicyResponse build() {
-            return new PipelineElapsedTimeMetricPolicyResponse(duration);
+        }
+
+        public PipelineElapsedTimeMetricPolicyResponse build() {
+            return $;
         }
     }
+
 }

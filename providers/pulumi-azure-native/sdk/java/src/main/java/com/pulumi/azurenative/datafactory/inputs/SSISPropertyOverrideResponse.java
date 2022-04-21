@@ -24,10 +24,10 @@ public final class SSISPropertyOverrideResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isSensitive")
-      private final @Nullable Boolean isSensitive;
+    private @Nullable Boolean isSensitive;
 
     public Optional<Boolean> isSensitive() {
-        return this.isSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSensitive);
+        return Optional.ofNullable(this.isSensitive);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class SSISPropertyOverrideResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="value", required=true)
-      private final Object value;
+    private Object value;
 
     public Object value() {
         return this.value;
     }
 
-    public SSISPropertyOverrideResponse(
-        @Nullable Boolean isSensitive,
-        Object value) {
-        this.isSensitive = isSensitive;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SSISPropertyOverrideResponse() {}
 
-    private SSISPropertyOverrideResponse() {
-        this.isSensitive = null;
-        this.value = null;
+    private SSISPropertyOverrideResponse(SSISPropertyOverrideResponse $) {
+        this.isSensitive = $.isSensitive;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISPropertyOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isSensitive;
-        private Object value;
+        private SSISPropertyOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISPropertyOverrideResponse();
         }
 
         public Builder(SSISPropertyOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isSensitive = defaults.isSensitive;
-    	      this.value = defaults.value;
+            $ = new SSISPropertyOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isSensitive(@Nullable Boolean isSensitive) {
-            this.isSensitive = isSensitive;
+            $.isSensitive = isSensitive;
             return this;
         }
+
         public Builder value(Object value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public SSISPropertyOverrideResponse build() {
-            return new SSISPropertyOverrideResponse(isSensitive, value);
+        }
+
+        public SSISPropertyOverrideResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

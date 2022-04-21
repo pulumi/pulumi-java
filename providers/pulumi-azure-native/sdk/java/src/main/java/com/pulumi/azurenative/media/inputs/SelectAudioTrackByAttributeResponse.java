@@ -24,7 +24,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="attribute", required=true)
-      private final String attribute;
+    private String attribute;
 
     public String attribute() {
         return this.attribute;
@@ -35,10 +35,10 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="channelMapping")
-      private final @Nullable String channelMapping;
+    private @Nullable String channelMapping;
 
     public Optional<String> channelMapping() {
-        return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
+        return Optional.ofNullable(this.channelMapping);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -57,10 +57,10 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="filterValue")
-      private final @Nullable String filterValue;
+    private @Nullable String filterValue;
 
     public Optional<String> filterValue() {
-        return this.filterValue == null ? Optional.empty() : Optional.ofNullable(this.filterValue);
+        return Optional.ofNullable(this.filterValue);
     }
 
     /**
@@ -69,82 +69,71 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public SelectAudioTrackByAttributeResponse(
-        String attribute,
-        @Nullable String channelMapping,
-        String filter,
-        @Nullable String filterValue,
-        String odataType) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.channelMapping = channelMapping;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.filterValue = filterValue;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private SelectAudioTrackByAttributeResponse() {}
 
-    private SelectAudioTrackByAttributeResponse() {
-        this.attribute = null;
-        this.channelMapping = null;
-        this.filter = null;
-        this.filterValue = null;
-        this.odataType = null;
+    private SelectAudioTrackByAttributeResponse(SelectAudioTrackByAttributeResponse $) {
+        this.attribute = $.attribute;
+        this.channelMapping = $.channelMapping;
+        this.filter = $.filter;
+        this.filterValue = $.filterValue;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectAudioTrackByAttributeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attribute;
-        private @Nullable String channelMapping;
-        private String filter;
-        private @Nullable String filterValue;
-        private String odataType;
+        private SelectAudioTrackByAttributeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectAudioTrackByAttributeResponse();
         }
 
         public Builder(SelectAudioTrackByAttributeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.channelMapping = defaults.channelMapping;
-    	      this.filter = defaults.filter;
-    	      this.filterValue = defaults.filterValue;
-    	      this.odataType = defaults.odataType;
+            $ = new SelectAudioTrackByAttributeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder channelMapping(@Nullable String channelMapping) {
-            this.channelMapping = channelMapping;
+            $.channelMapping = channelMapping;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filterValue(@Nullable String filterValue) {
-            this.filterValue = filterValue;
+            $.filterValue = filterValue;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public SelectAudioTrackByAttributeResponse build() {
-            return new SelectAudioTrackByAttributeResponse(attribute, channelMapping, filter, filterValue, odataType);
+        }
+
+        public SelectAudioTrackByAttributeResponse build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

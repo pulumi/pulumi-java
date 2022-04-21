@@ -25,7 +25,7 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="automationAccountId", required=true)
-      private final String automationAccountId;
+    private String automationAccountId;
 
     public String automationAccountId() {
         return this.automationAccountId;
@@ -36,7 +36,7 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isGlobalRunbook", required=true)
-      private final Boolean isGlobalRunbook;
+    private Boolean isGlobalRunbook;
 
     public Boolean isGlobalRunbook() {
         return this.isGlobalRunbook;
@@ -47,10 +47,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="runbookName", required=true)
-      private final String runbookName;
+    private String runbookName;
 
     public String runbookName() {
         return this.runbookName;
@@ -69,10 +69,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable String serviceUri;
+    private @Nullable String serviceUri;
 
     public Optional<String> serviceUri() {
-        return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
+        return Optional.ofNullable(this.serviceUri);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Boolean useCommonAlertSchema;
+    private @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
     /**
@@ -91,100 +91,85 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="webhookResourceId", required=true)
-      private final String webhookResourceId;
+    private String webhookResourceId;
 
     public String webhookResourceId() {
         return this.webhookResourceId;
     }
 
-    public AutomationRunbookReceiverResponse(
-        String automationAccountId,
-        Boolean isGlobalRunbook,
-        @Nullable String name,
-        String runbookName,
-        @Nullable String serviceUri,
-        @Nullable Boolean useCommonAlertSchema,
-        String webhookResourceId) {
-        this.automationAccountId = Objects.requireNonNull(automationAccountId, "expected parameter 'automationAccountId' to be non-null");
-        this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook, "expected parameter 'isGlobalRunbook' to be non-null");
-        this.name = name;
-        this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
-        this.serviceUri = serviceUri;
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg(useCommonAlertSchema).def(false).getNullable();
-        this.webhookResourceId = Objects.requireNonNull(webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
-    }
+    private AutomationRunbookReceiverResponse() {}
 
-    private AutomationRunbookReceiverResponse() {
-        this.automationAccountId = null;
-        this.isGlobalRunbook = null;
-        this.name = null;
-        this.runbookName = null;
-        this.serviceUri = null;
-        this.useCommonAlertSchema = null;
-        this.webhookResourceId = null;
+    private AutomationRunbookReceiverResponse(AutomationRunbookReceiverResponse $) {
+        this.automationAccountId = $.automationAccountId;
+        this.isGlobalRunbook = $.isGlobalRunbook;
+        this.name = $.name;
+        this.runbookName = $.runbookName;
+        this.serviceUri = $.serviceUri;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
+        this.webhookResourceId = $.webhookResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRunbookReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountId;
-        private Boolean isGlobalRunbook;
-        private @Nullable String name;
-        private String runbookName;
-        private @Nullable String serviceUri;
-        private @Nullable Boolean useCommonAlertSchema;
-        private String webhookResourceId;
+        private AutomationRunbookReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRunbookReceiverResponse();
         }
 
         public Builder(AutomationRunbookReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountId = defaults.automationAccountId;
-    	      this.isGlobalRunbook = defaults.isGlobalRunbook;
-    	      this.name = defaults.name;
-    	      this.runbookName = defaults.runbookName;
-    	      this.serviceUri = defaults.serviceUri;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
-    	      this.webhookResourceId = defaults.webhookResourceId;
+            $ = new AutomationRunbookReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountId(String automationAccountId) {
-            this.automationAccountId = Objects.requireNonNull(automationAccountId);
+            $.automationAccountId = automationAccountId;
             return this;
         }
+
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
-            this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook);
+            $.isGlobalRunbook = isGlobalRunbook;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder runbookName(String runbookName) {
-            this.runbookName = Objects.requireNonNull(runbookName);
+            $.runbookName = runbookName;
             return this;
         }
+
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
         }
+
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
+
         public Builder webhookResourceId(String webhookResourceId) {
-            this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
+            $.webhookResourceId = webhookResourceId;
             return this;
-        }        public AutomationRunbookReceiverResponse build() {
-            return new AutomationRunbookReceiverResponse(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
+        }
+
+        public AutomationRunbookReceiverResponse build() {
+            $.automationAccountId = Objects.requireNonNull($.automationAccountId, "expected parameter 'automationAccountId' to be non-null");
+            $.isGlobalRunbook = Objects.requireNonNull($.isGlobalRunbook, "expected parameter 'isGlobalRunbook' to be non-null");
+            $.runbookName = Objects.requireNonNull($.runbookName, "expected parameter 'runbookName' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg($.useCommonAlertSchema).def(false).getNullable();
+            $.webhookResourceId = Objects.requireNonNull($.webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
+            return $;
         }
     }
+
 }

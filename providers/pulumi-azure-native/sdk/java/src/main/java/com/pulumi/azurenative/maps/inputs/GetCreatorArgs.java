@@ -17,7 +17,7 @@ public final class GetCreatorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetCreatorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creatorName", required=true)
-      private final String creatorName;
+    private String creatorName;
 
     public String creatorName() {
         return this.creatorName;
@@ -39,64 +39,59 @@ public final class GetCreatorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCreatorArgs(
-        String accountName,
-        String creatorName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.creatorName = Objects.requireNonNull(creatorName, "expected parameter 'creatorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCreatorArgs() {}
 
-    private GetCreatorArgs() {
-        this.accountName = null;
-        this.creatorName = null;
-        this.resourceGroupName = null;
+    private GetCreatorArgs(GetCreatorArgs $) {
+        this.accountName = $.accountName;
+        this.creatorName = $.creatorName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCreatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String creatorName;
-        private String resourceGroupName;
+        private GetCreatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCreatorArgs();
         }
 
         public Builder(GetCreatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.creatorName = defaults.creatorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCreatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder creatorName(String creatorName) {
-            this.creatorName = Objects.requireNonNull(creatorName);
+            $.creatorName = creatorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCreatorArgs build() {
-            return new GetCreatorArgs(accountName, creatorName, resourceGroupName);
+        }
+
+        public GetCreatorArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.creatorName = Objects.requireNonNull($.creatorName, "expected parameter 'creatorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class ResourceProviderManifestPropertiesProviderAuthenticationArgs 
     public static final ResourceProviderManifestPropertiesProviderAuthenticationArgs Empty = new ResourceProviderManifestPropertiesProviderAuthenticationArgs();
 
     @Import(name="allowedAudiences", required=true)
-      private final Output<List<String>> allowedAudiences;
+    private Output<List<String>> allowedAudiences;
 
     public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences;
     }
 
-    public ResourceProviderManifestPropertiesProviderAuthenticationArgs(Output<List<String>> allowedAudiences) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
-    }
+    private ResourceProviderManifestPropertiesProviderAuthenticationArgs() {}
 
-    private ResourceProviderManifestPropertiesProviderAuthenticationArgs() {
-        this.allowedAudiences = Codegen.empty();
+    private ResourceProviderManifestPropertiesProviderAuthenticationArgs(ResourceProviderManifestPropertiesProviderAuthenticationArgs $) {
+        this.allowedAudiences = $.allowedAudiences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderManifestPropertiesProviderAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedAudiences;
+        private ResourceProviderManifestPropertiesProviderAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderManifestPropertiesProviderAuthenticationArgs();
         }
 
         public Builder(ResourceProviderManifestPropertiesProviderAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
+            $ = new ResourceProviderManifestPropertiesProviderAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(Output<List<String>> allowedAudiences) {
-            this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
+
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Output.of(Objects.requireNonNull(allowedAudiences));
-            return this;
+            return allowedAudiences(Output.of(allowedAudiences));
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
-        }        public ResourceProviderManifestPropertiesProviderAuthenticationArgs build() {
-            return new ResourceProviderManifestPropertiesProviderAuthenticationArgs(allowedAudiences);
+        }
+
+        public ResourceProviderManifestPropertiesProviderAuthenticationArgs build() {
+            $.allowedAudiences = Objects.requireNonNull($.allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
+            return $;
         }
     }
+
 }

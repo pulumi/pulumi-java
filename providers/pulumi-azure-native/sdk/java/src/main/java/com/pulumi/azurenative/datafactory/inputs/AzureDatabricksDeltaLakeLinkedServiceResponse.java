@@ -33,10 +33,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken() {
-        return this.accessToken == null ? null : this.accessToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Object clusterId;
+    private @Nullable Object clusterId;
 
     public Optional<Object> clusterId() {
-        return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="domain", required=true)
-      private final Object domain;
+    private Object domain;
 
     public Object domain() {
         return this.domain;
@@ -110,10 +110,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -133,7 +133,7 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -144,139 +144,110 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Object workspaceResourceId;
+    private @Nullable Object workspaceResourceId;
 
     public Optional<Object> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public AzureDatabricksDeltaLakeLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable List<Object> annotations,
-        @Nullable Object clusterId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        Object domain,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object workspaceResourceId) {
-        this.accessToken = accessToken;
-        this.annotations = annotations;
-        this.clusterId = clusterId;
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private AzureDatabricksDeltaLakeLinkedServiceResponse() {}
 
-    private AzureDatabricksDeltaLakeLinkedServiceResponse() {
-        this.accessToken = null;
-        this.annotations = List.of();
-        this.clusterId = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.domain = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.type = null;
-        this.workspaceResourceId = null;
+    private AzureDatabricksDeltaLakeLinkedServiceResponse(AzureDatabricksDeltaLakeLinkedServiceResponse $) {
+        this.accessToken = $.accessToken;
+        this.annotations = $.annotations;
+        this.clusterId = $.clusterId;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.domain = $.domain;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.type = $.type;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDatabricksDeltaLakeLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object clusterId;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private Object domain;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private String type;
-        private @Nullable Object workspaceResourceId;
+        private AzureDatabricksDeltaLakeLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDatabricksDeltaLakeLinkedServiceResponse();
         }
 
         public Builder(AzureDatabricksDeltaLakeLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.annotations = defaults.annotations;
-    	      this.clusterId = defaults.clusterId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.domain = defaults.domain;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new AzureDatabricksDeltaLakeLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clusterId(@Nullable Object clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder domain(Object domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public AzureDatabricksDeltaLakeLinkedServiceResponse build() {
-            return new AzureDatabricksDeltaLakeLinkedServiceResponse(accessToken, annotations, clusterId, connectVia, credential, description, domain, encryptedCredential, parameters, type, workspaceResourceId);
+        }
+
+        public AzureDatabricksDeltaLakeLinkedServiceResponse build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

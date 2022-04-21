@@ -35,10 +35,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="commands")
-      private final @Nullable List<String> commands;
+    private @Nullable List<String> commands;
 
-    public List<String> commands() {
-        return this.commands == null ? List.of() : this.commands;
+    public Optional<List<String>> commands() {
+        return Optional.ofNullable(this.commands);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable DiagnosticsRefResponse diagnostics;
+    private @Nullable DiagnosticsRefResponse diagnostics;
 
     public Optional<DiagnosticsRefResponse> diagnostics() {
-        return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable List<EndpointPropertiesResponse> endpoints;
+    private @Nullable List<EndpointPropertiesResponse> endpoints;
 
-    public List<EndpointPropertiesResponse> endpoints() {
-        return this.endpoints == null ? List.of() : this.endpoints;
+    public Optional<List<EndpointPropertiesResponse>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="entrypoint")
-      private final @Nullable String entrypoint;
+    private @Nullable String entrypoint;
 
     public Optional<String> entrypoint() {
-        return this.entrypoint == null ? Optional.empty() : Optional.ofNullable(this.entrypoint);
+        return Optional.ofNullable(this.entrypoint);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
+    private @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
-    public List<EnvironmentVariableResponse> environmentVariables() {
-        return this.environmentVariables == null ? List.of() : this.environmentVariables;
+    public Optional<List<EnvironmentVariableResponse>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -101,10 +101,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="imageRegistryCredential")
-      private final @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
+    private @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
 
     public Optional<ImageRegistryCredentialResponse> imageRegistryCredential() {
-        return this.imageRegistryCredential == null ? Optional.empty() : Optional.ofNullable(this.imageRegistryCredential);
+        return Optional.ofNullable(this.imageRegistryCredential);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="instanceView", required=true)
-      private final ContainerInstanceViewResponse instanceView;
+    private ContainerInstanceViewResponse instanceView;
 
     public ContainerInstanceViewResponse instanceView() {
         return this.instanceView;
@@ -123,10 +123,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="labels")
-      private final @Nullable List<ContainerLabelResponse> labels;
+    private @Nullable List<ContainerLabelResponse> labels;
 
-    public List<ContainerLabelResponse> labels() {
-        return this.labels == null ? List.of() : this.labels;
+    public Optional<List<ContainerLabelResponse>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -134,7 +134,7 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -145,10 +145,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="reliableCollectionsRefs")
-      private final @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
+    private @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
 
-    public List<ReliableCollectionsRefResponse> reliableCollectionsRefs() {
-        return this.reliableCollectionsRefs == null ? List.of() : this.reliableCollectionsRefs;
+    public Optional<List<ReliableCollectionsRefResponse>> reliableCollectionsRefs() {
+        return Optional.ofNullable(this.reliableCollectionsRefs);
     }
 
     /**
@@ -156,7 +156,7 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="resources", required=true)
-      private final ResourceRequirementsResponse resources;
+    private ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse resources() {
         return this.resources;
@@ -167,10 +167,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="settings")
-      private final @Nullable List<SettingResponse> settings;
+    private @Nullable List<SettingResponse> settings;
 
-    public List<SettingResponse> settings() {
-        return this.settings == null ? List.of() : this.settings;
+    public Optional<List<SettingResponse>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="volumeRefs")
-      private final @Nullable List<VolumeReferenceResponse> volumeRefs;
+    private @Nullable List<VolumeReferenceResponse> volumeRefs;
 
-    public List<VolumeReferenceResponse> volumeRefs() {
-        return this.volumeRefs == null ? List.of() : this.volumeRefs;
+    public Optional<List<VolumeReferenceResponse>> volumeRefs() {
+        return Optional.ofNullable(this.volumeRefs);
     }
 
     /**
@@ -189,196 +189,164 @@ public final class ContainerCodePackagePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="volumes")
-      private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
+    private @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
-    public List<ApplicationScopedVolumeResponse> volumes() {
-        return this.volumes == null ? List.of() : this.volumes;
+    public Optional<List<ApplicationScopedVolumeResponse>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public ContainerCodePackagePropertiesResponse(
-        @Nullable List<String> commands,
-        @Nullable DiagnosticsRefResponse diagnostics,
-        @Nullable List<EndpointPropertiesResponse> endpoints,
-        @Nullable String entrypoint,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        String image,
-        @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
-        ContainerInstanceViewResponse instanceView,
-        @Nullable List<ContainerLabelResponse> labels,
-        String name,
-        @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
-        ResourceRequirementsResponse resources,
-        @Nullable List<SettingResponse> settings,
-        @Nullable List<VolumeReferenceResponse> volumeRefs,
-        @Nullable List<ApplicationScopedVolumeResponse> volumes) {
-        this.commands = commands;
-        this.diagnostics = diagnostics;
-        this.endpoints = endpoints;
-        this.entrypoint = entrypoint;
-        this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.imageRegistryCredential = imageRegistryCredential;
-        this.instanceView = Objects.requireNonNull(instanceView, "expected parameter 'instanceView' to be non-null");
-        this.labels = labels;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.reliableCollectionsRefs = reliableCollectionsRefs;
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.settings = settings;
-        this.volumeRefs = volumeRefs;
-        this.volumes = volumes;
-    }
+    private ContainerCodePackagePropertiesResponse() {}
 
-    private ContainerCodePackagePropertiesResponse() {
-        this.commands = List.of();
-        this.diagnostics = null;
-        this.endpoints = List.of();
-        this.entrypoint = null;
-        this.environmentVariables = List.of();
-        this.image = null;
-        this.imageRegistryCredential = null;
-        this.instanceView = null;
-        this.labels = List.of();
-        this.name = null;
-        this.reliableCollectionsRefs = List.of();
-        this.resources = null;
-        this.settings = List.of();
-        this.volumeRefs = List.of();
-        this.volumes = List.of();
+    private ContainerCodePackagePropertiesResponse(ContainerCodePackagePropertiesResponse $) {
+        this.commands = $.commands;
+        this.diagnostics = $.diagnostics;
+        this.endpoints = $.endpoints;
+        this.entrypoint = $.entrypoint;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.imageRegistryCredential = $.imageRegistryCredential;
+        this.instanceView = $.instanceView;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.reliableCollectionsRefs = $.reliableCollectionsRefs;
+        this.resources = $.resources;
+        this.settings = $.settings;
+        this.volumeRefs = $.volumeRefs;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerCodePackagePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> commands;
-        private @Nullable DiagnosticsRefResponse diagnostics;
-        private @Nullable List<EndpointPropertiesResponse> endpoints;
-        private @Nullable String entrypoint;
-        private @Nullable List<EnvironmentVariableResponse> environmentVariables;
-        private String image;
-        private @Nullable ImageRegistryCredentialResponse imageRegistryCredential;
-        private ContainerInstanceViewResponse instanceView;
-        private @Nullable List<ContainerLabelResponse> labels;
-        private String name;
-        private @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs;
-        private ResourceRequirementsResponse resources;
-        private @Nullable List<SettingResponse> settings;
-        private @Nullable List<VolumeReferenceResponse> volumeRefs;
-        private @Nullable List<ApplicationScopedVolumeResponse> volumes;
+        private ContainerCodePackagePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerCodePackagePropertiesResponse();
         }
 
         public Builder(ContainerCodePackagePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commands = defaults.commands;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.endpoints = defaults.endpoints;
-    	      this.entrypoint = defaults.entrypoint;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.imageRegistryCredential = defaults.imageRegistryCredential;
-    	      this.instanceView = defaults.instanceView;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.reliableCollectionsRefs = defaults.reliableCollectionsRefs;
-    	      this.resources = defaults.resources;
-    	      this.settings = defaults.settings;
-    	      this.volumeRefs = defaults.volumeRefs;
-    	      this.volumes = defaults.volumes;
+            $ = new ContainerCodePackagePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = commands;
+            $.commands = commands;
             return this;
         }
+
         public Builder commands(String... commands) {
             return commands(List.of(commands));
         }
+
         public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
+
         public Builder endpoints(@Nullable List<EndpointPropertiesResponse> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(EndpointPropertiesResponse... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = entrypoint;
+            $.entrypoint = entrypoint;
             return this;
         }
+
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialResponse imageRegistryCredential) {
-            this.imageRegistryCredential = imageRegistryCredential;
+            $.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
+
         public Builder instanceView(ContainerInstanceViewResponse instanceView) {
-            this.instanceView = Objects.requireNonNull(instanceView);
+            $.instanceView = instanceView;
             return this;
         }
+
         public Builder labels(@Nullable List<ContainerLabelResponse> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(ContainerLabelResponse... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs) {
-            this.reliableCollectionsRefs = reliableCollectionsRefs;
+            $.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
+
         public Builder reliableCollectionsRefs(ReliableCollectionsRefResponse... reliableCollectionsRefs) {
             return reliableCollectionsRefs(List.of(reliableCollectionsRefs));
         }
+
         public Builder resources(ResourceRequirementsResponse resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder settings(@Nullable List<SettingResponse> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder settings(SettingResponse... settings) {
             return settings(List.of(settings));
         }
+
         public Builder volumeRefs(@Nullable List<VolumeReferenceResponse> volumeRefs) {
-            this.volumeRefs = volumeRefs;
+            $.volumeRefs = volumeRefs;
             return this;
         }
+
         public Builder volumeRefs(VolumeReferenceResponse... volumeRefs) {
             return volumeRefs(List.of(volumeRefs));
         }
+
         public Builder volumes(@Nullable List<ApplicationScopedVolumeResponse> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(ApplicationScopedVolumeResponse... volumes) {
             return volumes(List.of(volumes));
-        }        public ContainerCodePackagePropertiesResponse build() {
-            return new ContainerCodePackagePropertiesResponse(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, instanceView, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
+        }
+
+        public ContainerCodePackagePropertiesResponse build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.instanceView = Objects.requireNonNull($.instanceView, "expected parameter 'instanceView' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

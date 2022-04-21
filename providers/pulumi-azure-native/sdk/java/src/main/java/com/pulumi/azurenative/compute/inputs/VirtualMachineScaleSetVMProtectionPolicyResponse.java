@@ -23,10 +23,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends com.
      * 
      */
     @Import(name="protectFromScaleIn")
-      private final @Nullable Boolean protectFromScaleIn;
+    private @Nullable Boolean protectFromScaleIn;
 
     public Optional<Boolean> protectFromScaleIn() {
-        return this.protectFromScaleIn == null ? Optional.empty() : Optional.ofNullable(this.protectFromScaleIn);
+        return Optional.ofNullable(this.protectFromScaleIn);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends com.
      * 
      */
     @Import(name="protectFromScaleSetActions")
-      private final @Nullable Boolean protectFromScaleSetActions;
+    private @Nullable Boolean protectFromScaleSetActions;
 
     public Optional<Boolean> protectFromScaleSetActions() {
-        return this.protectFromScaleSetActions == null ? Optional.empty() : Optional.ofNullable(this.protectFromScaleSetActions);
+        return Optional.ofNullable(this.protectFromScaleSetActions);
     }
 
-    public VirtualMachineScaleSetVMProtectionPolicyResponse(
-        @Nullable Boolean protectFromScaleIn,
-        @Nullable Boolean protectFromScaleSetActions) {
-        this.protectFromScaleIn = protectFromScaleIn;
-        this.protectFromScaleSetActions = protectFromScaleSetActions;
-    }
+    private VirtualMachineScaleSetVMProtectionPolicyResponse() {}
 
-    private VirtualMachineScaleSetVMProtectionPolicyResponse() {
-        this.protectFromScaleIn = null;
-        this.protectFromScaleSetActions = null;
+    private VirtualMachineScaleSetVMProtectionPolicyResponse(VirtualMachineScaleSetVMProtectionPolicyResponse $) {
+        this.protectFromScaleIn = $.protectFromScaleIn;
+        this.protectFromScaleSetActions = $.protectFromScaleSetActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetVMProtectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean protectFromScaleIn;
-        private @Nullable Boolean protectFromScaleSetActions;
+        private VirtualMachineScaleSetVMProtectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetVMProtectionPolicyResponse();
         }
 
         public Builder(VirtualMachineScaleSetVMProtectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protectFromScaleIn = defaults.protectFromScaleIn;
-    	      this.protectFromScaleSetActions = defaults.protectFromScaleSetActions;
+            $ = new VirtualMachineScaleSetVMProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
-            this.protectFromScaleIn = protectFromScaleIn;
+            $.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
+
         public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
-            this.protectFromScaleSetActions = protectFromScaleSetActions;
+            $.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
-        }        public VirtualMachineScaleSetVMProtectionPolicyResponse build() {
-            return new VirtualMachineScaleSetVMProtectionPolicyResponse(protectFromScaleIn, protectFromScaleSetActions);
+        }
+
+        public VirtualMachineScaleSetVMProtectionPolicyResponse build() {
+            return $;
         }
     }
+
 }

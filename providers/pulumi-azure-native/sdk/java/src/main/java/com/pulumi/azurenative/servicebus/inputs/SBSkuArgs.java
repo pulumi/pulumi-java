@@ -7,9 +7,9 @@ import com.pulumi.azurenative.servicebus.enums.SkuName;
 import com.pulumi.azurenative.servicebus.enums.SkuTier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<SkuName> name;
+    private Output<SkuName> name;
 
     public Output<SkuName> name() {
         return this.name;
@@ -48,76 +48,69 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<SkuTier> tier;
+    private @Nullable Output<SkuTier> tier;
 
-    public Output<SkuTier> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<SkuTier>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public SBSkuArgs(
-        @Nullable Output<Integer> capacity,
-        Output<SkuName> name,
-        @Nullable Output<SkuTier> tier) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = tier;
-    }
+    private SBSkuArgs() {}
 
-    private SBSkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private SBSkuArgs(SBSkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SBSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private Output<SkuName> name;
-        private @Nullable Output<SkuTier> tier;
+        private SBSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SBSkuArgs();
         }
 
         public Builder(SBSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new SBSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<SkuName> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(SkuName name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<SkuTier> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable SkuTier tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public SBSkuArgs build() {
-            return new SBSkuArgs(capacity, name, tier);
+
+        public Builder tier(SkuTier tier) {
+            return tier(Output.of(tier));
+        }
+
+        public SBSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

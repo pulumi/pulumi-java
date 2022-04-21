@@ -17,7 +17,7 @@ public final class GetWorkspaceSqlAadAdminArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetWorkspaceSqlAadAdminArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetWorkspaceSqlAadAdminArgs(
-        String resourceGroupName,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetWorkspaceSqlAadAdminArgs() {}
 
-    private GetWorkspaceSqlAadAdminArgs() {
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetWorkspaceSqlAadAdminArgs(GetWorkspaceSqlAadAdminArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkspaceSqlAadAdminArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetWorkspaceSqlAadAdminArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkspaceSqlAadAdminArgs();
         }
 
         public Builder(GetWorkspaceSqlAadAdminArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetWorkspaceSqlAadAdminArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetWorkspaceSqlAadAdminArgs build() {
-            return new GetWorkspaceSqlAadAdminArgs(resourceGroupName, workspaceName);
+        }
+
+        public GetWorkspaceSqlAadAdminArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

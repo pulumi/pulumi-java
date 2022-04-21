@@ -24,10 +24,10 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends com.pul
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends com.pul
      * 
      */
     @Import(name="protocolType")
-      private final @Nullable String protocolType;
+    private @Nullable String protocolType;
 
     public Optional<String> protocolType() {
-        return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);
+        return Optional.ofNullable(this.protocolType);
     }
 
-    public FirewallPolicyRuleApplicationProtocolResponse(
-        @Nullable Integer port,
-        @Nullable String protocolType) {
-        this.port = port;
-        this.protocolType = protocolType;
-    }
+    private FirewallPolicyRuleApplicationProtocolResponse() {}
 
-    private FirewallPolicyRuleApplicationProtocolResponse() {
-        this.port = null;
-        this.protocolType = null;
+    private FirewallPolicyRuleApplicationProtocolResponse(FirewallPolicyRuleApplicationProtocolResponse $) {
+        this.port = $.port;
+        this.protocolType = $.protocolType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleApplicationProtocolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer port;
-        private @Nullable String protocolType;
+        private FirewallPolicyRuleApplicationProtocolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleApplicationProtocolResponse();
         }
 
         public Builder(FirewallPolicyRuleApplicationProtocolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocolType = defaults.protocolType;
+            $ = new FirewallPolicyRuleApplicationProtocolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder protocolType(@Nullable String protocolType) {
-            this.protocolType = protocolType;
+            $.protocolType = protocolType;
             return this;
-        }        public FirewallPolicyRuleApplicationProtocolResponse build() {
-            return new FirewallPolicyRuleApplicationProtocolResponse(port, protocolType);
+        }
+
+        public FirewallPolicyRuleApplicationProtocolResponse build() {
+            return $;
         }
     }
+
 }

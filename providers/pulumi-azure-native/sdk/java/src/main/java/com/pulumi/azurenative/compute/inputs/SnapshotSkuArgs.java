@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.enums.SnapshotStorageAccountTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class SnapshotSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,SnapshotStorageAccountTypes>> name;
+    private @Nullable Output<Either<String,SnapshotStorageAccountTypes>> name;
 
-    public Output<Either<String,SnapshotStorageAccountTypes>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,SnapshotStorageAccountTypes>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SnapshotSkuArgs(@Nullable Output<Either<String,SnapshotStorageAccountTypes>> name) {
-        this.name = name;
-    }
+    private SnapshotSkuArgs() {}
 
-    private SnapshotSkuArgs() {
-        this.name = Codegen.empty();
+    private SnapshotSkuArgs(SnapshotSkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SnapshotStorageAccountTypes>> name;
+        private SnapshotSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotSkuArgs();
         }
 
         public Builder(SnapshotSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SnapshotSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,SnapshotStorageAccountTypes>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,SnapshotStorageAccountTypes> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SnapshotSkuArgs build() {
-            return new SnapshotSkuArgs(name);
+
+        public Builder name(Either<String,SnapshotStorageAccountTypes> name) {
+            return name(Output.of(name));
+        }
+
+        public SnapshotSkuArgs build() {
+            return $;
         }
     }
+
 }

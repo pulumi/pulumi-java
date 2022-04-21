@@ -25,7 +25,7 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,EncoderSystemPresetType>> name;
+    private Output<Either<String,EncoderSystemPresetType>> name;
 
     public Output<Either<String,EncoderSystemPresetType>> name() {
         return this.name;
@@ -37,63 +37,60 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public EncoderSystemPresetArgs(
-        Output<Either<String,EncoderSystemPresetType>> name,
-        Output<String> type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private EncoderSystemPresetArgs() {}
 
-    private EncoderSystemPresetArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private EncoderSystemPresetArgs(EncoderSystemPresetArgs $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncoderSystemPresetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,EncoderSystemPresetType>> name;
-        private Output<String> type;
+        private EncoderSystemPresetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncoderSystemPresetArgs();
         }
 
         public Builder(EncoderSystemPresetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new EncoderSystemPresetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<Either<String,EncoderSystemPresetType>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,EncoderSystemPresetType> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EncoderSystemPresetArgs build() {
-            return new EncoderSystemPresetArgs(name, type);
+            return type(Output.of(type));
+        }
+
+        public EncoderSystemPresetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

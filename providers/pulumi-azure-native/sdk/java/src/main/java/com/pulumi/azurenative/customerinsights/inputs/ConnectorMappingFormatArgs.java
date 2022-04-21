@@ -6,9 +6,9 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.FormatTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arraySeparator")
-      private final @Nullable Output<String> arraySeparator;
+    private @Nullable Output<String> arraySeparator;
 
-    public Output<String> arraySeparator() {
-        return this.arraySeparator == null ? Codegen.empty() : this.arraySeparator;
+    public Optional<Output<String>> arraySeparator() {
+        return Optional.ofNullable(this.arraySeparator);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="columnDelimiter")
-      private final @Nullable Output<String> columnDelimiter;
+    private @Nullable Output<String> columnDelimiter;
 
-    public Output<String> columnDelimiter() {
-        return this.columnDelimiter == null ? Codegen.empty() : this.columnDelimiter;
+    public Optional<Output<String>> columnDelimiter() {
+        return Optional.ofNullable(this.columnDelimiter);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="formatType", required=true)
-      private final Output<FormatTypes> formatType;
+    private Output<FormatTypes> formatType;
 
     public Output<FormatTypes> formatType() {
         return this.formatType;
@@ -69,10 +69,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="quoteCharacter")
-      private final @Nullable Output<String> quoteCharacter;
+    private @Nullable Output<String> quoteCharacter;
 
-    public Output<String> quoteCharacter() {
-        return this.quoteCharacter == null ? Codegen.empty() : this.quoteCharacter;
+    public Optional<Output<String>> quoteCharacter() {
+        return Optional.ofNullable(this.quoteCharacter);
     }
 
     /**
@@ -80,115 +80,99 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="quoteEscapeCharacter")
-      private final @Nullable Output<String> quoteEscapeCharacter;
+    private @Nullable Output<String> quoteEscapeCharacter;
 
-    public Output<String> quoteEscapeCharacter() {
-        return this.quoteEscapeCharacter == null ? Codegen.empty() : this.quoteEscapeCharacter;
+    public Optional<Output<String>> quoteEscapeCharacter() {
+        return Optional.ofNullable(this.quoteEscapeCharacter);
     }
 
-    public ConnectorMappingFormatArgs(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> arraySeparator,
-        @Nullable Output<String> columnDelimiter,
-        Output<FormatTypes> formatType,
-        @Nullable Output<String> quoteCharacter,
-        @Nullable Output<String> quoteEscapeCharacter) {
-        this.acceptLanguage = acceptLanguage;
-        this.arraySeparator = arraySeparator;
-        this.columnDelimiter = columnDelimiter;
-        this.formatType = Objects.requireNonNull(formatType, "expected parameter 'formatType' to be non-null");
-        this.quoteCharacter = quoteCharacter;
-        this.quoteEscapeCharacter = quoteEscapeCharacter;
-    }
+    private ConnectorMappingFormatArgs() {}
 
-    private ConnectorMappingFormatArgs() {
-        this.acceptLanguage = Codegen.empty();
-        this.arraySeparator = Codegen.empty();
-        this.columnDelimiter = Codegen.empty();
-        this.formatType = Codegen.empty();
-        this.quoteCharacter = Codegen.empty();
-        this.quoteEscapeCharacter = Codegen.empty();
+    private ConnectorMappingFormatArgs(ConnectorMappingFormatArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.arraySeparator = $.arraySeparator;
+        this.columnDelimiter = $.columnDelimiter;
+        this.formatType = $.formatType;
+        this.quoteCharacter = $.quoteCharacter;
+        this.quoteEscapeCharacter = $.quoteEscapeCharacter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> arraySeparator;
-        private @Nullable Output<String> columnDelimiter;
-        private Output<FormatTypes> formatType;
-        private @Nullable Output<String> quoteCharacter;
-        private @Nullable Output<String> quoteEscapeCharacter;
+        private ConnectorMappingFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingFormatArgs();
         }
 
         public Builder(ConnectorMappingFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.arraySeparator = defaults.arraySeparator;
-    	      this.columnDelimiter = defaults.columnDelimiter;
-    	      this.formatType = defaults.formatType;
-    	      this.quoteCharacter = defaults.quoteCharacter;
-    	      this.quoteEscapeCharacter = defaults.quoteEscapeCharacter;
+            $ = new ConnectorMappingFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder arraySeparator(@Nullable Output<String> arraySeparator) {
-            this.arraySeparator = arraySeparator;
+            $.arraySeparator = arraySeparator;
             return this;
         }
-        public Builder arraySeparator(@Nullable String arraySeparator) {
-            this.arraySeparator = Codegen.ofNullable(arraySeparator);
-            return this;
+
+        public Builder arraySeparator(String arraySeparator) {
+            return arraySeparator(Output.of(arraySeparator));
         }
+
         public Builder columnDelimiter(@Nullable Output<String> columnDelimiter) {
-            this.columnDelimiter = columnDelimiter;
+            $.columnDelimiter = columnDelimiter;
             return this;
         }
-        public Builder columnDelimiter(@Nullable String columnDelimiter) {
-            this.columnDelimiter = Codegen.ofNullable(columnDelimiter);
-            return this;
+
+        public Builder columnDelimiter(String columnDelimiter) {
+            return columnDelimiter(Output.of(columnDelimiter));
         }
+
         public Builder formatType(Output<FormatTypes> formatType) {
-            this.formatType = Objects.requireNonNull(formatType);
+            $.formatType = formatType;
             return this;
         }
+
         public Builder formatType(FormatTypes formatType) {
-            this.formatType = Output.of(Objects.requireNonNull(formatType));
-            return this;
+            return formatType(Output.of(formatType));
         }
+
         public Builder quoteCharacter(@Nullable Output<String> quoteCharacter) {
-            this.quoteCharacter = quoteCharacter;
+            $.quoteCharacter = quoteCharacter;
             return this;
         }
-        public Builder quoteCharacter(@Nullable String quoteCharacter) {
-            this.quoteCharacter = Codegen.ofNullable(quoteCharacter);
-            return this;
+
+        public Builder quoteCharacter(String quoteCharacter) {
+            return quoteCharacter(Output.of(quoteCharacter));
         }
+
         public Builder quoteEscapeCharacter(@Nullable Output<String> quoteEscapeCharacter) {
-            this.quoteEscapeCharacter = quoteEscapeCharacter;
+            $.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
-        public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
-            this.quoteEscapeCharacter = Codegen.ofNullable(quoteEscapeCharacter);
-            return this;
-        }        public ConnectorMappingFormatArgs build() {
-            return new ConnectorMappingFormatArgs(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);
+
+        public Builder quoteEscapeCharacter(String quoteEscapeCharacter) {
+            return quoteEscapeCharacter(Output.of(quoteEscapeCharacter));
+        }
+
+        public ConnectorMappingFormatArgs build() {
+            $.formatType = Objects.requireNonNull($.formatType, "expected parameter 'formatType' to be non-null");
+            return $;
         }
     }
+
 }

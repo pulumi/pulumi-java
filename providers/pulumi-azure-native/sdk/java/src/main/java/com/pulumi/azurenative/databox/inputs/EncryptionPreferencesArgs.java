@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +27,49 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="doubleEncryption")
-      private final @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;
+    private @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;
 
-    public Output<Either<String,DoubleEncryption>> doubleEncryption() {
-        return this.doubleEncryption == null ? Codegen.empty() : this.doubleEncryption;
+    public Optional<Output<Either<String,DoubleEncryption>>> doubleEncryption() {
+        return Optional.ofNullable(this.doubleEncryption);
     }
 
-    public EncryptionPreferencesArgs(@Nullable Output<Either<String,DoubleEncryption>> doubleEncryption) {
-        this.doubleEncryption = Codegen.stringProp("doubleEncryption").left(DoubleEncryption.class).output().arg(doubleEncryption).def("Disabled").getNullable();
-    }
+    private EncryptionPreferencesArgs() {}
 
-    private EncryptionPreferencesArgs() {
-        this.doubleEncryption = Codegen.empty();
+    private EncryptionPreferencesArgs(EncryptionPreferencesArgs $) {
+        this.doubleEncryption = $.doubleEncryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;
+        private EncryptionPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPreferencesArgs();
         }
 
         public Builder(EncryptionPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doubleEncryption = defaults.doubleEncryption;
+            $ = new EncryptionPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder doubleEncryption(@Nullable Output<Either<String,DoubleEncryption>> doubleEncryption) {
-            this.doubleEncryption = doubleEncryption;
+            $.doubleEncryption = doubleEncryption;
             return this;
         }
-        public Builder doubleEncryption(@Nullable Either<String,DoubleEncryption> doubleEncryption) {
-            this.doubleEncryption = Codegen.ofNullable(doubleEncryption);
-            return this;
-        }        public EncryptionPreferencesArgs build() {
-            return new EncryptionPreferencesArgs(doubleEncryption);
+
+        public Builder doubleEncryption(Either<String,DoubleEncryption> doubleEncryption) {
+            return doubleEncryption(Output.of(doubleEncryption));
+        }
+
+        public EncryptionPreferencesArgs build() {
+            $.doubleEncryption = Codegen.stringProp("doubleEncryption").left(DoubleEncryption.class).output().arg($.doubleEncryption).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

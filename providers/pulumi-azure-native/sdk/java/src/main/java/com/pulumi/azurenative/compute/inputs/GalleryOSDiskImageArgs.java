@@ -7,8 +7,8 @@ import com.pulumi.azurenative.compute.enums.HostCaching;
 import com.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GalleryOSDiskImageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable Output<HostCaching> hostCaching;
+    private @Nullable Output<HostCaching> hostCaching;
 
-    public Output<HostCaching> hostCaching() {
-        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
+    public Optional<Output<HostCaching>> hostCaching() {
+        return Optional.ofNullable(this.hostCaching);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GalleryOSDiskImageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
+    private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<GalleryArtifactVersionSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public GalleryOSDiskImageArgs(
-        @Nullable Output<HostCaching> hostCaching,
-        @Nullable Output<GalleryArtifactVersionSourceArgs> source) {
-        this.hostCaching = hostCaching;
-        this.source = source;
-    }
+    private GalleryOSDiskImageArgs() {}
 
-    private GalleryOSDiskImageArgs() {
-        this.hostCaching = Codegen.empty();
-        this.source = Codegen.empty();
+    private GalleryOSDiskImageArgs(GalleryOSDiskImageArgs $) {
+        this.hostCaching = $.hostCaching;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryOSDiskImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HostCaching> hostCaching;
-        private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
+        private GalleryOSDiskImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryOSDiskImageArgs();
         }
 
         public Builder(GalleryOSDiskImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostCaching = defaults.hostCaching;
-    	      this.source = defaults.source;
+            $ = new GalleryOSDiskImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostCaching(@Nullable Output<HostCaching> hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
         }
-        public Builder hostCaching(@Nullable HostCaching hostCaching) {
-            this.hostCaching = Codegen.ofNullable(hostCaching);
-            return this;
+
+        public Builder hostCaching(HostCaching hostCaching) {
+            return hostCaching(Output.of(hostCaching));
         }
+
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public GalleryOSDiskImageArgs build() {
-            return new GalleryOSDiskImageArgs(hostCaching, source);
+
+        public Builder source(GalleryArtifactVersionSourceArgs source) {
+            return source(Output.of(source));
+        }
+
+        public GalleryOSDiskImageArgs build() {
+            return $;
         }
     }
+
 }

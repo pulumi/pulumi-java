@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datalakestore.inputs;
 import com.pulumi.azurenative.datalakestore.enums.EncryptionIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<EncryptionIdentityType> type;
+    private Output<EncryptionIdentityType> type;
 
     public Output<EncryptionIdentityType> type() {
         return this.type;
     }
 
-    public EncryptionIdentityArgs(Output<EncryptionIdentityType> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EncryptionIdentityArgs() {}
 
-    private EncryptionIdentityArgs() {
-        this.type = Codegen.empty();
+    private EncryptionIdentityArgs(EncryptionIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<EncryptionIdentityType> type;
+        private EncryptionIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionIdentityArgs();
         }
 
         public Builder(EncryptionIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new EncryptionIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<EncryptionIdentityType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(EncryptionIdentityType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EncryptionIdentityArgs build() {
-            return new EncryptionIdentityArgs(type);
+            return type(Output.of(type));
+        }
+
+        public EncryptionIdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="registrationDefinitionId", required=true)
-      private final String registrationDefinitionId;
+    private String registrationDefinitionId;
 
     public String registrationDefinitionId() {
         return this.registrationDefinitionId;
@@ -28,55 +28,52 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetRegistrationDefinitionArgs(
-        String registrationDefinitionId,
-        String scope) {
-        this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId, "expected parameter 'registrationDefinitionId' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRegistrationDefinitionArgs() {}
 
-    private GetRegistrationDefinitionArgs() {
-        this.registrationDefinitionId = null;
-        this.scope = null;
+    private GetRegistrationDefinitionArgs(GetRegistrationDefinitionArgs $) {
+        this.registrationDefinitionId = $.registrationDefinitionId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistrationDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registrationDefinitionId;
-        private String scope;
+        private GetRegistrationDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistrationDefinitionArgs();
         }
 
         public Builder(GetRegistrationDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registrationDefinitionId = defaults.registrationDefinitionId;
-    	      this.scope = defaults.scope;
+            $ = new GetRegistrationDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registrationDefinitionId(String registrationDefinitionId) {
-            this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
+            $.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRegistrationDefinitionArgs build() {
-            return new GetRegistrationDefinitionArgs(registrationDefinitionId, scope);
+        }
+
+        public GetRegistrationDefinitionArgs build() {
+            $.registrationDefinitionId = Objects.requireNonNull($.registrationDefinitionId, "expected parameter 'registrationDefinitionId' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

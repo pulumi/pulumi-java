@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="primaryZone")
-      private final @Nullable Output<String> primaryZone;
+    private @Nullable Output<String> primaryZone;
 
-    public Output<String> primaryZone() {
-        return this.primaryZone == null ? Codegen.empty() : this.primaryZone;
+    public Optional<Output<String>> primaryZone() {
+        return Optional.ofNullable(this.primaryZone);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class RecoveryPlanA2AInputArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="recoveryZone")
-      private final @Nullable Output<String> recoveryZone;
+    private @Nullable Output<String> recoveryZone;
 
-    public Output<String> recoveryZone() {
-        return this.recoveryZone == null ? Codegen.empty() : this.recoveryZone;
+    public Optional<Output<String>> recoveryZone() {
+        return Optional.ofNullable(this.recoveryZone);
     }
 
-    public RecoveryPlanA2AInputArgs(
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> primaryZone,
-        @Nullable Output<String> recoveryZone) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.primaryZone = primaryZone;
-        this.recoveryZone = recoveryZone;
-    }
+    private RecoveryPlanA2AInputArgs() {}
 
-    private RecoveryPlanA2AInputArgs() {
-        this.instanceType = Codegen.empty();
-        this.primaryZone = Codegen.empty();
-        this.recoveryZone = Codegen.empty();
+    private RecoveryPlanA2AInputArgs(RecoveryPlanA2AInputArgs $) {
+        this.instanceType = $.instanceType;
+        this.primaryZone = $.primaryZone;
+        this.recoveryZone = $.recoveryZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanA2AInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> primaryZone;
-        private @Nullable Output<String> recoveryZone;
+        private RecoveryPlanA2AInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanA2AInputArgs();
         }
 
         public Builder(RecoveryPlanA2AInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.primaryZone = defaults.primaryZone;
-    	      this.recoveryZone = defaults.recoveryZone;
+            $ = new RecoveryPlanA2AInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder primaryZone(@Nullable Output<String> primaryZone) {
-            this.primaryZone = primaryZone;
+            $.primaryZone = primaryZone;
             return this;
         }
-        public Builder primaryZone(@Nullable String primaryZone) {
-            this.primaryZone = Codegen.ofNullable(primaryZone);
-            return this;
+
+        public Builder primaryZone(String primaryZone) {
+            return primaryZone(Output.of(primaryZone));
         }
+
         public Builder recoveryZone(@Nullable Output<String> recoveryZone) {
-            this.recoveryZone = recoveryZone;
+            $.recoveryZone = recoveryZone;
             return this;
         }
-        public Builder recoveryZone(@Nullable String recoveryZone) {
-            this.recoveryZone = Codegen.ofNullable(recoveryZone);
-            return this;
-        }        public RecoveryPlanA2AInputArgs build() {
-            return new RecoveryPlanA2AInputArgs(instanceType, primaryZone, recoveryZone);
+
+        public Builder recoveryZone(String recoveryZone) {
+            return recoveryZone(Output.of(recoveryZone));
+        }
+
+        public RecoveryPlanA2AInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

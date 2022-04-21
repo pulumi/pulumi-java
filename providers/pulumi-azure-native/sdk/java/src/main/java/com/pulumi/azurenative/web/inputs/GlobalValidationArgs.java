@@ -6,11 +6,11 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.UnauthenticatedClientActionV2;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="excludedPaths")
-      private final @Nullable Output<List<String>> excludedPaths;
+    private @Nullable Output<List<String>> excludedPaths;
 
-    public Output<List<String>> excludedPaths() {
-        return this.excludedPaths == null ? Codegen.empty() : this.excludedPaths;
+    public Optional<Output<List<String>>> excludedPaths() {
+        return Optional.ofNullable(this.excludedPaths);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="redirectToProvider")
-      private final @Nullable Output<String> redirectToProvider;
+    private @Nullable Output<String> redirectToProvider;
 
-    public Output<String> redirectToProvider() {
-        return this.redirectToProvider == null ? Codegen.empty() : this.redirectToProvider;
+    public Optional<Output<String>> redirectToProvider() {
+        return Optional.ofNullable(this.redirectToProvider);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requireAuthentication")
-      private final @Nullable Output<Boolean> requireAuthentication;
+    private @Nullable Output<Boolean> requireAuthentication;
 
-    public Output<Boolean> requireAuthentication() {
-        return this.requireAuthentication == null ? Codegen.empty() : this.requireAuthentication;
+    public Optional<Output<Boolean>> requireAuthentication() {
+        return Optional.ofNullable(this.requireAuthentication);
     }
 
     /**
@@ -62,92 +62,82 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="unauthenticatedClientAction")
-      private final @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
+    private @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
-    public Output<UnauthenticatedClientActionV2> unauthenticatedClientAction() {
-        return this.unauthenticatedClientAction == null ? Codegen.empty() : this.unauthenticatedClientAction;
+    public Optional<Output<UnauthenticatedClientActionV2>> unauthenticatedClientAction() {
+        return Optional.ofNullable(this.unauthenticatedClientAction);
     }
 
-    public GlobalValidationArgs(
-        @Nullable Output<List<String>> excludedPaths,
-        @Nullable Output<String> redirectToProvider,
-        @Nullable Output<Boolean> requireAuthentication,
-        @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
-        this.excludedPaths = excludedPaths;
-        this.redirectToProvider = redirectToProvider;
-        this.requireAuthentication = requireAuthentication;
-        this.unauthenticatedClientAction = unauthenticatedClientAction;
-    }
+    private GlobalValidationArgs() {}
 
-    private GlobalValidationArgs() {
-        this.excludedPaths = Codegen.empty();
-        this.redirectToProvider = Codegen.empty();
-        this.requireAuthentication = Codegen.empty();
-        this.unauthenticatedClientAction = Codegen.empty();
+    private GlobalValidationArgs(GlobalValidationArgs $) {
+        this.excludedPaths = $.excludedPaths;
+        this.redirectToProvider = $.redirectToProvider;
+        this.requireAuthentication = $.requireAuthentication;
+        this.unauthenticatedClientAction = $.unauthenticatedClientAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedPaths;
-        private @Nullable Output<String> redirectToProvider;
-        private @Nullable Output<Boolean> requireAuthentication;
-        private @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
+        private GlobalValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalValidationArgs();
         }
 
         public Builder(GlobalValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedPaths = defaults.excludedPaths;
-    	      this.redirectToProvider = defaults.redirectToProvider;
-    	      this.requireAuthentication = defaults.requireAuthentication;
-    	      this.unauthenticatedClientAction = defaults.unauthenticatedClientAction;
+            $ = new GlobalValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedPaths(@Nullable Output<List<String>> excludedPaths) {
-            this.excludedPaths = excludedPaths;
+            $.excludedPaths = excludedPaths;
             return this;
         }
-        public Builder excludedPaths(@Nullable List<String> excludedPaths) {
-            this.excludedPaths = Codegen.ofNullable(excludedPaths);
-            return this;
+
+        public Builder excludedPaths(List<String> excludedPaths) {
+            return excludedPaths(Output.of(excludedPaths));
         }
+
         public Builder excludedPaths(String... excludedPaths) {
             return excludedPaths(List.of(excludedPaths));
         }
+
         public Builder redirectToProvider(@Nullable Output<String> redirectToProvider) {
-            this.redirectToProvider = redirectToProvider;
+            $.redirectToProvider = redirectToProvider;
             return this;
         }
-        public Builder redirectToProvider(@Nullable String redirectToProvider) {
-            this.redirectToProvider = Codegen.ofNullable(redirectToProvider);
-            return this;
+
+        public Builder redirectToProvider(String redirectToProvider) {
+            return redirectToProvider(Output.of(redirectToProvider));
         }
+
         public Builder requireAuthentication(@Nullable Output<Boolean> requireAuthentication) {
-            this.requireAuthentication = requireAuthentication;
+            $.requireAuthentication = requireAuthentication;
             return this;
         }
-        public Builder requireAuthentication(@Nullable Boolean requireAuthentication) {
-            this.requireAuthentication = Codegen.ofNullable(requireAuthentication);
-            return this;
+
+        public Builder requireAuthentication(Boolean requireAuthentication) {
+            return requireAuthentication(Output.of(requireAuthentication));
         }
+
         public Builder unauthenticatedClientAction(@Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
-            this.unauthenticatedClientAction = unauthenticatedClientAction;
+            $.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
-        public Builder unauthenticatedClientAction(@Nullable UnauthenticatedClientActionV2 unauthenticatedClientAction) {
-            this.unauthenticatedClientAction = Codegen.ofNullable(unauthenticatedClientAction);
-            return this;
-        }        public GlobalValidationArgs build() {
-            return new GlobalValidationArgs(excludedPaths, redirectToProvider, requireAuthentication, unauthenticatedClientAction);
+
+        public Builder unauthenticatedClientAction(UnauthenticatedClientActionV2 unauthenticatedClientAction) {
+            return unauthenticatedClientAction(Output.of(unauthenticatedClientAction));
+        }
+
+        public GlobalValidationArgs build() {
+            return $;
         }
     }
+
 }

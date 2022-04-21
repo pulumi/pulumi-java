@@ -23,7 +23,7 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="adminUserName", required=true)
-      private final String adminUserName;
+    private String adminUserName;
 
     public String adminUserName() {
         return this.adminUserName;
@@ -34,10 +34,10 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="adminUserPassword")
-      private final @Nullable String adminUserPassword;
+    private @Nullable String adminUserPassword;
 
     public Optional<String> adminUserPassword() {
-        return this.adminUserPassword == null ? Optional.empty() : Optional.ofNullable(this.adminUserPassword);
+        return Optional.ofNullable(this.adminUserPassword);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="adminUserSshPublicKey")
-      private final @Nullable String adminUserSshPublicKey;
+    private @Nullable String adminUserSshPublicKey;
 
     public Optional<String> adminUserSshPublicKey() {
-        return this.adminUserSshPublicKey == null ? Optional.empty() : Optional.ofNullable(this.adminUserSshPublicKey);
+        return Optional.ofNullable(this.adminUserSshPublicKey);
     }
 
-    public UserAccountCredentialsResponse(
-        String adminUserName,
-        @Nullable String adminUserPassword,
-        @Nullable String adminUserSshPublicKey) {
-        this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
-        this.adminUserPassword = adminUserPassword;
-        this.adminUserSshPublicKey = adminUserSshPublicKey;
-    }
+    private UserAccountCredentialsResponse() {}
 
-    private UserAccountCredentialsResponse() {
-        this.adminUserName = null;
-        this.adminUserPassword = null;
-        this.adminUserSshPublicKey = null;
+    private UserAccountCredentialsResponse(UserAccountCredentialsResponse $) {
+        this.adminUserName = $.adminUserName;
+        this.adminUserPassword = $.adminUserPassword;
+        this.adminUserSshPublicKey = $.adminUserSshPublicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAccountCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String adminUserName;
-        private @Nullable String adminUserPassword;
-        private @Nullable String adminUserSshPublicKey;
+        private UserAccountCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAccountCredentialsResponse();
         }
 
         public Builder(UserAccountCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUserName = defaults.adminUserName;
-    	      this.adminUserPassword = defaults.adminUserPassword;
-    	      this.adminUserSshPublicKey = defaults.adminUserSshPublicKey;
+            $ = new UserAccountCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUserName(String adminUserName) {
-            this.adminUserName = Objects.requireNonNull(adminUserName);
+            $.adminUserName = adminUserName;
             return this;
         }
+
         public Builder adminUserPassword(@Nullable String adminUserPassword) {
-            this.adminUserPassword = adminUserPassword;
+            $.adminUserPassword = adminUserPassword;
             return this;
         }
+
         public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
-            this.adminUserSshPublicKey = adminUserSshPublicKey;
+            $.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
-        }        public UserAccountCredentialsResponse build() {
-            return new UserAccountCredentialsResponse(adminUserName, adminUserPassword, adminUserSshPublicKey);
+        }
+
+        public UserAccountCredentialsResponse build() {
+            $.adminUserName = Objects.requireNonNull($.adminUserName, "expected parameter 'adminUserName' to be non-null");
+            return $;
         }
     }
+
 }

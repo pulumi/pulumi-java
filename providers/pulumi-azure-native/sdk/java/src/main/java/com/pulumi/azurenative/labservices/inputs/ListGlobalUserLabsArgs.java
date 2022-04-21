@@ -17,45 +17,45 @@ public final class ListGlobalUserLabsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ListGlobalUserLabsArgs(String userName) {
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ListGlobalUserLabsArgs() {}
 
-    private ListGlobalUserLabsArgs() {
-        this.userName = null;
+    private ListGlobalUserLabsArgs(ListGlobalUserLabsArgs $) {
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListGlobalUserLabsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userName;
+        private ListGlobalUserLabsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListGlobalUserLabsArgs();
         }
 
         public Builder(ListGlobalUserLabsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userName = defaults.userName;
+            $ = new ListGlobalUserLabsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ListGlobalUserLabsArgs build() {
-            return new ListGlobalUserLabsArgs(userName);
+        }
+
+        public ListGlobalUserLabsArgs build() {
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

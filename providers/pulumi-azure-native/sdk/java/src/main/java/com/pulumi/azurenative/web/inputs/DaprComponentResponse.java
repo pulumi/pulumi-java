@@ -25,10 +25,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable List<DaprMetadataResponse> metadata;
+    private @Nullable List<DaprMetadataResponse> metadata;
 
-    public List<DaprMetadataResponse> metadata() {
-        return this.metadata == null ? List.of() : this.metadata;
+    public Optional<List<DaprMetadataResponse>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -58,76 +58,66 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public DaprComponentResponse(
-        @Nullable List<DaprMetadataResponse> metadata,
-        @Nullable String name,
-        @Nullable String type,
-        @Nullable String version) {
-        this.metadata = metadata;
-        this.name = name;
-        this.type = type;
-        this.version = version;
-    }
+    private DaprComponentResponse() {}
 
-    private DaprComponentResponse() {
-        this.metadata = List.of();
-        this.name = null;
-        this.type = null;
-        this.version = null;
+    private DaprComponentResponse(DaprComponentResponse $) {
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaprComponentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DaprMetadataResponse> metadata;
-        private @Nullable String name;
-        private @Nullable String type;
-        private @Nullable String version;
+        private DaprComponentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaprComponentResponse();
         }
 
         public Builder(DaprComponentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new DaprComponentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable List<DaprMetadataResponse> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metadata(DaprMetadataResponse... metadata) {
             return metadata(List.of(metadata));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public DaprComponentResponse build() {
-            return new DaprComponentResponse(metadata, name, type, version);
+        }
+
+        public DaprComponentResponse build() {
+            return $;
         }
     }
+
 }

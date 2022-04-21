@@ -9,9 +9,9 @@ import com.pulumi.azurenative.network.enums.UseHubGateway;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="groupConnectivity")
-      private final @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
+    private @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
 
-    public Output<Either<String,GroupConnectivity>> groupConnectivity() {
-        return this.groupConnectivity == null ? Codegen.empty() : this.groupConnectivity;
+    public Optional<Output<Either<String,GroupConnectivity>>> groupConnectivity() {
+        return Optional.ofNullable(this.groupConnectivity);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="isGlobal")
-      private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
+    private @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
-    public Output<Either<String,IsGlobal>> isGlobal() {
-        return this.isGlobal == null ? Codegen.empty() : this.isGlobal;
+    public Optional<Output<Either<String,IsGlobal>>> isGlobal() {
+        return Optional.ofNullable(this.isGlobal);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="networkGroupId")
-      private final @Nullable Output<String> networkGroupId;
+    private @Nullable Output<String> networkGroupId;
 
-    public Output<String> networkGroupId() {
-        return this.networkGroupId == null ? Codegen.empty() : this.networkGroupId;
+    public Optional<Output<String>> networkGroupId() {
+        return Optional.ofNullable(this.networkGroupId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="useHubGateway")
-      private final @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
+    private @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
-    public Output<Either<String,UseHubGateway>> useHubGateway() {
-        return this.useHubGateway == null ? Codegen.empty() : this.useHubGateway;
+    public Optional<Output<Either<String,UseHubGateway>>> useHubGateway() {
+        return Optional.ofNullable(this.useHubGateway);
     }
 
-    public ConnectivityGroupItemArgs(
-        @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity,
-        @Nullable Output<Either<String,IsGlobal>> isGlobal,
-        @Nullable Output<String> networkGroupId,
-        @Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
-        this.groupConnectivity = groupConnectivity;
-        this.isGlobal = isGlobal;
-        this.networkGroupId = networkGroupId;
-        this.useHubGateway = useHubGateway;
-    }
+    private ConnectivityGroupItemArgs() {}
 
-    private ConnectivityGroupItemArgs() {
-        this.groupConnectivity = Codegen.empty();
-        this.isGlobal = Codegen.empty();
-        this.networkGroupId = Codegen.empty();
-        this.useHubGateway = Codegen.empty();
+    private ConnectivityGroupItemArgs(ConnectivityGroupItemArgs $) {
+        this.groupConnectivity = $.groupConnectivity;
+        this.isGlobal = $.isGlobal;
+        this.networkGroupId = $.networkGroupId;
+        this.useHubGateway = $.useHubGateway;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityGroupItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
-        private @Nullable Output<Either<String,IsGlobal>> isGlobal;
-        private @Nullable Output<String> networkGroupId;
-        private @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
+        private ConnectivityGroupItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityGroupItemArgs();
         }
 
         public Builder(ConnectivityGroupItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupConnectivity = defaults.groupConnectivity;
-    	      this.isGlobal = defaults.isGlobal;
-    	      this.networkGroupId = defaults.networkGroupId;
-    	      this.useHubGateway = defaults.useHubGateway;
+            $ = new ConnectivityGroupItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupConnectivity(@Nullable Output<Either<String,GroupConnectivity>> groupConnectivity) {
-            this.groupConnectivity = groupConnectivity;
+            $.groupConnectivity = groupConnectivity;
             return this;
         }
-        public Builder groupConnectivity(@Nullable Either<String,GroupConnectivity> groupConnectivity) {
-            this.groupConnectivity = Codegen.ofNullable(groupConnectivity);
-            return this;
+
+        public Builder groupConnectivity(Either<String,GroupConnectivity> groupConnectivity) {
+            return groupConnectivity(Output.of(groupConnectivity));
         }
+
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
-            this.isGlobal = isGlobal;
+            $.isGlobal = isGlobal;
             return this;
         }
-        public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
-            this.isGlobal = Codegen.ofNullable(isGlobal);
-            return this;
+
+        public Builder isGlobal(Either<String,IsGlobal> isGlobal) {
+            return isGlobal(Output.of(isGlobal));
         }
+
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
-            this.networkGroupId = networkGroupId;
+            $.networkGroupId = networkGroupId;
             return this;
         }
-        public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = Codegen.ofNullable(networkGroupId);
-            return this;
+
+        public Builder networkGroupId(String networkGroupId) {
+            return networkGroupId(Output.of(networkGroupId));
         }
+
         public Builder useHubGateway(@Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
-            this.useHubGateway = useHubGateway;
+            $.useHubGateway = useHubGateway;
             return this;
         }
-        public Builder useHubGateway(@Nullable Either<String,UseHubGateway> useHubGateway) {
-            this.useHubGateway = Codegen.ofNullable(useHubGateway);
-            return this;
-        }        public ConnectivityGroupItemArgs build() {
-            return new ConnectivityGroupItemArgs(groupConnectivity, isGlobal, networkGroupId, useHubGateway);
+
+        public Builder useHubGateway(Either<String,UseHubGateway> useHubGateway) {
+            return useHubGateway(Output.of(useHubGateway));
+        }
+
+        public ConnectivityGroupItemArgs build() {
+            return $;
         }
     }
+
 }

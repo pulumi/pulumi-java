@@ -21,7 +21,7 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataStoreType", required=true)
-      private final String dataStoreType;
+    private String dataStoreType;
 
     public String dataStoreType() {
         return this.dataStoreType;
@@ -32,55 +32,52 @@ public final class DataStoreInfoBaseResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public DataStoreInfoBaseResponse(
-        String dataStoreType,
-        String objectType) {
-        this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-    }
+    private DataStoreInfoBaseResponse() {}
 
-    private DataStoreInfoBaseResponse() {
-        this.dataStoreType = null;
-        this.objectType = null;
+    private DataStoreInfoBaseResponse(DataStoreInfoBaseResponse $) {
+        this.dataStoreType = $.dataStoreType;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreInfoBaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataStoreType;
-        private String objectType;
+        private DataStoreInfoBaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreInfoBaseResponse();
         }
 
         public Builder(DataStoreInfoBaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStoreType = defaults.dataStoreType;
-    	      this.objectType = defaults.objectType;
+            $ = new DataStoreInfoBaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStoreType(String dataStoreType) {
-            this.dataStoreType = Objects.requireNonNull(dataStoreType);
+            $.dataStoreType = dataStoreType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public DataStoreInfoBaseResponse build() {
-            return new DataStoreInfoBaseResponse(dataStoreType, objectType);
+        }
+
+        public DataStoreInfoBaseResponse build() {
+            $.dataStoreType = Objects.requireNonNull($.dataStoreType, "expected parameter 'dataStoreType' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            return $;
         }
     }
+
 }

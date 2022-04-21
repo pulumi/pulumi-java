@@ -5,9 +5,9 @@ package com.pulumi.azurenative.videoindexer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable Output<String> userAssignedIdentity;
+    private @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
+    public Optional<Output<String>> userAssignedIdentity() {
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public MediaServicesForPutRequestArgs(
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> userAssignedIdentity) {
-        this.resourceId = resourceId;
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private MediaServicesForPutRequestArgs() {}
 
-    private MediaServicesForPutRequestArgs() {
-        this.resourceId = Codegen.empty();
-        this.userAssignedIdentity = Codegen.empty();
+    private MediaServicesForPutRequestArgs(MediaServicesForPutRequestArgs $) {
+        this.resourceId = $.resourceId;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaServicesForPutRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> userAssignedIdentity;
+        private MediaServicesForPutRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaServicesForPutRequestArgs();
         }
 
         public Builder(MediaServicesForPutRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new MediaServicesForPutRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
-            return this;
-        }        public MediaServicesForPutRequestArgs build() {
-            return new MediaServicesForPutRequestArgs(resourceId, userAssignedIdentity);
+
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public MediaServicesForPutRequestArgs build() {
+            return $;
         }
     }
+
 }

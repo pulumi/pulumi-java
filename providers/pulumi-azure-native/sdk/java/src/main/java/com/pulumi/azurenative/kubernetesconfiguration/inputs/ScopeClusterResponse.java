@@ -23,45 +23,44 @@ public final class ScopeClusterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="releaseNamespace")
-      private final @Nullable String releaseNamespace;
+    private @Nullable String releaseNamespace;
 
     public Optional<String> releaseNamespace() {
-        return this.releaseNamespace == null ? Optional.empty() : Optional.ofNullable(this.releaseNamespace);
+        return Optional.ofNullable(this.releaseNamespace);
     }
 
-    public ScopeClusterResponse(@Nullable String releaseNamespace) {
-        this.releaseNamespace = releaseNamespace;
-    }
+    private ScopeClusterResponse() {}
 
-    private ScopeClusterResponse() {
-        this.releaseNamespace = null;
+    private ScopeClusterResponse(ScopeClusterResponse $) {
+        this.releaseNamespace = $.releaseNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String releaseNamespace;
+        private ScopeClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeClusterResponse();
         }
 
         public Builder(ScopeClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.releaseNamespace = defaults.releaseNamespace;
+            $ = new ScopeClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder releaseNamespace(@Nullable String releaseNamespace) {
-            this.releaseNamespace = releaseNamespace;
+            $.releaseNamespace = releaseNamespace;
             return this;
-        }        public ScopeClusterResponse build() {
-            return new ScopeClusterResponse(releaseNamespace);
+        }
+
+        public ScopeClusterResponse build() {
+            return $;
         }
     }
+
 }

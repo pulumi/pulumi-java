@@ -5,10 +5,10 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<List<String>> categories;
+    private @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<List<String>>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
      * 
      */
     @Import(name="resourceTypes")
-      private final @Nullable Output<List<String>> resourceTypes;
+    private @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> resourceTypes() {
-        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
+    public Optional<Output<List<String>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     /**
@@ -47,85 +47,80 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
      * 
      */
     @Import(name="solutions")
-      private final @Nullable Output<List<String>> solutions;
+    private @Nullable Output<List<String>> solutions;
 
-    public Output<List<String>> solutions() {
-        return this.solutions == null ? Codegen.empty() : this.solutions;
+    public Optional<Output<List<String>>> solutions() {
+        return Optional.ofNullable(this.solutions);
     }
 
-    public LogAnalyticsQueryPackQueryPropertiesRelatedArgs(
-        @Nullable Output<List<String>> categories,
-        @Nullable Output<List<String>> resourceTypes,
-        @Nullable Output<List<String>> solutions) {
-        this.categories = categories;
-        this.resourceTypes = resourceTypes;
-        this.solutions = solutions;
-    }
+    private LogAnalyticsQueryPackQueryPropertiesRelatedArgs() {}
 
-    private LogAnalyticsQueryPackQueryPropertiesRelatedArgs() {
-        this.categories = Codegen.empty();
-        this.resourceTypes = Codegen.empty();
-        this.solutions = Codegen.empty();
+    private LogAnalyticsQueryPackQueryPropertiesRelatedArgs(LogAnalyticsQueryPackQueryPropertiesRelatedArgs $) {
+        this.categories = $.categories;
+        this.resourceTypes = $.resourceTypes;
+        this.solutions = $.solutions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsQueryPackQueryPropertiesRelatedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> categories;
-        private @Nullable Output<List<String>> resourceTypes;
-        private @Nullable Output<List<String>> solutions;
+        private LogAnalyticsQueryPackQueryPropertiesRelatedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsQueryPackQueryPropertiesRelatedArgs();
         }
 
         public Builder(LogAnalyticsQueryPackQueryPropertiesRelatedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.solutions = defaults.solutions;
+            $ = new LogAnalyticsQueryPackQueryPropertiesRelatedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(@Nullable Output<List<String>> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable List<String> categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(List<String> categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
-        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Codegen.ofNullable(resourceTypes);
-            return this;
+
+        public Builder resourceTypes(List<String> resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
+
         public Builder solutions(@Nullable Output<List<String>> solutions) {
-            this.solutions = solutions;
+            $.solutions = solutions;
             return this;
         }
-        public Builder solutions(@Nullable List<String> solutions) {
-            this.solutions = Codegen.ofNullable(solutions);
-            return this;
+
+        public Builder solutions(List<String> solutions) {
+            return solutions(Output.of(solutions));
         }
+
         public Builder solutions(String... solutions) {
             return solutions(List.of(solutions));
-        }        public LogAnalyticsQueryPackQueryPropertiesRelatedArgs build() {
-            return new LogAnalyticsQueryPackQueryPropertiesRelatedArgs(categories, resourceTypes, solutions);
+        }
+
+        public LogAnalyticsQueryPackQueryPropertiesRelatedArgs build() {
+            return $;
         }
     }
+
 }

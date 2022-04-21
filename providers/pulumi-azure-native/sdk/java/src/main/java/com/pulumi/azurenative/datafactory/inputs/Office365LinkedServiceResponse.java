@@ -32,10 +32,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="office365TenantId", required=true)
-      private final Object office365TenantId;
+    private Object office365TenantId;
 
     public Object office365TenantId() {
         return this.office365TenantId;
@@ -87,10 +87,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="servicePrincipalId", required=true)
-      private final Object servicePrincipalId;
+    private Object servicePrincipalId;
 
     public Object servicePrincipalId() {
         return this.servicePrincipalId;
@@ -109,7 +109,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="servicePrincipalKey", required=true)
-      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey;
@@ -120,7 +120,7 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="servicePrincipalTenantId", required=true)
-      private final Object servicePrincipalTenantId;
+    private Object servicePrincipalTenantId;
 
     public Object servicePrincipalTenantId() {
         return this.servicePrincipalTenantId;
@@ -132,130 +132,107 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public Office365LinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object office365TenantId,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object servicePrincipalId,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        Object servicePrincipalTenantId,
-        String type) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.office365TenantId = Objects.requireNonNull(office365TenantId, "expected parameter 'office365TenantId' to be non-null");
-        this.parameters = parameters;
-        this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
-        this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey, "expected parameter 'servicePrincipalKey' to be non-null");
-        this.servicePrincipalTenantId = Objects.requireNonNull(servicePrincipalTenantId, "expected parameter 'servicePrincipalTenantId' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private Office365LinkedServiceResponse() {}
 
-    private Office365LinkedServiceResponse() {
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.office365TenantId = null;
-        this.parameters = Map.of();
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.servicePrincipalTenantId = null;
-        this.type = null;
+    private Office365LinkedServiceResponse(Office365LinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.office365TenantId = $.office365TenantId;
+        this.parameters = $.parameters;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.servicePrincipalTenantId = $.servicePrincipalTenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Office365LinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object office365TenantId;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private Object servicePrincipalId;
-        private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private Object servicePrincipalTenantId;
-        private String type;
+        private Office365LinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Office365LinkedServiceResponse();
         }
 
         public Builder(Office365LinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.office365TenantId = defaults.office365TenantId;
-    	      this.parameters = defaults.parameters;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.servicePrincipalTenantId = defaults.servicePrincipalTenantId;
-    	      this.type = defaults.type;
+            $ = new Office365LinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder office365TenantId(Object office365TenantId) {
-            this.office365TenantId = Objects.requireNonNull(office365TenantId);
+            $.office365TenantId = office365TenantId;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder servicePrincipalId(Object servicePrincipalId) {
-            this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder servicePrincipalTenantId(Object servicePrincipalTenantId) {
-            this.servicePrincipalTenantId = Objects.requireNonNull(servicePrincipalTenantId);
+            $.servicePrincipalTenantId = servicePrincipalTenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public Office365LinkedServiceResponse build() {
-            return new Office365LinkedServiceResponse(annotations, connectVia, description, encryptedCredential, office365TenantId, parameters, servicePrincipalId, servicePrincipalKey, servicePrincipalTenantId, type);
+        }
+
+        public Office365LinkedServiceResponse build() {
+            $.office365TenantId = Objects.requireNonNull($.office365TenantId, "expected parameter 'office365TenantId' to be non-null");
+            $.servicePrincipalId = Objects.requireNonNull($.servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
+            $.servicePrincipalKey = Objects.requireNonNull($.servicePrincipalKey, "expected parameter 'servicePrincipalKey' to be non-null");
+            $.servicePrincipalTenantId = Objects.requireNonNull($.servicePrincipalTenantId, "expected parameter 'servicePrincipalTenantId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

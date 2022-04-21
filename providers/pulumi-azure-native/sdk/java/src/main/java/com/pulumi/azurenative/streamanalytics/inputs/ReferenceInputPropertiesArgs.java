@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="datasource")
-      private final @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
+    private @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
 
-    public Output<BlobReferenceInputDataSourceArgs> datasource() {
-        return this.datasource == null ? Codegen.empty() : this.datasource;
+    public Optional<Output<BlobReferenceInputDataSourceArgs>> datasource() {
+        return Optional.ofNullable(this.datasource);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serialization")
-      private final @Nullable Output<Object> serialization;
+    private @Nullable Output<Object> serialization;
 
-    public Output<Object> serialization() {
-        return this.serialization == null ? Codegen.empty() : this.serialization;
+    public Optional<Output<Object>> serialization() {
+        return Optional.ofNullable(this.serialization);
     }
 
     /**
@@ -52,76 +53,69 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ReferenceInputPropertiesArgs(
-        @Nullable Output<BlobReferenceInputDataSourceArgs> datasource,
-        @Nullable Output<Object> serialization,
-        Output<String> type) {
-        this.datasource = datasource;
-        this.serialization = serialization;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ReferenceInputPropertiesArgs() {}
 
-    private ReferenceInputPropertiesArgs() {
-        this.datasource = Codegen.empty();
-        this.serialization = Codegen.empty();
-        this.type = Codegen.empty();
+    private ReferenceInputPropertiesArgs(ReferenceInputPropertiesArgs $) {
+        this.datasource = $.datasource;
+        this.serialization = $.serialization;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReferenceInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
-        private @Nullable Output<Object> serialization;
-        private Output<String> type;
+        private ReferenceInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReferenceInputPropertiesArgs();
         }
 
         public Builder(ReferenceInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasource = defaults.datasource;
-    	      this.serialization = defaults.serialization;
-    	      this.type = defaults.type;
+            $ = new ReferenceInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasource(@Nullable Output<BlobReferenceInputDataSourceArgs> datasource) {
-            this.datasource = datasource;
+            $.datasource = datasource;
             return this;
         }
-        public Builder datasource(@Nullable BlobReferenceInputDataSourceArgs datasource) {
-            this.datasource = Codegen.ofNullable(datasource);
-            return this;
+
+        public Builder datasource(BlobReferenceInputDataSourceArgs datasource) {
+            return datasource(Output.of(datasource));
         }
+
         public Builder serialization(@Nullable Output<Object> serialization) {
-            this.serialization = serialization;
+            $.serialization = serialization;
             return this;
         }
-        public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Codegen.ofNullable(serialization);
-            return this;
+
+        public Builder serialization(Object serialization) {
+            return serialization(Output.of(serialization));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ReferenceInputPropertiesArgs build() {
-            return new ReferenceInputPropertiesArgs(datasource, serialization, type);
+            return type(Output.of(type));
+        }
+
+        public ReferenceInputPropertiesArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName")
-      private final @Nullable String groupName;
+    private @Nullable String groupName;
 
     public Optional<String> groupName() {
-        return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
+        return Optional.ofNullable(this.groupName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="search")
-      private final @Nullable String search;
+    private @Nullable String search;
 
     public Optional<String> search() {
-        return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
+        return Optional.ofNullable(this.search);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="select")
-      private final @Nullable String select;
+    private @Nullable String select;
 
     public Optional<String> select() {
-        return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
+        return Optional.ofNullable(this.select);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skip")
-      private final @Nullable Integer skip;
+    private @Nullable Integer skip;
 
     public Optional<Integer> skip() {
-        return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
+        return Optional.ofNullable(this.skip);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skiptoken")
-      private final @Nullable String skiptoken;
+    private @Nullable String skiptoken;
 
     public Optional<String> skiptoken() {
-        return this.skiptoken == null ? Optional.empty() : Optional.ofNullable(this.skiptoken);
+        return Optional.ofNullable(this.skiptoken);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="top")
-      private final @Nullable Integer top;
+    private @Nullable Integer top;
 
     public Optional<Integer> top() {
-        return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
+        return Optional.ofNullable(this.top);
     }
 
     /**
@@ -103,109 +103,86 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetEntityArgs(
-        @Nullable String filter,
-        @Nullable String groupName,
-        @Nullable String search,
-        @Nullable String select,
-        @Nullable Integer skip,
-        @Nullable String skiptoken,
-        @Nullable Integer top,
-        @Nullable String view) {
-        this.filter = filter;
-        this.groupName = groupName;
-        this.search = search;
-        this.select = select;
-        this.skip = skip;
-        this.skiptoken = skiptoken;
-        this.top = top;
-        this.view = view;
-    }
+    private GetEntityArgs() {}
 
-    private GetEntityArgs() {
-        this.filter = null;
-        this.groupName = null;
-        this.search = null;
-        this.select = null;
-        this.skip = null;
-        this.skiptoken = null;
-        this.top = null;
-        this.view = null;
+    private GetEntityArgs(GetEntityArgs $) {
+        this.filter = $.filter;
+        this.groupName = $.groupName;
+        this.search = $.search;
+        this.select = $.select;
+        this.skip = $.skip;
+        this.skiptoken = $.skiptoken;
+        this.top = $.top;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filter;
-        private @Nullable String groupName;
-        private @Nullable String search;
-        private @Nullable String select;
-        private @Nullable Integer skip;
-        private @Nullable String skiptoken;
-        private @Nullable Integer top;
-        private @Nullable String view;
+        private GetEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntityArgs();
         }
 
         public Builder(GetEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.groupName = defaults.groupName;
-    	      this.search = defaults.search;
-    	      this.select = defaults.select;
-    	      this.skip = defaults.skip;
-    	      this.skiptoken = defaults.skiptoken;
-    	      this.top = defaults.top;
-    	      this.view = defaults.view;
+            $ = new GetEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
+
         public Builder search(@Nullable String search) {
-            this.search = search;
+            $.search = search;
             return this;
         }
+
         public Builder select(@Nullable String select) {
-            this.select = select;
+            $.select = select;
             return this;
         }
+
         public Builder skip(@Nullable Integer skip) {
-            this.skip = skip;
+            $.skip = skip;
             return this;
         }
+
         public Builder skiptoken(@Nullable String skiptoken) {
-            this.skiptoken = skiptoken;
+            $.skiptoken = skiptoken;
             return this;
         }
+
         public Builder top(@Nullable Integer top) {
-            this.top = top;
+            $.top = top;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetEntityArgs build() {
-            return new GetEntityArgs(filter, groupName, search, select, skip, skiptoken, top, view);
+        }
+
+        public GetEntityArgs build() {
+            return $;
         }
     }
+
 }

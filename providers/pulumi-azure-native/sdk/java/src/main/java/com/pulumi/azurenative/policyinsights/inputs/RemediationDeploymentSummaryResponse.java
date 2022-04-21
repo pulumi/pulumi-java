@@ -21,7 +21,7 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="failedDeployments", required=true)
-      private final Integer failedDeployments;
+    private Integer failedDeployments;
 
     public Integer failedDeployments() {
         return this.failedDeployments;
@@ -32,7 +32,7 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="successfulDeployments", required=true)
-      private final Integer successfulDeployments;
+    private Integer successfulDeployments;
 
     public Integer successfulDeployments() {
         return this.successfulDeployments;
@@ -43,64 +43,59 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="totalDeployments", required=true)
-      private final Integer totalDeployments;
+    private Integer totalDeployments;
 
     public Integer totalDeployments() {
         return this.totalDeployments;
     }
 
-    public RemediationDeploymentSummaryResponse(
-        Integer failedDeployments,
-        Integer successfulDeployments,
-        Integer totalDeployments) {
-        this.failedDeployments = Objects.requireNonNull(failedDeployments, "expected parameter 'failedDeployments' to be non-null");
-        this.successfulDeployments = Objects.requireNonNull(successfulDeployments, "expected parameter 'successfulDeployments' to be non-null");
-        this.totalDeployments = Objects.requireNonNull(totalDeployments, "expected parameter 'totalDeployments' to be non-null");
-    }
+    private RemediationDeploymentSummaryResponse() {}
 
-    private RemediationDeploymentSummaryResponse() {
-        this.failedDeployments = null;
-        this.successfulDeployments = null;
-        this.totalDeployments = null;
+    private RemediationDeploymentSummaryResponse(RemediationDeploymentSummaryResponse $) {
+        this.failedDeployments = $.failedDeployments;
+        this.successfulDeployments = $.successfulDeployments;
+        this.totalDeployments = $.totalDeployments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationDeploymentSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer failedDeployments;
-        private Integer successfulDeployments;
-        private Integer totalDeployments;
+        private RemediationDeploymentSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationDeploymentSummaryResponse();
         }
 
         public Builder(RemediationDeploymentSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failedDeployments = defaults.failedDeployments;
-    	      this.successfulDeployments = defaults.successfulDeployments;
-    	      this.totalDeployments = defaults.totalDeployments;
+            $ = new RemediationDeploymentSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failedDeployments(Integer failedDeployments) {
-            this.failedDeployments = Objects.requireNonNull(failedDeployments);
+            $.failedDeployments = failedDeployments;
             return this;
         }
+
         public Builder successfulDeployments(Integer successfulDeployments) {
-            this.successfulDeployments = Objects.requireNonNull(successfulDeployments);
+            $.successfulDeployments = successfulDeployments;
             return this;
         }
+
         public Builder totalDeployments(Integer totalDeployments) {
-            this.totalDeployments = Objects.requireNonNull(totalDeployments);
+            $.totalDeployments = totalDeployments;
             return this;
-        }        public RemediationDeploymentSummaryResponse build() {
-            return new RemediationDeploymentSummaryResponse(failedDeployments, successfulDeployments, totalDeployments);
+        }
+
+        public RemediationDeploymentSummaryResponse build() {
+            $.failedDeployments = Objects.requireNonNull($.failedDeployments, "expected parameter 'failedDeployments' to be non-null");
+            $.successfulDeployments = Objects.requireNonNull($.successfulDeployments, "expected parameter 'successfulDeployments' to be non-null");
+            $.totalDeployments = Objects.requireNonNull($.totalDeployments, "expected parameter 'totalDeployments' to be non-null");
+            return $;
         }
     }
+
 }

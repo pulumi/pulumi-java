@@ -17,7 +17,7 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends c
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -28,55 +28,52 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends c
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
     }
 
-    public ImageTemplateIdentityResponseUserAssignedIdentities(
-        String clientId,
-        String principalId) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-    }
+    private ImageTemplateIdentityResponseUserAssignedIdentities() {}
 
-    private ImageTemplateIdentityResponseUserAssignedIdentities() {
-        this.clientId = null;
-        this.principalId = null;
+    private ImageTemplateIdentityResponseUserAssignedIdentities(ImageTemplateIdentityResponseUserAssignedIdentities $) {
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateIdentityResponseUserAssignedIdentities defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private String principalId;
+        private ImageTemplateIdentityResponseUserAssignedIdentities $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateIdentityResponseUserAssignedIdentities();
         }
 
         public Builder(ImageTemplateIdentityResponseUserAssignedIdentities defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
+            $ = new ImageTemplateIdentityResponseUserAssignedIdentities(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
-        }        public ImageTemplateIdentityResponseUserAssignedIdentities build() {
-            return new ImageTemplateIdentityResponseUserAssignedIdentities(clientId, principalId);
+        }
+
+        public ImageTemplateIdentityResponseUserAssignedIdentities build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            return $;
         }
     }
+
 }

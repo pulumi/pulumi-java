@@ -21,7 +21,7 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="primaryAuthKeyHash", required=true)
-      private final String primaryAuthKeyHash;
+    private String primaryAuthKeyHash;
 
     public String primaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
@@ -32,55 +32,52 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secondaryAuthKeyHash", required=true)
-      private final String secondaryAuthKeyHash;
+    private String secondaryAuthKeyHash;
 
     public String secondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
 
-    public ServiceAuthConfigurationResponse(
-        String primaryAuthKeyHash,
-        String secondaryAuthKeyHash) {
-        this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash, "expected parameter 'primaryAuthKeyHash' to be non-null");
-        this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash, "expected parameter 'secondaryAuthKeyHash' to be non-null");
-    }
+    private ServiceAuthConfigurationResponse() {}
 
-    private ServiceAuthConfigurationResponse() {
-        this.primaryAuthKeyHash = null;
-        this.secondaryAuthKeyHash = null;
+    private ServiceAuthConfigurationResponse(ServiceAuthConfigurationResponse $) {
+        this.primaryAuthKeyHash = $.primaryAuthKeyHash;
+        this.secondaryAuthKeyHash = $.secondaryAuthKeyHash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAuthConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String primaryAuthKeyHash;
-        private String secondaryAuthKeyHash;
+        private ServiceAuthConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAuthConfigurationResponse();
         }
 
         public Builder(ServiceAuthConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryAuthKeyHash = defaults.primaryAuthKeyHash;
-    	      this.secondaryAuthKeyHash = defaults.secondaryAuthKeyHash;
+            $ = new ServiceAuthConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
-            this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
+            $.primaryAuthKeyHash = primaryAuthKeyHash;
             return this;
         }
+
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
-            this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
+            $.secondaryAuthKeyHash = secondaryAuthKeyHash;
             return this;
-        }        public ServiceAuthConfigurationResponse build() {
-            return new ServiceAuthConfigurationResponse(primaryAuthKeyHash, secondaryAuthKeyHash);
+        }
+
+        public ServiceAuthConfigurationResponse build() {
+            $.primaryAuthKeyHash = Objects.requireNonNull($.primaryAuthKeyHash, "expected parameter 'primaryAuthKeyHash' to be non-null");
+            $.secondaryAuthKeyHash = Objects.requireNonNull($.secondaryAuthKeyHash, "expected parameter 'secondaryAuthKeyHash' to be non-null");
+            return $;
         }
     }
+
 }

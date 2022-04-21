@@ -27,10 +27,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="azureFile")
-      private final @Nullable AzureFileVolumeResponse azureFile;
+    private @Nullable AzureFileVolumeResponse azureFile;
 
     public Optional<AzureFileVolumeResponse> azureFile() {
-        return this.azureFile == null ? Optional.empty() : Optional.ofNullable(this.azureFile);
+        return Optional.ofNullable(this.azureFile);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emptyDir")
-      private final @Nullable Object emptyDir;
+    private @Nullable Object emptyDir;
 
     public Optional<Object> emptyDir() {
-        return this.emptyDir == null ? Optional.empty() : Optional.ofNullable(this.emptyDir);
+        return Optional.ofNullable(this.emptyDir);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gitRepo")
-      private final @Nullable GitRepoVolumeResponse gitRepo;
+    private @Nullable GitRepoVolumeResponse gitRepo;
 
     public Optional<GitRepoVolumeResponse> gitRepo() {
-        return this.gitRepo == null ? Optional.empty() : Optional.ofNullable(this.gitRepo);
+        return Optional.ofNullable(this.gitRepo);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -71,82 +71,69 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Map<String,String> secret;
+    private @Nullable Map<String,String> secret;
 
-    public Map<String,String> secret() {
-        return this.secret == null ? Map.of() : this.secret;
+    public Optional<Map<String,String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public VolumeResponse(
-        @Nullable AzureFileVolumeResponse azureFile,
-        @Nullable Object emptyDir,
-        @Nullable GitRepoVolumeResponse gitRepo,
-        String name,
-        @Nullable Map<String,String> secret) {
-        this.azureFile = azureFile;
-        this.emptyDir = emptyDir;
-        this.gitRepo = gitRepo;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secret = secret;
-    }
+    private VolumeResponse() {}
 
-    private VolumeResponse() {
-        this.azureFile = null;
-        this.emptyDir = null;
-        this.gitRepo = null;
-        this.name = null;
-        this.secret = Map.of();
+    private VolumeResponse(VolumeResponse $) {
+        this.azureFile = $.azureFile;
+        this.emptyDir = $.emptyDir;
+        this.gitRepo = $.gitRepo;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureFileVolumeResponse azureFile;
-        private @Nullable Object emptyDir;
-        private @Nullable GitRepoVolumeResponse gitRepo;
-        private String name;
-        private @Nullable Map<String,String> secret;
+        private VolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeResponse();
         }
 
         public Builder(VolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureFile = defaults.azureFile;
-    	      this.emptyDir = defaults.emptyDir;
-    	      this.gitRepo = defaults.gitRepo;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new VolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureFile(@Nullable AzureFileVolumeResponse azureFile) {
-            this.azureFile = azureFile;
+            $.azureFile = azureFile;
             return this;
         }
+
         public Builder emptyDir(@Nullable Object emptyDir) {
-            this.emptyDir = emptyDir;
+            $.emptyDir = emptyDir;
             return this;
         }
+
         public Builder gitRepo(@Nullable GitRepoVolumeResponse gitRepo) {
-            this.gitRepo = gitRepo;
+            $.gitRepo = gitRepo;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secret(@Nullable Map<String,String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
-        }        public VolumeResponse build() {
-            return new VolumeResponse(azureFile, emptyDir, gitRepo, name, secret);
+        }
+
+        public VolumeResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

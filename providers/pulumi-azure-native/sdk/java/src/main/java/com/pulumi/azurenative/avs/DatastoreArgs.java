@@ -7,9 +7,9 @@ import com.pulumi.azurenative.avs.inputs.DiskPoolVolumeArgs;
 import com.pulumi.azurenative.avs.inputs.NetAppVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -33,10 +33,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskPoolVolume")
-      private final @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
+    private @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
 
-    public Output<DiskPoolVolumeArgs> diskPoolVolume() {
-        return this.diskPoolVolume == null ? Codegen.empty() : this.diskPoolVolume;
+    public Optional<Output<DiskPoolVolumeArgs>> diskPoolVolume() {
+        return Optional.ofNullable(this.diskPoolVolume);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="netAppVolume")
-      private final @Nullable Output<NetAppVolumeArgs> netAppVolume;
+    private @Nullable Output<NetAppVolumeArgs> netAppVolume;
 
-    public Output<NetAppVolumeArgs> netAppVolume() {
-        return this.netAppVolume == null ? Codegen.empty() : this.netAppVolume;
+    public Optional<Output<NetAppVolumeArgs>> netAppVolume() {
+        return Optional.ofNullable(this.netAppVolume);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -77,115 +77,101 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DatastoreArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> datastoreName,
-        @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume,
-        @Nullable Output<NetAppVolumeArgs> netAppVolume,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.datastoreName = datastoreName;
-        this.diskPoolVolume = diskPoolVolume;
-        this.netAppVolume = netAppVolume;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DatastoreArgs() {}
 
-    private DatastoreArgs() {
-        this.clusterName = Codegen.empty();
-        this.datastoreName = Codegen.empty();
-        this.diskPoolVolume = Codegen.empty();
-        this.netAppVolume = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DatastoreArgs(DatastoreArgs $) {
+        this.clusterName = $.clusterName;
+        this.datastoreName = $.datastoreName;
+        this.diskPoolVolume = $.diskPoolVolume;
+        this.netAppVolume = $.netAppVolume;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> datastoreName;
-        private @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
-        private @Nullable Output<NetAppVolumeArgs> netAppVolume;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
+        private DatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreArgs();
         }
 
         public Builder(DatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.diskPoolVolume = defaults.diskPoolVolume;
-    	      this.netAppVolume = defaults.netAppVolume;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder diskPoolVolume(@Nullable Output<DiskPoolVolumeArgs> diskPoolVolume) {
-            this.diskPoolVolume = diskPoolVolume;
+            $.diskPoolVolume = diskPoolVolume;
             return this;
         }
-        public Builder diskPoolVolume(@Nullable DiskPoolVolumeArgs diskPoolVolume) {
-            this.diskPoolVolume = Codegen.ofNullable(diskPoolVolume);
-            return this;
+
+        public Builder diskPoolVolume(DiskPoolVolumeArgs diskPoolVolume) {
+            return diskPoolVolume(Output.of(diskPoolVolume));
         }
+
         public Builder netAppVolume(@Nullable Output<NetAppVolumeArgs> netAppVolume) {
-            this.netAppVolume = netAppVolume;
+            $.netAppVolume = netAppVolume;
             return this;
         }
-        public Builder netAppVolume(@Nullable NetAppVolumeArgs netAppVolume) {
-            this.netAppVolume = Codegen.ofNullable(netAppVolume);
-            return this;
+
+        public Builder netAppVolume(NetAppVolumeArgs netAppVolume) {
+            return netAppVolume(Output.of(netAppVolume));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DatastoreArgs build() {
-            return new DatastoreArgs(clusterName, datastoreName, diskPoolVolume, netAppVolume, privateCloudName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DatastoreArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

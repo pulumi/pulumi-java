@@ -7,9 +7,9 @@ import com.pulumi.azurenative.machinelearningservices.enums.PrivateEndpointServi
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable Output<String> privateLinkResourceId;
+    private @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
+    public Optional<Output<String>> privateLinkResourceId() {
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable Output<String> requestMessage;
+    private @Nullable Output<String> requestMessage;
 
-    public Output<String> requestMessage() {
-        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
+    public Optional<Output<String>> requestMessage() {
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
+    private @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
-    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,PrivateEndpointServiceConnectionStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public SharedPrivateLinkResourceArgs(
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateLinkResourceId,
-        @Nullable Output<String> requestMessage,
-        @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
-        this.groupId = groupId;
-        this.name = name;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.requestMessage = requestMessage;
-        this.status = status;
-    }
+    private SharedPrivateLinkResourceArgs() {}
 
-    private SharedPrivateLinkResourceArgs() {
-        this.groupId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateLinkResourceId = Codegen.empty();
-        this.requestMessage = Codegen.empty();
-        this.status = Codegen.empty();
+    private SharedPrivateLinkResourceArgs(SharedPrivateLinkResourceArgs $) {
+        this.groupId = $.groupId;
+        this.name = $.name;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.requestMessage = $.requestMessage;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateLinkResourceId;
-        private @Nullable Output<String> requestMessage;
-        private @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
+        private SharedPrivateLinkResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourceArgs();
         }
 
         public Builder(SharedPrivateLinkResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.name = defaults.name;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.status = defaults.status;
+            $ = new SharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
-            return this;
+
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
+            return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
+
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Codegen.ofNullable(requestMessage);
-            return this;
+
+        public Builder requestMessage(String requestMessage) {
+            return requestMessage(Output.of(requestMessage));
         }
+
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public SharedPrivateLinkResourceArgs build() {
-            return new SharedPrivateLinkResourceArgs(groupId, name, privateLinkResourceId, requestMessage, status);
+
+        public Builder status(Either<String,PrivateEndpointServiceConnectionStatus> status) {
+            return status(Output.of(status));
+        }
+
+        public SharedPrivateLinkResourceArgs build() {
+            return $;
         }
     }
+
 }

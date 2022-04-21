@@ -6,10 +6,10 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.enums.SubscriptionState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowTracing")
-      private final @Nullable Output<Boolean> allowTracing;
+    private @Nullable Output<Boolean> allowTracing;
 
-    public Output<Boolean> allowTracing() {
-        return this.allowTracing == null ? Codegen.empty() : this.allowTracing;
+    public Optional<Output<Boolean>> allowTracing() {
+        return Optional.ofNullable(this.allowTracing);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appType")
-      private final @Nullable Output<String> appType;
+    private @Nullable Output<String> appType;
 
-    public Output<String> appType() {
-        return this.appType == null ? Codegen.empty() : this.appType;
+    public Optional<Output<String>> appType() {
+        return Optional.ofNullable(this.appType);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -57,10 +57,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notify")
-      private final @Nullable Output<Boolean> notify;
+    private @Nullable Output<Boolean> notify;
 
-    public Output<Boolean> notify_() {
-        return this.notify == null ? Codegen.empty() : this.notify;
+    public Optional<Output<Boolean>> notify_() {
+        return Optional.ofNullable(this.notify);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryKey")
-      private final @Nullable Output<String> primaryKey;
+    private @Nullable Output<String> primaryKey;
 
-    public Output<String> primaryKey() {
-        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
+    public Optional<Output<String>> primaryKey() {
+        return Optional.ofNullable(this.primaryKey);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -112,10 +112,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryKey")
-      private final @Nullable Output<String> secondaryKey;
+    private @Nullable Output<String> secondaryKey;
 
-    public Output<String> secondaryKey() {
-        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
+    public Optional<Output<String>> secondaryKey() {
+        return Optional.ofNullable(this.secondaryKey);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -134,10 +134,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sid")
-      private final @Nullable Output<String> sid;
+    private @Nullable Output<String> sid;
 
-    public Output<String> sid() {
-        return this.sid == null ? Codegen.empty() : this.sid;
+    public Optional<Output<String>> sid() {
+        return Optional.ofNullable(this.sid);
     }
 
     /**
@@ -145,193 +145,162 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<SubscriptionState> state;
+    private @Nullable Output<SubscriptionState> state;
 
-    public Output<SubscriptionState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<SubscriptionState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public SubscriptionArgs(
-        @Nullable Output<Boolean> allowTracing,
-        @Nullable Output<String> appType,
-        Output<String> displayName,
-        @Nullable Output<Boolean> notify,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> primaryKey,
-        Output<String> resourceGroupName,
-        Output<String> scope,
-        @Nullable Output<String> secondaryKey,
-        Output<String> serviceName,
-        @Nullable Output<String> sid,
-        @Nullable Output<SubscriptionState> state) {
-        this.allowTracing = allowTracing;
-        this.appType = appType;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.notify = notify;
-        this.ownerId = ownerId;
-        this.primaryKey = primaryKey;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.secondaryKey = secondaryKey;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.sid = sid;
-        this.state = state;
-    }
+    private SubscriptionArgs() {}
 
-    private SubscriptionArgs() {
-        this.allowTracing = Codegen.empty();
-        this.appType = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.notify = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.primaryKey = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.secondaryKey = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sid = Codegen.empty();
-        this.state = Codegen.empty();
+    private SubscriptionArgs(SubscriptionArgs $) {
+        this.allowTracing = $.allowTracing;
+        this.appType = $.appType;
+        this.displayName = $.displayName;
+        this.notify = $.notify;
+        this.ownerId = $.ownerId;
+        this.primaryKey = $.primaryKey;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scope = $.scope;
+        this.secondaryKey = $.secondaryKey;
+        this.serviceName = $.serviceName;
+        this.sid = $.sid;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowTracing;
-        private @Nullable Output<String> appType;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> notify;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> primaryKey;
-        private Output<String> resourceGroupName;
-        private Output<String> scope;
-        private @Nullable Output<String> secondaryKey;
-        private Output<String> serviceName;
-        private @Nullable Output<String> sid;
-        private @Nullable Output<SubscriptionState> state;
+        private SubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionArgs();
         }
 
         public Builder(SubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowTracing = defaults.allowTracing;
-    	      this.appType = defaults.appType;
-    	      this.displayName = defaults.displayName;
-    	      this.notify = defaults.notify;
-    	      this.ownerId = defaults.ownerId;
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scope = defaults.scope;
-    	      this.secondaryKey = defaults.secondaryKey;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sid = defaults.sid;
-    	      this.state = defaults.state;
+            $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowTracing(@Nullable Output<Boolean> allowTracing) {
-            this.allowTracing = allowTracing;
+            $.allowTracing = allowTracing;
             return this;
         }
-        public Builder allowTracing(@Nullable Boolean allowTracing) {
-            this.allowTracing = Codegen.ofNullable(allowTracing);
-            return this;
+
+        public Builder allowTracing(Boolean allowTracing) {
+            return allowTracing(Output.of(allowTracing));
         }
+
         public Builder appType(@Nullable Output<String> appType) {
-            this.appType = appType;
+            $.appType = appType;
             return this;
         }
-        public Builder appType(@Nullable String appType) {
-            this.appType = Codegen.ofNullable(appType);
-            return this;
+
+        public Builder appType(String appType) {
+            return appType(Output.of(appType));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder notify_(@Nullable Output<Boolean> notify) {
-            this.notify = notify;
+            $.notify = notify;
             return this;
         }
-        public Builder notify_(@Nullable Boolean notify) {
-            this.notify = Codegen.ofNullable(notify);
-            return this;
+
+        public Builder notify_(Boolean notify) {
+            return notify_(Output.of(notify));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
-            this.primaryKey = primaryKey;
+            $.primaryKey = primaryKey;
             return this;
         }
-        public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Codegen.ofNullable(primaryKey);
-            return this;
+
+        public Builder primaryKey(String primaryKey) {
+            return primaryKey(Output.of(primaryKey));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
-            this.secondaryKey = secondaryKey;
+            $.secondaryKey = secondaryKey;
             return this;
         }
-        public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Codegen.ofNullable(secondaryKey);
-            return this;
+
+        public Builder secondaryKey(String secondaryKey) {
+            return secondaryKey(Output.of(secondaryKey));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sid(@Nullable Output<String> sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
         }
-        public Builder sid(@Nullable String sid) {
-            this.sid = Codegen.ofNullable(sid);
-            return this;
+
+        public Builder sid(String sid) {
+            return sid(Output.of(sid));
         }
+
         public Builder state(@Nullable Output<SubscriptionState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable SubscriptionState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public SubscriptionArgs build() {
-            return new SubscriptionArgs(allowTracing, appType, displayName, notify, ownerId, primaryKey, resourceGroupName, scope, secondaryKey, serviceName, sid, state);
+
+        public Builder state(SubscriptionState state) {
+            return state(Output.of(state));
+        }
+
+        public SubscriptionArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

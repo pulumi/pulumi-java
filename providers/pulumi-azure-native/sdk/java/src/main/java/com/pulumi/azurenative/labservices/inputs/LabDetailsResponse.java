@@ -23,10 +23,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="usageQuota", required=true)
-      private final String usageQuota;
+    private String usageQuota;
 
     public String usageQuota() {
         return this.usageQuota;
     }
 
-    public LabDetailsResponse(
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String provisioningState,
-        String usageQuota) {
-        this.id = id;
-        this.name = name;
-        this.provisioningState = provisioningState;
-        this.usageQuota = Objects.requireNonNull(usageQuota, "expected parameter 'usageQuota' to be non-null");
-    }
+    private LabDetailsResponse() {}
 
-    private LabDetailsResponse() {
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.usageQuota = null;
+    private LabDetailsResponse(LabDetailsResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.usageQuota = $.usageQuota;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String provisioningState;
-        private String usageQuota;
+        private LabDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabDetailsResponse();
         }
 
         public Builder(LabDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.usageQuota = defaults.usageQuota;
+            $ = new LabDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder usageQuota(String usageQuota) {
-            this.usageQuota = Objects.requireNonNull(usageQuota);
+            $.usageQuota = usageQuota;
             return this;
-        }        public LabDetailsResponse build() {
-            return new LabDetailsResponse(id, name, provisioningState, usageQuota);
+        }
+
+        public LabDetailsResponse build() {
+            $.usageQuota = Objects.requireNonNull($.usageQuota, "expected parameter 'usageQuota' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
      * 
      */
     @Import(name="exclude")
-      private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
+    private @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
 
-    public List<ConnectionMonitorEndpointScopeItemResponse> exclude() {
-        return this.exclude == null ? List.of() : this.exclude;
+    public Optional<List<ConnectionMonitorEndpointScopeItemResponse>> exclude() {
+        return Optional.ofNullable(this.exclude);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
      * 
      */
     @Import(name="include")
-      private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
+    private @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
-    public List<ConnectionMonitorEndpointScopeItemResponse> include() {
-        return this.include == null ? List.of() : this.include;
+    public Optional<List<ConnectionMonitorEndpointScopeItemResponse>> include() {
+        return Optional.ofNullable(this.include);
     }
 
-    public ConnectionMonitorEndpointScopeResponse(
-        @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude,
-        @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
-        this.exclude = exclude;
-        this.include = include;
-    }
+    private ConnectionMonitorEndpointScopeResponse() {}
 
-    private ConnectionMonitorEndpointScopeResponse() {
-        this.exclude = List.of();
-        this.include = List.of();
+    private ConnectionMonitorEndpointScopeResponse(ConnectionMonitorEndpointScopeResponse $) {
+        this.exclude = $.exclude;
+        this.include = $.include;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
-        private @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
+        private ConnectionMonitorEndpointScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointScopeResponse();
         }
 
         public Builder(ConnectionMonitorEndpointScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclude = defaults.exclude;
-    	      this.include = defaults.include;
+            $ = new ConnectionMonitorEndpointScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude) {
-            this.exclude = exclude;
+            $.exclude = exclude;
             return this;
         }
+
         public Builder exclude(ConnectionMonitorEndpointScopeItemResponse... exclude) {
             return exclude(List.of(exclude));
         }
+
         public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
-            this.include = include;
+            $.include = include;
             return this;
         }
+
         public Builder include(ConnectionMonitorEndpointScopeItemResponse... include) {
             return include(List.of(include));
-        }        public ConnectionMonitorEndpointScopeResponse build() {
-            return new ConnectionMonitorEndpointScopeResponse(exclude, include);
+        }
+
+        public ConnectionMonitorEndpointScopeResponse build() {
+            return $;
         }
     }
+
 }

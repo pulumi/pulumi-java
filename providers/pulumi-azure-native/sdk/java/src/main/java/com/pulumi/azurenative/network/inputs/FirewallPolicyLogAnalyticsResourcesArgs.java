@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsWorkspace
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends com.pulumi.re
      * 
      */
     @Import(name="defaultWorkspaceId")
-      private final @Nullable Output<SubResourceArgs> defaultWorkspaceId;
+    private @Nullable Output<SubResourceArgs> defaultWorkspaceId;
 
-    public Output<SubResourceArgs> defaultWorkspaceId() {
-        return this.defaultWorkspaceId == null ? Codegen.empty() : this.defaultWorkspaceId;
+    public Optional<Output<SubResourceArgs>> defaultWorkspaceId() {
+        return Optional.ofNullable(this.defaultWorkspaceId);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class FirewallPolicyLogAnalyticsResourcesArgs extends com.pulumi.re
      * 
      */
     @Import(name="workspaces")
-      private final @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
+    private @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
 
-    public Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces() {
-        return this.workspaces == null ? Codegen.empty() : this.workspaces;
+    public Optional<Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>>> workspaces() {
+        return Optional.ofNullable(this.workspaces);
     }
 
-    public FirewallPolicyLogAnalyticsResourcesArgs(
-        @Nullable Output<SubResourceArgs> defaultWorkspaceId,
-        @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
-        this.defaultWorkspaceId = defaultWorkspaceId;
-        this.workspaces = workspaces;
-    }
+    private FirewallPolicyLogAnalyticsResourcesArgs() {}
 
-    private FirewallPolicyLogAnalyticsResourcesArgs() {
-        this.defaultWorkspaceId = Codegen.empty();
-        this.workspaces = Codegen.empty();
+    private FirewallPolicyLogAnalyticsResourcesArgs(FirewallPolicyLogAnalyticsResourcesArgs $) {
+        this.defaultWorkspaceId = $.defaultWorkspaceId;
+        this.workspaces = $.workspaces;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyLogAnalyticsResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> defaultWorkspaceId;
-        private @Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces;
+        private FirewallPolicyLogAnalyticsResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyLogAnalyticsResourcesArgs();
         }
 
         public Builder(FirewallPolicyLogAnalyticsResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultWorkspaceId = defaults.defaultWorkspaceId;
-    	      this.workspaces = defaults.workspaces;
+            $ = new FirewallPolicyLogAnalyticsResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultWorkspaceId(@Nullable Output<SubResourceArgs> defaultWorkspaceId) {
-            this.defaultWorkspaceId = defaultWorkspaceId;
+            $.defaultWorkspaceId = defaultWorkspaceId;
             return this;
         }
-        public Builder defaultWorkspaceId(@Nullable SubResourceArgs defaultWorkspaceId) {
-            this.defaultWorkspaceId = Codegen.ofNullable(defaultWorkspaceId);
-            return this;
+
+        public Builder defaultWorkspaceId(SubResourceArgs defaultWorkspaceId) {
+            return defaultWorkspaceId(Output.of(defaultWorkspaceId));
         }
+
         public Builder workspaces(@Nullable Output<List<FirewallPolicyLogAnalyticsWorkspaceArgs>> workspaces) {
-            this.workspaces = workspaces;
+            $.workspaces = workspaces;
             return this;
         }
-        public Builder workspaces(@Nullable List<FirewallPolicyLogAnalyticsWorkspaceArgs> workspaces) {
-            this.workspaces = Codegen.ofNullable(workspaces);
-            return this;
+
+        public Builder workspaces(List<FirewallPolicyLogAnalyticsWorkspaceArgs> workspaces) {
+            return workspaces(Output.of(workspaces));
         }
+
         public Builder workspaces(FirewallPolicyLogAnalyticsWorkspaceArgs... workspaces) {
             return workspaces(List.of(workspaces));
-        }        public FirewallPolicyLogAnalyticsResourcesArgs build() {
-            return new FirewallPolicyLogAnalyticsResourcesArgs(defaultWorkspaceId, workspaces);
+        }
+
+        public FirewallPolicyLogAnalyticsResourcesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="recommendationAction")
-      private final @Nullable Output<String> recommendationAction;
+    private @Nullable Output<String> recommendationAction;
 
-    public Output<String> recommendationAction() {
-        return this.recommendationAction == null ? Codegen.empty() : this.recommendationAction;
+    public Optional<Output<String>> recommendationAction() {
+        return Optional.ofNullable(this.recommendationAction);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class UserRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public UserRecommendationArgs(
-        @Nullable Output<String> recommendationAction,
-        @Nullable Output<String> username) {
-        this.recommendationAction = recommendationAction;
-        this.username = username;
-    }
+    private UserRecommendationArgs() {}
 
-    private UserRecommendationArgs() {
-        this.recommendationAction = Codegen.empty();
-        this.username = Codegen.empty();
+    private UserRecommendationArgs(UserRecommendationArgs $) {
+        this.recommendationAction = $.recommendationAction;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserRecommendationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> recommendationAction;
-        private @Nullable Output<String> username;
+        private UserRecommendationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserRecommendationArgs();
         }
 
         public Builder(UserRecommendationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recommendationAction = defaults.recommendationAction;
-    	      this.username = defaults.username;
+            $ = new UserRecommendationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
-            this.recommendationAction = recommendationAction;
+            $.recommendationAction = recommendationAction;
             return this;
         }
-        public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = Codegen.ofNullable(recommendationAction);
-            return this;
+
+        public Builder recommendationAction(String recommendationAction) {
+            return recommendationAction(Output.of(recommendationAction));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public UserRecommendationArgs build() {
-            return new UserRecommendationArgs(recommendationAction, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public UserRecommendationArgs build() {
+            return $;
         }
     }
+
 }

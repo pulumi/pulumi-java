@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="computeProperties")
-      private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
+    private @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
-    public Output<IntegrationRuntimeComputePropertiesArgs> computeProperties() {
-        return this.computeProperties == null ? Codegen.empty() : this.computeProperties;
+    public Optional<Output<IntegrationRuntimeComputePropertiesArgs>> computeProperties() {
+        return Optional.ofNullable(this.computeProperties);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ssisProperties")
-      private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
+    private @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
-    public Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties() {
-        return this.ssisProperties == null ? Codegen.empty() : this.ssisProperties;
+    public Optional<Output<IntegrationRuntimeSsisPropertiesArgs>> ssisProperties() {
+        return Optional.ofNullable(this.ssisProperties);
     }
 
     /**
@@ -60,89 +61,79 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ManagedIntegrationRuntimeArgs(
-        @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties,
-        @Nullable Output<String> description,
-        @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties,
-        Output<String> type) {
-        this.computeProperties = computeProperties;
-        this.description = description;
-        this.ssisProperties = ssisProperties;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ManagedIntegrationRuntimeArgs() {}
 
-    private ManagedIntegrationRuntimeArgs() {
-        this.computeProperties = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ssisProperties = Codegen.empty();
-        this.type = Codegen.empty();
+    private ManagedIntegrationRuntimeArgs(ManagedIntegrationRuntimeArgs $) {
+        this.computeProperties = $.computeProperties;
+        this.description = $.description;
+        this.ssisProperties = $.ssisProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIntegrationRuntimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
-        private @Nullable Output<String> description;
-        private @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
-        private Output<String> type;
+        private ManagedIntegrationRuntimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIntegrationRuntimeArgs();
         }
 
         public Builder(ManagedIntegrationRuntimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeProperties = defaults.computeProperties;
-    	      this.description = defaults.description;
-    	      this.ssisProperties = defaults.ssisProperties;
-    	      this.type = defaults.type;
+            $ = new ManagedIntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeProperties(@Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties) {
-            this.computeProperties = computeProperties;
+            $.computeProperties = computeProperties;
             return this;
         }
-        public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
-            this.computeProperties = Codegen.ofNullable(computeProperties);
-            return this;
+
+        public Builder computeProperties(IntegrationRuntimeComputePropertiesArgs computeProperties) {
+            return computeProperties(Output.of(computeProperties));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ssisProperties(@Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
-            this.ssisProperties = ssisProperties;
+            $.ssisProperties = ssisProperties;
             return this;
         }
-        public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
-            this.ssisProperties = Codegen.ofNullable(ssisProperties);
-            return this;
+
+        public Builder ssisProperties(IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
+            return ssisProperties(Output.of(ssisProperties));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ManagedIntegrationRuntimeArgs build() {
-            return new ManagedIntegrationRuntimeArgs(computeProperties, description, ssisProperties, type);
+            return type(Output.of(type));
+        }
+
+        public ManagedIntegrationRuntimeArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -35,7 +35,7 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -46,64 +46,59 @@ public final class IdentityDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityDetailsResponse(
-        String principalId,
-        String tenantId,
-        @Nullable String type) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).def("None").getNullable();
-    }
+    private IdentityDetailsResponse() {}
 
-    private IdentityDetailsResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
+    private IdentityDetailsResponse(IdentityDetailsResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String tenantId;
-        private @Nullable String type;
+        private IdentityDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityDetailsResponse();
         }
 
         public Builder(IdentityDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new IdentityDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public IdentityDetailsResponse build() {
-            return new IdentityDetailsResponse(principalId, tenantId, type);
+        }
+
+        public IdentityDetailsResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).def("None").getNullable();
+            return $;
         }
     }
+
 }

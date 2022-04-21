@@ -26,10 +26,10 @@ public final class ApplicationUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="applicationHealthPolicy")
-      private final @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy;
+    private @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy;
 
     public Optional<ArmApplicationHealthPolicyResponse> applicationHealthPolicy() {
-        return this.applicationHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.applicationHealthPolicy);
+        return Optional.ofNullable(this.applicationHealthPolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="forceRestart")
-      private final @Nullable Boolean forceRestart;
+    private @Nullable Boolean forceRestart;
 
     public Optional<Boolean> forceRestart() {
-        return this.forceRestart == null ? Optional.empty() : Optional.ofNullable(this.forceRestart);
+        return Optional.ofNullable(this.forceRestart);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="recreateApplication")
-      private final @Nullable Boolean recreateApplication;
+    private @Nullable Boolean recreateApplication;
 
     public Optional<Boolean> recreateApplication() {
-        return this.recreateApplication == null ? Optional.empty() : Optional.ofNullable(this.recreateApplication);
+        return Optional.ofNullable(this.recreateApplication);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="rollingUpgradeMonitoringPolicy")
-      private final @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
+    private @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
 
     public Optional<ArmRollingUpgradeMonitoringPolicyResponse> rollingUpgradeMonitoringPolicy() {
-        return this.rollingUpgradeMonitoringPolicy == null ? Optional.empty() : Optional.ofNullable(this.rollingUpgradeMonitoringPolicy);
+        return Optional.ofNullable(this.rollingUpgradeMonitoringPolicy);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="upgradeMode")
-      private final @Nullable String upgradeMode;
+    private @Nullable String upgradeMode;
 
     public Optional<String> upgradeMode() {
-        return this.upgradeMode == null ? Optional.empty() : Optional.ofNullable(this.upgradeMode);
+        return Optional.ofNullable(this.upgradeMode);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class ApplicationUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="upgradeReplicaSetCheckTimeout")
-      private final @Nullable String upgradeReplicaSetCheckTimeout;
+    private @Nullable String upgradeReplicaSetCheckTimeout;
 
     public Optional<String> upgradeReplicaSetCheckTimeout() {
-        return this.upgradeReplicaSetCheckTimeout == null ? Optional.empty() : Optional.ofNullable(this.upgradeReplicaSetCheckTimeout);
+        return Optional.ofNullable(this.upgradeReplicaSetCheckTimeout);
     }
 
-    public ApplicationUpgradePolicyResponse(
-        @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy,
-        @Nullable Boolean forceRestart,
-        @Nullable Boolean recreateApplication,
-        @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy,
-        @Nullable String upgradeMode,
-        @Nullable String upgradeReplicaSetCheckTimeout) {
-        this.applicationHealthPolicy = applicationHealthPolicy;
-        this.forceRestart = forceRestart;
-        this.recreateApplication = recreateApplication;
-        this.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
-        this.upgradeMode = upgradeMode;
-        this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
-    }
+    private ApplicationUpgradePolicyResponse() {}
 
-    private ApplicationUpgradePolicyResponse() {
-        this.applicationHealthPolicy = null;
-        this.forceRestart = null;
-        this.recreateApplication = null;
-        this.rollingUpgradeMonitoringPolicy = null;
-        this.upgradeMode = null;
-        this.upgradeReplicaSetCheckTimeout = null;
+    private ApplicationUpgradePolicyResponse(ApplicationUpgradePolicyResponse $) {
+        this.applicationHealthPolicy = $.applicationHealthPolicy;
+        this.forceRestart = $.forceRestart;
+        this.recreateApplication = $.recreateApplication;
+        this.rollingUpgradeMonitoringPolicy = $.rollingUpgradeMonitoringPolicy;
+        this.upgradeMode = $.upgradeMode;
+        this.upgradeReplicaSetCheckTimeout = $.upgradeReplicaSetCheckTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationUpgradePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy;
-        private @Nullable Boolean forceRestart;
-        private @Nullable Boolean recreateApplication;
-        private @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
-        private @Nullable String upgradeMode;
-        private @Nullable String upgradeReplicaSetCheckTimeout;
+        private ApplicationUpgradePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationUpgradePolicyResponse();
         }
 
         public Builder(ApplicationUpgradePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationHealthPolicy = defaults.applicationHealthPolicy;
-    	      this.forceRestart = defaults.forceRestart;
-    	      this.recreateApplication = defaults.recreateApplication;
-    	      this.rollingUpgradeMonitoringPolicy = defaults.rollingUpgradeMonitoringPolicy;
-    	      this.upgradeMode = defaults.upgradeMode;
-    	      this.upgradeReplicaSetCheckTimeout = defaults.upgradeReplicaSetCheckTimeout;
+            $ = new ApplicationUpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationHealthPolicy(@Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy) {
-            this.applicationHealthPolicy = applicationHealthPolicy;
+            $.applicationHealthPolicy = applicationHealthPolicy;
             return this;
         }
+
         public Builder forceRestart(@Nullable Boolean forceRestart) {
-            this.forceRestart = forceRestart;
+            $.forceRestart = forceRestart;
             return this;
         }
+
         public Builder recreateApplication(@Nullable Boolean recreateApplication) {
-            this.recreateApplication = recreateApplication;
+            $.recreateApplication = recreateApplication;
             return this;
         }
+
         public Builder rollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy) {
-            this.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
+            $.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
             return this;
         }
+
         public Builder upgradeMode(@Nullable String upgradeMode) {
-            this.upgradeMode = upgradeMode;
+            $.upgradeMode = upgradeMode;
             return this;
         }
+
         public Builder upgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
-            this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
+            $.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
-        }        public ApplicationUpgradePolicyResponse build() {
-            return new ApplicationUpgradePolicyResponse(applicationHealthPolicy, forceRestart, recreateApplication, rollingUpgradeMonitoringPolicy, upgradeMode, upgradeReplicaSetCheckTimeout);
+        }
+
+        public ApplicationUpgradePolicyResponse build() {
+            return $;
         }
     }
+
 }

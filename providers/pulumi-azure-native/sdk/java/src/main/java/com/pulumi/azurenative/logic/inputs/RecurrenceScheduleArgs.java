@@ -7,10 +7,10 @@ import com.pulumi.azurenative.logic.enums.DaysOfWeek;
 import com.pulumi.azurenative.logic.inputs.RecurrenceScheduleOccurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RecurrenceScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hours")
-      private final @Nullable Output<List<Integer>> hours;
+    private @Nullable Output<List<Integer>> hours;
 
-    public Output<List<Integer>> hours() {
-        return this.hours == null ? Codegen.empty() : this.hours;
+    public Optional<Output<List<Integer>>> hours() {
+        return Optional.ofNullable(this.hours);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RecurrenceScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="minutes")
-      private final @Nullable Output<List<Integer>> minutes;
+    private @Nullable Output<List<Integer>> minutes;
 
-    public Output<List<Integer>> minutes() {
-        return this.minutes == null ? Codegen.empty() : this.minutes;
+    public Optional<Output<List<Integer>>> minutes() {
+        return Optional.ofNullable(this.minutes);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RecurrenceScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="monthDays")
-      private final @Nullable Output<List<Integer>> monthDays;
+    private @Nullable Output<List<Integer>> monthDays;
 
-    public Output<List<Integer>> monthDays() {
-        return this.monthDays == null ? Codegen.empty() : this.monthDays;
+    public Optional<Output<List<Integer>>> monthDays() {
+        return Optional.ofNullable(this.monthDays);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RecurrenceScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="monthlyOccurrences")
-      private final @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
+    private @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
 
-    public Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences() {
-        return this.monthlyOccurrences == null ? Codegen.empty() : this.monthlyOccurrences;
+    public Optional<Output<List<RecurrenceScheduleOccurrenceArgs>>> monthlyOccurrences() {
+        return Optional.ofNullable(this.monthlyOccurrences);
     }
 
     /**
@@ -71,117 +71,108 @@ public final class RecurrenceScheduleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="weekDays")
-      private final @Nullable Output<List<DaysOfWeek>> weekDays;
+    private @Nullable Output<List<DaysOfWeek>> weekDays;
 
-    public Output<List<DaysOfWeek>> weekDays() {
-        return this.weekDays == null ? Codegen.empty() : this.weekDays;
+    public Optional<Output<List<DaysOfWeek>>> weekDays() {
+        return Optional.ofNullable(this.weekDays);
     }
 
-    public RecurrenceScheduleArgs(
-        @Nullable Output<List<Integer>> hours,
-        @Nullable Output<List<Integer>> minutes,
-        @Nullable Output<List<Integer>> monthDays,
-        @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences,
-        @Nullable Output<List<DaysOfWeek>> weekDays) {
-        this.hours = hours;
-        this.minutes = minutes;
-        this.monthDays = monthDays;
-        this.monthlyOccurrences = monthlyOccurrences;
-        this.weekDays = weekDays;
-    }
+    private RecurrenceScheduleArgs() {}
 
-    private RecurrenceScheduleArgs() {
-        this.hours = Codegen.empty();
-        this.minutes = Codegen.empty();
-        this.monthDays = Codegen.empty();
-        this.monthlyOccurrences = Codegen.empty();
-        this.weekDays = Codegen.empty();
+    private RecurrenceScheduleArgs(RecurrenceScheduleArgs $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.monthDays = $.monthDays;
+        this.monthlyOccurrences = $.monthlyOccurrences;
+        this.weekDays = $.weekDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrenceScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> hours;
-        private @Nullable Output<List<Integer>> minutes;
-        private @Nullable Output<List<Integer>> monthDays;
-        private @Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences;
-        private @Nullable Output<List<DaysOfWeek>> weekDays;
+        private RecurrenceScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrenceScheduleArgs();
         }
 
         public Builder(RecurrenceScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.monthDays = defaults.monthDays;
-    	      this.monthlyOccurrences = defaults.monthlyOccurrences;
-    	      this.weekDays = defaults.weekDays;
+            $ = new RecurrenceScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(@Nullable Output<List<Integer>> hours) {
-            this.hours = hours;
+            $.hours = hours;
             return this;
         }
-        public Builder hours(@Nullable List<Integer> hours) {
-            this.hours = Codegen.ofNullable(hours);
-            return this;
+
+        public Builder hours(List<Integer> hours) {
+            return hours(Output.of(hours));
         }
+
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
+
         public Builder minutes(@Nullable Output<List<Integer>> minutes) {
-            this.minutes = minutes;
+            $.minutes = minutes;
             return this;
         }
-        public Builder minutes(@Nullable List<Integer> minutes) {
-            this.minutes = Codegen.ofNullable(minutes);
-            return this;
+
+        public Builder minutes(List<Integer> minutes) {
+            return minutes(Output.of(minutes));
         }
+
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
+
         public Builder monthDays(@Nullable Output<List<Integer>> monthDays) {
-            this.monthDays = monthDays;
+            $.monthDays = monthDays;
             return this;
         }
-        public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = Codegen.ofNullable(monthDays);
-            return this;
+
+        public Builder monthDays(List<Integer> monthDays) {
+            return monthDays(Output.of(monthDays));
         }
+
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
+
         public Builder monthlyOccurrences(@Nullable Output<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences) {
-            this.monthlyOccurrences = monthlyOccurrences;
+            $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
-        public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceArgs> monthlyOccurrences) {
-            this.monthlyOccurrences = Codegen.ofNullable(monthlyOccurrences);
-            return this;
+
+        public Builder monthlyOccurrences(List<RecurrenceScheduleOccurrenceArgs> monthlyOccurrences) {
+            return monthlyOccurrences(Output.of(monthlyOccurrences));
         }
+
         public Builder monthlyOccurrences(RecurrenceScheduleOccurrenceArgs... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
+
         public Builder weekDays(@Nullable Output<List<DaysOfWeek>> weekDays) {
-            this.weekDays = weekDays;
+            $.weekDays = weekDays;
             return this;
         }
-        public Builder weekDays(@Nullable List<DaysOfWeek> weekDays) {
-            this.weekDays = Codegen.ofNullable(weekDays);
-            return this;
+
+        public Builder weekDays(List<DaysOfWeek> weekDays) {
+            return weekDays(Output.of(weekDays));
         }
+
         public Builder weekDays(DaysOfWeek... weekDays) {
             return weekDays(List.of(weekDays));
-        }        public RecurrenceScheduleArgs build() {
-            return new RecurrenceScheduleArgs(hours, minutes, monthDays, monthlyOccurrences, weekDays);
+        }
+
+        public RecurrenceScheduleArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -28,55 +28,52 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetProfileArgs(
-        String profileName,
-        String resourceGroupName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetProfileArgs() {}
 
-    private GetProfileArgs() {
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetProfileArgs(GetProfileArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String resourceGroupName;
+        private GetProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProfileArgs();
         }
 
         public Builder(GetProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetProfileArgs build() {
-            return new GetProfileArgs(profileName, resourceGroupName);
+        }
+
+        public GetProfileArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

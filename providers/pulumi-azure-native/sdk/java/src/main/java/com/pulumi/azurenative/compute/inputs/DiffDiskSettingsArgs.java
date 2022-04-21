@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.enums.DiffDiskPlacement;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="option")
-      private final @Nullable Output<Either<String,DiffDiskOptions>> option;
+    private @Nullable Output<Either<String,DiffDiskOptions>> option;
 
-    public Output<Either<String,DiffDiskOptions>> option() {
-        return this.option == null ? Codegen.empty() : this.option;
+    public Optional<Output<Either<String,DiffDiskOptions>>> option() {
+        return Optional.ofNullable(this.option);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="placement")
-      private final @Nullable Output<Either<String,DiffDiskPlacement>> placement;
+    private @Nullable Output<Either<String,DiffDiskPlacement>> placement;
 
-    public Output<Either<String,DiffDiskPlacement>> placement() {
-        return this.placement == null ? Codegen.empty() : this.placement;
+    public Optional<Output<Either<String,DiffDiskPlacement>>> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
-    public DiffDiskSettingsArgs(
-        @Nullable Output<Either<String,DiffDiskOptions>> option,
-        @Nullable Output<Either<String,DiffDiskPlacement>> placement) {
-        this.option = option;
-        this.placement = placement;
-    }
+    private DiffDiskSettingsArgs() {}
 
-    private DiffDiskSettingsArgs() {
-        this.option = Codegen.empty();
-        this.placement = Codegen.empty();
+    private DiffDiskSettingsArgs(DiffDiskSettingsArgs $) {
+        this.option = $.option;
+        this.placement = $.placement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiffDiskSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DiffDiskOptions>> option;
-        private @Nullable Output<Either<String,DiffDiskPlacement>> placement;
+        private DiffDiskSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiffDiskSettingsArgs();
         }
 
         public Builder(DiffDiskSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.option = defaults.option;
-    	      this.placement = defaults.placement;
+            $ = new DiffDiskSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder option(@Nullable Output<Either<String,DiffDiskOptions>> option) {
-            this.option = option;
+            $.option = option;
             return this;
         }
-        public Builder option(@Nullable Either<String,DiffDiskOptions> option) {
-            this.option = Codegen.ofNullable(option);
-            return this;
+
+        public Builder option(Either<String,DiffDiskOptions> option) {
+            return option(Output.of(option));
         }
+
         public Builder placement(@Nullable Output<Either<String,DiffDiskPlacement>> placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
         }
-        public Builder placement(@Nullable Either<String,DiffDiskPlacement> placement) {
-            this.placement = Codegen.ofNullable(placement);
-            return this;
-        }        public DiffDiskSettingsArgs build() {
-            return new DiffDiskSettingsArgs(option, placement);
+
+        public Builder placement(Either<String,DiffDiskPlacement> placement) {
+            return placement(Output.of(placement));
+        }
+
+        public DiffDiskSettingsArgs build() {
+            return $;
         }
     }
+
 }

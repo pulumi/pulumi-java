@@ -9,12 +9,12 @@ import com.pulumi.azurenative.devtestlab.inputs.CustomImagePropertiesFromVmArgs;
 import com.pulumi.azurenative.devtestlab.inputs.DataDiskStorageTypeInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="author")
-      private final @Nullable Output<String> author;
+    private @Nullable Output<String> author;
 
-    public Output<String> author() {
-        return this.author == null ? Codegen.empty() : this.author;
+    public Optional<Output<String>> author() {
+        return Optional.ofNullable(this.author);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customImagePlan")
-      private final @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
+    private @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
-    public Output<CustomImagePropertiesFromPlanArgs> customImagePlan() {
-        return this.customImagePlan == null ? Codegen.empty() : this.customImagePlan;
+    public Optional<Output<CustomImagePropertiesFromPlanArgs>> customImagePlan() {
+        return Optional.ofNullable(this.customImagePlan);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDiskStorageInfo")
-      private final @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
+    private @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
-    public Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo() {
-        return this.dataDiskStorageInfo == null ? Codegen.empty() : this.dataDiskStorageInfo;
+    public Optional<Output<List<DataDiskStorageTypeInfoArgs>>> dataDiskStorageInfo() {
+        return Optional.ofNullable(this.dataDiskStorageInfo);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isPlanAuthorized")
-      private final @Nullable Output<Boolean> isPlanAuthorized;
+    private @Nullable Output<Boolean> isPlanAuthorized;
 
-    public Output<Boolean> isPlanAuthorized() {
-        return this.isPlanAuthorized == null ? Codegen.empty() : this.isPlanAuthorized;
+    public Optional<Output<Boolean>> isPlanAuthorized() {
+        return Optional.ofNullable(this.isPlanAuthorized);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -93,10 +93,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedImageId")
-      private final @Nullable Output<String> managedImageId;
+    private @Nullable Output<String> managedImageId;
 
-    public Output<String> managedImageId() {
-        return this.managedImageId == null ? Codegen.empty() : this.managedImageId;
+    public Optional<Output<String>> managedImageId() {
+        return Optional.ofNullable(this.managedImageId);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedSnapshotId")
-      private final @Nullable Output<String> managedSnapshotId;
+    private @Nullable Output<String> managedSnapshotId;
 
-    public Output<String> managedSnapshotId() {
-        return this.managedSnapshotId == null ? Codegen.empty() : this.managedSnapshotId;
+    public Optional<Output<String>> managedSnapshotId() {
+        return Optional.ofNullable(this.managedSnapshotId);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -148,10 +148,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vhd")
-      private final @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
+    private @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
 
-    public Output<CustomImagePropertiesCustomArgs> vhd() {
-        return this.vhd == null ? Codegen.empty() : this.vhd;
+    public Optional<Output<CustomImagePropertiesCustomArgs>> vhd() {
+        return Optional.ofNullable(this.vhd);
     }
 
     /**
@@ -170,222 +170,184 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vm")
-      private final @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
+    private @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
 
-    public Output<CustomImagePropertiesFromVmArgs> vm() {
-        return this.vm == null ? Codegen.empty() : this.vm;
+    public Optional<Output<CustomImagePropertiesFromVmArgs>> vm() {
+        return Optional.ofNullable(this.vm);
     }
 
-    public CustomImageArgs(
-        @Nullable Output<String> author,
-        @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan,
-        @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isPlanAuthorized,
-        Output<String> labName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedImageId,
-        @Nullable Output<String> managedSnapshotId,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<CustomImagePropertiesCustomArgs> vhd,
-        @Nullable Output<CustomImagePropertiesFromVmArgs> vm) {
-        this.author = author;
-        this.customImagePlan = customImagePlan;
-        this.dataDiskStorageInfo = dataDiskStorageInfo;
-        this.description = description;
-        this.isPlanAuthorized = isPlanAuthorized;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.location = location;
-        this.managedImageId = managedImageId;
-        this.managedSnapshotId = managedSnapshotId;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vhd = vhd;
-        this.vm = vm;
-    }
+    private CustomImageArgs() {}
 
-    private CustomImageArgs() {
-        this.author = Codegen.empty();
-        this.customImagePlan = Codegen.empty();
-        this.dataDiskStorageInfo = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isPlanAuthorized = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedImageId = Codegen.empty();
-        this.managedSnapshotId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vhd = Codegen.empty();
-        this.vm = Codegen.empty();
+    private CustomImageArgs(CustomImageArgs $) {
+        this.author = $.author;
+        this.customImagePlan = $.customImagePlan;
+        this.dataDiskStorageInfo = $.dataDiskStorageInfo;
+        this.description = $.description;
+        this.isPlanAuthorized = $.isPlanAuthorized;
+        this.labName = $.labName;
+        this.location = $.location;
+        this.managedImageId = $.managedImageId;
+        this.managedSnapshotId = $.managedSnapshotId;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vhd = $.vhd;
+        this.vm = $.vm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> author;
-        private @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
-        private @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isPlanAuthorized;
-        private Output<String> labName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedImageId;
-        private @Nullable Output<String> managedSnapshotId;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
-        private @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
+        private CustomImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImageArgs();
         }
 
         public Builder(CustomImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.author = defaults.author;
-    	      this.customImagePlan = defaults.customImagePlan;
-    	      this.dataDiskStorageInfo = defaults.dataDiskStorageInfo;
-    	      this.description = defaults.description;
-    	      this.isPlanAuthorized = defaults.isPlanAuthorized;
-    	      this.labName = defaults.labName;
-    	      this.location = defaults.location;
-    	      this.managedImageId = defaults.managedImageId;
-    	      this.managedSnapshotId = defaults.managedSnapshotId;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vhd = defaults.vhd;
-    	      this.vm = defaults.vm;
+            $ = new CustomImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder author(@Nullable Output<String> author) {
-            this.author = author;
+            $.author = author;
             return this;
         }
-        public Builder author(@Nullable String author) {
-            this.author = Codegen.ofNullable(author);
-            return this;
+
+        public Builder author(String author) {
+            return author(Output.of(author));
         }
+
         public Builder customImagePlan(@Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan) {
-            this.customImagePlan = customImagePlan;
+            $.customImagePlan = customImagePlan;
             return this;
         }
-        public Builder customImagePlan(@Nullable CustomImagePropertiesFromPlanArgs customImagePlan) {
-            this.customImagePlan = Codegen.ofNullable(customImagePlan);
-            return this;
+
+        public Builder customImagePlan(CustomImagePropertiesFromPlanArgs customImagePlan) {
+            return customImagePlan(Output.of(customImagePlan));
         }
+
         public Builder dataDiskStorageInfo(@Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo) {
-            this.dataDiskStorageInfo = dataDiskStorageInfo;
+            $.dataDiskStorageInfo = dataDiskStorageInfo;
             return this;
         }
-        public Builder dataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
-            this.dataDiskStorageInfo = Codegen.ofNullable(dataDiskStorageInfo);
-            return this;
+
+        public Builder dataDiskStorageInfo(List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
+            return dataDiskStorageInfo(Output.of(dataDiskStorageInfo));
         }
+
         public Builder dataDiskStorageInfo(DataDiskStorageTypeInfoArgs... dataDiskStorageInfo) {
             return dataDiskStorageInfo(List.of(dataDiskStorageInfo));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
-            this.isPlanAuthorized = isPlanAuthorized;
+            $.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
-        public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
-            this.isPlanAuthorized = Codegen.ofNullable(isPlanAuthorized);
-            return this;
+
+        public Builder isPlanAuthorized(Boolean isPlanAuthorized) {
+            return isPlanAuthorized(Output.of(isPlanAuthorized));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedImageId(@Nullable Output<String> managedImageId) {
-            this.managedImageId = managedImageId;
+            $.managedImageId = managedImageId;
             return this;
         }
-        public Builder managedImageId(@Nullable String managedImageId) {
-            this.managedImageId = Codegen.ofNullable(managedImageId);
-            return this;
+
+        public Builder managedImageId(String managedImageId) {
+            return managedImageId(Output.of(managedImageId));
         }
+
         public Builder managedSnapshotId(@Nullable Output<String> managedSnapshotId) {
-            this.managedSnapshotId = managedSnapshotId;
+            $.managedSnapshotId = managedSnapshotId;
             return this;
         }
-        public Builder managedSnapshotId(@Nullable String managedSnapshotId) {
-            this.managedSnapshotId = Codegen.ofNullable(managedSnapshotId);
-            return this;
+
+        public Builder managedSnapshotId(String managedSnapshotId) {
+            return managedSnapshotId(Output.of(managedSnapshotId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vhd(@Nullable Output<CustomImagePropertiesCustomArgs> vhd) {
-            this.vhd = vhd;
+            $.vhd = vhd;
             return this;
         }
-        public Builder vhd(@Nullable CustomImagePropertiesCustomArgs vhd) {
-            this.vhd = Codegen.ofNullable(vhd);
-            return this;
+
+        public Builder vhd(CustomImagePropertiesCustomArgs vhd) {
+            return vhd(Output.of(vhd));
         }
+
         public Builder vm(@Nullable Output<CustomImagePropertiesFromVmArgs> vm) {
-            this.vm = vm;
+            $.vm = vm;
             return this;
         }
-        public Builder vm(@Nullable CustomImagePropertiesFromVmArgs vm) {
-            this.vm = Codegen.ofNullable(vm);
-            return this;
-        }        public CustomImageArgs build() {
-            return new CustomImageArgs(author, customImagePlan, dataDiskStorageInfo, description, isPlanAuthorized, labName, location, managedImageId, managedSnapshotId, name, resourceGroupName, tags, vhd, vm);
+
+        public Builder vm(CustomImagePropertiesFromVmArgs vm) {
+            return vm(Output.of(vm));
+        }
+
+        public CustomImageArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

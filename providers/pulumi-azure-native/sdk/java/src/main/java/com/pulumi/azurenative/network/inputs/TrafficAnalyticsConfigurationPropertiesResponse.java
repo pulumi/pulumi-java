@@ -25,10 +25,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
      * 
      */
     @Import(name="trafficAnalyticsInterval")
-      private final @Nullable Integer trafficAnalyticsInterval;
+    private @Nullable Integer trafficAnalyticsInterval;
 
     public Optional<Integer> trafficAnalyticsInterval() {
-        return this.trafficAnalyticsInterval == null ? Optional.empty() : Optional.ofNullable(this.trafficAnalyticsInterval);
+        return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable String workspaceId;
+    private @Nullable String workspaceId;
 
     public Optional<String> workspaceId() {
-        return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
+        return Optional.ofNullable(this.workspaceId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
      * 
      */
     @Import(name="workspaceRegion")
-      private final @Nullable String workspaceRegion;
+    private @Nullable String workspaceRegion;
 
     public Optional<String> workspaceRegion() {
-        return this.workspaceRegion == null ? Optional.empty() : Optional.ofNullable(this.workspaceRegion);
+        return Optional.ofNullable(this.workspaceRegion);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable String workspaceResourceId;
+    private @Nullable String workspaceResourceId;
 
     public Optional<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public TrafficAnalyticsConfigurationPropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer trafficAnalyticsInterval,
-        @Nullable String workspaceId,
-        @Nullable String workspaceRegion,
-        @Nullable String workspaceResourceId) {
-        this.enabled = enabled;
-        this.trafficAnalyticsInterval = trafficAnalyticsInterval;
-        this.workspaceId = workspaceId;
-        this.workspaceRegion = workspaceRegion;
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private TrafficAnalyticsConfigurationPropertiesResponse() {}
 
-    private TrafficAnalyticsConfigurationPropertiesResponse() {
-        this.enabled = null;
-        this.trafficAnalyticsInterval = null;
-        this.workspaceId = null;
-        this.workspaceRegion = null;
-        this.workspaceResourceId = null;
+    private TrafficAnalyticsConfigurationPropertiesResponse(TrafficAnalyticsConfigurationPropertiesResponse $) {
+        this.enabled = $.enabled;
+        this.trafficAnalyticsInterval = $.trafficAnalyticsInterval;
+        this.workspaceId = $.workspaceId;
+        this.workspaceRegion = $.workspaceRegion;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficAnalyticsConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable Integer trafficAnalyticsInterval;
-        private @Nullable String workspaceId;
-        private @Nullable String workspaceRegion;
-        private @Nullable String workspaceResourceId;
+        private TrafficAnalyticsConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficAnalyticsConfigurationPropertiesResponse();
         }
 
         public Builder(TrafficAnalyticsConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.trafficAnalyticsInterval = defaults.trafficAnalyticsInterval;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceRegion = defaults.workspaceRegion;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new TrafficAnalyticsConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
-            this.trafficAnalyticsInterval = trafficAnalyticsInterval;
+            $.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
+
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceRegion(@Nullable String workspaceRegion) {
-            this.workspaceRegion = workspaceRegion;
+            $.workspaceRegion = workspaceRegion;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public TrafficAnalyticsConfigurationPropertiesResponse build() {
-            return new TrafficAnalyticsConfigurationPropertiesResponse(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
+        }
+
+        public TrafficAnalyticsConfigurationPropertiesResponse build() {
+            return $;
         }
     }
+
 }

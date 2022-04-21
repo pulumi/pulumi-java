@@ -17,7 +17,7 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadataName", required=true)
-      private final String metadataName;
+    private String metadataName;
 
     public String metadataName() {
         return this.metadataName;
@@ -28,7 +28,7 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetMetadataArgs(
-        String metadataName,
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String workspaceName) {
-        this.metadataName = Objects.requireNonNull(metadataName, "expected parameter 'metadataName' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetMetadataArgs() {}
 
-    private GetMetadataArgs() {
-        this.metadataName = null;
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetMetadataArgs(GetMetadataArgs $) {
+        this.metadataName = $.metadataName;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metadataName;
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMetadataArgs();
         }
 
         public Builder(GetMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataName = defaults.metadataName;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataName(String metadataName) {
-            this.metadataName = Objects.requireNonNull(metadataName);
+            $.metadataName = metadataName;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetMetadataArgs build() {
-            return new GetMetadataArgs(metadataName, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
+        }
+
+        public GetMetadataArgs build() {
+            $.metadataName = Objects.requireNonNull($.metadataName, "expected parameter 'metadataName' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

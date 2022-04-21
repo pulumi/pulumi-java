@@ -8,10 +8,10 @@ import com.pulumi.azurenative.securityinsights.enums.AutomationRulePropertyCondi
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
+    private @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
-    public Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<Either<String,AutomationRulePropertyConditionSupportedOperator>>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * 
      */
     @Import(name="propertyName")
-      private final @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
+    private @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
-    public Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName() {
-        return this.propertyName == null ? Codegen.empty() : this.propertyName;
+    public Optional<Output<Either<String,AutomationRulePropertyConditionSupportedProperty>>> propertyName() {
+        return Optional.ofNullable(this.propertyName);
     }
 
     /**
@@ -50,79 +50,72 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
      * 
      */
     @Import(name="propertyValues")
-      private final @Nullable Output<List<String>> propertyValues;
+    private @Nullable Output<List<String>> propertyValues;
 
-    public Output<List<String>> propertyValues() {
-        return this.propertyValues == null ? Codegen.empty() : this.propertyValues;
+    public Optional<Output<List<String>>> propertyValues() {
+        return Optional.ofNullable(this.propertyValues);
     }
 
-    public AutomationRulePropertyValuesConditionConditionPropertiesArgs(
-        @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator,
-        @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName,
-        @Nullable Output<List<String>> propertyValues) {
-        this.operator = operator;
-        this.propertyName = propertyName;
-        this.propertyValues = propertyValues;
-    }
+    private AutomationRulePropertyValuesConditionConditionPropertiesArgs() {}
 
-    private AutomationRulePropertyValuesConditionConditionPropertiesArgs() {
-        this.operator = Codegen.empty();
-        this.propertyName = Codegen.empty();
-        this.propertyValues = Codegen.empty();
+    private AutomationRulePropertyValuesConditionConditionPropertiesArgs(AutomationRulePropertyValuesConditionConditionPropertiesArgs $) {
+        this.operator = $.operator;
+        this.propertyName = $.propertyName;
+        this.propertyValues = $.propertyValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRulePropertyValuesConditionConditionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
-        private @Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
-        private @Nullable Output<List<String>> propertyValues;
+        private AutomationRulePropertyValuesConditionConditionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRulePropertyValuesConditionConditionPropertiesArgs();
         }
 
         public Builder(AutomationRulePropertyValuesConditionConditionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.propertyName = defaults.propertyName;
-    	      this.propertyValues = defaults.propertyValues;
+            $ = new AutomationRulePropertyValuesConditionConditionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder propertyName(@Nullable Output<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
-            this.propertyName = propertyName;
+            $.propertyName = propertyName;
             return this;
         }
-        public Builder propertyName(@Nullable Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
-            this.propertyName = Codegen.ofNullable(propertyName);
-            return this;
+
+        public Builder propertyName(Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
+            return propertyName(Output.of(propertyName));
         }
+
         public Builder propertyValues(@Nullable Output<List<String>> propertyValues) {
-            this.propertyValues = propertyValues;
+            $.propertyValues = propertyValues;
             return this;
         }
-        public Builder propertyValues(@Nullable List<String> propertyValues) {
-            this.propertyValues = Codegen.ofNullable(propertyValues);
-            return this;
+
+        public Builder propertyValues(List<String> propertyValues) {
+            return propertyValues(Output.of(propertyValues));
         }
+
         public Builder propertyValues(String... propertyValues) {
             return propertyValues(List.of(propertyValues));
-        }        public AutomationRulePropertyValuesConditionConditionPropertiesArgs build() {
-            return new AutomationRulePropertyValuesConditionConditionPropertiesArgs(operator, propertyName, propertyValues);
+        }
+
+        public AutomationRulePropertyValuesConditionConditionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

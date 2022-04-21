@@ -23,10 +23,10 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
      * 
      */
     @Import(name="displayStatus")
-      private final @Nullable String displayStatus;
+    private @Nullable String displayStatus;
 
     public Optional<String> displayStatus() {
-        return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
+        return Optional.ofNullable(this.displayStatus);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
-    public ComputeVmInstanceViewStatusResponse(
-        @Nullable String code,
-        @Nullable String displayStatus,
-        @Nullable String message) {
-        this.code = code;
-        this.displayStatus = displayStatus;
-        this.message = message;
-    }
+    private ComputeVmInstanceViewStatusResponse() {}
 
-    private ComputeVmInstanceViewStatusResponse() {
-        this.code = null;
-        this.displayStatus = null;
-        this.message = null;
+    private ComputeVmInstanceViewStatusResponse(ComputeVmInstanceViewStatusResponse $) {
+        this.code = $.code;
+        this.displayStatus = $.displayStatus;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeVmInstanceViewStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String displayStatus;
-        private @Nullable String message;
+        private ComputeVmInstanceViewStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeVmInstanceViewStatusResponse();
         }
 
         public Builder(ComputeVmInstanceViewStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.displayStatus = defaults.displayStatus;
-    	      this.message = defaults.message;
+            $ = new ComputeVmInstanceViewStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder displayStatus(@Nullable String displayStatus) {
-            this.displayStatus = displayStatus;
+            $.displayStatus = displayStatus;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
-        }        public ComputeVmInstanceViewStatusResponse build() {
-            return new ComputeVmInstanceViewStatusResponse(code, displayStatus, message);
+        }
+
+        public ComputeVmInstanceViewStatusResponse build() {
+            return $;
         }
     }
+
 }

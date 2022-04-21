@@ -24,10 +24,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable String keyFrameInterval;
+    private @Nullable String keyFrameInterval;
 
     public Optional<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -58,10 +58,10 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable String stretchMode;
+    private @Nullable String stretchMode;
 
     public Optional<String> stretchMode() {
-        return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
+        return Optional.ofNullable(this.stretchMode);
     }
 
     /**
@@ -69,82 +69,69 @@ public final class VideoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncMode")
-      private final @Nullable String syncMode;
+    private @Nullable String syncMode;
 
     public Optional<String> syncMode() {
-        return this.syncMode == null ? Optional.empty() : Optional.ofNullable(this.syncMode);
+        return Optional.ofNullable(this.syncMode);
     }
 
-    public VideoResponse(
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        String odataType,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
-        this.keyFrameInterval = keyFrameInterval;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.stretchMode = stretchMode;
-        this.syncMode = syncMode;
-    }
+    private VideoResponse() {}
 
-    private VideoResponse() {
-        this.keyFrameInterval = null;
-        this.label = null;
-        this.odataType = null;
-        this.stretchMode = null;
-        this.syncMode = null;
+    private VideoResponse(VideoResponse $) {
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.stretchMode = $.stretchMode;
+        this.syncMode = $.syncMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyFrameInterval;
-        private @Nullable String label;
-        private String odataType;
-        private @Nullable String stretchMode;
-        private @Nullable String syncMode;
+        private VideoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoResponse();
         }
 
         public Builder(VideoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.stretchMode = defaults.stretchMode;
-    	      this.syncMode = defaults.syncMode;
+            $ = new VideoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder stretchMode(@Nullable String stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
         }
+
         public Builder syncMode(@Nullable String syncMode) {
-            this.syncMode = syncMode;
+            $.syncMode = syncMode;
             return this;
-        }        public VideoResponse build() {
-            return new VideoResponse(keyFrameInterval, label, odataType, stretchMode, syncMode);
+        }
+
+        public VideoResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

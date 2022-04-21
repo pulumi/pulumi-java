@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="privateEndpointConnectionProxyId", required=true)
-      private final String privateEndpointConnectionProxyId;
+    private String privateEndpointConnectionProxyId;
 
     public String privateEndpointConnectionProxyId() {
         return this.privateEndpointConnectionProxyId;
@@ -39,64 +39,59 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointConnectionProxyArgs(
-        String accountName,
-        String privateEndpointConnectionProxyId,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.privateEndpointConnectionProxyId = Objects.requireNonNull(privateEndpointConnectionProxyId, "expected parameter 'privateEndpointConnectionProxyId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointConnectionProxyArgs() {}
 
-    private GetPrivateEndpointConnectionProxyArgs() {
-        this.accountName = null;
-        this.privateEndpointConnectionProxyId = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointConnectionProxyArgs(GetPrivateEndpointConnectionProxyArgs $) {
+        this.accountName = $.accountName;
+        this.privateEndpointConnectionProxyId = $.privateEndpointConnectionProxyId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointConnectionProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String privateEndpointConnectionProxyId;
-        private String resourceGroupName;
+        private GetPrivateEndpointConnectionProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointConnectionProxyArgs();
         }
 
         public Builder(GetPrivateEndpointConnectionProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.privateEndpointConnectionProxyId = defaults.privateEndpointConnectionProxyId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointConnectionProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder privateEndpointConnectionProxyId(String privateEndpointConnectionProxyId) {
-            this.privateEndpointConnectionProxyId = Objects.requireNonNull(privateEndpointConnectionProxyId);
+            $.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointConnectionProxyArgs build() {
-            return new GetPrivateEndpointConnectionProxyArgs(accountName, privateEndpointConnectionProxyId, resourceGroupName);
+        }
+
+        public GetPrivateEndpointConnectionProxyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.privateEndpointConnectionProxyId = Objects.requireNonNull($.privateEndpointConnectionProxyId, "expected parameter 'privateEndpointConnectionProxyId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

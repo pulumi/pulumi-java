@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AssignedComponentItemArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public AssignedComponentItemArgs(@Nullable Output<String> key) {
-        this.key = key;
-    }
+    private AssignedComponentItemArgs() {}
 
-    private AssignedComponentItemArgs() {
-        this.key = Codegen.empty();
+    private AssignedComponentItemArgs(AssignedComponentItemArgs $) {
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignedComponentItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
+        private AssignedComponentItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignedComponentItemArgs();
         }
 
         public Builder(AssignedComponentItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
+            $ = new AssignedComponentItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public AssignedComponentItemArgs build() {
-            return new AssignedComponentItemArgs(key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public AssignedComponentItemArgs build() {
+            return $;
         }
     }
+
 }

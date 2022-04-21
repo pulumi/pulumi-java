@@ -23,10 +23,10 @@ public final class ProtocolCustomSettingsFormatResponse extends com.pulumi.resou
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProtocolCustomSettingsFormatResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceRateOverride")
-      private final @Nullable String sourceRateOverride;
+    private @Nullable String sourceRateOverride;
 
     public Optional<String> sourceRateOverride() {
-        return this.sourceRateOverride == null ? Optional.empty() : Optional.ofNullable(this.sourceRateOverride);
+        return Optional.ofNullable(this.sourceRateOverride);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProtocolCustomSettingsFormatResponse extends com.pulumi.resou
      * 
      */
     @Import(name="triggerRateOverride")
-      private final @Nullable String triggerRateOverride;
+    private @Nullable String triggerRateOverride;
 
     public Optional<String> triggerRateOverride() {
-        return this.triggerRateOverride == null ? Optional.empty() : Optional.ofNullable(this.triggerRateOverride);
+        return Optional.ofNullable(this.triggerRateOverride);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ProtocolCustomSettingsFormatResponse extends com.pulumi.resou
      * 
      */
     @Import(name="triggerSensitivityOverride")
-      private final @Nullable String triggerSensitivityOverride;
+    private @Nullable String triggerSensitivityOverride;
 
     public Optional<String> triggerSensitivityOverride() {
-        return this.triggerSensitivityOverride == null ? Optional.empty() : Optional.ofNullable(this.triggerSensitivityOverride);
+        return Optional.ofNullable(this.triggerSensitivityOverride);
     }
 
-    public ProtocolCustomSettingsFormatResponse(
-        @Nullable String protocol,
-        @Nullable String sourceRateOverride,
-        @Nullable String triggerRateOverride,
-        @Nullable String triggerSensitivityOverride) {
-        this.protocol = protocol;
-        this.sourceRateOverride = sourceRateOverride;
-        this.triggerRateOverride = triggerRateOverride;
-        this.triggerSensitivityOverride = triggerSensitivityOverride;
-    }
+    private ProtocolCustomSettingsFormatResponse() {}
 
-    private ProtocolCustomSettingsFormatResponse() {
-        this.protocol = null;
-        this.sourceRateOverride = null;
-        this.triggerRateOverride = null;
-        this.triggerSensitivityOverride = null;
+    private ProtocolCustomSettingsFormatResponse(ProtocolCustomSettingsFormatResponse $) {
+        this.protocol = $.protocol;
+        this.sourceRateOverride = $.sourceRateOverride;
+        this.triggerRateOverride = $.triggerRateOverride;
+        this.triggerSensitivityOverride = $.triggerSensitivityOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtocolCustomSettingsFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String protocol;
-        private @Nullable String sourceRateOverride;
-        private @Nullable String triggerRateOverride;
-        private @Nullable String triggerSensitivityOverride;
+        private ProtocolCustomSettingsFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtocolCustomSettingsFormatResponse();
         }
 
         public Builder(ProtocolCustomSettingsFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocol = defaults.protocol;
-    	      this.sourceRateOverride = defaults.sourceRateOverride;
-    	      this.triggerRateOverride = defaults.triggerRateOverride;
-    	      this.triggerSensitivityOverride = defaults.triggerSensitivityOverride;
+            $ = new ProtocolCustomSettingsFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder sourceRateOverride(@Nullable String sourceRateOverride) {
-            this.sourceRateOverride = sourceRateOverride;
+            $.sourceRateOverride = sourceRateOverride;
             return this;
         }
+
         public Builder triggerRateOverride(@Nullable String triggerRateOverride) {
-            this.triggerRateOverride = triggerRateOverride;
+            $.triggerRateOverride = triggerRateOverride;
             return this;
         }
+
         public Builder triggerSensitivityOverride(@Nullable String triggerSensitivityOverride) {
-            this.triggerSensitivityOverride = triggerSensitivityOverride;
+            $.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
-        }        public ProtocolCustomSettingsFormatResponse build() {
-            return new ProtocolCustomSettingsFormatResponse(protocol, sourceRateOverride, triggerRateOverride, triggerSensitivityOverride);
+        }
+
+        public ProtocolCustomSettingsFormatResponse build() {
+            return $;
         }
     }
+
 }

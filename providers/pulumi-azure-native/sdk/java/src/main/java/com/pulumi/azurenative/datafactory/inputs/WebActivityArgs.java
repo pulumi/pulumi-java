@@ -19,6 +19,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +36,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
+    private @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Output<WebActivityAuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<WebActivityAuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<Object> body;
+    private @Nullable Output<Object> body;
 
-    public Output<Object> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<Object>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasets")
-      private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
+    private @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> datasets() {
-        return this.datasets == null ? Codegen.empty() : this.datasets;
+    public Optional<Output<List<DatasetReferenceArgs>>> datasets() {
+        return Optional.ofNullable(this.datasets);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -101,10 +102,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<Object> headers;
+    private @Nullable Output<Object> headers;
 
-    public Output<Object> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<Object>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -112,10 +113,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -123,10 +124,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedServices")
-      private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
+    private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> linkedServices() {
-        return this.linkedServices == null ? Codegen.empty() : this.linkedServices;
+    public Optional<Output<List<LinkedServiceReferenceArgs>>> linkedServices() {
+        return Optional.ofNullable(this.linkedServices);
     }
 
     /**
@@ -134,7 +135,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="method", required=true)
-      private final Output<Either<String,WebActivityMethod>> method;
+    private Output<Either<String,WebActivityMethod>> method;
 
     public Output<Either<String,WebActivityMethod>> method() {
         return this.method;
@@ -145,7 +146,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -156,10 +157,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -168,7 +169,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -179,7 +180,7 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final Output<Object> url;
+    private Output<Object> url;
 
     public Output<Object> url() {
         return this.url;
@@ -190,244 +191,208 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public WebActivityArgs(
-        @Nullable Output<WebActivityAuthenticationArgs> authentication,
-        @Nullable Output<Object> body,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<List<DatasetReferenceArgs>> datasets,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> headers,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices,
-        Output<Either<String,WebActivityMethod>> method,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        Output<String> type,
-        Output<Object> url,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.authentication = authentication;
-        this.body = body;
-        this.connectVia = connectVia;
-        this.datasets = datasets;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.headers = headers;
-        this.linkedServiceName = linkedServiceName;
-        this.linkedServices = linkedServices;
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.userProperties = userProperties;
-    }
+    private WebActivityArgs() {}
 
-    private WebActivityArgs() {
-        this.authentication = Codegen.empty();
-        this.body = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.datasets = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.linkedServices = Codegen.empty();
-        this.method = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private WebActivityArgs(WebActivityArgs $) {
+        this.authentication = $.authentication;
+        this.body = $.body;
+        this.connectVia = $.connectVia;
+        this.datasets = $.datasets;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.headers = $.headers;
+        this.linkedServiceName = $.linkedServiceName;
+        this.linkedServices = $.linkedServices;
+        this.method = $.method;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.url = $.url;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebActivityAuthenticationArgs> authentication;
-        private @Nullable Output<Object> body;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<List<DatasetReferenceArgs>> datasets;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> headers;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
-        private Output<Either<String,WebActivityMethod>> method;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private Output<String> type;
-        private Output<Object> url;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private WebActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebActivityArgs();
         }
 
         public Builder(WebActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.body = defaults.body;
-    	      this.connectVia = defaults.connectVia;
-    	      this.datasets = defaults.datasets;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.linkedServices = defaults.linkedServices;
-    	      this.method = defaults.method;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.userProperties = defaults.userProperties;
+            $ = new WebActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Output<WebActivityAuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(WebActivityAuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder body(@Nullable Output<Object> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable Object body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(Object body) {
+            return body(Output.of(body));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
-            this.datasets = datasets;
+            $.datasets = datasets;
             return this;
         }
-        public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Codegen.ofNullable(datasets);
-            return this;
+
+        public Builder datasets(List<DatasetReferenceArgs> datasets) {
+            return datasets(Output.of(datasets));
         }
+
         public Builder datasets(DatasetReferenceArgs... datasets) {
             return datasets(List.of(datasets));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headers(@Nullable Output<Object> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable Object headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(Object headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
-            this.linkedServices = linkedServices;
+            $.linkedServices = linkedServices;
             return this;
         }
-        public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
-            this.linkedServices = Codegen.ofNullable(linkedServices);
-            return this;
+
+        public Builder linkedServices(List<LinkedServiceReferenceArgs> linkedServices) {
+            return linkedServices(Output.of(linkedServices));
         }
+
         public Builder linkedServices(LinkedServiceReferenceArgs... linkedServices) {
             return linkedServices(List.of(linkedServices));
         }
+
         public Builder method(Output<Either<String,WebActivityMethod>> method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder method(Either<String,WebActivityMethod> method) {
-            this.method = Output.of(Objects.requireNonNull(method));
-            return this;
+            return method(Output.of(method));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder url(Output<Object> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
+            return url(Output.of(url));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public WebActivityArgs build() {
-            return new WebActivityArgs(authentication, body, connectVia, datasets, dependsOn, description, headers, linkedServiceName, linkedServices, method, name, policy, type, url, userProperties);
+        }
+
+        public WebActivityArgs build() {
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

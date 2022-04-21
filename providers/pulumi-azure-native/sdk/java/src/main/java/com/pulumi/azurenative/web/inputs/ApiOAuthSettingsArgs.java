@@ -6,12 +6,12 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ApiOAuthSettingsParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="customParameters")
-      private final @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
+    private @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
 
-    public Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters() {
-        return this.customParameters == null ? Codegen.empty() : this.customParameters;
+    public Optional<Output<Map<String,ApiOAuthSettingsParameterArgs>>> customParameters() {
+        return Optional.ofNullable(this.customParameters);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identityProvider")
-      private final @Nullable Output<String> identityProvider;
+    private @Nullable Output<String> identityProvider;
 
-    public Output<String> identityProvider() {
-        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
+    public Optional<Output<String>> identityProvider() {
+        return Optional.ofNullable(this.identityProvider);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Object> properties;
+    private @Nullable Output<Object> properties;
 
-    public Output<Object> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Object>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="redirectUrl")
-      private final @Nullable Output<String> redirectUrl;
+    private @Nullable Output<String> redirectUrl;
 
-    public Output<String> redirectUrl() {
-        return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
+    public Optional<Output<String>> redirectUrl() {
+        return Optional.ofNullable(this.redirectUrl);
     }
 
     /**
@@ -94,131 +94,112 @@ public final class ApiOAuthSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<String>> scopes;
+    private @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<String>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
-    public ApiOAuthSettingsArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters,
-        @Nullable Output<String> identityProvider,
-        @Nullable Output<Object> properties,
-        @Nullable Output<String> redirectUrl,
-        @Nullable Output<List<String>> scopes) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.customParameters = customParameters;
-        this.identityProvider = identityProvider;
-        this.properties = properties;
-        this.redirectUrl = redirectUrl;
-        this.scopes = scopes;
-    }
+    private ApiOAuthSettingsArgs() {}
 
-    private ApiOAuthSettingsArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.customParameters = Codegen.empty();
-        this.identityProvider = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.redirectUrl = Codegen.empty();
-        this.scopes = Codegen.empty();
+    private ApiOAuthSettingsArgs(ApiOAuthSettingsArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.customParameters = $.customParameters;
+        this.identityProvider = $.identityProvider;
+        this.properties = $.properties;
+        this.redirectUrl = $.redirectUrl;
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiOAuthSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
-        private @Nullable Output<String> identityProvider;
-        private @Nullable Output<Object> properties;
-        private @Nullable Output<String> redirectUrl;
-        private @Nullable Output<List<String>> scopes;
+        private ApiOAuthSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiOAuthSettingsArgs();
         }
 
         public Builder(ApiOAuthSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.customParameters = defaults.customParameters;
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.properties = defaults.properties;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.scopes = defaults.scopes;
+            $ = new ApiOAuthSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder customParameters(@Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters) {
-            this.customParameters = customParameters;
+            $.customParameters = customParameters;
             return this;
         }
-        public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterArgs> customParameters) {
-            this.customParameters = Codegen.ofNullable(customParameters);
-            return this;
+
+        public Builder customParameters(Map<String,ApiOAuthSettingsParameterArgs> customParameters) {
+            return customParameters(Output.of(customParameters));
         }
+
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
-            this.identityProvider = identityProvider;
+            $.identityProvider = identityProvider;
             return this;
         }
-        public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Codegen.ofNullable(identityProvider);
-            return this;
+
+        public Builder identityProvider(String identityProvider) {
+            return identityProvider(Output.of(identityProvider));
         }
+
         public Builder properties(@Nullable Output<Object> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Object properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Object properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
-            this.redirectUrl = redirectUrl;
+            $.redirectUrl = redirectUrl;
             return this;
         }
-        public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Codegen.ofNullable(redirectUrl);
-            return this;
+
+        public Builder redirectUrl(String redirectUrl) {
+            return redirectUrl(Output.of(redirectUrl));
         }
+
         public Builder scopes(@Nullable Output<List<String>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<String> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public ApiOAuthSettingsArgs build() {
-            return new ApiOAuthSettingsArgs(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
+        }
+
+        public ApiOAuthSettingsArgs build() {
+            return $;
         }
     }
+
 }

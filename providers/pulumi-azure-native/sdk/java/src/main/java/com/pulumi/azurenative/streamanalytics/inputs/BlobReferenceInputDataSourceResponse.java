@@ -26,10 +26,10 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="container")
-      private final @Nullable String container;
+    private @Nullable String container;
 
     public Optional<String> container() {
-        return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="dateFormat")
-      private final @Nullable String dateFormat;
+    private @Nullable String dateFormat;
 
     public Optional<String> dateFormat() {
-        return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
+        return Optional.ofNullable(this.dateFormat);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="pathPattern")
-      private final @Nullable String pathPattern;
+    private @Nullable String pathPattern;
 
     public Optional<String> pathPattern() {
-        return this.pathPattern == null ? Optional.empty() : Optional.ofNullable(this.pathPattern);
+        return Optional.ofNullable(this.pathPattern);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="storageAccounts")
-      private final @Nullable List<StorageAccountResponse> storageAccounts;
+    private @Nullable List<StorageAccountResponse> storageAccounts;
 
-    public List<StorageAccountResponse> storageAccounts() {
-        return this.storageAccounts == null ? List.of() : this.storageAccounts;
+    public Optional<List<StorageAccountResponse>> storageAccounts() {
+        return Optional.ofNullable(this.storageAccounts);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="timeFormat")
-      private final @Nullable String timeFormat;
+    private @Nullable String timeFormat;
 
     public Optional<String> timeFormat() {
-        return this.timeFormat == null ? Optional.empty() : Optional.ofNullable(this.timeFormat);
+        return Optional.ofNullable(this.timeFormat);
     }
 
     /**
@@ -82,94 +82,79 @@ public final class BlobReferenceInputDataSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BlobReferenceInputDataSourceResponse(
-        @Nullable String container,
-        @Nullable String dateFormat,
-        @Nullable String pathPattern,
-        @Nullable List<StorageAccountResponse> storageAccounts,
-        @Nullable String timeFormat,
-        String type) {
-        this.container = container;
-        this.dateFormat = dateFormat;
-        this.pathPattern = pathPattern;
-        this.storageAccounts = storageAccounts;
-        this.timeFormat = timeFormat;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private BlobReferenceInputDataSourceResponse() {}
 
-    private BlobReferenceInputDataSourceResponse() {
-        this.container = null;
-        this.dateFormat = null;
-        this.pathPattern = null;
-        this.storageAccounts = List.of();
-        this.timeFormat = null;
-        this.type = null;
+    private BlobReferenceInputDataSourceResponse(BlobReferenceInputDataSourceResponse $) {
+        this.container = $.container;
+        this.dateFormat = $.dateFormat;
+        this.pathPattern = $.pathPattern;
+        this.storageAccounts = $.storageAccounts;
+        this.timeFormat = $.timeFormat;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobReferenceInputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String container;
-        private @Nullable String dateFormat;
-        private @Nullable String pathPattern;
-        private @Nullable List<StorageAccountResponse> storageAccounts;
-        private @Nullable String timeFormat;
-        private String type;
+        private BlobReferenceInputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobReferenceInputDataSourceResponse();
         }
 
         public Builder(BlobReferenceInputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.dateFormat = defaults.dateFormat;
-    	      this.pathPattern = defaults.pathPattern;
-    	      this.storageAccounts = defaults.storageAccounts;
-    	      this.timeFormat = defaults.timeFormat;
-    	      this.type = defaults.type;
+            $ = new BlobReferenceInputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder container(@Nullable String container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
+
         public Builder dateFormat(@Nullable String dateFormat) {
-            this.dateFormat = dateFormat;
+            $.dateFormat = dateFormat;
             return this;
         }
+
         public Builder pathPattern(@Nullable String pathPattern) {
-            this.pathPattern = pathPattern;
+            $.pathPattern = pathPattern;
             return this;
         }
+
         public Builder storageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
-            this.storageAccounts = storageAccounts;
+            $.storageAccounts = storageAccounts;
             return this;
         }
+
         public Builder storageAccounts(StorageAccountResponse... storageAccounts) {
             return storageAccounts(List.of(storageAccounts));
         }
+
         public Builder timeFormat(@Nullable String timeFormat) {
-            this.timeFormat = timeFormat;
+            $.timeFormat = timeFormat;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BlobReferenceInputDataSourceResponse build() {
-            return new BlobReferenceInputDataSourceResponse(container, dateFormat, pathPattern, storageAccounts, timeFormat, type);
+        }
+
+        public BlobReferenceInputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -48,10 +48,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inheritedPermissions")
-      private final @Nullable String inheritedPermissions;
+    private @Nullable String inheritedPermissions;
 
     public Optional<String> inheritedPermissions() {
-        return this.inheritedPermissions == null ? Optional.empty() : Optional.ofNullable(this.inheritedPermissions);
+        return Optional.ofNullable(this.inheritedPermissions);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,10 +70,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numberOfChildGroups")
-      private final @Nullable Integer numberOfChildGroups;
+    private @Nullable Integer numberOfChildGroups;
 
     public Optional<Integer> numberOfChildGroups() {
-        return this.numberOfChildGroups == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildGroups);
+        return Optional.ofNullable(this.numberOfChildGroups);
     }
 
     /**
@@ -81,17 +81,17 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numberOfChildren")
-      private final @Nullable Integer numberOfChildren;
+    private @Nullable Integer numberOfChildren;
 
     public Optional<Integer> numberOfChildren() {
-        return this.numberOfChildren == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildren);
+        return Optional.ofNullable(this.numberOfChildren);
     }
 
     @Import(name="numberOfDescendants")
-      private final @Nullable Integer numberOfDescendants;
+    private @Nullable Integer numberOfDescendants;
 
     public Optional<Integer> numberOfDescendants() {
-        return this.numberOfDescendants == null ? Optional.empty() : Optional.ofNullable(this.numberOfDescendants);
+        return Optional.ofNullable(this.numberOfDescendants);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable EntityParentGroupInfoResponse parent;
+    private @Nullable EntityParentGroupInfoResponse parent;
 
     public Optional<EntityParentGroupInfoResponse> parent() {
-        return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentDisplayNameChain")
-      private final @Nullable List<String> parentDisplayNameChain;
+    private @Nullable List<String> parentDisplayNameChain;
 
-    public List<String> parentDisplayNameChain() {
-        return this.parentDisplayNameChain == null ? List.of() : this.parentDisplayNameChain;
+    public Optional<List<String>> parentDisplayNameChain() {
+        return Optional.ofNullable(this.parentDisplayNameChain);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentNameChain")
-      private final @Nullable List<String> parentNameChain;
+    private @Nullable List<String> parentNameChain;
 
-    public List<String> parentNameChain() {
-        return this.parentNameChain == null ? List.of() : this.parentNameChain;
+    public Optional<List<String>> parentNameChain() {
+        return Optional.ofNullable(this.parentNameChain);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable String permissions;
+    private @Nullable String permissions;
 
     public Optional<String> permissions() {
-        return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -154,160 +154,127 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EntityInfoResponse(
-        @Nullable String displayName,
-        String id,
-        @Nullable String inheritedPermissions,
-        String name,
-        @Nullable Integer numberOfChildGroups,
-        @Nullable Integer numberOfChildren,
-        @Nullable Integer numberOfDescendants,
-        @Nullable EntityParentGroupInfoResponse parent,
-        @Nullable List<String> parentDisplayNameChain,
-        @Nullable List<String> parentNameChain,
-        @Nullable String permissions,
-        @Nullable String tenantId,
-        String type) {
-        this.displayName = displayName;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.inheritedPermissions = inheritedPermissions;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.numberOfChildGroups = numberOfChildGroups;
-        this.numberOfChildren = numberOfChildren;
-        this.numberOfDescendants = numberOfDescendants;
-        this.parent = parent;
-        this.parentDisplayNameChain = parentDisplayNameChain;
-        this.parentNameChain = parentNameChain;
-        this.permissions = permissions;
-        this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EntityInfoResponse() {}
 
-    private EntityInfoResponse() {
-        this.displayName = null;
-        this.id = null;
-        this.inheritedPermissions = null;
-        this.name = null;
-        this.numberOfChildGroups = null;
-        this.numberOfChildren = null;
-        this.numberOfDescendants = null;
-        this.parent = null;
-        this.parentDisplayNameChain = List.of();
-        this.parentNameChain = List.of();
-        this.permissions = null;
-        this.tenantId = null;
-        this.type = null;
+    private EntityInfoResponse(EntityInfoResponse $) {
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.inheritedPermissions = $.inheritedPermissions;
+        this.name = $.name;
+        this.numberOfChildGroups = $.numberOfChildGroups;
+        this.numberOfChildren = $.numberOfChildren;
+        this.numberOfDescendants = $.numberOfDescendants;
+        this.parent = $.parent;
+        this.parentDisplayNameChain = $.parentDisplayNameChain;
+        this.parentNameChain = $.parentNameChain;
+        this.permissions = $.permissions;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private String id;
-        private @Nullable String inheritedPermissions;
-        private String name;
-        private @Nullable Integer numberOfChildGroups;
-        private @Nullable Integer numberOfChildren;
-        private @Nullable Integer numberOfDescendants;
-        private @Nullable EntityParentGroupInfoResponse parent;
-        private @Nullable List<String> parentDisplayNameChain;
-        private @Nullable List<String> parentNameChain;
-        private @Nullable String permissions;
-        private @Nullable String tenantId;
-        private String type;
+        private EntityInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityInfoResponse();
         }
 
         public Builder(EntityInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.inheritedPermissions = defaults.inheritedPermissions;
-    	      this.name = defaults.name;
-    	      this.numberOfChildGroups = defaults.numberOfChildGroups;
-    	      this.numberOfChildren = defaults.numberOfChildren;
-    	      this.numberOfDescendants = defaults.numberOfDescendants;
-    	      this.parent = defaults.parent;
-    	      this.parentDisplayNameChain = defaults.parentDisplayNameChain;
-    	      this.parentNameChain = defaults.parentNameChain;
-    	      this.permissions = defaults.permissions;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new EntityInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder inheritedPermissions(@Nullable String inheritedPermissions) {
-            this.inheritedPermissions = inheritedPermissions;
+            $.inheritedPermissions = inheritedPermissions;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder numberOfChildGroups(@Nullable Integer numberOfChildGroups) {
-            this.numberOfChildGroups = numberOfChildGroups;
+            $.numberOfChildGroups = numberOfChildGroups;
             return this;
         }
+
         public Builder numberOfChildren(@Nullable Integer numberOfChildren) {
-            this.numberOfChildren = numberOfChildren;
+            $.numberOfChildren = numberOfChildren;
             return this;
         }
+
         public Builder numberOfDescendants(@Nullable Integer numberOfDescendants) {
-            this.numberOfDescendants = numberOfDescendants;
+            $.numberOfDescendants = numberOfDescendants;
             return this;
         }
+
         public Builder parent(@Nullable EntityParentGroupInfoResponse parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
+
         public Builder parentDisplayNameChain(@Nullable List<String> parentDisplayNameChain) {
-            this.parentDisplayNameChain = parentDisplayNameChain;
+            $.parentDisplayNameChain = parentDisplayNameChain;
             return this;
         }
+
         public Builder parentDisplayNameChain(String... parentDisplayNameChain) {
             return parentDisplayNameChain(List.of(parentDisplayNameChain));
         }
+
         public Builder parentNameChain(@Nullable List<String> parentNameChain) {
-            this.parentNameChain = parentNameChain;
+            $.parentNameChain = parentNameChain;
             return this;
         }
+
         public Builder parentNameChain(String... parentNameChain) {
             return parentNameChain(List.of(parentNameChain));
         }
+
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EntityInfoResponse build() {
-            return new EntityInfoResponse(displayName, id, inheritedPermissions, name, numberOfChildGroups, numberOfChildren, numberOfDescendants, parent, parentDisplayNameChain, parentNameChain, permissions, tenantId, type);
+        }
+
+        public EntityInfoResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

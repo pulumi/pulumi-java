@@ -26,10 +26,10 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessControl")
-      private final @Nullable LiveEventPreviewAccessControlResponse accessControl;
+    private @Nullable LiveEventPreviewAccessControlResponse accessControl;
 
     public Optional<LiveEventPreviewAccessControlResponse> accessControl() {
-        return this.accessControl == null ? Optional.empty() : Optional.ofNullable(this.accessControl);
+        return Optional.ofNullable(this.accessControl);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="alternativeMediaId")
-      private final @Nullable String alternativeMediaId;
+    private @Nullable String alternativeMediaId;
 
     public Optional<String> alternativeMediaId() {
-        return this.alternativeMediaId == null ? Optional.empty() : Optional.ofNullable(this.alternativeMediaId);
+        return Optional.ofNullable(this.alternativeMediaId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable List<LiveEventEndpointResponse> endpoints;
+    private @Nullable List<LiveEventEndpointResponse> endpoints;
 
-    public List<LiveEventEndpointResponse> endpoints() {
-        return this.endpoints == null ? List.of() : this.endpoints;
+    public Optional<List<LiveEventEndpointResponse>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="previewLocator")
-      private final @Nullable String previewLocator;
+    private @Nullable String previewLocator;
 
     public Optional<String> previewLocator() {
-        return this.previewLocator == null ? Optional.empty() : Optional.ofNullable(this.previewLocator);
+        return Optional.ofNullable(this.previewLocator);
     }
 
     /**
@@ -70,85 +70,72 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="streamingPolicyName")
-      private final @Nullable String streamingPolicyName;
+    private @Nullable String streamingPolicyName;
 
     public Optional<String> streamingPolicyName() {
-        return this.streamingPolicyName == null ? Optional.empty() : Optional.ofNullable(this.streamingPolicyName);
+        return Optional.ofNullable(this.streamingPolicyName);
     }
 
-    public LiveEventPreviewResponse(
-        @Nullable LiveEventPreviewAccessControlResponse accessControl,
-        @Nullable String alternativeMediaId,
-        @Nullable List<LiveEventEndpointResponse> endpoints,
-        @Nullable String previewLocator,
-        @Nullable String streamingPolicyName) {
-        this.accessControl = accessControl;
-        this.alternativeMediaId = alternativeMediaId;
-        this.endpoints = endpoints;
-        this.previewLocator = previewLocator;
-        this.streamingPolicyName = streamingPolicyName;
-    }
+    private LiveEventPreviewResponse() {}
 
-    private LiveEventPreviewResponse() {
-        this.accessControl = null;
-        this.alternativeMediaId = null;
-        this.endpoints = List.of();
-        this.previewLocator = null;
-        this.streamingPolicyName = null;
+    private LiveEventPreviewResponse(LiveEventPreviewResponse $) {
+        this.accessControl = $.accessControl;
+        this.alternativeMediaId = $.alternativeMediaId;
+        this.endpoints = $.endpoints;
+        this.previewLocator = $.previewLocator;
+        this.streamingPolicyName = $.streamingPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventPreviewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LiveEventPreviewAccessControlResponse accessControl;
-        private @Nullable String alternativeMediaId;
-        private @Nullable List<LiveEventEndpointResponse> endpoints;
-        private @Nullable String previewLocator;
-        private @Nullable String streamingPolicyName;
+        private LiveEventPreviewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventPreviewResponse();
         }
 
         public Builder(LiveEventPreviewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControl = defaults.accessControl;
-    	      this.alternativeMediaId = defaults.alternativeMediaId;
-    	      this.endpoints = defaults.endpoints;
-    	      this.previewLocator = defaults.previewLocator;
-    	      this.streamingPolicyName = defaults.streamingPolicyName;
+            $ = new LiveEventPreviewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControl(@Nullable LiveEventPreviewAccessControlResponse accessControl) {
-            this.accessControl = accessControl;
+            $.accessControl = accessControl;
             return this;
         }
+
         public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
-            this.alternativeMediaId = alternativeMediaId;
+            $.alternativeMediaId = alternativeMediaId;
             return this;
         }
+
         public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(LiveEventEndpointResponse... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder previewLocator(@Nullable String previewLocator) {
-            this.previewLocator = previewLocator;
+            $.previewLocator = previewLocator;
             return this;
         }
+
         public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
-            this.streamingPolicyName = streamingPolicyName;
+            $.streamingPolicyName = streamingPolicyName;
             return this;
-        }        public LiveEventPreviewResponse build() {
-            return new LiveEventPreviewResponse(accessControl, alternativeMediaId, endpoints, previewLocator, streamingPolicyName);
+        }
+
+        public LiveEventPreviewResponse build() {
+            return $;
         }
     }
+
 }

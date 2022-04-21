@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends com.pul
      * 
      */
     @Import(name="verifyClientCertIssuerDN")
-      private final @Nullable Output<Boolean> verifyClientCertIssuerDN;
+    private @Nullable Output<Boolean> verifyClientCertIssuerDN;
 
-    public Output<Boolean> verifyClientCertIssuerDN() {
-        return this.verifyClientCertIssuerDN == null ? Codegen.empty() : this.verifyClientCertIssuerDN;
+    public Optional<Output<Boolean>> verifyClientCertIssuerDN() {
+        return Optional.ofNullable(this.verifyClientCertIssuerDN);
     }
 
-    public ApplicationGatewayClientAuthConfigurationArgs(@Nullable Output<Boolean> verifyClientCertIssuerDN) {
-        this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
-    }
+    private ApplicationGatewayClientAuthConfigurationArgs() {}
 
-    private ApplicationGatewayClientAuthConfigurationArgs() {
-        this.verifyClientCertIssuerDN = Codegen.empty();
+    private ApplicationGatewayClientAuthConfigurationArgs(ApplicationGatewayClientAuthConfigurationArgs $) {
+        this.verifyClientCertIssuerDN = $.verifyClientCertIssuerDN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayClientAuthConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> verifyClientCertIssuerDN;
+        private ApplicationGatewayClientAuthConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayClientAuthConfigurationArgs();
         }
 
         public Builder(ApplicationGatewayClientAuthConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.verifyClientCertIssuerDN = defaults.verifyClientCertIssuerDN;
+            $ = new ApplicationGatewayClientAuthConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder verifyClientCertIssuerDN(@Nullable Output<Boolean> verifyClientCertIssuerDN) {
-            this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
+            $.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }
-        public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
-            this.verifyClientCertIssuerDN = Codegen.ofNullable(verifyClientCertIssuerDN);
-            return this;
-        }        public ApplicationGatewayClientAuthConfigurationArgs build() {
-            return new ApplicationGatewayClientAuthConfigurationArgs(verifyClientCertIssuerDN);
+
+        public Builder verifyClientCertIssuerDN(Boolean verifyClientCertIssuerDN) {
+            return verifyClientCertIssuerDN(Output.of(verifyClientCertIssuerDN));
+        }
+
+        public ApplicationGatewayClientAuthConfigurationArgs build() {
+            return $;
         }
     }
+
 }

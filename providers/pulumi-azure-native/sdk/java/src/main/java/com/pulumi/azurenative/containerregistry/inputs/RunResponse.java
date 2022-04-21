@@ -33,10 +33,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentConfiguration")
-      private final @Nullable AgentPropertiesResponse agentConfiguration;
+    private @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> agentConfiguration() {
-        return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
+        return Optional.ofNullable(this.agentConfiguration);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentPoolName")
-      private final @Nullable String agentPoolName;
+    private @Nullable String agentPoolName;
 
     public Optional<String> agentPoolName() {
-        return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
+        return Optional.ofNullable(this.agentPoolName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable String createTime;
+    private @Nullable String createTime;
 
     public Optional<String> createTime() {
-        return this.createTime == null ? Optional.empty() : Optional.ofNullable(this.createTime);
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customRegistries")
-      private final @Nullable List<String> customRegistries;
+    private @Nullable List<String> customRegistries;
 
-    public List<String> customRegistries() {
-        return this.customRegistries == null ? List.of() : this.customRegistries;
+    public Optional<List<String>> customRegistries() {
+        return Optional.ofNullable(this.customRegistries);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="finishTime")
-      private final @Nullable String finishTime;
+    private @Nullable String finishTime;
 
     public Optional<String> finishTime() {
-        return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
+        return Optional.ofNullable(this.finishTime);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -99,10 +99,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageUpdateTrigger")
-      private final @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
+    private @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
 
     public Optional<ImageUpdateTriggerResponse> imageUpdateTrigger() {
-        return this.imageUpdateTrigger == null ? Optional.empty() : Optional.ofNullable(this.imageUpdateTrigger);
+        return Optional.ofNullable(this.imageUpdateTrigger);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isArchiveEnabled")
-      private final @Nullable Boolean isArchiveEnabled;
+    private @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> isArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
+        return Optional.ofNullable(this.isArchiveEnabled);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable String lastUpdatedTime;
+    private @Nullable String lastUpdatedTime;
 
     public Optional<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logArtifact", required=true)
-      private final ImageDescriptorResponse logArtifact;
+    private ImageDescriptorResponse logArtifact;
 
     public ImageDescriptorResponse logArtifact() {
         return this.logArtifact;
@@ -143,7 +143,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -154,10 +154,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputImages")
-      private final @Nullable List<ImageDescriptorResponse> outputImages;
+    private @Nullable List<ImageDescriptorResponse> outputImages;
 
-    public List<ImageDescriptorResponse> outputImages() {
-        return this.outputImages == null ? List.of() : this.outputImages;
+    public Optional<List<ImageDescriptorResponse>> outputImages() {
+        return Optional.ofNullable(this.outputImages);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable PlatformPropertiesResponse platform;
+    private @Nullable PlatformPropertiesResponse platform;
 
     public Optional<PlatformPropertiesResponse> platform() {
-        return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -187,7 +187,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runErrorMessage", required=true)
-      private final String runErrorMessage;
+    private String runErrorMessage;
 
     public String runErrorMessage() {
         return this.runErrorMessage;
@@ -198,10 +198,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runId")
-      private final @Nullable String runId;
+    private @Nullable String runId;
 
     public Optional<String> runId() {
-        return this.runId == null ? Optional.empty() : Optional.ofNullable(this.runId);
+        return Optional.ofNullable(this.runId);
     }
 
     /**
@@ -209,10 +209,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runType")
-      private final @Nullable String runType;
+    private @Nullable String runType;
 
     public Optional<String> runType() {
-        return this.runType == null ? Optional.empty() : Optional.ofNullable(this.runType);
+        return Optional.ofNullable(this.runType);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRegistryAuth")
-      private final @Nullable String sourceRegistryAuth;
+    private @Nullable String sourceRegistryAuth;
 
     public Optional<String> sourceRegistryAuth() {
-        return this.sourceRegistryAuth == null ? Optional.empty() : Optional.ofNullable(this.sourceRegistryAuth);
+        return Optional.ofNullable(this.sourceRegistryAuth);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceTrigger")
-      private final @Nullable SourceTriggerDescriptorResponse sourceTrigger;
+    private @Nullable SourceTriggerDescriptorResponse sourceTrigger;
 
     public Optional<SourceTriggerDescriptorResponse> sourceTrigger() {
-        return this.sourceTrigger == null ? Optional.empty() : Optional.ofNullable(this.sourceTrigger);
+        return Optional.ofNullable(this.sourceTrigger);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -264,7 +264,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="systemData", required=true)
-      private final SystemDataResponse systemData;
+    private SystemDataResponse systemData;
 
     public SystemDataResponse systemData() {
         return this.systemData;
@@ -275,10 +275,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="task")
-      private final @Nullable String task;
+    private @Nullable String task;
 
     public Optional<String> task() {
-        return this.task == null ? Optional.empty() : Optional.ofNullable(this.task);
+        return Optional.ofNullable(this.task);
     }
 
     /**
@@ -286,10 +286,10 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timerTrigger")
-      private final @Nullable TimerTriggerDescriptorResponse timerTrigger;
+    private @Nullable TimerTriggerDescriptorResponse timerTrigger;
 
     public Optional<TimerTriggerDescriptorResponse> timerTrigger() {
-        return this.timerTrigger == null ? Optional.empty() : Optional.ofNullable(this.timerTrigger);
+        return Optional.ofNullable(this.timerTrigger);
     }
 
     /**
@@ -297,7 +297,7 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -308,277 +308,209 @@ public final class RunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTriggerToken")
-      private final @Nullable String updateTriggerToken;
+    private @Nullable String updateTriggerToken;
 
     public Optional<String> updateTriggerToken() {
-        return this.updateTriggerToken == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerToken);
+        return Optional.ofNullable(this.updateTriggerToken);
     }
 
-    public RunResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable String createTime,
-        @Nullable List<String> customRegistries,
-        @Nullable String finishTime,
-        String id,
-        @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String lastUpdatedTime,
-        ImageDescriptorResponse logArtifact,
-        String name,
-        @Nullable List<ImageDescriptorResponse> outputImages,
-        @Nullable PlatformPropertiesResponse platform,
-        @Nullable String provisioningState,
-        String runErrorMessage,
-        @Nullable String runId,
-        @Nullable String runType,
-        @Nullable String sourceRegistryAuth,
-        @Nullable SourceTriggerDescriptorResponse sourceTrigger,
-        @Nullable String startTime,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        @Nullable String task,
-        @Nullable TimerTriggerDescriptorResponse timerTrigger,
-        String type,
-        @Nullable String updateTriggerToken) {
-        this.agentConfiguration = agentConfiguration;
-        this.agentPoolName = agentPoolName;
-        this.createTime = createTime;
-        this.customRegistries = customRegistries;
-        this.finishTime = finishTime;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.imageUpdateTrigger = imageUpdateTrigger;
-        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.logArtifact = Objects.requireNonNull(logArtifact, "expected parameter 'logArtifact' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputImages = outputImages;
-        this.platform = platform;
-        this.provisioningState = provisioningState;
-        this.runErrorMessage = Objects.requireNonNull(runErrorMessage, "expected parameter 'runErrorMessage' to be non-null");
-        this.runId = runId;
-        this.runType = runType;
-        this.sourceRegistryAuth = sourceRegistryAuth;
-        this.sourceTrigger = sourceTrigger;
-        this.startTime = startTime;
-        this.status = status;
-        this.systemData = Objects.requireNonNull(systemData, "expected parameter 'systemData' to be non-null");
-        this.task = task;
-        this.timerTrigger = timerTrigger;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.updateTriggerToken = updateTriggerToken;
-    }
+    private RunResponse() {}
 
-    private RunResponse() {
-        this.agentConfiguration = null;
-        this.agentPoolName = null;
-        this.createTime = null;
-        this.customRegistries = List.of();
-        this.finishTime = null;
-        this.id = null;
-        this.imageUpdateTrigger = null;
-        this.isArchiveEnabled = null;
-        this.lastUpdatedTime = null;
-        this.logArtifact = null;
-        this.name = null;
-        this.outputImages = List.of();
-        this.platform = null;
-        this.provisioningState = null;
-        this.runErrorMessage = null;
-        this.runId = null;
-        this.runType = null;
-        this.sourceRegistryAuth = null;
-        this.sourceTrigger = null;
-        this.startTime = null;
-        this.status = null;
-        this.systemData = null;
-        this.task = null;
-        this.timerTrigger = null;
-        this.type = null;
-        this.updateTriggerToken = null;
+    private RunResponse(RunResponse $) {
+        this.agentConfiguration = $.agentConfiguration;
+        this.agentPoolName = $.agentPoolName;
+        this.createTime = $.createTime;
+        this.customRegistries = $.customRegistries;
+        this.finishTime = $.finishTime;
+        this.id = $.id;
+        this.imageUpdateTrigger = $.imageUpdateTrigger;
+        this.isArchiveEnabled = $.isArchiveEnabled;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.logArtifact = $.logArtifact;
+        this.name = $.name;
+        this.outputImages = $.outputImages;
+        this.platform = $.platform;
+        this.provisioningState = $.provisioningState;
+        this.runErrorMessage = $.runErrorMessage;
+        this.runId = $.runId;
+        this.runType = $.runType;
+        this.sourceRegistryAuth = $.sourceRegistryAuth;
+        this.sourceTrigger = $.sourceTrigger;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.systemData = $.systemData;
+        this.task = $.task;
+        this.timerTrigger = $.timerTrigger;
+        this.type = $.type;
+        this.updateTriggerToken = $.updateTriggerToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AgentPropertiesResponse agentConfiguration;
-        private @Nullable String agentPoolName;
-        private @Nullable String createTime;
-        private @Nullable List<String> customRegistries;
-        private @Nullable String finishTime;
-        private String id;
-        private @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
-        private @Nullable Boolean isArchiveEnabled;
-        private @Nullable String lastUpdatedTime;
-        private ImageDescriptorResponse logArtifact;
-        private String name;
-        private @Nullable List<ImageDescriptorResponse> outputImages;
-        private @Nullable PlatformPropertiesResponse platform;
-        private @Nullable String provisioningState;
-        private String runErrorMessage;
-        private @Nullable String runId;
-        private @Nullable String runType;
-        private @Nullable String sourceRegistryAuth;
-        private @Nullable SourceTriggerDescriptorResponse sourceTrigger;
-        private @Nullable String startTime;
-        private @Nullable String status;
-        private SystemDataResponse systemData;
-        private @Nullable String task;
-        private @Nullable TimerTriggerDescriptorResponse timerTrigger;
-        private String type;
-        private @Nullable String updateTriggerToken;
+        private RunResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunResponse();
         }
 
         public Builder(RunResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentConfiguration = defaults.agentConfiguration;
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.createTime = defaults.createTime;
-    	      this.customRegistries = defaults.customRegistries;
-    	      this.finishTime = defaults.finishTime;
-    	      this.id = defaults.id;
-    	      this.imageUpdateTrigger = defaults.imageUpdateTrigger;
-    	      this.isArchiveEnabled = defaults.isArchiveEnabled;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.logArtifact = defaults.logArtifact;
-    	      this.name = defaults.name;
-    	      this.outputImages = defaults.outputImages;
-    	      this.platform = defaults.platform;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.runErrorMessage = defaults.runErrorMessage;
-    	      this.runId = defaults.runId;
-    	      this.runType = defaults.runType;
-    	      this.sourceRegistryAuth = defaults.sourceRegistryAuth;
-    	      this.sourceTrigger = defaults.sourceTrigger;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.systemData = defaults.systemData;
-    	      this.task = defaults.task;
-    	      this.timerTrigger = defaults.timerTrigger;
-    	      this.type = defaults.type;
-    	      this.updateTriggerToken = defaults.updateTriggerToken;
+            $ = new RunResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
-            this.agentConfiguration = agentConfiguration;
+            $.agentConfiguration = agentConfiguration;
             return this;
         }
+
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = agentPoolName;
+            $.agentPoolName = agentPoolName;
             return this;
         }
+
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
+
         public Builder customRegistries(@Nullable List<String> customRegistries) {
-            this.customRegistries = customRegistries;
+            $.customRegistries = customRegistries;
             return this;
         }
+
         public Builder customRegistries(String... customRegistries) {
             return customRegistries(List.of(customRegistries));
         }
+
         public Builder finishTime(@Nullable String finishTime) {
-            this.finishTime = finishTime;
+            $.finishTime = finishTime;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder imageUpdateTrigger(@Nullable ImageUpdateTriggerResponse imageUpdateTrigger) {
-            this.imageUpdateTrigger = imageUpdateTrigger;
+            $.imageUpdateTrigger = imageUpdateTrigger;
             return this;
         }
+
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = isArchiveEnabled;
+            $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
+
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder logArtifact(ImageDescriptorResponse logArtifact) {
-            this.logArtifact = Objects.requireNonNull(logArtifact);
+            $.logArtifact = logArtifact;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder outputImages(@Nullable List<ImageDescriptorResponse> outputImages) {
-            this.outputImages = outputImages;
+            $.outputImages = outputImages;
             return this;
         }
+
         public Builder outputImages(ImageDescriptorResponse... outputImages) {
             return outputImages(List.of(outputImages));
         }
+
         public Builder platform(@Nullable PlatformPropertiesResponse platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder runErrorMessage(String runErrorMessage) {
-            this.runErrorMessage = Objects.requireNonNull(runErrorMessage);
+            $.runErrorMessage = runErrorMessage;
             return this;
         }
+
         public Builder runId(@Nullable String runId) {
-            this.runId = runId;
+            $.runId = runId;
             return this;
         }
+
         public Builder runType(@Nullable String runType) {
-            this.runType = runType;
+            $.runType = runType;
             return this;
         }
+
         public Builder sourceRegistryAuth(@Nullable String sourceRegistryAuth) {
-            this.sourceRegistryAuth = sourceRegistryAuth;
+            $.sourceRegistryAuth = sourceRegistryAuth;
             return this;
         }
+
         public Builder sourceTrigger(@Nullable SourceTriggerDescriptorResponse sourceTrigger) {
-            this.sourceTrigger = sourceTrigger;
+            $.sourceTrigger = sourceTrigger;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder systemData(SystemDataResponse systemData) {
-            this.systemData = Objects.requireNonNull(systemData);
+            $.systemData = systemData;
             return this;
         }
+
         public Builder task(@Nullable String task) {
-            this.task = task;
+            $.task = task;
             return this;
         }
+
         public Builder timerTrigger(@Nullable TimerTriggerDescriptorResponse timerTrigger) {
-            this.timerTrigger = timerTrigger;
+            $.timerTrigger = timerTrigger;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
-            this.updateTriggerToken = updateTriggerToken;
+            $.updateTriggerToken = updateTriggerToken;
             return this;
-        }        public RunResponse build() {
-            return new RunResponse(agentConfiguration, agentPoolName, createTime, customRegistries, finishTime, id, imageUpdateTrigger, isArchiveEnabled, lastUpdatedTime, logArtifact, name, outputImages, platform, provisioningState, runErrorMessage, runId, runType, sourceRegistryAuth, sourceTrigger, startTime, status, systemData, task, timerTrigger, type, updateTriggerToken);
+        }
+
+        public RunResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg($.isArchiveEnabled).def(false).getNullable();
+            $.logArtifact = Objects.requireNonNull($.logArtifact, "expected parameter 'logArtifact' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.runErrorMessage = Objects.requireNonNull($.runErrorMessage, "expected parameter 'runErrorMessage' to be non-null");
+            $.systemData = Objects.requireNonNull($.systemData, "expected parameter 'systemData' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

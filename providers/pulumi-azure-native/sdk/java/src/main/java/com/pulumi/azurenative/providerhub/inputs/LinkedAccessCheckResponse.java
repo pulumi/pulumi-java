@@ -15,110 +15,96 @@ public final class LinkedAccessCheckResponse extends com.pulumi.resources.Invoke
     public static final LinkedAccessCheckResponse Empty = new LinkedAccessCheckResponse();
 
     @Import(name="actionName")
-      private final @Nullable String actionName;
+    private @Nullable String actionName;
 
     public Optional<String> actionName() {
-        return this.actionName == null ? Optional.empty() : Optional.ofNullable(this.actionName);
+        return Optional.ofNullable(this.actionName);
     }
 
     @Import(name="linkedAction")
-      private final @Nullable String linkedAction;
+    private @Nullable String linkedAction;
 
     public Optional<String> linkedAction() {
-        return this.linkedAction == null ? Optional.empty() : Optional.ofNullable(this.linkedAction);
+        return Optional.ofNullable(this.linkedAction);
     }
 
     @Import(name="linkedActionVerb")
-      private final @Nullable String linkedActionVerb;
+    private @Nullable String linkedActionVerb;
 
     public Optional<String> linkedActionVerb() {
-        return this.linkedActionVerb == null ? Optional.empty() : Optional.ofNullable(this.linkedActionVerb);
+        return Optional.ofNullable(this.linkedActionVerb);
     }
 
     @Import(name="linkedProperty")
-      private final @Nullable String linkedProperty;
+    private @Nullable String linkedProperty;
 
     public Optional<String> linkedProperty() {
-        return this.linkedProperty == null ? Optional.empty() : Optional.ofNullable(this.linkedProperty);
+        return Optional.ofNullable(this.linkedProperty);
     }
 
     @Import(name="linkedType")
-      private final @Nullable String linkedType;
+    private @Nullable String linkedType;
 
     public Optional<String> linkedType() {
-        return this.linkedType == null ? Optional.empty() : Optional.ofNullable(this.linkedType);
+        return Optional.ofNullable(this.linkedType);
     }
 
-    public LinkedAccessCheckResponse(
-        @Nullable String actionName,
-        @Nullable String linkedAction,
-        @Nullable String linkedActionVerb,
-        @Nullable String linkedProperty,
-        @Nullable String linkedType) {
-        this.actionName = actionName;
-        this.linkedAction = linkedAction;
-        this.linkedActionVerb = linkedActionVerb;
-        this.linkedProperty = linkedProperty;
-        this.linkedType = linkedType;
-    }
+    private LinkedAccessCheckResponse() {}
 
-    private LinkedAccessCheckResponse() {
-        this.actionName = null;
-        this.linkedAction = null;
-        this.linkedActionVerb = null;
-        this.linkedProperty = null;
-        this.linkedType = null;
+    private LinkedAccessCheckResponse(LinkedAccessCheckResponse $) {
+        this.actionName = $.actionName;
+        this.linkedAction = $.linkedAction;
+        this.linkedActionVerb = $.linkedActionVerb;
+        this.linkedProperty = $.linkedProperty;
+        this.linkedType = $.linkedType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedAccessCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String actionName;
-        private @Nullable String linkedAction;
-        private @Nullable String linkedActionVerb;
-        private @Nullable String linkedProperty;
-        private @Nullable String linkedType;
+        private LinkedAccessCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedAccessCheckResponse();
         }
 
         public Builder(LinkedAccessCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.linkedAction = defaults.linkedAction;
-    	      this.linkedActionVerb = defaults.linkedActionVerb;
-    	      this.linkedProperty = defaults.linkedProperty;
-    	      this.linkedType = defaults.linkedType;
+            $ = new LinkedAccessCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(@Nullable String actionName) {
-            this.actionName = actionName;
+            $.actionName = actionName;
             return this;
         }
+
         public Builder linkedAction(@Nullable String linkedAction) {
-            this.linkedAction = linkedAction;
+            $.linkedAction = linkedAction;
             return this;
         }
+
         public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
-            this.linkedActionVerb = linkedActionVerb;
+            $.linkedActionVerb = linkedActionVerb;
             return this;
         }
+
         public Builder linkedProperty(@Nullable String linkedProperty) {
-            this.linkedProperty = linkedProperty;
+            $.linkedProperty = linkedProperty;
             return this;
         }
+
         public Builder linkedType(@Nullable String linkedType) {
-            this.linkedType = linkedType;
+            $.linkedType = linkedType;
             return this;
-        }        public LinkedAccessCheckResponse build() {
-            return new LinkedAccessCheckResponse(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
+        }
+
+        public LinkedAccessCheckResponse build() {
+            return $;
         }
     }
+
 }

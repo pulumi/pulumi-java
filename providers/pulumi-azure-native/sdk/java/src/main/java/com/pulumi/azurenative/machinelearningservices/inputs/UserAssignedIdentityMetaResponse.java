@@ -23,10 +23,10 @@ public final class UserAssignedIdentityMetaResponse extends com.pulumi.resources
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class UserAssignedIdentityMetaResponse extends com.pulumi.resources
      * 
      */
     @Import(name="principalId")
-      private final @Nullable String principalId;
+    private @Nullable String principalId;
 
     public Optional<String> principalId() {
-        return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
+        return Optional.ofNullable(this.principalId);
     }
 
-    public UserAssignedIdentityMetaResponse(
-        @Nullable String clientId,
-        @Nullable String principalId) {
-        this.clientId = clientId;
-        this.principalId = principalId;
-    }
+    private UserAssignedIdentityMetaResponse() {}
 
-    private UserAssignedIdentityMetaResponse() {
-        this.clientId = null;
-        this.principalId = null;
+    private UserAssignedIdentityMetaResponse(UserAssignedIdentityMetaResponse $) {
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityMetaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private @Nullable String principalId;
+        private UserAssignedIdentityMetaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityMetaResponse();
         }
 
         public Builder(UserAssignedIdentityMetaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
+            $ = new UserAssignedIdentityMetaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
-        }        public UserAssignedIdentityMetaResponse build() {
-            return new UserAssignedIdentityMetaResponse(clientId, principalId);
+        }
+
+        public UserAssignedIdentityMetaResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="city")
-      private final @Nullable Output<String> city;
+    private @Nullable Output<String> city;
 
-    public Output<String> city() {
-        return this.city == null ? Codegen.empty() : this.city;
+    public Optional<Output<String>> city() {
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="countryOrRegion")
-      private final @Nullable Output<String> countryOrRegion;
+    private @Nullable Output<String> countryOrRegion;
 
-    public Output<String> countryOrRegion() {
-        return this.countryOrRegion == null ? Codegen.empty() : this.countryOrRegion;
+    public Optional<Output<String>> countryOrRegion() {
+        return Optional.ofNullable(this.countryOrRegion);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="phone")
-      private final @Nullable Output<String> phone;
+    private @Nullable Output<String> phone;
 
-    public Output<String> phone() {
-        return this.phone == null ? Codegen.empty() : this.phone;
+    public Optional<Output<String>> phone() {
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable Output<String> postalCode;
+    private @Nullable Output<String> postalCode;
 
-    public Output<String> postalCode() {
-        return this.postalCode == null ? Codegen.empty() : this.postalCode;
+    public Optional<Output<String>> postalCode() {
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="recipientName")
-      private final @Nullable Output<String> recipientName;
+    private @Nullable Output<String> recipientName;
 
-    public Output<String> recipientName() {
-        return this.recipientName == null ? Codegen.empty() : this.recipientName;
+    public Optional<Output<String>> recipientName() {
+        return Optional.ofNullable(this.recipientName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="stateOrProvince")
-      private final @Nullable Output<String> stateOrProvince;
+    private @Nullable Output<String> stateOrProvince;
 
-    public Output<String> stateOrProvince() {
-        return this.stateOrProvince == null ? Codegen.empty() : this.stateOrProvince;
+    public Optional<Output<String>> stateOrProvince() {
+        return Optional.ofNullable(this.stateOrProvince);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="streetAddress1")
-      private final @Nullable Output<String> streetAddress1;
+    private @Nullable Output<String> streetAddress1;
 
-    public Output<String> streetAddress1() {
-        return this.streetAddress1 == null ? Codegen.empty() : this.streetAddress1;
+    public Optional<Output<String>> streetAddress1() {
+        return Optional.ofNullable(this.streetAddress1);
     }
 
     /**
@@ -101,141 +101,118 @@ public final class ShippingInformationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="streetAddress2")
-      private final @Nullable Output<String> streetAddress2;
+    private @Nullable Output<String> streetAddress2;
 
-    public Output<String> streetAddress2() {
-        return this.streetAddress2 == null ? Codegen.empty() : this.streetAddress2;
+    public Optional<Output<String>> streetAddress2() {
+        return Optional.ofNullable(this.streetAddress2);
     }
 
-    public ShippingInformationArgs(
-        @Nullable Output<String> city,
-        @Nullable Output<String> countryOrRegion,
-        @Nullable Output<String> phone,
-        @Nullable Output<String> postalCode,
-        @Nullable Output<String> recipientName,
-        @Nullable Output<String> stateOrProvince,
-        @Nullable Output<String> streetAddress1,
-        @Nullable Output<String> streetAddress2) {
-        this.city = city;
-        this.countryOrRegion = countryOrRegion;
-        this.phone = phone;
-        this.postalCode = postalCode;
-        this.recipientName = recipientName;
-        this.stateOrProvince = stateOrProvince;
-        this.streetAddress1 = streetAddress1;
-        this.streetAddress2 = streetAddress2;
-    }
+    private ShippingInformationArgs() {}
 
-    private ShippingInformationArgs() {
-        this.city = Codegen.empty();
-        this.countryOrRegion = Codegen.empty();
-        this.phone = Codegen.empty();
-        this.postalCode = Codegen.empty();
-        this.recipientName = Codegen.empty();
-        this.stateOrProvince = Codegen.empty();
-        this.streetAddress1 = Codegen.empty();
-        this.streetAddress2 = Codegen.empty();
+    private ShippingInformationArgs(ShippingInformationArgs $) {
+        this.city = $.city;
+        this.countryOrRegion = $.countryOrRegion;
+        this.phone = $.phone;
+        this.postalCode = $.postalCode;
+        this.recipientName = $.recipientName;
+        this.stateOrProvince = $.stateOrProvince;
+        this.streetAddress1 = $.streetAddress1;
+        this.streetAddress2 = $.streetAddress2;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShippingInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> city;
-        private @Nullable Output<String> countryOrRegion;
-        private @Nullable Output<String> phone;
-        private @Nullable Output<String> postalCode;
-        private @Nullable Output<String> recipientName;
-        private @Nullable Output<String> stateOrProvince;
-        private @Nullable Output<String> streetAddress1;
-        private @Nullable Output<String> streetAddress2;
+        private ShippingInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShippingInformationArgs();
         }
 
         public Builder(ShippingInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.city = defaults.city;
-    	      this.countryOrRegion = defaults.countryOrRegion;
-    	      this.phone = defaults.phone;
-    	      this.postalCode = defaults.postalCode;
-    	      this.recipientName = defaults.recipientName;
-    	      this.stateOrProvince = defaults.stateOrProvince;
-    	      this.streetAddress1 = defaults.streetAddress1;
-    	      this.streetAddress2 = defaults.streetAddress2;
+            $ = new ShippingInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder city(@Nullable Output<String> city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
-        public Builder city(@Nullable String city) {
-            this.city = Codegen.ofNullable(city);
-            return this;
+
+        public Builder city(String city) {
+            return city(Output.of(city));
         }
+
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
-            this.countryOrRegion = countryOrRegion;
+            $.countryOrRegion = countryOrRegion;
             return this;
         }
-        public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = Codegen.ofNullable(countryOrRegion);
-            return this;
+
+        public Builder countryOrRegion(String countryOrRegion) {
+            return countryOrRegion(Output.of(countryOrRegion));
         }
+
         public Builder phone(@Nullable Output<String> phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
-        public Builder phone(@Nullable String phone) {
-            this.phone = Codegen.ofNullable(phone);
-            return this;
+
+        public Builder phone(String phone) {
+            return phone(Output.of(phone));
         }
+
         public Builder postalCode(@Nullable Output<String> postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
-        public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Codegen.ofNullable(postalCode);
-            return this;
+
+        public Builder postalCode(String postalCode) {
+            return postalCode(Output.of(postalCode));
         }
+
         public Builder recipientName(@Nullable Output<String> recipientName) {
-            this.recipientName = recipientName;
+            $.recipientName = recipientName;
             return this;
         }
-        public Builder recipientName(@Nullable String recipientName) {
-            this.recipientName = Codegen.ofNullable(recipientName);
-            return this;
+
+        public Builder recipientName(String recipientName) {
+            return recipientName(Output.of(recipientName));
         }
+
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
-            this.stateOrProvince = stateOrProvince;
+            $.stateOrProvince = stateOrProvince;
             return this;
         }
-        public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = Codegen.ofNullable(stateOrProvince);
-            return this;
+
+        public Builder stateOrProvince(String stateOrProvince) {
+            return stateOrProvince(Output.of(stateOrProvince));
         }
+
         public Builder streetAddress1(@Nullable Output<String> streetAddress1) {
-            this.streetAddress1 = streetAddress1;
+            $.streetAddress1 = streetAddress1;
             return this;
         }
-        public Builder streetAddress1(@Nullable String streetAddress1) {
-            this.streetAddress1 = Codegen.ofNullable(streetAddress1);
-            return this;
+
+        public Builder streetAddress1(String streetAddress1) {
+            return streetAddress1(Output.of(streetAddress1));
         }
+
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
-            this.streetAddress2 = streetAddress2;
+            $.streetAddress2 = streetAddress2;
             return this;
         }
-        public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = Codegen.ofNullable(streetAddress2);
-            return this;
-        }        public ShippingInformationArgs build() {
-            return new ShippingInformationArgs(city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
+
+        public Builder streetAddress2(String streetAddress2) {
+            return streetAddress2(Output.of(streetAddress2));
+        }
+
+        public ShippingInformationArgs build() {
+            return $;
         }
     }
+
 }

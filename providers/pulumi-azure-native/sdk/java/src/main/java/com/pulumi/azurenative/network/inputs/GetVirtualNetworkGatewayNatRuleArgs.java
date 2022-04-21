@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="natRuleName", required=true)
-      private final String natRuleName;
+    private String natRuleName;
 
     public String natRuleName() {
         return this.natRuleName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-      private final String virtualNetworkGatewayName;
+    private String virtualNetworkGatewayName;
 
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
-    public GetVirtualNetworkGatewayNatRuleArgs(
-        String natRuleName,
-        String resourceGroupName,
-        String virtualNetworkGatewayName) {
-        this.natRuleName = Objects.requireNonNull(natRuleName, "expected parameter 'natRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
-    }
+    private GetVirtualNetworkGatewayNatRuleArgs() {}
 
-    private GetVirtualNetworkGatewayNatRuleArgs() {
-        this.natRuleName = null;
-        this.resourceGroupName = null;
-        this.virtualNetworkGatewayName = null;
+    private GetVirtualNetworkGatewayNatRuleArgs(GetVirtualNetworkGatewayNatRuleArgs $) {
+        this.natRuleName = $.natRuleName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkGatewayName = $.virtualNetworkGatewayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkGatewayNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String natRuleName;
-        private String resourceGroupName;
-        private String virtualNetworkGatewayName;
+        private GetVirtualNetworkGatewayNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkGatewayNatRuleArgs();
         }
 
         public Builder(GetVirtualNetworkGatewayNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.natRuleName = defaults.natRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkGatewayName = defaults.virtualNetworkGatewayName;
+            $ = new GetVirtualNetworkGatewayNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder natRuleName(String natRuleName) {
-            this.natRuleName = Objects.requireNonNull(natRuleName);
+            $.natRuleName = natRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
-        }        public GetVirtualNetworkGatewayNatRuleArgs build() {
-            return new GetVirtualNetworkGatewayNatRuleArgs(natRuleName, resourceGroupName, virtualNetworkGatewayName);
+        }
+
+        public GetVirtualNetworkGatewayNatRuleArgs build() {
+            $.natRuleName = Objects.requireNonNull($.natRuleName, "expected parameter 'natRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkGatewayName = Objects.requireNonNull($.virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="privateLinkServiceID", required=true)
-      private final String privateLinkServiceID;
+    private String privateLinkServiceID;
 
     public String privateLinkServiceID() {
         return this.privateLinkServiceID;
@@ -68,10 +68,10 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="requiredMembers")
-      private final @Nullable List<String> requiredMembers;
+    private @Nullable List<String> requiredMembers;
 
-    public List<String> requiredMembers() {
-        return this.requiredMembers == null ? List.of() : this.requiredMembers;
+    public Optional<List<String>> requiredMembers() {
+        return Optional.ofNullable(this.requiredMembers);
     }
 
     /**
@@ -79,94 +79,79 @@ public final class PrivateLinkResourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public PrivateLinkResourceResponse(
-        @Nullable String groupId,
-        @Nullable String id,
-        @Nullable String name,
-        String privateLinkServiceID,
-        @Nullable List<String> requiredMembers,
-        @Nullable String type) {
-        this.groupId = groupId;
-        this.id = id;
-        this.name = name;
-        this.privateLinkServiceID = Objects.requireNonNull(privateLinkServiceID, "expected parameter 'privateLinkServiceID' to be non-null");
-        this.requiredMembers = requiredMembers;
-        this.type = type;
-    }
+    private PrivateLinkResourceResponse() {}
 
-    private PrivateLinkResourceResponse() {
-        this.groupId = null;
-        this.id = null;
-        this.name = null;
-        this.privateLinkServiceID = null;
-        this.requiredMembers = List.of();
-        this.type = null;
+    private PrivateLinkResourceResponse(PrivateLinkResourceResponse $) {
+        this.groupId = $.groupId;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateLinkServiceID = $.privateLinkServiceID;
+        this.requiredMembers = $.requiredMembers;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String groupId;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String privateLinkServiceID;
-        private @Nullable List<String> requiredMembers;
-        private @Nullable String type;
+        private PrivateLinkResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkResourceResponse();
         }
 
         public Builder(PrivateLinkResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateLinkServiceID = defaults.privateLinkServiceID;
-    	      this.requiredMembers = defaults.requiredMembers;
-    	      this.type = defaults.type;
+            $ = new PrivateLinkResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateLinkServiceID(String privateLinkServiceID) {
-            this.privateLinkServiceID = Objects.requireNonNull(privateLinkServiceID);
+            $.privateLinkServiceID = privateLinkServiceID;
             return this;
         }
+
         public Builder requiredMembers(@Nullable List<String> requiredMembers) {
-            this.requiredMembers = requiredMembers;
+            $.requiredMembers = requiredMembers;
             return this;
         }
+
         public Builder requiredMembers(String... requiredMembers) {
             return requiredMembers(List.of(requiredMembers));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public PrivateLinkResourceResponse build() {
-            return new PrivateLinkResourceResponse(groupId, id, name, privateLinkServiceID, requiredMembers, type);
+        }
+
+        public PrivateLinkResourceResponse build() {
+            $.privateLinkServiceID = Objects.requireNonNull($.privateLinkServiceID, "expected parameter 'privateLinkServiceID' to be non-null");
+            return $;
         }
     }
+
 }

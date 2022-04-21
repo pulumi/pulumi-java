@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<List<Object>> inputs;
+    private @Nullable Output<List<Object>> inputs;
 
-    public Output<List<Object>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<List<Object>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -42,66 +43,63 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public JobInputsArgs(
-        @Nullable Output<List<Object>> inputs,
-        Output<String> odataType) {
-        this.inputs = inputs;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private JobInputsArgs() {}
 
-    private JobInputsArgs() {
-        this.inputs = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private JobInputsArgs(JobInputsArgs $) {
+        this.inputs = $.inputs;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobInputsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> inputs;
-        private Output<String> odataType;
+        private JobInputsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobInputsArgs();
         }
 
         public Builder(JobInputsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.odataType = defaults.odataType;
+            $ = new JobInputsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(@Nullable Output<List<Object>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(List<Object> inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public JobInputsArgs build() {
-            return new JobInputsArgs(inputs, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public JobInputsArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

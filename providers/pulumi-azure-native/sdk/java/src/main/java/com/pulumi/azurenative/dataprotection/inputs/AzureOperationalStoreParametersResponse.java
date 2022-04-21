@@ -24,7 +24,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="dataStoreType", required=true)
-      private final String dataStoreType;
+    private String dataStoreType;
 
     public String dataStoreType() {
         return this.dataStoreType;
@@ -36,7 +36,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -47,64 +47,58 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupId")
-      private final @Nullable String resourceGroupId;
+    private @Nullable String resourceGroupId;
 
     public Optional<String> resourceGroupId() {
-        return this.resourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupId);
+        return Optional.ofNullable(this.resourceGroupId);
     }
 
-    public AzureOperationalStoreParametersResponse(
-        String dataStoreType,
-        String objectType,
-        @Nullable String resourceGroupId) {
-        this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-        this.resourceGroupId = resourceGroupId;
-    }
+    private AzureOperationalStoreParametersResponse() {}
 
-    private AzureOperationalStoreParametersResponse() {
-        this.dataStoreType = null;
-        this.objectType = null;
-        this.resourceGroupId = null;
+    private AzureOperationalStoreParametersResponse(AzureOperationalStoreParametersResponse $) {
+        this.dataStoreType = $.dataStoreType;
+        this.objectType = $.objectType;
+        this.resourceGroupId = $.resourceGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureOperationalStoreParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataStoreType;
-        private String objectType;
-        private @Nullable String resourceGroupId;
+        private AzureOperationalStoreParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureOperationalStoreParametersResponse();
         }
 
         public Builder(AzureOperationalStoreParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStoreType = defaults.dataStoreType;
-    	      this.objectType = defaults.objectType;
-    	      this.resourceGroupId = defaults.resourceGroupId;
+            $ = new AzureOperationalStoreParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStoreType(String dataStoreType) {
-            this.dataStoreType = Objects.requireNonNull(dataStoreType);
+            $.dataStoreType = dataStoreType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+            $.resourceGroupId = resourceGroupId;
             return this;
-        }        public AzureOperationalStoreParametersResponse build() {
-            return new AzureOperationalStoreParametersResponse(dataStoreType, objectType, resourceGroupId);
+        }
+
+        public AzureOperationalStoreParametersResponse build() {
+            $.dataStoreType = Objects.requireNonNull($.dataStoreType, "expected parameter 'dataStoreType' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class ApplicationNotificationPolicyResponse extends com.pulumi.reso
      * 
      */
     @Import(name="notificationEndpoints", required=true)
-      private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
+    private List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
     public List<ApplicationNotificationEndpointResponse> notificationEndpoints() {
         return this.notificationEndpoints;
     }
 
-    public ApplicationNotificationPolicyResponse(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
-        this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints, "expected parameter 'notificationEndpoints' to be non-null");
-    }
+    private ApplicationNotificationPolicyResponse() {}
 
-    private ApplicationNotificationPolicyResponse() {
-        this.notificationEndpoints = List.of();
+    private ApplicationNotificationPolicyResponse(ApplicationNotificationPolicyResponse $) {
+        this.notificationEndpoints = $.notificationEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationNotificationPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ApplicationNotificationEndpointResponse> notificationEndpoints;
+        private ApplicationNotificationPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationNotificationPolicyResponse();
         }
 
         public Builder(ApplicationNotificationPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationEndpoints = defaults.notificationEndpoints;
+            $ = new ApplicationNotificationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
-            this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
+            $.notificationEndpoints = notificationEndpoints;
             return this;
         }
+
         public Builder notificationEndpoints(ApplicationNotificationEndpointResponse... notificationEndpoints) {
             return notificationEndpoints(List.of(notificationEndpoints));
-        }        public ApplicationNotificationPolicyResponse build() {
-            return new ApplicationNotificationPolicyResponse(notificationEndpoints);
+        }
+
+        public ApplicationNotificationPolicyResponse build() {
+            $.notificationEndpoints = Objects.requireNonNull($.notificationEndpoints, "expected parameter 'notificationEndpoints' to be non-null");
+            return $;
         }
     }
+
 }

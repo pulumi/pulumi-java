@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="modifiedPath")
-      private final @Nullable Output<String> modifiedPath;
+    private @Nullable Output<String> modifiedPath;
 
-    public Output<String> modifiedPath() {
-        return this.modifiedPath == null ? Codegen.empty() : this.modifiedPath;
+    public Optional<Output<String>> modifiedPath() {
+        return Optional.ofNullable(this.modifiedPath);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="modifiedQueryString")
-      private final @Nullable Output<String> modifiedQueryString;
+    private @Nullable Output<String> modifiedQueryString;
 
-    public Output<String> modifiedQueryString() {
-        return this.modifiedQueryString == null ? Codegen.empty() : this.modifiedQueryString;
+    public Optional<Output<String>> modifiedQueryString() {
+        return Optional.ofNullable(this.modifiedQueryString);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="reroute")
-      private final @Nullable Output<Boolean> reroute;
+    private @Nullable Output<Boolean> reroute;
 
-    public Output<Boolean> reroute() {
-        return this.reroute == null ? Codegen.empty() : this.reroute;
+    public Optional<Output<Boolean>> reroute() {
+        return Optional.ofNullable(this.reroute);
     }
 
-    public ApplicationGatewayUrlConfigurationArgs(
-        @Nullable Output<String> modifiedPath,
-        @Nullable Output<String> modifiedQueryString,
-        @Nullable Output<Boolean> reroute) {
-        this.modifiedPath = modifiedPath;
-        this.modifiedQueryString = modifiedQueryString;
-        this.reroute = reroute;
-    }
+    private ApplicationGatewayUrlConfigurationArgs() {}
 
-    private ApplicationGatewayUrlConfigurationArgs() {
-        this.modifiedPath = Codegen.empty();
-        this.modifiedQueryString = Codegen.empty();
-        this.reroute = Codegen.empty();
+    private ApplicationGatewayUrlConfigurationArgs(ApplicationGatewayUrlConfigurationArgs $) {
+        this.modifiedPath = $.modifiedPath;
+        this.modifiedQueryString = $.modifiedQueryString;
+        this.reroute = $.reroute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayUrlConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> modifiedPath;
-        private @Nullable Output<String> modifiedQueryString;
-        private @Nullable Output<Boolean> reroute;
+        private ApplicationGatewayUrlConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayUrlConfigurationArgs();
         }
 
         public Builder(ApplicationGatewayUrlConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modifiedPath = defaults.modifiedPath;
-    	      this.modifiedQueryString = defaults.modifiedQueryString;
-    	      this.reroute = defaults.reroute;
+            $ = new ApplicationGatewayUrlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modifiedPath(@Nullable Output<String> modifiedPath) {
-            this.modifiedPath = modifiedPath;
+            $.modifiedPath = modifiedPath;
             return this;
         }
-        public Builder modifiedPath(@Nullable String modifiedPath) {
-            this.modifiedPath = Codegen.ofNullable(modifiedPath);
-            return this;
+
+        public Builder modifiedPath(String modifiedPath) {
+            return modifiedPath(Output.of(modifiedPath));
         }
+
         public Builder modifiedQueryString(@Nullable Output<String> modifiedQueryString) {
-            this.modifiedQueryString = modifiedQueryString;
+            $.modifiedQueryString = modifiedQueryString;
             return this;
         }
-        public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
-            this.modifiedQueryString = Codegen.ofNullable(modifiedQueryString);
-            return this;
+
+        public Builder modifiedQueryString(String modifiedQueryString) {
+            return modifiedQueryString(Output.of(modifiedQueryString));
         }
+
         public Builder reroute(@Nullable Output<Boolean> reroute) {
-            this.reroute = reroute;
+            $.reroute = reroute;
             return this;
         }
-        public Builder reroute(@Nullable Boolean reroute) {
-            this.reroute = Codegen.ofNullable(reroute);
-            return this;
-        }        public ApplicationGatewayUrlConfigurationArgs build() {
-            return new ApplicationGatewayUrlConfigurationArgs(modifiedPath, modifiedQueryString, reroute);
+
+        public Builder reroute(Boolean reroute) {
+            return reroute(Output.of(reroute));
+        }
+
+        public ApplicationGatewayUrlConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
      * 
      */
     @Import(name="packages")
-      private final @Nullable List<SparkMavenPackageResponse> packages;
+    private @Nullable List<SparkMavenPackageResponse> packages;
 
-    public List<SparkMavenPackageResponse> packages() {
-        return this.packages == null ? List.of() : this.packages;
+    public Optional<List<SparkMavenPackageResponse>> packages() {
+        return Optional.ofNullable(this.packages);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
      * 
      */
     @Import(name="precachePackages")
-      private final @Nullable Boolean precachePackages;
+    private @Nullable Boolean precachePackages;
 
     public Optional<Boolean> precachePackages() {
-        return this.precachePackages == null ? Optional.empty() : Optional.ofNullable(this.precachePackages);
+        return Optional.ofNullable(this.precachePackages);
     }
 
     /**
@@ -48,70 +48,64 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
      * 
      */
     @Import(name="repositories")
-      private final @Nullable List<String> repositories;
+    private @Nullable List<String> repositories;
 
-    public List<String> repositories() {
-        return this.repositories == null ? List.of() : this.repositories;
+    public Optional<List<String>> repositories() {
+        return Optional.ofNullable(this.repositories);
     }
 
-    public ModelEnvironmentDefinitionResponseResponseSpark(
-        @Nullable List<SparkMavenPackageResponse> packages,
-        @Nullable Boolean precachePackages,
-        @Nullable List<String> repositories) {
-        this.packages = packages;
-        this.precachePackages = precachePackages;
-        this.repositories = repositories;
-    }
+    private ModelEnvironmentDefinitionResponseResponseSpark() {}
 
-    private ModelEnvironmentDefinitionResponseResponseSpark() {
-        this.packages = List.of();
-        this.precachePackages = null;
-        this.repositories = List.of();
+    private ModelEnvironmentDefinitionResponseResponseSpark(ModelEnvironmentDefinitionResponseResponseSpark $) {
+        this.packages = $.packages;
+        this.precachePackages = $.precachePackages;
+        this.repositories = $.repositories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionResponseResponseSpark defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SparkMavenPackageResponse> packages;
-        private @Nullable Boolean precachePackages;
-        private @Nullable List<String> repositories;
+        private ModelEnvironmentDefinitionResponseResponseSpark $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionResponseResponseSpark();
         }
 
         public Builder(ModelEnvironmentDefinitionResponseResponseSpark defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packages = defaults.packages;
-    	      this.precachePackages = defaults.precachePackages;
-    	      this.repositories = defaults.repositories;
+            $ = new ModelEnvironmentDefinitionResponseResponseSpark(Objects.requireNonNull(defaults));
         }
 
         public Builder packages(@Nullable List<SparkMavenPackageResponse> packages) {
-            this.packages = packages;
+            $.packages = packages;
             return this;
         }
+
         public Builder packages(SparkMavenPackageResponse... packages) {
             return packages(List.of(packages));
         }
+
         public Builder precachePackages(@Nullable Boolean precachePackages) {
-            this.precachePackages = precachePackages;
+            $.precachePackages = precachePackages;
             return this;
         }
+
         public Builder repositories(@Nullable List<String> repositories) {
-            this.repositories = repositories;
+            $.repositories = repositories;
             return this;
         }
+
         public Builder repositories(String... repositories) {
             return repositories(List.of(repositories));
-        }        public ModelEnvironmentDefinitionResponseResponseSpark build() {
-            return new ModelEnvironmentDefinitionResponseResponseSpark(packages, precachePackages, repositories);
+        }
+
+        public ModelEnvironmentDefinitionResponseResponseSpark build() {
+            return $;
         }
     }
+
 }

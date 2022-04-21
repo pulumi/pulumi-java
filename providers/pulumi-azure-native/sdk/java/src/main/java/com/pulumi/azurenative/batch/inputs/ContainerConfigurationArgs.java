@@ -7,10 +7,10 @@ import com.pulumi.azurenative.batch.enums.ContainerType;
 import com.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="containerImageNames")
-      private final @Nullable Output<List<String>> containerImageNames;
+    private @Nullable Output<List<String>> containerImageNames;
 
-    public Output<List<String>> containerImageNames() {
-        return this.containerImageNames == null ? Codegen.empty() : this.containerImageNames;
+    public Optional<Output<List<String>>> containerImageNames() {
+        return Optional.ofNullable(this.containerImageNames);
     }
 
     /**
@@ -34,89 +34,84 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="containerRegistries")
-      private final @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
+    private @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
 
-    public Output<List<ContainerRegistryArgs>> containerRegistries() {
-        return this.containerRegistries == null ? Codegen.empty() : this.containerRegistries;
+    public Optional<Output<List<ContainerRegistryArgs>>> containerRegistries() {
+        return Optional.ofNullable(this.containerRegistries);
     }
 
     @Import(name="type", required=true)
-      private final Output<ContainerType> type;
+    private Output<ContainerType> type;
 
     public Output<ContainerType> type() {
         return this.type;
     }
 
-    public ContainerConfigurationArgs(
-        @Nullable Output<List<String>> containerImageNames,
-        @Nullable Output<List<ContainerRegistryArgs>> containerRegistries,
-        Output<ContainerType> type) {
-        this.containerImageNames = containerImageNames;
-        this.containerRegistries = containerRegistries;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ContainerConfigurationArgs() {}
 
-    private ContainerConfigurationArgs() {
-        this.containerImageNames = Codegen.empty();
-        this.containerRegistries = Codegen.empty();
-        this.type = Codegen.empty();
+    private ContainerConfigurationArgs(ContainerConfigurationArgs $) {
+        this.containerImageNames = $.containerImageNames;
+        this.containerRegistries = $.containerRegistries;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> containerImageNames;
-        private @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
-        private Output<ContainerType> type;
+        private ContainerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerConfigurationArgs();
         }
 
         public Builder(ContainerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImageNames = defaults.containerImageNames;
-    	      this.containerRegistries = defaults.containerRegistries;
-    	      this.type = defaults.type;
+            $ = new ContainerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImageNames(@Nullable Output<List<String>> containerImageNames) {
-            this.containerImageNames = containerImageNames;
+            $.containerImageNames = containerImageNames;
             return this;
         }
-        public Builder containerImageNames(@Nullable List<String> containerImageNames) {
-            this.containerImageNames = Codegen.ofNullable(containerImageNames);
-            return this;
+
+        public Builder containerImageNames(List<String> containerImageNames) {
+            return containerImageNames(Output.of(containerImageNames));
         }
+
         public Builder containerImageNames(String... containerImageNames) {
             return containerImageNames(List.of(containerImageNames));
         }
+
         public Builder containerRegistries(@Nullable Output<List<ContainerRegistryArgs>> containerRegistries) {
-            this.containerRegistries = containerRegistries;
+            $.containerRegistries = containerRegistries;
             return this;
         }
-        public Builder containerRegistries(@Nullable List<ContainerRegistryArgs> containerRegistries) {
-            this.containerRegistries = Codegen.ofNullable(containerRegistries);
-            return this;
+
+        public Builder containerRegistries(List<ContainerRegistryArgs> containerRegistries) {
+            return containerRegistries(Output.of(containerRegistries));
         }
+
         public Builder containerRegistries(ContainerRegistryArgs... containerRegistries) {
             return containerRegistries(List.of(containerRegistries));
         }
+
         public Builder type(Output<ContainerType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ContainerType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ContainerConfigurationArgs build() {
-            return new ContainerConfigurationArgs(containerImageNames, containerRegistries, type);
+            return type(Output.of(type));
+        }
+
+        public ContainerConfigurationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.azurenative.databox.enums.FilterFileType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="filterFilePath", required=true)
-      private final Output<String> filterFilePath;
+    private Output<String> filterFilePath;
 
     public Output<String> filterFilePath() {
         return this.filterFilePath;
@@ -36,63 +35,60 @@ public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="filterFileType", required=true)
-      private final Output<Either<String,FilterFileType>> filterFileType;
+    private Output<Either<String,FilterFileType>> filterFileType;
 
     public Output<Either<String,FilterFileType>> filterFileType() {
         return this.filterFileType;
     }
 
-    public FilterFileDetailsArgs(
-        Output<String> filterFilePath,
-        Output<Either<String,FilterFileType>> filterFileType) {
-        this.filterFilePath = Objects.requireNonNull(filterFilePath, "expected parameter 'filterFilePath' to be non-null");
-        this.filterFileType = Objects.requireNonNull(filterFileType, "expected parameter 'filterFileType' to be non-null");
-    }
+    private FilterFileDetailsArgs() {}
 
-    private FilterFileDetailsArgs() {
-        this.filterFilePath = Codegen.empty();
-        this.filterFileType = Codegen.empty();
+    private FilterFileDetailsArgs(FilterFileDetailsArgs $) {
+        this.filterFilePath = $.filterFilePath;
+        this.filterFileType = $.filterFileType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterFileDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filterFilePath;
-        private Output<Either<String,FilterFileType>> filterFileType;
+        private FilterFileDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterFileDetailsArgs();
         }
 
         public Builder(FilterFileDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterFilePath = defaults.filterFilePath;
-    	      this.filterFileType = defaults.filterFileType;
+            $ = new FilterFileDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterFilePath(Output<String> filterFilePath) {
-            this.filterFilePath = Objects.requireNonNull(filterFilePath);
+            $.filterFilePath = filterFilePath;
             return this;
         }
+
         public Builder filterFilePath(String filterFilePath) {
-            this.filterFilePath = Output.of(Objects.requireNonNull(filterFilePath));
-            return this;
+            return filterFilePath(Output.of(filterFilePath));
         }
+
         public Builder filterFileType(Output<Either<String,FilterFileType>> filterFileType) {
-            this.filterFileType = Objects.requireNonNull(filterFileType);
+            $.filterFileType = filterFileType;
             return this;
         }
+
         public Builder filterFileType(Either<String,FilterFileType> filterFileType) {
-            this.filterFileType = Output.of(Objects.requireNonNull(filterFileType));
-            return this;
-        }        public FilterFileDetailsArgs build() {
-            return new FilterFileDetailsArgs(filterFilePath, filterFileType);
+            return filterFileType(Output.of(filterFileType));
+        }
+
+        public FilterFileDetailsArgs build() {
+            $.filterFilePath = Objects.requireNonNull($.filterFilePath, "expected parameter 'filterFilePath' to be non-null");
+            $.filterFileType = Objects.requireNonNull($.filterFileType, "expected parameter 'filterFileType' to be non-null");
+            return $;
         }
     }
+
 }

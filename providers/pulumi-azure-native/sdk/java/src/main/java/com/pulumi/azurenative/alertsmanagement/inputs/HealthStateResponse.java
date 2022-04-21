@@ -22,7 +22,7 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="healthStateName", required=true)
-      private final String healthStateName;
+    private String healthStateName;
 
     public String healthStateName() {
         return this.healthStateName;
@@ -33,55 +33,52 @@ public final class HealthStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final Double severity;
+    private Double severity;
 
     public Double severity() {
         return this.severity;
     }
 
-    public HealthStateResponse(
-        String healthStateName,
-        Double severity) {
-        this.healthStateName = Objects.requireNonNull(healthStateName, "expected parameter 'healthStateName' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-    }
+    private HealthStateResponse() {}
 
-    private HealthStateResponse() {
-        this.healthStateName = null;
-        this.severity = null;
+    private HealthStateResponse(HealthStateResponse $) {
+        this.healthStateName = $.healthStateName;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String healthStateName;
-        private Double severity;
+        private HealthStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthStateResponse();
         }
 
         public Builder(HealthStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthStateName = defaults.healthStateName;
-    	      this.severity = defaults.severity;
+            $ = new HealthStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder healthStateName(String healthStateName) {
-            this.healthStateName = Objects.requireNonNull(healthStateName);
+            $.healthStateName = healthStateName;
             return this;
         }
+
         public Builder severity(Double severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
-        }        public HealthStateResponse build() {
-            return new HealthStateResponse(healthStateName, severity);
+        }
+
+        public HealthStateResponse build() {
+            $.healthStateName = Objects.requireNonNull($.healthStateName, "expected parameter 'healthStateName' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

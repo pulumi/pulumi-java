@@ -24,10 +24,10 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends com.
      * 
      */
     @Import(name="antiMalware")
-      private final @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
+    private @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
 
     public Optional<ConfigurationProfilePreferenceAntiMalwareResponse> antiMalware() {
-        return this.antiMalware == null ? Optional.empty() : Optional.ofNullable(this.antiMalware);
+        return Optional.ofNullable(this.antiMalware);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends com.
      * 
      */
     @Import(name="vmBackup")
-      private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
+    private @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
 
     public Optional<ConfigurationProfilePreferenceVmBackupResponse> vmBackup() {
-        return this.vmBackup == null ? Optional.empty() : Optional.ofNullable(this.vmBackup);
+        return Optional.ofNullable(this.vmBackup);
     }
 
-    public ConfigurationProfilePreferencePropertiesResponse(
-        @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware,
-        @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
-        this.antiMalware = antiMalware;
-        this.vmBackup = vmBackup;
-    }
+    private ConfigurationProfilePreferencePropertiesResponse() {}
 
-    private ConfigurationProfilePreferencePropertiesResponse() {
-        this.antiMalware = null;
-        this.vmBackup = null;
+    private ConfigurationProfilePreferencePropertiesResponse(ConfigurationProfilePreferencePropertiesResponse $) {
+        this.antiMalware = $.antiMalware;
+        this.vmBackup = $.vmBackup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfilePreferencePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
-        private @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
+        private ConfigurationProfilePreferencePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfilePreferencePropertiesResponse();
         }
 
         public Builder(ConfigurationProfilePreferencePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.antiMalware = defaults.antiMalware;
-    	      this.vmBackup = defaults.vmBackup;
+            $ = new ConfigurationProfilePreferencePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware) {
-            this.antiMalware = antiMalware;
+            $.antiMalware = antiMalware;
             return this;
         }
+
         public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
-            this.vmBackup = vmBackup;
+            $.vmBackup = vmBackup;
             return this;
-        }        public ConfigurationProfilePreferencePropertiesResponse build() {
-            return new ConfigurationProfilePreferencePropertiesResponse(antiMalware, vmBackup);
+        }
+
+        public ConfigurationProfilePreferencePropertiesResponse build() {
+            return $;
         }
     }
+
 }

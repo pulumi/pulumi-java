@@ -22,7 +22,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -34,55 +34,52 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="storageType", required=true)
-      private final String storageType;
+    private String storageType;
 
     public String storageType() {
         return this.storageType;
     }
 
-    public StorageAccountResponse(
-        String accountName,
-        String storageType) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.storageType = Codegen.stringProp("storageType").arg(storageType).require();
-    }
+    private StorageAccountResponse() {}
 
-    private StorageAccountResponse() {
-        this.accountName = null;
-        this.storageType = null;
+    private StorageAccountResponse(StorageAccountResponse $) {
+        this.accountName = $.accountName;
+        this.storageType = $.storageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String storageType;
+        private StorageAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountResponse();
         }
 
         public Builder(StorageAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.storageType = defaults.storageType;
+            $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder storageType(String storageType) {
-            this.storageType = Objects.requireNonNull(storageType);
+            $.storageType = storageType;
             return this;
-        }        public StorageAccountResponse build() {
-            return new StorageAccountResponse(accountName, storageType);
+        }
+
+        public StorageAccountResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.storageType = Codegen.stringProp("storageType").arg($.storageType).require();
+            return $;
         }
     }
+
 }

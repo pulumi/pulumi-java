@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="identityClientId")
-      private final @Nullable Output<String> identityClientId;
+    private @Nullable Output<String> identityClientId;
 
-    public Output<String> identityClientId() {
-        return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
+    public Optional<Output<String>> identityClientId() {
+        return Optional.ofNullable(this.identityClientId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyIdentifier", required=true)
-      private final Output<String> keyIdentifier;
+    private Output<String> keyIdentifier;
 
     public Output<String> keyIdentifier() {
         return this.keyIdentifier;
@@ -42,76 +42,70 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyVaultArmId", required=true)
-      private final Output<String> keyVaultArmId;
+    private Output<String> keyVaultArmId;
 
     public Output<String> keyVaultArmId() {
         return this.keyVaultArmId;
     }
 
-    public KeyVaultPropertiesArgs(
-        @Nullable Output<String> identityClientId,
-        Output<String> keyIdentifier,
-        Output<String> keyVaultArmId) {
-        this.identityClientId = identityClientId;
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
-        this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId, "expected parameter 'keyVaultArmId' to be non-null");
-    }
+    private KeyVaultPropertiesArgs() {}
 
-    private KeyVaultPropertiesArgs() {
-        this.identityClientId = Codegen.empty();
-        this.keyIdentifier = Codegen.empty();
-        this.keyVaultArmId = Codegen.empty();
+    private KeyVaultPropertiesArgs(KeyVaultPropertiesArgs $) {
+        this.identityClientId = $.identityClientId;
+        this.keyIdentifier = $.keyIdentifier;
+        this.keyVaultArmId = $.keyVaultArmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identityClientId;
-        private Output<String> keyIdentifier;
-        private Output<String> keyVaultArmId;
+        private KeyVaultPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesArgs();
         }
 
         public Builder(KeyVaultPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityClientId = defaults.identityClientId;
-    	      this.keyIdentifier = defaults.keyIdentifier;
-    	      this.keyVaultArmId = defaults.keyVaultArmId;
+            $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
-            this.identityClientId = identityClientId;
+            $.identityClientId = identityClientId;
             return this;
         }
-        public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Codegen.ofNullable(identityClientId);
-            return this;
+
+        public Builder identityClientId(String identityClientId) {
+            return identityClientId(Output.of(identityClientId));
         }
+
         public Builder keyIdentifier(Output<String> keyIdentifier) {
-            this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
+
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
-            return this;
+            return keyIdentifier(Output.of(keyIdentifier));
         }
+
         public Builder keyVaultArmId(Output<String> keyVaultArmId) {
-            this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
+            $.keyVaultArmId = keyVaultArmId;
             return this;
         }
+
         public Builder keyVaultArmId(String keyVaultArmId) {
-            this.keyVaultArmId = Output.of(Objects.requireNonNull(keyVaultArmId));
-            return this;
-        }        public KeyVaultPropertiesArgs build() {
-            return new KeyVaultPropertiesArgs(identityClientId, keyIdentifier, keyVaultArmId);
+            return keyVaultArmId(Output.of(keyVaultArmId));
+        }
+
+        public KeyVaultPropertiesArgs build() {
+            $.keyIdentifier = Objects.requireNonNull($.keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
+            $.keyVaultArmId = Objects.requireNonNull($.keyVaultArmId, "expected parameter 'keyVaultArmId' to be non-null");
+            return $;
         }
     }
+
 }

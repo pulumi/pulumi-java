@@ -17,7 +17,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataManagerName", required=true)
-      private final String dataManagerName;
+    private String dataManagerName;
 
     public String dataManagerName() {
         return this.dataManagerName;
@@ -28,7 +28,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataServiceName", required=true)
-      private final String dataServiceName;
+    private String dataServiceName;
 
     public String dataServiceName() {
         return this.dataServiceName;
@@ -39,7 +39,7 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="jobDefinitionName", required=true)
-      private final String jobDefinitionName;
+    private String jobDefinitionName;
 
     public String jobDefinitionName() {
         return this.jobDefinitionName;
@@ -50,73 +50,66 @@ public final class GetJobDefinitionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetJobDefinitionArgs(
-        String dataManagerName,
-        String dataServiceName,
-        String jobDefinitionName,
-        String resourceGroupName) {
-        this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
-        this.dataServiceName = Objects.requireNonNull(dataServiceName, "expected parameter 'dataServiceName' to be non-null");
-        this.jobDefinitionName = Objects.requireNonNull(jobDefinitionName, "expected parameter 'jobDefinitionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetJobDefinitionArgs() {}
 
-    private GetJobDefinitionArgs() {
-        this.dataManagerName = null;
-        this.dataServiceName = null;
-        this.jobDefinitionName = null;
-        this.resourceGroupName = null;
+    private GetJobDefinitionArgs(GetJobDefinitionArgs $) {
+        this.dataManagerName = $.dataManagerName;
+        this.dataServiceName = $.dataServiceName;
+        this.jobDefinitionName = $.jobDefinitionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataManagerName;
-        private String dataServiceName;
-        private String jobDefinitionName;
-        private String resourceGroupName;
+        private GetJobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobDefinitionArgs();
         }
 
         public Builder(GetJobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataManagerName = defaults.dataManagerName;
-    	      this.dataServiceName = defaults.dataServiceName;
-    	      this.jobDefinitionName = defaults.jobDefinitionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Objects.requireNonNull(dataManagerName);
+            $.dataManagerName = dataManagerName;
             return this;
         }
+
         public Builder dataServiceName(String dataServiceName) {
-            this.dataServiceName = Objects.requireNonNull(dataServiceName);
+            $.dataServiceName = dataServiceName;
             return this;
         }
+
         public Builder jobDefinitionName(String jobDefinitionName) {
-            this.jobDefinitionName = Objects.requireNonNull(jobDefinitionName);
+            $.jobDefinitionName = jobDefinitionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetJobDefinitionArgs build() {
-            return new GetJobDefinitionArgs(dataManagerName, dataServiceName, jobDefinitionName, resourceGroupName);
+        }
+
+        public GetJobDefinitionArgs build() {
+            $.dataManagerName = Objects.requireNonNull($.dataManagerName, "expected parameter 'dataManagerName' to be non-null");
+            $.dataServiceName = Objects.requireNonNull($.dataServiceName, "expected parameter 'dataServiceName' to be non-null");
+            $.jobDefinitionName = Objects.requireNonNull($.jobDefinitionName, "expected parameter 'jobDefinitionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

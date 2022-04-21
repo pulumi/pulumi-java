@@ -17,7 +17,7 @@ public final class GetNetworkSecurityPerimeterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="networkSecurityPerimeterName", required=true)
-      private final String networkSecurityPerimeterName;
+    private String networkSecurityPerimeterName;
 
     public String networkSecurityPerimeterName() {
         return this.networkSecurityPerimeterName;
@@ -28,55 +28,52 @@ public final class GetNetworkSecurityPerimeterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkSecurityPerimeterArgs(
-        String networkSecurityPerimeterName,
-        String resourceGroupName) {
-        this.networkSecurityPerimeterName = Objects.requireNonNull(networkSecurityPerimeterName, "expected parameter 'networkSecurityPerimeterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkSecurityPerimeterArgs() {}
 
-    private GetNetworkSecurityPerimeterArgs() {
-        this.networkSecurityPerimeterName = null;
-        this.resourceGroupName = null;
+    private GetNetworkSecurityPerimeterArgs(GetNetworkSecurityPerimeterArgs $) {
+        this.networkSecurityPerimeterName = $.networkSecurityPerimeterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkSecurityPerimeterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkSecurityPerimeterName;
-        private String resourceGroupName;
+        private GetNetworkSecurityPerimeterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkSecurityPerimeterArgs();
         }
 
         public Builder(GetNetworkSecurityPerimeterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkSecurityPerimeterName = defaults.networkSecurityPerimeterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkSecurityPerimeterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkSecurityPerimeterName(String networkSecurityPerimeterName) {
-            this.networkSecurityPerimeterName = Objects.requireNonNull(networkSecurityPerimeterName);
+            $.networkSecurityPerimeterName = networkSecurityPerimeterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkSecurityPerimeterArgs build() {
-            return new GetNetworkSecurityPerimeterArgs(networkSecurityPerimeterName, resourceGroupName);
+        }
+
+        public GetNetworkSecurityPerimeterArgs build() {
+            $.networkSecurityPerimeterName = Objects.requireNonNull($.networkSecurityPerimeterName, "expected parameter 'networkSecurityPerimeterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

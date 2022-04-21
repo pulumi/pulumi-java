@@ -23,7 +23,7 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
      * 
      */
     @Import(name="privateEndpoint", required=true)
-      private final PrivateEndpointResponse privateEndpoint;
+    private PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
@@ -34,7 +34,7 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -45,64 +45,59 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public VaultPrivateEndpointConnectionResponse(
-        PrivateEndpointResponse privateEndpoint,
-        VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState) {
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private VaultPrivateEndpointConnectionResponse() {}
 
-    private VaultPrivateEndpointConnectionResponse() {
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
+    private VaultPrivateEndpointConnectionResponse(VaultPrivateEndpointConnectionResponse $) {
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PrivateEndpointResponse privateEndpoint;
-        private VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
+        private VaultPrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPrivateEndpointConnectionResponse();
         }
 
         public Builder(VaultPrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new VaultPrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public VaultPrivateEndpointConnectionResponse build() {
-            return new VaultPrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
+        }
+
+        public VaultPrivateEndpointConnectionResponse build() {
+            $.privateEndpoint = Objects.requireNonNull($.privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

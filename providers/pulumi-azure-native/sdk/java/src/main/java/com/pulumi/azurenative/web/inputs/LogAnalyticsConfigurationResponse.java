@@ -15,45 +15,44 @@ public final class LogAnalyticsConfigurationResponse extends com.pulumi.resource
     public static final LogAnalyticsConfigurationResponse Empty = new LogAnalyticsConfigurationResponse();
 
     @Import(name="customerId")
-      private final @Nullable String customerId;
+    private @Nullable String customerId;
 
     public Optional<String> customerId() {
-        return this.customerId == null ? Optional.empty() : Optional.ofNullable(this.customerId);
+        return Optional.ofNullable(this.customerId);
     }
 
-    public LogAnalyticsConfigurationResponse(@Nullable String customerId) {
-        this.customerId = customerId;
-    }
+    private LogAnalyticsConfigurationResponse() {}
 
-    private LogAnalyticsConfigurationResponse() {
-        this.customerId = null;
+    private LogAnalyticsConfigurationResponse(LogAnalyticsConfigurationResponse $) {
+        this.customerId = $.customerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customerId;
+        private LogAnalyticsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsConfigurationResponse();
         }
 
         public Builder(LogAnalyticsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerId = defaults.customerId;
+            $ = new LogAnalyticsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customerId(@Nullable String customerId) {
-            this.customerId = customerId;
+            $.customerId = customerId;
             return this;
-        }        public LogAnalyticsConfigurationResponse build() {
-            return new LogAnalyticsConfigurationResponse(customerId);
+        }
+
+        public LogAnalyticsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

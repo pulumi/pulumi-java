@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionId")
-      private final @Nullable Output<String> actionId;
+    private @Nullable Output<String> actionId;
 
-    public Output<String> actionId() {
-        return this.actionId == null ? Codegen.empty() : this.actionId;
+    public Optional<Output<String>> actionId() {
+        return Optional.ofNullable(this.actionId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logicAppResourceId", required=true)
-      private final Output<String> logicAppResourceId;
+    private Output<String> logicAppResourceId;
 
     public Output<String> logicAppResourceId() {
         return this.logicAppResourceId;
@@ -42,7 +42,7 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleId", required=true)
-      private final Output<String> ruleId;
+    private Output<String> ruleId;
 
     public Output<String> ruleId() {
         return this.ruleId;
@@ -64,7 +64,7 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggerUri", required=true)
-      private final Output<String> triggerUri;
+    private Output<String> triggerUri;
 
     public Output<String> triggerUri() {
         return this.triggerUri;
@@ -75,115 +75,103 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ActionArgs(
-        @Nullable Output<String> actionId,
-        Output<String> logicAppResourceId,
-        Output<String> resourceGroupName,
-        Output<String> ruleId,
-        Output<String> triggerUri,
-        Output<String> workspaceName) {
-        this.actionId = actionId;
-        this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId, "expected parameter 'logicAppResourceId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-        this.triggerUri = Objects.requireNonNull(triggerUri, "expected parameter 'triggerUri' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ActionArgs() {}
 
-    private ActionArgs() {
-        this.actionId = Codegen.empty();
-        this.logicAppResourceId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.triggerUri = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ActionArgs(ActionArgs $) {
+        this.actionId = $.actionId;
+        this.logicAppResourceId = $.logicAppResourceId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleId = $.ruleId;
+        this.triggerUri = $.triggerUri;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionId;
-        private Output<String> logicAppResourceId;
-        private Output<String> resourceGroupName;
-        private Output<String> ruleId;
-        private Output<String> triggerUri;
-        private Output<String> workspaceName;
+        private ActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionArgs();
         }
 
         public Builder(ActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionId = defaults.actionId;
-    	      this.logicAppResourceId = defaults.logicAppResourceId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleId = defaults.ruleId;
-    	      this.triggerUri = defaults.triggerUri;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionId(@Nullable Output<String> actionId) {
-            this.actionId = actionId;
+            $.actionId = actionId;
             return this;
         }
-        public Builder actionId(@Nullable String actionId) {
-            this.actionId = Codegen.ofNullable(actionId);
-            return this;
+
+        public Builder actionId(String actionId) {
+            return actionId(Output.of(actionId));
         }
+
         public Builder logicAppResourceId(Output<String> logicAppResourceId) {
-            this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
+            $.logicAppResourceId = logicAppResourceId;
             return this;
         }
+
         public Builder logicAppResourceId(String logicAppResourceId) {
-            this.logicAppResourceId = Output.of(Objects.requireNonNull(logicAppResourceId));
-            return this;
+            return logicAppResourceId(Output.of(logicAppResourceId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleId(Output<String> ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
-            return this;
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder triggerUri(Output<String> triggerUri) {
-            this.triggerUri = Objects.requireNonNull(triggerUri);
+            $.triggerUri = triggerUri;
             return this;
         }
+
         public Builder triggerUri(String triggerUri) {
-            this.triggerUri = Output.of(Objects.requireNonNull(triggerUri));
-            return this;
+            return triggerUri(Output.of(triggerUri));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ActionArgs build() {
-            return new ActionArgs(actionId, logicAppResourceId, resourceGroupName, ruleId, triggerUri, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ActionArgs build() {
+            $.logicAppResourceId = Objects.requireNonNull($.logicAppResourceId, "expected parameter 'logicAppResourceId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            $.triggerUri = Objects.requireNonNull($.triggerUri, "expected parameter 'triggerUri' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
      * 
      */
     @Import(name="sshProfile")
-      private final @Nullable SshProfileResponse sshProfile;
+    private @Nullable SshProfileResponse sshProfile;
 
     public Optional<SshProfileResponse> sshProfile() {
-        return this.sshProfile == null ? Optional.empty() : Optional.ofNullable(this.sshProfile);
+        return Optional.ofNullable(this.sshProfile);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public LinuxOperatingSystemProfileResponse(
-        @Nullable String password,
-        @Nullable SshProfileResponse sshProfile,
-        @Nullable String username) {
-        this.password = password;
-        this.sshProfile = sshProfile;
-        this.username = username;
-    }
+    private LinuxOperatingSystemProfileResponse() {}
 
-    private LinuxOperatingSystemProfileResponse() {
-        this.password = null;
-        this.sshProfile = null;
-        this.username = null;
+    private LinuxOperatingSystemProfileResponse(LinuxOperatingSystemProfileResponse $) {
+        this.password = $.password;
+        this.sshProfile = $.sshProfile;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxOperatingSystemProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private @Nullable SshProfileResponse sshProfile;
-        private @Nullable String username;
+        private LinuxOperatingSystemProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxOperatingSystemProfileResponse();
         }
 
         public Builder(LinuxOperatingSystemProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.sshProfile = defaults.sshProfile;
-    	      this.username = defaults.username;
+            $ = new LinuxOperatingSystemProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder sshProfile(@Nullable SshProfileResponse sshProfile) {
-            this.sshProfile = sshProfile;
+            $.sshProfile = sshProfile;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public LinuxOperatingSystemProfileResponse build() {
-            return new LinuxOperatingSystemProfileResponse(password, sshProfile, username);
+        }
+
+        public LinuxOperatingSystemProfileResponse build() {
+            return $;
         }
     }
+
 }

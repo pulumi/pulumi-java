@@ -26,10 +26,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable List<Object> allowedValues;
+    private @Nullable List<Object> allowedValues;
 
-    public List<Object> allowedValues() {
-        return this.allowedValues == null ? List.of() : this.allowedValues;
+    public Optional<List<Object>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Object defaultValue;
+    private @Nullable Object defaultValue;
 
     public Optional<Object> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="metadata")
-      private final @Nullable ParameterDefinitionsValueResponseMetadata metadata;
+    private @Nullable ParameterDefinitionsValueResponseMetadata metadata;
 
     public Optional<ParameterDefinitionsValueResponseMetadata> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -59,76 +59,66 @@ public final class ParameterDefinitionsValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ParameterDefinitionsValueResponse(
-        @Nullable List<Object> allowedValues,
-        @Nullable Object defaultValue,
-        @Nullable ParameterDefinitionsValueResponseMetadata metadata,
-        @Nullable String type) {
-        this.allowedValues = allowedValues;
-        this.defaultValue = defaultValue;
-        this.metadata = metadata;
-        this.type = type;
-    }
+    private ParameterDefinitionsValueResponse() {}
 
-    private ParameterDefinitionsValueResponse() {
-        this.allowedValues = List.of();
-        this.defaultValue = null;
-        this.metadata = null;
-        this.type = null;
+    private ParameterDefinitionsValueResponse(ParameterDefinitionsValueResponse $) {
+        this.allowedValues = $.allowedValues;
+        this.defaultValue = $.defaultValue;
+        this.metadata = $.metadata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionsValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> allowedValues;
-        private @Nullable Object defaultValue;
-        private @Nullable ParameterDefinitionsValueResponseMetadata metadata;
-        private @Nullable String type;
+        private ParameterDefinitionsValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionsValueResponse();
         }
 
         public Builder(ParameterDefinitionsValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.metadata = defaults.metadata;
-    	      this.type = defaults.type;
+            $ = new ParameterDefinitionsValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
+
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder metadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ParameterDefinitionsValueResponse build() {
-            return new ParameterDefinitionsValueResponse(allowedValues, defaultValue, metadata, type);
+        }
+
+        public ParameterDefinitionsValueResponse build() {
+            return $;
         }
     }
+
 }

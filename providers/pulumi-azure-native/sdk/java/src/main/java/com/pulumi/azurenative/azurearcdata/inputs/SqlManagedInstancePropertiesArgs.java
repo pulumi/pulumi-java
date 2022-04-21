@@ -6,10 +6,10 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 import com.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="admin")
-      private final @Nullable Output<String> admin;
+    private @Nullable Output<String> admin;
 
-    public Output<String> admin() {
-        return this.admin == null ? Codegen.empty() : this.admin;
+    public Optional<Output<String>> admin() {
+        return Optional.ofNullable(this.admin);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="basicLoginInformation")
-      private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
+    private @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
-    public Output<BasicLoginInformationArgs> basicLoginInformation() {
-        return this.basicLoginInformation == null ? Codegen.empty() : this.basicLoginInformation;
+    public Optional<Output<BasicLoginInformationArgs>> basicLoginInformation() {
+        return Optional.ofNullable(this.basicLoginInformation);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dataControllerId")
-      private final @Nullable Output<String> dataControllerId;
+    private @Nullable Output<String> dataControllerId;
 
-    public Output<String> dataControllerId() {
-        return this.dataControllerId == null ? Codegen.empty() : this.dataControllerId;
+    public Optional<Output<String>> dataControllerId() {
+        return Optional.ofNullable(this.dataControllerId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="k8sRaw")
-      private final @Nullable Output<Object> k8sRaw;
+    private @Nullable Output<Object> k8sRaw;
 
-    public Output<Object> k8sRaw() {
-        return this.k8sRaw == null ? Codegen.empty() : this.k8sRaw;
+    public Optional<Output<Object>> k8sRaw() {
+        return Optional.ofNullable(this.k8sRaw);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="lastUploadedDate")
-      private final @Nullable Output<String> lastUploadedDate;
+    private @Nullable Output<String> lastUploadedDate;
 
-    public Output<String> lastUploadedDate() {
-        return this.lastUploadedDate == null ? Codegen.empty() : this.lastUploadedDate;
+    public Optional<Output<String>> lastUploadedDate() {
+        return Optional.ofNullable(this.lastUploadedDate);
     }
 
     /**
@@ -92,128 +92,108 @@ public final class SqlManagedInstancePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public SqlManagedInstancePropertiesArgs(
-        @Nullable Output<String> admin,
-        @Nullable Output<BasicLoginInformationArgs> basicLoginInformation,
-        @Nullable Output<String> dataControllerId,
-        @Nullable Output<String> endTime,
-        @Nullable Output<Object> k8sRaw,
-        @Nullable Output<String> lastUploadedDate,
-        @Nullable Output<String> startTime) {
-        this.admin = admin;
-        this.basicLoginInformation = basicLoginInformation;
-        this.dataControllerId = dataControllerId;
-        this.endTime = endTime;
-        this.k8sRaw = k8sRaw;
-        this.lastUploadedDate = lastUploadedDate;
-        this.startTime = startTime;
-    }
+    private SqlManagedInstancePropertiesArgs() {}
 
-    private SqlManagedInstancePropertiesArgs() {
-        this.admin = Codegen.empty();
-        this.basicLoginInformation = Codegen.empty();
-        this.dataControllerId = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.k8sRaw = Codegen.empty();
-        this.lastUploadedDate = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private SqlManagedInstancePropertiesArgs(SqlManagedInstancePropertiesArgs $) {
+        this.admin = $.admin;
+        this.basicLoginInformation = $.basicLoginInformation;
+        this.dataControllerId = $.dataControllerId;
+        this.endTime = $.endTime;
+        this.k8sRaw = $.k8sRaw;
+        this.lastUploadedDate = $.lastUploadedDate;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlManagedInstancePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> admin;
-        private @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
-        private @Nullable Output<String> dataControllerId;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<Object> k8sRaw;
-        private @Nullable Output<String> lastUploadedDate;
-        private @Nullable Output<String> startTime;
+        private SqlManagedInstancePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlManagedInstancePropertiesArgs();
         }
 
         public Builder(SqlManagedInstancePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admin = defaults.admin;
-    	      this.basicLoginInformation = defaults.basicLoginInformation;
-    	      this.dataControllerId = defaults.dataControllerId;
-    	      this.endTime = defaults.endTime;
-    	      this.k8sRaw = defaults.k8sRaw;
-    	      this.lastUploadedDate = defaults.lastUploadedDate;
-    	      this.startTime = defaults.startTime;
+            $ = new SqlManagedInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder admin(@Nullable Output<String> admin) {
-            this.admin = admin;
+            $.admin = admin;
             return this;
         }
-        public Builder admin(@Nullable String admin) {
-            this.admin = Codegen.ofNullable(admin);
-            return this;
+
+        public Builder admin(String admin) {
+            return admin(Output.of(admin));
         }
+
         public Builder basicLoginInformation(@Nullable Output<BasicLoginInformationArgs> basicLoginInformation) {
-            this.basicLoginInformation = basicLoginInformation;
+            $.basicLoginInformation = basicLoginInformation;
             return this;
         }
-        public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
-            this.basicLoginInformation = Codegen.ofNullable(basicLoginInformation);
-            return this;
+
+        public Builder basicLoginInformation(BasicLoginInformationArgs basicLoginInformation) {
+            return basicLoginInformation(Output.of(basicLoginInformation));
         }
+
         public Builder dataControllerId(@Nullable Output<String> dataControllerId) {
-            this.dataControllerId = dataControllerId;
+            $.dataControllerId = dataControllerId;
             return this;
         }
-        public Builder dataControllerId(@Nullable String dataControllerId) {
-            this.dataControllerId = Codegen.ofNullable(dataControllerId);
-            return this;
+
+        public Builder dataControllerId(String dataControllerId) {
+            return dataControllerId(Output.of(dataControllerId));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
-            this.k8sRaw = k8sRaw;
+            $.k8sRaw = k8sRaw;
             return this;
         }
-        public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = Codegen.ofNullable(k8sRaw);
-            return this;
+
+        public Builder k8sRaw(Object k8sRaw) {
+            return k8sRaw(Output.of(k8sRaw));
         }
+
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
-            this.lastUploadedDate = lastUploadedDate;
+            $.lastUploadedDate = lastUploadedDate;
             return this;
         }
-        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = Codegen.ofNullable(lastUploadedDate);
-            return this;
+
+        public Builder lastUploadedDate(String lastUploadedDate) {
+            return lastUploadedDate(Output.of(lastUploadedDate));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public SqlManagedInstancePropertiesArgs build() {
-            return new SqlManagedInstancePropertiesArgs(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public SqlManagedInstancePropertiesArgs build() {
+            return $;
         }
     }
+
 }

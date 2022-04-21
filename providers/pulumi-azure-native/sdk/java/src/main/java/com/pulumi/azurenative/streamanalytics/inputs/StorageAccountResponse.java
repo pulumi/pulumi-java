@@ -23,10 +23,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable String accountKey;
+    private @Nullable String accountKey;
 
     public Optional<String> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
-    public StorageAccountResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName) {
-        this.accountKey = accountKey;
-        this.accountName = accountName;
-    }
+    private StorageAccountResponse() {}
 
-    private StorageAccountResponse() {
-        this.accountKey = null;
-        this.accountName = null;
+    private StorageAccountResponse(StorageAccountResponse $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountKey;
-        private @Nullable String accountName;
+        private StorageAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountResponse();
         }
 
         public Builder(StorageAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
+            $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
-        }        public StorageAccountResponse build() {
-            return new StorageAccountResponse(accountKey, accountName);
+        }
+
+        public StorageAccountResponse build() {
+            return $;
         }
     }
+
 }

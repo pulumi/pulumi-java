@@ -17,7 +17,7 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jitRequestName", required=true)
-      private final String jitRequestName;
+    private String jitRequestName;
 
     public String jitRequestName() {
         return this.jitRequestName;
@@ -28,55 +28,52 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetJitRequestArgs(
-        String jitRequestName,
-        String resourceGroupName) {
-        this.jitRequestName = Objects.requireNonNull(jitRequestName, "expected parameter 'jitRequestName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetJitRequestArgs() {}
 
-    private GetJitRequestArgs() {
-        this.jitRequestName = null;
-        this.resourceGroupName = null;
+    private GetJitRequestArgs(GetJitRequestArgs $) {
+        this.jitRequestName = $.jitRequestName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJitRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jitRequestName;
-        private String resourceGroupName;
+        private GetJitRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJitRequestArgs();
         }
 
         public Builder(GetJitRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jitRequestName = defaults.jitRequestName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetJitRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jitRequestName(String jitRequestName) {
-            this.jitRequestName = Objects.requireNonNull(jitRequestName);
+            $.jitRequestName = jitRequestName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetJitRequestArgs build() {
-            return new GetJitRequestArgs(jitRequestName, resourceGroupName);
+        }
+
+        public GetJitRequestArgs build() {
+            $.jitRequestName = Objects.requireNonNull($.jitRequestName, "expected parameter 'jitRequestName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

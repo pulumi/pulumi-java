@@ -23,45 +23,45 @@ public final class LongTermSchedulePolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="schedulePolicyType", required=true)
-      private final String schedulePolicyType;
+    private String schedulePolicyType;
 
     public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 
-    public LongTermSchedulePolicyResponse(String schedulePolicyType) {
-        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg(schedulePolicyType).require();
-    }
+    private LongTermSchedulePolicyResponse() {}
 
-    private LongTermSchedulePolicyResponse() {
-        this.schedulePolicyType = null;
+    private LongTermSchedulePolicyResponse(LongTermSchedulePolicyResponse $) {
+        this.schedulePolicyType = $.schedulePolicyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LongTermSchedulePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String schedulePolicyType;
+        private LongTermSchedulePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LongTermSchedulePolicyResponse();
         }
 
         public Builder(LongTermSchedulePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedulePolicyType = defaults.schedulePolicyType;
+            $ = new LongTermSchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schedulePolicyType(String schedulePolicyType) {
-            this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
+            $.schedulePolicyType = schedulePolicyType;
             return this;
-        }        public LongTermSchedulePolicyResponse build() {
-            return new LongTermSchedulePolicyResponse(schedulePolicyType);
+        }
+
+        public LongTermSchedulePolicyResponse build() {
+            $.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg($.schedulePolicyType).require();
+            return $;
         }
     }
+
 }

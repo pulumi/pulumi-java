@@ -5,10 +5,10 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends com.pulumi
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends com.pulumi
      * 
      */
     @Import(name="authority")
-      private final @Nullable Output<String> authority;
+    private @Nullable Output<String> authority;
 
-    public Output<String> authority() {
-        return this.authority == null ? Codegen.empty() : this.authority;
+    public Optional<Output<String>> authority() {
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends com.pulumi
      * 
      */
     @Import(name="smartProxyEnabled")
-      private final @Nullable Output<Boolean> smartProxyEnabled;
+    private @Nullable Output<Boolean> smartProxyEnabled;
 
-    public Output<Boolean> smartProxyEnabled() {
-        return this.smartProxyEnabled == null ? Codegen.empty() : this.smartProxyEnabled;
+    public Optional<Output<Boolean>> smartProxyEnabled() {
+        return Optional.ofNullable(this.smartProxyEnabled);
     }
 
-    public ServiceAuthenticationConfigurationInfoArgs(
-        @Nullable Output<String> audience,
-        @Nullable Output<String> authority,
-        @Nullable Output<Boolean> smartProxyEnabled) {
-        this.audience = audience;
-        this.authority = authority;
-        this.smartProxyEnabled = smartProxyEnabled;
-    }
+    private ServiceAuthenticationConfigurationInfoArgs() {}
 
-    private ServiceAuthenticationConfigurationInfoArgs() {
-        this.audience = Codegen.empty();
-        this.authority = Codegen.empty();
-        this.smartProxyEnabled = Codegen.empty();
+    private ServiceAuthenticationConfigurationInfoArgs(ServiceAuthenticationConfigurationInfoArgs $) {
+        this.audience = $.audience;
+        this.authority = $.authority;
+        this.smartProxyEnabled = $.smartProxyEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAuthenticationConfigurationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> authority;
-        private @Nullable Output<Boolean> smartProxyEnabled;
+        private ServiceAuthenticationConfigurationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAuthenticationConfigurationInfoArgs();
         }
 
         public Builder(ServiceAuthenticationConfigurationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.authority = defaults.authority;
-    	      this.smartProxyEnabled = defaults.smartProxyEnabled;
+            $ = new ServiceAuthenticationConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder authority(@Nullable Output<String> authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
-        public Builder authority(@Nullable String authority) {
-            this.authority = Codegen.ofNullable(authority);
-            return this;
+
+        public Builder authority(String authority) {
+            return authority(Output.of(authority));
         }
+
         public Builder smartProxyEnabled(@Nullable Output<Boolean> smartProxyEnabled) {
-            this.smartProxyEnabled = smartProxyEnabled;
+            $.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-        public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
-            this.smartProxyEnabled = Codegen.ofNullable(smartProxyEnabled);
-            return this;
-        }        public ServiceAuthenticationConfigurationInfoArgs build() {
-            return new ServiceAuthenticationConfigurationInfoArgs(audience, authority, smartProxyEnabled);
+
+        public Builder smartProxyEnabled(Boolean smartProxyEnabled) {
+            return smartProxyEnabled(Output.of(smartProxyEnabled));
+        }
+
+        public ServiceAuthenticationConfigurationInfoArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="securityConnectorName", required=true)
-      private final String securityConnectorName;
+    private String securityConnectorName;
 
     public String securityConnectorName() {
         return this.securityConnectorName;
     }
 
-    public GetSecurityConnectorArgs(
-        String resourceGroupName,
-        String securityConnectorName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityConnectorName = Objects.requireNonNull(securityConnectorName, "expected parameter 'securityConnectorName' to be non-null");
-    }
+    private GetSecurityConnectorArgs() {}
 
-    private GetSecurityConnectorArgs() {
-        this.resourceGroupName = null;
-        this.securityConnectorName = null;
+    private GetSecurityConnectorArgs(GetSecurityConnectorArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityConnectorName = $.securityConnectorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String securityConnectorName;
+        private GetSecurityConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityConnectorArgs();
         }
 
         public Builder(GetSecurityConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityConnectorName = defaults.securityConnectorName;
+            $ = new GetSecurityConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder securityConnectorName(String securityConnectorName) {
-            this.securityConnectorName = Objects.requireNonNull(securityConnectorName);
+            $.securityConnectorName = securityConnectorName;
             return this;
-        }        public GetSecurityConnectorArgs build() {
-            return new GetSecurityConnectorArgs(resourceGroupName, securityConnectorName);
+        }
+
+        public GetSecurityConnectorArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityConnectorName = Objects.requireNonNull($.securityConnectorName, "expected parameter 'securityConnectorName' to be non-null");
+            return $;
         }
     }
+
 }

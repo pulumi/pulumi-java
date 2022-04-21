@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DayDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
-    public DayDetailsArgs(@Nullable Output<String> time) {
-        this.time = time;
-    }
+    private DayDetailsArgs() {}
 
-    private DayDetailsArgs() {
-        this.time = Codegen.empty();
+    private DayDetailsArgs(DayDetailsArgs $) {
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DayDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> time;
+        private DayDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DayDetailsArgs();
         }
 
         public Builder(DayDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.time = defaults.time;
+            $ = new DayDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
-        }        public DayDetailsArgs build() {
-            return new DayDetailsArgs(time);
+
+        public Builder time(String time) {
+            return time(Output.of(time));
+        }
+
+        public DayDetailsArgs build() {
+            return $;
         }
     }
+
 }

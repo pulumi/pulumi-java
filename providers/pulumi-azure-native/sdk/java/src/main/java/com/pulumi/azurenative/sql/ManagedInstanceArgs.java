@@ -13,12 +13,12 @@ import com.pulumi.azurenative.sql.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="administratorLogin")
-      private final @Nullable Output<String> administratorLogin;
+    private @Nullable Output<String> administratorLogin;
 
-    public Output<String> administratorLogin() {
-        return this.administratorLogin == null ? Codegen.empty() : this.administratorLogin;
+    public Optional<Output<String>> administratorLogin() {
+        return Optional.ofNullable(this.administratorLogin);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="administratorLoginPassword")
-      private final @Nullable Output<String> administratorLoginPassword;
+    private @Nullable Output<String> administratorLoginPassword;
 
-    public Output<String> administratorLoginPassword() {
-        return this.administratorLoginPassword == null ? Codegen.empty() : this.administratorLoginPassword;
+    public Optional<Output<String>> administratorLoginPassword() {
+        return Optional.ofNullable(this.administratorLoginPassword);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="administrators")
-      private final @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
+    private @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
 
-    public Output<ManagedInstanceExternalAdministratorArgs> administrators() {
-        return this.administrators == null ? Codegen.empty() : this.administrators;
+    public Optional<Output<ManagedInstanceExternalAdministratorArgs>> administrators() {
+        return Optional.ofNullable(this.administrators);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dnsZonePartner")
-      private final @Nullable Output<String> dnsZonePartner;
+    private @Nullable Output<String> dnsZonePartner;
 
-    public Output<String> dnsZonePartner() {
-        return this.dnsZonePartner == null ? Codegen.empty() : this.dnsZonePartner;
+    public Optional<Output<String>> dnsZonePartner() {
+        return Optional.ofNullable(this.dnsZonePartner);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ResourceIdentityArgs> identity;
+    private @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instancePoolId")
-      private final @Nullable Output<String> instancePoolId;
+    private @Nullable Output<String> instancePoolId;
 
-    public Output<String> instancePoolId() {
-        return this.instancePoolId == null ? Codegen.empty() : this.instancePoolId;
+    public Optional<Output<String>> instancePoolId() {
+        return Optional.ofNullable(this.instancePoolId);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
+    private @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
 
-    public Output<Either<String,ManagedInstanceLicenseType>> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<Either<String,ManagedInstanceLicenseType>>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maintenanceConfigurationId")
-      private final @Nullable Output<String> maintenanceConfigurationId;
+    private @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> maintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
+    public Optional<Output<String>> maintenanceConfigurationId() {
+        return Optional.ofNullable(this.maintenanceConfigurationId);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="managedInstanceCreateMode")
-      private final @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
+    private @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
 
-    public Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode() {
-        return this.managedInstanceCreateMode == null ? Codegen.empty() : this.managedInstanceCreateMode;
+    public Optional<Output<Either<String,ManagedServerCreateMode>>> managedInstanceCreateMode() {
+        return Optional.ofNullable(this.managedInstanceCreateMode);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="managedInstanceName")
-      private final @Nullable Output<String> managedInstanceName;
+    private @Nullable Output<String> managedInstanceName;
 
-    public Output<String> managedInstanceName() {
-        return this.managedInstanceName == null ? Codegen.empty() : this.managedInstanceName;
+    public Optional<Output<String>> managedInstanceName() {
+        return Optional.ofNullable(this.managedInstanceName);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="minimalTlsVersion")
-      private final @Nullable Output<String> minimalTlsVersion;
+    private @Nullable Output<String> minimalTlsVersion;
 
-    public Output<String> minimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
+    public Optional<Output<String>> minimalTlsVersion() {
+        return Optional.ofNullable(this.minimalTlsVersion);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="primaryUserAssignedIdentityId")
-      private final @Nullable Output<String> primaryUserAssignedIdentityId;
+    private @Nullable Output<String> primaryUserAssignedIdentityId;
 
-    public Output<String> primaryUserAssignedIdentityId() {
-        return this.primaryUserAssignedIdentityId == null ? Codegen.empty() : this.primaryUserAssignedIdentityId;
+    public Optional<Output<String>> primaryUserAssignedIdentityId() {
+        return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="proxyOverride")
-      private final @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
+    private @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
 
-    public Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride() {
-        return this.proxyOverride == null ? Codegen.empty() : this.proxyOverride;
+    public Optional<Output<Either<String,ManagedInstanceProxyOverride>>> proxyOverride() {
+        return Optional.ofNullable(this.proxyOverride);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicDataEndpointEnabled")
-      private final @Nullable Output<Boolean> publicDataEndpointEnabled;
+    private @Nullable Output<Boolean> publicDataEndpointEnabled;
 
-    public Output<Boolean> publicDataEndpointEnabled() {
-        return this.publicDataEndpointEnabled == null ? Codegen.empty() : this.publicDataEndpointEnabled;
+    public Optional<Output<Boolean>> publicDataEndpointEnabled() {
+        return Optional.ofNullable(this.publicDataEndpointEnabled);
     }
 
     /**
@@ -222,7 +222,7 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -233,10 +233,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restorePointInTime")
-      private final @Nullable Output<String> restorePointInTime;
+    private @Nullable Output<String> restorePointInTime;
 
-    public Output<String> restorePointInTime() {
-        return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
+    public Optional<Output<String>> restorePointInTime() {
+        return Optional.ofNullable(this.restorePointInTime);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceManagedInstanceId")
-      private final @Nullable Output<String> sourceManagedInstanceId;
+    private @Nullable Output<String> sourceManagedInstanceId;
 
-    public Output<String> sourceManagedInstanceId() {
-        return this.sourceManagedInstanceId == null ? Codegen.empty() : this.sourceManagedInstanceId;
+    public Optional<Output<String>> sourceManagedInstanceId() {
+        return Optional.ofNullable(this.sourceManagedInstanceId);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountType>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageSizeInGB")
-      private final @Nullable Output<Integer> storageSizeInGB;
+    private @Nullable Output<Integer> storageSizeInGB;
 
-    public Output<Integer> storageSizeInGB() {
-        return this.storageSizeInGB == null ? Codegen.empty() : this.storageSizeInGB;
+    public Optional<Output<Integer>> storageSizeInGB() {
+        return Optional.ofNullable(this.storageSizeInGB);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -315,10 +315,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timezoneId")
-      private final @Nullable Output<String> timezoneId;
+    private @Nullable Output<String> timezoneId;
 
-    public Output<String> timezoneId() {
-        return this.timezoneId == null ? Codegen.empty() : this.timezoneId;
+    public Optional<Output<String>> timezoneId() {
+        return Optional.ofNullable(this.timezoneId);
     }
 
     /**
@@ -326,10 +326,10 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vCores")
-      private final @Nullable Output<Integer> vCores;
+    private @Nullable Output<Integer> vCores;
 
-    public Output<Integer> vCores() {
-        return this.vCores == null ? Codegen.empty() : this.vCores;
+    public Optional<Output<Integer>> vCores() {
+        return Optional.ofNullable(this.vCores);
     }
 
     /**
@@ -337,401 +337,319 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="zoneRedundant")
-      private final @Nullable Output<Boolean> zoneRedundant;
+    private @Nullable Output<Boolean> zoneRedundant;
 
-    public Output<Boolean> zoneRedundant() {
-        return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
+    public Optional<Output<Boolean>> zoneRedundant() {
+        return Optional.ofNullable(this.zoneRedundant);
     }
 
-    public ManagedInstanceArgs(
-        @Nullable Output<String> administratorLogin,
-        @Nullable Output<String> administratorLoginPassword,
-        @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators,
-        @Nullable Output<String> collation,
-        @Nullable Output<String> dnsZonePartner,
-        @Nullable Output<ResourceIdentityArgs> identity,
-        @Nullable Output<String> instancePoolId,
-        @Nullable Output<String> keyId,
-        @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType,
-        @Nullable Output<String> location,
-        @Nullable Output<String> maintenanceConfigurationId,
-        @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode,
-        @Nullable Output<String> managedInstanceName,
-        @Nullable Output<String> minimalTlsVersion,
-        @Nullable Output<String> primaryUserAssignedIdentityId,
-        @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride,
-        @Nullable Output<Boolean> publicDataEndpointEnabled,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> restorePointInTime,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<String> sourceManagedInstanceId,
-        @Nullable Output<Either<String,StorageAccountType>> storageAccountType,
-        @Nullable Output<Integer> storageSizeInGB,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> timezoneId,
-        @Nullable Output<Integer> vCores,
-        @Nullable Output<Boolean> zoneRedundant) {
-        this.administratorLogin = administratorLogin;
-        this.administratorLoginPassword = administratorLoginPassword;
-        this.administrators = administrators;
-        this.collation = collation;
-        this.dnsZonePartner = dnsZonePartner;
-        this.identity = identity;
-        this.instancePoolId = instancePoolId;
-        this.keyId = keyId;
-        this.licenseType = licenseType;
-        this.location = location;
-        this.maintenanceConfigurationId = maintenanceConfigurationId;
-        this.managedInstanceCreateMode = managedInstanceCreateMode;
-        this.managedInstanceName = managedInstanceName;
-        this.minimalTlsVersion = minimalTlsVersion;
-        this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
-        this.proxyOverride = proxyOverride;
-        this.publicDataEndpointEnabled = publicDataEndpointEnabled;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restorePointInTime = restorePointInTime;
-        this.sku = sku;
-        this.sourceManagedInstanceId = sourceManagedInstanceId;
-        this.storageAccountType = storageAccountType;
-        this.storageSizeInGB = storageSizeInGB;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.timezoneId = timezoneId;
-        this.vCores = vCores;
-        this.zoneRedundant = zoneRedundant;
-    }
+    private ManagedInstanceArgs() {}
 
-    private ManagedInstanceArgs() {
-        this.administratorLogin = Codegen.empty();
-        this.administratorLoginPassword = Codegen.empty();
-        this.administrators = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.dnsZonePartner = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.instancePoolId = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenanceConfigurationId = Codegen.empty();
-        this.managedInstanceCreateMode = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.minimalTlsVersion = Codegen.empty();
-        this.primaryUserAssignedIdentityId = Codegen.empty();
-        this.proxyOverride = Codegen.empty();
-        this.publicDataEndpointEnabled = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restorePointInTime = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.sourceManagedInstanceId = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
-        this.storageSizeInGB = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timezoneId = Codegen.empty();
-        this.vCores = Codegen.empty();
-        this.zoneRedundant = Codegen.empty();
+    private ManagedInstanceArgs(ManagedInstanceArgs $) {
+        this.administratorLogin = $.administratorLogin;
+        this.administratorLoginPassword = $.administratorLoginPassword;
+        this.administrators = $.administrators;
+        this.collation = $.collation;
+        this.dnsZonePartner = $.dnsZonePartner;
+        this.identity = $.identity;
+        this.instancePoolId = $.instancePoolId;
+        this.keyId = $.keyId;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.maintenanceConfigurationId = $.maintenanceConfigurationId;
+        this.managedInstanceCreateMode = $.managedInstanceCreateMode;
+        this.managedInstanceName = $.managedInstanceName;
+        this.minimalTlsVersion = $.minimalTlsVersion;
+        this.primaryUserAssignedIdentityId = $.primaryUserAssignedIdentityId;
+        this.proxyOverride = $.proxyOverride;
+        this.publicDataEndpointEnabled = $.publicDataEndpointEnabled;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restorePointInTime = $.restorePointInTime;
+        this.sku = $.sku;
+        this.sourceManagedInstanceId = $.sourceManagedInstanceId;
+        this.storageAccountType = $.storageAccountType;
+        this.storageSizeInGB = $.storageSizeInGB;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.timezoneId = $.timezoneId;
+        this.vCores = $.vCores;
+        this.zoneRedundant = $.zoneRedundant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administratorLogin;
-        private @Nullable Output<String> administratorLoginPassword;
-        private @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
-        private @Nullable Output<String> collation;
-        private @Nullable Output<String> dnsZonePartner;
-        private @Nullable Output<ResourceIdentityArgs> identity;
-        private @Nullable Output<String> instancePoolId;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> maintenanceConfigurationId;
-        private @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
-        private @Nullable Output<String> managedInstanceName;
-        private @Nullable Output<String> minimalTlsVersion;
-        private @Nullable Output<String> primaryUserAssignedIdentityId;
-        private @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
-        private @Nullable Output<Boolean> publicDataEndpointEnabled;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> restorePointInTime;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<String> sourceManagedInstanceId;
-        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
-        private @Nullable Output<Integer> storageSizeInGB;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> timezoneId;
-        private @Nullable Output<Integer> vCores;
-        private @Nullable Output<Boolean> zoneRedundant;
+        private ManagedInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstanceArgs();
         }
 
         public Builder(ManagedInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorLogin = defaults.administratorLogin;
-    	      this.administratorLoginPassword = defaults.administratorLoginPassword;
-    	      this.administrators = defaults.administrators;
-    	      this.collation = defaults.collation;
-    	      this.dnsZonePartner = defaults.dnsZonePartner;
-    	      this.identity = defaults.identity;
-    	      this.instancePoolId = defaults.instancePoolId;
-    	      this.keyId = defaults.keyId;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.maintenanceConfigurationId = defaults.maintenanceConfigurationId;
-    	      this.managedInstanceCreateMode = defaults.managedInstanceCreateMode;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.minimalTlsVersion = defaults.minimalTlsVersion;
-    	      this.primaryUserAssignedIdentityId = defaults.primaryUserAssignedIdentityId;
-    	      this.proxyOverride = defaults.proxyOverride;
-    	      this.publicDataEndpointEnabled = defaults.publicDataEndpointEnabled;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restorePointInTime = defaults.restorePointInTime;
-    	      this.sku = defaults.sku;
-    	      this.sourceManagedInstanceId = defaults.sourceManagedInstanceId;
-    	      this.storageAccountType = defaults.storageAccountType;
-    	      this.storageSizeInGB = defaults.storageSizeInGB;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.timezoneId = defaults.timezoneId;
-    	      this.vCores = defaults.vCores;
-    	      this.zoneRedundant = defaults.zoneRedundant;
+            $ = new ManagedInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorLogin(@Nullable Output<String> administratorLogin) {
-            this.administratorLogin = administratorLogin;
+            $.administratorLogin = administratorLogin;
             return this;
         }
-        public Builder administratorLogin(@Nullable String administratorLogin) {
-            this.administratorLogin = Codegen.ofNullable(administratorLogin);
-            return this;
+
+        public Builder administratorLogin(String administratorLogin) {
+            return administratorLogin(Output.of(administratorLogin));
         }
+
         public Builder administratorLoginPassword(@Nullable Output<String> administratorLoginPassword) {
-            this.administratorLoginPassword = administratorLoginPassword;
+            $.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
-        public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
-            this.administratorLoginPassword = Codegen.ofNullable(administratorLoginPassword);
-            return this;
+
+        public Builder administratorLoginPassword(String administratorLoginPassword) {
+            return administratorLoginPassword(Output.of(administratorLoginPassword));
         }
+
         public Builder administrators(@Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators) {
-            this.administrators = administrators;
+            $.administrators = administrators;
             return this;
         }
-        public Builder administrators(@Nullable ManagedInstanceExternalAdministratorArgs administrators) {
-            this.administrators = Codegen.ofNullable(administrators);
-            return this;
+
+        public Builder administrators(ManagedInstanceExternalAdministratorArgs administrators) {
+            return administrators(Output.of(administrators));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder dnsZonePartner(@Nullable Output<String> dnsZonePartner) {
-            this.dnsZonePartner = dnsZonePartner;
+            $.dnsZonePartner = dnsZonePartner;
             return this;
         }
-        public Builder dnsZonePartner(@Nullable String dnsZonePartner) {
-            this.dnsZonePartner = Codegen.ofNullable(dnsZonePartner);
-            return this;
+
+        public Builder dnsZonePartner(String dnsZonePartner) {
+            return dnsZonePartner(Output.of(dnsZonePartner));
         }
+
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder instancePoolId(@Nullable Output<String> instancePoolId) {
-            this.instancePoolId = instancePoolId;
+            $.instancePoolId = instancePoolId;
             return this;
         }
-        public Builder instancePoolId(@Nullable String instancePoolId) {
-            this.instancePoolId = Codegen.ofNullable(instancePoolId);
-            return this;
+
+        public Builder instancePoolId(String instancePoolId) {
+            return instancePoolId(Output.of(instancePoolId));
         }
+
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder licenseType(@Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable Either<String,ManagedInstanceLicenseType> licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(Either<String,ManagedInstanceLicenseType> licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = maintenanceConfigurationId;
+            $.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Codegen.ofNullable(maintenanceConfigurationId);
-            return this;
+
+        public Builder maintenanceConfigurationId(String maintenanceConfigurationId) {
+            return maintenanceConfigurationId(Output.of(maintenanceConfigurationId));
         }
+
         public Builder managedInstanceCreateMode(@Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode) {
-            this.managedInstanceCreateMode = managedInstanceCreateMode;
+            $.managedInstanceCreateMode = managedInstanceCreateMode;
             return this;
         }
-        public Builder managedInstanceCreateMode(@Nullable Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
-            this.managedInstanceCreateMode = Codegen.ofNullable(managedInstanceCreateMode);
-            return this;
+
+        public Builder managedInstanceCreateMode(Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
+            return managedInstanceCreateMode(Output.of(managedInstanceCreateMode));
         }
+
         public Builder managedInstanceName(@Nullable Output<String> managedInstanceName) {
-            this.managedInstanceName = managedInstanceName;
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
-        public Builder managedInstanceName(@Nullable String managedInstanceName) {
-            this.managedInstanceName = Codegen.ofNullable(managedInstanceName);
-            return this;
+
+        public Builder managedInstanceName(String managedInstanceName) {
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder minimalTlsVersion(@Nullable Output<String> minimalTlsVersion) {
-            this.minimalTlsVersion = minimalTlsVersion;
+            $.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
-            this.minimalTlsVersion = Codegen.ofNullable(minimalTlsVersion);
-            return this;
+
+        public Builder minimalTlsVersion(String minimalTlsVersion) {
+            return minimalTlsVersion(Output.of(minimalTlsVersion));
         }
+
         public Builder primaryUserAssignedIdentityId(@Nullable Output<String> primaryUserAssignedIdentityId) {
-            this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
+            $.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
-        public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
-            this.primaryUserAssignedIdentityId = Codegen.ofNullable(primaryUserAssignedIdentityId);
-            return this;
+
+        public Builder primaryUserAssignedIdentityId(String primaryUserAssignedIdentityId) {
+            return primaryUserAssignedIdentityId(Output.of(primaryUserAssignedIdentityId));
         }
+
         public Builder proxyOverride(@Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride) {
-            this.proxyOverride = proxyOverride;
+            $.proxyOverride = proxyOverride;
             return this;
         }
-        public Builder proxyOverride(@Nullable Either<String,ManagedInstanceProxyOverride> proxyOverride) {
-            this.proxyOverride = Codegen.ofNullable(proxyOverride);
-            return this;
+
+        public Builder proxyOverride(Either<String,ManagedInstanceProxyOverride> proxyOverride) {
+            return proxyOverride(Output.of(proxyOverride));
         }
+
         public Builder publicDataEndpointEnabled(@Nullable Output<Boolean> publicDataEndpointEnabled) {
-            this.publicDataEndpointEnabled = publicDataEndpointEnabled;
+            $.publicDataEndpointEnabled = publicDataEndpointEnabled;
             return this;
         }
-        public Builder publicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
-            this.publicDataEndpointEnabled = Codegen.ofNullable(publicDataEndpointEnabled);
-            return this;
+
+        public Builder publicDataEndpointEnabled(Boolean publicDataEndpointEnabled) {
+            return publicDataEndpointEnabled(Output.of(publicDataEndpointEnabled));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
-            this.restorePointInTime = restorePointInTime;
+            $.restorePointInTime = restorePointInTime;
             return this;
         }
-        public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Codegen.ofNullable(restorePointInTime);
-            return this;
+
+        public Builder restorePointInTime(String restorePointInTime) {
+            return restorePointInTime(Output.of(restorePointInTime));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder sourceManagedInstanceId(@Nullable Output<String> sourceManagedInstanceId) {
-            this.sourceManagedInstanceId = sourceManagedInstanceId;
+            $.sourceManagedInstanceId = sourceManagedInstanceId;
             return this;
         }
-        public Builder sourceManagedInstanceId(@Nullable String sourceManagedInstanceId) {
-            this.sourceManagedInstanceId = Codegen.ofNullable(sourceManagedInstanceId);
-            return this;
+
+        public Builder sourceManagedInstanceId(String sourceManagedInstanceId) {
+            return sourceManagedInstanceId(Output.of(sourceManagedInstanceId));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
+
+        public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
         }
+
         public Builder storageSizeInGB(@Nullable Output<Integer> storageSizeInGB) {
-            this.storageSizeInGB = storageSizeInGB;
+            $.storageSizeInGB = storageSizeInGB;
             return this;
         }
-        public Builder storageSizeInGB(@Nullable Integer storageSizeInGB) {
-            this.storageSizeInGB = Codegen.ofNullable(storageSizeInGB);
-            return this;
+
+        public Builder storageSizeInGB(Integer storageSizeInGB) {
+            return storageSizeInGB(Output.of(storageSizeInGB));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timezoneId(@Nullable Output<String> timezoneId) {
-            this.timezoneId = timezoneId;
+            $.timezoneId = timezoneId;
             return this;
         }
-        public Builder timezoneId(@Nullable String timezoneId) {
-            this.timezoneId = Codegen.ofNullable(timezoneId);
-            return this;
+
+        public Builder timezoneId(String timezoneId) {
+            return timezoneId(Output.of(timezoneId));
         }
+
         public Builder vCores(@Nullable Output<Integer> vCores) {
-            this.vCores = vCores;
+            $.vCores = vCores;
             return this;
         }
-        public Builder vCores(@Nullable Integer vCores) {
-            this.vCores = Codegen.ofNullable(vCores);
-            return this;
+
+        public Builder vCores(Integer vCores) {
+            return vCores(Output.of(vCores));
         }
+
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
-            this.zoneRedundant = zoneRedundant;
+            $.zoneRedundant = zoneRedundant;
             return this;
         }
-        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
-            this.zoneRedundant = Codegen.ofNullable(zoneRedundant);
-            return this;
-        }        public ManagedInstanceArgs build() {
-            return new ManagedInstanceArgs(administratorLogin, administratorLoginPassword, administrators, collation, dnsZonePartner, identity, instancePoolId, keyId, licenseType, location, maintenanceConfigurationId, managedInstanceCreateMode, managedInstanceName, minimalTlsVersion, primaryUserAssignedIdentityId, proxyOverride, publicDataEndpointEnabled, resourceGroupName, restorePointInTime, sku, sourceManagedInstanceId, storageAccountType, storageSizeInGB, subnetId, tags, timezoneId, vCores, zoneRedundant);
+
+        public Builder zoneRedundant(Boolean zoneRedundant) {
+            return zoneRedundant(Output.of(zoneRedundant));
+        }
+
+        public ManagedInstanceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

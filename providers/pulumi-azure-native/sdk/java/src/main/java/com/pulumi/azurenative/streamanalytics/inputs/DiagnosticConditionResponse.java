@@ -21,7 +21,7 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,7 +32,7 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -43,64 +43,59 @@ public final class DiagnosticConditionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="since", required=true)
-      private final String since;
+    private String since;
 
     public String since() {
         return this.since;
     }
 
-    public DiagnosticConditionResponse(
-        String code,
-        String message,
-        String since) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.since = Objects.requireNonNull(since, "expected parameter 'since' to be non-null");
-    }
+    private DiagnosticConditionResponse() {}
 
-    private DiagnosticConditionResponse() {
-        this.code = null;
-        this.message = null;
-        this.since = null;
+    private DiagnosticConditionResponse(DiagnosticConditionResponse $) {
+        this.code = $.code;
+        this.message = $.message;
+        this.since = $.since;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String message;
-        private String since;
+        private DiagnosticConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticConditionResponse();
         }
 
         public Builder(DiagnosticConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
-    	      this.since = defaults.since;
+            $ = new DiagnosticConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder since(String since) {
-            this.since = Objects.requireNonNull(since);
+            $.since = since;
             return this;
-        }        public DiagnosticConditionResponse build() {
-            return new DiagnosticConditionResponse(code, message, since);
+        }
+
+        public DiagnosticConditionResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.since = Objects.requireNonNull($.since, "expected parameter 'since' to be non-null");
+            return $;
         }
     }
+
 }

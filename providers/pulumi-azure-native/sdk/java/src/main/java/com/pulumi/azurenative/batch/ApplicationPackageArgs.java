@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="applicationName", required=true)
-      private final Output<String> applicationName;
+    private Output<String> applicationName;
 
     public Output<String> applicationName() {
         return this.applicationName;
@@ -42,7 +42,7 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,81 @@ public final class ApplicationPackageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="versionName")
-      private final @Nullable Output<String> versionName;
+    private @Nullable Output<String> versionName;
 
-    public Output<String> versionName() {
-        return this.versionName == null ? Codegen.empty() : this.versionName;
+    public Optional<Output<String>> versionName() {
+        return Optional.ofNullable(this.versionName);
     }
 
-    public ApplicationPackageArgs(
-        Output<String> accountName,
-        Output<String> applicationName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> versionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.versionName = versionName;
-    }
+    private ApplicationPackageArgs() {}
 
-    private ApplicationPackageArgs() {
-        this.accountName = Codegen.empty();
-        this.applicationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.versionName = Codegen.empty();
+    private ApplicationPackageArgs(ApplicationPackageArgs $) {
+        this.accountName = $.accountName;
+        this.applicationName = $.applicationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> applicationName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> versionName;
+        private ApplicationPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageArgs();
         }
 
         public Builder(ApplicationPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.applicationName = defaults.applicationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.versionName = defaults.versionName;
+            $ = new ApplicationPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder applicationName(Output<String> applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
-            return this;
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder versionName(@Nullable Output<String> versionName) {
-            this.versionName = versionName;
+            $.versionName = versionName;
             return this;
         }
-        public Builder versionName(@Nullable String versionName) {
-            this.versionName = Codegen.ofNullable(versionName);
-            return this;
-        }        public ApplicationPackageArgs build() {
-            return new ApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);
+
+        public Builder versionName(String versionName) {
+            return versionName(Output.of(versionName));
+        }
+
+        public ApplicationPackageArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class UserRecommendationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="recommendationAction")
-      private final @Nullable String recommendationAction;
+    private @Nullable String recommendationAction;
 
     public Optional<String> recommendationAction() {
-        return this.recommendationAction == null ? Optional.empty() : Optional.ofNullable(this.recommendationAction);
+        return Optional.ofNullable(this.recommendationAction);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class UserRecommendationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public UserRecommendationResponse(
-        @Nullable String recommendationAction,
-        @Nullable String username) {
-        this.recommendationAction = recommendationAction;
-        this.username = username;
-    }
+    private UserRecommendationResponse() {}
 
-    private UserRecommendationResponse() {
-        this.recommendationAction = null;
-        this.username = null;
+    private UserRecommendationResponse(UserRecommendationResponse $) {
+        this.recommendationAction = $.recommendationAction;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserRecommendationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String recommendationAction;
-        private @Nullable String username;
+        private UserRecommendationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserRecommendationResponse();
         }
 
         public Builder(UserRecommendationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recommendationAction = defaults.recommendationAction;
-    	      this.username = defaults.username;
+            $ = new UserRecommendationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = recommendationAction;
+            $.recommendationAction = recommendationAction;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public UserRecommendationResponse build() {
-            return new UserRecommendationResponse(recommendationAction, username);
+        }
+
+        public UserRecommendationResponse build() {
+            return $;
         }
     }
+
 }

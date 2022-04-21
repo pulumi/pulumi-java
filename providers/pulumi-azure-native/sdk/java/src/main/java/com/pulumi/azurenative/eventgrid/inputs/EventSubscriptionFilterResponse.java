@@ -39,10 +39,10 @@ public final class EventSubscriptionFilterResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="advancedFilters")
-      private final @Nullable List<Object> advancedFilters;
+    private @Nullable List<Object> advancedFilters;
 
-    public List<Object> advancedFilters() {
-        return this.advancedFilters == null ? List.of() : this.advancedFilters;
+    public Optional<List<Object>> advancedFilters() {
+        return Optional.ofNullable(this.advancedFilters);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class EventSubscriptionFilterResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="includedEventTypes")
-      private final @Nullable List<String> includedEventTypes;
+    private @Nullable List<String> includedEventTypes;
 
-    public List<String> includedEventTypes() {
-        return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
+    public Optional<List<String>> includedEventTypes() {
+        return Optional.ofNullable(this.includedEventTypes);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class EventSubscriptionFilterResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="isSubjectCaseSensitive")
-      private final @Nullable Boolean isSubjectCaseSensitive;
+    private @Nullable Boolean isSubjectCaseSensitive;
 
     public Optional<Boolean> isSubjectCaseSensitive() {
-        return this.isSubjectCaseSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSubjectCaseSensitive);
+        return Optional.ofNullable(this.isSubjectCaseSensitive);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class EventSubscriptionFilterResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="subjectBeginsWith")
-      private final @Nullable String subjectBeginsWith;
+    private @Nullable String subjectBeginsWith;
 
     public Optional<String> subjectBeginsWith() {
-        return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
+        return Optional.ofNullable(this.subjectBeginsWith);
     }
 
     /**
@@ -87,88 +87,77 @@ public final class EventSubscriptionFilterResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="subjectEndsWith")
-      private final @Nullable String subjectEndsWith;
+    private @Nullable String subjectEndsWith;
 
     public Optional<String> subjectEndsWith() {
-        return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
+        return Optional.ofNullable(this.subjectEndsWith);
     }
 
-    public EventSubscriptionFilterResponse(
-        @Nullable List<Object> advancedFilters,
-        @Nullable List<String> includedEventTypes,
-        @Nullable Boolean isSubjectCaseSensitive,
-        @Nullable String subjectBeginsWith,
-        @Nullable String subjectEndsWith) {
-        this.advancedFilters = advancedFilters;
-        this.includedEventTypes = includedEventTypes;
-        this.isSubjectCaseSensitive = Codegen.booleanProp("isSubjectCaseSensitive").arg(isSubjectCaseSensitive).def(false).getNullable();
-        this.subjectBeginsWith = subjectBeginsWith;
-        this.subjectEndsWith = subjectEndsWith;
-    }
+    private EventSubscriptionFilterResponse() {}
 
-    private EventSubscriptionFilterResponse() {
-        this.advancedFilters = List.of();
-        this.includedEventTypes = List.of();
-        this.isSubjectCaseSensitive = null;
-        this.subjectBeginsWith = null;
-        this.subjectEndsWith = null;
+    private EventSubscriptionFilterResponse(EventSubscriptionFilterResponse $) {
+        this.advancedFilters = $.advancedFilters;
+        this.includedEventTypes = $.includedEventTypes;
+        this.isSubjectCaseSensitive = $.isSubjectCaseSensitive;
+        this.subjectBeginsWith = $.subjectBeginsWith;
+        this.subjectEndsWith = $.subjectEndsWith;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSubscriptionFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> advancedFilters;
-        private @Nullable List<String> includedEventTypes;
-        private @Nullable Boolean isSubjectCaseSensitive;
-        private @Nullable String subjectBeginsWith;
-        private @Nullable String subjectEndsWith;
+        private EventSubscriptionFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSubscriptionFilterResponse();
         }
 
         public Builder(EventSubscriptionFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedFilters = defaults.advancedFilters;
-    	      this.includedEventTypes = defaults.includedEventTypes;
-    	      this.isSubjectCaseSensitive = defaults.isSubjectCaseSensitive;
-    	      this.subjectBeginsWith = defaults.subjectBeginsWith;
-    	      this.subjectEndsWith = defaults.subjectEndsWith;
+            $ = new EventSubscriptionFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
-            this.advancedFilters = advancedFilters;
+            $.advancedFilters = advancedFilters;
             return this;
         }
+
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
         }
+
         public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
-            this.includedEventTypes = includedEventTypes;
+            $.includedEventTypes = includedEventTypes;
             return this;
         }
+
         public Builder includedEventTypes(String... includedEventTypes) {
             return includedEventTypes(List.of(includedEventTypes));
         }
+
         public Builder isSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
-            this.isSubjectCaseSensitive = isSubjectCaseSensitive;
+            $.isSubjectCaseSensitive = isSubjectCaseSensitive;
             return this;
         }
+
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
-            this.subjectBeginsWith = subjectBeginsWith;
+            $.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
+
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
-            this.subjectEndsWith = subjectEndsWith;
+            $.subjectEndsWith = subjectEndsWith;
             return this;
-        }        public EventSubscriptionFilterResponse build() {
-            return new EventSubscriptionFilterResponse(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
+        }
+
+        public EventSubscriptionFilterResponse build() {
+            $.isSubjectCaseSensitive = Codegen.booleanProp("isSubjectCaseSensitive").arg($.isSubjectCaseSensitive).def(false).getNullable();
+            return $;
         }
     }
+
 }

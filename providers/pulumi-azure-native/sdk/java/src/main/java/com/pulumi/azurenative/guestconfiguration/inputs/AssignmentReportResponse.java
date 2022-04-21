@@ -23,10 +23,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="assignment")
-      private final @Nullable AssignmentInfoResponse assignment;
+    private @Nullable AssignmentInfoResponse assignment;
 
     public Optional<AssignmentInfoResponse> assignment() {
-        return this.assignment == null ? Optional.empty() : Optional.ofNullable(this.assignment);
+        return Optional.ofNullable(this.assignment);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="complianceStatus", required=true)
-      private final String complianceStatus;
+    private String complianceStatus;
 
     public String complianceStatus() {
         return this.complianceStatus;
@@ -45,7 +45,7 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -56,7 +56,7 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -67,7 +67,7 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="operationType", required=true)
-      private final String operationType;
+    private String operationType;
 
     public String operationType() {
         return this.operationType;
@@ -78,7 +78,7 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="reportId", required=true)
-      private final String reportId;
+    private String reportId;
 
     public String reportId() {
         return this.reportId;
@@ -89,10 +89,10 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resources")
-      private final @Nullable List<AssignmentReportResourceResponse> resources;
+    private @Nullable List<AssignmentReportResourceResponse> resources;
 
-    public List<AssignmentReportResourceResponse> resources() {
-        return this.resources == null ? List.of() : this.resources;
+    public Optional<List<AssignmentReportResourceResponse>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -111,121 +111,102 @@ public final class AssignmentReportResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="vm")
-      private final @Nullable VMInfoResponse vm;
+    private @Nullable VMInfoResponse vm;
 
     public Optional<VMInfoResponse> vm() {
-        return this.vm == null ? Optional.empty() : Optional.ofNullable(this.vm);
+        return Optional.ofNullable(this.vm);
     }
 
-    public AssignmentReportResponse(
-        @Nullable AssignmentInfoResponse assignment,
-        String complianceStatus,
-        String endTime,
-        String id,
-        String operationType,
-        String reportId,
-        @Nullable List<AssignmentReportResourceResponse> resources,
-        String startTime,
-        @Nullable VMInfoResponse vm) {
-        this.assignment = assignment;
-        this.complianceStatus = Objects.requireNonNull(complianceStatus, "expected parameter 'complianceStatus' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.operationType = Objects.requireNonNull(operationType, "expected parameter 'operationType' to be non-null");
-        this.reportId = Objects.requireNonNull(reportId, "expected parameter 'reportId' to be non-null");
-        this.resources = resources;
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.vm = vm;
-    }
+    private AssignmentReportResponse() {}
 
-    private AssignmentReportResponse() {
-        this.assignment = null;
-        this.complianceStatus = null;
-        this.endTime = null;
-        this.id = null;
-        this.operationType = null;
-        this.reportId = null;
-        this.resources = List.of();
-        this.startTime = null;
-        this.vm = null;
+    private AssignmentReportResponse(AssignmentReportResponse $) {
+        this.assignment = $.assignment;
+        this.complianceStatus = $.complianceStatus;
+        this.endTime = $.endTime;
+        this.id = $.id;
+        this.operationType = $.operationType;
+        this.reportId = $.reportId;
+        this.resources = $.resources;
+        this.startTime = $.startTime;
+        this.vm = $.vm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentReportResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AssignmentInfoResponse assignment;
-        private String complianceStatus;
-        private String endTime;
-        private String id;
-        private String operationType;
-        private String reportId;
-        private @Nullable List<AssignmentReportResourceResponse> resources;
-        private String startTime;
-        private @Nullable VMInfoResponse vm;
+        private AssignmentReportResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentReportResponse();
         }
 
         public Builder(AssignmentReportResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignment = defaults.assignment;
-    	      this.complianceStatus = defaults.complianceStatus;
-    	      this.endTime = defaults.endTime;
-    	      this.id = defaults.id;
-    	      this.operationType = defaults.operationType;
-    	      this.reportId = defaults.reportId;
-    	      this.resources = defaults.resources;
-    	      this.startTime = defaults.startTime;
-    	      this.vm = defaults.vm;
+            $ = new AssignmentReportResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignment(@Nullable AssignmentInfoResponse assignment) {
-            this.assignment = assignment;
+            $.assignment = assignment;
             return this;
         }
+
         public Builder complianceStatus(String complianceStatus) {
-            this.complianceStatus = Objects.requireNonNull(complianceStatus);
+            $.complianceStatus = complianceStatus;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder operationType(String operationType) {
-            this.operationType = Objects.requireNonNull(operationType);
+            $.operationType = operationType;
             return this;
         }
+
         public Builder reportId(String reportId) {
-            this.reportId = Objects.requireNonNull(reportId);
+            $.reportId = reportId;
             return this;
         }
+
         public Builder resources(@Nullable List<AssignmentReportResourceResponse> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(AssignmentReportResourceResponse... resources) {
             return resources(List.of(resources));
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder vm(@Nullable VMInfoResponse vm) {
-            this.vm = vm;
+            $.vm = vm;
             return this;
-        }        public AssignmentReportResponse build() {
-            return new AssignmentReportResponse(assignment, complianceStatus, endTime, id, operationType, reportId, resources, startTime, vm);
+        }
+
+        public AssignmentReportResponse build() {
+            $.complianceStatus = Objects.requireNonNull($.complianceStatus, "expected parameter 'complianceStatus' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.operationType = Objects.requireNonNull($.operationType, "expected parameter 'operationType' to be non-null");
+            $.reportId = Objects.requireNonNull($.reportId, "expected parameter 'reportId' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

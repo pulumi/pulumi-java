@@ -26,10 +26,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
      * 
      */
     @Import(name="encryptionConfiguration")
-      private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
+    private @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
 
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
      * 
      */
     @Import(name="endpointsConfiguration")
-      private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
+    private @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
 
     public Optional<FlowEndpointsConfigurationResponse> endpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointsConfiguration);
+        return Optional.ofNullable(this.endpointsConfiguration);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
      * 
      */
     @Import(name="integrationServiceEnvironmentId")
-      private final @Nullable String integrationServiceEnvironmentId;
+    private @Nullable String integrationServiceEnvironmentId;
 
     public Optional<String> integrationServiceEnvironmentId() {
-        return this.integrationServiceEnvironmentId == null ? Optional.empty() : Optional.ofNullable(this.integrationServiceEnvironmentId);
+        return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
      * 
      */
     @Import(name="networkConfiguration")
-      private final @Nullable NetworkConfigurationResponse networkConfiguration;
+    private @Nullable NetworkConfigurationResponse networkConfiguration;
 
     public Optional<NetworkConfigurationResponse> networkConfiguration() {
-        return this.networkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.networkConfiguration);
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public IntegrationServiceEnvironmentPropertiesResponse(
-        @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
-        @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
-        @Nullable String integrationServiceEnvironmentId,
-        @Nullable NetworkConfigurationResponse networkConfiguration,
-        @Nullable String provisioningState,
-        @Nullable String state) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.endpointsConfiguration = endpointsConfiguration;
-        this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
-        this.networkConfiguration = networkConfiguration;
-        this.provisioningState = provisioningState;
-        this.state = state;
-    }
+    private IntegrationServiceEnvironmentPropertiesResponse() {}
 
-    private IntegrationServiceEnvironmentPropertiesResponse() {
-        this.encryptionConfiguration = null;
-        this.endpointsConfiguration = null;
-        this.integrationServiceEnvironmentId = null;
-        this.networkConfiguration = null;
-        this.provisioningState = null;
-        this.state = null;
+    private IntegrationServiceEnvironmentPropertiesResponse(IntegrationServiceEnvironmentPropertiesResponse $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.endpointsConfiguration = $.endpointsConfiguration;
+        this.integrationServiceEnvironmentId = $.integrationServiceEnvironmentId;
+        this.networkConfiguration = $.networkConfiguration;
+        this.provisioningState = $.provisioningState;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
-        private @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
-        private @Nullable String integrationServiceEnvironmentId;
-        private @Nullable NetworkConfigurationResponse networkConfiguration;
-        private @Nullable String provisioningState;
-        private @Nullable String state;
+        private IntegrationServiceEnvironmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentPropertiesResponse();
         }
 
         public Builder(IntegrationServiceEnvironmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.endpointsConfiguration = defaults.endpointsConfiguration;
-    	      this.integrationServiceEnvironmentId = defaults.integrationServiceEnvironmentId;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.state = defaults.state;
+            $ = new IntegrationServiceEnvironmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
+
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
-            this.endpointsConfiguration = endpointsConfiguration;
+            $.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
+
         public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
-            this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
+            $.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
+
         public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public IntegrationServiceEnvironmentPropertiesResponse build() {
-            return new IntegrationServiceEnvironmentPropertiesResponse(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);
+        }
+
+        public IntegrationServiceEnvironmentPropertiesResponse build() {
+            return $;
         }
     }
+
 }

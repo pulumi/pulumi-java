@@ -21,7 +21,7 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
@@ -32,55 +32,52 @@ public final class ValidationErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public ValidationErrorResponse(
-        String severity,
-        String text) {
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private ValidationErrorResponse() {}
 
-    private ValidationErrorResponse() {
-        this.severity = null;
-        this.text = null;
+    private ValidationErrorResponse(ValidationErrorResponse $) {
+        this.severity = $.severity;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String severity;
-        private String text;
+        private ValidationErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationErrorResponse();
         }
 
         public Builder(ValidationErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.severity = defaults.severity;
-    	      this.text = defaults.text;
+            $ = new ValidationErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public ValidationErrorResponse build() {
-            return new ValidationErrorResponse(severity, text);
+        }
+
+        public ValidationErrorResponse build() {
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

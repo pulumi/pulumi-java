@@ -17,7 +17,7 @@ public final class GetApiTagDescriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiTagDescriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetApiTagDescriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -50,73 +50,66 @@ public final class GetApiTagDescriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tagDescriptionId", required=true)
-      private final String tagDescriptionId;
+    private String tagDescriptionId;
 
     public String tagDescriptionId() {
         return this.tagDescriptionId;
     }
 
-    public GetApiTagDescriptionArgs(
-        String apiId,
-        String resourceGroupName,
-        String serviceName,
-        String tagDescriptionId) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tagDescriptionId = Objects.requireNonNull(tagDescriptionId, "expected parameter 'tagDescriptionId' to be non-null");
-    }
+    private GetApiTagDescriptionArgs() {}
 
-    private GetApiTagDescriptionArgs() {
-        this.apiId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.tagDescriptionId = null;
+    private GetApiTagDescriptionArgs(GetApiTagDescriptionArgs $) {
+        this.apiId = $.apiId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.tagDescriptionId = $.tagDescriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiTagDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String resourceGroupName;
-        private String serviceName;
-        private String tagDescriptionId;
+        private GetApiTagDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiTagDescriptionArgs();
         }
 
         public Builder(GetApiTagDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tagDescriptionId = defaults.tagDescriptionId;
+            $ = new GetApiTagDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder tagDescriptionId(String tagDescriptionId) {
-            this.tagDescriptionId = Objects.requireNonNull(tagDescriptionId);
+            $.tagDescriptionId = tagDescriptionId;
             return this;
-        }        public GetApiTagDescriptionArgs build() {
-            return new GetApiTagDescriptionArgs(apiId, resourceGroupName, serviceName, tagDescriptionId);
+        }
+
+        public GetApiTagDescriptionArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.tagDescriptionId = Objects.requireNonNull($.tagDescriptionId, "expected parameter 'tagDescriptionId' to be non-null");
+            return $;
         }
     }
+
 }

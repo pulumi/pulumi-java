@@ -5,10 +5,10 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,10 +36,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<String> parameters;
+    private @Nullable Output<String> parameters;
 
-    public Output<String> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roles", required=true)
-      private final Output<Object> roles;
+    private Output<Object> roles;
 
     public Output<Object> roles() {
         return this.roles;
@@ -58,89 +58,81 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public ScriptActionArgs(
-        Output<String> name,
-        @Nullable Output<String> parameters,
-        Output<Object> roles,
-        Output<String> uri) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.roles = Objects.requireNonNull(roles, "expected parameter 'roles' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ScriptActionArgs() {}
 
-    private ScriptActionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ScriptActionArgs(ScriptActionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.roles = $.roles;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> parameters;
-        private Output<Object> roles;
-        private Output<String> uri;
+        private ScriptActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptActionArgs();
         }
 
         public Builder(ScriptActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.roles = defaults.roles;
-    	      this.uri = defaults.uri;
+            $ = new ScriptActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable String parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(String parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder roles(Output<Object> roles) {
-            this.roles = Objects.requireNonNull(roles);
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(Object roles) {
-            this.roles = Output.of(Objects.requireNonNull(roles));
-            return this;
+            return roles(Output.of(roles));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public ScriptActionArgs build() {
-            return new ScriptActionArgs(name, parameters, roles, uri);
+            return uri(Output.of(uri));
+        }
+
+        public ScriptActionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.roles = Objects.requireNonNull($.roles, "expected parameter 'roles' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

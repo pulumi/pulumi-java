@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="factoryName", required=true)
-      private final Output<String> factoryName;
+    private Output<String> factoryName;
 
     public Output<String> factoryName() {
         return this.factoryName;
@@ -31,10 +31,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="managedPrivateEndpointName")
-      private final @Nullable Output<String> managedPrivateEndpointName;
+    private @Nullable Output<String> managedPrivateEndpointName;
 
-    public Output<String> managedPrivateEndpointName() {
-        return this.managedPrivateEndpointName == null ? Codegen.empty() : this.managedPrivateEndpointName;
+    public Optional<Output<String>> managedPrivateEndpointName() {
+        return Optional.ofNullable(this.managedPrivateEndpointName);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="managedVirtualNetworkName", required=true)
-      private final Output<String> managedVirtualNetworkName;
+    private Output<String> managedVirtualNetworkName;
 
     public Output<String> managedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
@@ -53,7 +53,7 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
+    private Output<com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
 
     public Output<com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties() {
         return this.properties;
@@ -64,102 +64,92 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagedPrivateEndpointArgs(
-        Output<String> factoryName,
-        @Nullable Output<String> managedPrivateEndpointName,
-        Output<String> managedVirtualNetworkName,
-        Output<com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties,
-        Output<String> resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.managedPrivateEndpointName = managedPrivateEndpointName;
-        this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName, "expected parameter 'managedVirtualNetworkName' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagedPrivateEndpointArgs() {}
 
-    private ManagedPrivateEndpointArgs() {
-        this.factoryName = Codegen.empty();
-        this.managedPrivateEndpointName = Codegen.empty();
-        this.managedVirtualNetworkName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagedPrivateEndpointArgs(ManagedPrivateEndpointArgs $) {
+        this.factoryName = $.factoryName;
+        this.managedPrivateEndpointName = $.managedPrivateEndpointName;
+        this.managedVirtualNetworkName = $.managedVirtualNetworkName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> factoryName;
-        private @Nullable Output<String> managedPrivateEndpointName;
-        private Output<String> managedVirtualNetworkName;
-        private Output<com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
-        private Output<String> resourceGroupName;
+        private ManagedPrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrivateEndpointArgs();
         }
 
         public Builder(ManagedPrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.managedPrivateEndpointName = defaults.managedPrivateEndpointName;
-    	      this.managedVirtualNetworkName = defaults.managedVirtualNetworkName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(Output<String> factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
-            return this;
+            return factoryName(Output.of(factoryName));
         }
+
         public Builder managedPrivateEndpointName(@Nullable Output<String> managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = managedPrivateEndpointName;
+            $.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
-        public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = Codegen.ofNullable(managedPrivateEndpointName);
-            return this;
+
+        public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
+            return managedPrivateEndpointName(Output.of(managedPrivateEndpointName));
         }
+
         public Builder managedVirtualNetworkName(Output<String> managedVirtualNetworkName) {
-            this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName);
+            $.managedVirtualNetworkName = managedVirtualNetworkName;
             return this;
         }
+
         public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
-            this.managedVirtualNetworkName = Output.of(Objects.requireNonNull(managedVirtualNetworkName));
-            return this;
+            return managedVirtualNetworkName(Output.of(managedVirtualNetworkName));
         }
+
         public Builder properties(Output<com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(com.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagedPrivateEndpointArgs build() {
-            return new ManagedPrivateEndpointArgs(factoryName, managedPrivateEndpointName, managedVirtualNetworkName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagedPrivateEndpointArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.managedVirtualNetworkName = Objects.requireNonNull($.managedVirtualNetworkName, "expected parameter 'managedVirtualNetworkName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

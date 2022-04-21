@@ -6,8 +6,8 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.inputs.TaskPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
      * 
      */
     @Import(name="postTask")
-      private final @Nullable Output<TaskPropertiesArgs> postTask;
+    private @Nullable Output<TaskPropertiesArgs> postTask;
 
-    public Output<TaskPropertiesArgs> postTask() {
-        return this.postTask == null ? Codegen.empty() : this.postTask;
+    public Optional<Output<TaskPropertiesArgs>> postTask() {
+        return Optional.ofNullable(this.postTask);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SoftwareUpdateConfigurationTasksArgs extends com.pulumi.resou
      * 
      */
     @Import(name="preTask")
-      private final @Nullable Output<TaskPropertiesArgs> preTask;
+    private @Nullable Output<TaskPropertiesArgs> preTask;
 
-    public Output<TaskPropertiesArgs> preTask() {
-        return this.preTask == null ? Codegen.empty() : this.preTask;
+    public Optional<Output<TaskPropertiesArgs>> preTask() {
+        return Optional.ofNullable(this.preTask);
     }
 
-    public SoftwareUpdateConfigurationTasksArgs(
-        @Nullable Output<TaskPropertiesArgs> postTask,
-        @Nullable Output<TaskPropertiesArgs> preTask) {
-        this.postTask = postTask;
-        this.preTask = preTask;
-    }
+    private SoftwareUpdateConfigurationTasksArgs() {}
 
-    private SoftwareUpdateConfigurationTasksArgs() {
-        this.postTask = Codegen.empty();
-        this.preTask = Codegen.empty();
+    private SoftwareUpdateConfigurationTasksArgs(SoftwareUpdateConfigurationTasksArgs $) {
+        this.postTask = $.postTask;
+        this.preTask = $.preTask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareUpdateConfigurationTasksArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaskPropertiesArgs> postTask;
-        private @Nullable Output<TaskPropertiesArgs> preTask;
+        private SoftwareUpdateConfigurationTasksArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareUpdateConfigurationTasksArgs();
         }
 
         public Builder(SoftwareUpdateConfigurationTasksArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postTask = defaults.postTask;
-    	      this.preTask = defaults.preTask;
+            $ = new SoftwareUpdateConfigurationTasksArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder postTask(@Nullable Output<TaskPropertiesArgs> postTask) {
-            this.postTask = postTask;
+            $.postTask = postTask;
             return this;
         }
-        public Builder postTask(@Nullable TaskPropertiesArgs postTask) {
-            this.postTask = Codegen.ofNullable(postTask);
-            return this;
+
+        public Builder postTask(TaskPropertiesArgs postTask) {
+            return postTask(Output.of(postTask));
         }
+
         public Builder preTask(@Nullable Output<TaskPropertiesArgs> preTask) {
-            this.preTask = preTask;
+            $.preTask = preTask;
             return this;
         }
-        public Builder preTask(@Nullable TaskPropertiesArgs preTask) {
-            this.preTask = Codegen.ofNullable(preTask);
-            return this;
-        }        public SoftwareUpdateConfigurationTasksArgs build() {
-            return new SoftwareUpdateConfigurationTasksArgs(postTask, preTask);
+
+        public Builder preTask(TaskPropertiesArgs preTask) {
+            return preTask(Output.of(preTask));
+        }
+
+        public SoftwareUpdateConfigurationTasksArgs build() {
+            return $;
         }
     }
+
 }

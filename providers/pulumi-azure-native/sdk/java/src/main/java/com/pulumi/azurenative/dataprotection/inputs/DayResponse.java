@@ -24,10 +24,10 @@ public final class DayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="date")
-      private final @Nullable Integer date;
+    private @Nullable Integer date;
 
     public Optional<Integer> date() {
-        return this.date == null ? Optional.empty() : Optional.ofNullable(this.date);
+        return Optional.ofNullable(this.date);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isLast")
-      private final @Nullable Boolean isLast;
+    private @Nullable Boolean isLast;
 
     public Optional<Boolean> isLast() {
-        return this.isLast == null ? Optional.empty() : Optional.ofNullable(this.isLast);
+        return Optional.ofNullable(this.isLast);
     }
 
-    public DayResponse(
-        @Nullable Integer date,
-        @Nullable Boolean isLast) {
-        this.date = date;
-        this.isLast = isLast;
-    }
+    private DayResponse() {}
 
-    private DayResponse() {
-        this.date = null;
-        this.isLast = null;
+    private DayResponse(DayResponse $) {
+        this.date = $.date;
+        this.isLast = $.isLast;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer date;
-        private @Nullable Boolean isLast;
+        private DayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DayResponse();
         }
 
         public Builder(DayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.date = defaults.date;
-    	      this.isLast = defaults.isLast;
+            $ = new DayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder date(@Nullable Integer date) {
-            this.date = date;
+            $.date = date;
             return this;
         }
+
         public Builder isLast(@Nullable Boolean isLast) {
-            this.isLast = isLast;
+            $.isLast = isLast;
             return this;
-        }        public DayResponse build() {
-            return new DayResponse(date, isLast);
+        }
+
+        public DayResponse build() {
+            return $;
         }
     }
+
 }

@@ -12,10 +12,10 @@ import com.pulumi.azurenative.machinelearningcompute.inputs.StorageAccountProper
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="appInsights")
-      private final @Nullable Output<AppInsightsPropertiesArgs> appInsights;
+    private @Nullable Output<AppInsightsPropertiesArgs> appInsights;
 
-    public Output<AppInsightsPropertiesArgs> appInsights() {
-        return this.appInsights == null ? Codegen.empty() : this.appInsights;
+    public Optional<Output<AppInsightsPropertiesArgs>> appInsights() {
+        return Optional.ofNullable(this.appInsights);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterType", required=true)
-      private final Output<Either<String,ClusterType>> clusterType;
+    private Output<Either<String,ClusterType>> clusterType;
 
     public Output<Either<String,ClusterType>> clusterType() {
         return this.clusterType;
@@ -61,10 +61,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="containerRegistry")
-      private final @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
+    private @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
 
-    public Output<ContainerRegistryPropertiesArgs> containerRegistry() {
-        return this.containerRegistry == null ? Codegen.empty() : this.containerRegistry;
+    public Optional<Output<ContainerRegistryPropertiesArgs>> containerRegistry() {
+        return Optional.ofNullable(this.containerRegistry);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="containerService")
-      private final @Nullable Output<AcsClusterPropertiesArgs> containerService;
+    private @Nullable Output<AcsClusterPropertiesArgs> containerService;
 
-    public Output<AcsClusterPropertiesArgs> containerService() {
-        return this.containerService == null ? Codegen.empty() : this.containerService;
+    public Optional<Output<AcsClusterPropertiesArgs>> containerService() {
+        return Optional.ofNullable(this.containerService);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="globalServiceConfiguration")
-      private final @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
+    private @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
-    public Output<GlobalServiceConfigurationArgs> globalServiceConfiguration() {
-        return this.globalServiceConfiguration == null ? Codegen.empty() : this.globalServiceConfiguration;
+    public Optional<Output<GlobalServiceConfigurationArgs>> globalServiceConfiguration() {
+        return Optional.ofNullable(this.globalServiceConfiguration);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -127,10 +127,10 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
+    private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Output<StorageAccountPropertiesArgs> storageAccount() {
-        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
+    public Optional<Output<StorageAccountPropertiesArgs>> storageAccount() {
+        return Optional.ofNullable(this.storageAccount);
     }
 
     /**
@@ -138,180 +138,150 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public OperationalizationClusterArgs(
-        @Nullable Output<AppInsightsPropertiesArgs> appInsights,
-        @Nullable Output<String> clusterName,
-        Output<Either<String,ClusterType>> clusterType,
-        @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry,
-        @Nullable Output<AcsClusterPropertiesArgs> containerService,
-        @Nullable Output<String> description,
-        @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<StorageAccountPropertiesArgs> storageAccount,
-        @Nullable Output<Map<String,String>> tags) {
-        this.appInsights = appInsights;
-        this.clusterName = clusterName;
-        this.clusterType = Objects.requireNonNull(clusterType, "expected parameter 'clusterType' to be non-null");
-        this.containerRegistry = containerRegistry;
-        this.containerService = containerService;
-        this.description = description;
-        this.globalServiceConfiguration = globalServiceConfiguration;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccount = storageAccount;
-        this.tags = tags;
-    }
+    private OperationalizationClusterArgs() {}
 
-    private OperationalizationClusterArgs() {
-        this.appInsights = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.clusterType = Codegen.empty();
-        this.containerRegistry = Codegen.empty();
-        this.containerService = Codegen.empty();
-        this.description = Codegen.empty();
-        this.globalServiceConfiguration = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccount = Codegen.empty();
-        this.tags = Codegen.empty();
+    private OperationalizationClusterArgs(OperationalizationClusterArgs $) {
+        this.appInsights = $.appInsights;
+        this.clusterName = $.clusterName;
+        this.clusterType = $.clusterType;
+        this.containerRegistry = $.containerRegistry;
+        this.containerService = $.containerService;
+        this.description = $.description;
+        this.globalServiceConfiguration = $.globalServiceConfiguration;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccount = $.storageAccount;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationalizationClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppInsightsPropertiesArgs> appInsights;
-        private @Nullable Output<String> clusterName;
-        private Output<Either<String,ClusterType>> clusterType;
-        private @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
-        private @Nullable Output<AcsClusterPropertiesArgs> containerService;
-        private @Nullable Output<String> description;
-        private @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
-        private @Nullable Output<Map<String,String>> tags;
+        private OperationalizationClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationalizationClusterArgs();
         }
 
         public Builder(OperationalizationClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInsights = defaults.appInsights;
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterType = defaults.clusterType;
-    	      this.containerRegistry = defaults.containerRegistry;
-    	      this.containerService = defaults.containerService;
-    	      this.description = defaults.description;
-    	      this.globalServiceConfiguration = defaults.globalServiceConfiguration;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.tags = defaults.tags;
+            $ = new OperationalizationClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appInsights(@Nullable Output<AppInsightsPropertiesArgs> appInsights) {
-            this.appInsights = appInsights;
+            $.appInsights = appInsights;
             return this;
         }
-        public Builder appInsights(@Nullable AppInsightsPropertiesArgs appInsights) {
-            this.appInsights = Codegen.ofNullable(appInsights);
-            return this;
+
+        public Builder appInsights(AppInsightsPropertiesArgs appInsights) {
+            return appInsights(Output.of(appInsights));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder clusterType(Output<Either<String,ClusterType>> clusterType) {
-            this.clusterType = Objects.requireNonNull(clusterType);
+            $.clusterType = clusterType;
             return this;
         }
+
         public Builder clusterType(Either<String,ClusterType> clusterType) {
-            this.clusterType = Output.of(Objects.requireNonNull(clusterType));
-            return this;
+            return clusterType(Output.of(clusterType));
         }
+
         public Builder containerRegistry(@Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry) {
-            this.containerRegistry = containerRegistry;
+            $.containerRegistry = containerRegistry;
             return this;
         }
-        public Builder containerRegistry(@Nullable ContainerRegistryPropertiesArgs containerRegistry) {
-            this.containerRegistry = Codegen.ofNullable(containerRegistry);
-            return this;
+
+        public Builder containerRegistry(ContainerRegistryPropertiesArgs containerRegistry) {
+            return containerRegistry(Output.of(containerRegistry));
         }
+
         public Builder containerService(@Nullable Output<AcsClusterPropertiesArgs> containerService) {
-            this.containerService = containerService;
+            $.containerService = containerService;
             return this;
         }
-        public Builder containerService(@Nullable AcsClusterPropertiesArgs containerService) {
-            this.containerService = Codegen.ofNullable(containerService);
-            return this;
+
+        public Builder containerService(AcsClusterPropertiesArgs containerService) {
+            return containerService(Output.of(containerService));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalServiceConfiguration(@Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
-            this.globalServiceConfiguration = globalServiceConfiguration;
+            $.globalServiceConfiguration = globalServiceConfiguration;
             return this;
         }
-        public Builder globalServiceConfiguration(@Nullable GlobalServiceConfigurationArgs globalServiceConfiguration) {
-            this.globalServiceConfiguration = Codegen.ofNullable(globalServiceConfiguration);
-            return this;
+
+        public Builder globalServiceConfiguration(GlobalServiceConfigurationArgs globalServiceConfiguration) {
+            return globalServiceConfiguration(Output.of(globalServiceConfiguration));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
         }
-        public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Codegen.ofNullable(storageAccount);
-            return this;
+
+        public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
+            return storageAccount(Output.of(storageAccount));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public OperationalizationClusterArgs build() {
-            return new OperationalizationClusterArgs(appInsights, clusterName, clusterType, containerRegistry, containerService, description, globalServiceConfiguration, location, resourceGroupName, storageAccount, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public OperationalizationClusterArgs build() {
+            $.clusterType = Objects.requireNonNull($.clusterType, "expected parameter 'clusterType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="permissions", required=true)
-      private final String permissions;
+    private String permissions;
 
     public String permissions() {
         return this.permissions;
@@ -28,7 +28,7 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -39,64 +39,59 @@ public final class PermissionScopeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public PermissionScopeResponse(
-        String permissions,
-        String resourceName,
-        String service) {
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private PermissionScopeResponse() {}
 
-    private PermissionScopeResponse() {
-        this.permissions = null;
-        this.resourceName = null;
-        this.service = null;
+    private PermissionScopeResponse(PermissionScopeResponse $) {
+        this.permissions = $.permissions;
+        this.resourceName = $.resourceName;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String permissions;
-        private String resourceName;
-        private String service;
+        private PermissionScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionScopeResponse();
         }
 
         public Builder(PermissionScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
-    	      this.resourceName = defaults.resourceName;
-    	      this.service = defaults.service;
+            $ = new PermissionScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public PermissionScopeResponse build() {
-            return new PermissionScopeResponse(permissions, resourceName, service);
+        }
+
+        public PermissionScopeResponse build() {
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

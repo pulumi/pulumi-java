@@ -25,7 +25,7 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -36,10 +36,10 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="primaryZone")
-      private final @Nullable String primaryZone;
+    private @Nullable String primaryZone;
 
     public Optional<String> primaryZone() {
-        return this.primaryZone == null ? Optional.empty() : Optional.ofNullable(this.primaryZone);
+        return Optional.ofNullable(this.primaryZone);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryZone")
-      private final @Nullable String recoveryZone;
+    private @Nullable String recoveryZone;
 
     public Optional<String> recoveryZone() {
-        return this.recoveryZone == null ? Optional.empty() : Optional.ofNullable(this.recoveryZone);
+        return Optional.ofNullable(this.recoveryZone);
     }
 
-    public RecoveryPlanA2ADetailsResponse(
-        String instanceType,
-        @Nullable String primaryZone,
-        @Nullable String recoveryZone) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.primaryZone = primaryZone;
-        this.recoveryZone = recoveryZone;
-    }
+    private RecoveryPlanA2ADetailsResponse() {}
 
-    private RecoveryPlanA2ADetailsResponse() {
-        this.instanceType = null;
-        this.primaryZone = null;
-        this.recoveryZone = null;
+    private RecoveryPlanA2ADetailsResponse(RecoveryPlanA2ADetailsResponse $) {
+        this.instanceType = $.instanceType;
+        this.primaryZone = $.primaryZone;
+        this.recoveryZone = $.recoveryZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanA2ADetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
-        private @Nullable String primaryZone;
-        private @Nullable String recoveryZone;
+        private RecoveryPlanA2ADetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanA2ADetailsResponse();
         }
 
         public Builder(RecoveryPlanA2ADetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.primaryZone = defaults.primaryZone;
-    	      this.recoveryZone = defaults.recoveryZone;
+            $ = new RecoveryPlanA2ADetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder primaryZone(@Nullable String primaryZone) {
-            this.primaryZone = primaryZone;
+            $.primaryZone = primaryZone;
             return this;
         }
+
         public Builder recoveryZone(@Nullable String recoveryZone) {
-            this.recoveryZone = recoveryZone;
+            $.recoveryZone = recoveryZone;
             return this;
-        }        public RecoveryPlanA2ADetailsResponse build() {
-            return new RecoveryPlanA2ADetailsResponse(instanceType, primaryZone, recoveryZone);
+        }
+
+        public RecoveryPlanA2ADetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

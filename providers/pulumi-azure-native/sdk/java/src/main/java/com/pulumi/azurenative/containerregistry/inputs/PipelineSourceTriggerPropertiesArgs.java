@@ -21,49 +21,49 @@ public final class PipelineSourceTriggerPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,TriggerStatus>> status;
+    private Output<Either<String,TriggerStatus>> status;
 
     public Output<Either<String,TriggerStatus>> status() {
         return this.status;
     }
 
-    public PipelineSourceTriggerPropertiesArgs(Output<Either<String,TriggerStatus>> status) {
-        this.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg(status).def("Enabled").require();
-    }
+    private PipelineSourceTriggerPropertiesArgs() {}
 
-    private PipelineSourceTriggerPropertiesArgs() {
-        this.status = Codegen.empty();
+    private PipelineSourceTriggerPropertiesArgs(PipelineSourceTriggerPropertiesArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineSourceTriggerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,TriggerStatus>> status;
+        private PipelineSourceTriggerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineSourceTriggerPropertiesArgs();
         }
 
         public Builder(PipelineSourceTriggerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new PipelineSourceTriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<Either<String,TriggerStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,TriggerStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public PipelineSourceTriggerPropertiesArgs build() {
-            return new PipelineSourceTriggerPropertiesArgs(status);
+            return status(Output.of(status));
+        }
+
+        public PipelineSourceTriggerPropertiesArgs build() {
+            $.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg($.status).def("Enabled").require();
+            return $;
         }
     }
+
 }

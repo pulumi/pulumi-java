@@ -17,7 +17,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * 
      */
     @Import(name="functionAppName", required=true)
-      private final String functionAppName;
+    private String functionAppName;
 
     public String functionAppName() {
         return this.functionAppName;
@@ -28,7 +28,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs(
-        String functionAppName,
-        String name,
-        String resourceGroupName) {
-        this.functionAppName = Objects.requireNonNull(functionAppName, "expected parameter 'functionAppName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs() {}
 
-    private GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs() {
-        this.functionAppName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs $) {
+        this.functionAppName = $.functionAppName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionAppName;
-        private String name;
-        private String resourceGroupName;
+        private GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs();
         }
 
         public Builder(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionAppName = defaults.functionAppName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionAppName(String functionAppName) {
-            this.functionAppName = Objects.requireNonNull(functionAppName);
+            $.functionAppName = functionAppName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs build() {
-            return new GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs(functionAppName, name, resourceGroupName);
+        }
+
+        public GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs build() {
+            $.functionAppName = Objects.requireNonNull($.functionAppName, "expected parameter 'functionAppName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

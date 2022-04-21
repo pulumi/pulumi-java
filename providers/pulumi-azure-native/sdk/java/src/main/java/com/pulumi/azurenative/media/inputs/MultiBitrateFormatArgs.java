@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filenamePattern", required=true)
-      private final Output<String> filenamePattern;
+    private Output<String> filenamePattern;
 
     public Output<String> filenamePattern() {
         return this.filenamePattern;
@@ -38,7 +39,7 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -49,79 +50,74 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="outputFiles")
-      private final @Nullable Output<List<OutputFileArgs>> outputFiles;
+    private @Nullable Output<List<OutputFileArgs>> outputFiles;
 
-    public Output<List<OutputFileArgs>> outputFiles() {
-        return this.outputFiles == null ? Codegen.empty() : this.outputFiles;
+    public Optional<Output<List<OutputFileArgs>>> outputFiles() {
+        return Optional.ofNullable(this.outputFiles);
     }
 
-    public MultiBitrateFormatArgs(
-        Output<String> filenamePattern,
-        Output<String> odataType,
-        @Nullable Output<List<OutputFileArgs>> outputFiles) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.outputFiles = outputFiles;
-    }
+    private MultiBitrateFormatArgs() {}
 
-    private MultiBitrateFormatArgs() {
-        this.filenamePattern = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.outputFiles = Codegen.empty();
+    private MultiBitrateFormatArgs(MultiBitrateFormatArgs $) {
+        this.filenamePattern = $.filenamePattern;
+        this.odataType = $.odataType;
+        this.outputFiles = $.outputFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiBitrateFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filenamePattern;
-        private Output<String> odataType;
-        private @Nullable Output<List<OutputFileArgs>> outputFiles;
+        private MultiBitrateFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiBitrateFormatArgs();
         }
 
         public Builder(MultiBitrateFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filenamePattern = defaults.filenamePattern;
-    	      this.odataType = defaults.odataType;
-    	      this.outputFiles = defaults.outputFiles;
+            $ = new MultiBitrateFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filenamePattern(Output<String> filenamePattern) {
-            this.filenamePattern = Objects.requireNonNull(filenamePattern);
+            $.filenamePattern = filenamePattern;
             return this;
         }
+
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Output.of(Objects.requireNonNull(filenamePattern));
-            return this;
+            return filenamePattern(Output.of(filenamePattern));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder outputFiles(@Nullable Output<List<OutputFileArgs>> outputFiles) {
-            this.outputFiles = outputFiles;
+            $.outputFiles = outputFiles;
             return this;
         }
-        public Builder outputFiles(@Nullable List<OutputFileArgs> outputFiles) {
-            this.outputFiles = Codegen.ofNullable(outputFiles);
-            return this;
+
+        public Builder outputFiles(List<OutputFileArgs> outputFiles) {
+            return outputFiles(Output.of(outputFiles));
         }
+
         public Builder outputFiles(OutputFileArgs... outputFiles) {
             return outputFiles(List.of(outputFiles));
-        }        public MultiBitrateFormatArgs build() {
-            return new MultiBitrateFormatArgs(filenamePattern, odataType, outputFiles);
+        }
+
+        public MultiBitrateFormatArgs build() {
+            $.filenamePattern = Objects.requireNonNull($.filenamePattern, "expected parameter 'filenamePattern' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

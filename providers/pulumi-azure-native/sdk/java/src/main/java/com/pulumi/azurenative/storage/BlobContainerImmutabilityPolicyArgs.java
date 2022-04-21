@@ -5,11 +5,11 @@ package com.pulumi.azurenative.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="allowProtectedAppendWrites")
-      private final @Nullable Output<Boolean> allowProtectedAppendWrites;
+    private @Nullable Output<Boolean> allowProtectedAppendWrites;
 
-    public Output<Boolean> allowProtectedAppendWrites() {
-        return this.allowProtectedAppendWrites == null ? Codegen.empty() : this.allowProtectedAppendWrites;
+    public Optional<Output<Boolean>> allowProtectedAppendWrites() {
+        return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -55,10 +55,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="immutabilityPeriodSinceCreationInDays")
-      private final @Nullable Output<Integer> immutabilityPeriodSinceCreationInDays;
+    private @Nullable Output<Integer> immutabilityPeriodSinceCreationInDays;
 
-    public Output<Integer> immutabilityPeriodSinceCreationInDays() {
-        return this.immutabilityPeriodSinceCreationInDays == null ? Codegen.empty() : this.immutabilityPeriodSinceCreationInDays;
+    public Optional<Output<Integer>> immutabilityPeriodSinceCreationInDays() {
+        return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="immutabilityPolicyName")
-      private final @Nullable Output<String> immutabilityPolicyName;
+    private @Nullable Output<String> immutabilityPolicyName;
 
-    public Output<String> immutabilityPolicyName() {
-        return this.immutabilityPolicyName == null ? Codegen.empty() : this.immutabilityPolicyName;
+    public Optional<Output<String>> immutabilityPolicyName() {
+        return Optional.ofNullable(this.immutabilityPolicyName);
     }
 
     /**
@@ -77,115 +77,101 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public BlobContainerImmutabilityPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<Boolean> allowProtectedAppendWrites,
-        Output<String> containerName,
-        @Nullable Output<Integer> immutabilityPeriodSinceCreationInDays,
-        @Nullable Output<String> immutabilityPolicyName,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.allowProtectedAppendWrites = allowProtectedAppendWrites;
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
-        this.immutabilityPolicyName = immutabilityPolicyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private BlobContainerImmutabilityPolicyArgs() {}
 
-    private BlobContainerImmutabilityPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.allowProtectedAppendWrites = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.immutabilityPeriodSinceCreationInDays = Codegen.empty();
-        this.immutabilityPolicyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private BlobContainerImmutabilityPolicyArgs(BlobContainerImmutabilityPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.allowProtectedAppendWrites = $.allowProtectedAppendWrites;
+        this.containerName = $.containerName;
+        this.immutabilityPeriodSinceCreationInDays = $.immutabilityPeriodSinceCreationInDays;
+        this.immutabilityPolicyName = $.immutabilityPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobContainerImmutabilityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<Boolean> allowProtectedAppendWrites;
-        private Output<String> containerName;
-        private @Nullable Output<Integer> immutabilityPeriodSinceCreationInDays;
-        private @Nullable Output<String> immutabilityPolicyName;
-        private Output<String> resourceGroupName;
+        private BlobContainerImmutabilityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobContainerImmutabilityPolicyArgs();
         }
 
         public Builder(BlobContainerImmutabilityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.allowProtectedAppendWrites = defaults.allowProtectedAppendWrites;
-    	      this.containerName = defaults.containerName;
-    	      this.immutabilityPeriodSinceCreationInDays = defaults.immutabilityPeriodSinceCreationInDays;
-    	      this.immutabilityPolicyName = defaults.immutabilityPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new BlobContainerImmutabilityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder allowProtectedAppendWrites(@Nullable Output<Boolean> allowProtectedAppendWrites) {
-            this.allowProtectedAppendWrites = allowProtectedAppendWrites;
+            $.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
-        public Builder allowProtectedAppendWrites(@Nullable Boolean allowProtectedAppendWrites) {
-            this.allowProtectedAppendWrites = Codegen.ofNullable(allowProtectedAppendWrites);
-            return this;
+
+        public Builder allowProtectedAppendWrites(Boolean allowProtectedAppendWrites) {
+            return allowProtectedAppendWrites(Output.of(allowProtectedAppendWrites));
         }
+
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Output<Integer> immutabilityPeriodSinceCreationInDays) {
-            this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
+            $.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
-        public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
-            this.immutabilityPeriodSinceCreationInDays = Codegen.ofNullable(immutabilityPeriodSinceCreationInDays);
-            return this;
+
+        public Builder immutabilityPeriodSinceCreationInDays(Integer immutabilityPeriodSinceCreationInDays) {
+            return immutabilityPeriodSinceCreationInDays(Output.of(immutabilityPeriodSinceCreationInDays));
         }
+
         public Builder immutabilityPolicyName(@Nullable Output<String> immutabilityPolicyName) {
-            this.immutabilityPolicyName = immutabilityPolicyName;
+            $.immutabilityPolicyName = immutabilityPolicyName;
             return this;
         }
-        public Builder immutabilityPolicyName(@Nullable String immutabilityPolicyName) {
-            this.immutabilityPolicyName = Codegen.ofNullable(immutabilityPolicyName);
-            return this;
+
+        public Builder immutabilityPolicyName(String immutabilityPolicyName) {
+            return immutabilityPolicyName(Output.of(immutabilityPolicyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public BlobContainerImmutabilityPolicyArgs build() {
-            return new BlobContainerImmutabilityPolicyArgs(accountName, allowProtectedAppendWrites, containerName, immutabilityPeriodSinceCreationInDays, immutabilityPolicyName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public BlobContainerImmutabilityPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

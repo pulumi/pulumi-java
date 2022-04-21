@@ -23,7 +23,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="authProviderX509CertUrl", required=true)
-      private final Output<String> authProviderX509CertUrl;
+    private Output<String> authProviderX509CertUrl;
 
     public Output<String> authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
@@ -34,7 +34,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="authUri", required=true)
-      private final Output<String> authUri;
+    private Output<String> authUri;
 
     public Output<String> authUri() {
         return this.authUri;
@@ -46,7 +46,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -57,7 +57,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="clientEmail", required=true)
-      private final Output<String> clientEmail;
+    private Output<String> clientEmail;
 
     public Output<String> clientEmail() {
         return this.clientEmail;
@@ -68,7 +68,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -79,7 +79,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="clientX509CertUrl", required=true)
-      private final Output<String> clientX509CertUrl;
+    private Output<String> clientX509CertUrl;
 
     public Output<String> clientX509CertUrl() {
         return this.clientX509CertUrl;
@@ -90,7 +90,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -101,7 +101,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="privateKey", required=true)
-      private final Output<String> privateKey;
+    private Output<String> privateKey;
 
     public Output<String> privateKey() {
         return this.privateKey;
@@ -112,7 +112,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="privateKeyId", required=true)
-      private final Output<String> privateKeyId;
+    private Output<String> privateKeyId;
 
     public Output<String> privateKeyId() {
         return this.privateKeyId;
@@ -123,7 +123,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="projectId", required=true)
-      private final Output<String> projectId;
+    private Output<String> projectId;
 
     public Output<String> projectId() {
         return this.projectId;
@@ -134,7 +134,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tokenUri", required=true)
-      private final Output<String> tokenUri;
+    private Output<String> tokenUri;
 
     public Output<String> tokenUri() {
         return this.tokenUri;
@@ -145,193 +145,170 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public GcpCredentialsDetailsPropertiesArgs(
-        Output<String> authProviderX509CertUrl,
-        Output<String> authUri,
-        Output<String> authenticationType,
-        Output<String> clientEmail,
-        Output<String> clientId,
-        Output<String> clientX509CertUrl,
-        Output<String> organizationId,
-        Output<String> privateKey,
-        Output<String> privateKeyId,
-        Output<String> projectId,
-        Output<String> tokenUri,
-        Output<String> type) {
-        this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
-        this.authUri = Objects.requireNonNull(authUri, "expected parameter 'authUri' to be non-null");
-        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
-        this.clientEmail = Objects.requireNonNull(clientEmail, "expected parameter 'clientEmail' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl, "expected parameter 'clientX509CertUrl' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-        this.privateKeyId = Objects.requireNonNull(privateKeyId, "expected parameter 'privateKeyId' to be non-null");
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.tokenUri = Objects.requireNonNull(tokenUri, "expected parameter 'tokenUri' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GcpCredentialsDetailsPropertiesArgs() {}
 
-    private GcpCredentialsDetailsPropertiesArgs() {
-        this.authProviderX509CertUrl = Codegen.empty();
-        this.authUri = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.clientEmail = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientX509CertUrl = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.privateKeyId = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.tokenUri = Codegen.empty();
-        this.type = Codegen.empty();
+    private GcpCredentialsDetailsPropertiesArgs(GcpCredentialsDetailsPropertiesArgs $) {
+        this.authProviderX509CertUrl = $.authProviderX509CertUrl;
+        this.authUri = $.authUri;
+        this.authenticationType = $.authenticationType;
+        this.clientEmail = $.clientEmail;
+        this.clientId = $.clientId;
+        this.clientX509CertUrl = $.clientX509CertUrl;
+        this.organizationId = $.organizationId;
+        this.privateKey = $.privateKey;
+        this.privateKeyId = $.privateKeyId;
+        this.projectId = $.projectId;
+        this.tokenUri = $.tokenUri;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcpCredentialsDetailsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authProviderX509CertUrl;
-        private Output<String> authUri;
-        private Output<String> authenticationType;
-        private Output<String> clientEmail;
-        private Output<String> clientId;
-        private Output<String> clientX509CertUrl;
-        private Output<String> organizationId;
-        private Output<String> privateKey;
-        private Output<String> privateKeyId;
-        private Output<String> projectId;
-        private Output<String> tokenUri;
-        private Output<String> type;
+        private GcpCredentialsDetailsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcpCredentialsDetailsPropertiesArgs();
         }
 
         public Builder(GcpCredentialsDetailsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authProviderX509CertUrl = defaults.authProviderX509CertUrl;
-    	      this.authUri = defaults.authUri;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.clientEmail = defaults.clientEmail;
-    	      this.clientId = defaults.clientId;
-    	      this.clientX509CertUrl = defaults.clientX509CertUrl;
-    	      this.organizationId = defaults.organizationId;
-    	      this.privateKey = defaults.privateKey;
-    	      this.privateKeyId = defaults.privateKeyId;
-    	      this.projectId = defaults.projectId;
-    	      this.tokenUri = defaults.tokenUri;
-    	      this.type = defaults.type;
+            $ = new GcpCredentialsDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authProviderX509CertUrl(Output<String> authProviderX509CertUrl) {
-            this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
+            $.authProviderX509CertUrl = authProviderX509CertUrl;
             return this;
         }
+
         public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
-            this.authProviderX509CertUrl = Output.of(Objects.requireNonNull(authProviderX509CertUrl));
-            return this;
+            return authProviderX509CertUrl(Output.of(authProviderX509CertUrl));
         }
+
         public Builder authUri(Output<String> authUri) {
-            this.authUri = Objects.requireNonNull(authUri);
+            $.authUri = authUri;
             return this;
         }
+
         public Builder authUri(String authUri) {
-            this.authUri = Output.of(Objects.requireNonNull(authUri));
-            return this;
+            return authUri(Output.of(authUri));
         }
+
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder clientEmail(Output<String> clientEmail) {
-            this.clientEmail = Objects.requireNonNull(clientEmail);
+            $.clientEmail = clientEmail;
             return this;
         }
+
         public Builder clientEmail(String clientEmail) {
-            this.clientEmail = Output.of(Objects.requireNonNull(clientEmail));
-            return this;
+            return clientEmail(Output.of(clientEmail));
         }
+
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientX509CertUrl(Output<String> clientX509CertUrl) {
-            this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
+            $.clientX509CertUrl = clientX509CertUrl;
             return this;
         }
+
         public Builder clientX509CertUrl(String clientX509CertUrl) {
-            this.clientX509CertUrl = Output.of(Objects.requireNonNull(clientX509CertUrl));
-            return this;
+            return clientX509CertUrl(Output.of(clientX509CertUrl));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder privateKey(Output<String> privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder privateKey(String privateKey) {
-            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
-            return this;
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder privateKeyId(Output<String> privateKeyId) {
-            this.privateKeyId = Objects.requireNonNull(privateKeyId);
+            $.privateKeyId = privateKeyId;
             return this;
         }
+
         public Builder privateKeyId(String privateKeyId) {
-            this.privateKeyId = Output.of(Objects.requireNonNull(privateKeyId));
-            return this;
+            return privateKeyId(Output.of(privateKeyId));
         }
+
         public Builder projectId(Output<String> projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Output.of(Objects.requireNonNull(projectId));
-            return this;
+            return projectId(Output.of(projectId));
         }
+
         public Builder tokenUri(Output<String> tokenUri) {
-            this.tokenUri = Objects.requireNonNull(tokenUri);
+            $.tokenUri = tokenUri;
             return this;
         }
+
         public Builder tokenUri(String tokenUri) {
-            this.tokenUri = Output.of(Objects.requireNonNull(tokenUri));
-            return this;
+            return tokenUri(Output.of(tokenUri));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public GcpCredentialsDetailsPropertiesArgs build() {
-            return new GcpCredentialsDetailsPropertiesArgs(authProviderX509CertUrl, authUri, authenticationType, clientEmail, clientId, clientX509CertUrl, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
+            return type(Output.of(type));
+        }
+
+        public GcpCredentialsDetailsPropertiesArgs build() {
+            $.authProviderX509CertUrl = Objects.requireNonNull($.authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
+            $.authUri = Objects.requireNonNull($.authUri, "expected parameter 'authUri' to be non-null");
+            $.authenticationType = Codegen.stringProp("authenticationType").output().arg($.authenticationType).require();
+            $.clientEmail = Objects.requireNonNull($.clientEmail, "expected parameter 'clientEmail' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientX509CertUrl = Objects.requireNonNull($.clientX509CertUrl, "expected parameter 'clientX509CertUrl' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            $.privateKeyId = Objects.requireNonNull($.privateKeyId, "expected parameter 'privateKeyId' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            $.tokenUri = Objects.requireNonNull($.tokenUri, "expected parameter 'tokenUri' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

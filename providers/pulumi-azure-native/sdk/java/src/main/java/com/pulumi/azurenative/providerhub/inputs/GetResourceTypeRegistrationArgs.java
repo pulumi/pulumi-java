@@ -17,7 +17,7 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
@@ -28,55 +28,52 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GetResourceTypeRegistrationArgs(
-        String providerNamespace,
-        String resourceType) {
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GetResourceTypeRegistrationArgs() {}
 
-    private GetResourceTypeRegistrationArgs() {
-        this.providerNamespace = null;
-        this.resourceType = null;
+    private GetResourceTypeRegistrationArgs(GetResourceTypeRegistrationArgs $) {
+        this.providerNamespace = $.providerNamespace;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceTypeRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String providerNamespace;
-        private String resourceType;
+        private GetResourceTypeRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceTypeRegistrationArgs();
         }
 
         public Builder(GetResourceTypeRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GetResourceTypeRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GetResourceTypeRegistrationArgs build() {
-            return new GetResourceTypeRegistrationArgs(providerNamespace, resourceType);
+        }
+
+        public GetResourceTypeRegistrationArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

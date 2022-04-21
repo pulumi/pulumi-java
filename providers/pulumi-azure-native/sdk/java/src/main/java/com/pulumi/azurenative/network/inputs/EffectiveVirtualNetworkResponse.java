@@ -23,10 +23,10 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="membershipType")
-      private final @Nullable String membershipType;
+    private @Nullable String membershipType;
 
     public Optional<String> membershipType() {
-        return this.membershipType == null ? Optional.empty() : Optional.ofNullable(this.membershipType);
+        return Optional.ofNullable(this.membershipType);
     }
 
-    public EffectiveVirtualNetworkResponse(
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String membershipType) {
-        this.id = id;
-        this.location = location;
-        this.membershipType = membershipType;
-    }
+    private EffectiveVirtualNetworkResponse() {}
 
-    private EffectiveVirtualNetworkResponse() {
-        this.id = null;
-        this.location = null;
-        this.membershipType = null;
+    private EffectiveVirtualNetworkResponse(EffectiveVirtualNetworkResponse $) {
+        this.id = $.id;
+        this.location = $.location;
+        this.membershipType = $.membershipType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EffectiveVirtualNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String location;
-        private @Nullable String membershipType;
+        private EffectiveVirtualNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EffectiveVirtualNetworkResponse();
         }
 
         public Builder(EffectiveVirtualNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.membershipType = defaults.membershipType;
+            $ = new EffectiveVirtualNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder membershipType(@Nullable String membershipType) {
-            this.membershipType = membershipType;
+            $.membershipType = membershipType;
             return this;
-        }        public EffectiveVirtualNetworkResponse build() {
-            return new EffectiveVirtualNetworkResponse(id, location, membershipType);
+        }
+
+        public EffectiveVirtualNetworkResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
      * 
      */
     @Import(name="peer", required=true)
-      private final String peer;
+    private String peer;
 
     public String peer() {
         return this.peer;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-      private final String virtualNetworkGatewayName;
+    private String virtualNetworkGatewayName;
 
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
-    public GetVirtualNetworkGatewayAdvertisedRoutesArgs(
-        String peer,
-        String resourceGroupName,
-        String virtualNetworkGatewayName) {
-        this.peer = Objects.requireNonNull(peer, "expected parameter 'peer' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
-    }
+    private GetVirtualNetworkGatewayAdvertisedRoutesArgs() {}
 
-    private GetVirtualNetworkGatewayAdvertisedRoutesArgs() {
-        this.peer = null;
-        this.resourceGroupName = null;
-        this.virtualNetworkGatewayName = null;
+    private GetVirtualNetworkGatewayAdvertisedRoutesArgs(GetVirtualNetworkGatewayAdvertisedRoutesArgs $) {
+        this.peer = $.peer;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkGatewayName = $.virtualNetworkGatewayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkGatewayAdvertisedRoutesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peer;
-        private String resourceGroupName;
-        private String virtualNetworkGatewayName;
+        private GetVirtualNetworkGatewayAdvertisedRoutesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkGatewayAdvertisedRoutesArgs();
         }
 
         public Builder(GetVirtualNetworkGatewayAdvertisedRoutesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peer = defaults.peer;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkGatewayName = defaults.virtualNetworkGatewayName;
+            $ = new GetVirtualNetworkGatewayAdvertisedRoutesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peer(String peer) {
-            this.peer = Objects.requireNonNull(peer);
+            $.peer = peer;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
-        }        public GetVirtualNetworkGatewayAdvertisedRoutesArgs build() {
-            return new GetVirtualNetworkGatewayAdvertisedRoutesArgs(peer, resourceGroupName, virtualNetworkGatewayName);
+        }
+
+        public GetVirtualNetworkGatewayAdvertisedRoutesArgs build() {
+            $.peer = Objects.requireNonNull($.peer, "expected parameter 'peer' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkGatewayName = Objects.requireNonNull($.virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -48,7 +48,7 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="actions", required=true)
-      private final List<Object> actions;
+    private List<Object> actions;
 
     public List<Object> actions() {
         return this.actions;
@@ -59,10 +59,10 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="conditions")
-      private final @Nullable List<Object> conditions;
+    private @Nullable List<Object> conditions;
 
-    public List<Object> conditions() {
-        return this.conditions == null ? List.of() : this.conditions;
+    public Optional<List<Object>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,79 +81,72 @@ public final class DeliveryRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="order", required=true)
-      private final Integer order;
+    private Integer order;
 
     public Integer order() {
         return this.order;
     }
 
-    public DeliveryRuleResponse(
-        List<Object> actions,
-        @Nullable List<Object> conditions,
-        @Nullable String name,
-        Integer order) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.conditions = conditions;
-        this.name = name;
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-    }
+    private DeliveryRuleResponse() {}
 
-    private DeliveryRuleResponse() {
-        this.actions = List.of();
-        this.conditions = List.of();
-        this.name = null;
-        this.order = null;
+    private DeliveryRuleResponse(DeliveryRuleResponse $) {
+        this.actions = $.actions;
+        this.conditions = $.conditions;
+        this.name = $.name;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Object> actions;
-        private @Nullable List<Object> conditions;
-        private @Nullable String name;
-        private Integer order;
+        private DeliveryRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleResponse();
         }
 
         public Builder(DeliveryRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.conditions = defaults.conditions;
-    	      this.name = defaults.name;
-    	      this.order = defaults.order;
+            $ = new DeliveryRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<Object> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
+
         public Builder conditions(@Nullable List<Object> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(Object... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
-        }        public DeliveryRuleResponse build() {
-            return new DeliveryRuleResponse(actions, conditions, name, order);
+        }
+
+        public DeliveryRuleResponse build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            return $;
         }
     }
+
 }

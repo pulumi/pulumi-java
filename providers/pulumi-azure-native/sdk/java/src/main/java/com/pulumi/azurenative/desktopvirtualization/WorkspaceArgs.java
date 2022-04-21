@@ -8,11 +8,11 @@ import com.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllo
 import com.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationGroupReferences")
-      private final @Nullable Output<List<String>> applicationGroupReferences;
+    private @Nullable Output<List<String>> applicationGroupReferences;
 
-    public Output<List<String>> applicationGroupReferences() {
-        return this.applicationGroupReferences == null ? Codegen.empty() : this.applicationGroupReferences;
+    public Optional<Output<List<String>>> applicationGroupReferences() {
+        return Optional.ofNullable(this.applicationGroupReferences);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     @Import(name="identity")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceModelWithAllowedPropertySetIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -87,17 +87,17 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedBy")
-      private final @Nullable Output<String> managedBy;
+    private @Nullable Output<String> managedBy;
 
-    public Output<String> managedBy() {
-        return this.managedBy == null ? Codegen.empty() : this.managedBy;
+    public Optional<Output<String>> managedBy() {
+        return Optional.ofNullable(this.managedBy);
     }
 
     @Import(name="plan")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Output<ResourceModelWithAllowedPropertySetPlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<ResourceModelWithAllowedPropertySetPlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -105,17 +105,17 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="sku")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Output<ResourceModelWithAllowedPropertySetSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<ResourceModelWithAllowedPropertySetSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -134,196 +134,163 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName")
-      private final @Nullable Output<String> workspaceName;
+    private @Nullable Output<String> workspaceName;
 
-    public Output<String> workspaceName() {
-        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
+    public Optional<Output<String>> workspaceName() {
+        return Optional.ofNullable(this.workspaceName);
     }
 
-    public WorkspaceArgs(
-        @Nullable Output<List<String>> applicationGroupReferences,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedBy,
-        @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan,
-        Output<String> resourceGroupName,
-        @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> workspaceName) {
-        this.applicationGroupReferences = applicationGroupReferences;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.managedBy = managedBy;
-        this.plan = plan;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.workspaceName = workspaceName;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.applicationGroupReferences = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedBy = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.applicationGroupReferences = $.applicationGroupReferences;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.managedBy = $.managedBy;
+        this.plan = $.plan;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> applicationGroupReferences;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedBy;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> workspaceName;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGroupReferences = defaults.applicationGroupReferences;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.managedBy = defaults.managedBy;
-    	      this.plan = defaults.plan;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGroupReferences(@Nullable Output<List<String>> applicationGroupReferences) {
-            this.applicationGroupReferences = applicationGroupReferences;
+            $.applicationGroupReferences = applicationGroupReferences;
             return this;
         }
-        public Builder applicationGroupReferences(@Nullable List<String> applicationGroupReferences) {
-            this.applicationGroupReferences = Codegen.ofNullable(applicationGroupReferences);
-            return this;
+
+        public Builder applicationGroupReferences(List<String> applicationGroupReferences) {
+            return applicationGroupReferences(Output.of(applicationGroupReferences));
         }
+
         public Builder applicationGroupReferences(String... applicationGroupReferences) {
             return applicationGroupReferences(List.of(applicationGroupReferences));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceModelWithAllowedPropertySetIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedBy(@Nullable Output<String> managedBy) {
-            this.managedBy = managedBy;
+            $.managedBy = managedBy;
             return this;
         }
-        public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Codegen.ofNullable(managedBy);
-            return this;
+
+        public Builder managedBy(String managedBy) {
+            return managedBy(Output.of(managedBy));
         }
+
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(ResourceModelWithAllowedPropertySetPlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(ResourceModelWithAllowedPropertySetSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
-            this.workspaceName = workspaceName;
+            $.workspaceName = workspaceName;
             return this;
         }
-        public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Codegen.ofNullable(workspaceName);
-            return this;
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(applicationGroupReferences, description, friendlyName, identity, kind, location, managedBy, plan, resourceGroupName, sku, tags, workspaceName);
+
+        public Builder workspaceName(String workspaceName) {
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public WorkspaceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.compute.enums.DeleteOptions;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
+    private @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
-    public Output<Either<String,DeleteOptions>> deleteOption() {
-        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
+    public Optional<Output<Either<String,DeleteOptions>>> deleteOption() {
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="primary")
-      private final @Nullable Output<Boolean> primary;
+    private @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<Boolean>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
-    public NetworkInterfaceReferenceArgs(
-        @Nullable Output<Either<String,DeleteOptions>> deleteOption,
-        @Nullable Output<String> id,
-        @Nullable Output<Boolean> primary) {
-        this.deleteOption = deleteOption;
-        this.id = id;
-        this.primary = primary;
-    }
+    private NetworkInterfaceReferenceArgs() {}
 
-    private NetworkInterfaceReferenceArgs() {
-        this.deleteOption = Codegen.empty();
-        this.id = Codegen.empty();
-        this.primary = Codegen.empty();
+    private NetworkInterfaceReferenceArgs(NetworkInterfaceReferenceArgs $) {
+        this.deleteOption = $.deleteOption;
+        this.id = $.id;
+        this.primary = $.primary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DeleteOptions>> deleteOption;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Boolean> primary;
+        private NetworkInterfaceReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceReferenceArgs();
         }
 
         public Builder(NetworkInterfaceReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.id = defaults.id;
-    	      this.primary = defaults.primary;
+            $ = new NetworkInterfaceReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable Output<Either<String,DeleteOptions>> deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
-        public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
-            this.deleteOption = Codegen.ofNullable(deleteOption);
-            return this;
+
+        public Builder deleteOption(Either<String,DeleteOptions> deleteOption) {
+            return deleteOption(Output.of(deleteOption));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder primary(@Nullable Output<Boolean> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable Boolean primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
-        }        public NetworkInterfaceReferenceArgs build() {
-            return new NetworkInterfaceReferenceArgs(deleteOption, id, primary);
+
+        public Builder primary(Boolean primary) {
+            return primary(Output.of(primary));
+        }
+
+        public NetworkInterfaceReferenceArgs build() {
+            return $;
         }
     }
+
 }

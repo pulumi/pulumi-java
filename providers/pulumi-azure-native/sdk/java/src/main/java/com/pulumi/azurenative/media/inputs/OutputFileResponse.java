@@ -22,48 +22,49 @@ public final class OutputFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final List<String> labels;
+    private List<String> labels;
 
     public List<String> labels() {
         return this.labels;
     }
 
-    public OutputFileResponse(List<String> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private OutputFileResponse() {}
 
-    private OutputFileResponse() {
-        this.labels = List.of();
+    private OutputFileResponse(OutputFileResponse $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> labels;
+        private OutputFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputFileResponse();
         }
 
         public Builder(OutputFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new OutputFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(List<String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
-        }        public OutputFileResponse build() {
-            return new OutputFileResponse(labels);
+        }
+
+        public OutputFileResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

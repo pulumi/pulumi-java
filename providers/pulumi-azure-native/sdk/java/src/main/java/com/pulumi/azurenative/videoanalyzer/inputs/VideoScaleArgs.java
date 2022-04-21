@@ -7,9 +7,9 @@ import com.pulumi.azurenative.videoanalyzer.enums.VideoScaleMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<String> height;
+    private @Nullable Output<String> height;
 
-    public Output<String> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<String>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,VideoScaleMode>> mode;
+    private @Nullable Output<Either<String,VideoScaleMode>> mode;
 
-    public Output<Either<String,VideoScaleMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,VideoScaleMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<String> width;
+    private @Nullable Output<String> width;
 
-    public Output<String> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<String>> width() {
+        return Optional.ofNullable(this.width);
     }
 
-    public VideoScaleArgs(
-        @Nullable Output<String> height,
-        @Nullable Output<Either<String,VideoScaleMode>> mode,
-        @Nullable Output<String> width) {
-        this.height = height;
-        this.mode = mode;
-        this.width = width;
-    }
+    private VideoScaleArgs() {}
 
-    private VideoScaleArgs() {
-        this.height = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.width = Codegen.empty();
+    private VideoScaleArgs(VideoScaleArgs $) {
+        this.height = $.height;
+        this.mode = $.mode;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoScaleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> height;
-        private @Nullable Output<Either<String,VideoScaleMode>> mode;
-        private @Nullable Output<String> width;
+        private VideoScaleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoScaleArgs();
         }
 
         public Builder(VideoScaleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.mode = defaults.mode;
-    	      this.width = defaults.width;
+            $ = new VideoScaleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable Output<String> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable String height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(String height) {
+            return height(Output.of(height));
         }
+
         public Builder mode(@Nullable Output<Either<String,VideoScaleMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,VideoScaleMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,VideoScaleMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder width(@Nullable Output<String> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable String width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
-        }        public VideoScaleArgs build() {
-            return new VideoScaleArgs(height, mode, width);
+
+        public Builder width(String width) {
+            return width(Output.of(width));
+        }
+
+        public VideoScaleArgs build() {
+            return $;
         }
     }
+
 }

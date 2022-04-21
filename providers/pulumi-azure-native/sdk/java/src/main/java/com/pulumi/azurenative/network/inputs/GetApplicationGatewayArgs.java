@@ -17,7 +17,7 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="applicationGatewayName", required=true)
-      private final String applicationGatewayName;
+    private String applicationGatewayName;
 
     public String applicationGatewayName() {
         return this.applicationGatewayName;
@@ -28,55 +28,52 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationGatewayArgs(
-        String applicationGatewayName,
-        String resourceGroupName) {
-        this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationGatewayArgs() {}
 
-    private GetApplicationGatewayArgs() {
-        this.applicationGatewayName = null;
-        this.resourceGroupName = null;
+    private GetApplicationGatewayArgs(GetApplicationGatewayArgs $) {
+        this.applicationGatewayName = $.applicationGatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationGatewayName;
-        private String resourceGroupName;
+        private GetApplicationGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationGatewayArgs();
         }
 
         public Builder(GetApplicationGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGatewayName = defaults.applicationGatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGatewayName(String applicationGatewayName) {
-            this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
+            $.applicationGatewayName = applicationGatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationGatewayArgs build() {
-            return new GetApplicationGatewayArgs(applicationGatewayName, resourceGroupName);
+        }
+
+        public GetApplicationGatewayArgs build() {
+            $.applicationGatewayName = Objects.requireNonNull($.applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

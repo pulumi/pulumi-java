@@ -7,10 +7,10 @@ import com.pulumi.azurenative.alertsmanagement.enums.Operator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<Either<String,Operator>> operator;
+    private @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<Either<String,Operator>>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ConditionArgs(
-        @Nullable Output<Either<String,Operator>> operator,
-        @Nullable Output<List<String>> values) {
-        this.operator = operator;
-        this.values = values;
-    }
+    private ConditionArgs() {}
 
-    private ConditionArgs() {
-        this.operator = Codegen.empty();
-        this.values = Codegen.empty();
+    private ConditionArgs(ConditionArgs $) {
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Operator>> operator;
-        private @Nullable Output<List<String>> values;
+        private ConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionArgs();
         }
 
         public Builder(ConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new ConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(Either<String,Operator> operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ConditionArgs build() {
-            return new ConditionArgs(operator, values);
+        }
+
+        public ConditionArgs build() {
+            return $;
         }
     }
+
 }

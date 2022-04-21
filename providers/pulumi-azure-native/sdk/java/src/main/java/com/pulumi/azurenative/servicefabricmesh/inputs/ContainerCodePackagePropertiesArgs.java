@@ -15,10 +15,10 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.SettingArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.VolumeReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="commands")
-      private final @Nullable Output<List<String>> commands;
+    private @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> commands() {
-        return this.commands == null ? Codegen.empty() : this.commands;
+    public Optional<Output<List<String>>> commands() {
+        return Optional.ofNullable(this.commands);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
+    private @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
-    public Output<DiagnosticsRefArgs> diagnostics() {
-        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
+    public Optional<Output<DiagnosticsRefArgs>> diagnostics() {
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
+    private @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
 
-    public Output<List<EndpointPropertiesArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<EndpointPropertiesArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="entrypoint")
-      private final @Nullable Output<String> entrypoint;
+    private @Nullable Output<String> entrypoint;
 
-    public Output<String> entrypoint() {
-        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
+    public Optional<Output<String>> entrypoint() {
+        return Optional.ofNullable(this.entrypoint);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+    private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -101,10 +101,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="imageRegistryCredential")
-      private final @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
+    private @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
 
-    public Output<ImageRegistryCredentialArgs> imageRegistryCredential() {
-        return this.imageRegistryCredential == null ? Codegen.empty() : this.imageRegistryCredential;
+    public Optional<Output<ImageRegistryCredentialArgs>> imageRegistryCredential() {
+        return Optional.ofNullable(this.imageRegistryCredential);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<ContainerLabelArgs>> labels;
+    private @Nullable Output<List<ContainerLabelArgs>> labels;
 
-    public Output<List<ContainerLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<ContainerLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -134,10 +134,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="reliableCollectionsRefs")
-      private final @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
+    private @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
-    public Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs() {
-        return this.reliableCollectionsRefs == null ? Codegen.empty() : this.reliableCollectionsRefs;
+    public Optional<Output<List<ReliableCollectionsRefArgs>>> reliableCollectionsRefs() {
+        return Optional.ofNullable(this.reliableCollectionsRefs);
     }
 
     /**
@@ -145,7 +145,7 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<ResourceRequirementsArgs> resources;
+    private Output<ResourceRequirementsArgs> resources;
 
     public Output<ResourceRequirementsArgs> resources() {
         return this.resources;
@@ -156,10 +156,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<List<SettingArgs>> settings;
+    private @Nullable Output<List<SettingArgs>> settings;
 
-    public Output<List<SettingArgs>> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<List<SettingArgs>>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="volumeRefs")
-      private final @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
+    private @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
 
-    public Output<List<VolumeReferenceArgs>> volumeRefs() {
-        return this.volumeRefs == null ? Codegen.empty() : this.volumeRefs;
+    public Optional<Output<List<VolumeReferenceArgs>>> volumeRefs() {
+        return Optional.ofNullable(this.volumeRefs);
     }
 
     /**
@@ -178,243 +178,213 @@ public final class ContainerCodePackagePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
+    private @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
 
-    public Output<List<ApplicationScopedVolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<ApplicationScopedVolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public ContainerCodePackagePropertiesArgs(
-        @Nullable Output<List<String>> commands,
-        @Nullable Output<DiagnosticsRefArgs> diagnostics,
-        @Nullable Output<List<EndpointPropertiesArgs>> endpoints,
-        @Nullable Output<String> entrypoint,
-        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
-        Output<String> image,
-        @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential,
-        @Nullable Output<List<ContainerLabelArgs>> labels,
-        Output<String> name,
-        @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs,
-        Output<ResourceRequirementsArgs> resources,
-        @Nullable Output<List<SettingArgs>> settings,
-        @Nullable Output<List<VolumeReferenceArgs>> volumeRefs,
-        @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes) {
-        this.commands = commands;
-        this.diagnostics = diagnostics;
-        this.endpoints = endpoints;
-        this.entrypoint = entrypoint;
-        this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.imageRegistryCredential = imageRegistryCredential;
-        this.labels = labels;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.reliableCollectionsRefs = reliableCollectionsRefs;
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.settings = settings;
-        this.volumeRefs = volumeRefs;
-        this.volumes = volumes;
-    }
+    private ContainerCodePackagePropertiesArgs() {}
 
-    private ContainerCodePackagePropertiesArgs() {
-        this.commands = Codegen.empty();
-        this.diagnostics = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.entrypoint = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.image = Codegen.empty();
-        this.imageRegistryCredential = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.reliableCollectionsRefs = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.volumeRefs = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private ContainerCodePackagePropertiesArgs(ContainerCodePackagePropertiesArgs $) {
+        this.commands = $.commands;
+        this.diagnostics = $.diagnostics;
+        this.endpoints = $.endpoints;
+        this.entrypoint = $.entrypoint;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.imageRegistryCredential = $.imageRegistryCredential;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.reliableCollectionsRefs = $.reliableCollectionsRefs;
+        this.resources = $.resources;
+        this.settings = $.settings;
+        this.volumeRefs = $.volumeRefs;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerCodePackagePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> commands;
-        private @Nullable Output<DiagnosticsRefArgs> diagnostics;
-        private @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
-        private @Nullable Output<String> entrypoint;
-        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
-        private Output<String> image;
-        private @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
-        private @Nullable Output<List<ContainerLabelArgs>> labels;
-        private Output<String> name;
-        private @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
-        private Output<ResourceRequirementsArgs> resources;
-        private @Nullable Output<List<SettingArgs>> settings;
-        private @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
-        private @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
+        private ContainerCodePackagePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerCodePackagePropertiesArgs();
         }
 
         public Builder(ContainerCodePackagePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commands = defaults.commands;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.endpoints = defaults.endpoints;
-    	      this.entrypoint = defaults.entrypoint;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.imageRegistryCredential = defaults.imageRegistryCredential;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.reliableCollectionsRefs = defaults.reliableCollectionsRefs;
-    	      this.resources = defaults.resources;
-    	      this.settings = defaults.settings;
-    	      this.volumeRefs = defaults.volumeRefs;
-    	      this.volumes = defaults.volumes;
+            $ = new ContainerCodePackagePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commands(@Nullable Output<List<String>> commands) {
-            this.commands = commands;
+            $.commands = commands;
             return this;
         }
-        public Builder commands(@Nullable List<String> commands) {
-            this.commands = Codegen.ofNullable(commands);
-            return this;
+
+        public Builder commands(List<String> commands) {
+            return commands(Output.of(commands));
         }
+
         public Builder commands(String... commands) {
             return commands(List.of(commands));
         }
+
         public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
-        public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
-            this.diagnostics = Codegen.ofNullable(diagnostics);
-            return this;
+
+        public Builder diagnostics(DiagnosticsRefArgs diagnostics) {
+            return diagnostics(Output.of(diagnostics));
         }
+
         public Builder endpoints(@Nullable Output<List<EndpointPropertiesArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<EndpointPropertiesArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<EndpointPropertiesArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(EndpointPropertiesArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
-            this.entrypoint = entrypoint;
+            $.entrypoint = entrypoint;
             return this;
         }
-        public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Codegen.ofNullable(entrypoint);
-            return this;
+
+        public Builder entrypoint(String entrypoint) {
+            return entrypoint(Output.of(entrypoint));
         }
+
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder imageRegistryCredential(@Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential) {
-            this.imageRegistryCredential = imageRegistryCredential;
+            $.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
-        public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialArgs imageRegistryCredential) {
-            this.imageRegistryCredential = Codegen.ofNullable(imageRegistryCredential);
-            return this;
+
+        public Builder imageRegistryCredential(ImageRegistryCredentialArgs imageRegistryCredential) {
+            return imageRegistryCredential(Output.of(imageRegistryCredential));
         }
+
         public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<ContainerLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(ContainerLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder reliableCollectionsRefs(@Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs) {
-            this.reliableCollectionsRefs = reliableCollectionsRefs;
+            $.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
-        public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
-            this.reliableCollectionsRefs = Codegen.ofNullable(reliableCollectionsRefs);
-            return this;
+
+        public Builder reliableCollectionsRefs(List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
+            return reliableCollectionsRefs(Output.of(reliableCollectionsRefs));
         }
+
         public Builder reliableCollectionsRefs(ReliableCollectionsRefArgs... reliableCollectionsRefs) {
             return reliableCollectionsRefs(List.of(reliableCollectionsRefs));
         }
+
         public Builder resources(Output<ResourceRequirementsArgs> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(ResourceRequirementsArgs resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder settings(@Nullable Output<List<SettingArgs>> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable List<SettingArgs> settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(List<SettingArgs> settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder settings(SettingArgs... settings) {
             return settings(List.of(settings));
         }
+
         public Builder volumeRefs(@Nullable Output<List<VolumeReferenceArgs>> volumeRefs) {
-            this.volumeRefs = volumeRefs;
+            $.volumeRefs = volumeRefs;
             return this;
         }
-        public Builder volumeRefs(@Nullable List<VolumeReferenceArgs> volumeRefs) {
-            this.volumeRefs = Codegen.ofNullable(volumeRefs);
-            return this;
+
+        public Builder volumeRefs(List<VolumeReferenceArgs> volumeRefs) {
+            return volumeRefs(Output.of(volumeRefs));
         }
+
         public Builder volumeRefs(VolumeReferenceArgs... volumeRefs) {
             return volumeRefs(List.of(volumeRefs));
         }
+
         public Builder volumes(@Nullable Output<List<ApplicationScopedVolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<ApplicationScopedVolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<ApplicationScopedVolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(ApplicationScopedVolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public ContainerCodePackagePropertiesArgs build() {
-            return new ContainerCodePackagePropertiesArgs(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
+        }
+
+        public ContainerCodePackagePropertiesArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

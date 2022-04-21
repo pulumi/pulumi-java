@@ -17,7 +17,7 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="configurationProfileAssignmentName", required=true)
-      private final String configurationProfileAssignmentName;
+    private String configurationProfileAssignmentName;
 
     public String configurationProfileAssignmentName() {
         return this.configurationProfileAssignmentName;
@@ -28,7 +28,7 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="vmName", required=true)
-      private final String vmName;
+    private String vmName;
 
     public String vmName() {
         return this.vmName;
     }
 
-    public GetConfigurationProfileAssignmentArgs(
-        String configurationProfileAssignmentName,
-        String resourceGroupName,
-        String vmName) {
-        this.configurationProfileAssignmentName = Objects.requireNonNull(configurationProfileAssignmentName, "expected parameter 'configurationProfileAssignmentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private GetConfigurationProfileAssignmentArgs() {}
 
-    private GetConfigurationProfileAssignmentArgs() {
-        this.configurationProfileAssignmentName = null;
-        this.resourceGroupName = null;
-        this.vmName = null;
+    private GetConfigurationProfileAssignmentArgs(GetConfigurationProfileAssignmentArgs $) {
+        this.configurationProfileAssignmentName = $.configurationProfileAssignmentName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationProfileAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationProfileAssignmentName;
-        private String resourceGroupName;
-        private String vmName;
+        private GetConfigurationProfileAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationProfileAssignmentArgs();
         }
 
         public Builder(GetConfigurationProfileAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationProfileAssignmentName = defaults.configurationProfileAssignmentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmName = defaults.vmName;
+            $ = new GetConfigurationProfileAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationProfileAssignmentName(String configurationProfileAssignmentName) {
-            this.configurationProfileAssignmentName = Objects.requireNonNull(configurationProfileAssignmentName);
+            $.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
-        }        public GetConfigurationProfileAssignmentArgs build() {
-            return new GetConfigurationProfileAssignmentArgs(configurationProfileAssignmentName, resourceGroupName, vmName);
+        }
+
+        public GetConfigurationProfileAssignmentArgs build() {
+            $.configurationProfileAssignmentName = Objects.requireNonNull($.configurationProfileAssignmentName, "expected parameter 'configurationProfileAssignmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

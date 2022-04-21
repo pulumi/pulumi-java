@@ -5,9 +5,9 @@ package com.pulumi.azurenative.eventhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="archiveNameFormat")
-      private final @Nullable Output<String> archiveNameFormat;
+    private @Nullable Output<String> archiveNameFormat;
 
-    public Output<String> archiveNameFormat() {
-        return this.archiveNameFormat == null ? Codegen.empty() : this.archiveNameFormat;
+    public Optional<Output<String>> archiveNameFormat() {
+        return Optional.ofNullable(this.archiveNameFormat);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobContainer")
-      private final @Nullable Output<String> blobContainer;
+    private @Nullable Output<String> blobContainer;
 
-    public Output<String> blobContainer() {
-        return this.blobContainer == null ? Codegen.empty() : this.blobContainer;
+    public Optional<Output<String>> blobContainer() {
+        return Optional.ofNullable(this.blobContainer);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountResourceId")
-      private final @Nullable Output<String> storageAccountResourceId;
+    private @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> storageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
+    public Optional<Output<String>> storageAccountResourceId() {
+        return Optional.ofNullable(this.storageAccountResourceId);
     }
 
-    public DestinationArgs(
-        @Nullable Output<String> archiveNameFormat,
-        @Nullable Output<String> blobContainer,
-        @Nullable Output<String> name,
-        @Nullable Output<String> storageAccountResourceId) {
-        this.archiveNameFormat = archiveNameFormat;
-        this.blobContainer = blobContainer;
-        this.name = name;
-        this.storageAccountResourceId = storageAccountResourceId;
-    }
+    private DestinationArgs() {}
 
-    private DestinationArgs() {
-        this.archiveNameFormat = Codegen.empty();
-        this.blobContainer = Codegen.empty();
-        this.name = Codegen.empty();
-        this.storageAccountResourceId = Codegen.empty();
+    private DestinationArgs(DestinationArgs $) {
+        this.archiveNameFormat = $.archiveNameFormat;
+        this.blobContainer = $.blobContainer;
+        this.name = $.name;
+        this.storageAccountResourceId = $.storageAccountResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> archiveNameFormat;
-        private @Nullable Output<String> blobContainer;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> storageAccountResourceId;
+        private DestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationArgs();
         }
 
         public Builder(DestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveNameFormat = defaults.archiveNameFormat;
-    	      this.blobContainer = defaults.blobContainer;
-    	      this.name = defaults.name;
-    	      this.storageAccountResourceId = defaults.storageAccountResourceId;
+            $ = new DestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveNameFormat(@Nullable Output<String> archiveNameFormat) {
-            this.archiveNameFormat = archiveNameFormat;
+            $.archiveNameFormat = archiveNameFormat;
             return this;
         }
-        public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
-            this.archiveNameFormat = Codegen.ofNullable(archiveNameFormat);
-            return this;
+
+        public Builder archiveNameFormat(String archiveNameFormat) {
+            return archiveNameFormat(Output.of(archiveNameFormat));
         }
+
         public Builder blobContainer(@Nullable Output<String> blobContainer) {
-            this.blobContainer = blobContainer;
+            $.blobContainer = blobContainer;
             return this;
         }
-        public Builder blobContainer(@Nullable String blobContainer) {
-            this.blobContainer = Codegen.ofNullable(blobContainer);
-            return this;
+
+        public Builder blobContainer(String blobContainer) {
+            return blobContainer(Output.of(blobContainer));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
-            this.storageAccountResourceId = storageAccountResourceId;
+            $.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = Codegen.ofNullable(storageAccountResourceId);
-            return this;
-        }        public DestinationArgs build() {
-            return new DestinationArgs(archiveNameFormat, blobContainer, name, storageAccountResourceId);
+
+        public Builder storageAccountResourceId(String storageAccountResourceId) {
+            return storageAccountResourceId(Output.of(storageAccountResourceId));
+        }
+
+        public DestinationArgs build() {
+            return $;
         }
     }
+
 }

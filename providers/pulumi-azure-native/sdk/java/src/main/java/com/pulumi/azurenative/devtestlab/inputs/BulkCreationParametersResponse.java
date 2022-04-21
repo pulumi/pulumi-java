@@ -23,45 +23,44 @@ public final class BulkCreationParametersResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Integer instanceCount;
+    private @Nullable Integer instanceCount;
 
     public Optional<Integer> instanceCount() {
-        return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
+        return Optional.ofNullable(this.instanceCount);
     }
 
-    public BulkCreationParametersResponse(@Nullable Integer instanceCount) {
-        this.instanceCount = instanceCount;
-    }
+    private BulkCreationParametersResponse() {}
 
-    private BulkCreationParametersResponse() {
-        this.instanceCount = null;
+    private BulkCreationParametersResponse(BulkCreationParametersResponse $) {
+        this.instanceCount = $.instanceCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BulkCreationParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer instanceCount;
+        private BulkCreationParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BulkCreationParametersResponse();
         }
 
         public Builder(BulkCreationParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
+            $ = new BulkCreationParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
-        }        public BulkCreationParametersResponse build() {
-            return new BulkCreationParametersResponse(instanceCount);
+        }
+
+        public BulkCreationParametersResponse build() {
+            return $;
         }
     }
+
 }

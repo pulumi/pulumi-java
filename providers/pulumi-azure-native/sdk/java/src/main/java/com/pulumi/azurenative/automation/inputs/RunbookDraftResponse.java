@@ -24,10 +24,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable String creationTime;
+    private @Nullable String creationTime;
 
     public Optional<String> creationTime() {
-        return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="draftContentLink")
-      private final @Nullable ContentLinkResponse draftContentLink;
+    private @Nullable ContentLinkResponse draftContentLink;
 
     public Optional<ContentLinkResponse> draftContentLink() {
-        return this.draftContentLink == null ? Optional.empty() : Optional.ofNullable(this.draftContentLink);
+        return Optional.ofNullable(this.draftContentLink);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inEdit")
-      private final @Nullable Boolean inEdit;
+    private @Nullable Boolean inEdit;
 
     public Optional<Boolean> inEdit() {
-        return this.inEdit == null ? Optional.empty() : Optional.ofNullable(this.inEdit);
+        return Optional.ofNullable(this.inEdit);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable String lastModifiedTime;
+    private @Nullable String lastModifiedTime;
 
     public Optional<String> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="outputTypes")
-      private final @Nullable List<String> outputTypes;
+    private @Nullable List<String> outputTypes;
 
-    public List<String> outputTypes() {
-        return this.outputTypes == null ? List.of() : this.outputTypes;
+    public Optional<List<String>> outputTypes() {
+        return Optional.ofNullable(this.outputTypes);
     }
 
     /**
@@ -79,94 +79,78 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,RunbookParameterResponse> parameters;
+    private @Nullable Map<String,RunbookParameterResponse> parameters;
 
-    public Map<String,RunbookParameterResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,RunbookParameterResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public RunbookDraftResponse(
-        @Nullable String creationTime,
-        @Nullable ContentLinkResponse draftContentLink,
-        @Nullable Boolean inEdit,
-        @Nullable String lastModifiedTime,
-        @Nullable List<String> outputTypes,
-        @Nullable Map<String,RunbookParameterResponse> parameters) {
-        this.creationTime = creationTime;
-        this.draftContentLink = draftContentLink;
-        this.inEdit = inEdit;
-        this.lastModifiedTime = lastModifiedTime;
-        this.outputTypes = outputTypes;
-        this.parameters = parameters;
-    }
+    private RunbookDraftResponse() {}
 
-    private RunbookDraftResponse() {
-        this.creationTime = null;
-        this.draftContentLink = null;
-        this.inEdit = null;
-        this.lastModifiedTime = null;
-        this.outputTypes = List.of();
-        this.parameters = Map.of();
+    private RunbookDraftResponse(RunbookDraftResponse $) {
+        this.creationTime = $.creationTime;
+        this.draftContentLink = $.draftContentLink;
+        this.inEdit = $.inEdit;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.outputTypes = $.outputTypes;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunbookDraftResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String creationTime;
-        private @Nullable ContentLinkResponse draftContentLink;
-        private @Nullable Boolean inEdit;
-        private @Nullable String lastModifiedTime;
-        private @Nullable List<String> outputTypes;
-        private @Nullable Map<String,RunbookParameterResponse> parameters;
+        private RunbookDraftResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunbookDraftResponse();
         }
 
         public Builder(RunbookDraftResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.draftContentLink = defaults.draftContentLink;
-    	      this.inEdit = defaults.inEdit;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.outputTypes = defaults.outputTypes;
-    	      this.parameters = defaults.parameters;
+            $ = new RunbookDraftResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder draftContentLink(@Nullable ContentLinkResponse draftContentLink) {
-            this.draftContentLink = draftContentLink;
+            $.draftContentLink = draftContentLink;
             return this;
         }
+
         public Builder inEdit(@Nullable Boolean inEdit) {
-            this.inEdit = inEdit;
+            $.inEdit = inEdit;
             return this;
         }
+
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder outputTypes(@Nullable List<String> outputTypes) {
-            this.outputTypes = outputTypes;
+            $.outputTypes = outputTypes;
             return this;
         }
+
         public Builder outputTypes(String... outputTypes) {
             return outputTypes(List.of(outputTypes));
         }
+
         public Builder parameters(@Nullable Map<String,RunbookParameterResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public RunbookDraftResponse build() {
-            return new RunbookDraftResponse(creationTime, draftContentLink, inEdit, lastModifiedTime, outputTypes, parameters);
+        }
+
+        public RunbookDraftResponse build() {
+            return $;
         }
     }
+
 }

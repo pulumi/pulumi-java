@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerinstance.enums.ContainerGroupNetworkProto
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class PortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -38,63 +38,59 @@ public final class PortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol;
+    private @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol;
 
-    public Output<Either<String,ContainerGroupNetworkProtocol>> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<Either<String,ContainerGroupNetworkProtocol>>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public PortArgs(
-        Output<Integer> port,
-        @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol) {
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = protocol;
-    }
+    private PortArgs() {}
 
-    private PortArgs() {
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private PortArgs(PortArgs $) {
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> port;
-        private @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol;
+        private PortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PortArgs();
         }
 
         public Builder(PortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new PortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable Either<String,ContainerGroupNetworkProtocol> protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public PortArgs build() {
-            return new PortArgs(port, protocol);
+
+        public Builder protocol(Either<String,ContainerGroupNetworkProtocol> protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public PortArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes e
      * 
      */
     @Import(name="publicIPPrefixes")
-      private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
+    private @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
-    public List<ResourceReferenceResponse> publicIPPrefixes() {
-        return this.publicIPPrefixes == null ? List.of() : this.publicIPPrefixes;
+    public Optional<List<ResourceReferenceResponse>> publicIPPrefixes() {
+        return Optional.ofNullable(this.publicIPPrefixes);
     }
 
-    public ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(@Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
-        this.publicIPPrefixes = publicIPPrefixes;
-    }
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes() {}
 
-    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes() {
-        this.publicIPPrefixes = List.of();
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes $) {
+        this.publicIPPrefixes = $.publicIPPrefixes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
+        private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes();
         }
 
         public Builder(ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIPPrefixes = defaults.publicIPPrefixes;
+            $ = new ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIPPrefixes(@Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
-            this.publicIPPrefixes = publicIPPrefixes;
+            $.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
+
         public Builder publicIPPrefixes(ResourceReferenceResponse... publicIPPrefixes) {
             return publicIPPrefixes(List.of(publicIPPrefixes));
-        }        public ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes build() {
-            return new ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(publicIPPrefixes);
+        }
+
+        public ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes build() {
+            return $;
         }
     }
+
 }

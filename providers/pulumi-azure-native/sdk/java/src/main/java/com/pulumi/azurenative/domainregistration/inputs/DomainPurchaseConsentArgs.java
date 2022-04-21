@@ -5,10 +5,10 @@ package com.pulumi.azurenative.domainregistration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="agreedAt")
-      private final @Nullable Output<String> agreedAt;
+    private @Nullable Output<String> agreedAt;
 
-    public Output<String> agreedAt() {
-        return this.agreedAt == null ? Codegen.empty() : this.agreedAt;
+    public Optional<Output<String>> agreedAt() {
+        return Optional.ofNullable(this.agreedAt);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="agreedBy")
-      private final @Nullable Output<String> agreedBy;
+    private @Nullable Output<String> agreedBy;
 
-    public Output<String> agreedBy() {
-        return this.agreedBy == null ? Codegen.empty() : this.agreedBy;
+    public Optional<Output<String>> agreedBy() {
+        return Optional.ofNullable(this.agreedBy);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="agreementKeys")
-      private final @Nullable Output<List<String>> agreementKeys;
+    private @Nullable Output<List<String>> agreementKeys;
 
-    public Output<List<String>> agreementKeys() {
-        return this.agreementKeys == null ? Codegen.empty() : this.agreementKeys;
+    public Optional<Output<List<String>>> agreementKeys() {
+        return Optional.ofNullable(this.agreementKeys);
     }
 
-    public DomainPurchaseConsentArgs(
-        @Nullable Output<String> agreedAt,
-        @Nullable Output<String> agreedBy,
-        @Nullable Output<List<String>> agreementKeys) {
-        this.agreedAt = agreedAt;
-        this.agreedBy = agreedBy;
-        this.agreementKeys = agreementKeys;
-    }
+    private DomainPurchaseConsentArgs() {}
 
-    private DomainPurchaseConsentArgs() {
-        this.agreedAt = Codegen.empty();
-        this.agreedBy = Codegen.empty();
-        this.agreementKeys = Codegen.empty();
+    private DomainPurchaseConsentArgs(DomainPurchaseConsentArgs $) {
+        this.agreedAt = $.agreedAt;
+        this.agreedBy = $.agreedBy;
+        this.agreementKeys = $.agreementKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainPurchaseConsentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agreedAt;
-        private @Nullable Output<String> agreedBy;
-        private @Nullable Output<List<String>> agreementKeys;
+        private DomainPurchaseConsentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainPurchaseConsentArgs();
         }
 
         public Builder(DomainPurchaseConsentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreedAt = defaults.agreedAt;
-    	      this.agreedBy = defaults.agreedBy;
-    	      this.agreementKeys = defaults.agreementKeys;
+            $ = new DomainPurchaseConsentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agreedAt(@Nullable Output<String> agreedAt) {
-            this.agreedAt = agreedAt;
+            $.agreedAt = agreedAt;
             return this;
         }
-        public Builder agreedAt(@Nullable String agreedAt) {
-            this.agreedAt = Codegen.ofNullable(agreedAt);
-            return this;
+
+        public Builder agreedAt(String agreedAt) {
+            return agreedAt(Output.of(agreedAt));
         }
+
         public Builder agreedBy(@Nullable Output<String> agreedBy) {
-            this.agreedBy = agreedBy;
+            $.agreedBy = agreedBy;
             return this;
         }
-        public Builder agreedBy(@Nullable String agreedBy) {
-            this.agreedBy = Codegen.ofNullable(agreedBy);
-            return this;
+
+        public Builder agreedBy(String agreedBy) {
+            return agreedBy(Output.of(agreedBy));
         }
+
         public Builder agreementKeys(@Nullable Output<List<String>> agreementKeys) {
-            this.agreementKeys = agreementKeys;
+            $.agreementKeys = agreementKeys;
             return this;
         }
-        public Builder agreementKeys(@Nullable List<String> agreementKeys) {
-            this.agreementKeys = Codegen.ofNullable(agreementKeys);
-            return this;
+
+        public Builder agreementKeys(List<String> agreementKeys) {
+            return agreementKeys(Output.of(agreementKeys));
         }
+
         public Builder agreementKeys(String... agreementKeys) {
             return agreementKeys(List.of(agreementKeys));
-        }        public DomainPurchaseConsentArgs build() {
-            return new DomainPurchaseConsentArgs(agreedAt, agreedBy, agreementKeys);
+        }
+
+        public DomainPurchaseConsentArgs build() {
+            return $;
         }
     }
+
 }

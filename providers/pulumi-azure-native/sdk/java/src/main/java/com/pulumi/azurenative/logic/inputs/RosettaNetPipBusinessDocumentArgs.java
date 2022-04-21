@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,76 +46,70 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public RosettaNetPipBusinessDocumentArgs(
-        @Nullable Output<String> description,
-        Output<String> name,
-        Output<String> version) {
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private RosettaNetPipBusinessDocumentArgs() {}
 
-    private RosettaNetPipBusinessDocumentArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private RosettaNetPipBusinessDocumentArgs(RosettaNetPipBusinessDocumentArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipBusinessDocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private Output<String> version;
+        private RosettaNetPipBusinessDocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipBusinessDocumentArgs();
         }
 
         public Builder(RosettaNetPipBusinessDocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new RosettaNetPipBusinessDocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public RosettaNetPipBusinessDocumentArgs build() {
-            return new RosettaNetPipBusinessDocumentArgs(description, name, version);
+            return version(Output.of(version));
+        }
+
+        public RosettaNetPipBusinessDocumentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

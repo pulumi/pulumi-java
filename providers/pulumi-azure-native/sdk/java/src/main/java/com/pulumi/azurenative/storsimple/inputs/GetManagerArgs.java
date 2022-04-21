@@ -17,7 +17,7 @@ public final class GetManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -28,55 +28,52 @@ public final class GetManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagerArgs(
-        String managerName,
-        String resourceGroupName) {
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagerArgs() {}
 
-    private GetManagerArgs() {
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private GetManagerArgs(GetManagerArgs $) {
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managerName;
-        private String resourceGroupName;
+        private GetManagerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagerArgs();
         }
 
         public Builder(GetManagerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagerArgs build() {
-            return new GetManagerArgs(managerName, resourceGroupName);
+        }
+
+        public GetManagerArgs build() {
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

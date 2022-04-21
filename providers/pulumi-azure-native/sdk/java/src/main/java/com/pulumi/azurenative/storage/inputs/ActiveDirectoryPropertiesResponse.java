@@ -21,7 +21,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="azureStorageSid", required=true)
-      private final String azureStorageSid;
+    private String azureStorageSid;
 
     public String azureStorageSid() {
         return this.azureStorageSid;
@@ -32,7 +32,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="domainGuid", required=true)
-      private final String domainGuid;
+    private String domainGuid;
 
     public String domainGuid() {
         return this.domainGuid;
@@ -43,7 +43,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -54,7 +54,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="domainSid", required=true)
-      private final String domainSid;
+    private String domainSid;
 
     public String domainSid() {
         return this.domainSid;
@@ -65,7 +65,7 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="forestName", required=true)
-      private final String forestName;
+    private String forestName;
 
     public String forestName() {
         return this.forestName;
@@ -76,91 +76,80 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="netBiosDomainName", required=true)
-      private final String netBiosDomainName;
+    private String netBiosDomainName;
 
     public String netBiosDomainName() {
         return this.netBiosDomainName;
     }
 
-    public ActiveDirectoryPropertiesResponse(
-        String azureStorageSid,
-        String domainGuid,
-        String domainName,
-        String domainSid,
-        String forestName,
-        String netBiosDomainName) {
-        this.azureStorageSid = Objects.requireNonNull(azureStorageSid, "expected parameter 'azureStorageSid' to be non-null");
-        this.domainGuid = Objects.requireNonNull(domainGuid, "expected parameter 'domainGuid' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.domainSid = Objects.requireNonNull(domainSid, "expected parameter 'domainSid' to be non-null");
-        this.forestName = Objects.requireNonNull(forestName, "expected parameter 'forestName' to be non-null");
-        this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName, "expected parameter 'netBiosDomainName' to be non-null");
-    }
+    private ActiveDirectoryPropertiesResponse() {}
 
-    private ActiveDirectoryPropertiesResponse() {
-        this.azureStorageSid = null;
-        this.domainGuid = null;
-        this.domainName = null;
-        this.domainSid = null;
-        this.forestName = null;
-        this.netBiosDomainName = null;
+    private ActiveDirectoryPropertiesResponse(ActiveDirectoryPropertiesResponse $) {
+        this.azureStorageSid = $.azureStorageSid;
+        this.domainGuid = $.domainGuid;
+        this.domainName = $.domainName;
+        this.domainSid = $.domainSid;
+        this.forestName = $.forestName;
+        this.netBiosDomainName = $.netBiosDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActiveDirectoryPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureStorageSid;
-        private String domainGuid;
-        private String domainName;
-        private String domainSid;
-        private String forestName;
-        private String netBiosDomainName;
+        private ActiveDirectoryPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActiveDirectoryPropertiesResponse();
         }
 
         public Builder(ActiveDirectoryPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureStorageSid = defaults.azureStorageSid;
-    	      this.domainGuid = defaults.domainGuid;
-    	      this.domainName = defaults.domainName;
-    	      this.domainSid = defaults.domainSid;
-    	      this.forestName = defaults.forestName;
-    	      this.netBiosDomainName = defaults.netBiosDomainName;
+            $ = new ActiveDirectoryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureStorageSid(String azureStorageSid) {
-            this.azureStorageSid = Objects.requireNonNull(azureStorageSid);
+            $.azureStorageSid = azureStorageSid;
             return this;
         }
+
         public Builder domainGuid(String domainGuid) {
-            this.domainGuid = Objects.requireNonNull(domainGuid);
+            $.domainGuid = domainGuid;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainSid(String domainSid) {
-            this.domainSid = Objects.requireNonNull(domainSid);
+            $.domainSid = domainSid;
             return this;
         }
+
         public Builder forestName(String forestName) {
-            this.forestName = Objects.requireNonNull(forestName);
+            $.forestName = forestName;
             return this;
         }
+
         public Builder netBiosDomainName(String netBiosDomainName) {
-            this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
+            $.netBiosDomainName = netBiosDomainName;
             return this;
-        }        public ActiveDirectoryPropertiesResponse build() {
-            return new ActiveDirectoryPropertiesResponse(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
+        }
+
+        public ActiveDirectoryPropertiesResponse build() {
+            $.azureStorageSid = Objects.requireNonNull($.azureStorageSid, "expected parameter 'azureStorageSid' to be non-null");
+            $.domainGuid = Objects.requireNonNull($.domainGuid, "expected parameter 'domainGuid' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.domainSid = Objects.requireNonNull($.domainSid, "expected parameter 'domainSid' to be non-null");
+            $.forestName = Objects.requireNonNull($.forestName, "expected parameter 'forestName' to be non-null");
+            $.netBiosDomainName = Objects.requireNonNull($.netBiosDomainName, "expected parameter 'netBiosDomainName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.securityinsights.inputs.IncidentInfoArgs;
 import com.pulumi.azurenative.securityinsights.inputs.UserInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bookmarkId")
-      private final @Nullable Output<String> bookmarkId;
+    private @Nullable Output<String> bookmarkId;
 
-    public Output<String> bookmarkId() {
-        return this.bookmarkId == null ? Codegen.empty() : this.bookmarkId;
+    public Optional<Output<String>> bookmarkId() {
+        return Optional.ofNullable(this.bookmarkId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="created")
-      private final @Nullable Output<String> created;
+    private @Nullable Output<String> created;
 
-    public Output<String> created() {
-        return this.created == null ? Codegen.empty() : this.created;
+    public Optional<Output<String>> created() {
+        return Optional.ofNullable(this.created);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable Output<UserInfoArgs> createdBy;
+    private @Nullable Output<UserInfoArgs> createdBy;
 
-    public Output<UserInfoArgs> createdBy() {
-        return this.createdBy == null ? Codegen.empty() : this.createdBy;
+    public Optional<Output<UserInfoArgs>> createdBy() {
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -67,10 +67,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventTime")
-      private final @Nullable Output<String> eventTime;
+    private @Nullable Output<String> eventTime;
 
-    public Output<String> eventTime() {
-        return this.eventTime == null ? Codegen.empty() : this.eventTime;
+    public Optional<Output<String>> eventTime() {
+        return Optional.ofNullable(this.eventTime);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incidentInfo")
-      private final @Nullable Output<IncidentInfoArgs> incidentInfo;
+    private @Nullable Output<IncidentInfoArgs> incidentInfo;
 
-    public Output<IncidentInfoArgs> incidentInfo() {
-        return this.incidentInfo == null ? Codegen.empty() : this.incidentInfo;
+    public Optional<Output<IncidentInfoArgs>> incidentInfo() {
+        return Optional.ofNullable(this.incidentInfo);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<String>> labels;
+    private @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -122,10 +122,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryEndTime")
-      private final @Nullable Output<String> queryEndTime;
+    private @Nullable Output<String> queryEndTime;
 
-    public Output<String> queryEndTime() {
-        return this.queryEndTime == null ? Codegen.empty() : this.queryEndTime;
+    public Optional<Output<String>> queryEndTime() {
+        return Optional.ofNullable(this.queryEndTime);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryResult")
-      private final @Nullable Output<String> queryResult;
+    private @Nullable Output<String> queryResult;
 
-    public Output<String> queryResult() {
-        return this.queryResult == null ? Codegen.empty() : this.queryResult;
+    public Optional<Output<String>> queryResult() {
+        return Optional.ofNullable(this.queryResult);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryStartTime")
-      private final @Nullable Output<String> queryStartTime;
+    private @Nullable Output<String> queryStartTime;
 
-    public Output<String> queryStartTime() {
-        return this.queryStartTime == null ? Codegen.empty() : this.queryStartTime;
+    public Optional<Output<String>> queryStartTime() {
+        return Optional.ofNullable(this.queryStartTime);
     }
 
     /**
@@ -155,7 +155,7 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -166,10 +166,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updated")
-      private final @Nullable Output<String> updated;
+    private @Nullable Output<String> updated;
 
-    public Output<String> updated() {
-        return this.updated == null ? Codegen.empty() : this.updated;
+    public Optional<Output<String>> updated() {
+        return Optional.ofNullable(this.updated);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updatedBy")
-      private final @Nullable Output<UserInfoArgs> updatedBy;
+    private @Nullable Output<UserInfoArgs> updatedBy;
 
-    public Output<UserInfoArgs> updatedBy() {
-        return this.updatedBy == null ? Codegen.empty() : this.updatedBy;
+    public Optional<Output<UserInfoArgs>> updatedBy() {
+        return Optional.ofNullable(this.updatedBy);
     }
 
     /**
@@ -188,248 +188,206 @@ public final class BookmarkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public BookmarkArgs(
-        @Nullable Output<String> bookmarkId,
-        @Nullable Output<String> created,
-        @Nullable Output<UserInfoArgs> createdBy,
-        Output<String> displayName,
-        @Nullable Output<String> eventTime,
-        @Nullable Output<IncidentInfoArgs> incidentInfo,
-        @Nullable Output<List<String>> labels,
-        @Nullable Output<String> notes,
-        Output<String> query,
-        @Nullable Output<String> queryEndTime,
-        @Nullable Output<String> queryResult,
-        @Nullable Output<String> queryStartTime,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> updated,
-        @Nullable Output<UserInfoArgs> updatedBy,
-        Output<String> workspaceName) {
-        this.bookmarkId = bookmarkId;
-        this.created = created;
-        this.createdBy = createdBy;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.eventTime = eventTime;
-        this.incidentInfo = incidentInfo;
-        this.labels = labels;
-        this.notes = notes;
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.queryEndTime = queryEndTime;
-        this.queryResult = queryResult;
-        this.queryStartTime = queryStartTime;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.updated = updated;
-        this.updatedBy = updatedBy;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private BookmarkArgs() {}
 
-    private BookmarkArgs() {
-        this.bookmarkId = Codegen.empty();
-        this.created = Codegen.empty();
-        this.createdBy = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.eventTime = Codegen.empty();
-        this.incidentInfo = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.query = Codegen.empty();
-        this.queryEndTime = Codegen.empty();
-        this.queryResult = Codegen.empty();
-        this.queryStartTime = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.updated = Codegen.empty();
-        this.updatedBy = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private BookmarkArgs(BookmarkArgs $) {
+        this.bookmarkId = $.bookmarkId;
+        this.created = $.created;
+        this.createdBy = $.createdBy;
+        this.displayName = $.displayName;
+        this.eventTime = $.eventTime;
+        this.incidentInfo = $.incidentInfo;
+        this.labels = $.labels;
+        this.notes = $.notes;
+        this.query = $.query;
+        this.queryEndTime = $.queryEndTime;
+        this.queryResult = $.queryResult;
+        this.queryStartTime = $.queryStartTime;
+        this.resourceGroupName = $.resourceGroupName;
+        this.updated = $.updated;
+        this.updatedBy = $.updatedBy;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BookmarkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bookmarkId;
-        private @Nullable Output<String> created;
-        private @Nullable Output<UserInfoArgs> createdBy;
-        private Output<String> displayName;
-        private @Nullable Output<String> eventTime;
-        private @Nullable Output<IncidentInfoArgs> incidentInfo;
-        private @Nullable Output<List<String>> labels;
-        private @Nullable Output<String> notes;
-        private Output<String> query;
-        private @Nullable Output<String> queryEndTime;
-        private @Nullable Output<String> queryResult;
-        private @Nullable Output<String> queryStartTime;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> updated;
-        private @Nullable Output<UserInfoArgs> updatedBy;
-        private Output<String> workspaceName;
+        private BookmarkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BookmarkArgs();
         }
 
         public Builder(BookmarkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bookmarkId = defaults.bookmarkId;
-    	      this.created = defaults.created;
-    	      this.createdBy = defaults.createdBy;
-    	      this.displayName = defaults.displayName;
-    	      this.eventTime = defaults.eventTime;
-    	      this.incidentInfo = defaults.incidentInfo;
-    	      this.labels = defaults.labels;
-    	      this.notes = defaults.notes;
-    	      this.query = defaults.query;
-    	      this.queryEndTime = defaults.queryEndTime;
-    	      this.queryResult = defaults.queryResult;
-    	      this.queryStartTime = defaults.queryStartTime;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.updated = defaults.updated;
-    	      this.updatedBy = defaults.updatedBy;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new BookmarkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bookmarkId(@Nullable Output<String> bookmarkId) {
-            this.bookmarkId = bookmarkId;
+            $.bookmarkId = bookmarkId;
             return this;
         }
-        public Builder bookmarkId(@Nullable String bookmarkId) {
-            this.bookmarkId = Codegen.ofNullable(bookmarkId);
-            return this;
+
+        public Builder bookmarkId(String bookmarkId) {
+            return bookmarkId(Output.of(bookmarkId));
         }
+
         public Builder created(@Nullable Output<String> created) {
-            this.created = created;
+            $.created = created;
             return this;
         }
-        public Builder created(@Nullable String created) {
-            this.created = Codegen.ofNullable(created);
-            return this;
+
+        public Builder created(String created) {
+            return created(Output.of(created));
         }
+
         public Builder createdBy(@Nullable Output<UserInfoArgs> createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
-        public Builder createdBy(@Nullable UserInfoArgs createdBy) {
-            this.createdBy = Codegen.ofNullable(createdBy);
-            return this;
+
+        public Builder createdBy(UserInfoArgs createdBy) {
+            return createdBy(Output.of(createdBy));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder eventTime(@Nullable Output<String> eventTime) {
-            this.eventTime = eventTime;
+            $.eventTime = eventTime;
             return this;
         }
-        public Builder eventTime(@Nullable String eventTime) {
-            this.eventTime = Codegen.ofNullable(eventTime);
-            return this;
+
+        public Builder eventTime(String eventTime) {
+            return eventTime(Output.of(eventTime));
         }
+
         public Builder incidentInfo(@Nullable Output<IncidentInfoArgs> incidentInfo) {
-            this.incidentInfo = incidentInfo;
+            $.incidentInfo = incidentInfo;
             return this;
         }
-        public Builder incidentInfo(@Nullable IncidentInfoArgs incidentInfo) {
-            this.incidentInfo = Codegen.ofNullable(incidentInfo);
-            return this;
+
+        public Builder incidentInfo(IncidentInfoArgs incidentInfo) {
+            return incidentInfo(Output.of(incidentInfo));
         }
+
         public Builder labels(@Nullable Output<List<String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder queryEndTime(@Nullable Output<String> queryEndTime) {
-            this.queryEndTime = queryEndTime;
+            $.queryEndTime = queryEndTime;
             return this;
         }
-        public Builder queryEndTime(@Nullable String queryEndTime) {
-            this.queryEndTime = Codegen.ofNullable(queryEndTime);
-            return this;
+
+        public Builder queryEndTime(String queryEndTime) {
+            return queryEndTime(Output.of(queryEndTime));
         }
+
         public Builder queryResult(@Nullable Output<String> queryResult) {
-            this.queryResult = queryResult;
+            $.queryResult = queryResult;
             return this;
         }
-        public Builder queryResult(@Nullable String queryResult) {
-            this.queryResult = Codegen.ofNullable(queryResult);
-            return this;
+
+        public Builder queryResult(String queryResult) {
+            return queryResult(Output.of(queryResult));
         }
+
         public Builder queryStartTime(@Nullable Output<String> queryStartTime) {
-            this.queryStartTime = queryStartTime;
+            $.queryStartTime = queryStartTime;
             return this;
         }
-        public Builder queryStartTime(@Nullable String queryStartTime) {
-            this.queryStartTime = Codegen.ofNullable(queryStartTime);
-            return this;
+
+        public Builder queryStartTime(String queryStartTime) {
+            return queryStartTime(Output.of(queryStartTime));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder updated(@Nullable Output<String> updated) {
-            this.updated = updated;
+            $.updated = updated;
             return this;
         }
-        public Builder updated(@Nullable String updated) {
-            this.updated = Codegen.ofNullable(updated);
-            return this;
+
+        public Builder updated(String updated) {
+            return updated(Output.of(updated));
         }
+
         public Builder updatedBy(@Nullable Output<UserInfoArgs> updatedBy) {
-            this.updatedBy = updatedBy;
+            $.updatedBy = updatedBy;
             return this;
         }
-        public Builder updatedBy(@Nullable UserInfoArgs updatedBy) {
-            this.updatedBy = Codegen.ofNullable(updatedBy);
-            return this;
+
+        public Builder updatedBy(UserInfoArgs updatedBy) {
+            return updatedBy(Output.of(updatedBy));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public BookmarkArgs build() {
-            return new BookmarkArgs(bookmarkId, created, createdBy, displayName, eventTime, incidentInfo, labels, notes, query, queryEndTime, queryResult, queryStartTime, resourceGroupName, updated, updatedBy, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public BookmarkArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

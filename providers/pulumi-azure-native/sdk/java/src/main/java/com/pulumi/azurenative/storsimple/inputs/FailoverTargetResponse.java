@@ -26,10 +26,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="availableLocalStorageInBytes")
-      private final @Nullable Double availableLocalStorageInBytes;
+    private @Nullable Double availableLocalStorageInBytes;
 
     public Optional<Double> availableLocalStorageInBytes() {
-        return this.availableLocalStorageInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableLocalStorageInBytes);
+        return Optional.ofNullable(this.availableLocalStorageInBytes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="availableTieredStorageInBytes")
-      private final @Nullable Double availableTieredStorageInBytes;
+    private @Nullable Double availableTieredStorageInBytes;
 
     public Optional<Double> availableTieredStorageInBytes() {
-        return this.availableTieredStorageInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableTieredStorageInBytes);
+        return Optional.ofNullable(this.availableTieredStorageInBytes);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dataContainersCount")
-      private final @Nullable Integer dataContainersCount;
+    private @Nullable Integer dataContainersCount;
 
     public Optional<Integer> dataContainersCount() {
-        return this.dataContainersCount == null ? Optional.empty() : Optional.ofNullable(this.dataContainersCount);
+        return Optional.ofNullable(this.dataContainersCount);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceId")
-      private final @Nullable String deviceId;
+    private @Nullable String deviceId;
 
     public Optional<String> deviceId() {
-        return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
+        return Optional.ofNullable(this.deviceId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceLocation")
-      private final @Nullable String deviceLocation;
+    private @Nullable String deviceLocation;
 
     public Optional<String> deviceLocation() {
-        return this.deviceLocation == null ? Optional.empty() : Optional.ofNullable(this.deviceLocation);
+        return Optional.ofNullable(this.deviceLocation);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceSoftwareVersion")
-      private final @Nullable String deviceSoftwareVersion;
+    private @Nullable String deviceSoftwareVersion;
 
     public Optional<String> deviceSoftwareVersion() {
-        return this.deviceSoftwareVersion == null ? Optional.empty() : Optional.ofNullable(this.deviceSoftwareVersion);
+        return Optional.ofNullable(this.deviceSoftwareVersion);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceStatus")
-      private final @Nullable String deviceStatus;
+    private @Nullable String deviceStatus;
 
     public Optional<String> deviceStatus() {
-        return this.deviceStatus == null ? Optional.empty() : Optional.ofNullable(this.deviceStatus);
+        return Optional.ofNullable(this.deviceStatus);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="eligibilityResult")
-      private final @Nullable TargetEligibilityResultResponse eligibilityResult;
+    private @Nullable TargetEligibilityResultResponse eligibilityResult;
 
     public Optional<TargetEligibilityResultResponse> eligibilityResult() {
-        return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
+        return Optional.ofNullable(this.eligibilityResult);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="friendlyDeviceSoftwareVersion")
-      private final @Nullable String friendlyDeviceSoftwareVersion;
+    private @Nullable String friendlyDeviceSoftwareVersion;
 
     public Optional<String> friendlyDeviceSoftwareVersion() {
-        return this.friendlyDeviceSoftwareVersion == null ? Optional.empty() : Optional.ofNullable(this.friendlyDeviceSoftwareVersion);
+        return Optional.ofNullable(this.friendlyDeviceSoftwareVersion);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="modelDescription")
-      private final @Nullable String modelDescription;
+    private @Nullable String modelDescription;
 
     public Optional<String> modelDescription() {
-        return this.modelDescription == null ? Optional.empty() : Optional.ofNullable(this.modelDescription);
+        return Optional.ofNullable(this.modelDescription);
     }
 
     /**
@@ -136,136 +136,104 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="volumesCount")
-      private final @Nullable Integer volumesCount;
+    private @Nullable Integer volumesCount;
 
     public Optional<Integer> volumesCount() {
-        return this.volumesCount == null ? Optional.empty() : Optional.ofNullable(this.volumesCount);
+        return Optional.ofNullable(this.volumesCount);
     }
 
-    public FailoverTargetResponse(
-        @Nullable Double availableLocalStorageInBytes,
-        @Nullable Double availableTieredStorageInBytes,
-        @Nullable Integer dataContainersCount,
-        @Nullable String deviceId,
-        @Nullable String deviceLocation,
-        @Nullable String deviceSoftwareVersion,
-        @Nullable String deviceStatus,
-        @Nullable TargetEligibilityResultResponse eligibilityResult,
-        @Nullable String friendlyDeviceSoftwareVersion,
-        @Nullable String modelDescription,
-        @Nullable Integer volumesCount) {
-        this.availableLocalStorageInBytes = availableLocalStorageInBytes;
-        this.availableTieredStorageInBytes = availableTieredStorageInBytes;
-        this.dataContainersCount = dataContainersCount;
-        this.deviceId = deviceId;
-        this.deviceLocation = deviceLocation;
-        this.deviceSoftwareVersion = deviceSoftwareVersion;
-        this.deviceStatus = deviceStatus;
-        this.eligibilityResult = eligibilityResult;
-        this.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
-        this.modelDescription = modelDescription;
-        this.volumesCount = volumesCount;
-    }
+    private FailoverTargetResponse() {}
 
-    private FailoverTargetResponse() {
-        this.availableLocalStorageInBytes = null;
-        this.availableTieredStorageInBytes = null;
-        this.dataContainersCount = null;
-        this.deviceId = null;
-        this.deviceLocation = null;
-        this.deviceSoftwareVersion = null;
-        this.deviceStatus = null;
-        this.eligibilityResult = null;
-        this.friendlyDeviceSoftwareVersion = null;
-        this.modelDescription = null;
-        this.volumesCount = null;
+    private FailoverTargetResponse(FailoverTargetResponse $) {
+        this.availableLocalStorageInBytes = $.availableLocalStorageInBytes;
+        this.availableTieredStorageInBytes = $.availableTieredStorageInBytes;
+        this.dataContainersCount = $.dataContainersCount;
+        this.deviceId = $.deviceId;
+        this.deviceLocation = $.deviceLocation;
+        this.deviceSoftwareVersion = $.deviceSoftwareVersion;
+        this.deviceStatus = $.deviceStatus;
+        this.eligibilityResult = $.eligibilityResult;
+        this.friendlyDeviceSoftwareVersion = $.friendlyDeviceSoftwareVersion;
+        this.modelDescription = $.modelDescription;
+        this.volumesCount = $.volumesCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailoverTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double availableLocalStorageInBytes;
-        private @Nullable Double availableTieredStorageInBytes;
-        private @Nullable Integer dataContainersCount;
-        private @Nullable String deviceId;
-        private @Nullable String deviceLocation;
-        private @Nullable String deviceSoftwareVersion;
-        private @Nullable String deviceStatus;
-        private @Nullable TargetEligibilityResultResponse eligibilityResult;
-        private @Nullable String friendlyDeviceSoftwareVersion;
-        private @Nullable String modelDescription;
-        private @Nullable Integer volumesCount;
+        private FailoverTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailoverTargetResponse();
         }
 
         public Builder(FailoverTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableLocalStorageInBytes = defaults.availableLocalStorageInBytes;
-    	      this.availableTieredStorageInBytes = defaults.availableTieredStorageInBytes;
-    	      this.dataContainersCount = defaults.dataContainersCount;
-    	      this.deviceId = defaults.deviceId;
-    	      this.deviceLocation = defaults.deviceLocation;
-    	      this.deviceSoftwareVersion = defaults.deviceSoftwareVersion;
-    	      this.deviceStatus = defaults.deviceStatus;
-    	      this.eligibilityResult = defaults.eligibilityResult;
-    	      this.friendlyDeviceSoftwareVersion = defaults.friendlyDeviceSoftwareVersion;
-    	      this.modelDescription = defaults.modelDescription;
-    	      this.volumesCount = defaults.volumesCount;
+            $ = new FailoverTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availableLocalStorageInBytes(@Nullable Double availableLocalStorageInBytes) {
-            this.availableLocalStorageInBytes = availableLocalStorageInBytes;
+            $.availableLocalStorageInBytes = availableLocalStorageInBytes;
             return this;
         }
+
         public Builder availableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
-            this.availableTieredStorageInBytes = availableTieredStorageInBytes;
+            $.availableTieredStorageInBytes = availableTieredStorageInBytes;
             return this;
         }
+
         public Builder dataContainersCount(@Nullable Integer dataContainersCount) {
-            this.dataContainersCount = dataContainersCount;
+            $.dataContainersCount = dataContainersCount;
             return this;
         }
+
         public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = deviceId;
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder deviceLocation(@Nullable String deviceLocation) {
-            this.deviceLocation = deviceLocation;
+            $.deviceLocation = deviceLocation;
             return this;
         }
+
         public Builder deviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
-            this.deviceSoftwareVersion = deviceSoftwareVersion;
+            $.deviceSoftwareVersion = deviceSoftwareVersion;
             return this;
         }
+
         public Builder deviceStatus(@Nullable String deviceStatus) {
-            this.deviceStatus = deviceStatus;
+            $.deviceStatus = deviceStatus;
             return this;
         }
+
         public Builder eligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
-            this.eligibilityResult = eligibilityResult;
+            $.eligibilityResult = eligibilityResult;
             return this;
         }
+
         public Builder friendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
-            this.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
+            $.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
             return this;
         }
+
         public Builder modelDescription(@Nullable String modelDescription) {
-            this.modelDescription = modelDescription;
+            $.modelDescription = modelDescription;
             return this;
         }
+
         public Builder volumesCount(@Nullable Integer volumesCount) {
-            this.volumesCount = volumesCount;
+            $.volumesCount = volumesCount;
             return this;
-        }        public FailoverTargetResponse build() {
-            return new FailoverTargetResponse(availableLocalStorageInBytes, availableTieredStorageInBytes, dataContainersCount, deviceId, deviceLocation, deviceSoftwareVersion, deviceStatus, eligibilityResult, friendlyDeviceSoftwareVersion, modelDescription, volumesCount);
+        }
+
+        public FailoverTargetResponse build() {
+            return $;
         }
     }
+
 }

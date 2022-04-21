@@ -23,45 +23,44 @@ public final class TransferConfigurationResponseTransferAllDetails extends com.p
      * 
      */
     @Import(name="include")
-      private final @Nullable TransferAllDetailsResponse include;
+    private @Nullable TransferAllDetailsResponse include;
 
     public Optional<TransferAllDetailsResponse> include() {
-        return this.include == null ? Optional.empty() : Optional.ofNullable(this.include);
+        return Optional.ofNullable(this.include);
     }
 
-    public TransferConfigurationResponseTransferAllDetails(@Nullable TransferAllDetailsResponse include) {
-        this.include = include;
-    }
+    private TransferConfigurationResponseTransferAllDetails() {}
 
-    private TransferConfigurationResponseTransferAllDetails() {
-        this.include = null;
+    private TransferConfigurationResponseTransferAllDetails(TransferConfigurationResponseTransferAllDetails $) {
+        this.include = $.include;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferConfigurationResponseTransferAllDetails defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TransferAllDetailsResponse include;
+        private TransferConfigurationResponseTransferAllDetails $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferConfigurationResponseTransferAllDetails();
         }
 
         public Builder(TransferConfigurationResponseTransferAllDetails defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.include = defaults.include;
+            $ = new TransferConfigurationResponseTransferAllDetails(Objects.requireNonNull(defaults));
         }
 
         public Builder include(@Nullable TransferAllDetailsResponse include) {
-            this.include = include;
+            $.include = include;
             return this;
-        }        public TransferConfigurationResponseTransferAllDetails build() {
-            return new TransferConfigurationResponseTransferAllDetails(include);
+        }
+
+        public TransferConfigurationResponseTransferAllDetails build() {
+            return $;
         }
     }
+
 }

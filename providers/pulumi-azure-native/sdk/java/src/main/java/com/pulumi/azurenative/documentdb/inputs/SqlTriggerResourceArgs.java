@@ -8,9 +8,9 @@ import com.pulumi.azurenative.documentdb.enums.TriggerType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -49,10 +49,10 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="triggerOperation")
-      private final @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
+    private @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
 
-    public Output<Either<String,TriggerOperation>> triggerOperation() {
-        return this.triggerOperation == null ? Codegen.empty() : this.triggerOperation;
+    public Optional<Output<Either<String,TriggerOperation>>> triggerOperation() {
+        return Optional.ofNullable(this.triggerOperation);
     }
 
     /**
@@ -60,89 +60,79 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="triggerType")
-      private final @Nullable Output<Either<String,TriggerType>> triggerType;
+    private @Nullable Output<Either<String,TriggerType>> triggerType;
 
-    public Output<Either<String,TriggerType>> triggerType() {
-        return this.triggerType == null ? Codegen.empty() : this.triggerType;
+    public Optional<Output<Either<String,TriggerType>>> triggerType() {
+        return Optional.ofNullable(this.triggerType);
     }
 
-    public SqlTriggerResourceArgs(
-        @Nullable Output<String> body,
-        Output<String> id,
-        @Nullable Output<Either<String,TriggerOperation>> triggerOperation,
-        @Nullable Output<Either<String,TriggerType>> triggerType) {
-        this.body = body;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.triggerOperation = triggerOperation;
-        this.triggerType = triggerType;
-    }
+    private SqlTriggerResourceArgs() {}
 
-    private SqlTriggerResourceArgs() {
-        this.body = Codegen.empty();
-        this.id = Codegen.empty();
-        this.triggerOperation = Codegen.empty();
-        this.triggerType = Codegen.empty();
+    private SqlTriggerResourceArgs(SqlTriggerResourceArgs $) {
+        this.body = $.body;
+        this.id = $.id;
+        this.triggerOperation = $.triggerOperation;
+        this.triggerType = $.triggerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlTriggerResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> body;
-        private Output<String> id;
-        private @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
-        private @Nullable Output<Either<String,TriggerType>> triggerType;
+        private SqlTriggerResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlTriggerResourceArgs();
         }
 
         public Builder(SqlTriggerResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.id = defaults.id;
-    	      this.triggerOperation = defaults.triggerOperation;
-    	      this.triggerType = defaults.triggerType;
+            $ = new SqlTriggerResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder triggerOperation(@Nullable Output<Either<String,TriggerOperation>> triggerOperation) {
-            this.triggerOperation = triggerOperation;
+            $.triggerOperation = triggerOperation;
             return this;
         }
-        public Builder triggerOperation(@Nullable Either<String,TriggerOperation> triggerOperation) {
-            this.triggerOperation = Codegen.ofNullable(triggerOperation);
-            return this;
+
+        public Builder triggerOperation(Either<String,TriggerOperation> triggerOperation) {
+            return triggerOperation(Output.of(triggerOperation));
         }
+
         public Builder triggerType(@Nullable Output<Either<String,TriggerType>> triggerType) {
-            this.triggerType = triggerType;
+            $.triggerType = triggerType;
             return this;
         }
-        public Builder triggerType(@Nullable Either<String,TriggerType> triggerType) {
-            this.triggerType = Codegen.ofNullable(triggerType);
-            return this;
-        }        public SqlTriggerResourceArgs build() {
-            return new SqlTriggerResourceArgs(body, id, triggerOperation, triggerType);
+
+        public Builder triggerType(Either<String,TriggerType> triggerType) {
+            return triggerType(Output.of(triggerType));
+        }
+
+        public SqlTriggerResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

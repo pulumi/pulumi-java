@@ -26,10 +26,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="oracleReaderQuery")
-      private final @Nullable Object oracleReaderQuery;
+    private @Nullable Object oracleReaderQuery;
 
     public Optional<Object> oracleReaderQuery() {
-        return this.oracleReaderQuery == null ? Optional.empty() : Optional.ofNullable(this.oracleReaderQuery);
+        return Optional.ofNullable(this.oracleReaderQuery);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="partitionOption")
-      private final @Nullable Object partitionOption;
+    private @Nullable Object partitionOption;
 
     public Optional<Object> partitionOption() {
-        return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
+        return Optional.ofNullable(this.partitionOption);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="partitionSettings")
-      private final @Nullable OraclePartitionSettingsResponse partitionSettings;
+    private @Nullable OraclePartitionSettingsResponse partitionSettings;
 
     public Optional<OraclePartitionSettingsResponse> partitionSettings() {
-        return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
+        return Optional.ofNullable(this.partitionSettings);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Object queryTimeout;
+    private @Nullable Object queryTimeout;
 
     public Optional<Object> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -126,127 +126,99 @@ public final class OracleSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public OracleSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object oracleReaderQuery,
-        @Nullable Object partitionOption,
-        @Nullable OraclePartitionSettingsResponse partitionSettings,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.oracleReaderQuery = oracleReaderQuery;
-        this.partitionOption = partitionOption;
-        this.partitionSettings = partitionSettings;
-        this.queryTimeout = queryTimeout;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private OracleSourceResponse() {}
 
-    private OracleSourceResponse() {
-        this.additionalColumns = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.oracleReaderQuery = null;
-        this.partitionOption = null;
-        this.partitionSettings = null;
-        this.queryTimeout = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private OracleSourceResponse(OracleSourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.oracleReaderQuery = $.oracleReaderQuery;
+        this.partitionOption = $.partitionOption;
+        this.partitionSettings = $.partitionSettings;
+        this.queryTimeout = $.queryTimeout;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object oracleReaderQuery;
-        private @Nullable Object partitionOption;
-        private @Nullable OraclePartitionSettingsResponse partitionSettings;
-        private @Nullable Object queryTimeout;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private OracleSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSourceResponse();
         }
 
         public Builder(OracleSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.oracleReaderQuery = defaults.oracleReaderQuery;
-    	      this.partitionOption = defaults.partitionOption;
-    	      this.partitionSettings = defaults.partitionSettings;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new OracleSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder oracleReaderQuery(@Nullable Object oracleReaderQuery) {
-            this.oracleReaderQuery = oracleReaderQuery;
+            $.oracleReaderQuery = oracleReaderQuery;
             return this;
         }
+
         public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = partitionOption;
+            $.partitionOption = partitionOption;
             return this;
         }
+
         public Builder partitionSettings(@Nullable OraclePartitionSettingsResponse partitionSettings) {
-            this.partitionSettings = partitionSettings;
+            $.partitionSettings = partitionSettings;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public OracleSourceResponse build() {
-            return new OracleSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, oracleReaderQuery, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public OracleSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class OutboundFirewallRuleArgs extends com.pulumi.resources.Resourc
     public static final OutboundFirewallRuleArgs Empty = new OutboundFirewallRuleArgs();
 
     @Import(name="outboundRuleFqdn")
-      private final @Nullable Output<String> outboundRuleFqdn;
+    private @Nullable Output<String> outboundRuleFqdn;
 
-    public Output<String> outboundRuleFqdn() {
-        return this.outboundRuleFqdn == null ? Codegen.empty() : this.outboundRuleFqdn;
+    public Optional<Output<String>> outboundRuleFqdn() {
+        return Optional.ofNullable(this.outboundRuleFqdn);
     }
 
     /**
@@ -27,7 +27,7 @@ public final class OutboundFirewallRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -38,76 +38,70 @@ public final class OutboundFirewallRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public OutboundFirewallRuleArgs(
-        @Nullable Output<String> outboundRuleFqdn,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.outboundRuleFqdn = outboundRuleFqdn;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private OutboundFirewallRuleArgs() {}
 
-    private OutboundFirewallRuleArgs() {
-        this.outboundRuleFqdn = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private OutboundFirewallRuleArgs(OutboundFirewallRuleArgs $) {
+        this.outboundRuleFqdn = $.outboundRuleFqdn;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutboundFirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> outboundRuleFqdn;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private OutboundFirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutboundFirewallRuleArgs();
         }
 
         public Builder(OutboundFirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outboundRuleFqdn = defaults.outboundRuleFqdn;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new OutboundFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outboundRuleFqdn(@Nullable Output<String> outboundRuleFqdn) {
-            this.outboundRuleFqdn = outboundRuleFqdn;
+            $.outboundRuleFqdn = outboundRuleFqdn;
             return this;
         }
-        public Builder outboundRuleFqdn(@Nullable String outboundRuleFqdn) {
-            this.outboundRuleFqdn = Codegen.ofNullable(outboundRuleFqdn);
-            return this;
+
+        public Builder outboundRuleFqdn(String outboundRuleFqdn) {
+            return outboundRuleFqdn(Output.of(outboundRuleFqdn));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public OutboundFirewallRuleArgs build() {
-            return new OutboundFirewallRuleArgs(outboundRuleFqdn, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public OutboundFirewallRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

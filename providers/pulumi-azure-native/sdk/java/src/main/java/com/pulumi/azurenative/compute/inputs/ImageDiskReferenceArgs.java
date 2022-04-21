@@ -5,10 +5,10 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -36,63 +36,59 @@ public final class ImageDiskReferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="lun")
-      private final @Nullable Output<Integer> lun;
+    private @Nullable Output<Integer> lun;
 
-    public Output<Integer> lun() {
-        return this.lun == null ? Codegen.empty() : this.lun;
+    public Optional<Output<Integer>> lun() {
+        return Optional.ofNullable(this.lun);
     }
 
-    public ImageDiskReferenceArgs(
-        Output<String> id,
-        @Nullable Output<Integer> lun) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lun = lun;
-    }
+    private ImageDiskReferenceArgs() {}
 
-    private ImageDiskReferenceArgs() {
-        this.id = Codegen.empty();
-        this.lun = Codegen.empty();
+    private ImageDiskReferenceArgs(ImageDiskReferenceArgs $) {
+        this.id = $.id;
+        this.lun = $.lun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageDiskReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private @Nullable Output<Integer> lun;
+        private ImageDiskReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageDiskReferenceArgs();
         }
 
         public Builder(ImageDiskReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.lun = defaults.lun;
+            $ = new ImageDiskReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder lun(@Nullable Output<Integer> lun) {
-            this.lun = lun;
+            $.lun = lun;
             return this;
         }
-        public Builder lun(@Nullable Integer lun) {
-            this.lun = Codegen.ofNullable(lun);
-            return this;
-        }        public ImageDiskReferenceArgs build() {
-            return new ImageDiskReferenceArgs(id, lun);
+
+        public Builder lun(Integer lun) {
+            return lun(Output.of(lun));
+        }
+
+        public ImageDiskReferenceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
      * 
      */
     @Import(name="cloudWatchToKinesis")
-      private final @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
+    private @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
 
-    public Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis() {
-        return this.cloudWatchToKinesis == null ? Codegen.empty() : this.cloudWatchToKinesis;
+    public Optional<Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs>> cloudWatchToKinesis() {
+        return Optional.ofNullable(this.cloudWatchToKinesis);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
      * 
      */
     @Import(name="kinesisToS3")
-      private final @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
+    private @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
 
-    public Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3() {
-        return this.kinesisToS3 == null ? Codegen.empty() : this.kinesisToS3;
+    public Optional<Output<DefenderForContainersAwsOfferingKinesisToS3Args>> kinesisToS3() {
+        return Optional.ofNullable(this.kinesisToS3);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
      * 
      */
     @Import(name="kubernetesScubaReader")
-      private final @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
+    private @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
 
-    public Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader() {
-        return this.kubernetesScubaReader == null ? Codegen.empty() : this.kubernetesScubaReader;
+    public Optional<Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs>> kubernetesScubaReader() {
+        return Optional.ofNullable(this.kubernetesScubaReader);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
      * 
      */
     @Import(name="kubernetesService")
-      private final @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
+    private @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
 
-    public Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService() {
-        return this.kubernetesService == null ? Codegen.empty() : this.kubernetesService;
+    public Optional<Output<DefenderForContainersAwsOfferingKubernetesServiceArgs>> kubernetesService() {
+        return Optional.ofNullable(this.kubernetesService);
     }
 
     /**
@@ -73,102 +74,89 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
      * 
      */
     @Import(name="offeringType", required=true)
-      private final Output<String> offeringType;
+    private Output<String> offeringType;
 
     public Output<String> offeringType() {
         return this.offeringType;
     }
 
-    public DefenderForContainersAwsOfferingArgs(
-        @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis,
-        @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3,
-        @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader,
-        @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService,
-        Output<String> offeringType) {
-        this.cloudWatchToKinesis = cloudWatchToKinesis;
-        this.kinesisToS3 = kinesisToS3;
-        this.kubernetesScubaReader = kubernetesScubaReader;
-        this.kubernetesService = kubernetesService;
-        this.offeringType = Codegen.stringProp("offeringType").output().arg(offeringType).require();
-    }
+    private DefenderForContainersAwsOfferingArgs() {}
 
-    private DefenderForContainersAwsOfferingArgs() {
-        this.cloudWatchToKinesis = Codegen.empty();
-        this.kinesisToS3 = Codegen.empty();
-        this.kubernetesScubaReader = Codegen.empty();
-        this.kubernetesService = Codegen.empty();
-        this.offeringType = Codegen.empty();
+    private DefenderForContainersAwsOfferingArgs(DefenderForContainersAwsOfferingArgs $) {
+        this.cloudWatchToKinesis = $.cloudWatchToKinesis;
+        this.kinesisToS3 = $.kinesisToS3;
+        this.kubernetesScubaReader = $.kubernetesScubaReader;
+        this.kubernetesService = $.kubernetesService;
+        this.offeringType = $.offeringType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForContainersAwsOfferingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
-        private @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
-        private @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
-        private @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
-        private Output<String> offeringType;
+        private DefenderForContainersAwsOfferingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForContainersAwsOfferingArgs();
         }
 
         public Builder(DefenderForContainersAwsOfferingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchToKinesis = defaults.cloudWatchToKinesis;
-    	      this.kinesisToS3 = defaults.kinesisToS3;
-    	      this.kubernetesScubaReader = defaults.kubernetesScubaReader;
-    	      this.kubernetesService = defaults.kubernetesService;
-    	      this.offeringType = defaults.offeringType;
+            $ = new DefenderForContainersAwsOfferingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchToKinesis(@Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis) {
-            this.cloudWatchToKinesis = cloudWatchToKinesis;
+            $.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
-        public Builder cloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingCloudWatchToKinesisArgs cloudWatchToKinesis) {
-            this.cloudWatchToKinesis = Codegen.ofNullable(cloudWatchToKinesis);
-            return this;
+
+        public Builder cloudWatchToKinesis(DefenderForContainersAwsOfferingCloudWatchToKinesisArgs cloudWatchToKinesis) {
+            return cloudWatchToKinesis(Output.of(cloudWatchToKinesis));
         }
+
         public Builder kinesisToS3(@Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3) {
-            this.kinesisToS3 = kinesisToS3;
+            $.kinesisToS3 = kinesisToS3;
             return this;
         }
-        public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingKinesisToS3Args kinesisToS3) {
-            this.kinesisToS3 = Codegen.ofNullable(kinesisToS3);
-            return this;
+
+        public Builder kinesisToS3(DefenderForContainersAwsOfferingKinesisToS3Args kinesisToS3) {
+            return kinesisToS3(Output.of(kinesisToS3));
         }
+
         public Builder kubernetesScubaReader(@Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader) {
-            this.kubernetesScubaReader = kubernetesScubaReader;
+            $.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
-        public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingKubernetesScubaReaderArgs kubernetesScubaReader) {
-            this.kubernetesScubaReader = Codegen.ofNullable(kubernetesScubaReader);
-            return this;
+
+        public Builder kubernetesScubaReader(DefenderForContainersAwsOfferingKubernetesScubaReaderArgs kubernetesScubaReader) {
+            return kubernetesScubaReader(Output.of(kubernetesScubaReader));
         }
+
         public Builder kubernetesService(@Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService) {
-            this.kubernetesService = kubernetesService;
+            $.kubernetesService = kubernetesService;
             return this;
         }
-        public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingKubernetesServiceArgs kubernetesService) {
-            this.kubernetesService = Codegen.ofNullable(kubernetesService);
-            return this;
+
+        public Builder kubernetesService(DefenderForContainersAwsOfferingKubernetesServiceArgs kubernetesService) {
+            return kubernetesService(Output.of(kubernetesService));
         }
+
         public Builder offeringType(Output<String> offeringType) {
-            this.offeringType = Objects.requireNonNull(offeringType);
+            $.offeringType = offeringType;
             return this;
         }
+
         public Builder offeringType(String offeringType) {
-            this.offeringType = Output.of(Objects.requireNonNull(offeringType));
-            return this;
-        }        public DefenderForContainersAwsOfferingArgs build() {
-            return new DefenderForContainersAwsOfferingArgs(cloudWatchToKinesis, kinesisToS3, kubernetesScubaReader, kubernetesService, offeringType);
+            return offeringType(Output.of(offeringType));
+        }
+
+        public DefenderForContainersAwsOfferingArgs build() {
+            $.offeringType = Codegen.stringProp("offeringType").output().arg($.offeringType).require();
+            return $;
         }
     }
+
 }

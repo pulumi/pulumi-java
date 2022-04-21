@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Either<String,EnableStatus>> enabled;
+    private @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Output<Either<String,EnableStatus>> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Either<String,EnableStatus>>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable Output<String> expirationDate;
+    private @Nullable Output<String> expirationDate;
 
-    public Output<String> expirationDate() {
-        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
+    public Optional<Output<String>> expirationDate() {
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="expired")
-      private final @Nullable Output<Boolean> expired;
+    private @Nullable Output<Boolean> expired;
 
-    public Output<Boolean> expired() {
-        return this.expired == null ? Codegen.empty() : this.expired;
+    public Optional<Output<Boolean>> expired() {
+        return Optional.ofNullable(this.expired);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="markdown")
-      private final @Nullable Output<String> markdown;
+    private @Nullable Output<String> markdown;
 
-    public Output<String> markdown() {
-        return this.markdown == null ? Codegen.empty() : this.markdown;
+    public Optional<Output<String>> markdown() {
+        return Optional.ofNullable(this.markdown);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public LabAnnouncementPropertiesArgs(
-        @Nullable Output<Either<String,EnableStatus>> enabled,
-        @Nullable Output<String> expirationDate,
-        @Nullable Output<Boolean> expired,
-        @Nullable Output<String> markdown,
-        @Nullable Output<String> title) {
-        this.enabled = enabled;
-        this.expirationDate = expirationDate;
-        this.expired = expired;
-        this.markdown = markdown;
-        this.title = title;
-    }
+    private LabAnnouncementPropertiesArgs() {}
 
-    private LabAnnouncementPropertiesArgs() {
-        this.enabled = Codegen.empty();
-        this.expirationDate = Codegen.empty();
-        this.expired = Codegen.empty();
-        this.markdown = Codegen.empty();
-        this.title = Codegen.empty();
+    private LabAnnouncementPropertiesArgs(LabAnnouncementPropertiesArgs $) {
+        this.enabled = $.enabled;
+        this.expirationDate = $.expirationDate;
+        this.expired = $.expired;
+        this.markdown = $.markdown;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabAnnouncementPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EnableStatus>> enabled;
-        private @Nullable Output<String> expirationDate;
-        private @Nullable Output<Boolean> expired;
-        private @Nullable Output<String> markdown;
-        private @Nullable Output<String> title;
+        private LabAnnouncementPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabAnnouncementPropertiesArgs();
         }
 
         public Builder(LabAnnouncementPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.expired = defaults.expired;
-    	      this.markdown = defaults.markdown;
-    	      this.title = defaults.title;
+            $ = new LabAnnouncementPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Either<String,EnableStatus>> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Either<String,EnableStatus> enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
-        public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Codegen.ofNullable(expirationDate);
-            return this;
+
+        public Builder expirationDate(String expirationDate) {
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder expired(@Nullable Output<Boolean> expired) {
-            this.expired = expired;
+            $.expired = expired;
             return this;
         }
-        public Builder expired(@Nullable Boolean expired) {
-            this.expired = Codegen.ofNullable(expired);
-            return this;
+
+        public Builder expired(Boolean expired) {
+            return expired(Output.of(expired));
         }
+
         public Builder markdown(@Nullable Output<String> markdown) {
-            this.markdown = markdown;
+            $.markdown = markdown;
             return this;
         }
-        public Builder markdown(@Nullable String markdown) {
-            this.markdown = Codegen.ofNullable(markdown);
-            return this;
+
+        public Builder markdown(String markdown) {
+            return markdown(Output.of(markdown));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public LabAnnouncementPropertiesArgs build() {
-            return new LabAnnouncementPropertiesArgs(enabled, expirationDate, expired, markdown, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public LabAnnouncementPropertiesArgs build() {
+            return $;
         }
     }
+
 }

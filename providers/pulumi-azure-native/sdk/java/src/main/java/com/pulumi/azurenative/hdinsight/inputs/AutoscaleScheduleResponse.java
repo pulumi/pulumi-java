@@ -25,10 +25,10 @@ public final class AutoscaleScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="days")
-      private final @Nullable List<String> days;
+    private @Nullable List<String> days;
 
-    public List<String> days() {
-        return this.days == null ? List.of() : this.days;
+    public Optional<List<String>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class AutoscaleScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeAndCapacity")
-      private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
+    private @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
     public Optional<AutoscaleTimeAndCapacityResponse> timeAndCapacity() {
-        return this.timeAndCapacity == null ? Optional.empty() : Optional.ofNullable(this.timeAndCapacity);
+        return Optional.ofNullable(this.timeAndCapacity);
     }
 
-    public AutoscaleScheduleResponse(
-        @Nullable List<String> days,
-        @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
-        this.days = days;
-        this.timeAndCapacity = timeAndCapacity;
-    }
+    private AutoscaleScheduleResponse() {}
 
-    private AutoscaleScheduleResponse() {
-        this.days = List.of();
-        this.timeAndCapacity = null;
+    private AutoscaleScheduleResponse(AutoscaleScheduleResponse $) {
+        this.days = $.days;
+        this.timeAndCapacity = $.timeAndCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> days;
-        private @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
+        private AutoscaleScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleScheduleResponse();
         }
 
         public Builder(AutoscaleScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.timeAndCapacity = defaults.timeAndCapacity;
+            $ = new AutoscaleScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable List<String> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
+
         public Builder days(String... days) {
             return days(List.of(days));
         }
+
         public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
-            this.timeAndCapacity = timeAndCapacity;
+            $.timeAndCapacity = timeAndCapacity;
             return this;
-        }        public AutoscaleScheduleResponse build() {
-            return new AutoscaleScheduleResponse(days, timeAndCapacity);
+        }
+
+        public AutoscaleScheduleResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="attachNewDataDiskOptions")
-      private final @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
+    private @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
 
     public Optional<AttachNewDataDiskOptionsResponse> attachNewDataDiskOptions() {
-        return this.attachNewDataDiskOptions == null ? Optional.empty() : Optional.ofNullable(this.attachNewDataDiskOptions);
+        return Optional.ofNullable(this.attachNewDataDiskOptions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="existingLabDiskId")
-      private final @Nullable String existingLabDiskId;
+    private @Nullable String existingLabDiskId;
 
     public Optional<String> existingLabDiskId() {
-        return this.existingLabDiskId == null ? Optional.empty() : Optional.ofNullable(this.existingLabDiskId);
+        return Optional.ofNullable(this.existingLabDiskId);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable String hostCaching;
+    private @Nullable String hostCaching;
 
     public Optional<String> hostCaching() {
-        return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);
+        return Optional.ofNullable(this.hostCaching);
     }
 
-    public DataDiskPropertiesResponse(
-        @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
-        @Nullable String existingLabDiskId,
-        @Nullable String hostCaching) {
-        this.attachNewDataDiskOptions = attachNewDataDiskOptions;
-        this.existingLabDiskId = existingLabDiskId;
-        this.hostCaching = hostCaching;
-    }
+    private DataDiskPropertiesResponse() {}
 
-    private DataDiskPropertiesResponse() {
-        this.attachNewDataDiskOptions = null;
-        this.existingLabDiskId = null;
-        this.hostCaching = null;
+    private DataDiskPropertiesResponse(DataDiskPropertiesResponse $) {
+        this.attachNewDataDiskOptions = $.attachNewDataDiskOptions;
+        this.existingLabDiskId = $.existingLabDiskId;
+        this.hostCaching = $.hostCaching;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
-        private @Nullable String existingLabDiskId;
-        private @Nullable String hostCaching;
+        private DataDiskPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskPropertiesResponse();
         }
 
         public Builder(DataDiskPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachNewDataDiskOptions = defaults.attachNewDataDiskOptions;
-    	      this.existingLabDiskId = defaults.existingLabDiskId;
-    	      this.hostCaching = defaults.hostCaching;
+            $ = new DataDiskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions) {
-            this.attachNewDataDiskOptions = attachNewDataDiskOptions;
+            $.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
+
         public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
-            this.existingLabDiskId = existingLabDiskId;
+            $.existingLabDiskId = existingLabDiskId;
             return this;
         }
+
         public Builder hostCaching(@Nullable String hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
-        }        public DataDiskPropertiesResponse build() {
-            return new DataDiskPropertiesResponse(attachNewDataDiskOptions, existingLabDiskId, hostCaching);
+        }
+
+        public DataDiskPropertiesResponse build() {
+            return $;
         }
     }
+
 }

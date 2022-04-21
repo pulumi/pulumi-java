@@ -27,10 +27,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowForwardedTraffic")
-      private final @Nullable Boolean allowForwardedTraffic;
+    private @Nullable Boolean allowForwardedTraffic;
 
     public Optional<Boolean> allowForwardedTraffic() {
-        return this.allowForwardedTraffic == null ? Optional.empty() : Optional.ofNullable(this.allowForwardedTraffic);
+        return Optional.ofNullable(this.allowForwardedTraffic);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowGatewayTransit")
-      private final @Nullable Boolean allowGatewayTransit;
+    private @Nullable Boolean allowGatewayTransit;
 
     public Optional<Boolean> allowGatewayTransit() {
-        return this.allowGatewayTransit == null ? Optional.empty() : Optional.ofNullable(this.allowGatewayTransit);
+        return Optional.ofNullable(this.allowGatewayTransit);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowVirtualNetworkAccess")
-      private final @Nullable Boolean allowVirtualNetworkAccess;
+    private @Nullable Boolean allowVirtualNetworkAccess;
 
     public Optional<Boolean> allowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.allowVirtualNetworkAccess);
+        return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="doNotVerifyRemoteGateways")
-      private final @Nullable Boolean doNotVerifyRemoteGateways;
+    private @Nullable Boolean doNotVerifyRemoteGateways;
 
     public Optional<Boolean> doNotVerifyRemoteGateways() {
-        return this.doNotVerifyRemoteGateways == null ? Optional.empty() : Optional.ofNullable(this.doNotVerifyRemoteGateways);
+        return Optional.ofNullable(this.doNotVerifyRemoteGateways);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -82,10 +82,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="peeringState")
-      private final @Nullable String peeringState;
+    private @Nullable String peeringState;
 
     public Optional<String> peeringState() {
-        return this.peeringState == null ? Optional.empty() : Optional.ofNullable(this.peeringState);
+        return Optional.ofNullable(this.peeringState);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -126,10 +126,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="remoteAddressSpace")
-      private final @Nullable AddressSpaceResponse remoteAddressSpace;
+    private @Nullable AddressSpaceResponse remoteAddressSpace;
 
     public Optional<AddressSpaceResponse> remoteAddressSpace() {
-        return this.remoteAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.remoteAddressSpace);
+        return Optional.ofNullable(this.remoteAddressSpace);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="remoteBgpCommunities")
-      private final @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities;
+    private @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities;
 
     public Optional<VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities() {
-        return this.remoteBgpCommunities == null ? Optional.empty() : Optional.ofNullable(this.remoteBgpCommunities);
+        return Optional.ofNullable(this.remoteBgpCommunities);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="remoteVirtualNetwork")
-      private final @Nullable SubResourceResponse remoteVirtualNetwork;
+    private @Nullable SubResourceResponse remoteVirtualNetwork;
 
     public Optional<SubResourceResponse> remoteVirtualNetwork() {
-        return this.remoteVirtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.remoteVirtualNetwork);
+        return Optional.ofNullable(this.remoteVirtualNetwork);
     }
 
     /**
@@ -159,7 +159,7 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -170,10 +170,10 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -181,172 +181,131 @@ public final class VirtualNetworkPeeringResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useRemoteGateways")
-      private final @Nullable Boolean useRemoteGateways;
+    private @Nullable Boolean useRemoteGateways;
 
     public Optional<Boolean> useRemoteGateways() {
-        return this.useRemoteGateways == null ? Optional.empty() : Optional.ofNullable(this.useRemoteGateways);
+        return Optional.ofNullable(this.useRemoteGateways);
     }
 
-    public VirtualNetworkPeeringResponse(
-        @Nullable Boolean allowForwardedTraffic,
-        @Nullable Boolean allowGatewayTransit,
-        @Nullable Boolean allowVirtualNetworkAccess,
-        @Nullable Boolean doNotVerifyRemoteGateways,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String peeringState,
-        String provisioningState,
-        @Nullable AddressSpaceResponse remoteAddressSpace,
-        @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities,
-        @Nullable SubResourceResponse remoteVirtualNetwork,
-        String resourceGuid,
-        @Nullable String type,
-        @Nullable Boolean useRemoteGateways) {
-        this.allowForwardedTraffic = allowForwardedTraffic;
-        this.allowGatewayTransit = allowGatewayTransit;
-        this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
-        this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.peeringState = peeringState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.remoteAddressSpace = remoteAddressSpace;
-        this.remoteBgpCommunities = remoteBgpCommunities;
-        this.remoteVirtualNetwork = remoteVirtualNetwork;
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.type = type;
-        this.useRemoteGateways = useRemoteGateways;
-    }
+    private VirtualNetworkPeeringResponse() {}
 
-    private VirtualNetworkPeeringResponse() {
-        this.allowForwardedTraffic = null;
-        this.allowGatewayTransit = null;
-        this.allowVirtualNetworkAccess = null;
-        this.doNotVerifyRemoteGateways = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.peeringState = null;
-        this.provisioningState = null;
-        this.remoteAddressSpace = null;
-        this.remoteBgpCommunities = null;
-        this.remoteVirtualNetwork = null;
-        this.resourceGuid = null;
-        this.type = null;
-        this.useRemoteGateways = null;
+    private VirtualNetworkPeeringResponse(VirtualNetworkPeeringResponse $) {
+        this.allowForwardedTraffic = $.allowForwardedTraffic;
+        this.allowGatewayTransit = $.allowGatewayTransit;
+        this.allowVirtualNetworkAccess = $.allowVirtualNetworkAccess;
+        this.doNotVerifyRemoteGateways = $.doNotVerifyRemoteGateways;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.peeringState = $.peeringState;
+        this.provisioningState = $.provisioningState;
+        this.remoteAddressSpace = $.remoteAddressSpace;
+        this.remoteBgpCommunities = $.remoteBgpCommunities;
+        this.remoteVirtualNetwork = $.remoteVirtualNetwork;
+        this.resourceGuid = $.resourceGuid;
+        this.type = $.type;
+        this.useRemoteGateways = $.useRemoteGateways;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkPeeringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowForwardedTraffic;
-        private @Nullable Boolean allowGatewayTransit;
-        private @Nullable Boolean allowVirtualNetworkAccess;
-        private @Nullable Boolean doNotVerifyRemoteGateways;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String peeringState;
-        private String provisioningState;
-        private @Nullable AddressSpaceResponse remoteAddressSpace;
-        private @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities;
-        private @Nullable SubResourceResponse remoteVirtualNetwork;
-        private String resourceGuid;
-        private @Nullable String type;
-        private @Nullable Boolean useRemoteGateways;
+        private VirtualNetworkPeeringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkPeeringResponse();
         }
 
         public Builder(VirtualNetworkPeeringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowForwardedTraffic = defaults.allowForwardedTraffic;
-    	      this.allowGatewayTransit = defaults.allowGatewayTransit;
-    	      this.allowVirtualNetworkAccess = defaults.allowVirtualNetworkAccess;
-    	      this.doNotVerifyRemoteGateways = defaults.doNotVerifyRemoteGateways;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.peeringState = defaults.peeringState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.remoteAddressSpace = defaults.remoteAddressSpace;
-    	      this.remoteBgpCommunities = defaults.remoteBgpCommunities;
-    	      this.remoteVirtualNetwork = defaults.remoteVirtualNetwork;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.type = defaults.type;
-    	      this.useRemoteGateways = defaults.useRemoteGateways;
+            $ = new VirtualNetworkPeeringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
-            this.allowForwardedTraffic = allowForwardedTraffic;
+            $.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
+
         public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
-            this.allowGatewayTransit = allowGatewayTransit;
+            $.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
+
         public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
+            $.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
+
         public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
-            this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
+            $.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder peeringState(@Nullable String peeringState) {
-            this.peeringState = peeringState;
+            $.peeringState = peeringState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder remoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
-            this.remoteAddressSpace = remoteAddressSpace;
+            $.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
+
         public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities) {
-            this.remoteBgpCommunities = remoteBgpCommunities;
+            $.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
+
         public Builder remoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = remoteVirtualNetwork;
+            $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
-            this.useRemoteGateways = useRemoteGateways;
+            $.useRemoteGateways = useRemoteGateways;
             return this;
-        }        public VirtualNetworkPeeringResponse build() {
-            return new VirtualNetworkPeeringResponse(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, etag, id, name, peeringState, provisioningState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, resourceGuid, type, useRemoteGateways);
+        }
+
+        public VirtualNetworkPeeringResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            return $;
         }
     }
+
 }

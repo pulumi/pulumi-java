@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -31,10 +31,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -64,7 +64,7 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metadataEndpoint", required=true)
-      private final Output<String> metadataEndpoint;
+    private Output<String> metadataEndpoint;
 
     public Output<String> metadataEndpoint() {
         return this.metadataEndpoint;
@@ -75,10 +75,10 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="opid")
-      private final @Nullable Output<String> opid;
+    private @Nullable Output<String> opid;
 
-    public Output<String> opid() {
-        return this.opid == null ? Codegen.empty() : this.opid;
+    public Optional<Output<String>> opid() {
+        return Optional.ofNullable(this.opid);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -97,141 +97,123 @@ public final class OpenIdConnectProviderArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public OpenIdConnectProviderArgs(
-        Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> metadataEndpoint,
-        @Nullable Output<String> opid,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = clientSecret;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint, "expected parameter 'metadataEndpoint' to be non-null");
-        this.opid = opid;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private OpenIdConnectProviderArgs() {}
 
-    private OpenIdConnectProviderArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.metadataEndpoint = Codegen.empty();
-        this.opid = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private OpenIdConnectProviderArgs(OpenIdConnectProviderArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.metadataEndpoint = $.metadataEndpoint;
+        this.opid = $.opid;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdConnectProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> metadataEndpoint;
-        private @Nullable Output<String> opid;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private OpenIdConnectProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdConnectProviderArgs();
         }
 
         public Builder(OpenIdConnectProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.metadataEndpoint = defaults.metadataEndpoint;
-    	      this.opid = defaults.opid;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new OpenIdConnectProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder metadataEndpoint(Output<String> metadataEndpoint) {
-            this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
+            $.metadataEndpoint = metadataEndpoint;
             return this;
         }
+
         public Builder metadataEndpoint(String metadataEndpoint) {
-            this.metadataEndpoint = Output.of(Objects.requireNonNull(metadataEndpoint));
-            return this;
+            return metadataEndpoint(Output.of(metadataEndpoint));
         }
+
         public Builder opid(@Nullable Output<String> opid) {
-            this.opid = opid;
+            $.opid = opid;
             return this;
         }
-        public Builder opid(@Nullable String opid) {
-            this.opid = Codegen.ofNullable(opid);
-            return this;
+
+        public Builder opid(String opid) {
+            return opid(Output.of(opid));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public OpenIdConnectProviderArgs build() {
-            return new OpenIdConnectProviderArgs(clientId, clientSecret, description, displayName, metadataEndpoint, opid, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public OpenIdConnectProviderArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.metadataEndpoint = Objects.requireNonNull($.metadataEndpoint, "expected parameter 'metadataEndpoint' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

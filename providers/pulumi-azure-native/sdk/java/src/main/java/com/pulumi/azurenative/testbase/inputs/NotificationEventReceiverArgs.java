@@ -6,9 +6,9 @@ package com.pulumi.azurenative.testbase.inputs;
 import com.pulumi.azurenative.testbase.inputs.NotificationReceiverValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NotificationEventReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="receiverType")
-      private final @Nullable Output<String> receiverType;
+    private @Nullable Output<String> receiverType;
 
-    public Output<String> receiverType() {
-        return this.receiverType == null ? Codegen.empty() : this.receiverType;
+    public Optional<Output<String>> receiverType() {
+        return Optional.ofNullable(this.receiverType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class NotificationEventReceiverArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="receiverValue")
-      private final @Nullable Output<NotificationReceiverValueArgs> receiverValue;
+    private @Nullable Output<NotificationReceiverValueArgs> receiverValue;
 
-    public Output<NotificationReceiverValueArgs> receiverValue() {
-        return this.receiverValue == null ? Codegen.empty() : this.receiverValue;
+    public Optional<Output<NotificationReceiverValueArgs>> receiverValue() {
+        return Optional.ofNullable(this.receiverValue);
     }
 
-    public NotificationEventReceiverArgs(
-        @Nullable Output<String> receiverType,
-        @Nullable Output<NotificationReceiverValueArgs> receiverValue) {
-        this.receiverType = receiverType;
-        this.receiverValue = receiverValue;
-    }
+    private NotificationEventReceiverArgs() {}
 
-    private NotificationEventReceiverArgs() {
-        this.receiverType = Codegen.empty();
-        this.receiverValue = Codegen.empty();
+    private NotificationEventReceiverArgs(NotificationEventReceiverArgs $) {
+        this.receiverType = $.receiverType;
+        this.receiverValue = $.receiverValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationEventReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> receiverType;
-        private @Nullable Output<NotificationReceiverValueArgs> receiverValue;
+        private NotificationEventReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationEventReceiverArgs();
         }
 
         public Builder(NotificationEventReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiverType = defaults.receiverType;
-    	      this.receiverValue = defaults.receiverValue;
+            $ = new NotificationEventReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder receiverType(@Nullable Output<String> receiverType) {
-            this.receiverType = receiverType;
+            $.receiverType = receiverType;
             return this;
         }
-        public Builder receiverType(@Nullable String receiverType) {
-            this.receiverType = Codegen.ofNullable(receiverType);
-            return this;
+
+        public Builder receiverType(String receiverType) {
+            return receiverType(Output.of(receiverType));
         }
+
         public Builder receiverValue(@Nullable Output<NotificationReceiverValueArgs> receiverValue) {
-            this.receiverValue = receiverValue;
+            $.receiverValue = receiverValue;
             return this;
         }
-        public Builder receiverValue(@Nullable NotificationReceiverValueArgs receiverValue) {
-            this.receiverValue = Codegen.ofNullable(receiverValue);
-            return this;
-        }        public NotificationEventReceiverArgs build() {
-            return new NotificationEventReceiverArgs(receiverType, receiverValue);
+
+        public Builder receiverValue(NotificationReceiverValueArgs receiverValue) {
+            return receiverValue(Output.of(receiverValue));
+        }
+
+        public NotificationEventReceiverArgs build() {
+            return $;
         }
     }
+
 }

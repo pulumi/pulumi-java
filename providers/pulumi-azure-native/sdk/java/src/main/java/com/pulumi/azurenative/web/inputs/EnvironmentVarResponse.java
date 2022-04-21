@@ -23,10 +23,10 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable String secretRef;
+    private @Nullable String secretRef;
 
     public Optional<String> secretRef() {
-        return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public EnvironmentVarResponse(
-        @Nullable String name,
-        @Nullable String secretRef,
-        @Nullable String value) {
-        this.name = name;
-        this.secretRef = secretRef;
-        this.value = value;
-    }
+    private EnvironmentVarResponse() {}
 
-    private EnvironmentVarResponse() {
-        this.name = null;
-        this.secretRef = null;
-        this.value = null;
+    private EnvironmentVarResponse(EnvironmentVarResponse $) {
+        this.name = $.name;
+        this.secretRef = $.secretRef;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentVarResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String secretRef;
-        private @Nullable String value;
+        private EnvironmentVarResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentVarResponse();
         }
 
         public Builder(EnvironmentVarResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secretRef = defaults.secretRef;
-    	      this.value = defaults.value;
+            $ = new EnvironmentVarResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder secretRef(@Nullable String secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public EnvironmentVarResponse build() {
-            return new EnvironmentVarResponse(name, secretRef, value);
+        }
+
+        public EnvironmentVarResponse build() {
+            return $;
         }
     }
+
 }

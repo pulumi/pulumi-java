@@ -23,10 +23,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable String privateLinkResourceId;
+    private @Nullable String privateLinkResourceId;
 
     public Optional<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable String requestMessage;
+    private @Nullable String requestMessage;
 
     public Optional<String> requestMessage() {
-        return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="resourceRegion")
-      private final @Nullable String resourceRegion;
+    private @Nullable String resourceRegion;
 
     public Optional<String> resourceRegion() {
-        return this.resourceRegion == null ? Optional.empty() : Optional.ofNullable(this.resourceRegion);
+        return Optional.ofNullable(this.resourceRegion);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public SharedPrivateLinkResourcePropertiesResponse(
-        @Nullable String groupId,
-        @Nullable String privateLinkResourceId,
-        @Nullable String provisioningState,
-        @Nullable String requestMessage,
-        @Nullable String resourceRegion,
-        @Nullable String status) {
-        this.groupId = groupId;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.provisioningState = provisioningState;
-        this.requestMessage = requestMessage;
-        this.resourceRegion = resourceRegion;
-        this.status = status;
-    }
+    private SharedPrivateLinkResourcePropertiesResponse() {}
 
-    private SharedPrivateLinkResourcePropertiesResponse() {
-        this.groupId = null;
-        this.privateLinkResourceId = null;
-        this.provisioningState = null;
-        this.requestMessage = null;
-        this.resourceRegion = null;
-        this.status = null;
+    private SharedPrivateLinkResourcePropertiesResponse(SharedPrivateLinkResourcePropertiesResponse $) {
+        this.groupId = $.groupId;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.provisioningState = $.provisioningState;
+        this.requestMessage = $.requestMessage;
+        this.resourceRegion = $.resourceRegion;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String groupId;
-        private @Nullable String privateLinkResourceId;
-        private @Nullable String provisioningState;
-        private @Nullable String requestMessage;
-        private @Nullable String resourceRegion;
-        private @Nullable String status;
+        private SharedPrivateLinkResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourcePropertiesResponse();
         }
 
         public Builder(SharedPrivateLinkResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.resourceRegion = defaults.resourceRegion;
-    	      this.status = defaults.status;
+            $ = new SharedPrivateLinkResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
+
         public Builder resourceRegion(@Nullable String resourceRegion) {
-            this.resourceRegion = resourceRegion;
+            $.resourceRegion = resourceRegion;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public SharedPrivateLinkResourcePropertiesResponse build() {
-            return new SharedPrivateLinkResourcePropertiesResponse(groupId, privateLinkResourceId, provisioningState, requestMessage, resourceRegion, status);
+        }
+
+        public SharedPrivateLinkResourcePropertiesResponse build() {
+            return $;
         }
     }
+
 }

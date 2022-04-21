@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="backupIntervalInMinutes")
-      private final @Nullable Output<Integer> backupIntervalInMinutes;
+    private @Nullable Output<Integer> backupIntervalInMinutes;
 
-    public Output<Integer> backupIntervalInMinutes() {
-        return this.backupIntervalInMinutes == null ? Codegen.empty() : this.backupIntervalInMinutes;
+    public Optional<Output<Integer>> backupIntervalInMinutes() {
+        return Optional.ofNullable(this.backupIntervalInMinutes);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="backupRetentionIntervalInHours")
-      private final @Nullable Output<Integer> backupRetentionIntervalInHours;
+    private @Nullable Output<Integer> backupRetentionIntervalInHours;
 
-    public Output<Integer> backupRetentionIntervalInHours() {
-        return this.backupRetentionIntervalInHours == null ? Codegen.empty() : this.backupRetentionIntervalInHours;
+    public Optional<Output<Integer>> backupRetentionIntervalInHours() {
+        return Optional.ofNullable(this.backupRetentionIntervalInHours);
     }
 
-    public PeriodicModePropertiesArgs(
-        @Nullable Output<Integer> backupIntervalInMinutes,
-        @Nullable Output<Integer> backupRetentionIntervalInHours) {
-        this.backupIntervalInMinutes = backupIntervalInMinutes;
-        this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
-    }
+    private PeriodicModePropertiesArgs() {}
 
-    private PeriodicModePropertiesArgs() {
-        this.backupIntervalInMinutes = Codegen.empty();
-        this.backupRetentionIntervalInHours = Codegen.empty();
+    private PeriodicModePropertiesArgs(PeriodicModePropertiesArgs $) {
+        this.backupIntervalInMinutes = $.backupIntervalInMinutes;
+        this.backupRetentionIntervalInHours = $.backupRetentionIntervalInHours;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicModePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> backupIntervalInMinutes;
-        private @Nullable Output<Integer> backupRetentionIntervalInHours;
+        private PeriodicModePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicModePropertiesArgs();
         }
 
         public Builder(PeriodicModePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupIntervalInMinutes = defaults.backupIntervalInMinutes;
-    	      this.backupRetentionIntervalInHours = defaults.backupRetentionIntervalInHours;
+            $ = new PeriodicModePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupIntervalInMinutes(@Nullable Output<Integer> backupIntervalInMinutes) {
-            this.backupIntervalInMinutes = backupIntervalInMinutes;
+            $.backupIntervalInMinutes = backupIntervalInMinutes;
             return this;
         }
-        public Builder backupIntervalInMinutes(@Nullable Integer backupIntervalInMinutes) {
-            this.backupIntervalInMinutes = Codegen.ofNullable(backupIntervalInMinutes);
-            return this;
+
+        public Builder backupIntervalInMinutes(Integer backupIntervalInMinutes) {
+            return backupIntervalInMinutes(Output.of(backupIntervalInMinutes));
         }
+
         public Builder backupRetentionIntervalInHours(@Nullable Output<Integer> backupRetentionIntervalInHours) {
-            this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
+            $.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
         }
-        public Builder backupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
-            this.backupRetentionIntervalInHours = Codegen.ofNullable(backupRetentionIntervalInHours);
-            return this;
-        }        public PeriodicModePropertiesArgs build() {
-            return new PeriodicModePropertiesArgs(backupIntervalInMinutes, backupRetentionIntervalInHours);
+
+        public Builder backupRetentionIntervalInHours(Integer backupRetentionIntervalInHours) {
+            return backupRetentionIntervalInHours(Output.of(backupRetentionIntervalInHours));
+        }
+
+        public PeriodicModePropertiesArgs build() {
+            return $;
         }
     }
+
 }

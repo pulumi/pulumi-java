@@ -13,11 +13,11 @@ import com.pulumi.azurenative.redhatopenshift.inputs.ServicePrincipalProfileArgs
 import com.pulumi.azurenative.redhatopenshift.inputs.WorkerProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="apiserverProfile")
-      private final @Nullable Output<APIServerProfileArgs> apiserverProfile;
+    private @Nullable Output<APIServerProfileArgs> apiserverProfile;
 
-    public Output<APIServerProfileArgs> apiserverProfile() {
-        return this.apiserverProfile == null ? Codegen.empty() : this.apiserverProfile;
+    public Optional<Output<APIServerProfileArgs>> apiserverProfile() {
+        return Optional.ofNullable(this.apiserverProfile);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clusterProfile")
-      private final @Nullable Output<ClusterProfileArgs> clusterProfile;
+    private @Nullable Output<ClusterProfileArgs> clusterProfile;
 
-    public Output<ClusterProfileArgs> clusterProfile() {
-        return this.clusterProfile == null ? Codegen.empty() : this.clusterProfile;
+    public Optional<Output<ClusterProfileArgs>> clusterProfile() {
+        return Optional.ofNullable(this.clusterProfile);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="consoleProfile")
-      private final @Nullable Output<ConsoleProfileArgs> consoleProfile;
+    private @Nullable Output<ConsoleProfileArgs> consoleProfile;
 
-    public Output<ConsoleProfileArgs> consoleProfile() {
-        return this.consoleProfile == null ? Codegen.empty() : this.consoleProfile;
+    public Optional<Output<ConsoleProfileArgs>> consoleProfile() {
+        return Optional.ofNullable(this.consoleProfile);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ingressProfiles")
-      private final @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
+    private @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
 
-    public Output<List<IngressProfileArgs>> ingressProfiles() {
-        return this.ingressProfiles == null ? Codegen.empty() : this.ingressProfiles;
+    public Optional<Output<List<IngressProfileArgs>>> ingressProfiles() {
+        return Optional.ofNullable(this.ingressProfiles);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="masterProfile")
-      private final @Nullable Output<MasterProfileArgs> masterProfile;
+    private @Nullable Output<MasterProfileArgs> masterProfile;
 
-    public Output<MasterProfileArgs> masterProfile() {
-        return this.masterProfile == null ? Codegen.empty() : this.masterProfile;
+    public Optional<Output<MasterProfileArgs>> masterProfile() {
+        return Optional.ofNullable(this.masterProfile);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -129,10 +129,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="servicePrincipalProfile")
-      private final @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
+    private @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
 
-    public Output<ServicePrincipalProfileArgs> servicePrincipalProfile() {
-        return this.servicePrincipalProfile == null ? Codegen.empty() : this.servicePrincipalProfile;
+    public Optional<Output<ServicePrincipalProfileArgs>> servicePrincipalProfile() {
+        return Optional.ofNullable(this.servicePrincipalProfile);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -162,212 +162,177 @@ public final class OpenShiftClusterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workerProfiles")
-      private final @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
+    private @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
 
-    public Output<List<WorkerProfileArgs>> workerProfiles() {
-        return this.workerProfiles == null ? Codegen.empty() : this.workerProfiles;
+    public Optional<Output<List<WorkerProfileArgs>>> workerProfiles() {
+        return Optional.ofNullable(this.workerProfiles);
     }
 
-    public OpenShiftClusterArgs(
-        @Nullable Output<APIServerProfileArgs> apiserverProfile,
-        @Nullable Output<ClusterProfileArgs> clusterProfile,
-        @Nullable Output<ConsoleProfileArgs> consoleProfile,
-        @Nullable Output<List<IngressProfileArgs>> ingressProfiles,
-        @Nullable Output<String> location,
-        @Nullable Output<MasterProfileArgs> masterProfile,
-        @Nullable Output<NetworkProfileArgs> networkProfile,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<WorkerProfileArgs>> workerProfiles) {
-        this.apiserverProfile = apiserverProfile;
-        this.clusterProfile = clusterProfile;
-        this.consoleProfile = consoleProfile;
-        this.ingressProfiles = ingressProfiles;
-        this.location = location;
-        this.masterProfile = masterProfile;
-        this.networkProfile = networkProfile;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.servicePrincipalProfile = servicePrincipalProfile;
-        this.tags = tags;
-        this.workerProfiles = workerProfiles;
-    }
+    private OpenShiftClusterArgs() {}
 
-    private OpenShiftClusterArgs() {
-        this.apiserverProfile = Codegen.empty();
-        this.clusterProfile = Codegen.empty();
-        this.consoleProfile = Codegen.empty();
-        this.ingressProfiles = Codegen.empty();
-        this.location = Codegen.empty();
-        this.masterProfile = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.servicePrincipalProfile = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workerProfiles = Codegen.empty();
+    private OpenShiftClusterArgs(OpenShiftClusterArgs $) {
+        this.apiserverProfile = $.apiserverProfile;
+        this.clusterProfile = $.clusterProfile;
+        this.consoleProfile = $.consoleProfile;
+        this.ingressProfiles = $.ingressProfiles;
+        this.location = $.location;
+        this.masterProfile = $.masterProfile;
+        this.networkProfile = $.networkProfile;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.servicePrincipalProfile = $.servicePrincipalProfile;
+        this.tags = $.tags;
+        this.workerProfiles = $.workerProfiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<APIServerProfileArgs> apiserverProfile;
-        private @Nullable Output<ClusterProfileArgs> clusterProfile;
-        private @Nullable Output<ConsoleProfileArgs> consoleProfile;
-        private @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MasterProfileArgs> masterProfile;
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
+        private OpenShiftClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftClusterArgs();
         }
 
         public Builder(OpenShiftClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiserverProfile = defaults.apiserverProfile;
-    	      this.clusterProfile = defaults.clusterProfile;
-    	      this.consoleProfile = defaults.consoleProfile;
-    	      this.ingressProfiles = defaults.ingressProfiles;
-    	      this.location = defaults.location;
-    	      this.masterProfile = defaults.masterProfile;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.servicePrincipalProfile = defaults.servicePrincipalProfile;
-    	      this.tags = defaults.tags;
-    	      this.workerProfiles = defaults.workerProfiles;
+            $ = new OpenShiftClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiserverProfile(@Nullable Output<APIServerProfileArgs> apiserverProfile) {
-            this.apiserverProfile = apiserverProfile;
+            $.apiserverProfile = apiserverProfile;
             return this;
         }
-        public Builder apiserverProfile(@Nullable APIServerProfileArgs apiserverProfile) {
-            this.apiserverProfile = Codegen.ofNullable(apiserverProfile);
-            return this;
+
+        public Builder apiserverProfile(APIServerProfileArgs apiserverProfile) {
+            return apiserverProfile(Output.of(apiserverProfile));
         }
+
         public Builder clusterProfile(@Nullable Output<ClusterProfileArgs> clusterProfile) {
-            this.clusterProfile = clusterProfile;
+            $.clusterProfile = clusterProfile;
             return this;
         }
-        public Builder clusterProfile(@Nullable ClusterProfileArgs clusterProfile) {
-            this.clusterProfile = Codegen.ofNullable(clusterProfile);
-            return this;
+
+        public Builder clusterProfile(ClusterProfileArgs clusterProfile) {
+            return clusterProfile(Output.of(clusterProfile));
         }
+
         public Builder consoleProfile(@Nullable Output<ConsoleProfileArgs> consoleProfile) {
-            this.consoleProfile = consoleProfile;
+            $.consoleProfile = consoleProfile;
             return this;
         }
-        public Builder consoleProfile(@Nullable ConsoleProfileArgs consoleProfile) {
-            this.consoleProfile = Codegen.ofNullable(consoleProfile);
-            return this;
+
+        public Builder consoleProfile(ConsoleProfileArgs consoleProfile) {
+            return consoleProfile(Output.of(consoleProfile));
         }
+
         public Builder ingressProfiles(@Nullable Output<List<IngressProfileArgs>> ingressProfiles) {
-            this.ingressProfiles = ingressProfiles;
+            $.ingressProfiles = ingressProfiles;
             return this;
         }
-        public Builder ingressProfiles(@Nullable List<IngressProfileArgs> ingressProfiles) {
-            this.ingressProfiles = Codegen.ofNullable(ingressProfiles);
-            return this;
+
+        public Builder ingressProfiles(List<IngressProfileArgs> ingressProfiles) {
+            return ingressProfiles(Output.of(ingressProfiles));
         }
+
         public Builder ingressProfiles(IngressProfileArgs... ingressProfiles) {
             return ingressProfiles(List.of(ingressProfiles));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder masterProfile(@Nullable Output<MasterProfileArgs> masterProfile) {
-            this.masterProfile = masterProfile;
+            $.masterProfile = masterProfile;
             return this;
         }
-        public Builder masterProfile(@Nullable MasterProfileArgs masterProfile) {
-            this.masterProfile = Codegen.ofNullable(masterProfile);
-            return this;
+
+        public Builder masterProfile(MasterProfileArgs masterProfile) {
+            return masterProfile(Output.of(masterProfile));
         }
+
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder servicePrincipalProfile(@Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile) {
-            this.servicePrincipalProfile = servicePrincipalProfile;
+            $.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
-        public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileArgs servicePrincipalProfile) {
-            this.servicePrincipalProfile = Codegen.ofNullable(servicePrincipalProfile);
-            return this;
+
+        public Builder servicePrincipalProfile(ServicePrincipalProfileArgs servicePrincipalProfile) {
+            return servicePrincipalProfile(Output.of(servicePrincipalProfile));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workerProfiles(@Nullable Output<List<WorkerProfileArgs>> workerProfiles) {
-            this.workerProfiles = workerProfiles;
+            $.workerProfiles = workerProfiles;
             return this;
         }
-        public Builder workerProfiles(@Nullable List<WorkerProfileArgs> workerProfiles) {
-            this.workerProfiles = Codegen.ofNullable(workerProfiles);
-            return this;
+
+        public Builder workerProfiles(List<WorkerProfileArgs> workerProfiles) {
+            return workerProfiles(Output.of(workerProfiles));
         }
+
         public Builder workerProfiles(WorkerProfileArgs... workerProfiles) {
             return workerProfiles(List.of(workerProfiles));
-        }        public OpenShiftClusterArgs build() {
-            return new OpenShiftClusterArgs(apiserverProfile, clusterProfile, consoleProfile, ingressProfiles, location, masterProfile, networkProfile, provisioningState, resourceGroupName, resourceName, servicePrincipalProfile, tags, workerProfiles);
+        }
+
+        public OpenShiftClusterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

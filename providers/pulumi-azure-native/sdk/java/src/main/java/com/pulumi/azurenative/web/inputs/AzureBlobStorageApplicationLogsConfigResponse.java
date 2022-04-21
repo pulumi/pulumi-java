@@ -24,10 +24,10 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
      * 
      */
     @Import(name="level")
-      private final @Nullable String level;
+    private @Nullable String level;
 
     public Optional<String> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Integer retentionInDays;
+    private @Nullable Integer retentionInDays;
 
     public Optional<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
+        return Optional.ofNullable(this.retentionInDays);
     }
 
     /**
@@ -48,64 +48,56 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
      * 
      */
     @Import(name="sasUrl")
-      private final @Nullable String sasUrl;
+    private @Nullable String sasUrl;
 
     public Optional<String> sasUrl() {
-        return this.sasUrl == null ? Optional.empty() : Optional.ofNullable(this.sasUrl);
+        return Optional.ofNullable(this.sasUrl);
     }
 
-    public AzureBlobStorageApplicationLogsConfigResponse(
-        @Nullable String level,
-        @Nullable Integer retentionInDays,
-        @Nullable String sasUrl) {
-        this.level = level;
-        this.retentionInDays = retentionInDays;
-        this.sasUrl = sasUrl;
-    }
+    private AzureBlobStorageApplicationLogsConfigResponse() {}
 
-    private AzureBlobStorageApplicationLogsConfigResponse() {
-        this.level = null;
-        this.retentionInDays = null;
-        this.sasUrl = null;
+    private AzureBlobStorageApplicationLogsConfigResponse(AzureBlobStorageApplicationLogsConfigResponse $) {
+        this.level = $.level;
+        this.retentionInDays = $.retentionInDays;
+        this.sasUrl = $.sasUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageApplicationLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String level;
-        private @Nullable Integer retentionInDays;
-        private @Nullable String sasUrl;
+        private AzureBlobStorageApplicationLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageApplicationLogsConfigResponse();
         }
 
         public Builder(AzureBlobStorageApplicationLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.retentionInDays = defaults.retentionInDays;
-    	      this.sasUrl = defaults.sasUrl;
+            $ = new AzureBlobStorageApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable String level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
+
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
+
         public Builder sasUrl(@Nullable String sasUrl) {
-            this.sasUrl = sasUrl;
+            $.sasUrl = sasUrl;
             return this;
-        }        public AzureBlobStorageApplicationLogsConfigResponse build() {
-            return new AzureBlobStorageApplicationLogsConfigResponse(level, retentionInDays, sasUrl);
+        }
+
+        public AzureBlobStorageApplicationLogsConfigResponse build() {
+            return $;
         }
     }
+
 }

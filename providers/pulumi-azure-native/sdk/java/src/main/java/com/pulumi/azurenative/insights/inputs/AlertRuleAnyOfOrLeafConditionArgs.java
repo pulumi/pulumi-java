@@ -6,10 +6,10 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.AlertRuleLeafConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="anyOf")
-      private final @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf;
+    private @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf;
 
-    public Output<List<AlertRuleLeafConditionArgs>> anyOf() {
-        return this.anyOf == null ? Codegen.empty() : this.anyOf;
+    public Optional<Output<List<AlertRuleLeafConditionArgs>>> anyOf() {
+        return Optional.ofNullable(this.anyOf);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="containsAny")
-      private final @Nullable Output<List<String>> containsAny;
+    private @Nullable Output<List<String>> containsAny;
 
-    public Output<List<String>> containsAny() {
-        return this.containsAny == null ? Codegen.empty() : this.containsAny;
+    public Optional<Output<List<String>>> containsAny() {
+        return Optional.ofNullable(this.containsAny);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="equals")
-      private final @Nullable Output<String> equals;
+    private @Nullable Output<String> equals;
 
-    public Output<String> equals_() {
-        return this.equals == null ? Codegen.empty() : this.equals;
+    public Optional<Output<String>> equals_() {
+        return Optional.ofNullable(this.equals);
     }
 
     /**
@@ -66,95 +66,86 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
-    public AlertRuleAnyOfOrLeafConditionArgs(
-        @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf,
-        @Nullable Output<List<String>> containsAny,
-        @Nullable Output<String> equals,
-        @Nullable Output<String> field) {
-        this.anyOf = anyOf;
-        this.containsAny = containsAny;
-        this.equals = equals;
-        this.field = field;
-    }
+    private AlertRuleAnyOfOrLeafConditionArgs() {}
 
-    private AlertRuleAnyOfOrLeafConditionArgs() {
-        this.anyOf = Codegen.empty();
-        this.containsAny = Codegen.empty();
-        this.equals = Codegen.empty();
-        this.field = Codegen.empty();
+    private AlertRuleAnyOfOrLeafConditionArgs(AlertRuleAnyOfOrLeafConditionArgs $) {
+        this.anyOf = $.anyOf;
+        this.containsAny = $.containsAny;
+        this.equals = $.equals;
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertRuleAnyOfOrLeafConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf;
-        private @Nullable Output<List<String>> containsAny;
-        private @Nullable Output<String> equals;
-        private @Nullable Output<String> field;
+        private AlertRuleAnyOfOrLeafConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertRuleAnyOfOrLeafConditionArgs();
         }
 
         public Builder(AlertRuleAnyOfOrLeafConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anyOf = defaults.anyOf;
-    	      this.containsAny = defaults.containsAny;
-    	      this.equals = defaults.equals;
-    	      this.field = defaults.field;
+            $ = new AlertRuleAnyOfOrLeafConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder anyOf(@Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf) {
-            this.anyOf = anyOf;
+            $.anyOf = anyOf;
             return this;
         }
-        public Builder anyOf(@Nullable List<AlertRuleLeafConditionArgs> anyOf) {
-            this.anyOf = Codegen.ofNullable(anyOf);
-            return this;
+
+        public Builder anyOf(List<AlertRuleLeafConditionArgs> anyOf) {
+            return anyOf(Output.of(anyOf));
         }
+
         public Builder anyOf(AlertRuleLeafConditionArgs... anyOf) {
             return anyOf(List.of(anyOf));
         }
+
         public Builder containsAny(@Nullable Output<List<String>> containsAny) {
-            this.containsAny = containsAny;
+            $.containsAny = containsAny;
             return this;
         }
-        public Builder containsAny(@Nullable List<String> containsAny) {
-            this.containsAny = Codegen.ofNullable(containsAny);
-            return this;
+
+        public Builder containsAny(List<String> containsAny) {
+            return containsAny(Output.of(containsAny));
         }
+
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
+
         public Builder equals_(@Nullable Output<String> equals) {
-            this.equals = equals;
+            $.equals = equals;
             return this;
         }
-        public Builder equals_(@Nullable String equals) {
-            this.equals = Codegen.ofNullable(equals);
-            return this;
+
+        public Builder equals_(String equals) {
+            return equals_(Output.of(equals));
         }
+
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
-        }        public AlertRuleAnyOfOrLeafConditionArgs build() {
-            return new AlertRuleAnyOfOrLeafConditionArgs(anyOf, containsAny, equals, field);
+
+        public Builder field(String field) {
+            return field(Output.of(field));
+        }
+
+        public AlertRuleAnyOfOrLeafConditionArgs build() {
+            return $;
         }
     }
+
 }

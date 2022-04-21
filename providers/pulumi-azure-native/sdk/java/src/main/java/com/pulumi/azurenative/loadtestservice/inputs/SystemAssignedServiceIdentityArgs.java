@@ -7,7 +7,6 @@ import com.pulumi.azurenative.loadtestservice.enums.SystemAssignedServiceIdentit
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class SystemAssignedServiceIdentityArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,SystemAssignedServiceIdentityType>> type;
+    private Output<Either<String,SystemAssignedServiceIdentityType>> type;
 
     public Output<Either<String,SystemAssignedServiceIdentityType>> type() {
         return this.type;
     }
 
-    public SystemAssignedServiceIdentityArgs(Output<Either<String,SystemAssignedServiceIdentityType>> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SystemAssignedServiceIdentityArgs() {}
 
-    private SystemAssignedServiceIdentityArgs() {
-        this.type = Codegen.empty();
+    private SystemAssignedServiceIdentityArgs(SystemAssignedServiceIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemAssignedServiceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SystemAssignedServiceIdentityType>> type;
+        private SystemAssignedServiceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemAssignedServiceIdentityArgs();
         }
 
         public Builder(SystemAssignedServiceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new SystemAssignedServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<Either<String,SystemAssignedServiceIdentityType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,SystemAssignedServiceIdentityType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SystemAssignedServiceIdentityArgs build() {
-            return new SystemAssignedServiceIdentityArgs(type);
+            return type(Output.of(type));
+        }
+
+        public SystemAssignedServiceIdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

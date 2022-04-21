@@ -6,9 +6,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.CertificateInformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<CertificateInformationArgs> certificate;
+    private @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Output<CertificateInformationArgs> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<CertificateInformationArgs>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificatePassword")
-      private final @Nullable Output<String> certificatePassword;
+    private @Nullable Output<String> certificatePassword;
 
-    public Output<String> certificatePassword() {
-        return this.certificatePassword == null ? Codegen.empty() : this.certificatePassword;
+    public Optional<Output<String>> certificatePassword() {
+        return Optional.ofNullable(this.certificatePassword);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="encodedCertificate")
-      private final @Nullable Output<String> encodedCertificate;
+    private @Nullable Output<String> encodedCertificate;
 
-    public Output<String> encodedCertificate() {
-        return this.encodedCertificate == null ? Codegen.empty() : this.encodedCertificate;
+    public Optional<Output<String>> encodedCertificate() {
+        return Optional.ofNullable(this.encodedCertificate);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class CertificateConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storeName", required=true)
-      private final Output<String> storeName;
+    private Output<String> storeName;
 
     public Output<String> storeName() {
         return this.storeName;
     }
 
-    public CertificateConfigurationArgs(
-        @Nullable Output<CertificateInformationArgs> certificate,
-        @Nullable Output<String> certificatePassword,
-        @Nullable Output<String> encodedCertificate,
-        Output<String> storeName) {
-        this.certificate = certificate;
-        this.certificatePassword = certificatePassword;
-        this.encodedCertificate = encodedCertificate;
-        this.storeName = Objects.requireNonNull(storeName, "expected parameter 'storeName' to be non-null");
-    }
+    private CertificateConfigurationArgs() {}
 
-    private CertificateConfigurationArgs() {
-        this.certificate = Codegen.empty();
-        this.certificatePassword = Codegen.empty();
-        this.encodedCertificate = Codegen.empty();
-        this.storeName = Codegen.empty();
+    private CertificateConfigurationArgs(CertificateConfigurationArgs $) {
+        this.certificate = $.certificate;
+        this.certificatePassword = $.certificatePassword;
+        this.encodedCertificate = $.encodedCertificate;
+        this.storeName = $.storeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateInformationArgs> certificate;
-        private @Nullable Output<String> certificatePassword;
-        private @Nullable Output<String> encodedCertificate;
-        private Output<String> storeName;
+        private CertificateConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigurationArgs();
         }
 
         public Builder(CertificateConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.certificatePassword = defaults.certificatePassword;
-    	      this.encodedCertificate = defaults.encodedCertificate;
-    	      this.storeName = defaults.storeName;
+            $ = new CertificateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<CertificateInformationArgs> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable CertificateInformationArgs certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(CertificateInformationArgs certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
-            this.certificatePassword = certificatePassword;
+            $.certificatePassword = certificatePassword;
             return this;
         }
-        public Builder certificatePassword(@Nullable String certificatePassword) {
-            this.certificatePassword = Codegen.ofNullable(certificatePassword);
-            return this;
+
+        public Builder certificatePassword(String certificatePassword) {
+            return certificatePassword(Output.of(certificatePassword));
         }
+
         public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
-            this.encodedCertificate = encodedCertificate;
+            $.encodedCertificate = encodedCertificate;
             return this;
         }
-        public Builder encodedCertificate(@Nullable String encodedCertificate) {
-            this.encodedCertificate = Codegen.ofNullable(encodedCertificate);
-            return this;
+
+        public Builder encodedCertificate(String encodedCertificate) {
+            return encodedCertificate(Output.of(encodedCertificate));
         }
+
         public Builder storeName(Output<String> storeName) {
-            this.storeName = Objects.requireNonNull(storeName);
+            $.storeName = storeName;
             return this;
         }
+
         public Builder storeName(String storeName) {
-            this.storeName = Output.of(Objects.requireNonNull(storeName));
-            return this;
-        }        public CertificateConfigurationArgs build() {
-            return new CertificateConfigurationArgs(certificate, certificatePassword, encodedCertificate, storeName);
+            return storeName(Output.of(storeName));
+        }
+
+        public CertificateConfigurationArgs build() {
+            $.storeName = Objects.requireNonNull($.storeName, "expected parameter 'storeName' to be non-null");
+            return $;
         }
     }
+
 }

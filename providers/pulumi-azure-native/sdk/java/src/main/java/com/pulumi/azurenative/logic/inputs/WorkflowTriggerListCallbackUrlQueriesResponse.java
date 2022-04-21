@@ -23,10 +23,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable String apiVersion;
+    private @Nullable String apiVersion;
 
     public Optional<String> apiVersion() {
-        return this.apiVersion == null ? Optional.empty() : Optional.ofNullable(this.apiVersion);
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
      * 
      */
     @Import(name="se")
-      private final @Nullable String se;
+    private @Nullable String se;
 
     public Optional<String> se() {
-        return this.se == null ? Optional.empty() : Optional.ofNullable(this.se);
+        return Optional.ofNullable(this.se);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
      * 
      */
     @Import(name="sig")
-      private final @Nullable String sig;
+    private @Nullable String sig;
 
     public Optional<String> sig() {
-        return this.sig == null ? Optional.empty() : Optional.ofNullable(this.sig);
+        return Optional.ofNullable(this.sig);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
      * 
      */
     @Import(name="sp")
-      private final @Nullable String sp;
+    private @Nullable String sp;
 
     public Optional<String> sp() {
-        return this.sp == null ? Optional.empty() : Optional.ofNullable(this.sp);
+        return Optional.ofNullable(this.sp);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends com.pul
      * 
      */
     @Import(name="sv")
-      private final @Nullable String sv;
+    private @Nullable String sv;
 
     public Optional<String> sv() {
-        return this.sv == null ? Optional.empty() : Optional.ofNullable(this.sv);
+        return Optional.ofNullable(this.sv);
     }
 
-    public WorkflowTriggerListCallbackUrlQueriesResponse(
-        @Nullable String apiVersion,
-        @Nullable String se,
-        @Nullable String sig,
-        @Nullable String sp,
-        @Nullable String sv) {
-        this.apiVersion = apiVersion;
-        this.se = se;
-        this.sig = sig;
-        this.sp = sp;
-        this.sv = sv;
-    }
+    private WorkflowTriggerListCallbackUrlQueriesResponse() {}
 
-    private WorkflowTriggerListCallbackUrlQueriesResponse() {
-        this.apiVersion = null;
-        this.se = null;
-        this.sig = null;
-        this.sp = null;
-        this.sv = null;
+    private WorkflowTriggerListCallbackUrlQueriesResponse(WorkflowTriggerListCallbackUrlQueriesResponse $) {
+        this.apiVersion = $.apiVersion;
+        this.se = $.se;
+        this.sig = $.sig;
+        this.sp = $.sp;
+        this.sv = $.sv;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTriggerListCallbackUrlQueriesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String apiVersion;
-        private @Nullable String se;
-        private @Nullable String sig;
-        private @Nullable String sp;
-        private @Nullable String sv;
+        private WorkflowTriggerListCallbackUrlQueriesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTriggerListCallbackUrlQueriesResponse();
         }
 
         public Builder(WorkflowTriggerListCallbackUrlQueriesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.se = defaults.se;
-    	      this.sig = defaults.sig;
-    	      this.sp = defaults.sp;
-    	      this.sv = defaults.sv;
+            $ = new WorkflowTriggerListCallbackUrlQueriesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
+
         public Builder se(@Nullable String se) {
-            this.se = se;
+            $.se = se;
             return this;
         }
+
         public Builder sig(@Nullable String sig) {
-            this.sig = sig;
+            $.sig = sig;
             return this;
         }
+
         public Builder sp(@Nullable String sp) {
-            this.sp = sp;
+            $.sp = sp;
             return this;
         }
+
         public Builder sv(@Nullable String sv) {
-            this.sv = sv;
+            $.sv = sv;
             return this;
-        }        public WorkflowTriggerListCallbackUrlQueriesResponse build() {
-            return new WorkflowTriggerListCallbackUrlQueriesResponse(apiVersion, se, sig, sp, sv);
+        }
+
+        public WorkflowTriggerListCallbackUrlQueriesResponse build() {
+            return $;
         }
     }
+
 }

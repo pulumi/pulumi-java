@@ -5,9 +5,9 @@ package com.pulumi.azurenative.automation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -31,10 +31,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentialName")
-      private final @Nullable Output<String> credentialName;
+    private @Nullable Output<String> credentialName;
 
-    public Output<String> credentialName() {
-        return this.credentialName == null ? Codegen.empty() : this.credentialName;
+    public Optional<Output<String>> credentialName() {
+        return Optional.ofNullable(this.credentialName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -64,7 +64,7 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -75,7 +75,7 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -86,128 +86,113 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public CredentialArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<String> credentialName,
-        @Nullable Output<String> description,
-        Output<String> name,
-        Output<String> password,
-        Output<String> resourceGroupName,
-        Output<String> userName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.credentialName = credentialName;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private CredentialArgs() {}
 
-    private CredentialArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.credentialName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.userName = Codegen.empty();
+    private CredentialArgs(CredentialArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.credentialName = $.credentialName;
+        this.description = $.description;
+        this.name = $.name;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> credentialName;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private Output<String> password;
-        private Output<String> resourceGroupName;
-        private Output<String> userName;
+        private CredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CredentialArgs();
         }
 
         public Builder(CredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.credentialName = defaults.credentialName;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userName = defaults.userName;
+            $ = new CredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder credentialName(@Nullable Output<String> credentialName) {
-            this.credentialName = credentialName;
+            $.credentialName = credentialName;
             return this;
         }
-        public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Codegen.ofNullable(credentialName);
-            return this;
+
+        public Builder credentialName(String credentialName) {
+            return credentialName(Output.of(credentialName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public CredentialArgs build() {
-            return new CredentialArgs(automationAccountName, credentialName, description, name, password, resourceGroupName, userName);
+            return userName(Output.of(userName));
+        }
+
+        public CredentialArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

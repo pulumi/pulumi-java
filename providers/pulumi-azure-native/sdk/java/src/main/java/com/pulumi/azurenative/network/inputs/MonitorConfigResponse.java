@@ -27,10 +27,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="customHeaders")
-      private final @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
+    private @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
 
-    public List<MonitorConfigResponseCustomHeaders> customHeaders() {
-        return this.customHeaders == null ? List.of() : this.customHeaders;
+    public Optional<List<MonitorConfigResponseCustomHeaders>> customHeaders() {
+        return Optional.ofNullable(this.customHeaders);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expectedStatusCodeRanges")
-      private final @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
+    private @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
 
-    public List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges() {
-        return this.expectedStatusCodeRanges == null ? List.of() : this.expectedStatusCodeRanges;
+    public Optional<List<MonitorConfigResponseExpectedStatusCodeRanges>> expectedStatusCodeRanges() {
+        return Optional.ofNullable(this.expectedStatusCodeRanges);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Double intervalInSeconds;
+    private @Nullable Double intervalInSeconds;
 
     public Optional<Double> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="port")
-      private final @Nullable Double port;
+    private @Nullable Double port;
 
     public Optional<Double> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="profileMonitorStatus")
-      private final @Nullable String profileMonitorStatus;
+    private @Nullable String profileMonitorStatus;
 
     public Optional<String> profileMonitorStatus() {
-        return this.profileMonitorStatus == null ? Optional.empty() : Optional.ofNullable(this.profileMonitorStatus);
+        return Optional.ofNullable(this.profileMonitorStatus);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Double timeoutInSeconds;
+    private @Nullable Double timeoutInSeconds;
 
     public Optional<Double> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     /**
@@ -115,124 +115,100 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="toleratedNumberOfFailures")
-      private final @Nullable Double toleratedNumberOfFailures;
+    private @Nullable Double toleratedNumberOfFailures;
 
     public Optional<Double> toleratedNumberOfFailures() {
-        return this.toleratedNumberOfFailures == null ? Optional.empty() : Optional.ofNullable(this.toleratedNumberOfFailures);
+        return Optional.ofNullable(this.toleratedNumberOfFailures);
     }
 
-    public MonitorConfigResponse(
-        @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders,
-        @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges,
-        @Nullable Double intervalInSeconds,
-        @Nullable String path,
-        @Nullable Double port,
-        @Nullable String profileMonitorStatus,
-        @Nullable String protocol,
-        @Nullable Double timeoutInSeconds,
-        @Nullable Double toleratedNumberOfFailures) {
-        this.customHeaders = customHeaders;
-        this.expectedStatusCodeRanges = expectedStatusCodeRanges;
-        this.intervalInSeconds = intervalInSeconds;
-        this.path = path;
-        this.port = port;
-        this.profileMonitorStatus = profileMonitorStatus;
-        this.protocol = protocol;
-        this.timeoutInSeconds = timeoutInSeconds;
-        this.toleratedNumberOfFailures = toleratedNumberOfFailures;
-    }
+    private MonitorConfigResponse() {}
 
-    private MonitorConfigResponse() {
-        this.customHeaders = List.of();
-        this.expectedStatusCodeRanges = List.of();
-        this.intervalInSeconds = null;
-        this.path = null;
-        this.port = null;
-        this.profileMonitorStatus = null;
-        this.protocol = null;
-        this.timeoutInSeconds = null;
-        this.toleratedNumberOfFailures = null;
+    private MonitorConfigResponse(MonitorConfigResponse $) {
+        this.customHeaders = $.customHeaders;
+        this.expectedStatusCodeRanges = $.expectedStatusCodeRanges;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.path = $.path;
+        this.port = $.port;
+        this.profileMonitorStatus = $.profileMonitorStatus;
+        this.protocol = $.protocol;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.toleratedNumberOfFailures = $.toleratedNumberOfFailures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
-        private @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
-        private @Nullable Double intervalInSeconds;
-        private @Nullable String path;
-        private @Nullable Double port;
-        private @Nullable String profileMonitorStatus;
-        private @Nullable String protocol;
-        private @Nullable Double timeoutInSeconds;
-        private @Nullable Double toleratedNumberOfFailures;
+        private MonitorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitorConfigResponse();
         }
 
         public Builder(MonitorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customHeaders = defaults.customHeaders;
-    	      this.expectedStatusCodeRanges = defaults.expectedStatusCodeRanges;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.profileMonitorStatus = defaults.profileMonitorStatus;
-    	      this.protocol = defaults.protocol;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.toleratedNumberOfFailures = defaults.toleratedNumberOfFailures;
+            $ = new MonitorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customHeaders(@Nullable List<MonitorConfigResponseCustomHeaders> customHeaders) {
-            this.customHeaders = customHeaders;
+            $.customHeaders = customHeaders;
             return this;
         }
+
         public Builder customHeaders(MonitorConfigResponseCustomHeaders... customHeaders) {
             return customHeaders(List.of(customHeaders));
         }
+
         public Builder expectedStatusCodeRanges(@Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges) {
-            this.expectedStatusCodeRanges = expectedStatusCodeRanges;
+            $.expectedStatusCodeRanges = expectedStatusCodeRanges;
             return this;
         }
+
         public Builder expectedStatusCodeRanges(MonitorConfigResponseExpectedStatusCodeRanges... expectedStatusCodeRanges) {
             return expectedStatusCodeRanges(List.of(expectedStatusCodeRanges));
         }
+
         public Builder intervalInSeconds(@Nullable Double intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder port(@Nullable Double port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder profileMonitorStatus(@Nullable String profileMonitorStatus) {
-            this.profileMonitorStatus = profileMonitorStatus;
+            $.profileMonitorStatus = profileMonitorStatus;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
+
         public Builder toleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
-            this.toleratedNumberOfFailures = toleratedNumberOfFailures;
+            $.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;
-        }        public MonitorConfigResponse build() {
-            return new MonitorConfigResponse(customHeaders, expectedStatusCodeRanges, intervalInSeconds, path, port, profileMonitorStatus, protocol, timeoutInSeconds, toleratedNumberOfFailures);
+        }
+
+        public MonitorConfigResponse build() {
+            return $;
         }
     }
+
 }

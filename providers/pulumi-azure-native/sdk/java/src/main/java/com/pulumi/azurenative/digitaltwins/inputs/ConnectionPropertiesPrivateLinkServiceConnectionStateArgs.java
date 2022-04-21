@@ -7,9 +7,9 @@ import com.pulumi.azurenative.digitaltwins.enums.PrivateLinkServiceConnectionSta
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * 
      */
     @Import(name="actionsRequired")
-      private final @Nullable Output<String> actionsRequired;
+    private @Nullable Output<String> actionsRequired;
 
-    public Output<String> actionsRequired() {
-        return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
+    public Optional<Output<String>> actionsRequired() {
+        return Optional.ofNullable(this.actionsRequired);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -44,76 +44,70 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
+    private Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> status() {
         return this.status;
     }
 
-    public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
-        @Nullable Output<String> actionsRequired,
-        Output<String> description,
-        Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
-        this.actionsRequired = actionsRequired;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ConnectionPropertiesPrivateLinkServiceConnectionStateArgs() {}
 
-    private ConnectionPropertiesPrivateLinkServiceConnectionStateArgs() {
-        this.actionsRequired = Codegen.empty();
-        this.description = Codegen.empty();
-        this.status = Codegen.empty();
+    private ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(ConnectionPropertiesPrivateLinkServiceConnectionStateArgs $) {
+        this.actionsRequired = $.actionsRequired;
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionPropertiesPrivateLinkServiceConnectionStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionsRequired;
-        private Output<String> description;
-        private Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
+        private ConnectionPropertiesPrivateLinkServiceConnectionStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionPropertiesPrivateLinkServiceConnectionStateArgs();
         }
 
         public Builder(ConnectionPropertiesPrivateLinkServiceConnectionStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionsRequired = defaults.actionsRequired;
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
-            this.actionsRequired = actionsRequired;
+            $.actionsRequired = actionsRequired;
             return this;
         }
-        public Builder actionsRequired(@Nullable String actionsRequired) {
-            this.actionsRequired = Codegen.ofNullable(actionsRequired);
-            return this;
+
+        public Builder actionsRequired(String actionsRequired) {
+            return actionsRequired(Output.of(actionsRequired));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,PrivateLinkServiceConnectionStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
-            return new ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
+            return status(Output.of(status));
+        }
+
+        public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,9 +9,9 @@ import com.pulumi.azurenative.databoxedge.inputs.ContactDetailsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactInformation", required=true)
-      private final Output<ContactDetailsArgs> contactInformation;
+    private Output<ContactDetailsArgs> contactInformation;
 
     public Output<ContactDetailsArgs> contactInformation() {
         return this.contactInformation;
@@ -35,7 +35,7 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -46,7 +46,7 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -57,10 +57,10 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shipmentType")
-      private final @Nullable Output<Either<String,ShipmentType>> shipmentType;
+    private @Nullable Output<Either<String,ShipmentType>> shipmentType;
 
-    public Output<Either<String,ShipmentType>> shipmentType() {
-        return this.shipmentType == null ? Codegen.empty() : this.shipmentType;
+    public Optional<Output<Either<String,ShipmentType>>> shipmentType() {
+        return Optional.ofNullable(this.shipmentType);
     }
 
     /**
@@ -68,102 +68,91 @@ public final class OrderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shippingAddress")
-      private final @Nullable Output<AddressArgs> shippingAddress;
+    private @Nullable Output<AddressArgs> shippingAddress;
 
-    public Output<AddressArgs> shippingAddress() {
-        return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
+    public Optional<Output<AddressArgs>> shippingAddress() {
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    public OrderArgs(
-        Output<ContactDetailsArgs> contactInformation,
-        Output<String> deviceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,ShipmentType>> shipmentType,
-        @Nullable Output<AddressArgs> shippingAddress) {
-        this.contactInformation = Objects.requireNonNull(contactInformation, "expected parameter 'contactInformation' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shipmentType = shipmentType;
-        this.shippingAddress = shippingAddress;
-    }
+    private OrderArgs() {}
 
-    private OrderArgs() {
-        this.contactInformation = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shipmentType = Codegen.empty();
-        this.shippingAddress = Codegen.empty();
+    private OrderArgs(OrderArgs $) {
+        this.contactInformation = $.contactInformation;
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shipmentType = $.shipmentType;
+        this.shippingAddress = $.shippingAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ContactDetailsArgs> contactInformation;
-        private Output<String> deviceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,ShipmentType>> shipmentType;
-        private @Nullable Output<AddressArgs> shippingAddress;
+        private OrderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderArgs();
         }
 
         public Builder(OrderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactInformation = defaults.contactInformation;
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shipmentType = defaults.shipmentType;
-    	      this.shippingAddress = defaults.shippingAddress;
+            $ = new OrderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactInformation(Output<ContactDetailsArgs> contactInformation) {
-            this.contactInformation = Objects.requireNonNull(contactInformation);
+            $.contactInformation = contactInformation;
             return this;
         }
+
         public Builder contactInformation(ContactDetailsArgs contactInformation) {
-            this.contactInformation = Output.of(Objects.requireNonNull(contactInformation));
-            return this;
+            return contactInformation(Output.of(contactInformation));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shipmentType(@Nullable Output<Either<String,ShipmentType>> shipmentType) {
-            this.shipmentType = shipmentType;
+            $.shipmentType = shipmentType;
             return this;
         }
-        public Builder shipmentType(@Nullable Either<String,ShipmentType> shipmentType) {
-            this.shipmentType = Codegen.ofNullable(shipmentType);
-            return this;
+
+        public Builder shipmentType(Either<String,ShipmentType> shipmentType) {
+            return shipmentType(Output.of(shipmentType));
         }
+
         public Builder shippingAddress(@Nullable Output<AddressArgs> shippingAddress) {
-            this.shippingAddress = shippingAddress;
+            $.shippingAddress = shippingAddress;
             return this;
         }
-        public Builder shippingAddress(@Nullable AddressArgs shippingAddress) {
-            this.shippingAddress = Codegen.ofNullable(shippingAddress);
-            return this;
-        }        public OrderArgs build() {
-            return new OrderArgs(contactInformation, deviceName, resourceGroupName, shipmentType, shippingAddress);
+
+        public Builder shippingAddress(AddressArgs shippingAddress) {
+            return shippingAddress(Output.of(shippingAddress));
+        }
+
+        public OrderArgs build() {
+            $.contactInformation = Objects.requireNonNull($.contactInformation, "expected parameter 'contactInformation' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

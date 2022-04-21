@@ -23,45 +23,44 @@ public final class BillingProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maxPrice")
-      private final @Nullable Double maxPrice;
+    private @Nullable Double maxPrice;
 
     public Optional<Double> maxPrice() {
-        return this.maxPrice == null ? Optional.empty() : Optional.ofNullable(this.maxPrice);
+        return Optional.ofNullable(this.maxPrice);
     }
 
-    public BillingProfileResponse(@Nullable Double maxPrice) {
-        this.maxPrice = maxPrice;
-    }
+    private BillingProfileResponse() {}
 
-    private BillingProfileResponse() {
-        this.maxPrice = null;
+    private BillingProfileResponse(BillingProfileResponse $) {
+        this.maxPrice = $.maxPrice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double maxPrice;
+        private BillingProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingProfileResponse();
         }
 
         public Builder(BillingProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPrice = defaults.maxPrice;
+            $ = new BillingProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPrice(@Nullable Double maxPrice) {
-            this.maxPrice = maxPrice;
+            $.maxPrice = maxPrice;
             return this;
-        }        public BillingProfileResponse build() {
-            return new BillingProfileResponse(maxPrice);
+        }
+
+        public BillingProfileResponse build() {
+            return $;
         }
     }
+
 }

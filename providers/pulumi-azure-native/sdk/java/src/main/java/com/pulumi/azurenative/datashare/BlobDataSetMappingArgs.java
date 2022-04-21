@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +23,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,7 +34,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -44,7 +45,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataSetId", required=true)
-      private final Output<String> dataSetId;
+    private Output<String> dataSetId;
 
     public Output<String> dataSetId() {
         return this.dataSetId;
@@ -55,10 +56,10 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataSetMappingName")
-      private final @Nullable Output<String> dataSetMappingName;
+    private @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> dataSetMappingName() {
-        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
+    public Optional<Output<String>> dataSetMappingName() {
+        return Optional.ofNullable(this.dataSetMappingName);
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filePath", required=true)
-      private final Output<String> filePath;
+    private Output<String> filePath;
 
     public Output<String> filePath() {
         return this.filePath;
@@ -78,7 +79,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -89,10 +90,10 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="outputType")
-      private final @Nullable Output<Either<String,OutputType>> outputType;
+    private @Nullable Output<Either<String,OutputType>> outputType;
 
-    public Output<Either<String,OutputType>> outputType() {
-        return this.outputType == null ? Codegen.empty() : this.outputType;
+    public Optional<Output<Either<String,OutputType>>> outputType() {
+        return Optional.ofNullable(this.outputType);
     }
 
     /**
@@ -100,7 +101,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final Output<String> resourceGroup;
+    private Output<String> resourceGroup;
 
     public Output<String> resourceGroup() {
         return this.resourceGroup;
@@ -111,7 +112,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -122,7 +123,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final Output<String> shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -133,7 +134,7 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final Output<String> storageAccountName;
+    private Output<String> storageAccountName;
 
     public Output<String> storageAccountName() {
         return this.storageAccountName;
@@ -144,193 +145,168 @@ public final class BlobDataSetMappingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final Output<String> subscriptionId;
+    private Output<String> subscriptionId;
 
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
-    public BlobDataSetMappingArgs(
-        Output<String> accountName,
-        Output<String> containerName,
-        Output<String> dataSetId,
-        @Nullable Output<String> dataSetMappingName,
-        Output<String> filePath,
-        Output<String> kind,
-        @Nullable Output<Either<String,OutputType>> outputType,
-        Output<String> resourceGroup,
-        Output<String> resourceGroupName,
-        Output<String> shareSubscriptionName,
-        Output<String> storageAccountName,
-        Output<String> subscriptionId) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
-        this.dataSetMappingName = dataSetMappingName;
-        this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.outputType = outputType;
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private BlobDataSetMappingArgs() {}
 
-    private BlobDataSetMappingArgs() {
-        this.accountName = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.dataSetId = Codegen.empty();
-        this.dataSetMappingName = Codegen.empty();
-        this.filePath = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.outputType = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
+    private BlobDataSetMappingArgs(BlobDataSetMappingArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.dataSetId = $.dataSetId;
+        this.dataSetMappingName = $.dataSetMappingName;
+        this.filePath = $.filePath;
+        this.kind = $.kind;
+        this.outputType = $.outputType;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.storageAccountName = $.storageAccountName;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobDataSetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> containerName;
-        private Output<String> dataSetId;
-        private @Nullable Output<String> dataSetMappingName;
-        private Output<String> filePath;
-        private Output<String> kind;
-        private @Nullable Output<Either<String,OutputType>> outputType;
-        private Output<String> resourceGroup;
-        private Output<String> resourceGroupName;
-        private Output<String> shareSubscriptionName;
-        private Output<String> storageAccountName;
-        private Output<String> subscriptionId;
+        private BlobDataSetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobDataSetMappingArgs();
         }
 
         public Builder(BlobDataSetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.dataSetId = defaults.dataSetId;
-    	      this.dataSetMappingName = defaults.dataSetMappingName;
-    	      this.filePath = defaults.filePath;
-    	      this.kind = defaults.kind;
-    	      this.outputType = defaults.outputType;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new BlobDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder dataSetId(Output<String> dataSetId) {
-            this.dataSetId = Objects.requireNonNull(dataSetId);
+            $.dataSetId = dataSetId;
             return this;
         }
+
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
-            return this;
+            return dataSetId(Output.of(dataSetId));
         }
+
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
-            this.dataSetMappingName = dataSetMappingName;
+            $.dataSetMappingName = dataSetMappingName;
             return this;
         }
-        public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
-            return this;
+
+        public Builder dataSetMappingName(String dataSetMappingName) {
+            return dataSetMappingName(Output.of(dataSetMappingName));
         }
+
         public Builder filePath(Output<String> filePath) {
-            this.filePath = Objects.requireNonNull(filePath);
+            $.filePath = filePath;
             return this;
         }
+
         public Builder filePath(String filePath) {
-            this.filePath = Output.of(Objects.requireNonNull(filePath));
-            return this;
+            return filePath(Output.of(filePath));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder outputType(@Nullable Output<Either<String,OutputType>> outputType) {
-            this.outputType = outputType;
+            $.outputType = outputType;
             return this;
         }
-        public Builder outputType(@Nullable Either<String,OutputType> outputType) {
-            this.outputType = Codegen.ofNullable(outputType);
-            return this;
+
+        public Builder outputType(Either<String,OutputType> outputType) {
+            return outputType(Output.of(outputType));
         }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
-            return this;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
+
         public Builder storageAccountName(Output<String> storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
-            return this;
+            return storageAccountName(Output.of(storageAccountName));
         }
+
         public Builder subscriptionId(Output<String> subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
-            return this;
-        }        public BlobDataSetMappingArgs build() {
-            return new BlobDataSetMappingArgs(accountName, containerName, dataSetId, dataSetMappingName, filePath, kind, outputType, resourceGroup, resourceGroupName, shareSubscriptionName, storageAccountName, subscriptionId);
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        public BlobDataSetMappingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.dataSetId = Objects.requireNonNull($.dataSetId, "expected parameter 'dataSetId' to be non-null");
+            $.filePath = Objects.requireNonNull($.filePath, "expected parameter 'filePath' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

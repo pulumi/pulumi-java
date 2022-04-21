@@ -25,7 +25,7 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
@@ -36,63 +36,60 @@ public final class AdhocBasedTriggerContextArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="taggingCriteria", required=true)
-      private final Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
+    private Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
     public Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria() {
         return this.taggingCriteria;
     }
 
-    public AdhocBasedTriggerContextArgs(
-        Output<String> objectType,
-        Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-        this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
-    }
+    private AdhocBasedTriggerContextArgs() {}
 
-    private AdhocBasedTriggerContextArgs() {
-        this.objectType = Codegen.empty();
-        this.taggingCriteria = Codegen.empty();
+    private AdhocBasedTriggerContextArgs(AdhocBasedTriggerContextArgs $) {
+        this.objectType = $.objectType;
+        this.taggingCriteria = $.taggingCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdhocBasedTriggerContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectType;
-        private Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
+        private AdhocBasedTriggerContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdhocBasedTriggerContextArgs();
         }
 
         public Builder(AdhocBasedTriggerContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectType = defaults.objectType;
-    	      this.taggingCriteria = defaults.taggingCriteria;
+            $ = new AdhocBasedTriggerContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder taggingCriteria(Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
-            this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
+            $.taggingCriteria = taggingCriteria;
             return this;
         }
+
         public Builder taggingCriteria(AdhocBasedTaggingCriteriaArgs taggingCriteria) {
-            this.taggingCriteria = Output.of(Objects.requireNonNull(taggingCriteria));
-            return this;
-        }        public AdhocBasedTriggerContextArgs build() {
-            return new AdhocBasedTriggerContextArgs(objectType, taggingCriteria);
+            return taggingCriteria(Output.of(taggingCriteria));
+        }
+
+        public AdhocBasedTriggerContextArgs build() {
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            $.taggingCriteria = Objects.requireNonNull($.taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
+            return $;
         }
     }
+
 }

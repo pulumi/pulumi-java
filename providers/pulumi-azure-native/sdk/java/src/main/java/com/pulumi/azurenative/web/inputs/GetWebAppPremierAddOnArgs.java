@@ -17,7 +17,7 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="premierAddOnName", required=true)
-      private final String premierAddOnName;
+    private String premierAddOnName;
 
     public String premierAddOnName() {
         return this.premierAddOnName;
@@ -39,64 +39,59 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWebAppPremierAddOnArgs(
-        String name,
-        String premierAddOnName,
-        String resourceGroupName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.premierAddOnName = Objects.requireNonNull(premierAddOnName, "expected parameter 'premierAddOnName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWebAppPremierAddOnArgs() {}
 
-    private GetWebAppPremierAddOnArgs() {
-        this.name = null;
-        this.premierAddOnName = null;
-        this.resourceGroupName = null;
+    private GetWebAppPremierAddOnArgs(GetWebAppPremierAddOnArgs $) {
+        this.name = $.name;
+        this.premierAddOnName = $.premierAddOnName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppPremierAddOnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String premierAddOnName;
-        private String resourceGroupName;
+        private GetWebAppPremierAddOnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppPremierAddOnArgs();
         }
 
         public Builder(GetWebAppPremierAddOnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.premierAddOnName = defaults.premierAddOnName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWebAppPremierAddOnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder premierAddOnName(String premierAddOnName) {
-            this.premierAddOnName = Objects.requireNonNull(premierAddOnName);
+            $.premierAddOnName = premierAddOnName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWebAppPremierAddOnArgs build() {
-            return new GetWebAppPremierAddOnArgs(name, premierAddOnName, resourceGroupName);
+        }
+
+        public GetWebAppPremierAddOnArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.premierAddOnName = Objects.requireNonNull($.premierAddOnName, "expected parameter 'premierAddOnName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

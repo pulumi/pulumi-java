@@ -6,9 +6,9 @@ package com.pulumi.azurenative.eventhub.inputs;
 import com.pulumi.azurenative.eventhub.inputs.SubnetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ignoreMissingVnetServiceEndpoint")
-      private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
+    private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Output<Boolean> ignoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVnetServiceEndpoint;
+    public Optional<Output<Boolean>> ignoreMissingVnetServiceEndpoint() {
+        return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetArgs> subnet;
+    private @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public NWRuleSetVirtualNetworkRulesArgs(
-        @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint,
-        @Nullable Output<SubnetArgs> subnet) {
-        this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
-        this.subnet = subnet;
-    }
+    private NWRuleSetVirtualNetworkRulesArgs() {}
 
-    private NWRuleSetVirtualNetworkRulesArgs() {
-        this.ignoreMissingVnetServiceEndpoint = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private NWRuleSetVirtualNetworkRulesArgs(NWRuleSetVirtualNetworkRulesArgs $) {
+        this.ignoreMissingVnetServiceEndpoint = $.ignoreMissingVnetServiceEndpoint;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NWRuleSetVirtualNetworkRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
-        private @Nullable Output<SubnetArgs> subnet;
+        private NWRuleSetVirtualNetworkRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NWRuleSetVirtualNetworkRulesArgs();
         }
 
         public Builder(NWRuleSetVirtualNetworkRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreMissingVnetServiceEndpoint = defaults.ignoreMissingVnetServiceEndpoint;
-    	      this.subnet = defaults.subnet;
+            $ = new NWRuleSetVirtualNetworkRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
+            $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Codegen.ofNullable(ignoreMissingVnetServiceEndpoint);
-            return this;
+
+        public Builder ignoreMissingVnetServiceEndpoint(Boolean ignoreMissingVnetServiceEndpoint) {
+            return ignoreMissingVnetServiceEndpoint(Output.of(ignoreMissingVnetServiceEndpoint));
         }
+
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public NWRuleSetVirtualNetworkRulesArgs build() {
-            return new NWRuleSetVirtualNetworkRulesArgs(ignoreMissingVnetServiceEndpoint, subnet);
+
+        public Builder subnet(SubnetArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public NWRuleSetVirtualNetworkRulesArgs build() {
+            return $;
         }
     }
+
 }

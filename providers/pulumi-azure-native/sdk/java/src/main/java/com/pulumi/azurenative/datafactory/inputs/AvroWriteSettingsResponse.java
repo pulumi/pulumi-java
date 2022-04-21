@@ -25,10 +25,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fileNamePrefix")
-      private final @Nullable Object fileNamePrefix;
+    private @Nullable Object fileNamePrefix;
 
     public Optional<Object> fileNamePrefix() {
-        return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
+        return Optional.ofNullable(this.fileNamePrefix);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxRowsPerFile")
-      private final @Nullable Object maxRowsPerFile;
+    private @Nullable Object maxRowsPerFile;
 
     public Optional<Object> maxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
+        return Optional.ofNullable(this.maxRowsPerFile);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recordName")
-      private final @Nullable String recordName;
+    private @Nullable String recordName;
 
     public Optional<String> recordName() {
-        return this.recordName == null ? Optional.empty() : Optional.ofNullable(this.recordName);
+        return Optional.ofNullable(this.recordName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recordNamespace")
-      private final @Nullable String recordNamespace;
+    private @Nullable String recordNamespace;
 
     public Optional<String> recordNamespace() {
-        return this.recordNamespace == null ? Optional.empty() : Optional.ofNullable(this.recordNamespace);
+        return Optional.ofNullable(this.recordNamespace);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class AvroWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AvroWriteSettingsResponse(
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        @Nullable String recordName,
-        @Nullable String recordNamespace,
-        String type) {
-        this.fileNamePrefix = fileNamePrefix;
-        this.maxRowsPerFile = maxRowsPerFile;
-        this.recordName = recordName;
-        this.recordNamespace = recordNamespace;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AvroWriteSettingsResponse() {}
 
-    private AvroWriteSettingsResponse() {
-        this.fileNamePrefix = null;
-        this.maxRowsPerFile = null;
-        this.recordName = null;
-        this.recordNamespace = null;
-        this.type = null;
+    private AvroWriteSettingsResponse(AvroWriteSettingsResponse $) {
+        this.fileNamePrefix = $.fileNamePrefix;
+        this.maxRowsPerFile = $.maxRowsPerFile;
+        this.recordName = $.recordName;
+        this.recordNamespace = $.recordNamespace;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroWriteSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object fileNamePrefix;
-        private @Nullable Object maxRowsPerFile;
-        private @Nullable String recordName;
-        private @Nullable String recordNamespace;
-        private String type;
+        private AvroWriteSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroWriteSettingsResponse();
         }
 
         public Builder(AvroWriteSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileNamePrefix = defaults.fileNamePrefix;
-    	      this.maxRowsPerFile = defaults.maxRowsPerFile;
-    	      this.recordName = defaults.recordName;
-    	      this.recordNamespace = defaults.recordNamespace;
-    	      this.type = defaults.type;
+            $ = new AvroWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = fileNamePrefix;
+            $.fileNamePrefix = fileNamePrefix;
             return this;
         }
+
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = maxRowsPerFile;
+            $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
+
         public Builder recordName(@Nullable String recordName) {
-            this.recordName = recordName;
+            $.recordName = recordName;
             return this;
         }
+
         public Builder recordNamespace(@Nullable String recordNamespace) {
-            this.recordNamespace = recordNamespace;
+            $.recordNamespace = recordNamespace;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AvroWriteSettingsResponse build() {
-            return new AvroWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
+        }
+
+        public AvroWriteSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

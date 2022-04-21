@@ -25,10 +25,10 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="exchange")
-      private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
+    private @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
 
     public Optional<OfficeDataConnectorDataTypesResponseExchange> exchange() {
-        return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
+        return Optional.ofNullable(this.exchange);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sharePoint")
-      private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
+    private @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
 
     public Optional<OfficeDataConnectorDataTypesResponseSharePoint> sharePoint() {
-        return this.sharePoint == null ? Optional.empty() : Optional.ofNullable(this.sharePoint);
+        return Optional.ofNullable(this.sharePoint);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="teams")
-      private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
+    private @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
     public Optional<OfficeDataConnectorDataTypesResponseTeams> teams() {
-        return this.teams == null ? Optional.empty() : Optional.ofNullable(this.teams);
+        return Optional.ofNullable(this.teams);
     }
 
-    public OfficeDataConnectorDataTypesResponse(
-        @Nullable OfficeDataConnectorDataTypesResponseExchange exchange,
-        @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint,
-        @Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
-        this.exchange = exchange;
-        this.sharePoint = sharePoint;
-        this.teams = teams;
-    }
+    private OfficeDataConnectorDataTypesResponse() {}
 
-    private OfficeDataConnectorDataTypesResponse() {
-        this.exchange = null;
-        this.sharePoint = null;
-        this.teams = null;
+    private OfficeDataConnectorDataTypesResponse(OfficeDataConnectorDataTypesResponse $) {
+        this.exchange = $.exchange;
+        this.sharePoint = $.sharePoint;
+        this.teams = $.teams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OfficeDataConnectorDataTypesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
-        private @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
-        private @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
+        private OfficeDataConnectorDataTypesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OfficeDataConnectorDataTypesResponse();
         }
 
         public Builder(OfficeDataConnectorDataTypesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exchange = defaults.exchange;
-    	      this.sharePoint = defaults.sharePoint;
-    	      this.teams = defaults.teams;
+            $ = new OfficeDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exchange(@Nullable OfficeDataConnectorDataTypesResponseExchange exchange) {
-            this.exchange = exchange;
+            $.exchange = exchange;
             return this;
         }
+
         public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint) {
-            this.sharePoint = sharePoint;
+            $.sharePoint = sharePoint;
             return this;
         }
+
         public Builder teams(@Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
-            this.teams = teams;
+            $.teams = teams;
             return this;
-        }        public OfficeDataConnectorDataTypesResponse build() {
-            return new OfficeDataConnectorDataTypesResponse(exchange, sharePoint, teams);
+        }
+
+        public OfficeDataConnectorDataTypesResponse build() {
+            return $;
         }
     }
+
 }

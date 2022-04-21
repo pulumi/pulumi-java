@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="fileExtension", required=true)
-      private final Output<Object> fileExtension;
+    private Output<Object> fileExtension;
 
     public Output<Object> fileExtension() {
         return this.fileExtension;
@@ -36,10 +37,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="fileNamePrefix")
-      private final @Nullable Output<Object> fileNamePrefix;
+    private @Nullable Output<Object> fileNamePrefix;
 
-    public Output<Object> fileNamePrefix() {
-        return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
+    public Optional<Output<Object>> fileNamePrefix() {
+        return Optional.ofNullable(this.fileNamePrefix);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="maxRowsPerFile")
-      private final @Nullable Output<Object> maxRowsPerFile;
+    private @Nullable Output<Object> maxRowsPerFile;
 
-    public Output<Object> maxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
+    public Optional<Output<Object>> maxRowsPerFile() {
+        return Optional.ofNullable(this.maxRowsPerFile);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="quoteAllText")
-      private final @Nullable Output<Object> quoteAllText;
+    private @Nullable Output<Object> quoteAllText;
 
-    public Output<Object> quoteAllText() {
-        return this.quoteAllText == null ? Codegen.empty() : this.quoteAllText;
+    public Optional<Output<Object>> quoteAllText() {
+        return Optional.ofNullable(this.quoteAllText);
     }
 
     /**
@@ -70,102 +71,90 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DelimitedTextWriteSettingsArgs(
-        Output<Object> fileExtension,
-        @Nullable Output<Object> fileNamePrefix,
-        @Nullable Output<Object> maxRowsPerFile,
-        @Nullable Output<Object> quoteAllText,
-        Output<String> type) {
-        this.fileExtension = Objects.requireNonNull(fileExtension, "expected parameter 'fileExtension' to be non-null");
-        this.fileNamePrefix = fileNamePrefix;
-        this.maxRowsPerFile = maxRowsPerFile;
-        this.quoteAllText = quoteAllText;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DelimitedTextWriteSettingsArgs() {}
 
-    private DelimitedTextWriteSettingsArgs() {
-        this.fileExtension = Codegen.empty();
-        this.fileNamePrefix = Codegen.empty();
-        this.maxRowsPerFile = Codegen.empty();
-        this.quoteAllText = Codegen.empty();
-        this.type = Codegen.empty();
+    private DelimitedTextWriteSettingsArgs(DelimitedTextWriteSettingsArgs $) {
+        this.fileExtension = $.fileExtension;
+        this.fileNamePrefix = $.fileNamePrefix;
+        this.maxRowsPerFile = $.maxRowsPerFile;
+        this.quoteAllText = $.quoteAllText;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelimitedTextWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> fileExtension;
-        private @Nullable Output<Object> fileNamePrefix;
-        private @Nullable Output<Object> maxRowsPerFile;
-        private @Nullable Output<Object> quoteAllText;
-        private Output<String> type;
+        private DelimitedTextWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelimitedTextWriteSettingsArgs();
         }
 
         public Builder(DelimitedTextWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileExtension = defaults.fileExtension;
-    	      this.fileNamePrefix = defaults.fileNamePrefix;
-    	      this.maxRowsPerFile = defaults.maxRowsPerFile;
-    	      this.quoteAllText = defaults.quoteAllText;
-    	      this.type = defaults.type;
+            $ = new DelimitedTextWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileExtension(Output<Object> fileExtension) {
-            this.fileExtension = Objects.requireNonNull(fileExtension);
+            $.fileExtension = fileExtension;
             return this;
         }
+
         public Builder fileExtension(Object fileExtension) {
-            this.fileExtension = Output.of(Objects.requireNonNull(fileExtension));
-            return this;
+            return fileExtension(Output.of(fileExtension));
         }
+
         public Builder fileNamePrefix(@Nullable Output<Object> fileNamePrefix) {
-            this.fileNamePrefix = fileNamePrefix;
+            $.fileNamePrefix = fileNamePrefix;
             return this;
         }
-        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Codegen.ofNullable(fileNamePrefix);
-            return this;
+
+        public Builder fileNamePrefix(Object fileNamePrefix) {
+            return fileNamePrefix(Output.of(fileNamePrefix));
         }
+
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
-            this.maxRowsPerFile = maxRowsPerFile;
+            $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Codegen.ofNullable(maxRowsPerFile);
-            return this;
+
+        public Builder maxRowsPerFile(Object maxRowsPerFile) {
+            return maxRowsPerFile(Output.of(maxRowsPerFile));
         }
+
         public Builder quoteAllText(@Nullable Output<Object> quoteAllText) {
-            this.quoteAllText = quoteAllText;
+            $.quoteAllText = quoteAllText;
             return this;
         }
-        public Builder quoteAllText(@Nullable Object quoteAllText) {
-            this.quoteAllText = Codegen.ofNullable(quoteAllText);
-            return this;
+
+        public Builder quoteAllText(Object quoteAllText) {
+            return quoteAllText(Output.of(quoteAllText));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DelimitedTextWriteSettingsArgs build() {
-            return new DelimitedTextWriteSettingsArgs(fileExtension, fileNamePrefix, maxRowsPerFile, quoteAllText, type);
+            return type(Output.of(type));
+        }
+
+        public DelimitedTextWriteSettingsArgs build() {
+            $.fileExtension = Objects.requireNonNull($.fileExtension, "expected parameter 'fileExtension' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

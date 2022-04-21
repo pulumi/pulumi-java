@@ -6,10 +6,10 @@ package com.pulumi.azurenative.storagepool;
 import com.pulumi.azurenative.storagepool.inputs.TargetPortalGroupCreateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskPoolName", required=true)
-      private final Output<String> diskPoolName;
+    private Output<String> diskPoolName;
 
     public Output<String> diskPoolName() {
         return this.diskPoolName;
@@ -33,10 +33,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iscsiTargetName")
-      private final @Nullable Output<String> iscsiTargetName;
+    private @Nullable Output<String> iscsiTargetName;
 
-    public Output<String> iscsiTargetName() {
-        return this.iscsiTargetName == null ? Codegen.empty() : this.iscsiTargetName;
+    public Optional<Output<String>> iscsiTargetName() {
+        return Optional.ofNullable(this.iscsiTargetName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetIqn")
-      private final @Nullable Output<String> targetIqn;
+    private @Nullable Output<String> targetIqn;
 
-    public Output<String> targetIqn() {
-        return this.targetIqn == null ? Codegen.empty() : this.targetIqn;
+    public Optional<Output<String>> targetIqn() {
+        return Optional.ofNullable(this.targetIqn);
     }
 
     /**
@@ -66,105 +66,95 @@ public final class IscsiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tpgs", required=true)
-      private final Output<List<TargetPortalGroupCreateArgs>> tpgs;
+    private Output<List<TargetPortalGroupCreateArgs>> tpgs;
 
     public Output<List<TargetPortalGroupCreateArgs>> tpgs() {
         return this.tpgs;
     }
 
-    public IscsiTargetArgs(
-        Output<String> diskPoolName,
-        @Nullable Output<String> iscsiTargetName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> targetIqn,
-        Output<List<TargetPortalGroupCreateArgs>> tpgs) {
-        this.diskPoolName = Objects.requireNonNull(diskPoolName, "expected parameter 'diskPoolName' to be non-null");
-        this.iscsiTargetName = iscsiTargetName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.targetIqn = targetIqn;
-        this.tpgs = Objects.requireNonNull(tpgs, "expected parameter 'tpgs' to be non-null");
-    }
+    private IscsiTargetArgs() {}
 
-    private IscsiTargetArgs() {
-        this.diskPoolName = Codegen.empty();
-        this.iscsiTargetName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.targetIqn = Codegen.empty();
-        this.tpgs = Codegen.empty();
+    private IscsiTargetArgs(IscsiTargetArgs $) {
+        this.diskPoolName = $.diskPoolName;
+        this.iscsiTargetName = $.iscsiTargetName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.targetIqn = $.targetIqn;
+        this.tpgs = $.tpgs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IscsiTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> diskPoolName;
-        private @Nullable Output<String> iscsiTargetName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> targetIqn;
-        private Output<List<TargetPortalGroupCreateArgs>> tpgs;
+        private IscsiTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IscsiTargetArgs();
         }
 
         public Builder(IscsiTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskPoolName = defaults.diskPoolName;
-    	      this.iscsiTargetName = defaults.iscsiTargetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.targetIqn = defaults.targetIqn;
-    	      this.tpgs = defaults.tpgs;
+            $ = new IscsiTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskPoolName(Output<String> diskPoolName) {
-            this.diskPoolName = Objects.requireNonNull(diskPoolName);
+            $.diskPoolName = diskPoolName;
             return this;
         }
+
         public Builder diskPoolName(String diskPoolName) {
-            this.diskPoolName = Output.of(Objects.requireNonNull(diskPoolName));
-            return this;
+            return diskPoolName(Output.of(diskPoolName));
         }
+
         public Builder iscsiTargetName(@Nullable Output<String> iscsiTargetName) {
-            this.iscsiTargetName = iscsiTargetName;
+            $.iscsiTargetName = iscsiTargetName;
             return this;
         }
-        public Builder iscsiTargetName(@Nullable String iscsiTargetName) {
-            this.iscsiTargetName = Codegen.ofNullable(iscsiTargetName);
-            return this;
+
+        public Builder iscsiTargetName(String iscsiTargetName) {
+            return iscsiTargetName(Output.of(iscsiTargetName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder targetIqn(@Nullable Output<String> targetIqn) {
-            this.targetIqn = targetIqn;
+            $.targetIqn = targetIqn;
             return this;
         }
-        public Builder targetIqn(@Nullable String targetIqn) {
-            this.targetIqn = Codegen.ofNullable(targetIqn);
-            return this;
+
+        public Builder targetIqn(String targetIqn) {
+            return targetIqn(Output.of(targetIqn));
         }
+
         public Builder tpgs(Output<List<TargetPortalGroupCreateArgs>> tpgs) {
-            this.tpgs = Objects.requireNonNull(tpgs);
+            $.tpgs = tpgs;
             return this;
         }
+
         public Builder tpgs(List<TargetPortalGroupCreateArgs> tpgs) {
-            this.tpgs = Output.of(Objects.requireNonNull(tpgs));
-            return this;
+            return tpgs(Output.of(tpgs));
         }
+
         public Builder tpgs(TargetPortalGroupCreateArgs... tpgs) {
             return tpgs(List.of(tpgs));
-        }        public IscsiTargetArgs build() {
-            return new IscsiTargetArgs(diskPoolName, iscsiTargetName, resourceGroupName, targetIqn, tpgs);
+        }
+
+        public IscsiTargetArgs build() {
+            $.diskPoolName = Objects.requireNonNull($.diskPoolName, "expected parameter 'diskPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.tpgs = Objects.requireNonNull($.tpgs, "expected parameter 'tpgs' to be non-null");
+            return $;
         }
     }
+
 }

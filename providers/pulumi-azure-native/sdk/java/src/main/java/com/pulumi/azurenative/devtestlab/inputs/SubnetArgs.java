@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.UsagePermissionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowPublicIp")
-      private final @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp;
+    private @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp;
 
-    public Output<Either<String,UsagePermissionType>> allowPublicIp() {
-        return this.allowPublicIp == null ? Codegen.empty() : this.allowPublicIp;
+    public Optional<Output<Either<String,UsagePermissionType>>> allowPublicIp() {
+        return Optional.ofNullable(this.allowPublicIp);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labSubnetName")
-      private final @Nullable Output<String> labSubnetName;
+    private @Nullable Output<String> labSubnetName;
 
-    public Output<String> labSubnetName() {
-        return this.labSubnetName == null ? Codegen.empty() : this.labSubnetName;
+    public Optional<Output<String>> labSubnetName() {
+        return Optional.ofNullable(this.labSubnetName);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public SubnetArgs(
-        @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp,
-        @Nullable Output<String> labSubnetName,
-        @Nullable Output<String> resourceId) {
-        this.allowPublicIp = allowPublicIp;
-        this.labSubnetName = labSubnetName;
-        this.resourceId = resourceId;
-    }
+    private SubnetArgs() {}
 
-    private SubnetArgs() {
-        this.allowPublicIp = Codegen.empty();
-        this.labSubnetName = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private SubnetArgs(SubnetArgs $) {
+        this.allowPublicIp = $.allowPublicIp;
+        this.labSubnetName = $.labSubnetName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp;
-        private @Nullable Output<String> labSubnetName;
-        private @Nullable Output<String> resourceId;
+        private SubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetArgs();
         }
 
         public Builder(SubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPublicIp = defaults.allowPublicIp;
-    	      this.labSubnetName = defaults.labSubnetName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new SubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPublicIp(@Nullable Output<Either<String,UsagePermissionType>> allowPublicIp) {
-            this.allowPublicIp = allowPublicIp;
+            $.allowPublicIp = allowPublicIp;
             return this;
         }
-        public Builder allowPublicIp(@Nullable Either<String,UsagePermissionType> allowPublicIp) {
-            this.allowPublicIp = Codegen.ofNullable(allowPublicIp);
-            return this;
+
+        public Builder allowPublicIp(Either<String,UsagePermissionType> allowPublicIp) {
+            return allowPublicIp(Output.of(allowPublicIp));
         }
+
         public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
-            this.labSubnetName = labSubnetName;
+            $.labSubnetName = labSubnetName;
             return this;
         }
-        public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = Codegen.ofNullable(labSubnetName);
-            return this;
+
+        public Builder labSubnetName(String labSubnetName) {
+            return labSubnetName(Output.of(labSubnetName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public SubnetArgs build() {
-            return new SubnetArgs(allowPublicIp, labSubnetName, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public SubnetArgs build() {
+            return $;
         }
     }
+
 }

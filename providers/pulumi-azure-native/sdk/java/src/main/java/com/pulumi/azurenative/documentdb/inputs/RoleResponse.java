@@ -23,10 +23,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="db")
-      private final @Nullable String db;
+    private @Nullable String db;
 
     public Optional<String> db() {
-        return this.db == null ? Optional.empty() : Optional.ofNullable(this.db);
+        return Optional.ofNullable(this.db);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable String role;
+    private @Nullable String role;
 
     public Optional<String> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
-    public RoleResponse(
-        @Nullable String db,
-        @Nullable String role) {
-        this.db = db;
-        this.role = role;
-    }
+    private RoleResponse() {}
 
-    private RoleResponse() {
-        this.db = null;
-        this.role = null;
+    private RoleResponse(RoleResponse $) {
+        this.db = $.db;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String db;
-        private @Nullable String role;
+        private RoleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleResponse();
         }
 
         public Builder(RoleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.db = defaults.db;
-    	      this.role = defaults.role;
+            $ = new RoleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder db(@Nullable String db) {
-            this.db = db;
+            $.db = db;
             return this;
         }
+
         public Builder role(@Nullable String role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public RoleResponse build() {
-            return new RoleResponse(db, role);
+        }
+
+        public RoleResponse build() {
+            return $;
         }
     }
+
 }

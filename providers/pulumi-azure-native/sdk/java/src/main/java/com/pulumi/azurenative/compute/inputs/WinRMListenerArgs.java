@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.enums.ProtocolTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WinRMListenerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateUrl")
-      private final @Nullable Output<String> certificateUrl;
+    private @Nullable Output<String> certificateUrl;
 
-    public Output<String> certificateUrl() {
-        return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
+    public Optional<Output<String>> certificateUrl() {
+        return Optional.ofNullable(this.certificateUrl);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class WinRMListenerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<ProtocolTypes> protocol;
+    private @Nullable Output<ProtocolTypes> protocol;
 
-    public Output<ProtocolTypes> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<ProtocolTypes>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public WinRMListenerArgs(
-        @Nullable Output<String> certificateUrl,
-        @Nullable Output<ProtocolTypes> protocol) {
-        this.certificateUrl = certificateUrl;
-        this.protocol = protocol;
-    }
+    private WinRMListenerArgs() {}
 
-    private WinRMListenerArgs() {
-        this.certificateUrl = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private WinRMListenerArgs(WinRMListenerArgs $) {
+        this.certificateUrl = $.certificateUrl;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WinRMListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateUrl;
-        private @Nullable Output<ProtocolTypes> protocol;
+        private WinRMListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WinRMListenerArgs();
         }
 
         public Builder(WinRMListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateUrl = defaults.certificateUrl;
-    	      this.protocol = defaults.protocol;
+            $ = new WinRMListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
-            this.certificateUrl = certificateUrl;
+            $.certificateUrl = certificateUrl;
             return this;
         }
-        public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Codegen.ofNullable(certificateUrl);
-            return this;
+
+        public Builder certificateUrl(String certificateUrl) {
+            return certificateUrl(Output.of(certificateUrl));
         }
+
         public Builder protocol(@Nullable Output<ProtocolTypes> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable ProtocolTypes protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public WinRMListenerArgs build() {
-            return new WinRMListenerArgs(certificateUrl, protocol);
+
+        public Builder protocol(ProtocolTypes protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public WinRMListenerArgs build() {
+            return $;
         }
     }
+
 }

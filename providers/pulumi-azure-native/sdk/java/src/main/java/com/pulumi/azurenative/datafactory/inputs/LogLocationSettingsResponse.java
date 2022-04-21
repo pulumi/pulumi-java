@@ -24,7 +24,7 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -35,55 +35,51 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="path")
-      private final @Nullable Object path;
+    private @Nullable Object path;
 
     public Optional<Object> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public LogLocationSettingsResponse(
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object path) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.path = path;
-    }
+    private LogLocationSettingsResponse() {}
 
-    private LogLocationSettingsResponse() {
-        this.linkedServiceName = null;
-        this.path = null;
+    private LogLocationSettingsResponse(LogLocationSettingsResponse $) {
+        this.linkedServiceName = $.linkedServiceName;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogLocationSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Object path;
+        private LogLocationSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogLocationSettingsResponse();
         }
 
         public Builder(LogLocationSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.path = defaults.path;
+            $ = new LogLocationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder path(@Nullable Object path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public LogLocationSettingsResponse build() {
-            return new LogLocationSettingsResponse(linkedServiceName, path);
+        }
+
+        public LogLocationSettingsResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

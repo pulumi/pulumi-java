@@ -24,7 +24,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -35,63 +35,60 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="widevineTemplate", required=true)
-      private final Output<String> widevineTemplate;
+    private Output<String> widevineTemplate;
 
     public Output<String> widevineTemplate() {
         return this.widevineTemplate;
     }
 
-    public ContentKeyPolicyWidevineConfigurationArgs(
-        Output<String> odataType,
-        Output<String> widevineTemplate) {
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.widevineTemplate = Objects.requireNonNull(widevineTemplate, "expected parameter 'widevineTemplate' to be non-null");
-    }
+    private ContentKeyPolicyWidevineConfigurationArgs() {}
 
-    private ContentKeyPolicyWidevineConfigurationArgs() {
-        this.odataType = Codegen.empty();
-        this.widevineTemplate = Codegen.empty();
+    private ContentKeyPolicyWidevineConfigurationArgs(ContentKeyPolicyWidevineConfigurationArgs $) {
+        this.odataType = $.odataType;
+        this.widevineTemplate = $.widevineTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyWidevineConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
-        private Output<String> widevineTemplate;
+        private ContentKeyPolicyWidevineConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyWidevineConfigurationArgs();
         }
 
         public Builder(ContentKeyPolicyWidevineConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.widevineTemplate = defaults.widevineTemplate;
+            $ = new ContentKeyPolicyWidevineConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder widevineTemplate(Output<String> widevineTemplate) {
-            this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
+            $.widevineTemplate = widevineTemplate;
             return this;
         }
+
         public Builder widevineTemplate(String widevineTemplate) {
-            this.widevineTemplate = Output.of(Objects.requireNonNull(widevineTemplate));
-            return this;
-        }        public ContentKeyPolicyWidevineConfigurationArgs build() {
-            return new ContentKeyPolicyWidevineConfigurationArgs(odataType, widevineTemplate);
+            return widevineTemplate(Output.of(widevineTemplate));
+        }
+
+        public ContentKeyPolicyWidevineConfigurationArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.widevineTemplate = Objects.requireNonNull($.widevineTemplate, "expected parameter 'widevineTemplate' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="groupIds")
-      private final @Nullable Output<List<String>> groupIds;
+    private @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> groupIds() {
-        return this.groupIds == null ? Codegen.empty() : this.groupIds;
+    public Optional<Output<List<String>>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<PrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateLinkServiceId")
-      private final @Nullable Output<String> privateLinkServiceId;
+    private @Nullable Output<String> privateLinkServiceId;
 
-    public Output<String> privateLinkServiceId() {
-        return this.privateLinkServiceId == null ? Codegen.empty() : this.privateLinkServiceId;
+    public Optional<Output<String>> privateLinkServiceId() {
+        return Optional.ofNullable(this.privateLinkServiceId);
     }
 
     /**
@@ -81,118 +81,102 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable Output<String> requestMessage;
+    private @Nullable Output<String> requestMessage;
 
-    public Output<String> requestMessage() {
-        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
+    public Optional<Output<String>> requestMessage() {
+        return Optional.ofNullable(this.requestMessage);
     }
 
-    public PrivateLinkServiceConnectionArgs(
-        @Nullable Output<List<String>> groupIds,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        @Nullable Output<String> privateLinkServiceId,
-        @Nullable Output<String> requestMessage) {
-        this.groupIds = groupIds;
-        this.id = id;
-        this.name = name;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.privateLinkServiceId = privateLinkServiceId;
-        this.requestMessage = requestMessage;
-    }
+    private PrivateLinkServiceConnectionArgs() {}
 
-    private PrivateLinkServiceConnectionArgs() {
-        this.groupIds = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.privateLinkServiceId = Codegen.empty();
-        this.requestMessage = Codegen.empty();
+    private PrivateLinkServiceConnectionArgs(PrivateLinkServiceConnectionArgs $) {
+        this.groupIds = $.groupIds;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.privateLinkServiceId = $.privateLinkServiceId;
+        this.requestMessage = $.requestMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groupIds;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private @Nullable Output<String> privateLinkServiceId;
-        private @Nullable Output<String> requestMessage;
+        private PrivateLinkServiceConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionArgs();
         }
 
         public Builder(PrivateLinkServiceConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIds = defaults.groupIds;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.privateLinkServiceId = defaults.privateLinkServiceId;
-    	      this.requestMessage = defaults.requestMessage;
+            $ = new PrivateLinkServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
-            this.groupIds = groupIds;
+            $.groupIds = groupIds;
             return this;
         }
-        public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Codegen.ofNullable(groupIds);
-            return this;
+
+        public Builder groupIds(List<String> groupIds) {
+            return groupIds(Output.of(groupIds));
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
+
+        public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder privateLinkServiceId(@Nullable Output<String> privateLinkServiceId) {
-            this.privateLinkServiceId = privateLinkServiceId;
+            $.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
-        public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
-            this.privateLinkServiceId = Codegen.ofNullable(privateLinkServiceId);
-            return this;
+
+        public Builder privateLinkServiceId(String privateLinkServiceId) {
+            return privateLinkServiceId(Output.of(privateLinkServiceId));
         }
+
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Codegen.ofNullable(requestMessage);
-            return this;
-        }        public PrivateLinkServiceConnectionArgs build() {
-            return new PrivateLinkServiceConnectionArgs(groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, requestMessage);
+
+        public Builder requestMessage(String requestMessage) {
+            return requestMessage(Output.of(requestMessage));
+        }
+
+        public PrivateLinkServiceConnectionArgs build() {
+            return $;
         }
     }
+
 }

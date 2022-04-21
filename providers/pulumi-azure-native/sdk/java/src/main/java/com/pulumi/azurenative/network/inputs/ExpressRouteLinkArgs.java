@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.inputs.ExpressRouteLinkMacSecConfigArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ExpressRouteLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="adminState")
-      private final @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState;
+    private @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState;
 
-    public Output<Either<String,ExpressRouteLinkAdminState>> adminState() {
-        return this.adminState == null ? Codegen.empty() : this.adminState;
+    public Optional<Output<Either<String,ExpressRouteLinkAdminState>>> adminState() {
+        return Optional.ofNullable(this.adminState);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ExpressRouteLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ExpressRouteLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="macSecConfig")
-      private final @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
+    private @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
 
-    public Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig() {
-        return this.macSecConfig == null ? Codegen.empty() : this.macSecConfig;
+    public Optional<Output<ExpressRouteLinkMacSecConfigArgs>> macSecConfig() {
+        return Optional.ofNullable(this.macSecConfig);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ExpressRouteLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ExpressRouteLinkArgs(
-        @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState,
-        @Nullable Output<String> id,
-        @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig,
-        @Nullable Output<String> name) {
-        this.adminState = adminState;
-        this.id = id;
-        this.macSecConfig = macSecConfig;
-        this.name = name;
-    }
+    private ExpressRouteLinkArgs() {}
 
-    private ExpressRouteLinkArgs() {
-        this.adminState = Codegen.empty();
-        this.id = Codegen.empty();
-        this.macSecConfig = Codegen.empty();
-        this.name = Codegen.empty();
+    private ExpressRouteLinkArgs(ExpressRouteLinkArgs $) {
+        this.adminState = $.adminState;
+        this.id = $.id;
+        this.macSecConfig = $.macSecConfig;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState;
-        private @Nullable Output<String> id;
-        private @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
-        private @Nullable Output<String> name;
+        private ExpressRouteLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteLinkArgs();
         }
 
         public Builder(ExpressRouteLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminState = defaults.adminState;
-    	      this.id = defaults.id;
-    	      this.macSecConfig = defaults.macSecConfig;
-    	      this.name = defaults.name;
+            $ = new ExpressRouteLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminState(@Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState) {
-            this.adminState = adminState;
+            $.adminState = adminState;
             return this;
         }
-        public Builder adminState(@Nullable Either<String,ExpressRouteLinkAdminState> adminState) {
-            this.adminState = Codegen.ofNullable(adminState);
-            return this;
+
+        public Builder adminState(Either<String,ExpressRouteLinkAdminState> adminState) {
+            return adminState(Output.of(adminState));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder macSecConfig(@Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig) {
-            this.macSecConfig = macSecConfig;
+            $.macSecConfig = macSecConfig;
             return this;
         }
-        public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigArgs macSecConfig) {
-            this.macSecConfig = Codegen.ofNullable(macSecConfig);
-            return this;
+
+        public Builder macSecConfig(ExpressRouteLinkMacSecConfigArgs macSecConfig) {
+            return macSecConfig(Output.of(macSecConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ExpressRouteLinkArgs build() {
-            return new ExpressRouteLinkArgs(adminState, id, macSecConfig, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ExpressRouteLinkArgs build() {
+            return $;
         }
     }
+
 }

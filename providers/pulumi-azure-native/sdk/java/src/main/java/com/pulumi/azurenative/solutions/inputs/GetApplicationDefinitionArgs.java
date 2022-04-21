@@ -17,7 +17,7 @@ public final class GetApplicationDefinitionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="applicationDefinitionName", required=true)
-      private final String applicationDefinitionName;
+    private String applicationDefinitionName;
 
     public String applicationDefinitionName() {
         return this.applicationDefinitionName;
@@ -28,55 +28,52 @@ public final class GetApplicationDefinitionArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationDefinitionArgs(
-        String applicationDefinitionName,
-        String resourceGroupName) {
-        this.applicationDefinitionName = Objects.requireNonNull(applicationDefinitionName, "expected parameter 'applicationDefinitionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationDefinitionArgs() {}
 
-    private GetApplicationDefinitionArgs() {
-        this.applicationDefinitionName = null;
-        this.resourceGroupName = null;
+    private GetApplicationDefinitionArgs(GetApplicationDefinitionArgs $) {
+        this.applicationDefinitionName = $.applicationDefinitionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationDefinitionName;
-        private String resourceGroupName;
+        private GetApplicationDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationDefinitionArgs();
         }
 
         public Builder(GetApplicationDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationDefinitionName = defaults.applicationDefinitionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationDefinitionName(String applicationDefinitionName) {
-            this.applicationDefinitionName = Objects.requireNonNull(applicationDefinitionName);
+            $.applicationDefinitionName = applicationDefinitionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationDefinitionArgs build() {
-            return new GetApplicationDefinitionArgs(applicationDefinitionName, resourceGroupName);
+        }
+
+        public GetApplicationDefinitionArgs build() {
+            $.applicationDefinitionName = Objects.requireNonNull($.applicationDefinitionName, "expected parameter 'applicationDefinitionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

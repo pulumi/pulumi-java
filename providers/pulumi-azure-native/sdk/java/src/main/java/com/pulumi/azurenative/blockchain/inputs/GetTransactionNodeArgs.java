@@ -17,7 +17,7 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="blockchainMemberName", required=true)
-      private final String blockchainMemberName;
+    private String blockchainMemberName;
 
     public String blockchainMemberName() {
         return this.blockchainMemberName;
@@ -28,7 +28,7 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTransactionNodeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="transactionNodeName", required=true)
-      private final String transactionNodeName;
+    private String transactionNodeName;
 
     public String transactionNodeName() {
         return this.transactionNodeName;
     }
 
-    public GetTransactionNodeArgs(
-        String blockchainMemberName,
-        String resourceGroupName,
-        String transactionNodeName) {
-        this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.transactionNodeName = Objects.requireNonNull(transactionNodeName, "expected parameter 'transactionNodeName' to be non-null");
-    }
+    private GetTransactionNodeArgs() {}
 
-    private GetTransactionNodeArgs() {
-        this.blockchainMemberName = null;
-        this.resourceGroupName = null;
-        this.transactionNodeName = null;
+    private GetTransactionNodeArgs(GetTransactionNodeArgs $) {
+        this.blockchainMemberName = $.blockchainMemberName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.transactionNodeName = $.transactionNodeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransactionNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blockchainMemberName;
-        private String resourceGroupName;
-        private String transactionNodeName;
+        private GetTransactionNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransactionNodeArgs();
         }
 
         public Builder(GetTransactionNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockchainMemberName = defaults.blockchainMemberName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.transactionNodeName = defaults.transactionNodeName;
+            $ = new GetTransactionNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockchainMemberName(String blockchainMemberName) {
-            this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
+            $.blockchainMemberName = blockchainMemberName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder transactionNodeName(String transactionNodeName) {
-            this.transactionNodeName = Objects.requireNonNull(transactionNodeName);
+            $.transactionNodeName = transactionNodeName;
             return this;
-        }        public GetTransactionNodeArgs build() {
-            return new GetTransactionNodeArgs(blockchainMemberName, resourceGroupName, transactionNodeName);
+        }
+
+        public GetTransactionNodeArgs build() {
+            $.blockchainMemberName = Objects.requireNonNull($.blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.transactionNodeName = Objects.requireNonNull($.transactionNodeName, "expected parameter 'transactionNodeName' to be non-null");
+            return $;
         }
     }
+
 }

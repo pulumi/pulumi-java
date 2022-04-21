@@ -27,7 +27,7 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
+    private Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
 
     public Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint() {
         return this.endpoint;
@@ -38,7 +38,7 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -49,10 +49,10 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transport")
-      private final @Nullable String transport;
+    private @Nullable String transport;
 
     public Optional<String> transport() {
-        return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
+        return Optional.ofNullable(this.transport);
     }
 
     /**
@@ -61,73 +61,65 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RtspSourceResponse(
-        Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
-        String name,
-        @Nullable String transport,
-        String type) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.transport = transport;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private RtspSourceResponse() {}
 
-    private RtspSourceResponse() {
-        this.endpoint = null;
-        this.name = null;
-        this.transport = null;
-        this.type = null;
+    private RtspSourceResponse(RtspSourceResponse $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
+        this.transport = $.transport;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RtspSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
-        private String name;
-        private @Nullable String transport;
-        private String type;
+        private RtspSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RtspSourceResponse();
         }
 
         public Builder(RtspSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
-    	      this.transport = defaults.transport;
-    	      this.type = defaults.type;
+            $ = new RtspSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder transport(@Nullable String transport) {
-            this.transport = transport;
+            $.transport = transport;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RtspSourceResponse build() {
-            return new RtspSourceResponse(endpoint, name, transport, type);
+        }
+
+        public RtspSourceResponse build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
      * 
      */
     @Import(name="commandId")
-      private final @Nullable String commandId;
+    private @Nullable String commandId;
 
     public Optional<String> commandId() {
-        return this.commandId == null ? Optional.empty() : Optional.ofNullable(this.commandId);
+        return Optional.ofNullable(this.commandId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
      * 
      */
     @Import(name="script")
-      private final @Nullable String script;
+    private @Nullable String script;
 
     public Optional<String> script() {
-        return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
      * 
      */
     @Import(name="scriptUri")
-      private final @Nullable String scriptUri;
+    private @Nullable String scriptUri;
 
     public Optional<String> scriptUri() {
-        return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
+        return Optional.ofNullable(this.scriptUri);
     }
 
-    public VirtualMachineRunCommandScriptSourceResponse(
-        @Nullable String commandId,
-        @Nullable String script,
-        @Nullable String scriptUri) {
-        this.commandId = commandId;
-        this.script = script;
-        this.scriptUri = scriptUri;
-    }
+    private VirtualMachineRunCommandScriptSourceResponse() {}
 
-    private VirtualMachineRunCommandScriptSourceResponse() {
-        this.commandId = null;
-        this.script = null;
-        this.scriptUri = null;
+    private VirtualMachineRunCommandScriptSourceResponse(VirtualMachineRunCommandScriptSourceResponse $) {
+        this.commandId = $.commandId;
+        this.script = $.script;
+        this.scriptUri = $.scriptUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineRunCommandScriptSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String commandId;
-        private @Nullable String script;
-        private @Nullable String scriptUri;
+        private VirtualMachineRunCommandScriptSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineRunCommandScriptSourceResponse();
         }
 
         public Builder(VirtualMachineRunCommandScriptSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandId = defaults.commandId;
-    	      this.script = defaults.script;
-    	      this.scriptUri = defaults.scriptUri;
+            $ = new VirtualMachineRunCommandScriptSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commandId(@Nullable String commandId) {
-            this.commandId = commandId;
+            $.commandId = commandId;
             return this;
         }
+
         public Builder script(@Nullable String script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
+
         public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = scriptUri;
+            $.scriptUri = scriptUri;
             return this;
-        }        public VirtualMachineRunCommandScriptSourceResponse build() {
-            return new VirtualMachineRunCommandScriptSourceResponse(commandId, script, scriptUri);
+        }
+
+        public VirtualMachineRunCommandScriptSourceResponse build() {
+            return $;
         }
     }
+
 }

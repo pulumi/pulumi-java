@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClusterKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ClusterKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orderBy")
-      private final @Nullable Output<String> orderBy;
+    private @Nullable Output<String> orderBy;
 
-    public Output<String> orderBy() {
-        return this.orderBy == null ? Codegen.empty() : this.orderBy;
+    public Optional<Output<String>> orderBy() {
+        return Optional.ofNullable(this.orderBy);
     }
 
-    public ClusterKeyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> orderBy) {
-        this.name = name;
-        this.orderBy = orderBy;
-    }
+    private ClusterKeyArgs() {}
 
-    private ClusterKeyArgs() {
-        this.name = Codegen.empty();
-        this.orderBy = Codegen.empty();
+    private ClusterKeyArgs(ClusterKeyArgs $) {
+        this.name = $.name;
+        this.orderBy = $.orderBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> orderBy;
+        private ClusterKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterKeyArgs();
         }
 
         public Builder(ClusterKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.orderBy = defaults.orderBy;
+            $ = new ClusterKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orderBy(@Nullable Output<String> orderBy) {
-            this.orderBy = orderBy;
+            $.orderBy = orderBy;
             return this;
         }
-        public Builder orderBy(@Nullable String orderBy) {
-            this.orderBy = Codegen.ofNullable(orderBy);
-            return this;
-        }        public ClusterKeyArgs build() {
-            return new ClusterKeyArgs(name, orderBy);
+
+        public Builder orderBy(String orderBy) {
+            return orderBy(Output.of(orderBy));
+        }
+
+        public ClusterKeyArgs build() {
+            return $;
         }
     }
+
 }

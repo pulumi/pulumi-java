@@ -17,7 +17,7 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skuName", required=true)
-      private final String skuName;
+    private String skuName;
 
     public String skuName() {
         return this.skuName;
@@ -28,55 +28,52 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vendorName", required=true)
-      private final String vendorName;
+    private String vendorName;
 
     public String vendorName() {
         return this.vendorName;
     }
 
-    public GetVendorSkusArgs(
-        String skuName,
-        String vendorName) {
-        this.skuName = Objects.requireNonNull(skuName, "expected parameter 'skuName' to be non-null");
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-    }
+    private GetVendorSkusArgs() {}
 
-    private GetVendorSkusArgs() {
-        this.skuName = null;
-        this.vendorName = null;
+    private GetVendorSkusArgs(GetVendorSkusArgs $) {
+        this.skuName = $.skuName;
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVendorSkusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String skuName;
-        private String vendorName;
+        private GetVendorSkusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVendorSkusArgs();
         }
 
         public Builder(GetVendorSkusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.skuName = defaults.skuName;
-    	      this.vendorName = defaults.vendorName;
+            $ = new GetVendorSkusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder skuName(String skuName) {
-            this.skuName = Objects.requireNonNull(skuName);
+            $.skuName = skuName;
             return this;
         }
+
         public Builder vendorName(String vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
-        }        public GetVendorSkusArgs build() {
-            return new GetVendorSkusArgs(skuName, vendorName);
+        }
+
+        public GetVendorSkusArgs build() {
+            $.skuName = Objects.requireNonNull($.skuName, "expected parameter 'skuName' to be non-null");
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

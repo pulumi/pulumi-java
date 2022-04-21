@@ -17,7 +17,7 @@ public final class GetReplicationMigrationItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationMigrationItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="migrationItemName", required=true)
-      private final String migrationItemName;
+    private String migrationItemName;
 
     public String migrationItemName() {
         return this.migrationItemName;
@@ -39,7 +39,7 @@ public final class GetReplicationMigrationItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="protectionContainerName", required=true)
-      private final String protectionContainerName;
+    private String protectionContainerName;
 
     public String protectionContainerName() {
         return this.protectionContainerName;
@@ -50,7 +50,7 @@ public final class GetReplicationMigrationItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetReplicationMigrationItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetReplicationMigrationItemArgs(
-        String fabricName,
-        String migrationItemName,
-        String protectionContainerName,
-        String resourceGroupName,
-        String resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.migrationItemName = Objects.requireNonNull(migrationItemName, "expected parameter 'migrationItemName' to be non-null");
-        this.protectionContainerName = Objects.requireNonNull(protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetReplicationMigrationItemArgs() {}
 
-    private GetReplicationMigrationItemArgs() {
-        this.fabricName = null;
-        this.migrationItemName = null;
-        this.protectionContainerName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetReplicationMigrationItemArgs(GetReplicationMigrationItemArgs $) {
+        this.fabricName = $.fabricName;
+        this.migrationItemName = $.migrationItemName;
+        this.protectionContainerName = $.protectionContainerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationMigrationItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricName;
-        private String migrationItemName;
-        private String protectionContainerName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetReplicationMigrationItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationMigrationItemArgs();
         }
 
         public Builder(GetReplicationMigrationItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.migrationItemName = defaults.migrationItemName;
-    	      this.protectionContainerName = defaults.protectionContainerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetReplicationMigrationItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder migrationItemName(String migrationItemName) {
-            this.migrationItemName = Objects.requireNonNull(migrationItemName);
+            $.migrationItemName = migrationItemName;
             return this;
         }
+
         public Builder protectionContainerName(String protectionContainerName) {
-            this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
+            $.protectionContainerName = protectionContainerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetReplicationMigrationItemArgs build() {
-            return new GetReplicationMigrationItemArgs(fabricName, migrationItemName, protectionContainerName, resourceGroupName, resourceName);
+        }
+
+        public GetReplicationMigrationItemArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.migrationItemName = Objects.requireNonNull($.migrationItemName, "expected parameter 'migrationItemName' to be non-null");
+            $.protectionContainerName = Objects.requireNonNull($.protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

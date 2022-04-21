@@ -13,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationTags")
-      private final @Nullable Output<Map<String,String>> allocationTags;
+    private @Nullable Output<Map<String,String>> allocationTags;
 
-    public Output<Map<String,String>> allocationTags() {
-        return this.allocationTags == null ? Codegen.empty() : this.allocationTags;
+    public Optional<Output<Map<String,String>>> allocationTags() {
+        return Optional.ofNullable(this.allocationTags);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAllocationName")
-      private final @Nullable Output<String> ipAllocationName;
+    private @Nullable Output<String> ipAllocationName;
 
-    public Output<String> ipAllocationName() {
-        return this.ipAllocationName == null ? Codegen.empty() : this.ipAllocationName;
+    public Optional<Output<String>> ipAllocationName() {
+        return Optional.ofNullable(this.ipAllocationName);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipamAllocationId")
-      private final @Nullable Output<String> ipamAllocationId;
+    private @Nullable Output<String> ipamAllocationId;
 
-    public Output<String> ipamAllocationId() {
-        return this.ipamAllocationId == null ? Codegen.empty() : this.ipamAllocationId;
+    public Optional<Output<String>> ipamAllocationId() {
+        return Optional.ofNullable(this.ipamAllocationId);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefixLength")
-      private final @Nullable Output<Integer> prefixLength;
+    private @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> prefixLength() {
-        return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
+    public Optional<Output<Integer>> prefixLength() {
+        return Optional.ofNullable(this.prefixLength);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefixType")
-      private final @Nullable Output<Either<String,IPVersion>> prefixType;
+    private @Nullable Output<Either<String,IPVersion>> prefixType;
 
-    public Output<Either<String,IPVersion>> prefixType() {
-        return this.prefixType == null ? Codegen.empty() : this.prefixType;
+    public Optional<Output<Either<String,IPVersion>>> prefixType() {
+        return Optional.ofNullable(this.prefixType);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -124,10 +125,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -135,180 +136,150 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,IpAllocationType>> type;
+    private @Nullable Output<Either<String,IpAllocationType>> type;
 
-    public Output<Either<String,IpAllocationType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,IpAllocationType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IpAllocationArgs(
-        @Nullable Output<Map<String,String>> allocationTags,
-        @Nullable Output<String> id,
-        @Nullable Output<String> ipAllocationName,
-        @Nullable Output<String> ipamAllocationId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> prefix,
-        @Nullable Output<Integer> prefixLength,
-        @Nullable Output<Either<String,IPVersion>> prefixType,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Either<String,IpAllocationType>> type) {
-        this.allocationTags = allocationTags;
-        this.id = id;
-        this.ipAllocationName = ipAllocationName;
-        this.ipamAllocationId = ipamAllocationId;
-        this.location = location;
-        this.prefix = prefix;
-        this.prefixLength = Codegen.integerProp("prefixLength").output().arg(prefixLength).def(0).getNullable();
-        this.prefixType = prefixType;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.type = type;
-    }
+    private IpAllocationArgs() {}
 
-    private IpAllocationArgs() {
-        this.allocationTags = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipAllocationName = Codegen.empty();
-        this.ipamAllocationId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.prefixLength = Codegen.empty();
-        this.prefixType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private IpAllocationArgs(IpAllocationArgs $) {
+        this.allocationTags = $.allocationTags;
+        this.id = $.id;
+        this.ipAllocationName = $.ipAllocationName;
+        this.ipamAllocationId = $.ipamAllocationId;
+        this.location = $.location;
+        this.prefix = $.prefix;
+        this.prefixLength = $.prefixLength;
+        this.prefixType = $.prefixType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAllocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> allocationTags;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> ipAllocationName;
-        private @Nullable Output<String> ipamAllocationId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<Integer> prefixLength;
-        private @Nullable Output<Either<String,IPVersion>> prefixType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Either<String,IpAllocationType>> type;
+        private IpAllocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAllocationArgs();
         }
 
         public Builder(IpAllocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationTags = defaults.allocationTags;
-    	      this.id = defaults.id;
-    	      this.ipAllocationName = defaults.ipAllocationName;
-    	      this.ipamAllocationId = defaults.ipamAllocationId;
-    	      this.location = defaults.location;
-    	      this.prefix = defaults.prefix;
-    	      this.prefixLength = defaults.prefixLength;
-    	      this.prefixType = defaults.prefixType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new IpAllocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationTags(@Nullable Output<Map<String,String>> allocationTags) {
-            this.allocationTags = allocationTags;
+            $.allocationTags = allocationTags;
             return this;
         }
-        public Builder allocationTags(@Nullable Map<String,String> allocationTags) {
-            this.allocationTags = Codegen.ofNullable(allocationTags);
-            return this;
+
+        public Builder allocationTags(Map<String,String> allocationTags) {
+            return allocationTags(Output.of(allocationTags));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipAllocationName(@Nullable Output<String> ipAllocationName) {
-            this.ipAllocationName = ipAllocationName;
+            $.ipAllocationName = ipAllocationName;
             return this;
         }
-        public Builder ipAllocationName(@Nullable String ipAllocationName) {
-            this.ipAllocationName = Codegen.ofNullable(ipAllocationName);
-            return this;
+
+        public Builder ipAllocationName(String ipAllocationName) {
+            return ipAllocationName(Output.of(ipAllocationName));
         }
+
         public Builder ipamAllocationId(@Nullable Output<String> ipamAllocationId) {
-            this.ipamAllocationId = ipamAllocationId;
+            $.ipamAllocationId = ipamAllocationId;
             return this;
         }
-        public Builder ipamAllocationId(@Nullable String ipamAllocationId) {
-            this.ipamAllocationId = Codegen.ofNullable(ipamAllocationId);
-            return this;
+
+        public Builder ipamAllocationId(String ipamAllocationId) {
+            return ipamAllocationId(Output.of(ipamAllocationId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
-            this.prefixLength = prefixLength;
+            $.prefixLength = prefixLength;
             return this;
         }
-        public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Codegen.ofNullable(prefixLength);
-            return this;
+
+        public Builder prefixLength(Integer prefixLength) {
+            return prefixLength(Output.of(prefixLength));
         }
+
         public Builder prefixType(@Nullable Output<Either<String,IPVersion>> prefixType) {
-            this.prefixType = prefixType;
+            $.prefixType = prefixType;
             return this;
         }
-        public Builder prefixType(@Nullable Either<String,IPVersion> prefixType) {
-            this.prefixType = Codegen.ofNullable(prefixType);
-            return this;
+
+        public Builder prefixType(Either<String,IPVersion> prefixType) {
+            return prefixType(Output.of(prefixType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<Either<String,IpAllocationType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,IpAllocationType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IpAllocationArgs build() {
-            return new IpAllocationArgs(allocationTags, id, ipAllocationName, ipamAllocationId, location, prefix, prefixLength, prefixType, resourceGroupName, tags, type);
+
+        public Builder type(Either<String,IpAllocationType> type) {
+            return type(Output.of(type));
+        }
+
+        public IpAllocationArgs build() {
+            $.prefixLength = Codegen.integerProp("prefixLength").output().arg($.prefixLength).def(0).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

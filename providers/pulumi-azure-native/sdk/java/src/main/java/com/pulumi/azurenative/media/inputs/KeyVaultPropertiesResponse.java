@@ -19,7 +19,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="currentKeyIdentifier", required=true)
-      private final String currentKeyIdentifier;
+    private String currentKeyIdentifier;
 
     public String currentKeyIdentifier() {
         return this.currentKeyIdentifier;
@@ -30,55 +30,51 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyIdentifier")
-      private final @Nullable String keyIdentifier;
+    private @Nullable String keyIdentifier;
 
     public Optional<String> keyIdentifier() {
-        return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
+        return Optional.ofNullable(this.keyIdentifier);
     }
 
-    public KeyVaultPropertiesResponse(
-        String currentKeyIdentifier,
-        @Nullable String keyIdentifier) {
-        this.currentKeyIdentifier = Objects.requireNonNull(currentKeyIdentifier, "expected parameter 'currentKeyIdentifier' to be non-null");
-        this.keyIdentifier = keyIdentifier;
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.currentKeyIdentifier = null;
-        this.keyIdentifier = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.currentKeyIdentifier = $.currentKeyIdentifier;
+        this.keyIdentifier = $.keyIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentKeyIdentifier;
-        private @Nullable String keyIdentifier;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentKeyIdentifier = defaults.currentKeyIdentifier;
-    	      this.keyIdentifier = defaults.keyIdentifier;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentKeyIdentifier(String currentKeyIdentifier) {
-            this.currentKeyIdentifier = Objects.requireNonNull(currentKeyIdentifier);
+            $.currentKeyIdentifier = currentKeyIdentifier;
             return this;
         }
+
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = keyIdentifier;
+            $.keyIdentifier = keyIdentifier;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(currentKeyIdentifier, keyIdentifier);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            $.currentKeyIdentifier = Objects.requireNonNull($.currentKeyIdentifier, "expected parameter 'currentKeyIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

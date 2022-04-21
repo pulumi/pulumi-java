@@ -7,9 +7,9 @@ import com.pulumi.azurenative.logic.enums.RosettaNetPipRoleType;
 import com.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -37,7 +37,7 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="businessDocument", required=true)
-      private final Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
+    private Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
 
     public Output<RosettaNetPipBusinessDocumentArgs> businessDocument() {
         return this.businessDocument;
@@ -48,10 +48,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -70,7 +70,7 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="roleType", required=true)
-      private final Output<RosettaNetPipRoleType> roleType;
+    private Output<RosettaNetPipRoleType> roleType;
 
     public Output<RosettaNetPipRoleType> roleType() {
         return this.roleType;
@@ -81,7 +81,7 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -92,128 +92,114 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceClassification", required=true)
-      private final Output<String> serviceClassification;
+    private Output<String> serviceClassification;
 
     public Output<String> serviceClassification() {
         return this.serviceClassification;
     }
 
-    public RosettaNetPipRoleSettingsArgs(
-        Output<String> action,
-        Output<RosettaNetPipBusinessDocumentArgs> businessDocument,
-        @Nullable Output<String> description,
-        Output<String> role,
-        Output<RosettaNetPipRoleType> roleType,
-        Output<String> service,
-        Output<String> serviceClassification) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.businessDocument = Objects.requireNonNull(businessDocument, "expected parameter 'businessDocument' to be non-null");
-        this.description = description;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.roleType = Objects.requireNonNull(roleType, "expected parameter 'roleType' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.serviceClassification = Objects.requireNonNull(serviceClassification, "expected parameter 'serviceClassification' to be non-null");
-    }
+    private RosettaNetPipRoleSettingsArgs() {}
 
-    private RosettaNetPipRoleSettingsArgs() {
-        this.action = Codegen.empty();
-        this.businessDocument = Codegen.empty();
-        this.description = Codegen.empty();
-        this.role = Codegen.empty();
-        this.roleType = Codegen.empty();
-        this.service = Codegen.empty();
-        this.serviceClassification = Codegen.empty();
+    private RosettaNetPipRoleSettingsArgs(RosettaNetPipRoleSettingsArgs $) {
+        this.action = $.action;
+        this.businessDocument = $.businessDocument;
+        this.description = $.description;
+        this.role = $.role;
+        this.roleType = $.roleType;
+        this.service = $.service;
+        this.serviceClassification = $.serviceClassification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipRoleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
-        private @Nullable Output<String> description;
-        private Output<String> role;
-        private Output<RosettaNetPipRoleType> roleType;
-        private Output<String> service;
-        private Output<String> serviceClassification;
+        private RosettaNetPipRoleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipRoleSettingsArgs();
         }
 
         public Builder(RosettaNetPipRoleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.businessDocument = defaults.businessDocument;
-    	      this.description = defaults.description;
-    	      this.role = defaults.role;
-    	      this.roleType = defaults.roleType;
-    	      this.service = defaults.service;
-    	      this.serviceClassification = defaults.serviceClassification;
+            $ = new RosettaNetPipRoleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder businessDocument(Output<RosettaNetPipBusinessDocumentArgs> businessDocument) {
-            this.businessDocument = Objects.requireNonNull(businessDocument);
+            $.businessDocument = businessDocument;
             return this;
         }
+
         public Builder businessDocument(RosettaNetPipBusinessDocumentArgs businessDocument) {
-            this.businessDocument = Output.of(Objects.requireNonNull(businessDocument));
-            return this;
+            return businessDocument(Output.of(businessDocument));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder roleType(Output<RosettaNetPipRoleType> roleType) {
-            this.roleType = Objects.requireNonNull(roleType);
+            $.roleType = roleType;
             return this;
         }
+
         public Builder roleType(RosettaNetPipRoleType roleType) {
-            this.roleType = Output.of(Objects.requireNonNull(roleType));
-            return this;
+            return roleType(Output.of(roleType));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder serviceClassification(Output<String> serviceClassification) {
-            this.serviceClassification = Objects.requireNonNull(serviceClassification);
+            $.serviceClassification = serviceClassification;
             return this;
         }
+
         public Builder serviceClassification(String serviceClassification) {
-            this.serviceClassification = Output.of(Objects.requireNonNull(serviceClassification));
-            return this;
-        }        public RosettaNetPipRoleSettingsArgs build() {
-            return new RosettaNetPipRoleSettingsArgs(action, businessDocument, description, role, roleType, service, serviceClassification);
+            return serviceClassification(Output.of(serviceClassification));
+        }
+
+        public RosettaNetPipRoleSettingsArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.businessDocument = Objects.requireNonNull($.businessDocument, "expected parameter 'businessDocument' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.roleType = Objects.requireNonNull($.roleType, "expected parameter 'roleType' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.serviceClassification = Objects.requireNonNull($.serviceClassification, "expected parameter 'serviceClassification' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DPMContainerExtendedInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lastRefreshedAt")
-      private final @Nullable Output<String> lastRefreshedAt;
+    private @Nullable Output<String> lastRefreshedAt;
 
-    public Output<String> lastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
+    public Optional<Output<String>> lastRefreshedAt() {
+        return Optional.ofNullable(this.lastRefreshedAt);
     }
 
-    public DPMContainerExtendedInfoArgs(@Nullable Output<String> lastRefreshedAt) {
-        this.lastRefreshedAt = lastRefreshedAt;
-    }
+    private DPMContainerExtendedInfoArgs() {}
 
-    private DPMContainerExtendedInfoArgs() {
-        this.lastRefreshedAt = Codegen.empty();
+    private DPMContainerExtendedInfoArgs(DPMContainerExtendedInfoArgs $) {
+        this.lastRefreshedAt = $.lastRefreshedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DPMContainerExtendedInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lastRefreshedAt;
+        private DPMContainerExtendedInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DPMContainerExtendedInfoArgs();
         }
 
         public Builder(DPMContainerExtendedInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastRefreshedAt = defaults.lastRefreshedAt;
+            $ = new DPMContainerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
-            this.lastRefreshedAt = lastRefreshedAt;
+            $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Codegen.ofNullable(lastRefreshedAt);
-            return this;
-        }        public DPMContainerExtendedInfoArgs build() {
-            return new DPMContainerExtendedInfoArgs(lastRefreshedAt);
+
+        public Builder lastRefreshedAt(String lastRefreshedAt) {
+            return lastRefreshedAt(Output.of(lastRefreshedAt));
+        }
+
+        public DPMContainerExtendedInfoArgs build() {
+            return $;
         }
     }
+
 }

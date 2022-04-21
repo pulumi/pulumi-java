@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="binding")
-      private final @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
+    private @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
 
-    public Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding() {
-        return this.binding == null ? Codegen.empty() : this.binding;
+    public Optional<Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>>> binding() {
+        return Optional.ofNullable(this.binding);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<List<FunctionInputArgs>> inputs;
+    private @Nullable Output<List<FunctionInputArgs>> inputs;
 
-    public Output<List<FunctionInputArgs>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<List<FunctionInputArgs>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="output")
-      private final @Nullable Output<FunctionOutputArgs> output;
+    private @Nullable Output<FunctionOutputArgs> output;
 
-    public Output<FunctionOutputArgs> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<FunctionOutputArgs>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -64,92 +65,83 @@ public final class ScalarFunctionPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ScalarFunctionPropertiesArgs(
-        @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding,
-        @Nullable Output<List<FunctionInputArgs>> inputs,
-        @Nullable Output<FunctionOutputArgs> output,
-        Output<String> type) {
-        this.binding = binding;
-        this.inputs = inputs;
-        this.output = output;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ScalarFunctionPropertiesArgs() {}
 
-    private ScalarFunctionPropertiesArgs() {
-        this.binding = Codegen.empty();
-        this.inputs = Codegen.empty();
-        this.output = Codegen.empty();
-        this.type = Codegen.empty();
+    private ScalarFunctionPropertiesArgs(ScalarFunctionPropertiesArgs $) {
+        this.binding = $.binding;
+        this.inputs = $.inputs;
+        this.output = $.output;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalarFunctionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
-        private @Nullable Output<List<FunctionInputArgs>> inputs;
-        private @Nullable Output<FunctionOutputArgs> output;
-        private Output<String> type;
+        private ScalarFunctionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalarFunctionPropertiesArgs();
         }
 
         public Builder(ScalarFunctionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binding = defaults.binding;
-    	      this.inputs = defaults.inputs;
-    	      this.output = defaults.output;
-    	      this.type = defaults.type;
+            $ = new ScalarFunctionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder binding(@Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding) {
-            this.binding = binding;
+            $.binding = binding;
             return this;
         }
-        public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
-            this.binding = Codegen.ofNullable(binding);
-            return this;
+
+        public Builder binding(Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
+            return binding(Output.of(binding));
         }
+
         public Builder inputs(@Nullable Output<List<FunctionInputArgs>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable List<FunctionInputArgs> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(List<FunctionInputArgs> inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(FunctionInputArgs... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder output(@Nullable Output<FunctionOutputArgs> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable FunctionOutputArgs output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(FunctionOutputArgs output) {
+            return output(Output.of(output));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ScalarFunctionPropertiesArgs build() {
-            return new ScalarFunctionPropertiesArgs(binding, inputs, output, type);
+            return type(Output.of(type));
+        }
+
+        public ScalarFunctionPropertiesArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

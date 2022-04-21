@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="environmentName", required=true)
-      private final Output<String> environmentName;
+    private Output<String> environmentName;
 
     public Output<String> environmentName() {
         return this.environmentName;
@@ -32,10 +32,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="functionAppName")
-      private final @Nullable Output<String> functionAppName;
+    private @Nullable Output<String> functionAppName;
 
-    public Output<String> functionAppName() {
-        return this.functionAppName == null ? Codegen.empty() : this.functionAppName;
+    public Optional<Output<String>> functionAppName() {
+        return Optional.ofNullable(this.functionAppName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="functionAppRegion")
-      private final @Nullable Output<String> functionAppRegion;
+    private @Nullable Output<String> functionAppRegion;
 
-    public Output<String> functionAppRegion() {
-        return this.functionAppRegion == null ? Codegen.empty() : this.functionAppRegion;
+    public Optional<Output<String>> functionAppRegion() {
+        return Optional.ofNullable(this.functionAppRegion);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="functionAppResourceId")
-      private final @Nullable Output<String> functionAppResourceId;
+    private @Nullable Output<String> functionAppResourceId;
 
-    public Output<String> functionAppResourceId() {
-        return this.functionAppResourceId == null ? Codegen.empty() : this.functionAppResourceId;
+    public Optional<Output<String>> functionAppResourceId() {
+        return Optional.ofNullable(this.functionAppResourceId);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="isForced")
-      private final @Nullable Output<Boolean> isForced;
+    private @Nullable Output<Boolean> isForced;
 
-    public Output<Boolean> isForced() {
-        return this.isForced == null ? Codegen.empty() : this.isForced;
+    public Optional<Output<Boolean>> isForced() {
+        return Optional.ofNullable(this.isForced);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -98,141 +98,121 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(
-        Output<String> environmentName,
-        @Nullable Output<String> functionAppName,
-        @Nullable Output<String> functionAppRegion,
-        @Nullable Output<String> functionAppResourceId,
-        @Nullable Output<Boolean> isForced,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.functionAppName = functionAppName;
-        this.functionAppRegion = functionAppRegion;
-        this.functionAppResourceId = functionAppResourceId;
-        this.isForced = isForced;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs() {}
 
-    private StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs() {
-        this.environmentName = Codegen.empty();
-        this.functionAppName = Codegen.empty();
-        this.functionAppRegion = Codegen.empty();
-        this.functionAppResourceId = Codegen.empty();
-        this.isForced = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs $) {
+        this.environmentName = $.environmentName;
+        this.functionAppName = $.functionAppName;
+        this.functionAppRegion = $.functionAppRegion;
+        this.functionAppResourceId = $.functionAppResourceId;
+        this.isForced = $.isForced;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> environmentName;
-        private @Nullable Output<String> functionAppName;
-        private @Nullable Output<String> functionAppRegion;
-        private @Nullable Output<String> functionAppResourceId;
-        private @Nullable Output<Boolean> isForced;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
+        private StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs();
         }
 
         public Builder(StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.functionAppName = defaults.functionAppName;
-    	      this.functionAppRegion = defaults.functionAppRegion;
-    	      this.functionAppResourceId = defaults.functionAppResourceId;
-    	      this.isForced = defaults.isForced;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(Output<String> environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
-            return this;
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder functionAppName(@Nullable Output<String> functionAppName) {
-            this.functionAppName = functionAppName;
+            $.functionAppName = functionAppName;
             return this;
         }
-        public Builder functionAppName(@Nullable String functionAppName) {
-            this.functionAppName = Codegen.ofNullable(functionAppName);
-            return this;
+
+        public Builder functionAppName(String functionAppName) {
+            return functionAppName(Output.of(functionAppName));
         }
+
         public Builder functionAppRegion(@Nullable Output<String> functionAppRegion) {
-            this.functionAppRegion = functionAppRegion;
+            $.functionAppRegion = functionAppRegion;
             return this;
         }
-        public Builder functionAppRegion(@Nullable String functionAppRegion) {
-            this.functionAppRegion = Codegen.ofNullable(functionAppRegion);
-            return this;
+
+        public Builder functionAppRegion(String functionAppRegion) {
+            return functionAppRegion(Output.of(functionAppRegion));
         }
+
         public Builder functionAppResourceId(@Nullable Output<String> functionAppResourceId) {
-            this.functionAppResourceId = functionAppResourceId;
+            $.functionAppResourceId = functionAppResourceId;
             return this;
         }
-        public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
-            this.functionAppResourceId = Codegen.ofNullable(functionAppResourceId);
-            return this;
+
+        public Builder functionAppResourceId(String functionAppResourceId) {
+            return functionAppResourceId(Output.of(functionAppResourceId));
         }
+
         public Builder isForced(@Nullable Output<Boolean> isForced) {
-            this.isForced = isForced;
+            $.isForced = isForced;
             return this;
         }
-        public Builder isForced(@Nullable Boolean isForced) {
-            this.isForced = Codegen.ofNullable(isForced);
-            return this;
+
+        public Builder isForced(Boolean isForced) {
+            return isForced(Output.of(isForced));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
-            return new StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(environmentName, functionAppName, functionAppRegion, functionAppResourceId, isForced, kind, name, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

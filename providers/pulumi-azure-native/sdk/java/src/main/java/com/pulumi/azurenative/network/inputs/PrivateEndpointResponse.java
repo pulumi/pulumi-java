@@ -30,10 +30,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customDnsConfigs")
-      private final @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
+    private @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
 
-    public List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs() {
-        return this.customDnsConfigs == null ? List.of() : this.customDnsConfigs;
+    public Optional<List<CustomDnsConfigPropertiesFormatResponse>> customDnsConfigs() {
+        return Optional.ofNullable(this.customDnsConfigs);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -52,10 +52,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable ExtendedLocationResponse extendedLocation;
+    private @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
-      private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
+    private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
+    public Optional<List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
+        return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
 
     /**
@@ -96,7 +96,7 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -107,7 +107,7 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="networkInterfaces", required=true)
-      private final List<NetworkInterfaceResponse> networkInterfaces;
+    private List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
@@ -118,10 +118,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateLinkServiceConnections")
-      private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
+    private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
+    public Optional<List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections() {
+        return Optional.ofNullable(this.privateLinkServiceConnections);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -140,10 +140,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubnetResponse subnet;
+    private @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -162,166 +162,137 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PrivateEndpointResponse(
-        @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        String provisioningState,
-        @Nullable SubnetResponse subnet,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.customDnsConfigs = customDnsConfigs;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.location = location;
-        this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
-        this.privateLinkServiceConnections = privateLinkServiceConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.subnet = subnet;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PrivateEndpointResponse() {}
 
-    private PrivateEndpointResponse() {
-        this.customDnsConfigs = List.of();
-        this.etag = null;
-        this.extendedLocation = null;
-        this.id = null;
-        this.location = null;
-        this.manualPrivateLinkServiceConnections = List.of();
-        this.name = null;
-        this.networkInterfaces = List.of();
-        this.privateLinkServiceConnections = List.of();
-        this.provisioningState = null;
-        this.subnet = null;
-        this.tags = Map.of();
-        this.type = null;
+    private PrivateEndpointResponse(PrivateEndpointResponse $) {
+        this.customDnsConfigs = $.customDnsConfigs;
+        this.etag = $.etag;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.location = $.location;
+        this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
+        this.name = $.name;
+        this.networkInterfaces = $.networkInterfaces;
+        this.privateLinkServiceConnections = $.privateLinkServiceConnections;
+        this.provisioningState = $.provisioningState;
+        this.subnet = $.subnet;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
-        private String etag;
-        private @Nullable ExtendedLocationResponse extendedLocation;
-        private @Nullable String id;
-        private @Nullable String location;
-        private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
-        private String name;
-        private List<NetworkInterfaceResponse> networkInterfaces;
-        private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
-        private String provisioningState;
-        private @Nullable SubnetResponse subnet;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private PrivateEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointResponse();
         }
 
         public Builder(PrivateEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDnsConfigs = defaults.customDnsConfigs;
-    	      this.etag = defaults.etag;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
-    	      this.name = defaults.name;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.privateLinkServiceConnections = defaults.privateLinkServiceConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.subnet = defaults.subnet;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs) {
-            this.customDnsConfigs = customDnsConfigs;
+            $.customDnsConfigs = customDnsConfigs;
             return this;
         }
+
         public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatResponse... customDnsConfigs) {
             return customDnsConfigs(List.of(customDnsConfigs));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
+            $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
+
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = privateLinkServiceConnections;
+            $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
+
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionResponse... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder subnet(@Nullable SubnetResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PrivateEndpointResponse build() {
-            return new PrivateEndpointResponse(customDnsConfigs, etag, extendedLocation, id, location, manualPrivateLinkServiceConnections, name, networkInterfaces, privateLinkServiceConnections, provisioningState, subnet, tags, type);
+        }
+
+        public PrivateEndpointResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.networkInterfaces = Objects.requireNonNull($.networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

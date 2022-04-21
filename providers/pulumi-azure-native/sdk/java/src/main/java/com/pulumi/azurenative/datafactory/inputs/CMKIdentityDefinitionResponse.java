@@ -23,45 +23,44 @@ public final class CMKIdentityDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable String userAssignedIdentity;
+    private @Nullable String userAssignedIdentity;
 
     public Optional<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public CMKIdentityDefinitionResponse(@Nullable String userAssignedIdentity) {
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private CMKIdentityDefinitionResponse() {}
 
-    private CMKIdentityDefinitionResponse() {
-        this.userAssignedIdentity = null;
+    private CMKIdentityDefinitionResponse(CMKIdentityDefinitionResponse $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CMKIdentityDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String userAssignedIdentity;
+        private CMKIdentityDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CMKIdentityDefinitionResponse();
         }
 
         public Builder(CMKIdentityDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new CMKIdentityDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public CMKIdentityDefinitionResponse build() {
-            return new CMKIdentityDefinitionResponse(userAssignedIdentity);
+        }
+
+        public CMKIdentityDefinitionResponse build() {
+            return $;
         }
     }
+
 }

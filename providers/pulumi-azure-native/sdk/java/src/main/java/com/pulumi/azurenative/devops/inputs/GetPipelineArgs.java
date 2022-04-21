@@ -17,7 +17,7 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineName", required=true)
-      private final String pipelineName;
+    private String pipelineName;
 
     public String pipelineName() {
         return this.pipelineName;
@@ -28,55 +28,52 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPipelineArgs(
-        String pipelineName,
-        String resourceGroupName) {
-        this.pipelineName = Objects.requireNonNull(pipelineName, "expected parameter 'pipelineName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPipelineArgs() {}
 
-    private GetPipelineArgs() {
-        this.pipelineName = null;
-        this.resourceGroupName = null;
+    private GetPipelineArgs(GetPipelineArgs $) {
+        this.pipelineName = $.pipelineName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pipelineName;
-        private String resourceGroupName;
+        private GetPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineArgs();
         }
 
         public Builder(GetPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineName = defaults.pipelineName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineName(String pipelineName) {
-            this.pipelineName = Objects.requireNonNull(pipelineName);
+            $.pipelineName = pipelineName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPipelineArgs build() {
-            return new GetPipelineArgs(pipelineName, resourceGroupName);
+        }
+
+        public GetPipelineArgs build() {
+            $.pipelineName = Objects.requireNonNull($.pipelineName, "expected parameter 'pipelineName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

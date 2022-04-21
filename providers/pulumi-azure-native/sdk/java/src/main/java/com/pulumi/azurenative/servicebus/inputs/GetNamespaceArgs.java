@@ -17,7 +17,7 @@ public final class GetNamespaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -28,55 +28,52 @@ public final class GetNamespaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNamespaceArgs(
-        String namespaceName,
-        String resourceGroupName) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNamespaceArgs() {}
 
-    private GetNamespaceArgs() {
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetNamespaceArgs(GetNamespaceArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNamespaceArgs();
         }
 
         public Builder(GetNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNamespaceArgs build() {
-            return new GetNamespaceArgs(namespaceName, resourceGroupName);
+        }
+
+        public GetNamespaceArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

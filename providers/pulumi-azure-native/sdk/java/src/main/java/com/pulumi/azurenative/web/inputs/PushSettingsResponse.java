@@ -24,10 +24,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dynamicTagsJson")
-      private final @Nullable String dynamicTagsJson;
+    private @Nullable String dynamicTagsJson;
 
     public Optional<String> dynamicTagsJson() {
-        return this.dynamicTagsJson == null ? Optional.empty() : Optional.ofNullable(this.dynamicTagsJson);
+        return Optional.ofNullable(this.dynamicTagsJson);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -46,7 +46,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isPushEnabled", required=true)
-      private final Boolean isPushEnabled;
+    private Boolean isPushEnabled;
 
     public Boolean isPushEnabled() {
         return this.isPushEnabled;
@@ -57,10 +57,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -79,10 +79,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tagWhitelistJson")
-      private final @Nullable String tagWhitelistJson;
+    private @Nullable String tagWhitelistJson;
 
     public Optional<String> tagWhitelistJson() {
-        return this.tagWhitelistJson == null ? Optional.empty() : Optional.ofNullable(this.tagWhitelistJson);
+        return Optional.ofNullable(this.tagWhitelistJson);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tagsRequiringAuth")
-      private final @Nullable String tagsRequiringAuth;
+    private @Nullable String tagsRequiringAuth;
 
     public Optional<String> tagsRequiringAuth() {
-        return this.tagsRequiringAuth == null ? Optional.empty() : Optional.ofNullable(this.tagsRequiringAuth);
+        return Optional.ofNullable(this.tagsRequiringAuth);
     }
 
     /**
@@ -104,109 +104,90 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PushSettingsResponse(
-        @Nullable String dynamicTagsJson,
-        String id,
-        Boolean isPushEnabled,
-        @Nullable String kind,
-        String name,
-        @Nullable String tagWhitelistJson,
-        @Nullable String tagsRequiringAuth,
-        String type) {
-        this.dynamicTagsJson = dynamicTagsJson;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isPushEnabled = Objects.requireNonNull(isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tagWhitelistJson = tagWhitelistJson;
-        this.tagsRequiringAuth = tagsRequiringAuth;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PushSettingsResponse() {}
 
-    private PushSettingsResponse() {
-        this.dynamicTagsJson = null;
-        this.id = null;
-        this.isPushEnabled = null;
-        this.kind = null;
-        this.name = null;
-        this.tagWhitelistJson = null;
-        this.tagsRequiringAuth = null;
-        this.type = null;
+    private PushSettingsResponse(PushSettingsResponse $) {
+        this.dynamicTagsJson = $.dynamicTagsJson;
+        this.id = $.id;
+        this.isPushEnabled = $.isPushEnabled;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.tagWhitelistJson = $.tagWhitelistJson;
+        this.tagsRequiringAuth = $.tagsRequiringAuth;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dynamicTagsJson;
-        private String id;
-        private Boolean isPushEnabled;
-        private @Nullable String kind;
-        private String name;
-        private @Nullable String tagWhitelistJson;
-        private @Nullable String tagsRequiringAuth;
-        private String type;
+        private PushSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushSettingsResponse();
         }
 
         public Builder(PushSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dynamicTagsJson = defaults.dynamicTagsJson;
-    	      this.id = defaults.id;
-    	      this.isPushEnabled = defaults.isPushEnabled;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.tagWhitelistJson = defaults.tagWhitelistJson;
-    	      this.tagsRequiringAuth = defaults.tagsRequiringAuth;
-    	      this.type = defaults.type;
+            $ = new PushSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
-            this.dynamicTagsJson = dynamicTagsJson;
+            $.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder isPushEnabled(Boolean isPushEnabled) {
-            this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
+            $.isPushEnabled = isPushEnabled;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
-            this.tagWhitelistJson = tagWhitelistJson;
+            $.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
+
         public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
-            this.tagsRequiringAuth = tagsRequiringAuth;
+            $.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PushSettingsResponse build() {
-            return new PushSettingsResponse(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
+        }
+
+        public PushSettingsResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.isPushEnabled = Objects.requireNonNull($.isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

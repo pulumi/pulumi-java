@@ -23,10 +23,10 @@ public final class CrossSiteAccessPoliciesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientAccessPolicy")
-      private final @Nullable String clientAccessPolicy;
+    private @Nullable String clientAccessPolicy;
 
     public Optional<String> clientAccessPolicy() {
-        return this.clientAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.clientAccessPolicy);
+        return Optional.ofNullable(this.clientAccessPolicy);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class CrossSiteAccessPoliciesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="crossDomainPolicy")
-      private final @Nullable String crossDomainPolicy;
+    private @Nullable String crossDomainPolicy;
 
     public Optional<String> crossDomainPolicy() {
-        return this.crossDomainPolicy == null ? Optional.empty() : Optional.ofNullable(this.crossDomainPolicy);
+        return Optional.ofNullable(this.crossDomainPolicy);
     }
 
-    public CrossSiteAccessPoliciesResponse(
-        @Nullable String clientAccessPolicy,
-        @Nullable String crossDomainPolicy) {
-        this.clientAccessPolicy = clientAccessPolicy;
-        this.crossDomainPolicy = crossDomainPolicy;
-    }
+    private CrossSiteAccessPoliciesResponse() {}
 
-    private CrossSiteAccessPoliciesResponse() {
-        this.clientAccessPolicy = null;
-        this.crossDomainPolicy = null;
+    private CrossSiteAccessPoliciesResponse(CrossSiteAccessPoliciesResponse $) {
+        this.clientAccessPolicy = $.clientAccessPolicy;
+        this.crossDomainPolicy = $.crossDomainPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrossSiteAccessPoliciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientAccessPolicy;
-        private @Nullable String crossDomainPolicy;
+        private CrossSiteAccessPoliciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrossSiteAccessPoliciesResponse();
         }
 
         public Builder(CrossSiteAccessPoliciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientAccessPolicy = defaults.clientAccessPolicy;
-    	      this.crossDomainPolicy = defaults.crossDomainPolicy;
+            $ = new CrossSiteAccessPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
-            this.clientAccessPolicy = clientAccessPolicy;
+            $.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
+
         public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
-            this.crossDomainPolicy = crossDomainPolicy;
+            $.crossDomainPolicy = crossDomainPolicy;
             return this;
-        }        public CrossSiteAccessPoliciesResponse build() {
-            return new CrossSiteAccessPoliciesResponse(clientAccessPolicy, crossDomainPolicy);
+        }
+
+        public CrossSiteAccessPoliciesResponse build() {
+            return $;
         }
     }
+
 }

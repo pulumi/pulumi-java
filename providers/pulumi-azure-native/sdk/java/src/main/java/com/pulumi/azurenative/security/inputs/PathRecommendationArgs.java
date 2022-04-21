@@ -7,11 +7,11 @@ import com.pulumi.azurenative.security.inputs.PublisherInfoArgs;
 import com.pulumi.azurenative.security.inputs.UserRecommendationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="common")
-      private final @Nullable Output<Boolean> common;
+    private @Nullable Output<Boolean> common;
 
-    public Output<Boolean> common() {
-        return this.common == null ? Codegen.empty() : this.common;
+    public Optional<Output<Boolean>> common() {
+        return Optional.ofNullable(this.common);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="configurationStatus")
-      private final @Nullable Output<String> configurationStatus;
+    private @Nullable Output<String> configurationStatus;
 
-    public Output<String> configurationStatus() {
-        return this.configurationStatus == null ? Codegen.empty() : this.configurationStatus;
+    public Optional<Output<String>> configurationStatus() {
+        return Optional.ofNullable(this.configurationStatus);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fileType")
-      private final @Nullable Output<String> fileType;
+    private @Nullable Output<String> fileType;
 
-    public Output<String> fileType() {
-        return this.fileType == null ? Codegen.empty() : this.fileType;
+    public Optional<Output<String>> fileType() {
+        return Optional.ofNullable(this.fileType);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publisherInfo")
-      private final @Nullable Output<PublisherInfoArgs> publisherInfo;
+    private @Nullable Output<PublisherInfoArgs> publisherInfo;
 
-    public Output<PublisherInfoArgs> publisherInfo() {
-        return this.publisherInfo == null ? Codegen.empty() : this.publisherInfo;
+    public Optional<Output<PublisherInfoArgs>> publisherInfo() {
+        return Optional.ofNullable(this.publisherInfo);
     }
 
     /**
@@ -94,174 +94,150 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="userSids")
-      private final @Nullable Output<List<String>> userSids;
+    private @Nullable Output<List<String>> userSids;
 
-    public Output<List<String>> userSids() {
-        return this.userSids == null ? Codegen.empty() : this.userSids;
+    public Optional<Output<List<String>>> userSids() {
+        return Optional.ofNullable(this.userSids);
     }
 
     @Import(name="usernames")
-      private final @Nullable Output<List<UserRecommendationArgs>> usernames;
+    private @Nullable Output<List<UserRecommendationArgs>> usernames;
 
-    public Output<List<UserRecommendationArgs>> usernames() {
-        return this.usernames == null ? Codegen.empty() : this.usernames;
+    public Optional<Output<List<UserRecommendationArgs>>> usernames() {
+        return Optional.ofNullable(this.usernames);
     }
 
-    public PathRecommendationArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<Boolean> common,
-        @Nullable Output<String> configurationStatus,
-        @Nullable Output<String> fileType,
-        @Nullable Output<String> path,
-        @Nullable Output<PublisherInfoArgs> publisherInfo,
-        @Nullable Output<String> type,
-        @Nullable Output<List<String>> userSids,
-        @Nullable Output<List<UserRecommendationArgs>> usernames) {
-        this.action = action;
-        this.common = common;
-        this.configurationStatus = configurationStatus;
-        this.fileType = fileType;
-        this.path = path;
-        this.publisherInfo = publisherInfo;
-        this.type = type;
-        this.userSids = userSids;
-        this.usernames = usernames;
-    }
+    private PathRecommendationArgs() {}
 
-    private PathRecommendationArgs() {
-        this.action = Codegen.empty();
-        this.common = Codegen.empty();
-        this.configurationStatus = Codegen.empty();
-        this.fileType = Codegen.empty();
-        this.path = Codegen.empty();
-        this.publisherInfo = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userSids = Codegen.empty();
-        this.usernames = Codegen.empty();
+    private PathRecommendationArgs(PathRecommendationArgs $) {
+        this.action = $.action;
+        this.common = $.common;
+        this.configurationStatus = $.configurationStatus;
+        this.fileType = $.fileType;
+        this.path = $.path;
+        this.publisherInfo = $.publisherInfo;
+        this.type = $.type;
+        this.userSids = $.userSids;
+        this.usernames = $.usernames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PathRecommendationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<Boolean> common;
-        private @Nullable Output<String> configurationStatus;
-        private @Nullable Output<String> fileType;
-        private @Nullable Output<String> path;
-        private @Nullable Output<PublisherInfoArgs> publisherInfo;
-        private @Nullable Output<String> type;
-        private @Nullable Output<List<String>> userSids;
-        private @Nullable Output<List<UserRecommendationArgs>> usernames;
+        private PathRecommendationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PathRecommendationArgs();
         }
 
         public Builder(PathRecommendationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.common = defaults.common;
-    	      this.configurationStatus = defaults.configurationStatus;
-    	      this.fileType = defaults.fileType;
-    	      this.path = defaults.path;
-    	      this.publisherInfo = defaults.publisherInfo;
-    	      this.type = defaults.type;
-    	      this.userSids = defaults.userSids;
-    	      this.usernames = defaults.usernames;
+            $ = new PathRecommendationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder common(@Nullable Output<Boolean> common) {
-            this.common = common;
+            $.common = common;
             return this;
         }
-        public Builder common(@Nullable Boolean common) {
-            this.common = Codegen.ofNullable(common);
-            return this;
+
+        public Builder common(Boolean common) {
+            return common(Output.of(common));
         }
+
         public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
-            this.configurationStatus = configurationStatus;
+            $.configurationStatus = configurationStatus;
             return this;
         }
-        public Builder configurationStatus(@Nullable String configurationStatus) {
-            this.configurationStatus = Codegen.ofNullable(configurationStatus);
-            return this;
+
+        public Builder configurationStatus(String configurationStatus) {
+            return configurationStatus(Output.of(configurationStatus));
         }
+
         public Builder fileType(@Nullable Output<String> fileType) {
-            this.fileType = fileType;
+            $.fileType = fileType;
             return this;
         }
-        public Builder fileType(@Nullable String fileType) {
-            this.fileType = Codegen.ofNullable(fileType);
-            return this;
+
+        public Builder fileType(String fileType) {
+            return fileType(Output.of(fileType));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder publisherInfo(@Nullable Output<PublisherInfoArgs> publisherInfo) {
-            this.publisherInfo = publisherInfo;
+            $.publisherInfo = publisherInfo;
             return this;
         }
-        public Builder publisherInfo(@Nullable PublisherInfoArgs publisherInfo) {
-            this.publisherInfo = Codegen.ofNullable(publisherInfo);
-            return this;
+
+        public Builder publisherInfo(PublisherInfoArgs publisherInfo) {
+            return publisherInfo(Output.of(publisherInfo));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder userSids(@Nullable Output<List<String>> userSids) {
-            this.userSids = userSids;
+            $.userSids = userSids;
             return this;
         }
-        public Builder userSids(@Nullable List<String> userSids) {
-            this.userSids = Codegen.ofNullable(userSids);
-            return this;
+
+        public Builder userSids(List<String> userSids) {
+            return userSids(Output.of(userSids));
         }
+
         public Builder userSids(String... userSids) {
             return userSids(List.of(userSids));
         }
+
         public Builder usernames(@Nullable Output<List<UserRecommendationArgs>> usernames) {
-            this.usernames = usernames;
+            $.usernames = usernames;
             return this;
         }
-        public Builder usernames(@Nullable List<UserRecommendationArgs> usernames) {
-            this.usernames = Codegen.ofNullable(usernames);
-            return this;
+
+        public Builder usernames(List<UserRecommendationArgs> usernames) {
+            return usernames(Output.of(usernames));
         }
+
         public Builder usernames(UserRecommendationArgs... usernames) {
             return usernames(List.of(usernames));
-        }        public PathRecommendationArgs build() {
-            return new PathRecommendationArgs(action, common, configurationStatus, fileType, path, publisherInfo, type, userSids, usernames);
+        }
+
+        public PathRecommendationArgs build() {
+            return $;
         }
     }
+
 }

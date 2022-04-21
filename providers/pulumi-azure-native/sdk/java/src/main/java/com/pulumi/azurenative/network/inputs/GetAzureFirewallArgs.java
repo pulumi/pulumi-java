@@ -17,7 +17,7 @@ public final class GetAzureFirewallArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="azureFirewallName", required=true)
-      private final String azureFirewallName;
+    private String azureFirewallName;
 
     public String azureFirewallName() {
         return this.azureFirewallName;
@@ -28,55 +28,52 @@ public final class GetAzureFirewallArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAzureFirewallArgs(
-        String azureFirewallName,
-        String resourceGroupName) {
-        this.azureFirewallName = Objects.requireNonNull(azureFirewallName, "expected parameter 'azureFirewallName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAzureFirewallArgs() {}
 
-    private GetAzureFirewallArgs() {
-        this.azureFirewallName = null;
-        this.resourceGroupName = null;
+    private GetAzureFirewallArgs(GetAzureFirewallArgs $) {
+        this.azureFirewallName = $.azureFirewallName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAzureFirewallArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureFirewallName;
-        private String resourceGroupName;
+        private GetAzureFirewallArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAzureFirewallArgs();
         }
 
         public Builder(GetAzureFirewallArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureFirewallName = defaults.azureFirewallName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAzureFirewallArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureFirewallName(String azureFirewallName) {
-            this.azureFirewallName = Objects.requireNonNull(azureFirewallName);
+            $.azureFirewallName = azureFirewallName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAzureFirewallArgs build() {
-            return new GetAzureFirewallArgs(azureFirewallName, resourceGroupName);
+        }
+
+        public GetAzureFirewallArgs build() {
+            $.azureFirewallName = Objects.requireNonNull($.azureFirewallName, "expected parameter 'azureFirewallName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

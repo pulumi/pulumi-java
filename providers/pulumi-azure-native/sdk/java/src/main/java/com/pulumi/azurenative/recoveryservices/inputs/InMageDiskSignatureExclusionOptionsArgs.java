@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends com.pulumi.re
      * 
      */
     @Import(name="diskSignature")
-      private final @Nullable Output<String> diskSignature;
+    private @Nullable Output<String> diskSignature;
 
-    public Output<String> diskSignature() {
-        return this.diskSignature == null ? Codegen.empty() : this.diskSignature;
+    public Optional<Output<String>> diskSignature() {
+        return Optional.ofNullable(this.diskSignature);
     }
 
-    public InMageDiskSignatureExclusionOptionsArgs(@Nullable Output<String> diskSignature) {
-        this.diskSignature = diskSignature;
-    }
+    private InMageDiskSignatureExclusionOptionsArgs() {}
 
-    private InMageDiskSignatureExclusionOptionsArgs() {
-        this.diskSignature = Codegen.empty();
+    private InMageDiskSignatureExclusionOptionsArgs(InMageDiskSignatureExclusionOptionsArgs $) {
+        this.diskSignature = $.diskSignature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageDiskSignatureExclusionOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskSignature;
+        private InMageDiskSignatureExclusionOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageDiskSignatureExclusionOptionsArgs();
         }
 
         public Builder(InMageDiskSignatureExclusionOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSignature = defaults.diskSignature;
+            $ = new InMageDiskSignatureExclusionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSignature(@Nullable Output<String> diskSignature) {
-            this.diskSignature = diskSignature;
+            $.diskSignature = diskSignature;
             return this;
         }
-        public Builder diskSignature(@Nullable String diskSignature) {
-            this.diskSignature = Codegen.ofNullable(diskSignature);
-            return this;
-        }        public InMageDiskSignatureExclusionOptionsArgs build() {
-            return new InMageDiskSignatureExclusionOptionsArgs(diskSignature);
+
+        public Builder diskSignature(String diskSignature) {
+            return diskSignature(Output.of(diskSignature));
+        }
+
+        public InMageDiskSignatureExclusionOptionsArgs build() {
+            return $;
         }
     }
+
 }

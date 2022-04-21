@@ -17,7 +17,7 @@ public final class GetWorkspaceConnectionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetWorkspaceConnectionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWorkspaceConnectionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetWorkspaceConnectionArgs(
-        String connectionName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetWorkspaceConnectionArgs() {}
 
-    private GetWorkspaceConnectionArgs() {
-        this.connectionName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetWorkspaceConnectionArgs(GetWorkspaceConnectionArgs $) {
+        this.connectionName = $.connectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkspaceConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetWorkspaceConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkspaceConnectionArgs();
         }
 
         public Builder(GetWorkspaceConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetWorkspaceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetWorkspaceConnectionArgs build() {
-            return new GetWorkspaceConnectionArgs(connectionName, resourceGroupName, workspaceName);
+        }
+
+        public GetWorkspaceConnectionArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

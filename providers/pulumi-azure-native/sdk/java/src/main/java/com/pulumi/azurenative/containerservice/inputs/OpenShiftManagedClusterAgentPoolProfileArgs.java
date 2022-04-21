@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -40,7 +41,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -51,10 +52,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<Either<String,OSType>> osType;
+    private @Nullable Output<Either<String,OSType>> osType;
 
-    public Output<Either<String,OSType>> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<Either<String,OSType>>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
+    private @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
 
-    public Output<Either<String,OpenShiftAgentPoolProfileRole>> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<Either<String,OpenShiftAgentPoolProfileRole>>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
      * 
      */
     @Import(name="subnetCidr")
-      private final @Nullable Output<String> subnetCidr;
+    private @Nullable Output<String> subnetCidr;
 
-    public Output<String> subnetCidr() {
-        return this.subnetCidr == null ? Codegen.empty() : this.subnetCidr;
+    public Optional<Output<String>> subnetCidr() {
+        return Optional.ofNullable(this.subnetCidr);
     }
 
     /**
@@ -84,115 +85,102 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
      * 
      */
     @Import(name="vmSize", required=true)
-      private final Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
+    private Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
     public Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize() {
         return this.vmSize;
     }
 
-    public OpenShiftManagedClusterAgentPoolProfileArgs(
-        Output<Integer> count,
-        Output<String> name,
-        @Nullable Output<Either<String,OSType>> osType,
-        @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role,
-        @Nullable Output<String> subnetCidr,
-        Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.osType = osType;
-        this.role = role;
-        this.subnetCidr = Codegen.stringProp("subnetCidr").output().arg(subnetCidr).def("10.0.0.0/24").getNullable();
-        this.vmSize = Objects.requireNonNull(vmSize, "expected parameter 'vmSize' to be non-null");
-    }
+    private OpenShiftManagedClusterAgentPoolProfileArgs() {}
 
-    private OpenShiftManagedClusterAgentPoolProfileArgs() {
-        this.count = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.role = Codegen.empty();
-        this.subnetCidr = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private OpenShiftManagedClusterAgentPoolProfileArgs(OpenShiftManagedClusterAgentPoolProfileArgs $) {
+        this.count = $.count;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.role = $.role;
+        this.subnetCidr = $.subnetCidr;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterAgentPoolProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private Output<String> name;
-        private @Nullable Output<Either<String,OSType>> osType;
-        private @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
-        private @Nullable Output<String> subnetCidr;
-        private Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
+        private OpenShiftManagedClusterAgentPoolProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterAgentPoolProfileArgs();
         }
 
         public Builder(OpenShiftManagedClusterAgentPoolProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.role = defaults.role;
-    	      this.subnetCidr = defaults.subnetCidr;
-    	      this.vmSize = defaults.vmSize;
+            $ = new OpenShiftManagedClusterAgentPoolProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable Either<String,OSType> osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(Either<String,OSType> osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder role(@Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable Either<String,OpenShiftAgentPoolProfileRole> role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(Either<String,OpenShiftAgentPoolProfileRole> role) {
+            return role(Output.of(role));
         }
+
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
-            this.subnetCidr = subnetCidr;
+            $.subnetCidr = subnetCidr;
             return this;
         }
-        public Builder subnetCidr(@Nullable String subnetCidr) {
-            this.subnetCidr = Codegen.ofNullable(subnetCidr);
-            return this;
+
+        public Builder subnetCidr(String subnetCidr) {
+            return subnetCidr(Output.of(subnetCidr));
         }
+
         public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
-            this.vmSize = Objects.requireNonNull(vmSize);
+            $.vmSize = vmSize;
             return this;
         }
+
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
-            this.vmSize = Output.of(Objects.requireNonNull(vmSize));
-            return this;
-        }        public OpenShiftManagedClusterAgentPoolProfileArgs build() {
-            return new OpenShiftManagedClusterAgentPoolProfileArgs(count, name, osType, role, subnetCidr, vmSize);
+            return vmSize(Output.of(vmSize));
+        }
+
+        public OpenShiftManagedClusterAgentPoolProfileArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subnetCidr = Codegen.stringProp("subnetCidr").output().arg($.subnetCidr).def("10.0.0.0/24").getNullable();
+            $.vmSize = Objects.requireNonNull($.vmSize, "expected parameter 'vmSize' to be non-null");
+            return $;
         }
     }
+
 }

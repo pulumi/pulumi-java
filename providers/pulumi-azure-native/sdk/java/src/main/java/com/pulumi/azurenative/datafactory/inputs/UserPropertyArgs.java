@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,63 +34,60 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Object> value;
+    private Output<Object> value;
 
     public Output<Object> value() {
         return this.value;
     }
 
-    public UserPropertyArgs(
-        Output<String> name,
-        Output<Object> value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private UserPropertyArgs() {}
 
-    private UserPropertyArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private UserPropertyArgs(UserPropertyArgs $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<Object> value;
+        private UserPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPropertyArgs();
         }
 
         public Builder(UserPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new UserPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder value(Output<Object> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Object value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public UserPropertyArgs build() {
-            return new UserPropertyArgs(name, value);
+            return value(Output.of(value));
+        }
+
+        public UserPropertyArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

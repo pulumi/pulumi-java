@@ -8,9 +8,9 @@ import com.pulumi.azurenative.storsimple.enums.SslStatus;
 import com.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
+    private @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> accessKey() {
-        return this.accessKey == null ? Codegen.empty() : this.accessKey;
+    public Optional<Output<AsymmetricEncryptedSecretArgs>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="endPoint", required=true)
-      private final Output<String> endPoint;
+    private Output<String> endPoint;
 
     public Output<String> endPoint() {
         return this.endPoint;
@@ -45,10 +45,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -67,7 +67,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sslStatus", required=true)
-      private final Output<SslStatus> sslStatus;
+    private Output<SslStatus> sslStatus;
 
     public Output<SslStatus> sslStatus() {
         return this.sslStatus;
@@ -89,128 +89,112 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storageAccountCredentialName")
-      private final @Nullable Output<String> storageAccountCredentialName;
+    private @Nullable Output<String> storageAccountCredentialName;
 
-    public Output<String> storageAccountCredentialName() {
-        return this.storageAccountCredentialName == null ? Codegen.empty() : this.storageAccountCredentialName;
+    public Optional<Output<String>> storageAccountCredentialName() {
+        return Optional.ofNullable(this.storageAccountCredentialName);
     }
 
-    public StorageAccountCredentialArgs(
-        @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey,
-        Output<String> endPoint,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<String> resourceGroupName,
-        Output<SslStatus> sslStatus,
-        @Nullable Output<String> storageAccountCredentialName) {
-        this.accessKey = accessKey;
-        this.endPoint = Objects.requireNonNull(endPoint, "expected parameter 'endPoint' to be non-null");
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sslStatus = Objects.requireNonNull(sslStatus, "expected parameter 'sslStatus' to be non-null");
-        this.storageAccountCredentialName = storageAccountCredentialName;
-    }
+    private StorageAccountCredentialArgs() {}
 
-    private StorageAccountCredentialArgs() {
-        this.accessKey = Codegen.empty();
-        this.endPoint = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sslStatus = Codegen.empty();
-        this.storageAccountCredentialName = Codegen.empty();
+    private StorageAccountCredentialArgs(StorageAccountCredentialArgs $) {
+        this.accessKey = $.accessKey;
+        this.endPoint = $.endPoint;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sslStatus = $.sslStatus;
+        this.storageAccountCredentialName = $.storageAccountCredentialName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
-        private Output<String> endPoint;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<String> resourceGroupName;
-        private Output<SslStatus> sslStatus;
-        private @Nullable Output<String> storageAccountCredentialName;
+        private StorageAccountCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountCredentialArgs();
         }
 
         public Builder(StorageAccountCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.endPoint = defaults.endPoint;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sslStatus = defaults.sslStatus;
-    	      this.storageAccountCredentialName = defaults.storageAccountCredentialName;
+            $ = new StorageAccountCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Output<AsymmetricEncryptedSecretArgs> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
-        public Builder accessKey(@Nullable AsymmetricEncryptedSecretArgs accessKey) {
-            this.accessKey = Codegen.ofNullable(accessKey);
-            return this;
+
+        public Builder accessKey(AsymmetricEncryptedSecretArgs accessKey) {
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder endPoint(Output<String> endPoint) {
-            this.endPoint = Objects.requireNonNull(endPoint);
+            $.endPoint = endPoint;
             return this;
         }
+
         public Builder endPoint(String endPoint) {
-            this.endPoint = Output.of(Objects.requireNonNull(endPoint));
-            return this;
+            return endPoint(Output.of(endPoint));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sslStatus(Output<SslStatus> sslStatus) {
-            this.sslStatus = Objects.requireNonNull(sslStatus);
+            $.sslStatus = sslStatus;
             return this;
         }
+
         public Builder sslStatus(SslStatus sslStatus) {
-            this.sslStatus = Output.of(Objects.requireNonNull(sslStatus));
-            return this;
+            return sslStatus(Output.of(sslStatus));
         }
+
         public Builder storageAccountCredentialName(@Nullable Output<String> storageAccountCredentialName) {
-            this.storageAccountCredentialName = storageAccountCredentialName;
+            $.storageAccountCredentialName = storageAccountCredentialName;
             return this;
         }
-        public Builder storageAccountCredentialName(@Nullable String storageAccountCredentialName) {
-            this.storageAccountCredentialName = Codegen.ofNullable(storageAccountCredentialName);
-            return this;
-        }        public StorageAccountCredentialArgs build() {
-            return new StorageAccountCredentialArgs(accessKey, endPoint, kind, managerName, resourceGroupName, sslStatus, storageAccountCredentialName);
+
+        public Builder storageAccountCredentialName(String storageAccountCredentialName) {
+            return storageAccountCredentialName(Output.of(storageAccountCredentialName));
+        }
+
+        public StorageAccountCredentialArgs build() {
+            $.endPoint = Objects.requireNonNull($.endPoint, "expected parameter 'endPoint' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sslStatus = Objects.requireNonNull($.sslStatus, "expected parameter 'sslStatus' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="partitionCount")
-      private final @Nullable Output<Integer> partitionCount;
+    private @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> partitionCount() {
-        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
+    public Optional<Output<Integer>> partitionCount() {
+        return Optional.ofNullable(this.partitionCount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="retentionTimeInDays")
-      private final @Nullable Output<Double> retentionTimeInDays;
+    private @Nullable Output<Double> retentionTimeInDays;
 
-    public Output<Double> retentionTimeInDays() {
-        return this.retentionTimeInDays == null ? Codegen.empty() : this.retentionTimeInDays;
+    public Optional<Output<Double>> retentionTimeInDays() {
+        return Optional.ofNullable(this.retentionTimeInDays);
     }
 
-    public EventHubPropertiesArgs(
-        @Nullable Output<Integer> partitionCount,
-        @Nullable Output<Double> retentionTimeInDays) {
-        this.partitionCount = partitionCount;
-        this.retentionTimeInDays = retentionTimeInDays;
-    }
+    private EventHubPropertiesArgs() {}
 
-    private EventHubPropertiesArgs() {
-        this.partitionCount = Codegen.empty();
-        this.retentionTimeInDays = Codegen.empty();
+    private EventHubPropertiesArgs(EventHubPropertiesArgs $) {
+        this.partitionCount = $.partitionCount;
+        this.retentionTimeInDays = $.retentionTimeInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> partitionCount;
-        private @Nullable Output<Double> retentionTimeInDays;
+        private EventHubPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubPropertiesArgs();
         }
 
         public Builder(EventHubPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionCount = defaults.partitionCount;
-    	      this.retentionTimeInDays = defaults.retentionTimeInDays;
+            $ = new EventHubPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
-            this.partitionCount = partitionCount;
+            $.partitionCount = partitionCount;
             return this;
         }
-        public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Codegen.ofNullable(partitionCount);
-            return this;
+
+        public Builder partitionCount(Integer partitionCount) {
+            return partitionCount(Output.of(partitionCount));
         }
+
         public Builder retentionTimeInDays(@Nullable Output<Double> retentionTimeInDays) {
-            this.retentionTimeInDays = retentionTimeInDays;
+            $.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-        public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
-            this.retentionTimeInDays = Codegen.ofNullable(retentionTimeInDays);
-            return this;
-        }        public EventHubPropertiesArgs build() {
-            return new EventHubPropertiesArgs(partitionCount, retentionTimeInDays);
+
+        public Builder retentionTimeInDays(Double retentionTimeInDays) {
+            return retentionTimeInDays(Output.of(retentionTimeInDays));
+        }
+
+        public EventHubPropertiesArgs build() {
+            return $;
         }
     }
+
 }

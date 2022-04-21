@@ -7,9 +7,9 @@ import com.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ledgerRoleName")
-      private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
+    private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
-    public Output<Either<String,LedgerRoleName>> ledgerRoleName() {
-        return this.ledgerRoleName == null ? Codegen.empty() : this.ledgerRoleName;
+    public Optional<Output<Either<String,LedgerRoleName>>> ledgerRoleName() {
+        return Optional.ofNullable(this.ledgerRoleName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AADBasedSecurityPrincipalArgs(
-        @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName,
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> tenantId) {
-        this.ledgerRoleName = ledgerRoleName;
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-    }
+    private AADBasedSecurityPrincipalArgs() {}
 
-    private AADBasedSecurityPrincipalArgs() {
-        this.ledgerRoleName = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private AADBasedSecurityPrincipalArgs(AADBasedSecurityPrincipalArgs $) {
+        this.ledgerRoleName = $.ledgerRoleName;
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AADBasedSecurityPrincipalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> tenantId;
+        private AADBasedSecurityPrincipalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AADBasedSecurityPrincipalArgs();
         }
 
         public Builder(AADBasedSecurityPrincipalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ledgerRoleName = defaults.ledgerRoleName;
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AADBasedSecurityPrincipalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
-            this.ledgerRoleName = ledgerRoleName;
+            $.ledgerRoleName = ledgerRoleName;
             return this;
         }
-        public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
-            this.ledgerRoleName = Codegen.ofNullable(ledgerRoleName);
-            return this;
+
+        public Builder ledgerRoleName(Either<String,LedgerRoleName> ledgerRoleName) {
+            return ledgerRoleName(Output.of(ledgerRoleName));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public AADBasedSecurityPrincipalArgs build() {
-            return new AADBasedSecurityPrincipalArgs(ledgerRoleName, principalId, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public AADBasedSecurityPrincipalArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="folderId")
-      private final @Nullable Double folderId;
+    private @Nullable Double folderId;
 
     public Optional<Double> folderId() {
-        return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
+        return Optional.ofNullable(this.folderId);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable Double id;
+    private @Nullable Double id;
 
     public Optional<Double> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -83,94 +83,79 @@ public final class SsisEnvironmentResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="variables")
-      private final @Nullable List<SsisVariableResponse> variables;
+    private @Nullable List<SsisVariableResponse> variables;
 
-    public List<SsisVariableResponse> variables() {
-        return this.variables == null ? List.of() : this.variables;
+    public Optional<List<SsisVariableResponse>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
-    public SsisEnvironmentResponse(
-        @Nullable String description,
-        @Nullable Double folderId,
-        @Nullable Double id,
-        @Nullable String name,
-        String type,
-        @Nullable List<SsisVariableResponse> variables) {
-        this.description = description;
-        this.folderId = folderId;
-        this.id = id;
-        this.name = name;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.variables = variables;
-    }
+    private SsisEnvironmentResponse() {}
 
-    private SsisEnvironmentResponse() {
-        this.description = null;
-        this.folderId = null;
-        this.id = null;
-        this.name = null;
-        this.type = null;
-        this.variables = List.of();
+    private SsisEnvironmentResponse(SsisEnvironmentResponse $) {
+        this.description = $.description;
+        this.folderId = $.folderId;
+        this.id = $.id;
+        this.name = $.name;
+        this.type = $.type;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SsisEnvironmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Double folderId;
-        private @Nullable Double id;
-        private @Nullable String name;
-        private String type;
-        private @Nullable List<SsisVariableResponse> variables;
+        private SsisEnvironmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SsisEnvironmentResponse();
         }
 
         public Builder(SsisEnvironmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.folderId = defaults.folderId;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.variables = defaults.variables;
+            $ = new SsisEnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folderId(@Nullable Double folderId) {
-            this.folderId = folderId;
+            $.folderId = folderId;
             return this;
         }
+
         public Builder id(@Nullable Double id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder variables(@Nullable List<SsisVariableResponse> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
+
         public Builder variables(SsisVariableResponse... variables) {
             return variables(List.of(variables));
-        }        public SsisEnvironmentResponse build() {
-            return new SsisEnvironmentResponse(description, folderId, id, name, type, variables);
+        }
+
+        public SsisEnvironmentResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

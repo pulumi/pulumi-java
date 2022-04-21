@@ -21,7 +21,7 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -32,55 +32,52 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public LoadBalancerConfigResponse(
-        String type,
-        String version) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private LoadBalancerConfigResponse() {}
 
-    private LoadBalancerConfigResponse() {
-        this.type = null;
-        this.version = null;
+    private LoadBalancerConfigResponse(LoadBalancerConfigResponse $) {
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String version;
+        private LoadBalancerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerConfigResponse();
         }
 
         public Builder(LoadBalancerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new LoadBalancerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public LoadBalancerConfigResponse build() {
-            return new LoadBalancerConfigResponse(type, version);
+        }
+
+        public LoadBalancerConfigResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

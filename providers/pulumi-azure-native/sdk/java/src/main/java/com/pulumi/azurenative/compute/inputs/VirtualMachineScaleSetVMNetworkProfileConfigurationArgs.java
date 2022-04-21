@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
      * 
      */
     @Import(name="networkInterfaceConfigurations")
-      private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+    private @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Codegen.empty() : this.networkInterfaceConfigurations;
+    public Optional<Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>>> networkInterfaceConfigurations() {
+        return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
 
-    public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
-        this.networkInterfaceConfigurations = networkInterfaceConfigurations;
-    }
+    private VirtualMachineScaleSetVMNetworkProfileConfigurationArgs() {}
 
-    private VirtualMachineScaleSetVMNetworkProfileConfigurationArgs() {
-        this.networkInterfaceConfigurations = Codegen.empty();
+    private VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(VirtualMachineScaleSetVMNetworkProfileConfigurationArgs $) {
+        this.networkInterfaceConfigurations = $.networkInterfaceConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetVMNetworkProfileConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+        private VirtualMachineScaleSetVMNetworkProfileConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs();
         }
 
         public Builder(VirtualMachineScaleSetVMNetworkProfileConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
+            $ = new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = networkInterfaceConfigurations;
+            $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Codegen.ofNullable(networkInterfaceConfigurations);
-            return this;
+
+        public Builder networkInterfaceConfigurations(List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(Output.of(networkInterfaceConfigurations));
         }
+
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationArgs... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
-        }        public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs build() {
-            return new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(networkInterfaceConfigurations);
+        }
+
+        public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs build() {
+            return $;
         }
     }
+
 }

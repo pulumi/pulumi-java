@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="actionAfterReboot")
-      private final @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
+    private @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
 
-    public Output<Either<String,ActionAfterReboot>> actionAfterReboot() {
-        return this.actionAfterReboot == null ? Codegen.empty() : this.actionAfterReboot;
+    public Optional<Output<Either<String,ActionAfterReboot>>> actionAfterReboot() {
+        return Optional.ofNullable(this.actionAfterReboot);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowModuleOverwrite")
-      private final @Nullable Output<Boolean> allowModuleOverwrite;
+    private @Nullable Output<Boolean> allowModuleOverwrite;
 
-    public Output<Boolean> allowModuleOverwrite() {
-        return this.allowModuleOverwrite == null ? Codegen.empty() : this.allowModuleOverwrite;
+    public Optional<Output<Boolean>> allowModuleOverwrite() {
+        return Optional.ofNullable(this.allowModuleOverwrite);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="configurationMode")
-      private final @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
+    private @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
 
-    public Output<Either<String,ConfigurationMode>> configurationMode() {
-        return this.configurationMode == null ? Codegen.empty() : this.configurationMode;
+    public Optional<Output<Either<String,ConfigurationMode>>> configurationMode() {
+        return Optional.ofNullable(this.configurationMode);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="configurationModeFrequencyMins")
-      private final @Nullable Output<Double> configurationModeFrequencyMins;
+    private @Nullable Output<Double> configurationModeFrequencyMins;
 
-    public Output<Double> configurationModeFrequencyMins() {
-        return this.configurationModeFrequencyMins == null ? Codegen.empty() : this.configurationModeFrequencyMins;
+    public Optional<Output<Double>> configurationModeFrequencyMins() {
+        return Optional.ofNullable(this.configurationModeFrequencyMins);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="rebootIfNeeded")
-      private final @Nullable Output<Boolean> rebootIfNeeded;
+    private @Nullable Output<Boolean> rebootIfNeeded;
 
-    public Output<Boolean> rebootIfNeeded() {
-        return this.rebootIfNeeded == null ? Codegen.empty() : this.rebootIfNeeded;
+    public Optional<Output<Boolean>> rebootIfNeeded() {
+        return Optional.ofNullable(this.rebootIfNeeded);
     }
 
     /**
@@ -84,115 +85,100 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="refreshFrequencyMins")
-      private final @Nullable Output<Double> refreshFrequencyMins;
+    private @Nullable Output<Double> refreshFrequencyMins;
 
-    public Output<Double> refreshFrequencyMins() {
-        return this.refreshFrequencyMins == null ? Codegen.empty() : this.refreshFrequencyMins;
+    public Optional<Output<Double>> refreshFrequencyMins() {
+        return Optional.ofNullable(this.refreshFrequencyMins);
     }
 
-    public ConfigurationSettingArgs(
-        @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot,
-        @Nullable Output<Boolean> allowModuleOverwrite,
-        @Nullable Output<Either<String,ConfigurationMode>> configurationMode,
-        @Nullable Output<Double> configurationModeFrequencyMins,
-        @Nullable Output<Boolean> rebootIfNeeded,
-        @Nullable Output<Double> refreshFrequencyMins) {
-        this.actionAfterReboot = actionAfterReboot;
-        this.allowModuleOverwrite = allowModuleOverwrite;
-        this.configurationMode = configurationMode;
-        this.configurationModeFrequencyMins = Codegen.doubleProp("configurationModeFrequencyMins").output().arg(configurationModeFrequencyMins).def(1.5e+01).getNullable();
-        this.rebootIfNeeded = rebootIfNeeded;
-        this.refreshFrequencyMins = Codegen.doubleProp("refreshFrequencyMins").output().arg(refreshFrequencyMins).def(3e+01).getNullable();
-    }
+    private ConfigurationSettingArgs() {}
 
-    private ConfigurationSettingArgs() {
-        this.actionAfterReboot = Codegen.empty();
-        this.allowModuleOverwrite = Codegen.empty();
-        this.configurationMode = Codegen.empty();
-        this.configurationModeFrequencyMins = Codegen.empty();
-        this.rebootIfNeeded = Codegen.empty();
-        this.refreshFrequencyMins = Codegen.empty();
+    private ConfigurationSettingArgs(ConfigurationSettingArgs $) {
+        this.actionAfterReboot = $.actionAfterReboot;
+        this.allowModuleOverwrite = $.allowModuleOverwrite;
+        this.configurationMode = $.configurationMode;
+        this.configurationModeFrequencyMins = $.configurationModeFrequencyMins;
+        this.rebootIfNeeded = $.rebootIfNeeded;
+        this.refreshFrequencyMins = $.refreshFrequencyMins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
-        private @Nullable Output<Boolean> allowModuleOverwrite;
-        private @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
-        private @Nullable Output<Double> configurationModeFrequencyMins;
-        private @Nullable Output<Boolean> rebootIfNeeded;
-        private @Nullable Output<Double> refreshFrequencyMins;
+        private ConfigurationSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationSettingArgs();
         }
 
         public Builder(ConfigurationSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionAfterReboot = defaults.actionAfterReboot;
-    	      this.allowModuleOverwrite = defaults.allowModuleOverwrite;
-    	      this.configurationMode = defaults.configurationMode;
-    	      this.configurationModeFrequencyMins = defaults.configurationModeFrequencyMins;
-    	      this.rebootIfNeeded = defaults.rebootIfNeeded;
-    	      this.refreshFrequencyMins = defaults.refreshFrequencyMins;
+            $ = new ConfigurationSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionAfterReboot(@Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot) {
-            this.actionAfterReboot = actionAfterReboot;
+            $.actionAfterReboot = actionAfterReboot;
             return this;
         }
-        public Builder actionAfterReboot(@Nullable Either<String,ActionAfterReboot> actionAfterReboot) {
-            this.actionAfterReboot = Codegen.ofNullable(actionAfterReboot);
-            return this;
+
+        public Builder actionAfterReboot(Either<String,ActionAfterReboot> actionAfterReboot) {
+            return actionAfterReboot(Output.of(actionAfterReboot));
         }
+
         public Builder allowModuleOverwrite(@Nullable Output<Boolean> allowModuleOverwrite) {
-            this.allowModuleOverwrite = allowModuleOverwrite;
+            $.allowModuleOverwrite = allowModuleOverwrite;
             return this;
         }
-        public Builder allowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
-            this.allowModuleOverwrite = Codegen.ofNullable(allowModuleOverwrite);
-            return this;
+
+        public Builder allowModuleOverwrite(Boolean allowModuleOverwrite) {
+            return allowModuleOverwrite(Output.of(allowModuleOverwrite));
         }
+
         public Builder configurationMode(@Nullable Output<Either<String,ConfigurationMode>> configurationMode) {
-            this.configurationMode = configurationMode;
+            $.configurationMode = configurationMode;
             return this;
         }
-        public Builder configurationMode(@Nullable Either<String,ConfigurationMode> configurationMode) {
-            this.configurationMode = Codegen.ofNullable(configurationMode);
-            return this;
+
+        public Builder configurationMode(Either<String,ConfigurationMode> configurationMode) {
+            return configurationMode(Output.of(configurationMode));
         }
+
         public Builder configurationModeFrequencyMins(@Nullable Output<Double> configurationModeFrequencyMins) {
-            this.configurationModeFrequencyMins = configurationModeFrequencyMins;
+            $.configurationModeFrequencyMins = configurationModeFrequencyMins;
             return this;
         }
-        public Builder configurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
-            this.configurationModeFrequencyMins = Codegen.ofNullable(configurationModeFrequencyMins);
-            return this;
+
+        public Builder configurationModeFrequencyMins(Double configurationModeFrequencyMins) {
+            return configurationModeFrequencyMins(Output.of(configurationModeFrequencyMins));
         }
+
         public Builder rebootIfNeeded(@Nullable Output<Boolean> rebootIfNeeded) {
-            this.rebootIfNeeded = rebootIfNeeded;
+            $.rebootIfNeeded = rebootIfNeeded;
             return this;
         }
-        public Builder rebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
-            this.rebootIfNeeded = Codegen.ofNullable(rebootIfNeeded);
-            return this;
+
+        public Builder rebootIfNeeded(Boolean rebootIfNeeded) {
+            return rebootIfNeeded(Output.of(rebootIfNeeded));
         }
+
         public Builder refreshFrequencyMins(@Nullable Output<Double> refreshFrequencyMins) {
-            this.refreshFrequencyMins = refreshFrequencyMins;
+            $.refreshFrequencyMins = refreshFrequencyMins;
             return this;
         }
-        public Builder refreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
-            this.refreshFrequencyMins = Codegen.ofNullable(refreshFrequencyMins);
-            return this;
-        }        public ConfigurationSettingArgs build() {
-            return new ConfigurationSettingArgs(actionAfterReboot, allowModuleOverwrite, configurationMode, configurationModeFrequencyMins, rebootIfNeeded, refreshFrequencyMins);
+
+        public Builder refreshFrequencyMins(Double refreshFrequencyMins) {
+            return refreshFrequencyMins(Output.of(refreshFrequencyMins));
+        }
+
+        public ConfigurationSettingArgs build() {
+            $.configurationModeFrequencyMins = Codegen.doubleProp("configurationModeFrequencyMins").output().arg($.configurationModeFrequencyMins).def(1.5e+01).getNullable();
+            $.refreshFrequencyMins = Codegen.doubleProp("refreshFrequencyMins").output().arg($.refreshFrequencyMins).def(3e+01).getNullable();
+            return $;
         }
     }
+
 }

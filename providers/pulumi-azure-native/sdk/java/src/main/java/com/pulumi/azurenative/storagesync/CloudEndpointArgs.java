@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storagesync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureFileShareName")
-      private final @Nullable Output<String> azureFileShareName;
+    private @Nullable Output<String> azureFileShareName;
 
-    public Output<String> azureFileShareName() {
-        return this.azureFileShareName == null ? Codegen.empty() : this.azureFileShareName;
+    public Optional<Output<String>> azureFileShareName() {
+        return Optional.ofNullable(this.azureFileShareName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudEndpointName")
-      private final @Nullable Output<String> cloudEndpointName;
+    private @Nullable Output<String> cloudEndpointName;
 
-    public Output<String> cloudEndpointName() {
-        return this.cloudEndpointName == null ? Codegen.empty() : this.cloudEndpointName;
+    public Optional<Output<String>> cloudEndpointName() {
+        return Optional.ofNullable(this.cloudEndpointName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,10 +64,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountResourceId")
-      private final @Nullable Output<String> storageAccountResourceId;
+    private @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> storageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
+    public Optional<Output<String>> storageAccountResourceId() {
+        return Optional.ofNullable(this.storageAccountResourceId);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountTenantId")
-      private final @Nullable Output<String> storageAccountTenantId;
+    private @Nullable Output<String> storageAccountTenantId;
 
-    public Output<String> storageAccountTenantId() {
-        return this.storageAccountTenantId == null ? Codegen.empty() : this.storageAccountTenantId;
+    public Optional<Output<String>> storageAccountTenantId() {
+        return Optional.ofNullable(this.storageAccountTenantId);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-      private final Output<String> storageSyncServiceName;
+    private Output<String> storageSyncServiceName;
 
     public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -97,141 +97,121 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncGroupName", required=true)
-      private final Output<String> syncGroupName;
+    private Output<String> syncGroupName;
 
     public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
 
-    public CloudEndpointArgs(
-        @Nullable Output<String> azureFileShareName,
-        @Nullable Output<String> cloudEndpointName,
-        @Nullable Output<String> friendlyName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> storageAccountResourceId,
-        @Nullable Output<String> storageAccountTenantId,
-        Output<String> storageSyncServiceName,
-        Output<String> syncGroupName) {
-        this.azureFileShareName = azureFileShareName;
-        this.cloudEndpointName = cloudEndpointName;
-        this.friendlyName = friendlyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountResourceId = storageAccountResourceId;
-        this.storageAccountTenantId = storageAccountTenantId;
-        this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
-        this.syncGroupName = Objects.requireNonNull(syncGroupName, "expected parameter 'syncGroupName' to be non-null");
-    }
+    private CloudEndpointArgs() {}
 
-    private CloudEndpointArgs() {
-        this.azureFileShareName = Codegen.empty();
-        this.cloudEndpointName = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountResourceId = Codegen.empty();
-        this.storageAccountTenantId = Codegen.empty();
-        this.storageSyncServiceName = Codegen.empty();
-        this.syncGroupName = Codegen.empty();
+    private CloudEndpointArgs(CloudEndpointArgs $) {
+        this.azureFileShareName = $.azureFileShareName;
+        this.cloudEndpointName = $.cloudEndpointName;
+        this.friendlyName = $.friendlyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountResourceId = $.storageAccountResourceId;
+        this.storageAccountTenantId = $.storageAccountTenantId;
+        this.storageSyncServiceName = $.storageSyncServiceName;
+        this.syncGroupName = $.syncGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> azureFileShareName;
-        private @Nullable Output<String> cloudEndpointName;
-        private @Nullable Output<String> friendlyName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> storageAccountResourceId;
-        private @Nullable Output<String> storageAccountTenantId;
-        private Output<String> storageSyncServiceName;
-        private Output<String> syncGroupName;
+        private CloudEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudEndpointArgs();
         }
 
         public Builder(CloudEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureFileShareName = defaults.azureFileShareName;
-    	      this.cloudEndpointName = defaults.cloudEndpointName;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountResourceId = defaults.storageAccountResourceId;
-    	      this.storageAccountTenantId = defaults.storageAccountTenantId;
-    	      this.storageSyncServiceName = defaults.storageSyncServiceName;
-    	      this.syncGroupName = defaults.syncGroupName;
+            $ = new CloudEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureFileShareName(@Nullable Output<String> azureFileShareName) {
-            this.azureFileShareName = azureFileShareName;
+            $.azureFileShareName = azureFileShareName;
             return this;
         }
-        public Builder azureFileShareName(@Nullable String azureFileShareName) {
-            this.azureFileShareName = Codegen.ofNullable(azureFileShareName);
-            return this;
+
+        public Builder azureFileShareName(String azureFileShareName) {
+            return azureFileShareName(Output.of(azureFileShareName));
         }
+
         public Builder cloudEndpointName(@Nullable Output<String> cloudEndpointName) {
-            this.cloudEndpointName = cloudEndpointName;
+            $.cloudEndpointName = cloudEndpointName;
             return this;
         }
-        public Builder cloudEndpointName(@Nullable String cloudEndpointName) {
-            this.cloudEndpointName = Codegen.ofNullable(cloudEndpointName);
-            return this;
+
+        public Builder cloudEndpointName(String cloudEndpointName) {
+            return cloudEndpointName(Output.of(cloudEndpointName));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
-            this.storageAccountResourceId = storageAccountResourceId;
+            $.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = Codegen.ofNullable(storageAccountResourceId);
-            return this;
+
+        public Builder storageAccountResourceId(String storageAccountResourceId) {
+            return storageAccountResourceId(Output.of(storageAccountResourceId));
         }
+
         public Builder storageAccountTenantId(@Nullable Output<String> storageAccountTenantId) {
-            this.storageAccountTenantId = storageAccountTenantId;
+            $.storageAccountTenantId = storageAccountTenantId;
             return this;
         }
-        public Builder storageAccountTenantId(@Nullable String storageAccountTenantId) {
-            this.storageAccountTenantId = Codegen.ofNullable(storageAccountTenantId);
-            return this;
+
+        public Builder storageAccountTenantId(String storageAccountTenantId) {
+            return storageAccountTenantId(Output.of(storageAccountTenantId));
         }
+
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
-            this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
+
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
-            return this;
+            return storageSyncServiceName(Output.of(storageSyncServiceName));
         }
+
         public Builder syncGroupName(Output<String> syncGroupName) {
-            this.syncGroupName = Objects.requireNonNull(syncGroupName);
+            $.syncGroupName = syncGroupName;
             return this;
         }
+
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Output.of(Objects.requireNonNull(syncGroupName));
-            return this;
-        }        public CloudEndpointArgs build() {
-            return new CloudEndpointArgs(azureFileShareName, cloudEndpointName, friendlyName, resourceGroupName, storageAccountResourceId, storageAccountTenantId, storageSyncServiceName, syncGroupName);
+            return syncGroupName(Output.of(syncGroupName));
+        }
+
+        public CloudEndpointArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
+            $.syncGroupName = Objects.requireNonNull($.syncGroupName, "expected parameter 'syncGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SubscriptionKeyParameterNamesContractArgs extends com.pulumi.
      * 
      */
     @Import(name="header")
-      private final @Nullable Output<String> header;
+    private @Nullable Output<String> header;
 
-    public Output<String> header() {
-        return this.header == null ? Codegen.empty() : this.header;
+    public Optional<Output<String>> header() {
+        return Optional.ofNullable(this.header);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SubscriptionKeyParameterNamesContractArgs extends com.pulumi.
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public SubscriptionKeyParameterNamesContractArgs(
-        @Nullable Output<String> header,
-        @Nullable Output<String> query) {
-        this.header = header;
-        this.query = query;
-    }
+    private SubscriptionKeyParameterNamesContractArgs() {}
 
-    private SubscriptionKeyParameterNamesContractArgs() {
-        this.header = Codegen.empty();
-        this.query = Codegen.empty();
+    private SubscriptionKeyParameterNamesContractArgs(SubscriptionKeyParameterNamesContractArgs $) {
+        this.header = $.header;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionKeyParameterNamesContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> header;
-        private @Nullable Output<String> query;
+        private SubscriptionKeyParameterNamesContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionKeyParameterNamesContractArgs();
         }
 
         public Builder(SubscriptionKeyParameterNamesContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.query = defaults.query;
+            $ = new SubscriptionKeyParameterNamesContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder header(@Nullable Output<String> header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
-        public Builder header(@Nullable String header) {
-            this.header = Codegen.ofNullable(header);
-            return this;
+
+        public Builder header(String header) {
+            return header(Output.of(header));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
-        }        public SubscriptionKeyParameterNamesContractArgs build() {
-            return new SubscriptionKeyParameterNamesContractArgs(header, query);
+
+        public Builder query(String query) {
+            return query(Output.of(query));
+        }
+
+        public SubscriptionKeyParameterNamesContractArgs build() {
+            return $;
         }
     }
+
 }

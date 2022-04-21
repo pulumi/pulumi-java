@@ -8,9 +8,9 @@ import com.pulumi.azurenative.scheduler.inputs.JobActionArgs;
 import com.pulumi.azurenative.scheduler.inputs.JobRecurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class JobPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<JobActionArgs> action;
+    private @Nullable Output<JobActionArgs> action;
 
-    public Output<JobActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<JobActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class JobPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable Output<JobRecurrenceArgs> recurrence;
+    private @Nullable Output<JobRecurrenceArgs> recurrence;
 
-    public Output<JobRecurrenceArgs> recurrence() {
-        return this.recurrence == null ? Codegen.empty() : this.recurrence;
+    public Optional<Output<JobRecurrenceArgs>> recurrence() {
+        return Optional.ofNullable(this.recurrence);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class JobPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class JobPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<JobState> state;
+    private @Nullable Output<JobState> state;
 
-    public Output<JobState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<JobState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public JobPropertiesArgs(
-        @Nullable Output<JobActionArgs> action,
-        @Nullable Output<JobRecurrenceArgs> recurrence,
-        @Nullable Output<String> startTime,
-        @Nullable Output<JobState> state) {
-        this.action = action;
-        this.recurrence = recurrence;
-        this.startTime = startTime;
-        this.state = state;
-    }
+    private JobPropertiesArgs() {}
 
-    private JobPropertiesArgs() {
-        this.action = Codegen.empty();
-        this.recurrence = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.state = Codegen.empty();
+    private JobPropertiesArgs(JobPropertiesArgs $) {
+        this.action = $.action;
+        this.recurrence = $.recurrence;
+        this.startTime = $.startTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobActionArgs> action;
-        private @Nullable Output<JobRecurrenceArgs> recurrence;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<JobState> state;
+        private JobPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobPropertiesArgs();
         }
 
         public Builder(JobPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.recurrence = defaults.recurrence;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
+            $ = new JobPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<JobActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable JobActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(JobActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder recurrence(@Nullable Output<JobRecurrenceArgs> recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
-        public Builder recurrence(@Nullable JobRecurrenceArgs recurrence) {
-            this.recurrence = Codegen.ofNullable(recurrence);
-            return this;
+
+        public Builder recurrence(JobRecurrenceArgs recurrence) {
+            return recurrence(Output.of(recurrence));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder state(@Nullable Output<JobState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable JobState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public JobPropertiesArgs build() {
-            return new JobPropertiesArgs(action, recurrence, startTime, state);
+
+        public Builder state(JobState state) {
+            return state(Output.of(state));
+        }
+
+        public JobPropertiesArgs build() {
+            return $;
         }
     }
+
 }

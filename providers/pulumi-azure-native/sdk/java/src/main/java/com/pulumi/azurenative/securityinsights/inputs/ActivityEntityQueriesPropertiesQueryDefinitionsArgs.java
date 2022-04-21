@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends c
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public ActivityEntityQueriesPropertiesQueryDefinitionsArgs(@Nullable Output<String> query) {
-        this.query = query;
-    }
+    private ActivityEntityQueriesPropertiesQueryDefinitionsArgs() {}
 
-    private ActivityEntityQueriesPropertiesQueryDefinitionsArgs() {
-        this.query = Codegen.empty();
+    private ActivityEntityQueriesPropertiesQueryDefinitionsArgs(ActivityEntityQueriesPropertiesQueryDefinitionsArgs $) {
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityEntityQueriesPropertiesQueryDefinitionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> query;
+        private ActivityEntityQueriesPropertiesQueryDefinitionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityEntityQueriesPropertiesQueryDefinitionsArgs();
         }
 
         public Builder(ActivityEntityQueriesPropertiesQueryDefinitionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
+            $ = new ActivityEntityQueriesPropertiesQueryDefinitionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
-        }        public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {
-            return new ActivityEntityQueriesPropertiesQueryDefinitionsArgs(query);
+
+        public Builder query(String query) {
+            return query(Output.of(query));
+        }
+
+        public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {
+            return $;
         }
     }
+
 }

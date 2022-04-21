@@ -27,10 +27,10 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable String adminPassword;
+    private @Nullable String adminPassword;
 
     public Optional<String> adminPassword() {
-        return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable String adminUsername;
+    private @Nullable String adminUsername;
 
     public Optional<String> adminUsername() {
-        return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="computerNamePrefix")
-      private final @Nullable String computerNamePrefix;
+    private @Nullable String computerNamePrefix;
 
     public Optional<String> computerNamePrefix() {
-        return this.computerNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.computerNamePrefix);
+        return Optional.ofNullable(this.computerNamePrefix);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="customData")
-      private final @Nullable String customData;
+    private @Nullable String customData;
 
     public Optional<String> customData() {
-        return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="linuxConfiguration")
-      private final @Nullable LinuxConfigurationResponse linuxConfiguration;
+    private @Nullable LinuxConfigurationResponse linuxConfiguration;
 
     public Optional<LinuxConfigurationResponse> linuxConfiguration() {
-        return this.linuxConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxConfiguration);
+        return Optional.ofNullable(this.linuxConfiguration);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="secrets")
-      private final @Nullable List<VaultSecretGroupResponse> secrets;
+    private @Nullable List<VaultSecretGroupResponse> secrets;
 
-    public List<VaultSecretGroupResponse> secrets() {
-        return this.secrets == null ? List.of() : this.secrets;
+    public Optional<List<VaultSecretGroupResponse>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -93,103 +93,84 @@ public final class VirtualMachineScaleSetOSProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="windowsConfiguration")
-      private final @Nullable WindowsConfigurationResponse windowsConfiguration;
+    private @Nullable WindowsConfigurationResponse windowsConfiguration;
 
     public Optional<WindowsConfigurationResponse> windowsConfiguration() {
-        return this.windowsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsConfiguration);
+        return Optional.ofNullable(this.windowsConfiguration);
     }
 
-    public VirtualMachineScaleSetOSProfileResponse(
-        @Nullable String adminPassword,
-        @Nullable String adminUsername,
-        @Nullable String computerNamePrefix,
-        @Nullable String customData,
-        @Nullable LinuxConfigurationResponse linuxConfiguration,
-        @Nullable List<VaultSecretGroupResponse> secrets,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = adminUsername;
-        this.computerNamePrefix = computerNamePrefix;
-        this.customData = customData;
-        this.linuxConfiguration = linuxConfiguration;
-        this.secrets = secrets;
-        this.windowsConfiguration = windowsConfiguration;
-    }
+    private VirtualMachineScaleSetOSProfileResponse() {}
 
-    private VirtualMachineScaleSetOSProfileResponse() {
-        this.adminPassword = null;
-        this.adminUsername = null;
-        this.computerNamePrefix = null;
-        this.customData = null;
-        this.linuxConfiguration = null;
-        this.secrets = List.of();
-        this.windowsConfiguration = null;
+    private VirtualMachineScaleSetOSProfileResponse(VirtualMachineScaleSetOSProfileResponse $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.computerNamePrefix = $.computerNamePrefix;
+        this.customData = $.customData;
+        this.linuxConfiguration = $.linuxConfiguration;
+        this.secrets = $.secrets;
+        this.windowsConfiguration = $.windowsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetOSProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String adminPassword;
-        private @Nullable String adminUsername;
-        private @Nullable String computerNamePrefix;
-        private @Nullable String customData;
-        private @Nullable LinuxConfigurationResponse linuxConfiguration;
-        private @Nullable List<VaultSecretGroupResponse> secrets;
-        private @Nullable WindowsConfigurationResponse windowsConfiguration;
+        private VirtualMachineScaleSetOSProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetOSProfileResponse();
         }
 
         public Builder(VirtualMachineScaleSetOSProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.computerNamePrefix = defaults.computerNamePrefix;
-    	      this.customData = defaults.customData;
-    	      this.linuxConfiguration = defaults.linuxConfiguration;
-    	      this.secrets = defaults.secrets;
-    	      this.windowsConfiguration = defaults.windowsConfiguration;
+            $ = new VirtualMachineScaleSetOSProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
+
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
-            this.computerNamePrefix = computerNamePrefix;
+            $.computerNamePrefix = computerNamePrefix;
             return this;
         }
+
         public Builder customData(@Nullable String customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
+
         public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
-            this.linuxConfiguration = linuxConfiguration;
+            $.linuxConfiguration = linuxConfiguration;
             return this;
         }
+
         public Builder secrets(@Nullable List<VaultSecretGroupResponse> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(VaultSecretGroupResponse... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
-            this.windowsConfiguration = windowsConfiguration;
+            $.windowsConfiguration = windowsConfiguration;
             return this;
-        }        public VirtualMachineScaleSetOSProfileResponse build() {
-            return new VirtualMachineScaleSetOSProfileResponse(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
+        }
+
+        public VirtualMachineScaleSetOSProfileResponse build() {
+            return $;
         }
     }
+
 }

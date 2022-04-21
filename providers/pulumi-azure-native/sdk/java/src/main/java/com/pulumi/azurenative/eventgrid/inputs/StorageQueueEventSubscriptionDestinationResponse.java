@@ -25,7 +25,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends com.
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -36,10 +36,10 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends com.
      * 
      */
     @Import(name="queueName")
-      private final @Nullable String queueName;
+    private @Nullable String queueName;
 
     public Optional<String> queueName() {
-        return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class StorageQueueEventSubscriptionDestinationResponse extends com.
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public StorageQueueEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String queueName,
-        @Nullable String resourceId) {
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.queueName = queueName;
-        this.resourceId = resourceId;
-    }
+    private StorageQueueEventSubscriptionDestinationResponse() {}
 
-    private StorageQueueEventSubscriptionDestinationResponse() {
-        this.endpointType = null;
-        this.queueName = null;
-        this.resourceId = null;
+    private StorageQueueEventSubscriptionDestinationResponse(StorageQueueEventSubscriptionDestinationResponse $) {
+        this.endpointType = $.endpointType;
+        this.queueName = $.queueName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageQueueEventSubscriptionDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointType;
-        private @Nullable String queueName;
-        private @Nullable String resourceId;
+        private StorageQueueEventSubscriptionDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageQueueEventSubscriptionDestinationResponse();
         }
 
         public Builder(StorageQueueEventSubscriptionDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.queueName = defaults.queueName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new StorageQueueEventSubscriptionDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public StorageQueueEventSubscriptionDestinationResponse build() {
-            return new StorageQueueEventSubscriptionDestinationResponse(endpointType, queueName, resourceId);
+        }
+
+        public StorageQueueEventSubscriptionDestinationResponse build() {
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            return $;
         }
     }
+
 }

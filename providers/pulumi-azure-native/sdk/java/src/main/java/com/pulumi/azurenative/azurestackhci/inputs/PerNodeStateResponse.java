@@ -21,7 +21,7 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="arcInstance", required=true)
-      private final String arcInstance;
+    private String arcInstance;
 
     public String arcInstance() {
         return this.arcInstance;
@@ -32,7 +32,7 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public PerNodeStateResponse(
-        String arcInstance,
-        String name,
-        String state) {
-        this.arcInstance = Objects.requireNonNull(arcInstance, "expected parameter 'arcInstance' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private PerNodeStateResponse() {}
 
-    private PerNodeStateResponse() {
-        this.arcInstance = null;
-        this.name = null;
-        this.state = null;
+    private PerNodeStateResponse(PerNodeStateResponse $) {
+        this.arcInstance = $.arcInstance;
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerNodeStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arcInstance;
-        private String name;
-        private String state;
+        private PerNodeStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerNodeStateResponse();
         }
 
         public Builder(PerNodeStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arcInstance = defaults.arcInstance;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new PerNodeStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arcInstance(String arcInstance) {
-            this.arcInstance = Objects.requireNonNull(arcInstance);
+            $.arcInstance = arcInstance;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public PerNodeStateResponse build() {
-            return new PerNodeStateResponse(arcInstance, name, state);
+        }
+
+        public PerNodeStateResponse build() {
+            $.arcInstance = Objects.requireNonNull($.arcInstance, "expected parameter 'arcInstance' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

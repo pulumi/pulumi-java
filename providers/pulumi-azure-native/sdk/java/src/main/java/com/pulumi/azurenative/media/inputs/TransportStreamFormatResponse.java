@@ -26,7 +26,7 @@ public final class TransportStreamFormatResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filenamePattern", required=true)
-      private final String filenamePattern;
+    private String filenamePattern;
 
     public String filenamePattern() {
         return this.filenamePattern;
@@ -38,7 +38,7 @@ public final class TransportStreamFormatResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -49,67 +49,62 @@ public final class TransportStreamFormatResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="outputFiles")
-      private final @Nullable List<OutputFileResponse> outputFiles;
+    private @Nullable List<OutputFileResponse> outputFiles;
 
-    public List<OutputFileResponse> outputFiles() {
-        return this.outputFiles == null ? List.of() : this.outputFiles;
+    public Optional<List<OutputFileResponse>> outputFiles() {
+        return Optional.ofNullable(this.outputFiles);
     }
 
-    public TransportStreamFormatResponse(
-        String filenamePattern,
-        String odataType,
-        @Nullable List<OutputFileResponse> outputFiles) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.outputFiles = outputFiles;
-    }
+    private TransportStreamFormatResponse() {}
 
-    private TransportStreamFormatResponse() {
-        this.filenamePattern = null;
-        this.odataType = null;
-        this.outputFiles = List.of();
+    private TransportStreamFormatResponse(TransportStreamFormatResponse $) {
+        this.filenamePattern = $.filenamePattern;
+        this.odataType = $.odataType;
+        this.outputFiles = $.outputFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransportStreamFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filenamePattern;
-        private String odataType;
-        private @Nullable List<OutputFileResponse> outputFiles;
+        private TransportStreamFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransportStreamFormatResponse();
         }
 
         public Builder(TransportStreamFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filenamePattern = defaults.filenamePattern;
-    	      this.odataType = defaults.odataType;
-    	      this.outputFiles = defaults.outputFiles;
+            $ = new TransportStreamFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Objects.requireNonNull(filenamePattern);
+            $.filenamePattern = filenamePattern;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
-            this.outputFiles = outputFiles;
+            $.outputFiles = outputFiles;
             return this;
         }
+
         public Builder outputFiles(OutputFileResponse... outputFiles) {
             return outputFiles(List.of(outputFiles));
-        }        public TransportStreamFormatResponse build() {
-            return new TransportStreamFormatResponse(filenamePattern, odataType, outputFiles);
+        }
+
+        public TransportStreamFormatResponse build() {
+            $.filenamePattern = Objects.requireNonNull($.filenamePattern, "expected parameter 'filenamePattern' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

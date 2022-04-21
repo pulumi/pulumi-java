@@ -23,10 +23,10 @@ public final class VirtualDirectoryResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="physicalPath")
-      private final @Nullable String physicalPath;
+    private @Nullable String physicalPath;
 
     public Optional<String> physicalPath() {
-        return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
+        return Optional.ofNullable(this.physicalPath);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VirtualDirectoryResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="virtualPath")
-      private final @Nullable String virtualPath;
+    private @Nullable String virtualPath;
 
     public Optional<String> virtualPath() {
-        return this.virtualPath == null ? Optional.empty() : Optional.ofNullable(this.virtualPath);
+        return Optional.ofNullable(this.virtualPath);
     }
 
-    public VirtualDirectoryResponse(
-        @Nullable String physicalPath,
-        @Nullable String virtualPath) {
-        this.physicalPath = physicalPath;
-        this.virtualPath = virtualPath;
-    }
+    private VirtualDirectoryResponse() {}
 
-    private VirtualDirectoryResponse() {
-        this.physicalPath = null;
-        this.virtualPath = null;
+    private VirtualDirectoryResponse(VirtualDirectoryResponse $) {
+        this.physicalPath = $.physicalPath;
+        this.virtualPath = $.virtualPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualDirectoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String physicalPath;
-        private @Nullable String virtualPath;
+        private VirtualDirectoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualDirectoryResponse();
         }
 
         public Builder(VirtualDirectoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.physicalPath = defaults.physicalPath;
-    	      this.virtualPath = defaults.virtualPath;
+            $ = new VirtualDirectoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = physicalPath;
+            $.physicalPath = physicalPath;
             return this;
         }
+
         public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = virtualPath;
+            $.virtualPath = virtualPath;
             return this;
-        }        public VirtualDirectoryResponse build() {
-            return new VirtualDirectoryResponse(physicalPath, virtualPath);
+        }
+
+        public VirtualDirectoryResponse build() {
+            return $;
         }
     }
+
 }

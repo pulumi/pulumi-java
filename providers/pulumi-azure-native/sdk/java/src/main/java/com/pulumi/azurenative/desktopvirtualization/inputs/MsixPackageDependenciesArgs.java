@@ -5,9 +5,9 @@ package com.pulumi.azurenative.desktopvirtualization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dependencyName")
-      private final @Nullable Output<String> dependencyName;
+    private @Nullable Output<String> dependencyName;
 
-    public Output<String> dependencyName() {
-        return this.dependencyName == null ? Codegen.empty() : this.dependencyName;
+    public Optional<Output<String>> dependencyName() {
+        return Optional.ofNullable(this.dependencyName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="minVersion")
-      private final @Nullable Output<String> minVersion;
+    private @Nullable Output<String> minVersion;
 
-    public Output<String> minVersion() {
-        return this.minVersion == null ? Codegen.empty() : this.minVersion;
+    public Optional<Output<String>> minVersion() {
+        return Optional.ofNullable(this.minVersion);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
-    public MsixPackageDependenciesArgs(
-        @Nullable Output<String> dependencyName,
-        @Nullable Output<String> minVersion,
-        @Nullable Output<String> publisher) {
-        this.dependencyName = dependencyName;
-        this.minVersion = minVersion;
-        this.publisher = publisher;
-    }
+    private MsixPackageDependenciesArgs() {}
 
-    private MsixPackageDependenciesArgs() {
-        this.dependencyName = Codegen.empty();
-        this.minVersion = Codegen.empty();
-        this.publisher = Codegen.empty();
+    private MsixPackageDependenciesArgs(MsixPackageDependenciesArgs $) {
+        this.dependencyName = $.dependencyName;
+        this.minVersion = $.minVersion;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MsixPackageDependenciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dependencyName;
-        private @Nullable Output<String> minVersion;
-        private @Nullable Output<String> publisher;
+        private MsixPackageDependenciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MsixPackageDependenciesArgs();
         }
 
         public Builder(MsixPackageDependenciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependencyName = defaults.dependencyName;
-    	      this.minVersion = defaults.minVersion;
-    	      this.publisher = defaults.publisher;
+            $ = new MsixPackageDependenciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dependencyName(@Nullable Output<String> dependencyName) {
-            this.dependencyName = dependencyName;
+            $.dependencyName = dependencyName;
             return this;
         }
-        public Builder dependencyName(@Nullable String dependencyName) {
-            this.dependencyName = Codegen.ofNullable(dependencyName);
-            return this;
+
+        public Builder dependencyName(String dependencyName) {
+            return dependencyName(Output.of(dependencyName));
         }
+
         public Builder minVersion(@Nullable Output<String> minVersion) {
-            this.minVersion = minVersion;
+            $.minVersion = minVersion;
             return this;
         }
-        public Builder minVersion(@Nullable String minVersion) {
-            this.minVersion = Codegen.ofNullable(minVersion);
-            return this;
+
+        public Builder minVersion(String minVersion) {
+            return minVersion(Output.of(minVersion));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
-        }        public MsixPackageDependenciesArgs build() {
-            return new MsixPackageDependenciesArgs(dependencyName, minVersion, publisher);
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
+        }
+
+        public MsixPackageDependenciesArgs build() {
+            return $;
         }
     }
+
 }

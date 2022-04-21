@@ -26,10 +26,10 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
+    private @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
 
-    public List<DiskEncryptionSettingsResponse> encryptionSettings() {
-        return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
+    public Optional<List<DiskEncryptionSettingsResponse>> encryptionSettings() {
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,70 +48,64 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
-    public DiskInstanceViewResponse(
-        @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
-        @Nullable String name,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
-        this.encryptionSettings = encryptionSettings;
-        this.name = name;
-        this.statuses = statuses;
-    }
+    private DiskInstanceViewResponse() {}
 
-    private DiskInstanceViewResponse() {
-        this.encryptionSettings = List.of();
-        this.name = null;
-        this.statuses = List.of();
+    private DiskInstanceViewResponse(DiskInstanceViewResponse $) {
+        this.encryptionSettings = $.encryptionSettings;
+        this.name = $.name;
+        this.statuses = $.statuses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
-        private @Nullable String name;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
+        private DiskInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskInstanceViewResponse();
         }
 
         public Builder(DiskInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.name = defaults.name;
-    	      this.statuses = defaults.statuses;
+            $ = new DiskInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionSettings(@Nullable List<DiskEncryptionSettingsResponse> encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
+
         public Builder encryptionSettings(DiskEncryptionSettingsResponse... encryptionSettings) {
             return encryptionSettings(List.of(encryptionSettings));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
-        }        public DiskInstanceViewResponse build() {
-            return new DiskInstanceViewResponse(encryptionSettings, name, statuses);
+        }
+
+        public DiskInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

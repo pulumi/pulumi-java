@@ -7,8 +7,8 @@ import com.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelArgs;
 import com.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="model")
-      private final @Nullable Output<DeploymentModelArgs> model;
+    private @Nullable Output<DeploymentModelArgs> model;
 
-    public Output<DeploymentModelArgs> model() {
-        return this.model == null ? Codegen.empty() : this.model;
+    public Optional<Output<DeploymentModelArgs>> model() {
+        return Optional.ofNullable(this.model);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="scaleSettings")
-      private final @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
+    private @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
 
-    public Output<DeploymentScaleSettingsArgs> scaleSettings() {
-        return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
+    public Optional<Output<DeploymentScaleSettingsArgs>> scaleSettings() {
+        return Optional.ofNullable(this.scaleSettings);
     }
 
-    public DeploymentPropertiesArgs(
-        @Nullable Output<DeploymentModelArgs> model,
-        @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings) {
-        this.model = model;
-        this.scaleSettings = scaleSettings;
-    }
+    private DeploymentPropertiesArgs() {}
 
-    private DeploymentPropertiesArgs() {
-        this.model = Codegen.empty();
-        this.scaleSettings = Codegen.empty();
+    private DeploymentPropertiesArgs(DeploymentPropertiesArgs $) {
+        this.model = $.model;
+        this.scaleSettings = $.scaleSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeploymentModelArgs> model;
-        private @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
+        private DeploymentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentPropertiesArgs();
         }
 
         public Builder(DeploymentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.model = defaults.model;
-    	      this.scaleSettings = defaults.scaleSettings;
+            $ = new DeploymentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder model(@Nullable Output<DeploymentModelArgs> model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
-        public Builder model(@Nullable DeploymentModelArgs model) {
-            this.model = Codegen.ofNullable(model);
-            return this;
+
+        public Builder model(DeploymentModelArgs model) {
+            return model(Output.of(model));
         }
+
         public Builder scaleSettings(@Nullable Output<DeploymentScaleSettingsArgs> scaleSettings) {
-            this.scaleSettings = scaleSettings;
+            $.scaleSettings = scaleSettings;
             return this;
         }
-        public Builder scaleSettings(@Nullable DeploymentScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Codegen.ofNullable(scaleSettings);
-            return this;
-        }        public DeploymentPropertiesArgs build() {
-            return new DeploymentPropertiesArgs(model, scaleSettings);
+
+        public Builder scaleSettings(DeploymentScaleSettingsArgs scaleSettings) {
+            return scaleSettings(Output.of(scaleSettings));
+        }
+
+        public DeploymentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

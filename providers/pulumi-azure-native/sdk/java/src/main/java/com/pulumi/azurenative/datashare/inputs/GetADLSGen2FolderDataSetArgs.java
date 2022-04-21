@@ -17,7 +17,7 @@ public final class GetADLSGen2FolderDataSetArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetADLSGen2FolderDataSetArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dataSetName", required=true)
-      private final String dataSetName;
+    private String dataSetName;
 
     public String dataSetName() {
         return this.dataSetName;
@@ -39,7 +39,7 @@ public final class GetADLSGen2FolderDataSetArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetADLSGen2FolderDataSetArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
     }
 
-    public GetADLSGen2FolderDataSetArgs(
-        String accountName,
-        String dataSetName,
-        String resourceGroupName,
-        String shareName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetName = Objects.requireNonNull(dataSetName, "expected parameter 'dataSetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private GetADLSGen2FolderDataSetArgs() {}
 
-    private GetADLSGen2FolderDataSetArgs() {
-        this.accountName = null;
-        this.dataSetName = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
+    private GetADLSGen2FolderDataSetArgs(GetADLSGen2FolderDataSetArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetName = $.dataSetName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetADLSGen2FolderDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String dataSetName;
-        private String resourceGroupName;
-        private String shareName;
+        private GetADLSGen2FolderDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetADLSGen2FolderDataSetArgs();
         }
 
         public Builder(GetADLSGen2FolderDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetName = defaults.dataSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
+            $ = new GetADLSGen2FolderDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder dataSetName(String dataSetName) {
-            this.dataSetName = Objects.requireNonNull(dataSetName);
+            $.dataSetName = dataSetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
-        }        public GetADLSGen2FolderDataSetArgs build() {
-            return new GetADLSGen2FolderDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
+        }
+
+        public GetADLSGen2FolderDataSetArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataSetName = Objects.requireNonNull($.dataSetName, "expected parameter 'dataSetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

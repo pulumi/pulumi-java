@@ -19,10 +19,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetName", required=true)
-      private final String subnetName;
+    private String subnetName;
 
     public String subnetName() {
         return this.subnetName;
@@ -52,73 +52,65 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-      private final String virtualNetworkName;
+    private String virtualNetworkName;
 
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
-    public GetSubnetArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String subnetName,
-        String virtualNetworkName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnetName = Objects.requireNonNull(subnetName, "expected parameter 'subnetName' to be non-null");
-        this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
-    }
+    private GetSubnetArgs() {}
 
-    private GetSubnetArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.subnetName = null;
-        this.virtualNetworkName = null;
+    private GetSubnetArgs(GetSubnetArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnetName = $.subnetName;
+        this.virtualNetworkName = $.virtualNetworkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String subnetName;
-        private String virtualNetworkName;
+        private GetSubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetArgs();
         }
 
         public Builder(GetSubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnetName = defaults.subnetName;
-    	      this.virtualNetworkName = defaults.virtualNetworkName;
+            $ = new GetSubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder subnetName(String subnetName) {
-            this.subnetName = Objects.requireNonNull(subnetName);
+            $.subnetName = subnetName;
             return this;
         }
+
         public Builder virtualNetworkName(String virtualNetworkName) {
-            this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
+            $.virtualNetworkName = virtualNetworkName;
             return this;
-        }        public GetSubnetArgs build() {
-            return new GetSubnetArgs(expand, resourceGroupName, subnetName, virtualNetworkName);
+        }
+
+        public GetSubnetArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subnetName = Objects.requireNonNull($.subnetName, "expected parameter 'subnetName' to be non-null");
+            $.virtualNetworkName = Objects.requireNonNull($.virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="container")
-      private final @Nullable Output<String> container;
+    private @Nullable Output<String> container;
 
-    public Output<String> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<String>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable Output<String> fileSystem;
+    private @Nullable Output<String> fileSystem;
 
-    public Output<String> fileSystem() {
-        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
+    public Optional<Output<String>> fileSystem() {
+        return Optional.ofNullable(this.fileSystem);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fileshare")
-      private final @Nullable Output<String> fileshare;
+    private @Nullable Output<String> fileshare;
 
-    public Output<String> fileshare() {
-        return this.fileshare == null ? Codegen.empty() : this.fileshare;
+    public Optional<Output<String>> fileshare() {
+        return Optional.ofNullable(this.fileshare);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isDefault")
-      private final @Nullable Output<Boolean> isDefault;
+    private @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> isDefault() {
-        return this.isDefault == null ? Codegen.empty() : this.isDefault;
+    public Optional<Output<Boolean>> isDefault() {
+        return Optional.ofNullable(this.isDefault);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="msiResourceId")
-      private final @Nullable Output<String> msiResourceId;
+    private @Nullable Output<String> msiResourceId;
 
-    public Output<String> msiResourceId() {
-        return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
+    public Optional<Output<String>> msiResourceId() {
+        return Optional.ofNullable(this.msiResourceId);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -113,154 +113,128 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="saskey")
-      private final @Nullable Output<String> saskey;
+    private @Nullable Output<String> saskey;
 
-    public Output<String> saskey() {
-        return this.saskey == null ? Codegen.empty() : this.saskey;
+    public Optional<Output<String>> saskey() {
+        return Optional.ofNullable(this.saskey);
     }
 
-    public StorageAccountArgs(
-        @Nullable Output<String> container,
-        @Nullable Output<String> fileSystem,
-        @Nullable Output<String> fileshare,
-        @Nullable Output<Boolean> isDefault,
-        @Nullable Output<String> key,
-        @Nullable Output<String> msiResourceId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> saskey) {
-        this.container = container;
-        this.fileSystem = fileSystem;
-        this.fileshare = fileshare;
-        this.isDefault = isDefault;
-        this.key = key;
-        this.msiResourceId = msiResourceId;
-        this.name = name;
-        this.resourceId = resourceId;
-        this.saskey = saskey;
-    }
+    private StorageAccountArgs() {}
 
-    private StorageAccountArgs() {
-        this.container = Codegen.empty();
-        this.fileSystem = Codegen.empty();
-        this.fileshare = Codegen.empty();
-        this.isDefault = Codegen.empty();
-        this.key = Codegen.empty();
-        this.msiResourceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.saskey = Codegen.empty();
+    private StorageAccountArgs(StorageAccountArgs $) {
+        this.container = $.container;
+        this.fileSystem = $.fileSystem;
+        this.fileshare = $.fileshare;
+        this.isDefault = $.isDefault;
+        this.key = $.key;
+        this.msiResourceId = $.msiResourceId;
+        this.name = $.name;
+        this.resourceId = $.resourceId;
+        this.saskey = $.saskey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> container;
-        private @Nullable Output<String> fileSystem;
-        private @Nullable Output<String> fileshare;
-        private @Nullable Output<Boolean> isDefault;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> msiResourceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> saskey;
+        private StorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountArgs();
         }
 
         public Builder(StorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.fileshare = defaults.fileshare;
-    	      this.isDefault = defaults.isDefault;
-    	      this.key = defaults.key;
-    	      this.msiResourceId = defaults.msiResourceId;
-    	      this.name = defaults.name;
-    	      this.resourceId = defaults.resourceId;
-    	      this.saskey = defaults.saskey;
+            $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder container(@Nullable Output<String> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable String container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(String container) {
+            return container(Output.of(container));
         }
+
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
-        public Builder fileSystem(@Nullable String fileSystem) {
-            this.fileSystem = Codegen.ofNullable(fileSystem);
-            return this;
+
+        public Builder fileSystem(String fileSystem) {
+            return fileSystem(Output.of(fileSystem));
         }
+
         public Builder fileshare(@Nullable Output<String> fileshare) {
-            this.fileshare = fileshare;
+            $.fileshare = fileshare;
             return this;
         }
-        public Builder fileshare(@Nullable String fileshare) {
-            this.fileshare = Codegen.ofNullable(fileshare);
-            return this;
+
+        public Builder fileshare(String fileshare) {
+            return fileshare(Output.of(fileshare));
         }
+
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
-            this.isDefault = isDefault;
+            $.isDefault = isDefault;
             return this;
         }
-        public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Codegen.ofNullable(isDefault);
-            return this;
+
+        public Builder isDefault(Boolean isDefault) {
+            return isDefault(Output.of(isDefault));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
-            this.msiResourceId = msiResourceId;
+            $.msiResourceId = msiResourceId;
             return this;
         }
-        public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Codegen.ofNullable(msiResourceId);
-            return this;
+
+        public Builder msiResourceId(String msiResourceId) {
+            return msiResourceId(Output.of(msiResourceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder saskey(@Nullable Output<String> saskey) {
-            this.saskey = saskey;
+            $.saskey = saskey;
             return this;
         }
-        public Builder saskey(@Nullable String saskey) {
-            this.saskey = Codegen.ofNullable(saskey);
-            return this;
-        }        public StorageAccountArgs build() {
-            return new StorageAccountArgs(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);
+
+        public Builder saskey(String saskey) {
+            return saskey(Output.of(saskey));
+        }
+
+        public StorageAccountArgs build() {
+            return $;
         }
     }
+
 }

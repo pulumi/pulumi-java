@@ -6,9 +6,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.enums.LinkedServiceLinkType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkType")
-      private final @Nullable Output<LinkedServiceLinkType> linkType;
+    private @Nullable Output<LinkedServiceLinkType> linkType;
 
-    public Output<LinkedServiceLinkType> linkType() {
-        return this.linkType == null ? Codegen.empty() : this.linkType;
+    public Optional<Output<LinkedServiceLinkType>> linkType() {
+        return Optional.ofNullable(this.linkType);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkedServiceResourceId", required=true)
-      private final Output<String> linkedServiceResourceId;
+    private Output<String> linkedServiceResourceId;
 
     public Output<String> linkedServiceResourceId() {
         return this.linkedServiceResourceId;
@@ -58,89 +58,79 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="modifiedTime")
-      private final @Nullable Output<String> modifiedTime;
+    private @Nullable Output<String> modifiedTime;
 
-    public Output<String> modifiedTime() {
-        return this.modifiedTime == null ? Codegen.empty() : this.modifiedTime;
+    public Optional<Output<String>> modifiedTime() {
+        return Optional.ofNullable(this.modifiedTime);
     }
 
-    public LinkedServicePropsArgs(
-        @Nullable Output<String> createdTime,
-        @Nullable Output<LinkedServiceLinkType> linkType,
-        Output<String> linkedServiceResourceId,
-        @Nullable Output<String> modifiedTime) {
-        this.createdTime = createdTime;
-        this.linkType = linkType;
-        this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId, "expected parameter 'linkedServiceResourceId' to be non-null");
-        this.modifiedTime = modifiedTime;
-    }
+    private LinkedServicePropsArgs() {}
 
-    private LinkedServicePropsArgs() {
-        this.createdTime = Codegen.empty();
-        this.linkType = Codegen.empty();
-        this.linkedServiceResourceId = Codegen.empty();
-        this.modifiedTime = Codegen.empty();
+    private LinkedServicePropsArgs(LinkedServicePropsArgs $) {
+        this.createdTime = $.createdTime;
+        this.linkType = $.linkType;
+        this.linkedServiceResourceId = $.linkedServiceResourceId;
+        this.modifiedTime = $.modifiedTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedServicePropsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<LinkedServiceLinkType> linkType;
-        private Output<String> linkedServiceResourceId;
-        private @Nullable Output<String> modifiedTime;
+        private LinkedServicePropsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedServicePropsArgs();
         }
 
         public Builder(LinkedServicePropsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdTime = defaults.createdTime;
-    	      this.linkType = defaults.linkType;
-    	      this.linkedServiceResourceId = defaults.linkedServiceResourceId;
-    	      this.modifiedTime = defaults.modifiedTime;
+            $ = new LinkedServicePropsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder linkType(@Nullable Output<LinkedServiceLinkType> linkType) {
-            this.linkType = linkType;
+            $.linkType = linkType;
             return this;
         }
-        public Builder linkType(@Nullable LinkedServiceLinkType linkType) {
-            this.linkType = Codegen.ofNullable(linkType);
-            return this;
+
+        public Builder linkType(LinkedServiceLinkType linkType) {
+            return linkType(Output.of(linkType));
         }
+
         public Builder linkedServiceResourceId(Output<String> linkedServiceResourceId) {
-            this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
+            $.linkedServiceResourceId = linkedServiceResourceId;
             return this;
         }
+
         public Builder linkedServiceResourceId(String linkedServiceResourceId) {
-            this.linkedServiceResourceId = Output.of(Objects.requireNonNull(linkedServiceResourceId));
-            return this;
+            return linkedServiceResourceId(Output.of(linkedServiceResourceId));
         }
+
         public Builder modifiedTime(@Nullable Output<String> modifiedTime) {
-            this.modifiedTime = modifiedTime;
+            $.modifiedTime = modifiedTime;
             return this;
         }
-        public Builder modifiedTime(@Nullable String modifiedTime) {
-            this.modifiedTime = Codegen.ofNullable(modifiedTime);
-            return this;
-        }        public LinkedServicePropsArgs build() {
-            return new LinkedServicePropsArgs(createdTime, linkType, linkedServiceResourceId, modifiedTime);
+
+        public Builder modifiedTime(String modifiedTime) {
+            return modifiedTime(Output.of(modifiedTime));
+        }
+
+        public LinkedServicePropsArgs build() {
+            $.linkedServiceResourceId = Objects.requireNonNull($.linkedServiceResourceId, "expected parameter 'linkedServiceResourceId' to be non-null");
+            return $;
         }
     }
+
 }

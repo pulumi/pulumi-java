@@ -26,10 +26,10 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monthDays")
-      private final @Nullable List<Integer> monthDays;
+    private @Nullable List<Integer> monthDays;
 
-    public List<Integer> monthDays() {
-        return this.monthDays == null ? List.of() : this.monthDays;
+    public Optional<List<Integer>> monthDays() {
+        return Optional.ofNullable(this.monthDays);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monthlyOccurrences")
-      private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
+    private @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
-    public List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences() {
-        return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
+    public Optional<List<AdvancedScheduleMonthlyOccurrenceResponse>> monthlyOccurrences() {
+        return Optional.ofNullable(this.monthlyOccurrences);
     }
 
     /**
@@ -48,73 +48,68 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="weekDays")
-      private final @Nullable List<String> weekDays;
+    private @Nullable List<String> weekDays;
 
-    public List<String> weekDays() {
-        return this.weekDays == null ? List.of() : this.weekDays;
+    public Optional<List<String>> weekDays() {
+        return Optional.ofNullable(this.weekDays);
     }
 
-    public AdvancedScheduleResponse(
-        @Nullable List<Integer> monthDays,
-        @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
-        this.monthDays = monthDays;
-        this.monthlyOccurrences = monthlyOccurrences;
-        this.weekDays = weekDays;
-    }
+    private AdvancedScheduleResponse() {}
 
-    private AdvancedScheduleResponse() {
-        this.monthDays = List.of();
-        this.monthlyOccurrences = List.of();
-        this.weekDays = List.of();
+    private AdvancedScheduleResponse(AdvancedScheduleResponse $) {
+        this.monthDays = $.monthDays;
+        this.monthlyOccurrences = $.monthlyOccurrences;
+        this.weekDays = $.weekDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Integer> monthDays;
-        private @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
-        private @Nullable List<String> weekDays;
+        private AdvancedScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedScheduleResponse();
         }
 
         public Builder(AdvancedScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthDays = defaults.monthDays;
-    	      this.monthlyOccurrences = defaults.monthlyOccurrences;
-    	      this.weekDays = defaults.weekDays;
+            $ = new AdvancedScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = monthDays;
+            $.monthDays = monthDays;
             return this;
         }
+
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
+
         public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
-            this.monthlyOccurrences = monthlyOccurrences;
+            $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
+
         public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceResponse... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
+
         public Builder weekDays(@Nullable List<String> weekDays) {
-            this.weekDays = weekDays;
+            $.weekDays = weekDays;
             return this;
         }
+
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
-        }        public AdvancedScheduleResponse build() {
-            return new AdvancedScheduleResponse(monthDays, monthlyOccurrences, weekDays);
+        }
+
+        public AdvancedScheduleResponse build() {
+            return $;
         }
     }
+
 }

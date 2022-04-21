@@ -25,7 +25,7 @@ public final class SelectVideoTrackByIdArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -36,63 +36,60 @@ public final class SelectVideoTrackByIdArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="trackId", required=true)
-      private final Output<Double> trackId;
+    private Output<Double> trackId;
 
     public Output<Double> trackId() {
         return this.trackId;
     }
 
-    public SelectVideoTrackByIdArgs(
-        Output<String> odataType,
-        Output<Double> trackId) {
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.trackId = Objects.requireNonNull(trackId, "expected parameter 'trackId' to be non-null");
-    }
+    private SelectVideoTrackByIdArgs() {}
 
-    private SelectVideoTrackByIdArgs() {
-        this.odataType = Codegen.empty();
-        this.trackId = Codegen.empty();
+    private SelectVideoTrackByIdArgs(SelectVideoTrackByIdArgs $) {
+        this.odataType = $.odataType;
+        this.trackId = $.trackId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectVideoTrackByIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
-        private Output<Double> trackId;
+        private SelectVideoTrackByIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectVideoTrackByIdArgs();
         }
 
         public Builder(SelectVideoTrackByIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.trackId = defaults.trackId;
+            $ = new SelectVideoTrackByIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder trackId(Output<Double> trackId) {
-            this.trackId = Objects.requireNonNull(trackId);
+            $.trackId = trackId;
             return this;
         }
+
         public Builder trackId(Double trackId) {
-            this.trackId = Output.of(Objects.requireNonNull(trackId));
-            return this;
-        }        public SelectVideoTrackByIdArgs build() {
-            return new SelectVideoTrackByIdArgs(odataType, trackId);
+            return trackId(Output.of(trackId));
+        }
+
+        public SelectVideoTrackByIdArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.trackId = Objects.requireNonNull($.trackId, "expected parameter 'trackId' to be non-null");
+            return $;
         }
     }
+
 }

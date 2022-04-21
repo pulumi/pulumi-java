@@ -7,9 +7,9 @@ import com.pulumi.azurenative.desktopvirtualization.enums.RegistrationTokenOpera
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="registrationTokenOperation")
-      private final @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
+    private @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
-    public Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation() {
-        return this.registrationTokenOperation == null ? Codegen.empty() : this.registrationTokenOperation;
+    public Optional<Output<Either<String,RegistrationTokenOperation>>> registrationTokenOperation() {
+        return Optional.ofNullable(this.registrationTokenOperation);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="token")
-      private final @Nullable Output<String> token;
+    private @Nullable Output<String> token;
 
-    public Output<String> token() {
-        return this.token == null ? Codegen.empty() : this.token;
+    public Optional<Output<String>> token() {
+        return Optional.ofNullable(this.token);
     }
 
-    public RegistrationInfoArgs(
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation,
-        @Nullable Output<String> token) {
-        this.expirationTime = expirationTime;
-        this.registrationTokenOperation = registrationTokenOperation;
-        this.token = token;
-    }
+    private RegistrationInfoArgs() {}
 
-    private RegistrationInfoArgs() {
-        this.expirationTime = Codegen.empty();
-        this.registrationTokenOperation = Codegen.empty();
-        this.token = Codegen.empty();
+    private RegistrationInfoArgs(RegistrationInfoArgs $) {
+        this.expirationTime = $.expirationTime;
+        this.registrationTokenOperation = $.registrationTokenOperation;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
-        private @Nullable Output<String> token;
+        private RegistrationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationInfoArgs();
         }
 
         public Builder(RegistrationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.registrationTokenOperation = defaults.registrationTokenOperation;
-    	      this.token = defaults.token;
+            $ = new RegistrationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder registrationTokenOperation(@Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
-            this.registrationTokenOperation = registrationTokenOperation;
+            $.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
-        public Builder registrationTokenOperation(@Nullable Either<String,RegistrationTokenOperation> registrationTokenOperation) {
-            this.registrationTokenOperation = Codegen.ofNullable(registrationTokenOperation);
-            return this;
+
+        public Builder registrationTokenOperation(Either<String,RegistrationTokenOperation> registrationTokenOperation) {
+            return registrationTokenOperation(Output.of(registrationTokenOperation));
         }
+
         public Builder token(@Nullable Output<String> token) {
-            this.token = token;
+            $.token = token;
             return this;
         }
-        public Builder token(@Nullable String token) {
-            this.token = Codegen.ofNullable(token);
-            return this;
-        }        public RegistrationInfoArgs build() {
-            return new RegistrationInfoArgs(expirationTime, registrationTokenOperation, token);
+
+        public Builder token(String token) {
+            return token(Output.of(token));
+        }
+
+        public RegistrationInfoArgs build() {
+            return $;
         }
     }
+
 }

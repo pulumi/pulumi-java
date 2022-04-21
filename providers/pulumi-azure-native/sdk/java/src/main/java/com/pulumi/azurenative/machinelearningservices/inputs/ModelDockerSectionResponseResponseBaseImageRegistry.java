@@ -19,45 +19,44 @@ public final class ModelDockerSectionResponseResponseBaseImageRegistry extends c
     public static final ModelDockerSectionResponseResponseBaseImageRegistry Empty = new ModelDockerSectionResponseResponseBaseImageRegistry();
 
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
-    public ModelDockerSectionResponseResponseBaseImageRegistry(@Nullable String address) {
-        this.address = address;
-    }
+    private ModelDockerSectionResponseResponseBaseImageRegistry() {}
 
-    private ModelDockerSectionResponseResponseBaseImageRegistry() {
-        this.address = null;
+    private ModelDockerSectionResponseResponseBaseImageRegistry(ModelDockerSectionResponseResponseBaseImageRegistry $) {
+        this.address = $.address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelDockerSectionResponseResponseBaseImageRegistry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
+        private ModelDockerSectionResponseResponseBaseImageRegistry $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelDockerSectionResponseResponseBaseImageRegistry();
         }
 
         public Builder(ModelDockerSectionResponseResponseBaseImageRegistry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
+            $ = new ModelDockerSectionResponseResponseBaseImageRegistry(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
-        }        public ModelDockerSectionResponseResponseBaseImageRegistry build() {
-            return new ModelDockerSectionResponseResponseBaseImageRegistry(address);
+        }
+
+        public ModelDockerSectionResponseResponseBaseImageRegistry build() {
+            return $;
         }
     }
+
 }

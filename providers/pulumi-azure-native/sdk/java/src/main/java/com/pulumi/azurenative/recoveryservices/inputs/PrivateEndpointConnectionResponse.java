@@ -25,10 +25,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable PrivateEndpointResponse privateEndpoint;
+    private @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public PrivateEndpointConnectionResponse(
-        @Nullable PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @Nullable String provisioningState) {
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = provisioningState;
-    }
+    private PrivateEndpointConnectionResponse() {}
 
-    private PrivateEndpointConnectionResponse() {
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
+    private PrivateEndpointConnectionResponse(PrivateEndpointConnectionResponse $) {
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PrivateEndpointResponse privateEndpoint;
-        private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private @Nullable String provisioningState;
+        private PrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionResponse();
         }
 
         public Builder(PrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
-        }        public PrivateEndpointConnectionResponse build() {
-            return new PrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
+        }
+
+        public PrivateEndpointConnectionResponse build() {
+            return $;
         }
     }
+
 }

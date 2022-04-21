@@ -24,10 +24,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="helpUrl")
-      private final @Nullable String helpUrl;
+    private @Nullable String helpUrl;
 
     public Optional<String> helpUrl() {
-        return this.helpUrl == null ? Optional.empty() : Optional.ofNullable(this.helpUrl);
+        return Optional.ofNullable(this.helpUrl);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="isEnabledByDefault")
-      private final @Nullable Boolean isEnabledByDefault;
+    private @Nullable Boolean isEnabledByDefault;
 
     public Optional<Boolean> isEnabledByDefault() {
-        return this.isEnabledByDefault == null ? Optional.empty() : Optional.ofNullable(this.isEnabledByDefault);
+        return Optional.ofNullable(this.isEnabledByDefault);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="isHidden")
-      private final @Nullable Boolean isHidden;
+    private @Nullable Boolean isHidden;
 
     public Optional<Boolean> isHidden() {
-        return this.isHidden == null ? Optional.empty() : Optional.ofNullable(this.isHidden);
+        return Optional.ofNullable(this.isHidden);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="isInPreview")
-      private final @Nullable Boolean isInPreview;
+    private @Nullable Boolean isInPreview;
 
     public Optional<Boolean> isInPreview() {
-        return this.isInPreview == null ? Optional.empty() : Optional.ofNullable(this.isInPreview);
+        return Optional.ofNullable(this.isInPreview);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,109 +101,86 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * 
      */
     @Import(name="supportsEmailNotifications")
-      private final @Nullable Boolean supportsEmailNotifications;
+    private @Nullable Boolean supportsEmailNotifications;
 
     public Optional<Boolean> supportsEmailNotifications() {
-        return this.supportsEmailNotifications == null ? Optional.empty() : Optional.ofNullable(this.supportsEmailNotifications);
+        return Optional.ofNullable(this.supportsEmailNotifications);
     }
 
-    public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String helpUrl,
-        @Nullable Boolean isEnabledByDefault,
-        @Nullable Boolean isHidden,
-        @Nullable Boolean isInPreview,
-        @Nullable String name,
-        @Nullable Boolean supportsEmailNotifications) {
-        this.description = description;
-        this.displayName = displayName;
-        this.helpUrl = helpUrl;
-        this.isEnabledByDefault = isEnabledByDefault;
-        this.isHidden = isHidden;
-        this.isInPreview = isInPreview;
-        this.name = name;
-        this.supportsEmailNotifications = supportsEmailNotifications;
-    }
+    private ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions() {}
 
-    private ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions() {
-        this.description = null;
-        this.displayName = null;
-        this.helpUrl = null;
-        this.isEnabledByDefault = null;
-        this.isHidden = null;
-        this.isInPreview = null;
-        this.name = null;
-        this.supportsEmailNotifications = null;
+    private ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.helpUrl = $.helpUrl;
+        this.isEnabledByDefault = $.isEnabledByDefault;
+        this.isHidden = $.isHidden;
+        this.isInPreview = $.isInPreview;
+        this.name = $.name;
+        this.supportsEmailNotifications = $.supportsEmailNotifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String helpUrl;
-        private @Nullable Boolean isEnabledByDefault;
-        private @Nullable Boolean isHidden;
-        private @Nullable Boolean isInPreview;
-        private @Nullable String name;
-        private @Nullable Boolean supportsEmailNotifications;
+        private ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions();
         }
 
         public Builder(ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.helpUrl = defaults.helpUrl;
-    	      this.isEnabledByDefault = defaults.isEnabledByDefault;
-    	      this.isHidden = defaults.isHidden;
-    	      this.isInPreview = defaults.isInPreview;
-    	      this.name = defaults.name;
-    	      this.supportsEmailNotifications = defaults.supportsEmailNotifications;
+            $ = new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder helpUrl(@Nullable String helpUrl) {
-            this.helpUrl = helpUrl;
+            $.helpUrl = helpUrl;
             return this;
         }
+
         public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
-            this.isEnabledByDefault = isEnabledByDefault;
+            $.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
+
         public Builder isHidden(@Nullable Boolean isHidden) {
-            this.isHidden = isHidden;
+            $.isHidden = isHidden;
             return this;
         }
+
         public Builder isInPreview(@Nullable Boolean isInPreview) {
-            this.isInPreview = isInPreview;
+            $.isInPreview = isInPreview;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
-            this.supportsEmailNotifications = supportsEmailNotifications;
+            $.supportsEmailNotifications = supportsEmailNotifications;
             return this;
-        }        public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions build() {
-            return new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);
+        }
+
+        public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions build() {
+            return $;
         }
     }
+
 }

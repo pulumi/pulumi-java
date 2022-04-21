@@ -6,11 +6,11 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.EncryptionSettingsElementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -38,10 +38,10 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
+    private @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
-    public Output<List<EncryptionSettingsElementArgs>> encryptionSettings() {
-        return this.encryptionSettings == null ? Codegen.empty() : this.encryptionSettings;
+    public Optional<Output<List<EncryptionSettingsElementArgs>>> encryptionSettings() {
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -49,79 +49,73 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="encryptionSettingsVersion")
-      private final @Nullable Output<String> encryptionSettingsVersion;
+    private @Nullable Output<String> encryptionSettingsVersion;
 
-    public Output<String> encryptionSettingsVersion() {
-        return this.encryptionSettingsVersion == null ? Codegen.empty() : this.encryptionSettingsVersion;
+    public Optional<Output<String>> encryptionSettingsVersion() {
+        return Optional.ofNullable(this.encryptionSettingsVersion);
     }
 
-    public EncryptionSettingsCollectionArgs(
-        Output<Boolean> enabled,
-        @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings,
-        @Nullable Output<String> encryptionSettingsVersion) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.encryptionSettings = encryptionSettings;
-        this.encryptionSettingsVersion = encryptionSettingsVersion;
-    }
+    private EncryptionSettingsCollectionArgs() {}
 
-    private EncryptionSettingsCollectionArgs() {
-        this.enabled = Codegen.empty();
-        this.encryptionSettings = Codegen.empty();
-        this.encryptionSettingsVersion = Codegen.empty();
+    private EncryptionSettingsCollectionArgs(EncryptionSettingsCollectionArgs $) {
+        this.enabled = $.enabled;
+        this.encryptionSettings = $.encryptionSettings;
+        this.encryptionSettingsVersion = $.encryptionSettingsVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionSettingsCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
-        private @Nullable Output<String> encryptionSettingsVersion;
+        private EncryptionSettingsCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionSettingsCollectionArgs();
         }
 
         public Builder(EncryptionSettingsCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.encryptionSettingsVersion = defaults.encryptionSettingsVersion;
+            $ = new EncryptionSettingsCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder encryptionSettings(@Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
-        public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementArgs> encryptionSettings) {
-            this.encryptionSettings = Codegen.ofNullable(encryptionSettings);
-            return this;
+
+        public Builder encryptionSettings(List<EncryptionSettingsElementArgs> encryptionSettings) {
+            return encryptionSettings(Output.of(encryptionSettings));
         }
+
         public Builder encryptionSettings(EncryptionSettingsElementArgs... encryptionSettings) {
             return encryptionSettings(List.of(encryptionSettings));
         }
+
         public Builder encryptionSettingsVersion(@Nullable Output<String> encryptionSettingsVersion) {
-            this.encryptionSettingsVersion = encryptionSettingsVersion;
+            $.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
         }
-        public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
-            this.encryptionSettingsVersion = Codegen.ofNullable(encryptionSettingsVersion);
-            return this;
-        }        public EncryptionSettingsCollectionArgs build() {
-            return new EncryptionSettingsCollectionArgs(enabled, encryptionSettings, encryptionSettingsVersion);
+
+        public Builder encryptionSettingsVersion(String encryptionSettingsVersion) {
+            return encryptionSettingsVersion(Output.of(encryptionSettingsVersion));
+        }
+
+        public EncryptionSettingsCollectionArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

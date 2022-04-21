@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class SSISExecutionParameterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Object> value;
+    private Output<Object> value;
 
     public Output<Object> value() {
         return this.value;
     }
 
-    public SSISExecutionParameterArgs(Output<Object> value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SSISExecutionParameterArgs() {}
 
-    private SSISExecutionParameterArgs() {
-        this.value = Codegen.empty();
+    private SSISExecutionParameterArgs(SSISExecutionParameterArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISExecutionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> value;
+        private SSISExecutionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISExecutionParameterArgs();
         }
 
         public Builder(SSISExecutionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new SSISExecutionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<Object> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Object value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SSISExecutionParameterArgs build() {
-            return new SSISExecutionParameterArgs(value);
+            return value(Output.of(value));
+        }
+
+        public SSISExecutionParameterArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

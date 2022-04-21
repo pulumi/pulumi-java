@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accountDetails", required=true)
-      private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+    private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
     public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails() {
         return this.accountDetails;
@@ -40,10 +41,10 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logCollectionLevel")
-      private final @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
+    private @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
 
-    public Output<Either<String,LogCollectionLevel>> logCollectionLevel() {
-        return this.logCollectionLevel == null ? Codegen.empty() : this.logCollectionLevel;
+    public Optional<Output<Either<String,LogCollectionLevel>>> logCollectionLevel() {
+        return Optional.ofNullable(this.logCollectionLevel);
     }
 
     /**
@@ -51,76 +52,71 @@ public final class DataExportDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="transferConfiguration", required=true)
-      private final Output<TransferConfigurationArgs> transferConfiguration;
+    private Output<TransferConfigurationArgs> transferConfiguration;
 
     public Output<TransferConfigurationArgs> transferConfiguration() {
         return this.transferConfiguration;
     }
 
-    public DataExportDetailsArgs(
-        Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails,
-        @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel,
-        Output<TransferConfigurationArgs> transferConfiguration) {
-        this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-        this.logCollectionLevel = Codegen.stringProp("logCollectionLevel").left(LogCollectionLevel.class).output().arg(logCollectionLevel).def("Error").getNullable();
-        this.transferConfiguration = Objects.requireNonNull(transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
-    }
+    private DataExportDetailsArgs() {}
 
-    private DataExportDetailsArgs() {
-        this.accountDetails = Codegen.empty();
-        this.logCollectionLevel = Codegen.empty();
-        this.transferConfiguration = Codegen.empty();
+    private DataExportDetailsArgs(DataExportDetailsArgs $) {
+        this.accountDetails = $.accountDetails;
+        this.logCollectionLevel = $.logCollectionLevel;
+        this.transferConfiguration = $.transferConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataExportDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
-        private @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
-        private Output<TransferConfigurationArgs> transferConfiguration;
+        private DataExportDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataExportDetailsArgs();
         }
 
         public Builder(DataExportDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountDetails = defaults.accountDetails;
-    	      this.logCollectionLevel = defaults.logCollectionLevel;
-    	      this.transferConfiguration = defaults.transferConfiguration;
+            $ = new DataExportDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountDetails(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
-            this.accountDetails = Objects.requireNonNull(accountDetails);
+            $.accountDetails = accountDetails;
             return this;
         }
+
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
-            this.accountDetails = Output.of(Objects.requireNonNull(accountDetails));
-            return this;
+            return accountDetails(Output.of(accountDetails));
         }
+
         public Builder logCollectionLevel(@Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel) {
-            this.logCollectionLevel = logCollectionLevel;
+            $.logCollectionLevel = logCollectionLevel;
             return this;
         }
-        public Builder logCollectionLevel(@Nullable Either<String,LogCollectionLevel> logCollectionLevel) {
-            this.logCollectionLevel = Codegen.ofNullable(logCollectionLevel);
-            return this;
+
+        public Builder logCollectionLevel(Either<String,LogCollectionLevel> logCollectionLevel) {
+            return logCollectionLevel(Output.of(logCollectionLevel));
         }
+
         public Builder transferConfiguration(Output<TransferConfigurationArgs> transferConfiguration) {
-            this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
+            $.transferConfiguration = transferConfiguration;
             return this;
         }
+
         public Builder transferConfiguration(TransferConfigurationArgs transferConfiguration) {
-            this.transferConfiguration = Output.of(Objects.requireNonNull(transferConfiguration));
-            return this;
-        }        public DataExportDetailsArgs build() {
-            return new DataExportDetailsArgs(accountDetails, logCollectionLevel, transferConfiguration);
+            return transferConfiguration(Output.of(transferConfiguration));
+        }
+
+        public DataExportDetailsArgs build() {
+            $.accountDetails = Objects.requireNonNull($.accountDetails, "expected parameter 'accountDetails' to be non-null");
+            $.logCollectionLevel = Codegen.stringProp("logCollectionLevel").left(LogCollectionLevel.class).output().arg($.logCollectionLevel).def("Error").getNullable();
+            $.transferConfiguration = Objects.requireNonNull($.transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

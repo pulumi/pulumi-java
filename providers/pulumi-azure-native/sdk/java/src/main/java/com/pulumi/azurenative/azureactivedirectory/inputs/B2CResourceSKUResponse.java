@@ -23,10 +23,10 @@ public final class B2CResourceSKUResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class B2CResourceSKUResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public B2CResourceSKUResponse(
-        @Nullable String name,
-        @Nullable String tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private B2CResourceSKUResponse() {}
 
-    private B2CResourceSKUResponse() {
-        this.name = null;
-        this.tier = null;
+    private B2CResourceSKUResponse(B2CResourceSKUResponse $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(B2CResourceSKUResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String tier;
+        private B2CResourceSKUResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new B2CResourceSKUResponse();
         }
 
         public Builder(B2CResourceSKUResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new B2CResourceSKUResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public B2CResourceSKUResponse build() {
-            return new B2CResourceSKUResponse(name, tier);
+        }
+
+        public B2CResourceSKUResponse build() {
+            return $;
         }
     }
+
 }

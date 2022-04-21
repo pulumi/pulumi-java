@@ -5,7 +5,6 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="aadAuthority", required=true)
-      private final Output<String> aadAuthority;
+    private Output<String> aadAuthority;
 
     public Output<String> aadAuthority() {
         return this.aadAuthority;
@@ -34,7 +33,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -45,7 +44,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="audience", required=true)
-      private final Output<String> audience;
+    private Output<String> audience;
 
     public Output<String> audience() {
         return this.audience;
@@ -56,7 +55,7 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
@@ -67,102 +66,93 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tenantId", required=true)
-      private final Output<String> tenantId;
+    private Output<String> tenantId;
 
     public Output<String> tenantId() {
         return this.tenantId;
     }
 
-    public IdentityProviderInputArgs(
-        Output<String> aadAuthority,
-        Output<String> applicationId,
-        Output<String> audience,
-        Output<String> objectId,
-        Output<String> tenantId) {
-        this.aadAuthority = Objects.requireNonNull(aadAuthority, "expected parameter 'aadAuthority' to be non-null");
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private IdentityProviderInputArgs() {}
 
-    private IdentityProviderInputArgs() {
-        this.aadAuthority = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.audience = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private IdentityProviderInputArgs(IdentityProviderInputArgs $) {
+        this.aadAuthority = $.aadAuthority;
+        this.applicationId = $.applicationId;
+        this.audience = $.audience;
+        this.objectId = $.objectId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityProviderInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> aadAuthority;
-        private Output<String> applicationId;
-        private Output<String> audience;
-        private Output<String> objectId;
-        private Output<String> tenantId;
+        private IdentityProviderInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityProviderInputArgs();
         }
 
         public Builder(IdentityProviderInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadAuthority = defaults.aadAuthority;
-    	      this.applicationId = defaults.applicationId;
-    	      this.audience = defaults.audience;
-    	      this.objectId = defaults.objectId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new IdentityProviderInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aadAuthority(Output<String> aadAuthority) {
-            this.aadAuthority = Objects.requireNonNull(aadAuthority);
+            $.aadAuthority = aadAuthority;
             return this;
         }
+
         public Builder aadAuthority(String aadAuthority) {
-            this.aadAuthority = Output.of(Objects.requireNonNull(aadAuthority));
-            return this;
+            return aadAuthority(Output.of(aadAuthority));
         }
+
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder audience(Output<String> audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder audience(String audience) {
-            this.audience = Output.of(Objects.requireNonNull(audience));
-            return this;
+            return audience(Output.of(audience));
         }
+
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder tenantId(Output<String> tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
-            return this;
-        }        public IdentityProviderInputArgs build() {
-            return new IdentityProviderInputArgs(aadAuthority, applicationId, audience, objectId, tenantId);
+            return tenantId(Output.of(tenantId));
+        }
+
+        public IdentityProviderInputArgs build() {
+            $.aadAuthority = Objects.requireNonNull($.aadAuthority, "expected parameter 'aadAuthority' to be non-null");
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

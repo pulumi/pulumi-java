@@ -7,9 +7,9 @@ import com.pulumi.azurenative.appplatform.enums.UserSourceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class UserSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="artifactSelector")
-      private final @Nullable Output<String> artifactSelector;
+    private @Nullable Output<String> artifactSelector;
 
-    public Output<String> artifactSelector() {
-        return this.artifactSelector == null ? Codegen.empty() : this.artifactSelector;
+    public Optional<Output<String>> artifactSelector() {
+        return Optional.ofNullable(this.artifactSelector);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UserSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="relativePath")
-      private final @Nullable Output<String> relativePath;
+    private @Nullable Output<String> relativePath;
 
-    public Output<String> relativePath() {
-        return this.relativePath == null ? Codegen.empty() : this.relativePath;
+    public Optional<Output<String>> relativePath() {
+        return Optional.ofNullable(this.relativePath);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UserSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,UserSourceType>> type;
+    private @Nullable Output<Either<String,UserSourceType>> type;
 
-    public Output<Either<String,UserSourceType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,UserSourceType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class UserSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public UserSourceInfoArgs(
-        @Nullable Output<String> artifactSelector,
-        @Nullable Output<String> relativePath,
-        @Nullable Output<Either<String,UserSourceType>> type,
-        @Nullable Output<String> version) {
-        this.artifactSelector = artifactSelector;
-        this.relativePath = relativePath;
-        this.type = type;
-        this.version = version;
-    }
+    private UserSourceInfoArgs() {}
 
-    private UserSourceInfoArgs() {
-        this.artifactSelector = Codegen.empty();
-        this.relativePath = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private UserSourceInfoArgs(UserSourceInfoArgs $) {
+        this.artifactSelector = $.artifactSelector;
+        this.relativePath = $.relativePath;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserSourceInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactSelector;
-        private @Nullable Output<String> relativePath;
-        private @Nullable Output<Either<String,UserSourceType>> type;
-        private @Nullable Output<String> version;
+        private UserSourceInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserSourceInfoArgs();
         }
 
         public Builder(UserSourceInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactSelector = defaults.artifactSelector;
-    	      this.relativePath = defaults.relativePath;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new UserSourceInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactSelector(@Nullable Output<String> artifactSelector) {
-            this.artifactSelector = artifactSelector;
+            $.artifactSelector = artifactSelector;
             return this;
         }
-        public Builder artifactSelector(@Nullable String artifactSelector) {
-            this.artifactSelector = Codegen.ofNullable(artifactSelector);
-            return this;
+
+        public Builder artifactSelector(String artifactSelector) {
+            return artifactSelector(Output.of(artifactSelector));
         }
+
         public Builder relativePath(@Nullable Output<String> relativePath) {
-            this.relativePath = relativePath;
+            $.relativePath = relativePath;
             return this;
         }
-        public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Codegen.ofNullable(relativePath);
-            return this;
+
+        public Builder relativePath(String relativePath) {
+            return relativePath(Output.of(relativePath));
         }
+
         public Builder type(@Nullable Output<Either<String,UserSourceType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,UserSourceType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,UserSourceType> type) {
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public UserSourceInfoArgs build() {
-            return new UserSourceInfoArgs(artifactSelector, relativePath, type, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public UserSourceInfoArgs build() {
+            return $;
         }
     }
+
 }

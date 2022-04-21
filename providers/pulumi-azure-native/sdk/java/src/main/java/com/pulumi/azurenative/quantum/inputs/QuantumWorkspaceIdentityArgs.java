@@ -7,9 +7,9 @@ import com.pulumi.azurenative.quantum.enums.ResourceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class QuantumWorkspaceIdentityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ResourceIdentityType>> type;
+    private @Nullable Output<Either<String,ResourceIdentityType>> type;
 
-    public Output<Either<String,ResourceIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ResourceIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public QuantumWorkspaceIdentityArgs(@Nullable Output<Either<String,ResourceIdentityType>> type) {
-        this.type = type;
-    }
+    private QuantumWorkspaceIdentityArgs() {}
 
-    private QuantumWorkspaceIdentityArgs() {
-        this.type = Codegen.empty();
+    private QuantumWorkspaceIdentityArgs(QuantumWorkspaceIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuantumWorkspaceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ResourceIdentityType>> type;
+        private QuantumWorkspaceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuantumWorkspaceIdentityArgs();
         }
 
         public Builder(QuantumWorkspaceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new QuantumWorkspaceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,ResourceIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ResourceIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public QuantumWorkspaceIdentityArgs build() {
-            return new QuantumWorkspaceIdentityArgs(type);
+
+        public Builder type(Either<String,ResourceIdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public QuantumWorkspaceIdentityArgs build() {
+            return $;
         }
     }
+
 }

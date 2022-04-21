@@ -25,7 +25,7 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="devPortalUrl", required=true)
-      private final String devPortalUrl;
+    private String devPortalUrl;
 
     public String devPortalUrl() {
         return this.devPortalUrl;
@@ -36,7 +36,7 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -47,7 +47,7 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="iconUrl", required=true)
-      private final String iconUrl;
+    private String iconUrl;
 
     public String iconUrl() {
         return this.iconUrl;
@@ -58,7 +58,7 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -69,10 +69,10 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ServiceProviderParameterResponse> parameters;
+    private @Nullable List<ServiceProviderParameterResponse> parameters;
 
-    public List<ServiceProviderParameterResponse> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ServiceProviderParameterResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -80,94 +80,83 @@ public final class ServiceProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="serviceProviderName", required=true)
-      private final String serviceProviderName;
+    private String serviceProviderName;
 
     public String serviceProviderName() {
         return this.serviceProviderName;
     }
 
-    public ServiceProviderPropertiesResponse(
-        String devPortalUrl,
-        String displayName,
-        String iconUrl,
-        String id,
-        @Nullable List<ServiceProviderParameterResponse> parameters,
-        String serviceProviderName) {
-        this.devPortalUrl = Objects.requireNonNull(devPortalUrl, "expected parameter 'devPortalUrl' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.iconUrl = Objects.requireNonNull(iconUrl, "expected parameter 'iconUrl' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.parameters = parameters;
-        this.serviceProviderName = Objects.requireNonNull(serviceProviderName, "expected parameter 'serviceProviderName' to be non-null");
-    }
+    private ServiceProviderPropertiesResponse() {}
 
-    private ServiceProviderPropertiesResponse() {
-        this.devPortalUrl = null;
-        this.displayName = null;
-        this.iconUrl = null;
-        this.id = null;
-        this.parameters = List.of();
-        this.serviceProviderName = null;
+    private ServiceProviderPropertiesResponse(ServiceProviderPropertiesResponse $) {
+        this.devPortalUrl = $.devPortalUrl;
+        this.displayName = $.displayName;
+        this.iconUrl = $.iconUrl;
+        this.id = $.id;
+        this.parameters = $.parameters;
+        this.serviceProviderName = $.serviceProviderName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceProviderPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String devPortalUrl;
-        private String displayName;
-        private String iconUrl;
-        private String id;
-        private @Nullable List<ServiceProviderParameterResponse> parameters;
-        private String serviceProviderName;
+        private ServiceProviderPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceProviderPropertiesResponse();
         }
 
         public Builder(ServiceProviderPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.devPortalUrl = defaults.devPortalUrl;
-    	      this.displayName = defaults.displayName;
-    	      this.iconUrl = defaults.iconUrl;
-    	      this.id = defaults.id;
-    	      this.parameters = defaults.parameters;
-    	      this.serviceProviderName = defaults.serviceProviderName;
+            $ = new ServiceProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder devPortalUrl(String devPortalUrl) {
-            this.devPortalUrl = Objects.requireNonNull(devPortalUrl);
+            $.devPortalUrl = devPortalUrl;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder iconUrl(String iconUrl) {
-            this.iconUrl = Objects.requireNonNull(iconUrl);
+            $.iconUrl = iconUrl;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder parameters(@Nullable List<ServiceProviderParameterResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ServiceProviderParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder serviceProviderName(String serviceProviderName) {
-            this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
+            $.serviceProviderName = serviceProviderName;
             return this;
-        }        public ServiceProviderPropertiesResponse build() {
-            return new ServiceProviderPropertiesResponse(devPortalUrl, displayName, iconUrl, id, parameters, serviceProviderName);
+        }
+
+        public ServiceProviderPropertiesResponse build() {
+            $.devPortalUrl = Objects.requireNonNull($.devPortalUrl, "expected parameter 'devPortalUrl' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.iconUrl = Objects.requireNonNull($.iconUrl, "expected parameter 'iconUrl' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.serviceProviderName = Objects.requireNonNull($.serviceProviderName, "expected parameter 'serviceProviderName' to be non-null");
+            return $;
         }
     }
+
 }

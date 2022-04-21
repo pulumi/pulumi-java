@@ -7,8 +7,8 @@ import com.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import com.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class AddressPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="contactDetails", required=true)
-      private final Output<ContactDetailsArgs> contactDetails;
+    private Output<ContactDetailsArgs> contactDetails;
 
     public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
@@ -36,63 +36,59 @@ public final class AddressPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="shippingAddress")
-      private final @Nullable Output<ShippingAddressArgs> shippingAddress;
+    private @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Output<ShippingAddressArgs> shippingAddress() {
-        return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
+    public Optional<Output<ShippingAddressArgs>> shippingAddress() {
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    public AddressPropertiesArgs(
-        Output<ContactDetailsArgs> contactDetails,
-        @Nullable Output<ShippingAddressArgs> shippingAddress) {
-        this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
-        this.shippingAddress = shippingAddress;
-    }
+    private AddressPropertiesArgs() {}
 
-    private AddressPropertiesArgs() {
-        this.contactDetails = Codegen.empty();
-        this.shippingAddress = Codegen.empty();
+    private AddressPropertiesArgs(AddressPropertiesArgs $) {
+        this.contactDetails = $.contactDetails;
+        this.shippingAddress = $.shippingAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ContactDetailsArgs> contactDetails;
-        private @Nullable Output<ShippingAddressArgs> shippingAddress;
+        private AddressPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressPropertiesArgs();
         }
 
         public Builder(AddressPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactDetails = defaults.contactDetails;
-    	      this.shippingAddress = defaults.shippingAddress;
+            $ = new AddressPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
-            this.contactDetails = Objects.requireNonNull(contactDetails);
+            $.contactDetails = contactDetails;
             return this;
         }
+
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
-            this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
-            return this;
+            return contactDetails(Output.of(contactDetails));
         }
+
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
-            this.shippingAddress = shippingAddress;
+            $.shippingAddress = shippingAddress;
             return this;
         }
-        public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Codegen.ofNullable(shippingAddress);
-            return this;
-        }        public AddressPropertiesArgs build() {
-            return new AddressPropertiesArgs(contactDetails, shippingAddress);
+
+        public Builder shippingAddress(ShippingAddressArgs shippingAddress) {
+            return shippingAddress(Output.of(shippingAddress));
+        }
+
+        public AddressPropertiesArgs build() {
+            $.contactDetails = Objects.requireNonNull($.contactDetails, "expected parameter 'contactDetails' to be non-null");
+            return $;
         }
     }
+
 }

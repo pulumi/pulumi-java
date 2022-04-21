@@ -21,10 +21,10 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
+    private @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
 
     public Optional<PolicyAssignmentPropertiesResponsePolicy> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="roleDefinition")
-      private final @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
+    private @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
 
     public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> roleDefinition() {
-        return this.roleDefinition == null ? Optional.empty() : Optional.ofNullable(this.roleDefinition);
+        return Optional.ofNullable(this.roleDefinition);
     }
 
     /**
@@ -43,64 +43,56 @@ public final class PolicyAssignmentPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="scope")
-      private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
+    private @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
     public Optional<PolicyAssignmentPropertiesResponseScope> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
-    public PolicyAssignmentPropertiesResponse(
-        @Nullable PolicyAssignmentPropertiesResponsePolicy policy,
-        @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition,
-        @Nullable PolicyAssignmentPropertiesResponseScope scope) {
-        this.policy = policy;
-        this.roleDefinition = roleDefinition;
-        this.scope = scope;
-    }
+    private PolicyAssignmentPropertiesResponse() {}
 
-    private PolicyAssignmentPropertiesResponse() {
-        this.policy = null;
-        this.roleDefinition = null;
-        this.scope = null;
+    private PolicyAssignmentPropertiesResponse(PolicyAssignmentPropertiesResponse $) {
+        this.policy = $.policy;
+        this.roleDefinition = $.roleDefinition;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAssignmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
-        private @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
-        private @Nullable PolicyAssignmentPropertiesResponseScope scope;
+        private PolicyAssignmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAssignmentPropertiesResponse();
         }
 
         public Builder(PolicyAssignmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.roleDefinition = defaults.roleDefinition;
-    	      this.scope = defaults.scope;
+            $ = new PolicyAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable PolicyAssignmentPropertiesResponsePolicy policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder roleDefinition(@Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition) {
-            this.roleDefinition = roleDefinition;
+            $.roleDefinition = roleDefinition;
             return this;
         }
+
         public Builder scope(@Nullable PolicyAssignmentPropertiesResponseScope scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
-        }        public PolicyAssignmentPropertiesResponse build() {
-            return new PolicyAssignmentPropertiesResponse(policy, roleDefinition, scope);
+        }
+
+        public PolicyAssignmentPropertiesResponse build() {
+            return $;
         }
     }
+
 }

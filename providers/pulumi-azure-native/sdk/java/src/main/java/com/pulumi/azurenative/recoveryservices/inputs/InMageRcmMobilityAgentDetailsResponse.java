@@ -22,7 +22,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="agentVersionExpiryDate", required=true)
-      private final String agentVersionExpiryDate;
+    private String agentVersionExpiryDate;
 
     public String agentVersionExpiryDate() {
         return this.agentVersionExpiryDate;
@@ -33,7 +33,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="driverVersion", required=true)
-      private final String driverVersion;
+    private String driverVersion;
 
     public String driverVersion() {
         return this.driverVersion;
@@ -44,7 +44,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="driverVersionExpiryDate", required=true)
-      private final String driverVersionExpiryDate;
+    private String driverVersionExpiryDate;
 
     public String driverVersionExpiryDate() {
         return this.driverVersionExpiryDate;
@@ -55,7 +55,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="isUpgradeable", required=true)
-      private final String isUpgradeable;
+    private String isUpgradeable;
 
     public String isUpgradeable() {
         return this.isUpgradeable;
@@ -66,7 +66,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="lastHeartbeatUtc", required=true)
-      private final String lastHeartbeatUtc;
+    private String lastHeartbeatUtc;
 
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
@@ -77,7 +77,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="latestUpgradableVersionWithoutReboot", required=true)
-      private final String latestUpgradableVersionWithoutReboot;
+    private String latestUpgradableVersionWithoutReboot;
 
     public String latestUpgradableVersionWithoutReboot() {
         return this.latestUpgradableVersionWithoutReboot;
@@ -88,7 +88,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="latestVersion", required=true)
-      private final String latestVersion;
+    private String latestVersion;
 
     public String latestVersion() {
         return this.latestVersion;
@@ -99,7 +99,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="reasonsBlockingUpgrade", required=true)
-      private final List<String> reasonsBlockingUpgrade;
+    private List<String> reasonsBlockingUpgrade;
 
     public List<String> reasonsBlockingUpgrade() {
         return this.reasonsBlockingUpgrade;
@@ -110,121 +110,105 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public InMageRcmMobilityAgentDetailsResponse(
-        String agentVersionExpiryDate,
-        String driverVersion,
-        String driverVersionExpiryDate,
-        String isUpgradeable,
-        String lastHeartbeatUtc,
-        String latestUpgradableVersionWithoutReboot,
-        String latestVersion,
-        List<String> reasonsBlockingUpgrade,
-        String version) {
-        this.agentVersionExpiryDate = Objects.requireNonNull(agentVersionExpiryDate, "expected parameter 'agentVersionExpiryDate' to be non-null");
-        this.driverVersion = Objects.requireNonNull(driverVersion, "expected parameter 'driverVersion' to be non-null");
-        this.driverVersionExpiryDate = Objects.requireNonNull(driverVersionExpiryDate, "expected parameter 'driverVersionExpiryDate' to be non-null");
-        this.isUpgradeable = Objects.requireNonNull(isUpgradeable, "expected parameter 'isUpgradeable' to be non-null");
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc, "expected parameter 'lastHeartbeatUtc' to be non-null");
-        this.latestUpgradableVersionWithoutReboot = Objects.requireNonNull(latestUpgradableVersionWithoutReboot, "expected parameter 'latestUpgradableVersionWithoutReboot' to be non-null");
-        this.latestVersion = Objects.requireNonNull(latestVersion, "expected parameter 'latestVersion' to be non-null");
-        this.reasonsBlockingUpgrade = Objects.requireNonNull(reasonsBlockingUpgrade, "expected parameter 'reasonsBlockingUpgrade' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private InMageRcmMobilityAgentDetailsResponse() {}
 
-    private InMageRcmMobilityAgentDetailsResponse() {
-        this.agentVersionExpiryDate = null;
-        this.driverVersion = null;
-        this.driverVersionExpiryDate = null;
-        this.isUpgradeable = null;
-        this.lastHeartbeatUtc = null;
-        this.latestUpgradableVersionWithoutReboot = null;
-        this.latestVersion = null;
-        this.reasonsBlockingUpgrade = List.of();
-        this.version = null;
+    private InMageRcmMobilityAgentDetailsResponse(InMageRcmMobilityAgentDetailsResponse $) {
+        this.agentVersionExpiryDate = $.agentVersionExpiryDate;
+        this.driverVersion = $.driverVersion;
+        this.driverVersionExpiryDate = $.driverVersionExpiryDate;
+        this.isUpgradeable = $.isUpgradeable;
+        this.lastHeartbeatUtc = $.lastHeartbeatUtc;
+        this.latestUpgradableVersionWithoutReboot = $.latestUpgradableVersionWithoutReboot;
+        this.latestVersion = $.latestVersion;
+        this.reasonsBlockingUpgrade = $.reasonsBlockingUpgrade;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmMobilityAgentDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentVersionExpiryDate;
-        private String driverVersion;
-        private String driverVersionExpiryDate;
-        private String isUpgradeable;
-        private String lastHeartbeatUtc;
-        private String latestUpgradableVersionWithoutReboot;
-        private String latestVersion;
-        private List<String> reasonsBlockingUpgrade;
-        private String version;
+        private InMageRcmMobilityAgentDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmMobilityAgentDetailsResponse();
         }
 
         public Builder(InMageRcmMobilityAgentDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersionExpiryDate = defaults.agentVersionExpiryDate;
-    	      this.driverVersion = defaults.driverVersion;
-    	      this.driverVersionExpiryDate = defaults.driverVersionExpiryDate;
-    	      this.isUpgradeable = defaults.isUpgradeable;
-    	      this.lastHeartbeatUtc = defaults.lastHeartbeatUtc;
-    	      this.latestUpgradableVersionWithoutReboot = defaults.latestUpgradableVersionWithoutReboot;
-    	      this.latestVersion = defaults.latestVersion;
-    	      this.reasonsBlockingUpgrade = defaults.reasonsBlockingUpgrade;
-    	      this.version = defaults.version;
+            $ = new InMageRcmMobilityAgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersionExpiryDate(String agentVersionExpiryDate) {
-            this.agentVersionExpiryDate = Objects.requireNonNull(agentVersionExpiryDate);
+            $.agentVersionExpiryDate = agentVersionExpiryDate;
             return this;
         }
+
         public Builder driverVersion(String driverVersion) {
-            this.driverVersion = Objects.requireNonNull(driverVersion);
+            $.driverVersion = driverVersion;
             return this;
         }
+
         public Builder driverVersionExpiryDate(String driverVersionExpiryDate) {
-            this.driverVersionExpiryDate = Objects.requireNonNull(driverVersionExpiryDate);
+            $.driverVersionExpiryDate = driverVersionExpiryDate;
             return this;
         }
+
         public Builder isUpgradeable(String isUpgradeable) {
-            this.isUpgradeable = Objects.requireNonNull(isUpgradeable);
+            $.isUpgradeable = isUpgradeable;
             return this;
         }
+
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
-            this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
+            $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
+
         public Builder latestUpgradableVersionWithoutReboot(String latestUpgradableVersionWithoutReboot) {
-            this.latestUpgradableVersionWithoutReboot = Objects.requireNonNull(latestUpgradableVersionWithoutReboot);
+            $.latestUpgradableVersionWithoutReboot = latestUpgradableVersionWithoutReboot;
             return this;
         }
+
         public Builder latestVersion(String latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            $.latestVersion = latestVersion;
             return this;
         }
+
         public Builder reasonsBlockingUpgrade(List<String> reasonsBlockingUpgrade) {
-            this.reasonsBlockingUpgrade = Objects.requireNonNull(reasonsBlockingUpgrade);
+            $.reasonsBlockingUpgrade = reasonsBlockingUpgrade;
             return this;
         }
+
         public Builder reasonsBlockingUpgrade(String... reasonsBlockingUpgrade) {
             return reasonsBlockingUpgrade(List.of(reasonsBlockingUpgrade));
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public InMageRcmMobilityAgentDetailsResponse build() {
-            return new InMageRcmMobilityAgentDetailsResponse(agentVersionExpiryDate, driverVersion, driverVersionExpiryDate, isUpgradeable, lastHeartbeatUtc, latestUpgradableVersionWithoutReboot, latestVersion, reasonsBlockingUpgrade, version);
+        }
+
+        public InMageRcmMobilityAgentDetailsResponse build() {
+            $.agentVersionExpiryDate = Objects.requireNonNull($.agentVersionExpiryDate, "expected parameter 'agentVersionExpiryDate' to be non-null");
+            $.driverVersion = Objects.requireNonNull($.driverVersion, "expected parameter 'driverVersion' to be non-null");
+            $.driverVersionExpiryDate = Objects.requireNonNull($.driverVersionExpiryDate, "expected parameter 'driverVersionExpiryDate' to be non-null");
+            $.isUpgradeable = Objects.requireNonNull($.isUpgradeable, "expected parameter 'isUpgradeable' to be non-null");
+            $.lastHeartbeatUtc = Objects.requireNonNull($.lastHeartbeatUtc, "expected parameter 'lastHeartbeatUtc' to be non-null");
+            $.latestUpgradableVersionWithoutReboot = Objects.requireNonNull($.latestUpgradableVersionWithoutReboot, "expected parameter 'latestUpgradableVersionWithoutReboot' to be non-null");
+            $.latestVersion = Objects.requireNonNull($.latestVersion, "expected parameter 'latestVersion' to be non-null");
+            $.reasonsBlockingUpgrade = Objects.requireNonNull($.reasonsBlockingUpgrade, "expected parameter 'reasonsBlockingUpgrade' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

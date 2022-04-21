@@ -23,45 +23,44 @@ public final class EncryptionPropertiesResponseIdentity extends com.pulumi.resou
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable Object userAssignedIdentity;
+    private @Nullable Object userAssignedIdentity;
 
     public Optional<Object> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public EncryptionPropertiesResponseIdentity(@Nullable Object userAssignedIdentity) {
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private EncryptionPropertiesResponseIdentity() {}
 
-    private EncryptionPropertiesResponseIdentity() {
-        this.userAssignedIdentity = null;
+    private EncryptionPropertiesResponseIdentity(EncryptionPropertiesResponseIdentity $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertiesResponseIdentity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object userAssignedIdentity;
+        private EncryptionPropertiesResponseIdentity $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertiesResponseIdentity();
         }
 
         public Builder(EncryptionPropertiesResponseIdentity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new EncryptionPropertiesResponseIdentity(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public EncryptionPropertiesResponseIdentity build() {
-            return new EncryptionPropertiesResponseIdentity(userAssignedIdentity);
+        }
+
+        public EncryptionPropertiesResponseIdentity build() {
+            return $;
         }
     }
+
 }

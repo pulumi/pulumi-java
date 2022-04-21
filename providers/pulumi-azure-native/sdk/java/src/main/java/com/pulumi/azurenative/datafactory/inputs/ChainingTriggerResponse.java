@@ -28,10 +28,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dependsOn", required=true)
-      private final List<PipelineReferenceResponse> dependsOn;
+    private List<PipelineReferenceResponse> dependsOn;
 
     public List<PipelineReferenceResponse> dependsOn() {
         return this.dependsOn;
@@ -50,10 +50,10 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="pipeline", required=true)
-      private final TriggerPipelineReferenceResponse pipeline;
+    private TriggerPipelineReferenceResponse pipeline;
 
     public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
@@ -72,7 +72,7 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="runDimension", required=true)
-      private final String runDimension;
+    private String runDimension;
 
     public String runDimension() {
         return this.runDimension;
@@ -83,7 +83,7 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="runtimeState", required=true)
-      private final String runtimeState;
+    private String runtimeState;
 
     public String runtimeState() {
         return this.runtimeState;
@@ -95,106 +95,93 @@ public final class ChainingTriggerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ChainingTriggerResponse(
-        @Nullable List<Object> annotations,
-        List<PipelineReferenceResponse> dependsOn,
-        @Nullable String description,
-        TriggerPipelineReferenceResponse pipeline,
-        String runDimension,
-        String runtimeState,
-        String type) {
-        this.annotations = annotations;
-        this.dependsOn = Objects.requireNonNull(dependsOn, "expected parameter 'dependsOn' to be non-null");
-        this.description = description;
-        this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
-        this.runDimension = Objects.requireNonNull(runDimension, "expected parameter 'runDimension' to be non-null");
-        this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ChainingTriggerResponse() {}
 
-    private ChainingTriggerResponse() {
-        this.annotations = List.of();
-        this.dependsOn = List.of();
-        this.description = null;
-        this.pipeline = null;
-        this.runDimension = null;
-        this.runtimeState = null;
-        this.type = null;
+    private ChainingTriggerResponse(ChainingTriggerResponse $) {
+        this.annotations = $.annotations;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.pipeline = $.pipeline;
+        this.runDimension = $.runDimension;
+        this.runtimeState = $.runtimeState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChainingTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private List<PipelineReferenceResponse> dependsOn;
-        private @Nullable String description;
-        private TriggerPipelineReferenceResponse pipeline;
-        private String runDimension;
-        private String runtimeState;
-        private String type;
+        private ChainingTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChainingTriggerResponse();
         }
 
         public Builder(ChainingTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.pipeline = defaults.pipeline;
-    	      this.runDimension = defaults.runDimension;
-    	      this.runtimeState = defaults.runtimeState;
-    	      this.type = defaults.type;
+            $ = new ChainingTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder dependsOn(List<PipelineReferenceResponse> dependsOn) {
-            this.dependsOn = Objects.requireNonNull(dependsOn);
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(PipelineReferenceResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
-            this.pipeline = Objects.requireNonNull(pipeline);
+            $.pipeline = pipeline;
             return this;
         }
+
         public Builder runDimension(String runDimension) {
-            this.runDimension = Objects.requireNonNull(runDimension);
+            $.runDimension = runDimension;
             return this;
         }
+
         public Builder runtimeState(String runtimeState) {
-            this.runtimeState = Objects.requireNonNull(runtimeState);
+            $.runtimeState = runtimeState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ChainingTriggerResponse build() {
-            return new ChainingTriggerResponse(annotations, dependsOn, description, pipeline, runDimension, runtimeState, type);
+        }
+
+        public ChainingTriggerResponse build() {
+            $.dependsOn = Objects.requireNonNull($.dependsOn, "expected parameter 'dependsOn' to be non-null");
+            $.pipeline = Objects.requireNonNull($.pipeline, "expected parameter 'pipeline' to be non-null");
+            $.runDimension = Objects.requireNonNull($.runDimension, "expected parameter 'runDimension' to be non-null");
+            $.runtimeState = Objects.requireNonNull($.runtimeState, "expected parameter 'runtimeState' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

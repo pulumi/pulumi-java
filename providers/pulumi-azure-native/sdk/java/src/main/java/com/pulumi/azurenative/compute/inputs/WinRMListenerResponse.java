@@ -23,10 +23,10 @@ public final class WinRMListenerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="certificateUrl")
-      private final @Nullable String certificateUrl;
+    private @Nullable String certificateUrl;
 
     public Optional<String> certificateUrl() {
-        return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
+        return Optional.ofNullable(this.certificateUrl);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class WinRMListenerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
-    public WinRMListenerResponse(
-        @Nullable String certificateUrl,
-        @Nullable String protocol) {
-        this.certificateUrl = certificateUrl;
-        this.protocol = protocol;
-    }
+    private WinRMListenerResponse() {}
 
-    private WinRMListenerResponse() {
-        this.certificateUrl = null;
-        this.protocol = null;
+    private WinRMListenerResponse(WinRMListenerResponse $) {
+        this.certificateUrl = $.certificateUrl;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WinRMListenerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateUrl;
-        private @Nullable String protocol;
+        private WinRMListenerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WinRMListenerResponse();
         }
 
         public Builder(WinRMListenerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateUrl = defaults.certificateUrl;
-    	      this.protocol = defaults.protocol;
+            $ = new WinRMListenerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = certificateUrl;
+            $.certificateUrl = certificateUrl;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
-        }        public WinRMListenerResponse build() {
-            return new WinRMListenerResponse(certificateUrl, protocol);
+        }
+
+        public WinRMListenerResponse build() {
+            return $;
         }
     }
+
 }

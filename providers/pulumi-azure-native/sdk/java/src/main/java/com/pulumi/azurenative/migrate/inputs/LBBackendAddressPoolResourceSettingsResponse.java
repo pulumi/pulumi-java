@@ -23,45 +23,44 @@ public final class LBBackendAddressPoolResourceSettingsResponse extends com.pulu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public LBBackendAddressPoolResourceSettingsResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private LBBackendAddressPoolResourceSettingsResponse() {}
 
-    private LBBackendAddressPoolResourceSettingsResponse() {
-        this.name = null;
+    private LBBackendAddressPoolResourceSettingsResponse(LBBackendAddressPoolResourceSettingsResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LBBackendAddressPoolResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private LBBackendAddressPoolResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LBBackendAddressPoolResourceSettingsResponse();
         }
 
         public Builder(LBBackendAddressPoolResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new LBBackendAddressPoolResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public LBBackendAddressPoolResourceSettingsResponse build() {
-            return new LBBackendAddressPoolResourceSettingsResponse(name);
+        }
+
+        public LBBackendAddressPoolResourceSettingsResponse build() {
+            return $;
         }
     }
+
 }

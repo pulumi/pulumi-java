@@ -17,7 +17,7 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-      private final String authorizationRuleName;
+    private String authorizationRuleName;
 
     public String authorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,64 +39,59 @@ public final class GetNamespaceAuthorizationRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNamespaceAuthorizationRuleArgs(
-        String authorizationRuleName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNamespaceAuthorizationRuleArgs() {}
 
-    private GetNamespaceAuthorizationRuleArgs() {
-        this.authorizationRuleName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetNamespaceAuthorizationRuleArgs(GetNamespaceAuthorizationRuleArgs $) {
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNamespaceAuthorizationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationRuleName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetNamespaceAuthorizationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNamespaceAuthorizationRuleArgs();
         }
 
         public Builder(GetNamespaceAuthorizationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNamespaceAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRuleName(String authorizationRuleName) {
-            this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNamespaceAuthorizationRuleArgs build() {
-            return new GetNamespaceAuthorizationRuleArgs(authorizationRuleName, namespaceName, resourceGroupName);
+        }
+
+        public GetNamespaceAuthorizationRuleArgs build() {
+            $.authorizationRuleName = Objects.requireNonNull($.authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

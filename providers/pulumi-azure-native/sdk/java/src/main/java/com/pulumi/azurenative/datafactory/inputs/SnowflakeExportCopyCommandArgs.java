@@ -10,6 +10,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="additionalCopyOptions")
-      private final @Nullable Output<Map<String,Object>> additionalCopyOptions;
+    private @Nullable Output<Map<String,Object>> additionalCopyOptions;
 
-    public Output<Map<String,Object>> additionalCopyOptions() {
-        return this.additionalCopyOptions == null ? Codegen.empty() : this.additionalCopyOptions;
+    public Optional<Output<Map<String,Object>>> additionalCopyOptions() {
+        return Optional.ofNullable(this.additionalCopyOptions);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="additionalFormatOptions")
-      private final @Nullable Output<Map<String,Object>> additionalFormatOptions;
+    private @Nullable Output<Map<String,Object>> additionalFormatOptions;
 
-    public Output<Map<String,Object>> additionalFormatOptions() {
-        return this.additionalFormatOptions == null ? Codegen.empty() : this.additionalFormatOptions;
+    public Optional<Output<Map<String,Object>>> additionalFormatOptions() {
+        return Optional.ofNullable(this.additionalFormatOptions);
     }
 
     /**
@@ -49,76 +50,69 @@ public final class SnowflakeExportCopyCommandArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SnowflakeExportCopyCommandArgs(
-        @Nullable Output<Map<String,Object>> additionalCopyOptions,
-        @Nullable Output<Map<String,Object>> additionalFormatOptions,
-        Output<String> type) {
-        this.additionalCopyOptions = additionalCopyOptions;
-        this.additionalFormatOptions = additionalFormatOptions;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SnowflakeExportCopyCommandArgs() {}
 
-    private SnowflakeExportCopyCommandArgs() {
-        this.additionalCopyOptions = Codegen.empty();
-        this.additionalFormatOptions = Codegen.empty();
-        this.type = Codegen.empty();
+    private SnowflakeExportCopyCommandArgs(SnowflakeExportCopyCommandArgs $) {
+        this.additionalCopyOptions = $.additionalCopyOptions;
+        this.additionalFormatOptions = $.additionalFormatOptions;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnowflakeExportCopyCommandArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> additionalCopyOptions;
-        private @Nullable Output<Map<String,Object>> additionalFormatOptions;
-        private Output<String> type;
+        private SnowflakeExportCopyCommandArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnowflakeExportCopyCommandArgs();
         }
 
         public Builder(SnowflakeExportCopyCommandArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCopyOptions = defaults.additionalCopyOptions;
-    	      this.additionalFormatOptions = defaults.additionalFormatOptions;
-    	      this.type = defaults.type;
+            $ = new SnowflakeExportCopyCommandArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCopyOptions(@Nullable Output<Map<String,Object>> additionalCopyOptions) {
-            this.additionalCopyOptions = additionalCopyOptions;
+            $.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
-        public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
-            this.additionalCopyOptions = Codegen.ofNullable(additionalCopyOptions);
-            return this;
+
+        public Builder additionalCopyOptions(Map<String,Object> additionalCopyOptions) {
+            return additionalCopyOptions(Output.of(additionalCopyOptions));
         }
+
         public Builder additionalFormatOptions(@Nullable Output<Map<String,Object>> additionalFormatOptions) {
-            this.additionalFormatOptions = additionalFormatOptions;
+            $.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
-        public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
-            this.additionalFormatOptions = Codegen.ofNullable(additionalFormatOptions);
-            return this;
+
+        public Builder additionalFormatOptions(Map<String,Object> additionalFormatOptions) {
+            return additionalFormatOptions(Output.of(additionalFormatOptions));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SnowflakeExportCopyCommandArgs build() {
-            return new SnowflakeExportCopyCommandArgs(additionalCopyOptions, additionalFormatOptions, type);
+            return type(Output.of(type));
+        }
+
+        public SnowflakeExportCopyCommandArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class TrustPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -35,55 +35,52 @@ public final class TrustPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public TrustPolicyResponse(
-        @Nullable String status,
-        @Nullable String type) {
-        this.status = Codegen.stringProp("status").arg(status).def("disabled").getNullable();
-        this.type = Codegen.stringProp("type").arg(type).def("Notary").getNullable();
-    }
+    private TrustPolicyResponse() {}
 
-    private TrustPolicyResponse() {
-        this.status = null;
-        this.type = null;
+    private TrustPolicyResponse(TrustPolicyResponse $) {
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrustPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String status;
-        private @Nullable String type;
+        private TrustPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrustPolicyResponse();
         }
 
         public Builder(TrustPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new TrustPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public TrustPolicyResponse build() {
-            return new TrustPolicyResponse(status, type);
+        }
+
+        public TrustPolicyResponse build() {
+            $.status = Codegen.stringProp("status").arg($.status).def("disabled").getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).def("Notary").getNullable();
+            return $;
         }
     }
+
 }

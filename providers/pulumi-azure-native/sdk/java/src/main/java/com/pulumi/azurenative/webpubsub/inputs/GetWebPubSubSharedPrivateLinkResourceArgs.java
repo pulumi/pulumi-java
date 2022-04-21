@@ -17,7 +17,7 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -39,64 +39,59 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends com.pulumi.
      * 
      */
     @Import(name="sharedPrivateLinkResourceName", required=true)
-      private final String sharedPrivateLinkResourceName;
+    private String sharedPrivateLinkResourceName;
 
     public String sharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName;
     }
 
-    public GetWebPubSubSharedPrivateLinkResourceArgs(
-        String resourceGroupName,
-        String resourceName,
-        String sharedPrivateLinkResourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName, "expected parameter 'sharedPrivateLinkResourceName' to be non-null");
-    }
+    private GetWebPubSubSharedPrivateLinkResourceArgs() {}
 
-    private GetWebPubSubSharedPrivateLinkResourceArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.sharedPrivateLinkResourceName = null;
+    private GetWebPubSubSharedPrivateLinkResourceArgs(GetWebPubSubSharedPrivateLinkResourceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.sharedPrivateLinkResourceName = $.sharedPrivateLinkResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebPubSubSharedPrivateLinkResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
-        private String sharedPrivateLinkResourceName;
+        private GetWebPubSubSharedPrivateLinkResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebPubSubSharedPrivateLinkResourceArgs();
         }
 
         public Builder(GetWebPubSubSharedPrivateLinkResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.sharedPrivateLinkResourceName = defaults.sharedPrivateLinkResourceName;
+            $ = new GetWebPubSubSharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
+            $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
-        }        public GetWebPubSubSharedPrivateLinkResourceArgs build() {
-            return new GetWebPubSubSharedPrivateLinkResourceArgs(resourceGroupName, resourceName, sharedPrivateLinkResourceName);
+        }
+
+        public GetWebPubSubSharedPrivateLinkResourceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.sharedPrivateLinkResourceName = Objects.requireNonNull($.sharedPrivateLinkResourceName, "expected parameter 'sharedPrivateLinkResourceName' to be non-null");
+            return $;
         }
     }
+
 }

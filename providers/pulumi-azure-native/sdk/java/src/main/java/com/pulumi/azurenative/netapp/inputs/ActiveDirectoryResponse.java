@@ -26,10 +26,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="activeDirectoryId")
-      private final @Nullable String activeDirectoryId;
+    private @Nullable String activeDirectoryId;
 
     public Optional<String> activeDirectoryId() {
-        return this.activeDirectoryId == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryId);
+        return Optional.ofNullable(this.activeDirectoryId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="adName")
-      private final @Nullable String adName;
+    private @Nullable String adName;
 
     public Optional<String> adName() {
-        return this.adName == null ? Optional.empty() : Optional.ofNullable(this.adName);
+        return Optional.ofNullable(this.adName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="aesEncryption")
-      private final @Nullable Boolean aesEncryption;
+    private @Nullable Boolean aesEncryption;
 
     public Optional<Boolean> aesEncryption() {
-        return this.aesEncryption == null ? Optional.empty() : Optional.ofNullable(this.aesEncryption);
+        return Optional.ofNullable(this.aesEncryption);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allowLocalNfsUsersWithLdap")
-      private final @Nullable Boolean allowLocalNfsUsersWithLdap;
+    private @Nullable Boolean allowLocalNfsUsersWithLdap;
 
     public Optional<Boolean> allowLocalNfsUsersWithLdap() {
-        return this.allowLocalNfsUsersWithLdap == null ? Optional.empty() : Optional.ofNullable(this.allowLocalNfsUsersWithLdap);
+        return Optional.ofNullable(this.allowLocalNfsUsersWithLdap);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="backupOperators")
-      private final @Nullable List<String> backupOperators;
+    private @Nullable List<String> backupOperators;
 
-    public List<String> backupOperators() {
-        return this.backupOperators == null ? List.of() : this.backupOperators;
+    public Optional<List<String>> backupOperators() {
+        return Optional.ofNullable(this.backupOperators);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dns")
-      private final @Nullable String dns;
+    private @Nullable String dns;
 
     public Optional<String> dns() {
-        return this.dns == null ? Optional.empty() : Optional.ofNullable(this.dns);
+        return Optional.ofNullable(this.dns);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="domain")
-      private final @Nullable String domain;
+    private @Nullable String domain;
 
     public Optional<String> domain() {
-        return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="kdcIP")
-      private final @Nullable String kdcIP;
+    private @Nullable String kdcIP;
 
     public Optional<String> kdcIP() {
-        return this.kdcIP == null ? Optional.empty() : Optional.ofNullable(this.kdcIP);
+        return Optional.ofNullable(this.kdcIP);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ldapOverTLS")
-      private final @Nullable Boolean ldapOverTLS;
+    private @Nullable Boolean ldapOverTLS;
 
     public Optional<Boolean> ldapOverTLS() {
-        return this.ldapOverTLS == null ? Optional.empty() : Optional.ofNullable(this.ldapOverTLS);
+        return Optional.ofNullable(this.ldapOverTLS);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ldapSigning")
-      private final @Nullable Boolean ldapSigning;
+    private @Nullable Boolean ldapSigning;
 
     public Optional<Boolean> ldapSigning() {
-        return this.ldapSigning == null ? Optional.empty() : Optional.ofNullable(this.ldapSigning);
+        return Optional.ofNullable(this.ldapSigning);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="organizationalUnit")
-      private final @Nullable String organizationalUnit;
+    private @Nullable String organizationalUnit;
 
     public Optional<String> organizationalUnit() {
-        return this.organizationalUnit == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnit);
+        return Optional.ofNullable(this.organizationalUnit);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="securityOperators")
-      private final @Nullable List<String> securityOperators;
+    private @Nullable List<String> securityOperators;
 
-    public List<String> securityOperators() {
-        return this.securityOperators == null ? List.of() : this.securityOperators;
+    public Optional<List<String>> securityOperators() {
+        return Optional.ofNullable(this.securityOperators);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverRootCACertificate")
-      private final @Nullable String serverRootCACertificate;
+    private @Nullable String serverRootCACertificate;
 
     public Optional<String> serverRootCACertificate() {
-        return this.serverRootCACertificate == null ? Optional.empty() : Optional.ofNullable(this.serverRootCACertificate);
+        return Optional.ofNullable(this.serverRootCACertificate);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="site")
-      private final @Nullable String site;
+    private @Nullable String site;
 
     public Optional<String> site() {
-        return this.site == null ? Optional.empty() : Optional.ofNullable(this.site);
+        return Optional.ofNullable(this.site);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="smbServerName")
-      private final @Nullable String smbServerName;
+    private @Nullable String smbServerName;
 
     public Optional<String> smbServerName() {
-        return this.smbServerName == null ? Optional.empty() : Optional.ofNullable(this.smbServerName);
+        return Optional.ofNullable(this.smbServerName);
     }
 
     /**
@@ -202,7 +202,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -213,7 +213,7 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="statusDetails", required=true)
-      private final String statusDetails;
+    private String statusDetails;
 
     public String statusDetails() {
         return this.statusDetails;
@@ -224,214 +224,163 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public ActiveDirectoryResponse(
-        @Nullable String activeDirectoryId,
-        @Nullable String adName,
-        @Nullable Boolean aesEncryption,
-        @Nullable Boolean allowLocalNfsUsersWithLdap,
-        @Nullable List<String> backupOperators,
-        @Nullable String dns,
-        @Nullable String domain,
-        @Nullable String kdcIP,
-        @Nullable Boolean ldapOverTLS,
-        @Nullable Boolean ldapSigning,
-        @Nullable String organizationalUnit,
-        @Nullable String password,
-        @Nullable List<String> securityOperators,
-        @Nullable String serverRootCACertificate,
-        @Nullable String site,
-        @Nullable String smbServerName,
-        String status,
-        String statusDetails,
-        @Nullable String username) {
-        this.activeDirectoryId = activeDirectoryId;
-        this.adName = adName;
-        this.aesEncryption = aesEncryption;
-        this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
-        this.backupOperators = backupOperators;
-        this.dns = dns;
-        this.domain = domain;
-        this.kdcIP = kdcIP;
-        this.ldapOverTLS = ldapOverTLS;
-        this.ldapSigning = ldapSigning;
-        this.organizationalUnit = Codegen.stringProp("organizationalUnit").arg(organizationalUnit).def("CN=Computers").getNullable();
-        this.password = password;
-        this.securityOperators = securityOperators;
-        this.serverRootCACertificate = serverRootCACertificate;
-        this.site = site;
-        this.smbServerName = smbServerName;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusDetails = Objects.requireNonNull(statusDetails, "expected parameter 'statusDetails' to be non-null");
-        this.username = username;
-    }
+    private ActiveDirectoryResponse() {}
 
-    private ActiveDirectoryResponse() {
-        this.activeDirectoryId = null;
-        this.adName = null;
-        this.aesEncryption = null;
-        this.allowLocalNfsUsersWithLdap = null;
-        this.backupOperators = List.of();
-        this.dns = null;
-        this.domain = null;
-        this.kdcIP = null;
-        this.ldapOverTLS = null;
-        this.ldapSigning = null;
-        this.organizationalUnit = null;
-        this.password = null;
-        this.securityOperators = List.of();
-        this.serverRootCACertificate = null;
-        this.site = null;
-        this.smbServerName = null;
-        this.status = null;
-        this.statusDetails = null;
-        this.username = null;
+    private ActiveDirectoryResponse(ActiveDirectoryResponse $) {
+        this.activeDirectoryId = $.activeDirectoryId;
+        this.adName = $.adName;
+        this.aesEncryption = $.aesEncryption;
+        this.allowLocalNfsUsersWithLdap = $.allowLocalNfsUsersWithLdap;
+        this.backupOperators = $.backupOperators;
+        this.dns = $.dns;
+        this.domain = $.domain;
+        this.kdcIP = $.kdcIP;
+        this.ldapOverTLS = $.ldapOverTLS;
+        this.ldapSigning = $.ldapSigning;
+        this.organizationalUnit = $.organizationalUnit;
+        this.password = $.password;
+        this.securityOperators = $.securityOperators;
+        this.serverRootCACertificate = $.serverRootCACertificate;
+        this.site = $.site;
+        this.smbServerName = $.smbServerName;
+        this.status = $.status;
+        this.statusDetails = $.statusDetails;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActiveDirectoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeDirectoryId;
-        private @Nullable String adName;
-        private @Nullable Boolean aesEncryption;
-        private @Nullable Boolean allowLocalNfsUsersWithLdap;
-        private @Nullable List<String> backupOperators;
-        private @Nullable String dns;
-        private @Nullable String domain;
-        private @Nullable String kdcIP;
-        private @Nullable Boolean ldapOverTLS;
-        private @Nullable Boolean ldapSigning;
-        private @Nullable String organizationalUnit;
-        private @Nullable String password;
-        private @Nullable List<String> securityOperators;
-        private @Nullable String serverRootCACertificate;
-        private @Nullable String site;
-        private @Nullable String smbServerName;
-        private String status;
-        private String statusDetails;
-        private @Nullable String username;
+        private ActiveDirectoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActiveDirectoryResponse();
         }
 
         public Builder(ActiveDirectoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryId = defaults.activeDirectoryId;
-    	      this.adName = defaults.adName;
-    	      this.aesEncryption = defaults.aesEncryption;
-    	      this.allowLocalNfsUsersWithLdap = defaults.allowLocalNfsUsersWithLdap;
-    	      this.backupOperators = defaults.backupOperators;
-    	      this.dns = defaults.dns;
-    	      this.domain = defaults.domain;
-    	      this.kdcIP = defaults.kdcIP;
-    	      this.ldapOverTLS = defaults.ldapOverTLS;
-    	      this.ldapSigning = defaults.ldapSigning;
-    	      this.organizationalUnit = defaults.organizationalUnit;
-    	      this.password = defaults.password;
-    	      this.securityOperators = defaults.securityOperators;
-    	      this.serverRootCACertificate = defaults.serverRootCACertificate;
-    	      this.site = defaults.site;
-    	      this.smbServerName = defaults.smbServerName;
-    	      this.status = defaults.status;
-    	      this.statusDetails = defaults.statusDetails;
-    	      this.username = defaults.username;
+            $ = new ActiveDirectoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = activeDirectoryId;
+            $.activeDirectoryId = activeDirectoryId;
             return this;
         }
+
         public Builder adName(@Nullable String adName) {
-            this.adName = adName;
+            $.adName = adName;
             return this;
         }
+
         public Builder aesEncryption(@Nullable Boolean aesEncryption) {
-            this.aesEncryption = aesEncryption;
+            $.aesEncryption = aesEncryption;
             return this;
         }
+
         public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
-            this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
+            $.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
+
         public Builder backupOperators(@Nullable List<String> backupOperators) {
-            this.backupOperators = backupOperators;
+            $.backupOperators = backupOperators;
             return this;
         }
+
         public Builder backupOperators(String... backupOperators) {
             return backupOperators(List.of(backupOperators));
         }
+
         public Builder dns(@Nullable String dns) {
-            this.dns = dns;
+            $.dns = dns;
             return this;
         }
+
         public Builder domain(@Nullable String domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
+
         public Builder kdcIP(@Nullable String kdcIP) {
-            this.kdcIP = kdcIP;
+            $.kdcIP = kdcIP;
             return this;
         }
+
         public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
-            this.ldapOverTLS = ldapOverTLS;
+            $.ldapOverTLS = ldapOverTLS;
             return this;
         }
+
         public Builder ldapSigning(@Nullable Boolean ldapSigning) {
-            this.ldapSigning = ldapSigning;
+            $.ldapSigning = ldapSigning;
             return this;
         }
+
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = organizationalUnit;
+            $.organizationalUnit = organizationalUnit;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder securityOperators(@Nullable List<String> securityOperators) {
-            this.securityOperators = securityOperators;
+            $.securityOperators = securityOperators;
             return this;
         }
+
         public Builder securityOperators(String... securityOperators) {
             return securityOperators(List.of(securityOperators));
         }
+
         public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
-            this.serverRootCACertificate = serverRootCACertificate;
+            $.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
+
         public Builder site(@Nullable String site) {
-            this.site = site;
+            $.site = site;
             return this;
         }
+
         public Builder smbServerName(@Nullable String smbServerName) {
-            this.smbServerName = smbServerName;
+            $.smbServerName = smbServerName;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusDetails(String statusDetails) {
-            this.statusDetails = Objects.requireNonNull(statusDetails);
+            $.statusDetails = statusDetails;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public ActiveDirectoryResponse build() {
-            return new ActiveDirectoryResponse(activeDirectoryId, adName, aesEncryption, allowLocalNfsUsersWithLdap, backupOperators, dns, domain, kdcIP, ldapOverTLS, ldapSigning, organizationalUnit, password, securityOperators, serverRootCACertificate, site, smbServerName, status, statusDetails, username);
+        }
+
+        public ActiveDirectoryResponse build() {
+            $.organizationalUnit = Codegen.stringProp("organizationalUnit").arg($.organizationalUnit).def("CN=Computers").getNullable();
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusDetails = Objects.requireNonNull($.statusDetails, "expected parameter 'statusDetails' to be non-null");
+            return $;
         }
     }
+
 }

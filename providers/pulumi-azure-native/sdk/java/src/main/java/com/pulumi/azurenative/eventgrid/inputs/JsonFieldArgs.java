@@ -5,9 +5,9 @@ package com.pulumi.azurenative.eventgrid.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class JsonFieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceField")
-      private final @Nullable Output<String> sourceField;
+    private @Nullable Output<String> sourceField;
 
-    public Output<String> sourceField() {
-        return this.sourceField == null ? Codegen.empty() : this.sourceField;
+    public Optional<Output<String>> sourceField() {
+        return Optional.ofNullable(this.sourceField);
     }
 
-    public JsonFieldArgs(@Nullable Output<String> sourceField) {
-        this.sourceField = sourceField;
-    }
+    private JsonFieldArgs() {}
 
-    private JsonFieldArgs() {
-        this.sourceField = Codegen.empty();
+    private JsonFieldArgs(JsonFieldArgs $) {
+        this.sourceField = $.sourceField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sourceField;
+        private JsonFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonFieldArgs();
         }
 
         public Builder(JsonFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceField = defaults.sourceField;
+            $ = new JsonFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceField(@Nullable Output<String> sourceField) {
-            this.sourceField = sourceField;
+            $.sourceField = sourceField;
             return this;
         }
-        public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = Codegen.ofNullable(sourceField);
-            return this;
-        }        public JsonFieldArgs build() {
-            return new JsonFieldArgs(sourceField);
+
+        public Builder sourceField(String sourceField) {
+            return sourceField(Output.of(sourceField));
+        }
+
+        public JsonFieldArgs build() {
+            return $;
         }
     }
+
 }

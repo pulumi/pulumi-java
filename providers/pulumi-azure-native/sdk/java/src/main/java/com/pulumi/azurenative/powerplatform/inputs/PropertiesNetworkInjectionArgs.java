@@ -6,8 +6,8 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesListArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PropertiesNetworkInjectionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="virtualNetworks")
-      private final @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
+    private @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
-    public Output<VirtualNetworkPropertiesListArgs> virtualNetworks() {
-        return this.virtualNetworks == null ? Codegen.empty() : this.virtualNetworks;
+    public Optional<Output<VirtualNetworkPropertiesListArgs>> virtualNetworks() {
+        return Optional.ofNullable(this.virtualNetworks);
     }
 
-    public PropertiesNetworkInjectionArgs(@Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks) {
-        this.virtualNetworks = virtualNetworks;
-    }
+    private PropertiesNetworkInjectionArgs() {}
 
-    private PropertiesNetworkInjectionArgs() {
-        this.virtualNetworks = Codegen.empty();
+    private PropertiesNetworkInjectionArgs(PropertiesNetworkInjectionArgs $) {
+        this.virtualNetworks = $.virtualNetworks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertiesNetworkInjectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
+        private PropertiesNetworkInjectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertiesNetworkInjectionArgs();
         }
 
         public Builder(PropertiesNetworkInjectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNetworks = defaults.virtualNetworks;
+            $ = new PropertiesNetworkInjectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNetworks(@Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks) {
-            this.virtualNetworks = virtualNetworks;
+            $.virtualNetworks = virtualNetworks;
             return this;
         }
-        public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListArgs virtualNetworks) {
-            this.virtualNetworks = Codegen.ofNullable(virtualNetworks);
-            return this;
-        }        public PropertiesNetworkInjectionArgs build() {
-            return new PropertiesNetworkInjectionArgs(virtualNetworks);
+
+        public Builder virtualNetworks(VirtualNetworkPropertiesListArgs virtualNetworks) {
+            return virtualNetworks(Output.of(virtualNetworks));
+        }
+
+        public PropertiesNetworkInjectionArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="allowedDiskLevelOperation")
-      private final @Nullable List<String> allowedDiskLevelOperation;
+    private @Nullable List<String> allowedDiskLevelOperation;
 
-    public List<String> allowedDiskLevelOperation() {
-        return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
+    public Optional<List<String>> allowedDiskLevelOperation() {
+        return Optional.ofNullable(this.allowedDiskLevelOperation);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="dataPendingAtSourceAgentInMB")
-      private final @Nullable Double dataPendingAtSourceAgentInMB;
+    private @Nullable Double dataPendingAtSourceAgentInMB;
 
     public Optional<Double> dataPendingAtSourceAgentInMB() {
-        return this.dataPendingAtSourceAgentInMB == null ? Optional.empty() : Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
+        return Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="dataPendingInStagingStorageAccountInMB")
-      private final @Nullable Double dataPendingInStagingStorageAccountInMB;
+    private @Nullable Double dataPendingInStagingStorageAccountInMB;
 
     public Optional<Double> dataPendingInStagingStorageAccountInMB() {
-        return this.dataPendingInStagingStorageAccountInMB == null ? Optional.empty() : Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
+        return Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="dekKeyVaultArmId")
-      private final @Nullable String dekKeyVaultArmId;
+    private @Nullable String dekKeyVaultArmId;
 
     public Optional<String> dekKeyVaultArmId() {
-        return this.dekKeyVaultArmId == null ? Optional.empty() : Optional.ofNullable(this.dekKeyVaultArmId);
+        return Optional.ofNullable(this.dekKeyVaultArmId);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="diskCapacityInBytes")
-      private final @Nullable Double diskCapacityInBytes;
+    private @Nullable Double diskCapacityInBytes;
 
     public Optional<Double> diskCapacityInBytes() {
-        return this.diskCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskCapacityInBytes);
+        return Optional.ofNullable(this.diskCapacityInBytes);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="diskId")
-      private final @Nullable String diskId;
+    private @Nullable String diskId;
 
     public Optional<String> diskId() {
-        return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="diskName")
-      private final @Nullable String diskName;
+    private @Nullable String diskName;
 
     public Optional<String> diskName() {
-        return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="diskState")
-      private final @Nullable String diskState;
+    private @Nullable String diskState;
 
     public Optional<String> diskState() {
-        return this.diskState == null ? Optional.empty() : Optional.ofNullable(this.diskState);
+        return Optional.ofNullable(this.diskState);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="diskType")
-      private final @Nullable String diskType;
+    private @Nullable String diskType;
 
     public Optional<String> diskType() {
-        return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="failoverDiskName")
-      private final @Nullable String failoverDiskName;
+    private @Nullable String failoverDiskName;
 
     public Optional<String> failoverDiskName() {
-        return this.failoverDiskName == null ? Optional.empty() : Optional.ofNullable(this.failoverDiskName);
+        return Optional.ofNullable(this.failoverDiskName);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="isDiskEncrypted")
-      private final @Nullable Boolean isDiskEncrypted;
+    private @Nullable Boolean isDiskEncrypted;
 
     public Optional<Boolean> isDiskEncrypted() {
-        return this.isDiskEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isDiskEncrypted);
+        return Optional.ofNullable(this.isDiskEncrypted);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="isDiskKeyEncrypted")
-      private final @Nullable Boolean isDiskKeyEncrypted;
+    private @Nullable Boolean isDiskKeyEncrypted;
 
     public Optional<Boolean> isDiskKeyEncrypted() {
-        return this.isDiskKeyEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isDiskKeyEncrypted);
+        return Optional.ofNullable(this.isDiskKeyEncrypted);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="kekKeyVaultArmId")
-      private final @Nullable String kekKeyVaultArmId;
+    private @Nullable String kekKeyVaultArmId;
 
     public Optional<String> kekKeyVaultArmId() {
-        return this.kekKeyVaultArmId == null ? Optional.empty() : Optional.ofNullable(this.kekKeyVaultArmId);
+        return Optional.ofNullable(this.kekKeyVaultArmId);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="keyIdentifier")
-      private final @Nullable String keyIdentifier;
+    private @Nullable String keyIdentifier;
 
     public Optional<String> keyIdentifier() {
-        return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
+        return Optional.ofNullable(this.keyIdentifier);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="monitoringJobType")
-      private final @Nullable String monitoringJobType;
+    private @Nullable String monitoringJobType;
 
     public Optional<String> monitoringJobType() {
-        return this.monitoringJobType == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobType);
+        return Optional.ofNullable(this.monitoringJobType);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="monitoringPercentageCompletion")
-      private final @Nullable Integer monitoringPercentageCompletion;
+    private @Nullable Integer monitoringPercentageCompletion;
 
     public Optional<Integer> monitoringPercentageCompletion() {
-        return this.monitoringPercentageCompletion == null ? Optional.empty() : Optional.ofNullable(this.monitoringPercentageCompletion);
+        return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="primaryStagingAzureStorageAccountId")
-      private final @Nullable String primaryStagingAzureStorageAccountId;
+    private @Nullable String primaryStagingAzureStorageAccountId;
 
     public Optional<String> primaryStagingAzureStorageAccountId() {
-        return this.primaryStagingAzureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
+        return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryDiskEncryptionSetId")
-      private final @Nullable String recoveryDiskEncryptionSetId;
+    private @Nullable String recoveryDiskEncryptionSetId;
 
     public Optional<String> recoveryDiskEncryptionSetId() {
-        return this.recoveryDiskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryDiskEncryptionSetId);
+        return Optional.ofNullable(this.recoveryDiskEncryptionSetId);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryReplicaDiskAccountType")
-      private final @Nullable String recoveryReplicaDiskAccountType;
+    private @Nullable String recoveryReplicaDiskAccountType;
 
     public Optional<String> recoveryReplicaDiskAccountType() {
-        return this.recoveryReplicaDiskAccountType == null ? Optional.empty() : Optional.ofNullable(this.recoveryReplicaDiskAccountType);
+        return Optional.ofNullable(this.recoveryReplicaDiskAccountType);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryReplicaDiskId")
-      private final @Nullable String recoveryReplicaDiskId;
+    private @Nullable String recoveryReplicaDiskId;
 
     public Optional<String> recoveryReplicaDiskId() {
-        return this.recoveryReplicaDiskId == null ? Optional.empty() : Optional.ofNullable(this.recoveryReplicaDiskId);
+        return Optional.ofNullable(this.recoveryReplicaDiskId);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryResourceGroupId")
-      private final @Nullable String recoveryResourceGroupId;
+    private @Nullable String recoveryResourceGroupId;
 
     public Optional<String> recoveryResourceGroupId() {
-        return this.recoveryResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryResourceGroupId);
+        return Optional.ofNullable(this.recoveryResourceGroupId);
     }
 
     /**
@@ -258,10 +258,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryTargetDiskAccountType")
-      private final @Nullable String recoveryTargetDiskAccountType;
+    private @Nullable String recoveryTargetDiskAccountType;
 
     public Optional<String> recoveryTargetDiskAccountType() {
-        return this.recoveryTargetDiskAccountType == null ? Optional.empty() : Optional.ofNullable(this.recoveryTargetDiskAccountType);
+        return Optional.ofNullable(this.recoveryTargetDiskAccountType);
     }
 
     /**
@@ -269,10 +269,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryTargetDiskId")
-      private final @Nullable String recoveryTargetDiskId;
+    private @Nullable String recoveryTargetDiskId;
 
     public Optional<String> recoveryTargetDiskId() {
-        return this.recoveryTargetDiskId == null ? Optional.empty() : Optional.ofNullable(this.recoveryTargetDiskId);
+        return Optional.ofNullable(this.recoveryTargetDiskId);
     }
 
     /**
@@ -280,10 +280,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="resyncRequired")
-      private final @Nullable Boolean resyncRequired;
+    private @Nullable Boolean resyncRequired;
 
     public Optional<Boolean> resyncRequired() {
-        return this.resyncRequired == null ? Optional.empty() : Optional.ofNullable(this.resyncRequired);
+        return Optional.ofNullable(this.resyncRequired);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="secretIdentifier")
-      private final @Nullable String secretIdentifier;
+    private @Nullable String secretIdentifier;
 
     public Optional<String> secretIdentifier() {
-        return this.secretIdentifier == null ? Optional.empty() : Optional.ofNullable(this.secretIdentifier);
+        return Optional.ofNullable(this.secretIdentifier);
     }
 
     /**
@@ -302,274 +302,198 @@ public final class A2AProtectedManagedDiskDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="tfoDiskName")
-      private final @Nullable String tfoDiskName;
+    private @Nullable String tfoDiskName;
 
     public Optional<String> tfoDiskName() {
-        return this.tfoDiskName == null ? Optional.empty() : Optional.ofNullable(this.tfoDiskName);
+        return Optional.ofNullable(this.tfoDiskName);
     }
 
-    public A2AProtectedManagedDiskDetailsResponse(
-        @Nullable List<String> allowedDiskLevelOperation,
-        @Nullable Double dataPendingAtSourceAgentInMB,
-        @Nullable Double dataPendingInStagingStorageAccountInMB,
-        @Nullable String dekKeyVaultArmId,
-        @Nullable Double diskCapacityInBytes,
-        @Nullable String diskId,
-        @Nullable String diskName,
-        @Nullable String diskState,
-        @Nullable String diskType,
-        @Nullable String failoverDiskName,
-        @Nullable Boolean isDiskEncrypted,
-        @Nullable Boolean isDiskKeyEncrypted,
-        @Nullable String kekKeyVaultArmId,
-        @Nullable String keyIdentifier,
-        @Nullable String monitoringJobType,
-        @Nullable Integer monitoringPercentageCompletion,
-        @Nullable String primaryStagingAzureStorageAccountId,
-        @Nullable String recoveryDiskEncryptionSetId,
-        @Nullable String recoveryReplicaDiskAccountType,
-        @Nullable String recoveryReplicaDiskId,
-        @Nullable String recoveryResourceGroupId,
-        @Nullable String recoveryTargetDiskAccountType,
-        @Nullable String recoveryTargetDiskId,
-        @Nullable Boolean resyncRequired,
-        @Nullable String secretIdentifier,
-        @Nullable String tfoDiskName) {
-        this.allowedDiskLevelOperation = allowedDiskLevelOperation;
-        this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
-        this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
-        this.dekKeyVaultArmId = dekKeyVaultArmId;
-        this.diskCapacityInBytes = diskCapacityInBytes;
-        this.diskId = diskId;
-        this.diskName = diskName;
-        this.diskState = diskState;
-        this.diskType = diskType;
-        this.failoverDiskName = failoverDiskName;
-        this.isDiskEncrypted = isDiskEncrypted;
-        this.isDiskKeyEncrypted = isDiskKeyEncrypted;
-        this.kekKeyVaultArmId = kekKeyVaultArmId;
-        this.keyIdentifier = keyIdentifier;
-        this.monitoringJobType = monitoringJobType;
-        this.monitoringPercentageCompletion = monitoringPercentageCompletion;
-        this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
-        this.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
-        this.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
-        this.recoveryReplicaDiskId = recoveryReplicaDiskId;
-        this.recoveryResourceGroupId = recoveryResourceGroupId;
-        this.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
-        this.recoveryTargetDiskId = recoveryTargetDiskId;
-        this.resyncRequired = resyncRequired;
-        this.secretIdentifier = secretIdentifier;
-        this.tfoDiskName = tfoDiskName;
-    }
+    private A2AProtectedManagedDiskDetailsResponse() {}
 
-    private A2AProtectedManagedDiskDetailsResponse() {
-        this.allowedDiskLevelOperation = List.of();
-        this.dataPendingAtSourceAgentInMB = null;
-        this.dataPendingInStagingStorageAccountInMB = null;
-        this.dekKeyVaultArmId = null;
-        this.diskCapacityInBytes = null;
-        this.diskId = null;
-        this.diskName = null;
-        this.diskState = null;
-        this.diskType = null;
-        this.failoverDiskName = null;
-        this.isDiskEncrypted = null;
-        this.isDiskKeyEncrypted = null;
-        this.kekKeyVaultArmId = null;
-        this.keyIdentifier = null;
-        this.monitoringJobType = null;
-        this.monitoringPercentageCompletion = null;
-        this.primaryStagingAzureStorageAccountId = null;
-        this.recoveryDiskEncryptionSetId = null;
-        this.recoveryReplicaDiskAccountType = null;
-        this.recoveryReplicaDiskId = null;
-        this.recoveryResourceGroupId = null;
-        this.recoveryTargetDiskAccountType = null;
-        this.recoveryTargetDiskId = null;
-        this.resyncRequired = null;
-        this.secretIdentifier = null;
-        this.tfoDiskName = null;
+    private A2AProtectedManagedDiskDetailsResponse(A2AProtectedManagedDiskDetailsResponse $) {
+        this.allowedDiskLevelOperation = $.allowedDiskLevelOperation;
+        this.dataPendingAtSourceAgentInMB = $.dataPendingAtSourceAgentInMB;
+        this.dataPendingInStagingStorageAccountInMB = $.dataPendingInStagingStorageAccountInMB;
+        this.dekKeyVaultArmId = $.dekKeyVaultArmId;
+        this.diskCapacityInBytes = $.diskCapacityInBytes;
+        this.diskId = $.diskId;
+        this.diskName = $.diskName;
+        this.diskState = $.diskState;
+        this.diskType = $.diskType;
+        this.failoverDiskName = $.failoverDiskName;
+        this.isDiskEncrypted = $.isDiskEncrypted;
+        this.isDiskKeyEncrypted = $.isDiskKeyEncrypted;
+        this.kekKeyVaultArmId = $.kekKeyVaultArmId;
+        this.keyIdentifier = $.keyIdentifier;
+        this.monitoringJobType = $.monitoringJobType;
+        this.monitoringPercentageCompletion = $.monitoringPercentageCompletion;
+        this.primaryStagingAzureStorageAccountId = $.primaryStagingAzureStorageAccountId;
+        this.recoveryDiskEncryptionSetId = $.recoveryDiskEncryptionSetId;
+        this.recoveryReplicaDiskAccountType = $.recoveryReplicaDiskAccountType;
+        this.recoveryReplicaDiskId = $.recoveryReplicaDiskId;
+        this.recoveryResourceGroupId = $.recoveryResourceGroupId;
+        this.recoveryTargetDiskAccountType = $.recoveryTargetDiskAccountType;
+        this.recoveryTargetDiskId = $.recoveryTargetDiskId;
+        this.resyncRequired = $.resyncRequired;
+        this.secretIdentifier = $.secretIdentifier;
+        this.tfoDiskName = $.tfoDiskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AProtectedManagedDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedDiskLevelOperation;
-        private @Nullable Double dataPendingAtSourceAgentInMB;
-        private @Nullable Double dataPendingInStagingStorageAccountInMB;
-        private @Nullable String dekKeyVaultArmId;
-        private @Nullable Double diskCapacityInBytes;
-        private @Nullable String diskId;
-        private @Nullable String diskName;
-        private @Nullable String diskState;
-        private @Nullable String diskType;
-        private @Nullable String failoverDiskName;
-        private @Nullable Boolean isDiskEncrypted;
-        private @Nullable Boolean isDiskKeyEncrypted;
-        private @Nullable String kekKeyVaultArmId;
-        private @Nullable String keyIdentifier;
-        private @Nullable String monitoringJobType;
-        private @Nullable Integer monitoringPercentageCompletion;
-        private @Nullable String primaryStagingAzureStorageAccountId;
-        private @Nullable String recoveryDiskEncryptionSetId;
-        private @Nullable String recoveryReplicaDiskAccountType;
-        private @Nullable String recoveryReplicaDiskId;
-        private @Nullable String recoveryResourceGroupId;
-        private @Nullable String recoveryTargetDiskAccountType;
-        private @Nullable String recoveryTargetDiskId;
-        private @Nullable Boolean resyncRequired;
-        private @Nullable String secretIdentifier;
-        private @Nullable String tfoDiskName;
+        private A2AProtectedManagedDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AProtectedManagedDiskDetailsResponse();
         }
 
         public Builder(A2AProtectedManagedDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedDiskLevelOperation = defaults.allowedDiskLevelOperation;
-    	      this.dataPendingAtSourceAgentInMB = defaults.dataPendingAtSourceAgentInMB;
-    	      this.dataPendingInStagingStorageAccountInMB = defaults.dataPendingInStagingStorageAccountInMB;
-    	      this.dekKeyVaultArmId = defaults.dekKeyVaultArmId;
-    	      this.diskCapacityInBytes = defaults.diskCapacityInBytes;
-    	      this.diskId = defaults.diskId;
-    	      this.diskName = defaults.diskName;
-    	      this.diskState = defaults.diskState;
-    	      this.diskType = defaults.diskType;
-    	      this.failoverDiskName = defaults.failoverDiskName;
-    	      this.isDiskEncrypted = defaults.isDiskEncrypted;
-    	      this.isDiskKeyEncrypted = defaults.isDiskKeyEncrypted;
-    	      this.kekKeyVaultArmId = defaults.kekKeyVaultArmId;
-    	      this.keyIdentifier = defaults.keyIdentifier;
-    	      this.monitoringJobType = defaults.monitoringJobType;
-    	      this.monitoringPercentageCompletion = defaults.monitoringPercentageCompletion;
-    	      this.primaryStagingAzureStorageAccountId = defaults.primaryStagingAzureStorageAccountId;
-    	      this.recoveryDiskEncryptionSetId = defaults.recoveryDiskEncryptionSetId;
-    	      this.recoveryReplicaDiskAccountType = defaults.recoveryReplicaDiskAccountType;
-    	      this.recoveryReplicaDiskId = defaults.recoveryReplicaDiskId;
-    	      this.recoveryResourceGroupId = defaults.recoveryResourceGroupId;
-    	      this.recoveryTargetDiskAccountType = defaults.recoveryTargetDiskAccountType;
-    	      this.recoveryTargetDiskId = defaults.recoveryTargetDiskId;
-    	      this.resyncRequired = defaults.resyncRequired;
-    	      this.secretIdentifier = defaults.secretIdentifier;
-    	      this.tfoDiskName = defaults.tfoDiskName;
+            $ = new A2AProtectedManagedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedDiskLevelOperation(@Nullable List<String> allowedDiskLevelOperation) {
-            this.allowedDiskLevelOperation = allowedDiskLevelOperation;
+            $.allowedDiskLevelOperation = allowedDiskLevelOperation;
             return this;
         }
+
         public Builder allowedDiskLevelOperation(String... allowedDiskLevelOperation) {
             return allowedDiskLevelOperation(List.of(allowedDiskLevelOperation));
         }
+
         public Builder dataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
-            this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
+            $.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
             return this;
         }
+
         public Builder dataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
-            this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
+            $.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
             return this;
         }
+
         public Builder dekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
-            this.dekKeyVaultArmId = dekKeyVaultArmId;
+            $.dekKeyVaultArmId = dekKeyVaultArmId;
             return this;
         }
+
         public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
-            this.diskCapacityInBytes = diskCapacityInBytes;
+            $.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
+
         public Builder diskId(@Nullable String diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskState(@Nullable String diskState) {
-            this.diskState = diskState;
+            $.diskState = diskState;
             return this;
         }
+
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
+
         public Builder failoverDiskName(@Nullable String failoverDiskName) {
-            this.failoverDiskName = failoverDiskName;
+            $.failoverDiskName = failoverDiskName;
             return this;
         }
+
         public Builder isDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
-            this.isDiskEncrypted = isDiskEncrypted;
+            $.isDiskEncrypted = isDiskEncrypted;
             return this;
         }
+
         public Builder isDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
-            this.isDiskKeyEncrypted = isDiskKeyEncrypted;
+            $.isDiskKeyEncrypted = isDiskKeyEncrypted;
             return this;
         }
+
         public Builder kekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
-            this.kekKeyVaultArmId = kekKeyVaultArmId;
+            $.kekKeyVaultArmId = kekKeyVaultArmId;
             return this;
         }
+
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = keyIdentifier;
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
+
         public Builder monitoringJobType(@Nullable String monitoringJobType) {
-            this.monitoringJobType = monitoringJobType;
+            $.monitoringJobType = monitoringJobType;
             return this;
         }
+
         public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
-            this.monitoringPercentageCompletion = monitoringPercentageCompletion;
+            $.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
+
         public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
-            this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
+            $.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
+
         public Builder recoveryDiskEncryptionSetId(@Nullable String recoveryDiskEncryptionSetId) {
-            this.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
+            $.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
             return this;
         }
+
         public Builder recoveryReplicaDiskAccountType(@Nullable String recoveryReplicaDiskAccountType) {
-            this.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
+            $.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
             return this;
         }
+
         public Builder recoveryReplicaDiskId(@Nullable String recoveryReplicaDiskId) {
-            this.recoveryReplicaDiskId = recoveryReplicaDiskId;
+            $.recoveryReplicaDiskId = recoveryReplicaDiskId;
             return this;
         }
+
         public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
-            this.recoveryResourceGroupId = recoveryResourceGroupId;
+            $.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
+
         public Builder recoveryTargetDiskAccountType(@Nullable String recoveryTargetDiskAccountType) {
-            this.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
+            $.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
             return this;
         }
+
         public Builder recoveryTargetDiskId(@Nullable String recoveryTargetDiskId) {
-            this.recoveryTargetDiskId = recoveryTargetDiskId;
+            $.recoveryTargetDiskId = recoveryTargetDiskId;
             return this;
         }
+
         public Builder resyncRequired(@Nullable Boolean resyncRequired) {
-            this.resyncRequired = resyncRequired;
+            $.resyncRequired = resyncRequired;
             return this;
         }
+
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = secretIdentifier;
+            $.secretIdentifier = secretIdentifier;
             return this;
         }
+
         public Builder tfoDiskName(@Nullable String tfoDiskName) {
-            this.tfoDiskName = tfoDiskName;
+            $.tfoDiskName = tfoDiskName;
             return this;
-        }        public A2AProtectedManagedDiskDetailsResponse build() {
-            return new A2AProtectedManagedDiskDetailsResponse(allowedDiskLevelOperation, dataPendingAtSourceAgentInMB, dataPendingInStagingStorageAccountInMB, dekKeyVaultArmId, diskCapacityInBytes, diskId, diskName, diskState, diskType, failoverDiskName, isDiskEncrypted, isDiskKeyEncrypted, kekKeyVaultArmId, keyIdentifier, monitoringJobType, monitoringPercentageCompletion, primaryStagingAzureStorageAccountId, recoveryDiskEncryptionSetId, recoveryReplicaDiskAccountType, recoveryReplicaDiskId, recoveryResourceGroupId, recoveryTargetDiskAccountType, recoveryTargetDiskId, resyncRequired, secretIdentifier, tfoDiskName);
+        }
+
+        public A2AProtectedManagedDiskDetailsResponse build() {
+            return $;
         }
     }
+
 }

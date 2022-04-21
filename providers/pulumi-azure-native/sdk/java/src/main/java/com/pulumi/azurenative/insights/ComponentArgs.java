@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationType", required=true)
-      private final Output<Either<String,ApplicationType>> applicationType;
+    private Output<Either<String,ApplicationType>> applicationType;
 
     public Output<Either<String,ApplicationType>> applicationType() {
         return this.applicationType;
@@ -40,10 +41,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableIpMasking")
-      private final @Nullable Output<Boolean> disableIpMasking;
+    private @Nullable Output<Boolean> disableIpMasking;
 
-    public Output<Boolean> disableIpMasking() {
-        return this.disableIpMasking == null ? Codegen.empty() : this.disableIpMasking;
+    public Optional<Output<Boolean>> disableIpMasking() {
+        return Optional.ofNullable(this.disableIpMasking);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flowType")
-      private final @Nullable Output<Either<String,FlowType>> flowType;
+    private @Nullable Output<Either<String,FlowType>> flowType;
 
-    public Output<Either<String,FlowType>> flowType() {
-        return this.flowType == null ? Codegen.empty() : this.flowType;
+    public Optional<Output<Either<String,FlowType>>> flowType() {
+        return Optional.ofNullable(this.flowType);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hockeyAppId")
-      private final @Nullable Output<String> hockeyAppId;
+    private @Nullable Output<String> hockeyAppId;
 
-    public Output<String> hockeyAppId() {
-        return this.hockeyAppId == null ? Codegen.empty() : this.hockeyAppId;
+    public Optional<Output<String>> hockeyAppId() {
+        return Optional.ofNullable(this.hockeyAppId);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="immediatePurgeDataOn30Days")
-      private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;
+    private @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
-    public Output<Boolean> immediatePurgeDataOn30Days() {
-        return this.immediatePurgeDataOn30Days == null ? Codegen.empty() : this.immediatePurgeDataOn30Days;
+    public Optional<Output<Boolean>> immediatePurgeDataOn30Days() {
+        return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingestionMode")
-      private final @Nullable Output<Either<String,IngestionMode>> ingestionMode;
+    private @Nullable Output<Either<String,IngestionMode>> ingestionMode;
 
-    public Output<Either<String,IngestionMode>> ingestionMode() {
-        return this.ingestionMode == null ? Codegen.empty() : this.ingestionMode;
+    public Optional<Output<Either<String,IngestionMode>>> ingestionMode() {
+        return Optional.ofNullable(this.ingestionMode);
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -106,10 +107,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestSource")
-      private final @Nullable Output<Either<String,RequestSource>> requestSource;
+    private @Nullable Output<Either<String,RequestSource>> requestSource;
 
-    public Output<Either<String,RequestSource>> requestSource() {
-        return this.requestSource == null ? Codegen.empty() : this.requestSource;
+    public Optional<Output<Either<String,RequestSource>>> requestSource() {
+        return Optional.ofNullable(this.requestSource);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -139,10 +140,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Output<Integer> retentionInDays;
+    private @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
+    public Optional<Output<Integer>> retentionInDays() {
+        return Optional.ofNullable(this.retentionInDays);
     }
 
     /**
@@ -161,10 +162,10 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="samplingPercentage")
-      private final @Nullable Output<Double> samplingPercentage;
+    private @Nullable Output<Double> samplingPercentage;
 
-    public Output<Double> samplingPercentage() {
-        return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
+    public Optional<Output<Double>> samplingPercentage() {
+        return Optional.ofNullable(this.samplingPercentage);
     }
 
     /**
@@ -172,219 +173,185 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ComponentArgs(
-        Output<Either<String,ApplicationType>> applicationType,
-        @Nullable Output<Boolean> disableIpMasking,
-        @Nullable Output<Either<String,FlowType>> flowType,
-        @Nullable Output<String> hockeyAppId,
-        @Nullable Output<Boolean> immediatePurgeDataOn30Days,
-        @Nullable Output<Either<String,IngestionMode>> ingestionMode,
-        Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,RequestSource>> requestSource,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Integer> retentionInDays,
-        @Nullable Output<Double> samplingPercentage,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationType = Codegen.stringProp("applicationType").left(ApplicationType.class).output().arg(applicationType).def("web").require();
-        this.disableIpMasking = disableIpMasking;
-        this.flowType = Codegen.stringProp("flowType").left(FlowType.class).output().arg(flowType).def("Bluefield").getNullable();
-        this.hockeyAppId = hockeyAppId;
-        this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
-        this.ingestionMode = Codegen.stringProp("ingestionMode").left(IngestionMode.class).output().arg(ingestionMode).def("ApplicationInsights").getNullable();
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = location;
-        this.requestSource = Codegen.stringProp("requestSource").left(RequestSource.class).output().arg(requestSource).def("rest").getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.retentionInDays = Codegen.integerProp("retentionInDays").output().arg(retentionInDays).def(90).getNullable();
-        this.samplingPercentage = samplingPercentage;
-        this.tags = tags;
-    }
+    private ComponentArgs() {}
 
-    private ComponentArgs() {
-        this.applicationType = Codegen.empty();
-        this.disableIpMasking = Codegen.empty();
-        this.flowType = Codegen.empty();
-        this.hockeyAppId = Codegen.empty();
-        this.immediatePurgeDataOn30Days = Codegen.empty();
-        this.ingestionMode = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.requestSource = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.retentionInDays = Codegen.empty();
-        this.samplingPercentage = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ComponentArgs(ComponentArgs $) {
+        this.applicationType = $.applicationType;
+        this.disableIpMasking = $.disableIpMasking;
+        this.flowType = $.flowType;
+        this.hockeyAppId = $.hockeyAppId;
+        this.immediatePurgeDataOn30Days = $.immediatePurgeDataOn30Days;
+        this.ingestionMode = $.ingestionMode;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.requestSource = $.requestSource;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.retentionInDays = $.retentionInDays;
+        this.samplingPercentage = $.samplingPercentage;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ApplicationType>> applicationType;
-        private @Nullable Output<Boolean> disableIpMasking;
-        private @Nullable Output<Either<String,FlowType>> flowType;
-        private @Nullable Output<String> hockeyAppId;
-        private @Nullable Output<Boolean> immediatePurgeDataOn30Days;
-        private @Nullable Output<Either<String,IngestionMode>> ingestionMode;
-        private Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,RequestSource>> requestSource;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Integer> retentionInDays;
-        private @Nullable Output<Double> samplingPercentage;
-        private @Nullable Output<Map<String,String>> tags;
+        private ComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentArgs();
         }
 
         public Builder(ComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationType = defaults.applicationType;
-    	      this.disableIpMasking = defaults.disableIpMasking;
-    	      this.flowType = defaults.flowType;
-    	      this.hockeyAppId = defaults.hockeyAppId;
-    	      this.immediatePurgeDataOn30Days = defaults.immediatePurgeDataOn30Days;
-    	      this.ingestionMode = defaults.ingestionMode;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.requestSource = defaults.requestSource;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.retentionInDays = defaults.retentionInDays;
-    	      this.samplingPercentage = defaults.samplingPercentage;
-    	      this.tags = defaults.tags;
+            $ = new ComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationType(Output<Either<String,ApplicationType>> applicationType) {
-            this.applicationType = Objects.requireNonNull(applicationType);
+            $.applicationType = applicationType;
             return this;
         }
+
         public Builder applicationType(Either<String,ApplicationType> applicationType) {
-            this.applicationType = Output.of(Objects.requireNonNull(applicationType));
-            return this;
+            return applicationType(Output.of(applicationType));
         }
+
         public Builder disableIpMasking(@Nullable Output<Boolean> disableIpMasking) {
-            this.disableIpMasking = disableIpMasking;
+            $.disableIpMasking = disableIpMasking;
             return this;
         }
-        public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
-            this.disableIpMasking = Codegen.ofNullable(disableIpMasking);
-            return this;
+
+        public Builder disableIpMasking(Boolean disableIpMasking) {
+            return disableIpMasking(Output.of(disableIpMasking));
         }
+
         public Builder flowType(@Nullable Output<Either<String,FlowType>> flowType) {
-            this.flowType = flowType;
+            $.flowType = flowType;
             return this;
         }
-        public Builder flowType(@Nullable Either<String,FlowType> flowType) {
-            this.flowType = Codegen.ofNullable(flowType);
-            return this;
+
+        public Builder flowType(Either<String,FlowType> flowType) {
+            return flowType(Output.of(flowType));
         }
+
         public Builder hockeyAppId(@Nullable Output<String> hockeyAppId) {
-            this.hockeyAppId = hockeyAppId;
+            $.hockeyAppId = hockeyAppId;
             return this;
         }
-        public Builder hockeyAppId(@Nullable String hockeyAppId) {
-            this.hockeyAppId = Codegen.ofNullable(hockeyAppId);
-            return this;
+
+        public Builder hockeyAppId(String hockeyAppId) {
+            return hockeyAppId(Output.of(hockeyAppId));
         }
+
         public Builder immediatePurgeDataOn30Days(@Nullable Output<Boolean> immediatePurgeDataOn30Days) {
-            this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
+            $.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
-        public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
-            this.immediatePurgeDataOn30Days = Codegen.ofNullable(immediatePurgeDataOn30Days);
-            return this;
+
+        public Builder immediatePurgeDataOn30Days(Boolean immediatePurgeDataOn30Days) {
+            return immediatePurgeDataOn30Days(Output.of(immediatePurgeDataOn30Days));
         }
+
         public Builder ingestionMode(@Nullable Output<Either<String,IngestionMode>> ingestionMode) {
-            this.ingestionMode = ingestionMode;
+            $.ingestionMode = ingestionMode;
             return this;
         }
-        public Builder ingestionMode(@Nullable Either<String,IngestionMode> ingestionMode) {
-            this.ingestionMode = Codegen.ofNullable(ingestionMode);
-            return this;
+
+        public Builder ingestionMode(Either<String,IngestionMode> ingestionMode) {
+            return ingestionMode(Output.of(ingestionMode));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder requestSource(@Nullable Output<Either<String,RequestSource>> requestSource) {
-            this.requestSource = requestSource;
+            $.requestSource = requestSource;
             return this;
         }
-        public Builder requestSource(@Nullable Either<String,RequestSource> requestSource) {
-            this.requestSource = Codegen.ofNullable(requestSource);
-            return this;
+
+        public Builder requestSource(Either<String,RequestSource> requestSource) {
+            return requestSource(Output.of(requestSource));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
-        public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Codegen.ofNullable(retentionInDays);
-            return this;
+
+        public Builder retentionInDays(Integer retentionInDays) {
+            return retentionInDays(Output.of(retentionInDays));
         }
+
         public Builder samplingPercentage(@Nullable Output<Double> samplingPercentage) {
-            this.samplingPercentage = samplingPercentage;
+            $.samplingPercentage = samplingPercentage;
             return this;
         }
-        public Builder samplingPercentage(@Nullable Double samplingPercentage) {
-            this.samplingPercentage = Codegen.ofNullable(samplingPercentage);
-            return this;
+
+        public Builder samplingPercentage(Double samplingPercentage) {
+            return samplingPercentage(Output.of(samplingPercentage));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ComponentArgs build() {
-            return new ComponentArgs(applicationType, disableIpMasking, flowType, hockeyAppId, immediatePurgeDataOn30Days, ingestionMode, kind, location, requestSource, resourceGroupName, resourceName, retentionInDays, samplingPercentage, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ComponentArgs build() {
+            $.applicationType = Codegen.stringProp("applicationType").left(ApplicationType.class).output().arg($.applicationType).def("web").require();
+            $.flowType = Codegen.stringProp("flowType").left(FlowType.class).output().arg($.flowType).def("Bluefield").getNullable();
+            $.ingestionMode = Codegen.stringProp("ingestionMode").left(IngestionMode.class).output().arg($.ingestionMode).def("ApplicationInsights").getNullable();
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.requestSource = Codegen.stringProp("requestSource").left(RequestSource.class).output().arg($.requestSource).def("rest").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.retentionInDays = Codegen.integerProp("retentionInDays").output().arg($.retentionInDays).def(90).getNullable();
+            return $;
         }
     }
+
 }

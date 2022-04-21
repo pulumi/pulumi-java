@@ -23,7 +23,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="assetId", required=true)
-      private final Output<String> assetId;
+    private Output<String> assetId;
 
     public Output<String> assetId() {
         return this.assetId;
@@ -35,63 +35,60 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="referenceType", required=true)
-      private final Output<String> referenceType;
+    private Output<String> referenceType;
 
     public Output<String> referenceType() {
         return this.referenceType;
     }
 
-    public IdAssetReferenceArgs(
-        Output<String> assetId,
-        Output<String> referenceType) {
-        this.assetId = Objects.requireNonNull(assetId, "expected parameter 'assetId' to be non-null");
-        this.referenceType = Codegen.stringProp("referenceType").output().arg(referenceType).require();
-    }
+    private IdAssetReferenceArgs() {}
 
-    private IdAssetReferenceArgs() {
-        this.assetId = Codegen.empty();
-        this.referenceType = Codegen.empty();
+    private IdAssetReferenceArgs(IdAssetReferenceArgs $) {
+        this.assetId = $.assetId;
+        this.referenceType = $.referenceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdAssetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> assetId;
-        private Output<String> referenceType;
+        private IdAssetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdAssetReferenceArgs();
         }
 
         public Builder(IdAssetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
-    	      this.referenceType = defaults.referenceType;
+            $ = new IdAssetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(Output<String> assetId) {
-            this.assetId = Objects.requireNonNull(assetId);
+            $.assetId = assetId;
             return this;
         }
+
         public Builder assetId(String assetId) {
-            this.assetId = Output.of(Objects.requireNonNull(assetId));
-            return this;
+            return assetId(Output.of(assetId));
         }
+
         public Builder referenceType(Output<String> referenceType) {
-            this.referenceType = Objects.requireNonNull(referenceType);
+            $.referenceType = referenceType;
             return this;
         }
+
         public Builder referenceType(String referenceType) {
-            this.referenceType = Output.of(Objects.requireNonNull(referenceType));
-            return this;
-        }        public IdAssetReferenceArgs build() {
-            return new IdAssetReferenceArgs(assetId, referenceType);
+            return referenceType(Output.of(referenceType));
+        }
+
+        public IdAssetReferenceArgs build() {
+            $.assetId = Objects.requireNonNull($.assetId, "expected parameter 'assetId' to be non-null");
+            $.referenceType = Codegen.stringProp("referenceType").output().arg($.referenceType).require();
+            return $;
         }
     }
+
 }

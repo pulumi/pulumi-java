@@ -21,45 +21,45 @@ public final class X12MessageFilterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="messageFilterType", required=true)
-      private final String messageFilterType;
+    private String messageFilterType;
 
     public String messageFilterType() {
         return this.messageFilterType;
     }
 
-    public X12MessageFilterResponse(String messageFilterType) {
-        this.messageFilterType = Objects.requireNonNull(messageFilterType, "expected parameter 'messageFilterType' to be non-null");
-    }
+    private X12MessageFilterResponse() {}
 
-    private X12MessageFilterResponse() {
-        this.messageFilterType = null;
+    private X12MessageFilterResponse(X12MessageFilterResponse $) {
+        this.messageFilterType = $.messageFilterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12MessageFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageFilterType;
+        private X12MessageFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12MessageFilterResponse();
         }
 
         public Builder(X12MessageFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFilterType = defaults.messageFilterType;
+            $ = new X12MessageFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFilterType(String messageFilterType) {
-            this.messageFilterType = Objects.requireNonNull(messageFilterType);
+            $.messageFilterType = messageFilterType;
             return this;
-        }        public X12MessageFilterResponse build() {
-            return new X12MessageFilterResponse(messageFilterType);
+        }
+
+        public X12MessageFilterResponse build() {
+            $.messageFilterType = Objects.requireNonNull($.messageFilterType, "expected parameter 'messageFilterType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acls", required=true)
-      private final List<AclResponse> acls;
+    private List<AclResponse> acls;
 
     public List<AclResponse> acls() {
         return this.acls;
@@ -37,7 +37,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="attributes", required=true)
-      private final AttributesResponse attributes;
+    private AttributesResponse attributes;
 
     public AttributesResponse attributes() {
         return this.attributes;
@@ -48,7 +48,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endpoints", required=true)
-      private final List<String> endpoints;
+    private List<String> endpoints;
 
     public List<String> endpoints() {
         return this.endpoints;
@@ -59,7 +59,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="luns", required=true)
-      private final List<IscsiLunResponse> luns;
+    private List<IscsiLunResponse> luns;
 
     public List<IscsiLunResponse> luns() {
         return this.luns;
@@ -70,7 +70,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -81,100 +81,92 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tag", required=true)
-      private final Integer tag;
+    private Integer tag;
 
     public Integer tag() {
         return this.tag;
     }
 
-    public TargetPortalGroupResponse(
-        List<AclResponse> acls,
-        AttributesResponse attributes,
-        List<String> endpoints,
-        List<IscsiLunResponse> luns,
-        Integer port,
-        Integer tag) {
-        this.acls = Objects.requireNonNull(acls, "expected parameter 'acls' to be non-null");
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-        this.luns = Objects.requireNonNull(luns, "expected parameter 'luns' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private TargetPortalGroupResponse() {}
 
-    private TargetPortalGroupResponse() {
-        this.acls = List.of();
-        this.attributes = null;
-        this.endpoints = List.of();
-        this.luns = List.of();
-        this.port = null;
-        this.tag = null;
+    private TargetPortalGroupResponse(TargetPortalGroupResponse $) {
+        this.acls = $.acls;
+        this.attributes = $.attributes;
+        this.endpoints = $.endpoints;
+        this.luns = $.luns;
+        this.port = $.port;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetPortalGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AclResponse> acls;
-        private AttributesResponse attributes;
-        private List<String> endpoints;
-        private List<IscsiLunResponse> luns;
-        private Integer port;
-        private Integer tag;
+        private TargetPortalGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetPortalGroupResponse();
         }
 
         public Builder(TargetPortalGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acls = defaults.acls;
-    	      this.attributes = defaults.attributes;
-    	      this.endpoints = defaults.endpoints;
-    	      this.luns = defaults.luns;
-    	      this.port = defaults.port;
-    	      this.tag = defaults.tag;
+            $ = new TargetPortalGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acls(List<AclResponse> acls) {
-            this.acls = Objects.requireNonNull(acls);
+            $.acls = acls;
             return this;
         }
+
         public Builder acls(AclResponse... acls) {
             return acls(List.of(acls));
         }
+
         public Builder attributes(AttributesResponse attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder endpoints(List<String> endpoints) {
-            this.endpoints = Objects.requireNonNull(endpoints);
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder luns(List<IscsiLunResponse> luns) {
-            this.luns = Objects.requireNonNull(luns);
+            $.luns = luns;
             return this;
         }
+
         public Builder luns(IscsiLunResponse... luns) {
             return luns(List.of(luns));
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder tag(Integer tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public TargetPortalGroupResponse build() {
-            return new TargetPortalGroupResponse(acls, attributes, endpoints, luns, port, tag);
+        }
+
+        public TargetPortalGroupResponse build() {
+            $.acls = Objects.requireNonNull($.acls, "expected parameter 'acls' to be non-null");
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.endpoints = Objects.requireNonNull($.endpoints, "expected parameter 'endpoints' to be non-null");
+            $.luns = Objects.requireNonNull($.luns, "expected parameter 'luns' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

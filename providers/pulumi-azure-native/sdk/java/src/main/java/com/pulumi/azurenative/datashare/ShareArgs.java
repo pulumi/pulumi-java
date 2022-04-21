@@ -7,9 +7,9 @@ import com.pulumi.azurenative.datashare.enums.ShareKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareKind")
-      private final @Nullable Output<Either<String,ShareKind>> shareKind;
+    private @Nullable Output<Either<String,ShareKind>> shareKind;
 
-    public Output<Either<String,ShareKind>> shareKind() {
-        return this.shareKind == null ? Codegen.empty() : this.shareKind;
+    public Optional<Output<Either<String,ShareKind>>> shareKind() {
+        return Optional.ofNullable(this.shareKind);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareName")
-      private final @Nullable Output<String> shareName;
+    private @Nullable Output<String> shareName;
 
-    public Output<String> shareName() {
-        return this.shareName == null ? Codegen.empty() : this.shareName;
+    public Optional<Output<String>> shareName() {
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -77,115 +77,100 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terms")
-      private final @Nullable Output<String> terms;
+    private @Nullable Output<String> terms;
 
-    public Output<String> terms() {
-        return this.terms == null ? Codegen.empty() : this.terms;
+    public Optional<Output<String>> terms() {
+        return Optional.ofNullable(this.terms);
     }
 
-    public ShareArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,ShareKind>> shareKind,
-        @Nullable Output<String> shareName,
-        @Nullable Output<String> terms) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareKind = shareKind;
-        this.shareName = shareName;
-        this.terms = terms;
-    }
+    private ShareArgs() {}
 
-    private ShareArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareKind = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.terms = Codegen.empty();
+    private ShareArgs(ShareArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareKind = $.shareKind;
+        this.shareName = $.shareName;
+        this.terms = $.terms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,ShareKind>> shareKind;
-        private @Nullable Output<String> shareName;
-        private @Nullable Output<String> terms;
+        private ShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareArgs();
         }
 
         public Builder(ShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareKind = defaults.shareKind;
-    	      this.shareName = defaults.shareName;
-    	      this.terms = defaults.terms;
+            $ = new ShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareKind(@Nullable Output<Either<String,ShareKind>> shareKind) {
-            this.shareKind = shareKind;
+            $.shareKind = shareKind;
             return this;
         }
-        public Builder shareKind(@Nullable Either<String,ShareKind> shareKind) {
-            this.shareKind = Codegen.ofNullable(shareKind);
-            return this;
+
+        public Builder shareKind(Either<String,ShareKind> shareKind) {
+            return shareKind(Output.of(shareKind));
         }
+
         public Builder shareName(@Nullable Output<String> shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
-        public Builder shareName(@Nullable String shareName) {
-            this.shareName = Codegen.ofNullable(shareName);
-            return this;
+
+        public Builder shareName(String shareName) {
+            return shareName(Output.of(shareName));
         }
+
         public Builder terms(@Nullable Output<String> terms) {
-            this.terms = terms;
+            $.terms = terms;
             return this;
         }
-        public Builder terms(@Nullable String terms) {
-            this.terms = Codegen.ofNullable(terms);
-            return this;
-        }        public ShareArgs build() {
-            return new ShareArgs(accountName, description, resourceGroupName, shareKind, shareName, terms);
+
+        public Builder terms(String terms) {
+            return terms(Output.of(terms));
+        }
+
+        public ShareArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends co
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends co
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public AzureMachineLearningWebServiceOutputColumnResponse(
-        @Nullable String dataType,
-        @Nullable String name) {
-        this.dataType = dataType;
-        this.name = name;
-    }
+    private AzureMachineLearningWebServiceOutputColumnResponse() {}
 
-    private AzureMachineLearningWebServiceOutputColumnResponse() {
-        this.dataType = null;
-        this.name = null;
+    private AzureMachineLearningWebServiceOutputColumnResponse(AzureMachineLearningWebServiceOutputColumnResponse $) {
+        this.dataType = $.dataType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMachineLearningWebServiceOutputColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataType;
-        private @Nullable String name;
+        private AzureMachineLearningWebServiceOutputColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMachineLearningWebServiceOutputColumnResponse();
         }
 
         public Builder(AzureMachineLearningWebServiceOutputColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.name = defaults.name;
+            $ = new AzureMachineLearningWebServiceOutputColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public AzureMachineLearningWebServiceOutputColumnResponse build() {
-            return new AzureMachineLearningWebServiceOutputColumnResponse(dataType, name);
+        }
+
+        public AzureMachineLearningWebServiceOutputColumnResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Either<String,EnableStatus>> enabled;
+    private @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Output<Either<String,EnableStatus>> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Either<String,EnableStatus>>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class LabSupportPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="markdown")
-      private final @Nullable Output<String> markdown;
+    private @Nullable Output<String> markdown;
 
-    public Output<String> markdown() {
-        return this.markdown == null ? Codegen.empty() : this.markdown;
+    public Optional<Output<String>> markdown() {
+        return Optional.ofNullable(this.markdown);
     }
 
-    public LabSupportPropertiesArgs(
-        @Nullable Output<Either<String,EnableStatus>> enabled,
-        @Nullable Output<String> markdown) {
-        this.enabled = enabled;
-        this.markdown = markdown;
-    }
+    private LabSupportPropertiesArgs() {}
 
-    private LabSupportPropertiesArgs() {
-        this.enabled = Codegen.empty();
-        this.markdown = Codegen.empty();
+    private LabSupportPropertiesArgs(LabSupportPropertiesArgs $) {
+        this.enabled = $.enabled;
+        this.markdown = $.markdown;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabSupportPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EnableStatus>> enabled;
-        private @Nullable Output<String> markdown;
+        private LabSupportPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabSupportPropertiesArgs();
         }
 
         public Builder(LabSupportPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.markdown = defaults.markdown;
+            $ = new LabSupportPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Either<String,EnableStatus>> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Either<String,EnableStatus> enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder markdown(@Nullable Output<String> markdown) {
-            this.markdown = markdown;
+            $.markdown = markdown;
             return this;
         }
-        public Builder markdown(@Nullable String markdown) {
-            this.markdown = Codegen.ofNullable(markdown);
-            return this;
-        }        public LabSupportPropertiesArgs build() {
-            return new LabSupportPropertiesArgs(enabled, markdown);
+
+        public Builder markdown(String markdown) {
+            return markdown(Output.of(markdown));
+        }
+
+        public LabSupportPropertiesArgs build() {
+            return $;
         }
     }
+
 }

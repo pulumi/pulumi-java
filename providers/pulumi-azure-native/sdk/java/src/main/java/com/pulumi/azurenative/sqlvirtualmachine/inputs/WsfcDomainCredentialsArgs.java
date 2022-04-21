@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WsfcDomainCredentialsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clusterBootstrapAccountPassword")
-      private final @Nullable Output<String> clusterBootstrapAccountPassword;
+    private @Nullable Output<String> clusterBootstrapAccountPassword;
 
-    public Output<String> clusterBootstrapAccountPassword() {
-        return this.clusterBootstrapAccountPassword == null ? Codegen.empty() : this.clusterBootstrapAccountPassword;
+    public Optional<Output<String>> clusterBootstrapAccountPassword() {
+        return Optional.ofNullable(this.clusterBootstrapAccountPassword);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WsfcDomainCredentialsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clusterOperatorAccountPassword")
-      private final @Nullable Output<String> clusterOperatorAccountPassword;
+    private @Nullable Output<String> clusterOperatorAccountPassword;
 
-    public Output<String> clusterOperatorAccountPassword() {
-        return this.clusterOperatorAccountPassword == null ? Codegen.empty() : this.clusterOperatorAccountPassword;
+    public Optional<Output<String>> clusterOperatorAccountPassword() {
+        return Optional.ofNullable(this.clusterOperatorAccountPassword);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class WsfcDomainCredentialsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sqlServiceAccountPassword")
-      private final @Nullable Output<String> sqlServiceAccountPassword;
+    private @Nullable Output<String> sqlServiceAccountPassword;
 
-    public Output<String> sqlServiceAccountPassword() {
-        return this.sqlServiceAccountPassword == null ? Codegen.empty() : this.sqlServiceAccountPassword;
+    public Optional<Output<String>> sqlServiceAccountPassword() {
+        return Optional.ofNullable(this.sqlServiceAccountPassword);
     }
 
-    public WsfcDomainCredentialsArgs(
-        @Nullable Output<String> clusterBootstrapAccountPassword,
-        @Nullable Output<String> clusterOperatorAccountPassword,
-        @Nullable Output<String> sqlServiceAccountPassword) {
-        this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
-        this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
-        this.sqlServiceAccountPassword = sqlServiceAccountPassword;
-    }
+    private WsfcDomainCredentialsArgs() {}
 
-    private WsfcDomainCredentialsArgs() {
-        this.clusterBootstrapAccountPassword = Codegen.empty();
-        this.clusterOperatorAccountPassword = Codegen.empty();
-        this.sqlServiceAccountPassword = Codegen.empty();
+    private WsfcDomainCredentialsArgs(WsfcDomainCredentialsArgs $) {
+        this.clusterBootstrapAccountPassword = $.clusterBootstrapAccountPassword;
+        this.clusterOperatorAccountPassword = $.clusterOperatorAccountPassword;
+        this.sqlServiceAccountPassword = $.sqlServiceAccountPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsfcDomainCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterBootstrapAccountPassword;
-        private @Nullable Output<String> clusterOperatorAccountPassword;
-        private @Nullable Output<String> sqlServiceAccountPassword;
+        private WsfcDomainCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsfcDomainCredentialsArgs();
         }
 
         public Builder(WsfcDomainCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterBootstrapAccountPassword = defaults.clusterBootstrapAccountPassword;
-    	      this.clusterOperatorAccountPassword = defaults.clusterOperatorAccountPassword;
-    	      this.sqlServiceAccountPassword = defaults.sqlServiceAccountPassword;
+            $ = new WsfcDomainCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterBootstrapAccountPassword(@Nullable Output<String> clusterBootstrapAccountPassword) {
-            this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
+            $.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
-        public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
-            this.clusterBootstrapAccountPassword = Codegen.ofNullable(clusterBootstrapAccountPassword);
-            return this;
+
+        public Builder clusterBootstrapAccountPassword(String clusterBootstrapAccountPassword) {
+            return clusterBootstrapAccountPassword(Output.of(clusterBootstrapAccountPassword));
         }
+
         public Builder clusterOperatorAccountPassword(@Nullable Output<String> clusterOperatorAccountPassword) {
-            this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
+            $.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
-        public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
-            this.clusterOperatorAccountPassword = Codegen.ofNullable(clusterOperatorAccountPassword);
-            return this;
+
+        public Builder clusterOperatorAccountPassword(String clusterOperatorAccountPassword) {
+            return clusterOperatorAccountPassword(Output.of(clusterOperatorAccountPassword));
         }
+
         public Builder sqlServiceAccountPassword(@Nullable Output<String> sqlServiceAccountPassword) {
-            this.sqlServiceAccountPassword = sqlServiceAccountPassword;
+            $.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }
-        public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
-            this.sqlServiceAccountPassword = Codegen.ofNullable(sqlServiceAccountPassword);
-            return this;
-        }        public WsfcDomainCredentialsArgs build() {
-            return new WsfcDomainCredentialsArgs(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);
+
+        public Builder sqlServiceAccountPassword(String sqlServiceAccountPassword) {
+            return sqlServiceAccountPassword(Output.of(sqlServiceAccountPassword));
+        }
+
+        public WsfcDomainCredentialsArgs build() {
+            return $;
         }
     }
+
 }

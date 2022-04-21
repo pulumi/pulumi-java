@@ -17,7 +17,7 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="watcherName", required=true)
-      private final String watcherName;
+    private String watcherName;
 
     public String watcherName() {
         return this.watcherName;
     }
 
-    public GetWatcherArgs(
-        String automationAccountName,
-        String resourceGroupName,
-        String watcherName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.watcherName = Objects.requireNonNull(watcherName, "expected parameter 'watcherName' to be non-null");
-    }
+    private GetWatcherArgs() {}
 
-    private GetWatcherArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
-        this.watcherName = null;
+    private GetWatcherArgs(GetWatcherArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.watcherName = $.watcherName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
-        private String watcherName;
+        private GetWatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWatcherArgs();
         }
 
         public Builder(GetWatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.watcherName = defaults.watcherName;
+            $ = new GetWatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder watcherName(String watcherName) {
-            this.watcherName = Objects.requireNonNull(watcherName);
+            $.watcherName = watcherName;
             return this;
-        }        public GetWatcherArgs build() {
-            return new GetWatcherArgs(automationAccountName, resourceGroupName, watcherName);
+        }
+
+        public GetWatcherArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.watcherName = Objects.requireNonNull($.watcherName, "expected parameter 'watcherName' to be non-null");
+            return $;
         }
     }
+
 }

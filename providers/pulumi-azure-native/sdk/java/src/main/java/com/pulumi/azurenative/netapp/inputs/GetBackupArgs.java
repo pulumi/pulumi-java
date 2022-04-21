@@ -17,7 +17,7 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupName", required=true)
-      private final String backupName;
+    private String backupName;
 
     public String backupName() {
         return this.backupName;
@@ -39,7 +39,7 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolName", required=true)
-      private final String poolName;
+    private String poolName;
 
     public String poolName() {
         return this.poolName;
@@ -50,7 +50,7 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeName", required=true)
-      private final String volumeName;
+    private String volumeName;
 
     public String volumeName() {
         return this.volumeName;
     }
 
-    public GetBackupArgs(
-        String accountName,
-        String backupName,
-        String poolName,
-        String resourceGroupName,
-        String volumeName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.backupName = Objects.requireNonNull(backupName, "expected parameter 'backupName' to be non-null");
-        this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.volumeName = Objects.requireNonNull(volumeName, "expected parameter 'volumeName' to be non-null");
-    }
+    private GetBackupArgs() {}
 
-    private GetBackupArgs() {
-        this.accountName = null;
-        this.backupName = null;
-        this.poolName = null;
-        this.resourceGroupName = null;
-        this.volumeName = null;
+    private GetBackupArgs(GetBackupArgs $) {
+        this.accountName = $.accountName;
+        this.backupName = $.backupName;
+        this.poolName = $.poolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String backupName;
-        private String poolName;
-        private String resourceGroupName;
-        private String volumeName;
+        private GetBackupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupArgs();
         }
 
         public Builder(GetBackupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.backupName = defaults.backupName;
-    	      this.poolName = defaults.poolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.volumeName = defaults.volumeName;
+            $ = new GetBackupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder backupName(String backupName) {
-            this.backupName = Objects.requireNonNull(backupName);
+            $.backupName = backupName;
             return this;
         }
+
         public Builder poolName(String poolName) {
-            this.poolName = Objects.requireNonNull(poolName);
+            $.poolName = poolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder volumeName(String volumeName) {
-            this.volumeName = Objects.requireNonNull(volumeName);
+            $.volumeName = volumeName;
             return this;
-        }        public GetBackupArgs build() {
-            return new GetBackupArgs(accountName, backupName, poolName, resourceGroupName, volumeName);
+        }
+
+        public GetBackupArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.backupName = Objects.requireNonNull($.backupName, "expected parameter 'backupName' to be non-null");
+            $.poolName = Objects.requireNonNull($.poolName, "expected parameter 'poolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.volumeName = Objects.requireNonNull($.volumeName, "expected parameter 'volumeName' to be non-null");
+            return $;
         }
     }
+
 }

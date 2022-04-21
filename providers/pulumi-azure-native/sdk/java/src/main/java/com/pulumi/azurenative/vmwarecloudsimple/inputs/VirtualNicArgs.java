@@ -8,11 +8,11 @@ import com.pulumi.azurenative.vmwarecloudsimple.inputs.GuestOSNICCustomizationAr
 import com.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNetworkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customization")
-      private final @Nullable Output<GuestOSNICCustomizationArgs> customization;
+    private @Nullable Output<GuestOSNICCustomizationArgs> customization;
 
-    public Output<GuestOSNICCustomizationArgs> customization() {
-        return this.customization == null ? Codegen.empty() : this.customization;
+    public Optional<Output<GuestOSNICCustomizationArgs>> customization() {
+        return Optional.ofNullable(this.customization);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="macAddress")
-      private final @Nullable Output<String> macAddress;
+    private @Nullable Output<String> macAddress;
 
-    public Output<String> macAddress() {
-        return this.macAddress == null ? Codegen.empty() : this.macAddress;
+    public Optional<Output<String>> macAddress() {
+        return Optional.ofNullable(this.macAddress);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final Output<VirtualNetworkArgs> network;
+    private Output<VirtualNetworkArgs> network;
 
     public Output<VirtualNetworkArgs> network() {
         return this.network;
@@ -73,7 +73,7 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nicType", required=true)
-      private final Output<NICType> nicType;
+    private Output<NICType> nicType;
 
     public Output<NICType> nicType() {
         return this.nicType;
@@ -84,10 +84,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="powerOnBoot")
-      private final @Nullable Output<Boolean> powerOnBoot;
+    private @Nullable Output<Boolean> powerOnBoot;
 
-    public Output<Boolean> powerOnBoot() {
-        return this.powerOnBoot == null ? Codegen.empty() : this.powerOnBoot;
+    public Optional<Output<Boolean>> powerOnBoot() {
+        return Optional.ofNullable(this.powerOnBoot);
     }
 
     /**
@@ -95,131 +95,114 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualNicId")
-      private final @Nullable Output<String> virtualNicId;
+    private @Nullable Output<String> virtualNicId;
 
-    public Output<String> virtualNicId() {
-        return this.virtualNicId == null ? Codegen.empty() : this.virtualNicId;
+    public Optional<Output<String>> virtualNicId() {
+        return Optional.ofNullable(this.virtualNicId);
     }
 
-    public VirtualNicArgs(
-        @Nullable Output<GuestOSNICCustomizationArgs> customization,
-        @Nullable Output<List<String>> ipAddresses,
-        @Nullable Output<String> macAddress,
-        Output<VirtualNetworkArgs> network,
-        Output<NICType> nicType,
-        @Nullable Output<Boolean> powerOnBoot,
-        @Nullable Output<String> virtualNicId) {
-        this.customization = customization;
-        this.ipAddresses = ipAddresses;
-        this.macAddress = macAddress;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.nicType = Objects.requireNonNull(nicType, "expected parameter 'nicType' to be non-null");
-        this.powerOnBoot = powerOnBoot;
-        this.virtualNicId = virtualNicId;
-    }
+    private VirtualNicArgs() {}
 
-    private VirtualNicArgs() {
-        this.customization = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
-        this.macAddress = Codegen.empty();
-        this.network = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.powerOnBoot = Codegen.empty();
-        this.virtualNicId = Codegen.empty();
+    private VirtualNicArgs(VirtualNicArgs $) {
+        this.customization = $.customization;
+        this.ipAddresses = $.ipAddresses;
+        this.macAddress = $.macAddress;
+        this.network = $.network;
+        this.nicType = $.nicType;
+        this.powerOnBoot = $.powerOnBoot;
+        this.virtualNicId = $.virtualNicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GuestOSNICCustomizationArgs> customization;
-        private @Nullable Output<List<String>> ipAddresses;
-        private @Nullable Output<String> macAddress;
-        private Output<VirtualNetworkArgs> network;
-        private Output<NICType> nicType;
-        private @Nullable Output<Boolean> powerOnBoot;
-        private @Nullable Output<String> virtualNicId;
+        private VirtualNicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNicArgs();
         }
 
         public Builder(VirtualNicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customization = defaults.customization;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.macAddress = defaults.macAddress;
-    	      this.network = defaults.network;
-    	      this.nicType = defaults.nicType;
-    	      this.powerOnBoot = defaults.powerOnBoot;
-    	      this.virtualNicId = defaults.virtualNicId;
+            $ = new VirtualNicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customization(@Nullable Output<GuestOSNICCustomizationArgs> customization) {
-            this.customization = customization;
+            $.customization = customization;
             return this;
         }
-        public Builder customization(@Nullable GuestOSNICCustomizationArgs customization) {
-            this.customization = Codegen.ofNullable(customization);
-            return this;
+
+        public Builder customization(GuestOSNICCustomizationArgs customization) {
+            return customization(Output.of(customization));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder macAddress(@Nullable Output<String> macAddress) {
-            this.macAddress = macAddress;
+            $.macAddress = macAddress;
             return this;
         }
-        public Builder macAddress(@Nullable String macAddress) {
-            this.macAddress = Codegen.ofNullable(macAddress);
-            return this;
+
+        public Builder macAddress(String macAddress) {
+            return macAddress(Output.of(macAddress));
         }
+
         public Builder network(Output<VirtualNetworkArgs> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(VirtualNetworkArgs network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder nicType(Output<NICType> nicType) {
-            this.nicType = Objects.requireNonNull(nicType);
+            $.nicType = nicType;
             return this;
         }
+
         public Builder nicType(NICType nicType) {
-            this.nicType = Output.of(Objects.requireNonNull(nicType));
-            return this;
+            return nicType(Output.of(nicType));
         }
+
         public Builder powerOnBoot(@Nullable Output<Boolean> powerOnBoot) {
-            this.powerOnBoot = powerOnBoot;
+            $.powerOnBoot = powerOnBoot;
             return this;
         }
-        public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
-            this.powerOnBoot = Codegen.ofNullable(powerOnBoot);
-            return this;
+
+        public Builder powerOnBoot(Boolean powerOnBoot) {
+            return powerOnBoot(Output.of(powerOnBoot));
         }
+
         public Builder virtualNicId(@Nullable Output<String> virtualNicId) {
-            this.virtualNicId = virtualNicId;
+            $.virtualNicId = virtualNicId;
             return this;
         }
-        public Builder virtualNicId(@Nullable String virtualNicId) {
-            this.virtualNicId = Codegen.ofNullable(virtualNicId);
-            return this;
-        }        public VirtualNicArgs build() {
-            return new VirtualNicArgs(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId);
+
+        public Builder virtualNicId(String virtualNicId) {
+            return virtualNicId(Output.of(virtualNicId));
+        }
+
+        public VirtualNicArgs build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.nicType = Objects.requireNonNull($.nicType, "expected parameter 'nicType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,48 +18,49 @@ public final class LoadBalancerConfigurationPropertiesResponse extends com.pulum
      * 
      */
     @Import(name="frontendIPConfigurations", required=true)
-      private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
+    private List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
     public List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 
-    public LoadBalancerConfigurationPropertiesResponse(List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
-        this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations, "expected parameter 'frontendIPConfigurations' to be non-null");
-    }
+    private LoadBalancerConfigurationPropertiesResponse() {}
 
-    private LoadBalancerConfigurationPropertiesResponse() {
-        this.frontendIPConfigurations = List.of();
+    private LoadBalancerConfigurationPropertiesResponse(LoadBalancerConfigurationPropertiesResponse $) {
+        this.frontendIPConfigurations = $.frontendIPConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
+        private LoadBalancerConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerConfigurationPropertiesResponse();
         }
 
         public Builder(LoadBalancerConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
+            $ = new LoadBalancerConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
+            $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
+
         public Builder frontendIPConfigurations(LoadBalancerFrontendIPConfigurationResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
-        }        public LoadBalancerConfigurationPropertiesResponse build() {
-            return new LoadBalancerConfigurationPropertiesResponse(frontendIPConfigurations);
+        }
+
+        public LoadBalancerConfigurationPropertiesResponse build() {
+            $.frontendIPConfigurations = Objects.requireNonNull($.frontendIPConfigurations, "expected parameter 'frontendIPConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

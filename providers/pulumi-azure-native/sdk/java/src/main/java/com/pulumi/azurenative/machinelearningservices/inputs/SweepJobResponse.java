@@ -38,7 +38,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -49,7 +49,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compute", required=true)
-      private final ComputeConfigurationResponse compute;
+    private ComputeConfigurationResponse compute;
 
     public ComputeConfigurationResponse compute() {
         return this.compute;
@@ -60,10 +60,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="earlyTermination")
-      private final @Nullable Object earlyTermination;
+    private @Nullable Object earlyTermination;
 
-    public Object earlyTermination() {
-        return this.earlyTermination == null ? null : this.earlyTermination;
+    public Optional<Object> earlyTermination() {
+        return Optional.ofNullable(this.earlyTermination);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable String experimentName;
+    private @Nullable String experimentName;
 
     public Optional<String> experimentName() {
-        return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
+    private @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
-    public Either<AmlTokenResponse,ManagedIdentityResponse> identity() {
-        return this.identity == null ? null : this.identity;
+    public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interactionEndpoints", required=true)
-      private final Map<String,JobEndpointResponse> interactionEndpoints;
+    private Map<String,JobEndpointResponse> interactionEndpoints;
 
     public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
@@ -118,7 +118,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobType", required=true)
-      private final String jobType;
+    private String jobType;
 
     public String jobType() {
         return this.jobType;
@@ -129,10 +129,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentTrials")
-      private final @Nullable Integer maxConcurrentTrials;
+    private @Nullable Integer maxConcurrentTrials;
 
     public Optional<Integer> maxConcurrentTrials() {
-        return this.maxConcurrentTrials == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentTrials);
+        return Optional.ofNullable(this.maxConcurrentTrials);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxTotalTrials")
-      private final @Nullable Integer maxTotalTrials;
+    private @Nullable Integer maxTotalTrials;
 
     public Optional<Integer> maxTotalTrials() {
-        return this.maxTotalTrials == null ? Optional.empty() : Optional.ofNullable(this.maxTotalTrials);
+        return Optional.ofNullable(this.maxTotalTrials);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objective", required=true)
-      private final ObjectiveResponse objective;
+    private ObjectiveResponse objective;
 
     public ObjectiveResponse objective() {
         return this.objective;
@@ -162,7 +162,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="output", required=true)
-      private final JobOutputResponse output;
+    private JobOutputResponse output;
 
     public JobOutputResponse output() {
         return this.output;
@@ -174,10 +174,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -196,7 +196,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -207,7 +207,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="searchSpace", required=true)
-      private final Map<String,Object> searchSpace;
+    private Map<String,Object> searchSpace;
 
     public Map<String,Object> searchSpace() {
         return this.searchSpace;
@@ -218,7 +218,7 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -229,10 +229,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -251,217 +251,167 @@ public final class SweepJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trial")
-      private final @Nullable TrialComponentResponse trial;
+    private @Nullable TrialComponentResponse trial;
 
     public Optional<TrialComponentResponse> trial() {
-        return this.trial == null ? Optional.empty() : Optional.ofNullable(this.trial);
+        return Optional.ofNullable(this.trial);
     }
 
-    public SweepJobResponse(
-        String algorithm,
-        ComputeConfigurationResponse compute,
-        @Nullable String description,
-        @Nullable Object earlyTermination,
-        @Nullable String experimentName,
-        @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
-        Map<String,JobEndpointResponse> interactionEndpoints,
-        String jobType,
-        @Nullable Integer maxConcurrentTrials,
-        @Nullable Integer maxTotalTrials,
-        ObjectiveResponse objective,
-        JobOutputResponse output,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        Map<String,Object> searchSpace,
-        String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout,
-        @Nullable TrialComponentResponse trial) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
-        this.description = description;
-        this.earlyTermination = earlyTermination;
-        this.experimentName = experimentName;
-        this.identity = identity;
-        this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints, "expected parameter 'interactionEndpoints' to be non-null");
-        this.jobType = Codegen.stringProp("jobType").arg(jobType).require();
-        this.maxConcurrentTrials = maxConcurrentTrials;
-        this.maxTotalTrials = maxTotalTrials;
-        this.objective = Objects.requireNonNull(objective, "expected parameter 'objective' to be non-null");
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.priority = priority;
-        this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.searchSpace = Objects.requireNonNull(searchSpace, "expected parameter 'searchSpace' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.tags = tags;
-        this.timeout = timeout;
-        this.trial = trial;
-    }
+    private SweepJobResponse() {}
 
-    private SweepJobResponse() {
-        this.algorithm = null;
-        this.compute = null;
-        this.description = null;
-        this.earlyTermination = null;
-        this.experimentName = null;
-        this.identity = null;
-        this.interactionEndpoints = Map.of();
-        this.jobType = null;
-        this.maxConcurrentTrials = null;
-        this.maxTotalTrials = null;
-        this.objective = null;
-        this.output = null;
-        this.priority = null;
-        this.properties = Map.of();
-        this.provisioningState = null;
-        this.searchSpace = Map.of();
-        this.status = null;
-        this.tags = Map.of();
-        this.timeout = null;
-        this.trial = null;
+    private SweepJobResponse(SweepJobResponse $) {
+        this.algorithm = $.algorithm;
+        this.compute = $.compute;
+        this.description = $.description;
+        this.earlyTermination = $.earlyTermination;
+        this.experimentName = $.experimentName;
+        this.identity = $.identity;
+        this.interactionEndpoints = $.interactionEndpoints;
+        this.jobType = $.jobType;
+        this.maxConcurrentTrials = $.maxConcurrentTrials;
+        this.maxTotalTrials = $.maxTotalTrials;
+        this.objective = $.objective;
+        this.output = $.output;
+        this.priority = $.priority;
+        this.properties = $.properties;
+        this.provisioningState = $.provisioningState;
+        this.searchSpace = $.searchSpace;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
+        this.trial = $.trial;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SweepJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private ComputeConfigurationResponse compute;
-        private @Nullable String description;
-        private @Nullable Object earlyTermination;
-        private @Nullable String experimentName;
-        private @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
-        private Map<String,JobEndpointResponse> interactionEndpoints;
-        private String jobType;
-        private @Nullable Integer maxConcurrentTrials;
-        private @Nullable Integer maxTotalTrials;
-        private ObjectiveResponse objective;
-        private JobOutputResponse output;
-        private @Nullable Integer priority;
-        private @Nullable Map<String,String> properties;
-        private String provisioningState;
-        private Map<String,Object> searchSpace;
-        private String status;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String timeout;
-        private @Nullable TrialComponentResponse trial;
+        private SweepJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SweepJobResponse();
         }
 
         public Builder(SweepJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.compute = defaults.compute;
-    	      this.description = defaults.description;
-    	      this.earlyTermination = defaults.earlyTermination;
-    	      this.experimentName = defaults.experimentName;
-    	      this.identity = defaults.identity;
-    	      this.interactionEndpoints = defaults.interactionEndpoints;
-    	      this.jobType = defaults.jobType;
-    	      this.maxConcurrentTrials = defaults.maxConcurrentTrials;
-    	      this.maxTotalTrials = defaults.maxTotalTrials;
-    	      this.objective = defaults.objective;
-    	      this.output = defaults.output;
-    	      this.priority = defaults.priority;
-    	      this.properties = defaults.properties;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.searchSpace = defaults.searchSpace;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
-    	      this.trial = defaults.trial;
+            $ = new SweepJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder compute(ComputeConfigurationResponse compute) {
-            this.compute = Objects.requireNonNull(compute);
+            $.compute = compute;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder earlyTermination(@Nullable Object earlyTermination) {
-            this.earlyTermination = earlyTermination;
+            $.earlyTermination = earlyTermination;
             return this;
         }
+
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
+
         public Builder identity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
-            this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints);
+            $.interactionEndpoints = interactionEndpoints;
             return this;
         }
+
         public Builder jobType(String jobType) {
-            this.jobType = Objects.requireNonNull(jobType);
+            $.jobType = jobType;
             return this;
         }
+
         public Builder maxConcurrentTrials(@Nullable Integer maxConcurrentTrials) {
-            this.maxConcurrentTrials = maxConcurrentTrials;
+            $.maxConcurrentTrials = maxConcurrentTrials;
             return this;
         }
+
         public Builder maxTotalTrials(@Nullable Integer maxTotalTrials) {
-            this.maxTotalTrials = maxTotalTrials;
+            $.maxTotalTrials = maxTotalTrials;
             return this;
         }
+
         public Builder objective(ObjectiveResponse objective) {
-            this.objective = Objects.requireNonNull(objective);
+            $.objective = objective;
             return this;
         }
+
         public Builder output(JobOutputResponse output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder searchSpace(Map<String,Object> searchSpace) {
-            this.searchSpace = Objects.requireNonNull(searchSpace);
+            $.searchSpace = searchSpace;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder trial(@Nullable TrialComponentResponse trial) {
-            this.trial = trial;
+            $.trial = trial;
             return this;
-        }        public SweepJobResponse build() {
-            return new SweepJobResponse(algorithm, compute, description, earlyTermination, experimentName, identity, interactionEndpoints, jobType, maxConcurrentTrials, maxTotalTrials, objective, output, priority, properties, provisioningState, searchSpace, status, tags, timeout, trial);
+        }
+
+        public SweepJobResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.compute = Objects.requireNonNull($.compute, "expected parameter 'compute' to be non-null");
+            $.interactionEndpoints = Objects.requireNonNull($.interactionEndpoints, "expected parameter 'interactionEndpoints' to be non-null");
+            $.jobType = Codegen.stringProp("jobType").arg($.jobType).require();
+            $.objective = Objects.requireNonNull($.objective, "expected parameter 'objective' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.searchSpace = Objects.requireNonNull($.searchSpace, "expected parameter 'searchSpace' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

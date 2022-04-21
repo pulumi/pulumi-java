@@ -25,10 +25,10 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="extendedSummary")
-      private final @Nullable Map<String,String> extendedSummary;
+    private @Nullable Map<String,String> extendedSummary;
 
-    public Map<String,String> extendedSummary() {
-        return this.extendedSummary == null ? Map.of() : this.extendedSummary;
+    public Optional<Map<String,String>> extendedSummary() {
+        return Optional.ofNullable(this.extendedSummary);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -48,10 +48,10 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="lastSummaryRefreshedTime")
-      private final @Nullable String lastSummaryRefreshedTime;
+    private @Nullable String lastSummaryRefreshedTime;
 
     public Optional<String> lastSummaryRefreshedTime() {
-        return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
+        return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="refreshSummaryState")
-      private final @Nullable String refreshSummaryState;
+    private @Nullable String refreshSummaryState;
 
     public Optional<String> refreshSummaryState() {
-        return this.refreshSummaryState == null ? Optional.empty() : Optional.ofNullable(this.refreshSummaryState);
+        return Optional.ofNullable(this.refreshSummaryState);
     }
 
-    public DatabaseProjectSummaryResponse(
-        @Nullable Map<String,String> extendedSummary,
-        String instanceType,
-        @Nullable String lastSummaryRefreshedTime,
-        @Nullable String refreshSummaryState) {
-        this.extendedSummary = extendedSummary;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
-        this.refreshSummaryState = refreshSummaryState;
-    }
+    private DatabaseProjectSummaryResponse() {}
 
-    private DatabaseProjectSummaryResponse() {
-        this.extendedSummary = Map.of();
-        this.instanceType = null;
-        this.lastSummaryRefreshedTime = null;
-        this.refreshSummaryState = null;
+    private DatabaseProjectSummaryResponse(DatabaseProjectSummaryResponse $) {
+        this.extendedSummary = $.extendedSummary;
+        this.instanceType = $.instanceType;
+        this.lastSummaryRefreshedTime = $.lastSummaryRefreshedTime;
+        this.refreshSummaryState = $.refreshSummaryState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseProjectSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> extendedSummary;
-        private String instanceType;
-        private @Nullable String lastSummaryRefreshedTime;
-        private @Nullable String refreshSummaryState;
+        private DatabaseProjectSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseProjectSummaryResponse();
         }
 
         public Builder(DatabaseProjectSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedSummary = defaults.extendedSummary;
-    	      this.instanceType = defaults.instanceType;
-    	      this.lastSummaryRefreshedTime = defaults.lastSummaryRefreshedTime;
-    	      this.refreshSummaryState = defaults.refreshSummaryState;
+            $ = new DatabaseProjectSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
-            this.extendedSummary = extendedSummary;
+            $.extendedSummary = extendedSummary;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
-            this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
+            $.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
+
         public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
-            this.refreshSummaryState = refreshSummaryState;
+            $.refreshSummaryState = refreshSummaryState;
             return this;
-        }        public DatabaseProjectSummaryResponse build() {
-            return new DatabaseProjectSummaryResponse(extendedSummary, instanceType, lastSummaryRefreshedTime, refreshSummaryState);
+        }
+
+        public DatabaseProjectSummaryResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

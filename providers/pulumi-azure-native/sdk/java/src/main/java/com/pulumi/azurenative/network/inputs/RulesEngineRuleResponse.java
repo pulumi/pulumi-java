@@ -27,7 +27,7 @@ public final class RulesEngineRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="action", required=true)
-      private final RulesEngineActionResponse action;
+    private RulesEngineActionResponse action;
 
     public RulesEngineActionResponse action() {
         return this.action;
@@ -38,10 +38,10 @@ public final class RulesEngineRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="matchConditions")
-      private final @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
+    private @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
 
-    public List<RulesEngineMatchConditionResponse> matchConditions() {
-        return this.matchConditions == null ? List.of() : this.matchConditions;
+    public Optional<List<RulesEngineMatchConditionResponse>> matchConditions() {
+        return Optional.ofNullable(this.matchConditions);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RulesEngineRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="matchProcessingBehavior")
-      private final @Nullable String matchProcessingBehavior;
+    private @Nullable String matchProcessingBehavior;
 
     public Optional<String> matchProcessingBehavior() {
-        return this.matchProcessingBehavior == null ? Optional.empty() : Optional.ofNullable(this.matchProcessingBehavior);
+        return Optional.ofNullable(this.matchProcessingBehavior);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class RulesEngineRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -71,85 +71,75 @@ public final class RulesEngineRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
     }
 
-    public RulesEngineRuleResponse(
-        RulesEngineActionResponse action,
-        @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
-        @Nullable String matchProcessingBehavior,
-        String name,
-        Integer priority) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.matchConditions = matchConditions;
-        this.matchProcessingBehavior = matchProcessingBehavior;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-    }
+    private RulesEngineRuleResponse() {}
 
-    private RulesEngineRuleResponse() {
-        this.action = null;
-        this.matchConditions = List.of();
-        this.matchProcessingBehavior = null;
-        this.name = null;
-        this.priority = null;
+    private RulesEngineRuleResponse(RulesEngineRuleResponse $) {
+        this.action = $.action;
+        this.matchConditions = $.matchConditions;
+        this.matchProcessingBehavior = $.matchProcessingBehavior;
+        this.name = $.name;
+        this.priority = $.priority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RulesEngineActionResponse action;
-        private @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
-        private @Nullable String matchProcessingBehavior;
-        private String name;
-        private Integer priority;
+        private RulesEngineRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineRuleResponse();
         }
 
         public Builder(RulesEngineRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.matchProcessingBehavior = defaults.matchProcessingBehavior;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
+            $ = new RulesEngineRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(RulesEngineActionResponse action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder matchConditions(@Nullable List<RulesEngineMatchConditionResponse> matchConditions) {
-            this.matchConditions = matchConditions;
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(RulesEngineMatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder matchProcessingBehavior(@Nullable String matchProcessingBehavior) {
-            this.matchProcessingBehavior = matchProcessingBehavior;
+            $.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
-        }        public RulesEngineRuleResponse build() {
-            return new RulesEngineRuleResponse(action, matchConditions, matchProcessingBehavior, name, priority);
+        }
+
+        public RulesEngineRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

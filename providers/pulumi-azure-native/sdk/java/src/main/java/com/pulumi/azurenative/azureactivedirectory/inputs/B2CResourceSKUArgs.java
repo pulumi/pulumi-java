@@ -7,8 +7,8 @@ import com.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUName;
 import com.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUTier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class B2CResourceSKUArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<B2CResourceSKUName> name;
+    private @Nullable Output<B2CResourceSKUName> name;
 
-    public Output<B2CResourceSKUName> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<B2CResourceSKUName>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class B2CResourceSKUArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<B2CResourceSKUTier> tier;
+    private @Nullable Output<B2CResourceSKUTier> tier;
 
-    public Output<B2CResourceSKUTier> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<B2CResourceSKUTier>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public B2CResourceSKUArgs(
-        @Nullable Output<B2CResourceSKUName> name,
-        @Nullable Output<B2CResourceSKUTier> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private B2CResourceSKUArgs() {}
 
-    private B2CResourceSKUArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private B2CResourceSKUArgs(B2CResourceSKUArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(B2CResourceSKUArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<B2CResourceSKUName> name;
-        private @Nullable Output<B2CResourceSKUTier> tier;
+        private B2CResourceSKUArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new B2CResourceSKUArgs();
         }
 
         public Builder(B2CResourceSKUArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new B2CResourceSKUArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<B2CResourceSKUName> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable B2CResourceSKUName name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(B2CResourceSKUName name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<B2CResourceSKUTier> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable B2CResourceSKUTier tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public B2CResourceSKUArgs build() {
-            return new B2CResourceSKUArgs(name, tier);
+
+        public Builder tier(B2CResourceSKUTier tier) {
+            return tier(Output.of(tier));
+        }
+
+        public B2CResourceSKUArgs build() {
+            return $;
         }
     }
+
 }

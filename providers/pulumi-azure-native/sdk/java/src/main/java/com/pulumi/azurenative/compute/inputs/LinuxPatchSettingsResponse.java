@@ -23,10 +23,10 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="assessmentMode")
-      private final @Nullable String assessmentMode;
+    private @Nullable String assessmentMode;
 
     public Optional<String> assessmentMode() {
-        return this.assessmentMode == null ? Optional.empty() : Optional.ofNullable(this.assessmentMode);
+        return Optional.ofNullable(this.assessmentMode);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="patchMode")
-      private final @Nullable String patchMode;
+    private @Nullable String patchMode;
 
     public Optional<String> patchMode() {
-        return this.patchMode == null ? Optional.empty() : Optional.ofNullable(this.patchMode);
+        return Optional.ofNullable(this.patchMode);
     }
 
-    public LinuxPatchSettingsResponse(
-        @Nullable String assessmentMode,
-        @Nullable String patchMode) {
-        this.assessmentMode = assessmentMode;
-        this.patchMode = patchMode;
-    }
+    private LinuxPatchSettingsResponse() {}
 
-    private LinuxPatchSettingsResponse() {
-        this.assessmentMode = null;
-        this.patchMode = null;
+    private LinuxPatchSettingsResponse(LinuxPatchSettingsResponse $) {
+        this.assessmentMode = $.assessmentMode;
+        this.patchMode = $.patchMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxPatchSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assessmentMode;
-        private @Nullable String patchMode;
+        private LinuxPatchSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxPatchSettingsResponse();
         }
 
         public Builder(LinuxPatchSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentMode = defaults.assessmentMode;
-    	      this.patchMode = defaults.patchMode;
+            $ = new LinuxPatchSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentMode(@Nullable String assessmentMode) {
-            this.assessmentMode = assessmentMode;
+            $.assessmentMode = assessmentMode;
             return this;
         }
+
         public Builder patchMode(@Nullable String patchMode) {
-            this.patchMode = patchMode;
+            $.patchMode = patchMode;
             return this;
-        }        public LinuxPatchSettingsResponse build() {
-            return new LinuxPatchSettingsResponse(assessmentMode, patchMode);
+        }
+
+        public LinuxPatchSettingsResponse build() {
+            return $;
         }
     }
+
 }

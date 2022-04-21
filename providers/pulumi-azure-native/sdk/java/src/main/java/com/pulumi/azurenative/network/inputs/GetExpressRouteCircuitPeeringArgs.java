@@ -17,7 +17,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
      * 
      */
     @Import(name="circuitName", required=true)
-      private final String circuitName;
+    private String circuitName;
 
     public String circuitName() {
         return this.circuitName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -39,64 +39,59 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteCircuitPeeringArgs(
-        String circuitName,
-        String peeringName,
-        String resourceGroupName) {
-        this.circuitName = Objects.requireNonNull(circuitName, "expected parameter 'circuitName' to be non-null");
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteCircuitPeeringArgs() {}
 
-    private GetExpressRouteCircuitPeeringArgs() {
-        this.circuitName = null;
-        this.peeringName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteCircuitPeeringArgs(GetExpressRouteCircuitPeeringArgs $) {
+        this.circuitName = $.circuitName;
+        this.peeringName = $.peeringName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteCircuitPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String circuitName;
-        private String peeringName;
-        private String resourceGroupName;
+        private GetExpressRouteCircuitPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteCircuitPeeringArgs();
         }
 
         public Builder(GetExpressRouteCircuitPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.circuitName = defaults.circuitName;
-    	      this.peeringName = defaults.peeringName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteCircuitPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder circuitName(String circuitName) {
-            this.circuitName = Objects.requireNonNull(circuitName);
+            $.circuitName = circuitName;
             return this;
         }
+
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteCircuitPeeringArgs build() {
-            return new GetExpressRouteCircuitPeeringArgs(circuitName, peeringName, resourceGroupName);
+        }
+
+        public GetExpressRouteCircuitPeeringArgs build() {
+            $.circuitName = Objects.requireNonNull($.circuitName, "expected parameter 'circuitName' to be non-null");
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

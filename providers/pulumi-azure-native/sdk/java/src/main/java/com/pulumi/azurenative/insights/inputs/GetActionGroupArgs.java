@@ -17,7 +17,7 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actionGroupName", required=true)
-      private final String actionGroupName;
+    private String actionGroupName;
 
     public String actionGroupName() {
         return this.actionGroupName;
@@ -28,55 +28,52 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetActionGroupArgs(
-        String actionGroupName,
-        String resourceGroupName) {
-        this.actionGroupName = Objects.requireNonNull(actionGroupName, "expected parameter 'actionGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetActionGroupArgs() {}
 
-    private GetActionGroupArgs() {
-        this.actionGroupName = null;
-        this.resourceGroupName = null;
+    private GetActionGroupArgs(GetActionGroupArgs $) {
+        this.actionGroupName = $.actionGroupName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionGroupName;
-        private String resourceGroupName;
+        private GetActionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActionGroupArgs();
         }
 
         public Builder(GetActionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupName = defaults.actionGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupName(String actionGroupName) {
-            this.actionGroupName = Objects.requireNonNull(actionGroupName);
+            $.actionGroupName = actionGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetActionGroupArgs build() {
-            return new GetActionGroupArgs(actionGroupName, resourceGroupName);
+        }
+
+        public GetActionGroupArgs build() {
+            $.actionGroupName = Objects.requireNonNull($.actionGroupName, "expected parameter 'actionGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

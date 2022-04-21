@@ -24,7 +24,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="capabilities", required=true)
-      private final Map<String,String> capabilities;
+    private Map<String,String> capabilities;
 
     public Map<String,String> capabilities() {
         return this.capabilities;
@@ -35,7 +35,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="concurrentJobsLimit", required=true)
-      private final Integer concurrentJobsLimit;
+    private Integer concurrentJobsLimit;
 
     public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
@@ -46,7 +46,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="expiryTime", required=true)
-      private final String expiryTime;
+    private String expiryTime;
 
     public String expiryTime() {
         return this.expiryTime;
@@ -57,7 +57,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="hostServiceUri", required=true)
-      private final String hostServiceUri;
+    private String hostServiceUri;
 
     public String hostServiceUri() {
         return this.hostServiceUri;
@@ -68,7 +68,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="isActiveDispatcher", required=true)
-      private final Boolean isActiveDispatcher;
+    private Boolean isActiveDispatcher;
 
     public Boolean isActiveDispatcher() {
         return this.isActiveDispatcher;
@@ -79,7 +79,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastConnectTime", required=true)
-      private final String lastConnectTime;
+    private String lastConnectTime;
 
     public String lastConnectTime() {
         return this.lastConnectTime;
@@ -90,7 +90,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastEndUpdateTime", required=true)
-      private final String lastEndUpdateTime;
+    private String lastEndUpdateTime;
 
     public String lastEndUpdateTime() {
         return this.lastEndUpdateTime;
@@ -101,7 +101,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastStartTime", required=true)
-      private final String lastStartTime;
+    private String lastStartTime;
 
     public String lastStartTime() {
         return this.lastStartTime;
@@ -112,7 +112,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastStartUpdateTime", required=true)
-      private final String lastStartUpdateTime;
+    private String lastStartUpdateTime;
 
     public String lastStartUpdateTime() {
         return this.lastStartUpdateTime;
@@ -123,7 +123,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastStopTime", required=true)
-      private final String lastStopTime;
+    private String lastStopTime;
 
     public String lastStopTime() {
         return this.lastStopTime;
@@ -134,7 +134,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastUpdateResult", required=true)
-      private final String lastUpdateResult;
+    private String lastUpdateResult;
 
     public String lastUpdateResult() {
         return this.lastUpdateResult;
@@ -145,7 +145,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="machineName", required=true)
-      private final String machineName;
+    private String machineName;
 
     public String machineName() {
         return this.machineName;
@@ -156,7 +156,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="maxConcurrentJobs", required=true)
-      private final Integer maxConcurrentJobs;
+    private Integer maxConcurrentJobs;
 
     public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
@@ -167,7 +167,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="nodeName", required=true)
-      private final String nodeName;
+    private String nodeName;
 
     public String nodeName() {
         return this.nodeName;
@@ -178,7 +178,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="registerTime", required=true)
-      private final String registerTime;
+    private String registerTime;
 
     public String registerTime() {
         return this.registerTime;
@@ -189,7 +189,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -200,7 +200,7 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
@@ -211,199 +211,164 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
      * 
      */
     @Import(name="versionStatus", required=true)
-      private final String versionStatus;
+    private String versionStatus;
 
     public String versionStatus() {
         return this.versionStatus;
     }
 
-    public SelfHostedIntegrationRuntimeNodeResponse(
-        Map<String,String> capabilities,
-        Integer concurrentJobsLimit,
-        String expiryTime,
-        String hostServiceUri,
-        Boolean isActiveDispatcher,
-        String lastConnectTime,
-        String lastEndUpdateTime,
-        String lastStartTime,
-        String lastStartUpdateTime,
-        String lastStopTime,
-        String lastUpdateResult,
-        String machineName,
-        Integer maxConcurrentJobs,
-        String nodeName,
-        String registerTime,
-        String status,
-        String version,
-        String versionStatus) {
-        this.capabilities = Objects.requireNonNull(capabilities, "expected parameter 'capabilities' to be non-null");
-        this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit, "expected parameter 'concurrentJobsLimit' to be non-null");
-        this.expiryTime = Objects.requireNonNull(expiryTime, "expected parameter 'expiryTime' to be non-null");
-        this.hostServiceUri = Objects.requireNonNull(hostServiceUri, "expected parameter 'hostServiceUri' to be non-null");
-        this.isActiveDispatcher = Objects.requireNonNull(isActiveDispatcher, "expected parameter 'isActiveDispatcher' to be non-null");
-        this.lastConnectTime = Objects.requireNonNull(lastConnectTime, "expected parameter 'lastConnectTime' to be non-null");
-        this.lastEndUpdateTime = Objects.requireNonNull(lastEndUpdateTime, "expected parameter 'lastEndUpdateTime' to be non-null");
-        this.lastStartTime = Objects.requireNonNull(lastStartTime, "expected parameter 'lastStartTime' to be non-null");
-        this.lastStartUpdateTime = Objects.requireNonNull(lastStartUpdateTime, "expected parameter 'lastStartUpdateTime' to be non-null");
-        this.lastStopTime = Objects.requireNonNull(lastStopTime, "expected parameter 'lastStopTime' to be non-null");
-        this.lastUpdateResult = Objects.requireNonNull(lastUpdateResult, "expected parameter 'lastUpdateResult' to be non-null");
-        this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs, "expected parameter 'maxConcurrentJobs' to be non-null");
-        this.nodeName = Objects.requireNonNull(nodeName, "expected parameter 'nodeName' to be non-null");
-        this.registerTime = Objects.requireNonNull(registerTime, "expected parameter 'registerTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.versionStatus = Objects.requireNonNull(versionStatus, "expected parameter 'versionStatus' to be non-null");
-    }
+    private SelfHostedIntegrationRuntimeNodeResponse() {}
 
-    private SelfHostedIntegrationRuntimeNodeResponse() {
-        this.capabilities = Map.of();
-        this.concurrentJobsLimit = null;
-        this.expiryTime = null;
-        this.hostServiceUri = null;
-        this.isActiveDispatcher = null;
-        this.lastConnectTime = null;
-        this.lastEndUpdateTime = null;
-        this.lastStartTime = null;
-        this.lastStartUpdateTime = null;
-        this.lastStopTime = null;
-        this.lastUpdateResult = null;
-        this.machineName = null;
-        this.maxConcurrentJobs = null;
-        this.nodeName = null;
-        this.registerTime = null;
-        this.status = null;
-        this.version = null;
-        this.versionStatus = null;
+    private SelfHostedIntegrationRuntimeNodeResponse(SelfHostedIntegrationRuntimeNodeResponse $) {
+        this.capabilities = $.capabilities;
+        this.concurrentJobsLimit = $.concurrentJobsLimit;
+        this.expiryTime = $.expiryTime;
+        this.hostServiceUri = $.hostServiceUri;
+        this.isActiveDispatcher = $.isActiveDispatcher;
+        this.lastConnectTime = $.lastConnectTime;
+        this.lastEndUpdateTime = $.lastEndUpdateTime;
+        this.lastStartTime = $.lastStartTime;
+        this.lastStartUpdateTime = $.lastStartUpdateTime;
+        this.lastStopTime = $.lastStopTime;
+        this.lastUpdateResult = $.lastUpdateResult;
+        this.machineName = $.machineName;
+        this.maxConcurrentJobs = $.maxConcurrentJobs;
+        this.nodeName = $.nodeName;
+        this.registerTime = $.registerTime;
+        this.status = $.status;
+        this.version = $.version;
+        this.versionStatus = $.versionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfHostedIntegrationRuntimeNodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> capabilities;
-        private Integer concurrentJobsLimit;
-        private String expiryTime;
-        private String hostServiceUri;
-        private Boolean isActiveDispatcher;
-        private String lastConnectTime;
-        private String lastEndUpdateTime;
-        private String lastStartTime;
-        private String lastStartUpdateTime;
-        private String lastStopTime;
-        private String lastUpdateResult;
-        private String machineName;
-        private Integer maxConcurrentJobs;
-        private String nodeName;
-        private String registerTime;
-        private String status;
-        private String version;
-        private String versionStatus;
+        private SelfHostedIntegrationRuntimeNodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfHostedIntegrationRuntimeNodeResponse();
         }
 
         public Builder(SelfHostedIntegrationRuntimeNodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.concurrentJobsLimit = defaults.concurrentJobsLimit;
-    	      this.expiryTime = defaults.expiryTime;
-    	      this.hostServiceUri = defaults.hostServiceUri;
-    	      this.isActiveDispatcher = defaults.isActiveDispatcher;
-    	      this.lastConnectTime = defaults.lastConnectTime;
-    	      this.lastEndUpdateTime = defaults.lastEndUpdateTime;
-    	      this.lastStartTime = defaults.lastStartTime;
-    	      this.lastStartUpdateTime = defaults.lastStartUpdateTime;
-    	      this.lastStopTime = defaults.lastStopTime;
-    	      this.lastUpdateResult = defaults.lastUpdateResult;
-    	      this.machineName = defaults.machineName;
-    	      this.maxConcurrentJobs = defaults.maxConcurrentJobs;
-    	      this.nodeName = defaults.nodeName;
-    	      this.registerTime = defaults.registerTime;
-    	      this.status = defaults.status;
-    	      this.version = defaults.version;
-    	      this.versionStatus = defaults.versionStatus;
+            $ = new SelfHostedIntegrationRuntimeNodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(Map<String,String> capabilities) {
-            this.capabilities = Objects.requireNonNull(capabilities);
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
-            this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
+            $.concurrentJobsLimit = concurrentJobsLimit;
             return this;
         }
+
         public Builder expiryTime(String expiryTime) {
-            this.expiryTime = Objects.requireNonNull(expiryTime);
+            $.expiryTime = expiryTime;
             return this;
         }
+
         public Builder hostServiceUri(String hostServiceUri) {
-            this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
+            $.hostServiceUri = hostServiceUri;
             return this;
         }
+
         public Builder isActiveDispatcher(Boolean isActiveDispatcher) {
-            this.isActiveDispatcher = Objects.requireNonNull(isActiveDispatcher);
+            $.isActiveDispatcher = isActiveDispatcher;
             return this;
         }
+
         public Builder lastConnectTime(String lastConnectTime) {
-            this.lastConnectTime = Objects.requireNonNull(lastConnectTime);
+            $.lastConnectTime = lastConnectTime;
             return this;
         }
+
         public Builder lastEndUpdateTime(String lastEndUpdateTime) {
-            this.lastEndUpdateTime = Objects.requireNonNull(lastEndUpdateTime);
+            $.lastEndUpdateTime = lastEndUpdateTime;
             return this;
         }
+
         public Builder lastStartTime(String lastStartTime) {
-            this.lastStartTime = Objects.requireNonNull(lastStartTime);
+            $.lastStartTime = lastStartTime;
             return this;
         }
+
         public Builder lastStartUpdateTime(String lastStartUpdateTime) {
-            this.lastStartUpdateTime = Objects.requireNonNull(lastStartUpdateTime);
+            $.lastStartUpdateTime = lastStartUpdateTime;
             return this;
         }
+
         public Builder lastStopTime(String lastStopTime) {
-            this.lastStopTime = Objects.requireNonNull(lastStopTime);
+            $.lastStopTime = lastStopTime;
             return this;
         }
+
         public Builder lastUpdateResult(String lastUpdateResult) {
-            this.lastUpdateResult = Objects.requireNonNull(lastUpdateResult);
+            $.lastUpdateResult = lastUpdateResult;
             return this;
         }
+
         public Builder machineName(String machineName) {
-            this.machineName = Objects.requireNonNull(machineName);
+            $.machineName = machineName;
             return this;
         }
+
         public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
-            this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
+            $.maxConcurrentJobs = maxConcurrentJobs;
             return this;
         }
+
         public Builder nodeName(String nodeName) {
-            this.nodeName = Objects.requireNonNull(nodeName);
+            $.nodeName = nodeName;
             return this;
         }
+
         public Builder registerTime(String registerTime) {
-            this.registerTime = Objects.requireNonNull(registerTime);
+            $.registerTime = registerTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder versionStatus(String versionStatus) {
-            this.versionStatus = Objects.requireNonNull(versionStatus);
+            $.versionStatus = versionStatus;
             return this;
-        }        public SelfHostedIntegrationRuntimeNodeResponse build() {
-            return new SelfHostedIntegrationRuntimeNodeResponse(capabilities, concurrentJobsLimit, expiryTime, hostServiceUri, isActiveDispatcher, lastConnectTime, lastEndUpdateTime, lastStartTime, lastStartUpdateTime, lastStopTime, lastUpdateResult, machineName, maxConcurrentJobs, nodeName, registerTime, status, version, versionStatus);
+        }
+
+        public SelfHostedIntegrationRuntimeNodeResponse build() {
+            $.capabilities = Objects.requireNonNull($.capabilities, "expected parameter 'capabilities' to be non-null");
+            $.concurrentJobsLimit = Objects.requireNonNull($.concurrentJobsLimit, "expected parameter 'concurrentJobsLimit' to be non-null");
+            $.expiryTime = Objects.requireNonNull($.expiryTime, "expected parameter 'expiryTime' to be non-null");
+            $.hostServiceUri = Objects.requireNonNull($.hostServiceUri, "expected parameter 'hostServiceUri' to be non-null");
+            $.isActiveDispatcher = Objects.requireNonNull($.isActiveDispatcher, "expected parameter 'isActiveDispatcher' to be non-null");
+            $.lastConnectTime = Objects.requireNonNull($.lastConnectTime, "expected parameter 'lastConnectTime' to be non-null");
+            $.lastEndUpdateTime = Objects.requireNonNull($.lastEndUpdateTime, "expected parameter 'lastEndUpdateTime' to be non-null");
+            $.lastStartTime = Objects.requireNonNull($.lastStartTime, "expected parameter 'lastStartTime' to be non-null");
+            $.lastStartUpdateTime = Objects.requireNonNull($.lastStartUpdateTime, "expected parameter 'lastStartUpdateTime' to be non-null");
+            $.lastStopTime = Objects.requireNonNull($.lastStopTime, "expected parameter 'lastStopTime' to be non-null");
+            $.lastUpdateResult = Objects.requireNonNull($.lastUpdateResult, "expected parameter 'lastUpdateResult' to be non-null");
+            $.machineName = Objects.requireNonNull($.machineName, "expected parameter 'machineName' to be non-null");
+            $.maxConcurrentJobs = Objects.requireNonNull($.maxConcurrentJobs, "expected parameter 'maxConcurrentJobs' to be non-null");
+            $.nodeName = Objects.requireNonNull($.nodeName, "expected parameter 'nodeName' to be non-null");
+            $.registerTime = Objects.requireNonNull($.registerTime, "expected parameter 'registerTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            $.versionStatus = Objects.requireNonNull($.versionStatus, "expected parameter 'versionStatus' to be non-null");
+            return $;
         }
     }
+
 }

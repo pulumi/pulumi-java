@@ -25,10 +25,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="code")
-      private final @Nullable Integer code;
+    private @Nullable Integer code;
 
     public Optional<Integer> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="recommendations")
-      private final @Nullable List<String> recommendations;
+    private @Nullable List<String> recommendations;
 
-    public List<String> recommendations() {
-        return this.recommendations == null ? List.of() : this.recommendations;
+    public Optional<List<String>> recommendations() {
+        return Optional.ofNullable(this.recommendations);
     }
 
     /**
@@ -58,76 +58,66 @@ public final class MABContainerHealthDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
-    public MABContainerHealthDetailsResponse(
-        @Nullable Integer code,
-        @Nullable String message,
-        @Nullable List<String> recommendations,
-        @Nullable String title) {
-        this.code = code;
-        this.message = message;
-        this.recommendations = recommendations;
-        this.title = title;
-    }
+    private MABContainerHealthDetailsResponse() {}
 
-    private MABContainerHealthDetailsResponse() {
-        this.code = null;
-        this.message = null;
-        this.recommendations = List.of();
-        this.title = null;
+    private MABContainerHealthDetailsResponse(MABContainerHealthDetailsResponse $) {
+        this.code = $.code;
+        this.message = $.message;
+        this.recommendations = $.recommendations;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MABContainerHealthDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer code;
-        private @Nullable String message;
-        private @Nullable List<String> recommendations;
-        private @Nullable String title;
+        private MABContainerHealthDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MABContainerHealthDetailsResponse();
         }
 
         public Builder(MABContainerHealthDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
-    	      this.recommendations = defaults.recommendations;
-    	      this.title = defaults.title;
+            $ = new MABContainerHealthDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder recommendations(@Nullable List<String> recommendations) {
-            this.recommendations = recommendations;
+            $.recommendations = recommendations;
             return this;
         }
+
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
-        }        public MABContainerHealthDetailsResponse build() {
-            return new MABContainerHealthDetailsResponse(code, message, recommendations, title);
+        }
+
+        public MABContainerHealthDetailsResponse build() {
+            return $;
         }
     }
+
 }

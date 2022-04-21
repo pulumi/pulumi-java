@@ -26,10 +26,10 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="blobType")
-      private final @Nullable List<String> blobType;
+    private @Nullable List<String> blobType;
 
-    public List<String> blobType() {
-        return this.blobType == null ? List.of() : this.blobType;
+    public Optional<List<String>> blobType() {
+        return Optional.ofNullable(this.blobType);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
@@ -48,10 +48,10 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,76 +59,67 @@ public final class LastAccessTimeTrackingPolicyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="trackingGranularityInDays")
-      private final @Nullable Integer trackingGranularityInDays;
+    private @Nullable Integer trackingGranularityInDays;
 
     public Optional<Integer> trackingGranularityInDays() {
-        return this.trackingGranularityInDays == null ? Optional.empty() : Optional.ofNullable(this.trackingGranularityInDays);
+        return Optional.ofNullable(this.trackingGranularityInDays);
     }
 
-    public LastAccessTimeTrackingPolicyResponse(
-        @Nullable List<String> blobType,
-        Boolean enable,
-        @Nullable String name,
-        @Nullable Integer trackingGranularityInDays) {
-        this.blobType = blobType;
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.name = name;
-        this.trackingGranularityInDays = trackingGranularityInDays;
-    }
+    private LastAccessTimeTrackingPolicyResponse() {}
 
-    private LastAccessTimeTrackingPolicyResponse() {
-        this.blobType = List.of();
-        this.enable = null;
-        this.name = null;
-        this.trackingGranularityInDays = null;
+    private LastAccessTimeTrackingPolicyResponse(LastAccessTimeTrackingPolicyResponse $) {
+        this.blobType = $.blobType;
+        this.enable = $.enable;
+        this.name = $.name;
+        this.trackingGranularityInDays = $.trackingGranularityInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LastAccessTimeTrackingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> blobType;
-        private Boolean enable;
-        private @Nullable String name;
-        private @Nullable Integer trackingGranularityInDays;
+        private LastAccessTimeTrackingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LastAccessTimeTrackingPolicyResponse();
         }
 
         public Builder(LastAccessTimeTrackingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobType = defaults.blobType;
-    	      this.enable = defaults.enable;
-    	      this.name = defaults.name;
-    	      this.trackingGranularityInDays = defaults.trackingGranularityInDays;
+            $ = new LastAccessTimeTrackingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobType(@Nullable List<String> blobType) {
-            this.blobType = blobType;
+            $.blobType = blobType;
             return this;
         }
+
         public Builder blobType(String... blobType) {
             return blobType(List.of(blobType));
         }
+
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
-            this.trackingGranularityInDays = trackingGranularityInDays;
+            $.trackingGranularityInDays = trackingGranularityInDays;
             return this;
-        }        public LastAccessTimeTrackingPolicyResponse build() {
-            return new LastAccessTimeTrackingPolicyResponse(blobType, enable, name, trackingGranularityInDays);
+        }
+
+        public LastAccessTimeTrackingPolicyResponse build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            return $;
         }
     }
+
 }

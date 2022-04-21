@@ -19,10 +19,10 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sqlVirtualMachineName", required=true)
-      private final String sqlVirtualMachineName;
+    private String sqlVirtualMachineName;
 
     public String sqlVirtualMachineName() {
         return this.sqlVirtualMachineName;
     }
 
-    public GetSqlVirtualMachineArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String sqlVirtualMachineName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlVirtualMachineName = Objects.requireNonNull(sqlVirtualMachineName, "expected parameter 'sqlVirtualMachineName' to be non-null");
-    }
+    private GetSqlVirtualMachineArgs() {}
 
-    private GetSqlVirtualMachineArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.sqlVirtualMachineName = null;
+    private GetSqlVirtualMachineArgs(GetSqlVirtualMachineArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlVirtualMachineName = $.sqlVirtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String sqlVirtualMachineName;
+        private GetSqlVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlVirtualMachineArgs();
         }
 
         public Builder(GetSqlVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlVirtualMachineName = defaults.sqlVirtualMachineName;
+            $ = new GetSqlVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlVirtualMachineName(String sqlVirtualMachineName) {
-            this.sqlVirtualMachineName = Objects.requireNonNull(sqlVirtualMachineName);
+            $.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;
-        }        public GetSqlVirtualMachineArgs build() {
-            return new GetSqlVirtualMachineArgs(expand, resourceGroupName, sqlVirtualMachineName);
+        }
+
+        public GetSqlVirtualMachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlVirtualMachineName = Objects.requireNonNull($.sqlVirtualMachineName, "expected parameter 'sqlVirtualMachineName' to be non-null");
+            return $;
         }
     }
+
 }

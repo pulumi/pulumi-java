@@ -10,10 +10,10 @@ import com.pulumi.azurenative.guestconfiguration.inputs.ConfigurationSettingArgs
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="assignmentType")
-      private final @Nullable Output<Either<String,AssignmentType>> assignmentType;
+    private @Nullable Output<Either<String,AssignmentType>> assignmentType;
 
-    public Output<Either<String,AssignmentType>> assignmentType() {
-        return this.assignmentType == null ? Codegen.empty() : this.assignmentType;
+    public Optional<Output<Either<String,AssignmentType>>> assignmentType() {
+        return Optional.ofNullable(this.assignmentType);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="configurationParameter")
-      private final @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
+    private @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
 
-    public Output<List<ConfigurationParameterArgs>> configurationParameter() {
-        return this.configurationParameter == null ? Codegen.empty() : this.configurationParameter;
+    public Optional<Output<List<ConfigurationParameterArgs>>> configurationParameter() {
+        return Optional.ofNullable(this.configurationParameter);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="configurationProtectedParameter")
-      private final @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
+    private @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
-    public Output<List<ConfigurationParameterArgs>> configurationProtectedParameter() {
-        return this.configurationProtectedParameter == null ? Codegen.empty() : this.configurationProtectedParameter;
+    public Optional<Output<List<ConfigurationParameterArgs>>> configurationProtectedParameter() {
+        return Optional.ofNullable(this.configurationProtectedParameter);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="configurationSetting")
-      private final @Nullable Output<ConfigurationSettingArgs> configurationSetting;
+    private @Nullable Output<ConfigurationSettingArgs> configurationSetting;
 
-    public Output<ConfigurationSettingArgs> configurationSetting() {
-        return this.configurationSetting == null ? Codegen.empty() : this.configurationSetting;
+    public Optional<Output<ConfigurationSettingArgs>> configurationSetting() {
+        return Optional.ofNullable(this.configurationSetting);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentHash")
-      private final @Nullable Output<String> contentHash;
+    private @Nullable Output<String> contentHash;
 
-    public Output<String> contentHash() {
-        return this.contentHash == null ? Codegen.empty() : this.contentHash;
+    public Optional<Output<String>> contentHash() {
+        return Optional.ofNullable(this.contentHash);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentUri")
-      private final @Nullable Output<String> contentUri;
+    private @Nullable Output<String> contentUri;
 
-    public Output<String> contentUri() {
-        return this.contentUri == null ? Codegen.empty() : this.contentUri;
+    public Optional<Output<String>> contentUri() {
+        return Optional.ofNullable(this.contentUri);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,Kind>> kind;
+    private @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,Kind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,160 +118,136 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GuestConfigurationNavigationArgs(
-        @Nullable Output<Either<String,AssignmentType>> assignmentType,
-        @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter,
-        @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter,
-        @Nullable Output<ConfigurationSettingArgs> configurationSetting,
-        @Nullable Output<String> contentHash,
-        @Nullable Output<String> contentUri,
-        @Nullable Output<Either<String,Kind>> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> version) {
-        this.assignmentType = assignmentType;
-        this.configurationParameter = configurationParameter;
-        this.configurationProtectedParameter = configurationProtectedParameter;
-        this.configurationSetting = configurationSetting;
-        this.contentHash = contentHash;
-        this.contentUri = contentUri;
-        this.kind = kind;
-        this.name = name;
-        this.version = version;
-    }
+    private GuestConfigurationNavigationArgs() {}
 
-    private GuestConfigurationNavigationArgs() {
-        this.assignmentType = Codegen.empty();
-        this.configurationParameter = Codegen.empty();
-        this.configurationProtectedParameter = Codegen.empty();
-        this.configurationSetting = Codegen.empty();
-        this.contentHash = Codegen.empty();
-        this.contentUri = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private GuestConfigurationNavigationArgs(GuestConfigurationNavigationArgs $) {
+        this.assignmentType = $.assignmentType;
+        this.configurationParameter = $.configurationParameter;
+        this.configurationProtectedParameter = $.configurationProtectedParameter;
+        this.configurationSetting = $.configurationSetting;
+        this.contentHash = $.contentHash;
+        this.contentUri = $.contentUri;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestConfigurationNavigationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AssignmentType>> assignmentType;
-        private @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
-        private @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
-        private @Nullable Output<ConfigurationSettingArgs> configurationSetting;
-        private @Nullable Output<String> contentHash;
-        private @Nullable Output<String> contentUri;
-        private @Nullable Output<Either<String,Kind>> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> version;
+        private GuestConfigurationNavigationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestConfigurationNavigationArgs();
         }
 
         public Builder(GuestConfigurationNavigationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentType = defaults.assignmentType;
-    	      this.configurationParameter = defaults.configurationParameter;
-    	      this.configurationProtectedParameter = defaults.configurationProtectedParameter;
-    	      this.configurationSetting = defaults.configurationSetting;
-    	      this.contentHash = defaults.contentHash;
-    	      this.contentUri = defaults.contentUri;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new GuestConfigurationNavigationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentType(@Nullable Output<Either<String,AssignmentType>> assignmentType) {
-            this.assignmentType = assignmentType;
+            $.assignmentType = assignmentType;
             return this;
         }
-        public Builder assignmentType(@Nullable Either<String,AssignmentType> assignmentType) {
-            this.assignmentType = Codegen.ofNullable(assignmentType);
-            return this;
+
+        public Builder assignmentType(Either<String,AssignmentType> assignmentType) {
+            return assignmentType(Output.of(assignmentType));
         }
+
         public Builder configurationParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationParameter) {
-            this.configurationParameter = configurationParameter;
+            $.configurationParameter = configurationParameter;
             return this;
         }
-        public Builder configurationParameter(@Nullable List<ConfigurationParameterArgs> configurationParameter) {
-            this.configurationParameter = Codegen.ofNullable(configurationParameter);
-            return this;
+
+        public Builder configurationParameter(List<ConfigurationParameterArgs> configurationParameter) {
+            return configurationParameter(Output.of(configurationParameter));
         }
+
         public Builder configurationParameter(ConfigurationParameterArgs... configurationParameter) {
             return configurationParameter(List.of(configurationParameter));
         }
+
         public Builder configurationProtectedParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
-            this.configurationProtectedParameter = configurationProtectedParameter;
+            $.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
-        public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterArgs> configurationProtectedParameter) {
-            this.configurationProtectedParameter = Codegen.ofNullable(configurationProtectedParameter);
-            return this;
+
+        public Builder configurationProtectedParameter(List<ConfigurationParameterArgs> configurationProtectedParameter) {
+            return configurationProtectedParameter(Output.of(configurationProtectedParameter));
         }
+
         public Builder configurationProtectedParameter(ConfigurationParameterArgs... configurationProtectedParameter) {
             return configurationProtectedParameter(List.of(configurationProtectedParameter));
         }
+
         public Builder configurationSetting(@Nullable Output<ConfigurationSettingArgs> configurationSetting) {
-            this.configurationSetting = configurationSetting;
+            $.configurationSetting = configurationSetting;
             return this;
         }
-        public Builder configurationSetting(@Nullable ConfigurationSettingArgs configurationSetting) {
-            this.configurationSetting = Codegen.ofNullable(configurationSetting);
-            return this;
+
+        public Builder configurationSetting(ConfigurationSettingArgs configurationSetting) {
+            return configurationSetting(Output.of(configurationSetting));
         }
+
         public Builder contentHash(@Nullable Output<String> contentHash) {
-            this.contentHash = contentHash;
+            $.contentHash = contentHash;
             return this;
         }
-        public Builder contentHash(@Nullable String contentHash) {
-            this.contentHash = Codegen.ofNullable(contentHash);
-            return this;
+
+        public Builder contentHash(String contentHash) {
+            return contentHash(Output.of(contentHash));
         }
+
         public Builder contentUri(@Nullable Output<String> contentUri) {
-            this.contentUri = contentUri;
+            $.contentUri = contentUri;
             return this;
         }
-        public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = Codegen.ofNullable(contentUri);
-            return this;
+
+        public Builder contentUri(String contentUri) {
+            return contentUri(Output.of(contentUri));
         }
+
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,Kind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GuestConfigurationNavigationArgs build() {
-            return new GuestConfigurationNavigationArgs(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentUri, kind, name, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GuestConfigurationNavigationArgs build() {
+            return $;
         }
     }
+
 }

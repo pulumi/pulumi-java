@@ -24,10 +24,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="digest")
-      private final @Nullable String digest;
+    private @Nullable String digest;
 
     public Optional<String> digest() {
-        return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
+        return Optional.ofNullable(this.digest);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="length")
-      private final @Nullable Double length;
+    private @Nullable Double length;
 
     public Optional<Double> length() {
-        return this.length == null ? Optional.empty() : Optional.ofNullable(this.length);
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mediaType")
-      private final @Nullable String mediaType;
+    private @Nullable String mediaType;
 
     public Optional<String> mediaType() {
-        return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
+        return Optional.ofNullable(this.mediaType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repository")
-      private final @Nullable String repository;
+    private @Nullable String repository;
 
     public Optional<String> repository() {
-        return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
+        return Optional.ofNullable(this.repository);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Double size;
+    private @Nullable Double size;
 
     public Optional<Double> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -112,118 +112,92 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public TargetResponse(
-        @Nullable String digest,
-        @Nullable Double length,
-        @Nullable String mediaType,
-        @Nullable String name,
-        @Nullable String repository,
-        @Nullable Double size,
-        @Nullable String tag,
-        @Nullable String url,
-        @Nullable String version) {
-        this.digest = digest;
-        this.length = length;
-        this.mediaType = mediaType;
-        this.name = name;
-        this.repository = repository;
-        this.size = size;
-        this.tag = tag;
-        this.url = url;
-        this.version = version;
-    }
+    private TargetResponse() {}
 
-    private TargetResponse() {
-        this.digest = null;
-        this.length = null;
-        this.mediaType = null;
-        this.name = null;
-        this.repository = null;
-        this.size = null;
-        this.tag = null;
-        this.url = null;
-        this.version = null;
+    private TargetResponse(TargetResponse $) {
+        this.digest = $.digest;
+        this.length = $.length;
+        this.mediaType = $.mediaType;
+        this.name = $.name;
+        this.repository = $.repository;
+        this.size = $.size;
+        this.tag = $.tag;
+        this.url = $.url;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String digest;
-        private @Nullable Double length;
-        private @Nullable String mediaType;
-        private @Nullable String name;
-        private @Nullable String repository;
-        private @Nullable Double size;
-        private @Nullable String tag;
-        private @Nullable String url;
-        private @Nullable String version;
+        private TargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetResponse();
         }
 
         public Builder(TargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.length = defaults.length;
-    	      this.mediaType = defaults.mediaType;
-    	      this.name = defaults.name;
-    	      this.repository = defaults.repository;
-    	      this.size = defaults.size;
-    	      this.tag = defaults.tag;
-    	      this.url = defaults.url;
-    	      this.version = defaults.version;
+            $ = new TargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(@Nullable String digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
+
         public Builder length(@Nullable Double length) {
-            this.length = length;
+            $.length = length;
             return this;
         }
+
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = mediaType;
+            $.mediaType = mediaType;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder repository(@Nullable String repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
+
         public Builder size(@Nullable Double size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public TargetResponse build() {
-            return new TargetResponse(digest, length, mediaType, name, repository, size, tag, url, version);
+        }
+
+        public TargetResponse build() {
+            return $;
         }
     }
+
 }

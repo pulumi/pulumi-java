@@ -23,7 +23,7 @@ public final class ContainerGroupResponseInstanceView extends com.pulumi.resourc
      * 
      */
     @Import(name="events", required=true)
-      private final List<EventResponse> events;
+    private List<EventResponse> events;
 
     public List<EventResponse> events() {
         return this.events;
@@ -34,58 +34,56 @@ public final class ContainerGroupResponseInstanceView extends com.pulumi.resourc
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public ContainerGroupResponseInstanceView(
-        List<EventResponse> events,
-        String state) {
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private ContainerGroupResponseInstanceView() {}
 
-    private ContainerGroupResponseInstanceView() {
-        this.events = List.of();
-        this.state = null;
+    private ContainerGroupResponseInstanceView(ContainerGroupResponseInstanceView $) {
+        this.events = $.events;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupResponseInstanceView defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<EventResponse> events;
-        private String state;
+        private ContainerGroupResponseInstanceView $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupResponseInstanceView();
         }
 
         public Builder(ContainerGroupResponseInstanceView defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
-    	      this.state = defaults.state;
+            $ = new ContainerGroupResponseInstanceView(Objects.requireNonNull(defaults));
         }
 
         public Builder events(List<EventResponse> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(EventResponse... events) {
             return events(List.of(events));
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public ContainerGroupResponseInstanceView build() {
-            return new ContainerGroupResponseInstanceView(events, state);
+        }
+
+        public ContainerGroupResponseInstanceView build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

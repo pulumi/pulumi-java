@@ -26,10 +26,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="accessModes")
-      private final @Nullable List<String> accessModes;
+    private @Nullable List<String> accessModes;
 
-    public List<String> accessModes() {
-        return this.accessModes == null ? List.of() : this.accessModes;
+    public Optional<List<String>> accessModes() {
+        return Optional.ofNullable(this.accessModes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Integer destinationPort;
+    private @Nullable Integer destinationPort;
 
     public Optional<Integer> destinationPort() {
-        return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="disableGatewayAuth")
-      private final @Nullable Boolean disableGatewayAuth;
+    private @Nullable Boolean disableGatewayAuth;
 
     public Optional<Boolean> disableGatewayAuth() {
-        return this.disableGatewayAuth == null ? Optional.empty() : Optional.ofNullable(this.disableGatewayAuth);
+        return Optional.ofNullable(this.disableGatewayAuth);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -70,10 +70,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="publicPort", required=true)
-      private final Integer publicPort;
+    private Integer publicPort;
 
     public Integer publicPort() {
         return this.publicPort;
@@ -92,103 +92,86 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
      * 
      */
     @Import(name="subDomainSuffix")
-      private final @Nullable String subDomainSuffix;
+    private @Nullable String subDomainSuffix;
 
     public Optional<String> subDomainSuffix() {
-        return this.subDomainSuffix == null ? Optional.empty() : Optional.ofNullable(this.subDomainSuffix);
+        return Optional.ofNullable(this.subDomainSuffix);
     }
 
-    public ApplicationGetHttpsEndpointResponse(
-        @Nullable List<String> accessModes,
-        @Nullable Integer destinationPort,
-        @Nullable Boolean disableGatewayAuth,
-        String location,
-        @Nullable String privateIPAddress,
-        Integer publicPort,
-        @Nullable String subDomainSuffix) {
-        this.accessModes = accessModes;
-        this.destinationPort = destinationPort;
-        this.disableGatewayAuth = disableGatewayAuth;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.privateIPAddress = privateIPAddress;
-        this.publicPort = Objects.requireNonNull(publicPort, "expected parameter 'publicPort' to be non-null");
-        this.subDomainSuffix = subDomainSuffix;
-    }
+    private ApplicationGetHttpsEndpointResponse() {}
 
-    private ApplicationGetHttpsEndpointResponse() {
-        this.accessModes = List.of();
-        this.destinationPort = null;
-        this.disableGatewayAuth = null;
-        this.location = null;
-        this.privateIPAddress = null;
-        this.publicPort = null;
-        this.subDomainSuffix = null;
+    private ApplicationGetHttpsEndpointResponse(ApplicationGetHttpsEndpointResponse $) {
+        this.accessModes = $.accessModes;
+        this.destinationPort = $.destinationPort;
+        this.disableGatewayAuth = $.disableGatewayAuth;
+        this.location = $.location;
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicPort = $.publicPort;
+        this.subDomainSuffix = $.subDomainSuffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGetHttpsEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> accessModes;
-        private @Nullable Integer destinationPort;
-        private @Nullable Boolean disableGatewayAuth;
-        private String location;
-        private @Nullable String privateIPAddress;
-        private Integer publicPort;
-        private @Nullable String subDomainSuffix;
+        private ApplicationGetHttpsEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGetHttpsEndpointResponse();
         }
 
         public Builder(ApplicationGetHttpsEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessModes = defaults.accessModes;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.disableGatewayAuth = defaults.disableGatewayAuth;
-    	      this.location = defaults.location;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicPort = defaults.publicPort;
-    	      this.subDomainSuffix = defaults.subDomainSuffix;
+            $ = new ApplicationGetHttpsEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = accessModes;
+            $.accessModes = accessModes;
             return this;
         }
+
         public Builder accessModes(String... accessModes) {
             return accessModes(List.of(accessModes));
         }
+
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
+
         public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
-            this.disableGatewayAuth = disableGatewayAuth;
+            $.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder publicPort(Integer publicPort) {
-            this.publicPort = Objects.requireNonNull(publicPort);
+            $.publicPort = publicPort;
             return this;
         }
+
         public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
-            this.subDomainSuffix = subDomainSuffix;
+            $.subDomainSuffix = subDomainSuffix;
             return this;
-        }        public ApplicationGetHttpsEndpointResponse build() {
-            return new ApplicationGetHttpsEndpointResponse(accessModes, destinationPort, disableGatewayAuth, location, privateIPAddress, publicPort, subDomainSuffix);
+        }
+
+        public ApplicationGetHttpsEndpointResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.publicPort = Objects.requireNonNull($.publicPort, "expected parameter 'publicPort' to be non-null");
+            return $;
         }
     }
+
 }

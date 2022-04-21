@@ -8,9 +8,9 @@ import com.pulumi.azurenative.devtestlab.inputs.AttachNewDataDiskOptionsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="attachNewDataDiskOptions")
-      private final @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
+    private @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
 
-    public Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions() {
-        return this.attachNewDataDiskOptions == null ? Codegen.empty() : this.attachNewDataDiskOptions;
+    public Optional<Output<AttachNewDataDiskOptionsArgs>> attachNewDataDiskOptions() {
+        return Optional.ofNullable(this.attachNewDataDiskOptions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="existingLabDiskId")
-      private final @Nullable Output<String> existingLabDiskId;
+    private @Nullable Output<String> existingLabDiskId;
 
-    public Output<String> existingLabDiskId() {
-        return this.existingLabDiskId == null ? Codegen.empty() : this.existingLabDiskId;
+    public Optional<Output<String>> existingLabDiskId() {
+        return Optional.ofNullable(this.existingLabDiskId);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
+    private @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
-    public Output<Either<String,HostCachingOptions>> hostCaching() {
-        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
+    public Optional<Output<Either<String,HostCachingOptions>>> hostCaching() {
+        return Optional.ofNullable(this.hostCaching);
     }
 
-    public DataDiskPropertiesArgs(
-        @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions,
-        @Nullable Output<String> existingLabDiskId,
-        @Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
-        this.attachNewDataDiskOptions = attachNewDataDiskOptions;
-        this.existingLabDiskId = existingLabDiskId;
-        this.hostCaching = hostCaching;
-    }
+    private DataDiskPropertiesArgs() {}
 
-    private DataDiskPropertiesArgs() {
-        this.attachNewDataDiskOptions = Codegen.empty();
-        this.existingLabDiskId = Codegen.empty();
-        this.hostCaching = Codegen.empty();
+    private DataDiskPropertiesArgs(DataDiskPropertiesArgs $) {
+        this.attachNewDataDiskOptions = $.attachNewDataDiskOptions;
+        this.existingLabDiskId = $.existingLabDiskId;
+        this.hostCaching = $.hostCaching;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
-        private @Nullable Output<String> existingLabDiskId;
-        private @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
+        private DataDiskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskPropertiesArgs();
         }
 
         public Builder(DataDiskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachNewDataDiskOptions = defaults.attachNewDataDiskOptions;
-    	      this.existingLabDiskId = defaults.existingLabDiskId;
-    	      this.hostCaching = defaults.hostCaching;
+            $ = new DataDiskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachNewDataDiskOptions(@Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions) {
-            this.attachNewDataDiskOptions = attachNewDataDiskOptions;
+            $.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
-        public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsArgs attachNewDataDiskOptions) {
-            this.attachNewDataDiskOptions = Codegen.ofNullable(attachNewDataDiskOptions);
-            return this;
+
+        public Builder attachNewDataDiskOptions(AttachNewDataDiskOptionsArgs attachNewDataDiskOptions) {
+            return attachNewDataDiskOptions(Output.of(attachNewDataDiskOptions));
         }
+
         public Builder existingLabDiskId(@Nullable Output<String> existingLabDiskId) {
-            this.existingLabDiskId = existingLabDiskId;
+            $.existingLabDiskId = existingLabDiskId;
             return this;
         }
-        public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
-            this.existingLabDiskId = Codegen.ofNullable(existingLabDiskId);
-            return this;
+
+        public Builder existingLabDiskId(String existingLabDiskId) {
+            return existingLabDiskId(Output.of(existingLabDiskId));
         }
+
         public Builder hostCaching(@Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
         }
-        public Builder hostCaching(@Nullable Either<String,HostCachingOptions> hostCaching) {
-            this.hostCaching = Codegen.ofNullable(hostCaching);
-            return this;
-        }        public DataDiskPropertiesArgs build() {
-            return new DataDiskPropertiesArgs(attachNewDataDiskOptions, existingLabDiskId, hostCaching);
+
+        public Builder hostCaching(Either<String,HostCachingOptions> hostCaching) {
+            return hostCaching(Output.of(hostCaching));
+        }
+
+        public DataDiskPropertiesArgs build() {
+            return $;
         }
     }
+
 }

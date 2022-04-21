@@ -28,10 +28,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="preCopyScript")
-      private final @Nullable Object preCopyScript;
+    private @Nullable Object preCopyScript;
 
     public Optional<Object> preCopyScript() {
-        return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
+        return Optional.ofNullable(this.preCopyScript);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Object sinkRetryCount;
+    private @Nullable Object sinkRetryCount;
 
     public Optional<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Object sinkRetryWait;
+    private @Nullable Object sinkRetryWait;
 
     public Optional<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sqlWriterStoredProcedureName")
-      private final @Nullable Object sqlWriterStoredProcedureName;
+    private @Nullable Object sqlWriterStoredProcedureName;
 
     public Optional<Object> sqlWriterStoredProcedureName() {
-        return this.sqlWriterStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterStoredProcedureName);
+        return Optional.ofNullable(this.sqlWriterStoredProcedureName);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sqlWriterTableType")
-      private final @Nullable Object sqlWriterTableType;
+    private @Nullable Object sqlWriterTableType;
 
     public Optional<Object> sqlWriterTableType() {
-        return this.sqlWriterTableType == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterTableType);
+        return Optional.ofNullable(this.sqlWriterTableType);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sqlWriterUseTableLock")
-      private final @Nullable Object sqlWriterUseTableLock;
+    private @Nullable Object sqlWriterUseTableLock;
 
     public Optional<Object> sqlWriterUseTableLock() {
-        return this.sqlWriterUseTableLock == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterUseTableLock);
+        return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="storedProcedureParameters")
-      private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+    private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
-    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
-        return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
+    public Optional<Map<String,StoredProcedureParameterResponse>> storedProcedureParameters() {
+        return Optional.ofNullable(this.storedProcedureParameters);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="storedProcedureTableTypeParameterName")
-      private final @Nullable Object storedProcedureTableTypeParameterName;
+    private @Nullable Object storedProcedureTableTypeParameterName;
 
     public Optional<Object> storedProcedureTableTypeParameterName() {
-        return this.storedProcedureTableTypeParameterName == null ? Optional.empty() : Optional.ofNullable(this.storedProcedureTableTypeParameterName);
+        return Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tableOption")
-      private final @Nullable Object tableOption;
+    private @Nullable Object tableOption;
 
     public Optional<Object> tableOption() {
-        return this.tableOption == null ? Optional.empty() : Optional.ofNullable(this.tableOption);
+        return Optional.ofNullable(this.tableOption);
     }
 
     /**
@@ -150,7 +150,7 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -161,10 +161,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="upsertSettings")
-      private final @Nullable SqlUpsertSettingsResponse upsertSettings;
+    private @Nullable SqlUpsertSettingsResponse upsertSettings;
 
     public Optional<SqlUpsertSettingsResponse> upsertSettings() {
-        return this.upsertSettings == null ? Optional.empty() : Optional.ofNullable(this.upsertSettings);
+        return Optional.ofNullable(this.upsertSettings);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Object writeBatchSize;
+    private @Nullable Object writeBatchSize;
 
     public Optional<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Object writeBatchTimeout;
+    private @Nullable Object writeBatchTimeout;
 
     public Optional<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
     /**
@@ -194,181 +194,135 @@ public final class SqlServerSinkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="writeBehavior")
-      private final @Nullable Object writeBehavior;
+    private @Nullable Object writeBehavior;
 
     public Optional<Object> writeBehavior() {
-        return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
+        return Optional.ofNullable(this.writeBehavior);
     }
 
-    public SqlServerSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object sqlWriterStoredProcedureName,
-        @Nullable Object sqlWriterTableType,
-        @Nullable Object sqlWriterUseTableLock,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        @Nullable Object storedProcedureTableTypeParameterName,
-        @Nullable Object tableOption,
-        String type,
-        @Nullable SqlUpsertSettingsResponse upsertSettings,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable Object writeBehavior) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.preCopyScript = preCopyScript;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
-        this.sqlWriterTableType = sqlWriterTableType;
-        this.sqlWriterUseTableLock = sqlWriterUseTableLock;
-        this.storedProcedureParameters = storedProcedureParameters;
-        this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
-        this.tableOption = tableOption;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.upsertSettings = upsertSettings;
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-        this.writeBehavior = writeBehavior;
-    }
+    private SqlServerSinkResponse() {}
 
-    private SqlServerSinkResponse() {
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.preCopyScript = null;
-        this.sinkRetryCount = null;
-        this.sinkRetryWait = null;
-        this.sqlWriterStoredProcedureName = null;
-        this.sqlWriterTableType = null;
-        this.sqlWriterUseTableLock = null;
-        this.storedProcedureParameters = Map.of();
-        this.storedProcedureTableTypeParameterName = null;
-        this.tableOption = null;
-        this.type = null;
-        this.upsertSettings = null;
-        this.writeBatchSize = null;
-        this.writeBatchTimeout = null;
-        this.writeBehavior = null;
+    private SqlServerSinkResponse(SqlServerSinkResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.preCopyScript = $.preCopyScript;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.sqlWriterStoredProcedureName = $.sqlWriterStoredProcedureName;
+        this.sqlWriterTableType = $.sqlWriterTableType;
+        this.sqlWriterUseTableLock = $.sqlWriterUseTableLock;
+        this.storedProcedureParameters = $.storedProcedureParameters;
+        this.storedProcedureTableTypeParameterName = $.storedProcedureTableTypeParameterName;
+        this.tableOption = $.tableOption;
+        this.type = $.type;
+        this.upsertSettings = $.upsertSettings;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
+        this.writeBehavior = $.writeBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object preCopyScript;
-        private @Nullable Object sinkRetryCount;
-        private @Nullable Object sinkRetryWait;
-        private @Nullable Object sqlWriterStoredProcedureName;
-        private @Nullable Object sqlWriterTableType;
-        private @Nullable Object sqlWriterUseTableLock;
-        private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
-        private @Nullable Object storedProcedureTableTypeParameterName;
-        private @Nullable Object tableOption;
-        private String type;
-        private @Nullable SqlUpsertSettingsResponse upsertSettings;
-        private @Nullable Object writeBatchSize;
-        private @Nullable Object writeBatchTimeout;
-        private @Nullable Object writeBehavior;
+        private SqlServerSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerSinkResponse();
         }
 
         public Builder(SqlServerSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.preCopyScript = defaults.preCopyScript;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.sqlWriterStoredProcedureName = defaults.sqlWriterStoredProcedureName;
-    	      this.sqlWriterTableType = defaults.sqlWriterTableType;
-    	      this.sqlWriterUseTableLock = defaults.sqlWriterUseTableLock;
-    	      this.storedProcedureParameters = defaults.storedProcedureParameters;
-    	      this.storedProcedureTableTypeParameterName = defaults.storedProcedureTableTypeParameterName;
-    	      this.tableOption = defaults.tableOption;
-    	      this.type = defaults.type;
-    	      this.upsertSettings = defaults.upsertSettings;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
-    	      this.writeBehavior = defaults.writeBehavior;
+            $ = new SqlServerSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder preCopyScript(@Nullable Object preCopyScript) {
-            this.preCopyScript = preCopyScript;
+            $.preCopyScript = preCopyScript;
             return this;
         }
+
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
+
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
+
         public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
-            this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
+            $.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
+
         public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
-            this.sqlWriterTableType = sqlWriterTableType;
+            $.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
+
         public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
-            this.sqlWriterUseTableLock = sqlWriterUseTableLock;
+            $.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
+
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
-            this.storedProcedureParameters = storedProcedureParameters;
+            $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
+
         public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
-            this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
+            $.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
+
         public Builder tableOption(@Nullable Object tableOption) {
-            this.tableOption = tableOption;
+            $.tableOption = tableOption;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder upsertSettings(@Nullable SqlUpsertSettingsResponse upsertSettings) {
-            this.upsertSettings = upsertSettings;
+            $.upsertSettings = upsertSettings;
             return this;
         }
+
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
+
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
+
         public Builder writeBehavior(@Nullable Object writeBehavior) {
-            this.writeBehavior = writeBehavior;
+            $.writeBehavior = writeBehavior;
             return this;
-        }        public SqlServerSinkResponse build() {
-            return new SqlServerSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
+        }
+
+        public SqlServerSinkResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="batchConfigurationName", required=true)
-      private final String batchConfigurationName;
+    private String batchConfigurationName;
 
     public String batchConfigurationName() {
         return this.batchConfigurationName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -39,64 +39,59 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIntegrationAccountBatchConfigurationArgs(
-        String batchConfigurationName,
-        String integrationAccountName,
-        String resourceGroupName) {
-        this.batchConfigurationName = Objects.requireNonNull(batchConfigurationName, "expected parameter 'batchConfigurationName' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIntegrationAccountBatchConfigurationArgs() {}
 
-    private GetIntegrationAccountBatchConfigurationArgs() {
-        this.batchConfigurationName = null;
-        this.integrationAccountName = null;
-        this.resourceGroupName = null;
+    private GetIntegrationAccountBatchConfigurationArgs(GetIntegrationAccountBatchConfigurationArgs $) {
+        this.batchConfigurationName = $.batchConfigurationName;
+        this.integrationAccountName = $.integrationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationAccountBatchConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String batchConfigurationName;
-        private String integrationAccountName;
-        private String resourceGroupName;
+        private GetIntegrationAccountBatchConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationAccountBatchConfigurationArgs();
         }
 
         public Builder(GetIntegrationAccountBatchConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchConfigurationName = defaults.batchConfigurationName;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIntegrationAccountBatchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchConfigurationName(String batchConfigurationName) {
-            this.batchConfigurationName = Objects.requireNonNull(batchConfigurationName);
+            $.batchConfigurationName = batchConfigurationName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIntegrationAccountBatchConfigurationArgs build() {
-            return new GetIntegrationAccountBatchConfigurationArgs(batchConfigurationName, integrationAccountName, resourceGroupName);
+        }
+
+        public GetIntegrationAccountBatchConfigurationArgs build() {
+            $.batchConfigurationName = Objects.requireNonNull($.batchConfigurationName, "expected parameter 'batchConfigurationName' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

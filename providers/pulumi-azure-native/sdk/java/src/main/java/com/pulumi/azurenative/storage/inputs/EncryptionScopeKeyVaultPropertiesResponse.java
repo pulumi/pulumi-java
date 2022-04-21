@@ -23,7 +23,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="currentVersionedKeyIdentifier", required=true)
-      private final String currentVersionedKeyIdentifier;
+    private String currentVersionedKeyIdentifier;
 
     public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
@@ -34,10 +34,10 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="keyUri")
-      private final @Nullable String keyUri;
+    private @Nullable String keyUri;
 
     public Optional<String> keyUri() {
-        return this.keyUri == null ? Optional.empty() : Optional.ofNullable(this.keyUri);
+        return Optional.ofNullable(this.keyUri);
     }
 
     /**
@@ -45,64 +45,58 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="lastKeyRotationTimestamp", required=true)
-      private final String lastKeyRotationTimestamp;
+    private String lastKeyRotationTimestamp;
 
     public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
 
-    public EncryptionScopeKeyVaultPropertiesResponse(
-        String currentVersionedKeyIdentifier,
-        @Nullable String keyUri,
-        String lastKeyRotationTimestamp) {
-        this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier, "expected parameter 'currentVersionedKeyIdentifier' to be non-null");
-        this.keyUri = keyUri;
-        this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp, "expected parameter 'lastKeyRotationTimestamp' to be non-null");
-    }
+    private EncryptionScopeKeyVaultPropertiesResponse() {}
 
-    private EncryptionScopeKeyVaultPropertiesResponse() {
-        this.currentVersionedKeyIdentifier = null;
-        this.keyUri = null;
-        this.lastKeyRotationTimestamp = null;
+    private EncryptionScopeKeyVaultPropertiesResponse(EncryptionScopeKeyVaultPropertiesResponse $) {
+        this.currentVersionedKeyIdentifier = $.currentVersionedKeyIdentifier;
+        this.keyUri = $.keyUri;
+        this.lastKeyRotationTimestamp = $.lastKeyRotationTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionScopeKeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentVersionedKeyIdentifier;
-        private @Nullable String keyUri;
-        private String lastKeyRotationTimestamp;
+        private EncryptionScopeKeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionScopeKeyVaultPropertiesResponse();
         }
 
         public Builder(EncryptionScopeKeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentVersionedKeyIdentifier = defaults.currentVersionedKeyIdentifier;
-    	      this.keyUri = defaults.keyUri;
-    	      this.lastKeyRotationTimestamp = defaults.lastKeyRotationTimestamp;
+            $ = new EncryptionScopeKeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
-            this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
+            $.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
             return this;
         }
+
         public Builder keyUri(@Nullable String keyUri) {
-            this.keyUri = keyUri;
+            $.keyUri = keyUri;
             return this;
         }
+
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
-            this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
+            $.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
             return this;
-        }        public EncryptionScopeKeyVaultPropertiesResponse build() {
-            return new EncryptionScopeKeyVaultPropertiesResponse(currentVersionedKeyIdentifier, keyUri, lastKeyRotationTimestamp);
+        }
+
+        public EncryptionScopeKeyVaultPropertiesResponse build() {
+            $.currentVersionedKeyIdentifier = Objects.requireNonNull($.currentVersionedKeyIdentifier, "expected parameter 'currentVersionedKeyIdentifier' to be non-null");
+            $.lastKeyRotationTimestamp = Objects.requireNonNull($.lastKeyRotationTimestamp, "expected parameter 'lastKeyRotationTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

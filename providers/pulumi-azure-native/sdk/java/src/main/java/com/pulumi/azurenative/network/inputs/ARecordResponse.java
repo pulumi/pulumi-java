@@ -23,45 +23,44 @@ public final class ARecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv4Address")
-      private final @Nullable String ipv4Address;
+    private @Nullable String ipv4Address;
 
     public Optional<String> ipv4Address() {
-        return this.ipv4Address == null ? Optional.empty() : Optional.ofNullable(this.ipv4Address);
+        return Optional.ofNullable(this.ipv4Address);
     }
 
-    public ARecordResponse(@Nullable String ipv4Address) {
-        this.ipv4Address = ipv4Address;
-    }
+    private ARecordResponse() {}
 
-    private ARecordResponse() {
-        this.ipv4Address = null;
+    private ARecordResponse(ARecordResponse $) {
+        this.ipv4Address = $.ipv4Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ARecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipv4Address;
+        private ARecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ARecordResponse();
         }
 
         public Builder(ARecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv4Address = defaults.ipv4Address;
+            $ = new ARecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = ipv4Address;
+            $.ipv4Address = ipv4Address;
             return this;
-        }        public ARecordResponse build() {
-            return new ARecordResponse(ipv4Address);
+        }
+
+        public ARecordResponse build() {
+            return $;
         }
     }
+
 }

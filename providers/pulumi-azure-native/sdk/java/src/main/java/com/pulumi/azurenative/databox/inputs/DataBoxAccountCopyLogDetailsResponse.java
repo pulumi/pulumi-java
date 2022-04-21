@@ -22,7 +22,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="copyLogDetailsType", required=true)
-      private final String copyLogDetailsType;
+    private String copyLogDetailsType;
 
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
@@ -45,7 +45,7 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="copyLogLink", required=true)
-      private final String copyLogLink;
+    private String copyLogLink;
 
     public String copyLogLink() {
         return this.copyLogLink;
@@ -56,73 +56,66 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="copyVerboseLogLink", required=true)
-      private final String copyVerboseLogLink;
+    private String copyVerboseLogLink;
 
     public String copyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }
 
-    public DataBoxAccountCopyLogDetailsResponse(
-        String accountName,
-        String copyLogDetailsType,
-        String copyLogLink,
-        String copyVerboseLogLink) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.copyLogDetailsType = Codegen.stringProp("copyLogDetailsType").arg(copyLogDetailsType).require();
-        this.copyLogLink = Objects.requireNonNull(copyLogLink, "expected parameter 'copyLogLink' to be non-null");
-        this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink, "expected parameter 'copyVerboseLogLink' to be non-null");
-    }
+    private DataBoxAccountCopyLogDetailsResponse() {}
 
-    private DataBoxAccountCopyLogDetailsResponse() {
-        this.accountName = null;
-        this.copyLogDetailsType = null;
-        this.copyLogLink = null;
-        this.copyVerboseLogLink = null;
+    private DataBoxAccountCopyLogDetailsResponse(DataBoxAccountCopyLogDetailsResponse $) {
+        this.accountName = $.accountName;
+        this.copyLogDetailsType = $.copyLogDetailsType;
+        this.copyLogLink = $.copyLogLink;
+        this.copyVerboseLogLink = $.copyVerboseLogLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxAccountCopyLogDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String copyLogDetailsType;
-        private String copyLogLink;
-        private String copyVerboseLogLink;
+        private DataBoxAccountCopyLogDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxAccountCopyLogDetailsResponse();
         }
 
         public Builder(DataBoxAccountCopyLogDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.copyLogDetailsType = defaults.copyLogDetailsType;
-    	      this.copyLogLink = defaults.copyLogLink;
-    	      this.copyVerboseLogLink = defaults.copyVerboseLogLink;
+            $ = new DataBoxAccountCopyLogDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder copyLogDetailsType(String copyLogDetailsType) {
-            this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
+            $.copyLogDetailsType = copyLogDetailsType;
             return this;
         }
+
         public Builder copyLogLink(String copyLogLink) {
-            this.copyLogLink = Objects.requireNonNull(copyLogLink);
+            $.copyLogLink = copyLogLink;
             return this;
         }
+
         public Builder copyVerboseLogLink(String copyVerboseLogLink) {
-            this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
+            $.copyVerboseLogLink = copyVerboseLogLink;
             return this;
-        }        public DataBoxAccountCopyLogDetailsResponse build() {
-            return new DataBoxAccountCopyLogDetailsResponse(accountName, copyLogDetailsType, copyLogLink, copyVerboseLogLink);
+        }
+
+        public DataBoxAccountCopyLogDetailsResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.copyLogDetailsType = Codegen.stringProp("copyLogDetailsType").arg($.copyLogDetailsType).require();
+            $.copyLogLink = Objects.requireNonNull($.copyLogLink, "expected parameter 'copyLogLink' to be non-null");
+            $.copyVerboseLogLink = Objects.requireNonNull($.copyVerboseLogLink, "expected parameter 'copyVerboseLogLink' to be non-null");
+            return $;
         }
     }
+
 }

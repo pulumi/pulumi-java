@@ -23,10 +23,10 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="directory")
-      private final @Nullable String directory;
+    private @Nullable String directory;
 
     public Optional<String> directory() {
-        return this.directory == null ? Optional.empty() : Optional.ofNullable(this.directory);
+        return Optional.ofNullable(this.directory);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="repository", required=true)
-      private final String repository;
+    private String repository;
 
     public String repository() {
         return this.repository;
@@ -45,64 +45,57 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="revision")
-      private final @Nullable String revision;
+    private @Nullable String revision;
 
     public Optional<String> revision() {
-        return this.revision == null ? Optional.empty() : Optional.ofNullable(this.revision);
+        return Optional.ofNullable(this.revision);
     }
 
-    public GitRepoVolumeResponse(
-        @Nullable String directory,
-        String repository,
-        @Nullable String revision) {
-        this.directory = directory;
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.revision = revision;
-    }
+    private GitRepoVolumeResponse() {}
 
-    private GitRepoVolumeResponse() {
-        this.directory = null;
-        this.repository = null;
-        this.revision = null;
+    private GitRepoVolumeResponse(GitRepoVolumeResponse $) {
+        this.directory = $.directory;
+        this.repository = $.repository;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitRepoVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String directory;
-        private String repository;
-        private @Nullable String revision;
+        private GitRepoVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitRepoVolumeResponse();
         }
 
         public Builder(GitRepoVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directory = defaults.directory;
-    	      this.repository = defaults.repository;
-    	      this.revision = defaults.revision;
+            $ = new GitRepoVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder directory(@Nullable String directory) {
-            this.directory = directory;
+            $.directory = directory;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder revision(@Nullable String revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
-        }        public GitRepoVolumeResponse build() {
-            return new GitRepoVolumeResponse(directory, repository, revision);
+        }
+
+        public GitRepoVolumeResponse build() {
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class KpiAliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliasName", required=true)
-      private final String aliasName;
+    private String aliasName;
 
     public String aliasName() {
         return this.aliasName;
@@ -32,55 +32,52 @@ public final class KpiAliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
     }
 
-    public KpiAliasResponse(
-        String aliasName,
-        String expression) {
-        this.aliasName = Objects.requireNonNull(aliasName, "expected parameter 'aliasName' to be non-null");
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-    }
+    private KpiAliasResponse() {}
 
-    private KpiAliasResponse() {
-        this.aliasName = null;
-        this.expression = null;
+    private KpiAliasResponse(KpiAliasResponse $) {
+        this.aliasName = $.aliasName;
+        this.expression = $.expression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiAliasResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aliasName;
-        private String expression;
+        private KpiAliasResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiAliasResponse();
         }
 
         public Builder(KpiAliasResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasName = defaults.aliasName;
-    	      this.expression = defaults.expression;
+            $ = new KpiAliasResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasName(String aliasName) {
-            this.aliasName = Objects.requireNonNull(aliasName);
+            $.aliasName = aliasName;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
-        }        public KpiAliasResponse build() {
-            return new KpiAliasResponse(aliasName, expression);
+        }
+
+        public KpiAliasResponse build() {
+            $.aliasName = Objects.requireNonNull($.aliasName, "expected parameter 'aliasName' to be non-null");
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            return $;
         }
     }
+
 }

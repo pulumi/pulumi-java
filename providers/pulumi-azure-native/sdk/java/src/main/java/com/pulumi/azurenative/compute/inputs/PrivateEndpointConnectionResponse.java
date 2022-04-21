@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateEndpoint", required=true)
-      private final PrivateEndpointResponse privateEndpoint;
+    private PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -78,91 +78,80 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PrivateEndpointConnectionResponse(
-        String id,
-        String name,
-        PrivateEndpointResponse privateEndpoint,
-        PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PrivateEndpointConnectionResponse() {}
 
-    private PrivateEndpointConnectionResponse() {
-        this.id = null;
-        this.name = null;
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
-        this.type = null;
+    private PrivateEndpointConnectionResponse(PrivateEndpointConnectionResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private PrivateEndpointResponse privateEndpoint;
-        private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
-        private String type;
+        private PrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionResponse();
         }
 
         public Builder(PrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PrivateEndpointConnectionResponse build() {
-            return new PrivateEndpointConnectionResponse(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
+        }
+
+        public PrivateEndpointConnectionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateEndpoint = Objects.requireNonNull($.privateEndpoint, "expected parameter 'privateEndpoint' to be non-null");
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

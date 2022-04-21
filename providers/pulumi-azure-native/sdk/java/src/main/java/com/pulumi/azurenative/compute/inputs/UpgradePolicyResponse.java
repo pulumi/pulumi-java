@@ -25,10 +25,10 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="automaticOSUpgradePolicy")
-      private final @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
+    private @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
 
     public Optional<AutomaticOSUpgradePolicyResponse> automaticOSUpgradePolicy() {
-        return this.automaticOSUpgradePolicy == null ? Optional.empty() : Optional.ofNullable(this.automaticOSUpgradePolicy);
+        return Optional.ofNullable(this.automaticOSUpgradePolicy);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class UpgradePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rollingUpgradePolicy")
-      private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
+    private @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
     public Optional<RollingUpgradePolicyResponse> rollingUpgradePolicy() {
-        return this.rollingUpgradePolicy == null ? Optional.empty() : Optional.ofNullable(this.rollingUpgradePolicy);
+        return Optional.ofNullable(this.rollingUpgradePolicy);
     }
 
-    public UpgradePolicyResponse(
-        @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
-        @Nullable String mode,
-        @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
-        this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
-        this.mode = mode;
-        this.rollingUpgradePolicy = rollingUpgradePolicy;
-    }
+    private UpgradePolicyResponse() {}
 
-    private UpgradePolicyResponse() {
-        this.automaticOSUpgradePolicy = null;
-        this.mode = null;
-        this.rollingUpgradePolicy = null;
+    private UpgradePolicyResponse(UpgradePolicyResponse $) {
+        this.automaticOSUpgradePolicy = $.automaticOSUpgradePolicy;
+        this.mode = $.mode;
+        this.rollingUpgradePolicy = $.rollingUpgradePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
-        private @Nullable String mode;
-        private @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
+        private UpgradePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradePolicyResponse();
         }
 
         public Builder(UpgradePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticOSUpgradePolicy = defaults.automaticOSUpgradePolicy;
-    	      this.mode = defaults.mode;
-    	      this.rollingUpgradePolicy = defaults.rollingUpgradePolicy;
+            $ = new UpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy) {
-            this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
+            $.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
-            this.rollingUpgradePolicy = rollingUpgradePolicy;
+            $.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
-        }        public UpgradePolicyResponse build() {
-            return new UpgradePolicyResponse(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
+        }
+
+        public UpgradePolicyResponse build() {
+            return $;
         }
     }
+
 }

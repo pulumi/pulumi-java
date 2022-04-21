@@ -6,8 +6,8 @@ package com.pulumi.azurenative.containerregistry.inputs;
 import com.pulumi.azurenative.containerregistry.inputs.PipelineSourceTriggerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class PipelineTriggerPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sourceTrigger")
-      private final @Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
+    private @Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
 
-    public Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger() {
-        return this.sourceTrigger == null ? Codegen.empty() : this.sourceTrigger;
+    public Optional<Output<PipelineSourceTriggerPropertiesArgs>> sourceTrigger() {
+        return Optional.ofNullable(this.sourceTrigger);
     }
 
-    public PipelineTriggerPropertiesArgs(@Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger) {
-        this.sourceTrigger = sourceTrigger;
-    }
+    private PipelineTriggerPropertiesArgs() {}
 
-    private PipelineTriggerPropertiesArgs() {
-        this.sourceTrigger = Codegen.empty();
+    private PipelineTriggerPropertiesArgs(PipelineTriggerPropertiesArgs $) {
+        this.sourceTrigger = $.sourceTrigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineTriggerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
+        private PipelineTriggerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineTriggerPropertiesArgs();
         }
 
         public Builder(PipelineTriggerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceTrigger = defaults.sourceTrigger;
+            $ = new PipelineTriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceTrigger(@Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger) {
-            this.sourceTrigger = sourceTrigger;
+            $.sourceTrigger = sourceTrigger;
             return this;
         }
-        public Builder sourceTrigger(@Nullable PipelineSourceTriggerPropertiesArgs sourceTrigger) {
-            this.sourceTrigger = Codegen.ofNullable(sourceTrigger);
-            return this;
-        }        public PipelineTriggerPropertiesArgs build() {
-            return new PipelineTriggerPropertiesArgs(sourceTrigger);
+
+        public Builder sourceTrigger(PipelineSourceTriggerPropertiesArgs sourceTrigger) {
+            return sourceTrigger(Output.of(sourceTrigger));
+        }
+
+        public PipelineTriggerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

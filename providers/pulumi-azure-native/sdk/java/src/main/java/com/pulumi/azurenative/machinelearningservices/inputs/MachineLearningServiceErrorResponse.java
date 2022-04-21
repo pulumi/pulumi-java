@@ -21,45 +21,45 @@ public final class MachineLearningServiceErrorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="error", required=true)
-      private final ErrorResponseResponse error;
+    private ErrorResponseResponse error;
 
     public ErrorResponseResponse error() {
         return this.error;
     }
 
-    public MachineLearningServiceErrorResponse(ErrorResponseResponse error) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-    }
+    private MachineLearningServiceErrorResponse() {}
 
-    private MachineLearningServiceErrorResponse() {
-        this.error = null;
+    private MachineLearningServiceErrorResponse(MachineLearningServiceErrorResponse $) {
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineLearningServiceErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ErrorResponseResponse error;
+        private MachineLearningServiceErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineLearningServiceErrorResponse();
         }
 
         public Builder(MachineLearningServiceErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
+            $ = new MachineLearningServiceErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(ErrorResponseResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
-        }        public MachineLearningServiceErrorResponse build() {
-            return new MachineLearningServiceErrorResponse(error);
+        }
+
+        public MachineLearningServiceErrorResponse build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            return $;
         }
     }
+
 }

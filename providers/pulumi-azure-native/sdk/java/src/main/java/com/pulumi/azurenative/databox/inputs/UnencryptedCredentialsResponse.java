@@ -25,7 +25,7 @@ public final class UnencryptedCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -36,55 +36,52 @@ public final class UnencryptedCredentialsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="jobSecrets", required=true)
-      private final Object jobSecrets;
+    private Object jobSecrets;
 
     public Object jobSecrets() {
         return this.jobSecrets;
     }
 
-    public UnencryptedCredentialsResponse(
-        String jobName,
-        Object jobSecrets) {
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.jobSecrets = Objects.requireNonNull(jobSecrets, "expected parameter 'jobSecrets' to be non-null");
-    }
+    private UnencryptedCredentialsResponse() {}
 
-    private UnencryptedCredentialsResponse() {
-        this.jobName = null;
-        this.jobSecrets = null;
+    private UnencryptedCredentialsResponse(UnencryptedCredentialsResponse $) {
+        this.jobName = $.jobName;
+        this.jobSecrets = $.jobSecrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UnencryptedCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobName;
-        private Object jobSecrets;
+        private UnencryptedCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UnencryptedCredentialsResponse();
         }
 
         public Builder(UnencryptedCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobName = defaults.jobName;
-    	      this.jobSecrets = defaults.jobSecrets;
+            $ = new UnencryptedCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobSecrets(Object jobSecrets) {
-            this.jobSecrets = Objects.requireNonNull(jobSecrets);
+            $.jobSecrets = jobSecrets;
             return this;
-        }        public UnencryptedCredentialsResponse build() {
-            return new UnencryptedCredentialsResponse(jobName, jobSecrets);
+        }
+
+        public UnencryptedCredentialsResponse build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.jobSecrets = Objects.requireNonNull($.jobSecrets, "expected parameter 'jobSecrets' to be non-null");
+            return $;
         }
     }
+
 }

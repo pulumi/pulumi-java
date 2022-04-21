@@ -21,7 +21,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hanaInstanceSize", required=true)
-      private final String hanaInstanceSize;
+    private String hanaInstanceSize;
 
     public String hanaInstanceSize() {
         return this.hanaInstanceSize;
@@ -32,55 +32,52 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hardwareType", required=true)
-      private final String hardwareType;
+    private String hardwareType;
 
     public String hardwareType() {
         return this.hardwareType;
     }
 
-    public HardwareProfileResponse(
-        String hanaInstanceSize,
-        String hardwareType) {
-        this.hanaInstanceSize = Objects.requireNonNull(hanaInstanceSize, "expected parameter 'hanaInstanceSize' to be non-null");
-        this.hardwareType = Objects.requireNonNull(hardwareType, "expected parameter 'hardwareType' to be non-null");
-    }
+    private HardwareProfileResponse() {}
 
-    private HardwareProfileResponse() {
-        this.hanaInstanceSize = null;
-        this.hardwareType = null;
+    private HardwareProfileResponse(HardwareProfileResponse $) {
+        this.hanaInstanceSize = $.hanaInstanceSize;
+        this.hardwareType = $.hardwareType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HardwareProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hanaInstanceSize;
-        private String hardwareType;
+        private HardwareProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HardwareProfileResponse();
         }
 
         public Builder(HardwareProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hanaInstanceSize = defaults.hanaInstanceSize;
-    	      this.hardwareType = defaults.hardwareType;
+            $ = new HardwareProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hanaInstanceSize(String hanaInstanceSize) {
-            this.hanaInstanceSize = Objects.requireNonNull(hanaInstanceSize);
+            $.hanaInstanceSize = hanaInstanceSize;
             return this;
         }
+
         public Builder hardwareType(String hardwareType) {
-            this.hardwareType = Objects.requireNonNull(hardwareType);
+            $.hardwareType = hardwareType;
             return this;
-        }        public HardwareProfileResponse build() {
-            return new HardwareProfileResponse(hanaInstanceSize, hardwareType);
+        }
+
+        public HardwareProfileResponse build() {
+            $.hanaInstanceSize = Objects.requireNonNull($.hanaInstanceSize, "expected parameter 'hanaInstanceSize' to be non-null");
+            $.hardwareType = Objects.requireNonNull($.hardwareType, "expected parameter 'hardwareType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assessmentName", required=true)
-      private final String assessmentName;
+    private String assessmentName;
 
     public String assessmentName() {
         return this.assessmentName;
@@ -30,10 +30,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public GetAssessmentArgs(
-        String assessmentName,
-        @Nullable String expand,
-        String resourceId) {
-        this.assessmentName = Objects.requireNonNull(assessmentName, "expected parameter 'assessmentName' to be non-null");
-        this.expand = expand;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private GetAssessmentArgs() {}
 
-    private GetAssessmentArgs() {
-        this.assessmentName = null;
-        this.expand = null;
-        this.resourceId = null;
+    private GetAssessmentArgs(GetAssessmentArgs $) {
+        this.assessmentName = $.assessmentName;
+        this.expand = $.expand;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssessmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assessmentName;
-        private @Nullable String expand;
-        private String resourceId;
+        private GetAssessmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssessmentArgs();
         }
 
         public Builder(GetAssessmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentName = defaults.assessmentName;
-    	      this.expand = defaults.expand;
-    	      this.resourceId = defaults.resourceId;
+            $ = new GetAssessmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentName(String assessmentName) {
-            this.assessmentName = Objects.requireNonNull(assessmentName);
+            $.assessmentName = assessmentName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public GetAssessmentArgs build() {
-            return new GetAssessmentArgs(assessmentName, expand, resourceId);
+        }
+
+        public GetAssessmentArgs build() {
+            $.assessmentName = Objects.requireNonNull($.assessmentName, "expected parameter 'assessmentName' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

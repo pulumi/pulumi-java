@@ -17,7 +17,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="favoriteProcessResourceName", required=true)
-      private final String favoriteProcessResourceName;
+    private String favoriteProcessResourceName;
 
     public String favoriteProcessResourceName() {
         return this.favoriteProcessResourceName;
@@ -28,7 +28,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="packageName", required=true)
-      private final String packageName;
+    private String packageName;
 
     public String packageName() {
         return this.packageName;
@@ -39,7 +39,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-      private final String testBaseAccountName;
+    private String testBaseAccountName;
 
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
-    public GetFavoriteProcessArgs(
-        String favoriteProcessResourceName,
-        String packageName,
-        String resourceGroupName,
-        String testBaseAccountName) {
-        this.favoriteProcessResourceName = Objects.requireNonNull(favoriteProcessResourceName, "expected parameter 'favoriteProcessResourceName' to be non-null");
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
-    }
+    private GetFavoriteProcessArgs() {}
 
-    private GetFavoriteProcessArgs() {
-        this.favoriteProcessResourceName = null;
-        this.packageName = null;
-        this.resourceGroupName = null;
-        this.testBaseAccountName = null;
+    private GetFavoriteProcessArgs(GetFavoriteProcessArgs $) {
+        this.favoriteProcessResourceName = $.favoriteProcessResourceName;
+        this.packageName = $.packageName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.testBaseAccountName = $.testBaseAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFavoriteProcessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String favoriteProcessResourceName;
-        private String packageName;
-        private String resourceGroupName;
-        private String testBaseAccountName;
+        private GetFavoriteProcessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFavoriteProcessArgs();
         }
 
         public Builder(GetFavoriteProcessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.favoriteProcessResourceName = defaults.favoriteProcessResourceName;
-    	      this.packageName = defaults.packageName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
+            $ = new GetFavoriteProcessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder favoriteProcessResourceName(String favoriteProcessResourceName) {
-            this.favoriteProcessResourceName = Objects.requireNonNull(favoriteProcessResourceName);
+            $.favoriteProcessResourceName = favoriteProcessResourceName;
             return this;
         }
+
         public Builder packageName(String packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
+            $.testBaseAccountName = testBaseAccountName;
             return this;
-        }        public GetFavoriteProcessArgs build() {
-            return new GetFavoriteProcessArgs(favoriteProcessResourceName, packageName, resourceGroupName, testBaseAccountName);
+        }
+
+        public GetFavoriteProcessArgs build() {
+            $.favoriteProcessResourceName = Objects.requireNonNull($.favoriteProcessResourceName, "expected parameter 'favoriteProcessResourceName' to be non-null");
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.testBaseAccountName = Objects.requireNonNull($.testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
+            return $;
         }
     }
+
 }

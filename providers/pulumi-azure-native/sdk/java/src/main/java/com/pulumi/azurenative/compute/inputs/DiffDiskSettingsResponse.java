@@ -23,10 +23,10 @@ public final class DiffDiskSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="option")
-      private final @Nullable String option;
+    private @Nullable String option;
 
     public Optional<String> option() {
-        return this.option == null ? Optional.empty() : Optional.ofNullable(this.option);
+        return Optional.ofNullable(this.option);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DiffDiskSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="placement")
-      private final @Nullable String placement;
+    private @Nullable String placement;
 
     public Optional<String> placement() {
-        return this.placement == null ? Optional.empty() : Optional.ofNullable(this.placement);
+        return Optional.ofNullable(this.placement);
     }
 
-    public DiffDiskSettingsResponse(
-        @Nullable String option,
-        @Nullable String placement) {
-        this.option = option;
-        this.placement = placement;
-    }
+    private DiffDiskSettingsResponse() {}
 
-    private DiffDiskSettingsResponse() {
-        this.option = null;
-        this.placement = null;
+    private DiffDiskSettingsResponse(DiffDiskSettingsResponse $) {
+        this.option = $.option;
+        this.placement = $.placement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiffDiskSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String option;
-        private @Nullable String placement;
+        private DiffDiskSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiffDiskSettingsResponse();
         }
 
         public Builder(DiffDiskSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.option = defaults.option;
-    	      this.placement = defaults.placement;
+            $ = new DiffDiskSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder option(@Nullable String option) {
-            this.option = option;
+            $.option = option;
             return this;
         }
+
         public Builder placement(@Nullable String placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
-        }        public DiffDiskSettingsResponse build() {
-            return new DiffDiskSettingsResponse(option, placement);
+        }
+
+        public DiffDiskSettingsResponse build() {
+            return $;
         }
     }
+
 }

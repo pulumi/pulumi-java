@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="companyName", required=true)
-      private final Output<String> companyName;
+    private Output<String> companyName;
 
     public Output<String> companyName() {
         return this.companyName;
@@ -35,7 +34,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contactPerson", required=true)
-      private final Output<String> contactPerson;
+    private Output<String> contactPerson;
 
     public Output<String> contactPerson() {
         return this.contactPerson;
@@ -46,7 +45,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="emailList", required=true)
-      private final Output<List<String>> emailList;
+    private Output<List<String>> emailList;
 
     public Output<List<String>> emailList() {
         return this.emailList;
@@ -57,92 +56,86 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="phone", required=true)
-      private final Output<String> phone;
+    private Output<String> phone;
 
     public Output<String> phone() {
         return this.phone;
     }
 
-    public ContactDetailsArgs(
-        Output<String> companyName,
-        Output<String> contactPerson,
-        Output<List<String>> emailList,
-        Output<String> phone) {
-        this.companyName = Objects.requireNonNull(companyName, "expected parameter 'companyName' to be non-null");
-        this.contactPerson = Objects.requireNonNull(contactPerson, "expected parameter 'contactPerson' to be non-null");
-        this.emailList = Objects.requireNonNull(emailList, "expected parameter 'emailList' to be non-null");
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-    }
+    private ContactDetailsArgs() {}
 
-    private ContactDetailsArgs() {
-        this.companyName = Codegen.empty();
-        this.contactPerson = Codegen.empty();
-        this.emailList = Codegen.empty();
-        this.phone = Codegen.empty();
+    private ContactDetailsArgs(ContactDetailsArgs $) {
+        this.companyName = $.companyName;
+        this.contactPerson = $.contactPerson;
+        this.emailList = $.emailList;
+        this.phone = $.phone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> companyName;
-        private Output<String> contactPerson;
-        private Output<List<String>> emailList;
-        private Output<String> phone;
+        private ContactDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactDetailsArgs();
         }
 
         public Builder(ContactDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.companyName = defaults.companyName;
-    	      this.contactPerson = defaults.contactPerson;
-    	      this.emailList = defaults.emailList;
-    	      this.phone = defaults.phone;
+            $ = new ContactDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder companyName(Output<String> companyName) {
-            this.companyName = Objects.requireNonNull(companyName);
+            $.companyName = companyName;
             return this;
         }
+
         public Builder companyName(String companyName) {
-            this.companyName = Output.of(Objects.requireNonNull(companyName));
-            return this;
+            return companyName(Output.of(companyName));
         }
+
         public Builder contactPerson(Output<String> contactPerson) {
-            this.contactPerson = Objects.requireNonNull(contactPerson);
+            $.contactPerson = contactPerson;
             return this;
         }
+
         public Builder contactPerson(String contactPerson) {
-            this.contactPerson = Output.of(Objects.requireNonNull(contactPerson));
-            return this;
+            return contactPerson(Output.of(contactPerson));
         }
+
         public Builder emailList(Output<List<String>> emailList) {
-            this.emailList = Objects.requireNonNull(emailList);
+            $.emailList = emailList;
             return this;
         }
+
         public Builder emailList(List<String> emailList) {
-            this.emailList = Output.of(Objects.requireNonNull(emailList));
-            return this;
+            return emailList(Output.of(emailList));
         }
+
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
+
         public Builder phone(Output<String> phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Output.of(Objects.requireNonNull(phone));
-            return this;
-        }        public ContactDetailsArgs build() {
-            return new ContactDetailsArgs(companyName, contactPerson, emailList, phone);
+            return phone(Output.of(phone));
+        }
+
+        public ContactDetailsArgs build() {
+            $.companyName = Objects.requireNonNull($.companyName, "expected parameter 'companyName' to be non-null");
+            $.contactPerson = Objects.requireNonNull($.contactPerson, "expected parameter 'contactPerson' to be non-null");
+            $.emailList = Objects.requireNonNull($.emailList, "expected parameter 'emailList' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OpenIdConnectLoginArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nameClaimType")
-      private final @Nullable Output<String> nameClaimType;
+    private @Nullable Output<String> nameClaimType;
 
-    public Output<String> nameClaimType() {
-        return this.nameClaimType == null ? Codegen.empty() : this.nameClaimType;
+    public Optional<Output<String>> nameClaimType() {
+        return Optional.ofNullable(this.nameClaimType);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class OpenIdConnectLoginArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<String>> scopes;
+    private @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<String>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
-    public OpenIdConnectLoginArgs(
-        @Nullable Output<String> nameClaimType,
-        @Nullable Output<List<String>> scopes) {
-        this.nameClaimType = nameClaimType;
-        this.scopes = scopes;
-    }
+    private OpenIdConnectLoginArgs() {}
 
-    private OpenIdConnectLoginArgs() {
-        this.nameClaimType = Codegen.empty();
-        this.scopes = Codegen.empty();
+    private OpenIdConnectLoginArgs(OpenIdConnectLoginArgs $) {
+        this.nameClaimType = $.nameClaimType;
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdConnectLoginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nameClaimType;
-        private @Nullable Output<List<String>> scopes;
+        private OpenIdConnectLoginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdConnectLoginArgs();
         }
 
         public Builder(OpenIdConnectLoginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nameClaimType = defaults.nameClaimType;
-    	      this.scopes = defaults.scopes;
+            $ = new OpenIdConnectLoginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nameClaimType(@Nullable Output<String> nameClaimType) {
-            this.nameClaimType = nameClaimType;
+            $.nameClaimType = nameClaimType;
             return this;
         }
-        public Builder nameClaimType(@Nullable String nameClaimType) {
-            this.nameClaimType = Codegen.ofNullable(nameClaimType);
-            return this;
+
+        public Builder nameClaimType(String nameClaimType) {
+            return nameClaimType(Output.of(nameClaimType));
         }
+
         public Builder scopes(@Nullable Output<List<String>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<String> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public OpenIdConnectLoginArgs build() {
-            return new OpenIdConnectLoginArgs(nameClaimType, scopes);
+        }
+
+        public OpenIdConnectLoginArgs build() {
+            return $;
         }
     }
+
 }

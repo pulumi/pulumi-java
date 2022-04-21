@@ -17,7 +17,7 @@ public final class ListClusterStreamingJobsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,55 +28,52 @@ public final class ListClusterStreamingJobsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListClusterStreamingJobsArgs(
-        String clusterName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListClusterStreamingJobsArgs() {}
 
-    private ListClusterStreamingJobsArgs() {
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private ListClusterStreamingJobsArgs(ListClusterStreamingJobsArgs $) {
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListClusterStreamingJobsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String resourceGroupName;
+        private ListClusterStreamingJobsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListClusterStreamingJobsArgs();
         }
 
         public Builder(ListClusterStreamingJobsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListClusterStreamingJobsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListClusterStreamingJobsArgs build() {
-            return new ListClusterStreamingJobsArgs(clusterName, resourceGroupName);
+        }
+
+        public ListClusterStreamingJobsArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

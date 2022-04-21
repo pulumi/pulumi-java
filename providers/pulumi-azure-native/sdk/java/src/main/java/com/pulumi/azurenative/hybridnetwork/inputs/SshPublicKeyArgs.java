@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyData")
-      private final @Nullable Output<String> keyData;
+    private @Nullable Output<String> keyData;
 
-    public Output<String> keyData() {
-        return this.keyData == null ? Codegen.empty() : this.keyData;
+    public Optional<Output<String>> keyData() {
+        return Optional.ofNullable(this.keyData);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public SshPublicKeyArgs(
-        @Nullable Output<String> keyData,
-        @Nullable Output<String> path) {
-        this.keyData = keyData;
-        this.path = path;
-    }
+    private SshPublicKeyArgs() {}
 
-    private SshPublicKeyArgs() {
-        this.keyData = Codegen.empty();
-        this.path = Codegen.empty();
+    private SshPublicKeyArgs(SshPublicKeyArgs $) {
+        this.keyData = $.keyData;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyData;
-        private @Nullable Output<String> path;
+        private SshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyArgs();
         }
 
         public Builder(SshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyData = defaults.keyData;
-    	      this.path = defaults.path;
+            $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyData(@Nullable Output<String> keyData) {
-            this.keyData = keyData;
+            $.keyData = keyData;
             return this;
         }
-        public Builder keyData(@Nullable String keyData) {
-            this.keyData = Codegen.ofNullable(keyData);
-            return this;
+
+        public Builder keyData(String keyData) {
+            return keyData(Output.of(keyData));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public SshPublicKeyArgs build() {
-            return new SshPublicKeyArgs(keyData, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public SshPublicKeyArgs build() {
+            return $;
         }
     }
+
 }

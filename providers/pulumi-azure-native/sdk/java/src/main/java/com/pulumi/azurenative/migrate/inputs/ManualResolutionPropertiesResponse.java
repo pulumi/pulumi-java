@@ -23,45 +23,44 @@ public final class ManualResolutionPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="targetId")
-      private final @Nullable String targetId;
+    private @Nullable String targetId;
 
     public Optional<String> targetId() {
-        return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
+        return Optional.ofNullable(this.targetId);
     }
 
-    public ManualResolutionPropertiesResponse(@Nullable String targetId) {
-        this.targetId = targetId;
-    }
+    private ManualResolutionPropertiesResponse() {}
 
-    private ManualResolutionPropertiesResponse() {
-        this.targetId = null;
+    private ManualResolutionPropertiesResponse(ManualResolutionPropertiesResponse $) {
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManualResolutionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String targetId;
+        private ManualResolutionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManualResolutionPropertiesResponse();
         }
 
         public Builder(ManualResolutionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetId = defaults.targetId;
+            $ = new ManualResolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
-        }        public ManualResolutionPropertiesResponse build() {
-            return new ManualResolutionPropertiesResponse(targetId);
+        }
+
+        public ManualResolutionPropertiesResponse build() {
+            return $;
         }
     }
+
 }

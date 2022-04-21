@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends com.p
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
+    private @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
 
-    public Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<ConnectToSourcePostgreSqlSyncTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends com.p
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public ConnectToSourcePostgreSqlSyncTaskPropertiesArgs(
-        @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private ConnectToSourcePostgreSqlSyncTaskPropertiesArgs() {}
 
-    private ConnectToSourcePostgreSqlSyncTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private ConnectToSourcePostgreSqlSyncTaskPropertiesArgs(ConnectToSourcePostgreSqlSyncTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourcePostgreSqlSyncTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
-        private Output<String> taskType;
+        private ConnectToSourcePostgreSqlSyncTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs();
         }
 
         public Builder(ConnectToSourcePostgreSqlSyncTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable ConnectToSourcePostgreSqlSyncTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(ConnectToSourcePostgreSqlSyncTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public ConnectToSourcePostgreSqlSyncTaskPropertiesArgs build() {
-            return new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public ConnectToSourcePostgreSqlSyncTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

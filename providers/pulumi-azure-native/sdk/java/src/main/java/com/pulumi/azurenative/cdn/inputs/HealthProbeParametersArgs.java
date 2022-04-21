@@ -7,10 +7,10 @@ import com.pulumi.azurenative.cdn.enums.HealthProbeRequestType;
 import com.pulumi.azurenative.cdn.enums.ProbeProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="probeIntervalInSeconds")
-      private final @Nullable Output<Integer> probeIntervalInSeconds;
+    private @Nullable Output<Integer> probeIntervalInSeconds;
 
-    public Output<Integer> probeIntervalInSeconds() {
-        return this.probeIntervalInSeconds == null ? Codegen.empty() : this.probeIntervalInSeconds;
+    public Optional<Output<Integer>> probeIntervalInSeconds() {
+        return Optional.ofNullable(this.probeIntervalInSeconds);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="probePath")
-      private final @Nullable Output<String> probePath;
+    private @Nullable Output<String> probePath;
 
-    public Output<String> probePath() {
-        return this.probePath == null ? Codegen.empty() : this.probePath;
+    public Optional<Output<String>> probePath() {
+        return Optional.ofNullable(this.probePath);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="probeProtocol")
-      private final @Nullable Output<ProbeProtocol> probeProtocol;
+    private @Nullable Output<ProbeProtocol> probeProtocol;
 
-    public Output<ProbeProtocol> probeProtocol() {
-        return this.probeProtocol == null ? Codegen.empty() : this.probeProtocol;
+    public Optional<Output<ProbeProtocol>> probeProtocol() {
+        return Optional.ofNullable(this.probeProtocol);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="probeRequestType")
-      private final @Nullable Output<HealthProbeRequestType> probeRequestType;
+    private @Nullable Output<HealthProbeRequestType> probeRequestType;
 
-    public Output<HealthProbeRequestType> probeRequestType() {
-        return this.probeRequestType == null ? Codegen.empty() : this.probeRequestType;
+    public Optional<Output<HealthProbeRequestType>> probeRequestType() {
+        return Optional.ofNullable(this.probeRequestType);
     }
 
-    public HealthProbeParametersArgs(
-        @Nullable Output<Integer> probeIntervalInSeconds,
-        @Nullable Output<String> probePath,
-        @Nullable Output<ProbeProtocol> probeProtocol,
-        @Nullable Output<HealthProbeRequestType> probeRequestType) {
-        this.probeIntervalInSeconds = probeIntervalInSeconds;
-        this.probePath = probePath;
-        this.probeProtocol = probeProtocol;
-        this.probeRequestType = probeRequestType;
-    }
+    private HealthProbeParametersArgs() {}
 
-    private HealthProbeParametersArgs() {
-        this.probeIntervalInSeconds = Codegen.empty();
-        this.probePath = Codegen.empty();
-        this.probeProtocol = Codegen.empty();
-        this.probeRequestType = Codegen.empty();
+    private HealthProbeParametersArgs(HealthProbeParametersArgs $) {
+        this.probeIntervalInSeconds = $.probeIntervalInSeconds;
+        this.probePath = $.probePath;
+        this.probeProtocol = $.probeProtocol;
+        this.probeRequestType = $.probeRequestType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthProbeParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> probeIntervalInSeconds;
-        private @Nullable Output<String> probePath;
-        private @Nullable Output<ProbeProtocol> probeProtocol;
-        private @Nullable Output<HealthProbeRequestType> probeRequestType;
+        private HealthProbeParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthProbeParametersArgs();
         }
 
         public Builder(HealthProbeParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.probeIntervalInSeconds = defaults.probeIntervalInSeconds;
-    	      this.probePath = defaults.probePath;
-    	      this.probeProtocol = defaults.probeProtocol;
-    	      this.probeRequestType = defaults.probeRequestType;
+            $ = new HealthProbeParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder probeIntervalInSeconds(@Nullable Output<Integer> probeIntervalInSeconds) {
-            this.probeIntervalInSeconds = probeIntervalInSeconds;
+            $.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
-        public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
-            this.probeIntervalInSeconds = Codegen.ofNullable(probeIntervalInSeconds);
-            return this;
+
+        public Builder probeIntervalInSeconds(Integer probeIntervalInSeconds) {
+            return probeIntervalInSeconds(Output.of(probeIntervalInSeconds));
         }
+
         public Builder probePath(@Nullable Output<String> probePath) {
-            this.probePath = probePath;
+            $.probePath = probePath;
             return this;
         }
-        public Builder probePath(@Nullable String probePath) {
-            this.probePath = Codegen.ofNullable(probePath);
-            return this;
+
+        public Builder probePath(String probePath) {
+            return probePath(Output.of(probePath));
         }
+
         public Builder probeProtocol(@Nullable Output<ProbeProtocol> probeProtocol) {
-            this.probeProtocol = probeProtocol;
+            $.probeProtocol = probeProtocol;
             return this;
         }
-        public Builder probeProtocol(@Nullable ProbeProtocol probeProtocol) {
-            this.probeProtocol = Codegen.ofNullable(probeProtocol);
-            return this;
+
+        public Builder probeProtocol(ProbeProtocol probeProtocol) {
+            return probeProtocol(Output.of(probeProtocol));
         }
+
         public Builder probeRequestType(@Nullable Output<HealthProbeRequestType> probeRequestType) {
-            this.probeRequestType = probeRequestType;
+            $.probeRequestType = probeRequestType;
             return this;
         }
-        public Builder probeRequestType(@Nullable HealthProbeRequestType probeRequestType) {
-            this.probeRequestType = Codegen.ofNullable(probeRequestType);
-            return this;
-        }        public HealthProbeParametersArgs build() {
-            return new HealthProbeParametersArgs(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
+
+        public Builder probeRequestType(HealthProbeRequestType probeRequestType) {
+            return probeRequestType(Output.of(probeRequestType));
+        }
+
+        public HealthProbeParametersArgs build() {
+            return $;
         }
     }
+
 }

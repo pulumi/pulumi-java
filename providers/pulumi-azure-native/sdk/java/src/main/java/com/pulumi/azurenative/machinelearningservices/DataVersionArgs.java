@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,7 +31,7 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
+    private Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
 
     public Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties() {
         return this.properties;
@@ -42,7 +42,7 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -64,102 +64,92 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public DataVersionArgs(
-        Output<String> name,
-        Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> version,
-        Output<String> workspaceName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.version = version;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private DataVersionArgs() {}
 
-    private DataVersionArgs() {
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.version = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private DataVersionArgs(DataVersionArgs $) {
+        this.name = $.name;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.version = $.version;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> version;
-        private Output<String> workspaceName;
+        private DataVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataVersionArgs();
         }
 
         public Builder(DataVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.version = defaults.version;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new DataVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder properties(Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public DataVersionArgs build() {
-            return new DataVersionArgs(name, properties, resourceGroupName, version, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public DataVersionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

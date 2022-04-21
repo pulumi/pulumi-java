@@ -19,10 +19,10 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="featureName")
-      private final @Nullable String featureName;
+    private @Nullable String featureName;
 
     public Optional<String> featureName() {
-        return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
+        return Optional.ofNullable(this.featureName);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="featureType")
-      private final @Nullable String featureType;
+    private @Nullable String featureType;
 
     public Optional<String> featureType() {
-        return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
+        return Optional.ofNullable(this.featureType);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="locationId", required=true)
-      private final String locationId;
+    private String locationId;
 
     public String locationId() {
         return this.locationId;
     }
 
-    public GetExposureControlFeatureValueArgs(
-        @Nullable String featureName,
-        @Nullable String featureType,
-        String locationId) {
-        this.featureName = featureName;
-        this.featureType = featureType;
-        this.locationId = Objects.requireNonNull(locationId, "expected parameter 'locationId' to be non-null");
-    }
+    private GetExposureControlFeatureValueArgs() {}
 
-    private GetExposureControlFeatureValueArgs() {
-        this.featureName = null;
-        this.featureType = null;
-        this.locationId = null;
+    private GetExposureControlFeatureValueArgs(GetExposureControlFeatureValueArgs $) {
+        this.featureName = $.featureName;
+        this.featureType = $.featureType;
+        this.locationId = $.locationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExposureControlFeatureValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String featureName;
-        private @Nullable String featureType;
-        private String locationId;
+        private GetExposureControlFeatureValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExposureControlFeatureValueArgs();
         }
 
         public Builder(GetExposureControlFeatureValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureName = defaults.featureName;
-    	      this.featureType = defaults.featureType;
-    	      this.locationId = defaults.locationId;
+            $ = new GetExposureControlFeatureValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = featureName;
+            $.featureName = featureName;
             return this;
         }
+
         public Builder featureType(@Nullable String featureType) {
-            this.featureType = featureType;
+            $.featureType = featureType;
             return this;
         }
+
         public Builder locationId(String locationId) {
-            this.locationId = Objects.requireNonNull(locationId);
+            $.locationId = locationId;
             return this;
-        }        public GetExposureControlFeatureValueArgs build() {
-            return new GetExposureControlFeatureValueArgs(featureName, featureType, locationId);
+        }
+
+        public GetExposureControlFeatureValueArgs build() {
+            $.locationId = Objects.requireNonNull($.locationId, "expected parameter 'locationId' to be non-null");
+            return $;
         }
     }
+
 }

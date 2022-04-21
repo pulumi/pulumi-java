@@ -25,10 +25,10 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endDate", required=true)
-      private final String endDate;
+    private String endDate;
 
     public String endDate() {
         return this.endDate;
@@ -47,7 +47,7 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="quota", required=true)
-      private final CommitmentQuotaResponse quota;
+    private CommitmentQuotaResponse quota;
 
     public CommitmentQuotaResponse quota() {
         return this.quota;
@@ -58,7 +58,7 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startDate", required=true)
-      private final String startDate;
+    private String startDate;
 
     public String startDate() {
         return this.startDate;
@@ -69,82 +69,71 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public CommitmentPeriodResponse(
-        @Nullable Integer count,
-        String endDate,
-        CommitmentQuotaResponse quota,
-        String startDate,
-        @Nullable String tier) {
-        this.count = count;
-        this.endDate = Objects.requireNonNull(endDate, "expected parameter 'endDate' to be non-null");
-        this.quota = Objects.requireNonNull(quota, "expected parameter 'quota' to be non-null");
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-        this.tier = tier;
-    }
+    private CommitmentPeriodResponse() {}
 
-    private CommitmentPeriodResponse() {
-        this.count = null;
-        this.endDate = null;
-        this.quota = null;
-        this.startDate = null;
-        this.tier = null;
+    private CommitmentPeriodResponse(CommitmentPeriodResponse $) {
+        this.count = $.count;
+        this.endDate = $.endDate;
+        this.quota = $.quota;
+        this.startDate = $.startDate;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentPeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private String endDate;
-        private CommitmentQuotaResponse quota;
-        private String startDate;
-        private @Nullable String tier;
+        private CommitmentPeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentPeriodResponse();
         }
 
         public Builder(CommitmentPeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.endDate = defaults.endDate;
-    	      this.quota = defaults.quota;
-    	      this.startDate = defaults.startDate;
-    	      this.tier = defaults.tier;
+            $ = new CommitmentPeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder endDate(String endDate) {
-            this.endDate = Objects.requireNonNull(endDate);
+            $.endDate = endDate;
             return this;
         }
+
         public Builder quota(CommitmentQuotaResponse quota) {
-            this.quota = Objects.requireNonNull(quota);
+            $.quota = quota;
             return this;
         }
+
         public Builder startDate(String startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public CommitmentPeriodResponse build() {
-            return new CommitmentPeriodResponse(count, endDate, quota, startDate, tier);
+        }
+
+        public CommitmentPeriodResponse build() {
+            $.endDate = Objects.requireNonNull($.endDate, "expected parameter 'endDate' to be non-null");
+            $.quota = Objects.requireNonNull($.quota, "expected parameter 'quota' to be non-null");
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            return $;
         }
     }
+
 }

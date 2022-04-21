@@ -17,7 +17,7 @@ public final class GetSqlMigrationServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSqlMigrationServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlMigrationServiceName", required=true)
-      private final String sqlMigrationServiceName;
+    private String sqlMigrationServiceName;
 
     public String sqlMigrationServiceName() {
         return this.sqlMigrationServiceName;
     }
 
-    public GetSqlMigrationServiceArgs(
-        String resourceGroupName,
-        String sqlMigrationServiceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName, "expected parameter 'sqlMigrationServiceName' to be non-null");
-    }
+    private GetSqlMigrationServiceArgs() {}
 
-    private GetSqlMigrationServiceArgs() {
-        this.resourceGroupName = null;
-        this.sqlMigrationServiceName = null;
+    private GetSqlMigrationServiceArgs(GetSqlMigrationServiceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlMigrationServiceName = $.sqlMigrationServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlMigrationServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlMigrationServiceName;
+        private GetSqlMigrationServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlMigrationServiceArgs();
         }
 
         public Builder(GetSqlMigrationServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlMigrationServiceName = defaults.sqlMigrationServiceName;
+            $ = new GetSqlMigrationServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
-            this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
+            $.sqlMigrationServiceName = sqlMigrationServiceName;
             return this;
-        }        public GetSqlMigrationServiceArgs build() {
-            return new GetSqlMigrationServiceArgs(resourceGroupName, sqlMigrationServiceName);
+        }
+
+        public GetSqlMigrationServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlMigrationServiceName = Objects.requireNonNull($.sqlMigrationServiceName, "expected parameter 'sqlMigrationServiceName' to be non-null");
+            return $;
         }
     }
+
 }

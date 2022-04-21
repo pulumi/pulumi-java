@@ -23,10 +23,10 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endDate")
-      private final @Nullable String endDate;
+    private @Nullable String endDate;
 
     public Optional<String> endDate() {
-        return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="startDate")
-      private final @Nullable String startDate;
+    private @Nullable String startDate;
 
     public Optional<String> startDate() {
-        return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="termUnit")
-      private final @Nullable String termUnit;
+    private @Nullable String termUnit;
 
     public Optional<String> termUnit() {
-        return this.termUnit == null ? Optional.empty() : Optional.ofNullable(this.termUnit);
+        return Optional.ofNullable(this.termUnit);
     }
 
-    public SaasPropertiesResponseTerm(
-        @Nullable String endDate,
-        @Nullable String startDate,
-        @Nullable String termUnit) {
-        this.endDate = endDate;
-        this.startDate = startDate;
-        this.termUnit = termUnit;
-    }
+    private SaasPropertiesResponseTerm() {}
 
-    private SaasPropertiesResponseTerm() {
-        this.endDate = null;
-        this.startDate = null;
-        this.termUnit = null;
+    private SaasPropertiesResponseTerm(SaasPropertiesResponseTerm $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
+        this.termUnit = $.termUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SaasPropertiesResponseTerm defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endDate;
-        private @Nullable String startDate;
-        private @Nullable String termUnit;
+        private SaasPropertiesResponseTerm $;
 
         public Builder() {
-    	      // Empty
+            $ = new SaasPropertiesResponseTerm();
         }
 
         public Builder(SaasPropertiesResponseTerm defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
-    	      this.termUnit = defaults.termUnit;
+            $ = new SaasPropertiesResponseTerm(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
+
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
+
         public Builder termUnit(@Nullable String termUnit) {
-            this.termUnit = termUnit;
+            $.termUnit = termUnit;
             return this;
-        }        public SaasPropertiesResponseTerm build() {
-            return new SaasPropertiesResponseTerm(endDate, startDate, termUnit);
+        }
+
+        public SaasPropertiesResponseTerm build() {
+            return $;
         }
     }
+
 }

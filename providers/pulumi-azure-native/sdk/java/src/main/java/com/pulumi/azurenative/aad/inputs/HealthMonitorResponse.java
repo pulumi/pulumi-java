@@ -21,7 +21,7 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="details", required=true)
-      private final String details;
+    private String details;
 
     public String details() {
         return this.details;
@@ -32,7 +32,7 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,64 +43,59 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public HealthMonitorResponse(
-        String details,
-        String id,
-        String name) {
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private HealthMonitorResponse() {}
 
-    private HealthMonitorResponse() {
-        this.details = null;
-        this.id = null;
-        this.name = null;
+    private HealthMonitorResponse(HealthMonitorResponse $) {
+        this.details = $.details;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthMonitorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String details;
-        private String id;
-        private String name;
+        private HealthMonitorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthMonitorResponse();
         }
 
         public Builder(HealthMonitorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new HealthMonitorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder details(String details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public HealthMonitorResponse build() {
-            return new HealthMonitorResponse(details, id, name);
+        }
+
+        public HealthMonitorResponse build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

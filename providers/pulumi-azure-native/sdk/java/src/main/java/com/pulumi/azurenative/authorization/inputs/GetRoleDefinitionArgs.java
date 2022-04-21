@@ -17,7 +17,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final String roleDefinitionId;
+    private String roleDefinitionId;
 
     public String roleDefinitionId() {
         return this.roleDefinitionId;
@@ -28,55 +28,52 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetRoleDefinitionArgs(
-        String roleDefinitionId,
-        String scope) {
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRoleDefinitionArgs() {}
 
-    private GetRoleDefinitionArgs() {
-        this.roleDefinitionId = null;
-        this.scope = null;
+    private GetRoleDefinitionArgs(GetRoleDefinitionArgs $) {
+        this.roleDefinitionId = $.roleDefinitionId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoleDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleDefinitionId;
-        private String scope;
+        private GetRoleDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoleDefinitionArgs();
         }
 
         public Builder(GetRoleDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
-    	      this.scope = defaults.scope;
+            $ = new GetRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRoleDefinitionArgs build() {
-            return new GetRoleDefinitionArgs(roleDefinitionId, scope);
+        }
+
+        public GetRoleDefinitionArgs build() {
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

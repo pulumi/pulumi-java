@@ -21,45 +21,45 @@ public final class Gen2StorageConfigurationOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
     }
 
-    public Gen2StorageConfigurationOutputResponse(String accountName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-    }
+    private Gen2StorageConfigurationOutputResponse() {}
 
-    private Gen2StorageConfigurationOutputResponse() {
-        this.accountName = null;
+    private Gen2StorageConfigurationOutputResponse(Gen2StorageConfigurationOutputResponse $) {
+        this.accountName = $.accountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Gen2StorageConfigurationOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
+        private Gen2StorageConfigurationOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Gen2StorageConfigurationOutputResponse();
         }
 
         public Builder(Gen2StorageConfigurationOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
+            $ = new Gen2StorageConfigurationOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
-        }        public Gen2StorageConfigurationOutputResponse build() {
-            return new Gen2StorageConfigurationOutputResponse(accountName);
+        }
+
+        public Gen2StorageConfigurationOutputResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            return $;
         }
     }
+
 }

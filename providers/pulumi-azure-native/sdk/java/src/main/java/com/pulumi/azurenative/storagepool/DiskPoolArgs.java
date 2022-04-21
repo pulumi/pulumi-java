@@ -8,11 +8,11 @@ import com.pulumi.azurenative.storagepool.inputs.DiskArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalCapabilities")
-      private final @Nullable Output<List<String>> additionalCapabilities;
+    private @Nullable Output<List<String>> additionalCapabilities;
 
-    public Output<List<String>> additionalCapabilities() {
-        return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
+    public Optional<Output<List<String>>> additionalCapabilities() {
+        return Optional.ofNullable(this.additionalCapabilities);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZones", required=true)
-      private final Output<List<String>> availabilityZones;
+    private Output<List<String>> availabilityZones;
 
     public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
@@ -47,10 +47,10 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskPoolName")
-      private final @Nullable Output<String> diskPoolName;
+    private @Nullable Output<String> diskPoolName;
 
-    public Output<String> diskPoolName() {
-        return this.diskPoolName == null ? Codegen.empty() : this.diskPoolName;
+    public Optional<Output<String>> diskPoolName() {
+        return Optional.ofNullable(this.diskPoolName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<List<DiskArgs>> disks;
+    private @Nullable Output<List<DiskArgs>> disks;
 
-    public Output<List<DiskArgs>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<List<DiskArgs>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -102,10 +102,10 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,163 +113,144 @@ public final class DiskPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<Either<String,DiskPoolTier>> tier;
+    private Output<Either<String,DiskPoolTier>> tier;
 
     public Output<Either<String,DiskPoolTier>> tier() {
         return this.tier;
     }
 
-    public DiskPoolArgs(
-        @Nullable Output<List<String>> additionalCapabilities,
-        Output<List<String>> availabilityZones,
-        @Nullable Output<String> diskPoolName,
-        @Nullable Output<List<DiskArgs>> disks,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        Output<Either<String,DiskPoolTier>> tier) {
-        this.additionalCapabilities = additionalCapabilities;
-        this.availabilityZones = Objects.requireNonNull(availabilityZones, "expected parameter 'availabilityZones' to be non-null");
-        this.diskPoolName = diskPoolName;
-        this.disks = disks;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.tags = tags;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private DiskPoolArgs() {}
 
-    private DiskPoolArgs() {
-        this.additionalCapabilities = Codegen.empty();
-        this.availabilityZones = Codegen.empty();
-        this.diskPoolName = Codegen.empty();
-        this.disks = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tier = Codegen.empty();
+    private DiskPoolArgs(DiskPoolArgs $) {
+        this.additionalCapabilities = $.additionalCapabilities;
+        this.availabilityZones = $.availabilityZones;
+        this.diskPoolName = $.diskPoolName;
+        this.disks = $.disks;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalCapabilities;
-        private Output<List<String>> availabilityZones;
-        private @Nullable Output<String> diskPoolName;
-        private @Nullable Output<List<DiskArgs>> disks;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<Either<String,DiskPoolTier>> tier;
+        private DiskPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskPoolArgs();
         }
 
         public Builder(DiskPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCapabilities = defaults.additionalCapabilities;
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.diskPoolName = defaults.diskPoolName;
-    	      this.disks = defaults.disks;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.tier = defaults.tier;
+            $ = new DiskPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCapabilities(@Nullable Output<List<String>> additionalCapabilities) {
-            this.additionalCapabilities = additionalCapabilities;
+            $.additionalCapabilities = additionalCapabilities;
             return this;
         }
-        public Builder additionalCapabilities(@Nullable List<String> additionalCapabilities) {
-            this.additionalCapabilities = Codegen.ofNullable(additionalCapabilities);
-            return this;
+
+        public Builder additionalCapabilities(List<String> additionalCapabilities) {
+            return additionalCapabilities(Output.of(additionalCapabilities));
         }
+
         public Builder additionalCapabilities(String... additionalCapabilities) {
             return additionalCapabilities(List.of(additionalCapabilities));
         }
+
         public Builder availabilityZones(Output<List<String>> availabilityZones) {
-            this.availabilityZones = Objects.requireNonNull(availabilityZones);
+            $.availabilityZones = availabilityZones;
             return this;
         }
+
         public Builder availabilityZones(List<String> availabilityZones) {
-            this.availabilityZones = Output.of(Objects.requireNonNull(availabilityZones));
-            return this;
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder diskPoolName(@Nullable Output<String> diskPoolName) {
-            this.diskPoolName = diskPoolName;
+            $.diskPoolName = diskPoolName;
             return this;
         }
-        public Builder diskPoolName(@Nullable String diskPoolName) {
-            this.diskPoolName = Codegen.ofNullable(diskPoolName);
-            return this;
+
+        public Builder diskPoolName(String diskPoolName) {
+            return diskPoolName(Output.of(diskPoolName));
         }
+
         public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable List<DiskArgs> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(List<DiskArgs> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder disks(DiskArgs... disks) {
             return disks(List.of(disks));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tier(Output<Either<String,DiskPoolTier>> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(Either<String,DiskPoolTier> tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public DiskPoolArgs build() {
-            return new DiskPoolArgs(additionalCapabilities, availabilityZones, diskPoolName, disks, location, resourceGroupName, subnetId, tags, tier);
+            return tier(Output.of(tier));
+        }
+
+        public DiskPoolArgs build() {
+            $.availabilityZones = Objects.requireNonNull($.availabilityZones, "expected parameter 'availabilityZones' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.azurestack.enums.Location;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<Either<String,Location>> location;
+    private @Nullable Output<Either<String,Location>> location;
 
-    public Output<Either<String,Location>> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<Either<String,Location>>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationName")
-      private final @Nullable Output<String> registrationName;
+    private @Nullable Output<String> registrationName;
 
-    public Output<String> registrationName() {
-        return this.registrationName == null ? Codegen.empty() : this.registrationName;
+    public Optional<Output<String>> registrationName() {
+        return Optional.ofNullable(this.registrationName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationToken", required=true)
-      private final Output<String> registrationToken;
+    private Output<String> registrationToken;
 
     public Output<String> registrationToken() {
         return this.registrationToken;
@@ -55,89 +55,80 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final Output<String> resourceGroup;
+    private Output<String> resourceGroup;
 
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
-    public RegistrationArgs(
-        @Nullable Output<Either<String,Location>> location,
-        @Nullable Output<String> registrationName,
-        Output<String> registrationToken,
-        Output<String> resourceGroup) {
-        this.location = location;
-        this.registrationName = registrationName;
-        this.registrationToken = Objects.requireNonNull(registrationToken, "expected parameter 'registrationToken' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private RegistrationArgs() {}
 
-    private RegistrationArgs() {
-        this.location = Codegen.empty();
-        this.registrationName = Codegen.empty();
-        this.registrationToken = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
+    private RegistrationArgs(RegistrationArgs $) {
+        this.location = $.location;
+        this.registrationName = $.registrationName;
+        this.registrationToken = $.registrationToken;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Location>> location;
-        private @Nullable Output<String> registrationName;
-        private Output<String> registrationToken;
-        private Output<String> resourceGroup;
+        private RegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationArgs();
         }
 
         public Builder(RegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.registrationName = defaults.registrationName;
-    	      this.registrationToken = defaults.registrationToken;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new RegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<Either<String,Location>> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable Either<String,Location> location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(Either<String,Location> location) {
+            return location(Output.of(location));
         }
+
         public Builder registrationName(@Nullable Output<String> registrationName) {
-            this.registrationName = registrationName;
+            $.registrationName = registrationName;
             return this;
         }
-        public Builder registrationName(@Nullable String registrationName) {
-            this.registrationName = Codegen.ofNullable(registrationName);
-            return this;
+
+        public Builder registrationName(String registrationName) {
+            return registrationName(Output.of(registrationName));
         }
+
         public Builder registrationToken(Output<String> registrationToken) {
-            this.registrationToken = Objects.requireNonNull(registrationToken);
+            $.registrationToken = registrationToken;
             return this;
         }
+
         public Builder registrationToken(String registrationToken) {
-            this.registrationToken = Output.of(Objects.requireNonNull(registrationToken));
-            return this;
+            return registrationToken(Output.of(registrationToken));
         }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
-            return this;
-        }        public RegistrationArgs build() {
-            return new RegistrationArgs(location, registrationName, registrationToken, resourceGroup);
+            return resourceGroup(Output.of(resourceGroup));
+        }
+
+        public RegistrationArgs build() {
+            $.registrationToken = Objects.requireNonNull($.registrationToken, "expected parameter 'registrationToken' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

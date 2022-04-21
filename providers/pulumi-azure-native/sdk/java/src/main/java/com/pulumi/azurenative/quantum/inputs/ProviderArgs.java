@@ -7,9 +7,9 @@ import com.pulumi.azurenative.quantum.enums.Status;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceUri")
-      private final @Nullable Output<String> instanceUri;
+    private @Nullable Output<String> instanceUri;
 
-    public Output<String> instanceUri() {
-        return this.instanceUri == null ? Codegen.empty() : this.instanceUri;
+    public Optional<Output<String>> instanceUri() {
+        return Optional.ofNullable(this.instanceUri);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerId")
-      private final @Nullable Output<String> providerId;
+    private @Nullable Output<String> providerId;
 
-    public Output<String> providerId() {
-        return this.providerId == null ? Codegen.empty() : this.providerId;
+    public Optional<Output<String>> providerId() {
+        return Optional.ofNullable(this.providerId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerSku")
-      private final @Nullable Output<String> providerSku;
+    private @Nullable Output<String> providerSku;
 
-    public Output<String> providerSku() {
-        return this.providerSku == null ? Codegen.empty() : this.providerSku;
+    public Optional<Output<String>> providerSku() {
+        return Optional.ofNullable(this.providerSku);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,Status>> provisioningState;
+    private @Nullable Output<Either<String,Status>> provisioningState;
 
-    public Output<Either<String,Status>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,Status>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUsageId")
-      private final @Nullable Output<String> resourceUsageId;
+    private @Nullable Output<String> resourceUsageId;
 
-    public Output<String> resourceUsageId() {
-        return this.resourceUsageId == null ? Codegen.empty() : this.resourceUsageId;
+    public Optional<Output<String>> resourceUsageId() {
+        return Optional.ofNullable(this.resourceUsageId);
     }
 
-    public ProviderArgs(
-        @Nullable Output<String> applicationName,
-        @Nullable Output<String> instanceUri,
-        @Nullable Output<String> providerId,
-        @Nullable Output<String> providerSku,
-        @Nullable Output<Either<String,Status>> provisioningState,
-        @Nullable Output<String> resourceUsageId) {
-        this.applicationName = applicationName;
-        this.instanceUri = instanceUri;
-        this.providerId = providerId;
-        this.providerSku = providerSku;
-        this.provisioningState = provisioningState;
-        this.resourceUsageId = resourceUsageId;
-    }
+    private ProviderArgs() {}
 
-    private ProviderArgs() {
-        this.applicationName = Codegen.empty();
-        this.instanceUri = Codegen.empty();
-        this.providerId = Codegen.empty();
-        this.providerSku = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceUsageId = Codegen.empty();
+    private ProviderArgs(ProviderArgs $) {
+        this.applicationName = $.applicationName;
+        this.instanceUri = $.instanceUri;
+        this.providerId = $.providerId;
+        this.providerSku = $.providerSku;
+        this.provisioningState = $.provisioningState;
+        this.resourceUsageId = $.resourceUsageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationName;
-        private @Nullable Output<String> instanceUri;
-        private @Nullable Output<String> providerId;
-        private @Nullable Output<String> providerSku;
-        private @Nullable Output<Either<String,Status>> provisioningState;
-        private @Nullable Output<String> resourceUsageId;
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderArgs();
         }
 
         public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.instanceUri = defaults.instanceUri;
-    	      this.providerId = defaults.providerId;
-    	      this.providerSku = defaults.providerSku;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceUsageId = defaults.resourceUsageId;
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder instanceUri(@Nullable Output<String> instanceUri) {
-            this.instanceUri = instanceUri;
+            $.instanceUri = instanceUri;
             return this;
         }
-        public Builder instanceUri(@Nullable String instanceUri) {
-            this.instanceUri = Codegen.ofNullable(instanceUri);
-            return this;
+
+        public Builder instanceUri(String instanceUri) {
+            return instanceUri(Output.of(instanceUri));
         }
+
         public Builder providerId(@Nullable Output<String> providerId) {
-            this.providerId = providerId;
+            $.providerId = providerId;
             return this;
         }
-        public Builder providerId(@Nullable String providerId) {
-            this.providerId = Codegen.ofNullable(providerId);
-            return this;
+
+        public Builder providerId(String providerId) {
+            return providerId(Output.of(providerId));
         }
+
         public Builder providerSku(@Nullable Output<String> providerSku) {
-            this.providerSku = providerSku;
+            $.providerSku = providerSku;
             return this;
         }
-        public Builder providerSku(@Nullable String providerSku) {
-            this.providerSku = Codegen.ofNullable(providerSku);
-            return this;
+
+        public Builder providerSku(String providerSku) {
+            return providerSku(Output.of(providerSku));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,Status>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,Status> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,Status> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceUsageId(@Nullable Output<String> resourceUsageId) {
-            this.resourceUsageId = resourceUsageId;
+            $.resourceUsageId = resourceUsageId;
             return this;
         }
-        public Builder resourceUsageId(@Nullable String resourceUsageId) {
-            this.resourceUsageId = Codegen.ofNullable(resourceUsageId);
-            return this;
-        }        public ProviderArgs build() {
-            return new ProviderArgs(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
+
+        public Builder resourceUsageId(String resourceUsageId) {
+            return resourceUsageId(Output.of(resourceUsageId));
+        }
+
+        public ProviderArgs build() {
+            return $;
         }
     }
+
 }

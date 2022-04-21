@@ -20,10 +20,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends com.pu
      * 
      */
     @Import(name="day")
-      private final @Nullable String day;
+    private @Nullable String day;
 
     public Optional<String> day() {
-        return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends com.pu
      * 
      */
     @Import(name="occurrence")
-      private final @Nullable Integer occurrence;
+    private @Nullable Integer occurrence;
 
     public Optional<Integer> occurrence() {
-        return this.occurrence == null ? Optional.empty() : Optional.ofNullable(this.occurrence);
+        return Optional.ofNullable(this.occurrence);
     }
 
-    public JobRecurrenceScheduleMonthlyOccurrenceResponse(
-        @Nullable String day,
-        @Nullable Integer occurrence) {
-        this.day = day;
-        this.occurrence = occurrence;
-    }
+    private JobRecurrenceScheduleMonthlyOccurrenceResponse() {}
 
-    private JobRecurrenceScheduleMonthlyOccurrenceResponse() {
-        this.day = null;
-        this.occurrence = null;
+    private JobRecurrenceScheduleMonthlyOccurrenceResponse(JobRecurrenceScheduleMonthlyOccurrenceResponse $) {
+        this.day = $.day;
+        this.occurrence = $.occurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRecurrenceScheduleMonthlyOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String day;
-        private @Nullable Integer occurrence;
+        private JobRecurrenceScheduleMonthlyOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRecurrenceScheduleMonthlyOccurrenceResponse();
         }
 
         public Builder(JobRecurrenceScheduleMonthlyOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.occurrence = defaults.occurrence;
+            $ = new JobRecurrenceScheduleMonthlyOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable String day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
+
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = occurrence;
+            $.occurrence = occurrence;
             return this;
-        }        public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
-            return new JobRecurrenceScheduleMonthlyOccurrenceResponse(day, occurrence);
+        }
+
+        public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="linkedWorkspaceResourceId")
-      private final @Nullable Output<String> linkedWorkspaceResourceId;
+    private @Nullable Output<String> linkedWorkspaceResourceId;
 
-    public Output<String> linkedWorkspaceResourceId() {
-        return this.linkedWorkspaceResourceId == null ? Codegen.empty() : this.linkedWorkspaceResourceId;
+    public Optional<Output<String>> linkedWorkspaceResourceId() {
+        return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userAssignedIdentityResourceId")
-      private final @Nullable Output<String> userAssignedIdentityResourceId;
+    private @Nullable Output<String> userAssignedIdentityResourceId;
 
-    public Output<String> userAssignedIdentityResourceId() {
-        return this.userAssignedIdentityResourceId == null ? Codegen.empty() : this.userAssignedIdentityResourceId;
+    public Optional<Output<String>> userAssignedIdentityResourceId() {
+        return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
 
-    public LinkedWorkspacePropsArgs(
-        @Nullable Output<String> linkedWorkspaceResourceId,
-        @Nullable Output<String> userAssignedIdentityResourceId) {
-        this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
-        this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
-    }
+    private LinkedWorkspacePropsArgs() {}
 
-    private LinkedWorkspacePropsArgs() {
-        this.linkedWorkspaceResourceId = Codegen.empty();
-        this.userAssignedIdentityResourceId = Codegen.empty();
+    private LinkedWorkspacePropsArgs(LinkedWorkspacePropsArgs $) {
+        this.linkedWorkspaceResourceId = $.linkedWorkspaceResourceId;
+        this.userAssignedIdentityResourceId = $.userAssignedIdentityResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedWorkspacePropsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> linkedWorkspaceResourceId;
-        private @Nullable Output<String> userAssignedIdentityResourceId;
+        private LinkedWorkspacePropsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedWorkspacePropsArgs();
         }
 
         public Builder(LinkedWorkspacePropsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedWorkspaceResourceId = defaults.linkedWorkspaceResourceId;
-    	      this.userAssignedIdentityResourceId = defaults.userAssignedIdentityResourceId;
+            $ = new LinkedWorkspacePropsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedWorkspaceResourceId(@Nullable Output<String> linkedWorkspaceResourceId) {
-            this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
+            $.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
-        public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
-            this.linkedWorkspaceResourceId = Codegen.ofNullable(linkedWorkspaceResourceId);
-            return this;
+
+        public Builder linkedWorkspaceResourceId(String linkedWorkspaceResourceId) {
+            return linkedWorkspaceResourceId(Output.of(linkedWorkspaceResourceId));
         }
+
         public Builder userAssignedIdentityResourceId(@Nullable Output<String> userAssignedIdentityResourceId) {
-            this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
+            $.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }
-        public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
-            this.userAssignedIdentityResourceId = Codegen.ofNullable(userAssignedIdentityResourceId);
-            return this;
-        }        public LinkedWorkspacePropsArgs build() {
-            return new LinkedWorkspacePropsArgs(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
+
+        public Builder userAssignedIdentityResourceId(String userAssignedIdentityResourceId) {
+            return userAssignedIdentityResourceId(Output.of(userAssignedIdentityResourceId));
+        }
+
+        public LinkedWorkspacePropsArgs build() {
+            return $;
         }
     }
+
 }

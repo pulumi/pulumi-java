@@ -25,10 +25,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="disks")
-      private final @Nullable List<VirtualDiskResponse> disks;
+    private @Nullable List<VirtualDiskResponse> disks;
 
-    public List<VirtualDiskResponse> disks() {
-        return this.disks == null ? List.of() : this.disks;
+    public Optional<List<VirtualDiskResponse>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -36,61 +36,59 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scsiControllers", required=true)
-      private final List<VirtualSCSIControllerResponse> scsiControllers;
+    private List<VirtualSCSIControllerResponse> scsiControllers;
 
     public List<VirtualSCSIControllerResponse> scsiControllers() {
         return this.scsiControllers;
     }
 
-    public StorageProfileResponse(
-        @Nullable List<VirtualDiskResponse> disks,
-        List<VirtualSCSIControllerResponse> scsiControllers) {
-        this.disks = disks;
-        this.scsiControllers = Objects.requireNonNull(scsiControllers, "expected parameter 'scsiControllers' to be non-null");
-    }
+    private StorageProfileResponse() {}
 
-    private StorageProfileResponse() {
-        this.disks = List.of();
-        this.scsiControllers = List.of();
+    private StorageProfileResponse(StorageProfileResponse $) {
+        this.disks = $.disks;
+        this.scsiControllers = $.scsiControllers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VirtualDiskResponse> disks;
-        private List<VirtualSCSIControllerResponse> scsiControllers;
+        private StorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileResponse();
         }
 
         public Builder(StorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
-    	      this.scsiControllers = defaults.scsiControllers;
+            $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(@Nullable List<VirtualDiskResponse> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
+
         public Builder disks(VirtualDiskResponse... disks) {
             return disks(List.of(disks));
         }
+
         public Builder scsiControllers(List<VirtualSCSIControllerResponse> scsiControllers) {
-            this.scsiControllers = Objects.requireNonNull(scsiControllers);
+            $.scsiControllers = scsiControllers;
             return this;
         }
+
         public Builder scsiControllers(VirtualSCSIControllerResponse... scsiControllers) {
             return scsiControllers(List.of(scsiControllers));
-        }        public StorageProfileResponse build() {
-            return new StorageProfileResponse(disks, scsiControllers);
+        }
+
+        public StorageProfileResponse build() {
+            $.scsiControllers = Objects.requireNonNull($.scsiControllers, "expected parameter 'scsiControllers' to be non-null");
+            return $;
         }
     }
+
 }

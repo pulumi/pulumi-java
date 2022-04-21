@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeLocation")
-      private final @Nullable Output<String> computeLocation;
+    private @Nullable Output<String> computeLocation;
 
-    public Output<String> computeLocation() {
-        return this.computeLocation == null ? Codegen.empty() : this.computeLocation;
+    public Optional<Output<String>> computeLocation() {
+        return Optional.ofNullable(this.computeLocation);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeType", required=true)
-      private final Output<String> computeType;
+    private Output<String> computeType;
 
     public Output<String> computeType() {
         return this.computeType;
@@ -47,10 +48,10 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,89 +59,79 @@ public final class DataFactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public DataFactoryArgs(
-        @Nullable Output<String> computeLocation,
-        Output<String> computeType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> resourceId) {
-        this.computeLocation = computeLocation;
-        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
-        this.description = description;
-        this.resourceId = resourceId;
-    }
+    private DataFactoryArgs() {}
 
-    private DataFactoryArgs() {
-        this.computeLocation = Codegen.empty();
-        this.computeType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private DataFactoryArgs(DataFactoryArgs $) {
+        this.computeLocation = $.computeLocation;
+        this.computeType = $.computeType;
+        this.description = $.description;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFactoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> computeLocation;
-        private Output<String> computeType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> resourceId;
+        private DataFactoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFactoryArgs();
         }
 
         public Builder(DataFactoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeLocation = defaults.computeLocation;
-    	      this.computeType = defaults.computeType;
-    	      this.description = defaults.description;
-    	      this.resourceId = defaults.resourceId;
+            $ = new DataFactoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeLocation(@Nullable Output<String> computeLocation) {
-            this.computeLocation = computeLocation;
+            $.computeLocation = computeLocation;
             return this;
         }
-        public Builder computeLocation(@Nullable String computeLocation) {
-            this.computeLocation = Codegen.ofNullable(computeLocation);
-            return this;
+
+        public Builder computeLocation(String computeLocation) {
+            return computeLocation(Output.of(computeLocation));
         }
+
         public Builder computeType(Output<String> computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Output.of(Objects.requireNonNull(computeType));
-            return this;
+            return computeType(Output.of(computeType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public DataFactoryArgs build() {
-            return new DataFactoryArgs(computeLocation, computeType, description, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public DataFactoryArgs build() {
+            $.computeType = Codegen.stringProp("computeType").output().arg($.computeType).require();
+            return $;
         }
     }
+
 }

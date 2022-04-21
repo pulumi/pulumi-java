@@ -8,11 +8,11 @@ import com.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bandwidthInMbps")
-      private final @Nullable Output<Integer> bandwidthInMbps;
+    private @Nullable Output<Integer> bandwidthInMbps;
 
-    public Output<Integer> bandwidthInMbps() {
-        return this.bandwidthInMbps == null ? Codegen.empty() : this.bandwidthInMbps;
+    public Optional<Output<Integer>> bandwidthInMbps() {
+        return Optional.ofNullable(this.bandwidthInMbps);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bgpSession")
-      private final @Nullable Output<BgpSessionArgs> bgpSession;
+    private @Nullable Output<BgpSessionArgs> bgpSession;
 
-    public Output<BgpSessionArgs> bgpSession() {
-        return this.bgpSession == null ? Codegen.empty() : this.bgpSession;
+    public Optional<Output<BgpSessionArgs>> bgpSession() {
+        return Optional.ofNullable(this.bgpSession);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectionIdentifier")
-      private final @Nullable Output<String> connectionIdentifier;
+    private @Nullable Output<String> connectionIdentifier;
 
-    public Output<String> connectionIdentifier() {
-        return this.connectionIdentifier == null ? Codegen.empty() : this.connectionIdentifier;
+    public Optional<Output<String>> connectionIdentifier() {
+        return Optional.ofNullable(this.connectionIdentifier);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="peeringDBFacilityId")
-      private final @Nullable Output<Integer> peeringDBFacilityId;
+    private @Nullable Output<Integer> peeringDBFacilityId;
 
-    public Output<Integer> peeringDBFacilityId() {
-        return this.peeringDBFacilityId == null ? Codegen.empty() : this.peeringDBFacilityId;
+    public Optional<Output<Integer>> peeringDBFacilityId() {
+        return Optional.ofNullable(this.peeringDBFacilityId);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sessionAddressProvider")
-      private final @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
+    private @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
-    public Output<Either<String,SessionAddressProvider>> sessionAddressProvider() {
-        return this.sessionAddressProvider == null ? Codegen.empty() : this.sessionAddressProvider;
+    public Optional<Output<Either<String,SessionAddressProvider>>> sessionAddressProvider() {
+        return Optional.ofNullable(this.sessionAddressProvider);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class DirectConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="useForPeeringService")
-      private final @Nullable Output<Boolean> useForPeeringService;
+    private @Nullable Output<Boolean> useForPeeringService;
 
-    public Output<Boolean> useForPeeringService() {
-        return this.useForPeeringService == null ? Codegen.empty() : this.useForPeeringService;
+    public Optional<Output<Boolean>> useForPeeringService() {
+        return Optional.ofNullable(this.useForPeeringService);
     }
 
-    public DirectConnectionArgs(
-        @Nullable Output<Integer> bandwidthInMbps,
-        @Nullable Output<BgpSessionArgs> bgpSession,
-        @Nullable Output<String> connectionIdentifier,
-        @Nullable Output<Integer> peeringDBFacilityId,
-        @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider,
-        @Nullable Output<Boolean> useForPeeringService) {
-        this.bandwidthInMbps = bandwidthInMbps;
-        this.bgpSession = bgpSession;
-        this.connectionIdentifier = connectionIdentifier;
-        this.peeringDBFacilityId = peeringDBFacilityId;
-        this.sessionAddressProvider = sessionAddressProvider;
-        this.useForPeeringService = useForPeeringService;
-    }
+    private DirectConnectionArgs() {}
 
-    private DirectConnectionArgs() {
-        this.bandwidthInMbps = Codegen.empty();
-        this.bgpSession = Codegen.empty();
-        this.connectionIdentifier = Codegen.empty();
-        this.peeringDBFacilityId = Codegen.empty();
-        this.sessionAddressProvider = Codegen.empty();
-        this.useForPeeringService = Codegen.empty();
+    private DirectConnectionArgs(DirectConnectionArgs $) {
+        this.bandwidthInMbps = $.bandwidthInMbps;
+        this.bgpSession = $.bgpSession;
+        this.connectionIdentifier = $.connectionIdentifier;
+        this.peeringDBFacilityId = $.peeringDBFacilityId;
+        this.sessionAddressProvider = $.sessionAddressProvider;
+        this.useForPeeringService = $.useForPeeringService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bandwidthInMbps;
-        private @Nullable Output<BgpSessionArgs> bgpSession;
-        private @Nullable Output<String> connectionIdentifier;
-        private @Nullable Output<Integer> peeringDBFacilityId;
-        private @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
-        private @Nullable Output<Boolean> useForPeeringService;
+        private DirectConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectConnectionArgs();
         }
 
         public Builder(DirectConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidthInMbps = defaults.bandwidthInMbps;
-    	      this.bgpSession = defaults.bgpSession;
-    	      this.connectionIdentifier = defaults.connectionIdentifier;
-    	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
-    	      this.sessionAddressProvider = defaults.sessionAddressProvider;
-    	      this.useForPeeringService = defaults.useForPeeringService;
+            $ = new DirectConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidthInMbps(@Nullable Output<Integer> bandwidthInMbps) {
-            this.bandwidthInMbps = bandwidthInMbps;
+            $.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
-        public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
-            this.bandwidthInMbps = Codegen.ofNullable(bandwidthInMbps);
-            return this;
+
+        public Builder bandwidthInMbps(Integer bandwidthInMbps) {
+            return bandwidthInMbps(Output.of(bandwidthInMbps));
         }
+
         public Builder bgpSession(@Nullable Output<BgpSessionArgs> bgpSession) {
-            this.bgpSession = bgpSession;
+            $.bgpSession = bgpSession;
             return this;
         }
-        public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
-            this.bgpSession = Codegen.ofNullable(bgpSession);
-            return this;
+
+        public Builder bgpSession(BgpSessionArgs bgpSession) {
+            return bgpSession(Output.of(bgpSession));
         }
+
         public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
-            this.connectionIdentifier = connectionIdentifier;
+            $.connectionIdentifier = connectionIdentifier;
             return this;
         }
-        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = Codegen.ofNullable(connectionIdentifier);
-            return this;
+
+        public Builder connectionIdentifier(String connectionIdentifier) {
+            return connectionIdentifier(Output.of(connectionIdentifier));
         }
+
         public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
-            this.peeringDBFacilityId = peeringDBFacilityId;
+            $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
-        public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
-            this.peeringDBFacilityId = Codegen.ofNullable(peeringDBFacilityId);
-            return this;
+
+        public Builder peeringDBFacilityId(Integer peeringDBFacilityId) {
+            return peeringDBFacilityId(Output.of(peeringDBFacilityId));
         }
+
         public Builder sessionAddressProvider(@Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider) {
-            this.sessionAddressProvider = sessionAddressProvider;
+            $.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
-        public Builder sessionAddressProvider(@Nullable Either<String,SessionAddressProvider> sessionAddressProvider) {
-            this.sessionAddressProvider = Codegen.ofNullable(sessionAddressProvider);
-            return this;
+
+        public Builder sessionAddressProvider(Either<String,SessionAddressProvider> sessionAddressProvider) {
+            return sessionAddressProvider(Output.of(sessionAddressProvider));
         }
+
         public Builder useForPeeringService(@Nullable Output<Boolean> useForPeeringService) {
-            this.useForPeeringService = useForPeeringService;
+            $.useForPeeringService = useForPeeringService;
             return this;
         }
-        public Builder useForPeeringService(@Nullable Boolean useForPeeringService) {
-            this.useForPeeringService = Codegen.ofNullable(useForPeeringService);
-            return this;
-        }        public DirectConnectionArgs build() {
-            return new DirectConnectionArgs(bandwidthInMbps, bgpSession, connectionIdentifier, peeringDBFacilityId, sessionAddressProvider, useForPeeringService);
+
+        public Builder useForPeeringService(Boolean useForPeeringService) {
+            return useForPeeringService(Output.of(useForPeeringService));
+        }
+
+        public DirectConnectionArgs build() {
+            return $;
         }
     }
+
 }

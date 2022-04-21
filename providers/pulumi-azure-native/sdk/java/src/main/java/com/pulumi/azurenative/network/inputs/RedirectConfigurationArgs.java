@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="customFragment")
-      private final @Nullable Output<String> customFragment;
+    private @Nullable Output<String> customFragment;
 
-    public Output<String> customFragment() {
-        return this.customFragment == null ? Codegen.empty() : this.customFragment;
+    public Optional<Output<String>> customFragment() {
+        return Optional.ofNullable(this.customFragment);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="customHost")
-      private final @Nullable Output<String> customHost;
+    private @Nullable Output<String> customHost;
 
-    public Output<String> customHost() {
-        return this.customHost == null ? Codegen.empty() : this.customHost;
+    public Optional<Output<String>> customHost() {
+        return Optional.ofNullable(this.customHost);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="customPath")
-      private final @Nullable Output<String> customPath;
+    private @Nullable Output<String> customPath;
 
-    public Output<String> customPath() {
-        return this.customPath == null ? Codegen.empty() : this.customPath;
+    public Optional<Output<String>> customPath() {
+        return Optional.ofNullable(this.customPath);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="customQueryString")
-      private final @Nullable Output<String> customQueryString;
+    private @Nullable Output<String> customQueryString;
 
-    public Output<String> customQueryString() {
-        return this.customQueryString == null ? Codegen.empty() : this.customQueryString;
+    public Optional<Output<String>> customQueryString() {
+        return Optional.ofNullable(this.customQueryString);
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -82,10 +83,10 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="redirectProtocol")
-      private final @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
+    private @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
 
-    public Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol() {
-        return this.redirectProtocol == null ? Codegen.empty() : this.redirectProtocol;
+    public Optional<Output<Either<String,FrontDoorRedirectProtocol>>> redirectProtocol() {
+        return Optional.ofNullable(this.redirectProtocol);
     }
 
     /**
@@ -93,128 +94,109 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="redirectType")
-      private final @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
+    private @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
 
-    public Output<Either<String,FrontDoorRedirectType>> redirectType() {
-        return this.redirectType == null ? Codegen.empty() : this.redirectType;
+    public Optional<Output<Either<String,FrontDoorRedirectType>>> redirectType() {
+        return Optional.ofNullable(this.redirectType);
     }
 
-    public RedirectConfigurationArgs(
-        @Nullable Output<String> customFragment,
-        @Nullable Output<String> customHost,
-        @Nullable Output<String> customPath,
-        @Nullable Output<String> customQueryString,
-        Output<String> odataType,
-        @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol,
-        @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
-        this.customFragment = customFragment;
-        this.customHost = customHost;
-        this.customPath = customPath;
-        this.customQueryString = customQueryString;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.redirectProtocol = redirectProtocol;
-        this.redirectType = redirectType;
-    }
+    private RedirectConfigurationArgs() {}
 
-    private RedirectConfigurationArgs() {
-        this.customFragment = Codegen.empty();
-        this.customHost = Codegen.empty();
-        this.customPath = Codegen.empty();
-        this.customQueryString = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.redirectProtocol = Codegen.empty();
-        this.redirectType = Codegen.empty();
+    private RedirectConfigurationArgs(RedirectConfigurationArgs $) {
+        this.customFragment = $.customFragment;
+        this.customHost = $.customHost;
+        this.customPath = $.customPath;
+        this.customQueryString = $.customQueryString;
+        this.odataType = $.odataType;
+        this.redirectProtocol = $.redirectProtocol;
+        this.redirectType = $.redirectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedirectConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customFragment;
-        private @Nullable Output<String> customHost;
-        private @Nullable Output<String> customPath;
-        private @Nullable Output<String> customQueryString;
-        private Output<String> odataType;
-        private @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
-        private @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
+        private RedirectConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedirectConfigurationArgs();
         }
 
         public Builder(RedirectConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFragment = defaults.customFragment;
-    	      this.customHost = defaults.customHost;
-    	      this.customPath = defaults.customPath;
-    	      this.customQueryString = defaults.customQueryString;
-    	      this.odataType = defaults.odataType;
-    	      this.redirectProtocol = defaults.redirectProtocol;
-    	      this.redirectType = defaults.redirectType;
+            $ = new RedirectConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customFragment(@Nullable Output<String> customFragment) {
-            this.customFragment = customFragment;
+            $.customFragment = customFragment;
             return this;
         }
-        public Builder customFragment(@Nullable String customFragment) {
-            this.customFragment = Codegen.ofNullable(customFragment);
-            return this;
+
+        public Builder customFragment(String customFragment) {
+            return customFragment(Output.of(customFragment));
         }
+
         public Builder customHost(@Nullable Output<String> customHost) {
-            this.customHost = customHost;
+            $.customHost = customHost;
             return this;
         }
-        public Builder customHost(@Nullable String customHost) {
-            this.customHost = Codegen.ofNullable(customHost);
-            return this;
+
+        public Builder customHost(String customHost) {
+            return customHost(Output.of(customHost));
         }
+
         public Builder customPath(@Nullable Output<String> customPath) {
-            this.customPath = customPath;
+            $.customPath = customPath;
             return this;
         }
-        public Builder customPath(@Nullable String customPath) {
-            this.customPath = Codegen.ofNullable(customPath);
-            return this;
+
+        public Builder customPath(String customPath) {
+            return customPath(Output.of(customPath));
         }
+
         public Builder customQueryString(@Nullable Output<String> customQueryString) {
-            this.customQueryString = customQueryString;
+            $.customQueryString = customQueryString;
             return this;
         }
-        public Builder customQueryString(@Nullable String customQueryString) {
-            this.customQueryString = Codegen.ofNullable(customQueryString);
-            return this;
+
+        public Builder customQueryString(String customQueryString) {
+            return customQueryString(Output.of(customQueryString));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder redirectProtocol(@Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
-            this.redirectProtocol = redirectProtocol;
+            $.redirectProtocol = redirectProtocol;
             return this;
         }
-        public Builder redirectProtocol(@Nullable Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
-            this.redirectProtocol = Codegen.ofNullable(redirectProtocol);
-            return this;
+
+        public Builder redirectProtocol(Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
+            return redirectProtocol(Output.of(redirectProtocol));
         }
+
         public Builder redirectType(@Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
-            this.redirectType = redirectType;
+            $.redirectType = redirectType;
             return this;
         }
-        public Builder redirectType(@Nullable Either<String,FrontDoorRedirectType> redirectType) {
-            this.redirectType = Codegen.ofNullable(redirectType);
-            return this;
-        }        public RedirectConfigurationArgs build() {
-            return new RedirectConfigurationArgs(customFragment, customHost, customPath, customQueryString, odataType, redirectProtocol, redirectType);
+
+        public Builder redirectType(Either<String,FrontDoorRedirectType> redirectType) {
+            return redirectType(Output.of(redirectType));
+        }
+
+        public RedirectConfigurationArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

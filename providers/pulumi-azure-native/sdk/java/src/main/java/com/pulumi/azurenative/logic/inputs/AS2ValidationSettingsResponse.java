@@ -25,7 +25,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="checkCertificateRevocationListOnReceive", required=true)
-      private final Boolean checkCertificateRevocationListOnReceive;
+    private Boolean checkCertificateRevocationListOnReceive;
 
     public Boolean checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
@@ -36,7 +36,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="checkCertificateRevocationListOnSend", required=true)
-      private final Boolean checkCertificateRevocationListOnSend;
+    private Boolean checkCertificateRevocationListOnSend;
 
     public Boolean checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
@@ -47,7 +47,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="checkDuplicateMessage", required=true)
-      private final Boolean checkDuplicateMessage;
+    private Boolean checkDuplicateMessage;
 
     public Boolean checkDuplicateMessage() {
         return this.checkDuplicateMessage;
@@ -58,7 +58,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="compressMessage", required=true)
-      private final Boolean compressMessage;
+    private Boolean compressMessage;
 
     public Boolean compressMessage() {
         return this.compressMessage;
@@ -69,7 +69,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="encryptMessage", required=true)
-      private final Boolean encryptMessage;
+    private Boolean encryptMessage;
 
     public Boolean encryptMessage() {
         return this.encryptMessage;
@@ -80,7 +80,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="encryptionAlgorithm", required=true)
-      private final String encryptionAlgorithm;
+    private String encryptionAlgorithm;
 
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -91,7 +91,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="interchangeDuplicatesValidityDays", required=true)
-      private final Integer interchangeDuplicatesValidityDays;
+    private Integer interchangeDuplicatesValidityDays;
 
     public Integer interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
@@ -102,7 +102,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="overrideMessageProperties", required=true)
-      private final Boolean overrideMessageProperties;
+    private Boolean overrideMessageProperties;
 
     public Boolean overrideMessageProperties() {
         return this.overrideMessageProperties;
@@ -113,7 +113,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="signMessage", required=true)
-      private final Boolean signMessage;
+    private Boolean signMessage;
 
     public Boolean signMessage() {
         return this.signMessage;
@@ -124,127 +124,107 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="signingAlgorithm")
-      private final @Nullable String signingAlgorithm;
+    private @Nullable String signingAlgorithm;
 
     public Optional<String> signingAlgorithm() {
-        return this.signingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.signingAlgorithm);
+        return Optional.ofNullable(this.signingAlgorithm);
     }
 
-    public AS2ValidationSettingsResponse(
-        Boolean checkCertificateRevocationListOnReceive,
-        Boolean checkCertificateRevocationListOnSend,
-        Boolean checkDuplicateMessage,
-        Boolean compressMessage,
-        Boolean encryptMessage,
-        String encryptionAlgorithm,
-        Integer interchangeDuplicatesValidityDays,
-        Boolean overrideMessageProperties,
-        Boolean signMessage,
-        @Nullable String signingAlgorithm) {
-        this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive, "expected parameter 'checkCertificateRevocationListOnReceive' to be non-null");
-        this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend, "expected parameter 'checkCertificateRevocationListOnSend' to be non-null");
-        this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage, "expected parameter 'checkDuplicateMessage' to be non-null");
-        this.compressMessage = Objects.requireNonNull(compressMessage, "expected parameter 'compressMessage' to be non-null");
-        this.encryptMessage = Objects.requireNonNull(encryptMessage, "expected parameter 'encryptMessage' to be non-null");
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
-        this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays, "expected parameter 'interchangeDuplicatesValidityDays' to be non-null");
-        this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties, "expected parameter 'overrideMessageProperties' to be non-null");
-        this.signMessage = Objects.requireNonNull(signMessage, "expected parameter 'signMessage' to be non-null");
-        this.signingAlgorithm = signingAlgorithm;
-    }
+    private AS2ValidationSettingsResponse() {}
 
-    private AS2ValidationSettingsResponse() {
-        this.checkCertificateRevocationListOnReceive = null;
-        this.checkCertificateRevocationListOnSend = null;
-        this.checkDuplicateMessage = null;
-        this.compressMessage = null;
-        this.encryptMessage = null;
-        this.encryptionAlgorithm = null;
-        this.interchangeDuplicatesValidityDays = null;
-        this.overrideMessageProperties = null;
-        this.signMessage = null;
-        this.signingAlgorithm = null;
+    private AS2ValidationSettingsResponse(AS2ValidationSettingsResponse $) {
+        this.checkCertificateRevocationListOnReceive = $.checkCertificateRevocationListOnReceive;
+        this.checkCertificateRevocationListOnSend = $.checkCertificateRevocationListOnSend;
+        this.checkDuplicateMessage = $.checkDuplicateMessage;
+        this.compressMessage = $.compressMessage;
+        this.encryptMessage = $.encryptMessage;
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.interchangeDuplicatesValidityDays = $.interchangeDuplicatesValidityDays;
+        this.overrideMessageProperties = $.overrideMessageProperties;
+        this.signMessage = $.signMessage;
+        this.signingAlgorithm = $.signingAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2ValidationSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean checkCertificateRevocationListOnReceive;
-        private Boolean checkCertificateRevocationListOnSend;
-        private Boolean checkDuplicateMessage;
-        private Boolean compressMessage;
-        private Boolean encryptMessage;
-        private String encryptionAlgorithm;
-        private Integer interchangeDuplicatesValidityDays;
-        private Boolean overrideMessageProperties;
-        private Boolean signMessage;
-        private @Nullable String signingAlgorithm;
+        private AS2ValidationSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2ValidationSettingsResponse();
         }
 
         public Builder(AS2ValidationSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkCertificateRevocationListOnReceive = defaults.checkCertificateRevocationListOnReceive;
-    	      this.checkCertificateRevocationListOnSend = defaults.checkCertificateRevocationListOnSend;
-    	      this.checkDuplicateMessage = defaults.checkDuplicateMessage;
-    	      this.compressMessage = defaults.compressMessage;
-    	      this.encryptMessage = defaults.encryptMessage;
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.interchangeDuplicatesValidityDays = defaults.interchangeDuplicatesValidityDays;
-    	      this.overrideMessageProperties = defaults.overrideMessageProperties;
-    	      this.signMessage = defaults.signMessage;
-    	      this.signingAlgorithm = defaults.signingAlgorithm;
+            $ = new AS2ValidationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
-            this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
+            $.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
             return this;
         }
+
         public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
-            this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
+            $.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
             return this;
         }
+
         public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
-            this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
+            $.checkDuplicateMessage = checkDuplicateMessage;
             return this;
         }
+
         public Builder compressMessage(Boolean compressMessage) {
-            this.compressMessage = Objects.requireNonNull(compressMessage);
+            $.compressMessage = compressMessage;
             return this;
         }
+
         public Builder encryptMessage(Boolean encryptMessage) {
-            this.encryptMessage = Objects.requireNonNull(encryptMessage);
+            $.encryptMessage = encryptMessage;
             return this;
         }
+
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
+
         public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
-            this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
+            $.interchangeDuplicatesValidityDays = interchangeDuplicatesValidityDays;
             return this;
         }
+
         public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
-            this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
+            $.overrideMessageProperties = overrideMessageProperties;
             return this;
         }
+
         public Builder signMessage(Boolean signMessage) {
-            this.signMessage = Objects.requireNonNull(signMessage);
+            $.signMessage = signMessage;
             return this;
         }
+
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
-            this.signingAlgorithm = signingAlgorithm;
+            $.signingAlgorithm = signingAlgorithm;
             return this;
-        }        public AS2ValidationSettingsResponse build() {
-            return new AS2ValidationSettingsResponse(checkCertificateRevocationListOnReceive, checkCertificateRevocationListOnSend, checkDuplicateMessage, compressMessage, encryptMessage, encryptionAlgorithm, interchangeDuplicatesValidityDays, overrideMessageProperties, signMessage, signingAlgorithm);
+        }
+
+        public AS2ValidationSettingsResponse build() {
+            $.checkCertificateRevocationListOnReceive = Objects.requireNonNull($.checkCertificateRevocationListOnReceive, "expected parameter 'checkCertificateRevocationListOnReceive' to be non-null");
+            $.checkCertificateRevocationListOnSend = Objects.requireNonNull($.checkCertificateRevocationListOnSend, "expected parameter 'checkCertificateRevocationListOnSend' to be non-null");
+            $.checkDuplicateMessage = Objects.requireNonNull($.checkDuplicateMessage, "expected parameter 'checkDuplicateMessage' to be non-null");
+            $.compressMessage = Objects.requireNonNull($.compressMessage, "expected parameter 'compressMessage' to be non-null");
+            $.encryptMessage = Objects.requireNonNull($.encryptMessage, "expected parameter 'encryptMessage' to be non-null");
+            $.encryptionAlgorithm = Objects.requireNonNull($.encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
+            $.interchangeDuplicatesValidityDays = Objects.requireNonNull($.interchangeDuplicatesValidityDays, "expected parameter 'interchangeDuplicatesValidityDays' to be non-null");
+            $.overrideMessageProperties = Objects.requireNonNull($.overrideMessageProperties, "expected parameter 'overrideMessageProperties' to be non-null");
+            $.signMessage = Objects.requireNonNull($.signMessage, "expected parameter 'signMessage' to be non-null");
+            return $;
         }
     }
+
 }

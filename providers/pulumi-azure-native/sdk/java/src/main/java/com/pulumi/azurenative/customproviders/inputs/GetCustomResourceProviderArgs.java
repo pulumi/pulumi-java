@@ -17,7 +17,7 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceProviderName", required=true)
-      private final String resourceProviderName;
+    private String resourceProviderName;
 
     public String resourceProviderName() {
         return this.resourceProviderName;
     }
 
-    public GetCustomResourceProviderArgs(
-        String resourceGroupName,
-        String resourceProviderName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceProviderName = Objects.requireNonNull(resourceProviderName, "expected parameter 'resourceProviderName' to be non-null");
-    }
+    private GetCustomResourceProviderArgs() {}
 
-    private GetCustomResourceProviderArgs() {
-        this.resourceGroupName = null;
-        this.resourceProviderName = null;
+    private GetCustomResourceProviderArgs(GetCustomResourceProviderArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceProviderName = $.resourceProviderName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomResourceProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceProviderName;
+        private GetCustomResourceProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomResourceProviderArgs();
         }
 
         public Builder(GetCustomResourceProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceProviderName = defaults.resourceProviderName;
+            $ = new GetCustomResourceProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceProviderName(String resourceProviderName) {
-            this.resourceProviderName = Objects.requireNonNull(resourceProviderName);
+            $.resourceProviderName = resourceProviderName;
             return this;
-        }        public GetCustomResourceProviderArgs build() {
-            return new GetCustomResourceProviderArgs(resourceGroupName, resourceProviderName);
+        }
+
+        public GetCustomResourceProviderArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceProviderName = Objects.requireNonNull($.resourceProviderName, "expected parameter 'resourceProviderName' to be non-null");
+            return $;
         }
     }
+
 }

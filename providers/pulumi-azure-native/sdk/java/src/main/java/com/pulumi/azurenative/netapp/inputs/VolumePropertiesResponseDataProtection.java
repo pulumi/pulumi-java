@@ -25,10 +25,10 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
      * 
      */
     @Import(name="backup")
-      private final @Nullable VolumeBackupPropertiesResponse backup;
+    private @Nullable VolumeBackupPropertiesResponse backup;
 
     public Optional<VolumeBackupPropertiesResponse> backup() {
-        return this.backup == null ? Optional.empty() : Optional.ofNullable(this.backup);
+        return Optional.ofNullable(this.backup);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
      * 
      */
     @Import(name="replication")
-      private final @Nullable ReplicationObjectResponse replication;
+    private @Nullable ReplicationObjectResponse replication;
 
     public Optional<ReplicationObjectResponse> replication() {
-        return this.replication == null ? Optional.empty() : Optional.ofNullable(this.replication);
+        return Optional.ofNullable(this.replication);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
+    private @Nullable VolumeSnapshotPropertiesResponse snapshot;
 
     public Optional<VolumeSnapshotPropertiesResponse> snapshot() {
-        return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
+        return Optional.ofNullable(this.snapshot);
     }
 
-    public VolumePropertiesResponseDataProtection(
-        @Nullable VolumeBackupPropertiesResponse backup,
-        @Nullable ReplicationObjectResponse replication,
-        @Nullable VolumeSnapshotPropertiesResponse snapshot) {
-        this.backup = backup;
-        this.replication = replication;
-        this.snapshot = snapshot;
-    }
+    private VolumePropertiesResponseDataProtection() {}
 
-    private VolumePropertiesResponseDataProtection() {
-        this.backup = null;
-        this.replication = null;
-        this.snapshot = null;
+    private VolumePropertiesResponseDataProtection(VolumePropertiesResponseDataProtection $) {
+        this.backup = $.backup;
+        this.replication = $.replication;
+        this.snapshot = $.snapshot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumePropertiesResponseDataProtection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable VolumeBackupPropertiesResponse backup;
-        private @Nullable ReplicationObjectResponse replication;
-        private @Nullable VolumeSnapshotPropertiesResponse snapshot;
+        private VolumePropertiesResponseDataProtection $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumePropertiesResponseDataProtection();
         }
 
         public Builder(VolumePropertiesResponseDataProtection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backup = defaults.backup;
-    	      this.replication = defaults.replication;
-    	      this.snapshot = defaults.snapshot;
+            $ = new VolumePropertiesResponseDataProtection(Objects.requireNonNull(defaults));
         }
 
         public Builder backup(@Nullable VolumeBackupPropertiesResponse backup) {
-            this.backup = backup;
+            $.backup = backup;
             return this;
         }
+
         public Builder replication(@Nullable ReplicationObjectResponse replication) {
-            this.replication = replication;
+            $.replication = replication;
             return this;
         }
+
         public Builder snapshot(@Nullable VolumeSnapshotPropertiesResponse snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
-        }        public VolumePropertiesResponseDataProtection build() {
-            return new VolumePropertiesResponseDataProtection(backup, replication, snapshot);
+        }
+
+        public VolumePropertiesResponseDataProtection build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ServiceRegistryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -31,7 +31,7 @@ public final class ServiceRegistryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -42,76 +42,70 @@ public final class ServiceRegistryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceRegistryName")
-      private final @Nullable Output<String> serviceRegistryName;
+    private @Nullable Output<String> serviceRegistryName;
 
-    public Output<String> serviceRegistryName() {
-        return this.serviceRegistryName == null ? Codegen.empty() : this.serviceRegistryName;
+    public Optional<Output<String>> serviceRegistryName() {
+        return Optional.ofNullable(this.serviceRegistryName);
     }
 
-    public ServiceRegistryArgs(
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> serviceRegistryName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceRegistryName = serviceRegistryName;
-    }
+    private ServiceRegistryArgs() {}
 
-    private ServiceRegistryArgs() {
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceRegistryName = Codegen.empty();
+    private ServiceRegistryArgs(ServiceRegistryArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.serviceRegistryName = $.serviceRegistryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> serviceRegistryName;
+        private ServiceRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceRegistryArgs();
         }
 
         public Builder(ServiceRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceRegistryName = defaults.serviceRegistryName;
+            $ = new ServiceRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceRegistryName(@Nullable Output<String> serviceRegistryName) {
-            this.serviceRegistryName = serviceRegistryName;
+            $.serviceRegistryName = serviceRegistryName;
             return this;
         }
-        public Builder serviceRegistryName(@Nullable String serviceRegistryName) {
-            this.serviceRegistryName = Codegen.ofNullable(serviceRegistryName);
-            return this;
-        }        public ServiceRegistryArgs build() {
-            return new ServiceRegistryArgs(resourceGroupName, serviceName, serviceRegistryName);
+
+        public Builder serviceRegistryName(String serviceRegistryName) {
+            return serviceRegistryName(Output.of(serviceRegistryName));
+        }
+
+        public ServiceRegistryArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

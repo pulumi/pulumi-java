@@ -6,7 +6,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.inputs.RelationshipTypeFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class RelationshipTypeMappingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="fieldMappings", required=true)
-      private final Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
+    private Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
 
     public Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings;
     }
 
-    public RelationshipTypeMappingArgs(Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
-        this.fieldMappings = Objects.requireNonNull(fieldMappings, "expected parameter 'fieldMappings' to be non-null");
-    }
+    private RelationshipTypeMappingArgs() {}
 
-    private RelationshipTypeMappingArgs() {
-        this.fieldMappings = Codegen.empty();
+    private RelationshipTypeMappingArgs(RelationshipTypeMappingArgs $) {
+        this.fieldMappings = $.fieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipTypeMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
+        private RelationshipTypeMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipTypeMappingArgs();
         }
 
         public Builder(RelationshipTypeMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldMappings = defaults.fieldMappings;
+            $ = new RelationshipTypeMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldMappings(Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
-            this.fieldMappings = Objects.requireNonNull(fieldMappings);
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(List<RelationshipTypeFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.of(Objects.requireNonNull(fieldMappings));
-            return this;
+            return fieldMappings(Output.of(fieldMappings));
         }
+
         public Builder fieldMappings(RelationshipTypeFieldMappingArgs... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
-        }        public RelationshipTypeMappingArgs build() {
-            return new RelationshipTypeMappingArgs(fieldMappings);
+        }
+
+        public RelationshipTypeMappingArgs build() {
+            $.fieldMappings = Objects.requireNonNull($.fieldMappings, "expected parameter 'fieldMappings' to be non-null");
+            return $;
         }
     }
+
 }

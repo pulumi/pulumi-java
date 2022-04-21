@@ -17,7 +17,7 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
      * 
      */
     @Import(name="labAccountName", required=true)
-      private final String labAccountName;
+    private String labAccountName;
 
     public String labAccountName() {
         return this.labAccountName;
@@ -28,55 +28,52 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLabAccountRegionalAvailabilityArgs(
-        String labAccountName,
-        String resourceGroupName) {
-        this.labAccountName = Objects.requireNonNull(labAccountName, "expected parameter 'labAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLabAccountRegionalAvailabilityArgs() {}
 
-    private GetLabAccountRegionalAvailabilityArgs() {
-        this.labAccountName = null;
-        this.resourceGroupName = null;
+    private GetLabAccountRegionalAvailabilityArgs(GetLabAccountRegionalAvailabilityArgs $) {
+        this.labAccountName = $.labAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLabAccountRegionalAvailabilityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labAccountName;
-        private String resourceGroupName;
+        private GetLabAccountRegionalAvailabilityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLabAccountRegionalAvailabilityArgs();
         }
 
         public Builder(GetLabAccountRegionalAvailabilityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLabAccountRegionalAvailabilityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Objects.requireNonNull(labAccountName);
+            $.labAccountName = labAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLabAccountRegionalAvailabilityArgs build() {
-            return new GetLabAccountRegionalAvailabilityArgs(labAccountName, resourceGroupName);
+        }
+
+        public GetLabAccountRegionalAvailabilityArgs build() {
+            $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

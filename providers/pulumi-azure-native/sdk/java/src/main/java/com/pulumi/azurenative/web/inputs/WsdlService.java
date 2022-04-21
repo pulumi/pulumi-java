@@ -24,10 +24,10 @@ public final class WsdlService extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointQualifiedNames")
-      private final @Nullable List<String> endpointQualifiedNames;
+    private @Nullable List<String> endpointQualifiedNames;
 
-    public List<String> endpointQualifiedNames() {
-        return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
+    public Optional<List<String>> endpointQualifiedNames() {
+        return Optional.ofNullable(this.endpointQualifiedNames);
     }
 
     /**
@@ -35,58 +35,55 @@ public final class WsdlService extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifiedName", required=true)
-      private final String qualifiedName;
+    private String qualifiedName;
 
     public String qualifiedName() {
         return this.qualifiedName;
     }
 
-    public WsdlService(
-        @Nullable List<String> endpointQualifiedNames,
-        String qualifiedName) {
-        this.endpointQualifiedNames = endpointQualifiedNames;
-        this.qualifiedName = Objects.requireNonNull(qualifiedName, "expected parameter 'qualifiedName' to be non-null");
-    }
+    private WsdlService() {}
 
-    private WsdlService() {
-        this.endpointQualifiedNames = List.of();
-        this.qualifiedName = null;
+    private WsdlService(WsdlService $) {
+        this.endpointQualifiedNames = $.endpointQualifiedNames;
+        this.qualifiedName = $.qualifiedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsdlService defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> endpointQualifiedNames;
-        private String qualifiedName;
+        private WsdlService $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsdlService();
         }
 
         public Builder(WsdlService defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointQualifiedNames = defaults.endpointQualifiedNames;
-    	      this.qualifiedName = defaults.qualifiedName;
+            $ = new WsdlService(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
-            this.endpointQualifiedNames = endpointQualifiedNames;
+            $.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
+
         public Builder endpointQualifiedNames(String... endpointQualifiedNames) {
             return endpointQualifiedNames(List.of(endpointQualifiedNames));
         }
+
         public Builder qualifiedName(String qualifiedName) {
-            this.qualifiedName = Objects.requireNonNull(qualifiedName);
+            $.qualifiedName = qualifiedName;
             return this;
-        }        public WsdlService build() {
-            return new WsdlService(endpointQualifiedNames, qualifiedName);
+        }
+
+        public WsdlService build() {
+            $.qualifiedName = Objects.requireNonNull($.qualifiedName, "expected parameter 'qualifiedName' to be non-null");
+            return $;
         }
     }
+
 }

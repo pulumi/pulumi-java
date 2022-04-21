@@ -5,9 +5,9 @@ package com.pulumi.azurenative.domainregistration;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -31,10 +31,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ownershipId")
-      private final @Nullable Output<String> ownershipId;
+    private @Nullable Output<String> ownershipId;
 
-    public Output<String> ownershipId() {
-        return this.ownershipId == null ? Codegen.empty() : this.ownershipId;
+    public Optional<Output<String>> ownershipId() {
+        return Optional.ofNullable(this.ownershipId);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DomainOwnershipIdentifierArgs(
-        Output<String> domainName,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ownershipId,
-        Output<String> resourceGroupName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.kind = kind;
-        this.name = name;
-        this.ownershipId = ownershipId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DomainOwnershipIdentifierArgs() {}
 
-    private DomainOwnershipIdentifierArgs() {
-        this.domainName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownershipId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DomainOwnershipIdentifierArgs(DomainOwnershipIdentifierArgs $) {
+        this.domainName = $.domainName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.ownershipId = $.ownershipId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainOwnershipIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ownershipId;
-        private Output<String> resourceGroupName;
+        private DomainOwnershipIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainOwnershipIdentifierArgs();
         }
 
         public Builder(DomainOwnershipIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.ownershipId = defaults.ownershipId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DomainOwnershipIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownershipId(@Nullable Output<String> ownershipId) {
-            this.ownershipId = ownershipId;
+            $.ownershipId = ownershipId;
             return this;
         }
-        public Builder ownershipId(@Nullable String ownershipId) {
-            this.ownershipId = Codegen.ofNullable(ownershipId);
-            return this;
+
+        public Builder ownershipId(String ownershipId) {
+            return ownershipId(Output.of(ownershipId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DomainOwnershipIdentifierArgs build() {
-            return new DomainOwnershipIdentifierArgs(domainName, kind, name, ownershipId, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DomainOwnershipIdentifierArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

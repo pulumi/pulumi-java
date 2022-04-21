@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ContentLinkArgs(@Nullable Output<String> uri) {
-        this.uri = uri;
-    }
+    private ContentLinkArgs() {}
 
-    private ContentLinkArgs() {
-        this.uri = Codegen.empty();
+    private ContentLinkArgs(ContentLinkArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> uri;
+        private ContentLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentLinkArgs();
         }
 
         public Builder(ContentLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new ContentLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ContentLinkArgs build() {
-            return new ContentLinkArgs(uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ContentLinkArgs build() {
+            return $;
         }
     }
+
 }

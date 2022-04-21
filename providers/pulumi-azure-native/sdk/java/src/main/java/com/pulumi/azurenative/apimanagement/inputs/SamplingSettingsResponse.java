@@ -24,10 +24,10 @@ public final class SamplingSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Double percentage;
+    private @Nullable Double percentage;
 
     public Optional<Double> percentage() {
-        return this.percentage == null ? Optional.empty() : Optional.ofNullable(this.percentage);
+        return Optional.ofNullable(this.percentage);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class SamplingSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="samplingType")
-      private final @Nullable String samplingType;
+    private @Nullable String samplingType;
 
     public Optional<String> samplingType() {
-        return this.samplingType == null ? Optional.empty() : Optional.ofNullable(this.samplingType);
+        return Optional.ofNullable(this.samplingType);
     }
 
-    public SamplingSettingsResponse(
-        @Nullable Double percentage,
-        @Nullable String samplingType) {
-        this.percentage = percentage;
-        this.samplingType = samplingType;
-    }
+    private SamplingSettingsResponse() {}
 
-    private SamplingSettingsResponse() {
-        this.percentage = null;
-        this.samplingType = null;
+    private SamplingSettingsResponse(SamplingSettingsResponse $) {
+        this.percentage = $.percentage;
+        this.samplingType = $.samplingType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double percentage;
-        private @Nullable String samplingType;
+        private SamplingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingSettingsResponse();
         }
 
         public Builder(SamplingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percentage = defaults.percentage;
-    	      this.samplingType = defaults.samplingType;
+            $ = new SamplingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
+
         public Builder samplingType(@Nullable String samplingType) {
-            this.samplingType = samplingType;
+            $.samplingType = samplingType;
             return this;
-        }        public SamplingSettingsResponse build() {
-            return new SamplingSettingsResponse(percentage, samplingType);
+        }
+
+        public SamplingSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.azurenative.media.inputs.AkamaiAccessControlArgs;
 import com.pulumi.azurenative.media.inputs.IPAccessControlArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StreamingEndpointAccessControlArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="akamai")
-      private final @Nullable Output<AkamaiAccessControlArgs> akamai;
+    private @Nullable Output<AkamaiAccessControlArgs> akamai;
 
-    public Output<AkamaiAccessControlArgs> akamai() {
-        return this.akamai == null ? Codegen.empty() : this.akamai;
+    public Optional<Output<AkamaiAccessControlArgs>> akamai() {
+        return Optional.ofNullable(this.akamai);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class StreamingEndpointAccessControlArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<IPAccessControlArgs> ip;
+    private @Nullable Output<IPAccessControlArgs> ip;
 
-    public Output<IPAccessControlArgs> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<IPAccessControlArgs>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
-    public StreamingEndpointAccessControlArgs(
-        @Nullable Output<AkamaiAccessControlArgs> akamai,
-        @Nullable Output<IPAccessControlArgs> ip) {
-        this.akamai = akamai;
-        this.ip = ip;
-    }
+    private StreamingEndpointAccessControlArgs() {}
 
-    private StreamingEndpointAccessControlArgs() {
-        this.akamai = Codegen.empty();
-        this.ip = Codegen.empty();
+    private StreamingEndpointAccessControlArgs(StreamingEndpointAccessControlArgs $) {
+        this.akamai = $.akamai;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingEndpointAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AkamaiAccessControlArgs> akamai;
-        private @Nullable Output<IPAccessControlArgs> ip;
+        private StreamingEndpointAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingEndpointAccessControlArgs();
         }
 
         public Builder(StreamingEndpointAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.akamai = defaults.akamai;
-    	      this.ip = defaults.ip;
+            $ = new StreamingEndpointAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder akamai(@Nullable Output<AkamaiAccessControlArgs> akamai) {
-            this.akamai = akamai;
+            $.akamai = akamai;
             return this;
         }
-        public Builder akamai(@Nullable AkamaiAccessControlArgs akamai) {
-            this.akamai = Codegen.ofNullable(akamai);
-            return this;
+
+        public Builder akamai(AkamaiAccessControlArgs akamai) {
+            return akamai(Output.of(akamai));
         }
+
         public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable IPAccessControlArgs ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
-        }        public StreamingEndpointAccessControlArgs build() {
-            return new StreamingEndpointAccessControlArgs(akamai, ip);
+
+        public Builder ip(IPAccessControlArgs ip) {
+            return ip(Output.of(ip));
+        }
+
+        public StreamingEndpointAccessControlArgs build() {
+            return $;
         }
     }
+
 }

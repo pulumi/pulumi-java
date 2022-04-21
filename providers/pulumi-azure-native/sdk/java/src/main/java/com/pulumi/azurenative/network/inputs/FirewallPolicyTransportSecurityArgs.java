@@ -6,8 +6,8 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.FirewallPolicyCertificateAuthorityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FirewallPolicyTransportSecurityArgs extends com.pulumi.resour
      * 
      */
     @Import(name="certificateAuthority")
-      private final @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
+    private @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
 
-    public Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority() {
-        return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
+    public Optional<Output<FirewallPolicyCertificateAuthorityArgs>> certificateAuthority() {
+        return Optional.ofNullable(this.certificateAuthority);
     }
 
-    public FirewallPolicyTransportSecurityArgs(@Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
-        this.certificateAuthority = certificateAuthority;
-    }
+    private FirewallPolicyTransportSecurityArgs() {}
 
-    private FirewallPolicyTransportSecurityArgs() {
-        this.certificateAuthority = Codegen.empty();
+    private FirewallPolicyTransportSecurityArgs(FirewallPolicyTransportSecurityArgs $) {
+        this.certificateAuthority = $.certificateAuthority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyTransportSecurityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
+        private FirewallPolicyTransportSecurityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyTransportSecurityArgs();
         }
 
         public Builder(FirewallPolicyTransportSecurityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthority = defaults.certificateAuthority;
+            $ = new FirewallPolicyTransportSecurityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthority(@Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
-            this.certificateAuthority = certificateAuthority;
+            $.certificateAuthority = certificateAuthority;
             return this;
         }
-        public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityArgs certificateAuthority) {
-            this.certificateAuthority = Codegen.ofNullable(certificateAuthority);
-            return this;
-        }        public FirewallPolicyTransportSecurityArgs build() {
-            return new FirewallPolicyTransportSecurityArgs(certificateAuthority);
+
+        public Builder certificateAuthority(FirewallPolicyCertificateAuthorityArgs certificateAuthority) {
+            return certificateAuthority(Output.of(certificateAuthority));
+        }
+
+        public FirewallPolicyTransportSecurityArgs build() {
+            return $;
         }
     }
+
 }

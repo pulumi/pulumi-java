@@ -23,45 +23,44 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="error")
-      private final @Nullable CloudErrorBodyResponse error;
+    private @Nullable CloudErrorBodyResponse error;
 
     public Optional<CloudErrorBodyResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
-    public CloudErrorResponse(@Nullable CloudErrorBodyResponse error) {
-        this.error = error;
-    }
+    private CloudErrorResponse() {}
 
-    private CloudErrorResponse() {
-        this.error = null;
+    private CloudErrorResponse(CloudErrorResponse $) {
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CloudErrorBodyResponse error;
+        private CloudErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudErrorResponse();
         }
 
         public Builder(CloudErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
+            $ = new CloudErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable CloudErrorBodyResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
-        }        public CloudErrorResponse build() {
-            return new CloudErrorResponse(error);
+        }
+
+        public CloudErrorResponse build() {
+            return $;
         }
     }
+
 }

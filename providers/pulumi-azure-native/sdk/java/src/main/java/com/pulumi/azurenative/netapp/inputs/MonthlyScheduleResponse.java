@@ -25,10 +25,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="daysOfMonth")
-      private final @Nullable String daysOfMonth;
+    private @Nullable String daysOfMonth;
 
     public Optional<String> daysOfMonth() {
-        return this.daysOfMonth == null ? Optional.empty() : Optional.ofNullable(this.daysOfMonth);
+        return Optional.ofNullable(this.daysOfMonth);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hour")
-      private final @Nullable Integer hour;
+    private @Nullable Integer hour;
 
     public Optional<Integer> hour() {
-        return this.hour == null ? Optional.empty() : Optional.ofNullable(this.hour);
+        return Optional.ofNullable(this.hour);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="minute")
-      private final @Nullable Integer minute;
+    private @Nullable Integer minute;
 
     public Optional<Integer> minute() {
-        return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
+        return Optional.ofNullable(this.minute);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="snapshotsToKeep")
-      private final @Nullable Integer snapshotsToKeep;
+    private @Nullable Integer snapshotsToKeep;
 
     public Optional<Integer> snapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Optional.empty() : Optional.ofNullable(this.snapshotsToKeep);
+        return Optional.ofNullable(this.snapshotsToKeep);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="usedBytes")
-      private final @Nullable Double usedBytes;
+    private @Nullable Double usedBytes;
 
     public Optional<Double> usedBytes() {
-        return this.usedBytes == null ? Optional.empty() : Optional.ofNullable(this.usedBytes);
+        return Optional.ofNullable(this.usedBytes);
     }
 
-    public MonthlyScheduleResponse(
-        @Nullable String daysOfMonth,
-        @Nullable Integer hour,
-        @Nullable Integer minute,
-        @Nullable Integer snapshotsToKeep,
-        @Nullable Double usedBytes) {
-        this.daysOfMonth = daysOfMonth;
-        this.hour = hour;
-        this.minute = minute;
-        this.snapshotsToKeep = snapshotsToKeep;
-        this.usedBytes = usedBytes;
-    }
+    private MonthlyScheduleResponse() {}
 
-    private MonthlyScheduleResponse() {
-        this.daysOfMonth = null;
-        this.hour = null;
-        this.minute = null;
-        this.snapshotsToKeep = null;
-        this.usedBytes = null;
+    private MonthlyScheduleResponse(MonthlyScheduleResponse $) {
+        this.daysOfMonth = $.daysOfMonth;
+        this.hour = $.hour;
+        this.minute = $.minute;
+        this.snapshotsToKeep = $.snapshotsToKeep;
+        this.usedBytes = $.usedBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonthlyScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String daysOfMonth;
-        private @Nullable Integer hour;
-        private @Nullable Integer minute;
-        private @Nullable Integer snapshotsToKeep;
-        private @Nullable Double usedBytes;
+        private MonthlyScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonthlyScheduleResponse();
         }
 
         public Builder(MonthlyScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfMonth = defaults.daysOfMonth;
-    	      this.hour = defaults.hour;
-    	      this.minute = defaults.minute;
-    	      this.snapshotsToKeep = defaults.snapshotsToKeep;
-    	      this.usedBytes = defaults.usedBytes;
+            $ = new MonthlyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfMonth(@Nullable String daysOfMonth) {
-            this.daysOfMonth = daysOfMonth;
+            $.daysOfMonth = daysOfMonth;
             return this;
         }
+
         public Builder hour(@Nullable Integer hour) {
-            this.hour = hour;
+            $.hour = hour;
             return this;
         }
+
         public Builder minute(@Nullable Integer minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
         }
+
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = snapshotsToKeep;
+            $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
+
         public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = usedBytes;
+            $.usedBytes = usedBytes;
             return this;
-        }        public MonthlyScheduleResponse build() {
-            return new MonthlyScheduleResponse(daysOfMonth, hour, minute, snapshotsToKeep, usedBytes);
+        }
+
+        public MonthlyScheduleResponse build() {
+            return $;
         }
     }
+
 }

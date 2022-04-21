@@ -25,10 +25,10 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
      * 
      */
     @Import(name="isSecret")
-      private final @Nullable Boolean isSecret;
+    private @Nullable Boolean isSecret;
 
     public Optional<Boolean> isSecret() {
-        return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
+        return Optional.ofNullable(this.isSecret);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -59,73 +59,64 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public StaticDeliveryAttributeMappingResponse(
-        @Nullable Boolean isSecret,
-        @Nullable String name,
-        String type,
-        @Nullable String value) {
-        this.isSecret = Codegen.booleanProp("isSecret").arg(isSecret).def(false).getNullable();
-        this.name = name;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.value = value;
-    }
+    private StaticDeliveryAttributeMappingResponse() {}
 
-    private StaticDeliveryAttributeMappingResponse() {
-        this.isSecret = null;
-        this.name = null;
-        this.type = null;
-        this.value = null;
+    private StaticDeliveryAttributeMappingResponse(StaticDeliveryAttributeMappingResponse $) {
+        this.isSecret = $.isSecret;
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticDeliveryAttributeMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isSecret;
-        private @Nullable String name;
-        private String type;
-        private @Nullable String value;
+        private StaticDeliveryAttributeMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticDeliveryAttributeMappingResponse();
         }
 
         public Builder(StaticDeliveryAttributeMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isSecret = defaults.isSecret;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new StaticDeliveryAttributeMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isSecret(@Nullable Boolean isSecret) {
-            this.isSecret = isSecret;
+            $.isSecret = isSecret;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public StaticDeliveryAttributeMappingResponse build() {
-            return new StaticDeliveryAttributeMappingResponse(isSecret, name, type, value);
+        }
+
+        public StaticDeliveryAttributeMappingResponse build() {
+            $.isSecret = Codegen.booleanProp("isSecret").arg($.isSecret).def(false).getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

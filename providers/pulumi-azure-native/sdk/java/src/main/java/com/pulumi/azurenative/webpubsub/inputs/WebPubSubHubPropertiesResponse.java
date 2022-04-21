@@ -26,10 +26,10 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="anonymousConnectPolicy")
-      private final @Nullable String anonymousConnectPolicy;
+    private @Nullable String anonymousConnectPolicy;
 
     public Optional<String> anonymousConnectPolicy() {
-        return this.anonymousConnectPolicy == null ? Optional.empty() : Optional.ofNullable(this.anonymousConnectPolicy);
+        return Optional.ofNullable(this.anonymousConnectPolicy);
     }
 
     /**
@@ -37,58 +37,55 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="eventHandlers")
-      private final @Nullable List<EventHandlerResponse> eventHandlers;
+    private @Nullable List<EventHandlerResponse> eventHandlers;
 
-    public List<EventHandlerResponse> eventHandlers() {
-        return this.eventHandlers == null ? List.of() : this.eventHandlers;
+    public Optional<List<EventHandlerResponse>> eventHandlers() {
+        return Optional.ofNullable(this.eventHandlers);
     }
 
-    public WebPubSubHubPropertiesResponse(
-        @Nullable String anonymousConnectPolicy,
-        @Nullable List<EventHandlerResponse> eventHandlers) {
-        this.anonymousConnectPolicy = Codegen.stringProp("anonymousConnectPolicy").arg(anonymousConnectPolicy).def("deny").getNullable();
-        this.eventHandlers = eventHandlers;
-    }
+    private WebPubSubHubPropertiesResponse() {}
 
-    private WebPubSubHubPropertiesResponse() {
-        this.anonymousConnectPolicy = null;
-        this.eventHandlers = List.of();
+    private WebPubSubHubPropertiesResponse(WebPubSubHubPropertiesResponse $) {
+        this.anonymousConnectPolicy = $.anonymousConnectPolicy;
+        this.eventHandlers = $.eventHandlers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubHubPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String anonymousConnectPolicy;
-        private @Nullable List<EventHandlerResponse> eventHandlers;
+        private WebPubSubHubPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubHubPropertiesResponse();
         }
 
         public Builder(WebPubSubHubPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anonymousConnectPolicy = defaults.anonymousConnectPolicy;
-    	      this.eventHandlers = defaults.eventHandlers;
+            $ = new WebPubSubHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
-            this.anonymousConnectPolicy = anonymousConnectPolicy;
+            $.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
+
         public Builder eventHandlers(@Nullable List<EventHandlerResponse> eventHandlers) {
-            this.eventHandlers = eventHandlers;
+            $.eventHandlers = eventHandlers;
             return this;
         }
+
         public Builder eventHandlers(EventHandlerResponse... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
-        }        public WebPubSubHubPropertiesResponse build() {
-            return new WebPubSubHubPropertiesResponse(anonymousConnectPolicy, eventHandlers);
+        }
+
+        public WebPubSubHubPropertiesResponse build() {
+            $.anonymousConnectPolicy = Codegen.stringProp("anonymousConnectPolicy").arg($.anonymousConnectPolicy).def("deny").getNullable();
+            return $;
         }
     }
+
 }

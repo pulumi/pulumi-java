@@ -23,10 +23,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterBootstrapAccount")
-      private final @Nullable String clusterBootstrapAccount;
+    private @Nullable String clusterBootstrapAccount;
 
     public Optional<String> clusterBootstrapAccount() {
-        return this.clusterBootstrapAccount == null ? Optional.empty() : Optional.ofNullable(this.clusterBootstrapAccount);
+        return Optional.ofNullable(this.clusterBootstrapAccount);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterOperatorAccount")
-      private final @Nullable String clusterOperatorAccount;
+    private @Nullable String clusterOperatorAccount;
 
     public Optional<String> clusterOperatorAccount() {
-        return this.clusterOperatorAccount == null ? Optional.empty() : Optional.ofNullable(this.clusterOperatorAccount);
+        return Optional.ofNullable(this.clusterOperatorAccount);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainFqdn")
-      private final @Nullable String domainFqdn;
+    private @Nullable String domainFqdn;
 
     public Optional<String> domainFqdn() {
-        return this.domainFqdn == null ? Optional.empty() : Optional.ofNullable(this.domainFqdn);
+        return Optional.ofNullable(this.domainFqdn);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fileShareWitnessPath")
-      private final @Nullable String fileShareWitnessPath;
+    private @Nullable String fileShareWitnessPath;
 
     public Optional<String> fileShareWitnessPath() {
-        return this.fileShareWitnessPath == null ? Optional.empty() : Optional.ofNullable(this.fileShareWitnessPath);
+        return Optional.ofNullable(this.fileShareWitnessPath);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ouPath")
-      private final @Nullable String ouPath;
+    private @Nullable String ouPath;
 
     public Optional<String> ouPath() {
-        return this.ouPath == null ? Optional.empty() : Optional.ofNullable(this.ouPath);
+        return Optional.ofNullable(this.ouPath);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sqlServiceAccount")
-      private final @Nullable String sqlServiceAccount;
+    private @Nullable String sqlServiceAccount;
 
     public Optional<String> sqlServiceAccount() {
-        return this.sqlServiceAccount == null ? Optional.empty() : Optional.ofNullable(this.sqlServiceAccount);
+        return Optional.ofNullable(this.sqlServiceAccount);
     }
 
     /**
@@ -89,100 +89,80 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="storageAccountUrl")
-      private final @Nullable String storageAccountUrl;
+    private @Nullable String storageAccountUrl;
 
     public Optional<String> storageAccountUrl() {
-        return this.storageAccountUrl == null ? Optional.empty() : Optional.ofNullable(this.storageAccountUrl);
+        return Optional.ofNullable(this.storageAccountUrl);
     }
 
-    public WsfcDomainProfileResponse(
-        @Nullable String clusterBootstrapAccount,
-        @Nullable String clusterOperatorAccount,
-        @Nullable String domainFqdn,
-        @Nullable String fileShareWitnessPath,
-        @Nullable String ouPath,
-        @Nullable String sqlServiceAccount,
-        @Nullable String storageAccountUrl) {
-        this.clusterBootstrapAccount = clusterBootstrapAccount;
-        this.clusterOperatorAccount = clusterOperatorAccount;
-        this.domainFqdn = domainFqdn;
-        this.fileShareWitnessPath = fileShareWitnessPath;
-        this.ouPath = ouPath;
-        this.sqlServiceAccount = sqlServiceAccount;
-        this.storageAccountUrl = storageAccountUrl;
-    }
+    private WsfcDomainProfileResponse() {}
 
-    private WsfcDomainProfileResponse() {
-        this.clusterBootstrapAccount = null;
-        this.clusterOperatorAccount = null;
-        this.domainFqdn = null;
-        this.fileShareWitnessPath = null;
-        this.ouPath = null;
-        this.sqlServiceAccount = null;
-        this.storageAccountUrl = null;
+    private WsfcDomainProfileResponse(WsfcDomainProfileResponse $) {
+        this.clusterBootstrapAccount = $.clusterBootstrapAccount;
+        this.clusterOperatorAccount = $.clusterOperatorAccount;
+        this.domainFqdn = $.domainFqdn;
+        this.fileShareWitnessPath = $.fileShareWitnessPath;
+        this.ouPath = $.ouPath;
+        this.sqlServiceAccount = $.sqlServiceAccount;
+        this.storageAccountUrl = $.storageAccountUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsfcDomainProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clusterBootstrapAccount;
-        private @Nullable String clusterOperatorAccount;
-        private @Nullable String domainFqdn;
-        private @Nullable String fileShareWitnessPath;
-        private @Nullable String ouPath;
-        private @Nullable String sqlServiceAccount;
-        private @Nullable String storageAccountUrl;
+        private WsfcDomainProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsfcDomainProfileResponse();
         }
 
         public Builder(WsfcDomainProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterBootstrapAccount = defaults.clusterBootstrapAccount;
-    	      this.clusterOperatorAccount = defaults.clusterOperatorAccount;
-    	      this.domainFqdn = defaults.domainFqdn;
-    	      this.fileShareWitnessPath = defaults.fileShareWitnessPath;
-    	      this.ouPath = defaults.ouPath;
-    	      this.sqlServiceAccount = defaults.sqlServiceAccount;
-    	      this.storageAccountUrl = defaults.storageAccountUrl;
+            $ = new WsfcDomainProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
-            this.clusterBootstrapAccount = clusterBootstrapAccount;
+            $.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
+
         public Builder clusterOperatorAccount(@Nullable String clusterOperatorAccount) {
-            this.clusterOperatorAccount = clusterOperatorAccount;
+            $.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
+
         public Builder domainFqdn(@Nullable String domainFqdn) {
-            this.domainFqdn = domainFqdn;
+            $.domainFqdn = domainFqdn;
             return this;
         }
+
         public Builder fileShareWitnessPath(@Nullable String fileShareWitnessPath) {
-            this.fileShareWitnessPath = fileShareWitnessPath;
+            $.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
+
         public Builder ouPath(@Nullable String ouPath) {
-            this.ouPath = ouPath;
+            $.ouPath = ouPath;
             return this;
         }
+
         public Builder sqlServiceAccount(@Nullable String sqlServiceAccount) {
-            this.sqlServiceAccount = sqlServiceAccount;
+            $.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
+
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
-            this.storageAccountUrl = storageAccountUrl;
+            $.storageAccountUrl = storageAccountUrl;
             return this;
-        }        public WsfcDomainProfileResponse build() {
-            return new WsfcDomainProfileResponse(clusterBootstrapAccount, clusterOperatorAccount, domainFqdn, fileShareWitnessPath, ouPath, sqlServiceAccount, storageAccountUrl);
+        }
+
+        public WsfcDomainProfileResponse build() {
+            return $;
         }
     }
+
 }

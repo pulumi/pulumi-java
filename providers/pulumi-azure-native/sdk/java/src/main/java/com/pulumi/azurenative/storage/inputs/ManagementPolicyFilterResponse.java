@@ -25,10 +25,10 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="blobIndexMatch")
-      private final @Nullable List<TagFilterResponse> blobIndexMatch;
+    private @Nullable List<TagFilterResponse> blobIndexMatch;
 
-    public List<TagFilterResponse> blobIndexMatch() {
-        return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
+    public Optional<List<TagFilterResponse>> blobIndexMatch() {
+        return Optional.ofNullable(this.blobIndexMatch);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="blobTypes", required=true)
-      private final List<String> blobTypes;
+    private List<String> blobTypes;
 
     public List<String> blobTypes() {
         return this.blobTypes;
@@ -47,73 +47,69 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable List<String> prefixMatch;
+    private @Nullable List<String> prefixMatch;
 
-    public List<String> prefixMatch() {
-        return this.prefixMatch == null ? List.of() : this.prefixMatch;
+    public Optional<List<String>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
-    public ManagementPolicyFilterResponse(
-        @Nullable List<TagFilterResponse> blobIndexMatch,
-        List<String> blobTypes,
-        @Nullable List<String> prefixMatch) {
-        this.blobIndexMatch = blobIndexMatch;
-        this.blobTypes = Objects.requireNonNull(blobTypes, "expected parameter 'blobTypes' to be non-null");
-        this.prefixMatch = prefixMatch;
-    }
+    private ManagementPolicyFilterResponse() {}
 
-    private ManagementPolicyFilterResponse() {
-        this.blobIndexMatch = List.of();
-        this.blobTypes = List.of();
-        this.prefixMatch = List.of();
+    private ManagementPolicyFilterResponse(ManagementPolicyFilterResponse $) {
+        this.blobIndexMatch = $.blobIndexMatch;
+        this.blobTypes = $.blobTypes;
+        this.prefixMatch = $.prefixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<TagFilterResponse> blobIndexMatch;
-        private List<String> blobTypes;
-        private @Nullable List<String> prefixMatch;
+        private ManagementPolicyFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyFilterResponse();
         }
 
         public Builder(ManagementPolicyFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobIndexMatch = defaults.blobIndexMatch;
-    	      this.blobTypes = defaults.blobTypes;
-    	      this.prefixMatch = defaults.prefixMatch;
+            $ = new ManagementPolicyFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobIndexMatch(@Nullable List<TagFilterResponse> blobIndexMatch) {
-            this.blobIndexMatch = blobIndexMatch;
+            $.blobIndexMatch = blobIndexMatch;
             return this;
         }
+
         public Builder blobIndexMatch(TagFilterResponse... blobIndexMatch) {
             return blobIndexMatch(List.of(blobIndexMatch));
         }
+
         public Builder blobTypes(List<String> blobTypes) {
-            this.blobTypes = Objects.requireNonNull(blobTypes);
+            $.blobTypes = blobTypes;
             return this;
         }
+
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
+
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
+
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
-        }        public ManagementPolicyFilterResponse build() {
-            return new ManagementPolicyFilterResponse(blobIndexMatch, blobTypes, prefixMatch);
+        }
+
+        public ManagementPolicyFilterResponse build() {
+            $.blobTypes = Objects.requireNonNull($.blobTypes, "expected parameter 'blobTypes' to be non-null");
+            return $;
         }
     }
+
 }

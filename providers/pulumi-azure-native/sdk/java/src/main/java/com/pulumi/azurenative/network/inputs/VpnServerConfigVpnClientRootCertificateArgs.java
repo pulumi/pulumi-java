@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends com.pulum
      * 
      */
     @Import(name="publicCertData")
-      private final @Nullable Output<String> publicCertData;
+    private @Nullable Output<String> publicCertData;
 
-    public Output<String> publicCertData() {
-        return this.publicCertData == null ? Codegen.empty() : this.publicCertData;
+    public Optional<Output<String>> publicCertData() {
+        return Optional.ofNullable(this.publicCertData);
     }
 
-    public VpnServerConfigVpnClientRootCertificateArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> publicCertData) {
-        this.name = name;
-        this.publicCertData = publicCertData;
-    }
+    private VpnServerConfigVpnClientRootCertificateArgs() {}
 
-    private VpnServerConfigVpnClientRootCertificateArgs() {
-        this.name = Codegen.empty();
-        this.publicCertData = Codegen.empty();
+    private VpnServerConfigVpnClientRootCertificateArgs(VpnServerConfigVpnClientRootCertificateArgs $) {
+        this.name = $.name;
+        this.publicCertData = $.publicCertData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnServerConfigVpnClientRootCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> publicCertData;
+        private VpnServerConfigVpnClientRootCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnServerConfigVpnClientRootCertificateArgs();
         }
 
         public Builder(VpnServerConfigVpnClientRootCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.publicCertData = defaults.publicCertData;
+            $ = new VpnServerConfigVpnClientRootCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder publicCertData(@Nullable Output<String> publicCertData) {
-            this.publicCertData = publicCertData;
+            $.publicCertData = publicCertData;
             return this;
         }
-        public Builder publicCertData(@Nullable String publicCertData) {
-            this.publicCertData = Codegen.ofNullable(publicCertData);
-            return this;
-        }        public VpnServerConfigVpnClientRootCertificateArgs build() {
-            return new VpnServerConfigVpnClientRootCertificateArgs(name, publicCertData);
+
+        public Builder publicCertData(String publicCertData) {
+            return publicCertData(Output.of(publicCertData));
+        }
+
+        public VpnServerConfigVpnClientRootCertificateArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceKeyVaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyName", required=true)
-      private final Output<String> keyName;
+    private Output<String> keyName;
 
     public Output<String> keyName() {
         return this.keyName;
@@ -36,7 +36,7 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyVault", required=true)
-      private final Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
+    private Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
 
     public Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault() {
         return this.keyVault;
@@ -47,76 +47,70 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable Output<String> keyVersion;
+    private @Nullable Output<String> keyVersion;
 
-    public Output<String> keyVersion() {
-        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
+    public Optional<Output<String>> keyVersion() {
+        return Optional.ofNullable(this.keyVersion);
     }
 
-    public KeyVaultKeyReferenceArgs(
-        Output<String> keyName,
-        Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault,
-        @Nullable Output<String> keyVersion) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.keyVault = Objects.requireNonNull(keyVault, "expected parameter 'keyVault' to be non-null");
-        this.keyVersion = keyVersion;
-    }
+    private KeyVaultKeyReferenceArgs() {}
 
-    private KeyVaultKeyReferenceArgs() {
-        this.keyName = Codegen.empty();
-        this.keyVault = Codegen.empty();
-        this.keyVersion = Codegen.empty();
+    private KeyVaultKeyReferenceArgs(KeyVaultKeyReferenceArgs $) {
+        this.keyName = $.keyName;
+        this.keyVault = $.keyVault;
+        this.keyVersion = $.keyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyName;
-        private Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
-        private @Nullable Output<String> keyVersion;
+        private KeyVaultKeyReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyReferenceArgs();
         }
 
         public Builder(KeyVaultKeyReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyVault = defaults.keyVault;
-    	      this.keyVersion = defaults.keyVersion;
+            $ = new KeyVaultKeyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(Output<String> keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyName(String keyName) {
-            this.keyName = Output.of(Objects.requireNonNull(keyName));
-            return this;
+            return keyName(Output.of(keyName));
         }
+
         public Builder keyVault(Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault) {
-            this.keyVault = Objects.requireNonNull(keyVault);
+            $.keyVault = keyVault;
             return this;
         }
+
         public Builder keyVault(KeyVaultKeyReferenceKeyVaultArgs keyVault) {
-            this.keyVault = Output.of(Objects.requireNonNull(keyVault));
-            return this;
+            return keyVault(Output.of(keyVault));
         }
+
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
         }
-        public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Codegen.ofNullable(keyVersion);
-            return this;
-        }        public KeyVaultKeyReferenceArgs build() {
-            return new KeyVaultKeyReferenceArgs(keyName, keyVault, keyVersion);
+
+        public Builder keyVersion(String keyVersion) {
+            return keyVersion(Output.of(keyVersion));
+        }
+
+        public KeyVaultKeyReferenceArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.keyVault = Objects.requireNonNull($.keyVault, "expected parameter 'keyVault' to be non-null");
+            return $;
         }
     }
+
 }

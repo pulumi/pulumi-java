@@ -5,11 +5,11 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupsCount")
-      private final @Nullable Output<Integer> backupsCount;
+    private @Nullable Output<Integer> backupsCount;
 
-    public Output<Integer> backupsCount() {
-        return this.backupsCount == null ? Codegen.empty() : this.backupsCount;
+    public Optional<Output<Integer>> backupsCount() {
+        return Optional.ofNullable(this.backupsCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyEnabled")
-      private final @Nullable Output<Boolean> policyEnabled;
+    private @Nullable Output<Boolean> policyEnabled;
 
-    public Output<Boolean> policyEnabled() {
-        return this.policyEnabled == null ? Codegen.empty() : this.policyEnabled;
+    public Optional<Output<Boolean>> policyEnabled() {
+        return Optional.ofNullable(this.policyEnabled);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable Output<String> volumeName;
+    private @Nullable Output<String> volumeName;
 
-    public Output<String> volumeName() {
-        return this.volumeName == null ? Codegen.empty() : this.volumeName;
+    public Optional<Output<String>> volumeName() {
+        return Optional.ofNullable(this.volumeName);
     }
 
-    public VolumeBackupsArgs(
-        @Nullable Output<Integer> backupsCount,
-        @Nullable Output<Boolean> policyEnabled,
-        @Nullable Output<String> volumeName) {
-        this.backupsCount = backupsCount;
-        this.policyEnabled = policyEnabled;
-        this.volumeName = volumeName;
-    }
+    private VolumeBackupsArgs() {}
 
-    private VolumeBackupsArgs() {
-        this.backupsCount = Codegen.empty();
-        this.policyEnabled = Codegen.empty();
-        this.volumeName = Codegen.empty();
+    private VolumeBackupsArgs(VolumeBackupsArgs $) {
+        this.backupsCount = $.backupsCount;
+        this.policyEnabled = $.policyEnabled;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeBackupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> backupsCount;
-        private @Nullable Output<Boolean> policyEnabled;
-        private @Nullable Output<String> volumeName;
+        private VolumeBackupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeBackupsArgs();
         }
 
         public Builder(VolumeBackupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupsCount = defaults.backupsCount;
-    	      this.policyEnabled = defaults.policyEnabled;
-    	      this.volumeName = defaults.volumeName;
+            $ = new VolumeBackupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupsCount(@Nullable Output<Integer> backupsCount) {
-            this.backupsCount = backupsCount;
+            $.backupsCount = backupsCount;
             return this;
         }
-        public Builder backupsCount(@Nullable Integer backupsCount) {
-            this.backupsCount = Codegen.ofNullable(backupsCount);
-            return this;
+
+        public Builder backupsCount(Integer backupsCount) {
+            return backupsCount(Output.of(backupsCount));
         }
+
         public Builder policyEnabled(@Nullable Output<Boolean> policyEnabled) {
-            this.policyEnabled = policyEnabled;
+            $.policyEnabled = policyEnabled;
             return this;
         }
-        public Builder policyEnabled(@Nullable Boolean policyEnabled) {
-            this.policyEnabled = Codegen.ofNullable(policyEnabled);
-            return this;
+
+        public Builder policyEnabled(Boolean policyEnabled) {
+            return policyEnabled(Output.of(policyEnabled));
         }
+
         public Builder volumeName(@Nullable Output<String> volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
         }
-        public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Codegen.ofNullable(volumeName);
-            return this;
-        }        public VolumeBackupsArgs build() {
-            return new VolumeBackupsArgs(backupsCount, policyEnabled, volumeName);
+
+        public Builder volumeName(String volumeName) {
+            return volumeName(Output.of(volumeName));
+        }
+
+        public VolumeBackupsArgs build() {
+            return $;
         }
     }
+
 }

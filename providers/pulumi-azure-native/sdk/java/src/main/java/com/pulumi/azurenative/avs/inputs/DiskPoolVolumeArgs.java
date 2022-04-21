@@ -5,10 +5,10 @@ package com.pulumi.azurenative.avs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<String>> endpoints;
+    private @Nullable Output<List<String>> endpoints;
 
-    public Output<List<String>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<String>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lunName")
-      private final @Nullable Output<String> lunName;
+    private @Nullable Output<String> lunName;
 
-    public Output<String> lunName() {
-        return this.lunName == null ? Codegen.empty() : this.lunName;
+    public Optional<Output<String>> lunName() {
+        return Optional.ofNullable(this.lunName);
     }
 
-    public DiskPoolVolumeArgs(
-        @Nullable Output<List<String>> endpoints,
-        @Nullable Output<String> lunName) {
-        this.endpoints = endpoints;
-        this.lunName = lunName;
-    }
+    private DiskPoolVolumeArgs() {}
 
-    private DiskPoolVolumeArgs() {
-        this.endpoints = Codegen.empty();
-        this.lunName = Codegen.empty();
+    private DiskPoolVolumeArgs(DiskPoolVolumeArgs $) {
+        this.endpoints = $.endpoints;
+        this.lunName = $.lunName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskPoolVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> endpoints;
-        private @Nullable Output<String> lunName;
+        private DiskPoolVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskPoolVolumeArgs();
         }
 
         public Builder(DiskPoolVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
-    	      this.lunName = defaults.lunName;
+            $ = new DiskPoolVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(@Nullable Output<List<String>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<String> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder lunName(@Nullable Output<String> lunName) {
-            this.lunName = lunName;
+            $.lunName = lunName;
             return this;
         }
-        public Builder lunName(@Nullable String lunName) {
-            this.lunName = Codegen.ofNullable(lunName);
-            return this;
-        }        public DiskPoolVolumeArgs build() {
-            return new DiskPoolVolumeArgs(endpoints, lunName);
+
+        public Builder lunName(String lunName) {
+            return lunName(Output.of(lunName));
+        }
+
+        public DiskPoolVolumeArgs build() {
+            return $;
         }
     }
+
 }

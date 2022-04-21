@@ -6,11 +6,11 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="componentSeparator", required=true)
-      private final Output<Integer> componentSeparator;
+    private Output<Integer> componentSeparator;
 
     public Output<Integer> componentSeparator() {
         return this.componentSeparator;
@@ -38,7 +38,7 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataElementSeparator", required=true)
-      private final Output<Integer> dataElementSeparator;
+    private Output<Integer> dataElementSeparator;
 
     public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
@@ -49,10 +49,10 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="messageId")
-      private final @Nullable Output<String> messageId;
+    private @Nullable Output<String> messageId;
 
-    public Output<String> messageId() {
-        return this.messageId == null ? Codegen.empty() : this.messageId;
+    public Optional<Output<String>> messageId() {
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="protocolVersion")
-      private final @Nullable Output<String> protocolVersion;
+    private @Nullable Output<String> protocolVersion;
 
-    public Output<String> protocolVersion() {
-        return this.protocolVersion == null ? Codegen.empty() : this.protocolVersion;
+    public Optional<Output<String>> protocolVersion() {
+        return Optional.ofNullable(this.protocolVersion);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="replaceCharacter", required=true)
-      private final Output<Integer> replaceCharacter;
+    private Output<Integer> replaceCharacter;
 
     public Output<Integer> replaceCharacter() {
         return this.replaceCharacter;
@@ -82,7 +82,7 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="replaceSeparatorsInPayload", required=true)
-      private final Output<Boolean> replaceSeparatorsInPayload;
+    private Output<Boolean> replaceSeparatorsInPayload;
 
     public Output<Boolean> replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -93,7 +93,7 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="segmentTerminator", required=true)
-      private final Output<Integer> segmentTerminator;
+    private Output<Integer> segmentTerminator;
 
     public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
@@ -104,7 +104,7 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
-      private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+    private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
     public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -115,154 +115,134 @@ public final class X12DelimiterOverridesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="targetNamespace")
-      private final @Nullable Output<String> targetNamespace;
+    private @Nullable Output<String> targetNamespace;
 
-    public Output<String> targetNamespace() {
-        return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
+    public Optional<Output<String>> targetNamespace() {
+        return Optional.ofNullable(this.targetNamespace);
     }
 
-    public X12DelimiterOverridesArgs(
-        Output<Integer> componentSeparator,
-        Output<Integer> dataElementSeparator,
-        @Nullable Output<String> messageId,
-        @Nullable Output<String> protocolVersion,
-        Output<Integer> replaceCharacter,
-        Output<Boolean> replaceSeparatorsInPayload,
-        Output<Integer> segmentTerminator,
-        Output<SegmentTerminatorSuffix> segmentTerminatorSuffix,
-        @Nullable Output<String> targetNamespace) {
-        this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
-        this.messageId = messageId;
-        this.protocolVersion = protocolVersion;
-        this.replaceCharacter = Objects.requireNonNull(replaceCharacter, "expected parameter 'replaceCharacter' to be non-null");
-        this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload, "expected parameter 'replaceSeparatorsInPayload' to be non-null");
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
-        this.targetNamespace = targetNamespace;
-    }
+    private X12DelimiterOverridesArgs() {}
 
-    private X12DelimiterOverridesArgs() {
-        this.componentSeparator = Codegen.empty();
-        this.dataElementSeparator = Codegen.empty();
-        this.messageId = Codegen.empty();
-        this.protocolVersion = Codegen.empty();
-        this.replaceCharacter = Codegen.empty();
-        this.replaceSeparatorsInPayload = Codegen.empty();
-        this.segmentTerminator = Codegen.empty();
-        this.segmentTerminatorSuffix = Codegen.empty();
-        this.targetNamespace = Codegen.empty();
+    private X12DelimiterOverridesArgs(X12DelimiterOverridesArgs $) {
+        this.componentSeparator = $.componentSeparator;
+        this.dataElementSeparator = $.dataElementSeparator;
+        this.messageId = $.messageId;
+        this.protocolVersion = $.protocolVersion;
+        this.replaceCharacter = $.replaceCharacter;
+        this.replaceSeparatorsInPayload = $.replaceSeparatorsInPayload;
+        this.segmentTerminator = $.segmentTerminator;
+        this.segmentTerminatorSuffix = $.segmentTerminatorSuffix;
+        this.targetNamespace = $.targetNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12DelimiterOverridesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> componentSeparator;
-        private Output<Integer> dataElementSeparator;
-        private @Nullable Output<String> messageId;
-        private @Nullable Output<String> protocolVersion;
-        private Output<Integer> replaceCharacter;
-        private Output<Boolean> replaceSeparatorsInPayload;
-        private Output<Integer> segmentTerminator;
-        private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
-        private @Nullable Output<String> targetNamespace;
+        private X12DelimiterOverridesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12DelimiterOverridesArgs();
         }
 
         public Builder(X12DelimiterOverridesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentSeparator = defaults.componentSeparator;
-    	      this.dataElementSeparator = defaults.dataElementSeparator;
-    	      this.messageId = defaults.messageId;
-    	      this.protocolVersion = defaults.protocolVersion;
-    	      this.replaceCharacter = defaults.replaceCharacter;
-    	      this.replaceSeparatorsInPayload = defaults.replaceSeparatorsInPayload;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
-    	      this.targetNamespace = defaults.targetNamespace;
+            $ = new X12DelimiterOverridesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentSeparator(Output<Integer> componentSeparator) {
-            this.componentSeparator = Objects.requireNonNull(componentSeparator);
+            $.componentSeparator = componentSeparator;
             return this;
         }
+
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
-            return this;
+            return componentSeparator(Output.of(componentSeparator));
         }
+
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
-            this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
+            $.dataElementSeparator = dataElementSeparator;
             return this;
         }
+
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
-            return this;
+            return dataElementSeparator(Output.of(dataElementSeparator));
         }
+
         public Builder messageId(@Nullable Output<String> messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
-        public Builder messageId(@Nullable String messageId) {
-            this.messageId = Codegen.ofNullable(messageId);
-            return this;
+
+        public Builder messageId(String messageId) {
+            return messageId(Output.of(messageId));
         }
+
         public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
-            this.protocolVersion = protocolVersion;
+            $.protocolVersion = protocolVersion;
             return this;
         }
-        public Builder protocolVersion(@Nullable String protocolVersion) {
-            this.protocolVersion = Codegen.ofNullable(protocolVersion);
-            return this;
+
+        public Builder protocolVersion(String protocolVersion) {
+            return protocolVersion(Output.of(protocolVersion));
         }
+
         public Builder replaceCharacter(Output<Integer> replaceCharacter) {
-            this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
+            $.replaceCharacter = replaceCharacter;
             return this;
         }
+
         public Builder replaceCharacter(Integer replaceCharacter) {
-            this.replaceCharacter = Output.of(Objects.requireNonNull(replaceCharacter));
-            return this;
+            return replaceCharacter(Output.of(replaceCharacter));
         }
+
         public Builder replaceSeparatorsInPayload(Output<Boolean> replaceSeparatorsInPayload) {
-            this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
+            $.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
             return this;
         }
+
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
-            this.replaceSeparatorsInPayload = Output.of(Objects.requireNonNull(replaceSeparatorsInPayload));
-            return this;
+            return replaceSeparatorsInPayload(Output.of(replaceSeparatorsInPayload));
         }
+
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
-            this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
+
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
-            return this;
+            return segmentTerminator(Output.of(segmentTerminator));
         }
+
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+            $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
+
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
-            return this;
+            return segmentTerminatorSuffix(Output.of(segmentTerminatorSuffix));
         }
+
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
-            this.targetNamespace = targetNamespace;
+            $.targetNamespace = targetNamespace;
             return this;
         }
-        public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Codegen.ofNullable(targetNamespace);
-            return this;
-        }        public X12DelimiterOverridesArgs build() {
-            return new X12DelimiterOverridesArgs(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
+
+        public Builder targetNamespace(String targetNamespace) {
+            return targetNamespace(Output.of(targetNamespace));
+        }
+
+        public X12DelimiterOverridesArgs build() {
+            $.componentSeparator = Objects.requireNonNull($.componentSeparator, "expected parameter 'componentSeparator' to be non-null");
+            $.dataElementSeparator = Objects.requireNonNull($.dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
+            $.replaceCharacter = Objects.requireNonNull($.replaceCharacter, "expected parameter 'replaceCharacter' to be non-null");
+            $.replaceSeparatorsInPayload = Objects.requireNonNull($.replaceSeparatorsInPayload, "expected parameter 'replaceSeparatorsInPayload' to be non-null");
+            $.segmentTerminator = Objects.requireNonNull($.segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
+            $.segmentTerminatorSuffix = Objects.requireNonNull($.segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
+            return $;
         }
     }
+
 }

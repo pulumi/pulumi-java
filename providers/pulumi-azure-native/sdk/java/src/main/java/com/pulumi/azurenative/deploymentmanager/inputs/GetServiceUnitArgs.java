@@ -17,7 +17,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,7 +39,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceTopologyName", required=true)
-      private final String serviceTopologyName;
+    private String serviceTopologyName;
 
     public String serviceTopologyName() {
         return this.serviceTopologyName;
@@ -50,73 +50,66 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceUnitName", required=true)
-      private final String serviceUnitName;
+    private String serviceUnitName;
 
     public String serviceUnitName() {
         return this.serviceUnitName;
     }
 
-    public GetServiceUnitArgs(
-        String resourceGroupName,
-        String serviceName,
-        String serviceTopologyName,
-        String serviceUnitName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName, "expected parameter 'serviceTopologyName' to be non-null");
-        this.serviceUnitName = Objects.requireNonNull(serviceUnitName, "expected parameter 'serviceUnitName' to be non-null");
-    }
+    private GetServiceUnitArgs() {}
 
-    private GetServiceUnitArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.serviceTopologyName = null;
-        this.serviceUnitName = null;
+    private GetServiceUnitArgs(GetServiceUnitArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.serviceTopologyName = $.serviceTopologyName;
+        this.serviceUnitName = $.serviceUnitName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceUnitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String serviceTopologyName;
-        private String serviceUnitName;
+        private GetServiceUnitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceUnitArgs();
         }
 
         public Builder(GetServiceUnitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceTopologyName = defaults.serviceTopologyName;
-    	      this.serviceUnitName = defaults.serviceUnitName;
+            $ = new GetServiceUnitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceTopologyName(String serviceTopologyName) {
-            this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
+            $.serviceTopologyName = serviceTopologyName;
             return this;
         }
+
         public Builder serviceUnitName(String serviceUnitName) {
-            this.serviceUnitName = Objects.requireNonNull(serviceUnitName);
+            $.serviceUnitName = serviceUnitName;
             return this;
-        }        public GetServiceUnitArgs build() {
-            return new GetServiceUnitArgs(resourceGroupName, serviceName, serviceTopologyName, serviceUnitName);
+        }
+
+        public GetServiceUnitArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.serviceTopologyName = Objects.requireNonNull($.serviceTopologyName, "expected parameter 'serviceTopologyName' to be non-null");
+            $.serviceUnitName = Objects.requireNonNull($.serviceUnitName, "expected parameter 'serviceUnitName' to be non-null");
+            return $;
         }
     }
+
 }

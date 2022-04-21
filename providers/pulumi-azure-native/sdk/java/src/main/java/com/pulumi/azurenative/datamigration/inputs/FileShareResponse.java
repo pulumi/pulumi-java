@@ -23,10 +23,10 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -45,64 +45,57 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public FileShareResponse(
-        @Nullable String password,
-        String path,
-        @Nullable String userName) {
-        this.password = password;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.userName = userName;
-    }
+    private FileShareResponse() {}
 
-    private FileShareResponse() {
-        this.password = null;
-        this.path = null;
-        this.userName = null;
+    private FileShareResponse(FileShareResponse $) {
+        this.password = $.password;
+        this.path = $.path;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileShareResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private String path;
-        private @Nullable String userName;
+        private FileShareResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileShareResponse();
         }
 
         public Builder(FileShareResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.path = defaults.path;
-    	      this.userName = defaults.userName;
+            $ = new FileShareResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public FileShareResponse build() {
-            return new FileShareResponse(password, path, userName);
+        }
+
+        public FileShareResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

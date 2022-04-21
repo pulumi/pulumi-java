@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="computeSubnetId")
-      private final @Nullable Output<String> computeSubnetId;
+    private @Nullable Output<String> computeSubnetId;
 
-    public Output<String> computeSubnetId() {
-        return this.computeSubnetId == null ? Codegen.empty() : this.computeSubnetId;
+    public Optional<Output<String>> computeSubnetId() {
+        return Optional.ofNullable(this.computeSubnetId);
     }
 
-    public VirtualNetworkProfileArgs(@Nullable Output<String> computeSubnetId) {
-        this.computeSubnetId = computeSubnetId;
-    }
+    private VirtualNetworkProfileArgs() {}
 
-    private VirtualNetworkProfileArgs() {
-        this.computeSubnetId = Codegen.empty();
+    private VirtualNetworkProfileArgs(VirtualNetworkProfileArgs $) {
+        this.computeSubnetId = $.computeSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> computeSubnetId;
+        private VirtualNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkProfileArgs();
         }
 
         public Builder(VirtualNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeSubnetId = defaults.computeSubnetId;
+            $ = new VirtualNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeSubnetId(@Nullable Output<String> computeSubnetId) {
-            this.computeSubnetId = computeSubnetId;
+            $.computeSubnetId = computeSubnetId;
             return this;
         }
-        public Builder computeSubnetId(@Nullable String computeSubnetId) {
-            this.computeSubnetId = Codegen.ofNullable(computeSubnetId);
-            return this;
-        }        public VirtualNetworkProfileArgs build() {
-            return new VirtualNetworkProfileArgs(computeSubnetId);
+
+        public Builder computeSubnetId(String computeSubnetId) {
+            return computeSubnetId(Output.of(computeSubnetId));
+        }
+
+        public VirtualNetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

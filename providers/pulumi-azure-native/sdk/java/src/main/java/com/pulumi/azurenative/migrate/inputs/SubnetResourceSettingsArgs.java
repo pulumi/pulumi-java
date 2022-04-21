@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.NsgReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
+    private @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
 
-    public Output<NsgReferenceArgs> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
+    public Optional<Output<NsgReferenceArgs>> networkSecurityGroup() {
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
-    public SubnetResourceSettingsArgs(
-        @Nullable Output<String> addressPrefix,
-        @Nullable Output<String> name,
-        @Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
-        this.addressPrefix = addressPrefix;
-        this.name = name;
-        this.networkSecurityGroup = networkSecurityGroup;
-    }
+    private SubnetResourceSettingsArgs() {}
 
-    private SubnetResourceSettingsArgs() {
-        this.addressPrefix = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkSecurityGroup = Codegen.empty();
+    private SubnetResourceSettingsArgs(SubnetResourceSettingsArgs $) {
+        this.addressPrefix = $.addressPrefix;
+        this.name = $.name;
+        this.networkSecurityGroup = $.networkSecurityGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
+        private SubnetResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetResourceSettingsArgs();
         }
 
         public Builder(SubnetResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
+            $ = new SubnetResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkSecurityGroup(@Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-        public Builder networkSecurityGroup(@Nullable NsgReferenceArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Codegen.ofNullable(networkSecurityGroup);
-            return this;
-        }        public SubnetResourceSettingsArgs build() {
-            return new SubnetResourceSettingsArgs(addressPrefix, name, networkSecurityGroup);
+
+        public Builder networkSecurityGroup(NsgReferenceArgs networkSecurityGroup) {
+            return networkSecurityGroup(Output.of(networkSecurityGroup));
+        }
+
+        public SubnetResourceSettingsArgs build() {
+            return $;
         }
     }
+
 }

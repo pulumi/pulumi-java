@@ -17,7 +17,7 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="lockName", required=true)
-      private final String lockName;
+    private String lockName;
 
     public String lockName() {
         return this.lockName;
@@ -28,7 +28,7 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="parentResourcePath", required=true)
-      private final String parentResourcePath;
+    private String parentResourcePath;
 
     public String parentResourcePath() {
         return this.parentResourcePath;
@@ -39,7 +39,7 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -61,7 +61,7 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-      private final String resourceProviderNamespace;
+    private String resourceProviderNamespace;
 
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -72,91 +72,80 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GetManagementLockAtResourceLevelArgs(
-        String lockName,
-        String parentResourcePath,
-        String resourceGroupName,
-        String resourceName,
-        String resourceProviderNamespace,
-        String resourceType) {
-        this.lockName = Objects.requireNonNull(lockName, "expected parameter 'lockName' to be non-null");
-        this.parentResourcePath = Objects.requireNonNull(parentResourcePath, "expected parameter 'parentResourcePath' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GetManagementLockAtResourceLevelArgs() {}
 
-    private GetManagementLockAtResourceLevelArgs() {
-        this.lockName = null;
-        this.parentResourcePath = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.resourceProviderNamespace = null;
-        this.resourceType = null;
+    private GetManagementLockAtResourceLevelArgs(GetManagementLockAtResourceLevelArgs $) {
+        this.lockName = $.lockName;
+        this.parentResourcePath = $.parentResourcePath;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.resourceProviderNamespace = $.resourceProviderNamespace;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementLockAtResourceLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lockName;
-        private String parentResourcePath;
-        private String resourceGroupName;
-        private String resourceName;
-        private String resourceProviderNamespace;
-        private String resourceType;
+        private GetManagementLockAtResourceLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementLockAtResourceLevelArgs();
         }
 
         public Builder(GetManagementLockAtResourceLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lockName = defaults.lockName;
-    	      this.parentResourcePath = defaults.parentResourcePath;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceProviderNamespace = defaults.resourceProviderNamespace;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GetManagementLockAtResourceLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lockName(String lockName) {
-            this.lockName = Objects.requireNonNull(lockName);
+            $.lockName = lockName;
             return this;
         }
+
         public Builder parentResourcePath(String parentResourcePath) {
-            this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
+            $.parentResourcePath = parentResourcePath;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GetManagementLockAtResourceLevelArgs build() {
-            return new GetManagementLockAtResourceLevelArgs(lockName, parentResourcePath, resourceGroupName, resourceName, resourceProviderNamespace, resourceType);
+        }
+
+        public GetManagementLockAtResourceLevelArgs build() {
+            $.lockName = Objects.requireNonNull($.lockName, "expected parameter 'lockName' to be non-null");
+            $.parentResourcePath = Objects.requireNonNull($.parentResourcePath, "expected parameter 'parentResourcePath' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceProviderNamespace = Objects.requireNonNull($.resourceProviderNamespace, "expected parameter 'resourceProviderNamespace' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

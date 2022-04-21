@@ -63,10 +63,10 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="activities")
-      private final @Nullable List<Object> activities;
+    private @Nullable List<Object> activities;
 
-    public List<Object> activities() {
-        return this.activities == null ? List.of() : this.activities;
+    public Optional<List<Object>> activities() {
+        return Optional.ofNullable(this.activities);
     }
 
     /**
@@ -74,58 +74,54 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public SwitchCaseResponse(
-        @Nullable List<Object> activities,
-        @Nullable String value) {
-        this.activities = activities;
-        this.value = value;
-    }
+    private SwitchCaseResponse() {}
 
-    private SwitchCaseResponse() {
-        this.activities = List.of();
-        this.value = null;
+    private SwitchCaseResponse(SwitchCaseResponse $) {
+        this.activities = $.activities;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SwitchCaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> activities;
-        private @Nullable String value;
+        private SwitchCaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SwitchCaseResponse();
         }
 
         public Builder(SwitchCaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activities = defaults.activities;
-    	      this.value = defaults.value;
+            $ = new SwitchCaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activities(@Nullable List<Object> activities) {
-            this.activities = activities;
+            $.activities = activities;
             return this;
         }
+
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public SwitchCaseResponse build() {
-            return new SwitchCaseResponse(activities, value);
+        }
+
+        public SwitchCaseResponse build() {
+            return $;
         }
     }
+
 }

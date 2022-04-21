@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EndpointAuthKeysArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="primaryKey")
-      private final @Nullable Output<String> primaryKey;
+    private @Nullable Output<String> primaryKey;
 
-    public Output<String> primaryKey() {
-        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
+    public Optional<Output<String>> primaryKey() {
+        return Optional.ofNullable(this.primaryKey);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class EndpointAuthKeysArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="secondaryKey")
-      private final @Nullable Output<String> secondaryKey;
+    private @Nullable Output<String> secondaryKey;
 
-    public Output<String> secondaryKey() {
-        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
+    public Optional<Output<String>> secondaryKey() {
+        return Optional.ofNullable(this.secondaryKey);
     }
 
-    public EndpointAuthKeysArgs(
-        @Nullable Output<String> primaryKey,
-        @Nullable Output<String> secondaryKey) {
-        this.primaryKey = primaryKey;
-        this.secondaryKey = secondaryKey;
-    }
+    private EndpointAuthKeysArgs() {}
 
-    private EndpointAuthKeysArgs() {
-        this.primaryKey = Codegen.empty();
-        this.secondaryKey = Codegen.empty();
+    private EndpointAuthKeysArgs(EndpointAuthKeysArgs $) {
+        this.primaryKey = $.primaryKey;
+        this.secondaryKey = $.secondaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAuthKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> primaryKey;
-        private @Nullable Output<String> secondaryKey;
+        private EndpointAuthKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAuthKeysArgs();
         }
 
         public Builder(EndpointAuthKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.secondaryKey = defaults.secondaryKey;
+            $ = new EndpointAuthKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
-            this.primaryKey = primaryKey;
+            $.primaryKey = primaryKey;
             return this;
         }
-        public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Codegen.ofNullable(primaryKey);
-            return this;
+
+        public Builder primaryKey(String primaryKey) {
+            return primaryKey(Output.of(primaryKey));
         }
+
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
-            this.secondaryKey = secondaryKey;
+            $.secondaryKey = secondaryKey;
             return this;
         }
-        public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Codegen.ofNullable(secondaryKey);
-            return this;
-        }        public EndpointAuthKeysArgs build() {
-            return new EndpointAuthKeysArgs(primaryKey, secondaryKey);
+
+        public Builder secondaryKey(String secondaryKey) {
+            return secondaryKey(Output.of(secondaryKey));
+        }
+
+        public EndpointAuthKeysArgs build() {
+            return $;
         }
     }
+
 }

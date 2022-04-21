@@ -15,12 +15,12 @@ import com.pulumi.azurenative.servicefabric.inputs.UniformInt64RangePartitionSch
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,7 +33,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName", required=true)
-      private final Output<String> applicationName;
+    private Output<String> applicationName;
 
     public Output<String> applicationName() {
         return this.applicationName;
@@ -44,7 +44,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -55,10 +55,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="correlationScheme")
-      private final @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
+    private @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
-    public Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme() {
-        return this.correlationScheme == null ? Codegen.empty() : this.correlationScheme;
+    public Optional<Output<List<ServiceCorrelationDescriptionArgs>>> correlationScheme() {
+        return Optional.ofNullable(this.correlationScheme);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultMoveCost")
-      private final @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
+    private @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
 
-    public Output<Either<String,MoveCost>> defaultMoveCost() {
-        return this.defaultMoveCost == null ? Codegen.empty() : this.defaultMoveCost;
+    public Optional<Output<Either<String,MoveCost>>> defaultMoveCost() {
+        return Optional.ofNullable(this.defaultMoveCost);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionDescription")
-      private final @Nullable Output<Object> partitionDescription;
+    private @Nullable Output<Object> partitionDescription;
 
-    public Output<Object> partitionDescription() {
-        return this.partitionDescription == null ? Codegen.empty() : this.partitionDescription;
+    public Optional<Output<Object>> partitionDescription() {
+        return Optional.ofNullable(this.partitionDescription);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placementConstraints")
-      private final @Nullable Output<String> placementConstraints;
+    private @Nullable Output<String> placementConstraints;
 
-    public Output<String> placementConstraints() {
-        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
+    public Optional<Output<String>> placementConstraints() {
+        return Optional.ofNullable(this.placementConstraints);
     }
 
     /**
@@ -110,7 +110,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -121,10 +121,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceDnsName")
-      private final @Nullable Output<String> serviceDnsName;
+    private @Nullable Output<String> serviceDnsName;
 
-    public Output<String> serviceDnsName() {
-        return this.serviceDnsName == null ? Codegen.empty() : this.serviceDnsName;
+    public Optional<Output<String>> serviceDnsName() {
+        return Optional.ofNullable(this.serviceDnsName);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceKind", required=true)
-      private final Output<Either<String,ServiceKind>> serviceKind;
+    private Output<Either<String,ServiceKind>> serviceKind;
 
     public Output<Either<String,ServiceKind>> serviceKind() {
         return this.serviceKind;
@@ -143,10 +143,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceLoadMetrics")
-      private final @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
+    private @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
-    public Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics() {
-        return this.serviceLoadMetrics == null ? Codegen.empty() : this.serviceLoadMetrics;
+    public Optional<Output<List<ServiceLoadMetricDescriptionArgs>>> serviceLoadMetrics() {
+        return Optional.ofNullable(this.serviceLoadMetrics);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="servicePackageActivationMode")
-      private final @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
+    private @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
-    public Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode() {
-        return this.servicePackageActivationMode == null ? Codegen.empty() : this.servicePackageActivationMode;
+    public Optional<Output<Either<String,ArmServicePackageActivationMode>>> servicePackageActivationMode() {
+        return Optional.ofNullable(this.servicePackageActivationMode);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="servicePlacementPolicies")
-      private final @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
+    private @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
-    public Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies() {
-        return this.servicePlacementPolicies == null ? Codegen.empty() : this.servicePlacementPolicies;
+    public Optional<Output<List<ServicePlacementPolicyDescriptionArgs>>> servicePlacementPolicies() {
+        return Optional.ofNullable(this.servicePlacementPolicies);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceTypeName")
-      private final @Nullable Output<String> serviceTypeName;
+    private @Nullable Output<String> serviceTypeName;
 
-    public Output<String> serviceTypeName() {
-        return this.serviceTypeName == null ? Codegen.empty() : this.serviceTypeName;
+    public Optional<Output<String>> serviceTypeName() {
+        return Optional.ofNullable(this.serviceTypeName);
     }
 
     /**
@@ -198,254 +198,214 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServiceArgs(
-        Output<String> applicationName,
-        Output<String> clusterName,
-        @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme,
-        @Nullable Output<Either<String,MoveCost>> defaultMoveCost,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> partitionDescription,
-        @Nullable Output<String> placementConstraints,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serviceDnsName,
-        Output<Either<String,ServiceKind>> serviceKind,
-        @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode,
-        @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies,
-        @Nullable Output<String> serviceTypeName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.correlationScheme = correlationScheme;
-        this.defaultMoveCost = defaultMoveCost;
-        this.location = location;
-        this.partitionDescription = partitionDescription;
-        this.placementConstraints = placementConstraints;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceDnsName = serviceDnsName;
-        this.serviceKind = Objects.requireNonNull(serviceKind, "expected parameter 'serviceKind' to be non-null");
-        this.serviceLoadMetrics = serviceLoadMetrics;
-        this.serviceName = serviceName;
-        this.servicePackageActivationMode = servicePackageActivationMode;
-        this.servicePlacementPolicies = servicePlacementPolicies;
-        this.serviceTypeName = serviceTypeName;
-        this.tags = tags;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.applicationName = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.correlationScheme = Codegen.empty();
-        this.defaultMoveCost = Codegen.empty();
-        this.location = Codegen.empty();
-        this.partitionDescription = Codegen.empty();
-        this.placementConstraints = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceDnsName = Codegen.empty();
-        this.serviceKind = Codegen.empty();
-        this.serviceLoadMetrics = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.servicePackageActivationMode = Codegen.empty();
-        this.servicePlacementPolicies = Codegen.empty();
-        this.serviceTypeName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.applicationName = $.applicationName;
+        this.clusterName = $.clusterName;
+        this.correlationScheme = $.correlationScheme;
+        this.defaultMoveCost = $.defaultMoveCost;
+        this.location = $.location;
+        this.partitionDescription = $.partitionDescription;
+        this.placementConstraints = $.placementConstraints;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceDnsName = $.serviceDnsName;
+        this.serviceKind = $.serviceKind;
+        this.serviceLoadMetrics = $.serviceLoadMetrics;
+        this.serviceName = $.serviceName;
+        this.servicePackageActivationMode = $.servicePackageActivationMode;
+        this.servicePlacementPolicies = $.servicePlacementPolicies;
+        this.serviceTypeName = $.serviceTypeName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationName;
-        private Output<String> clusterName;
-        private @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
-        private @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> partitionDescription;
-        private @Nullable Output<String> placementConstraints;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serviceDnsName;
-        private Output<Either<String,ServiceKind>> serviceKind;
-        private @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
-        private @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
-        private @Nullable Output<String> serviceTypeName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.correlationScheme = defaults.correlationScheme;
-    	      this.defaultMoveCost = defaults.defaultMoveCost;
-    	      this.location = defaults.location;
-    	      this.partitionDescription = defaults.partitionDescription;
-    	      this.placementConstraints = defaults.placementConstraints;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceDnsName = defaults.serviceDnsName;
-    	      this.serviceKind = defaults.serviceKind;
-    	      this.serviceLoadMetrics = defaults.serviceLoadMetrics;
-    	      this.serviceName = defaults.serviceName;
-    	      this.servicePackageActivationMode = defaults.servicePackageActivationMode;
-    	      this.servicePlacementPolicies = defaults.servicePlacementPolicies;
-    	      this.serviceTypeName = defaults.serviceTypeName;
-    	      this.tags = defaults.tags;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(Output<String> applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
-            return this;
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder correlationScheme(@Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
-            this.correlationScheme = correlationScheme;
+            $.correlationScheme = correlationScheme;
             return this;
         }
-        public Builder correlationScheme(@Nullable List<ServiceCorrelationDescriptionArgs> correlationScheme) {
-            this.correlationScheme = Codegen.ofNullable(correlationScheme);
-            return this;
+
+        public Builder correlationScheme(List<ServiceCorrelationDescriptionArgs> correlationScheme) {
+            return correlationScheme(Output.of(correlationScheme));
         }
+
         public Builder correlationScheme(ServiceCorrelationDescriptionArgs... correlationScheme) {
             return correlationScheme(List.of(correlationScheme));
         }
+
         public Builder defaultMoveCost(@Nullable Output<Either<String,MoveCost>> defaultMoveCost) {
-            this.defaultMoveCost = defaultMoveCost;
+            $.defaultMoveCost = defaultMoveCost;
             return this;
         }
-        public Builder defaultMoveCost(@Nullable Either<String,MoveCost> defaultMoveCost) {
-            this.defaultMoveCost = Codegen.ofNullable(defaultMoveCost);
-            return this;
+
+        public Builder defaultMoveCost(Either<String,MoveCost> defaultMoveCost) {
+            return defaultMoveCost(Output.of(defaultMoveCost));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder partitionDescription(@Nullable Output<Object> partitionDescription) {
-            this.partitionDescription = partitionDescription;
+            $.partitionDescription = partitionDescription;
             return this;
         }
-        public Builder partitionDescription(@Nullable Object partitionDescription) {
-            this.partitionDescription = Codegen.ofNullable(partitionDescription);
-            return this;
+
+        public Builder partitionDescription(Object partitionDescription) {
+            return partitionDescription(Output.of(partitionDescription));
         }
+
         public Builder placementConstraints(@Nullable Output<String> placementConstraints) {
-            this.placementConstraints = placementConstraints;
+            $.placementConstraints = placementConstraints;
             return this;
         }
-        public Builder placementConstraints(@Nullable String placementConstraints) {
-            this.placementConstraints = Codegen.ofNullable(placementConstraints);
-            return this;
+
+        public Builder placementConstraints(String placementConstraints) {
+            return placementConstraints(Output.of(placementConstraints));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceDnsName(@Nullable Output<String> serviceDnsName) {
-            this.serviceDnsName = serviceDnsName;
+            $.serviceDnsName = serviceDnsName;
             return this;
         }
-        public Builder serviceDnsName(@Nullable String serviceDnsName) {
-            this.serviceDnsName = Codegen.ofNullable(serviceDnsName);
-            return this;
+
+        public Builder serviceDnsName(String serviceDnsName) {
+            return serviceDnsName(Output.of(serviceDnsName));
         }
+
         public Builder serviceKind(Output<Either<String,ServiceKind>> serviceKind) {
-            this.serviceKind = Objects.requireNonNull(serviceKind);
+            $.serviceKind = serviceKind;
             return this;
         }
+
         public Builder serviceKind(Either<String,ServiceKind> serviceKind) {
-            this.serviceKind = Output.of(Objects.requireNonNull(serviceKind));
-            return this;
+            return serviceKind(Output.of(serviceKind));
         }
+
         public Builder serviceLoadMetrics(@Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
-            this.serviceLoadMetrics = serviceLoadMetrics;
+            $.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
-        public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
-            this.serviceLoadMetrics = Codegen.ofNullable(serviceLoadMetrics);
-            return this;
+
+        public Builder serviceLoadMetrics(List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
+            return serviceLoadMetrics(Output.of(serviceLoadMetrics));
         }
+
         public Builder serviceLoadMetrics(ServiceLoadMetricDescriptionArgs... serviceLoadMetrics) {
             return serviceLoadMetrics(List.of(serviceLoadMetrics));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder servicePackageActivationMode(@Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
-            this.servicePackageActivationMode = servicePackageActivationMode;
+            $.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
-        public Builder servicePackageActivationMode(@Nullable Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
-            this.servicePackageActivationMode = Codegen.ofNullable(servicePackageActivationMode);
-            return this;
+
+        public Builder servicePackageActivationMode(Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
+            return servicePackageActivationMode(Output.of(servicePackageActivationMode));
         }
+
         public Builder servicePlacementPolicies(@Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
-            this.servicePlacementPolicies = servicePlacementPolicies;
+            $.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
-        public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
-            this.servicePlacementPolicies = Codegen.ofNullable(servicePlacementPolicies);
-            return this;
+
+        public Builder servicePlacementPolicies(List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
+            return servicePlacementPolicies(Output.of(servicePlacementPolicies));
         }
+
         public Builder servicePlacementPolicies(ServicePlacementPolicyDescriptionArgs... servicePlacementPolicies) {
             return servicePlacementPolicies(List.of(servicePlacementPolicies));
         }
+
         public Builder serviceTypeName(@Nullable Output<String> serviceTypeName) {
-            this.serviceTypeName = serviceTypeName;
+            $.serviceTypeName = serviceTypeName;
             return this;
         }
-        public Builder serviceTypeName(@Nullable String serviceTypeName) {
-            this.serviceTypeName = Codegen.ofNullable(serviceTypeName);
-            return this;
+
+        public Builder serviceTypeName(String serviceTypeName) {
+            return serviceTypeName(Output.of(serviceTypeName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(applicationName, clusterName, correlationScheme, defaultMoveCost, location, partitionDescription, placementConstraints, resourceGroupName, serviceDnsName, serviceKind, serviceLoadMetrics, serviceName, servicePackageActivationMode, servicePlacementPolicies, serviceTypeName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ServiceArgs build() {
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceKind = Objects.requireNonNull($.serviceKind, "expected parameter 'serviceKind' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -34,7 +34,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="environmentState", required=true)
-      private final String environmentState;
+    private String environmentState;
 
     public String environmentState() {
         return this.environmentState;
@@ -45,7 +45,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -56,7 +56,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="latestOperationResult", required=true)
-      private final LatestOperationResultResponse latestOperationResult;
+    private LatestOperationResultResponse latestOperationResult;
 
     public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
@@ -67,7 +67,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -78,7 +78,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="passwordLastReset", required=true)
-      private final String passwordLastReset;
+    private String passwordLastReset;
 
     public String passwordLastReset() {
         return this.passwordLastReset;
@@ -89,7 +89,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -100,7 +100,7 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="totalUsage", required=true)
-      private final String totalUsage;
+    private String totalUsage;
 
     public String totalUsage() {
         return this.totalUsage;
@@ -111,118 +111,101 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualMachineDetails", required=true)
-      private final VirtualMachineDetailsResponse virtualMachineDetails;
+    private VirtualMachineDetailsResponse virtualMachineDetails;
 
     public VirtualMachineDetailsResponse virtualMachineDetails() {
         return this.virtualMachineDetails;
     }
 
-    public EnvironmentDetailsResponse(
-        String description,
-        String environmentState,
-        String id,
-        LatestOperationResultResponse latestOperationResult,
-        String name,
-        String passwordLastReset,
-        String provisioningState,
-        String totalUsage,
-        VirtualMachineDetailsResponse virtualMachineDetails) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.environmentState = Objects.requireNonNull(environmentState, "expected parameter 'environmentState' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult, "expected parameter 'latestOperationResult' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.passwordLastReset = Objects.requireNonNull(passwordLastReset, "expected parameter 'passwordLastReset' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.totalUsage = Objects.requireNonNull(totalUsage, "expected parameter 'totalUsage' to be non-null");
-        this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails, "expected parameter 'virtualMachineDetails' to be non-null");
-    }
+    private EnvironmentDetailsResponse() {}
 
-    private EnvironmentDetailsResponse() {
-        this.description = null;
-        this.environmentState = null;
-        this.id = null;
-        this.latestOperationResult = null;
-        this.name = null;
-        this.passwordLastReset = null;
-        this.provisioningState = null;
-        this.totalUsage = null;
-        this.virtualMachineDetails = null;
+    private EnvironmentDetailsResponse(EnvironmentDetailsResponse $) {
+        this.description = $.description;
+        this.environmentState = $.environmentState;
+        this.id = $.id;
+        this.latestOperationResult = $.latestOperationResult;
+        this.name = $.name;
+        this.passwordLastReset = $.passwordLastReset;
+        this.provisioningState = $.provisioningState;
+        this.totalUsage = $.totalUsage;
+        this.virtualMachineDetails = $.virtualMachineDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String environmentState;
-        private String id;
-        private LatestOperationResultResponse latestOperationResult;
-        private String name;
-        private String passwordLastReset;
-        private String provisioningState;
-        private String totalUsage;
-        private VirtualMachineDetailsResponse virtualMachineDetails;
+        private EnvironmentDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentDetailsResponse();
         }
 
         public Builder(EnvironmentDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.environmentState = defaults.environmentState;
-    	      this.id = defaults.id;
-    	      this.latestOperationResult = defaults.latestOperationResult;
-    	      this.name = defaults.name;
-    	      this.passwordLastReset = defaults.passwordLastReset;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.totalUsage = defaults.totalUsage;
-    	      this.virtualMachineDetails = defaults.virtualMachineDetails;
+            $ = new EnvironmentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder environmentState(String environmentState) {
-            this.environmentState = Objects.requireNonNull(environmentState);
+            $.environmentState = environmentState;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
-            this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+            $.latestOperationResult = latestOperationResult;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder passwordLastReset(String passwordLastReset) {
-            this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
+            $.passwordLastReset = passwordLastReset;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder totalUsage(String totalUsage) {
-            this.totalUsage = Objects.requireNonNull(totalUsage);
+            $.totalUsage = totalUsage;
             return this;
         }
+
         public Builder virtualMachineDetails(VirtualMachineDetailsResponse virtualMachineDetails) {
-            this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
+            $.virtualMachineDetails = virtualMachineDetails;
             return this;
-        }        public EnvironmentDetailsResponse build() {
-            return new EnvironmentDetailsResponse(description, environmentState, id, latestOperationResult, name, passwordLastReset, provisioningState, totalUsage, virtualMachineDetails);
+        }
+
+        public EnvironmentDetailsResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.environmentState = Objects.requireNonNull($.environmentState, "expected parameter 'environmentState' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.latestOperationResult = Objects.requireNonNull($.latestOperationResult, "expected parameter 'latestOperationResult' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.passwordLastReset = Objects.requireNonNull($.passwordLastReset, "expected parameter 'passwordLastReset' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.totalUsage = Objects.requireNonNull($.totalUsage, "expected parameter 'totalUsage' to be non-null");
+            $.virtualMachineDetails = Objects.requireNonNull($.virtualMachineDetails, "expected parameter 'virtualMachineDetails' to be non-null");
+            return $;
         }
     }
+
 }

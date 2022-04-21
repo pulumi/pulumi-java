@@ -6,8 +6,8 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.CosmosDbSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ServiceManagedResourcesSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="cosmosDb")
-      private final @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
+    private @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
-    public Output<CosmosDbSettingsArgs> cosmosDb() {
-        return this.cosmosDb == null ? Codegen.empty() : this.cosmosDb;
+    public Optional<Output<CosmosDbSettingsArgs>> cosmosDb() {
+        return Optional.ofNullable(this.cosmosDb);
     }
 
-    public ServiceManagedResourcesSettingsArgs(@Nullable Output<CosmosDbSettingsArgs> cosmosDb) {
-        this.cosmosDb = cosmosDb;
-    }
+    private ServiceManagedResourcesSettingsArgs() {}
 
-    private ServiceManagedResourcesSettingsArgs() {
-        this.cosmosDb = Codegen.empty();
+    private ServiceManagedResourcesSettingsArgs(ServiceManagedResourcesSettingsArgs $) {
+        this.cosmosDb = $.cosmosDb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceManagedResourcesSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
+        private ServiceManagedResourcesSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceManagedResourcesSettingsArgs();
         }
 
         public Builder(ServiceManagedResourcesSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cosmosDb = defaults.cosmosDb;
+            $ = new ServiceManagedResourcesSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cosmosDb(@Nullable Output<CosmosDbSettingsArgs> cosmosDb) {
-            this.cosmosDb = cosmosDb;
+            $.cosmosDb = cosmosDb;
             return this;
         }
-        public Builder cosmosDb(@Nullable CosmosDbSettingsArgs cosmosDb) {
-            this.cosmosDb = Codegen.ofNullable(cosmosDb);
-            return this;
-        }        public ServiceManagedResourcesSettingsArgs build() {
-            return new ServiceManagedResourcesSettingsArgs(cosmosDb);
+
+        public Builder cosmosDb(CosmosDbSettingsArgs cosmosDb) {
+            return cosmosDb(Output.of(cosmosDb));
+        }
+
+        public ServiceManagedResourcesSettingsArgs build() {
+            return $;
         }
     }
+
 }

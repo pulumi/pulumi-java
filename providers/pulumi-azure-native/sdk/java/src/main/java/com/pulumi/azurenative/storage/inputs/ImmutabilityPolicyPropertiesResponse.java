@@ -27,10 +27,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="allowProtectedAppendWrites")
-      private final @Nullable Boolean allowProtectedAppendWrites;
+    private @Nullable Boolean allowProtectedAppendWrites;
 
     public Optional<Boolean> allowProtectedAppendWrites() {
-        return this.allowProtectedAppendWrites == null ? Optional.empty() : Optional.ofNullable(this.allowProtectedAppendWrites);
+        return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -49,10 +49,10 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="immutabilityPeriodSinceCreationInDays")
-      private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
+    private @Nullable Integer immutabilityPeriodSinceCreationInDays;
 
     public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
-        return this.immutabilityPeriodSinceCreationInDays == null ? Optional.empty() : Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
+        return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -71,85 +71,75 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="updateHistory", required=true)
-      private final List<UpdateHistoryPropertyResponse> updateHistory;
+    private List<UpdateHistoryPropertyResponse> updateHistory;
 
     public List<UpdateHistoryPropertyResponse> updateHistory() {
         return this.updateHistory;
     }
 
-    public ImmutabilityPolicyPropertiesResponse(
-        @Nullable Boolean allowProtectedAppendWrites,
-        String etag,
-        @Nullable Integer immutabilityPeriodSinceCreationInDays,
-        String state,
-        List<UpdateHistoryPropertyResponse> updateHistory) {
-        this.allowProtectedAppendWrites = allowProtectedAppendWrites;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.updateHistory = Objects.requireNonNull(updateHistory, "expected parameter 'updateHistory' to be non-null");
-    }
+    private ImmutabilityPolicyPropertiesResponse() {}
 
-    private ImmutabilityPolicyPropertiesResponse() {
-        this.allowProtectedAppendWrites = null;
-        this.etag = null;
-        this.immutabilityPeriodSinceCreationInDays = null;
-        this.state = null;
-        this.updateHistory = List.of();
+    private ImmutabilityPolicyPropertiesResponse(ImmutabilityPolicyPropertiesResponse $) {
+        this.allowProtectedAppendWrites = $.allowProtectedAppendWrites;
+        this.etag = $.etag;
+        this.immutabilityPeriodSinceCreationInDays = $.immutabilityPeriodSinceCreationInDays;
+        this.state = $.state;
+        this.updateHistory = $.updateHistory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImmutabilityPolicyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowProtectedAppendWrites;
-        private String etag;
-        private @Nullable Integer immutabilityPeriodSinceCreationInDays;
-        private String state;
-        private List<UpdateHistoryPropertyResponse> updateHistory;
+        private ImmutabilityPolicyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImmutabilityPolicyPropertiesResponse();
         }
 
         public Builder(ImmutabilityPolicyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowProtectedAppendWrites = defaults.allowProtectedAppendWrites;
-    	      this.etag = defaults.etag;
-    	      this.immutabilityPeriodSinceCreationInDays = defaults.immutabilityPeriodSinceCreationInDays;
-    	      this.state = defaults.state;
-    	      this.updateHistory = defaults.updateHistory;
+            $ = new ImmutabilityPolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowProtectedAppendWrites(@Nullable Boolean allowProtectedAppendWrites) {
-            this.allowProtectedAppendWrites = allowProtectedAppendWrites;
+            $.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
-            this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
+            $.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder updateHistory(List<UpdateHistoryPropertyResponse> updateHistory) {
-            this.updateHistory = Objects.requireNonNull(updateHistory);
+            $.updateHistory = updateHistory;
             return this;
         }
+
         public Builder updateHistory(UpdateHistoryPropertyResponse... updateHistory) {
             return updateHistory(List.of(updateHistory));
-        }        public ImmutabilityPolicyPropertiesResponse build() {
-            return new ImmutabilityPolicyPropertiesResponse(allowProtectedAppendWrites, etag, immutabilityPeriodSinceCreationInDays, state, updateHistory);
+        }
+
+        public ImmutabilityPolicyPropertiesResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.updateHistory = Objects.requireNonNull($.updateHistory, "expected parameter 'updateHistory' to be non-null");
+            return $;
         }
     }
+
 }

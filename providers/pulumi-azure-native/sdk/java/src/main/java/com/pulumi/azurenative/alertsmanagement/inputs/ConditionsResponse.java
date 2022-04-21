@@ -23,10 +23,10 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alertContext")
-      private final @Nullable ConditionResponse alertContext;
+    private @Nullable ConditionResponse alertContext;
 
     public Optional<ConditionResponse> alertContext() {
-        return this.alertContext == null ? Optional.empty() : Optional.ofNullable(this.alertContext);
+        return Optional.ofNullable(this.alertContext);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alertRuleId")
-      private final @Nullable ConditionResponse alertRuleId;
+    private @Nullable ConditionResponse alertRuleId;
 
     public Optional<ConditionResponse> alertRuleId() {
-        return this.alertRuleId == null ? Optional.empty() : Optional.ofNullable(this.alertRuleId);
+        return Optional.ofNullable(this.alertRuleId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable ConditionResponse description;
+    private @Nullable ConditionResponse description;
 
     public Optional<ConditionResponse> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorCondition")
-      private final @Nullable ConditionResponse monitorCondition;
+    private @Nullable ConditionResponse monitorCondition;
 
     public Optional<ConditionResponse> monitorCondition() {
-        return this.monitorCondition == null ? Optional.empty() : Optional.ofNullable(this.monitorCondition);
+        return Optional.ofNullable(this.monitorCondition);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorService")
-      private final @Nullable ConditionResponse monitorService;
+    private @Nullable ConditionResponse monitorService;
 
     public Optional<ConditionResponse> monitorService() {
-        return this.monitorService == null ? Optional.empty() : Optional.ofNullable(this.monitorService);
+        return Optional.ofNullable(this.monitorService);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="severity")
-      private final @Nullable ConditionResponse severity;
+    private @Nullable ConditionResponse severity;
 
     public Optional<ConditionResponse> severity() {
-        return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -89,100 +89,80 @@ public final class ConditionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetResourceType")
-      private final @Nullable ConditionResponse targetResourceType;
+    private @Nullable ConditionResponse targetResourceType;
 
     public Optional<ConditionResponse> targetResourceType() {
-        return this.targetResourceType == null ? Optional.empty() : Optional.ofNullable(this.targetResourceType);
+        return Optional.ofNullable(this.targetResourceType);
     }
 
-    public ConditionsResponse(
-        @Nullable ConditionResponse alertContext,
-        @Nullable ConditionResponse alertRuleId,
-        @Nullable ConditionResponse description,
-        @Nullable ConditionResponse monitorCondition,
-        @Nullable ConditionResponse monitorService,
-        @Nullable ConditionResponse severity,
-        @Nullable ConditionResponse targetResourceType) {
-        this.alertContext = alertContext;
-        this.alertRuleId = alertRuleId;
-        this.description = description;
-        this.monitorCondition = monitorCondition;
-        this.monitorService = monitorService;
-        this.severity = severity;
-        this.targetResourceType = targetResourceType;
-    }
+    private ConditionsResponse() {}
 
-    private ConditionsResponse() {
-        this.alertContext = null;
-        this.alertRuleId = null;
-        this.description = null;
-        this.monitorCondition = null;
-        this.monitorService = null;
-        this.severity = null;
-        this.targetResourceType = null;
+    private ConditionsResponse(ConditionsResponse $) {
+        this.alertContext = $.alertContext;
+        this.alertRuleId = $.alertRuleId;
+        this.description = $.description;
+        this.monitorCondition = $.monitorCondition;
+        this.monitorService = $.monitorService;
+        this.severity = $.severity;
+        this.targetResourceType = $.targetResourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConditionResponse alertContext;
-        private @Nullable ConditionResponse alertRuleId;
-        private @Nullable ConditionResponse description;
-        private @Nullable ConditionResponse monitorCondition;
-        private @Nullable ConditionResponse monitorService;
-        private @Nullable ConditionResponse severity;
-        private @Nullable ConditionResponse targetResourceType;
+        private ConditionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionsResponse();
         }
 
         public Builder(ConditionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertContext = defaults.alertContext;
-    	      this.alertRuleId = defaults.alertRuleId;
-    	      this.description = defaults.description;
-    	      this.monitorCondition = defaults.monitorCondition;
-    	      this.monitorService = defaults.monitorService;
-    	      this.severity = defaults.severity;
-    	      this.targetResourceType = defaults.targetResourceType;
+            $ = new ConditionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alertContext(@Nullable ConditionResponse alertContext) {
-            this.alertContext = alertContext;
+            $.alertContext = alertContext;
             return this;
         }
+
         public Builder alertRuleId(@Nullable ConditionResponse alertRuleId) {
-            this.alertRuleId = alertRuleId;
+            $.alertRuleId = alertRuleId;
             return this;
         }
+
         public Builder description(@Nullable ConditionResponse description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder monitorCondition(@Nullable ConditionResponse monitorCondition) {
-            this.monitorCondition = monitorCondition;
+            $.monitorCondition = monitorCondition;
             return this;
         }
+
         public Builder monitorService(@Nullable ConditionResponse monitorService) {
-            this.monitorService = monitorService;
+            $.monitorService = monitorService;
             return this;
         }
+
         public Builder severity(@Nullable ConditionResponse severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
+
         public Builder targetResourceType(@Nullable ConditionResponse targetResourceType) {
-            this.targetResourceType = targetResourceType;
+            $.targetResourceType = targetResourceType;
             return this;
-        }        public ConditionsResponse build() {
-            return new ConditionsResponse(alertContext, alertRuleId, description, monitorCondition, monitorService, severity, targetResourceType);
+        }
+
+        public ConditionsResponse build() {
+            return $;
         }
     }
+
 }

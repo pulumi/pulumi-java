@@ -24,10 +24,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="autoScale")
-      private final @Nullable AutoScaleSettingsResponse autoScale;
+    private @Nullable AutoScaleSettingsResponse autoScale;
 
     public Optional<AutoScaleSettingsResponse> autoScale() {
-        return this.autoScale == null ? Optional.empty() : Optional.ofNullable(this.autoScale);
+        return Optional.ofNullable(this.autoScale);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fixedScale")
-      private final @Nullable FixedScaleSettingsResponse fixedScale;
+    private @Nullable FixedScaleSettingsResponse fixedScale;
 
     public Optional<FixedScaleSettingsResponse> fixedScale() {
-        return this.fixedScale == null ? Optional.empty() : Optional.ofNullable(this.fixedScale);
+        return Optional.ofNullable(this.fixedScale);
     }
 
-    public ScaleSettingsResponse(
-        @Nullable AutoScaleSettingsResponse autoScale,
-        @Nullable FixedScaleSettingsResponse fixedScale) {
-        this.autoScale = autoScale;
-        this.fixedScale = fixedScale;
-    }
+    private ScaleSettingsResponse() {}
 
-    private ScaleSettingsResponse() {
-        this.autoScale = null;
-        this.fixedScale = null;
+    private ScaleSettingsResponse(ScaleSettingsResponse $) {
+        this.autoScale = $.autoScale;
+        this.fixedScale = $.fixedScale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoScaleSettingsResponse autoScale;
-        private @Nullable FixedScaleSettingsResponse fixedScale;
+        private ScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleSettingsResponse();
         }
 
         public Builder(ScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScale = defaults.autoScale;
-    	      this.fixedScale = defaults.fixedScale;
+            $ = new ScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScale(@Nullable AutoScaleSettingsResponse autoScale) {
-            this.autoScale = autoScale;
+            $.autoScale = autoScale;
             return this;
         }
+
         public Builder fixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
-            this.fixedScale = fixedScale;
+            $.fixedScale = fixedScale;
             return this;
-        }        public ScaleSettingsResponse build() {
-            return new ScaleSettingsResponse(autoScale, fixedScale);
+        }
+
+        public ScaleSettingsResponse build() {
+            return $;
         }
     }
+
 }

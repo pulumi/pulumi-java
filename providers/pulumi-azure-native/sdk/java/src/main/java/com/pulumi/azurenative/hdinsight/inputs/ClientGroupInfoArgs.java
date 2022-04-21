@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClientGroupInfoArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ClientGroupInfoArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
-    public ClientGroupInfoArgs(
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> groupName) {
-        this.groupId = groupId;
-        this.groupName = groupName;
-    }
+    private ClientGroupInfoArgs() {}
 
-    private ClientGroupInfoArgs() {
-        this.groupId = Codegen.empty();
-        this.groupName = Codegen.empty();
+    private ClientGroupInfoArgs(ClientGroupInfoArgs $) {
+        this.groupId = $.groupId;
+        this.groupName = $.groupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientGroupInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> groupName;
+        private ClientGroupInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientGroupInfoArgs();
         }
 
         public Builder(ClientGroupInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.groupName = defaults.groupName;
+            $ = new ClientGroupInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
-        }        public ClientGroupInfoArgs build() {
-            return new ClientGroupInfoArgs(groupId, groupName);
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
+        }
+
+        public ClientGroupInfoArgs build() {
+            return $;
         }
     }
+
 }

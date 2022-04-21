@@ -24,10 +24,10 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="metadata")
-      private final @Nullable MarkdownPartMetadataResponse metadata;
+    private @Nullable MarkdownPartMetadataResponse metadata;
 
     public Optional<MarkdownPartMetadataResponse> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="position", required=true)
-      private final DashboardPartsResponsePosition position;
+    private DashboardPartsResponsePosition position;
 
     public DashboardPartsResponsePosition position() {
         return this.position;
     }
 
-    public DashboardPartsResponse(
-        @Nullable MarkdownPartMetadataResponse metadata,
-        DashboardPartsResponsePosition position) {
-        this.metadata = metadata;
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-    }
+    private DashboardPartsResponse() {}
 
-    private DashboardPartsResponse() {
-        this.metadata = null;
-        this.position = null;
+    private DashboardPartsResponse(DashboardPartsResponse $) {
+        this.metadata = $.metadata;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardPartsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MarkdownPartMetadataResponse metadata;
-        private DashboardPartsResponsePosition position;
+        private DashboardPartsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardPartsResponse();
         }
 
         public Builder(DashboardPartsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.position = defaults.position;
+            $ = new DashboardPartsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable MarkdownPartMetadataResponse metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder position(DashboardPartsResponsePosition position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
-        }        public DashboardPartsResponse build() {
-            return new DashboardPartsResponse(metadata, position);
+        }
+
+        public DashboardPartsResponse build() {
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

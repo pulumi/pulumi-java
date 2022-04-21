@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -38,63 +39,60 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,PolicyStatus>> status;
+    private @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,PolicyStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public RetentionPolicyArgs(
-        @Nullable Output<Integer> days,
-        @Nullable Output<Either<String,PolicyStatus>> status) {
-        this.days = Codegen.integerProp("days").output().arg(days).def(7).getNullable();
-        this.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg(status).def("disabled").getNullable();
-    }
+    private RetentionPolicyArgs() {}
 
-    private RetentionPolicyArgs() {
-        this.days = Codegen.empty();
-        this.status = Codegen.empty();
+    private RetentionPolicyArgs(RetentionPolicyArgs $) {
+        this.days = $.days;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
-        private @Nullable Output<Either<String,PolicyStatus>> status;
+        private RetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionPolicyArgs();
         }
 
         public Builder(RetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.status = defaults.status;
+            $ = new RetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
         }
+
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public RetentionPolicyArgs build() {
-            return new RetentionPolicyArgs(days, status);
+
+        public Builder status(Either<String,PolicyStatus> status) {
+            return status(Output.of(status));
+        }
+
+        public RetentionPolicyArgs build() {
+            $.days = Codegen.integerProp("days").output().arg($.days).def(7).getNullable();
+            $.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg($.status).def("disabled").getNullable();
+            return $;
         }
     }
+
 }

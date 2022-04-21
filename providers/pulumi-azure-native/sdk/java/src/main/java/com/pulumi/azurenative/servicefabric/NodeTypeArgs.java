@@ -8,13 +8,13 @@ import com.pulumi.azurenative.servicefabric.inputs.VMSSExtensionArgs;
 import com.pulumi.azurenative.servicefabric.inputs.VaultSecretGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationPorts")
-      private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
+    private @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Output<EndpointRangeDescriptionArgs> applicationPorts() {
-        return this.applicationPorts == null ? Codegen.empty() : this.applicationPorts;
+    public Optional<Output<EndpointRangeDescriptionArgs>> applicationPorts() {
+        return Optional.ofNullable(this.applicationPorts);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacities")
-      private final @Nullable Output<Map<String,String>> capacities;
+    private @Nullable Output<Map<String,String>> capacities;
 
-    public Output<Map<String,String>> capacities() {
-        return this.capacities == null ? Codegen.empty() : this.capacities;
+    public Optional<Output<Map<String,String>>> capacities() {
+        return Optional.ofNullable(this.capacities);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -60,7 +60,7 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDiskSizeGB", required=true)
-      private final Output<Integer> dataDiskSizeGB;
+    private Output<Integer> dataDiskSizeGB;
 
     public Output<Integer> dataDiskSizeGB() {
         return this.dataDiskSizeGB;
@@ -71,10 +71,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralPorts")
-      private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
+    private @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Output<EndpointRangeDescriptionArgs> ephemeralPorts() {
-        return this.ephemeralPorts == null ? Codegen.empty() : this.ephemeralPorts;
+    public Optional<Output<EndpointRangeDescriptionArgs>> ephemeralPorts() {
+        return Optional.ofNullable(this.ephemeralPorts);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isPrimary", required=true)
-      private final Output<Boolean> isPrimary;
+    private Output<Boolean> isPrimary;
 
     public Output<Boolean> isPrimary() {
         return this.isPrimary;
@@ -93,10 +93,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTypeName")
-      private final @Nullable Output<String> nodeTypeName;
+    private @Nullable Output<String> nodeTypeName;
 
-    public Output<String> nodeTypeName() {
-        return this.nodeTypeName == null ? Codegen.empty() : this.nodeTypeName;
+    public Optional<Output<String>> nodeTypeName() {
+        return Optional.ofNullable(this.nodeTypeName);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placementProperties")
-      private final @Nullable Output<Map<String,String>> placementProperties;
+    private @Nullable Output<Map<String,String>> placementProperties;
 
-    public Output<Map<String,String>> placementProperties() {
-        return this.placementProperties == null ? Codegen.empty() : this.placementProperties;
+    public Optional<Output<Map<String,String>>> placementProperties() {
+        return Optional.ofNullable(this.placementProperties);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -126,10 +126,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmExtensions")
-      private final @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
+    private @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
 
-    public Output<List<VMSSExtensionArgs>> vmExtensions() {
-        return this.vmExtensions == null ? Codegen.empty() : this.vmExtensions;
+    public Optional<Output<List<VMSSExtensionArgs>>> vmExtensions() {
+        return Optional.ofNullable(this.vmExtensions);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImageOffer")
-      private final @Nullable Output<String> vmImageOffer;
+    private @Nullable Output<String> vmImageOffer;
 
-    public Output<String> vmImageOffer() {
-        return this.vmImageOffer == null ? Codegen.empty() : this.vmImageOffer;
+    public Optional<Output<String>> vmImageOffer() {
+        return Optional.ofNullable(this.vmImageOffer);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImagePublisher")
-      private final @Nullable Output<String> vmImagePublisher;
+    private @Nullable Output<String> vmImagePublisher;
 
-    public Output<String> vmImagePublisher() {
-        return this.vmImagePublisher == null ? Codegen.empty() : this.vmImagePublisher;
+    public Optional<Output<String>> vmImagePublisher() {
+        return Optional.ofNullable(this.vmImagePublisher);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImageSku")
-      private final @Nullable Output<String> vmImageSku;
+    private @Nullable Output<String> vmImageSku;
 
-    public Output<String> vmImageSku() {
-        return this.vmImageSku == null ? Codegen.empty() : this.vmImageSku;
+    public Optional<Output<String>> vmImageSku() {
+        return Optional.ofNullable(this.vmImageSku);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImageVersion")
-      private final @Nullable Output<String> vmImageVersion;
+    private @Nullable Output<String> vmImageVersion;
 
-    public Output<String> vmImageVersion() {
-        return this.vmImageVersion == null ? Codegen.empty() : this.vmImageVersion;
+    public Optional<Output<String>> vmImageVersion() {
+        return Optional.ofNullable(this.vmImageVersion);
     }
 
     /**
@@ -192,7 +192,7 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmInstanceCount", required=true)
-      private final Output<Integer> vmInstanceCount;
+    private Output<Integer> vmInstanceCount;
 
     public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
@@ -203,10 +203,10 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmSecrets")
-      private final @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
+    private @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
 
-    public Output<List<VaultSecretGroupArgs>> vmSecrets() {
-        return this.vmSecrets == null ? Codegen.empty() : this.vmSecrets;
+    public Optional<Output<List<VaultSecretGroupArgs>>> vmSecrets() {
+        return Optional.ofNullable(this.vmSecrets);
     }
 
     /**
@@ -214,277 +214,231 @@ public final class NodeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public NodeTypeArgs(
-        @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts,
-        @Nullable Output<Map<String,String>> capacities,
-        Output<String> clusterName,
-        Output<Integer> dataDiskSizeGB,
-        @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts,
-        Output<Boolean> isPrimary,
-        @Nullable Output<String> nodeTypeName,
-        @Nullable Output<Map<String,String>> placementProperties,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<VMSSExtensionArgs>> vmExtensions,
-        @Nullable Output<String> vmImageOffer,
-        @Nullable Output<String> vmImagePublisher,
-        @Nullable Output<String> vmImageSku,
-        @Nullable Output<String> vmImageVersion,
-        Output<Integer> vmInstanceCount,
-        @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets,
-        @Nullable Output<String> vmSize) {
-        this.applicationPorts = applicationPorts;
-        this.capacities = capacities;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB, "expected parameter 'dataDiskSizeGB' to be non-null");
-        this.ephemeralPorts = ephemeralPorts;
-        this.isPrimary = Objects.requireNonNull(isPrimary, "expected parameter 'isPrimary' to be non-null");
-        this.nodeTypeName = nodeTypeName;
-        this.placementProperties = placementProperties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vmExtensions = vmExtensions;
-        this.vmImageOffer = vmImageOffer;
-        this.vmImagePublisher = vmImagePublisher;
-        this.vmImageSku = vmImageSku;
-        this.vmImageVersion = vmImageVersion;
-        this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount, "expected parameter 'vmInstanceCount' to be non-null");
-        this.vmSecrets = vmSecrets;
-        this.vmSize = vmSize;
-    }
+    private NodeTypeArgs() {}
 
-    private NodeTypeArgs() {
-        this.applicationPorts = Codegen.empty();
-        this.capacities = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.dataDiskSizeGB = Codegen.empty();
-        this.ephemeralPorts = Codegen.empty();
-        this.isPrimary = Codegen.empty();
-        this.nodeTypeName = Codegen.empty();
-        this.placementProperties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vmExtensions = Codegen.empty();
-        this.vmImageOffer = Codegen.empty();
-        this.vmImagePublisher = Codegen.empty();
-        this.vmImageSku = Codegen.empty();
-        this.vmImageVersion = Codegen.empty();
-        this.vmInstanceCount = Codegen.empty();
-        this.vmSecrets = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private NodeTypeArgs(NodeTypeArgs $) {
+        this.applicationPorts = $.applicationPorts;
+        this.capacities = $.capacities;
+        this.clusterName = $.clusterName;
+        this.dataDiskSizeGB = $.dataDiskSizeGB;
+        this.ephemeralPorts = $.ephemeralPorts;
+        this.isPrimary = $.isPrimary;
+        this.nodeTypeName = $.nodeTypeName;
+        this.placementProperties = $.placementProperties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vmExtensions = $.vmExtensions;
+        this.vmImageOffer = $.vmImageOffer;
+        this.vmImagePublisher = $.vmImagePublisher;
+        this.vmImageSku = $.vmImageSku;
+        this.vmImageVersion = $.vmImageVersion;
+        this.vmInstanceCount = $.vmInstanceCount;
+        this.vmSecrets = $.vmSecrets;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
-        private @Nullable Output<Map<String,String>> capacities;
-        private Output<String> clusterName;
-        private Output<Integer> dataDiskSizeGB;
-        private @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
-        private Output<Boolean> isPrimary;
-        private @Nullable Output<String> nodeTypeName;
-        private @Nullable Output<Map<String,String>> placementProperties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<VMSSExtensionArgs>> vmExtensions;
-        private @Nullable Output<String> vmImageOffer;
-        private @Nullable Output<String> vmImagePublisher;
-        private @Nullable Output<String> vmImageSku;
-        private @Nullable Output<String> vmImageVersion;
-        private Output<Integer> vmInstanceCount;
-        private @Nullable Output<List<VaultSecretGroupArgs>> vmSecrets;
-        private @Nullable Output<String> vmSize;
+        private NodeTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTypeArgs();
         }
 
         public Builder(NodeTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationPorts = defaults.applicationPorts;
-    	      this.capacities = defaults.capacities;
-    	      this.clusterName = defaults.clusterName;
-    	      this.dataDiskSizeGB = defaults.dataDiskSizeGB;
-    	      this.ephemeralPorts = defaults.ephemeralPorts;
-    	      this.isPrimary = defaults.isPrimary;
-    	      this.nodeTypeName = defaults.nodeTypeName;
-    	      this.placementProperties = defaults.placementProperties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vmExtensions = defaults.vmExtensions;
-    	      this.vmImageOffer = defaults.vmImageOffer;
-    	      this.vmImagePublisher = defaults.vmImagePublisher;
-    	      this.vmImageSku = defaults.vmImageSku;
-    	      this.vmImageVersion = defaults.vmImageVersion;
-    	      this.vmInstanceCount = defaults.vmInstanceCount;
-    	      this.vmSecrets = defaults.vmSecrets;
-    	      this.vmSize = defaults.vmSize;
+            $ = new NodeTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationPorts(@Nullable Output<EndpointRangeDescriptionArgs> applicationPorts) {
-            this.applicationPorts = applicationPorts;
+            $.applicationPorts = applicationPorts;
             return this;
         }
-        public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
-            this.applicationPorts = Codegen.ofNullable(applicationPorts);
-            return this;
+
+        public Builder applicationPorts(EndpointRangeDescriptionArgs applicationPorts) {
+            return applicationPorts(Output.of(applicationPorts));
         }
+
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
-            this.capacities = capacities;
+            $.capacities = capacities;
             return this;
         }
-        public Builder capacities(@Nullable Map<String,String> capacities) {
-            this.capacities = Codegen.ofNullable(capacities);
-            return this;
+
+        public Builder capacities(Map<String,String> capacities) {
+            return capacities(Output.of(capacities));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder dataDiskSizeGB(Output<Integer> dataDiskSizeGB) {
-            this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
+            $.dataDiskSizeGB = dataDiskSizeGB;
             return this;
         }
+
         public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
-            this.dataDiskSizeGB = Output.of(Objects.requireNonNull(dataDiskSizeGB));
-            return this;
+            return dataDiskSizeGB(Output.of(dataDiskSizeGB));
         }
+
         public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
-            this.ephemeralPorts = ephemeralPorts;
+            $.ephemeralPorts = ephemeralPorts;
             return this;
         }
-        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
-            this.ephemeralPorts = Codegen.ofNullable(ephemeralPorts);
-            return this;
+
+        public Builder ephemeralPorts(EndpointRangeDescriptionArgs ephemeralPorts) {
+            return ephemeralPorts(Output.of(ephemeralPorts));
         }
+
         public Builder isPrimary(Output<Boolean> isPrimary) {
-            this.isPrimary = Objects.requireNonNull(isPrimary);
+            $.isPrimary = isPrimary;
             return this;
         }
+
         public Builder isPrimary(Boolean isPrimary) {
-            this.isPrimary = Output.of(Objects.requireNonNull(isPrimary));
-            return this;
+            return isPrimary(Output.of(isPrimary));
         }
+
         public Builder nodeTypeName(@Nullable Output<String> nodeTypeName) {
-            this.nodeTypeName = nodeTypeName;
+            $.nodeTypeName = nodeTypeName;
             return this;
         }
-        public Builder nodeTypeName(@Nullable String nodeTypeName) {
-            this.nodeTypeName = Codegen.ofNullable(nodeTypeName);
-            return this;
+
+        public Builder nodeTypeName(String nodeTypeName) {
+            return nodeTypeName(Output.of(nodeTypeName));
         }
+
         public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
-            this.placementProperties = placementProperties;
+            $.placementProperties = placementProperties;
             return this;
         }
-        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
-            this.placementProperties = Codegen.ofNullable(placementProperties);
-            return this;
+
+        public Builder placementProperties(Map<String,String> placementProperties) {
+            return placementProperties(Output.of(placementProperties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vmExtensions(@Nullable Output<List<VMSSExtensionArgs>> vmExtensions) {
-            this.vmExtensions = vmExtensions;
+            $.vmExtensions = vmExtensions;
             return this;
         }
-        public Builder vmExtensions(@Nullable List<VMSSExtensionArgs> vmExtensions) {
-            this.vmExtensions = Codegen.ofNullable(vmExtensions);
-            return this;
+
+        public Builder vmExtensions(List<VMSSExtensionArgs> vmExtensions) {
+            return vmExtensions(Output.of(vmExtensions));
         }
+
         public Builder vmExtensions(VMSSExtensionArgs... vmExtensions) {
             return vmExtensions(List.of(vmExtensions));
         }
+
         public Builder vmImageOffer(@Nullable Output<String> vmImageOffer) {
-            this.vmImageOffer = vmImageOffer;
+            $.vmImageOffer = vmImageOffer;
             return this;
         }
-        public Builder vmImageOffer(@Nullable String vmImageOffer) {
-            this.vmImageOffer = Codegen.ofNullable(vmImageOffer);
-            return this;
+
+        public Builder vmImageOffer(String vmImageOffer) {
+            return vmImageOffer(Output.of(vmImageOffer));
         }
+
         public Builder vmImagePublisher(@Nullable Output<String> vmImagePublisher) {
-            this.vmImagePublisher = vmImagePublisher;
+            $.vmImagePublisher = vmImagePublisher;
             return this;
         }
-        public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
-            this.vmImagePublisher = Codegen.ofNullable(vmImagePublisher);
-            return this;
+
+        public Builder vmImagePublisher(String vmImagePublisher) {
+            return vmImagePublisher(Output.of(vmImagePublisher));
         }
+
         public Builder vmImageSku(@Nullable Output<String> vmImageSku) {
-            this.vmImageSku = vmImageSku;
+            $.vmImageSku = vmImageSku;
             return this;
         }
-        public Builder vmImageSku(@Nullable String vmImageSku) {
-            this.vmImageSku = Codegen.ofNullable(vmImageSku);
-            return this;
+
+        public Builder vmImageSku(String vmImageSku) {
+            return vmImageSku(Output.of(vmImageSku));
         }
+
         public Builder vmImageVersion(@Nullable Output<String> vmImageVersion) {
-            this.vmImageVersion = vmImageVersion;
+            $.vmImageVersion = vmImageVersion;
             return this;
         }
-        public Builder vmImageVersion(@Nullable String vmImageVersion) {
-            this.vmImageVersion = Codegen.ofNullable(vmImageVersion);
-            return this;
+
+        public Builder vmImageVersion(String vmImageVersion) {
+            return vmImageVersion(Output.of(vmImageVersion));
         }
+
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
-            this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
+            $.vmInstanceCount = vmInstanceCount;
             return this;
         }
+
         public Builder vmInstanceCount(Integer vmInstanceCount) {
-            this.vmInstanceCount = Output.of(Objects.requireNonNull(vmInstanceCount));
-            return this;
+            return vmInstanceCount(Output.of(vmInstanceCount));
         }
+
         public Builder vmSecrets(@Nullable Output<List<VaultSecretGroupArgs>> vmSecrets) {
-            this.vmSecrets = vmSecrets;
+            $.vmSecrets = vmSecrets;
             return this;
         }
-        public Builder vmSecrets(@Nullable List<VaultSecretGroupArgs> vmSecrets) {
-            this.vmSecrets = Codegen.ofNullable(vmSecrets);
-            return this;
+
+        public Builder vmSecrets(List<VaultSecretGroupArgs> vmSecrets) {
+            return vmSecrets(Output.of(vmSecrets));
         }
+
         public Builder vmSecrets(VaultSecretGroupArgs... vmSecrets) {
             return vmSecrets(List.of(vmSecrets));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public NodeTypeArgs build() {
-            return new NodeTypeArgs(applicationPorts, capacities, clusterName, dataDiskSizeGB, ephemeralPorts, isPrimary, nodeTypeName, placementProperties, resourceGroupName, tags, vmExtensions, vmImageOffer, vmImagePublisher, vmImageSku, vmImageVersion, vmInstanceCount, vmSecrets, vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public NodeTypeArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.dataDiskSizeGB = Objects.requireNonNull($.dataDiskSizeGB, "expected parameter 'dataDiskSizeGB' to be non-null");
+            $.isPrimary = Objects.requireNonNull($.isPrimary, "expected parameter 'isPrimary' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmInstanceCount = Objects.requireNonNull($.vmInstanceCount, "expected parameter 'vmInstanceCount' to be non-null");
+            return $;
         }
     }
+
 }

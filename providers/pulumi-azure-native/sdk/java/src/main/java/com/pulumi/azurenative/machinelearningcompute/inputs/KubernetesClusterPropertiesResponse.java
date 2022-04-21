@@ -23,45 +23,44 @@ public final class KubernetesClusterPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="servicePrincipal")
-      private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+    private @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
-        return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
+        return Optional.ofNullable(this.servicePrincipal);
     }
 
-    public KubernetesClusterPropertiesResponse(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
-        this.servicePrincipal = servicePrincipal;
-    }
+    private KubernetesClusterPropertiesResponse() {}
 
-    private KubernetesClusterPropertiesResponse() {
-        this.servicePrincipal = null;
+    private KubernetesClusterPropertiesResponse(KubernetesClusterPropertiesResponse $) {
+        this.servicePrincipal = $.servicePrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesClusterPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+        private KubernetesClusterPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesClusterPropertiesResponse();
         }
 
         public Builder(KubernetesClusterPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.servicePrincipal = defaults.servicePrincipal;
+            $ = new KubernetesClusterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
-            this.servicePrincipal = servicePrincipal;
+            $.servicePrincipal = servicePrincipal;
             return this;
-        }        public KubernetesClusterPropertiesResponse build() {
-            return new KubernetesClusterPropertiesResponse(servicePrincipal);
+        }
+
+        public KubernetesClusterPropertiesResponse build() {
+            return $;
         }
     }
+
 }

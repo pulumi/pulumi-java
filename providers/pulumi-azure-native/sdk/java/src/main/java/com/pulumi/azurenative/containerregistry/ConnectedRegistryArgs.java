@@ -9,10 +9,10 @@ import com.pulumi.azurenative.containerregistry.inputs.ParentPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clientTokenIds")
-      private final @Nullable Output<List<String>> clientTokenIds;
+    private @Nullable Output<List<String>> clientTokenIds;
 
-    public Output<List<String>> clientTokenIds() {
-        return this.clientTokenIds == null ? Codegen.empty() : this.clientTokenIds;
+    public Optional<Output<List<String>>> clientTokenIds() {
+        return Optional.ofNullable(this.clientTokenIds);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectedRegistryName")
-      private final @Nullable Output<String> connectedRegistryName;
+    private @Nullable Output<String> connectedRegistryName;
 
-    public Output<String> connectedRegistryName() {
-        return this.connectedRegistryName == null ? Codegen.empty() : this.connectedRegistryName;
+    public Optional<Output<String>> connectedRegistryName() {
+        return Optional.ofNullable(this.connectedRegistryName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logging")
-      private final @Nullable Output<LoggingPropertiesArgs> logging;
+    private @Nullable Output<LoggingPropertiesArgs> logging;
 
-    public Output<LoggingPropertiesArgs> logging() {
-        return this.logging == null ? Codegen.empty() : this.logging;
+    public Optional<Output<LoggingPropertiesArgs>> logging() {
+        return Optional.ofNullable(this.logging);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<Either<String,ConnectedRegistryMode>> mode;
+    private Output<Either<String,ConnectedRegistryMode>> mode;
 
     public Output<Either<String,ConnectedRegistryMode>> mode() {
         return this.mode;
@@ -69,7 +69,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<ParentPropertiesArgs> parent;
+    private Output<ParentPropertiesArgs> parent;
 
     public Output<ParentPropertiesArgs> parent() {
         return this.parent;
@@ -80,7 +80,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -91,131 +91,116 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ConnectedRegistryArgs(
-        @Nullable Output<List<String>> clientTokenIds,
-        @Nullable Output<String> connectedRegistryName,
-        @Nullable Output<LoggingPropertiesArgs> logging,
-        Output<Either<String,ConnectedRegistryMode>> mode,
-        Output<ParentPropertiesArgs> parent,
-        Output<String> registryName,
-        Output<String> resourceGroupName) {
-        this.clientTokenIds = clientTokenIds;
-        this.connectedRegistryName = connectedRegistryName;
-        this.logging = logging;
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ConnectedRegistryArgs() {}
 
-    private ConnectedRegistryArgs() {
-        this.clientTokenIds = Codegen.empty();
-        this.connectedRegistryName = Codegen.empty();
-        this.logging = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ConnectedRegistryArgs(ConnectedRegistryArgs $) {
+        this.clientTokenIds = $.clientTokenIds;
+        this.connectedRegistryName = $.connectedRegistryName;
+        this.logging = $.logging;
+        this.mode = $.mode;
+        this.parent = $.parent;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectedRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> clientTokenIds;
-        private @Nullable Output<String> connectedRegistryName;
-        private @Nullable Output<LoggingPropertiesArgs> logging;
-        private Output<Either<String,ConnectedRegistryMode>> mode;
-        private Output<ParentPropertiesArgs> parent;
-        private Output<String> registryName;
-        private Output<String> resourceGroupName;
+        private ConnectedRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectedRegistryArgs();
         }
 
         public Builder(ConnectedRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTokenIds = defaults.clientTokenIds;
-    	      this.connectedRegistryName = defaults.connectedRegistryName;
-    	      this.logging = defaults.logging;
-    	      this.mode = defaults.mode;
-    	      this.parent = defaults.parent;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ConnectedRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTokenIds(@Nullable Output<List<String>> clientTokenIds) {
-            this.clientTokenIds = clientTokenIds;
+            $.clientTokenIds = clientTokenIds;
             return this;
         }
-        public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
-            this.clientTokenIds = Codegen.ofNullable(clientTokenIds);
-            return this;
+
+        public Builder clientTokenIds(List<String> clientTokenIds) {
+            return clientTokenIds(Output.of(clientTokenIds));
         }
+
         public Builder clientTokenIds(String... clientTokenIds) {
             return clientTokenIds(List.of(clientTokenIds));
         }
+
         public Builder connectedRegistryName(@Nullable Output<String> connectedRegistryName) {
-            this.connectedRegistryName = connectedRegistryName;
+            $.connectedRegistryName = connectedRegistryName;
             return this;
         }
-        public Builder connectedRegistryName(@Nullable String connectedRegistryName) {
-            this.connectedRegistryName = Codegen.ofNullable(connectedRegistryName);
-            return this;
+
+        public Builder connectedRegistryName(String connectedRegistryName) {
+            return connectedRegistryName(Output.of(connectedRegistryName));
         }
+
         public Builder logging(@Nullable Output<LoggingPropertiesArgs> logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
         }
-        public Builder logging(@Nullable LoggingPropertiesArgs logging) {
-            this.logging = Codegen.ofNullable(logging);
-            return this;
+
+        public Builder logging(LoggingPropertiesArgs logging) {
+            return logging(Output.of(logging));
         }
+
         public Builder mode(Output<Either<String,ConnectedRegistryMode>> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(Either<String,ConnectedRegistryMode> mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder parent(Output<ParentPropertiesArgs> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(ParentPropertiesArgs parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ConnectedRegistryArgs build() {
-            return new ConnectedRegistryArgs(clientTokenIds, connectedRegistryName, logging, mode, parent, registryName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ConnectedRegistryArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

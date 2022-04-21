@@ -24,10 +24,10 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
      * 
      */
     @Import(name="roles")
-      private final @Nullable List<String> roles;
+    private @Nullable List<String> roles;
 
-    public List<String> roles() {
-        return this.roles == null ? List.of() : this.roles;
+    public Optional<List<String>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public SecurityContactPropertiesResponseNotificationsByRole(
-        @Nullable List<String> roles,
-        @Nullable String state) {
-        this.roles = roles;
-        this.state = state;
-    }
+    private SecurityContactPropertiesResponseNotificationsByRole() {}
 
-    private SecurityContactPropertiesResponseNotificationsByRole() {
-        this.roles = List.of();
-        this.state = null;
+    private SecurityContactPropertiesResponseNotificationsByRole(SecurityContactPropertiesResponseNotificationsByRole $) {
+        this.roles = $.roles;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityContactPropertiesResponseNotificationsByRole defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> roles;
-        private @Nullable String state;
+        private SecurityContactPropertiesResponseNotificationsByRole $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityContactPropertiesResponseNotificationsByRole();
         }
 
         public Builder(SecurityContactPropertiesResponseNotificationsByRole defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roles = defaults.roles;
-    	      this.state = defaults.state;
+            $ = new SecurityContactPropertiesResponseNotificationsByRole(Objects.requireNonNull(defaults));
         }
 
         public Builder roles(@Nullable List<String> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public SecurityContactPropertiesResponseNotificationsByRole build() {
-            return new SecurityContactPropertiesResponseNotificationsByRole(roles, state);
+        }
+
+        public SecurityContactPropertiesResponseNotificationsByRole build() {
+            return $;
         }
     }
+
 }

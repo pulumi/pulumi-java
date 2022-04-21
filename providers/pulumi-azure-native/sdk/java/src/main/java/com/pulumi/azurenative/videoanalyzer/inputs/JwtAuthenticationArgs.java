@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="audiences")
-      private final @Nullable Output<List<String>> audiences;
+    private @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> audiences() {
-        return this.audiences == null ? Codegen.empty() : this.audiences;
+    public Optional<Output<List<String>>> audiences() {
+        return Optional.ofNullable(this.audiences);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="claims")
-      private final @Nullable Output<List<TokenClaimArgs>> claims;
+    private @Nullable Output<List<TokenClaimArgs>> claims;
 
-    public Output<List<TokenClaimArgs>> claims() {
-        return this.claims == null ? Codegen.empty() : this.claims;
+    public Optional<Output<List<TokenClaimArgs>>> claims() {
+        return Optional.ofNullable(this.claims);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="issuers")
-      private final @Nullable Output<List<String>> issuers;
+    private @Nullable Output<List<String>> issuers;
 
-    public Output<List<String>> issuers() {
-        return this.issuers == null ? Codegen.empty() : this.issuers;
+    public Optional<Output<List<String>>> issuers() {
+        return Optional.ofNullable(this.issuers);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
+    private @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
 
-    public Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -74,114 +75,105 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JwtAuthenticationArgs(
-        @Nullable Output<List<String>> audiences,
-        @Nullable Output<List<TokenClaimArgs>> claims,
-        @Nullable Output<List<String>> issuers,
-        @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys,
-        Output<String> type) {
-        this.audiences = audiences;
-        this.claims = claims;
-        this.issuers = issuers;
-        this.keys = keys;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JwtAuthenticationArgs() {}
 
-    private JwtAuthenticationArgs() {
-        this.audiences = Codegen.empty();
-        this.claims = Codegen.empty();
-        this.issuers = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.type = Codegen.empty();
+    private JwtAuthenticationArgs(JwtAuthenticationArgs $) {
+        this.audiences = $.audiences;
+        this.claims = $.claims;
+        this.issuers = $.issuers;
+        this.keys = $.keys;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> audiences;
-        private @Nullable Output<List<TokenClaimArgs>> claims;
-        private @Nullable Output<List<String>> issuers;
-        private @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
-        private Output<String> type;
+        private JwtAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtAuthenticationArgs();
         }
 
         public Builder(JwtAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.claims = defaults.claims;
-    	      this.issuers = defaults.issuers;
-    	      this.keys = defaults.keys;
-    	      this.type = defaults.type;
+            $ = new JwtAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(@Nullable Output<List<String>> audiences) {
-            this.audiences = audiences;
+            $.audiences = audiences;
             return this;
         }
-        public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = Codegen.ofNullable(audiences);
-            return this;
+
+        public Builder audiences(List<String> audiences) {
+            return audiences(Output.of(audiences));
         }
+
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
+
         public Builder claims(@Nullable Output<List<TokenClaimArgs>> claims) {
-            this.claims = claims;
+            $.claims = claims;
             return this;
         }
-        public Builder claims(@Nullable List<TokenClaimArgs> claims) {
-            this.claims = Codegen.ofNullable(claims);
-            return this;
+
+        public Builder claims(List<TokenClaimArgs> claims) {
+            return claims(Output.of(claims));
         }
+
         public Builder claims(TokenClaimArgs... claims) {
             return claims(List.of(claims));
         }
+
         public Builder issuers(@Nullable Output<List<String>> issuers) {
-            this.issuers = issuers;
+            $.issuers = issuers;
             return this;
         }
-        public Builder issuers(@Nullable List<String> issuers) {
-            this.issuers = Codegen.ofNullable(issuers);
-            return this;
+
+        public Builder issuers(List<String> issuers) {
+            return issuers(Output.of(issuers));
         }
+
         public Builder issuers(String... issuers) {
             return issuers(List.of(issuers));
         }
+
         public Builder keys(@Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(Either<EccTokenKeyArgs,RsaTokenKeyArgs>... keys) {
             return keys(List.of(keys));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JwtAuthenticationArgs build() {
-            return new JwtAuthenticationArgs(audiences, claims, issuers, keys, type);
+            return type(Output.of(type));
+        }
+
+        public JwtAuthenticationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

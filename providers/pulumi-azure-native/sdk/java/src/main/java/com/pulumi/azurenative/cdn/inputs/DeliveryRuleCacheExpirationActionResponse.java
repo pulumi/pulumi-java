@@ -24,7 +24,7 @@ public final class DeliveryRuleCacheExpirationActionResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,52 @@ public final class DeliveryRuleCacheExpirationActionResponse extends com.pulumi.
      * 
      */
     @Import(name="parameters", required=true)
-      private final CacheExpirationActionParametersResponse parameters;
+    private CacheExpirationActionParametersResponse parameters;
 
     public CacheExpirationActionParametersResponse parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleCacheExpirationActionResponse(
-        String name,
-        CacheExpirationActionParametersResponse parameters) {
-        this.name = Codegen.stringProp("name").arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleCacheExpirationActionResponse() {}
 
-    private DeliveryRuleCacheExpirationActionResponse() {
-        this.name = null;
-        this.parameters = null;
+    private DeliveryRuleCacheExpirationActionResponse(DeliveryRuleCacheExpirationActionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleCacheExpirationActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private CacheExpirationActionParametersResponse parameters;
+        private DeliveryRuleCacheExpirationActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleCacheExpirationActionResponse();
         }
 
         public Builder(DeliveryRuleCacheExpirationActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleCacheExpirationActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(CacheExpirationActionParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
-        }        public DeliveryRuleCacheExpirationActionResponse build() {
-            return new DeliveryRuleCacheExpirationActionResponse(name, parameters);
+        }
+
+        public DeliveryRuleCacheExpirationActionResponse build() {
+            $.name = Codegen.stringProp("name").arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

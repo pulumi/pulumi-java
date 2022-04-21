@@ -8,10 +8,10 @@ import com.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-      private final Output<String> environmentName;
+    private Output<String> environmentName;
 
     public Output<String> environmentName() {
         return this.environmentName;
@@ -35,10 +35,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventSourceName")
-      private final @Nullable Output<String> eventSourceName;
+    private @Nullable Output<String> eventSourceName;
 
-    public Output<String> eventSourceName() {
-        return this.eventSourceName == null ? Codegen.empty() : this.eventSourceName;
+    public Optional<Output<String>> eventSourceName() {
+        return Optional.ofNullable(this.eventSourceName);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,EventSourceKind>> kind;
+    private Output<Either<String,EventSourceKind>> kind;
 
     public Output<Either<String,EventSourceKind>> kind() {
         return this.kind;
@@ -57,10 +57,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localTimestamp")
-      private final @Nullable Output<LocalTimestampArgs> localTimestamp;
+    private @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Output<LocalTimestampArgs> localTimestamp() {
-        return this.localTimestamp == null ? Codegen.empty() : this.localTimestamp;
+    public Optional<Output<LocalTimestampArgs>> localTimestamp() {
+        return Optional.ofNullable(this.localTimestamp);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,128 +90,111 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EventSourceArgs(
-        Output<String> environmentName,
-        @Nullable Output<String> eventSourceName,
-        Output<Either<String,EventSourceKind>> kind,
-        @Nullable Output<LocalTimestampArgs> localTimestamp,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.eventSourceName = eventSourceName;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.localTimestamp = localTimestamp;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private EventSourceArgs() {}
 
-    private EventSourceArgs() {
-        this.environmentName = Codegen.empty();
-        this.eventSourceName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.localTimestamp = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EventSourceArgs(EventSourceArgs $) {
+        this.environmentName = $.environmentName;
+        this.eventSourceName = $.eventSourceName;
+        this.kind = $.kind;
+        this.localTimestamp = $.localTimestamp;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> environmentName;
-        private @Nullable Output<String> eventSourceName;
-        private Output<Either<String,EventSourceKind>> kind;
-        private @Nullable Output<LocalTimestampArgs> localTimestamp;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private EventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceArgs();
         }
 
         public Builder(EventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.eventSourceName = defaults.eventSourceName;
-    	      this.kind = defaults.kind;
-    	      this.localTimestamp = defaults.localTimestamp;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new EventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(Output<String> environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
-            return this;
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
-            this.eventSourceName = eventSourceName;
+            $.eventSourceName = eventSourceName;
             return this;
         }
-        public Builder eventSourceName(@Nullable String eventSourceName) {
-            this.eventSourceName = Codegen.ofNullable(eventSourceName);
-            return this;
+
+        public Builder eventSourceName(String eventSourceName) {
+            return eventSourceName(Output.of(eventSourceName));
         }
+
         public Builder kind(Output<Either<String,EventSourceKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,EventSourceKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
-            this.localTimestamp = localTimestamp;
+            $.localTimestamp = localTimestamp;
             return this;
         }
-        public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
-            this.localTimestamp = Codegen.ofNullable(localTimestamp);
-            return this;
+
+        public Builder localTimestamp(LocalTimestampArgs localTimestamp) {
+            return localTimestamp(Output.of(localTimestamp));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public EventSourceArgs build() {
-            return new EventSourceArgs(environmentName, eventSourceName, kind, localTimestamp, location, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public EventSourceArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

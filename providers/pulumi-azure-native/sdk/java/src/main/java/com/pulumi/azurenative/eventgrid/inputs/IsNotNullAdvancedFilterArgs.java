@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class IsNotNullAdvancedFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class IsNotNullAdvancedFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="operatorType", required=true)
-      private final Output<String> operatorType;
+    private Output<String> operatorType;
 
     public Output<String> operatorType() {
         return this.operatorType;
     }
 
-    public IsNotNullAdvancedFilterArgs(
-        @Nullable Output<String> key,
-        Output<String> operatorType) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
-    }
+    private IsNotNullAdvancedFilterArgs() {}
 
-    private IsNotNullAdvancedFilterArgs() {
-        this.key = Codegen.empty();
-        this.operatorType = Codegen.empty();
+    private IsNotNullAdvancedFilterArgs(IsNotNullAdvancedFilterArgs $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IsNotNullAdvancedFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private Output<String> operatorType;
+        private IsNotNullAdvancedFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IsNotNullAdvancedFilterArgs();
         }
 
         public Builder(IsNotNullAdvancedFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
+            $ = new IsNotNullAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder operatorType(Output<String> operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Output.of(Objects.requireNonNull(operatorType));
-            return this;
-        }        public IsNotNullAdvancedFilterArgs build() {
-            return new IsNotNullAdvancedFilterArgs(key, operatorType);
+            return operatorType(Output.of(operatorType));
+        }
+
+        public IsNotNullAdvancedFilterArgs build() {
+            $.operatorType = Codegen.stringProp("operatorType").output().arg($.operatorType).require();
+            return $;
         }
     }
+
 }

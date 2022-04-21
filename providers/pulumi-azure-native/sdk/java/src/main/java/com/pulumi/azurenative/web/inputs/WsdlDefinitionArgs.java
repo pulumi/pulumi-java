@@ -8,9 +8,9 @@ import com.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="importMethod")
-      private final @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
+    private @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
-    public Output<Either<String,WsdlImportMethod>> importMethod() {
-        return this.importMethod == null ? Codegen.empty() : this.importMethod;
+    public Optional<Output<Either<String,WsdlImportMethod>>> importMethod() {
+        return Optional.ofNullable(this.importMethod);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<WsdlServiceArgs> service;
+    private @Nullable Output<WsdlServiceArgs> service;
 
-    public Output<WsdlServiceArgs> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<WsdlServiceArgs>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public WsdlDefinitionArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<Either<String,WsdlImportMethod>> importMethod,
-        @Nullable Output<WsdlServiceArgs> service,
-        @Nullable Output<String> url) {
-        this.content = content;
-        this.importMethod = importMethod;
-        this.service = service;
-        this.url = url;
-    }
+    private WsdlDefinitionArgs() {}
 
-    private WsdlDefinitionArgs() {
-        this.content = Codegen.empty();
-        this.importMethod = Codegen.empty();
-        this.service = Codegen.empty();
-        this.url = Codegen.empty();
+    private WsdlDefinitionArgs(WsdlDefinitionArgs $) {
+        this.content = $.content;
+        this.importMethod = $.importMethod;
+        this.service = $.service;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsdlDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
-        private @Nullable Output<WsdlServiceArgs> service;
-        private @Nullable Output<String> url;
+        private WsdlDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsdlDefinitionArgs();
         }
 
         public Builder(WsdlDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.importMethod = defaults.importMethod;
-    	      this.service = defaults.service;
-    	      this.url = defaults.url;
+            $ = new WsdlDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder importMethod(@Nullable Output<Either<String,WsdlImportMethod>> importMethod) {
-            this.importMethod = importMethod;
+            $.importMethod = importMethod;
             return this;
         }
-        public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
-            this.importMethod = Codegen.ofNullable(importMethod);
-            return this;
+
+        public Builder importMethod(Either<String,WsdlImportMethod> importMethod) {
+            return importMethod(Output.of(importMethod));
         }
+
         public Builder service(@Nullable Output<WsdlServiceArgs> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable WsdlServiceArgs service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(WsdlServiceArgs service) {
+            return service(Output.of(service));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public WsdlDefinitionArgs build() {
-            return new WsdlDefinitionArgs(content, importMethod, service, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public WsdlDefinitionArgs build() {
+            return $;
         }
     }
+
 }

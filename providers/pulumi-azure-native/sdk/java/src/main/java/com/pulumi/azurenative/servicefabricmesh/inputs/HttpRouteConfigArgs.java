@@ -7,7 +7,6 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<GatewayDestinationArgs> destination;
+    private Output<GatewayDestinationArgs> destination;
 
     public Output<GatewayDestinationArgs> destination() {
         return this.destination;
@@ -36,7 +35,7 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="match", required=true)
-      private final Output<HttpRouteMatchRuleArgs> match;
+    private Output<HttpRouteMatchRuleArgs> match;
 
     public Output<HttpRouteMatchRuleArgs> match() {
         return this.match;
@@ -47,76 +46,71 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public HttpRouteConfigArgs(
-        Output<GatewayDestinationArgs> destination,
-        Output<HttpRouteMatchRuleArgs> match,
-        Output<String> name) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private HttpRouteConfigArgs() {}
 
-    private HttpRouteConfigArgs() {
-        this.destination = Codegen.empty();
-        this.match = Codegen.empty();
-        this.name = Codegen.empty();
+    private HttpRouteConfigArgs(HttpRouteConfigArgs $) {
+        this.destination = $.destination;
+        this.match = $.match;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayDestinationArgs> destination;
-        private Output<HttpRouteMatchRuleArgs> match;
-        private Output<String> name;
+        private HttpRouteConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteConfigArgs();
         }
 
         public Builder(HttpRouteConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.match = defaults.match;
-    	      this.name = defaults.name;
+            $ = new HttpRouteConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<GatewayDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(GatewayDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder match(Output<HttpRouteMatchRuleArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(HttpRouteMatchRuleArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
+            return match(Output.of(match));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public HttpRouteConfigArgs build() {
-            return new HttpRouteConfigArgs(destination, match, name);
+            return name(Output.of(name));
+        }
+
+        public HttpRouteConfigArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

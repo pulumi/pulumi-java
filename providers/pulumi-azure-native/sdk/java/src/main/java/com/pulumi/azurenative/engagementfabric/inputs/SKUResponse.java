@@ -23,7 +23,7 @@ public final class SKUResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,55 +34,51 @@ public final class SKUResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public SKUResponse(
-        String name,
-        @Nullable String tier) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = tier;
-    }
+    private SKUResponse() {}
 
-    private SKUResponse() {
-        this.name = null;
-        this.tier = null;
+    private SKUResponse(SKUResponse $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SKUResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String tier;
+        private SKUResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SKUResponse();
         }
 
         public Builder(SKUResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new SKUResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public SKUResponse build() {
-            return new SKUResponse(name, tier);
+        }
+
+        public SKUResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

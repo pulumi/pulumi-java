@@ -17,45 +17,45 @@ public final class GetDiagnosticServiceTokenReadOnlyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetDiagnosticServiceTokenReadOnlyArgs(String resourceUri) {
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetDiagnosticServiceTokenReadOnlyArgs() {}
 
-    private GetDiagnosticServiceTokenReadOnlyArgs() {
-        this.resourceUri = null;
+    private GetDiagnosticServiceTokenReadOnlyArgs(GetDiagnosticServiceTokenReadOnlyArgs $) {
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiagnosticServiceTokenReadOnlyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceUri;
+        private GetDiagnosticServiceTokenReadOnlyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiagnosticServiceTokenReadOnlyArgs();
         }
 
         public Builder(GetDiagnosticServiceTokenReadOnlyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetDiagnosticServiceTokenReadOnlyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetDiagnosticServiceTokenReadOnlyArgs build() {
-            return new GetDiagnosticServiceTokenReadOnlyArgs(resourceUri);
+        }
+
+        public GetDiagnosticServiceTokenReadOnlyArgs build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

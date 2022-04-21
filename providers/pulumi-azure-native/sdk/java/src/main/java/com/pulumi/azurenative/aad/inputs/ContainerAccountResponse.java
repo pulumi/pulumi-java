@@ -23,10 +23,10 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="spn")
-      private final @Nullable String spn;
+    private @Nullable String spn;
 
     public Optional<String> spn() {
-        return this.spn == null ? Optional.empty() : Optional.ofNullable(this.spn);
+        return Optional.ofNullable(this.spn);
     }
 
-    public ContainerAccountResponse(
-        @Nullable String accountName,
-        @Nullable String password,
-        @Nullable String spn) {
-        this.accountName = accountName;
-        this.password = password;
-        this.spn = spn;
-    }
+    private ContainerAccountResponse() {}
 
-    private ContainerAccountResponse() {
-        this.accountName = null;
-        this.password = null;
-        this.spn = null;
+    private ContainerAccountResponse(ContainerAccountResponse $) {
+        this.accountName = $.accountName;
+        this.password = $.password;
+        this.spn = $.spn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountName;
-        private @Nullable String password;
-        private @Nullable String spn;
+        private ContainerAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerAccountResponse();
         }
 
         public Builder(ContainerAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.password = defaults.password;
-    	      this.spn = defaults.spn;
+            $ = new ContainerAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder spn(@Nullable String spn) {
-            this.spn = spn;
+            $.spn = spn;
             return this;
-        }        public ContainerAccountResponse build() {
-            return new ContainerAccountResponse(accountName, password, spn);
+        }
+
+        public ContainerAccountResponse build() {
+            return $;
         }
     }
+
 }

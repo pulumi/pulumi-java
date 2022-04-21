@@ -17,7 +17,7 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="favoriteId", required=true)
-      private final String favoriteId;
+    private String favoriteId;
 
     public String favoriteId() {
         return this.favoriteId;
@@ -28,7 +28,7 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetFavoriteArgs(
-        String favoriteId,
-        String resourceGroupName,
-        String resourceName) {
-        this.favoriteId = Objects.requireNonNull(favoriteId, "expected parameter 'favoriteId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetFavoriteArgs() {}
 
-    private GetFavoriteArgs() {
-        this.favoriteId = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetFavoriteArgs(GetFavoriteArgs $) {
+        this.favoriteId = $.favoriteId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFavoriteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String favoriteId;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetFavoriteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFavoriteArgs();
         }
 
         public Builder(GetFavoriteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.favoriteId = defaults.favoriteId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetFavoriteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder favoriteId(String favoriteId) {
-            this.favoriteId = Objects.requireNonNull(favoriteId);
+            $.favoriteId = favoriteId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetFavoriteArgs build() {
-            return new GetFavoriteArgs(favoriteId, resourceGroupName, resourceName);
+        }
+
+        public GetFavoriteArgs build() {
+            $.favoriteId = Objects.requireNonNull($.favoriteId, "expected parameter 'favoriteId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

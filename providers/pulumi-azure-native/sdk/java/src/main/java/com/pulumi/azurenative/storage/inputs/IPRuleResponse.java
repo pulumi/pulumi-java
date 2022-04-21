@@ -24,10 +24,10 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -35,55 +35,52 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iPAddressOrRange", required=true)
-      private final String iPAddressOrRange;
+    private String iPAddressOrRange;
 
     public String iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
 
-    public IPRuleResponse(
-        @Nullable String action,
-        String iPAddressOrRange) {
-        this.action = Codegen.stringProp("action").arg(action).def("Allow").getNullable();
-        this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
-    }
+    private IPRuleResponse() {}
 
-    private IPRuleResponse() {
-        this.action = null;
-        this.iPAddressOrRange = null;
+    private IPRuleResponse(IPRuleResponse $) {
+        this.action = $.action;
+        this.iPAddressOrRange = $.iPAddressOrRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private String iPAddressOrRange;
+        private IPRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPRuleResponse();
         }
 
         public Builder(IPRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.iPAddressOrRange = defaults.iPAddressOrRange;
+            $ = new IPRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder iPAddressOrRange(String iPAddressOrRange) {
-            this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
+            $.iPAddressOrRange = iPAddressOrRange;
             return this;
-        }        public IPRuleResponse build() {
-            return new IPRuleResponse(action, iPAddressOrRange);
+        }
+
+        public IPRuleResponse build() {
+            $.action = Codegen.stringProp("action").arg($.action).def("Allow").getNullable();
+            $.iPAddressOrRange = Objects.requireNonNull($.iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
+            return $;
         }
     }
+
 }

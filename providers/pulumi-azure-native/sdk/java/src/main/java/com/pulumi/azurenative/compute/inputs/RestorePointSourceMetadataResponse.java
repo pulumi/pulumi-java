@@ -28,10 +28,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="diagnosticsProfile")
-      private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
+    private @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
     public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsProfile);
+        return Optional.ofNullable(this.diagnosticsProfile);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="hardwareProfile")
-      private final @Nullable HardwareProfileResponse hardwareProfile;
+    private @Nullable HardwareProfileResponse hardwareProfile;
 
     public Optional<HardwareProfileResponse> hardwareProfile() {
-        return this.hardwareProfile == null ? Optional.empty() : Optional.ofNullable(this.hardwareProfile);
+        return Optional.ofNullable(this.hardwareProfile);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable OSProfileResponse osProfile;
+    private @Nullable OSProfileResponse osProfile;
 
     public Optional<OSProfileResponse> osProfile() {
-        return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable SecurityProfileResponse securityProfile;
+    private @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> securityProfile() {
-        return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
+    private @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
 
     public Optional<RestorePointSourceVMStorageProfileResponse> storageProfile() {
-        return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -105,109 +105,86 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="vmId")
-      private final @Nullable String vmId;
+    private @Nullable String vmId;
 
     public Optional<String> vmId() {
-        return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
+        return Optional.ofNullable(this.vmId);
     }
 
-    public RestorePointSourceMetadataResponse(
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable HardwareProfileResponse hardwareProfile,
-        @Nullable String licenseType,
-        @Nullable String location,
-        @Nullable OSProfileResponse osProfile,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable RestorePointSourceVMStorageProfileResponse storageProfile,
-        @Nullable String vmId) {
-        this.diagnosticsProfile = diagnosticsProfile;
-        this.hardwareProfile = hardwareProfile;
-        this.licenseType = licenseType;
-        this.location = location;
-        this.osProfile = osProfile;
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.vmId = vmId;
-    }
+    private RestorePointSourceMetadataResponse() {}
 
-    private RestorePointSourceMetadataResponse() {
-        this.diagnosticsProfile = null;
-        this.hardwareProfile = null;
-        this.licenseType = null;
-        this.location = null;
-        this.osProfile = null;
-        this.securityProfile = null;
-        this.storageProfile = null;
-        this.vmId = null;
+    private RestorePointSourceMetadataResponse(RestorePointSourceMetadataResponse $) {
+        this.diagnosticsProfile = $.diagnosticsProfile;
+        this.hardwareProfile = $.hardwareProfile;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.osProfile = $.osProfile;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.vmId = $.vmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointSourceMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DiagnosticsProfileResponse diagnosticsProfile;
-        private @Nullable HardwareProfileResponse hardwareProfile;
-        private @Nullable String licenseType;
-        private @Nullable String location;
-        private @Nullable OSProfileResponse osProfile;
-        private @Nullable SecurityProfileResponse securityProfile;
-        private @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
-        private @Nullable String vmId;
+        private RestorePointSourceMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointSourceMetadataResponse();
         }
 
         public Builder(RestorePointSourceMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diagnosticsProfile = defaults.diagnosticsProfile;
-    	      this.hardwareProfile = defaults.hardwareProfile;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.osProfile = defaults.osProfile;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.vmId = defaults.vmId;
+            $ = new RestorePointSourceMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
-            this.diagnosticsProfile = diagnosticsProfile;
+            $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
+
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
-            this.hardwareProfile = hardwareProfile;
+            $.hardwareProfile = hardwareProfile;
             return this;
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder osProfile(@Nullable OSProfileResponse osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
+
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
+
         public Builder storageProfile(@Nullable RestorePointSourceVMStorageProfileResponse storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
+
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
-        }        public RestorePointSourceMetadataResponse build() {
-            return new RestorePointSourceMetadataResponse(diagnosticsProfile, hardwareProfile, licenseType, location, osProfile, securityProfile, storageProfile, vmId);
+        }
+
+        public RestorePointSourceMetadataResponse build() {
+            return $;
         }
     }
+
 }

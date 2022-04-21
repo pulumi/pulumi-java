@@ -6,10 +6,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.LightHouseAuthorizationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     public static final ProviderHubMetadataThirdPartyProviderAuthorizationArgs Empty = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs();
 
     @Import(name="authorizations")
-      private final @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
+    private @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
 
-    public Output<List<LightHouseAuthorizationArgs>> authorizations() {
-        return this.authorizations == null ? Codegen.empty() : this.authorizations;
+    public Optional<Output<List<LightHouseAuthorizationArgs>>> authorizations() {
+        return Optional.ofNullable(this.authorizations);
     }
 
     @Import(name="managedByTenantId")
-      private final @Nullable Output<String> managedByTenantId;
+    private @Nullable Output<String> managedByTenantId;
 
-    public Output<String> managedByTenantId() {
-        return this.managedByTenantId == null ? Codegen.empty() : this.managedByTenantId;
+    public Optional<Output<String>> managedByTenantId() {
+        return Optional.ofNullable(this.managedByTenantId);
     }
 
-    public ProviderHubMetadataThirdPartyProviderAuthorizationArgs(
-        @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations,
-        @Nullable Output<String> managedByTenantId) {
-        this.authorizations = authorizations;
-        this.managedByTenantId = managedByTenantId;
-    }
+    private ProviderHubMetadataThirdPartyProviderAuthorizationArgs() {}
 
-    private ProviderHubMetadataThirdPartyProviderAuthorizationArgs() {
-        this.authorizations = Codegen.empty();
-        this.managedByTenantId = Codegen.empty();
+    private ProviderHubMetadataThirdPartyProviderAuthorizationArgs(ProviderHubMetadataThirdPartyProviderAuthorizationArgs $) {
+        this.authorizations = $.authorizations;
+        this.managedByTenantId = $.managedByTenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderHubMetadataThirdPartyProviderAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
-        private @Nullable Output<String> managedByTenantId;
+        private ProviderHubMetadataThirdPartyProviderAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs();
         }
 
         public Builder(ProviderHubMetadataThirdPartyProviderAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizations = defaults.authorizations;
-    	      this.managedByTenantId = defaults.managedByTenantId;
+            $ = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizations(@Nullable Output<List<LightHouseAuthorizationArgs>> authorizations) {
-            this.authorizations = authorizations;
+            $.authorizations = authorizations;
             return this;
         }
-        public Builder authorizations(@Nullable List<LightHouseAuthorizationArgs> authorizations) {
-            this.authorizations = Codegen.ofNullable(authorizations);
-            return this;
+
+        public Builder authorizations(List<LightHouseAuthorizationArgs> authorizations) {
+            return authorizations(Output.of(authorizations));
         }
+
         public Builder authorizations(LightHouseAuthorizationArgs... authorizations) {
             return authorizations(List.of(authorizations));
         }
+
         public Builder managedByTenantId(@Nullable Output<String> managedByTenantId) {
-            this.managedByTenantId = managedByTenantId;
+            $.managedByTenantId = managedByTenantId;
             return this;
         }
-        public Builder managedByTenantId(@Nullable String managedByTenantId) {
-            this.managedByTenantId = Codegen.ofNullable(managedByTenantId);
-            return this;
-        }        public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {
-            return new ProviderHubMetadataThirdPartyProviderAuthorizationArgs(authorizations, managedByTenantId);
+
+        public Builder managedByTenantId(String managedByTenantId) {
+            return managedByTenantId(Output.of(managedByTenantId));
+        }
+
+        public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {
+            return $;
         }
     }
+
 }

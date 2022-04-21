@@ -17,7 +17,7 @@ public final class GetPrivateCloudArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -28,55 +28,52 @@ public final class GetPrivateCloudArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateCloudArgs(
-        String privateCloudName,
-        String resourceGroupName) {
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateCloudArgs() {}
 
-    private GetPrivateCloudArgs() {
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetPrivateCloudArgs(GetPrivateCloudArgs $) {
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateCloudArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetPrivateCloudArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateCloudArgs();
         }
 
         public Builder(GetPrivateCloudArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateCloudArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateCloudArgs build() {
-            return new GetPrivateCloudArgs(privateCloudName, resourceGroupName);
+        }
+
+        public GetPrivateCloudArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

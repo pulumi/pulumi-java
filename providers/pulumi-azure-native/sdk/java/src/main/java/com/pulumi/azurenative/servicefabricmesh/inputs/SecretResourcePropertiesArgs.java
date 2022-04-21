@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class SecretResourcePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
-    public SecretResourcePropertiesArgs(
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> description,
-        Output<String> kind) {
-        this.contentType = contentType;
-        this.description = description;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-    }
+    private SecretResourcePropertiesArgs() {}
 
-    private SecretResourcePropertiesArgs() {
-        this.contentType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.kind = Codegen.empty();
+    private SecretResourcePropertiesArgs(SecretResourcePropertiesArgs $) {
+        this.contentType = $.contentType;
+        this.description = $.description;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> description;
-        private Output<String> kind;
+        private SecretResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretResourcePropertiesArgs();
         }
 
         public Builder(SecretResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
+            $ = new SecretResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
-        }        public SecretResourcePropertiesArgs build() {
-            return new SecretResourcePropertiesArgs(contentType, description, kind);
+            return kind(Output.of(kind));
+        }
+
+        public SecretResourcePropertiesArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            return $;
         }
     }
+
 }

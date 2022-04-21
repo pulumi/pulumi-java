@@ -17,7 +17,7 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,7 +28,7 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDomainOwnershipIdentifierArgs(
-        String domainName,
-        String name,
-        String resourceGroupName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDomainOwnershipIdentifierArgs() {}
 
-    private GetDomainOwnershipIdentifierArgs() {
-        this.domainName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetDomainOwnershipIdentifierArgs(GetDomainOwnershipIdentifierArgs $) {
+        this.domainName = $.domainName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainOwnershipIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String name;
-        private String resourceGroupName;
+        private GetDomainOwnershipIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainOwnershipIdentifierArgs();
         }
 
         public Builder(GetDomainOwnershipIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDomainOwnershipIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDomainOwnershipIdentifierArgs build() {
-            return new GetDomainOwnershipIdentifierArgs(domainName, name, resourceGroupName);
+        }
+
+        public GetDomainOwnershipIdentifierArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filterName", required=true)
-      private final String filterName;
+    private String filterName;
 
     public String filterName() {
         return this.filterName;
@@ -39,64 +39,59 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAccountFilterArgs(
-        String accountName,
-        String filterName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAccountFilterArgs() {}
 
-    private GetAccountFilterArgs() {
-        this.accountName = null;
-        this.filterName = null;
-        this.resourceGroupName = null;
+    private GetAccountFilterArgs(GetAccountFilterArgs $) {
+        this.accountName = $.accountName;
+        this.filterName = $.filterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccountFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String filterName;
-        private String resourceGroupName;
+        private GetAccountFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccountFilterArgs();
         }
 
         public Builder(GetAccountFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.filterName = defaults.filterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAccountFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder filterName(String filterName) {
-            this.filterName = Objects.requireNonNull(filterName);
+            $.filterName = filterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAccountFilterArgs build() {
-            return new GetAccountFilterArgs(accountName, filterName, resourceGroupName);
+        }
+
+        public GetAccountFilterArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.filterName = Objects.requireNonNull($.filterName, "expected parameter 'filterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

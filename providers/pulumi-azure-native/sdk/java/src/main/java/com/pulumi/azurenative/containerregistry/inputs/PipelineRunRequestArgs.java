@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerregistry.inputs.PipelineRunSourceProperti
 import com.pulumi.azurenative.containerregistry.inputs.PipelineRunTargetPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class PipelineRunRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable Output<List<String>> artifacts;
+    private @Nullable Output<List<String>> artifacts;
 
-    public Output<List<String>> artifacts() {
-        return this.artifacts == null ? Codegen.empty() : this.artifacts;
+    public Optional<Output<List<String>>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PipelineRunRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="catalogDigest")
-      private final @Nullable Output<String> catalogDigest;
+    private @Nullable Output<String> catalogDigest;
 
-    public Output<String> catalogDigest() {
-        return this.catalogDigest == null ? Codegen.empty() : this.catalogDigest;
+    public Optional<Output<String>> catalogDigest() {
+        return Optional.ofNullable(this.catalogDigest);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PipelineRunRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pipelineResourceId")
-      private final @Nullable Output<String> pipelineResourceId;
+    private @Nullable Output<String> pipelineResourceId;
 
-    public Output<String> pipelineResourceId() {
-        return this.pipelineResourceId == null ? Codegen.empty() : this.pipelineResourceId;
+    public Optional<Output<String>> pipelineResourceId() {
+        return Optional.ofNullable(this.pipelineResourceId);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PipelineRunRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<PipelineRunSourcePropertiesArgs> source;
+    private @Nullable Output<PipelineRunSourcePropertiesArgs> source;
 
-    public Output<PipelineRunSourcePropertiesArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<PipelineRunSourcePropertiesArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -74,105 +74,92 @@ public final class PipelineRunRequestArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<PipelineRunTargetPropertiesArgs> target;
+    private @Nullable Output<PipelineRunTargetPropertiesArgs> target;
 
-    public Output<PipelineRunTargetPropertiesArgs> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<PipelineRunTargetPropertiesArgs>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public PipelineRunRequestArgs(
-        @Nullable Output<List<String>> artifacts,
-        @Nullable Output<String> catalogDigest,
-        @Nullable Output<String> pipelineResourceId,
-        @Nullable Output<PipelineRunSourcePropertiesArgs> source,
-        @Nullable Output<PipelineRunTargetPropertiesArgs> target) {
-        this.artifacts = artifacts;
-        this.catalogDigest = catalogDigest;
-        this.pipelineResourceId = pipelineResourceId;
-        this.source = source;
-        this.target = target;
-    }
+    private PipelineRunRequestArgs() {}
 
-    private PipelineRunRequestArgs() {
-        this.artifacts = Codegen.empty();
-        this.catalogDigest = Codegen.empty();
-        this.pipelineResourceId = Codegen.empty();
-        this.source = Codegen.empty();
-        this.target = Codegen.empty();
+    private PipelineRunRequestArgs(PipelineRunRequestArgs $) {
+        this.artifacts = $.artifacts;
+        this.catalogDigest = $.catalogDigest;
+        this.pipelineResourceId = $.pipelineResourceId;
+        this.source = $.source;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRunRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> artifacts;
-        private @Nullable Output<String> catalogDigest;
-        private @Nullable Output<String> pipelineResourceId;
-        private @Nullable Output<PipelineRunSourcePropertiesArgs> source;
-        private @Nullable Output<PipelineRunTargetPropertiesArgs> target;
+        private PipelineRunRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRunRequestArgs();
         }
 
         public Builder(PipelineRunRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.catalogDigest = defaults.catalogDigest;
-    	      this.pipelineResourceId = defaults.pipelineResourceId;
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
+            $ = new PipelineRunRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(@Nullable Output<List<String>> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
-        public Builder artifacts(@Nullable List<String> artifacts) {
-            this.artifacts = Codegen.ofNullable(artifacts);
-            return this;
+
+        public Builder artifacts(List<String> artifacts) {
+            return artifacts(Output.of(artifacts));
         }
+
         public Builder artifacts(String... artifacts) {
             return artifacts(List.of(artifacts));
         }
+
         public Builder catalogDigest(@Nullable Output<String> catalogDigest) {
-            this.catalogDigest = catalogDigest;
+            $.catalogDigest = catalogDigest;
             return this;
         }
-        public Builder catalogDigest(@Nullable String catalogDigest) {
-            this.catalogDigest = Codegen.ofNullable(catalogDigest);
-            return this;
+
+        public Builder catalogDigest(String catalogDigest) {
+            return catalogDigest(Output.of(catalogDigest));
         }
+
         public Builder pipelineResourceId(@Nullable Output<String> pipelineResourceId) {
-            this.pipelineResourceId = pipelineResourceId;
+            $.pipelineResourceId = pipelineResourceId;
             return this;
         }
-        public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
-            this.pipelineResourceId = Codegen.ofNullable(pipelineResourceId);
-            return this;
+
+        public Builder pipelineResourceId(String pipelineResourceId) {
+            return pipelineResourceId(Output.of(pipelineResourceId));
         }
+
         public Builder source(@Nullable Output<PipelineRunSourcePropertiesArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable PipelineRunSourcePropertiesArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(PipelineRunSourcePropertiesArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder target(@Nullable Output<PipelineRunTargetPropertiesArgs> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable PipelineRunTargetPropertiesArgs target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public PipelineRunRequestArgs build() {
-            return new PipelineRunRequestArgs(artifacts, catalogDigest, pipelineResourceId, source, target);
+
+        public Builder target(PipelineRunTargetPropertiesArgs target) {
+            return target(Output.of(target));
+        }
+
+        public PipelineRunRequestArgs build() {
+            return $;
         }
     }
+
 }

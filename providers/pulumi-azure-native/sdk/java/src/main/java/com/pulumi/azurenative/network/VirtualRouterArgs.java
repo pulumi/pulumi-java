@@ -6,12 +6,12 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedGateway")
-      private final @Nullable Output<SubResourceArgs> hostedGateway;
+    private @Nullable Output<SubResourceArgs> hostedGateway;
 
-    public Output<SubResourceArgs> hostedGateway() {
-        return this.hostedGateway == null ? Codegen.empty() : this.hostedGateway;
+    public Optional<Output<SubResourceArgs>> hostedGateway() {
+        return Optional.ofNullable(this.hostedGateway);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedSubnet")
-      private final @Nullable Output<SubResourceArgs> hostedSubnet;
+    private @Nullable Output<SubResourceArgs> hostedSubnet;
 
-    public Output<SubResourceArgs> hostedSubnet() {
-        return this.hostedSubnet == null ? Codegen.empty() : this.hostedSubnet;
+    public Optional<Output<SubResourceArgs>> hostedSubnet() {
+        return Optional.ofNullable(this.hostedSubnet);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,10 +79,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualRouterAsn")
-      private final @Nullable Output<Double> virtualRouterAsn;
+    private @Nullable Output<Double> virtualRouterAsn;
 
-    public Output<Double> virtualRouterAsn() {
-        return this.virtualRouterAsn == null ? Codegen.empty() : this.virtualRouterAsn;
+    public Optional<Output<Double>> virtualRouterAsn() {
+        return Optional.ofNullable(this.virtualRouterAsn);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualRouterIps")
-      private final @Nullable Output<List<String>> virtualRouterIps;
+    private @Nullable Output<List<String>> virtualRouterIps;
 
-    public Output<List<String>> virtualRouterIps() {
-        return this.virtualRouterIps == null ? Codegen.empty() : this.virtualRouterIps;
+    public Optional<Output<List<String>>> virtualRouterIps() {
+        return Optional.ofNullable(this.virtualRouterIps);
     }
 
     /**
@@ -112,157 +112,133 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualRouterName")
-      private final @Nullable Output<String> virtualRouterName;
+    private @Nullable Output<String> virtualRouterName;
 
-    public Output<String> virtualRouterName() {
-        return this.virtualRouterName == null ? Codegen.empty() : this.virtualRouterName;
+    public Optional<Output<String>> virtualRouterName() {
+        return Optional.ofNullable(this.virtualRouterName);
     }
 
-    public VirtualRouterArgs(
-        @Nullable Output<SubResourceArgs> hostedGateway,
-        @Nullable Output<SubResourceArgs> hostedSubnet,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Double> virtualRouterAsn,
-        @Nullable Output<List<String>> virtualRouterIps,
-        @Nullable Output<String> virtualRouterName) {
-        this.hostedGateway = hostedGateway;
-        this.hostedSubnet = hostedSubnet;
-        this.id = id;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.virtualRouterAsn = virtualRouterAsn;
-        this.virtualRouterIps = virtualRouterIps;
-        this.virtualRouterName = virtualRouterName;
-    }
+    private VirtualRouterArgs() {}
 
-    private VirtualRouterArgs() {
-        this.hostedGateway = Codegen.empty();
-        this.hostedSubnet = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualRouterAsn = Codegen.empty();
-        this.virtualRouterIps = Codegen.empty();
-        this.virtualRouterName = Codegen.empty();
+    private VirtualRouterArgs(VirtualRouterArgs $) {
+        this.hostedGateway = $.hostedGateway;
+        this.hostedSubnet = $.hostedSubnet;
+        this.id = $.id;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.virtualRouterAsn = $.virtualRouterAsn;
+        this.virtualRouterIps = $.virtualRouterIps;
+        this.virtualRouterName = $.virtualRouterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualRouterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> hostedGateway;
-        private @Nullable Output<SubResourceArgs> hostedSubnet;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Double> virtualRouterAsn;
-        private @Nullable Output<List<String>> virtualRouterIps;
-        private @Nullable Output<String> virtualRouterName;
+        private VirtualRouterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualRouterArgs();
         }
 
         public Builder(VirtualRouterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostedGateway = defaults.hostedGateway;
-    	      this.hostedSubnet = defaults.hostedSubnet;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.virtualRouterAsn = defaults.virtualRouterAsn;
-    	      this.virtualRouterIps = defaults.virtualRouterIps;
-    	      this.virtualRouterName = defaults.virtualRouterName;
+            $ = new VirtualRouterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostedGateway(@Nullable Output<SubResourceArgs> hostedGateway) {
-            this.hostedGateway = hostedGateway;
+            $.hostedGateway = hostedGateway;
             return this;
         }
-        public Builder hostedGateway(@Nullable SubResourceArgs hostedGateway) {
-            this.hostedGateway = Codegen.ofNullable(hostedGateway);
-            return this;
+
+        public Builder hostedGateway(SubResourceArgs hostedGateway) {
+            return hostedGateway(Output.of(hostedGateway));
         }
+
         public Builder hostedSubnet(@Nullable Output<SubResourceArgs> hostedSubnet) {
-            this.hostedSubnet = hostedSubnet;
+            $.hostedSubnet = hostedSubnet;
             return this;
         }
-        public Builder hostedSubnet(@Nullable SubResourceArgs hostedSubnet) {
-            this.hostedSubnet = Codegen.ofNullable(hostedSubnet);
-            return this;
+
+        public Builder hostedSubnet(SubResourceArgs hostedSubnet) {
+            return hostedSubnet(Output.of(hostedSubnet));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
-            this.virtualRouterAsn = virtualRouterAsn;
+            $.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
-        public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
-            this.virtualRouterAsn = Codegen.ofNullable(virtualRouterAsn);
-            return this;
+
+        public Builder virtualRouterAsn(Double virtualRouterAsn) {
+            return virtualRouterAsn(Output.of(virtualRouterAsn));
         }
+
         public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
-            this.virtualRouterIps = virtualRouterIps;
+            $.virtualRouterIps = virtualRouterIps;
             return this;
         }
-        public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
-            this.virtualRouterIps = Codegen.ofNullable(virtualRouterIps);
-            return this;
+
+        public Builder virtualRouterIps(List<String> virtualRouterIps) {
+            return virtualRouterIps(Output.of(virtualRouterIps));
         }
+
         public Builder virtualRouterIps(String... virtualRouterIps) {
             return virtualRouterIps(List.of(virtualRouterIps));
         }
+
         public Builder virtualRouterName(@Nullable Output<String> virtualRouterName) {
-            this.virtualRouterName = virtualRouterName;
+            $.virtualRouterName = virtualRouterName;
             return this;
         }
-        public Builder virtualRouterName(@Nullable String virtualRouterName) {
-            this.virtualRouterName = Codegen.ofNullable(virtualRouterName);
-            return this;
-        }        public VirtualRouterArgs build() {
-            return new VirtualRouterArgs(hostedGateway, hostedSubnet, id, location, resourceGroupName, tags, virtualRouterAsn, virtualRouterIps, virtualRouterName);
+
+        public Builder virtualRouterName(String virtualRouterName) {
+            return virtualRouterName(Output.of(virtualRouterName));
+        }
+
+        public VirtualRouterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

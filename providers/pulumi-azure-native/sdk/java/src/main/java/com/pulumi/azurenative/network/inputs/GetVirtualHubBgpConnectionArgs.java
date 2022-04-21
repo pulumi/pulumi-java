@@ -17,7 +17,7 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final String virtualHubName;
+    private String virtualHubName;
 
     public String virtualHubName() {
         return this.virtualHubName;
     }
 
-    public GetVirtualHubBgpConnectionArgs(
-        String connectionName,
-        String resourceGroupName,
-        String virtualHubName) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private GetVirtualHubBgpConnectionArgs() {}
 
-    private GetVirtualHubBgpConnectionArgs() {
-        this.connectionName = null;
-        this.resourceGroupName = null;
-        this.virtualHubName = null;
+    private GetVirtualHubBgpConnectionArgs(GetVirtualHubBgpConnectionArgs $) {
+        this.connectionName = $.connectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualHubBgpConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private String resourceGroupName;
-        private String virtualHubName;
+        private GetVirtualHubBgpConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualHubBgpConnectionArgs();
         }
 
         public Builder(GetVirtualHubBgpConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new GetVirtualHubBgpConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
-        }        public GetVirtualHubBgpConnectionArgs build() {
-            return new GetVirtualHubBgpConnectionArgs(connectionName, resourceGroupName, virtualHubName);
+        }
+
+        public GetVirtualHubBgpConnectionArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

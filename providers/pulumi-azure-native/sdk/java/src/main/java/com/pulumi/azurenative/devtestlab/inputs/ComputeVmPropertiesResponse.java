@@ -26,10 +26,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataDiskIds")
-      private final @Nullable List<String> dataDiskIds;
+    private @Nullable List<String> dataDiskIds;
 
-    public List<String> dataDiskIds() {
-        return this.dataDiskIds == null ? List.of() : this.dataDiskIds;
+    public Optional<List<String>> dataDiskIds() {
+        return Optional.ofNullable(this.dataDiskIds);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable List<ComputeDataDiskResponse> dataDisks;
+    private @Nullable List<ComputeDataDiskResponse> dataDisks;
 
-    public List<ComputeDataDiskResponse> dataDisks() {
-        return this.dataDisks == null ? List.of() : this.dataDisks;
+    public Optional<List<ComputeDataDiskResponse>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable String networkInterfaceId;
+    private @Nullable String networkInterfaceId;
 
     public Optional<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="osDiskId")
-      private final @Nullable String osDiskId;
+    private @Nullable String osDiskId;
 
     public Optional<String> osDiskId() {
-        return this.osDiskId == null ? Optional.empty() : Optional.ofNullable(this.osDiskId);
+        return Optional.ofNullable(this.osDiskId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
+    private @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
 
-    public List<ComputeVmInstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<ComputeVmInstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -92,109 +92,92 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public ComputeVmPropertiesResponse(
-        @Nullable List<String> dataDiskIds,
-        @Nullable List<ComputeDataDiskResponse> dataDisks,
-        @Nullable String networkInterfaceId,
-        @Nullable String osDiskId,
-        @Nullable String osType,
-        @Nullable List<ComputeVmInstanceViewStatusResponse> statuses,
-        @Nullable String vmSize) {
-        this.dataDiskIds = dataDiskIds;
-        this.dataDisks = dataDisks;
-        this.networkInterfaceId = networkInterfaceId;
-        this.osDiskId = osDiskId;
-        this.osType = osType;
-        this.statuses = statuses;
-        this.vmSize = vmSize;
-    }
+    private ComputeVmPropertiesResponse() {}
 
-    private ComputeVmPropertiesResponse() {
-        this.dataDiskIds = List.of();
-        this.dataDisks = List.of();
-        this.networkInterfaceId = null;
-        this.osDiskId = null;
-        this.osType = null;
-        this.statuses = List.of();
-        this.vmSize = null;
+    private ComputeVmPropertiesResponse(ComputeVmPropertiesResponse $) {
+        this.dataDiskIds = $.dataDiskIds;
+        this.dataDisks = $.dataDisks;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.osDiskId = $.osDiskId;
+        this.osType = $.osType;
+        this.statuses = $.statuses;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeVmPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dataDiskIds;
-        private @Nullable List<ComputeDataDiskResponse> dataDisks;
-        private @Nullable String networkInterfaceId;
-        private @Nullable String osDiskId;
-        private @Nullable String osType;
-        private @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
-        private @Nullable String vmSize;
+        private ComputeVmPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeVmPropertiesResponse();
         }
 
         public Builder(ComputeVmPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDiskIds = defaults.dataDiskIds;
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.osDiskId = defaults.osDiskId;
-    	      this.osType = defaults.osType;
-    	      this.statuses = defaults.statuses;
-    	      this.vmSize = defaults.vmSize;
+            $ = new ComputeVmPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDiskIds(@Nullable List<String> dataDiskIds) {
-            this.dataDiskIds = dataDiskIds;
+            $.dataDiskIds = dataDiskIds;
             return this;
         }
+
         public Builder dataDiskIds(String... dataDiskIds) {
             return dataDiskIds(List.of(dataDiskIds));
         }
+
         public Builder dataDisks(@Nullable List<ComputeDataDiskResponse> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
+
         public Builder dataDisks(ComputeDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder osDiskId(@Nullable String osDiskId) {
-            this.osDiskId = osDiskId;
+            $.osDiskId = osDiskId;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder statuses(@Nullable List<ComputeVmInstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(ComputeVmInstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public ComputeVmPropertiesResponse build() {
-            return new ComputeVmPropertiesResponse(dataDiskIds, dataDisks, networkInterfaceId, osDiskId, osType, statuses, vmSize);
+        }
+
+        public ComputeVmPropertiesResponse build() {
+            return $;
         }
     }
+
 }

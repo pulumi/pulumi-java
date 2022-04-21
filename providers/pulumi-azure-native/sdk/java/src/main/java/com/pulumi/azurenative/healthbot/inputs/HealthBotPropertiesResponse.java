@@ -21,7 +21,7 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="botManagementPortalLink", required=true)
-      private final String botManagementPortalLink;
+    private String botManagementPortalLink;
 
     public String botManagementPortalLink() {
         return this.botManagementPortalLink;
@@ -32,55 +32,52 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public HealthBotPropertiesResponse(
-        String botManagementPortalLink,
-        String provisioningState) {
-        this.botManagementPortalLink = Objects.requireNonNull(botManagementPortalLink, "expected parameter 'botManagementPortalLink' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private HealthBotPropertiesResponse() {}
 
-    private HealthBotPropertiesResponse() {
-        this.botManagementPortalLink = null;
-        this.provisioningState = null;
+    private HealthBotPropertiesResponse(HealthBotPropertiesResponse $) {
+        this.botManagementPortalLink = $.botManagementPortalLink;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthBotPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String botManagementPortalLink;
-        private String provisioningState;
+        private HealthBotPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthBotPropertiesResponse();
         }
 
         public Builder(HealthBotPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botManagementPortalLink = defaults.botManagementPortalLink;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new HealthBotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder botManagementPortalLink(String botManagementPortalLink) {
-            this.botManagementPortalLink = Objects.requireNonNull(botManagementPortalLink);
+            $.botManagementPortalLink = botManagementPortalLink;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public HealthBotPropertiesResponse build() {
-            return new HealthBotPropertiesResponse(botManagementPortalLink, provisioningState);
+        }
+
+        public HealthBotPropertiesResponse build() {
+            $.botManagementPortalLink = Objects.requireNonNull($.botManagementPortalLink, "expected parameter 'botManagementPortalLink' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

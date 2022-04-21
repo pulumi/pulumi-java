@@ -26,10 +26,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable String accountKey;
+    private @Nullable String accountKey;
 
     public Optional<String> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Integer batchSize;
+    private @Nullable Integer batchSize;
 
     public Optional<Integer> batchSize() {
-        return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="columnsToRemove")
-      private final @Nullable List<String> columnsToRemove;
+    private @Nullable List<String> columnsToRemove;
 
-    public List<String> columnsToRemove() {
-        return this.columnsToRemove == null ? List.of() : this.columnsToRemove;
+    public Optional<List<String>> columnsToRemove() {
+        return Optional.ofNullable(this.columnsToRemove);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable String partitionKey;
+    private @Nullable String partitionKey;
 
     public Optional<String> partitionKey() {
-        return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="rowKey")
-      private final @Nullable String rowKey;
+    private @Nullable String rowKey;
 
     public Optional<String> rowKey() {
-        return this.rowKey == null ? Optional.empty() : Optional.ofNullable(this.rowKey);
+        return Optional.ofNullable(this.rowKey);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="table")
-      private final @Nullable String table;
+    private @Nullable String table;
 
     public Optional<String> table() {
-        return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -104,112 +104,91 @@ public final class AzureTableOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureTableOutputDataSourceResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName,
-        @Nullable Integer batchSize,
-        @Nullable List<String> columnsToRemove,
-        @Nullable String partitionKey,
-        @Nullable String rowKey,
-        @Nullable String table,
-        String type) {
-        this.accountKey = accountKey;
-        this.accountName = accountName;
-        this.batchSize = batchSize;
-        this.columnsToRemove = columnsToRemove;
-        this.partitionKey = partitionKey;
-        this.rowKey = rowKey;
-        this.table = table;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureTableOutputDataSourceResponse() {}
 
-    private AzureTableOutputDataSourceResponse() {
-        this.accountKey = null;
-        this.accountName = null;
-        this.batchSize = null;
-        this.columnsToRemove = List.of();
-        this.partitionKey = null;
-        this.rowKey = null;
-        this.table = null;
-        this.type = null;
+    private AzureTableOutputDataSourceResponse(AzureTableOutputDataSourceResponse $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.batchSize = $.batchSize;
+        this.columnsToRemove = $.columnsToRemove;
+        this.partitionKey = $.partitionKey;
+        this.rowKey = $.rowKey;
+        this.table = $.table;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureTableOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountKey;
-        private @Nullable String accountName;
-        private @Nullable Integer batchSize;
-        private @Nullable List<String> columnsToRemove;
-        private @Nullable String partitionKey;
-        private @Nullable String rowKey;
-        private @Nullable String table;
-        private String type;
+        private AzureTableOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureTableOutputDataSourceResponse();
         }
 
         public Builder(AzureTableOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.batchSize = defaults.batchSize;
-    	      this.columnsToRemove = defaults.columnsToRemove;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.rowKey = defaults.rowKey;
-    	      this.table = defaults.table;
-    	      this.type = defaults.type;
+            $ = new AzureTableOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
+
         public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
-            this.columnsToRemove = columnsToRemove;
+            $.columnsToRemove = columnsToRemove;
             return this;
         }
+
         public Builder columnsToRemove(String... columnsToRemove) {
             return columnsToRemove(List.of(columnsToRemove));
         }
+
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
+
         public Builder rowKey(@Nullable String rowKey) {
-            this.rowKey = rowKey;
+            $.rowKey = rowKey;
             return this;
         }
+
         public Builder table(@Nullable String table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureTableOutputDataSourceResponse build() {
-            return new AzureTableOutputDataSourceResponse(accountKey, accountName, batchSize, columnsToRemove, partitionKey, rowKey, table, type);
+        }
+
+        public AzureTableOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

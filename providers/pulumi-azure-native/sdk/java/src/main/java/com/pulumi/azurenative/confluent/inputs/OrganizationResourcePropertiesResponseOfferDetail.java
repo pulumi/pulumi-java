@@ -23,10 +23,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
      * 
      */
     @Import(name="planId")
-      private final @Nullable String planId;
+    private @Nullable String planId;
 
     public Optional<String> planId() {
-        return this.planId == null ? Optional.empty() : Optional.ofNullable(this.planId);
+        return Optional.ofNullable(this.planId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
      * 
      */
     @Import(name="planName")
-      private final @Nullable String planName;
+    private @Nullable String planName;
 
     public Optional<String> planName() {
-        return this.planName == null ? Optional.empty() : Optional.ofNullable(this.planName);
+        return Optional.ofNullable(this.planName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
      * 
      */
     @Import(name="publisherId")
-      private final @Nullable String publisherId;
+    private @Nullable String publisherId;
 
     public Optional<String> publisherId() {
-        return this.publisherId == null ? Optional.empty() : Optional.ofNullable(this.publisherId);
+        return Optional.ofNullable(this.publisherId);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -78,91 +78,75 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
      * 
      */
     @Import(name="termUnit")
-      private final @Nullable String termUnit;
+    private @Nullable String termUnit;
 
     public Optional<String> termUnit() {
-        return this.termUnit == null ? Optional.empty() : Optional.ofNullable(this.termUnit);
+        return Optional.ofNullable(this.termUnit);
     }
 
-    public OrganizationResourcePropertiesResponseOfferDetail(
-        @Nullable String id,
-        @Nullable String planId,
-        @Nullable String planName,
-        @Nullable String publisherId,
-        String status,
-        @Nullable String termUnit) {
-        this.id = id;
-        this.planId = planId;
-        this.planName = planName;
-        this.publisherId = publisherId;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.termUnit = termUnit;
-    }
+    private OrganizationResourcePropertiesResponseOfferDetail() {}
 
-    private OrganizationResourcePropertiesResponseOfferDetail() {
-        this.id = null;
-        this.planId = null;
-        this.planName = null;
-        this.publisherId = null;
-        this.status = null;
-        this.termUnit = null;
+    private OrganizationResourcePropertiesResponseOfferDetail(OrganizationResourcePropertiesResponseOfferDetail $) {
+        this.id = $.id;
+        this.planId = $.planId;
+        this.planName = $.planName;
+        this.publisherId = $.publisherId;
+        this.status = $.status;
+        this.termUnit = $.termUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationResourcePropertiesResponseOfferDetail defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String planId;
-        private @Nullable String planName;
-        private @Nullable String publisherId;
-        private String status;
-        private @Nullable String termUnit;
+        private OrganizationResourcePropertiesResponseOfferDetail $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationResourcePropertiesResponseOfferDetail();
         }
 
         public Builder(OrganizationResourcePropertiesResponseOfferDetail defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.planId = defaults.planId;
-    	      this.planName = defaults.planName;
-    	      this.publisherId = defaults.publisherId;
-    	      this.status = defaults.status;
-    	      this.termUnit = defaults.termUnit;
+            $ = new OrganizationResourcePropertiesResponseOfferDetail(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder planId(@Nullable String planId) {
-            this.planId = planId;
+            $.planId = planId;
             return this;
         }
+
         public Builder planName(@Nullable String planName) {
-            this.planName = planName;
+            $.planName = planName;
             return this;
         }
+
         public Builder publisherId(@Nullable String publisherId) {
-            this.publisherId = publisherId;
+            $.publisherId = publisherId;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder termUnit(@Nullable String termUnit) {
-            this.termUnit = termUnit;
+            $.termUnit = termUnit;
             return this;
-        }        public OrganizationResourcePropertiesResponseOfferDetail build() {
-            return new OrganizationResourcePropertiesResponseOfferDetail(id, planId, planName, publisherId, status, termUnit);
+        }
+
+        public OrganizationResourcePropertiesResponseOfferDetail build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

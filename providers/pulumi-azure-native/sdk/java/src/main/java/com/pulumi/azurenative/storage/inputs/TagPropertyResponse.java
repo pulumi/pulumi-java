@@ -21,7 +21,7 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectIdentifier", required=true)
-      private final String objectIdentifier;
+    private String objectIdentifier;
 
     public String objectIdentifier() {
         return this.objectIdentifier;
@@ -32,7 +32,7 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
@@ -43,7 +43,7 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -54,7 +54,7 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
@@ -65,82 +65,73 @@ public final class TagPropertyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="upn", required=true)
-      private final String upn;
+    private String upn;
 
     public String upn() {
         return this.upn;
     }
 
-    public TagPropertyResponse(
-        String objectIdentifier,
-        String tag,
-        String tenantId,
-        String timestamp,
-        String upn) {
-        this.objectIdentifier = Objects.requireNonNull(objectIdentifier, "expected parameter 'objectIdentifier' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.upn = Objects.requireNonNull(upn, "expected parameter 'upn' to be non-null");
-    }
+    private TagPropertyResponse() {}
 
-    private TagPropertyResponse() {
-        this.objectIdentifier = null;
-        this.tag = null;
-        this.tenantId = null;
-        this.timestamp = null;
-        this.upn = null;
+    private TagPropertyResponse(TagPropertyResponse $) {
+        this.objectIdentifier = $.objectIdentifier;
+        this.tag = $.tag;
+        this.tenantId = $.tenantId;
+        this.timestamp = $.timestamp;
+        this.upn = $.upn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectIdentifier;
-        private String tag;
-        private String tenantId;
-        private String timestamp;
-        private String upn;
+        private TagPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagPropertyResponse();
         }
 
         public Builder(TagPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdentifier = defaults.objectIdentifier;
-    	      this.tag = defaults.tag;
-    	      this.tenantId = defaults.tenantId;
-    	      this.timestamp = defaults.timestamp;
-    	      this.upn = defaults.upn;
+            $ = new TagPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdentifier(String objectIdentifier) {
-            this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
+            $.objectIdentifier = objectIdentifier;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder upn(String upn) {
-            this.upn = Objects.requireNonNull(upn);
+            $.upn = upn;
             return this;
-        }        public TagPropertyResponse build() {
-            return new TagPropertyResponse(objectIdentifier, tag, tenantId, timestamp, upn);
+        }
+
+        public TagPropertyResponse build() {
+            $.objectIdentifier = Objects.requireNonNull($.objectIdentifier, "expected parameter 'objectIdentifier' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.upn = Objects.requireNonNull($.upn, "expected parameter 'upn' to be non-null");
+            return $;
         }
     }
+
 }

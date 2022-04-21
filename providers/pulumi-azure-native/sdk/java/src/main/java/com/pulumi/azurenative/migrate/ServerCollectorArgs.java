@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate;
 import com.pulumi.azurenative.migrate.inputs.CollectorPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ServerCollectorArgs extends com.pulumi.resources.ResourceArgs
     public static final ServerCollectorArgs Empty = new ServerCollectorArgs();
 
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -28,17 +28,17 @@ public final class ServerCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
     }
 
     @Import(name="properties")
-      private final @Nullable Output<CollectorPropertiesArgs> properties;
+    private @Nullable Output<CollectorPropertiesArgs> properties;
 
-    public Output<CollectorPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CollectorPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ServerCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -57,102 +57,90 @@ public final class ServerCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serverCollectorName")
-      private final @Nullable Output<String> serverCollectorName;
+    private @Nullable Output<String> serverCollectorName;
 
-    public Output<String> serverCollectorName() {
-        return this.serverCollectorName == null ? Codegen.empty() : this.serverCollectorName;
+    public Optional<Output<String>> serverCollectorName() {
+        return Optional.ofNullable(this.serverCollectorName);
     }
 
-    public ServerCollectorArgs(
-        @Nullable Output<String> eTag,
-        Output<String> projectName,
-        @Nullable Output<CollectorPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serverCollectorName) {
-        this.eTag = eTag;
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverCollectorName = serverCollectorName;
-    }
+    private ServerCollectorArgs() {}
 
-    private ServerCollectorArgs() {
-        this.eTag = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverCollectorName = Codegen.empty();
+    private ServerCollectorArgs(ServerCollectorArgs $) {
+        this.eTag = $.eTag;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverCollectorName = $.serverCollectorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private Output<String> projectName;
-        private @Nullable Output<CollectorPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serverCollectorName;
+        private ServerCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCollectorArgs();
         }
 
         public Builder(ServerCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverCollectorName = defaults.serverCollectorName;
+            $ = new ServerCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(@Nullable Output<CollectorPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CollectorPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(CollectorPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverCollectorName(@Nullable Output<String> serverCollectorName) {
-            this.serverCollectorName = serverCollectorName;
+            $.serverCollectorName = serverCollectorName;
             return this;
         }
-        public Builder serverCollectorName(@Nullable String serverCollectorName) {
-            this.serverCollectorName = Codegen.ofNullable(serverCollectorName);
-            return this;
-        }        public ServerCollectorArgs build() {
-            return new ServerCollectorArgs(eTag, projectName, properties, resourceGroupName, serverCollectorName);
+
+        public Builder serverCollectorName(String serverCollectorName) {
+            return serverCollectorName(Output.of(serverCollectorName));
+        }
+
+        public ServerCollectorArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

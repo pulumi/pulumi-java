@@ -24,10 +24,10 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bitrateKbps")
-      private final @Nullable String bitrateKbps;
+    private @Nullable String bitrateKbps;
 
     public Optional<String> bitrateKbps() {
-        return this.bitrateKbps == null ? Optional.empty() : Optional.ofNullable(this.bitrateKbps);
+        return Optional.ofNullable(this.bitrateKbps);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AudioEncoderAacResponse(
-        @Nullable String bitrateKbps,
-        String type) {
-        this.bitrateKbps = bitrateKbps;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AudioEncoderAacResponse() {}
 
-    private AudioEncoderAacResponse() {
-        this.bitrateKbps = null;
-        this.type = null;
+    private AudioEncoderAacResponse(AudioEncoderAacResponse $) {
+        this.bitrateKbps = $.bitrateKbps;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioEncoderAacResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bitrateKbps;
-        private String type;
+        private AudioEncoderAacResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioEncoderAacResponse();
         }
 
         public Builder(AudioEncoderAacResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrateKbps = defaults.bitrateKbps;
-    	      this.type = defaults.type;
+            $ = new AudioEncoderAacResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = bitrateKbps;
+            $.bitrateKbps = bitrateKbps;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AudioEncoderAacResponse build() {
-            return new AudioEncoderAacResponse(bitrateKbps, type);
+        }
+
+        public AudioEncoderAacResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

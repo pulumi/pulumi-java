@@ -11,6 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final Output<String> backupManagementType;
+    private Output<String> backupManagementType;
 
     public Output<String> backupManagementType() {
         return this.backupManagementType;
@@ -39,10 +40,10 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="fabricName")
-      private final @Nullable Output<String> fabricName;
+    private @Nullable Output<String> fabricName;
 
-    public Output<String> fabricName() {
-        return this.fabricName == null ? Codegen.empty() : this.fabricName;
+    public Optional<Output<String>> fabricName() {
+        return Optional.ofNullable(this.fabricName);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Output<Integer> protectedItemsCount;
+    private @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
+    public Optional<Output<Integer>> protectedItemsCount() {
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subProtectionPolicy")
-      private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+    private @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
-    public Output<List<SubProtectionPolicyArgs>> subProtectionPolicy() {
-        return this.subProtectionPolicy == null ? Codegen.empty() : this.subProtectionPolicy;
+    public Optional<Output<List<SubProtectionPolicyArgs>>> subProtectionPolicy() {
+        return Optional.ofNullable(this.subProtectionPolicy);
     }
 
     /**
@@ -72,105 +73,93 @@ public final class GenericProtectionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public GenericProtectionPolicyArgs(
-        Output<String> backupManagementType,
-        @Nullable Output<String> fabricName,
-        @Nullable Output<Integer> protectedItemsCount,
-        @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy,
-        @Nullable Output<String> timeZone) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
-        this.fabricName = fabricName;
-        this.protectedItemsCount = protectedItemsCount;
-        this.subProtectionPolicy = subProtectionPolicy;
-        this.timeZone = timeZone;
-    }
+    private GenericProtectionPolicyArgs() {}
 
-    private GenericProtectionPolicyArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.fabricName = Codegen.empty();
-        this.protectedItemsCount = Codegen.empty();
-        this.subProtectionPolicy = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private GenericProtectionPolicyArgs(GenericProtectionPolicyArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.fabricName = $.fabricName;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.subProtectionPolicy = $.subProtectionPolicy;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupManagementType;
-        private @Nullable Output<String> fabricName;
-        private @Nullable Output<Integer> protectedItemsCount;
-        private @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
-        private @Nullable Output<String> timeZone;
+        private GenericProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericProtectionPolicyArgs();
         }
 
         public Builder(GenericProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.fabricName = defaults.fabricName;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.subProtectionPolicy = defaults.subProtectionPolicy;
-    	      this.timeZone = defaults.timeZone;
+            $ = new GenericProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(Output<String> backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
-            return this;
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder fabricName(@Nullable Output<String> fabricName) {
-            this.fabricName = fabricName;
+            $.fabricName = fabricName;
             return this;
         }
-        public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Codegen.ofNullable(fabricName);
-            return this;
+
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
-        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
-            return this;
+
+        public Builder protectedItemsCount(Integer protectedItemsCount) {
+            return protectedItemsCount(Output.of(protectedItemsCount));
         }
+
         public Builder subProtectionPolicy(@Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
-            this.subProtectionPolicy = subProtectionPolicy;
+            $.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
-        public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
-            this.subProtectionPolicy = Codegen.ofNullable(subProtectionPolicy);
-            return this;
+
+        public Builder subProtectionPolicy(List<SubProtectionPolicyArgs> subProtectionPolicy) {
+            return subProtectionPolicy(Output.of(subProtectionPolicy));
         }
+
         public Builder subProtectionPolicy(SubProtectionPolicyArgs... subProtectionPolicy) {
             return subProtectionPolicy(List.of(subProtectionPolicy));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public GenericProtectionPolicyArgs build() {
-            return new GenericProtectionPolicyArgs(backupManagementType, fabricName, protectedItemsCount, subProtectionPolicy, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public GenericProtectionPolicyArgs build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").output().arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

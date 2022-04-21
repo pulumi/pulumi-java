@@ -9,11 +9,11 @@ import com.pulumi.azurenative.sql.inputs.SyncGroupSchemaArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conflictLoggingRetentionInDays")
-      private final @Nullable Output<Integer> conflictLoggingRetentionInDays;
+    private @Nullable Output<Integer> conflictLoggingRetentionInDays;
 
-    public Output<Integer> conflictLoggingRetentionInDays() {
-        return this.conflictLoggingRetentionInDays == null ? Codegen.empty() : this.conflictLoggingRetentionInDays;
+    public Optional<Output<Integer>> conflictLoggingRetentionInDays() {
+        return Optional.ofNullable(this.conflictLoggingRetentionInDays);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conflictResolutionPolicy")
-      private final @Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
+    private @Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
 
-    public Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy() {
-        return this.conflictResolutionPolicy == null ? Codegen.empty() : this.conflictResolutionPolicy;
+    public Optional<Output<Either<String,SyncConflictResolutionPolicy>>> conflictResolutionPolicy() {
+        return Optional.ofNullable(this.conflictResolutionPolicy);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -59,10 +59,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableConflictLogging")
-      private final @Nullable Output<Boolean> enableConflictLogging;
+    private @Nullable Output<Boolean> enableConflictLogging;
 
-    public Output<Boolean> enableConflictLogging() {
-        return this.enableConflictLogging == null ? Codegen.empty() : this.enableConflictLogging;
+    public Optional<Output<Boolean>> enableConflictLogging() {
+        return Optional.ofNullable(this.enableConflictLogging);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubDatabasePassword")
-      private final @Nullable Output<String> hubDatabasePassword;
+    private @Nullable Output<String> hubDatabasePassword;
 
-    public Output<String> hubDatabasePassword() {
-        return this.hubDatabasePassword == null ? Codegen.empty() : this.hubDatabasePassword;
+    public Optional<Output<String>> hubDatabasePassword() {
+        return Optional.ofNullable(this.hubDatabasePassword);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubDatabaseUserName")
-      private final @Nullable Output<String> hubDatabaseUserName;
+    private @Nullable Output<String> hubDatabaseUserName;
 
-    public Output<String> hubDatabaseUserName() {
-        return this.hubDatabaseUserName == null ? Codegen.empty() : this.hubDatabaseUserName;
+    public Optional<Output<String>> hubDatabaseUserName() {
+        return Optional.ofNullable(this.hubDatabaseUserName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -114,10 +114,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<SyncGroupSchemaArgs> schema;
+    private @Nullable Output<SyncGroupSchemaArgs> schema;
 
-    public Output<SyncGroupSchemaArgs> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<SyncGroupSchemaArgs>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -136,10 +136,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncDatabaseId")
-      private final @Nullable Output<String> syncDatabaseId;
+    private @Nullable Output<String> syncDatabaseId;
 
-    public Output<String> syncDatabaseId() {
-        return this.syncDatabaseId == null ? Codegen.empty() : this.syncDatabaseId;
+    public Optional<Output<String>> syncDatabaseId() {
+        return Optional.ofNullable(this.syncDatabaseId);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncGroupName")
-      private final @Nullable Output<String> syncGroupName;
+    private @Nullable Output<String> syncGroupName;
 
-    public Output<String> syncGroupName() {
-        return this.syncGroupName == null ? Codegen.empty() : this.syncGroupName;
+    public Optional<Output<String>> syncGroupName() {
+        return Optional.ofNullable(this.syncGroupName);
     }
 
     /**
@@ -169,219 +169,181 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usePrivateLinkConnection")
-      private final @Nullable Output<Boolean> usePrivateLinkConnection;
+    private @Nullable Output<Boolean> usePrivateLinkConnection;
 
-    public Output<Boolean> usePrivateLinkConnection() {
-        return this.usePrivateLinkConnection == null ? Codegen.empty() : this.usePrivateLinkConnection;
+    public Optional<Output<Boolean>> usePrivateLinkConnection() {
+        return Optional.ofNullable(this.usePrivateLinkConnection);
     }
 
-    public SyncGroupArgs(
-        @Nullable Output<Integer> conflictLoggingRetentionInDays,
-        @Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy,
-        Output<String> databaseName,
-        @Nullable Output<Boolean> enableConflictLogging,
-        @Nullable Output<String> hubDatabasePassword,
-        @Nullable Output<String> hubDatabaseUserName,
-        @Nullable Output<Integer> interval,
-        Output<String> resourceGroupName,
-        @Nullable Output<SyncGroupSchemaArgs> schema,
-        Output<String> serverName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<String> syncDatabaseId,
-        @Nullable Output<String> syncGroupName,
-        @Nullable Output<Boolean> usePrivateLinkConnection) {
-        this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
-        this.conflictResolutionPolicy = conflictResolutionPolicy;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.enableConflictLogging = enableConflictLogging;
-        this.hubDatabasePassword = hubDatabasePassword;
-        this.hubDatabaseUserName = hubDatabaseUserName;
-        this.interval = interval;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schema = schema;
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.sku = sku;
-        this.syncDatabaseId = syncDatabaseId;
-        this.syncGroupName = syncGroupName;
-        this.usePrivateLinkConnection = usePrivateLinkConnection;
-    }
+    private SyncGroupArgs() {}
 
-    private SyncGroupArgs() {
-        this.conflictLoggingRetentionInDays = Codegen.empty();
-        this.conflictResolutionPolicy = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.enableConflictLogging = Codegen.empty();
-        this.hubDatabasePassword = Codegen.empty();
-        this.hubDatabaseUserName = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.syncDatabaseId = Codegen.empty();
-        this.syncGroupName = Codegen.empty();
-        this.usePrivateLinkConnection = Codegen.empty();
+    private SyncGroupArgs(SyncGroupArgs $) {
+        this.conflictLoggingRetentionInDays = $.conflictLoggingRetentionInDays;
+        this.conflictResolutionPolicy = $.conflictResolutionPolicy;
+        this.databaseName = $.databaseName;
+        this.enableConflictLogging = $.enableConflictLogging;
+        this.hubDatabasePassword = $.hubDatabasePassword;
+        this.hubDatabaseUserName = $.hubDatabaseUserName;
+        this.interval = $.interval;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schema = $.schema;
+        this.serverName = $.serverName;
+        this.sku = $.sku;
+        this.syncDatabaseId = $.syncDatabaseId;
+        this.syncGroupName = $.syncGroupName;
+        this.usePrivateLinkConnection = $.usePrivateLinkConnection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> conflictLoggingRetentionInDays;
-        private @Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
-        private Output<String> databaseName;
-        private @Nullable Output<Boolean> enableConflictLogging;
-        private @Nullable Output<String> hubDatabasePassword;
-        private @Nullable Output<String> hubDatabaseUserName;
-        private @Nullable Output<Integer> interval;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SyncGroupSchemaArgs> schema;
-        private Output<String> serverName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<String> syncDatabaseId;
-        private @Nullable Output<String> syncGroupName;
-        private @Nullable Output<Boolean> usePrivateLinkConnection;
+        private SyncGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupArgs();
         }
 
         public Builder(SyncGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conflictLoggingRetentionInDays = defaults.conflictLoggingRetentionInDays;
-    	      this.conflictResolutionPolicy = defaults.conflictResolutionPolicy;
-    	      this.databaseName = defaults.databaseName;
-    	      this.enableConflictLogging = defaults.enableConflictLogging;
-    	      this.hubDatabasePassword = defaults.hubDatabasePassword;
-    	      this.hubDatabaseUserName = defaults.hubDatabaseUserName;
-    	      this.interval = defaults.interval;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schema = defaults.schema;
-    	      this.serverName = defaults.serverName;
-    	      this.sku = defaults.sku;
-    	      this.syncDatabaseId = defaults.syncDatabaseId;
-    	      this.syncGroupName = defaults.syncGroupName;
-    	      this.usePrivateLinkConnection = defaults.usePrivateLinkConnection;
+            $ = new SyncGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conflictLoggingRetentionInDays(@Nullable Output<Integer> conflictLoggingRetentionInDays) {
-            this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
+            $.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
             return this;
         }
-        public Builder conflictLoggingRetentionInDays(@Nullable Integer conflictLoggingRetentionInDays) {
-            this.conflictLoggingRetentionInDays = Codegen.ofNullable(conflictLoggingRetentionInDays);
-            return this;
+
+        public Builder conflictLoggingRetentionInDays(Integer conflictLoggingRetentionInDays) {
+            return conflictLoggingRetentionInDays(Output.of(conflictLoggingRetentionInDays));
         }
+
         public Builder conflictResolutionPolicy(@Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy) {
-            this.conflictResolutionPolicy = conflictResolutionPolicy;
+            $.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
-        public Builder conflictResolutionPolicy(@Nullable Either<String,SyncConflictResolutionPolicy> conflictResolutionPolicy) {
-            this.conflictResolutionPolicy = Codegen.ofNullable(conflictResolutionPolicy);
-            return this;
+
+        public Builder conflictResolutionPolicy(Either<String,SyncConflictResolutionPolicy> conflictResolutionPolicy) {
+            return conflictResolutionPolicy(Output.of(conflictResolutionPolicy));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder enableConflictLogging(@Nullable Output<Boolean> enableConflictLogging) {
-            this.enableConflictLogging = enableConflictLogging;
+            $.enableConflictLogging = enableConflictLogging;
             return this;
         }
-        public Builder enableConflictLogging(@Nullable Boolean enableConflictLogging) {
-            this.enableConflictLogging = Codegen.ofNullable(enableConflictLogging);
-            return this;
+
+        public Builder enableConflictLogging(Boolean enableConflictLogging) {
+            return enableConflictLogging(Output.of(enableConflictLogging));
         }
+
         public Builder hubDatabasePassword(@Nullable Output<String> hubDatabasePassword) {
-            this.hubDatabasePassword = hubDatabasePassword;
+            $.hubDatabasePassword = hubDatabasePassword;
             return this;
         }
-        public Builder hubDatabasePassword(@Nullable String hubDatabasePassword) {
-            this.hubDatabasePassword = Codegen.ofNullable(hubDatabasePassword);
-            return this;
+
+        public Builder hubDatabasePassword(String hubDatabasePassword) {
+            return hubDatabasePassword(Output.of(hubDatabasePassword));
         }
+
         public Builder hubDatabaseUserName(@Nullable Output<String> hubDatabaseUserName) {
-            this.hubDatabaseUserName = hubDatabaseUserName;
+            $.hubDatabaseUserName = hubDatabaseUserName;
             return this;
         }
-        public Builder hubDatabaseUserName(@Nullable String hubDatabaseUserName) {
-            this.hubDatabaseUserName = Codegen.ofNullable(hubDatabaseUserName);
-            return this;
+
+        public Builder hubDatabaseUserName(String hubDatabaseUserName) {
+            return hubDatabaseUserName(Output.of(hubDatabaseUserName));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schema(@Nullable Output<SyncGroupSchemaArgs> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable SyncGroupSchemaArgs schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(SyncGroupSchemaArgs schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
-            this.syncDatabaseId = syncDatabaseId;
+            $.syncDatabaseId = syncDatabaseId;
             return this;
         }
-        public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
-            this.syncDatabaseId = Codegen.ofNullable(syncDatabaseId);
-            return this;
+
+        public Builder syncDatabaseId(String syncDatabaseId) {
+            return syncDatabaseId(Output.of(syncDatabaseId));
         }
+
         public Builder syncGroupName(@Nullable Output<String> syncGroupName) {
-            this.syncGroupName = syncGroupName;
+            $.syncGroupName = syncGroupName;
             return this;
         }
-        public Builder syncGroupName(@Nullable String syncGroupName) {
-            this.syncGroupName = Codegen.ofNullable(syncGroupName);
-            return this;
+
+        public Builder syncGroupName(String syncGroupName) {
+            return syncGroupName(Output.of(syncGroupName));
         }
+
         public Builder usePrivateLinkConnection(@Nullable Output<Boolean> usePrivateLinkConnection) {
-            this.usePrivateLinkConnection = usePrivateLinkConnection;
+            $.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
-            this.usePrivateLinkConnection = Codegen.ofNullable(usePrivateLinkConnection);
-            return this;
-        }        public SyncGroupArgs build() {
-            return new SyncGroupArgs(conflictLoggingRetentionInDays, conflictResolutionPolicy, databaseName, enableConflictLogging, hubDatabasePassword, hubDatabaseUserName, interval, resourceGroupName, schema, serverName, sku, syncDatabaseId, syncGroupName, usePrivateLinkConnection);
+
+        public Builder usePrivateLinkConnection(Boolean usePrivateLinkConnection) {
+            return usePrivateLinkConnection(Output.of(usePrivateLinkConnection));
+        }
+
+        public SyncGroupArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

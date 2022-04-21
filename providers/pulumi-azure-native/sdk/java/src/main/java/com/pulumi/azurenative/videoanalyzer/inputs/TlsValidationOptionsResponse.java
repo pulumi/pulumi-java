@@ -23,10 +23,10 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ignoreHostname")
-      private final @Nullable String ignoreHostname;
+    private @Nullable String ignoreHostname;
 
     public Optional<String> ignoreHostname() {
-        return this.ignoreHostname == null ? Optional.empty() : Optional.ofNullable(this.ignoreHostname);
+        return Optional.ofNullable(this.ignoreHostname);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ignoreSignature")
-      private final @Nullable String ignoreSignature;
+    private @Nullable String ignoreSignature;
 
     public Optional<String> ignoreSignature() {
-        return this.ignoreSignature == null ? Optional.empty() : Optional.ofNullable(this.ignoreSignature);
+        return Optional.ofNullable(this.ignoreSignature);
     }
 
-    public TlsValidationOptionsResponse(
-        @Nullable String ignoreHostname,
-        @Nullable String ignoreSignature) {
-        this.ignoreHostname = ignoreHostname;
-        this.ignoreSignature = ignoreSignature;
-    }
+    private TlsValidationOptionsResponse() {}
 
-    private TlsValidationOptionsResponse() {
-        this.ignoreHostname = null;
-        this.ignoreSignature = null;
+    private TlsValidationOptionsResponse(TlsValidationOptionsResponse $) {
+        this.ignoreHostname = $.ignoreHostname;
+        this.ignoreSignature = $.ignoreSignature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsValidationOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ignoreHostname;
-        private @Nullable String ignoreSignature;
+        private TlsValidationOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsValidationOptionsResponse();
         }
 
         public Builder(TlsValidationOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreHostname = defaults.ignoreHostname;
-    	      this.ignoreSignature = defaults.ignoreSignature;
+            $ = new TlsValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreHostname(@Nullable String ignoreHostname) {
-            this.ignoreHostname = ignoreHostname;
+            $.ignoreHostname = ignoreHostname;
             return this;
         }
+
         public Builder ignoreSignature(@Nullable String ignoreSignature) {
-            this.ignoreSignature = ignoreSignature;
+            $.ignoreSignature = ignoreSignature;
             return this;
-        }        public TlsValidationOptionsResponse build() {
-            return new TlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
+        }
+
+        public TlsValidationOptionsResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.search.inputs;
 import com.pulumi.azurenative.search.enums.IdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<IdentityType> type;
+    private Output<IdentityType> type;
 
     public Output<IdentityType> type() {
         return this.type;
     }
 
-    public IdentityArgs(Output<IdentityType> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IdentityArgs() {}
 
-    private IdentityArgs() {
-        this.type = Codegen.empty();
+    private IdentityArgs(IdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<IdentityType> type;
+        private IdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityArgs();
         }
 
         public Builder(IdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<IdentityType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(IdentityType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public IdentityArgs build() {
-            return new IdentityArgs(type);
+            return type(Output.of(type));
+        }
+
+        public IdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

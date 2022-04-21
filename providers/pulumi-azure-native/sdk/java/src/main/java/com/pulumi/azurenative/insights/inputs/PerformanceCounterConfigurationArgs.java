@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class PerformanceCounterConfigurationArgs extends com.pulumi.resour
     public static final PerformanceCounterConfigurationArgs Empty = new PerformanceCounterConfigurationArgs();
 
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="samplingPeriod", required=true)
-      private final Output<String> samplingPeriod;
+    private Output<String> samplingPeriod;
 
     public Output<String> samplingPeriod() {
         return this.samplingPeriod;
     }
 
-    public PerformanceCounterConfigurationArgs(
-        @Nullable Output<String> instance,
-        Output<String> name,
-        Output<String> samplingPeriod) {
-        this.instance = instance;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.samplingPeriod = Objects.requireNonNull(samplingPeriod, "expected parameter 'samplingPeriod' to be non-null");
-    }
+    private PerformanceCounterConfigurationArgs() {}
 
-    private PerformanceCounterConfigurationArgs() {
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.samplingPeriod = Codegen.empty();
+    private PerformanceCounterConfigurationArgs(PerformanceCounterConfigurationArgs $) {
+        this.instance = $.instance;
+        this.name = $.name;
+        this.samplingPeriod = $.samplingPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerformanceCounterConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instance;
-        private Output<String> name;
-        private Output<String> samplingPeriod;
+        private PerformanceCounterConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerformanceCounterConfigurationArgs();
         }
 
         public Builder(PerformanceCounterConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.samplingPeriod = defaults.samplingPeriod;
+            $ = new PerformanceCounterConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder samplingPeriod(Output<String> samplingPeriod) {
-            this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
+            $.samplingPeriod = samplingPeriod;
             return this;
         }
+
         public Builder samplingPeriod(String samplingPeriod) {
-            this.samplingPeriod = Output.of(Objects.requireNonNull(samplingPeriod));
-            return this;
-        }        public PerformanceCounterConfigurationArgs build() {
-            return new PerformanceCounterConfigurationArgs(instance, name, samplingPeriod);
+            return samplingPeriod(Output.of(samplingPeriod));
+        }
+
+        public PerformanceCounterConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.samplingPeriod = Objects.requireNonNull($.samplingPeriod, "expected parameter 'samplingPeriod' to be non-null");
+            return $;
         }
     }
+
 }

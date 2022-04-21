@@ -17,7 +17,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final String gatewayName;
+    private String gatewayName;
 
     public String gatewayName() {
         return this.gatewayName;
@@ -28,55 +28,52 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetP2sVpnGatewayP2sVpnConnectionHealthArgs(
-        String gatewayName,
-        String resourceGroupName) {
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetP2sVpnGatewayP2sVpnConnectionHealthArgs() {}
 
-    private GetP2sVpnGatewayP2sVpnConnectionHealthArgs() {
-        this.gatewayName = null;
-        this.resourceGroupName = null;
+    private GetP2sVpnGatewayP2sVpnConnectionHealthArgs(GetP2sVpnGatewayP2sVpnConnectionHealthArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetP2sVpnGatewayP2sVpnConnectionHealthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayName;
-        private String resourceGroupName;
+        private GetP2sVpnGatewayP2sVpnConnectionHealthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetP2sVpnGatewayP2sVpnConnectionHealthArgs();
         }
 
         public Builder(GetP2sVpnGatewayP2sVpnConnectionHealthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetP2sVpnGatewayP2sVpnConnectionHealthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetP2sVpnGatewayP2sVpnConnectionHealthArgs build() {
-            return new GetP2sVpnGatewayP2sVpnConnectionHealthArgs(gatewayName, resourceGroupName);
+        }
+
+        public GetP2sVpnGatewayP2sVpnConnectionHealthArgs build() {
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

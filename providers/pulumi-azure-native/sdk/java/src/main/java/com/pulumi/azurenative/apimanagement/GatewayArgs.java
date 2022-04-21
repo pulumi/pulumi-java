@@ -6,9 +6,9 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.inputs.ResourceLocationDataContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable Output<String> gatewayId;
+    private @Nullable Output<String> gatewayId;
 
-    public Output<String> gatewayId() {
-        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
+    public Optional<Output<String>> gatewayId() {
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationData")
-      private final @Nullable Output<ResourceLocationDataContractArgs> locationData;
+    private @Nullable Output<ResourceLocationDataContractArgs> locationData;
 
-    public Output<ResourceLocationDataContractArgs> locationData() {
-        return this.locationData == null ? Codegen.empty() : this.locationData;
+    public Optional<Output<ResourceLocationDataContractArgs>> locationData() {
+        return Optional.ofNullable(this.locationData);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,90 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public GatewayArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> gatewayId,
-        @Nullable Output<ResourceLocationDataContractArgs> locationData,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.description = description;
-        this.gatewayId = gatewayId;
-        this.locationData = locationData;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GatewayArgs() {}
 
-    private GatewayArgs() {
-        this.description = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.locationData = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private GatewayArgs(GatewayArgs $) {
+        this.description = $.description;
+        this.gatewayId = $.gatewayId;
+        this.locationData = $.locationData;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> gatewayId;
-        private @Nullable Output<ResourceLocationDataContractArgs> locationData;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private GatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayArgs();
         }
 
         public Builder(GatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.locationData = defaults.locationData;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
-        public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Codegen.ofNullable(gatewayId);
-            return this;
+
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder locationData(@Nullable Output<ResourceLocationDataContractArgs> locationData) {
-            this.locationData = locationData;
+            $.locationData = locationData;
             return this;
         }
-        public Builder locationData(@Nullable ResourceLocationDataContractArgs locationData) {
-            this.locationData = Codegen.ofNullable(locationData);
-            return this;
+
+        public Builder locationData(ResourceLocationDataContractArgs locationData) {
+            return locationData(Output.of(locationData));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public GatewayArgs build() {
-            return new GatewayArgs(description, gatewayId, locationData, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public GatewayArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

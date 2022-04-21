@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BuildpackPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public BuildpackPropertiesArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private BuildpackPropertiesArgs() {}
 
-    private BuildpackPropertiesArgs() {
-        this.id = Codegen.empty();
+    private BuildpackPropertiesArgs(BuildpackPropertiesArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpackPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private BuildpackPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpackPropertiesArgs();
         }
 
         public Builder(BuildpackPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new BuildpackPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public BuildpackPropertiesArgs build() {
-            return new BuildpackPropertiesArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public BuildpackPropertiesArgs build() {
+            return $;
         }
     }
+
 }

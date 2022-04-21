@@ -18,7 +18,7 @@ public final class OriginGroupOverrideActionParametersResponse extends com.pulum
     public static final OriginGroupOverrideActionParametersResponse Empty = new OriginGroupOverrideActionParametersResponse();
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -29,55 +29,52 @@ public final class OriginGroupOverrideActionParametersResponse extends com.pulum
      * 
      */
     @Import(name="originGroup", required=true)
-      private final ResourceReferenceResponse originGroup;
+    private ResourceReferenceResponse originGroup;
 
     public ResourceReferenceResponse originGroup() {
         return this.originGroup;
     }
 
-    public OriginGroupOverrideActionParametersResponse(
-        String odataType,
-        ResourceReferenceResponse originGroup) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.originGroup = Objects.requireNonNull(originGroup, "expected parameter 'originGroup' to be non-null");
-    }
+    private OriginGroupOverrideActionParametersResponse() {}
 
-    private OriginGroupOverrideActionParametersResponse() {
-        this.odataType = null;
-        this.originGroup = null;
+    private OriginGroupOverrideActionParametersResponse(OriginGroupOverrideActionParametersResponse $) {
+        this.odataType = $.odataType;
+        this.originGroup = $.originGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginGroupOverrideActionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private ResourceReferenceResponse originGroup;
+        private OriginGroupOverrideActionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginGroupOverrideActionParametersResponse();
         }
 
         public Builder(OriginGroupOverrideActionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.originGroup = defaults.originGroup;
+            $ = new OriginGroupOverrideActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder originGroup(ResourceReferenceResponse originGroup) {
-            this.originGroup = Objects.requireNonNull(originGroup);
+            $.originGroup = originGroup;
             return this;
-        }        public OriginGroupOverrideActionParametersResponse build() {
-            return new OriginGroupOverrideActionParametersResponse(odataType, originGroup);
+        }
+
+        public OriginGroupOverrideActionParametersResponse build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.originGroup = Objects.requireNonNull($.originGroup, "expected parameter 'originGroup' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class GatewayResourceRequestsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="cpu")
-      private final @Nullable String cpu;
+    private @Nullable String cpu;
 
     public Optional<String> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class GatewayResourceRequestsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="memory")
-      private final @Nullable String memory;
+    private @Nullable String memory;
 
     public Optional<String> memory() {
-        return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
+        return Optional.ofNullable(this.memory);
     }
 
-    public GatewayResourceRequestsResponse(
-        @Nullable String cpu,
-        @Nullable String memory) {
-        this.cpu = cpu;
-        this.memory = memory;
-    }
+    private GatewayResourceRequestsResponse() {}
 
-    private GatewayResourceRequestsResponse() {
-        this.cpu = null;
-        this.memory = null;
+    private GatewayResourceRequestsResponse(GatewayResourceRequestsResponse $) {
+        this.cpu = $.cpu;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayResourceRequestsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cpu;
-        private @Nullable String memory;
+        private GatewayResourceRequestsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayResourceRequestsResponse();
         }
 
         public Builder(GatewayResourceRequestsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memory = defaults.memory;
+            $ = new GatewayResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memory(@Nullable String memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
-        }        public GatewayResourceRequestsResponse build() {
-            return new GatewayResourceRequestsResponse(cpu, memory);
+        }
+
+        public GatewayResourceRequestsResponse build() {
+            return $;
         }
     }
+
 }

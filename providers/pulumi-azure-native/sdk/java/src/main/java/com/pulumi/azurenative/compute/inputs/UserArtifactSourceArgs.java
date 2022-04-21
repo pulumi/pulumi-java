@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserArtifactSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="defaultConfigurationLink")
-      private final @Nullable Output<String> defaultConfigurationLink;
+    private @Nullable Output<String> defaultConfigurationLink;
 
-    public Output<String> defaultConfigurationLink() {
-        return this.defaultConfigurationLink == null ? Codegen.empty() : this.defaultConfigurationLink;
+    public Optional<Output<String>> defaultConfigurationLink() {
+        return Optional.ofNullable(this.defaultConfigurationLink);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class UserArtifactSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="mediaLink", required=true)
-      private final Output<String> mediaLink;
+    private Output<String> mediaLink;
 
     public Output<String> mediaLink() {
         return this.mediaLink;
     }
 
-    public UserArtifactSourceArgs(
-        @Nullable Output<String> defaultConfigurationLink,
-        Output<String> mediaLink) {
-        this.defaultConfigurationLink = defaultConfigurationLink;
-        this.mediaLink = Objects.requireNonNull(mediaLink, "expected parameter 'mediaLink' to be non-null");
-    }
+    private UserArtifactSourceArgs() {}
 
-    private UserArtifactSourceArgs() {
-        this.defaultConfigurationLink = Codegen.empty();
-        this.mediaLink = Codegen.empty();
+    private UserArtifactSourceArgs(UserArtifactSourceArgs $) {
+        this.defaultConfigurationLink = $.defaultConfigurationLink;
+        this.mediaLink = $.mediaLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArtifactSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultConfigurationLink;
-        private Output<String> mediaLink;
+        private UserArtifactSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArtifactSourceArgs();
         }
 
         public Builder(UserArtifactSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultConfigurationLink = defaults.defaultConfigurationLink;
-    	      this.mediaLink = defaults.mediaLink;
+            $ = new UserArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultConfigurationLink(@Nullable Output<String> defaultConfigurationLink) {
-            this.defaultConfigurationLink = defaultConfigurationLink;
+            $.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
-        public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
-            this.defaultConfigurationLink = Codegen.ofNullable(defaultConfigurationLink);
-            return this;
+
+        public Builder defaultConfigurationLink(String defaultConfigurationLink) {
+            return defaultConfigurationLink(Output.of(defaultConfigurationLink));
         }
+
         public Builder mediaLink(Output<String> mediaLink) {
-            this.mediaLink = Objects.requireNonNull(mediaLink);
+            $.mediaLink = mediaLink;
             return this;
         }
+
         public Builder mediaLink(String mediaLink) {
-            this.mediaLink = Output.of(Objects.requireNonNull(mediaLink));
-            return this;
-        }        public UserArtifactSourceArgs build() {
-            return new UserArtifactSourceArgs(defaultConfigurationLink, mediaLink);
+            return mediaLink(Output.of(mediaLink));
+        }
+
+        public UserArtifactSourceArgs build() {
+            $.mediaLink = Objects.requireNonNull($.mediaLink, "expected parameter 'mediaLink' to be non-null");
+            return $;
         }
     }
+
 }

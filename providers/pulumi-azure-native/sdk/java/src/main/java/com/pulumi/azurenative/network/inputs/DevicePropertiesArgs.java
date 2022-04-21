@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deviceModel")
-      private final @Nullable Output<String> deviceModel;
+    private @Nullable Output<String> deviceModel;
 
-    public Output<String> deviceModel() {
-        return this.deviceModel == null ? Codegen.empty() : this.deviceModel;
+    public Optional<Output<String>> deviceModel() {
+        return Optional.ofNullable(this.deviceModel);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deviceVendor")
-      private final @Nullable Output<String> deviceVendor;
+    private @Nullable Output<String> deviceVendor;
 
-    public Output<String> deviceVendor() {
-        return this.deviceVendor == null ? Codegen.empty() : this.deviceVendor;
+    public Optional<Output<String>> deviceVendor() {
+        return Optional.ofNullable(this.deviceVendor);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="linkSpeedInMbps")
-      private final @Nullable Output<Integer> linkSpeedInMbps;
+    private @Nullable Output<Integer> linkSpeedInMbps;
 
-    public Output<Integer> linkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Codegen.empty() : this.linkSpeedInMbps;
+    public Optional<Output<Integer>> linkSpeedInMbps() {
+        return Optional.ofNullable(this.linkSpeedInMbps);
     }
 
-    public DevicePropertiesArgs(
-        @Nullable Output<String> deviceModel,
-        @Nullable Output<String> deviceVendor,
-        @Nullable Output<Integer> linkSpeedInMbps) {
-        this.deviceModel = deviceModel;
-        this.deviceVendor = deviceVendor;
-        this.linkSpeedInMbps = linkSpeedInMbps;
-    }
+    private DevicePropertiesArgs() {}
 
-    private DevicePropertiesArgs() {
-        this.deviceModel = Codegen.empty();
-        this.deviceVendor = Codegen.empty();
-        this.linkSpeedInMbps = Codegen.empty();
+    private DevicePropertiesArgs(DevicePropertiesArgs $) {
+        this.deviceModel = $.deviceModel;
+        this.deviceVendor = $.deviceVendor;
+        this.linkSpeedInMbps = $.linkSpeedInMbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceModel;
-        private @Nullable Output<String> deviceVendor;
-        private @Nullable Output<Integer> linkSpeedInMbps;
+        private DevicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevicePropertiesArgs();
         }
 
         public Builder(DevicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceModel = defaults.deviceModel;
-    	      this.deviceVendor = defaults.deviceVendor;
-    	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
+            $ = new DevicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceModel(@Nullable Output<String> deviceModel) {
-            this.deviceModel = deviceModel;
+            $.deviceModel = deviceModel;
             return this;
         }
-        public Builder deviceModel(@Nullable String deviceModel) {
-            this.deviceModel = Codegen.ofNullable(deviceModel);
-            return this;
+
+        public Builder deviceModel(String deviceModel) {
+            return deviceModel(Output.of(deviceModel));
         }
+
         public Builder deviceVendor(@Nullable Output<String> deviceVendor) {
-            this.deviceVendor = deviceVendor;
+            $.deviceVendor = deviceVendor;
             return this;
         }
-        public Builder deviceVendor(@Nullable String deviceVendor) {
-            this.deviceVendor = Codegen.ofNullable(deviceVendor);
-            return this;
+
+        public Builder deviceVendor(String deviceVendor) {
+            return deviceVendor(Output.of(deviceVendor));
         }
+
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
-            this.linkSpeedInMbps = linkSpeedInMbps;
+            $.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-        public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = Codegen.ofNullable(linkSpeedInMbps);
-            return this;
-        }        public DevicePropertiesArgs build() {
-            return new DevicePropertiesArgs(deviceModel, deviceVendor, linkSpeedInMbps);
+
+        public Builder linkSpeedInMbps(Integer linkSpeedInMbps) {
+            return linkSpeedInMbps(Output.of(linkSpeedInMbps));
+        }
+
+        public DevicePropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DataCollectionRuleAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="associationName")
-      private final @Nullable Output<String> associationName;
+    private @Nullable Output<String> associationName;
 
-    public Output<String> associationName() {
-        return this.associationName == null ? Codegen.empty() : this.associationName;
+    public Optional<Output<String>> associationName() {
+        return Optional.ofNullable(this.associationName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DataCollectionRuleAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="dataCollectionRuleId")
-      private final @Nullable Output<String> dataCollectionRuleId;
+    private @Nullable Output<String> dataCollectionRuleId;
 
-    public Output<String> dataCollectionRuleId() {
-        return this.dataCollectionRuleId == null ? Codegen.empty() : this.dataCollectionRuleId;
+    public Optional<Output<String>> dataCollectionRuleId() {
+        return Optional.ofNullable(this.dataCollectionRuleId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DataCollectionRuleAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,89 +53,79 @@ public final class DataCollectionRuleAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final Output<String> resourceUri;
+    private Output<String> resourceUri;
 
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
-    public DataCollectionRuleAssociationArgs(
-        @Nullable Output<String> associationName,
-        @Nullable Output<String> dataCollectionRuleId,
-        @Nullable Output<String> description,
-        Output<String> resourceUri) {
-        this.associationName = associationName;
-        this.dataCollectionRuleId = dataCollectionRuleId;
-        this.description = description;
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private DataCollectionRuleAssociationArgs() {}
 
-    private DataCollectionRuleAssociationArgs() {
-        this.associationName = Codegen.empty();
-        this.dataCollectionRuleId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.resourceUri = Codegen.empty();
+    private DataCollectionRuleAssociationArgs(DataCollectionRuleAssociationArgs $) {
+        this.associationName = $.associationName;
+        this.dataCollectionRuleId = $.dataCollectionRuleId;
+        this.description = $.description;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionRuleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> associationName;
-        private @Nullable Output<String> dataCollectionRuleId;
-        private @Nullable Output<String> description;
-        private Output<String> resourceUri;
+        private DataCollectionRuleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionRuleAssociationArgs();
         }
 
         public Builder(DataCollectionRuleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationName = defaults.associationName;
-    	      this.dataCollectionRuleId = defaults.dataCollectionRuleId;
-    	      this.description = defaults.description;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new DataCollectionRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationName(@Nullable Output<String> associationName) {
-            this.associationName = associationName;
+            $.associationName = associationName;
             return this;
         }
-        public Builder associationName(@Nullable String associationName) {
-            this.associationName = Codegen.ofNullable(associationName);
-            return this;
+
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
         }
+
         public Builder dataCollectionRuleId(@Nullable Output<String> dataCollectionRuleId) {
-            this.dataCollectionRuleId = dataCollectionRuleId;
+            $.dataCollectionRuleId = dataCollectionRuleId;
             return this;
         }
-        public Builder dataCollectionRuleId(@Nullable String dataCollectionRuleId) {
-            this.dataCollectionRuleId = Codegen.ofNullable(dataCollectionRuleId);
-            return this;
+
+        public Builder dataCollectionRuleId(String dataCollectionRuleId) {
+            return dataCollectionRuleId(Output.of(dataCollectionRuleId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder resourceUri(Output<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
-            return this;
-        }        public DataCollectionRuleAssociationArgs build() {
-            return new DataCollectionRuleAssociationArgs(associationName, dataCollectionRuleId, description, resourceUri);
+            return resourceUri(Output.of(resourceUri));
+        }
+
+        public DataCollectionRuleAssociationArgs build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

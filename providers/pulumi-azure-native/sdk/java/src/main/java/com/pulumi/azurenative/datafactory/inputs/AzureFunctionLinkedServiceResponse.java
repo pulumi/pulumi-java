@@ -33,10 +33,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Object authentication;
+    private @Nullable Object authentication;
 
     public Optional<Object> authentication() {
-        return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="functionAppUrl", required=true)
-      private final Object functionAppUrl;
+    private Object functionAppUrl;
 
     public Object functionAppUrl() {
         return this.functionAppUrl;
@@ -110,10 +110,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="functionKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey() {
-        return this.functionKey == null ? null : this.functionKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> functionKey() {
+        return Optional.ofNullable(this.functionKey);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Object resourceId;
+    private @Nullable Object resourceId;
 
     public Optional<Object> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -144,139 +144,110 @@ public final class AzureFunctionLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureFunctionLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object functionAppUrl,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceId,
-        String type) {
-        this.annotations = annotations;
-        this.authentication = authentication;
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.functionAppUrl = Objects.requireNonNull(functionAppUrl, "expected parameter 'functionAppUrl' to be non-null");
-        this.functionKey = functionKey;
-        this.parameters = parameters;
-        this.resourceId = resourceId;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureFunctionLinkedServiceResponse() {}
 
-    private AzureFunctionLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authentication = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.functionAppUrl = null;
-        this.functionKey = null;
-        this.parameters = Map.of();
-        this.resourceId = null;
-        this.type = null;
+    private AzureFunctionLinkedServiceResponse(AzureFunctionLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authentication = $.authentication;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.functionAppUrl = $.functionAppUrl;
+        this.functionKey = $.functionKey;
+        this.parameters = $.parameters;
+        this.resourceId = $.resourceId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFunctionLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object authentication;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object functionAppUrl;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object resourceId;
-        private String type;
+        private AzureFunctionLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFunctionLinkedServiceResponse();
         }
 
         public Builder(AzureFunctionLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authentication = defaults.authentication;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.functionAppUrl = defaults.functionAppUrl;
-    	      this.functionKey = defaults.functionKey;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceId = defaults.resourceId;
-    	      this.type = defaults.type;
+            $ = new AzureFunctionLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authentication(@Nullable Object authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder functionAppUrl(Object functionAppUrl) {
-            this.functionAppUrl = Objects.requireNonNull(functionAppUrl);
+            $.functionAppUrl = functionAppUrl;
             return this;
         }
+
         public Builder functionKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey) {
-            this.functionKey = functionKey;
+            $.functionKey = functionKey;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder resourceId(@Nullable Object resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureFunctionLinkedServiceResponse build() {
-            return new AzureFunctionLinkedServiceResponse(annotations, authentication, connectVia, credential, description, encryptedCredential, functionAppUrl, functionKey, parameters, resourceId, type);
+        }
+
+        public AzureFunctionLinkedServiceResponse build() {
+            $.functionAppUrl = Objects.requireNonNull($.functionAppUrl, "expected parameter 'functionAppUrl' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

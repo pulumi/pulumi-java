@@ -19,10 +19,10 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -41,64 +41,58 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedInstanceArgs(
-        @Nullable String expand,
-        String managedInstanceName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedInstanceArgs() {}
 
-    private GetManagedInstanceArgs() {
-        this.expand = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
+    private GetManagedInstanceArgs(GetManagedInstanceArgs $) {
+        this.expand = $.expand;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String managedInstanceName;
-        private String resourceGroupName;
+        private GetManagedInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedInstanceArgs();
         }
 
         public Builder(GetManagedInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedInstanceArgs build() {
-            return new GetManagedInstanceArgs(expand, managedInstanceName, resourceGroupName);
+        }
+
+        public GetManagedInstanceArgs build() {
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

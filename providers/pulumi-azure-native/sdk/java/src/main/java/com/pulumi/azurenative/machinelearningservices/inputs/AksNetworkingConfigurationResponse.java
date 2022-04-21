@@ -23,10 +23,10 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dnsServiceIP")
-      private final @Nullable String dnsServiceIP;
+    private @Nullable String dnsServiceIP;
 
     public Optional<String> dnsServiceIP() {
-        return this.dnsServiceIP == null ? Optional.empty() : Optional.ofNullable(this.dnsServiceIP);
+        return Optional.ofNullable(this.dnsServiceIP);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dockerBridgeCidr")
-      private final @Nullable String dockerBridgeCidr;
+    private @Nullable String dockerBridgeCidr;
 
     public Optional<String> dockerBridgeCidr() {
-        return this.dockerBridgeCidr == null ? Optional.empty() : Optional.ofNullable(this.dockerBridgeCidr);
+        return Optional.ofNullable(this.dockerBridgeCidr);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable String serviceCidr;
+    private @Nullable String serviceCidr;
 
     public Optional<String> serviceCidr() {
-        return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
+        return Optional.ofNullable(this.serviceCidr);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public AksNetworkingConfigurationResponse(
-        @Nullable String dnsServiceIP,
-        @Nullable String dockerBridgeCidr,
-        @Nullable String serviceCidr,
-        @Nullable String subnetId) {
-        this.dnsServiceIP = dnsServiceIP;
-        this.dockerBridgeCidr = dockerBridgeCidr;
-        this.serviceCidr = serviceCidr;
-        this.subnetId = subnetId;
-    }
+    private AksNetworkingConfigurationResponse() {}
 
-    private AksNetworkingConfigurationResponse() {
-        this.dnsServiceIP = null;
-        this.dockerBridgeCidr = null;
-        this.serviceCidr = null;
-        this.subnetId = null;
+    private AksNetworkingConfigurationResponse(AksNetworkingConfigurationResponse $) {
+        this.dnsServiceIP = $.dnsServiceIP;
+        this.dockerBridgeCidr = $.dockerBridgeCidr;
+        this.serviceCidr = $.serviceCidr;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AksNetworkingConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dnsServiceIP;
-        private @Nullable String dockerBridgeCidr;
-        private @Nullable String serviceCidr;
-        private @Nullable String subnetId;
+        private AksNetworkingConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AksNetworkingConfigurationResponse();
         }
 
         public Builder(AksNetworkingConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServiceIP = defaults.dnsServiceIP;
-    	      this.dockerBridgeCidr = defaults.dockerBridgeCidr;
-    	      this.serviceCidr = defaults.serviceCidr;
-    	      this.subnetId = defaults.subnetId;
+            $ = new AksNetworkingConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
-            this.dnsServiceIP = dnsServiceIP;
+            $.dnsServiceIP = dnsServiceIP;
             return this;
         }
+
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
-            this.dockerBridgeCidr = dockerBridgeCidr;
+            $.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
+
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
-        }        public AksNetworkingConfigurationResponse build() {
-            return new AksNetworkingConfigurationResponse(dnsServiceIP, dockerBridgeCidr, serviceCidr, subnetId);
+        }
+
+        public AksNetworkingConfigurationResponse build() {
+            return $;
         }
     }
+
 }

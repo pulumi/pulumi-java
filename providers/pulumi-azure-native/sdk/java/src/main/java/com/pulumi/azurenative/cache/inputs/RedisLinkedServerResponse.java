@@ -21,45 +21,45 @@ public final class RedisLinkedServerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public RedisLinkedServerResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private RedisLinkedServerResponse() {}
 
-    private RedisLinkedServerResponse() {
-        this.id = null;
+    private RedisLinkedServerResponse(RedisLinkedServerResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedisLinkedServerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private RedisLinkedServerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedisLinkedServerResponse();
         }
 
         public Builder(RedisLinkedServerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new RedisLinkedServerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public RedisLinkedServerResponse build() {
-            return new RedisLinkedServerResponse(id);
+        }
+
+        public RedisLinkedServerResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

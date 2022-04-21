@@ -8,10 +8,10 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
      * 
      */
     @Import(name="primary")
-      private final @Nullable Output<Boolean> primary;
+    private @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<Boolean>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+    private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
+    public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -83,115 +83,98 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubResourceArgs> subnet;
+    private @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubResourceArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public ApplicationGatewayPrivateLinkIpConfigurationArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> primary,
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod,
-        @Nullable Output<SubResourceArgs> subnet) {
-        this.id = id;
-        this.name = name;
-        this.primary = primary;
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.subnet = subnet;
-    }
+    private ApplicationGatewayPrivateLinkIpConfigurationArgs() {}
 
-    private ApplicationGatewayPrivateLinkIpConfigurationArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.primary = Codegen.empty();
-        this.privateIPAddress = Codegen.empty();
-        this.privateIPAllocationMethod = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private ApplicationGatewayPrivateLinkIpConfigurationArgs(ApplicationGatewayPrivateLinkIpConfigurationArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.primary = $.primary;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayPrivateLinkIpConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> primary;
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
-        private @Nullable Output<SubResourceArgs> subnet;
+        private ApplicationGatewayPrivateLinkIpConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayPrivateLinkIpConfigurationArgs();
         }
 
         public Builder(ApplicationGatewayPrivateLinkIpConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.primary = defaults.primary;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.subnet = defaults.subnet;
+            $ = new ApplicationGatewayPrivateLinkIpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder primary(@Nullable Output<Boolean> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable Boolean primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
+
+        public Builder primary(Boolean primary) {
+            return primary(Output.of(primary));
         }
+
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
-            return this;
+
+        public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
+
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public ApplicationGatewayPrivateLinkIpConfigurationArgs build() {
-            return new ApplicationGatewayPrivateLinkIpConfigurationArgs(id, name, primary, privateIPAddress, privateIPAllocationMethod, subnet);
+
+        public Builder subnet(SubResourceArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public ApplicationGatewayPrivateLinkIpConfigurationArgs build() {
+            return $;
         }
     }
+
 }

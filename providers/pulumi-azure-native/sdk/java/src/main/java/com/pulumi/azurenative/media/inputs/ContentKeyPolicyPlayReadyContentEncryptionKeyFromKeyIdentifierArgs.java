@@ -23,7 +23,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
@@ -35,63 +35,60 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs(
-        Output<String> keyId,
-        Output<String> odataType) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs() {}
 
-    private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs() {
-        this.keyId = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs $) {
+        this.keyId = $.keyId;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyId;
-        private Output<String> odataType;
+        private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs();
         }
 
         public Builder(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
+            return keyId(Output.of(keyId));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs build() {
-            return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs(keyId, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

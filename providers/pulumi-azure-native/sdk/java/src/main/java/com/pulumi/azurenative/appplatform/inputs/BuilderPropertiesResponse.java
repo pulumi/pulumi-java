@@ -26,10 +26,10 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="buildpackGroups")
-      private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
+    private @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
 
-    public List<BuildpacksGroupPropertiesResponse> buildpackGroups() {
-        return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
+    public Optional<List<BuildpacksGroupPropertiesResponse>> buildpackGroups() {
+        return Optional.ofNullable(this.buildpackGroups);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -48,67 +48,61 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="stack")
-      private final @Nullable StackPropertiesResponse stack;
+    private @Nullable StackPropertiesResponse stack;
 
     public Optional<StackPropertiesResponse> stack() {
-        return this.stack == null ? Optional.empty() : Optional.ofNullable(this.stack);
+        return Optional.ofNullable(this.stack);
     }
 
-    public BuilderPropertiesResponse(
-        @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups,
-        String provisioningState,
-        @Nullable StackPropertiesResponse stack) {
-        this.buildpackGroups = buildpackGroups;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.stack = stack;
-    }
+    private BuilderPropertiesResponse() {}
 
-    private BuilderPropertiesResponse() {
-        this.buildpackGroups = List.of();
-        this.provisioningState = null;
-        this.stack = null;
+    private BuilderPropertiesResponse(BuilderPropertiesResponse $) {
+        this.buildpackGroups = $.buildpackGroups;
+        this.provisioningState = $.provisioningState;
+        this.stack = $.stack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuilderPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
-        private String provisioningState;
-        private @Nullable StackPropertiesResponse stack;
+        private BuilderPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuilderPropertiesResponse();
         }
 
         public Builder(BuilderPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildpackGroups = defaults.buildpackGroups;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.stack = defaults.stack;
+            $ = new BuilderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buildpackGroups(@Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups) {
-            this.buildpackGroups = buildpackGroups;
+            $.buildpackGroups = buildpackGroups;
             return this;
         }
+
         public Builder buildpackGroups(BuildpacksGroupPropertiesResponse... buildpackGroups) {
             return buildpackGroups(List.of(buildpackGroups));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder stack(@Nullable StackPropertiesResponse stack) {
-            this.stack = stack;
+            $.stack = stack;
             return this;
-        }        public BuilderPropertiesResponse build() {
-            return new BuilderPropertiesResponse(buildpackGroups, provisioningState, stack);
+        }
+
+        public BuilderPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

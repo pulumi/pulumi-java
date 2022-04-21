@@ -21,7 +21,7 @@ public final class ConnStringValueTypePairResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -32,55 +32,52 @@ public final class ConnStringValueTypePairResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ConnStringValueTypePairResponse(
-        String type,
-        String value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ConnStringValueTypePairResponse() {}
 
-    private ConnStringValueTypePairResponse() {
-        this.type = null;
-        this.value = null;
+    private ConnStringValueTypePairResponse(ConnStringValueTypePairResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnStringValueTypePairResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String value;
+        private ConnStringValueTypePairResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnStringValueTypePairResponse();
         }
 
         public Builder(ConnStringValueTypePairResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ConnStringValueTypePairResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ConnStringValueTypePairResponse build() {
-            return new ConnStringValueTypePairResponse(type, value);
+        }
+
+        public ConnStringValueTypePairResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

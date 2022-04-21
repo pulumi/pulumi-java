@@ -25,7 +25,7 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -36,7 +36,7 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
@@ -47,64 +47,58 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="zoneRedundant")
-      private final @Nullable String zoneRedundant;
+    private @Nullable String zoneRedundant;
 
     public Optional<String> zoneRedundant() {
-        return this.zoneRedundant == null ? Optional.empty() : Optional.ofNullable(this.zoneRedundant);
+        return Optional.ofNullable(this.zoneRedundant);
     }
 
-    public SqlDatabaseResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName,
-        @Nullable String zoneRedundant) {
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.zoneRedundant = zoneRedundant;
-    }
+    private SqlDatabaseResourceSettingsResponse() {}
 
-    private SqlDatabaseResourceSettingsResponse() {
-        this.resourceType = null;
-        this.targetResourceName = null;
-        this.zoneRedundant = null;
+    private SqlDatabaseResourceSettingsResponse(SqlDatabaseResourceSettingsResponse $) {
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
+        this.zoneRedundant = $.zoneRedundant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlDatabaseResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceType;
-        private String targetResourceName;
-        private @Nullable String zoneRedundant;
+        private SqlDatabaseResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlDatabaseResourceSettingsResponse();
         }
 
         public Builder(SqlDatabaseResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.zoneRedundant = defaults.zoneRedundant;
+            $ = new SqlDatabaseResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder zoneRedundant(@Nullable String zoneRedundant) {
-            this.zoneRedundant = zoneRedundant;
+            $.zoneRedundant = zoneRedundant;
             return this;
-        }        public SqlDatabaseResourceSettingsResponse build() {
-            return new SqlDatabaseResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
+        }
+
+        public SqlDatabaseResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

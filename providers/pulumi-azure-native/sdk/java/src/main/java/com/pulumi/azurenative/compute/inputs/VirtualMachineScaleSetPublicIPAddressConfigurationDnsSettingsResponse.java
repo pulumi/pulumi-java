@@ -21,45 +21,45 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
      * 
      */
     @Import(name="domainNameLabel", required=true)
-      private final String domainNameLabel;
+    private String domainNameLabel;
 
     public String domainNameLabel() {
         return this.domainNameLabel;
     }
 
-    public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(String domainNameLabel) {
-        this.domainNameLabel = Objects.requireNonNull(domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
-    }
+    private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse() {}
 
-    private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse() {
-        this.domainNameLabel = null;
+    private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse $) {
+        this.domainNameLabel = $.domainNameLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainNameLabel;
+        private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse();
         }
 
         public Builder(VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainNameLabel = defaults.domainNameLabel;
+            $ = new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainNameLabel(String domainNameLabel) {
-            this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
+            $.domainNameLabel = domainNameLabel;
             return this;
-        }        public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse build() {
-            return new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(domainNameLabel);
+        }
+
+        public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse build() {
+            $.domainNameLabel = Objects.requireNonNull($.domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
+            return $;
         }
     }
+
 }

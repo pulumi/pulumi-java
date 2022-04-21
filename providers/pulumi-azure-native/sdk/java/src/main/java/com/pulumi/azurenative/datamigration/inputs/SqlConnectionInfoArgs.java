@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="additionalSettings")
-      private final @Nullable Output<String> additionalSettings;
+    private @Nullable Output<String> additionalSettings;
 
-    public Output<String> additionalSettings() {
-        return this.additionalSettings == null ? Codegen.empty() : this.additionalSettings;
+    public Optional<Output<String>> additionalSettings() {
+        return Optional.ofNullable(this.additionalSettings);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<Either<String,AuthenticationType>> authentication;
+    private @Nullable Output<Either<String,AuthenticationType>> authentication;
 
-    public Output<Either<String,AuthenticationType>> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<Either<String,AuthenticationType>>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataSource", required=true)
-      private final Output<String> dataSource;
+    private Output<String> dataSource;
 
     public Output<String> dataSource() {
         return this.dataSource;
@@ -61,10 +62,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="encryptConnection")
-      private final @Nullable Output<Boolean> encryptConnection;
+    private @Nullable Output<Boolean> encryptConnection;
 
-    public Output<Boolean> encryptConnection() {
-        return this.encryptConnection == null ? Codegen.empty() : this.encryptConnection;
+    public Optional<Output<Boolean>> encryptConnection() {
+        return Optional.ofNullable(this.encryptConnection);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<Either<String,SqlSourcePlatform>> platform;
+    private @Nullable Output<Either<String,SqlSourcePlatform>> platform;
 
-    public Output<Either<String,SqlSourcePlatform>> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<Either<String,SqlSourcePlatform>>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="trustServerCertificate")
-      private final @Nullable Output<Boolean> trustServerCertificate;
+    private @Nullable Output<Boolean> trustServerCertificate;
 
-    public Output<Boolean> trustServerCertificate() {
-        return this.trustServerCertificate == null ? Codegen.empty() : this.trustServerCertificate;
+    public Optional<Output<Boolean>> trustServerCertificate() {
+        return Optional.ofNullable(this.trustServerCertificate);
     }
 
     /**
@@ -106,7 +107,7 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -117,154 +118,132 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SqlConnectionInfoArgs(
-        @Nullable Output<String> additionalSettings,
-        @Nullable Output<Either<String,AuthenticationType>> authentication,
-        Output<String> dataSource,
-        @Nullable Output<Boolean> encryptConnection,
-        @Nullable Output<String> password,
-        @Nullable Output<Either<String,SqlSourcePlatform>> platform,
-        @Nullable Output<Boolean> trustServerCertificate,
-        Output<String> type,
-        @Nullable Output<String> userName) {
-        this.additionalSettings = additionalSettings;
-        this.authentication = authentication;
-        this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.encryptConnection = Codegen.booleanProp("encryptConnection").output().arg(encryptConnection).def(true).getNullable();
-        this.password = password;
-        this.platform = platform;
-        this.trustServerCertificate = Codegen.booleanProp("trustServerCertificate").output().arg(trustServerCertificate).def(false).getNullable();
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = userName;
-    }
+    private SqlConnectionInfoArgs() {}
 
-    private SqlConnectionInfoArgs() {
-        this.additionalSettings = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.dataSource = Codegen.empty();
-        this.encryptConnection = Codegen.empty();
-        this.password = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.trustServerCertificate = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SqlConnectionInfoArgs(SqlConnectionInfoArgs $) {
+        this.additionalSettings = $.additionalSettings;
+        this.authentication = $.authentication;
+        this.dataSource = $.dataSource;
+        this.encryptConnection = $.encryptConnection;
+        this.password = $.password;
+        this.platform = $.platform;
+        this.trustServerCertificate = $.trustServerCertificate;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlConnectionInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalSettings;
-        private @Nullable Output<Either<String,AuthenticationType>> authentication;
-        private Output<String> dataSource;
-        private @Nullable Output<Boolean> encryptConnection;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Either<String,SqlSourcePlatform>> platform;
-        private @Nullable Output<Boolean> trustServerCertificate;
-        private Output<String> type;
-        private @Nullable Output<String> userName;
+        private SqlConnectionInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlConnectionInfoArgs();
         }
 
         public Builder(SqlConnectionInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalSettings = defaults.additionalSettings;
-    	      this.authentication = defaults.authentication;
-    	      this.dataSource = defaults.dataSource;
-    	      this.encryptConnection = defaults.encryptConnection;
-    	      this.password = defaults.password;
-    	      this.platform = defaults.platform;
-    	      this.trustServerCertificate = defaults.trustServerCertificate;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new SqlConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalSettings(@Nullable Output<String> additionalSettings) {
-            this.additionalSettings = additionalSettings;
+            $.additionalSettings = additionalSettings;
             return this;
         }
-        public Builder additionalSettings(@Nullable String additionalSettings) {
-            this.additionalSettings = Codegen.ofNullable(additionalSettings);
-            return this;
+
+        public Builder additionalSettings(String additionalSettings) {
+            return additionalSettings(Output.of(additionalSettings));
         }
+
         public Builder authentication(@Nullable Output<Either<String,AuthenticationType>> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable Either<String,AuthenticationType> authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(Either<String,AuthenticationType> authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder dataSource(Output<String> dataSource) {
-            this.dataSource = Objects.requireNonNull(dataSource);
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder dataSource(String dataSource) {
-            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
-            return this;
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder encryptConnection(@Nullable Output<Boolean> encryptConnection) {
-            this.encryptConnection = encryptConnection;
+            $.encryptConnection = encryptConnection;
             return this;
         }
-        public Builder encryptConnection(@Nullable Boolean encryptConnection) {
-            this.encryptConnection = Codegen.ofNullable(encryptConnection);
-            return this;
+
+        public Builder encryptConnection(Boolean encryptConnection) {
+            return encryptConnection(Output.of(encryptConnection));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder platform(@Nullable Output<Either<String,SqlSourcePlatform>> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable Either<String,SqlSourcePlatform> platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(Either<String,SqlSourcePlatform> platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder trustServerCertificate(@Nullable Output<Boolean> trustServerCertificate) {
-            this.trustServerCertificate = trustServerCertificate;
+            $.trustServerCertificate = trustServerCertificate;
             return this;
         }
-        public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
-            this.trustServerCertificate = Codegen.ofNullable(trustServerCertificate);
-            return this;
+
+        public Builder trustServerCertificate(Boolean trustServerCertificate) {
+            return trustServerCertificate(Output.of(trustServerCertificate));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SqlConnectionInfoArgs build() {
-            return new SqlConnectionInfoArgs(additionalSettings, authentication, dataSource, encryptConnection, password, platform, trustServerCertificate, type, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SqlConnectionInfoArgs build() {
+            $.dataSource = Objects.requireNonNull($.dataSource, "expected parameter 'dataSource' to be non-null");
+            $.encryptConnection = Codegen.booleanProp("encryptConnection").output().arg($.encryptConnection).def(true).getNullable();
+            $.trustServerCertificate = Codegen.booleanProp("trustServerCertificate").output().arg($.trustServerCertificate).def(false).getNullable();
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

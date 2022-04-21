@@ -24,7 +24,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="allowlistValues", required=true)
-      private final List<String> allowlistValues;
+    private List<String> allowlistValues;
 
     public List<String> allowlistValues() {
         return this.allowlistValues;
@@ -35,7 +35,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -46,7 +46,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -69,7 +69,7 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ruleType", required=true)
-      private final String ruleType;
+    private String ruleType;
 
     public String ruleType() {
         return this.ruleType;
@@ -80,94 +80,84 @@ public final class AllowlistCustomAlertRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="valueType", required=true)
-      private final String valueType;
+    private String valueType;
 
     public String valueType() {
         return this.valueType;
     }
 
-    public AllowlistCustomAlertRuleResponse(
-        List<String> allowlistValues,
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        String ruleType,
-        String valueType) {
-        this.allowlistValues = Objects.requireNonNull(allowlistValues, "expected parameter 'allowlistValues' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
-        this.valueType = Objects.requireNonNull(valueType, "expected parameter 'valueType' to be non-null");
-    }
+    private AllowlistCustomAlertRuleResponse() {}
 
-    private AllowlistCustomAlertRuleResponse() {
-        this.allowlistValues = List.of();
-        this.description = null;
-        this.displayName = null;
-        this.isEnabled = null;
-        this.ruleType = null;
-        this.valueType = null;
+    private AllowlistCustomAlertRuleResponse(AllowlistCustomAlertRuleResponse $) {
+        this.allowlistValues = $.allowlistValues;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.isEnabled = $.isEnabled;
+        this.ruleType = $.ruleType;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowlistCustomAlertRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowlistValues;
-        private String description;
-        private String displayName;
-        private Boolean isEnabled;
-        private String ruleType;
-        private String valueType;
+        private AllowlistCustomAlertRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowlistCustomAlertRuleResponse();
         }
 
         public Builder(AllowlistCustomAlertRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowlistValues = defaults.allowlistValues;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.ruleType = defaults.ruleType;
-    	      this.valueType = defaults.valueType;
+            $ = new AllowlistCustomAlertRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowlistValues(List<String> allowlistValues) {
-            this.allowlistValues = Objects.requireNonNull(allowlistValues);
+            $.allowlistValues = allowlistValues;
             return this;
         }
+
         public Builder allowlistValues(String... allowlistValues) {
             return allowlistValues(List.of(allowlistValues));
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder valueType(String valueType) {
-            this.valueType = Objects.requireNonNull(valueType);
+            $.valueType = valueType;
             return this;
-        }        public AllowlistCustomAlertRuleResponse build() {
-            return new AllowlistCustomAlertRuleResponse(allowlistValues, description, displayName, isEnabled, ruleType, valueType);
+        }
+
+        public AllowlistCustomAlertRuleResponse build() {
+            $.allowlistValues = Objects.requireNonNull($.allowlistValues, "expected parameter 'allowlistValues' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.ruleType = Codegen.stringProp("ruleType").arg($.ruleType).require();
+            $.valueType = Objects.requireNonNull($.valueType, "expected parameter 'valueType' to be non-null");
+            return $;
         }
     }
+
 }

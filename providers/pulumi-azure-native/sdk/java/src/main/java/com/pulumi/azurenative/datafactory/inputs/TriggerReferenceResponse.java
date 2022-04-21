@@ -21,7 +21,7 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="referenceName", required=true)
-      private final String referenceName;
+    private String referenceName;
 
     public String referenceName() {
         return this.referenceName;
@@ -32,55 +32,52 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TriggerReferenceResponse(
-        String referenceName,
-        String type) {
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TriggerReferenceResponse() {}
 
-    private TriggerReferenceResponse() {
-        this.referenceName = null;
-        this.type = null;
+    private TriggerReferenceResponse(TriggerReferenceResponse $) {
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String referenceName;
-        private String type;
+        private TriggerReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerReferenceResponse();
         }
 
         public Builder(TriggerReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new TriggerReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TriggerReferenceResponse build() {
-            return new TriggerReferenceResponse(referenceName, type);
+        }
+
+        public TriggerReferenceResponse build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

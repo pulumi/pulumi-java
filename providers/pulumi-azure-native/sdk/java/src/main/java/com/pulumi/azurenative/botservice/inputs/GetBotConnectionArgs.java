@@ -17,7 +17,7 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetBotConnectionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetBotConnectionArgs(
-        String connectionName,
-        String resourceGroupName,
-        String resourceName) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetBotConnectionArgs() {}
 
-    private GetBotConnectionArgs() {
-        this.connectionName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetBotConnectionArgs(GetBotConnectionArgs $) {
+        this.connectionName = $.connectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetBotConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotConnectionArgs();
         }
 
         public Builder(GetBotConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetBotConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetBotConnectionArgs build() {
-            return new GetBotConnectionArgs(connectionName, resourceGroupName, resourceName);
+        }
+
+        public GetBotConnectionArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

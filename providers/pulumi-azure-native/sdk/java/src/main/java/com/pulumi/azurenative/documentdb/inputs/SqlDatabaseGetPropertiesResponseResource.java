@@ -20,10 +20,10 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
      * 
      */
     @Import(name="colls")
-      private final @Nullable String colls;
+    private @Nullable String colls;
 
     public Optional<String> colls() {
-        return this.colls == null ? Optional.empty() : Optional.ofNullable(this.colls);
+        return Optional.ofNullable(this.colls);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -42,7 +42,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -53,7 +53,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -64,7 +64,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
@@ -75,91 +75,78 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
      * 
      */
     @Import(name="users")
-      private final @Nullable String users;
+    private @Nullable String users;
 
     public Optional<String> users() {
-        return this.users == null ? Optional.empty() : Optional.ofNullable(this.users);
+        return Optional.ofNullable(this.users);
     }
 
-    public SqlDatabaseGetPropertiesResponseResource(
-        @Nullable String colls,
-        String etag,
-        String id,
-        String rid,
-        Double ts,
-        @Nullable String users) {
-        this.colls = colls;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-        this.users = users;
-    }
+    private SqlDatabaseGetPropertiesResponseResource() {}
 
-    private SqlDatabaseGetPropertiesResponseResource() {
-        this.colls = null;
-        this.etag = null;
-        this.id = null;
-        this.rid = null;
-        this.ts = null;
-        this.users = null;
+    private SqlDatabaseGetPropertiesResponseResource(SqlDatabaseGetPropertiesResponseResource $) {
+        this.colls = $.colls;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.rid = $.rid;
+        this.ts = $.ts;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlDatabaseGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String colls;
-        private String etag;
-        private String id;
-        private String rid;
-        private Double ts;
-        private @Nullable String users;
+        private SqlDatabaseGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlDatabaseGetPropertiesResponseResource();
         }
 
         public Builder(SqlDatabaseGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colls = defaults.colls;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.rid = defaults.rid;
-    	      this.ts = defaults.ts;
-    	      this.users = defaults.users;
+            $ = new SqlDatabaseGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder colls(@Nullable String colls) {
-            this.colls = colls;
+            $.colls = colls;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
         }
+
         public Builder users(@Nullable String users) {
-            this.users = users;
+            $.users = users;
             return this;
-        }        public SqlDatabaseGetPropertiesResponseResource build() {
-            return new SqlDatabaseGetPropertiesResponseResource(colls, etag, id, rid, ts, users);
+        }
+
+        public SqlDatabaseGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

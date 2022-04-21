@@ -22,7 +22,7 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobStageDetails", required=true)
-      private final Object jobStageDetails;
+    private Object jobStageDetails;
 
     public Object jobStageDetails() {
         return this.jobStageDetails;
@@ -44,7 +44,7 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName", required=true)
-      private final String stageName;
+    private String stageName;
 
     public String stageName() {
         return this.stageName;
@@ -55,7 +55,7 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageStatus", required=true)
-      private final String stageStatus;
+    private String stageStatus;
 
     public String stageStatus() {
         return this.stageStatus;
@@ -66,82 +66,73 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageTime", required=true)
-      private final String stageTime;
+    private String stageTime;
 
     public String stageTime() {
         return this.stageTime;
     }
 
-    public JobStagesResponse(
-        String displayName,
-        Object jobStageDetails,
-        String stageName,
-        String stageStatus,
-        String stageTime) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.jobStageDetails = Objects.requireNonNull(jobStageDetails, "expected parameter 'jobStageDetails' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-        this.stageStatus = Objects.requireNonNull(stageStatus, "expected parameter 'stageStatus' to be non-null");
-        this.stageTime = Objects.requireNonNull(stageTime, "expected parameter 'stageTime' to be non-null");
-    }
+    private JobStagesResponse() {}
 
-    private JobStagesResponse() {
-        this.displayName = null;
-        this.jobStageDetails = null;
-        this.stageName = null;
-        this.stageStatus = null;
-        this.stageTime = null;
+    private JobStagesResponse(JobStagesResponse $) {
+        this.displayName = $.displayName;
+        this.jobStageDetails = $.jobStageDetails;
+        this.stageName = $.stageName;
+        this.stageStatus = $.stageStatus;
+        this.stageTime = $.stageTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStagesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private Object jobStageDetails;
-        private String stageName;
-        private String stageStatus;
-        private String stageTime;
+        private JobStagesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStagesResponse();
         }
 
         public Builder(JobStagesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.jobStageDetails = defaults.jobStageDetails;
-    	      this.stageName = defaults.stageName;
-    	      this.stageStatus = defaults.stageStatus;
-    	      this.stageTime = defaults.stageTime;
+            $ = new JobStagesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder jobStageDetails(Object jobStageDetails) {
-            this.jobStageDetails = Objects.requireNonNull(jobStageDetails);
+            $.jobStageDetails = jobStageDetails;
             return this;
         }
+
         public Builder stageName(String stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
         }
+
         public Builder stageStatus(String stageStatus) {
-            this.stageStatus = Objects.requireNonNull(stageStatus);
+            $.stageStatus = stageStatus;
             return this;
         }
+
         public Builder stageTime(String stageTime) {
-            this.stageTime = Objects.requireNonNull(stageTime);
+            $.stageTime = stageTime;
             return this;
-        }        public JobStagesResponse build() {
-            return new JobStagesResponse(displayName, jobStageDetails, stageName, stageStatus, stageTime);
+        }
+
+        public JobStagesResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.jobStageDetails = Objects.requireNonNull($.jobStageDetails, "expected parameter 'jobStageDetails' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            $.stageStatus = Objects.requireNonNull($.stageStatus, "expected parameter 'stageStatus' to be non-null");
+            $.stageTime = Objects.requireNonNull($.stageTime, "expected parameter 'stageTime' to be non-null");
+            return $;
         }
     }
+
 }

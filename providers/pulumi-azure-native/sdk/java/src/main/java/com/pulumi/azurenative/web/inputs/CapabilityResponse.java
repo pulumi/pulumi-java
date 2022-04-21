@@ -23,10 +23,10 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable String reason;
+    private @Nullable String reason;
 
     public Optional<String> reason() {
-        return this.reason == null ? Optional.empty() : Optional.ofNullable(this.reason);
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public CapabilityResponse(
-        @Nullable String name,
-        @Nullable String reason,
-        @Nullable String value) {
-        this.name = name;
-        this.reason = reason;
-        this.value = value;
-    }
+    private CapabilityResponse() {}
 
-    private CapabilityResponse() {
-        this.name = null;
-        this.reason = null;
-        this.value = null;
+    private CapabilityResponse(CapabilityResponse $) {
+        this.name = $.name;
+        this.reason = $.reason;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapabilityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String reason;
-        private @Nullable String value;
+        private CapabilityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapabilityResponse();
         }
 
         public Builder(CapabilityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.reason = defaults.reason;
-    	      this.value = defaults.value;
+            $ = new CapabilityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder reason(@Nullable String reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public CapabilityResponse build() {
-            return new CapabilityResponse(name, reason, value);
+        }
+
+        public CapabilityResponse build() {
+            return $;
         }
     }
+
 }

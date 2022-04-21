@@ -21,7 +21,7 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="errorCode", required=true)
-      private final String errorCode;
+    private String errorCode;
 
     public String errorCode() {
         return this.errorCode;
@@ -32,55 +32,52 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="isRetryable", required=true)
-      private final String isRetryable;
+    private String isRetryable;
 
     public String isRetryable() {
         return this.isRetryable;
     }
 
-    public RecommendedActionErrorInfoResponse(
-        String errorCode,
-        String isRetryable) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.isRetryable = Objects.requireNonNull(isRetryable, "expected parameter 'isRetryable' to be non-null");
-    }
+    private RecommendedActionErrorInfoResponse() {}
 
-    private RecommendedActionErrorInfoResponse() {
-        this.errorCode = null;
-        this.isRetryable = null;
+    private RecommendedActionErrorInfoResponse(RecommendedActionErrorInfoResponse $) {
+        this.errorCode = $.errorCode;
+        this.isRetryable = $.isRetryable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedActionErrorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorCode;
-        private String isRetryable;
+        private RecommendedActionErrorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedActionErrorInfoResponse();
         }
 
         public Builder(RecommendedActionErrorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.isRetryable = defaults.isRetryable;
+            $ = new RecommendedActionErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(String errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder isRetryable(String isRetryable) {
-            this.isRetryable = Objects.requireNonNull(isRetryable);
+            $.isRetryable = isRetryable;
             return this;
-        }        public RecommendedActionErrorInfoResponse build() {
-            return new RecommendedActionErrorInfoResponse(errorCode, isRetryable);
+        }
+
+        public RecommendedActionErrorInfoResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.isRetryable = Objects.requireNonNull($.isRetryable, "expected parameter 'isRetryable' to be non-null");
+            return $;
         }
     }
+
 }

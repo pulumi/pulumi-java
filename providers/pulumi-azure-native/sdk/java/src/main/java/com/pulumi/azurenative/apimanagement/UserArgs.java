@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appType")
-      private final @Nullable Output<Either<String,AppType>> appType;
+    private @Nullable Output<Either<String,AppType>> appType;
 
-    public Output<Either<String,AppType>> appType() {
-        return this.appType == null ? Codegen.empty() : this.appType;
+    public Optional<Output<Either<String,AppType>>> appType() {
+        return Optional.ofNullable(this.appType);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confirmation")
-      private final @Nullable Output<Either<String,Confirmation>> confirmation;
+    private @Nullable Output<Either<String,Confirmation>> confirmation;
 
-    public Output<Either<String,Confirmation>> confirmation() {
-        return this.confirmation == null ? Codegen.empty() : this.confirmation;
+    public Optional<Output<Either<String,Confirmation>>> confirmation() {
+        return Optional.ofNullable(this.confirmation);
     }
 
     /**
@@ -49,7 +50,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -60,7 +61,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstName", required=true)
-      private final Output<String> firstName;
+    private Output<String> firstName;
 
     public Output<String> firstName() {
         return this.firstName;
@@ -71,10 +72,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identities")
-      private final @Nullable Output<List<UserIdentityContractArgs>> identities;
+    private @Nullable Output<List<UserIdentityContractArgs>> identities;
 
-    public Output<List<UserIdentityContractArgs>> identities() {
-        return this.identities == null ? Codegen.empty() : this.identities;
+    public Optional<Output<List<UserIdentityContractArgs>>> identities() {
+        return Optional.ofNullable(this.identities);
     }
 
     /**
@@ -82,7 +83,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastName", required=true)
-      private final Output<String> lastName;
+    private Output<String> lastName;
 
     public Output<String> lastName() {
         return this.lastName;
@@ -93,10 +94,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="note")
-      private final @Nullable Output<String> note;
+    private @Nullable Output<String> note;
 
-    public Output<String> note() {
-        return this.note == null ? Codegen.empty() : this.note;
+    public Optional<Output<String>> note() {
+        return Optional.ofNullable(this.note);
     }
 
     /**
@@ -104,10 +105,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notify")
-      private final @Nullable Output<Boolean> notify;
+    private @Nullable Output<Boolean> notify;
 
-    public Output<Boolean> notify_() {
-        return this.notify == null ? Codegen.empty() : this.notify;
+    public Optional<Output<Boolean>> notify_() {
+        return Optional.ofNullable(this.notify);
     }
 
     /**
@@ -115,10 +116,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -126,7 +127,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -137,7 +138,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -148,10 +149,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,UserState>> state;
+    private @Nullable Output<Either<String,UserState>> state;
 
-    public Output<Either<String,UserState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,UserState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -159,209 +160,178 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<String> userId;
+    private @Nullable Output<String> userId;
 
-    public Output<String> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
-    public UserArgs(
-        @Nullable Output<Either<String,AppType>> appType,
-        @Nullable Output<Either<String,Confirmation>> confirmation,
-        Output<String> email,
-        Output<String> firstName,
-        @Nullable Output<List<UserIdentityContractArgs>> identities,
-        Output<String> lastName,
-        @Nullable Output<String> note,
-        @Nullable Output<Boolean> notify,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<Either<String,UserState>> state,
-        @Nullable Output<String> userId) {
-        this.appType = appType;
-        this.confirmation = confirmation;
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.firstName = Objects.requireNonNull(firstName, "expected parameter 'firstName' to be non-null");
-        this.identities = identities;
-        this.lastName = Objects.requireNonNull(lastName, "expected parameter 'lastName' to be non-null");
-        this.note = note;
-        this.notify = notify;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.state = Codegen.stringProp("state").left(UserState.class).output().arg(state).def("active").getNullable();
-        this.userId = userId;
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.appType = Codegen.empty();
-        this.confirmation = Codegen.empty();
-        this.email = Codegen.empty();
-        this.firstName = Codegen.empty();
-        this.identities = Codegen.empty();
-        this.lastName = Codegen.empty();
-        this.note = Codegen.empty();
-        this.notify = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.state = Codegen.empty();
-        this.userId = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.appType = $.appType;
+        this.confirmation = $.confirmation;
+        this.email = $.email;
+        this.firstName = $.firstName;
+        this.identities = $.identities;
+        this.lastName = $.lastName;
+        this.note = $.note;
+        this.notify = $.notify;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.state = $.state;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AppType>> appType;
-        private @Nullable Output<Either<String,Confirmation>> confirmation;
-        private Output<String> email;
-        private Output<String> firstName;
-        private @Nullable Output<List<UserIdentityContractArgs>> identities;
-        private Output<String> lastName;
-        private @Nullable Output<String> note;
-        private @Nullable Output<Boolean> notify;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<Either<String,UserState>> state;
-        private @Nullable Output<String> userId;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appType = defaults.appType;
-    	      this.confirmation = defaults.confirmation;
-    	      this.email = defaults.email;
-    	      this.firstName = defaults.firstName;
-    	      this.identities = defaults.identities;
-    	      this.lastName = defaults.lastName;
-    	      this.note = defaults.note;
-    	      this.notify = defaults.notify;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.state = defaults.state;
-    	      this.userId = defaults.userId;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appType(@Nullable Output<Either<String,AppType>> appType) {
-            this.appType = appType;
+            $.appType = appType;
             return this;
         }
-        public Builder appType(@Nullable Either<String,AppType> appType) {
-            this.appType = Codegen.ofNullable(appType);
-            return this;
+
+        public Builder appType(Either<String,AppType> appType) {
+            return appType(Output.of(appType));
         }
+
         public Builder confirmation(@Nullable Output<Either<String,Confirmation>> confirmation) {
-            this.confirmation = confirmation;
+            $.confirmation = confirmation;
             return this;
         }
-        public Builder confirmation(@Nullable Either<String,Confirmation> confirmation) {
-            this.confirmation = Codegen.ofNullable(confirmation);
-            return this;
+
+        public Builder confirmation(Either<String,Confirmation> confirmation) {
+            return confirmation(Output.of(confirmation));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder firstName(Output<String> firstName) {
-            this.firstName = Objects.requireNonNull(firstName);
+            $.firstName = firstName;
             return this;
         }
+
         public Builder firstName(String firstName) {
-            this.firstName = Output.of(Objects.requireNonNull(firstName));
-            return this;
+            return firstName(Output.of(firstName));
         }
+
         public Builder identities(@Nullable Output<List<UserIdentityContractArgs>> identities) {
-            this.identities = identities;
+            $.identities = identities;
             return this;
         }
-        public Builder identities(@Nullable List<UserIdentityContractArgs> identities) {
-            this.identities = Codegen.ofNullable(identities);
-            return this;
+
+        public Builder identities(List<UserIdentityContractArgs> identities) {
+            return identities(Output.of(identities));
         }
+
         public Builder identities(UserIdentityContractArgs... identities) {
             return identities(List.of(identities));
         }
+
         public Builder lastName(Output<String> lastName) {
-            this.lastName = Objects.requireNonNull(lastName);
+            $.lastName = lastName;
             return this;
         }
+
         public Builder lastName(String lastName) {
-            this.lastName = Output.of(Objects.requireNonNull(lastName));
-            return this;
+            return lastName(Output.of(lastName));
         }
+
         public Builder note(@Nullable Output<String> note) {
-            this.note = note;
+            $.note = note;
             return this;
         }
-        public Builder note(@Nullable String note) {
-            this.note = Codegen.ofNullable(note);
-            return this;
+
+        public Builder note(String note) {
+            return note(Output.of(note));
         }
+
         public Builder notify_(@Nullable Output<Boolean> notify) {
-            this.notify = notify;
+            $.notify = notify;
             return this;
         }
-        public Builder notify_(@Nullable Boolean notify) {
-            this.notify = Codegen.ofNullable(notify);
-            return this;
+
+        public Builder notify_(Boolean notify) {
+            return notify_(Output.of(notify));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder state(@Nullable Output<Either<String,UserState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,UserState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,UserState> state) {
+            return state(Output.of(state));
         }
+
         public Builder userId(@Nullable Output<String> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable String userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(appType, confirmation, email, firstName, identities, lastName, note, notify, password, resourceGroupName, serviceName, state, userId);
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
+        }
+
+        public UserArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.firstName = Objects.requireNonNull($.firstName, "expected parameter 'firstName' to be non-null");
+            $.lastName = Objects.requireNonNull($.lastName, "expected parameter 'lastName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.state = Codegen.stringProp("state").left(UserState.class).output().arg($.state).def("active").getNullable();
+            return $;
         }
     }
+
 }

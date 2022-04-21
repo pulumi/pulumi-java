@@ -6,9 +6,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 import com.pulumi.azurenative.devtestlab.inputs.InboundNatRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SharedPublicIpAddressConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="inboundNatRules")
-      private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
+    private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
-    public Output<List<InboundNatRuleArgs>> inboundNatRules() {
-        return this.inboundNatRules == null ? Codegen.empty() : this.inboundNatRules;
+    public Optional<Output<List<InboundNatRuleArgs>>> inboundNatRules() {
+        return Optional.ofNullable(this.inboundNatRules);
     }
 
-    public SharedPublicIpAddressConfigurationArgs(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
-        this.inboundNatRules = inboundNatRules;
-    }
+    private SharedPublicIpAddressConfigurationArgs() {}
 
-    private SharedPublicIpAddressConfigurationArgs() {
-        this.inboundNatRules = Codegen.empty();
+    private SharedPublicIpAddressConfigurationArgs(SharedPublicIpAddressConfigurationArgs $) {
+        this.inboundNatRules = $.inboundNatRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPublicIpAddressConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
+        private SharedPublicIpAddressConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPublicIpAddressConfigurationArgs();
         }
 
         public Builder(SharedPublicIpAddressConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inboundNatRules = defaults.inboundNatRules;
+            $ = new SharedPublicIpAddressConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
-            this.inboundNatRules = inboundNatRules;
+            $.inboundNatRules = inboundNatRules;
             return this;
         }
-        public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
-            this.inboundNatRules = Codegen.ofNullable(inboundNatRules);
-            return this;
+
+        public Builder inboundNatRules(List<InboundNatRuleArgs> inboundNatRules) {
+            return inboundNatRules(Output.of(inboundNatRules));
         }
+
         public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
-        }        public SharedPublicIpAddressConfigurationArgs build() {
-            return new SharedPublicIpAddressConfigurationArgs(inboundNatRules);
+        }
+
+        public SharedPublicIpAddressConfigurationArgs build() {
+            return $;
         }
     }
+
 }

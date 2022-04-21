@@ -21,7 +21,7 @@ public final class ManagedVirtualNetworkReferenceResponse extends com.pulumi.res
      * 
      */
     @Import(name="referenceName", required=true)
-      private final String referenceName;
+    private String referenceName;
 
     public String referenceName() {
         return this.referenceName;
@@ -32,55 +32,52 @@ public final class ManagedVirtualNetworkReferenceResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedVirtualNetworkReferenceResponse(
-        String referenceName,
-        String type) {
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagedVirtualNetworkReferenceResponse() {}
 
-    private ManagedVirtualNetworkReferenceResponse() {
-        this.referenceName = null;
-        this.type = null;
+    private ManagedVirtualNetworkReferenceResponse(ManagedVirtualNetworkReferenceResponse $) {
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedVirtualNetworkReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String referenceName;
-        private String type;
+        private ManagedVirtualNetworkReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedVirtualNetworkReferenceResponse();
         }
 
         public Builder(ManagedVirtualNetworkReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new ManagedVirtualNetworkReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedVirtualNetworkReferenceResponse build() {
-            return new ManagedVirtualNetworkReferenceResponse(referenceName, type);
+        }
+
+        public ManagedVirtualNetworkReferenceResponse build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.ManagedRuleEnabledState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ruleId", required=true)
-      private final Output<String> ruleId;
+    private Output<String> ruleId;
 
     public Output<String> ruleId() {
         return this.ruleId;
@@ -37,63 +37,59 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
+    private @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
 
-    public Output<Either<String,ManagedRuleEnabledState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,ManagedRuleEnabledState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public ManagedRuleOverrideArgs(
-        Output<String> ruleId,
-        @Nullable Output<Either<String,ManagedRuleEnabledState>> state) {
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-        this.state = state;
-    }
+    private ManagedRuleOverrideArgs() {}
 
-    private ManagedRuleOverrideArgs() {
-        this.ruleId = Codegen.empty();
-        this.state = Codegen.empty();
+    private ManagedRuleOverrideArgs(ManagedRuleOverrideArgs $) {
+        this.ruleId = $.ruleId;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ruleId;
-        private @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
+        private ManagedRuleOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleOverrideArgs();
         }
 
         public Builder(ManagedRuleOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleId = defaults.ruleId;
-    	      this.state = defaults.state;
+            $ = new ManagedRuleOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleId(Output<String> ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
-            return this;
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder state(@Nullable Output<Either<String,ManagedRuleEnabledState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,ManagedRuleEnabledState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public ManagedRuleOverrideArgs build() {
-            return new ManagedRuleOverrideArgs(ruleId, state);
+
+        public Builder state(Either<String,ManagedRuleEnabledState> state) {
+            return state(Output.of(state));
+        }
+
+        public ManagedRuleOverrideArgs build() {
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

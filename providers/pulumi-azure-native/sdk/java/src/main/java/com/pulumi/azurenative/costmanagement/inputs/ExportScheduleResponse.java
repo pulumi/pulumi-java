@@ -24,10 +24,10 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable String recurrence;
+    private @Nullable String recurrence;
 
     public Optional<String> recurrence() {
-        return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
+        return Optional.ofNullable(this.recurrence);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recurrencePeriod")
-      private final @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
+    private @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
 
     public Optional<ExportRecurrencePeriodResponse> recurrencePeriod() {
-        return this.recurrencePeriod == null ? Optional.empty() : Optional.ofNullable(this.recurrencePeriod);
+        return Optional.ofNullable(this.recurrencePeriod);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public ExportScheduleResponse(
-        @Nullable String recurrence,
-        @Nullable ExportRecurrencePeriodResponse recurrencePeriod,
-        @Nullable String status) {
-        this.recurrence = recurrence;
-        this.recurrencePeriod = recurrencePeriod;
-        this.status = status;
-    }
+    private ExportScheduleResponse() {}
 
-    private ExportScheduleResponse() {
-        this.recurrence = null;
-        this.recurrencePeriod = null;
-        this.status = null;
+    private ExportScheduleResponse(ExportScheduleResponse $) {
+        this.recurrence = $.recurrence;
+        this.recurrencePeriod = $.recurrencePeriod;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String recurrence;
-        private @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
-        private @Nullable String status;
+        private ExportScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportScheduleResponse();
         }
 
         public Builder(ExportScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrence = defaults.recurrence;
-    	      this.recurrencePeriod = defaults.recurrencePeriod;
-    	      this.status = defaults.status;
+            $ = new ExportScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrence(@Nullable String recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodResponse recurrencePeriod) {
-            this.recurrencePeriod = recurrencePeriod;
+            $.recurrencePeriod = recurrencePeriod;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public ExportScheduleResponse build() {
-            return new ExportScheduleResponse(recurrence, recurrencePeriod, status);
+        }
+
+        public ExportScheduleResponse build() {
+            return $;
         }
     }
+
 }

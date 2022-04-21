@@ -23,45 +23,44 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public HardwareProfileResponse(@Nullable String vmSize) {
-        this.vmSize = vmSize;
-    }
+    private HardwareProfileResponse() {}
 
-    private HardwareProfileResponse() {
-        this.vmSize = null;
+    private HardwareProfileResponse(HardwareProfileResponse $) {
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HardwareProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String vmSize;
+        private HardwareProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HardwareProfileResponse();
         }
 
         public Builder(HardwareProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vmSize = defaults.vmSize;
+            $ = new HardwareProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public HardwareProfileResponse build() {
-            return new HardwareProfileResponse(vmSize);
+        }
+
+        public HardwareProfileResponse build() {
+            return $;
         }
     }
+
 }

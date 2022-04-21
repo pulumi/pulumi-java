@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,7 +33,7 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="op", required=true)
-      private final Output<String> op;
+    private Output<String> op;
 
     public Output<String> op() {
         return this.op;
@@ -45,76 +44,71 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public TagFilterArgs(
-        Output<String> name,
-        Output<String> op,
-        Output<String> value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.op = Objects.requireNonNull(op, "expected parameter 'op' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TagFilterArgs() {}
 
-    private TagFilterArgs() {
-        this.name = Codegen.empty();
-        this.op = Codegen.empty();
-        this.value = Codegen.empty();
+    private TagFilterArgs(TagFilterArgs $) {
+        this.name = $.name;
+        this.op = $.op;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> op;
-        private Output<String> value;
+        private TagFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagFilterArgs();
         }
 
         public Builder(TagFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.op = defaults.op;
-    	      this.value = defaults.value;
+            $ = new TagFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder op(Output<String> op) {
-            this.op = Objects.requireNonNull(op);
+            $.op = op;
             return this;
         }
+
         public Builder op(String op) {
-            this.op = Output.of(Objects.requireNonNull(op));
-            return this;
+            return op(Output.of(op));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public TagFilterArgs build() {
-            return new TagFilterArgs(name, op, value);
+            return value(Output.of(value));
+        }
+
+        public TagFilterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.op = Objects.requireNonNull($.op, "expected parameter 'op' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

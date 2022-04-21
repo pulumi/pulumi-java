@@ -21,45 +21,45 @@ public final class ServicePlacementPolicyDescriptionResponse extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServicePlacementPolicyDescriptionResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServicePlacementPolicyDescriptionResponse() {}
 
-    private ServicePlacementPolicyDescriptionResponse() {
-        this.type = null;
+    private ServicePlacementPolicyDescriptionResponse(ServicePlacementPolicyDescriptionResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePlacementPolicyDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ServicePlacementPolicyDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePlacementPolicyDescriptionResponse();
         }
 
         public Builder(ServicePlacementPolicyDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServicePlacementPolicyDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServicePlacementPolicyDescriptionResponse build() {
-            return new ServicePlacementPolicyDescriptionResponse(type);
+        }
+
+        public ServicePlacementPolicyDescriptionResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

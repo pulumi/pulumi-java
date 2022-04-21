@@ -25,10 +25,10 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,Object> parameters;
+    private @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="referenceName", required=true)
-      private final String referenceName;
+    private String referenceName;
 
     public String referenceName() {
         return this.referenceName;
@@ -47,64 +47,58 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public IntegrationRuntimeReferenceResponse(
-        @Nullable Map<String,Object> parameters,
-        String referenceName,
-        String type) {
-        this.parameters = parameters;
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IntegrationRuntimeReferenceResponse() {}
 
-    private IntegrationRuntimeReferenceResponse() {
-        this.parameters = Map.of();
-        this.referenceName = null;
-        this.type = null;
+    private IntegrationRuntimeReferenceResponse(IntegrationRuntimeReferenceResponse $) {
+        this.parameters = $.parameters;
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> parameters;
-        private String referenceName;
-        private String type;
+        private IntegrationRuntimeReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeReferenceResponse();
         }
 
         public Builder(IntegrationRuntimeReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new IntegrationRuntimeReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder referenceName(String referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public IntegrationRuntimeReferenceResponse build() {
-            return new IntegrationRuntimeReferenceResponse(parameters, referenceName, type);
+        }
+
+        public IntegrationRuntimeReferenceResponse build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

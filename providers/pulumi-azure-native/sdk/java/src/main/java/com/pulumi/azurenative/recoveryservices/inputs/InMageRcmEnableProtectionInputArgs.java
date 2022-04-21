@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="disksDefault")
-      private final @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
+    private @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
 
-    public Output<InMageRcmDisksDefaultInputArgs> disksDefault() {
-        return this.disksDefault == null ? Codegen.empty() : this.disksDefault;
+    public Optional<Output<InMageRcmDisksDefaultInputArgs>> disksDefault() {
+        return Optional.ofNullable(this.disksDefault);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="disksToInclude")
-      private final @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
+    private @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
 
-    public Output<List<InMageRcmDiskInputArgs>> disksToInclude() {
-        return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
+    public Optional<Output<List<InMageRcmDiskInputArgs>>> disksToInclude() {
+        return Optional.ofNullable(this.disksToInclude);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fabricDiscoveryMachineId")
-      private final @Nullable Output<String> fabricDiscoveryMachineId;
+    private @Nullable Output<String> fabricDiscoveryMachineId;
 
-    public Output<String> fabricDiscoveryMachineId() {
-        return this.fabricDiscoveryMachineId == null ? Codegen.empty() : this.fabricDiscoveryMachineId;
+    public Optional<Output<String>> fabricDiscoveryMachineId() {
+        return Optional.ofNullable(this.fabricDiscoveryMachineId);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<Either<String,LicenseType>> licenseType;
+    private @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Output<Either<String,LicenseType>> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<Either<String,LicenseType>>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="multiVmGroupName")
-      private final @Nullable Output<String> multiVmGroupName;
+    private @Nullable Output<String> multiVmGroupName;
 
-    public Output<String> multiVmGroupName() {
-        return this.multiVmGroupName == null ? Codegen.empty() : this.multiVmGroupName;
+    public Optional<Output<String>> multiVmGroupName() {
+        return Optional.ofNullable(this.multiVmGroupName);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="processServerId")
-      private final @Nullable Output<String> processServerId;
+    private @Nullable Output<String> processServerId;
 
-    public Output<String> processServerId() {
-        return this.processServerId == null ? Codegen.empty() : this.processServerId;
+    public Optional<Output<String>> processServerId() {
+        return Optional.ofNullable(this.processServerId);
     }
 
     /**
@@ -107,10 +108,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="runAsAccountId")
-      private final @Nullable Output<String> runAsAccountId;
+    private @Nullable Output<String> runAsAccountId;
 
-    public Output<String> runAsAccountId() {
-        return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
+    public Optional<Output<String>> runAsAccountId() {
+        return Optional.ofNullable(this.runAsAccountId);
     }
 
     /**
@@ -118,10 +119,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetAvailabilitySetId")
-      private final @Nullable Output<String> targetAvailabilitySetId;
+    private @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> targetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
+    public Optional<Output<String>> targetAvailabilitySetId() {
+        return Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
     /**
@@ -129,10 +130,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetAvailabilityZone")
-      private final @Nullable Output<String> targetAvailabilityZone;
+    private @Nullable Output<String> targetAvailabilityZone;
 
-    public Output<String> targetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
+    public Optional<Output<String>> targetAvailabilityZone() {
+        return Optional.ofNullable(this.targetAvailabilityZone);
     }
 
     /**
@@ -140,10 +141,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetBootDiagnosticsStorageAccountId")
-      private final @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
+    private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
 
-    public Output<String> targetBootDiagnosticsStorageAccountId() {
-        return this.targetBootDiagnosticsStorageAccountId == null ? Codegen.empty() : this.targetBootDiagnosticsStorageAccountId;
+    public Optional<Output<String>> targetBootDiagnosticsStorageAccountId() {
+        return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
 
     /**
@@ -151,10 +152,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetNetworkId")
-      private final @Nullable Output<String> targetNetworkId;
+    private @Nullable Output<String> targetNetworkId;
 
-    public Output<String> targetNetworkId() {
-        return this.targetNetworkId == null ? Codegen.empty() : this.targetNetworkId;
+    public Optional<Output<String>> targetNetworkId() {
+        return Optional.ofNullable(this.targetNetworkId);
     }
 
     /**
@@ -162,10 +163,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetProximityPlacementGroupId")
-      private final @Nullable Output<String> targetProximityPlacementGroupId;
+    private @Nullable Output<String> targetProximityPlacementGroupId;
 
-    public Output<String> targetProximityPlacementGroupId() {
-        return this.targetProximityPlacementGroupId == null ? Codegen.empty() : this.targetProximityPlacementGroupId;
+    public Optional<Output<String>> targetProximityPlacementGroupId() {
+        return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
 
     /**
@@ -173,10 +174,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetResourceGroupId")
-      private final @Nullable Output<String> targetResourceGroupId;
+    private @Nullable Output<String> targetResourceGroupId;
 
-    public Output<String> targetResourceGroupId() {
-        return this.targetResourceGroupId == null ? Codegen.empty() : this.targetResourceGroupId;
+    public Optional<Output<String>> targetResourceGroupId() {
+        return Optional.ofNullable(this.targetResourceGroupId);
     }
 
     /**
@@ -184,10 +185,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetSubnetName")
-      private final @Nullable Output<String> targetSubnetName;
+    private @Nullable Output<String> targetSubnetName;
 
-    public Output<String> targetSubnetName() {
-        return this.targetSubnetName == null ? Codegen.empty() : this.targetSubnetName;
+    public Optional<Output<String>> targetSubnetName() {
+        return Optional.ofNullable(this.targetSubnetName);
     }
 
     /**
@@ -195,10 +196,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetVmName")
-      private final @Nullable Output<String> targetVmName;
+    private @Nullable Output<String> targetVmName;
 
-    public Output<String> targetVmName() {
-        return this.targetVmName == null ? Codegen.empty() : this.targetVmName;
+    public Optional<Output<String>> targetVmName() {
+        return Optional.ofNullable(this.targetVmName);
     }
 
     /**
@@ -206,10 +207,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetVmSize")
-      private final @Nullable Output<String> targetVmSize;
+    private @Nullable Output<String> targetVmSize;
 
-    public Output<String> targetVmSize() {
-        return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
+    public Optional<Output<String>> targetVmSize() {
+        return Optional.ofNullable(this.targetVmSize);
     }
 
     /**
@@ -217,10 +218,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="testNetworkId")
-      private final @Nullable Output<String> testNetworkId;
+    private @Nullable Output<String> testNetworkId;
 
-    public Output<String> testNetworkId() {
-        return this.testNetworkId == null ? Codegen.empty() : this.testNetworkId;
+    public Optional<Output<String>> testNetworkId() {
+        return Optional.ofNullable(this.testNetworkId);
     }
 
     /**
@@ -228,287 +229,233 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="testSubnetName")
-      private final @Nullable Output<String> testSubnetName;
+    private @Nullable Output<String> testSubnetName;
 
-    public Output<String> testSubnetName() {
-        return this.testSubnetName == null ? Codegen.empty() : this.testSubnetName;
+    public Optional<Output<String>> testSubnetName() {
+        return Optional.ofNullable(this.testSubnetName);
     }
 
-    public InMageRcmEnableProtectionInputArgs(
-        @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault,
-        @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude,
-        @Nullable Output<String> fabricDiscoveryMachineId,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<Either<String,LicenseType>> licenseType,
-        @Nullable Output<String> multiVmGroupName,
-        @Nullable Output<String> processServerId,
-        @Nullable Output<String> runAsAccountId,
-        @Nullable Output<String> targetAvailabilitySetId,
-        @Nullable Output<String> targetAvailabilityZone,
-        @Nullable Output<String> targetBootDiagnosticsStorageAccountId,
-        @Nullable Output<String> targetNetworkId,
-        @Nullable Output<String> targetProximityPlacementGroupId,
-        @Nullable Output<String> targetResourceGroupId,
-        @Nullable Output<String> targetSubnetName,
-        @Nullable Output<String> targetVmName,
-        @Nullable Output<String> targetVmSize,
-        @Nullable Output<String> testNetworkId,
-        @Nullable Output<String> testSubnetName) {
-        this.disksDefault = disksDefault;
-        this.disksToInclude = disksToInclude;
-        this.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.licenseType = licenseType;
-        this.multiVmGroupName = multiVmGroupName;
-        this.processServerId = processServerId;
-        this.runAsAccountId = runAsAccountId;
-        this.targetAvailabilitySetId = targetAvailabilitySetId;
-        this.targetAvailabilityZone = targetAvailabilityZone;
-        this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
-        this.targetNetworkId = targetNetworkId;
-        this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
-        this.targetResourceGroupId = targetResourceGroupId;
-        this.targetSubnetName = targetSubnetName;
-        this.targetVmName = targetVmName;
-        this.targetVmSize = targetVmSize;
-        this.testNetworkId = testNetworkId;
-        this.testSubnetName = testSubnetName;
-    }
+    private InMageRcmEnableProtectionInputArgs() {}
 
-    private InMageRcmEnableProtectionInputArgs() {
-        this.disksDefault = Codegen.empty();
-        this.disksToInclude = Codegen.empty();
-        this.fabricDiscoveryMachineId = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.multiVmGroupName = Codegen.empty();
-        this.processServerId = Codegen.empty();
-        this.runAsAccountId = Codegen.empty();
-        this.targetAvailabilitySetId = Codegen.empty();
-        this.targetAvailabilityZone = Codegen.empty();
-        this.targetBootDiagnosticsStorageAccountId = Codegen.empty();
-        this.targetNetworkId = Codegen.empty();
-        this.targetProximityPlacementGroupId = Codegen.empty();
-        this.targetResourceGroupId = Codegen.empty();
-        this.targetSubnetName = Codegen.empty();
-        this.targetVmName = Codegen.empty();
-        this.targetVmSize = Codegen.empty();
-        this.testNetworkId = Codegen.empty();
-        this.testSubnetName = Codegen.empty();
+    private InMageRcmEnableProtectionInputArgs(InMageRcmEnableProtectionInputArgs $) {
+        this.disksDefault = $.disksDefault;
+        this.disksToInclude = $.disksToInclude;
+        this.fabricDiscoveryMachineId = $.fabricDiscoveryMachineId;
+        this.instanceType = $.instanceType;
+        this.licenseType = $.licenseType;
+        this.multiVmGroupName = $.multiVmGroupName;
+        this.processServerId = $.processServerId;
+        this.runAsAccountId = $.runAsAccountId;
+        this.targetAvailabilitySetId = $.targetAvailabilitySetId;
+        this.targetAvailabilityZone = $.targetAvailabilityZone;
+        this.targetBootDiagnosticsStorageAccountId = $.targetBootDiagnosticsStorageAccountId;
+        this.targetNetworkId = $.targetNetworkId;
+        this.targetProximityPlacementGroupId = $.targetProximityPlacementGroupId;
+        this.targetResourceGroupId = $.targetResourceGroupId;
+        this.targetSubnetName = $.targetSubnetName;
+        this.targetVmName = $.targetVmName;
+        this.targetVmSize = $.targetVmSize;
+        this.testNetworkId = $.testNetworkId;
+        this.testSubnetName = $.testSubnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmEnableProtectionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
-        private @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
-        private @Nullable Output<String> fabricDiscoveryMachineId;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<Either<String,LicenseType>> licenseType;
-        private @Nullable Output<String> multiVmGroupName;
-        private @Nullable Output<String> processServerId;
-        private @Nullable Output<String> runAsAccountId;
-        private @Nullable Output<String> targetAvailabilitySetId;
-        private @Nullable Output<String> targetAvailabilityZone;
-        private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
-        private @Nullable Output<String> targetNetworkId;
-        private @Nullable Output<String> targetProximityPlacementGroupId;
-        private @Nullable Output<String> targetResourceGroupId;
-        private @Nullable Output<String> targetSubnetName;
-        private @Nullable Output<String> targetVmName;
-        private @Nullable Output<String> targetVmSize;
-        private @Nullable Output<String> testNetworkId;
-        private @Nullable Output<String> testSubnetName;
+        private InMageRcmEnableProtectionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmEnableProtectionInputArgs();
         }
 
         public Builder(InMageRcmEnableProtectionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disksDefault = defaults.disksDefault;
-    	      this.disksToInclude = defaults.disksToInclude;
-    	      this.fabricDiscoveryMachineId = defaults.fabricDiscoveryMachineId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.licenseType = defaults.licenseType;
-    	      this.multiVmGroupName = defaults.multiVmGroupName;
-    	      this.processServerId = defaults.processServerId;
-    	      this.runAsAccountId = defaults.runAsAccountId;
-    	      this.targetAvailabilitySetId = defaults.targetAvailabilitySetId;
-    	      this.targetAvailabilityZone = defaults.targetAvailabilityZone;
-    	      this.targetBootDiagnosticsStorageAccountId = defaults.targetBootDiagnosticsStorageAccountId;
-    	      this.targetNetworkId = defaults.targetNetworkId;
-    	      this.targetProximityPlacementGroupId = defaults.targetProximityPlacementGroupId;
-    	      this.targetResourceGroupId = defaults.targetResourceGroupId;
-    	      this.targetSubnetName = defaults.targetSubnetName;
-    	      this.targetVmName = defaults.targetVmName;
-    	      this.targetVmSize = defaults.targetVmSize;
-    	      this.testNetworkId = defaults.testNetworkId;
-    	      this.testSubnetName = defaults.testSubnetName;
+            $ = new InMageRcmEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disksDefault(@Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault) {
-            this.disksDefault = disksDefault;
+            $.disksDefault = disksDefault;
             return this;
         }
-        public Builder disksDefault(@Nullable InMageRcmDisksDefaultInputArgs disksDefault) {
-            this.disksDefault = Codegen.ofNullable(disksDefault);
-            return this;
+
+        public Builder disksDefault(InMageRcmDisksDefaultInputArgs disksDefault) {
+            return disksDefault(Output.of(disksDefault));
         }
+
         public Builder disksToInclude(@Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude) {
-            this.disksToInclude = disksToInclude;
+            $.disksToInclude = disksToInclude;
             return this;
         }
-        public Builder disksToInclude(@Nullable List<InMageRcmDiskInputArgs> disksToInclude) {
-            this.disksToInclude = Codegen.ofNullable(disksToInclude);
-            return this;
+
+        public Builder disksToInclude(List<InMageRcmDiskInputArgs> disksToInclude) {
+            return disksToInclude(Output.of(disksToInclude));
         }
+
         public Builder disksToInclude(InMageRcmDiskInputArgs... disksToInclude) {
             return disksToInclude(List.of(disksToInclude));
         }
+
         public Builder fabricDiscoveryMachineId(@Nullable Output<String> fabricDiscoveryMachineId) {
-            this.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
+            $.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
             return this;
         }
-        public Builder fabricDiscoveryMachineId(@Nullable String fabricDiscoveryMachineId) {
-            this.fabricDiscoveryMachineId = Codegen.ofNullable(fabricDiscoveryMachineId);
-            return this;
+
+        public Builder fabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
+            return fabricDiscoveryMachineId(Output.of(fabricDiscoveryMachineId));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(Either<String,LicenseType> licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
-            this.multiVmGroupName = multiVmGroupName;
+            $.multiVmGroupName = multiVmGroupName;
             return this;
         }
-        public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
-            this.multiVmGroupName = Codegen.ofNullable(multiVmGroupName);
-            return this;
+
+        public Builder multiVmGroupName(String multiVmGroupName) {
+            return multiVmGroupName(Output.of(multiVmGroupName));
         }
+
         public Builder processServerId(@Nullable Output<String> processServerId) {
-            this.processServerId = processServerId;
+            $.processServerId = processServerId;
             return this;
         }
-        public Builder processServerId(@Nullable String processServerId) {
-            this.processServerId = Codegen.ofNullable(processServerId);
-            return this;
+
+        public Builder processServerId(String processServerId) {
+            return processServerId(Output.of(processServerId));
         }
+
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
-            this.runAsAccountId = runAsAccountId;
+            $.runAsAccountId = runAsAccountId;
             return this;
         }
-        public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Codegen.ofNullable(runAsAccountId);
-            return this;
+
+        public Builder runAsAccountId(String runAsAccountId) {
+            return runAsAccountId(Output.of(runAsAccountId));
         }
+
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = targetAvailabilitySetId;
+            $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Codegen.ofNullable(targetAvailabilitySetId);
-            return this;
+
+        public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
+            return targetAvailabilitySetId(Output.of(targetAvailabilitySetId));
         }
+
         public Builder targetAvailabilityZone(@Nullable Output<String> targetAvailabilityZone) {
-            this.targetAvailabilityZone = targetAvailabilityZone;
+            $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
-            this.targetAvailabilityZone = Codegen.ofNullable(targetAvailabilityZone);
-            return this;
+
+        public Builder targetAvailabilityZone(String targetAvailabilityZone) {
+            return targetAvailabilityZone(Output.of(targetAvailabilityZone));
         }
+
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable Output<String> targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
+            $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
-        public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = Codegen.ofNullable(targetBootDiagnosticsStorageAccountId);
-            return this;
+
+        public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
+            return targetBootDiagnosticsStorageAccountId(Output.of(targetBootDiagnosticsStorageAccountId));
         }
+
         public Builder targetNetworkId(@Nullable Output<String> targetNetworkId) {
-            this.targetNetworkId = targetNetworkId;
+            $.targetNetworkId = targetNetworkId;
             return this;
         }
-        public Builder targetNetworkId(@Nullable String targetNetworkId) {
-            this.targetNetworkId = Codegen.ofNullable(targetNetworkId);
-            return this;
+
+        public Builder targetNetworkId(String targetNetworkId) {
+            return targetNetworkId(Output.of(targetNetworkId));
         }
+
         public Builder targetProximityPlacementGroupId(@Nullable Output<String> targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
+            $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
-        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = Codegen.ofNullable(targetProximityPlacementGroupId);
-            return this;
+
+        public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
+            return targetProximityPlacementGroupId(Output.of(targetProximityPlacementGroupId));
         }
+
         public Builder targetResourceGroupId(@Nullable Output<String> targetResourceGroupId) {
-            this.targetResourceGroupId = targetResourceGroupId;
+            $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
-        public Builder targetResourceGroupId(@Nullable String targetResourceGroupId) {
-            this.targetResourceGroupId = Codegen.ofNullable(targetResourceGroupId);
-            return this;
+
+        public Builder targetResourceGroupId(String targetResourceGroupId) {
+            return targetResourceGroupId(Output.of(targetResourceGroupId));
         }
+
         public Builder targetSubnetName(@Nullable Output<String> targetSubnetName) {
-            this.targetSubnetName = targetSubnetName;
+            $.targetSubnetName = targetSubnetName;
             return this;
         }
-        public Builder targetSubnetName(@Nullable String targetSubnetName) {
-            this.targetSubnetName = Codegen.ofNullable(targetSubnetName);
-            return this;
+
+        public Builder targetSubnetName(String targetSubnetName) {
+            return targetSubnetName(Output.of(targetSubnetName));
         }
+
         public Builder targetVmName(@Nullable Output<String> targetVmName) {
-            this.targetVmName = targetVmName;
+            $.targetVmName = targetVmName;
             return this;
         }
-        public Builder targetVmName(@Nullable String targetVmName) {
-            this.targetVmName = Codegen.ofNullable(targetVmName);
-            return this;
+
+        public Builder targetVmName(String targetVmName) {
+            return targetVmName(Output.of(targetVmName));
         }
+
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
-            this.targetVmSize = targetVmSize;
+            $.targetVmSize = targetVmSize;
             return this;
         }
-        public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Codegen.ofNullable(targetVmSize);
-            return this;
+
+        public Builder targetVmSize(String targetVmSize) {
+            return targetVmSize(Output.of(targetVmSize));
         }
+
         public Builder testNetworkId(@Nullable Output<String> testNetworkId) {
-            this.testNetworkId = testNetworkId;
+            $.testNetworkId = testNetworkId;
             return this;
         }
-        public Builder testNetworkId(@Nullable String testNetworkId) {
-            this.testNetworkId = Codegen.ofNullable(testNetworkId);
-            return this;
+
+        public Builder testNetworkId(String testNetworkId) {
+            return testNetworkId(Output.of(testNetworkId));
         }
+
         public Builder testSubnetName(@Nullable Output<String> testSubnetName) {
-            this.testSubnetName = testSubnetName;
+            $.testSubnetName = testSubnetName;
             return this;
         }
-        public Builder testSubnetName(@Nullable String testSubnetName) {
-            this.testSubnetName = Codegen.ofNullable(testSubnetName);
-            return this;
-        }        public InMageRcmEnableProtectionInputArgs build() {
-            return new InMageRcmEnableProtectionInputArgs(disksDefault, disksToInclude, fabricDiscoveryMachineId, instanceType, licenseType, multiVmGroupName, processServerId, runAsAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetBootDiagnosticsStorageAccountId, targetNetworkId, targetProximityPlacementGroupId, targetResourceGroupId, targetSubnetName, targetVmName, targetVmSize, testNetworkId, testSubnetName);
+
+        public Builder testSubnetName(String testSubnetName) {
+            return testSubnetName(Output.of(testSubnetName));
+        }
+
+        public InMageRcmEnableProtectionInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

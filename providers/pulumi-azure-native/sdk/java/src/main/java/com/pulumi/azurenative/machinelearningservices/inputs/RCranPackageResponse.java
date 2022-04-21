@@ -19,10 +19,10 @@ public final class RCranPackageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class RCranPackageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="repository")
-      private final @Nullable String repository;
+    private @Nullable String repository;
 
     public Optional<String> repository() {
-        return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
+        return Optional.ofNullable(this.repository);
     }
 
-    public RCranPackageResponse(
-        @Nullable String name,
-        @Nullable String repository) {
-        this.name = name;
-        this.repository = repository;
-    }
+    private RCranPackageResponse() {}
 
-    private RCranPackageResponse() {
-        this.name = null;
-        this.repository = null;
+    private RCranPackageResponse(RCranPackageResponse $) {
+        this.name = $.name;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RCranPackageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String repository;
+        private RCranPackageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RCranPackageResponse();
         }
 
         public Builder(RCranPackageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.repository = defaults.repository;
+            $ = new RCranPackageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder repository(@Nullable String repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
-        }        public RCranPackageResponse build() {
-            return new RCranPackageResponse(name, repository);
+        }
+
+        public RCranPackageResponse build() {
+            return $;
         }
     }
+
 }

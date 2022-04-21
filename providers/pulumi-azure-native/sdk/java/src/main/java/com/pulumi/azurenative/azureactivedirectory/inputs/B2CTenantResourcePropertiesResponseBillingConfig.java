@@ -23,10 +23,10 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends com.
      * 
      */
     @Import(name="billingType")
-      private final @Nullable String billingType;
+    private @Nullable String billingType;
 
     public Optional<String> billingType() {
-        return this.billingType == null ? Optional.empty() : Optional.ofNullable(this.billingType);
+        return Optional.ofNullable(this.billingType);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends com.
      * 
      */
     @Import(name="effectiveStartDateUtc", required=true)
-      private final String effectiveStartDateUtc;
+    private String effectiveStartDateUtc;
 
     public String effectiveStartDateUtc() {
         return this.effectiveStartDateUtc;
     }
 
-    public B2CTenantResourcePropertiesResponseBillingConfig(
-        @Nullable String billingType,
-        String effectiveStartDateUtc) {
-        this.billingType = billingType;
-        this.effectiveStartDateUtc = Objects.requireNonNull(effectiveStartDateUtc, "expected parameter 'effectiveStartDateUtc' to be non-null");
-    }
+    private B2CTenantResourcePropertiesResponseBillingConfig() {}
 
-    private B2CTenantResourcePropertiesResponseBillingConfig() {
-        this.billingType = null;
-        this.effectiveStartDateUtc = null;
+    private B2CTenantResourcePropertiesResponseBillingConfig(B2CTenantResourcePropertiesResponseBillingConfig $) {
+        this.billingType = $.billingType;
+        this.effectiveStartDateUtc = $.effectiveStartDateUtc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(B2CTenantResourcePropertiesResponseBillingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String billingType;
-        private String effectiveStartDateUtc;
+        private B2CTenantResourcePropertiesResponseBillingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new B2CTenantResourcePropertiesResponseBillingConfig();
         }
 
         public Builder(B2CTenantResourcePropertiesResponseBillingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingType = defaults.billingType;
-    	      this.effectiveStartDateUtc = defaults.effectiveStartDateUtc;
+            $ = new B2CTenantResourcePropertiesResponseBillingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder billingType(@Nullable String billingType) {
-            this.billingType = billingType;
+            $.billingType = billingType;
             return this;
         }
+
         public Builder effectiveStartDateUtc(String effectiveStartDateUtc) {
-            this.effectiveStartDateUtc = Objects.requireNonNull(effectiveStartDateUtc);
+            $.effectiveStartDateUtc = effectiveStartDateUtc;
             return this;
-        }        public B2CTenantResourcePropertiesResponseBillingConfig build() {
-            return new B2CTenantResourcePropertiesResponseBillingConfig(billingType, effectiveStartDateUtc);
+        }
+
+        public B2CTenantResourcePropertiesResponseBillingConfig build() {
+            $.effectiveStartDateUtc = Objects.requireNonNull($.effectiveStartDateUtc, "expected parameter 'effectiveStartDateUtc' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -35,10 +35,10 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iPAddressOrRange")
-      private final @Nullable String iPAddressOrRange;
+    private @Nullable String iPAddressOrRange;
 
     public Optional<String> iPAddressOrRange() {
-        return this.iPAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.iPAddressOrRange);
+        return Optional.ofNullable(this.iPAddressOrRange);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyToSign")
-      private final @Nullable String keyToSign;
+    private @Nullable String keyToSign;
 
     public Optional<String> keyToSign() {
-        return this.keyToSign == null ? Optional.empty() : Optional.ofNullable(this.keyToSign);
+        return Optional.ofNullable(this.keyToSign);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions", required=true)
-      private final Either<String,Permissions> permissions;
+    private Either<String,Permissions> permissions;
 
     public Either<String,Permissions> permissions() {
         return this.permissions;
@@ -68,10 +68,10 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocols")
-      private final @Nullable HttpProtocol protocols;
+    private @Nullable HttpProtocol protocols;
 
     public Optional<HttpProtocol> protocols() {
-        return this.protocols == null ? Optional.empty() : Optional.ofNullable(this.protocols);
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceTypes", required=true)
-      private final Either<String,SignedResourceTypes> resourceTypes;
+    private Either<String,SignedResourceTypes> resourceTypes;
 
     public Either<String,SignedResourceTypes> resourceTypes() {
         return this.resourceTypes;
@@ -101,7 +101,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="services", required=true)
-      private final Either<String,Services> services;
+    private Either<String,Services> services;
 
     public Either<String,Services> services() {
         return this.services;
@@ -112,7 +112,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sharedAccessExpiryTime", required=true)
-      private final String sharedAccessExpiryTime;
+    private String sharedAccessExpiryTime;
 
     public String sharedAccessExpiryTime() {
         return this.sharedAccessExpiryTime;
@@ -123,127 +123,104 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sharedAccessStartTime")
-      private final @Nullable String sharedAccessStartTime;
+    private @Nullable String sharedAccessStartTime;
 
     public Optional<String> sharedAccessStartTime() {
-        return this.sharedAccessStartTime == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessStartTime);
+        return Optional.ofNullable(this.sharedAccessStartTime);
     }
 
-    public ListStorageAccountSASArgs(
-        String accountName,
-        @Nullable String iPAddressOrRange,
-        @Nullable String keyToSign,
-        Either<String,Permissions> permissions,
-        @Nullable HttpProtocol protocols,
-        String resourceGroupName,
-        Either<String,SignedResourceTypes> resourceTypes,
-        Either<String,Services> services,
-        String sharedAccessExpiryTime,
-        @Nullable String sharedAccessStartTime) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.iPAddressOrRange = iPAddressOrRange;
-        this.keyToSign = keyToSign;
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.protocols = protocols;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceTypes = Objects.requireNonNull(resourceTypes, "expected parameter 'resourceTypes' to be non-null");
-        this.services = Objects.requireNonNull(services, "expected parameter 'services' to be non-null");
-        this.sharedAccessExpiryTime = Objects.requireNonNull(sharedAccessExpiryTime, "expected parameter 'sharedAccessExpiryTime' to be non-null");
-        this.sharedAccessStartTime = sharedAccessStartTime;
-    }
+    private ListStorageAccountSASArgs() {}
 
-    private ListStorageAccountSASArgs() {
-        this.accountName = null;
-        this.iPAddressOrRange = null;
-        this.keyToSign = null;
-        this.permissions = null;
-        this.protocols = null;
-        this.resourceGroupName = null;
-        this.resourceTypes = null;
-        this.services = null;
-        this.sharedAccessExpiryTime = null;
-        this.sharedAccessStartTime = null;
+    private ListStorageAccountSASArgs(ListStorageAccountSASArgs $) {
+        this.accountName = $.accountName;
+        this.iPAddressOrRange = $.iPAddressOrRange;
+        this.keyToSign = $.keyToSign;
+        this.permissions = $.permissions;
+        this.protocols = $.protocols;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceTypes = $.resourceTypes;
+        this.services = $.services;
+        this.sharedAccessExpiryTime = $.sharedAccessExpiryTime;
+        this.sharedAccessStartTime = $.sharedAccessStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListStorageAccountSASArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String iPAddressOrRange;
-        private @Nullable String keyToSign;
-        private Either<String,Permissions> permissions;
-        private @Nullable HttpProtocol protocols;
-        private String resourceGroupName;
-        private Either<String,SignedResourceTypes> resourceTypes;
-        private Either<String,Services> services;
-        private String sharedAccessExpiryTime;
-        private @Nullable String sharedAccessStartTime;
+        private ListStorageAccountSASArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListStorageAccountSASArgs();
         }
 
         public Builder(ListStorageAccountSASArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.iPAddressOrRange = defaults.iPAddressOrRange;
-    	      this.keyToSign = defaults.keyToSign;
-    	      this.permissions = defaults.permissions;
-    	      this.protocols = defaults.protocols;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.services = defaults.services;
-    	      this.sharedAccessExpiryTime = defaults.sharedAccessExpiryTime;
-    	      this.sharedAccessStartTime = defaults.sharedAccessStartTime;
+            $ = new ListStorageAccountSASArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
-            this.iPAddressOrRange = iPAddressOrRange;
+            $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
+
         public Builder keyToSign(@Nullable String keyToSign) {
-            this.keyToSign = keyToSign;
+            $.keyToSign = keyToSign;
             return this;
         }
+
         public Builder permissions(Either<String,Permissions> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder protocols(@Nullable HttpProtocol protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceTypes(Either<String,SignedResourceTypes> resourceTypes) {
-            this.resourceTypes = Objects.requireNonNull(resourceTypes);
+            $.resourceTypes = resourceTypes;
             return this;
         }
+
         public Builder services(Either<String,Services> services) {
-            this.services = Objects.requireNonNull(services);
+            $.services = services;
             return this;
         }
+
         public Builder sharedAccessExpiryTime(String sharedAccessExpiryTime) {
-            this.sharedAccessExpiryTime = Objects.requireNonNull(sharedAccessExpiryTime);
+            $.sharedAccessExpiryTime = sharedAccessExpiryTime;
             return this;
         }
+
         public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
-            this.sharedAccessStartTime = sharedAccessStartTime;
+            $.sharedAccessStartTime = sharedAccessStartTime;
             return this;
-        }        public ListStorageAccountSASArgs build() {
-            return new ListStorageAccountSASArgs(accountName, iPAddressOrRange, keyToSign, permissions, protocols, resourceGroupName, resourceTypes, services, sharedAccessExpiryTime, sharedAccessStartTime);
+        }
+
+        public ListStorageAccountSASArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceTypes = Objects.requireNonNull($.resourceTypes, "expected parameter 'resourceTypes' to be non-null");
+            $.services = Objects.requireNonNull($.services, "expected parameter 'services' to be non-null");
+            $.sharedAccessExpiryTime = Objects.requireNonNull($.sharedAccessExpiryTime, "expected parameter 'sharedAccessExpiryTime' to be non-null");
+            return $;
         }
     }
+
 }

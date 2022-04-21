@@ -24,10 +24,10 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class IPRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetPrefixLength")
-      private final @Nullable Integer subnetPrefixLength;
+    private @Nullable Integer subnetPrefixLength;
 
     public Optional<Integer> subnetPrefixLength() {
-        return this.subnetPrefixLength == null ? Optional.empty() : Optional.ofNullable(this.subnetPrefixLength);
+        return Optional.ofNullable(this.subnetPrefixLength);
     }
 
-    public IPRangeResponse(
-        @Nullable String address,
-        @Nullable String name,
-        @Nullable Integer subnetPrefixLength) {
-        this.address = address;
-        this.name = name;
-        this.subnetPrefixLength = subnetPrefixLength;
-    }
+    private IPRangeResponse() {}
 
-    private IPRangeResponse() {
-        this.address = null;
-        this.name = null;
-        this.subnetPrefixLength = null;
+    private IPRangeResponse(IPRangeResponse $) {
+        this.address = $.address;
+        this.name = $.name;
+        this.subnetPrefixLength = $.subnetPrefixLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable String name;
-        private @Nullable Integer subnetPrefixLength;
+        private IPRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPRangeResponse();
         }
 
         public Builder(IPRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.name = defaults.name;
-    	      this.subnetPrefixLength = defaults.subnetPrefixLength;
+            $ = new IPRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
-            this.subnetPrefixLength = subnetPrefixLength;
+            $.subnetPrefixLength = subnetPrefixLength;
             return this;
-        }        public IPRangeResponse build() {
-            return new IPRangeResponse(address, name, subnetPrefixLength);
+        }
+
+        public IPRangeResponse build() {
+            return $;
         }
     }
+
 }

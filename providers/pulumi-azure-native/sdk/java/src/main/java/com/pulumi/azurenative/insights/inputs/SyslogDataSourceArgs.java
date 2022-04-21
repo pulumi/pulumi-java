@@ -9,10 +9,10 @@ import com.pulumi.azurenative.insights.enums.KnownSyslogDataSourceStreams;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="facilityNames")
-      private final @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
+    private @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
-    public Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames() {
-        return this.facilityNames == null ? Codegen.empty() : this.facilityNames;
+    public Optional<Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>>> facilityNames() {
+        return Optional.ofNullable(this.facilityNames);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="logLevels")
-      private final @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
+    private @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
-    public Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels() {
-        return this.logLevels == null ? Codegen.empty() : this.logLevels;
+    public Optional<Output<List<Either<String,KnownSyslogDataSourceLogLevels>>>> logLevels() {
+        return Optional.ofNullable(this.logLevels);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,98 +65,90 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="streams")
-      private final @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
+    private @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
-    public Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams() {
-        return this.streams == null ? Codegen.empty() : this.streams;
+    public Optional<Output<List<Either<String,KnownSyslogDataSourceStreams>>>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public SyslogDataSourceArgs(
-        @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames,
-        @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels,
-        @Nullable Output<String> name,
-        @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
-        this.facilityNames = facilityNames;
-        this.logLevels = logLevels;
-        this.name = name;
-        this.streams = streams;
-    }
+    private SyslogDataSourceArgs() {}
 
-    private SyslogDataSourceArgs() {
-        this.facilityNames = Codegen.empty();
-        this.logLevels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.streams = Codegen.empty();
+    private SyslogDataSourceArgs(SyslogDataSourceArgs $) {
+        this.facilityNames = $.facilityNames;
+        this.logLevels = $.logLevels;
+        this.name = $.name;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyslogDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
-        private @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
+        private SyslogDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyslogDataSourceArgs();
         }
 
         public Builder(SyslogDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.facilityNames = defaults.facilityNames;
-    	      this.logLevels = defaults.logLevels;
-    	      this.name = defaults.name;
-    	      this.streams = defaults.streams;
+            $ = new SyslogDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder facilityNames(@Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames) {
-            this.facilityNames = facilityNames;
+            $.facilityNames = facilityNames;
             return this;
         }
-        public Builder facilityNames(@Nullable List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
-            this.facilityNames = Codegen.ofNullable(facilityNames);
-            return this;
+
+        public Builder facilityNames(List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
+            return facilityNames(Output.of(facilityNames));
         }
+
         public Builder facilityNames(Either<String,KnownSyslogDataSourceFacilityNames>... facilityNames) {
             return facilityNames(List.of(facilityNames));
         }
+
         public Builder logLevels(@Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
-            this.logLevels = logLevels;
+            $.logLevels = logLevels;
             return this;
         }
-        public Builder logLevels(@Nullable List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
-            this.logLevels = Codegen.ofNullable(logLevels);
-            return this;
+
+        public Builder logLevels(List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
+            return logLevels(Output.of(logLevels));
         }
+
         public Builder logLevels(Either<String,KnownSyslogDataSourceLogLevels>... logLevels) {
             return logLevels(List.of(logLevels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder streams(@Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
-        public Builder streams(@Nullable List<Either<String,KnownSyslogDataSourceStreams>> streams) {
-            this.streams = Codegen.ofNullable(streams);
-            return this;
+
+        public Builder streams(List<Either<String,KnownSyslogDataSourceStreams>> streams) {
+            return streams(Output.of(streams));
         }
+
         public Builder streams(Either<String,KnownSyslogDataSourceStreams>... streams) {
             return streams(List.of(streams));
-        }        public SyslogDataSourceArgs build() {
-            return new SyslogDataSourceArgs(facilityNames, logLevels, name, streams);
+        }
+
+        public SyslogDataSourceArgs build() {
+            return $;
         }
     }
+
 }

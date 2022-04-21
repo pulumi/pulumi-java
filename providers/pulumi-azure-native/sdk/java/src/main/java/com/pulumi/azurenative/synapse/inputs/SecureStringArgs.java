@@ -24,7 +24,7 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -35,63 +35,60 @@ public final class SecureStringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public SecureStringArgs(
-        Output<String> type,
-        Output<String> value) {
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SecureStringArgs() {}
 
-    private SecureStringArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private SecureStringArgs(SecureStringArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecureStringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<String> value;
+        private SecureStringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecureStringArgs();
         }
 
         public Builder(SecureStringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new SecureStringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SecureStringArgs build() {
-            return new SecureStringArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public SecureStringArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

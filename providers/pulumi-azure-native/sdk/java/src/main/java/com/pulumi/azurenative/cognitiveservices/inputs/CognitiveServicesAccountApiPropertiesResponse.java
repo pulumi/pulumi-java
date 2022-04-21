@@ -24,10 +24,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="aadClientId")
-      private final @Nullable String aadClientId;
+    private @Nullable String aadClientId;
 
     public Optional<String> aadClientId() {
-        return this.aadClientId == null ? Optional.empty() : Optional.ofNullable(this.aadClientId);
+        return Optional.ofNullable(this.aadClientId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="aadTenantId")
-      private final @Nullable String aadTenantId;
+    private @Nullable String aadTenantId;
 
     public Optional<String> aadTenantId() {
-        return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
+        return Optional.ofNullable(this.aadTenantId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="eventHubConnectionString")
-      private final @Nullable String eventHubConnectionString;
+    private @Nullable String eventHubConnectionString;
 
     public Optional<String> eventHubConnectionString() {
-        return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
+        return Optional.ofNullable(this.eventHubConnectionString);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="qnaAzureSearchEndpointId")
-      private final @Nullable String qnaAzureSearchEndpointId;
+    private @Nullable String qnaAzureSearchEndpointId;
 
     public Optional<String> qnaAzureSearchEndpointId() {
-        return this.qnaAzureSearchEndpointId == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointId);
+        return Optional.ofNullable(this.qnaAzureSearchEndpointId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="qnaAzureSearchEndpointKey")
-      private final @Nullable String qnaAzureSearchEndpointKey;
+    private @Nullable String qnaAzureSearchEndpointKey;
 
     public Optional<String> qnaAzureSearchEndpointKey() {
-        return this.qnaAzureSearchEndpointKey == null ? Optional.empty() : Optional.ofNullable(this.qnaAzureSearchEndpointKey);
+        return Optional.ofNullable(this.qnaAzureSearchEndpointKey);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="qnaRuntimeEndpoint")
-      private final @Nullable String qnaRuntimeEndpoint;
+    private @Nullable String qnaRuntimeEndpoint;
 
     public Optional<String> qnaRuntimeEndpoint() {
-        return this.qnaRuntimeEndpoint == null ? Optional.empty() : Optional.ofNullable(this.qnaRuntimeEndpoint);
+        return Optional.ofNullable(this.qnaRuntimeEndpoint);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="statisticsEnabled")
-      private final @Nullable Boolean statisticsEnabled;
+    private @Nullable Boolean statisticsEnabled;
 
     public Optional<Boolean> statisticsEnabled() {
-        return this.statisticsEnabled == null ? Optional.empty() : Optional.ofNullable(this.statisticsEnabled);
+        return Optional.ofNullable(this.statisticsEnabled);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="storageAccountConnectionString")
-      private final @Nullable String storageAccountConnectionString;
+    private @Nullable String storageAccountConnectionString;
 
     public Optional<String> storageAccountConnectionString() {
-        return this.storageAccountConnectionString == null ? Optional.empty() : Optional.ofNullable(this.storageAccountConnectionString);
+        return Optional.ofNullable(this.storageAccountConnectionString);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="superUser")
-      private final @Nullable String superUser;
+    private @Nullable String superUser;
 
     public Optional<String> superUser() {
-        return this.superUser == null ? Optional.empty() : Optional.ofNullable(this.superUser);
+        return Optional.ofNullable(this.superUser);
     }
 
     /**
@@ -123,127 +123,98 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends com.pul
      * 
      */
     @Import(name="websiteName")
-      private final @Nullable String websiteName;
+    private @Nullable String websiteName;
 
     public Optional<String> websiteName() {
-        return this.websiteName == null ? Optional.empty() : Optional.ofNullable(this.websiteName);
+        return Optional.ofNullable(this.websiteName);
     }
 
-    public CognitiveServicesAccountApiPropertiesResponse(
-        @Nullable String aadClientId,
-        @Nullable String aadTenantId,
-        @Nullable String eventHubConnectionString,
-        @Nullable String qnaAzureSearchEndpointId,
-        @Nullable String qnaAzureSearchEndpointKey,
-        @Nullable String qnaRuntimeEndpoint,
-        @Nullable Boolean statisticsEnabled,
-        @Nullable String storageAccountConnectionString,
-        @Nullable String superUser,
-        @Nullable String websiteName) {
-        this.aadClientId = aadClientId;
-        this.aadTenantId = aadTenantId;
-        this.eventHubConnectionString = eventHubConnectionString;
-        this.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
-        this.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
-        this.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
-        this.statisticsEnabled = statisticsEnabled;
-        this.storageAccountConnectionString = storageAccountConnectionString;
-        this.superUser = superUser;
-        this.websiteName = websiteName;
-    }
+    private CognitiveServicesAccountApiPropertiesResponse() {}
 
-    private CognitiveServicesAccountApiPropertiesResponse() {
-        this.aadClientId = null;
-        this.aadTenantId = null;
-        this.eventHubConnectionString = null;
-        this.qnaAzureSearchEndpointId = null;
-        this.qnaAzureSearchEndpointKey = null;
-        this.qnaRuntimeEndpoint = null;
-        this.statisticsEnabled = null;
-        this.storageAccountConnectionString = null;
-        this.superUser = null;
-        this.websiteName = null;
+    private CognitiveServicesAccountApiPropertiesResponse(CognitiveServicesAccountApiPropertiesResponse $) {
+        this.aadClientId = $.aadClientId;
+        this.aadTenantId = $.aadTenantId;
+        this.eventHubConnectionString = $.eventHubConnectionString;
+        this.qnaAzureSearchEndpointId = $.qnaAzureSearchEndpointId;
+        this.qnaAzureSearchEndpointKey = $.qnaAzureSearchEndpointKey;
+        this.qnaRuntimeEndpoint = $.qnaRuntimeEndpoint;
+        this.statisticsEnabled = $.statisticsEnabled;
+        this.storageAccountConnectionString = $.storageAccountConnectionString;
+        this.superUser = $.superUser;
+        this.websiteName = $.websiteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CognitiveServicesAccountApiPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String aadClientId;
-        private @Nullable String aadTenantId;
-        private @Nullable String eventHubConnectionString;
-        private @Nullable String qnaAzureSearchEndpointId;
-        private @Nullable String qnaAzureSearchEndpointKey;
-        private @Nullable String qnaRuntimeEndpoint;
-        private @Nullable Boolean statisticsEnabled;
-        private @Nullable String storageAccountConnectionString;
-        private @Nullable String superUser;
-        private @Nullable String websiteName;
+        private CognitiveServicesAccountApiPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CognitiveServicesAccountApiPropertiesResponse();
         }
 
         public Builder(CognitiveServicesAccountApiPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadClientId = defaults.aadClientId;
-    	      this.aadTenantId = defaults.aadTenantId;
-    	      this.eventHubConnectionString = defaults.eventHubConnectionString;
-    	      this.qnaAzureSearchEndpointId = defaults.qnaAzureSearchEndpointId;
-    	      this.qnaAzureSearchEndpointKey = defaults.qnaAzureSearchEndpointKey;
-    	      this.qnaRuntimeEndpoint = defaults.qnaRuntimeEndpoint;
-    	      this.statisticsEnabled = defaults.statisticsEnabled;
-    	      this.storageAccountConnectionString = defaults.storageAccountConnectionString;
-    	      this.superUser = defaults.superUser;
-    	      this.websiteName = defaults.websiteName;
+            $ = new CognitiveServicesAccountApiPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadClientId(@Nullable String aadClientId) {
-            this.aadClientId = aadClientId;
+            $.aadClientId = aadClientId;
             return this;
         }
+
         public Builder aadTenantId(@Nullable String aadTenantId) {
-            this.aadTenantId = aadTenantId;
+            $.aadTenantId = aadTenantId;
             return this;
         }
+
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
-            this.eventHubConnectionString = eventHubConnectionString;
+            $.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
+
         public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
-            this.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
+            $.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
             return this;
         }
+
         public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
-            this.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
+            $.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
             return this;
         }
+
         public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
-            this.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
+            $.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
             return this;
         }
+
         public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
-            this.statisticsEnabled = statisticsEnabled;
+            $.statisticsEnabled = statisticsEnabled;
             return this;
         }
+
         public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
-            this.storageAccountConnectionString = storageAccountConnectionString;
+            $.storageAccountConnectionString = storageAccountConnectionString;
             return this;
         }
+
         public Builder superUser(@Nullable String superUser) {
-            this.superUser = superUser;
+            $.superUser = superUser;
             return this;
         }
+
         public Builder websiteName(@Nullable String websiteName) {
-            this.websiteName = websiteName;
+            $.websiteName = websiteName;
             return this;
-        }        public CognitiveServicesAccountApiPropertiesResponse build() {
-            return new CognitiveServicesAccountApiPropertiesResponse(aadClientId, aadTenantId, eventHubConnectionString, qnaAzureSearchEndpointId, qnaAzureSearchEndpointKey, qnaRuntimeEndpoint, statisticsEnabled, storageAccountConnectionString, superUser, websiteName);
+        }
+
+        public CognitiveServicesAccountApiPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class RecommendedActionStateInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="actionInitiatedBy", required=true)
-      private final String actionInitiatedBy;
+    private String actionInitiatedBy;
 
     public String actionInitiatedBy() {
         return this.actionInitiatedBy;
@@ -32,7 +32,7 @@ public final class RecommendedActionStateInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="currentValue", required=true)
-      private final String currentValue;
+    private String currentValue;
 
     public String currentValue() {
         return this.currentValue;
@@ -43,64 +43,59 @@ public final class RecommendedActionStateInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastModified", required=true)
-      private final String lastModified;
+    private String lastModified;
 
     public String lastModified() {
         return this.lastModified;
     }
 
-    public RecommendedActionStateInfoResponse(
-        String actionInitiatedBy,
-        String currentValue,
-        String lastModified) {
-        this.actionInitiatedBy = Objects.requireNonNull(actionInitiatedBy, "expected parameter 'actionInitiatedBy' to be non-null");
-        this.currentValue = Objects.requireNonNull(currentValue, "expected parameter 'currentValue' to be non-null");
-        this.lastModified = Objects.requireNonNull(lastModified, "expected parameter 'lastModified' to be non-null");
-    }
+    private RecommendedActionStateInfoResponse() {}
 
-    private RecommendedActionStateInfoResponse() {
-        this.actionInitiatedBy = null;
-        this.currentValue = null;
-        this.lastModified = null;
+    private RecommendedActionStateInfoResponse(RecommendedActionStateInfoResponse $) {
+        this.actionInitiatedBy = $.actionInitiatedBy;
+        this.currentValue = $.currentValue;
+        this.lastModified = $.lastModified;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedActionStateInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionInitiatedBy;
-        private String currentValue;
-        private String lastModified;
+        private RecommendedActionStateInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedActionStateInfoResponse();
         }
 
         public Builder(RecommendedActionStateInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionInitiatedBy = defaults.actionInitiatedBy;
-    	      this.currentValue = defaults.currentValue;
-    	      this.lastModified = defaults.lastModified;
+            $ = new RecommendedActionStateInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionInitiatedBy(String actionInitiatedBy) {
-            this.actionInitiatedBy = Objects.requireNonNull(actionInitiatedBy);
+            $.actionInitiatedBy = actionInitiatedBy;
             return this;
         }
+
         public Builder currentValue(String currentValue) {
-            this.currentValue = Objects.requireNonNull(currentValue);
+            $.currentValue = currentValue;
             return this;
         }
+
         public Builder lastModified(String lastModified) {
-            this.lastModified = Objects.requireNonNull(lastModified);
+            $.lastModified = lastModified;
             return this;
-        }        public RecommendedActionStateInfoResponse build() {
-            return new RecommendedActionStateInfoResponse(actionInitiatedBy, currentValue, lastModified);
+        }
+
+        public RecommendedActionStateInfoResponse build() {
+            $.actionInitiatedBy = Objects.requireNonNull($.actionInitiatedBy, "expected parameter 'actionInitiatedBy' to be non-null");
+            $.currentValue = Objects.requireNonNull($.currentValue, "expected parameter 'currentValue' to be non-null");
+            $.lastModified = Objects.requireNonNull($.lastModified, "expected parameter 'lastModified' to be non-null");
+            return $;
         }
     }
+
 }

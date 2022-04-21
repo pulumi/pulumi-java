@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends com.pulumi
      * 
      */
     @Import(name="hostPoolName", required=true)
-      private final String hostPoolName;
+    private String hostPoolName;
 
     public String hostPoolName() {
         return this.hostPoolName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends com.pulumi
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-      private final String privateEndpointConnectionName;
+    private String privateEndpointConnectionName;
 
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -39,64 +39,59 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointConnectionByHostPoolArgs(
-        String hostPoolName,
-        String privateEndpointConnectionName,
-        String resourceGroupName) {
-        this.hostPoolName = Objects.requireNonNull(hostPoolName, "expected parameter 'hostPoolName' to be non-null");
-        this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointConnectionByHostPoolArgs() {}
 
-    private GetPrivateEndpointConnectionByHostPoolArgs() {
-        this.hostPoolName = null;
-        this.privateEndpointConnectionName = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointConnectionByHostPoolArgs(GetPrivateEndpointConnectionByHostPoolArgs $) {
+        this.hostPoolName = $.hostPoolName;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointConnectionByHostPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostPoolName;
-        private String privateEndpointConnectionName;
-        private String resourceGroupName;
+        private GetPrivateEndpointConnectionByHostPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointConnectionByHostPoolArgs();
         }
 
         public Builder(GetPrivateEndpointConnectionByHostPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostPoolName = defaults.hostPoolName;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointConnectionByHostPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostPoolName(String hostPoolName) {
-            this.hostPoolName = Objects.requireNonNull(hostPoolName);
+            $.hostPoolName = hostPoolName;
             return this;
         }
+
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointConnectionByHostPoolArgs build() {
-            return new GetPrivateEndpointConnectionByHostPoolArgs(hostPoolName, privateEndpointConnectionName, resourceGroupName);
+        }
+
+        public GetPrivateEndpointConnectionByHostPoolArgs build() {
+            $.hostPoolName = Objects.requireNonNull($.hostPoolName, "expected parameter 'hostPoolName' to be non-null");
+            $.privateEndpointConnectionName = Objects.requireNonNull($.privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

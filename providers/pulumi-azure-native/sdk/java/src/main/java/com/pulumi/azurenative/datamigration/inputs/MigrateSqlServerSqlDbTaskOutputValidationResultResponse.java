@@ -26,7 +26,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -37,7 +37,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @Import(name="migrationId", required=true)
-      private final String migrationId;
+    private String migrationId;
 
     public String migrationId() {
         return this.migrationId;
@@ -49,7 +49,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -71,82 +71,72 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @Import(name="summaryResults")
-      private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
+    private @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
-    public Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults() {
-        return this.summaryResults == null ? Map.of() : this.summaryResults;
+    public Optional<Map<String,MigrationValidationDatabaseSummaryResultResponse>> summaryResults() {
+        return Optional.ofNullable(this.summaryResults);
     }
 
-    public MigrateSqlServerSqlDbTaskOutputValidationResultResponse(
-        String id,
-        String migrationId,
-        String resultType,
-        String status,
-        @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.migrationId = Objects.requireNonNull(migrationId, "expected parameter 'migrationId' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.summaryResults = summaryResults;
-    }
+    private MigrateSqlServerSqlDbTaskOutputValidationResultResponse() {}
 
-    private MigrateSqlServerSqlDbTaskOutputValidationResultResponse() {
-        this.id = null;
-        this.migrationId = null;
-        this.resultType = null;
-        this.status = null;
-        this.summaryResults = Map.of();
+    private MigrateSqlServerSqlDbTaskOutputValidationResultResponse(MigrateSqlServerSqlDbTaskOutputValidationResultResponse $) {
+        this.id = $.id;
+        this.migrationId = $.migrationId;
+        this.resultType = $.resultType;
+        this.status = $.status;
+        this.summaryResults = $.summaryResults;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskOutputValidationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String migrationId;
-        private String resultType;
-        private String status;
-        private @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
+        private MigrateSqlServerSqlDbTaskOutputValidationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskOutputValidationResultResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskOutputValidationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.migrationId = defaults.migrationId;
-    	      this.resultType = defaults.resultType;
-    	      this.status = defaults.status;
-    	      this.summaryResults = defaults.summaryResults;
+            $ = new MigrateSqlServerSqlDbTaskOutputValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder migrationId(String migrationId) {
-            this.migrationId = Objects.requireNonNull(migrationId);
+            $.migrationId = migrationId;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder summaryResults(@Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
-            this.summaryResults = summaryResults;
+            $.summaryResults = summaryResults;
             return this;
-        }        public MigrateSqlServerSqlDbTaskOutputValidationResultResponse build() {
-            return new MigrateSqlServerSqlDbTaskOutputValidationResultResponse(id, migrationId, resultType, status, summaryResults);
+        }
+
+        public MigrateSqlServerSqlDbTaskOutputValidationResultResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.migrationId = Objects.requireNonNull($.migrationId, "expected parameter 'migrationId' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="emailRecipient")
-      private final @Nullable String emailRecipient;
+    private @Nullable String emailRecipient;
 
     public Optional<String> emailRecipient() {
-        return this.emailRecipient == null ? Optional.empty() : Optional.ofNullable(this.emailRecipient);
+        return Optional.ofNullable(this.emailRecipient);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="notificationLocale")
-      private final @Nullable String notificationLocale;
+    private @Nullable String notificationLocale;
 
     public Optional<String> notificationLocale() {
-        return this.notificationLocale == null ? Optional.empty() : Optional.ofNullable(this.notificationLocale);
+        return Optional.ofNullable(this.notificationLocale);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeInMinutes")
-      private final @Nullable Integer timeInMinutes;
+    private @Nullable Integer timeInMinutes;
 
     public Optional<Integer> timeInMinutes() {
-        return this.timeInMinutes == null ? Optional.empty() : Optional.ofNullable(this.timeInMinutes);
+        return Optional.ofNullable(this.timeInMinutes);
     }
 
     /**
@@ -69,82 +69,69 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="webhookUrl")
-      private final @Nullable String webhookUrl;
+    private @Nullable String webhookUrl;
 
     public Optional<String> webhookUrl() {
-        return this.webhookUrl == null ? Optional.empty() : Optional.ofNullable(this.webhookUrl);
+        return Optional.ofNullable(this.webhookUrl);
     }
 
-    public NotificationSettingsResponse(
-        @Nullable String emailRecipient,
-        @Nullable String notificationLocale,
-        @Nullable String status,
-        @Nullable Integer timeInMinutes,
-        @Nullable String webhookUrl) {
-        this.emailRecipient = emailRecipient;
-        this.notificationLocale = notificationLocale;
-        this.status = Codegen.stringProp("status").arg(status).def("Disabled").getNullable();
-        this.timeInMinutes = timeInMinutes;
-        this.webhookUrl = webhookUrl;
-    }
+    private NotificationSettingsResponse() {}
 
-    private NotificationSettingsResponse() {
-        this.emailRecipient = null;
-        this.notificationLocale = null;
-        this.status = null;
-        this.timeInMinutes = null;
-        this.webhookUrl = null;
+    private NotificationSettingsResponse(NotificationSettingsResponse $) {
+        this.emailRecipient = $.emailRecipient;
+        this.notificationLocale = $.notificationLocale;
+        this.status = $.status;
+        this.timeInMinutes = $.timeInMinutes;
+        this.webhookUrl = $.webhookUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String emailRecipient;
-        private @Nullable String notificationLocale;
-        private @Nullable String status;
-        private @Nullable Integer timeInMinutes;
-        private @Nullable String webhookUrl;
+        private NotificationSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationSettingsResponse();
         }
 
         public Builder(NotificationSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailRecipient = defaults.emailRecipient;
-    	      this.notificationLocale = defaults.notificationLocale;
-    	      this.status = defaults.status;
-    	      this.timeInMinutes = defaults.timeInMinutes;
-    	      this.webhookUrl = defaults.webhookUrl;
+            $ = new NotificationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder emailRecipient(@Nullable String emailRecipient) {
-            this.emailRecipient = emailRecipient;
+            $.emailRecipient = emailRecipient;
             return this;
         }
+
         public Builder notificationLocale(@Nullable String notificationLocale) {
-            this.notificationLocale = notificationLocale;
+            $.notificationLocale = notificationLocale;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
-            this.timeInMinutes = timeInMinutes;
+            $.timeInMinutes = timeInMinutes;
             return this;
         }
+
         public Builder webhookUrl(@Nullable String webhookUrl) {
-            this.webhookUrl = webhookUrl;
+            $.webhookUrl = webhookUrl;
             return this;
-        }        public NotificationSettingsResponse build() {
-            return new NotificationSettingsResponse(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);
+        }
+
+        public NotificationSettingsResponse build() {
+            $.status = Codegen.stringProp("status").arg($.status).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

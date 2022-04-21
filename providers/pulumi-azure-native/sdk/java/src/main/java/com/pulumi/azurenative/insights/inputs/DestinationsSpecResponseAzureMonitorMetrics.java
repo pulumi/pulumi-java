@@ -24,45 +24,44 @@ public final class DestinationsSpecResponseAzureMonitorMetrics extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DestinationsSpecResponseAzureMonitorMetrics(@Nullable String name) {
-        this.name = name;
-    }
+    private DestinationsSpecResponseAzureMonitorMetrics() {}
 
-    private DestinationsSpecResponseAzureMonitorMetrics() {
-        this.name = null;
+    private DestinationsSpecResponseAzureMonitorMetrics(DestinationsSpecResponseAzureMonitorMetrics $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationsSpecResponseAzureMonitorMetrics defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private DestinationsSpecResponseAzureMonitorMetrics $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationsSpecResponseAzureMonitorMetrics();
         }
 
         public Builder(DestinationsSpecResponseAzureMonitorMetrics defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new DestinationsSpecResponseAzureMonitorMetrics(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DestinationsSpecResponseAzureMonitorMetrics build() {
-            return new DestinationsSpecResponseAzureMonitorMetrics(name);
+        }
+
+        public DestinationsSpecResponseAzureMonitorMetrics build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Boolean autoUpgradeMinorVersion;
+    private @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable String forceUpdateTag;
+    private @Nullable String forceUpdateTag;
 
     public Optional<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -52,17 +52,17 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable String protectedSettings;
+    private @Nullable String protectedSettings;
 
     public Optional<String> protectedSettings() {
-        return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     @Import(name="protectedSettingsFromKeyVault")
-      private final @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault;
+    private @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault;
 
     public Optional<CloudServiceVaultAndSecretReferenceResponse> protectedSettingsFromKeyVault() {
-        return this.protectedSettingsFromKeyVault == null ? Optional.empty() : Optional.ofNullable(this.protectedSettingsFromKeyVault);
+        return Optional.ofNullable(this.protectedSettingsFromKeyVault);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -81,10 +81,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="rolesAppliedTo")
-      private final @Nullable List<String> rolesAppliedTo;
+    private @Nullable List<String> rolesAppliedTo;
 
-    public List<String> rolesAppliedTo() {
-        return this.rolesAppliedTo == null ? List.of() : this.rolesAppliedTo;
+    public Optional<List<String>> rolesAppliedTo() {
+        return Optional.ofNullable(this.rolesAppliedTo);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="settings")
-      private final @Nullable String settings;
+    private @Nullable String settings;
 
     public Optional<String> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -125,130 +125,103 @@ public final class CloudServiceExtensionPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable String typeHandlerVersion;
+    private @Nullable String typeHandlerVersion;
 
     public Optional<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public CloudServiceExtensionPropertiesResponse(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable String forceUpdateTag,
-        @Nullable String protectedSettings,
-        @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault,
-        String provisioningState,
-        @Nullable String publisher,
-        @Nullable List<String> rolesAppliedTo,
-        @Nullable String settings,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.forceUpdateTag = forceUpdateTag;
-        this.protectedSettings = protectedSettings;
-        this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publisher = publisher;
-        this.rolesAppliedTo = rolesAppliedTo;
-        this.settings = settings;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private CloudServiceExtensionPropertiesResponse() {}
 
-    private CloudServiceExtensionPropertiesResponse() {
-        this.autoUpgradeMinorVersion = null;
-        this.forceUpdateTag = null;
-        this.protectedSettings = null;
-        this.protectedSettingsFromKeyVault = null;
-        this.provisioningState = null;
-        this.publisher = null;
-        this.rolesAppliedTo = List.of();
-        this.settings = null;
-        this.type = null;
-        this.typeHandlerVersion = null;
+    private CloudServiceExtensionPropertiesResponse(CloudServiceExtensionPropertiesResponse $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.protectedSettings = $.protectedSettings;
+        this.protectedSettingsFromKeyVault = $.protectedSettingsFromKeyVault;
+        this.provisioningState = $.provisioningState;
+        this.publisher = $.publisher;
+        this.rolesAppliedTo = $.rolesAppliedTo;
+        this.settings = $.settings;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceExtensionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean autoUpgradeMinorVersion;
-        private @Nullable String forceUpdateTag;
-        private @Nullable String protectedSettings;
-        private @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault;
-        private String provisioningState;
-        private @Nullable String publisher;
-        private @Nullable List<String> rolesAppliedTo;
-        private @Nullable String settings;
-        private @Nullable String type;
-        private @Nullable String typeHandlerVersion;
+        private CloudServiceExtensionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceExtensionPropertiesResponse();
         }
 
         public Builder(CloudServiceExtensionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.protectedSettingsFromKeyVault = defaults.protectedSettingsFromKeyVault;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publisher = defaults.publisher;
-    	      this.rolesAppliedTo = defaults.rolesAppliedTo;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new CloudServiceExtensionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
+
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
+
         public Builder protectedSettings(@Nullable String protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
+
         public Builder protectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault) {
-            this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
+            $.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
+
         public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
-            this.rolesAppliedTo = rolesAppliedTo;
+            $.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
+
         public Builder rolesAppliedTo(String... rolesAppliedTo) {
             return rolesAppliedTo(List.of(rolesAppliedTo));
         }
+
         public Builder settings(@Nullable String settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }        public CloudServiceExtensionPropertiesResponse build() {
-            return new CloudServiceExtensionPropertiesResponse(autoUpgradeMinorVersion, forceUpdateTag, protectedSettings, protectedSettingsFromKeyVault, provisioningState, publisher, rolesAppliedTo, settings, type, typeHandlerVersion);
+        }
+
+        public CloudServiceExtensionPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

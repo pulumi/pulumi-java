@@ -22,7 +22,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends com.pul
      * 
      */
     @Import(name="errorCode", required=true)
-      private final String errorCode;
+    private String errorCode;
 
     public String errorCode() {
         return this.errorCode;
@@ -33,7 +33,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends com.pul
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -44,7 +44,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends com.pul
      * 
      */
     @Import(name="errorMessageParameters", required=true)
-      private final Map<String,String> errorMessageParameters;
+    private Map<String,String> errorMessageParameters;
 
     public Map<String,String> errorMessageParameters() {
         return this.errorMessageParameters;
@@ -55,7 +55,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends com.pul
      * 
      */
     @Import(name="errorTags", required=true)
-      private final Map<String,String> errorTags;
+    private Map<String,String> errorTags;
 
     public Map<String,String> errorTags() {
         return this.errorTags;
@@ -66,7 +66,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends com.pul
      * 
      */
     @Import(name="possibleCauses", required=true)
-      private final String possibleCauses;
+    private String possibleCauses;
 
     public String possibleCauses() {
         return this.possibleCauses;
@@ -77,91 +77,80 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends com.pul
      * 
      */
     @Import(name="recommendedAction", required=true)
-      private final String recommendedAction;
+    private String recommendedAction;
 
     public String recommendedAction() {
         return this.recommendedAction;
     }
 
-    public InMageRcmLastAgentUpgradeErrorDetailsResponse(
-        String errorCode,
-        String errorMessage,
-        Map<String,String> errorMessageParameters,
-        Map<String,String> errorTags,
-        String possibleCauses,
-        String recommendedAction) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.errorMessageParameters = Objects.requireNonNull(errorMessageParameters, "expected parameter 'errorMessageParameters' to be non-null");
-        this.errorTags = Objects.requireNonNull(errorTags, "expected parameter 'errorTags' to be non-null");
-        this.possibleCauses = Objects.requireNonNull(possibleCauses, "expected parameter 'possibleCauses' to be non-null");
-        this.recommendedAction = Objects.requireNonNull(recommendedAction, "expected parameter 'recommendedAction' to be non-null");
-    }
+    private InMageRcmLastAgentUpgradeErrorDetailsResponse() {}
 
-    private InMageRcmLastAgentUpgradeErrorDetailsResponse() {
-        this.errorCode = null;
-        this.errorMessage = null;
-        this.errorMessageParameters = Map.of();
-        this.errorTags = Map.of();
-        this.possibleCauses = null;
-        this.recommendedAction = null;
+    private InMageRcmLastAgentUpgradeErrorDetailsResponse(InMageRcmLastAgentUpgradeErrorDetailsResponse $) {
+        this.errorCode = $.errorCode;
+        this.errorMessage = $.errorMessage;
+        this.errorMessageParameters = $.errorMessageParameters;
+        this.errorTags = $.errorTags;
+        this.possibleCauses = $.possibleCauses;
+        this.recommendedAction = $.recommendedAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmLastAgentUpgradeErrorDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorCode;
-        private String errorMessage;
-        private Map<String,String> errorMessageParameters;
-        private Map<String,String> errorTags;
-        private String possibleCauses;
-        private String recommendedAction;
+        private InMageRcmLastAgentUpgradeErrorDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmLastAgentUpgradeErrorDetailsResponse();
         }
 
         public Builder(InMageRcmLastAgentUpgradeErrorDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.errorMessageParameters = defaults.errorMessageParameters;
-    	      this.errorTags = defaults.errorTags;
-    	      this.possibleCauses = defaults.possibleCauses;
-    	      this.recommendedAction = defaults.recommendedAction;
+            $ = new InMageRcmLastAgentUpgradeErrorDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(String errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder errorMessageParameters(Map<String,String> errorMessageParameters) {
-            this.errorMessageParameters = Objects.requireNonNull(errorMessageParameters);
+            $.errorMessageParameters = errorMessageParameters;
             return this;
         }
+
         public Builder errorTags(Map<String,String> errorTags) {
-            this.errorTags = Objects.requireNonNull(errorTags);
+            $.errorTags = errorTags;
             return this;
         }
+
         public Builder possibleCauses(String possibleCauses) {
-            this.possibleCauses = Objects.requireNonNull(possibleCauses);
+            $.possibleCauses = possibleCauses;
             return this;
         }
+
         public Builder recommendedAction(String recommendedAction) {
-            this.recommendedAction = Objects.requireNonNull(recommendedAction);
+            $.recommendedAction = recommendedAction;
             return this;
-        }        public InMageRcmLastAgentUpgradeErrorDetailsResponse build() {
-            return new InMageRcmLastAgentUpgradeErrorDetailsResponse(errorCode, errorMessage, errorMessageParameters, errorTags, possibleCauses, recommendedAction);
+        }
+
+        public InMageRcmLastAgentUpgradeErrorDetailsResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.errorMessageParameters = Objects.requireNonNull($.errorMessageParameters, "expected parameter 'errorMessageParameters' to be non-null");
+            $.errorTags = Objects.requireNonNull($.errorTags, "expected parameter 'errorTags' to be non-null");
+            $.possibleCauses = Objects.requireNonNull($.possibleCauses, "expected parameter 'possibleCauses' to be non-null");
+            $.recommendedAction = Objects.requireNonNull($.recommendedAction, "expected parameter 'recommendedAction' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.aad;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainServiceName", required=true)
-      private final Output<String> domainServiceName;
+    private Output<String> domainServiceName;
 
     public Output<String> domainServiceName() {
         return this.domainServiceName;
@@ -42,10 +42,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ouContainerName")
-      private final @Nullable Output<String> ouContainerName;
+    private @Nullable Output<String> ouContainerName;
 
-    public Output<String> ouContainerName() {
-        return this.ouContainerName == null ? Codegen.empty() : this.ouContainerName;
+    public Optional<Output<String>> ouContainerName() {
+        return Optional.ofNullable(this.ouContainerName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,115 +75,100 @@ public final class OuContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spn")
-      private final @Nullable Output<String> spn;
+    private @Nullable Output<String> spn;
 
-    public Output<String> spn() {
-        return this.spn == null ? Codegen.empty() : this.spn;
+    public Optional<Output<String>> spn() {
+        return Optional.ofNullable(this.spn);
     }
 
-    public OuContainerArgs(
-        @Nullable Output<String> accountName,
-        Output<String> domainServiceName,
-        @Nullable Output<String> ouContainerName,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> spn) {
-        this.accountName = accountName;
-        this.domainServiceName = Objects.requireNonNull(domainServiceName, "expected parameter 'domainServiceName' to be non-null");
-        this.ouContainerName = ouContainerName;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.spn = spn;
-    }
+    private OuContainerArgs() {}
 
-    private OuContainerArgs() {
-        this.accountName = Codegen.empty();
-        this.domainServiceName = Codegen.empty();
-        this.ouContainerName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.spn = Codegen.empty();
+    private OuContainerArgs(OuContainerArgs $) {
+        this.accountName = $.accountName;
+        this.domainServiceName = $.domainServiceName;
+        this.ouContainerName = $.ouContainerName;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.spn = $.spn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OuContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private Output<String> domainServiceName;
-        private @Nullable Output<String> ouContainerName;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> spn;
+        private OuContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OuContainerArgs();
         }
 
         public Builder(OuContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.domainServiceName = defaults.domainServiceName;
-    	      this.ouContainerName = defaults.ouContainerName;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.spn = defaults.spn;
+            $ = new OuContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder domainServiceName(Output<String> domainServiceName) {
-            this.domainServiceName = Objects.requireNonNull(domainServiceName);
+            $.domainServiceName = domainServiceName;
             return this;
         }
+
         public Builder domainServiceName(String domainServiceName) {
-            this.domainServiceName = Output.of(Objects.requireNonNull(domainServiceName));
-            return this;
+            return domainServiceName(Output.of(domainServiceName));
         }
+
         public Builder ouContainerName(@Nullable Output<String> ouContainerName) {
-            this.ouContainerName = ouContainerName;
+            $.ouContainerName = ouContainerName;
             return this;
         }
-        public Builder ouContainerName(@Nullable String ouContainerName) {
-            this.ouContainerName = Codegen.ofNullable(ouContainerName);
-            return this;
+
+        public Builder ouContainerName(String ouContainerName) {
+            return ouContainerName(Output.of(ouContainerName));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder spn(@Nullable Output<String> spn) {
-            this.spn = spn;
+            $.spn = spn;
             return this;
         }
-        public Builder spn(@Nullable String spn) {
-            this.spn = Codegen.ofNullable(spn);
-            return this;
-        }        public OuContainerArgs build() {
-            return new OuContainerArgs(accountName, domainServiceName, ouContainerName, password, resourceGroupName, spn);
+
+        public Builder spn(String spn) {
+            return spn(Output.of(spn));
+        }
+
+        public OuContainerArgs build() {
+            $.domainServiceName = Objects.requireNonNull($.domainServiceName, "expected parameter 'domainServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

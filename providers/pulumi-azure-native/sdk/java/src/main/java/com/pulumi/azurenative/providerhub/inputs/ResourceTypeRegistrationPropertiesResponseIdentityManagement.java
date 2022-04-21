@@ -15,62 +15,57 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
     public static final ResourceTypeRegistrationPropertiesResponseIdentityManagement Empty = new ResourceTypeRegistrationPropertiesResponseIdentityManagement();
 
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ResourceTypeRegistrationPropertiesResponseIdentityManagement(
-        @Nullable String applicationId,
-        @Nullable String type) {
-        this.applicationId = applicationId;
-        this.type = type;
-    }
+    private ResourceTypeRegistrationPropertiesResponseIdentityManagement() {}
 
-    private ResourceTypeRegistrationPropertiesResponseIdentityManagement() {
-        this.applicationId = null;
-        this.type = null;
+    private ResourceTypeRegistrationPropertiesResponseIdentityManagement(ResourceTypeRegistrationPropertiesResponseIdentityManagement $) {
+        this.applicationId = $.applicationId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseIdentityManagement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String type;
+        private ResourceTypeRegistrationPropertiesResponseIdentityManagement $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseIdentityManagement();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseIdentityManagement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.type = defaults.type;
+            $ = new ResourceTypeRegistrationPropertiesResponseIdentityManagement(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ResourceTypeRegistrationPropertiesResponseIdentityManagement build() {
-            return new ResourceTypeRegistrationPropertiesResponseIdentityManagement(applicationId, type);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseIdentityManagement build() {
+            return $;
         }
     }
+
 }

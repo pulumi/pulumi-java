@@ -8,9 +8,9 @@ import com.pulumi.azurenative.batch.inputs.LinuxUserConfigurationArgs;
 import com.pulumi.azurenative.batch.inputs.WindowsUserConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class UserAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elevationLevel")
-      private final @Nullable Output<ElevationLevel> elevationLevel;
+    private @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Output<ElevationLevel> elevationLevel() {
-        return this.elevationLevel == null ? Codegen.empty() : this.elevationLevel;
+    public Optional<Output<ElevationLevel>> elevationLevel() {
+        return Optional.ofNullable(this.elevationLevel);
     }
 
     /**
@@ -34,21 +34,21 @@ public final class UserAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxUserConfiguration")
-      private final @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
+    private @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
-    public Output<LinuxUserConfigurationArgs> linuxUserConfiguration() {
-        return this.linuxUserConfiguration == null ? Codegen.empty() : this.linuxUserConfiguration;
+    public Optional<Output<LinuxUserConfigurationArgs>> linuxUserConfiguration() {
+        return Optional.ofNullable(this.linuxUserConfiguration);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -59,102 +59,90 @@ public final class UserAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsUserConfiguration")
-      private final @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
+    private @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
-    public Output<WindowsUserConfigurationArgs> windowsUserConfiguration() {
-        return this.windowsUserConfiguration == null ? Codegen.empty() : this.windowsUserConfiguration;
+    public Optional<Output<WindowsUserConfigurationArgs>> windowsUserConfiguration() {
+        return Optional.ofNullable(this.windowsUserConfiguration);
     }
 
-    public UserAccountArgs(
-        @Nullable Output<ElevationLevel> elevationLevel,
-        @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration,
-        Output<String> name,
-        Output<String> password,
-        @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration) {
-        this.elevationLevel = elevationLevel;
-        this.linuxUserConfiguration = linuxUserConfiguration;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.windowsUserConfiguration = windowsUserConfiguration;
-    }
+    private UserAccountArgs() {}
 
-    private UserAccountArgs() {
-        this.elevationLevel = Codegen.empty();
-        this.linuxUserConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.windowsUserConfiguration = Codegen.empty();
+    private UserAccountArgs(UserAccountArgs $) {
+        this.elevationLevel = $.elevationLevel;
+        this.linuxUserConfiguration = $.linuxUserConfiguration;
+        this.name = $.name;
+        this.password = $.password;
+        this.windowsUserConfiguration = $.windowsUserConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ElevationLevel> elevationLevel;
-        private @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
-        private Output<String> name;
-        private Output<String> password;
-        private @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
+        private UserAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAccountArgs();
         }
 
         public Builder(UserAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elevationLevel = defaults.elevationLevel;
-    	      this.linuxUserConfiguration = defaults.linuxUserConfiguration;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.windowsUserConfiguration = defaults.windowsUserConfiguration;
+            $ = new UserAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elevationLevel(@Nullable Output<ElevationLevel> elevationLevel) {
-            this.elevationLevel = elevationLevel;
+            $.elevationLevel = elevationLevel;
             return this;
         }
-        public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
-            this.elevationLevel = Codegen.ofNullable(elevationLevel);
-            return this;
+
+        public Builder elevationLevel(ElevationLevel elevationLevel) {
+            return elevationLevel(Output.of(elevationLevel));
         }
+
         public Builder linuxUserConfiguration(@Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration) {
-            this.linuxUserConfiguration = linuxUserConfiguration;
+            $.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
-        public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationArgs linuxUserConfiguration) {
-            this.linuxUserConfiguration = Codegen.ofNullable(linuxUserConfiguration);
-            return this;
+
+        public Builder linuxUserConfiguration(LinuxUserConfigurationArgs linuxUserConfiguration) {
+            return linuxUserConfiguration(Output.of(linuxUserConfiguration));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder windowsUserConfiguration(@Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration) {
-            this.windowsUserConfiguration = windowsUserConfiguration;
+            $.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
-        public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationArgs windowsUserConfiguration) {
-            this.windowsUserConfiguration = Codegen.ofNullable(windowsUserConfiguration);
-            return this;
-        }        public UserAccountArgs build() {
-            return new UserAccountArgs(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
+
+        public Builder windowsUserConfiguration(WindowsUserConfigurationArgs windowsUserConfiguration) {
+            return windowsUserConfiguration(Output.of(windowsUserConfiguration));
+        }
+
+        public UserAccountArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            return $;
         }
     }
+
 }

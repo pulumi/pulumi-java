@@ -17,7 +17,7 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="associationName", required=true)
-      private final String associationName;
+    private String associationName;
 
     public String associationName() {
         return this.associationName;
@@ -28,55 +28,52 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetDataCollectionRuleAssociationArgs(
-        String associationName,
-        String resourceUri) {
-        this.associationName = Objects.requireNonNull(associationName, "expected parameter 'associationName' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetDataCollectionRuleAssociationArgs() {}
 
-    private GetDataCollectionRuleAssociationArgs() {
-        this.associationName = null;
-        this.resourceUri = null;
+    private GetDataCollectionRuleAssociationArgs(GetDataCollectionRuleAssociationArgs $) {
+        this.associationName = $.associationName;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCollectionRuleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associationName;
-        private String resourceUri;
+        private GetDataCollectionRuleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCollectionRuleAssociationArgs();
         }
 
         public Builder(GetDataCollectionRuleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationName = defaults.associationName;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetDataCollectionRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationName(String associationName) {
-            this.associationName = Objects.requireNonNull(associationName);
+            $.associationName = associationName;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetDataCollectionRuleAssociationArgs build() {
-            return new GetDataCollectionRuleAssociationArgs(associationName, resourceUri);
+        }
+
+        public GetDataCollectionRuleAssociationArgs build() {
+            $.associationName = Objects.requireNonNull($.associationName, "expected parameter 'associationName' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backendPort")
-      private final @Nullable Output<Integer> backendPort;
+    private @Nullable Output<Integer> backendPort;
 
-    public Output<Integer> backendPort() {
-        return this.backendPort == null ? Codegen.empty() : this.backendPort;
+    public Optional<Output<Integer>> backendPort() {
+        return Optional.ofNullable(this.backendPort);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableFloatingIP")
-      private final @Nullable Output<Boolean> enableFloatingIP;
+    private @Nullable Output<Boolean> enableFloatingIP;
 
-    public Output<Boolean> enableFloatingIP() {
-        return this.enableFloatingIP == null ? Codegen.empty() : this.enableFloatingIP;
+    public Optional<Output<Boolean>> enableFloatingIP() {
+        return Optional.ofNullable(this.enableFloatingIP);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableTcpReset")
-      private final @Nullable Output<Boolean> enableTcpReset;
+    private @Nullable Output<Boolean> enableTcpReset;
 
-    public Output<Boolean> enableTcpReset() {
-        return this.enableTcpReset == null ? Codegen.empty() : this.enableTcpReset;
+    public Optional<Output<Boolean>> enableTcpReset() {
+        return Optional.ofNullable(this.enableTcpReset);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="frontendIPConfiguration")
-      private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
+    private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Output<SubResourceArgs> frontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Codegen.empty() : this.frontendIPConfiguration;
+    public Optional<Output<SubResourceArgs>> frontendIPConfiguration() {
+        return Optional.ofNullable(this.frontendIPConfiguration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="frontendPort")
-      private final @Nullable Output<Integer> frontendPort;
+    private @Nullable Output<Integer> frontendPort;
 
-    public Output<Integer> frontendPort() {
-        return this.frontendPort == null ? Codegen.empty() : this.frontendPort;
+    public Optional<Output<Integer>> frontendPort() {
+        return Optional.ofNullable(this.frontendPort);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Output<Integer> idleTimeoutInMinutes;
+    private @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
+    public Optional<Output<Integer>> idleTimeoutInMinutes() {
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="inboundNatRuleName")
-      private final @Nullable Output<String> inboundNatRuleName;
+    private @Nullable Output<String> inboundNatRuleName;
 
-    public Output<String> inboundNatRuleName() {
-        return this.inboundNatRuleName == null ? Codegen.empty() : this.inboundNatRuleName;
+    public Optional<Output<String>> inboundNatRuleName() {
+        return Optional.ofNullable(this.inboundNatRuleName);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final Output<String> loadBalancerName;
+    private Output<String> loadBalancerName;
 
     public Output<String> loadBalancerName() {
         return this.loadBalancerName;
@@ -124,10 +124,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<Either<String,TransportProtocol>> protocol;
+    private @Nullable Output<Either<String,TransportProtocol>> protocol;
 
-    public Output<Either<String,TransportProtocol>> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<Either<String,TransportProtocol>>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -146,193 +146,160 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public InboundNatRuleArgs(
-        @Nullable Output<Integer> backendPort,
-        @Nullable Output<Boolean> enableFloatingIP,
-        @Nullable Output<Boolean> enableTcpReset,
-        @Nullable Output<SubResourceArgs> frontendIPConfiguration,
-        @Nullable Output<Integer> frontendPort,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> idleTimeoutInMinutes,
-        @Nullable Output<String> inboundNatRuleName,
-        Output<String> loadBalancerName,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,TransportProtocol>> protocol,
-        Output<String> resourceGroupName) {
-        this.backendPort = backendPort;
-        this.enableFloatingIP = enableFloatingIP;
-        this.enableTcpReset = enableTcpReset;
-        this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPort = frontendPort;
-        this.id = id;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.inboundNatRuleName = inboundNatRuleName;
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-        this.name = name;
-        this.protocol = protocol;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private InboundNatRuleArgs() {}
 
-    private InboundNatRuleArgs() {
-        this.backendPort = Codegen.empty();
-        this.enableFloatingIP = Codegen.empty();
-        this.enableTcpReset = Codegen.empty();
-        this.frontendIPConfiguration = Codegen.empty();
-        this.frontendPort = Codegen.empty();
-        this.id = Codegen.empty();
-        this.idleTimeoutInMinutes = Codegen.empty();
-        this.inboundNatRuleName = Codegen.empty();
-        this.loadBalancerName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private InboundNatRuleArgs(InboundNatRuleArgs $) {
+        this.backendPort = $.backendPort;
+        this.enableFloatingIP = $.enableFloatingIP;
+        this.enableTcpReset = $.enableTcpReset;
+        this.frontendIPConfiguration = $.frontendIPConfiguration;
+        this.frontendPort = $.frontendPort;
+        this.id = $.id;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.inboundNatRuleName = $.inboundNatRuleName;
+        this.loadBalancerName = $.loadBalancerName;
+        this.name = $.name;
+        this.protocol = $.protocol;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> backendPort;
-        private @Nullable Output<Boolean> enableFloatingIP;
-        private @Nullable Output<Boolean> enableTcpReset;
-        private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
-        private @Nullable Output<Integer> frontendPort;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> idleTimeoutInMinutes;
-        private @Nullable Output<String> inboundNatRuleName;
-        private Output<String> loadBalancerName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,TransportProtocol>> protocol;
-        private Output<String> resourceGroupName;
+        private InboundNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundNatRuleArgs();
         }
 
         public Builder(InboundNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.enableFloatingIP = defaults.enableFloatingIP;
-    	      this.enableTcpReset = defaults.enableTcpReset;
-    	      this.frontendIPConfiguration = defaults.frontendIPConfiguration;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.id = defaults.id;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.inboundNatRuleName = defaults.inboundNatRuleName;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new InboundNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(@Nullable Output<Integer> backendPort) {
-            this.backendPort = backendPort;
+            $.backendPort = backendPort;
             return this;
         }
-        public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Codegen.ofNullable(backendPort);
-            return this;
+
+        public Builder backendPort(Integer backendPort) {
+            return backendPort(Output.of(backendPort));
         }
+
         public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
-            this.enableFloatingIP = enableFloatingIP;
+            $.enableFloatingIP = enableFloatingIP;
             return this;
         }
-        public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = Codegen.ofNullable(enableFloatingIP);
-            return this;
+
+        public Builder enableFloatingIP(Boolean enableFloatingIP) {
+            return enableFloatingIP(Output.of(enableFloatingIP));
         }
+
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
-            this.enableTcpReset = enableTcpReset;
+            $.enableTcpReset = enableTcpReset;
             return this;
         }
-        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Codegen.ofNullable(enableTcpReset);
-            return this;
+
+        public Builder enableTcpReset(Boolean enableTcpReset) {
+            return enableTcpReset(Output.of(enableTcpReset));
         }
+
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
-            this.frontendIPConfiguration = frontendIPConfiguration;
+            $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-        public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
-            this.frontendIPConfiguration = Codegen.ofNullable(frontendIPConfiguration);
-            return this;
+
+        public Builder frontendIPConfiguration(SubResourceArgs frontendIPConfiguration) {
+            return frontendIPConfiguration(Output.of(frontendIPConfiguration));
         }
+
         public Builder frontendPort(@Nullable Output<Integer> frontendPort) {
-            this.frontendPort = frontendPort;
+            $.frontendPort = frontendPort;
             return this;
         }
-        public Builder frontendPort(@Nullable Integer frontendPort) {
-            this.frontendPort = Codegen.ofNullable(frontendPort);
-            return this;
+
+        public Builder frontendPort(Integer frontendPort) {
+            return frontendPort(Output.of(frontendPort));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
-            return this;
+
+        public Builder idleTimeoutInMinutes(Integer idleTimeoutInMinutes) {
+            return idleTimeoutInMinutes(Output.of(idleTimeoutInMinutes));
         }
+
         public Builder inboundNatRuleName(@Nullable Output<String> inboundNatRuleName) {
-            this.inboundNatRuleName = inboundNatRuleName;
+            $.inboundNatRuleName = inboundNatRuleName;
             return this;
         }
-        public Builder inboundNatRuleName(@Nullable String inboundNatRuleName) {
-            this.inboundNatRuleName = Codegen.ofNullable(inboundNatRuleName);
-            return this;
+
+        public Builder inboundNatRuleName(String inboundNatRuleName) {
+            return inboundNatRuleName(Output.of(inboundNatRuleName));
         }
+
         public Builder loadBalancerName(Output<String> loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
+
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
-            return this;
+            return loadBalancerName(Output.of(loadBalancerName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocol(@Nullable Output<Either<String,TransportProtocol>> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable Either<String,TransportProtocol> protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(Either<String,TransportProtocol> protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public InboundNatRuleArgs build() {
-            return new InboundNatRuleArgs(backendPort, enableFloatingIP, enableTcpReset, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, inboundNatRuleName, loadBalancerName, name, protocol, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public InboundNatRuleArgs build() {
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

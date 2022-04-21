@@ -17,7 +17,7 @@ public final class GetCustomEntityStoreAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="customEntityStoreAssignmentName", required=true)
-      private final String customEntityStoreAssignmentName;
+    private String customEntityStoreAssignmentName;
 
     public String customEntityStoreAssignmentName() {
         return this.customEntityStoreAssignmentName;
@@ -28,55 +28,52 @@ public final class GetCustomEntityStoreAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCustomEntityStoreAssignmentArgs(
-        String customEntityStoreAssignmentName,
-        String resourceGroupName) {
-        this.customEntityStoreAssignmentName = Objects.requireNonNull(customEntityStoreAssignmentName, "expected parameter 'customEntityStoreAssignmentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCustomEntityStoreAssignmentArgs() {}
 
-    private GetCustomEntityStoreAssignmentArgs() {
-        this.customEntityStoreAssignmentName = null;
-        this.resourceGroupName = null;
+    private GetCustomEntityStoreAssignmentArgs(GetCustomEntityStoreAssignmentArgs $) {
+        this.customEntityStoreAssignmentName = $.customEntityStoreAssignmentName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomEntityStoreAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customEntityStoreAssignmentName;
-        private String resourceGroupName;
+        private GetCustomEntityStoreAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomEntityStoreAssignmentArgs();
         }
 
         public Builder(GetCustomEntityStoreAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEntityStoreAssignmentName = defaults.customEntityStoreAssignmentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCustomEntityStoreAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
-            this.customEntityStoreAssignmentName = Objects.requireNonNull(customEntityStoreAssignmentName);
+            $.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCustomEntityStoreAssignmentArgs build() {
-            return new GetCustomEntityStoreAssignmentArgs(customEntityStoreAssignmentName, resourceGroupName);
+        }
+
+        public GetCustomEntityStoreAssignmentArgs build() {
+            $.customEntityStoreAssignmentName = Objects.requireNonNull($.customEntityStoreAssignmentName, "expected parameter 'customEntityStoreAssignmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

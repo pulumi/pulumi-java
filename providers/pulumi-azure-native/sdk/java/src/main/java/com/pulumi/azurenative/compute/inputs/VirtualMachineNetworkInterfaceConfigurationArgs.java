@@ -10,11 +10,11 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceIPCon
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
+    private @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
-    public Output<Either<String,DeleteOptions>> deleteOption() {
-        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
+    public Optional<Output<Either<String,DeleteOptions>>> deleteOption() {
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -42,17 +42,17 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
+    private @Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
 
-    public Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings() {
-        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
+    public Optional<Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs>> dnsSettings() {
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     @Import(name="dscpConfiguration")
-      private final @Nullable Output<SubResourceArgs> dscpConfiguration;
+    private @Nullable Output<SubResourceArgs> dscpConfiguration;
 
-    public Output<SubResourceArgs> dscpConfiguration() {
-        return this.dscpConfiguration == null ? Codegen.empty() : this.dscpConfiguration;
+    public Optional<Output<SubResourceArgs>> dscpConfiguration() {
+        return Optional.ofNullable(this.dscpConfiguration);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Output<Boolean> enableAcceleratedNetworking;
+    private @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Output<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Codegen.empty() : this.enableAcceleratedNetworking;
+    public Optional<Output<Boolean>> enableAcceleratedNetworking() {
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="enableFpga")
-      private final @Nullable Output<Boolean> enableFpga;
+    private @Nullable Output<Boolean> enableFpga;
 
-    public Output<Boolean> enableFpga() {
-        return this.enableFpga == null ? Codegen.empty() : this.enableFpga;
+    public Optional<Output<Boolean>> enableFpga() {
+        return Optional.ofNullable(this.enableFpga);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="enableIPForwarding")
-      private final @Nullable Output<Boolean> enableIPForwarding;
+    private @Nullable Output<Boolean> enableIPForwarding;
 
-    public Output<Boolean> enableIPForwarding() {
-        return this.enableIPForwarding == null ? Codegen.empty() : this.enableIPForwarding;
+    public Optional<Output<Boolean>> enableIPForwarding() {
+        return Optional.ofNullable(this.enableIPForwarding);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="ipConfigurations", required=true)
-      private final Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+    private Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
     public Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations;
@@ -104,7 +104,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -115,10 +115,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable Output<SubResourceArgs> networkSecurityGroup;
+    private @Nullable Output<SubResourceArgs> networkSecurityGroup;
 
-    public Output<SubResourceArgs> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
+    public Optional<Output<SubResourceArgs>> networkSecurityGroup() {
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -126,170 +126,144 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
      * 
      */
     @Import(name="primary")
-      private final @Nullable Output<Boolean> primary;
+    private @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<Boolean>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
-    public VirtualMachineNetworkInterfaceConfigurationArgs(
-        @Nullable Output<Either<String,DeleteOptions>> deleteOption,
-        @Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings,
-        @Nullable Output<SubResourceArgs> dscpConfiguration,
-        @Nullable Output<Boolean> enableAcceleratedNetworking,
-        @Nullable Output<Boolean> enableFpga,
-        @Nullable Output<Boolean> enableIPForwarding,
-        Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations,
-        Output<String> name,
-        @Nullable Output<SubResourceArgs> networkSecurityGroup,
-        @Nullable Output<Boolean> primary) {
-        this.deleteOption = deleteOption;
-        this.dnsSettings = dnsSettings;
-        this.dscpConfiguration = dscpConfiguration;
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.enableFpga = enableFpga;
-        this.enableIPForwarding = enableIPForwarding;
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.primary = primary;
-    }
+    private VirtualMachineNetworkInterfaceConfigurationArgs() {}
 
-    private VirtualMachineNetworkInterfaceConfigurationArgs() {
-        this.deleteOption = Codegen.empty();
-        this.dnsSettings = Codegen.empty();
-        this.dscpConfiguration = Codegen.empty();
-        this.enableAcceleratedNetworking = Codegen.empty();
-        this.enableFpga = Codegen.empty();
-        this.enableIPForwarding = Codegen.empty();
-        this.ipConfigurations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkSecurityGroup = Codegen.empty();
-        this.primary = Codegen.empty();
+    private VirtualMachineNetworkInterfaceConfigurationArgs(VirtualMachineNetworkInterfaceConfigurationArgs $) {
+        this.deleteOption = $.deleteOption;
+        this.dnsSettings = $.dnsSettings;
+        this.dscpConfiguration = $.dscpConfiguration;
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.enableFpga = $.enableFpga;
+        this.enableIPForwarding = $.enableIPForwarding;
+        this.ipConfigurations = $.ipConfigurations;
+        this.name = $.name;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.primary = $.primary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineNetworkInterfaceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DeleteOptions>> deleteOption;
-        private @Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
-        private @Nullable Output<SubResourceArgs> dscpConfiguration;
-        private @Nullable Output<Boolean> enableAcceleratedNetworking;
-        private @Nullable Output<Boolean> enableFpga;
-        private @Nullable Output<Boolean> enableIPForwarding;
-        private Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
-        private Output<String> name;
-        private @Nullable Output<SubResourceArgs> networkSecurityGroup;
-        private @Nullable Output<Boolean> primary;
+        private VirtualMachineNetworkInterfaceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineNetworkInterfaceConfigurationArgs();
         }
 
         public Builder(VirtualMachineNetworkInterfaceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.dscpConfiguration = defaults.dscpConfiguration;
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.enableFpga = defaults.enableFpga;
-    	      this.enableIPForwarding = defaults.enableIPForwarding;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.primary = defaults.primary;
+            $ = new VirtualMachineNetworkInterfaceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable Output<Either<String,DeleteOptions>> deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
-        public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
-            this.deleteOption = Codegen.ofNullable(deleteOption);
-            return this;
+
+        public Builder deleteOption(Either<String,DeleteOptions> deleteOption) {
+            return deleteOption(Output.of(deleteOption));
         }
+
         public Builder dnsSettings(@Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
-        public Builder dnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs dnsSettings) {
-            this.dnsSettings = Codegen.ofNullable(dnsSettings);
-            return this;
+
+        public Builder dnsSettings(VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs dnsSettings) {
+            return dnsSettings(Output.of(dnsSettings));
         }
+
         public Builder dscpConfiguration(@Nullable Output<SubResourceArgs> dscpConfiguration) {
-            this.dscpConfiguration = dscpConfiguration;
+            $.dscpConfiguration = dscpConfiguration;
             return this;
         }
-        public Builder dscpConfiguration(@Nullable SubResourceArgs dscpConfiguration) {
-            this.dscpConfiguration = Codegen.ofNullable(dscpConfiguration);
-            return this;
+
+        public Builder dscpConfiguration(SubResourceArgs dscpConfiguration) {
+            return dscpConfiguration(Output.of(dscpConfiguration));
         }
+
         public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = Codegen.ofNullable(enableAcceleratedNetworking);
-            return this;
+
+        public Builder enableAcceleratedNetworking(Boolean enableAcceleratedNetworking) {
+            return enableAcceleratedNetworking(Output.of(enableAcceleratedNetworking));
         }
+
         public Builder enableFpga(@Nullable Output<Boolean> enableFpga) {
-            this.enableFpga = enableFpga;
+            $.enableFpga = enableFpga;
             return this;
         }
-        public Builder enableFpga(@Nullable Boolean enableFpga) {
-            this.enableFpga = Codegen.ofNullable(enableFpga);
-            return this;
+
+        public Builder enableFpga(Boolean enableFpga) {
+            return enableFpga(Output.of(enableFpga));
         }
+
         public Builder enableIPForwarding(@Nullable Output<Boolean> enableIPForwarding) {
-            this.enableIPForwarding = enableIPForwarding;
+            $.enableIPForwarding = enableIPForwarding;
             return this;
         }
-        public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
-            this.enableIPForwarding = Codegen.ofNullable(enableIPForwarding);
-            return this;
+
+        public Builder enableIPForwarding(Boolean enableIPForwarding) {
+            return enableIPForwarding(Output.of(enableIPForwarding));
         }
+
         public Builder ipConfigurations(Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
-            this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Output.of(Objects.requireNonNull(ipConfigurations));
-            return this;
+            return ipConfigurations(Output.of(ipConfigurations));
         }
+
         public Builder ipConfigurations(VirtualMachineNetworkInterfaceIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder networkSecurityGroup(@Nullable Output<SubResourceArgs> networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-        public Builder networkSecurityGroup(@Nullable SubResourceArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Codegen.ofNullable(networkSecurityGroup);
-            return this;
+
+        public Builder networkSecurityGroup(SubResourceArgs networkSecurityGroup) {
+            return networkSecurityGroup(Output.of(networkSecurityGroup));
         }
+
         public Builder primary(@Nullable Output<Boolean> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable Boolean primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
-        }        public VirtualMachineNetworkInterfaceConfigurationArgs build() {
-            return new VirtualMachineNetworkInterfaceConfigurationArgs(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
+
+        public Builder primary(Boolean primary) {
+            return primary(Output.of(primary));
+        }
+
+        public VirtualMachineNetworkInterfaceConfigurationArgs build() {
+            $.ipConfigurations = Objects.requireNonNull($.ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

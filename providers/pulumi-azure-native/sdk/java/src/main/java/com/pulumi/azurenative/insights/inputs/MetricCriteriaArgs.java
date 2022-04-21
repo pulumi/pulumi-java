@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,7 +33,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="criterionType", required=true)
-      private final Output<String> criterionType;
+    private Output<String> criterionType;
 
     public Output<String> criterionType() {
         return this.criterionType;
@@ -43,10 +44,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
+    private @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Output<List<MetricDimensionArgs>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<List<MetricDimensionArgs>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -54,7 +55,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -65,10 +66,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metricNamespace")
-      private final @Nullable Output<String> metricNamespace;
+    private @Nullable Output<String> metricNamespace;
 
-    public Output<String> metricNamespace() {
-        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
+    public Optional<Output<String>> metricNamespace() {
+        return Optional.ofNullable(this.metricNamespace);
     }
 
     /**
@@ -76,7 +77,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -87,7 +88,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<Either<String,Operator>> operator;
+    private Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> operator() {
         return this.operator;
@@ -98,10 +99,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="skipMetricValidation")
-      private final @Nullable Output<Boolean> skipMetricValidation;
+    private @Nullable Output<Boolean> skipMetricValidation;
 
-    public Output<Boolean> skipMetricValidation() {
-        return this.skipMetricValidation == null ? Codegen.empty() : this.skipMetricValidation;
+    public Optional<Output<Boolean>> skipMetricValidation() {
+        return Optional.ofNullable(this.skipMetricValidation);
     }
 
     /**
@@ -109,7 +110,7 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<Double> threshold;
+    private Output<Double> threshold;
 
     public Output<Double> threshold() {
         return this.threshold;
@@ -120,157 +121,138 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeAggregation", required=true)
-      private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
+    private Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
     public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
 
-    public MetricCriteriaArgs(
-        Output<String> criterionType,
-        @Nullable Output<List<MetricDimensionArgs>> dimensions,
-        Output<String> metricName,
-        @Nullable Output<String> metricNamespace,
-        Output<String> name,
-        Output<Either<String,Operator>> operator,
-        @Nullable Output<Boolean> skipMetricValidation,
-        Output<Double> threshold,
-        Output<Either<String,AggregationTypeEnum>> timeAggregation) {
-        this.criterionType = Codegen.stringProp("criterionType").output().arg(criterionType).require();
-        this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.metricNamespace = metricNamespace;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.skipMetricValidation = skipMetricValidation;
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.timeAggregation = Objects.requireNonNull(timeAggregation, "expected parameter 'timeAggregation' to be non-null");
-    }
+    private MetricCriteriaArgs() {}
 
-    private MetricCriteriaArgs() {
-        this.criterionType = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.metricNamespace = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.skipMetricValidation = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.timeAggregation = Codegen.empty();
+    private MetricCriteriaArgs(MetricCriteriaArgs $) {
+        this.criterionType = $.criterionType;
+        this.dimensions = $.dimensions;
+        this.metricName = $.metricName;
+        this.metricNamespace = $.metricNamespace;
+        this.name = $.name;
+        this.operator = $.operator;
+        this.skipMetricValidation = $.skipMetricValidation;
+        this.threshold = $.threshold;
+        this.timeAggregation = $.timeAggregation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> criterionType;
-        private @Nullable Output<List<MetricDimensionArgs>> dimensions;
-        private Output<String> metricName;
-        private @Nullable Output<String> metricNamespace;
-        private Output<String> name;
-        private Output<Either<String,Operator>> operator;
-        private @Nullable Output<Boolean> skipMetricValidation;
-        private Output<Double> threshold;
-        private Output<Either<String,AggregationTypeEnum>> timeAggregation;
+        private MetricCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricCriteriaArgs();
         }
 
         public Builder(MetricCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criterionType = defaults.criterionType;
-    	      this.dimensions = defaults.dimensions;
-    	      this.metricName = defaults.metricName;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.name = defaults.name;
-    	      this.operator = defaults.operator;
-    	      this.skipMetricValidation = defaults.skipMetricValidation;
-    	      this.threshold = defaults.threshold;
-    	      this.timeAggregation = defaults.timeAggregation;
+            $ = new MetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder criterionType(Output<String> criterionType) {
-            this.criterionType = Objects.requireNonNull(criterionType);
+            $.criterionType = criterionType;
             return this;
         }
+
         public Builder criterionType(String criterionType) {
-            this.criterionType = Output.of(Objects.requireNonNull(criterionType));
-            return this;
+            return criterionType(Output.of(criterionType));
         }
+
         public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(List<MetricDimensionArgs> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(MetricDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
-            this.metricNamespace = metricNamespace;
+            $.metricNamespace = metricNamespace;
             return this;
         }
-        public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Codegen.ofNullable(metricNamespace);
-            return this;
+
+        public Builder metricNamespace(String metricNamespace) {
+            return metricNamespace(Output.of(metricNamespace));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder operator(Output<Either<String,Operator>> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(Either<String,Operator> operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
-            this.skipMetricValidation = skipMetricValidation;
+            $.skipMetricValidation = skipMetricValidation;
             return this;
         }
-        public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
-            this.skipMetricValidation = Codegen.ofNullable(skipMetricValidation);
-            return this;
+
+        public Builder skipMetricValidation(Boolean skipMetricValidation) {
+            return skipMetricValidation(Output.of(skipMetricValidation));
         }
+
         public Builder threshold(Output<Double> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
+            return threshold(Output.of(threshold));
         }
+
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
-            this.timeAggregation = Objects.requireNonNull(timeAggregation);
+            $.timeAggregation = timeAggregation;
             return this;
         }
+
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
-            this.timeAggregation = Output.of(Objects.requireNonNull(timeAggregation));
-            return this;
-        }        public MetricCriteriaArgs build() {
-            return new MetricCriteriaArgs(criterionType, dimensions, metricName, metricNamespace, name, operator, skipMetricValidation, threshold, timeAggregation);
+            return timeAggregation(Output.of(timeAggregation));
+        }
+
+        public MetricCriteriaArgs build() {
+            $.criterionType = Codegen.stringProp("criterionType").output().arg($.criterionType).require();
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            $.timeAggregation = Objects.requireNonNull($.timeAggregation, "expected parameter 'timeAggregation' to be non-null");
+            return $;
         }
     }
+
 }

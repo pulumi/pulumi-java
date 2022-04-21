@@ -19,45 +19,44 @@ public final class PrivateEndpointPropertyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public PrivateEndpointPropertyResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private PrivateEndpointPropertyResponse() {}
 
-    private PrivateEndpointPropertyResponse() {
-        this.id = null;
+    private PrivateEndpointPropertyResponse(PrivateEndpointPropertyResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private PrivateEndpointPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointPropertyResponse();
         }
 
         public Builder(PrivateEndpointPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new PrivateEndpointPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public PrivateEndpointPropertyResponse build() {
-            return new PrivateEndpointPropertyResponse(id);
+        }
+
+        public PrivateEndpointPropertyResponse build() {
+            return $;
         }
     }
+
 }

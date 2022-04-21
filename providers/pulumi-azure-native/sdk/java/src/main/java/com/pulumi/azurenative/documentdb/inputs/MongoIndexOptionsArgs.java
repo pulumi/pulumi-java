@@ -5,10 +5,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="expireAfterSeconds")
-      private final @Nullable Output<Integer> expireAfterSeconds;
+    private @Nullable Output<Integer> expireAfterSeconds;
 
-    public Output<Integer> expireAfterSeconds() {
-        return this.expireAfterSeconds == null ? Codegen.empty() : this.expireAfterSeconds;
+    public Optional<Output<Integer>> expireAfterSeconds() {
+        return Optional.ofNullable(this.expireAfterSeconds);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="unique")
-      private final @Nullable Output<Boolean> unique;
+    private @Nullable Output<Boolean> unique;
 
-    public Output<Boolean> unique() {
-        return this.unique == null ? Codegen.empty() : this.unique;
+    public Optional<Output<Boolean>> unique() {
+        return Optional.ofNullable(this.unique);
     }
 
-    public MongoIndexOptionsArgs(
-        @Nullable Output<Integer> expireAfterSeconds,
-        @Nullable Output<Boolean> unique) {
-        this.expireAfterSeconds = expireAfterSeconds;
-        this.unique = unique;
-    }
+    private MongoIndexOptionsArgs() {}
 
-    private MongoIndexOptionsArgs() {
-        this.expireAfterSeconds = Codegen.empty();
-        this.unique = Codegen.empty();
+    private MongoIndexOptionsArgs(MongoIndexOptionsArgs $) {
+        this.expireAfterSeconds = $.expireAfterSeconds;
+        this.unique = $.unique;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoIndexOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> expireAfterSeconds;
-        private @Nullable Output<Boolean> unique;
+        private MongoIndexOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoIndexOptionsArgs();
         }
 
         public Builder(MongoIndexOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expireAfterSeconds = defaults.expireAfterSeconds;
-    	      this.unique = defaults.unique;
+            $ = new MongoIndexOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expireAfterSeconds(@Nullable Output<Integer> expireAfterSeconds) {
-            this.expireAfterSeconds = expireAfterSeconds;
+            $.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
-        public Builder expireAfterSeconds(@Nullable Integer expireAfterSeconds) {
-            this.expireAfterSeconds = Codegen.ofNullable(expireAfterSeconds);
-            return this;
+
+        public Builder expireAfterSeconds(Integer expireAfterSeconds) {
+            return expireAfterSeconds(Output.of(expireAfterSeconds));
         }
+
         public Builder unique(@Nullable Output<Boolean> unique) {
-            this.unique = unique;
+            $.unique = unique;
             return this;
         }
-        public Builder unique(@Nullable Boolean unique) {
-            this.unique = Codegen.ofNullable(unique);
-            return this;
-        }        public MongoIndexOptionsArgs build() {
-            return new MongoIndexOptionsArgs(expireAfterSeconds, unique);
+
+        public Builder unique(Boolean unique) {
+            return unique(Output.of(unique));
+        }
+
+        public MongoIndexOptionsArgs build() {
+            return $;
         }
     }
+
 }

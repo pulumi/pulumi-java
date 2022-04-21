@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetDataDiskArgs;
 import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
+    private @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
 
-    public Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks() {
-        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
+    public Optional<Output<List<VirtualMachineScaleSetDataDiskArgs>>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
      * 
      */
     @Import(name="imageReference")
-      private final @Nullable Output<ImageReferenceArgs> imageReference;
+    private @Nullable Output<ImageReferenceArgs> imageReference;
 
-    public Output<ImageReferenceArgs> imageReference() {
-        return this.imageReference == null ? Codegen.empty() : this.imageReference;
+    public Optional<Output<ImageReferenceArgs>> imageReference() {
+        return Optional.ofNullable(this.imageReference);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends com.pulumi.r
      * 
      */
     @Import(name="osDisk")
-      private final @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk;
+    private @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk;
 
-    public Output<VirtualMachineScaleSetOSDiskArgs> osDisk() {
-        return this.osDisk == null ? Codegen.empty() : this.osDisk;
+    public Optional<Output<VirtualMachineScaleSetOSDiskArgs>> osDisk() {
+        return Optional.ofNullable(this.osDisk);
     }
 
-    public VirtualMachineScaleSetStorageProfileArgs(
-        @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks,
-        @Nullable Output<ImageReferenceArgs> imageReference,
-        @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk) {
-        this.dataDisks = dataDisks;
-        this.imageReference = imageReference;
-        this.osDisk = osDisk;
-    }
+    private VirtualMachineScaleSetStorageProfileArgs() {}
 
-    private VirtualMachineScaleSetStorageProfileArgs() {
-        this.dataDisks = Codegen.empty();
-        this.imageReference = Codegen.empty();
-        this.osDisk = Codegen.empty();
+    private VirtualMachineScaleSetStorageProfileArgs(VirtualMachineScaleSetStorageProfileArgs $) {
+        this.dataDisks = $.dataDisks;
+        this.imageReference = $.imageReference;
+        this.osDisk = $.osDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetStorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
-        private @Nullable Output<ImageReferenceArgs> imageReference;
-        private @Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk;
+        private VirtualMachineScaleSetStorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetStorageProfileArgs();
         }
 
         public Builder(VirtualMachineScaleSetStorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.imageReference = defaults.imageReference;
-    	      this.osDisk = defaults.osDisk;
+            $ = new VirtualMachineScaleSetStorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDisks(@Nullable Output<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
-        public Builder dataDisks(@Nullable List<VirtualMachineScaleSetDataDiskArgs> dataDisks) {
-            this.dataDisks = Codegen.ofNullable(dataDisks);
-            return this;
+
+        public Builder dataDisks(List<VirtualMachineScaleSetDataDiskArgs> dataDisks) {
+            return dataDisks(Output.of(dataDisks));
         }
+
         public Builder dataDisks(VirtualMachineScaleSetDataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
-            this.imageReference = imageReference;
+            $.imageReference = imageReference;
             return this;
         }
-        public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
-            this.imageReference = Codegen.ofNullable(imageReference);
-            return this;
+
+        public Builder imageReference(ImageReferenceArgs imageReference) {
+            return imageReference(Output.of(imageReference));
         }
+
         public Builder osDisk(@Nullable Output<VirtualMachineScaleSetOSDiskArgs> osDisk) {
-            this.osDisk = osDisk;
+            $.osDisk = osDisk;
             return this;
         }
-        public Builder osDisk(@Nullable VirtualMachineScaleSetOSDiskArgs osDisk) {
-            this.osDisk = Codegen.ofNullable(osDisk);
-            return this;
-        }        public VirtualMachineScaleSetStorageProfileArgs build() {
-            return new VirtualMachineScaleSetStorageProfileArgs(dataDisks, imageReference, osDisk);
+
+        public Builder osDisk(VirtualMachineScaleSetOSDiskArgs osDisk) {
+            return osDisk(Output.of(osDisk));
+        }
+
+        public VirtualMachineScaleSetStorageProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListObjectAnchorsAccountKeysArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,55 +28,52 @@ public final class ListObjectAnchorsAccountKeysArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListObjectAnchorsAccountKeysArgs(
-        String accountName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListObjectAnchorsAccountKeysArgs() {}
 
-    private ListObjectAnchorsAccountKeysArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
+    private ListObjectAnchorsAccountKeysArgs(ListObjectAnchorsAccountKeysArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListObjectAnchorsAccountKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
+        private ListObjectAnchorsAccountKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListObjectAnchorsAccountKeysArgs();
         }
 
         public Builder(ListObjectAnchorsAccountKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListObjectAnchorsAccountKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListObjectAnchorsAccountKeysArgs build() {
-            return new ListObjectAnchorsAccountKeysArgs(accountName, resourceGroupName);
+        }
+
+        public ListObjectAnchorsAccountKeysArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

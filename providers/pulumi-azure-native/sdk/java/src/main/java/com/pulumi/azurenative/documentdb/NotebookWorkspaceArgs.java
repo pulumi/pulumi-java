@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="notebookWorkspaceName")
-      private final @Nullable Output<String> notebookWorkspaceName;
+    private @Nullable Output<String> notebookWorkspaceName;
 
-    public Output<String> notebookWorkspaceName() {
-        return this.notebookWorkspaceName == null ? Codegen.empty() : this.notebookWorkspaceName;
+    public Optional<Output<String>> notebookWorkspaceName() {
+        return Optional.ofNullable(this.notebookWorkspaceName);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public NotebookWorkspaceArgs(
-        Output<String> accountName,
-        @Nullable Output<String> notebookWorkspaceName,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.notebookWorkspaceName = notebookWorkspaceName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private NotebookWorkspaceArgs() {}
 
-    private NotebookWorkspaceArgs() {
-        this.accountName = Codegen.empty();
-        this.notebookWorkspaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private NotebookWorkspaceArgs(NotebookWorkspaceArgs $) {
+        this.accountName = $.accountName;
+        this.notebookWorkspaceName = $.notebookWorkspaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookWorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> notebookWorkspaceName;
-        private Output<String> resourceGroupName;
+        private NotebookWorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookWorkspaceArgs();
         }
 
         public Builder(NotebookWorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.notebookWorkspaceName = defaults.notebookWorkspaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new NotebookWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder notebookWorkspaceName(@Nullable Output<String> notebookWorkspaceName) {
-            this.notebookWorkspaceName = notebookWorkspaceName;
+            $.notebookWorkspaceName = notebookWorkspaceName;
             return this;
         }
-        public Builder notebookWorkspaceName(@Nullable String notebookWorkspaceName) {
-            this.notebookWorkspaceName = Codegen.ofNullable(notebookWorkspaceName);
-            return this;
+
+        public Builder notebookWorkspaceName(String notebookWorkspaceName) {
+            return notebookWorkspaceName(Output.of(notebookWorkspaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public NotebookWorkspaceArgs build() {
-            return new NotebookWorkspaceArgs(accountName, notebookWorkspaceName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public NotebookWorkspaceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

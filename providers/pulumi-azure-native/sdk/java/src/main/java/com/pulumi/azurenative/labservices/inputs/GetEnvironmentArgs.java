@@ -19,7 +19,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -30,7 +30,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentSettingName", required=true)
-      private final String environmentSettingName;
+    private String environmentSettingName;
 
     public String environmentSettingName() {
         return this.environmentSettingName;
@@ -41,10 +41,10 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labAccountName", required=true)
-      private final String labAccountName;
+    private String labAccountName;
 
     public String labAccountName() {
         return this.labAccountName;
@@ -63,7 +63,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -74,91 +74,79 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEnvironmentArgs(
-        String environmentName,
-        String environmentSettingName,
-        @Nullable String expand,
-        String labAccountName,
-        String labName,
-        String resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.environmentSettingName = Objects.requireNonNull(environmentSettingName, "expected parameter 'environmentSettingName' to be non-null");
-        this.expand = expand;
-        this.labAccountName = Objects.requireNonNull(labAccountName, "expected parameter 'labAccountName' to be non-null");
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEnvironmentArgs() {}
 
-    private GetEnvironmentArgs() {
-        this.environmentName = null;
-        this.environmentSettingName = null;
-        this.expand = null;
-        this.labAccountName = null;
-        this.labName = null;
-        this.resourceGroupName = null;
+    private GetEnvironmentArgs(GetEnvironmentArgs $) {
+        this.environmentName = $.environmentName;
+        this.environmentSettingName = $.environmentSettingName;
+        this.expand = $.expand;
+        this.labAccountName = $.labAccountName;
+        this.labName = $.labName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentName;
-        private String environmentSettingName;
-        private @Nullable String expand;
-        private String labAccountName;
-        private String labName;
-        private String resourceGroupName;
+        private GetEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentArgs();
         }
 
         public Builder(GetEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.environmentSettingName = defaults.environmentSettingName;
-    	      this.expand = defaults.expand;
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.labName = defaults.labName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentSettingName(String environmentSettingName) {
-            this.environmentSettingName = Objects.requireNonNull(environmentSettingName);
+            $.environmentSettingName = environmentSettingName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Objects.requireNonNull(labAccountName);
+            $.labAccountName = labAccountName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEnvironmentArgs build() {
-            return new GetEnvironmentArgs(environmentName, environmentSettingName, expand, labAccountName, labName, resourceGroupName);
+        }
+
+        public GetEnvironmentArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.environmentSettingName = Objects.requireNonNull($.environmentSettingName, "expected parameter 'environmentSettingName' to be non-null");
+            $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

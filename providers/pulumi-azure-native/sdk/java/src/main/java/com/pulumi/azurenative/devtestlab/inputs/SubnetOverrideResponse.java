@@ -24,10 +24,10 @@ public final class SubnetOverrideResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="labSubnetName")
-      private final @Nullable String labSubnetName;
+    private @Nullable String labSubnetName;
 
     public Optional<String> labSubnetName() {
-        return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
+        return Optional.ofNullable(this.labSubnetName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SubnetOverrideResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SubnetOverrideResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sharedPublicIpAddressConfiguration")
-      private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
+    private @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
     public Optional<SubnetSharedPublicIpAddressConfigurationResponse> sharedPublicIpAddressConfiguration() {
-        return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
+        return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SubnetOverrideResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="useInVmCreationPermission")
-      private final @Nullable String useInVmCreationPermission;
+    private @Nullable String useInVmCreationPermission;
 
     public Optional<String> useInVmCreationPermission() {
-        return this.useInVmCreationPermission == null ? Optional.empty() : Optional.ofNullable(this.useInVmCreationPermission);
+        return Optional.ofNullable(this.useInVmCreationPermission);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SubnetOverrideResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="usePublicIpAddressPermission")
-      private final @Nullable String usePublicIpAddressPermission;
+    private @Nullable String usePublicIpAddressPermission;
 
     public Optional<String> usePublicIpAddressPermission() {
-        return this.usePublicIpAddressPermission == null ? Optional.empty() : Optional.ofNullable(this.usePublicIpAddressPermission);
+        return Optional.ofNullable(this.usePublicIpAddressPermission);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class SubnetOverrideResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="virtualNetworkPoolName")
-      private final @Nullable String virtualNetworkPoolName;
+    private @Nullable String virtualNetworkPoolName;
 
     public Optional<String> virtualNetworkPoolName() {
-        return this.virtualNetworkPoolName == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkPoolName);
+        return Optional.ofNullable(this.virtualNetworkPoolName);
     }
 
-    public SubnetOverrideResponse(
-        @Nullable String labSubnetName,
-        @Nullable String resourceId,
-        @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
-        @Nullable String useInVmCreationPermission,
-        @Nullable String usePublicIpAddressPermission,
-        @Nullable String virtualNetworkPoolName) {
-        this.labSubnetName = labSubnetName;
-        this.resourceId = resourceId;
-        this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
-        this.useInVmCreationPermission = useInVmCreationPermission;
-        this.usePublicIpAddressPermission = usePublicIpAddressPermission;
-        this.virtualNetworkPoolName = virtualNetworkPoolName;
-    }
+    private SubnetOverrideResponse() {}
 
-    private SubnetOverrideResponse() {
-        this.labSubnetName = null;
-        this.resourceId = null;
-        this.sharedPublicIpAddressConfiguration = null;
-        this.useInVmCreationPermission = null;
-        this.usePublicIpAddressPermission = null;
-        this.virtualNetworkPoolName = null;
+    private SubnetOverrideResponse(SubnetOverrideResponse $) {
+        this.labSubnetName = $.labSubnetName;
+        this.resourceId = $.resourceId;
+        this.sharedPublicIpAddressConfiguration = $.sharedPublicIpAddressConfiguration;
+        this.useInVmCreationPermission = $.useInVmCreationPermission;
+        this.usePublicIpAddressPermission = $.usePublicIpAddressPermission;
+        this.virtualNetworkPoolName = $.virtualNetworkPoolName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String labSubnetName;
-        private @Nullable String resourceId;
-        private @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
-        private @Nullable String useInVmCreationPermission;
-        private @Nullable String usePublicIpAddressPermission;
-        private @Nullable String virtualNetworkPoolName;
+        private SubnetOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetOverrideResponse();
         }
 
         public Builder(SubnetOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labSubnetName = defaults.labSubnetName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.sharedPublicIpAddressConfiguration = defaults.sharedPublicIpAddressConfiguration;
-    	      this.useInVmCreationPermission = defaults.useInVmCreationPermission;
-    	      this.usePublicIpAddressPermission = defaults.usePublicIpAddressPermission;
-    	      this.virtualNetworkPoolName = defaults.virtualNetworkPoolName;
+            $ = new SubnetOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = labSubnetName;
+            $.labSubnetName = labSubnetName;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder sharedPublicIpAddressConfiguration(@Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
-            this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
+            $.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
+
         public Builder useInVmCreationPermission(@Nullable String useInVmCreationPermission) {
-            this.useInVmCreationPermission = useInVmCreationPermission;
+            $.useInVmCreationPermission = useInVmCreationPermission;
             return this;
         }
+
         public Builder usePublicIpAddressPermission(@Nullable String usePublicIpAddressPermission) {
-            this.usePublicIpAddressPermission = usePublicIpAddressPermission;
+            $.usePublicIpAddressPermission = usePublicIpAddressPermission;
             return this;
         }
+
         public Builder virtualNetworkPoolName(@Nullable String virtualNetworkPoolName) {
-            this.virtualNetworkPoolName = virtualNetworkPoolName;
+            $.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
-        }        public SubnetOverrideResponse build() {
-            return new SubnetOverrideResponse(labSubnetName, resourceId, sharedPublicIpAddressConfiguration, useInVmCreationPermission, usePublicIpAddressPermission, virtualNetworkPoolName);
+        }
+
+        public SubnetOverrideResponse build() {
+            return $;
         }
     }
+
 }

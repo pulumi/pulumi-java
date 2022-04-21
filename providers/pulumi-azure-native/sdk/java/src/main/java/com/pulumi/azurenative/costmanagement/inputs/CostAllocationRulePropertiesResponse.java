@@ -24,7 +24,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="createdDate", required=true)
-      private final String createdDate;
+    private String createdDate;
 
     public String createdDate() {
         return this.createdDate;
@@ -35,10 +35,10 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="details", required=true)
-      private final CostAllocationRuleDetailsResponse details;
+    private CostAllocationRuleDetailsResponse details;
 
     public CostAllocationRuleDetailsResponse details() {
         return this.details;
@@ -57,7 +57,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -68,82 +68,72 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="updatedDate", required=true)
-      private final String updatedDate;
+    private String updatedDate;
 
     public String updatedDate() {
         return this.updatedDate;
     }
 
-    public CostAllocationRulePropertiesResponse(
-        String createdDate,
-        @Nullable String description,
-        CostAllocationRuleDetailsResponse details,
-        String status,
-        String updatedDate) {
-        this.createdDate = Objects.requireNonNull(createdDate, "expected parameter 'createdDate' to be non-null");
-        this.description = description;
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.updatedDate = Objects.requireNonNull(updatedDate, "expected parameter 'updatedDate' to be non-null");
-    }
+    private CostAllocationRulePropertiesResponse() {}
 
-    private CostAllocationRulePropertiesResponse() {
-        this.createdDate = null;
-        this.description = null;
-        this.details = null;
-        this.status = null;
-        this.updatedDate = null;
+    private CostAllocationRulePropertiesResponse(CostAllocationRulePropertiesResponse $) {
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.details = $.details;
+        this.status = $.status;
+        this.updatedDate = $.updatedDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationRulePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdDate;
-        private @Nullable String description;
-        private CostAllocationRuleDetailsResponse details;
-        private String status;
-        private String updatedDate;
+        private CostAllocationRulePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationRulePropertiesResponse();
         }
 
         public Builder(CostAllocationRulePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.details = defaults.details;
-    	      this.status = defaults.status;
-    	      this.updatedDate = defaults.updatedDate;
+            $ = new CostAllocationRulePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdDate(String createdDate) {
-            this.createdDate = Objects.requireNonNull(createdDate);
+            $.createdDate = createdDate;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder details(CostAllocationRuleDetailsResponse details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder updatedDate(String updatedDate) {
-            this.updatedDate = Objects.requireNonNull(updatedDate);
+            $.updatedDate = updatedDate;
             return this;
-        }        public CostAllocationRulePropertiesResponse build() {
-            return new CostAllocationRulePropertiesResponse(createdDate, description, details, status, updatedDate);
+        }
+
+        public CostAllocationRulePropertiesResponse build() {
+            $.createdDate = Objects.requireNonNull($.createdDate, "expected parameter 'createdDate' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.updatedDate = Objects.requireNonNull($.updatedDate, "expected parameter 'updatedDate' to be non-null");
+            return $;
         }
     }
+
 }

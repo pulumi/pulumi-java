@@ -23,10 +23,10 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public FilteringTagResponse(
-        @Nullable String action,
-        @Nullable String name,
-        @Nullable String value) {
-        this.action = action;
-        this.name = name;
-        this.value = value;
-    }
+    private FilteringTagResponse() {}
 
-    private FilteringTagResponse() {
-        this.action = null;
-        this.name = null;
-        this.value = null;
+    private FilteringTagResponse(FilteringTagResponse $) {
+        this.action = $.action;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilteringTagResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private @Nullable String name;
-        private @Nullable String value;
+        private FilteringTagResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilteringTagResponse();
         }
 
         public Builder(FilteringTagResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new FilteringTagResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public FilteringTagResponse build() {
-            return new FilteringTagResponse(action, name, value);
+        }
+
+        public FilteringTagResponse build() {
+            return $;
         }
     }
+
 }

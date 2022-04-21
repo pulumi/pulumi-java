@@ -24,48 +24,48 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
-    public VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(@Nullable List<String> dnsServers) {
-        this.dnsServers = dnsServers;
-    }
+    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse() {}
 
-    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse() {
-        this.dnsServers = List.of();
+    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse $) {
+        this.dnsServers = $.dnsServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dnsServers;
+        private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse();
         }
 
         public Builder(VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServers = defaults.dnsServers;
+            $ = new VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
-        }        public VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse build() {
-            return new VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(dnsServers);
+        }
+
+        public VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.inputs.Ipv6CircuitConnectionConfigArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="authorizationKey")
-      private final @Nullable Output<String> authorizationKey;
+    private @Nullable Output<String> authorizationKey;
 
-    public Output<String> authorizationKey() {
-        return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
+    public Optional<Output<String>> authorizationKey() {
+        return Optional.ofNullable(this.authorizationKey);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="expressRouteCircuitPeering")
-      private final @Nullable Output<SubResourceArgs> expressRouteCircuitPeering;
+    private @Nullable Output<SubResourceArgs> expressRouteCircuitPeering;
 
-    public Output<SubResourceArgs> expressRouteCircuitPeering() {
-        return this.expressRouteCircuitPeering == null ? Codegen.empty() : this.expressRouteCircuitPeering;
+    public Optional<Output<SubResourceArgs>> expressRouteCircuitPeering() {
+        return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ipv6CircuitConnectionConfig")
-      private final @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
+    private @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
 
-    public Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig() {
-        return this.ipv6CircuitConnectionConfig == null ? Codegen.empty() : this.ipv6CircuitConnectionConfig;
+    public Optional<Output<Ipv6CircuitConnectionConfigArgs>> ipv6CircuitConnectionConfig() {
+        return Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,128 +92,108 @@ public final class ExpressRouteCircuitConnectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="peerExpressRouteCircuitPeering")
-      private final @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering;
+    private @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering;
 
-    public Output<SubResourceArgs> peerExpressRouteCircuitPeering() {
-        return this.peerExpressRouteCircuitPeering == null ? Codegen.empty() : this.peerExpressRouteCircuitPeering;
+    public Optional<Output<SubResourceArgs>> peerExpressRouteCircuitPeering() {
+        return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
 
-    public ExpressRouteCircuitConnectionArgs(
-        @Nullable Output<String> addressPrefix,
-        @Nullable Output<String> authorizationKey,
-        @Nullable Output<SubResourceArgs> expressRouteCircuitPeering,
-        @Nullable Output<String> id,
-        @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering) {
-        this.addressPrefix = addressPrefix;
-        this.authorizationKey = authorizationKey;
-        this.expressRouteCircuitPeering = expressRouteCircuitPeering;
-        this.id = id;
-        this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
-        this.name = name;
-        this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
-    }
+    private ExpressRouteCircuitConnectionArgs() {}
 
-    private ExpressRouteCircuitConnectionArgs() {
-        this.addressPrefix = Codegen.empty();
-        this.authorizationKey = Codegen.empty();
-        this.expressRouteCircuitPeering = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipv6CircuitConnectionConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peerExpressRouteCircuitPeering = Codegen.empty();
+    private ExpressRouteCircuitConnectionArgs(ExpressRouteCircuitConnectionArgs $) {
+        this.addressPrefix = $.addressPrefix;
+        this.authorizationKey = $.authorizationKey;
+        this.expressRouteCircuitPeering = $.expressRouteCircuitPeering;
+        this.id = $.id;
+        this.ipv6CircuitConnectionConfig = $.ipv6CircuitConnectionConfig;
+        this.name = $.name;
+        this.peerExpressRouteCircuitPeering = $.peerExpressRouteCircuitPeering;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
-        private @Nullable Output<String> authorizationKey;
-        private @Nullable Output<SubResourceArgs> expressRouteCircuitPeering;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering;
+        private ExpressRouteCircuitConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitConnectionArgs();
         }
 
         public Builder(ExpressRouteCircuitConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.authorizationKey = defaults.authorizationKey;
-    	      this.expressRouteCircuitPeering = defaults.expressRouteCircuitPeering;
-    	      this.id = defaults.id;
-    	      this.ipv6CircuitConnectionConfig = defaults.ipv6CircuitConnectionConfig;
-    	      this.name = defaults.name;
-    	      this.peerExpressRouteCircuitPeering = defaults.peerExpressRouteCircuitPeering;
+            $ = new ExpressRouteCircuitConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
         }
+
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
-            this.authorizationKey = authorizationKey;
+            $.authorizationKey = authorizationKey;
             return this;
         }
-        public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Codegen.ofNullable(authorizationKey);
-            return this;
+
+        public Builder authorizationKey(String authorizationKey) {
+            return authorizationKey(Output.of(authorizationKey));
         }
+
         public Builder expressRouteCircuitPeering(@Nullable Output<SubResourceArgs> expressRouteCircuitPeering) {
-            this.expressRouteCircuitPeering = expressRouteCircuitPeering;
+            $.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
-        public Builder expressRouteCircuitPeering(@Nullable SubResourceArgs expressRouteCircuitPeering) {
-            this.expressRouteCircuitPeering = Codegen.ofNullable(expressRouteCircuitPeering);
-            return this;
+
+        public Builder expressRouteCircuitPeering(SubResourceArgs expressRouteCircuitPeering) {
+            return expressRouteCircuitPeering(Output.of(expressRouteCircuitPeering));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipv6CircuitConnectionConfig(@Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig) {
-            this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
+            $.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
             return this;
         }
-        public Builder ipv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigArgs ipv6CircuitConnectionConfig) {
-            this.ipv6CircuitConnectionConfig = Codegen.ofNullable(ipv6CircuitConnectionConfig);
-            return this;
+
+        public Builder ipv6CircuitConnectionConfig(Ipv6CircuitConnectionConfigArgs ipv6CircuitConnectionConfig) {
+            return ipv6CircuitConnectionConfig(Output.of(ipv6CircuitConnectionConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peerExpressRouteCircuitPeering(@Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering) {
-            this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
+            $.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
-        public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceArgs peerExpressRouteCircuitPeering) {
-            this.peerExpressRouteCircuitPeering = Codegen.ofNullable(peerExpressRouteCircuitPeering);
-            return this;
-        }        public ExpressRouteCircuitConnectionArgs build() {
-            return new ExpressRouteCircuitConnectionArgs(addressPrefix, authorizationKey, expressRouteCircuitPeering, id, ipv6CircuitConnectionConfig, name, peerExpressRouteCircuitPeering);
+
+        public Builder peerExpressRouteCircuitPeering(SubResourceArgs peerExpressRouteCircuitPeering) {
+            return peerExpressRouteCircuitPeering(Output.of(peerExpressRouteCircuitPeering));
+        }
+
+        public ExpressRouteCircuitConnectionArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.azurenative.extendedlocation.inputs.CustomLocationPropertiesAu
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
+    private @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
 
-    public Output<CustomLocationPropertiesAuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<CustomLocationPropertiesAuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clusterExtensionIds")
-      private final @Nullable Output<List<String>> clusterExtensionIds;
+    private @Nullable Output<List<String>> clusterExtensionIds;
 
-    public Output<List<String>> clusterExtensionIds() {
-        return this.clusterExtensionIds == null ? Codegen.empty() : this.clusterExtensionIds;
+    public Optional<Output<List<String>>> clusterExtensionIds() {
+        return Optional.ofNullable(this.clusterExtensionIds);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hostResourceId")
-      private final @Nullable Output<String> hostResourceId;
+    private @Nullable Output<String> hostResourceId;
 
-    public Output<String> hostResourceId() {
-        return this.hostResourceId == null ? Codegen.empty() : this.hostResourceId;
+    public Optional<Output<String>> hostResourceId() {
+        return Optional.ofNullable(this.hostResourceId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hostType")
-      private final @Nullable Output<Either<String,HostType>> hostType;
+    private @Nullable Output<Either<String,HostType>> hostType;
 
-    public Output<Either<String,HostType>> hostType() {
-        return this.hostType == null ? Codegen.empty() : this.hostType;
+    public Optional<Output<Either<String,HostType>>> hostType() {
+        return Optional.ofNullable(this.hostType);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -124,10 +124,10 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -135,183 +135,153 @@ public final class CustomLocationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CustomLocationArgs(
-        @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication,
-        @Nullable Output<List<String>> clusterExtensionIds,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> hostResourceId,
-        @Nullable Output<Either<String,HostType>> hostType,
-        @Nullable Output<String> location,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.authentication = authentication;
-        this.clusterExtensionIds = clusterExtensionIds;
-        this.displayName = displayName;
-        this.hostResourceId = hostResourceId;
-        this.hostType = hostType;
-        this.location = location;
-        this.namespace = namespace;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.tags = tags;
-    }
+    private CustomLocationArgs() {}
 
-    private CustomLocationArgs() {
-        this.authentication = Codegen.empty();
-        this.clusterExtensionIds = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.hostResourceId = Codegen.empty();
-        this.hostType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CustomLocationArgs(CustomLocationArgs $) {
+        this.authentication = $.authentication;
+        this.clusterExtensionIds = $.clusterExtensionIds;
+        this.displayName = $.displayName;
+        this.hostResourceId = $.hostResourceId;
+        this.hostType = $.hostType;
+        this.location = $.location;
+        this.namespace = $.namespace;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
-        private @Nullable Output<List<String>> clusterExtensionIds;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> hostResourceId;
-        private @Nullable Output<Either<String,HostType>> hostType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Map<String,String>> tags;
+        private CustomLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomLocationArgs();
         }
 
         public Builder(CustomLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.clusterExtensionIds = defaults.clusterExtensionIds;
-    	      this.displayName = defaults.displayName;
-    	      this.hostResourceId = defaults.hostResourceId;
-    	      this.hostType = defaults.hostType;
-    	      this.location = defaults.location;
-    	      this.namespace = defaults.namespace;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tags = defaults.tags;
+            $ = new CustomLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable CustomLocationPropertiesAuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(CustomLocationPropertiesAuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder clusterExtensionIds(@Nullable Output<List<String>> clusterExtensionIds) {
-            this.clusterExtensionIds = clusterExtensionIds;
+            $.clusterExtensionIds = clusterExtensionIds;
             return this;
         }
-        public Builder clusterExtensionIds(@Nullable List<String> clusterExtensionIds) {
-            this.clusterExtensionIds = Codegen.ofNullable(clusterExtensionIds);
-            return this;
+
+        public Builder clusterExtensionIds(List<String> clusterExtensionIds) {
+            return clusterExtensionIds(Output.of(clusterExtensionIds));
         }
+
         public Builder clusterExtensionIds(String... clusterExtensionIds) {
             return clusterExtensionIds(List.of(clusterExtensionIds));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder hostResourceId(@Nullable Output<String> hostResourceId) {
-            this.hostResourceId = hostResourceId;
+            $.hostResourceId = hostResourceId;
             return this;
         }
-        public Builder hostResourceId(@Nullable String hostResourceId) {
-            this.hostResourceId = Codegen.ofNullable(hostResourceId);
-            return this;
+
+        public Builder hostResourceId(String hostResourceId) {
+            return hostResourceId(Output.of(hostResourceId));
         }
+
         public Builder hostType(@Nullable Output<Either<String,HostType>> hostType) {
-            this.hostType = hostType;
+            $.hostType = hostType;
             return this;
         }
-        public Builder hostType(@Nullable Either<String,HostType> hostType) {
-            this.hostType = Codegen.ofNullable(hostType);
-            return this;
+
+        public Builder hostType(Either<String,HostType> hostType) {
+            return hostType(Output.of(hostType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public CustomLocationArgs build() {
-            return new CustomLocationArgs(authentication, clusterExtensionIds, displayName, hostResourceId, hostType, location, namespace, provisioningState, resourceGroupName, resourceName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public CustomLocationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

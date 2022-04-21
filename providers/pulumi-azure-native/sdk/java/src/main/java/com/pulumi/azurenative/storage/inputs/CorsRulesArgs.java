@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.CorsRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CorsRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="corsRules")
-      private final @Nullable Output<List<CorsRuleArgs>> corsRules;
+    private @Nullable Output<List<CorsRuleArgs>> corsRules;
 
-    public Output<List<CorsRuleArgs>> corsRules() {
-        return this.corsRules == null ? Codegen.empty() : this.corsRules;
+    public Optional<Output<List<CorsRuleArgs>>> corsRules() {
+        return Optional.ofNullable(this.corsRules);
     }
 
-    public CorsRulesArgs(@Nullable Output<List<CorsRuleArgs>> corsRules) {
-        this.corsRules = corsRules;
-    }
+    private CorsRulesArgs() {}
 
-    private CorsRulesArgs() {
-        this.corsRules = Codegen.empty();
+    private CorsRulesArgs(CorsRulesArgs $) {
+        this.corsRules = $.corsRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CorsRuleArgs>> corsRules;
+        private CorsRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsRulesArgs();
         }
 
         public Builder(CorsRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsRules = defaults.corsRules;
+            $ = new CorsRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder corsRules(@Nullable Output<List<CorsRuleArgs>> corsRules) {
-            this.corsRules = corsRules;
+            $.corsRules = corsRules;
             return this;
         }
-        public Builder corsRules(@Nullable List<CorsRuleArgs> corsRules) {
-            this.corsRules = Codegen.ofNullable(corsRules);
-            return this;
+
+        public Builder corsRules(List<CorsRuleArgs> corsRules) {
+            return corsRules(Output.of(corsRules));
         }
+
         public Builder corsRules(CorsRuleArgs... corsRules) {
             return corsRules(List.of(corsRules));
-        }        public CorsRulesArgs build() {
-            return new CorsRulesArgs(corsRules);
+        }
+
+        public CorsRulesArgs build() {
+            return $;
         }
     }
+
 }

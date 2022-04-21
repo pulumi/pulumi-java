@@ -25,7 +25,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -36,7 +36,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,10 +47,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
      * 
      */
     @Import(name="role")
-      private final @Nullable String role;
+    private @Nullable String role;
 
     public Optional<String> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
      * 
      */
     @Import(name="subnetCidr")
-      private final @Nullable String subnetCidr;
+    private @Nullable String subnetCidr;
 
     public Optional<String> subnetCidr() {
-        return this.subnetCidr == null ? Optional.empty() : Optional.ofNullable(this.subnetCidr);
+        return Optional.ofNullable(this.subnetCidr);
     }
 
     /**
@@ -80,91 +80,78 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
      * 
      */
     @Import(name="vmSize", required=true)
-      private final String vmSize;
+    private String vmSize;
 
     public String vmSize() {
         return this.vmSize;
     }
 
-    public OpenShiftManagedClusterAgentPoolProfileResponse(
-        Integer count,
-        String name,
-        @Nullable String osType,
-        @Nullable String role,
-        @Nullable String subnetCidr,
-        String vmSize) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.osType = osType;
-        this.role = role;
-        this.subnetCidr = Codegen.stringProp("subnetCidr").arg(subnetCidr).def("10.0.0.0/24").getNullable();
-        this.vmSize = Objects.requireNonNull(vmSize, "expected parameter 'vmSize' to be non-null");
-    }
+    private OpenShiftManagedClusterAgentPoolProfileResponse() {}
 
-    private OpenShiftManagedClusterAgentPoolProfileResponse() {
-        this.count = null;
-        this.name = null;
-        this.osType = null;
-        this.role = null;
-        this.subnetCidr = null;
-        this.vmSize = null;
+    private OpenShiftManagedClusterAgentPoolProfileResponse(OpenShiftManagedClusterAgentPoolProfileResponse $) {
+        this.count = $.count;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.role = $.role;
+        this.subnetCidr = $.subnetCidr;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterAgentPoolProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String name;
-        private @Nullable String osType;
-        private @Nullable String role;
-        private @Nullable String subnetCidr;
-        private String vmSize;
+        private OpenShiftManagedClusterAgentPoolProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterAgentPoolProfileResponse();
         }
 
         public Builder(OpenShiftManagedClusterAgentPoolProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.role = defaults.role;
-    	      this.subnetCidr = defaults.subnetCidr;
-    	      this.vmSize = defaults.vmSize;
+            $ = new OpenShiftManagedClusterAgentPoolProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder role(@Nullable String role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
+
         public Builder subnetCidr(@Nullable String subnetCidr) {
-            this.subnetCidr = subnetCidr;
+            $.subnetCidr = subnetCidr;
             return this;
         }
+
         public Builder vmSize(String vmSize) {
-            this.vmSize = Objects.requireNonNull(vmSize);
+            $.vmSize = vmSize;
             return this;
-        }        public OpenShiftManagedClusterAgentPoolProfileResponse build() {
-            return new OpenShiftManagedClusterAgentPoolProfileResponse(count, name, osType, role, subnetCidr, vmSize);
+        }
+
+        public OpenShiftManagedClusterAgentPoolProfileResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subnetCidr = Codegen.stringProp("subnetCidr").arg($.subnetCidr).def("10.0.0.0/24").getNullable();
+            $.vmSize = Objects.requireNonNull($.vmSize, "expected parameter 'vmSize' to be non-null");
+            return $;
         }
     }
+
 }

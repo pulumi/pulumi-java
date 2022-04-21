@@ -7,9 +7,9 @@ import com.pulumi.azurenative.apimanagement.enums.State;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -33,10 +33,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -55,10 +55,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issueId")
-      private final @Nullable Output<String> issueId;
+    private @Nullable Output<String> issueId;
 
-    public Output<String> issueId() {
-        return this.issueId == null ? Codegen.empty() : this.issueId;
+    public Optional<Output<String>> issueId() {
+        return Optional.ofNullable(this.issueId);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -88,10 +88,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,State>> state;
+    private @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,State>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
@@ -110,154 +110,134 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public ApiIssueArgs(
-        Output<String> apiId,
-        @Nullable Output<String> createdDate,
-        Output<String> description,
-        @Nullable Output<String> issueId,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<Either<String,State>> state,
-        Output<String> title,
-        Output<String> userId) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.createdDate = createdDate;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.issueId = issueId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.state = state;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private ApiIssueArgs() {}
 
-    private ApiIssueArgs() {
-        this.apiId = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.issueId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.state = Codegen.empty();
-        this.title = Codegen.empty();
-        this.userId = Codegen.empty();
+    private ApiIssueArgs(ApiIssueArgs $) {
+        this.apiId = $.apiId;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.issueId = $.issueId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.state = $.state;
+        this.title = $.title;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiIssueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> createdDate;
-        private Output<String> description;
-        private @Nullable Output<String> issueId;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<Either<String,State>> state;
-        private Output<String> title;
-        private Output<String> userId;
+        private ApiIssueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiIssueArgs();
         }
 
         public Builder(ApiIssueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.issueId = defaults.issueId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.state = defaults.state;
-    	      this.title = defaults.title;
-    	      this.userId = defaults.userId;
+            $ = new ApiIssueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder issueId(@Nullable Output<String> issueId) {
-            this.issueId = issueId;
+            $.issueId = issueId;
             return this;
         }
-        public Builder issueId(@Nullable String issueId) {
-            this.issueId = Codegen.ofNullable(issueId);
-            return this;
+
+        public Builder issueId(String issueId) {
+            return issueId(Output.of(issueId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,State> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,State> state) {
+            return state(Output.of(state));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
+            return title(Output.of(title));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public ApiIssueArgs build() {
-            return new ApiIssueArgs(apiId, createdDate, description, issueId, resourceGroupName, serviceName, state, title, userId);
+            return userId(Output.of(userId));
+        }
+
+        public ApiIssueArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

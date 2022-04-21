@@ -6,9 +6,9 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.enums.DayOfWeek;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<DayOfWeek> day;
+    private @Nullable Output<DayOfWeek> day;
 
-    public Output<DayOfWeek> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<DayOfWeek>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="occurrence")
-      private final @Nullable Output<Integer> occurrence;
+    private @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> occurrence() {
-        return this.occurrence == null ? Codegen.empty() : this.occurrence;
+    public Optional<Output<Integer>> occurrence() {
+        return Optional.ofNullable(this.occurrence);
     }
 
-    public RecurrenceScheduleOccurrenceArgs(
-        @Nullable Output<DayOfWeek> day,
-        @Nullable Output<Integer> occurrence) {
-        this.day = day;
-        this.occurrence = occurrence;
-    }
+    private RecurrenceScheduleOccurrenceArgs() {}
 
-    private RecurrenceScheduleOccurrenceArgs() {
-        this.day = Codegen.empty();
-        this.occurrence = Codegen.empty();
+    private RecurrenceScheduleOccurrenceArgs(RecurrenceScheduleOccurrenceArgs $) {
+        this.day = $.day;
+        this.occurrence = $.occurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrenceScheduleOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DayOfWeek> day;
-        private @Nullable Output<Integer> occurrence;
+        private RecurrenceScheduleOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrenceScheduleOccurrenceArgs();
         }
 
         public Builder(RecurrenceScheduleOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.occurrence = defaults.occurrence;
+            $ = new RecurrenceScheduleOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<DayOfWeek> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable DayOfWeek day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(DayOfWeek day) {
+            return day(Output.of(day));
         }
+
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
-            this.occurrence = occurrence;
+            $.occurrence = occurrence;
             return this;
         }
-        public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Codegen.ofNullable(occurrence);
-            return this;
-        }        public RecurrenceScheduleOccurrenceArgs build() {
-            return new RecurrenceScheduleOccurrenceArgs(day, occurrence);
+
+        public Builder occurrence(Integer occurrence) {
+            return occurrence(Output.of(occurrence));
+        }
+
+        public RecurrenceScheduleOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

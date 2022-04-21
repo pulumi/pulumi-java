@@ -26,7 +26,7 @@ public final class DockerImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dockerImageUri", required=true)
-      private final String dockerImageUri;
+    private String dockerImageUri;
 
     public String dockerImageUri() {
         return this.dockerImageUri;
@@ -38,7 +38,7 @@ public final class DockerImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dockerSpecificationType", required=true)
-      private final String dockerSpecificationType;
+    private String dockerSpecificationType;
 
     public String dockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -49,64 +49,58 @@ public final class DockerImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable DockerImagePlatformResponse platform;
+    private @Nullable DockerImagePlatformResponse platform;
 
     public Optional<DockerImagePlatformResponse> platform() {
-        return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
+        return Optional.ofNullable(this.platform);
     }
 
-    public DockerImageResponse(
-        String dockerImageUri,
-        String dockerSpecificationType,
-        @Nullable DockerImagePlatformResponse platform) {
-        this.dockerImageUri = Objects.requireNonNull(dockerImageUri, "expected parameter 'dockerImageUri' to be non-null");
-        this.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").arg(dockerSpecificationType).require();
-        this.platform = platform;
-    }
+    private DockerImageResponse() {}
 
-    private DockerImageResponse() {
-        this.dockerImageUri = null;
-        this.dockerSpecificationType = null;
-        this.platform = null;
+    private DockerImageResponse(DockerImageResponse $) {
+        this.dockerImageUri = $.dockerImageUri;
+        this.dockerSpecificationType = $.dockerSpecificationType;
+        this.platform = $.platform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dockerImageUri;
-        private String dockerSpecificationType;
-        private @Nullable DockerImagePlatformResponse platform;
+        private DockerImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerImageResponse();
         }
 
         public Builder(DockerImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dockerImageUri = defaults.dockerImageUri;
-    	      this.dockerSpecificationType = defaults.dockerSpecificationType;
-    	      this.platform = defaults.platform;
+            $ = new DockerImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dockerImageUri(String dockerImageUri) {
-            this.dockerImageUri = Objects.requireNonNull(dockerImageUri);
+            $.dockerImageUri = dockerImageUri;
             return this;
         }
+
         public Builder dockerSpecificationType(String dockerSpecificationType) {
-            this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
+            $.dockerSpecificationType = dockerSpecificationType;
             return this;
         }
+
         public Builder platform(@Nullable DockerImagePlatformResponse platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
-        }        public DockerImageResponse build() {
-            return new DockerImageResponse(dockerImageUri, dockerSpecificationType, platform);
+        }
+
+        public DockerImageResponse build() {
+            $.dockerImageUri = Objects.requireNonNull($.dockerImageUri, "expected parameter 'dockerImageUri' to be non-null");
+            $.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").arg($.dockerSpecificationType).require();
+            return $;
         }
     }
+
 }

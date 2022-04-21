@@ -6,10 +6,10 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 import com.pulumi.azurenative.deploymentmanager.enums.RestMatchQuantifier;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="matchQuantifier")
-      private final @Nullable Output<RestMatchQuantifier> matchQuantifier;
+    private @Nullable Output<RestMatchQuantifier> matchQuantifier;
 
-    public Output<RestMatchQuantifier> matchQuantifier() {
-        return this.matchQuantifier == null ? Codegen.empty() : this.matchQuantifier;
+    public Optional<Output<RestMatchQuantifier>> matchQuantifier() {
+        return Optional.ofNullable(this.matchQuantifier);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class RestResponseRegexArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="matches")
-      private final @Nullable Output<List<String>> matches;
+    private @Nullable Output<List<String>> matches;
 
-    public Output<List<String>> matches() {
-        return this.matches == null ? Codegen.empty() : this.matches;
+    public Optional<Output<List<String>>> matches() {
+        return Optional.ofNullable(this.matches);
     }
 
-    public RestResponseRegexArgs(
-        @Nullable Output<RestMatchQuantifier> matchQuantifier,
-        @Nullable Output<List<String>> matches) {
-        this.matchQuantifier = matchQuantifier;
-        this.matches = matches;
-    }
+    private RestResponseRegexArgs() {}
 
-    private RestResponseRegexArgs() {
-        this.matchQuantifier = Codegen.empty();
-        this.matches = Codegen.empty();
+    private RestResponseRegexArgs(RestResponseRegexArgs $) {
+        this.matchQuantifier = $.matchQuantifier;
+        this.matches = $.matches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestResponseRegexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RestMatchQuantifier> matchQuantifier;
-        private @Nullable Output<List<String>> matches;
+        private RestResponseRegexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestResponseRegexArgs();
         }
 
         public Builder(RestResponseRegexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchQuantifier = defaults.matchQuantifier;
-    	      this.matches = defaults.matches;
+            $ = new RestResponseRegexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchQuantifier(@Nullable Output<RestMatchQuantifier> matchQuantifier) {
-            this.matchQuantifier = matchQuantifier;
+            $.matchQuantifier = matchQuantifier;
             return this;
         }
-        public Builder matchQuantifier(@Nullable RestMatchQuantifier matchQuantifier) {
-            this.matchQuantifier = Codegen.ofNullable(matchQuantifier);
-            return this;
+
+        public Builder matchQuantifier(RestMatchQuantifier matchQuantifier) {
+            return matchQuantifier(Output.of(matchQuantifier));
         }
+
         public Builder matches(@Nullable Output<List<String>> matches) {
-            this.matches = matches;
+            $.matches = matches;
             return this;
         }
-        public Builder matches(@Nullable List<String> matches) {
-            this.matches = Codegen.ofNullable(matches);
-            return this;
+
+        public Builder matches(List<String> matches) {
+            return matches(Output.of(matches));
         }
+
         public Builder matches(String... matches) {
             return matches(List.of(matches));
-        }        public RestResponseRegexArgs build() {
-            return new RestResponseRegexArgs(matchQuantifier, matches);
+        }
+
+        public RestResponseRegexArgs build() {
+            return $;
         }
     }
+
 }

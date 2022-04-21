@@ -25,10 +25,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="branch")
-      private final @Nullable String branch;
+    private @Nullable String branch;
 
     public Optional<String> branch() {
-        return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentLogsUrl")
-      private final @Nullable String deploymentLogsUrl;
+    private @Nullable String deploymentLogsUrl;
 
     public Optional<String> deploymentLogsUrl() {
-        return this.deploymentLogsUrl == null ? Optional.empty() : Optional.ofNullable(this.deploymentLogsUrl);
+        return Optional.ofNullable(this.deploymentLogsUrl);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayUrl")
-      private final @Nullable String displayUrl;
+    private @Nullable String displayUrl;
 
     public Optional<String> displayUrl() {
-        return this.displayUrl == null ? Optional.empty() : Optional.ofNullable(this.displayUrl);
+        return Optional.ofNullable(this.displayUrl);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathMapping")
-      private final @Nullable List<ContentPathMapResponse> pathMapping;
+    private @Nullable List<ContentPathMapResponse> pathMapping;
 
-    public List<ContentPathMapResponse> pathMapping() {
-        return this.pathMapping == null ? List.of() : this.pathMapping;
+    public Optional<List<ContentPathMapResponse>> pathMapping() {
+        return Optional.ofNullable(this.pathMapping);
     }
 
     /**
@@ -69,85 +69,72 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public RepositoryResponse(
-        @Nullable String branch,
-        @Nullable String deploymentLogsUrl,
-        @Nullable String displayUrl,
-        @Nullable List<ContentPathMapResponse> pathMapping,
-        @Nullable String url) {
-        this.branch = branch;
-        this.deploymentLogsUrl = deploymentLogsUrl;
-        this.displayUrl = displayUrl;
-        this.pathMapping = pathMapping;
-        this.url = url;
-    }
+    private RepositoryResponse() {}
 
-    private RepositoryResponse() {
-        this.branch = null;
-        this.deploymentLogsUrl = null;
-        this.displayUrl = null;
-        this.pathMapping = List.of();
-        this.url = null;
+    private RepositoryResponse(RepositoryResponse $) {
+        this.branch = $.branch;
+        this.deploymentLogsUrl = $.deploymentLogsUrl;
+        this.displayUrl = $.displayUrl;
+        this.pathMapping = $.pathMapping;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String branch;
-        private @Nullable String deploymentLogsUrl;
-        private @Nullable String displayUrl;
-        private @Nullable List<ContentPathMapResponse> pathMapping;
-        private @Nullable String url;
+        private RepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryResponse();
         }
 
         public Builder(RepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.deploymentLogsUrl = defaults.deploymentLogsUrl;
-    	      this.displayUrl = defaults.displayUrl;
-    	      this.pathMapping = defaults.pathMapping;
-    	      this.url = defaults.url;
+            $ = new RepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
+
         public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
-            this.deploymentLogsUrl = deploymentLogsUrl;
+            $.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
+
         public Builder displayUrl(@Nullable String displayUrl) {
-            this.displayUrl = displayUrl;
+            $.displayUrl = displayUrl;
             return this;
         }
+
         public Builder pathMapping(@Nullable List<ContentPathMapResponse> pathMapping) {
-            this.pathMapping = pathMapping;
+            $.pathMapping = pathMapping;
             return this;
         }
+
         public Builder pathMapping(ContentPathMapResponse... pathMapping) {
             return pathMapping(List.of(pathMapping));
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public RepositoryResponse build() {
-            return new RepositoryResponse(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
+        }
+
+        public RepositoryResponse build() {
+            return $;
         }
     }
+
 }

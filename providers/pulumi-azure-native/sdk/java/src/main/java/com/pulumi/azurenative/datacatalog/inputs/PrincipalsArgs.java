@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrincipalsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PrincipalsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upn")
-      private final @Nullable Output<String> upn;
+    private @Nullable Output<String> upn;
 
-    public Output<String> upn() {
-        return this.upn == null ? Codegen.empty() : this.upn;
+    public Optional<Output<String>> upn() {
+        return Optional.ofNullable(this.upn);
     }
 
-    public PrincipalsArgs(
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> upn) {
-        this.objectId = objectId;
-        this.upn = upn;
-    }
+    private PrincipalsArgs() {}
 
-    private PrincipalsArgs() {
-        this.objectId = Codegen.empty();
-        this.upn = Codegen.empty();
+    private PrincipalsArgs(PrincipalsArgs $) {
+        this.objectId = $.objectId;
+        this.upn = $.upn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrincipalsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> upn;
+        private PrincipalsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrincipalsArgs();
         }
 
         public Builder(PrincipalsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
-    	      this.upn = defaults.upn;
+            $ = new PrincipalsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder upn(@Nullable Output<String> upn) {
-            this.upn = upn;
+            $.upn = upn;
             return this;
         }
-        public Builder upn(@Nullable String upn) {
-            this.upn = Codegen.ofNullable(upn);
-            return this;
-        }        public PrincipalsArgs build() {
-            return new PrincipalsArgs(objectId, upn);
+
+        public Builder upn(String upn) {
+            return upn(Output.of(upn));
+        }
+
+        public PrincipalsArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="logRules")
-      private final @Nullable LogRulesResponse logRules;
+    private @Nullable LogRulesResponse logRules;
 
     public Optional<LogRulesResponse> logRules() {
-        return this.logRules == null ? Optional.empty() : Optional.ofNullable(this.logRules);
+        return Optional.ofNullable(this.logRules);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -47,64 +47,58 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="systemData", required=true)
-      private final SystemDataResponse systemData;
+    private SystemDataResponse systemData;
 
     public SystemDataResponse systemData() {
         return this.systemData;
     }
 
-    public MonitoringTagRulesPropertiesResponse(
-        @Nullable LogRulesResponse logRules,
-        String provisioningState,
-        SystemDataResponse systemData) {
-        this.logRules = logRules;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.systemData = Objects.requireNonNull(systemData, "expected parameter 'systemData' to be non-null");
-    }
+    private MonitoringTagRulesPropertiesResponse() {}
 
-    private MonitoringTagRulesPropertiesResponse() {
-        this.logRules = null;
-        this.provisioningState = null;
-        this.systemData = null;
+    private MonitoringTagRulesPropertiesResponse(MonitoringTagRulesPropertiesResponse $) {
+        this.logRules = $.logRules;
+        this.provisioningState = $.provisioningState;
+        this.systemData = $.systemData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringTagRulesPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LogRulesResponse logRules;
-        private String provisioningState;
-        private SystemDataResponse systemData;
+        private MonitoringTagRulesPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringTagRulesPropertiesResponse();
         }
 
         public Builder(MonitoringTagRulesPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logRules = defaults.logRules;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.systemData = defaults.systemData;
+            $ = new MonitoringTagRulesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logRules(@Nullable LogRulesResponse logRules) {
-            this.logRules = logRules;
+            $.logRules = logRules;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder systemData(SystemDataResponse systemData) {
-            this.systemData = Objects.requireNonNull(systemData);
+            $.systemData = systemData;
             return this;
-        }        public MonitoringTagRulesPropertiesResponse build() {
-            return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState, systemData);
+        }
+
+        public MonitoringTagRulesPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.systemData = Objects.requireNonNull($.systemData, "expected parameter 'systemData' to be non-null");
+            return $;
         }
     }
+
 }

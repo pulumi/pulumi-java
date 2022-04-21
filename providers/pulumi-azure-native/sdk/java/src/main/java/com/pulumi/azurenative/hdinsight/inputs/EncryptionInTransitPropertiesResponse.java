@@ -24,45 +24,45 @@ public final class EncryptionInTransitPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="isEncryptionInTransitEnabled")
-      private final @Nullable Boolean isEncryptionInTransitEnabled;
+    private @Nullable Boolean isEncryptionInTransitEnabled;
 
     public Optional<Boolean> isEncryptionInTransitEnabled() {
-        return this.isEncryptionInTransitEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEncryptionInTransitEnabled);
+        return Optional.ofNullable(this.isEncryptionInTransitEnabled);
     }
 
-    public EncryptionInTransitPropertiesResponse(@Nullable Boolean isEncryptionInTransitEnabled) {
-        this.isEncryptionInTransitEnabled = Codegen.booleanProp("isEncryptionInTransitEnabled").arg(isEncryptionInTransitEnabled).def(false).getNullable();
-    }
+    private EncryptionInTransitPropertiesResponse() {}
 
-    private EncryptionInTransitPropertiesResponse() {
-        this.isEncryptionInTransitEnabled = null;
+    private EncryptionInTransitPropertiesResponse(EncryptionInTransitPropertiesResponse $) {
+        this.isEncryptionInTransitEnabled = $.isEncryptionInTransitEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionInTransitPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isEncryptionInTransitEnabled;
+        private EncryptionInTransitPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionInTransitPropertiesResponse();
         }
 
         public Builder(EncryptionInTransitPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEncryptionInTransitEnabled = defaults.isEncryptionInTransitEnabled;
+            $ = new EncryptionInTransitPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
-            this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
+            $.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
-        }        public EncryptionInTransitPropertiesResponse build() {
-            return new EncryptionInTransitPropertiesResponse(isEncryptionInTransitEnabled);
+        }
+
+        public EncryptionInTransitPropertiesResponse build() {
+            $.isEncryptionInTransitEnabled = Codegen.booleanProp("isEncryptionInTransitEnabled").arg($.isEncryptionInTransitEnabled).def(false).getNullable();
+            return $;
         }
     }
+
 }

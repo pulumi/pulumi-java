@@ -24,10 +24,10 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="arguments")
-      private final @Nullable String arguments;
+    private @Nullable String arguments;
 
     public Optional<String> arguments() {
-        return this.arguments == null ? Optional.empty() : Optional.ofNullable(this.arguments);
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="extension")
-      private final @Nullable String extension;
+    private @Nullable String extension;
 
     public Optional<String> extension() {
-        return this.extension == null ? Optional.empty() : Optional.ofNullable(this.extension);
+        return Optional.ofNullable(this.extension);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scriptProcessor")
-      private final @Nullable String scriptProcessor;
+    private @Nullable String scriptProcessor;
 
     public Optional<String> scriptProcessor() {
-        return this.scriptProcessor == null ? Optional.empty() : Optional.ofNullable(this.scriptProcessor);
+        return Optional.ofNullable(this.scriptProcessor);
     }
 
-    public HandlerMappingResponse(
-        @Nullable String arguments,
-        @Nullable String extension,
-        @Nullable String scriptProcessor) {
-        this.arguments = arguments;
-        this.extension = extension;
-        this.scriptProcessor = scriptProcessor;
-    }
+    private HandlerMappingResponse() {}
 
-    private HandlerMappingResponse() {
-        this.arguments = null;
-        this.extension = null;
-        this.scriptProcessor = null;
+    private HandlerMappingResponse(HandlerMappingResponse $) {
+        this.arguments = $.arguments;
+        this.extension = $.extension;
+        this.scriptProcessor = $.scriptProcessor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HandlerMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arguments;
-        private @Nullable String extension;
-        private @Nullable String scriptProcessor;
+        private HandlerMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HandlerMappingResponse();
         }
 
         public Builder(HandlerMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.extension = defaults.extension;
-    	      this.scriptProcessor = defaults.scriptProcessor;
+            $ = new HandlerMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable String arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
+
         public Builder extension(@Nullable String extension) {
-            this.extension = extension;
+            $.extension = extension;
             return this;
         }
+
         public Builder scriptProcessor(@Nullable String scriptProcessor) {
-            this.scriptProcessor = scriptProcessor;
+            $.scriptProcessor = scriptProcessor;
             return this;
-        }        public HandlerMappingResponse build() {
-            return new HandlerMappingResponse(arguments, extension, scriptProcessor);
+        }
+
+        public HandlerMappingResponse build() {
+            return $;
         }
     }
+
 }

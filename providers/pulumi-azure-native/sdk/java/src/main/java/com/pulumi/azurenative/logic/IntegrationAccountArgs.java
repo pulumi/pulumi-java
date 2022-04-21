@@ -9,10 +9,10 @@ import com.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="integrationAccountName")
-      private final @Nullable Output<String> integrationAccountName;
+    private @Nullable Output<String> integrationAccountName;
 
-    public Output<String> integrationAccountName() {
-        return this.integrationAccountName == null ? Codegen.empty() : this.integrationAccountName;
+    public Optional<Output<String>> integrationAccountName() {
+        return Optional.ofNullable(this.integrationAccountName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="integrationServiceEnvironment")
-      private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
+    private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
+    public Optional<Output<ResourceReferenceArgs>> integrationServiceEnvironment() {
+        return Optional.ofNullable(this.integrationServiceEnvironment);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -69,10 +69,10 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<IntegrationAccountSkuArgs> sku;
+    private @Nullable Output<IntegrationAccountSkuArgs> sku;
 
-    public Output<IntegrationAccountSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<IntegrationAccountSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,WorkflowState>> state;
+    private @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,WorkflowState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -91,128 +91,109 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationAccountArgs(
-        @Nullable Output<String> integrationAccountName,
-        @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<IntegrationAccountSkuArgs> sku,
-        @Nullable Output<Either<String,WorkflowState>> state,
-        @Nullable Output<Map<String,String>> tags) {
-        this.integrationAccountName = integrationAccountName;
-        this.integrationServiceEnvironment = integrationServiceEnvironment;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.state = state;
-        this.tags = tags;
-    }
+    private IntegrationAccountArgs() {}
 
-    private IntegrationAccountArgs() {
-        this.integrationAccountName = Codegen.empty();
-        this.integrationServiceEnvironment = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationAccountArgs(IntegrationAccountArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.integrationServiceEnvironment = $.integrationServiceEnvironment;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> integrationAccountName;
-        private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<IntegrationAccountSkuArgs> sku;
-        private @Nullable Output<Either<String,WorkflowState>> state;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountArgs();
         }
 
         public Builder(IntegrationAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.integrationServiceEnvironment = defaults.integrationServiceEnvironment;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(@Nullable Output<String> integrationAccountName) {
-            this.integrationAccountName = integrationAccountName;
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
-        public Builder integrationAccountName(@Nullable String integrationAccountName) {
-            this.integrationAccountName = Codegen.ofNullable(integrationAccountName);
-            return this;
+
+        public Builder integrationAccountName(String integrationAccountName) {
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = integrationServiceEnvironment;
+            $.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Codegen.ofNullable(integrationServiceEnvironment);
-            return this;
+
+        public Builder integrationServiceEnvironment(ResourceReferenceArgs integrationServiceEnvironment) {
+            return integrationServiceEnvironment(Output.of(integrationServiceEnvironment));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<IntegrationAccountSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable IntegrationAccountSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(IntegrationAccountSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,WorkflowState> state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationAccountArgs build() {
-            return new IntegrationAccountArgs(integrationAccountName, integrationServiceEnvironment, location, resourceGroupName, sku, state, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

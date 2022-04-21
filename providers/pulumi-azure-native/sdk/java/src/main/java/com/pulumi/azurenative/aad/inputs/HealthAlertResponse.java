@@ -21,7 +21,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,7 +32,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issue", required=true)
-      private final String issue;
+    private String issue;
 
     public String issue() {
         return this.issue;
@@ -43,7 +43,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastDetected", required=true)
-      private final String lastDetected;
+    private String lastDetected;
 
     public String lastDetected() {
         return this.lastDetected;
@@ -54,7 +54,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -65,7 +65,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="raised", required=true)
-      private final String raised;
+    private String raised;
 
     public String raised() {
         return this.raised;
@@ -76,7 +76,7 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolutionUri", required=true)
-      private final String resolutionUri;
+    private String resolutionUri;
 
     public String resolutionUri() {
         return this.resolutionUri;
@@ -87,100 +87,87 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
     }
 
-    public HealthAlertResponse(
-        String id,
-        String issue,
-        String lastDetected,
-        String name,
-        String raised,
-        String resolutionUri,
-        String severity) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.issue = Objects.requireNonNull(issue, "expected parameter 'issue' to be non-null");
-        this.lastDetected = Objects.requireNonNull(lastDetected, "expected parameter 'lastDetected' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.raised = Objects.requireNonNull(raised, "expected parameter 'raised' to be non-null");
-        this.resolutionUri = Objects.requireNonNull(resolutionUri, "expected parameter 'resolutionUri' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-    }
+    private HealthAlertResponse() {}
 
-    private HealthAlertResponse() {
-        this.id = null;
-        this.issue = null;
-        this.lastDetected = null;
-        this.name = null;
-        this.raised = null;
-        this.resolutionUri = null;
-        this.severity = null;
+    private HealthAlertResponse(HealthAlertResponse $) {
+        this.id = $.id;
+        this.issue = $.issue;
+        this.lastDetected = $.lastDetected;
+        this.name = $.name;
+        this.raised = $.raised;
+        this.resolutionUri = $.resolutionUri;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthAlertResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String issue;
-        private String lastDetected;
-        private String name;
-        private String raised;
-        private String resolutionUri;
-        private String severity;
+        private HealthAlertResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthAlertResponse();
         }
 
         public Builder(HealthAlertResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.issue = defaults.issue;
-    	      this.lastDetected = defaults.lastDetected;
-    	      this.name = defaults.name;
-    	      this.raised = defaults.raised;
-    	      this.resolutionUri = defaults.resolutionUri;
-    	      this.severity = defaults.severity;
+            $ = new HealthAlertResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder issue(String issue) {
-            this.issue = Objects.requireNonNull(issue);
+            $.issue = issue;
             return this;
         }
+
         public Builder lastDetected(String lastDetected) {
-            this.lastDetected = Objects.requireNonNull(lastDetected);
+            $.lastDetected = lastDetected;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder raised(String raised) {
-            this.raised = Objects.requireNonNull(raised);
+            $.raised = raised;
             return this;
         }
+
         public Builder resolutionUri(String resolutionUri) {
-            this.resolutionUri = Objects.requireNonNull(resolutionUri);
+            $.resolutionUri = resolutionUri;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
-        }        public HealthAlertResponse build() {
-            return new HealthAlertResponse(id, issue, lastDetected, name, raised, resolutionUri, severity);
+        }
+
+        public HealthAlertResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.issue = Objects.requireNonNull($.issue, "expected parameter 'issue' to be non-null");
+            $.lastDetected = Objects.requireNonNull($.lastDetected, "expected parameter 'lastDetected' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.raised = Objects.requireNonNull($.raised, "expected parameter 'raised' to be non-null");
+            $.resolutionUri = Objects.requireNonNull($.resolutionUri, "expected parameter 'resolutionUri' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

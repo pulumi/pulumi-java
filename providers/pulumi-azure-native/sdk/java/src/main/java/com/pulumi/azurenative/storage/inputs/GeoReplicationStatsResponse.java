@@ -22,7 +22,7 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="canFailover", required=true)
-      private final Boolean canFailover;
+    private Boolean canFailover;
 
     public Boolean canFailover() {
         return this.canFailover;
@@ -33,7 +33,7 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="lastSyncTime", required=true)
-      private final String lastSyncTime;
+    private String lastSyncTime;
 
     public String lastSyncTime() {
         return this.lastSyncTime;
@@ -44,64 +44,59 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GeoReplicationStatsResponse(
-        Boolean canFailover,
-        String lastSyncTime,
-        String status) {
-        this.canFailover = Objects.requireNonNull(canFailover, "expected parameter 'canFailover' to be non-null");
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime, "expected parameter 'lastSyncTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GeoReplicationStatsResponse() {}
 
-    private GeoReplicationStatsResponse() {
-        this.canFailover = null;
-        this.lastSyncTime = null;
-        this.status = null;
+    private GeoReplicationStatsResponse(GeoReplicationStatsResponse $) {
+        this.canFailover = $.canFailover;
+        this.lastSyncTime = $.lastSyncTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GeoReplicationStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canFailover;
-        private String lastSyncTime;
-        private String status;
+        private GeoReplicationStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GeoReplicationStatsResponse();
         }
 
         public Builder(GeoReplicationStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canFailover = defaults.canFailover;
-    	      this.lastSyncTime = defaults.lastSyncTime;
-    	      this.status = defaults.status;
+            $ = new GeoReplicationStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canFailover(Boolean canFailover) {
-            this.canFailover = Objects.requireNonNull(canFailover);
+            $.canFailover = canFailover;
             return this;
         }
+
         public Builder lastSyncTime(String lastSyncTime) {
-            this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
+            $.lastSyncTime = lastSyncTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GeoReplicationStatsResponse build() {
-            return new GeoReplicationStatsResponse(canFailover, lastSyncTime, status);
+        }
+
+        public GeoReplicationStatsResponse build() {
+            $.canFailover = Objects.requireNonNull($.canFailover, "expected parameter 'canFailover' to be non-null");
+            $.lastSyncTime = Objects.requireNonNull($.lastSyncTime, "expected parameter 'lastSyncTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

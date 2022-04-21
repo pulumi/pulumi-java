@@ -6,10 +6,10 @@ package com.pulumi.azurenative.scheduler.inputs;
 import com.pulumi.azurenative.scheduler.enums.RetryType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryCount")
-      private final @Nullable Output<Integer> retryCount;
+    private @Nullable Output<Integer> retryCount;
 
-    public Output<Integer> retryCount() {
-        return this.retryCount == null ? Codegen.empty() : this.retryCount;
+    public Optional<Output<Integer>> retryCount() {
+        return Optional.ofNullable(this.retryCount);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryInterval")
-      private final @Nullable Output<String> retryInterval;
+    private @Nullable Output<String> retryInterval;
 
-    public Output<String> retryInterval() {
-        return this.retryInterval == null ? Codegen.empty() : this.retryInterval;
+    public Optional<Output<String>> retryInterval() {
+        return Optional.ofNullable(this.retryInterval);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryType")
-      private final @Nullable Output<RetryType> retryType;
+    private @Nullable Output<RetryType> retryType;
 
-    public Output<RetryType> retryType() {
-        return this.retryType == null ? Codegen.empty() : this.retryType;
+    public Optional<Output<RetryType>> retryType() {
+        return Optional.ofNullable(this.retryType);
     }
 
-    public RetryPolicyArgs(
-        @Nullable Output<Integer> retryCount,
-        @Nullable Output<String> retryInterval,
-        @Nullable Output<RetryType> retryType) {
-        this.retryCount = retryCount;
-        this.retryInterval = retryInterval;
-        this.retryType = retryType;
-    }
+    private RetryPolicyArgs() {}
 
-    private RetryPolicyArgs() {
-        this.retryCount = Codegen.empty();
-        this.retryInterval = Codegen.empty();
-        this.retryType = Codegen.empty();
+    private RetryPolicyArgs(RetryPolicyArgs $) {
+        this.retryCount = $.retryCount;
+        this.retryInterval = $.retryInterval;
+        this.retryType = $.retryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> retryCount;
-        private @Nullable Output<String> retryInterval;
-        private @Nullable Output<RetryType> retryType;
+        private RetryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryPolicyArgs();
         }
 
         public Builder(RetryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retryCount = defaults.retryCount;
-    	      this.retryInterval = defaults.retryInterval;
-    	      this.retryType = defaults.retryType;
+            $ = new RetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retryCount(@Nullable Output<Integer> retryCount) {
-            this.retryCount = retryCount;
+            $.retryCount = retryCount;
             return this;
         }
-        public Builder retryCount(@Nullable Integer retryCount) {
-            this.retryCount = Codegen.ofNullable(retryCount);
-            return this;
+
+        public Builder retryCount(Integer retryCount) {
+            return retryCount(Output.of(retryCount));
         }
+
         public Builder retryInterval(@Nullable Output<String> retryInterval) {
-            this.retryInterval = retryInterval;
+            $.retryInterval = retryInterval;
             return this;
         }
-        public Builder retryInterval(@Nullable String retryInterval) {
-            this.retryInterval = Codegen.ofNullable(retryInterval);
-            return this;
+
+        public Builder retryInterval(String retryInterval) {
+            return retryInterval(Output.of(retryInterval));
         }
+
         public Builder retryType(@Nullable Output<RetryType> retryType) {
-            this.retryType = retryType;
+            $.retryType = retryType;
             return this;
         }
-        public Builder retryType(@Nullable RetryType retryType) {
-            this.retryType = Codegen.ofNullable(retryType);
-            return this;
-        }        public RetryPolicyArgs build() {
-            return new RetryPolicyArgs(retryCount, retryInterval, retryType);
+
+        public Builder retryType(RetryType retryType) {
+            return retryType(Output.of(retryType));
+        }
+
+        public RetryPolicyArgs build() {
+            return $;
         }
     }
+
 }

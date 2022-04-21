@@ -24,10 +24,10 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="error")
-      private final @Nullable ConnectionErrorResponse error;
+    private @Nullable ConnectionErrorResponse error;
 
     public Optional<ConnectionErrorResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public ConnectionStatusDefinitionResponse(
-        @Nullable ConnectionErrorResponse error,
-        @Nullable String status,
-        @Nullable String target) {
-        this.error = error;
-        this.status = status;
-        this.target = target;
-    }
+    private ConnectionStatusDefinitionResponse() {}
 
-    private ConnectionStatusDefinitionResponse() {
-        this.error = null;
-        this.status = null;
-        this.target = null;
+    private ConnectionStatusDefinitionResponse(ConnectionStatusDefinitionResponse $) {
+        this.error = $.error;
+        this.status = $.status;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionStatusDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConnectionErrorResponse error;
-        private @Nullable String status;
-        private @Nullable String target;
+        private ConnectionStatusDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionStatusDefinitionResponse();
         }
 
         public Builder(ConnectionStatusDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.status = defaults.status;
-    	      this.target = defaults.target;
+            $ = new ConnectionStatusDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable ConnectionErrorResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public ConnectionStatusDefinitionResponse build() {
-            return new ConnectionStatusDefinitionResponse(error, status, target);
+        }
+
+        public ConnectionStatusDefinitionResponse build() {
+            return $;
         }
     }
+
 }

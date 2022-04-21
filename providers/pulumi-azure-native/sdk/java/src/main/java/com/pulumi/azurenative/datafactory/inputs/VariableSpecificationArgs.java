@@ -7,10 +7,10 @@ import com.pulumi.azurenative.datafactory.enums.VariableType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VariableSpecificationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<Object> defaultValue;
+    private @Nullable Output<Object> defaultValue;
 
-    public Output<Object> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<Object>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -38,63 +38,59 @@ public final class VariableSpecificationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,VariableType>> type;
+    private Output<Either<String,VariableType>> type;
 
     public Output<Either<String,VariableType>> type() {
         return this.type;
     }
 
-    public VariableSpecificationArgs(
-        @Nullable Output<Object> defaultValue,
-        Output<Either<String,VariableType>> type) {
-        this.defaultValue = defaultValue;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VariableSpecificationArgs() {}
 
-    private VariableSpecificationArgs() {
-        this.defaultValue = Codegen.empty();
-        this.type = Codegen.empty();
+    private VariableSpecificationArgs(VariableSpecificationArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> defaultValue;
-        private Output<Either<String,VariableType>> type;
+        private VariableSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableSpecificationArgs();
         }
 
         public Builder(VariableSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.type = defaults.type;
+            $ = new VariableSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(Object defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder type(Output<Either<String,VariableType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,VariableType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public VariableSpecificationArgs build() {
-            return new VariableSpecificationArgs(defaultValue, type);
+            return type(Output.of(type));
+        }
+
+        public VariableSpecificationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -33,7 +33,7 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobState", required=true)
-      private final String jobState;
+    private String jobState;
 
     public String jobState() {
         return this.jobState;
@@ -44,64 +44,59 @@ public final class ClusterJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="streamingUnits", required=true)
-      private final Integer streamingUnits;
+    private Integer streamingUnits;
 
     public Integer streamingUnits() {
         return this.streamingUnits;
     }
 
-    public ClusterJobResponse(
-        String id,
-        String jobState,
-        Integer streamingUnits) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.jobState = Objects.requireNonNull(jobState, "expected parameter 'jobState' to be non-null");
-        this.streamingUnits = Objects.requireNonNull(streamingUnits, "expected parameter 'streamingUnits' to be non-null");
-    }
+    private ClusterJobResponse() {}
 
-    private ClusterJobResponse() {
-        this.id = null;
-        this.jobState = null;
-        this.streamingUnits = null;
+    private ClusterJobResponse(ClusterJobResponse $) {
+        this.id = $.id;
+        this.jobState = $.jobState;
+        this.streamingUnits = $.streamingUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String jobState;
-        private Integer streamingUnits;
+        private ClusterJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterJobResponse();
         }
 
         public Builder(ClusterJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.jobState = defaults.jobState;
-    	      this.streamingUnits = defaults.streamingUnits;
+            $ = new ClusterJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder jobState(String jobState) {
-            this.jobState = Objects.requireNonNull(jobState);
+            $.jobState = jobState;
             return this;
         }
+
         public Builder streamingUnits(Integer streamingUnits) {
-            this.streamingUnits = Objects.requireNonNull(streamingUnits);
+            $.streamingUnits = streamingUnits;
             return this;
-        }        public ClusterJobResponse build() {
-            return new ClusterJobResponse(id, jobState, streamingUnits);
+        }
+
+        public ClusterJobResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.jobState = Objects.requireNonNull($.jobState, "expected parameter 'jobState' to be non-null");
+            $.streamingUnits = Objects.requireNonNull($.streamingUnits, "expected parameter 'streamingUnits' to be non-null");
+            return $;
         }
     }
+
 }

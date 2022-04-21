@@ -5,11 +5,11 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<Map<String,String>> config;
+    private @Nullable Output<Map<String,String>> config;
 
-    public Output<Map<String,String>> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<Map<String,String>>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -37,63 +37,59 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ManagedClusterAddonProfileArgs(
-        @Nullable Output<Map<String,String>> config,
-        Output<Boolean> enabled) {
-        this.config = config;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ManagedClusterAddonProfileArgs() {}
 
-    private ManagedClusterAddonProfileArgs() {
-        this.config = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private ManagedClusterAddonProfileArgs(ManagedClusterAddonProfileArgs $) {
+        this.config = $.config;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAddonProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> config;
-        private Output<Boolean> enabled;
+        private ManagedClusterAddonProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAddonProfileArgs();
         }
 
         public Builder(ManagedClusterAddonProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.enabled = defaults.enabled;
+            $ = new ManagedClusterAddonProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<Map<String,String>> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable Map<String,String> config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(Map<String,String> config) {
+            return config(Output.of(config));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ManagedClusterAddonProfileArgs build() {
-            return new ManagedClusterAddonProfileArgs(config, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ManagedClusterAddonProfileArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

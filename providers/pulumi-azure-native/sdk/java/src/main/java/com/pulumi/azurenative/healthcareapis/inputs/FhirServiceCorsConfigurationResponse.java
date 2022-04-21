@@ -26,10 +26,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="allowCredentials")
-      private final @Nullable Boolean allowCredentials;
+    private @Nullable Boolean allowCredentials;
 
     public Optional<Boolean> allowCredentials() {
-        return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
+        return Optional.ofNullable(this.allowCredentials);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="headers")
-      private final @Nullable List<String> headers;
+    private @Nullable List<String> headers;
 
-    public List<String> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<String>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="maxAge")
-      private final @Nullable Integer maxAge;
+    private @Nullable Integer maxAge;
 
     public Optional<Integer> maxAge() {
-        return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
+        return Optional.ofNullable(this.maxAge);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="methods")
-      private final @Nullable List<String> methods;
+    private @Nullable List<String> methods;
 
-    public List<String> methods() {
-        return this.methods == null ? List.of() : this.methods;
+    public Optional<List<String>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     /**
@@ -70,91 +70,80 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="origins")
-      private final @Nullable List<String> origins;
+    private @Nullable List<String> origins;
 
-    public List<String> origins() {
-        return this.origins == null ? List.of() : this.origins;
+    public Optional<List<String>> origins() {
+        return Optional.ofNullable(this.origins);
     }
 
-    public FhirServiceCorsConfigurationResponse(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> headers,
-        @Nullable Integer maxAge,
-        @Nullable List<String> methods,
-        @Nullable List<String> origins) {
-        this.allowCredentials = allowCredentials;
-        this.headers = headers;
-        this.maxAge = maxAge;
-        this.methods = methods;
-        this.origins = origins;
-    }
+    private FhirServiceCorsConfigurationResponse() {}
 
-    private FhirServiceCorsConfigurationResponse() {
-        this.allowCredentials = null;
-        this.headers = List.of();
-        this.maxAge = null;
-        this.methods = List.of();
-        this.origins = List.of();
+    private FhirServiceCorsConfigurationResponse(FhirServiceCorsConfigurationResponse $) {
+        this.allowCredentials = $.allowCredentials;
+        this.headers = $.headers;
+        this.maxAge = $.maxAge;
+        this.methods = $.methods;
+        this.origins = $.origins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirServiceCorsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowCredentials;
-        private @Nullable List<String> headers;
-        private @Nullable Integer maxAge;
-        private @Nullable List<String> methods;
-        private @Nullable List<String> origins;
+        private FhirServiceCorsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirServiceCorsConfigurationResponse();
         }
 
         public Builder(FhirServiceCorsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCredentials = defaults.allowCredentials;
-    	      this.headers = defaults.headers;
-    	      this.maxAge = defaults.maxAge;
-    	      this.methods = defaults.methods;
-    	      this.origins = defaults.origins;
+            $ = new FhirServiceCorsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
-            this.allowCredentials = allowCredentials;
+            $.allowCredentials = allowCredentials;
             return this;
         }
+
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }
+
         public Builder maxAge(@Nullable Integer maxAge) {
-            this.maxAge = maxAge;
+            $.maxAge = maxAge;
             return this;
         }
+
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder origins(@Nullable List<String> origins) {
-            this.origins = origins;
+            $.origins = origins;
             return this;
         }
+
         public Builder origins(String... origins) {
             return origins(List.of(origins));
-        }        public FhirServiceCorsConfigurationResponse build() {
-            return new FhirServiceCorsConfigurationResponse(allowCredentials, headers, maxAge, methods, origins);
+        }
+
+        public FhirServiceCorsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

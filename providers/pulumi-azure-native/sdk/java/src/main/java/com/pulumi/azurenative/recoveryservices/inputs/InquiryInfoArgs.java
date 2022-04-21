@@ -6,10 +6,10 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class InquiryInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inquiryDetails")
-      private final @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
+    private @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
-    public Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails() {
-        return this.inquiryDetails == null ? Codegen.empty() : this.inquiryDetails;
+    public Optional<Output<List<WorkloadInquiryDetailsArgs>>> inquiryDetails() {
+        return Optional.ofNullable(this.inquiryDetails);
     }
 
     /**
@@ -39,66 +39,62 @@ public final class InquiryInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public InquiryInfoArgs(
-        @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails,
-        @Nullable Output<String> status) {
-        this.inquiryDetails = inquiryDetails;
-        this.status = status;
-    }
+    private InquiryInfoArgs() {}
 
-    private InquiryInfoArgs() {
-        this.inquiryDetails = Codegen.empty();
-        this.status = Codegen.empty();
+    private InquiryInfoArgs(InquiryInfoArgs $) {
+        this.inquiryDetails = $.inquiryDetails;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InquiryInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
-        private @Nullable Output<String> status;
+        private InquiryInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InquiryInfoArgs();
         }
 
         public Builder(InquiryInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inquiryDetails = defaults.inquiryDetails;
-    	      this.status = defaults.status;
+            $ = new InquiryInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inquiryDetails(@Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails) {
-            this.inquiryDetails = inquiryDetails;
+            $.inquiryDetails = inquiryDetails;
             return this;
         }
-        public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsArgs> inquiryDetails) {
-            this.inquiryDetails = Codegen.ofNullable(inquiryDetails);
-            return this;
+
+        public Builder inquiryDetails(List<WorkloadInquiryDetailsArgs> inquiryDetails) {
+            return inquiryDetails(Output.of(inquiryDetails));
         }
+
         public Builder inquiryDetails(WorkloadInquiryDetailsArgs... inquiryDetails) {
             return inquiryDetails(List.of(inquiryDetails));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public InquiryInfoArgs build() {
-            return new InquiryInfoArgs(inquiryDetails, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public InquiryInfoArgs build() {
+            return $;
         }
     }
+
 }

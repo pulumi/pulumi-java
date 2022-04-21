@@ -16,65 +16,61 @@ public final class DefaultRolloutSpecificationResponseLowTraffic extends com.pul
     public static final DefaultRolloutSpecificationResponseLowTraffic Empty = new DefaultRolloutSpecificationResponseLowTraffic();
 
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     @Import(name="waitDuration")
-      private final @Nullable String waitDuration;
+    private @Nullable String waitDuration;
 
     public Optional<String> waitDuration() {
-        return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);
+        return Optional.ofNullable(this.waitDuration);
     }
 
-    public DefaultRolloutSpecificationResponseLowTraffic(
-        @Nullable List<String> regions,
-        @Nullable String waitDuration) {
-        this.regions = regions;
-        this.waitDuration = waitDuration;
-    }
+    private DefaultRolloutSpecificationResponseLowTraffic() {}
 
-    private DefaultRolloutSpecificationResponseLowTraffic() {
-        this.regions = List.of();
-        this.waitDuration = null;
+    private DefaultRolloutSpecificationResponseLowTraffic(DefaultRolloutSpecificationResponseLowTraffic $) {
+        this.regions = $.regions;
+        this.waitDuration = $.waitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutSpecificationResponseLowTraffic defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> regions;
-        private @Nullable String waitDuration;
+        private DefaultRolloutSpecificationResponseLowTraffic $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutSpecificationResponseLowTraffic();
         }
 
         public Builder(DefaultRolloutSpecificationResponseLowTraffic defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regions = defaults.regions;
-    	      this.waitDuration = defaults.waitDuration;
+            $ = new DefaultRolloutSpecificationResponseLowTraffic(Objects.requireNonNull(defaults));
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = waitDuration;
+            $.waitDuration = waitDuration;
             return this;
-        }        public DefaultRolloutSpecificationResponseLowTraffic build() {
-            return new DefaultRolloutSpecificationResponseLowTraffic(regions, waitDuration);
+        }
+
+        public DefaultRolloutSpecificationResponseLowTraffic build() {
+            return $;
         }
     }
+
 }

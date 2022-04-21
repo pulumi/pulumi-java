@@ -9,11 +9,11 @@ import com.pulumi.azurenative.network.inputs.MatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="action", required=true)
-      private final Output<Either<String,WebApplicationFirewallAction>> action;
+    private Output<Either<String,WebApplicationFirewallAction>> action;
 
     public Output<Either<String,WebApplicationFirewallAction>> action() {
         return this.action;
@@ -41,7 +41,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="matchConditions", required=true)
-      private final Output<List<MatchConditionArgs>> matchConditions;
+    private Output<List<MatchConditionArgs>> matchConditions;
 
     public Output<List<MatchConditionArgs>> matchConditions() {
         return this.matchConditions;
@@ -52,10 +52,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -74,105 +74,96 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="ruleType", required=true)
-      private final Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
+    private Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
     public Output<Either<String,WebApplicationFirewallRuleType>> ruleType() {
         return this.ruleType;
     }
 
-    public WebApplicationFirewallCustomRuleArgs(
-        Output<Either<String,WebApplicationFirewallAction>> action,
-        Output<List<MatchConditionArgs>> matchConditions,
-        @Nullable Output<String> name,
-        Output<Integer> priority,
-        Output<Either<String,WebApplicationFirewallRuleType>> ruleType) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
-        this.name = name;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
-    }
+    private WebApplicationFirewallCustomRuleArgs() {}
 
-    private WebApplicationFirewallCustomRuleArgs() {
-        this.action = Codegen.empty();
-        this.matchConditions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.ruleType = Codegen.empty();
+    private WebApplicationFirewallCustomRuleArgs(WebApplicationFirewallCustomRuleArgs $) {
+        this.action = $.action;
+        this.matchConditions = $.matchConditions;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.ruleType = $.ruleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebApplicationFirewallCustomRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,WebApplicationFirewallAction>> action;
-        private Output<List<MatchConditionArgs>> matchConditions;
-        private @Nullable Output<String> name;
-        private Output<Integer> priority;
-        private Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
+        private WebApplicationFirewallCustomRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebApplicationFirewallCustomRuleArgs();
         }
 
         public Builder(WebApplicationFirewallCustomRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.ruleType = defaults.ruleType;
+            $ = new WebApplicationFirewallCustomRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<Either<String,WebApplicationFirewallAction>> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(Either<String,WebApplicationFirewallAction> action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
-            this.matchConditions = Objects.requireNonNull(matchConditions);
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
-            this.matchConditions = Output.of(Objects.requireNonNull(matchConditions));
-            return this;
+            return matchConditions(Output.of(matchConditions));
         }
+
         public Builder matchConditions(MatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder ruleType(Output<Either<String,WebApplicationFirewallRuleType>> ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder ruleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
-            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
-            return this;
-        }        public WebApplicationFirewallCustomRuleArgs build() {
-            return new WebApplicationFirewallCustomRuleArgs(action, matchConditions, name, priority, ruleType);
+            return ruleType(Output.of(ruleType));
+        }
+
+        public WebApplicationFirewallCustomRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.matchConditions = Objects.requireNonNull($.matchConditions, "expected parameter 'matchConditions' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.ruleType = Objects.requireNonNull($.ruleType, "expected parameter 'ruleType' to be non-null");
+            return $;
         }
     }
+
 }

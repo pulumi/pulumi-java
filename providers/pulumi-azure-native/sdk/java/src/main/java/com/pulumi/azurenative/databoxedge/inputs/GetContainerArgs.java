@@ -17,7 +17,7 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -28,7 +28,7 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -39,7 +39,7 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final String storageAccountName;
+    private String storageAccountName;
 
     public String storageAccountName() {
         return this.storageAccountName;
     }
 
-    public GetContainerArgs(
-        String containerName,
-        String deviceName,
-        String resourceGroupName,
-        String storageAccountName) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-    }
+    private GetContainerArgs() {}
 
-    private GetContainerArgs() {
-        this.containerName = null;
-        this.deviceName = null;
-        this.resourceGroupName = null;
-        this.storageAccountName = null;
+    private GetContainerArgs(GetContainerArgs $) {
+        this.containerName = $.containerName;
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerName;
-        private String deviceName;
-        private String resourceGroupName;
-        private String storageAccountName;
+        private GetContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContainerArgs();
         }
 
         public Builder(GetContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new GetContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public GetContainerArgs build() {
-            return new GetContainerArgs(containerName, deviceName, resourceGroupName, storageAccountName);
+        }
+
+        public GetContainerArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class CompressionSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="contentTypesToCompress")
-      private final @Nullable List<String> contentTypesToCompress;
+    private @Nullable List<String> contentTypesToCompress;
 
-    public List<String> contentTypesToCompress() {
-        return this.contentTypesToCompress == null ? List.of() : this.contentTypesToCompress;
+    public Optional<List<String>> contentTypesToCompress() {
+        return Optional.ofNullable(this.contentTypesToCompress);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class CompressionSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isCompressionEnabled")
-      private final @Nullable Boolean isCompressionEnabled;
+    private @Nullable Boolean isCompressionEnabled;
 
     public Optional<Boolean> isCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Optional.empty() : Optional.ofNullable(this.isCompressionEnabled);
+        return Optional.ofNullable(this.isCompressionEnabled);
     }
 
-    public CompressionSettingsResponse(
-        @Nullable List<String> contentTypesToCompress,
-        @Nullable Boolean isCompressionEnabled) {
-        this.contentTypesToCompress = contentTypesToCompress;
-        this.isCompressionEnabled = isCompressionEnabled;
-    }
+    private CompressionSettingsResponse() {}
 
-    private CompressionSettingsResponse() {
-        this.contentTypesToCompress = List.of();
-        this.isCompressionEnabled = null;
+    private CompressionSettingsResponse(CompressionSettingsResponse $) {
+        this.contentTypesToCompress = $.contentTypesToCompress;
+        this.isCompressionEnabled = $.isCompressionEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompressionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> contentTypesToCompress;
-        private @Nullable Boolean isCompressionEnabled;
+        private CompressionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompressionSettingsResponse();
         }
 
         public Builder(CompressionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentTypesToCompress = defaults.contentTypesToCompress;
-    	      this.isCompressionEnabled = defaults.isCompressionEnabled;
+            $ = new CompressionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = contentTypesToCompress;
+            $.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
+
         public Builder contentTypesToCompress(String... contentTypesToCompress) {
             return contentTypesToCompress(List.of(contentTypesToCompress));
         }
+
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = isCompressionEnabled;
+            $.isCompressionEnabled = isCompressionEnabled;
             return this;
-        }        public CompressionSettingsResponse build() {
-            return new CompressionSettingsResponse(contentTypesToCompress, isCompressionEnabled);
+        }
+
+        public CompressionSettingsResponse build() {
+            return $;
         }
     }
+
 }

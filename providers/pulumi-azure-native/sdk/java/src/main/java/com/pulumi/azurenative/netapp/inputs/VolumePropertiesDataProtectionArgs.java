@@ -8,8 +8,8 @@ import com.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import com.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="backup")
-      private final @Nullable Output<VolumeBackupPropertiesArgs> backup;
+    private @Nullable Output<VolumeBackupPropertiesArgs> backup;
 
-    public Output<VolumeBackupPropertiesArgs> backup() {
-        return this.backup == null ? Codegen.empty() : this.backup;
+    public Optional<Output<VolumeBackupPropertiesArgs>> backup() {
+        return Optional.ofNullable(this.backup);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="replication")
-      private final @Nullable Output<ReplicationObjectArgs> replication;
+    private @Nullable Output<ReplicationObjectArgs> replication;
 
-    public Output<ReplicationObjectArgs> replication() {
-        return this.replication == null ? Codegen.empty() : this.replication;
+    public Optional<Output<ReplicationObjectArgs>> replication() {
+        return Optional.ofNullable(this.replication);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
+    private @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
-    public Output<VolumeSnapshotPropertiesArgs> snapshot() {
-        return this.snapshot == null ? Codegen.empty() : this.snapshot;
+    public Optional<Output<VolumeSnapshotPropertiesArgs>> snapshot() {
+        return Optional.ofNullable(this.snapshot);
     }
 
-    public VolumePropertiesDataProtectionArgs(
-        @Nullable Output<VolumeBackupPropertiesArgs> backup,
-        @Nullable Output<ReplicationObjectArgs> replication,
-        @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
-        this.backup = backup;
-        this.replication = replication;
-        this.snapshot = snapshot;
-    }
+    private VolumePropertiesDataProtectionArgs() {}
 
-    private VolumePropertiesDataProtectionArgs() {
-        this.backup = Codegen.empty();
-        this.replication = Codegen.empty();
-        this.snapshot = Codegen.empty();
+    private VolumePropertiesDataProtectionArgs(VolumePropertiesDataProtectionArgs $) {
+        this.backup = $.backup;
+        this.replication = $.replication;
+        this.snapshot = $.snapshot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumePropertiesDataProtectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VolumeBackupPropertiesArgs> backup;
-        private @Nullable Output<ReplicationObjectArgs> replication;
-        private @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
+        private VolumePropertiesDataProtectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumePropertiesDataProtectionArgs();
         }
 
         public Builder(VolumePropertiesDataProtectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backup = defaults.backup;
-    	      this.replication = defaults.replication;
-    	      this.snapshot = defaults.snapshot;
+            $ = new VolumePropertiesDataProtectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backup(@Nullable Output<VolumeBackupPropertiesArgs> backup) {
-            this.backup = backup;
+            $.backup = backup;
             return this;
         }
-        public Builder backup(@Nullable VolumeBackupPropertiesArgs backup) {
-            this.backup = Codegen.ofNullable(backup);
-            return this;
+
+        public Builder backup(VolumeBackupPropertiesArgs backup) {
+            return backup(Output.of(backup));
         }
+
         public Builder replication(@Nullable Output<ReplicationObjectArgs> replication) {
-            this.replication = replication;
+            $.replication = replication;
             return this;
         }
-        public Builder replication(@Nullable ReplicationObjectArgs replication) {
-            this.replication = Codegen.ofNullable(replication);
-            return this;
+
+        public Builder replication(ReplicationObjectArgs replication) {
+            return replication(Output.of(replication));
         }
+
         public Builder snapshot(@Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
-        public Builder snapshot(@Nullable VolumeSnapshotPropertiesArgs snapshot) {
-            this.snapshot = Codegen.ofNullable(snapshot);
-            return this;
-        }        public VolumePropertiesDataProtectionArgs build() {
-            return new VolumePropertiesDataProtectionArgs(backup, replication, snapshot);
+
+        public Builder snapshot(VolumeSnapshotPropertiesArgs snapshot) {
+            return snapshot(Output.of(snapshot));
+        }
+
+        public VolumePropertiesDataProtectionArgs build() {
+            return $;
         }
     }
+
 }

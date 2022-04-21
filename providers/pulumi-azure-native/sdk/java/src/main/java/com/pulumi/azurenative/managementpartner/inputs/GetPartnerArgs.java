@@ -17,45 +17,45 @@ public final class GetPartnerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partnerId", required=true)
-      private final String partnerId;
+    private String partnerId;
 
     public String partnerId() {
         return this.partnerId;
     }
 
-    public GetPartnerArgs(String partnerId) {
-        this.partnerId = Objects.requireNonNull(partnerId, "expected parameter 'partnerId' to be non-null");
-    }
+    private GetPartnerArgs() {}
 
-    private GetPartnerArgs() {
-        this.partnerId = null;
+    private GetPartnerArgs(GetPartnerArgs $) {
+        this.partnerId = $.partnerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPartnerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partnerId;
+        private GetPartnerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPartnerArgs();
         }
 
         public Builder(GetPartnerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerId = defaults.partnerId;
+            $ = new GetPartnerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerId(String partnerId) {
-            this.partnerId = Objects.requireNonNull(partnerId);
+            $.partnerId = partnerId;
             return this;
-        }        public GetPartnerArgs build() {
-            return new GetPartnerArgs(partnerId);
+        }
+
+        public GetPartnerArgs build() {
+            $.partnerId = Objects.requireNonNull($.partnerId, "expected parameter 'partnerId' to be non-null");
+            return $;
         }
     }
+
 }

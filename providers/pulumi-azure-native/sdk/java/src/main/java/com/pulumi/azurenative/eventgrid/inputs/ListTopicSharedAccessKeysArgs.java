@@ -17,7 +17,7 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="topicName", required=true)
-      private final String topicName;
+    private String topicName;
 
     public String topicName() {
         return this.topicName;
     }
 
-    public ListTopicSharedAccessKeysArgs(
-        String resourceGroupName,
-        String topicName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private ListTopicSharedAccessKeysArgs() {}
 
-    private ListTopicSharedAccessKeysArgs() {
-        this.resourceGroupName = null;
-        this.topicName = null;
+    private ListTopicSharedAccessKeysArgs(ListTopicSharedAccessKeysArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListTopicSharedAccessKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String topicName;
+        private ListTopicSharedAccessKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListTopicSharedAccessKeysArgs();
         }
 
         public Builder(ListTopicSharedAccessKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.topicName = defaults.topicName;
+            $ = new ListTopicSharedAccessKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
-        }        public ListTopicSharedAccessKeysArgs build() {
-            return new ListTopicSharedAccessKeysArgs(resourceGroupName, topicName);
+        }
+
+        public ListTopicSharedAccessKeysArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

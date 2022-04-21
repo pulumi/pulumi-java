@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeResource")
-      private final @Nullable Output<ComputeResourceArgs> computeResource;
+    private @Nullable Output<ComputeResourceArgs> computeResource;
 
-    public Output<ComputeResourceArgs> computeResource() {
-        return this.computeResource == null ? Codegen.empty() : this.computeResource;
+    public Optional<Output<ComputeResourceArgs>> computeResource() {
+        return Optional.ofNullable(this.computeResource);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -50,7 +51,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostPlatform", required=true)
-      private final Output<Either<String,PlatformType>> hostPlatform;
+    private Output<Either<String,PlatformType>> hostPlatform;
 
     public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
@@ -61,7 +62,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ioTDeviceDetails", required=true)
-      private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
+    private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
@@ -72,10 +73,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ioTEdgeAgentInfo")
-      private final @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
+    private @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
-    public Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo() {
-        return this.ioTEdgeAgentInfo == null ? Codegen.empty() : this.ioTEdgeAgentInfo;
+    public Optional<Output<IoTEdgeAgentInfoArgs>> ioTEdgeAgentInfo() {
+        return Optional.ofNullable(this.ioTEdgeAgentInfo);
     }
 
     /**
@@ -83,7 +84,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ioTEdgeDeviceDetails", required=true)
-      private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+    private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
@@ -95,7 +96,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -106,10 +107,10 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -117,7 +118,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -128,7 +129,7 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleStatus", required=true)
-      private final Output<Either<String,RoleStatus>> roleStatus;
+    private Output<Either<String,RoleStatus>> roleStatus;
 
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
@@ -139,183 +140,159 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareMappings")
-      private final @Nullable Output<List<MountPointMapArgs>> shareMappings;
+    private @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
-    public Output<List<MountPointMapArgs>> shareMappings() {
-        return this.shareMappings == null ? Codegen.empty() : this.shareMappings;
+    public Optional<Output<List<MountPointMapArgs>>> shareMappings() {
+        return Optional.ofNullable(this.shareMappings);
     }
 
-    public IoTRoleArgs(
-        @Nullable Output<ComputeResourceArgs> computeResource,
-        Output<String> deviceName,
-        Output<Either<String,PlatformType>> hostPlatform,
-        Output<IoTDeviceInfoArgs> ioTDeviceDetails,
-        @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo,
-        Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails,
-        Output<String> kind,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<Either<String,RoleStatus>> roleStatus,
-        @Nullable Output<List<MountPointMapArgs>> shareMappings) {
-        this.computeResource = computeResource;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.hostPlatform = Objects.requireNonNull(hostPlatform, "expected parameter 'hostPlatform' to be non-null");
-        this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails, "expected parameter 'ioTDeviceDetails' to be non-null");
-        this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
-        this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails, "expected parameter 'ioTEdgeDeviceDetails' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleStatus = Objects.requireNonNull(roleStatus, "expected parameter 'roleStatus' to be non-null");
-        this.shareMappings = shareMappings;
-    }
+    private IoTRoleArgs() {}
 
-    private IoTRoleArgs() {
-        this.computeResource = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.hostPlatform = Codegen.empty();
-        this.ioTDeviceDetails = Codegen.empty();
-        this.ioTEdgeAgentInfo = Codegen.empty();
-        this.ioTEdgeDeviceDetails = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleStatus = Codegen.empty();
-        this.shareMappings = Codegen.empty();
+    private IoTRoleArgs(IoTRoleArgs $) {
+        this.computeResource = $.computeResource;
+        this.deviceName = $.deviceName;
+        this.hostPlatform = $.hostPlatform;
+        this.ioTDeviceDetails = $.ioTDeviceDetails;
+        this.ioTEdgeAgentInfo = $.ioTEdgeAgentInfo;
+        this.ioTEdgeDeviceDetails = $.ioTEdgeDeviceDetails;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleStatus = $.roleStatus;
+        this.shareMappings = $.shareMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoTRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ComputeResourceArgs> computeResource;
-        private Output<String> deviceName;
-        private Output<Either<String,PlatformType>> hostPlatform;
-        private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
-        private @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
-        private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
-        private Output<String> kind;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,RoleStatus>> roleStatus;
-        private @Nullable Output<List<MountPointMapArgs>> shareMappings;
+        private IoTRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoTRoleArgs();
         }
 
         public Builder(IoTRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeResource = defaults.computeResource;
-    	      this.deviceName = defaults.deviceName;
-    	      this.hostPlatform = defaults.hostPlatform;
-    	      this.ioTDeviceDetails = defaults.ioTDeviceDetails;
-    	      this.ioTEdgeAgentInfo = defaults.ioTEdgeAgentInfo;
-    	      this.ioTEdgeDeviceDetails = defaults.ioTEdgeDeviceDetails;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleStatus = defaults.roleStatus;
-    	      this.shareMappings = defaults.shareMappings;
+            $ = new IoTRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeResource(@Nullable Output<ComputeResourceArgs> computeResource) {
-            this.computeResource = computeResource;
+            $.computeResource = computeResource;
             return this;
         }
-        public Builder computeResource(@Nullable ComputeResourceArgs computeResource) {
-            this.computeResource = Codegen.ofNullable(computeResource);
-            return this;
+
+        public Builder computeResource(ComputeResourceArgs computeResource) {
+            return computeResource(Output.of(computeResource));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
-            this.hostPlatform = Objects.requireNonNull(hostPlatform);
+            $.hostPlatform = hostPlatform;
             return this;
         }
+
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
-            this.hostPlatform = Output.of(Objects.requireNonNull(hostPlatform));
-            return this;
+            return hostPlatform(Output.of(hostPlatform));
         }
+
         public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
-            this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
+            $.ioTDeviceDetails = ioTDeviceDetails;
             return this;
         }
+
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
-            this.ioTDeviceDetails = Output.of(Objects.requireNonNull(ioTDeviceDetails));
-            return this;
+            return ioTDeviceDetails(Output.of(ioTDeviceDetails));
         }
+
         public Builder ioTEdgeAgentInfo(@Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo) {
-            this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
+            $.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
             return this;
         }
-        public Builder ioTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
-            this.ioTEdgeAgentInfo = Codegen.ofNullable(ioTEdgeAgentInfo);
-            return this;
+
+        public Builder ioTEdgeAgentInfo(IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
+            return ioTEdgeAgentInfo(Output.of(ioTEdgeAgentInfo));
         }
+
         public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
-            this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
+            $.ioTEdgeDeviceDetails = ioTEdgeDeviceDetails;
             return this;
         }
+
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
-            this.ioTEdgeDeviceDetails = Output.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
-            return this;
+            return ioTEdgeDeviceDetails(Output.of(ioTEdgeDeviceDetails));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
-            this.roleStatus = Objects.requireNonNull(roleStatus);
+            $.roleStatus = roleStatus;
             return this;
         }
+
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
-            this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
-            return this;
+            return roleStatus(Output.of(roleStatus));
         }
+
         public Builder shareMappings(@Nullable Output<List<MountPointMapArgs>> shareMappings) {
-            this.shareMappings = shareMappings;
+            $.shareMappings = shareMappings;
             return this;
         }
-        public Builder shareMappings(@Nullable List<MountPointMapArgs> shareMappings) {
-            this.shareMappings = Codegen.ofNullable(shareMappings);
-            return this;
+
+        public Builder shareMappings(List<MountPointMapArgs> shareMappings) {
+            return shareMappings(Output.of(shareMappings));
         }
+
         public Builder shareMappings(MountPointMapArgs... shareMappings) {
             return shareMappings(List.of(shareMappings));
-        }        public IoTRoleArgs build() {
-            return new IoTRoleArgs(computeResource, deviceName, hostPlatform, ioTDeviceDetails, ioTEdgeAgentInfo, ioTEdgeDeviceDetails, kind, name, resourceGroupName, roleStatus, shareMappings);
+        }
+
+        public IoTRoleArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.hostPlatform = Objects.requireNonNull($.hostPlatform, "expected parameter 'hostPlatform' to be non-null");
+            $.ioTDeviceDetails = Objects.requireNonNull($.ioTDeviceDetails, "expected parameter 'ioTDeviceDetails' to be non-null");
+            $.ioTEdgeDeviceDetails = Objects.requireNonNull($.ioTEdgeDeviceDetails, "expected parameter 'ioTEdgeDeviceDetails' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleStatus = Objects.requireNonNull($.roleStatus, "expected parameter 'roleStatus' to be non-null");
+            return $;
         }
     }
+
 }

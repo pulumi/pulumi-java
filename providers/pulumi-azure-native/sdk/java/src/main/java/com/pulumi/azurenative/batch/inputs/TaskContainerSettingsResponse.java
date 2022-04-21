@@ -20,10 +20,10 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="containerRunOptions")
-      private final @Nullable String containerRunOptions;
+    private @Nullable String containerRunOptions;
 
     public Optional<String> containerRunOptions() {
-        return this.containerRunOptions == null ? Optional.empty() : Optional.ofNullable(this.containerRunOptions);
+        return Optional.ofNullable(this.containerRunOptions);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="imageName", required=true)
-      private final String imageName;
+    private String imageName;
 
     public String imageName() {
         return this.imageName;
@@ -42,80 +42,70 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="registry")
-      private final @Nullable ContainerRegistryResponse registry;
+    private @Nullable ContainerRegistryResponse registry;
 
     public Optional<ContainerRegistryResponse> registry() {
-        return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
+        return Optional.ofNullable(this.registry);
     }
 
     @Import(name="workingDirectory")
-      private final @Nullable String workingDirectory;
+    private @Nullable String workingDirectory;
 
     public Optional<String> workingDirectory() {
-        return this.workingDirectory == null ? Optional.empty() : Optional.ofNullable(this.workingDirectory);
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public TaskContainerSettingsResponse(
-        @Nullable String containerRunOptions,
-        String imageName,
-        @Nullable ContainerRegistryResponse registry,
-        @Nullable String workingDirectory) {
-        this.containerRunOptions = containerRunOptions;
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.registry = registry;
-        this.workingDirectory = workingDirectory;
-    }
+    private TaskContainerSettingsResponse() {}
 
-    private TaskContainerSettingsResponse() {
-        this.containerRunOptions = null;
-        this.imageName = null;
-        this.registry = null;
-        this.workingDirectory = null;
+    private TaskContainerSettingsResponse(TaskContainerSettingsResponse $) {
+        this.containerRunOptions = $.containerRunOptions;
+        this.imageName = $.imageName;
+        this.registry = $.registry;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskContainerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String containerRunOptions;
-        private String imageName;
-        private @Nullable ContainerRegistryResponse registry;
-        private @Nullable String workingDirectory;
+        private TaskContainerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskContainerSettingsResponse();
         }
 
         public Builder(TaskContainerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerRunOptions = defaults.containerRunOptions;
-    	      this.imageName = defaults.imageName;
-    	      this.registry = defaults.registry;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new TaskContainerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerRunOptions(@Nullable String containerRunOptions) {
-            this.containerRunOptions = containerRunOptions;
+            $.containerRunOptions = containerRunOptions;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder registry(@Nullable ContainerRegistryResponse registry) {
-            this.registry = registry;
+            $.registry = registry;
             return this;
         }
+
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
-        }        public TaskContainerSettingsResponse build() {
-            return new TaskContainerSettingsResponse(containerRunOptions, imageName, registry, workingDirectory);
+        }
+
+        public TaskContainerSettingsResponse build() {
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            return $;
         }
     }
+
 }

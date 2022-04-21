@@ -5,9 +5,9 @@ package com.pulumi.azurenative.dbformariadb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="charset")
-      private final @Nullable Output<String> charset;
+    private @Nullable Output<String> charset;
 
-    public Output<String> charset() {
-        return this.charset == null ? Codegen.empty() : this.charset;
+    public Optional<Output<String>> charset() {
+        return Optional.ofNullable(this.charset);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,90 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public DatabaseArgs(
-        @Nullable Output<String> charset,
-        @Nullable Output<String> collation,
-        @Nullable Output<String> databaseName,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.charset = charset;
-        this.collation = collation;
-        this.databaseName = databaseName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private DatabaseArgs() {}
 
-    private DatabaseArgs() {
-        this.charset = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private DatabaseArgs(DatabaseArgs $) {
+        this.charset = $.charset;
+        this.collation = $.collation;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> charset;
-        private @Nullable Output<String> collation;
-        private @Nullable Output<String> databaseName;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private DatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseArgs();
         }
 
         public Builder(DatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.collation = defaults.collation;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable Output<String> charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
-        public Builder charset(@Nullable String charset) {
-            this.charset = Codegen.ofNullable(charset);
-            return this;
+
+        public Builder charset(String charset) {
+            return charset(Output.of(charset));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public DatabaseArgs build() {
-            return new DatabaseArgs(charset, collation, databaseName, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public DatabaseArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

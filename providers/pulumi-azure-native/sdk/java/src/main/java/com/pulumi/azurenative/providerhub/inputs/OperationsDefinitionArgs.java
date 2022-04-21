@@ -6,11 +6,11 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.OperationsDefinitionDisplayArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     public static final OperationsDefinitionArgs Empty = new OperationsDefinitionArgs();
 
     @Import(name="actionType")
-      private final @Nullable Output<String> actionType;
+    private @Nullable Output<String> actionType;
 
-    public Output<String> actionType() {
-        return this.actionType == null ? Codegen.empty() : this.actionType;
+    public Optional<Output<String>> actionType() {
+        return Optional.ofNullable(this.actionType);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="display", required=true)
-      private final Output<OperationsDefinitionDisplayArgs> display;
+    private Output<OperationsDefinitionDisplayArgs> display;
 
     public Output<OperationsDefinitionDisplayArgs> display() {
         return this.display;
@@ -45,10 +45,10 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isDataAction")
-      private final @Nullable Output<Boolean> isDataAction;
+    private @Nullable Output<Boolean> isDataAction;
 
-    public Output<Boolean> isDataAction() {
-        return this.isDataAction == null ? Codegen.empty() : this.isDataAction;
+    public Optional<Output<Boolean>> isDataAction() {
+        return Optional.ofNullable(this.isDataAction);
     }
 
     /**
@@ -56,129 +56,114 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="origin")
-      private final @Nullable Output<String> origin;
+    private @Nullable Output<String> origin;
 
-    public Output<String> origin() {
-        return this.origin == null ? Codegen.empty() : this.origin;
+    public Optional<Output<String>> origin() {
+        return Optional.ofNullable(this.origin);
     }
 
     @Import(name="properties")
-      private final @Nullable Output<Object> properties;
+    private @Nullable Output<Object> properties;
 
-    public Output<Object> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Object>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public OperationsDefinitionArgs(
-        @Nullable Output<String> actionType,
-        Output<OperationsDefinitionDisplayArgs> display,
-        @Nullable Output<Boolean> isDataAction,
-        Output<String> name,
-        @Nullable Output<String> origin,
-        @Nullable Output<Object> properties) {
-        this.actionType = actionType;
-        this.display = Objects.requireNonNull(display, "expected parameter 'display' to be non-null");
-        this.isDataAction = isDataAction;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.origin = origin;
-        this.properties = properties;
-    }
+    private OperationsDefinitionArgs() {}
 
-    private OperationsDefinitionArgs() {
-        this.actionType = Codegen.empty();
-        this.display = Codegen.empty();
-        this.isDataAction = Codegen.empty();
-        this.name = Codegen.empty();
-        this.origin = Codegen.empty();
-        this.properties = Codegen.empty();
+    private OperationsDefinitionArgs(OperationsDefinitionArgs $) {
+        this.actionType = $.actionType;
+        this.display = $.display;
+        this.isDataAction = $.isDataAction;
+        this.name = $.name;
+        this.origin = $.origin;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationsDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionType;
-        private Output<OperationsDefinitionDisplayArgs> display;
-        private @Nullable Output<Boolean> isDataAction;
-        private Output<String> name;
-        private @Nullable Output<String> origin;
-        private @Nullable Output<Object> properties;
+        private OperationsDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationsDefinitionArgs();
         }
 
         public Builder(OperationsDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.display = defaults.display;
-    	      this.isDataAction = defaults.isDataAction;
-    	      this.name = defaults.name;
-    	      this.origin = defaults.origin;
-    	      this.properties = defaults.properties;
+            $ = new OperationsDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(@Nullable Output<String> actionType) {
-            this.actionType = actionType;
+            $.actionType = actionType;
             return this;
         }
-        public Builder actionType(@Nullable String actionType) {
-            this.actionType = Codegen.ofNullable(actionType);
-            return this;
+
+        public Builder actionType(String actionType) {
+            return actionType(Output.of(actionType));
         }
+
         public Builder display(Output<OperationsDefinitionDisplayArgs> display) {
-            this.display = Objects.requireNonNull(display);
+            $.display = display;
             return this;
         }
+
         public Builder display(OperationsDefinitionDisplayArgs display) {
-            this.display = Output.of(Objects.requireNonNull(display));
-            return this;
+            return display(Output.of(display));
         }
+
         public Builder isDataAction(@Nullable Output<Boolean> isDataAction) {
-            this.isDataAction = isDataAction;
+            $.isDataAction = isDataAction;
             return this;
         }
-        public Builder isDataAction(@Nullable Boolean isDataAction) {
-            this.isDataAction = Codegen.ofNullable(isDataAction);
-            return this;
+
+        public Builder isDataAction(Boolean isDataAction) {
+            return isDataAction(Output.of(isDataAction));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder origin(@Nullable Output<String> origin) {
-            this.origin = origin;
+            $.origin = origin;
             return this;
         }
-        public Builder origin(@Nullable String origin) {
-            this.origin = Codegen.ofNullable(origin);
-            return this;
+
+        public Builder origin(String origin) {
+            return origin(Output.of(origin));
         }
+
         public Builder properties(@Nullable Output<Object> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Object properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public OperationsDefinitionArgs build() {
-            return new OperationsDefinitionArgs(actionType, display, isDataAction, name, origin, properties);
+
+        public Builder properties(Object properties) {
+            return properties(Output.of(properties));
+        }
+
+        public OperationsDefinitionArgs build() {
+            $.display = Objects.requireNonNull($.display, "expected parameter 'display' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

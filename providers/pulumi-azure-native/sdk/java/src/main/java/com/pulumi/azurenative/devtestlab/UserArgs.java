@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devtestlab.inputs.UserIdentityArgs;
 import com.pulumi.azurenative.devtestlab.inputs.UserSecretStoreArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<UserIdentityArgs> identity;
+    private @Nullable Output<UserIdentityArgs> identity;
 
-    public Output<UserIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<UserIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -45,10 +45,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,10 +78,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretStore")
-      private final @Nullable Output<UserSecretStoreArgs> secretStore;
+    private @Nullable Output<UserSecretStoreArgs> secretStore;
 
-    public Output<UserSecretStoreArgs> secretStore() {
-        return this.secretStore == null ? Codegen.empty() : this.secretStore;
+    public Optional<Output<UserSecretStoreArgs>> secretStore() {
+        return Optional.ofNullable(this.secretStore);
     }
 
     /**
@@ -89,128 +89,110 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public UserArgs(
-        @Nullable Output<UserIdentityArgs> identity,
-        Output<String> labName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<UserSecretStoreArgs> secretStore,
-        @Nullable Output<Map<String,String>> tags) {
-        this.identity = identity;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secretStore = secretStore;
-        this.tags = tags;
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.identity = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.secretStore = Codegen.empty();
-        this.tags = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.identity = $.identity;
+        this.labName = $.labName;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secretStore = $.secretStore;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UserIdentityArgs> identity;
-        private Output<String> labName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<UserSecretStoreArgs> secretStore;
-        private @Nullable Output<Map<String,String>> tags;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.labName = defaults.labName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secretStore = defaults.secretStore;
-    	      this.tags = defaults.tags;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<UserIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable UserIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(UserIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder secretStore(@Nullable Output<UserSecretStoreArgs> secretStore) {
-            this.secretStore = secretStore;
+            $.secretStore = secretStore;
             return this;
         }
-        public Builder secretStore(@Nullable UserSecretStoreArgs secretStore) {
-            this.secretStore = Codegen.ofNullable(secretStore);
-            return this;
+
+        public Builder secretStore(UserSecretStoreArgs secretStore) {
+            return secretStore(Output.of(secretStore));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(identity, labName, location, name, resourceGroupName, secretStore, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public UserArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

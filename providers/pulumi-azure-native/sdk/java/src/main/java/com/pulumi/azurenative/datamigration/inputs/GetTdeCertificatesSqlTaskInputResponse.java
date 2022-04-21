@@ -24,7 +24,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="backupFileShare", required=true)
-      private final FileShareResponse backupFileShare;
+    private FileShareResponse backupFileShare;
 
     public FileShareResponse backupFileShare() {
         return this.backupFileShare;
@@ -35,7 +35,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="connectionInfo", required=true)
-      private final SqlConnectionInfoResponse connectionInfo;
+    private SqlConnectionInfoResponse connectionInfo;
 
     public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
@@ -46,67 +46,63 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="selectedCertificates", required=true)
-      private final List<SelectedCertificateInputResponse> selectedCertificates;
+    private List<SelectedCertificateInputResponse> selectedCertificates;
 
     public List<SelectedCertificateInputResponse> selectedCertificates() {
         return this.selectedCertificates;
     }
 
-    public GetTdeCertificatesSqlTaskInputResponse(
-        FileShareResponse backupFileShare,
-        SqlConnectionInfoResponse connectionInfo,
-        List<SelectedCertificateInputResponse> selectedCertificates) {
-        this.backupFileShare = Objects.requireNonNull(backupFileShare, "expected parameter 'backupFileShare' to be non-null");
-        this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
-        this.selectedCertificates = Objects.requireNonNull(selectedCertificates, "expected parameter 'selectedCertificates' to be non-null");
-    }
+    private GetTdeCertificatesSqlTaskInputResponse() {}
 
-    private GetTdeCertificatesSqlTaskInputResponse() {
-        this.backupFileShare = null;
-        this.connectionInfo = null;
-        this.selectedCertificates = List.of();
+    private GetTdeCertificatesSqlTaskInputResponse(GetTdeCertificatesSqlTaskInputResponse $) {
+        this.backupFileShare = $.backupFileShare;
+        this.connectionInfo = $.connectionInfo;
+        this.selectedCertificates = $.selectedCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTdeCertificatesSqlTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileShareResponse backupFileShare;
-        private SqlConnectionInfoResponse connectionInfo;
-        private List<SelectedCertificateInputResponse> selectedCertificates;
+        private GetTdeCertificatesSqlTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTdeCertificatesSqlTaskInputResponse();
         }
 
         public Builder(GetTdeCertificatesSqlTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupFileShare = defaults.backupFileShare;
-    	      this.connectionInfo = defaults.connectionInfo;
-    	      this.selectedCertificates = defaults.selectedCertificates;
+            $ = new GetTdeCertificatesSqlTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupFileShare(FileShareResponse backupFileShare) {
-            this.backupFileShare = Objects.requireNonNull(backupFileShare);
+            $.backupFileShare = backupFileShare;
             return this;
         }
+
         public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
-            this.connectionInfo = Objects.requireNonNull(connectionInfo);
+            $.connectionInfo = connectionInfo;
             return this;
         }
+
         public Builder selectedCertificates(List<SelectedCertificateInputResponse> selectedCertificates) {
-            this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
+            $.selectedCertificates = selectedCertificates;
             return this;
         }
+
         public Builder selectedCertificates(SelectedCertificateInputResponse... selectedCertificates) {
             return selectedCertificates(List.of(selectedCertificates));
-        }        public GetTdeCertificatesSqlTaskInputResponse build() {
-            return new GetTdeCertificatesSqlTaskInputResponse(backupFileShare, connectionInfo, selectedCertificates);
+        }
+
+        public GetTdeCertificatesSqlTaskInputResponse build() {
+            $.backupFileShare = Objects.requireNonNull($.backupFileShare, "expected parameter 'backupFileShare' to be non-null");
+            $.connectionInfo = Objects.requireNonNull($.connectionInfo, "expected parameter 'connectionInfo' to be non-null");
+            $.selectedCertificates = Objects.requireNonNull($.selectedCertificates, "expected parameter 'selectedCertificates' to be non-null");
+            return $;
         }
     }
+
 }

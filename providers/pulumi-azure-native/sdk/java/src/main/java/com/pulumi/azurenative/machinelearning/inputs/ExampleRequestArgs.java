@@ -5,12 +5,12 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalParameters")
-      private final @Nullable Output<Map<String,Object>> globalParameters;
+    private @Nullable Output<Map<String,Object>> globalParameters;
 
-    public Output<Map<String,Object>> globalParameters() {
-        return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
+    public Optional<Output<Map<String,Object>>> globalParameters() {
+        return Optional.ofNullable(this.globalParameters);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<Map<String,List<List<Object>>>> inputs;
+    private @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
-    public Output<Map<String,List<List<Object>>>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<Map<String,List<List<Object>>>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
-    public ExampleRequestArgs(
-        @Nullable Output<Map<String,Object>> globalParameters,
-        @Nullable Output<Map<String,List<List<Object>>>> inputs) {
-        this.globalParameters = globalParameters;
-        this.inputs = inputs;
-    }
+    private ExampleRequestArgs() {}
 
-    private ExampleRequestArgs() {
-        this.globalParameters = Codegen.empty();
-        this.inputs = Codegen.empty();
+    private ExampleRequestArgs(ExampleRequestArgs $) {
+        this.globalParameters = $.globalParameters;
+        this.inputs = $.inputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExampleRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> globalParameters;
-        private @Nullable Output<Map<String,List<List<Object>>>> inputs;
+        private ExampleRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExampleRequestArgs();
         }
 
         public Builder(ExampleRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalParameters = defaults.globalParameters;
-    	      this.inputs = defaults.inputs;
+            $ = new ExampleRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalParameters(@Nullable Output<Map<String,Object>> globalParameters) {
-            this.globalParameters = globalParameters;
+            $.globalParameters = globalParameters;
             return this;
         }
-        public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
-            this.globalParameters = Codegen.ofNullable(globalParameters);
-            return this;
+
+        public Builder globalParameters(Map<String,Object> globalParameters) {
+            return globalParameters(Output.of(globalParameters));
         }
+
         public Builder inputs(@Nullable Output<Map<String,List<List<Object>>>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
-        }        public ExampleRequestArgs build() {
-            return new ExampleRequestArgs(globalParameters, inputs);
+
+        public Builder inputs(Map<String,List<List<Object>>> inputs) {
+            return inputs(Output.of(inputs));
+        }
+
+        public ExampleRequestArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="remediationName", required=true)
-      private final String remediationName;
+    private String remediationName;
 
     public String remediationName() {
         return this.remediationName;
@@ -28,55 +28,52 @@ public final class GetRemediationAtResourceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public GetRemediationAtResourceArgs(
-        String remediationName,
-        String resourceId) {
-        this.remediationName = Objects.requireNonNull(remediationName, "expected parameter 'remediationName' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private GetRemediationAtResourceArgs() {}
 
-    private GetRemediationAtResourceArgs() {
-        this.remediationName = null;
-        this.resourceId = null;
+    private GetRemediationAtResourceArgs(GetRemediationAtResourceArgs $) {
+        this.remediationName = $.remediationName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRemediationAtResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String remediationName;
-        private String resourceId;
+        private GetRemediationAtResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRemediationAtResourceArgs();
         }
 
         public Builder(GetRemediationAtResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.remediationName = defaults.remediationName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new GetRemediationAtResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder remediationName(String remediationName) {
-            this.remediationName = Objects.requireNonNull(remediationName);
+            $.remediationName = remediationName;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public GetRemediationAtResourceArgs build() {
-            return new GetRemediationAtResourceArgs(remediationName, resourceId);
+        }
+
+        public GetRemediationAtResourceArgs build() {
+            $.remediationName = Objects.requireNonNull($.remediationName, "expected parameter 'remediationName' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

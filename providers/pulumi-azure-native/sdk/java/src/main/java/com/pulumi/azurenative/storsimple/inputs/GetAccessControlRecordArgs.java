@@ -17,7 +17,7 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accessControlRecordName", required=true)
-      private final String accessControlRecordName;
+    private String accessControlRecordName;
 
     public String accessControlRecordName() {
         return this.accessControlRecordName;
@@ -28,7 +28,7 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -39,64 +39,59 @@ public final class GetAccessControlRecordArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAccessControlRecordArgs(
-        String accessControlRecordName,
-        String managerName,
-        String resourceGroupName) {
-        this.accessControlRecordName = Objects.requireNonNull(accessControlRecordName, "expected parameter 'accessControlRecordName' to be non-null");
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAccessControlRecordArgs() {}
 
-    private GetAccessControlRecordArgs() {
-        this.accessControlRecordName = null;
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private GetAccessControlRecordArgs(GetAccessControlRecordArgs $) {
+        this.accessControlRecordName = $.accessControlRecordName;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessControlRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessControlRecordName;
-        private String managerName;
-        private String resourceGroupName;
+        private GetAccessControlRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessControlRecordArgs();
         }
 
         public Builder(GetAccessControlRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlRecordName = defaults.accessControlRecordName;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAccessControlRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlRecordName(String accessControlRecordName) {
-            this.accessControlRecordName = Objects.requireNonNull(accessControlRecordName);
+            $.accessControlRecordName = accessControlRecordName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAccessControlRecordArgs build() {
-            return new GetAccessControlRecordArgs(accessControlRecordName, managerName, resourceGroupName);
+        }
+
+        public GetAccessControlRecordArgs build() {
+            $.accessControlRecordName = Objects.requireNonNull($.accessControlRecordName, "expected parameter 'accessControlRecordName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

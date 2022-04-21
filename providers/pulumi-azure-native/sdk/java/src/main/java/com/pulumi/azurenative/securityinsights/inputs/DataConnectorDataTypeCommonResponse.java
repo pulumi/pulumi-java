@@ -23,45 +23,44 @@ public final class DataConnectorDataTypeCommonResponse extends com.pulumi.resour
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public DataConnectorDataTypeCommonResponse(@Nullable String state) {
-        this.state = state;
-    }
+    private DataConnectorDataTypeCommonResponse() {}
 
-    private DataConnectorDataTypeCommonResponse() {
-        this.state = null;
+    private DataConnectorDataTypeCommonResponse(DataConnectorDataTypeCommonResponse $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataConnectorDataTypeCommonResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String state;
+        private DataConnectorDataTypeCommonResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataConnectorDataTypeCommonResponse();
         }
 
         public Builder(DataConnectorDataTypeCommonResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new DataConnectorDataTypeCommonResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public DataConnectorDataTypeCommonResponse build() {
-            return new DataConnectorDataTypeCommonResponse(state);
+        }
+
+        public DataConnectorDataTypeCommonResponse build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxReplicas")
-      private final @Nullable Integer maxReplicas;
+    private @Nullable Integer maxReplicas;
 
     public Optional<Integer> maxReplicas() {
-        return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
+        return Optional.ofNullable(this.maxReplicas);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minReplicas")
-      private final @Nullable Integer minReplicas;
+    private @Nullable Integer minReplicas;
 
     public Optional<Integer> minReplicas() {
-        return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
+        return Optional.ofNullable(this.minReplicas);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class ScaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<ScaleRuleResponse> rules;
+    private @Nullable List<ScaleRuleResponse> rules;
 
-    public List<ScaleRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<ScaleRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ScaleResponse(
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable List<ScaleRuleResponse> rules) {
-        this.maxReplicas = maxReplicas;
-        this.minReplicas = minReplicas;
-        this.rules = rules;
-    }
+    private ScaleResponse() {}
 
-    private ScaleResponse() {
-        this.maxReplicas = null;
-        this.minReplicas = null;
-        this.rules = List.of();
+    private ScaleResponse(ScaleResponse $) {
+        this.maxReplicas = $.maxReplicas;
+        this.minReplicas = $.minReplicas;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxReplicas;
-        private @Nullable Integer minReplicas;
-        private @Nullable List<ScaleRuleResponse> rules;
+        private ScaleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleResponse();
         }
 
         public Builder(ScaleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.minReplicas = defaults.minReplicas;
-    	      this.rules = defaults.rules;
+            $ = new ScaleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = maxReplicas;
+            $.maxReplicas = maxReplicas;
             return this;
         }
+
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = minReplicas;
+            $.minReplicas = minReplicas;
             return this;
         }
+
         public Builder rules(@Nullable List<ScaleRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ScaleRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public ScaleResponse build() {
-            return new ScaleResponse(maxReplicas, minReplicas, rules);
+        }
+
+        public ScaleResponse build() {
+            return $;
         }
     }
+
 }

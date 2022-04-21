@@ -7,9 +7,9 @@ import com.pulumi.azurenative.security.inputs.SecurityContactPropertiesAlertNoti
 import com.pulumi.azurenative.security.inputs.SecurityContactPropertiesNotificationsByRoleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="alertNotifications")
-      private final @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
+    private @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
-    public Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications() {
-        return this.alertNotifications == null ? Codegen.empty() : this.alertNotifications;
+    public Optional<Output<SecurityContactPropertiesAlertNotificationsArgs>> alertNotifications() {
+        return Optional.ofNullable(this.alertNotifications);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="emails")
-      private final @Nullable Output<String> emails;
+    private @Nullable Output<String> emails;
 
-    public Output<String> emails() {
-        return this.emails == null ? Codegen.empty() : this.emails;
+    public Optional<Output<String>> emails() {
+        return Optional.ofNullable(this.emails);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="notificationsByRole")
-      private final @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
+    private @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
-    public Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole() {
-        return this.notificationsByRole == null ? Codegen.empty() : this.notificationsByRole;
+    public Optional<Output<SecurityContactPropertiesNotificationsByRoleArgs>> notificationsByRole() {
+        return Optional.ofNullable(this.notificationsByRole);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="phone")
-      private final @Nullable Output<String> phone;
+    private @Nullable Output<String> phone;
 
-    public Output<String> phone() {
-        return this.phone == null ? Codegen.empty() : this.phone;
+    public Optional<Output<String>> phone() {
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="securityContactName")
-      private final @Nullable Output<String> securityContactName;
+    private @Nullable Output<String> securityContactName;
 
-    public Output<String> securityContactName() {
-        return this.securityContactName == null ? Codegen.empty() : this.securityContactName;
+    public Optional<Output<String>> securityContactName() {
+        return Optional.ofNullable(this.securityContactName);
     }
 
-    public SecurityContactArgs(
-        @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications,
-        @Nullable Output<String> emails,
-        @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole,
-        @Nullable Output<String> phone,
-        @Nullable Output<String> securityContactName) {
-        this.alertNotifications = alertNotifications;
-        this.emails = emails;
-        this.notificationsByRole = notificationsByRole;
-        this.phone = phone;
-        this.securityContactName = securityContactName;
-    }
+    private SecurityContactArgs() {}
 
-    private SecurityContactArgs() {
-        this.alertNotifications = Codegen.empty();
-        this.emails = Codegen.empty();
-        this.notificationsByRole = Codegen.empty();
-        this.phone = Codegen.empty();
-        this.securityContactName = Codegen.empty();
+    private SecurityContactArgs(SecurityContactArgs $) {
+        this.alertNotifications = $.alertNotifications;
+        this.emails = $.emails;
+        this.notificationsByRole = $.notificationsByRole;
+        this.phone = $.phone;
+        this.securityContactName = $.securityContactName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
-        private @Nullable Output<String> emails;
-        private @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
-        private @Nullable Output<String> phone;
-        private @Nullable Output<String> securityContactName;
+        private SecurityContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityContactArgs();
         }
 
         public Builder(SecurityContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertNotifications = defaults.alertNotifications;
-    	      this.emails = defaults.emails;
-    	      this.notificationsByRole = defaults.notificationsByRole;
-    	      this.phone = defaults.phone;
-    	      this.securityContactName = defaults.securityContactName;
+            $ = new SecurityContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertNotifications(@Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications) {
-            this.alertNotifications = alertNotifications;
+            $.alertNotifications = alertNotifications;
             return this;
         }
-        public Builder alertNotifications(@Nullable SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
-            this.alertNotifications = Codegen.ofNullable(alertNotifications);
-            return this;
+
+        public Builder alertNotifications(SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
+            return alertNotifications(Output.of(alertNotifications));
         }
+
         public Builder emails(@Nullable Output<String> emails) {
-            this.emails = emails;
+            $.emails = emails;
             return this;
         }
-        public Builder emails(@Nullable String emails) {
-            this.emails = Codegen.ofNullable(emails);
-            return this;
+
+        public Builder emails(String emails) {
+            return emails(Output.of(emails));
         }
+
         public Builder notificationsByRole(@Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole) {
-            this.notificationsByRole = notificationsByRole;
+            $.notificationsByRole = notificationsByRole;
             return this;
         }
-        public Builder notificationsByRole(@Nullable SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
-            this.notificationsByRole = Codegen.ofNullable(notificationsByRole);
-            return this;
+
+        public Builder notificationsByRole(SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
+            return notificationsByRole(Output.of(notificationsByRole));
         }
+
         public Builder phone(@Nullable Output<String> phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
-        public Builder phone(@Nullable String phone) {
-            this.phone = Codegen.ofNullable(phone);
-            return this;
+
+        public Builder phone(String phone) {
+            return phone(Output.of(phone));
         }
+
         public Builder securityContactName(@Nullable Output<String> securityContactName) {
-            this.securityContactName = securityContactName;
+            $.securityContactName = securityContactName;
             return this;
         }
-        public Builder securityContactName(@Nullable String securityContactName) {
-            this.securityContactName = Codegen.ofNullable(securityContactName);
-            return this;
-        }        public SecurityContactArgs build() {
-            return new SecurityContactArgs(alertNotifications, emails, notificationsByRole, phone, securityContactName);
+
+        public Builder securityContactName(String securityContactName) {
+            return securityContactName(Output.of(securityContactName));
+        }
+
+        public SecurityContactArgs build() {
+            return $;
         }
     }
+
 }

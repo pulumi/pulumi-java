@@ -22,7 +22,7 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="increasingKpi", required=true)
-      private final Boolean increasingKpi;
+    private Boolean increasingKpi;
 
     public Boolean increasingKpi() {
         return this.increasingKpi;
@@ -33,7 +33,7 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lowerLimit", required=true)
-      private final Double lowerLimit;
+    private Double lowerLimit;
 
     public Double lowerLimit() {
         return this.lowerLimit;
@@ -44,64 +44,59 @@ public final class KpiThresholdsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="upperLimit", required=true)
-      private final Double upperLimit;
+    private Double upperLimit;
 
     public Double upperLimit() {
         return this.upperLimit;
     }
 
-    public KpiThresholdsResponse(
-        Boolean increasingKpi,
-        Double lowerLimit,
-        Double upperLimit) {
-        this.increasingKpi = Objects.requireNonNull(increasingKpi, "expected parameter 'increasingKpi' to be non-null");
-        this.lowerLimit = Objects.requireNonNull(lowerLimit, "expected parameter 'lowerLimit' to be non-null");
-        this.upperLimit = Objects.requireNonNull(upperLimit, "expected parameter 'upperLimit' to be non-null");
-    }
+    private KpiThresholdsResponse() {}
 
-    private KpiThresholdsResponse() {
-        this.increasingKpi = null;
-        this.lowerLimit = null;
-        this.upperLimit = null;
+    private KpiThresholdsResponse(KpiThresholdsResponse $) {
+        this.increasingKpi = $.increasingKpi;
+        this.lowerLimit = $.lowerLimit;
+        this.upperLimit = $.upperLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiThresholdsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean increasingKpi;
-        private Double lowerLimit;
-        private Double upperLimit;
+        private KpiThresholdsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiThresholdsResponse();
         }
 
         public Builder(KpiThresholdsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.increasingKpi = defaults.increasingKpi;
-    	      this.lowerLimit = defaults.lowerLimit;
-    	      this.upperLimit = defaults.upperLimit;
+            $ = new KpiThresholdsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder increasingKpi(Boolean increasingKpi) {
-            this.increasingKpi = Objects.requireNonNull(increasingKpi);
+            $.increasingKpi = increasingKpi;
             return this;
         }
+
         public Builder lowerLimit(Double lowerLimit) {
-            this.lowerLimit = Objects.requireNonNull(lowerLimit);
+            $.lowerLimit = lowerLimit;
             return this;
         }
+
         public Builder upperLimit(Double upperLimit) {
-            this.upperLimit = Objects.requireNonNull(upperLimit);
+            $.upperLimit = upperLimit;
             return this;
-        }        public KpiThresholdsResponse build() {
-            return new KpiThresholdsResponse(increasingKpi, lowerLimit, upperLimit);
+        }
+
+        public KpiThresholdsResponse build() {
+            $.increasingKpi = Objects.requireNonNull($.increasingKpi, "expected parameter 'increasingKpi' to be non-null");
+            $.lowerLimit = Objects.requireNonNull($.lowerLimit, "expected parameter 'lowerLimit' to be non-null");
+            $.upperLimit = Objects.requireNonNull($.upperLimit, "expected parameter 'upperLimit' to be non-null");
+            return $;
         }
     }
+
 }

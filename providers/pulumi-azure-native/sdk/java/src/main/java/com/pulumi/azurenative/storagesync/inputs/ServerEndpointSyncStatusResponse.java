@@ -24,7 +24,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="combinedHealth", required=true)
-      private final String combinedHealth;
+    private String combinedHealth;
 
     public String combinedHealth() {
         return this.combinedHealth;
@@ -35,7 +35,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="downloadActivity", required=true)
-      private final ServerEndpointSyncActivityStatusResponse downloadActivity;
+    private ServerEndpointSyncActivityStatusResponse downloadActivity;
 
     public ServerEndpointSyncActivityStatusResponse downloadActivity() {
         return this.downloadActivity;
@@ -46,7 +46,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="downloadHealth", required=true)
-      private final String downloadHealth;
+    private String downloadHealth;
 
     public String downloadHealth() {
         return this.downloadHealth;
@@ -57,7 +57,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="downloadStatus", required=true)
-      private final ServerEndpointSyncSessionStatusResponse downloadStatus;
+    private ServerEndpointSyncSessionStatusResponse downloadStatus;
 
     public ServerEndpointSyncSessionStatusResponse downloadStatus() {
         return this.downloadStatus;
@@ -68,7 +68,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -79,7 +79,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="offlineDataTransferStatus", required=true)
-      private final String offlineDataTransferStatus;
+    private String offlineDataTransferStatus;
 
     public String offlineDataTransferStatus() {
         return this.offlineDataTransferStatus;
@@ -90,7 +90,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="syncActivity", required=true)
-      private final String syncActivity;
+    private String syncActivity;
 
     public String syncActivity() {
         return this.syncActivity;
@@ -101,7 +101,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="totalPersistentFilesNotSyncingCount", required=true)
-      private final Double totalPersistentFilesNotSyncingCount;
+    private Double totalPersistentFilesNotSyncingCount;
 
     public Double totalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
@@ -112,7 +112,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uploadActivity", required=true)
-      private final ServerEndpointSyncActivityStatusResponse uploadActivity;
+    private ServerEndpointSyncActivityStatusResponse uploadActivity;
 
     public ServerEndpointSyncActivityStatusResponse uploadActivity() {
         return this.uploadActivity;
@@ -123,7 +123,7 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uploadHealth", required=true)
-      private final String uploadHealth;
+    private String uploadHealth;
 
     public String uploadHealth() {
         return this.uploadHealth;
@@ -134,136 +134,115 @@ public final class ServerEndpointSyncStatusResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uploadStatus", required=true)
-      private final ServerEndpointSyncSessionStatusResponse uploadStatus;
+    private ServerEndpointSyncSessionStatusResponse uploadStatus;
 
     public ServerEndpointSyncSessionStatusResponse uploadStatus() {
         return this.uploadStatus;
     }
 
-    public ServerEndpointSyncStatusResponse(
-        String combinedHealth,
-        ServerEndpointSyncActivityStatusResponse downloadActivity,
-        String downloadHealth,
-        ServerEndpointSyncSessionStatusResponse downloadStatus,
-        String lastUpdatedTimestamp,
-        String offlineDataTransferStatus,
-        String syncActivity,
-        Double totalPersistentFilesNotSyncingCount,
-        ServerEndpointSyncActivityStatusResponse uploadActivity,
-        String uploadHealth,
-        ServerEndpointSyncSessionStatusResponse uploadStatus) {
-        this.combinedHealth = Objects.requireNonNull(combinedHealth, "expected parameter 'combinedHealth' to be non-null");
-        this.downloadActivity = Objects.requireNonNull(downloadActivity, "expected parameter 'downloadActivity' to be non-null");
-        this.downloadHealth = Objects.requireNonNull(downloadHealth, "expected parameter 'downloadHealth' to be non-null");
-        this.downloadStatus = Objects.requireNonNull(downloadStatus, "expected parameter 'downloadStatus' to be non-null");
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-        this.offlineDataTransferStatus = Objects.requireNonNull(offlineDataTransferStatus, "expected parameter 'offlineDataTransferStatus' to be non-null");
-        this.syncActivity = Objects.requireNonNull(syncActivity, "expected parameter 'syncActivity' to be non-null");
-        this.totalPersistentFilesNotSyncingCount = Objects.requireNonNull(totalPersistentFilesNotSyncingCount, "expected parameter 'totalPersistentFilesNotSyncingCount' to be non-null");
-        this.uploadActivity = Objects.requireNonNull(uploadActivity, "expected parameter 'uploadActivity' to be non-null");
-        this.uploadHealth = Objects.requireNonNull(uploadHealth, "expected parameter 'uploadHealth' to be non-null");
-        this.uploadStatus = Objects.requireNonNull(uploadStatus, "expected parameter 'uploadStatus' to be non-null");
-    }
+    private ServerEndpointSyncStatusResponse() {}
 
-    private ServerEndpointSyncStatusResponse() {
-        this.combinedHealth = null;
-        this.downloadActivity = null;
-        this.downloadHealth = null;
-        this.downloadStatus = null;
-        this.lastUpdatedTimestamp = null;
-        this.offlineDataTransferStatus = null;
-        this.syncActivity = null;
-        this.totalPersistentFilesNotSyncingCount = null;
-        this.uploadActivity = null;
-        this.uploadHealth = null;
-        this.uploadStatus = null;
+    private ServerEndpointSyncStatusResponse(ServerEndpointSyncStatusResponse $) {
+        this.combinedHealth = $.combinedHealth;
+        this.downloadActivity = $.downloadActivity;
+        this.downloadHealth = $.downloadHealth;
+        this.downloadStatus = $.downloadStatus;
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
+        this.offlineDataTransferStatus = $.offlineDataTransferStatus;
+        this.syncActivity = $.syncActivity;
+        this.totalPersistentFilesNotSyncingCount = $.totalPersistentFilesNotSyncingCount;
+        this.uploadActivity = $.uploadActivity;
+        this.uploadHealth = $.uploadHealth;
+        this.uploadStatus = $.uploadStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointSyncStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String combinedHealth;
-        private ServerEndpointSyncActivityStatusResponse downloadActivity;
-        private String downloadHealth;
-        private ServerEndpointSyncSessionStatusResponse downloadStatus;
-        private String lastUpdatedTimestamp;
-        private String offlineDataTransferStatus;
-        private String syncActivity;
-        private Double totalPersistentFilesNotSyncingCount;
-        private ServerEndpointSyncActivityStatusResponse uploadActivity;
-        private String uploadHealth;
-        private ServerEndpointSyncSessionStatusResponse uploadStatus;
+        private ServerEndpointSyncStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointSyncStatusResponse();
         }
 
         public Builder(ServerEndpointSyncStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.combinedHealth = defaults.combinedHealth;
-    	      this.downloadActivity = defaults.downloadActivity;
-    	      this.downloadHealth = defaults.downloadHealth;
-    	      this.downloadStatus = defaults.downloadStatus;
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
-    	      this.offlineDataTransferStatus = defaults.offlineDataTransferStatus;
-    	      this.syncActivity = defaults.syncActivity;
-    	      this.totalPersistentFilesNotSyncingCount = defaults.totalPersistentFilesNotSyncingCount;
-    	      this.uploadActivity = defaults.uploadActivity;
-    	      this.uploadHealth = defaults.uploadHealth;
-    	      this.uploadStatus = defaults.uploadStatus;
+            $ = new ServerEndpointSyncStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder combinedHealth(String combinedHealth) {
-            this.combinedHealth = Objects.requireNonNull(combinedHealth);
+            $.combinedHealth = combinedHealth;
             return this;
         }
+
         public Builder downloadActivity(ServerEndpointSyncActivityStatusResponse downloadActivity) {
-            this.downloadActivity = Objects.requireNonNull(downloadActivity);
+            $.downloadActivity = downloadActivity;
             return this;
         }
+
         public Builder downloadHealth(String downloadHealth) {
-            this.downloadHealth = Objects.requireNonNull(downloadHealth);
+            $.downloadHealth = downloadHealth;
             return this;
         }
+
         public Builder downloadStatus(ServerEndpointSyncSessionStatusResponse downloadStatus) {
-            this.downloadStatus = Objects.requireNonNull(downloadStatus);
+            $.downloadStatus = downloadStatus;
             return this;
         }
+
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
+
         public Builder offlineDataTransferStatus(String offlineDataTransferStatus) {
-            this.offlineDataTransferStatus = Objects.requireNonNull(offlineDataTransferStatus);
+            $.offlineDataTransferStatus = offlineDataTransferStatus;
             return this;
         }
+
         public Builder syncActivity(String syncActivity) {
-            this.syncActivity = Objects.requireNonNull(syncActivity);
+            $.syncActivity = syncActivity;
             return this;
         }
+
         public Builder totalPersistentFilesNotSyncingCount(Double totalPersistentFilesNotSyncingCount) {
-            this.totalPersistentFilesNotSyncingCount = Objects.requireNonNull(totalPersistentFilesNotSyncingCount);
+            $.totalPersistentFilesNotSyncingCount = totalPersistentFilesNotSyncingCount;
             return this;
         }
+
         public Builder uploadActivity(ServerEndpointSyncActivityStatusResponse uploadActivity) {
-            this.uploadActivity = Objects.requireNonNull(uploadActivity);
+            $.uploadActivity = uploadActivity;
             return this;
         }
+
         public Builder uploadHealth(String uploadHealth) {
-            this.uploadHealth = Objects.requireNonNull(uploadHealth);
+            $.uploadHealth = uploadHealth;
             return this;
         }
+
         public Builder uploadStatus(ServerEndpointSyncSessionStatusResponse uploadStatus) {
-            this.uploadStatus = Objects.requireNonNull(uploadStatus);
+            $.uploadStatus = uploadStatus;
             return this;
-        }        public ServerEndpointSyncStatusResponse build() {
-            return new ServerEndpointSyncStatusResponse(combinedHealth, downloadActivity, downloadHealth, downloadStatus, lastUpdatedTimestamp, offlineDataTransferStatus, syncActivity, totalPersistentFilesNotSyncingCount, uploadActivity, uploadHealth, uploadStatus);
+        }
+
+        public ServerEndpointSyncStatusResponse build() {
+            $.combinedHealth = Objects.requireNonNull($.combinedHealth, "expected parameter 'combinedHealth' to be non-null");
+            $.downloadActivity = Objects.requireNonNull($.downloadActivity, "expected parameter 'downloadActivity' to be non-null");
+            $.downloadHealth = Objects.requireNonNull($.downloadHealth, "expected parameter 'downloadHealth' to be non-null");
+            $.downloadStatus = Objects.requireNonNull($.downloadStatus, "expected parameter 'downloadStatus' to be non-null");
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            $.offlineDataTransferStatus = Objects.requireNonNull($.offlineDataTransferStatus, "expected parameter 'offlineDataTransferStatus' to be non-null");
+            $.syncActivity = Objects.requireNonNull($.syncActivity, "expected parameter 'syncActivity' to be non-null");
+            $.totalPersistentFilesNotSyncingCount = Objects.requireNonNull($.totalPersistentFilesNotSyncingCount, "expected parameter 'totalPersistentFilesNotSyncingCount' to be non-null");
+            $.uploadActivity = Objects.requireNonNull($.uploadActivity, "expected parameter 'uploadActivity' to be non-null");
+            $.uploadHealth = Objects.requireNonNull($.uploadHealth, "expected parameter 'uploadHealth' to be non-null");
+            $.uploadStatus = Objects.requireNonNull($.uploadStatus, "expected parameter 'uploadStatus' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="acceptedTerms")
-      private final @Nullable Boolean acceptedTerms;
+    private @Nullable Boolean acceptedTerms;
 
     public Optional<Boolean> acceptedTerms() {
-        return this.acceptedTerms == null ? Optional.empty() : Optional.ofNullable(this.acceptedTerms);
+        return Optional.ofNullable(this.acceptedTerms);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="callingWebHook")
-      private final @Nullable String callingWebHook;
+    private @Nullable String callingWebHook;
 
     public Optional<String> callingWebHook() {
-        return this.callingWebHook == null ? Optional.empty() : Optional.ofNullable(this.callingWebHook);
+        return Optional.ofNullable(this.callingWebHook);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="deploymentEnvironment")
-      private final @Nullable String deploymentEnvironment;
+    private @Nullable String deploymentEnvironment;
 
     public Optional<String> deploymentEnvironment() {
-        return this.deploymentEnvironment == null ? Optional.empty() : Optional.ofNullable(this.deploymentEnvironment);
+        return Optional.ofNullable(this.deploymentEnvironment);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enableCalling")
-      private final @Nullable Boolean enableCalling;
+    private @Nullable Boolean enableCalling;
 
     public Optional<Boolean> enableCalling() {
-        return this.enableCalling == null ? Optional.empty() : Optional.ofNullable(this.enableCalling);
+        return Optional.ofNullable(this.enableCalling);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="incomingCallRoute")
-      private final @Nullable String incomingCallRoute;
+    private @Nullable String incomingCallRoute;
 
     public Optional<String> incomingCallRoute() {
-        return this.incomingCallRoute == null ? Optional.empty() : Optional.ofNullable(this.incomingCallRoute);
+        return Optional.ofNullable(this.incomingCallRoute);
     }
 
     /**
@@ -80,91 +80,76 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
     }
 
-    public MsTeamsChannelPropertiesResponse(
-        @Nullable Boolean acceptedTerms,
-        @Nullable String callingWebHook,
-        @Nullable String deploymentEnvironment,
-        @Nullable Boolean enableCalling,
-        @Nullable String incomingCallRoute,
-        Boolean isEnabled) {
-        this.acceptedTerms = Codegen.booleanProp("acceptedTerms").arg(acceptedTerms).def(true).getNullable();
-        this.callingWebHook = callingWebHook;
-        this.deploymentEnvironment = deploymentEnvironment;
-        this.enableCalling = enableCalling;
-        this.incomingCallRoute = incomingCallRoute;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-    }
+    private MsTeamsChannelPropertiesResponse() {}
 
-    private MsTeamsChannelPropertiesResponse() {
-        this.acceptedTerms = null;
-        this.callingWebHook = null;
-        this.deploymentEnvironment = null;
-        this.enableCalling = null;
-        this.incomingCallRoute = null;
-        this.isEnabled = null;
+    private MsTeamsChannelPropertiesResponse(MsTeamsChannelPropertiesResponse $) {
+        this.acceptedTerms = $.acceptedTerms;
+        this.callingWebHook = $.callingWebHook;
+        this.deploymentEnvironment = $.deploymentEnvironment;
+        this.enableCalling = $.enableCalling;
+        this.incomingCallRoute = $.incomingCallRoute;
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MsTeamsChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean acceptedTerms;
-        private @Nullable String callingWebHook;
-        private @Nullable String deploymentEnvironment;
-        private @Nullable Boolean enableCalling;
-        private @Nullable String incomingCallRoute;
-        private Boolean isEnabled;
+        private MsTeamsChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MsTeamsChannelPropertiesResponse();
         }
 
         public Builder(MsTeamsChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptedTerms = defaults.acceptedTerms;
-    	      this.callingWebHook = defaults.callingWebHook;
-    	      this.deploymentEnvironment = defaults.deploymentEnvironment;
-    	      this.enableCalling = defaults.enableCalling;
-    	      this.incomingCallRoute = defaults.incomingCallRoute;
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new MsTeamsChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
-            this.acceptedTerms = acceptedTerms;
+            $.acceptedTerms = acceptedTerms;
             return this;
         }
+
         public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = callingWebHook;
+            $.callingWebHook = callingWebHook;
             return this;
         }
+
         public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
-            this.deploymentEnvironment = deploymentEnvironment;
+            $.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
+
         public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = enableCalling;
+            $.enableCalling = enableCalling;
             return this;
         }
+
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = incomingCallRoute;
+            $.incomingCallRoute = incomingCallRoute;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
-        }        public MsTeamsChannelPropertiesResponse build() {
-            return new MsTeamsChannelPropertiesResponse(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
+        }
+
+        public MsTeamsChannelPropertiesResponse build() {
+            $.acceptedTerms = Codegen.booleanProp("acceptedTerms").arg($.acceptedTerms).def(true).getNullable();
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

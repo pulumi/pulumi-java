@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secureBootEnabled")
-      private final @Nullable Output<Boolean> secureBootEnabled;
+    private @Nullable Output<Boolean> secureBootEnabled;
 
-    public Output<Boolean> secureBootEnabled() {
-        return this.secureBootEnabled == null ? Codegen.empty() : this.secureBootEnabled;
+    public Optional<Output<Boolean>> secureBootEnabled() {
+        return Optional.ofNullable(this.secureBootEnabled);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class UefiSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vTpmEnabled")
-      private final @Nullable Output<Boolean> vTpmEnabled;
+    private @Nullable Output<Boolean> vTpmEnabled;
 
-    public Output<Boolean> vTpmEnabled() {
-        return this.vTpmEnabled == null ? Codegen.empty() : this.vTpmEnabled;
+    public Optional<Output<Boolean>> vTpmEnabled() {
+        return Optional.ofNullable(this.vTpmEnabled);
     }
 
-    public UefiSettingsArgs(
-        @Nullable Output<Boolean> secureBootEnabled,
-        @Nullable Output<Boolean> vTpmEnabled) {
-        this.secureBootEnabled = secureBootEnabled;
-        this.vTpmEnabled = vTpmEnabled;
-    }
+    private UefiSettingsArgs() {}
 
-    private UefiSettingsArgs() {
-        this.secureBootEnabled = Codegen.empty();
-        this.vTpmEnabled = Codegen.empty();
+    private UefiSettingsArgs(UefiSettingsArgs $) {
+        this.secureBootEnabled = $.secureBootEnabled;
+        this.vTpmEnabled = $.vTpmEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UefiSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> secureBootEnabled;
-        private @Nullable Output<Boolean> vTpmEnabled;
+        private UefiSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UefiSettingsArgs();
         }
 
         public Builder(UefiSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secureBootEnabled = defaults.secureBootEnabled;
-    	      this.vTpmEnabled = defaults.vTpmEnabled;
+            $ = new UefiSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secureBootEnabled(@Nullable Output<Boolean> secureBootEnabled) {
-            this.secureBootEnabled = secureBootEnabled;
+            $.secureBootEnabled = secureBootEnabled;
             return this;
         }
-        public Builder secureBootEnabled(@Nullable Boolean secureBootEnabled) {
-            this.secureBootEnabled = Codegen.ofNullable(secureBootEnabled);
-            return this;
+
+        public Builder secureBootEnabled(Boolean secureBootEnabled) {
+            return secureBootEnabled(Output.of(secureBootEnabled));
         }
+
         public Builder vTpmEnabled(@Nullable Output<Boolean> vTpmEnabled) {
-            this.vTpmEnabled = vTpmEnabled;
+            $.vTpmEnabled = vTpmEnabled;
             return this;
         }
-        public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
-            this.vTpmEnabled = Codegen.ofNullable(vTpmEnabled);
-            return this;
-        }        public UefiSettingsArgs build() {
-            return new UefiSettingsArgs(secureBootEnabled, vTpmEnabled);
+
+        public Builder vTpmEnabled(Boolean vTpmEnabled) {
+            return vTpmEnabled(Output.of(vTpmEnabled));
+        }
+
+        public UefiSettingsArgs build() {
+            return $;
         }
     }
+
 }

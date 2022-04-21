@@ -30,7 +30,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="agentUpgradeBlockingErrorDetails", required=true)
-      private final List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
+    private List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
 
     public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails() {
         return this.agentUpgradeBlockingErrorDetails;
@@ -41,7 +41,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="agentUpgradeState", required=true)
-      private final String agentUpgradeState;
+    private String agentUpgradeState;
 
     public String agentUpgradeState() {
         return this.agentUpgradeState;
@@ -52,7 +52,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="allocatedMemoryInMB", required=true)
-      private final Double allocatedMemoryInMB;
+    private Double allocatedMemoryInMB;
 
     public Double allocatedMemoryInMB() {
         return this.allocatedMemoryInMB;
@@ -63,7 +63,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="discoveryType", required=true)
-      private final String discoveryType;
+    private String discoveryType;
 
     public String discoveryType() {
         return this.discoveryType;
@@ -74,7 +74,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="fabricDiscoveryMachineId", required=true)
-      private final String fabricDiscoveryMachineId;
+    private String fabricDiscoveryMachineId;
 
     public String fabricDiscoveryMachineId() {
         return this.fabricDiscoveryMachineId;
@@ -85,7 +85,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="failoverRecoveryPointId", required=true)
-      private final String failoverRecoveryPointId;
+    private String failoverRecoveryPointId;
 
     public String failoverRecoveryPointId() {
         return this.failoverRecoveryPointId;
@@ -96,7 +96,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="firmwareType", required=true)
-      private final String firmwareType;
+    private String firmwareType;
 
     public String firmwareType() {
         return this.firmwareType;
@@ -107,7 +107,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="initialReplicationProcessedBytes", required=true)
-      private final Double initialReplicationProcessedBytes;
+    private Double initialReplicationProcessedBytes;
 
     public Double initialReplicationProcessedBytes() {
         return this.initialReplicationProcessedBytes;
@@ -118,7 +118,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="initialReplicationProgressPercentage", required=true)
-      private final Integer initialReplicationProgressPercentage;
+    private Integer initialReplicationProgressPercentage;
 
     public Integer initialReplicationProgressPercentage() {
         return this.initialReplicationProgressPercentage;
@@ -129,7 +129,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="initialReplicationTransferredBytes", required=true)
-      private final Double initialReplicationTransferredBytes;
+    private Double initialReplicationTransferredBytes;
 
     public Double initialReplicationTransferredBytes() {
         return this.initialReplicationTransferredBytes;
@@ -141,7 +141,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -152,7 +152,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="internalIdentifier", required=true)
-      private final String internalIdentifier;
+    private String internalIdentifier;
 
     public String internalIdentifier() {
         return this.internalIdentifier;
@@ -163,7 +163,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="isLastUpgradeSuccessful", required=true)
-      private final String isLastUpgradeSuccessful;
+    private String isLastUpgradeSuccessful;
 
     public String isLastUpgradeSuccessful() {
         return this.isLastUpgradeSuccessful;
@@ -174,7 +174,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastAgentUpgradeErrorDetails", required=true)
-      private final List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
+    private List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
 
     public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails() {
         return this.lastAgentUpgradeErrorDetails;
@@ -185,7 +185,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastAgentUpgradeFailedJobId", required=true)
-      private final String lastAgentUpgradeFailedJobId;
+    private String lastAgentUpgradeFailedJobId;
 
     public String lastAgentUpgradeFailedJobId() {
         return this.lastAgentUpgradeFailedJobId;
@@ -196,7 +196,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastAgentUpgradeType", required=true)
-      private final String lastAgentUpgradeType;
+    private String lastAgentUpgradeType;
 
     public String lastAgentUpgradeType() {
         return this.lastAgentUpgradeType;
@@ -207,7 +207,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastRecoveryPointId", required=true)
-      private final String lastRecoveryPointId;
+    private String lastRecoveryPointId;
 
     public String lastRecoveryPointId() {
         return this.lastRecoveryPointId;
@@ -218,7 +218,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastRecoveryPointReceived", required=true)
-      private final String lastRecoveryPointReceived;
+    private String lastRecoveryPointReceived;
 
     public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
@@ -229,7 +229,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastRpoCalculatedTime", required=true)
-      private final String lastRpoCalculatedTime;
+    private String lastRpoCalculatedTime;
 
     public String lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime;
@@ -240,7 +240,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastRpoInSeconds", required=true)
-      private final Double lastRpoInSeconds;
+    private Double lastRpoInSeconds;
 
     public Double lastRpoInSeconds() {
         return this.lastRpoInSeconds;
@@ -251,7 +251,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="licenseType", required=true)
-      private final String licenseType;
+    private String licenseType;
 
     public String licenseType() {
         return this.licenseType;
@@ -262,7 +262,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="mobilityAgentDetails", required=true)
-      private final InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
+    private InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
 
     public InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails() {
         return this.mobilityAgentDetails;
@@ -273,7 +273,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="multiVmGroupName", required=true)
-      private final String multiVmGroupName;
+    private String multiVmGroupName;
 
     public String multiVmGroupName() {
         return this.multiVmGroupName;
@@ -284,7 +284,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -295,7 +295,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="processServerId", required=true)
-      private final String processServerId;
+    private String processServerId;
 
     public String processServerId() {
         return this.processServerId;
@@ -306,7 +306,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="processServerName", required=true)
-      private final String processServerName;
+    private String processServerName;
 
     public String processServerName() {
         return this.processServerName;
@@ -317,7 +317,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="processorCoreCount", required=true)
-      private final Integer processorCoreCount;
+    private Integer processorCoreCount;
 
     public Integer processorCoreCount() {
         return this.processorCoreCount;
@@ -328,7 +328,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="protectedDisks", required=true)
-      private final List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
+    private List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
 
     public List<InMageRcmProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks;
@@ -339,7 +339,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resyncProcessedBytes", required=true)
-      private final Double resyncProcessedBytes;
+    private Double resyncProcessedBytes;
 
     public Double resyncProcessedBytes() {
         return this.resyncProcessedBytes;
@@ -350,7 +350,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resyncProgressPercentage", required=true)
-      private final Integer resyncProgressPercentage;
+    private Integer resyncProgressPercentage;
 
     public Integer resyncProgressPercentage() {
         return this.resyncProgressPercentage;
@@ -361,7 +361,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resyncRequired", required=true)
-      private final String resyncRequired;
+    private String resyncRequired;
 
     public String resyncRequired() {
         return this.resyncRequired;
@@ -372,7 +372,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resyncState", required=true)
-      private final String resyncState;
+    private String resyncState;
 
     public String resyncState() {
         return this.resyncState;
@@ -383,7 +383,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resyncTransferredBytes", required=true)
-      private final Double resyncTransferredBytes;
+    private Double resyncTransferredBytes;
 
     public Double resyncTransferredBytes() {
         return this.resyncTransferredBytes;
@@ -394,7 +394,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="runAsAccountId", required=true)
-      private final String runAsAccountId;
+    private String runAsAccountId;
 
     public String runAsAccountId() {
         return this.runAsAccountId;
@@ -405,7 +405,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetAvailabilitySetId", required=true)
-      private final String targetAvailabilitySetId;
+    private String targetAvailabilitySetId;
 
     public String targetAvailabilitySetId() {
         return this.targetAvailabilitySetId;
@@ -416,7 +416,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetAvailabilityZone", required=true)
-      private final String targetAvailabilityZone;
+    private String targetAvailabilityZone;
 
     public String targetAvailabilityZone() {
         return this.targetAvailabilityZone;
@@ -427,7 +427,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetBootDiagnosticsStorageAccountId", required=true)
-      private final String targetBootDiagnosticsStorageAccountId;
+    private String targetBootDiagnosticsStorageAccountId;
 
     public String targetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId;
@@ -438,7 +438,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetGeneration", required=true)
-      private final String targetGeneration;
+    private String targetGeneration;
 
     public String targetGeneration() {
         return this.targetGeneration;
@@ -449,7 +449,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetNetworkId", required=true)
-      private final String targetNetworkId;
+    private String targetNetworkId;
 
     public String targetNetworkId() {
         return this.targetNetworkId;
@@ -460,7 +460,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetProximityPlacementGroupId", required=true)
-      private final String targetProximityPlacementGroupId;
+    private String targetProximityPlacementGroupId;
 
     public String targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId;
@@ -471,7 +471,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetResourceGroupId", required=true)
-      private final String targetResourceGroupId;
+    private String targetResourceGroupId;
 
     public String targetResourceGroupId() {
         return this.targetResourceGroupId;
@@ -482,7 +482,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetVmName", required=true)
-      private final String targetVmName;
+    private String targetVmName;
 
     public String targetVmName() {
         return this.targetVmName;
@@ -493,7 +493,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetVmSize", required=true)
-      private final String targetVmSize;
+    private String targetVmSize;
 
     public String targetVmSize() {
         return this.targetVmSize;
@@ -504,7 +504,7 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="testNetworkId", required=true)
-      private final String testNetworkId;
+    private String testNetworkId;
 
     public String testNetworkId() {
         return this.testNetworkId;
@@ -515,454 +515,369 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="vmNics", required=true)
-      private final List<InMageRcmNicDetailsResponse> vmNics;
+    private List<InMageRcmNicDetailsResponse> vmNics;
 
     public List<InMageRcmNicDetailsResponse> vmNics() {
         return this.vmNics;
     }
 
-    public InMageRcmReplicationDetailsResponse(
-        List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails,
-        String agentUpgradeState,
-        Double allocatedMemoryInMB,
-        String discoveryType,
-        String fabricDiscoveryMachineId,
-        String failoverRecoveryPointId,
-        String firmwareType,
-        Double initialReplicationProcessedBytes,
-        Integer initialReplicationProgressPercentage,
-        Double initialReplicationTransferredBytes,
-        String instanceType,
-        String internalIdentifier,
-        String isLastUpgradeSuccessful,
-        List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails,
-        String lastAgentUpgradeFailedJobId,
-        String lastAgentUpgradeType,
-        String lastRecoveryPointId,
-        String lastRecoveryPointReceived,
-        String lastRpoCalculatedTime,
-        Double lastRpoInSeconds,
-        String licenseType,
-        InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails,
-        String multiVmGroupName,
-        String osType,
-        String processServerId,
-        String processServerName,
-        Integer processorCoreCount,
-        List<InMageRcmProtectedDiskDetailsResponse> protectedDisks,
-        Double resyncProcessedBytes,
-        Integer resyncProgressPercentage,
-        String resyncRequired,
-        String resyncState,
-        Double resyncTransferredBytes,
-        String runAsAccountId,
-        String targetAvailabilitySetId,
-        String targetAvailabilityZone,
-        String targetBootDiagnosticsStorageAccountId,
-        String targetGeneration,
-        String targetNetworkId,
-        String targetProximityPlacementGroupId,
-        String targetResourceGroupId,
-        String targetVmName,
-        String targetVmSize,
-        String testNetworkId,
-        List<InMageRcmNicDetailsResponse> vmNics) {
-        this.agentUpgradeBlockingErrorDetails = Objects.requireNonNull(agentUpgradeBlockingErrorDetails, "expected parameter 'agentUpgradeBlockingErrorDetails' to be non-null");
-        this.agentUpgradeState = Objects.requireNonNull(agentUpgradeState, "expected parameter 'agentUpgradeState' to be non-null");
-        this.allocatedMemoryInMB = Objects.requireNonNull(allocatedMemoryInMB, "expected parameter 'allocatedMemoryInMB' to be non-null");
-        this.discoveryType = Objects.requireNonNull(discoveryType, "expected parameter 'discoveryType' to be non-null");
-        this.fabricDiscoveryMachineId = Objects.requireNonNull(fabricDiscoveryMachineId, "expected parameter 'fabricDiscoveryMachineId' to be non-null");
-        this.failoverRecoveryPointId = Objects.requireNonNull(failoverRecoveryPointId, "expected parameter 'failoverRecoveryPointId' to be non-null");
-        this.firmwareType = Objects.requireNonNull(firmwareType, "expected parameter 'firmwareType' to be non-null");
-        this.initialReplicationProcessedBytes = Objects.requireNonNull(initialReplicationProcessedBytes, "expected parameter 'initialReplicationProcessedBytes' to be non-null");
-        this.initialReplicationProgressPercentage = Objects.requireNonNull(initialReplicationProgressPercentage, "expected parameter 'initialReplicationProgressPercentage' to be non-null");
-        this.initialReplicationTransferredBytes = Objects.requireNonNull(initialReplicationTransferredBytes, "expected parameter 'initialReplicationTransferredBytes' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.internalIdentifier = Objects.requireNonNull(internalIdentifier, "expected parameter 'internalIdentifier' to be non-null");
-        this.isLastUpgradeSuccessful = Objects.requireNonNull(isLastUpgradeSuccessful, "expected parameter 'isLastUpgradeSuccessful' to be non-null");
-        this.lastAgentUpgradeErrorDetails = Objects.requireNonNull(lastAgentUpgradeErrorDetails, "expected parameter 'lastAgentUpgradeErrorDetails' to be non-null");
-        this.lastAgentUpgradeFailedJobId = Objects.requireNonNull(lastAgentUpgradeFailedJobId, "expected parameter 'lastAgentUpgradeFailedJobId' to be non-null");
-        this.lastAgentUpgradeType = Objects.requireNonNull(lastAgentUpgradeType, "expected parameter 'lastAgentUpgradeType' to be non-null");
-        this.lastRecoveryPointId = Objects.requireNonNull(lastRecoveryPointId, "expected parameter 'lastRecoveryPointId' to be non-null");
-        this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived, "expected parameter 'lastRecoveryPointReceived' to be non-null");
-        this.lastRpoCalculatedTime = Objects.requireNonNull(lastRpoCalculatedTime, "expected parameter 'lastRpoCalculatedTime' to be non-null");
-        this.lastRpoInSeconds = Objects.requireNonNull(lastRpoInSeconds, "expected parameter 'lastRpoInSeconds' to be non-null");
-        this.licenseType = Objects.requireNonNull(licenseType, "expected parameter 'licenseType' to be non-null");
-        this.mobilityAgentDetails = Objects.requireNonNull(mobilityAgentDetails, "expected parameter 'mobilityAgentDetails' to be non-null");
-        this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName, "expected parameter 'multiVmGroupName' to be non-null");
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.processServerId = Objects.requireNonNull(processServerId, "expected parameter 'processServerId' to be non-null");
-        this.processServerName = Objects.requireNonNull(processServerName, "expected parameter 'processServerName' to be non-null");
-        this.processorCoreCount = Objects.requireNonNull(processorCoreCount, "expected parameter 'processorCoreCount' to be non-null");
-        this.protectedDisks = Objects.requireNonNull(protectedDisks, "expected parameter 'protectedDisks' to be non-null");
-        this.resyncProcessedBytes = Objects.requireNonNull(resyncProcessedBytes, "expected parameter 'resyncProcessedBytes' to be non-null");
-        this.resyncProgressPercentage = Objects.requireNonNull(resyncProgressPercentage, "expected parameter 'resyncProgressPercentage' to be non-null");
-        this.resyncRequired = Objects.requireNonNull(resyncRequired, "expected parameter 'resyncRequired' to be non-null");
-        this.resyncState = Objects.requireNonNull(resyncState, "expected parameter 'resyncState' to be non-null");
-        this.resyncTransferredBytes = Objects.requireNonNull(resyncTransferredBytes, "expected parameter 'resyncTransferredBytes' to be non-null");
-        this.runAsAccountId = Objects.requireNonNull(runAsAccountId, "expected parameter 'runAsAccountId' to be non-null");
-        this.targetAvailabilitySetId = Objects.requireNonNull(targetAvailabilitySetId, "expected parameter 'targetAvailabilitySetId' to be non-null");
-        this.targetAvailabilityZone = Objects.requireNonNull(targetAvailabilityZone, "expected parameter 'targetAvailabilityZone' to be non-null");
-        this.targetBootDiagnosticsStorageAccountId = Objects.requireNonNull(targetBootDiagnosticsStorageAccountId, "expected parameter 'targetBootDiagnosticsStorageAccountId' to be non-null");
-        this.targetGeneration = Objects.requireNonNull(targetGeneration, "expected parameter 'targetGeneration' to be non-null");
-        this.targetNetworkId = Objects.requireNonNull(targetNetworkId, "expected parameter 'targetNetworkId' to be non-null");
-        this.targetProximityPlacementGroupId = Objects.requireNonNull(targetProximityPlacementGroupId, "expected parameter 'targetProximityPlacementGroupId' to be non-null");
-        this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId, "expected parameter 'targetResourceGroupId' to be non-null");
-        this.targetVmName = Objects.requireNonNull(targetVmName, "expected parameter 'targetVmName' to be non-null");
-        this.targetVmSize = Objects.requireNonNull(targetVmSize, "expected parameter 'targetVmSize' to be non-null");
-        this.testNetworkId = Objects.requireNonNull(testNetworkId, "expected parameter 'testNetworkId' to be non-null");
-        this.vmNics = Objects.requireNonNull(vmNics, "expected parameter 'vmNics' to be non-null");
-    }
+    private InMageRcmReplicationDetailsResponse() {}
 
-    private InMageRcmReplicationDetailsResponse() {
-        this.agentUpgradeBlockingErrorDetails = List.of();
-        this.agentUpgradeState = null;
-        this.allocatedMemoryInMB = null;
-        this.discoveryType = null;
-        this.fabricDiscoveryMachineId = null;
-        this.failoverRecoveryPointId = null;
-        this.firmwareType = null;
-        this.initialReplicationProcessedBytes = null;
-        this.initialReplicationProgressPercentage = null;
-        this.initialReplicationTransferredBytes = null;
-        this.instanceType = null;
-        this.internalIdentifier = null;
-        this.isLastUpgradeSuccessful = null;
-        this.lastAgentUpgradeErrorDetails = List.of();
-        this.lastAgentUpgradeFailedJobId = null;
-        this.lastAgentUpgradeType = null;
-        this.lastRecoveryPointId = null;
-        this.lastRecoveryPointReceived = null;
-        this.lastRpoCalculatedTime = null;
-        this.lastRpoInSeconds = null;
-        this.licenseType = null;
-        this.mobilityAgentDetails = null;
-        this.multiVmGroupName = null;
-        this.osType = null;
-        this.processServerId = null;
-        this.processServerName = null;
-        this.processorCoreCount = null;
-        this.protectedDisks = List.of();
-        this.resyncProcessedBytes = null;
-        this.resyncProgressPercentage = null;
-        this.resyncRequired = null;
-        this.resyncState = null;
-        this.resyncTransferredBytes = null;
-        this.runAsAccountId = null;
-        this.targetAvailabilitySetId = null;
-        this.targetAvailabilityZone = null;
-        this.targetBootDiagnosticsStorageAccountId = null;
-        this.targetGeneration = null;
-        this.targetNetworkId = null;
-        this.targetProximityPlacementGroupId = null;
-        this.targetResourceGroupId = null;
-        this.targetVmName = null;
-        this.targetVmSize = null;
-        this.testNetworkId = null;
-        this.vmNics = List.of();
+    private InMageRcmReplicationDetailsResponse(InMageRcmReplicationDetailsResponse $) {
+        this.agentUpgradeBlockingErrorDetails = $.agentUpgradeBlockingErrorDetails;
+        this.agentUpgradeState = $.agentUpgradeState;
+        this.allocatedMemoryInMB = $.allocatedMemoryInMB;
+        this.discoveryType = $.discoveryType;
+        this.fabricDiscoveryMachineId = $.fabricDiscoveryMachineId;
+        this.failoverRecoveryPointId = $.failoverRecoveryPointId;
+        this.firmwareType = $.firmwareType;
+        this.initialReplicationProcessedBytes = $.initialReplicationProcessedBytes;
+        this.initialReplicationProgressPercentage = $.initialReplicationProgressPercentage;
+        this.initialReplicationTransferredBytes = $.initialReplicationTransferredBytes;
+        this.instanceType = $.instanceType;
+        this.internalIdentifier = $.internalIdentifier;
+        this.isLastUpgradeSuccessful = $.isLastUpgradeSuccessful;
+        this.lastAgentUpgradeErrorDetails = $.lastAgentUpgradeErrorDetails;
+        this.lastAgentUpgradeFailedJobId = $.lastAgentUpgradeFailedJobId;
+        this.lastAgentUpgradeType = $.lastAgentUpgradeType;
+        this.lastRecoveryPointId = $.lastRecoveryPointId;
+        this.lastRecoveryPointReceived = $.lastRecoveryPointReceived;
+        this.lastRpoCalculatedTime = $.lastRpoCalculatedTime;
+        this.lastRpoInSeconds = $.lastRpoInSeconds;
+        this.licenseType = $.licenseType;
+        this.mobilityAgentDetails = $.mobilityAgentDetails;
+        this.multiVmGroupName = $.multiVmGroupName;
+        this.osType = $.osType;
+        this.processServerId = $.processServerId;
+        this.processServerName = $.processServerName;
+        this.processorCoreCount = $.processorCoreCount;
+        this.protectedDisks = $.protectedDisks;
+        this.resyncProcessedBytes = $.resyncProcessedBytes;
+        this.resyncProgressPercentage = $.resyncProgressPercentage;
+        this.resyncRequired = $.resyncRequired;
+        this.resyncState = $.resyncState;
+        this.resyncTransferredBytes = $.resyncTransferredBytes;
+        this.runAsAccountId = $.runAsAccountId;
+        this.targetAvailabilitySetId = $.targetAvailabilitySetId;
+        this.targetAvailabilityZone = $.targetAvailabilityZone;
+        this.targetBootDiagnosticsStorageAccountId = $.targetBootDiagnosticsStorageAccountId;
+        this.targetGeneration = $.targetGeneration;
+        this.targetNetworkId = $.targetNetworkId;
+        this.targetProximityPlacementGroupId = $.targetProximityPlacementGroupId;
+        this.targetResourceGroupId = $.targetResourceGroupId;
+        this.targetVmName = $.targetVmName;
+        this.targetVmSize = $.targetVmSize;
+        this.testNetworkId = $.testNetworkId;
+        this.vmNics = $.vmNics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmReplicationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
-        private String agentUpgradeState;
-        private Double allocatedMemoryInMB;
-        private String discoveryType;
-        private String fabricDiscoveryMachineId;
-        private String failoverRecoveryPointId;
-        private String firmwareType;
-        private Double initialReplicationProcessedBytes;
-        private Integer initialReplicationProgressPercentage;
-        private Double initialReplicationTransferredBytes;
-        private String instanceType;
-        private String internalIdentifier;
-        private String isLastUpgradeSuccessful;
-        private List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
-        private String lastAgentUpgradeFailedJobId;
-        private String lastAgentUpgradeType;
-        private String lastRecoveryPointId;
-        private String lastRecoveryPointReceived;
-        private String lastRpoCalculatedTime;
-        private Double lastRpoInSeconds;
-        private String licenseType;
-        private InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
-        private String multiVmGroupName;
-        private String osType;
-        private String processServerId;
-        private String processServerName;
-        private Integer processorCoreCount;
-        private List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
-        private Double resyncProcessedBytes;
-        private Integer resyncProgressPercentage;
-        private String resyncRequired;
-        private String resyncState;
-        private Double resyncTransferredBytes;
-        private String runAsAccountId;
-        private String targetAvailabilitySetId;
-        private String targetAvailabilityZone;
-        private String targetBootDiagnosticsStorageAccountId;
-        private String targetGeneration;
-        private String targetNetworkId;
-        private String targetProximityPlacementGroupId;
-        private String targetResourceGroupId;
-        private String targetVmName;
-        private String targetVmSize;
-        private String testNetworkId;
-        private List<InMageRcmNicDetailsResponse> vmNics;
+        private InMageRcmReplicationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmReplicationDetailsResponse();
         }
 
         public Builder(InMageRcmReplicationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentUpgradeBlockingErrorDetails = defaults.agentUpgradeBlockingErrorDetails;
-    	      this.agentUpgradeState = defaults.agentUpgradeState;
-    	      this.allocatedMemoryInMB = defaults.allocatedMemoryInMB;
-    	      this.discoveryType = defaults.discoveryType;
-    	      this.fabricDiscoveryMachineId = defaults.fabricDiscoveryMachineId;
-    	      this.failoverRecoveryPointId = defaults.failoverRecoveryPointId;
-    	      this.firmwareType = defaults.firmwareType;
-    	      this.initialReplicationProcessedBytes = defaults.initialReplicationProcessedBytes;
-    	      this.initialReplicationProgressPercentage = defaults.initialReplicationProgressPercentage;
-    	      this.initialReplicationTransferredBytes = defaults.initialReplicationTransferredBytes;
-    	      this.instanceType = defaults.instanceType;
-    	      this.internalIdentifier = defaults.internalIdentifier;
-    	      this.isLastUpgradeSuccessful = defaults.isLastUpgradeSuccessful;
-    	      this.lastAgentUpgradeErrorDetails = defaults.lastAgentUpgradeErrorDetails;
-    	      this.lastAgentUpgradeFailedJobId = defaults.lastAgentUpgradeFailedJobId;
-    	      this.lastAgentUpgradeType = defaults.lastAgentUpgradeType;
-    	      this.lastRecoveryPointId = defaults.lastRecoveryPointId;
-    	      this.lastRecoveryPointReceived = defaults.lastRecoveryPointReceived;
-    	      this.lastRpoCalculatedTime = defaults.lastRpoCalculatedTime;
-    	      this.lastRpoInSeconds = defaults.lastRpoInSeconds;
-    	      this.licenseType = defaults.licenseType;
-    	      this.mobilityAgentDetails = defaults.mobilityAgentDetails;
-    	      this.multiVmGroupName = defaults.multiVmGroupName;
-    	      this.osType = defaults.osType;
-    	      this.processServerId = defaults.processServerId;
-    	      this.processServerName = defaults.processServerName;
-    	      this.processorCoreCount = defaults.processorCoreCount;
-    	      this.protectedDisks = defaults.protectedDisks;
-    	      this.resyncProcessedBytes = defaults.resyncProcessedBytes;
-    	      this.resyncProgressPercentage = defaults.resyncProgressPercentage;
-    	      this.resyncRequired = defaults.resyncRequired;
-    	      this.resyncState = defaults.resyncState;
-    	      this.resyncTransferredBytes = defaults.resyncTransferredBytes;
-    	      this.runAsAccountId = defaults.runAsAccountId;
-    	      this.targetAvailabilitySetId = defaults.targetAvailabilitySetId;
-    	      this.targetAvailabilityZone = defaults.targetAvailabilityZone;
-    	      this.targetBootDiagnosticsStorageAccountId = defaults.targetBootDiagnosticsStorageAccountId;
-    	      this.targetGeneration = defaults.targetGeneration;
-    	      this.targetNetworkId = defaults.targetNetworkId;
-    	      this.targetProximityPlacementGroupId = defaults.targetProximityPlacementGroupId;
-    	      this.targetResourceGroupId = defaults.targetResourceGroupId;
-    	      this.targetVmName = defaults.targetVmName;
-    	      this.targetVmSize = defaults.targetVmSize;
-    	      this.testNetworkId = defaults.testNetworkId;
-    	      this.vmNics = defaults.vmNics;
+            $ = new InMageRcmReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentUpgradeBlockingErrorDetails(List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails) {
-            this.agentUpgradeBlockingErrorDetails = Objects.requireNonNull(agentUpgradeBlockingErrorDetails);
+            $.agentUpgradeBlockingErrorDetails = agentUpgradeBlockingErrorDetails;
             return this;
         }
+
         public Builder agentUpgradeBlockingErrorDetails(InMageRcmAgentUpgradeBlockingErrorDetailsResponse... agentUpgradeBlockingErrorDetails) {
             return agentUpgradeBlockingErrorDetails(List.of(agentUpgradeBlockingErrorDetails));
         }
+
         public Builder agentUpgradeState(String agentUpgradeState) {
-            this.agentUpgradeState = Objects.requireNonNull(agentUpgradeState);
+            $.agentUpgradeState = agentUpgradeState;
             return this;
         }
+
         public Builder allocatedMemoryInMB(Double allocatedMemoryInMB) {
-            this.allocatedMemoryInMB = Objects.requireNonNull(allocatedMemoryInMB);
+            $.allocatedMemoryInMB = allocatedMemoryInMB;
             return this;
         }
+
         public Builder discoveryType(String discoveryType) {
-            this.discoveryType = Objects.requireNonNull(discoveryType);
+            $.discoveryType = discoveryType;
             return this;
         }
+
         public Builder fabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
-            this.fabricDiscoveryMachineId = Objects.requireNonNull(fabricDiscoveryMachineId);
+            $.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
             return this;
         }
+
         public Builder failoverRecoveryPointId(String failoverRecoveryPointId) {
-            this.failoverRecoveryPointId = Objects.requireNonNull(failoverRecoveryPointId);
+            $.failoverRecoveryPointId = failoverRecoveryPointId;
             return this;
         }
+
         public Builder firmwareType(String firmwareType) {
-            this.firmwareType = Objects.requireNonNull(firmwareType);
+            $.firmwareType = firmwareType;
             return this;
         }
+
         public Builder initialReplicationProcessedBytes(Double initialReplicationProcessedBytes) {
-            this.initialReplicationProcessedBytes = Objects.requireNonNull(initialReplicationProcessedBytes);
+            $.initialReplicationProcessedBytes = initialReplicationProcessedBytes;
             return this;
         }
+
         public Builder initialReplicationProgressPercentage(Integer initialReplicationProgressPercentage) {
-            this.initialReplicationProgressPercentage = Objects.requireNonNull(initialReplicationProgressPercentage);
+            $.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
+
         public Builder initialReplicationTransferredBytes(Double initialReplicationTransferredBytes) {
-            this.initialReplicationTransferredBytes = Objects.requireNonNull(initialReplicationTransferredBytes);
+            $.initialReplicationTransferredBytes = initialReplicationTransferredBytes;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder internalIdentifier(String internalIdentifier) {
-            this.internalIdentifier = Objects.requireNonNull(internalIdentifier);
+            $.internalIdentifier = internalIdentifier;
             return this;
         }
+
         public Builder isLastUpgradeSuccessful(String isLastUpgradeSuccessful) {
-            this.isLastUpgradeSuccessful = Objects.requireNonNull(isLastUpgradeSuccessful);
+            $.isLastUpgradeSuccessful = isLastUpgradeSuccessful;
             return this;
         }
+
         public Builder lastAgentUpgradeErrorDetails(List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails) {
-            this.lastAgentUpgradeErrorDetails = Objects.requireNonNull(lastAgentUpgradeErrorDetails);
+            $.lastAgentUpgradeErrorDetails = lastAgentUpgradeErrorDetails;
             return this;
         }
+
         public Builder lastAgentUpgradeErrorDetails(InMageRcmLastAgentUpgradeErrorDetailsResponse... lastAgentUpgradeErrorDetails) {
             return lastAgentUpgradeErrorDetails(List.of(lastAgentUpgradeErrorDetails));
         }
+
         public Builder lastAgentUpgradeFailedJobId(String lastAgentUpgradeFailedJobId) {
-            this.lastAgentUpgradeFailedJobId = Objects.requireNonNull(lastAgentUpgradeFailedJobId);
+            $.lastAgentUpgradeFailedJobId = lastAgentUpgradeFailedJobId;
             return this;
         }
+
         public Builder lastAgentUpgradeType(String lastAgentUpgradeType) {
-            this.lastAgentUpgradeType = Objects.requireNonNull(lastAgentUpgradeType);
+            $.lastAgentUpgradeType = lastAgentUpgradeType;
             return this;
         }
+
         public Builder lastRecoveryPointId(String lastRecoveryPointId) {
-            this.lastRecoveryPointId = Objects.requireNonNull(lastRecoveryPointId);
+            $.lastRecoveryPointId = lastRecoveryPointId;
             return this;
         }
+
         public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
-            this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived);
+            $.lastRecoveryPointReceived = lastRecoveryPointReceived;
             return this;
         }
+
         public Builder lastRpoCalculatedTime(String lastRpoCalculatedTime) {
-            this.lastRpoCalculatedTime = Objects.requireNonNull(lastRpoCalculatedTime);
+            $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
+
         public Builder lastRpoInSeconds(Double lastRpoInSeconds) {
-            this.lastRpoInSeconds = Objects.requireNonNull(lastRpoInSeconds);
+            $.lastRpoInSeconds = lastRpoInSeconds;
             return this;
         }
+
         public Builder licenseType(String licenseType) {
-            this.licenseType = Objects.requireNonNull(licenseType);
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder mobilityAgentDetails(InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails) {
-            this.mobilityAgentDetails = Objects.requireNonNull(mobilityAgentDetails);
+            $.mobilityAgentDetails = mobilityAgentDetails;
             return this;
         }
+
         public Builder multiVmGroupName(String multiVmGroupName) {
-            this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName);
+            $.multiVmGroupName = multiVmGroupName;
             return this;
         }
+
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder processServerId(String processServerId) {
-            this.processServerId = Objects.requireNonNull(processServerId);
+            $.processServerId = processServerId;
             return this;
         }
+
         public Builder processServerName(String processServerName) {
-            this.processServerName = Objects.requireNonNull(processServerName);
+            $.processServerName = processServerName;
             return this;
         }
+
         public Builder processorCoreCount(Integer processorCoreCount) {
-            this.processorCoreCount = Objects.requireNonNull(processorCoreCount);
+            $.processorCoreCount = processorCoreCount;
             return this;
         }
+
         public Builder protectedDisks(List<InMageRcmProtectedDiskDetailsResponse> protectedDisks) {
-            this.protectedDisks = Objects.requireNonNull(protectedDisks);
+            $.protectedDisks = protectedDisks;
             return this;
         }
+
         public Builder protectedDisks(InMageRcmProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
+
         public Builder resyncProcessedBytes(Double resyncProcessedBytes) {
-            this.resyncProcessedBytes = Objects.requireNonNull(resyncProcessedBytes);
+            $.resyncProcessedBytes = resyncProcessedBytes;
             return this;
         }
+
         public Builder resyncProgressPercentage(Integer resyncProgressPercentage) {
-            this.resyncProgressPercentage = Objects.requireNonNull(resyncProgressPercentage);
+            $.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
+
         public Builder resyncRequired(String resyncRequired) {
-            this.resyncRequired = Objects.requireNonNull(resyncRequired);
+            $.resyncRequired = resyncRequired;
             return this;
         }
+
         public Builder resyncState(String resyncState) {
-            this.resyncState = Objects.requireNonNull(resyncState);
+            $.resyncState = resyncState;
             return this;
         }
+
         public Builder resyncTransferredBytes(Double resyncTransferredBytes) {
-            this.resyncTransferredBytes = Objects.requireNonNull(resyncTransferredBytes);
+            $.resyncTransferredBytes = resyncTransferredBytes;
             return this;
         }
+
         public Builder runAsAccountId(String runAsAccountId) {
-            this.runAsAccountId = Objects.requireNonNull(runAsAccountId);
+            $.runAsAccountId = runAsAccountId;
             return this;
         }
+
         public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Objects.requireNonNull(targetAvailabilitySetId);
+            $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
+
         public Builder targetAvailabilityZone(String targetAvailabilityZone) {
-            this.targetAvailabilityZone = Objects.requireNonNull(targetAvailabilityZone);
+            $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
+
         public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = Objects.requireNonNull(targetBootDiagnosticsStorageAccountId);
+            $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
+
         public Builder targetGeneration(String targetGeneration) {
-            this.targetGeneration = Objects.requireNonNull(targetGeneration);
+            $.targetGeneration = targetGeneration;
             return this;
         }
+
         public Builder targetNetworkId(String targetNetworkId) {
-            this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
+            $.targetNetworkId = targetNetworkId;
             return this;
         }
+
         public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = Objects.requireNonNull(targetProximityPlacementGroupId);
+            $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
+
         public Builder targetResourceGroupId(String targetResourceGroupId) {
-            this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
+            $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
+
         public Builder targetVmName(String targetVmName) {
-            this.targetVmName = Objects.requireNonNull(targetVmName);
+            $.targetVmName = targetVmName;
             return this;
         }
+
         public Builder targetVmSize(String targetVmSize) {
-            this.targetVmSize = Objects.requireNonNull(targetVmSize);
+            $.targetVmSize = targetVmSize;
             return this;
         }
+
         public Builder testNetworkId(String testNetworkId) {
-            this.testNetworkId = Objects.requireNonNull(testNetworkId);
+            $.testNetworkId = testNetworkId;
             return this;
         }
+
         public Builder vmNics(List<InMageRcmNicDetailsResponse> vmNics) {
-            this.vmNics = Objects.requireNonNull(vmNics);
+            $.vmNics = vmNics;
             return this;
         }
+
         public Builder vmNics(InMageRcmNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
-        }        public InMageRcmReplicationDetailsResponse build() {
-            return new InMageRcmReplicationDetailsResponse(agentUpgradeBlockingErrorDetails, agentUpgradeState, allocatedMemoryInMB, discoveryType, fabricDiscoveryMachineId, failoverRecoveryPointId, firmwareType, initialReplicationProcessedBytes, initialReplicationProgressPercentage, initialReplicationTransferredBytes, instanceType, internalIdentifier, isLastUpgradeSuccessful, lastAgentUpgradeErrorDetails, lastAgentUpgradeFailedJobId, lastAgentUpgradeType, lastRecoveryPointId, lastRecoveryPointReceived, lastRpoCalculatedTime, lastRpoInSeconds, licenseType, mobilityAgentDetails, multiVmGroupName, osType, processServerId, processServerName, processorCoreCount, protectedDisks, resyncProcessedBytes, resyncProgressPercentage, resyncRequired, resyncState, resyncTransferredBytes, runAsAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetBootDiagnosticsStorageAccountId, targetGeneration, targetNetworkId, targetProximityPlacementGroupId, targetResourceGroupId, targetVmName, targetVmSize, testNetworkId, vmNics);
+        }
+
+        public InMageRcmReplicationDetailsResponse build() {
+            $.agentUpgradeBlockingErrorDetails = Objects.requireNonNull($.agentUpgradeBlockingErrorDetails, "expected parameter 'agentUpgradeBlockingErrorDetails' to be non-null");
+            $.agentUpgradeState = Objects.requireNonNull($.agentUpgradeState, "expected parameter 'agentUpgradeState' to be non-null");
+            $.allocatedMemoryInMB = Objects.requireNonNull($.allocatedMemoryInMB, "expected parameter 'allocatedMemoryInMB' to be non-null");
+            $.discoveryType = Objects.requireNonNull($.discoveryType, "expected parameter 'discoveryType' to be non-null");
+            $.fabricDiscoveryMachineId = Objects.requireNonNull($.fabricDiscoveryMachineId, "expected parameter 'fabricDiscoveryMachineId' to be non-null");
+            $.failoverRecoveryPointId = Objects.requireNonNull($.failoverRecoveryPointId, "expected parameter 'failoverRecoveryPointId' to be non-null");
+            $.firmwareType = Objects.requireNonNull($.firmwareType, "expected parameter 'firmwareType' to be non-null");
+            $.initialReplicationProcessedBytes = Objects.requireNonNull($.initialReplicationProcessedBytes, "expected parameter 'initialReplicationProcessedBytes' to be non-null");
+            $.initialReplicationProgressPercentage = Objects.requireNonNull($.initialReplicationProgressPercentage, "expected parameter 'initialReplicationProgressPercentage' to be non-null");
+            $.initialReplicationTransferredBytes = Objects.requireNonNull($.initialReplicationTransferredBytes, "expected parameter 'initialReplicationTransferredBytes' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.internalIdentifier = Objects.requireNonNull($.internalIdentifier, "expected parameter 'internalIdentifier' to be non-null");
+            $.isLastUpgradeSuccessful = Objects.requireNonNull($.isLastUpgradeSuccessful, "expected parameter 'isLastUpgradeSuccessful' to be non-null");
+            $.lastAgentUpgradeErrorDetails = Objects.requireNonNull($.lastAgentUpgradeErrorDetails, "expected parameter 'lastAgentUpgradeErrorDetails' to be non-null");
+            $.lastAgentUpgradeFailedJobId = Objects.requireNonNull($.lastAgentUpgradeFailedJobId, "expected parameter 'lastAgentUpgradeFailedJobId' to be non-null");
+            $.lastAgentUpgradeType = Objects.requireNonNull($.lastAgentUpgradeType, "expected parameter 'lastAgentUpgradeType' to be non-null");
+            $.lastRecoveryPointId = Objects.requireNonNull($.lastRecoveryPointId, "expected parameter 'lastRecoveryPointId' to be non-null");
+            $.lastRecoveryPointReceived = Objects.requireNonNull($.lastRecoveryPointReceived, "expected parameter 'lastRecoveryPointReceived' to be non-null");
+            $.lastRpoCalculatedTime = Objects.requireNonNull($.lastRpoCalculatedTime, "expected parameter 'lastRpoCalculatedTime' to be non-null");
+            $.lastRpoInSeconds = Objects.requireNonNull($.lastRpoInSeconds, "expected parameter 'lastRpoInSeconds' to be non-null");
+            $.licenseType = Objects.requireNonNull($.licenseType, "expected parameter 'licenseType' to be non-null");
+            $.mobilityAgentDetails = Objects.requireNonNull($.mobilityAgentDetails, "expected parameter 'mobilityAgentDetails' to be non-null");
+            $.multiVmGroupName = Objects.requireNonNull($.multiVmGroupName, "expected parameter 'multiVmGroupName' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.processServerId = Objects.requireNonNull($.processServerId, "expected parameter 'processServerId' to be non-null");
+            $.processServerName = Objects.requireNonNull($.processServerName, "expected parameter 'processServerName' to be non-null");
+            $.processorCoreCount = Objects.requireNonNull($.processorCoreCount, "expected parameter 'processorCoreCount' to be non-null");
+            $.protectedDisks = Objects.requireNonNull($.protectedDisks, "expected parameter 'protectedDisks' to be non-null");
+            $.resyncProcessedBytes = Objects.requireNonNull($.resyncProcessedBytes, "expected parameter 'resyncProcessedBytes' to be non-null");
+            $.resyncProgressPercentage = Objects.requireNonNull($.resyncProgressPercentage, "expected parameter 'resyncProgressPercentage' to be non-null");
+            $.resyncRequired = Objects.requireNonNull($.resyncRequired, "expected parameter 'resyncRequired' to be non-null");
+            $.resyncState = Objects.requireNonNull($.resyncState, "expected parameter 'resyncState' to be non-null");
+            $.resyncTransferredBytes = Objects.requireNonNull($.resyncTransferredBytes, "expected parameter 'resyncTransferredBytes' to be non-null");
+            $.runAsAccountId = Objects.requireNonNull($.runAsAccountId, "expected parameter 'runAsAccountId' to be non-null");
+            $.targetAvailabilitySetId = Objects.requireNonNull($.targetAvailabilitySetId, "expected parameter 'targetAvailabilitySetId' to be non-null");
+            $.targetAvailabilityZone = Objects.requireNonNull($.targetAvailabilityZone, "expected parameter 'targetAvailabilityZone' to be non-null");
+            $.targetBootDiagnosticsStorageAccountId = Objects.requireNonNull($.targetBootDiagnosticsStorageAccountId, "expected parameter 'targetBootDiagnosticsStorageAccountId' to be non-null");
+            $.targetGeneration = Objects.requireNonNull($.targetGeneration, "expected parameter 'targetGeneration' to be non-null");
+            $.targetNetworkId = Objects.requireNonNull($.targetNetworkId, "expected parameter 'targetNetworkId' to be non-null");
+            $.targetProximityPlacementGroupId = Objects.requireNonNull($.targetProximityPlacementGroupId, "expected parameter 'targetProximityPlacementGroupId' to be non-null");
+            $.targetResourceGroupId = Objects.requireNonNull($.targetResourceGroupId, "expected parameter 'targetResourceGroupId' to be non-null");
+            $.targetVmName = Objects.requireNonNull($.targetVmName, "expected parameter 'targetVmName' to be non-null");
+            $.targetVmSize = Objects.requireNonNull($.targetVmSize, "expected parameter 'targetVmSize' to be non-null");
+            $.testNetworkId = Objects.requireNonNull($.testNetworkId, "expected parameter 'testNetworkId' to be non-null");
+            $.vmNics = Objects.requireNonNull($.vmNics, "expected parameter 'vmNics' to be non-null");
+            return $;
         }
     }
+
 }

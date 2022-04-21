@@ -24,10 +24,10 @@ public final class ParentPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ParentPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="syncProperties", required=true)
-      private final SyncPropertiesResponse syncProperties;
+    private SyncPropertiesResponse syncProperties;
 
     public SyncPropertiesResponse syncProperties() {
         return this.syncProperties;
     }
 
-    public ParentPropertiesResponse(
-        @Nullable String id,
-        SyncPropertiesResponse syncProperties) {
-        this.id = id;
-        this.syncProperties = Objects.requireNonNull(syncProperties, "expected parameter 'syncProperties' to be non-null");
-    }
+    private ParentPropertiesResponse() {}
 
-    private ParentPropertiesResponse() {
-        this.id = null;
-        this.syncProperties = null;
+    private ParentPropertiesResponse(ParentPropertiesResponse $) {
+        this.id = $.id;
+        this.syncProperties = $.syncProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private SyncPropertiesResponse syncProperties;
+        private ParentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParentPropertiesResponse();
         }
 
         public Builder(ParentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.syncProperties = defaults.syncProperties;
+            $ = new ParentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder syncProperties(SyncPropertiesResponse syncProperties) {
-            this.syncProperties = Objects.requireNonNull(syncProperties);
+            $.syncProperties = syncProperties;
             return this;
-        }        public ParentPropertiesResponse build() {
-            return new ParentPropertiesResponse(id, syncProperties);
+        }
+
+        public ParentPropertiesResponse build() {
+            $.syncProperties = Objects.requireNonNull($.syncProperties, "expected parameter 'syncProperties' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -28,7 +28,7 @@ public final class GetOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="originName", required=true)
-      private final String originName;
+    private String originName;
 
     public String originName() {
         return this.originName;
@@ -39,7 +39,7 @@ public final class GetOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -50,73 +50,66 @@ public final class GetOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetOriginArgs(
-        String endpointName,
-        String originName,
-        String profileName,
-        String resourceGroupName) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.originName = Objects.requireNonNull(originName, "expected parameter 'originName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetOriginArgs() {}
 
-    private GetOriginArgs() {
-        this.endpointName = null;
-        this.originName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetOriginArgs(GetOriginArgs $) {
+        this.endpointName = $.endpointName;
+        this.originName = $.originName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOriginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
-        private String originName;
-        private String profileName;
-        private String resourceGroupName;
+        private GetOriginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOriginArgs();
         }
 
         public Builder(GetOriginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.originName = defaults.originName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetOriginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder originName(String originName) {
-            this.originName = Objects.requireNonNull(originName);
+            $.originName = originName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetOriginArgs build() {
-            return new GetOriginArgs(endpointName, originName, profileName, resourceGroupName);
+        }
+
+        public GetOriginArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.originName = Objects.requireNonNull($.originName, "expected parameter 'originName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

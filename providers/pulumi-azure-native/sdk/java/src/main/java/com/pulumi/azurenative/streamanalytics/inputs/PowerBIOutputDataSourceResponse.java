@@ -24,10 +24,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dataset")
-      private final @Nullable String dataset;
+    private @Nullable String dataset;
 
     public Optional<String> dataset() {
-        return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="groupName")
-      private final @Nullable String groupName;
+    private @Nullable String groupName;
 
     public Optional<String> groupName() {
-        return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
+        return Optional.ofNullable(this.groupName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable String refreshToken;
+    private @Nullable String refreshToken;
 
     public Optional<String> refreshToken() {
-        return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="table")
-      private final @Nullable String table;
+    private @Nullable String table;
 
     public Optional<String> table() {
-        return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tokenUserDisplayName")
-      private final @Nullable String tokenUserDisplayName;
+    private @Nullable String tokenUserDisplayName;
 
     public Optional<String> tokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserDisplayName);
+        return Optional.ofNullable(this.tokenUserDisplayName);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tokenUserPrincipalName")
-      private final @Nullable String tokenUserPrincipalName;
+    private @Nullable String tokenUserPrincipalName;
 
     public Optional<String> tokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.tokenUserPrincipalName);
+        return Optional.ofNullable(this.tokenUserPrincipalName);
     }
 
     /**
@@ -102,109 +102,87 @@ public final class PowerBIOutputDataSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PowerBIOutputDataSourceResponse(
-        @Nullable String dataset,
-        @Nullable String groupId,
-        @Nullable String groupName,
-        @Nullable String refreshToken,
-        @Nullable String table,
-        @Nullable String tokenUserDisplayName,
-        @Nullable String tokenUserPrincipalName,
-        String type) {
-        this.dataset = dataset;
-        this.groupId = groupId;
-        this.groupName = groupName;
-        this.refreshToken = refreshToken;
-        this.table = table;
-        this.tokenUserDisplayName = tokenUserDisplayName;
-        this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private PowerBIOutputDataSourceResponse() {}
 
-    private PowerBIOutputDataSourceResponse() {
-        this.dataset = null;
-        this.groupId = null;
-        this.groupName = null;
-        this.refreshToken = null;
-        this.table = null;
-        this.tokenUserDisplayName = null;
-        this.tokenUserPrincipalName = null;
-        this.type = null;
+    private PowerBIOutputDataSourceResponse(PowerBIOutputDataSourceResponse $) {
+        this.dataset = $.dataset;
+        this.groupId = $.groupId;
+        this.groupName = $.groupName;
+        this.refreshToken = $.refreshToken;
+        this.table = $.table;
+        this.tokenUserDisplayName = $.tokenUserDisplayName;
+        this.tokenUserPrincipalName = $.tokenUserPrincipalName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PowerBIOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataset;
-        private @Nullable String groupId;
-        private @Nullable String groupName;
-        private @Nullable String refreshToken;
-        private @Nullable String table;
-        private @Nullable String tokenUserDisplayName;
-        private @Nullable String tokenUserPrincipalName;
-        private String type;
+        private PowerBIOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PowerBIOutputDataSourceResponse();
         }
 
         public Builder(PowerBIOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.groupId = defaults.groupId;
-    	      this.groupName = defaults.groupName;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.table = defaults.table;
-    	      this.tokenUserDisplayName = defaults.tokenUserDisplayName;
-    	      this.tokenUserPrincipalName = defaults.tokenUserPrincipalName;
-    	      this.type = defaults.type;
+            $ = new PowerBIOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
+
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
+
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
+
         public Builder table(@Nullable String table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
+
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = tokenUserDisplayName;
+            $.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
+
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = tokenUserPrincipalName;
+            $.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PowerBIOutputDataSourceResponse build() {
-            return new PowerBIOutputDataSourceResponse(dataset, groupId, groupName, refreshToken, table, tokenUserDisplayName, tokenUserPrincipalName, type);
+        }
+
+        public PowerBIOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

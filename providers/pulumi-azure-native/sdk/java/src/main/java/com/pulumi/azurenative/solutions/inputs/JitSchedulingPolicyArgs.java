@@ -5,7 +5,6 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class JitSchedulingPolicyArgs extends com.pulumi.resources.Resource
     public static final JitSchedulingPolicyArgs Empty = new JitSchedulingPolicyArgs();
 
     @Import(name="duration", required=true)
-      private final Output<String> duration;
+    private Output<String> duration;
 
     public Output<String> duration() {
         return this.duration;
@@ -30,63 +29,60 @@ public final class JitSchedulingPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public JitSchedulingPolicyArgs(
-        Output<String> duration,
-        Output<String> startTime) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private JitSchedulingPolicyArgs() {}
 
-    private JitSchedulingPolicyArgs() {
-        this.duration = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private JitSchedulingPolicyArgs(JitSchedulingPolicyArgs $) {
+        this.duration = $.duration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitSchedulingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> duration;
-        private Output<String> startTime;
+        private JitSchedulingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitSchedulingPolicyArgs();
         }
 
         public Builder(JitSchedulingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.startTime = defaults.startTime;
+            $ = new JitSchedulingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<String> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public JitSchedulingPolicyArgs build() {
-            return new JitSchedulingPolicyArgs(duration, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public JitSchedulingPolicyArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

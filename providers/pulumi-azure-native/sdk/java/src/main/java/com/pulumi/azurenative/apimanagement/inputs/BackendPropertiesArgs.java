@@ -6,8 +6,8 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.BackendServiceFabricClusterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BackendPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceFabricCluster")
-      private final @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
+    private @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
-    public Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster() {
-        return this.serviceFabricCluster == null ? Codegen.empty() : this.serviceFabricCluster;
+    public Optional<Output<BackendServiceFabricClusterPropertiesArgs>> serviceFabricCluster() {
+        return Optional.ofNullable(this.serviceFabricCluster);
     }
 
-    public BackendPropertiesArgs(@Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
-        this.serviceFabricCluster = serviceFabricCluster;
-    }
+    private BackendPropertiesArgs() {}
 
-    private BackendPropertiesArgs() {
-        this.serviceFabricCluster = Codegen.empty();
+    private BackendPropertiesArgs(BackendPropertiesArgs $) {
+        this.serviceFabricCluster = $.serviceFabricCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
+        private BackendPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendPropertiesArgs();
         }
 
         public Builder(BackendPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceFabricCluster = defaults.serviceFabricCluster;
+            $ = new BackendPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceFabricCluster(@Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
-            this.serviceFabricCluster = serviceFabricCluster;
+            $.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
-        public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesArgs serviceFabricCluster) {
-            this.serviceFabricCluster = Codegen.ofNullable(serviceFabricCluster);
-            return this;
-        }        public BackendPropertiesArgs build() {
-            return new BackendPropertiesArgs(serviceFabricCluster);
+
+        public Builder serviceFabricCluster(BackendServiceFabricClusterPropertiesArgs serviceFabricCluster) {
+            return serviceFabricCluster(Output.of(serviceFabricCluster));
+        }
+
+        public BackendPropertiesArgs build() {
+            return $;
         }
     }
+
 }

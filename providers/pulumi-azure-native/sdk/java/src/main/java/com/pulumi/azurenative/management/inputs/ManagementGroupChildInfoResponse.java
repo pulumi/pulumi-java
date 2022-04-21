@@ -24,10 +24,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="children")
-      private final @Nullable List<ManagementGroupChildInfoResponse> children;
+    private @Nullable List<ManagementGroupChildInfoResponse> children;
 
-    public List<ManagementGroupChildInfoResponse> children() {
-        return this.children == null ? List.of() : this.children;
+    public Optional<List<ManagementGroupChildInfoResponse>> children() {
+        return Optional.ofNullable(this.children);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,85 +68,72 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ManagementGroupChildInfoResponse(
-        @Nullable List<ManagementGroupChildInfoResponse> children,
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String type) {
-        this.children = children;
-        this.displayName = displayName;
-        this.id = id;
-        this.name = name;
-        this.type = type;
-    }
+    private ManagementGroupChildInfoResponse() {}
 
-    private ManagementGroupChildInfoResponse() {
-        this.children = List.of();
-        this.displayName = null;
-        this.id = null;
-        this.name = null;
-        this.type = null;
+    private ManagementGroupChildInfoResponse(ManagementGroupChildInfoResponse $) {
+        this.children = $.children;
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementGroupChildInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ManagementGroupChildInfoResponse> children;
-        private @Nullable String displayName;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String type;
+        private ManagementGroupChildInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementGroupChildInfoResponse();
         }
 
         public Builder(ManagementGroupChildInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.children = defaults.children;
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ManagementGroupChildInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder children(@Nullable List<ManagementGroupChildInfoResponse> children) {
-            this.children = children;
+            $.children = children;
             return this;
         }
+
         public Builder children(ManagementGroupChildInfoResponse... children) {
             return children(List.of(children));
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ManagementGroupChildInfoResponse build() {
-            return new ManagementGroupChildInfoResponse(children, displayName, id, name, type);
+        }
+
+        public ManagementGroupChildInfoResponse build() {
+            return $;
         }
     }
+
 }

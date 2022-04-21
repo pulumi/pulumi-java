@@ -22,7 +22,7 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="queryTimeout", required=true)
-      private final Double queryTimeout;
+    private Double queryTimeout;
 
     public Double queryTimeout() {
         return this.queryTimeout;
@@ -33,7 +33,7 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlQuery", required=true)
-      private final String sqlQuery;
+    private String sqlQuery;
 
     public String sqlQuery() {
         return this.sqlQuery;
@@ -44,7 +44,7 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlStoredProcedureName", required=true)
-      private final String sqlStoredProcedureName;
+    private String sqlStoredProcedureName;
 
     public String sqlStoredProcedureName() {
         return this.sqlStoredProcedureName;
@@ -55,73 +55,66 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlTableName", required=true)
-      private final String sqlTableName;
+    private String sqlTableName;
 
     public String sqlTableName() {
         return this.sqlTableName;
     }
 
-    public DatasetResponseSqlDataPath(
-        Double queryTimeout,
-        String sqlQuery,
-        String sqlStoredProcedureName,
-        String sqlTableName) {
-        this.queryTimeout = Objects.requireNonNull(queryTimeout, "expected parameter 'queryTimeout' to be non-null");
-        this.sqlQuery = Objects.requireNonNull(sqlQuery, "expected parameter 'sqlQuery' to be non-null");
-        this.sqlStoredProcedureName = Objects.requireNonNull(sqlStoredProcedureName, "expected parameter 'sqlStoredProcedureName' to be non-null");
-        this.sqlTableName = Objects.requireNonNull(sqlTableName, "expected parameter 'sqlTableName' to be non-null");
-    }
+    private DatasetResponseSqlDataPath() {}
 
-    private DatasetResponseSqlDataPath() {
-        this.queryTimeout = null;
-        this.sqlQuery = null;
-        this.sqlStoredProcedureName = null;
-        this.sqlTableName = null;
+    private DatasetResponseSqlDataPath(DatasetResponseSqlDataPath $) {
+        this.queryTimeout = $.queryTimeout;
+        this.sqlQuery = $.sqlQuery;
+        this.sqlStoredProcedureName = $.sqlStoredProcedureName;
+        this.sqlTableName = $.sqlTableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetResponseSqlDataPath defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double queryTimeout;
-        private String sqlQuery;
-        private String sqlStoredProcedureName;
-        private String sqlTableName;
+        private DatasetResponseSqlDataPath $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetResponseSqlDataPath();
         }
 
         public Builder(DatasetResponseSqlDataPath defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sqlQuery = defaults.sqlQuery;
-    	      this.sqlStoredProcedureName = defaults.sqlStoredProcedureName;
-    	      this.sqlTableName = defaults.sqlTableName;
+            $ = new DatasetResponseSqlDataPath(Objects.requireNonNull(defaults));
         }
 
         public Builder queryTimeout(Double queryTimeout) {
-            this.queryTimeout = Objects.requireNonNull(queryTimeout);
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder sqlQuery(String sqlQuery) {
-            this.sqlQuery = Objects.requireNonNull(sqlQuery);
+            $.sqlQuery = sqlQuery;
             return this;
         }
+
         public Builder sqlStoredProcedureName(String sqlStoredProcedureName) {
-            this.sqlStoredProcedureName = Objects.requireNonNull(sqlStoredProcedureName);
+            $.sqlStoredProcedureName = sqlStoredProcedureName;
             return this;
         }
+
         public Builder sqlTableName(String sqlTableName) {
-            this.sqlTableName = Objects.requireNonNull(sqlTableName);
+            $.sqlTableName = sqlTableName;
             return this;
-        }        public DatasetResponseSqlDataPath build() {
-            return new DatasetResponseSqlDataPath(queryTimeout, sqlQuery, sqlStoredProcedureName, sqlTableName);
+        }
+
+        public DatasetResponseSqlDataPath build() {
+            $.queryTimeout = Objects.requireNonNull($.queryTimeout, "expected parameter 'queryTimeout' to be non-null");
+            $.sqlQuery = Objects.requireNonNull($.sqlQuery, "expected parameter 'sqlQuery' to be non-null");
+            $.sqlStoredProcedureName = Objects.requireNonNull($.sqlStoredProcedureName, "expected parameter 'sqlStoredProcedureName' to be non-null");
+            $.sqlTableName = Objects.requireNonNull($.sqlTableName, "expected parameter 'sqlTableName' to be non-null");
+            return $;
         }
     }
+
 }

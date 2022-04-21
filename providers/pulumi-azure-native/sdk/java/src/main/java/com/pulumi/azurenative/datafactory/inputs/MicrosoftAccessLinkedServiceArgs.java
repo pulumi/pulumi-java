@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<Object> authenticationType;
+    private @Nullable Output<Object> authenticationType;
 
-    public Output<Object> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<Object>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,7 +66,7 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="connectionString", required=true)
-      private final Output<Object> connectionString;
+    private Output<Object> connectionString;
 
     public Output<Object> connectionString() {
         return this.connectionString;
@@ -76,10 +77,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="credential")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential() {
-        return this.credential == null ? Codegen.empty() : this.credential;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> credential() {
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -132,7 +133,7 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -143,183 +144,154 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<Object> userName;
+    private @Nullable Output<Object> userName;
 
-    public Output<Object> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<Object>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public MicrosoftAccessLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> authenticationType,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        Output<Object> connectionString,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Output<String> type,
-        @Nullable Output<Object> userName) {
-        this.annotations = annotations;
-        this.authenticationType = authenticationType;
-        this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = userName;
-    }
+    private MicrosoftAccessLinkedServiceArgs() {}
 
-    private MicrosoftAccessLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.credential = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private MicrosoftAccessLinkedServiceArgs(MicrosoftAccessLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MicrosoftAccessLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> authenticationType;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private Output<Object> connectionString;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Output<String> type;
-        private @Nullable Output<Object> userName;
+        private MicrosoftAccessLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MicrosoftAccessLinkedServiceArgs();
         }
 
         public Builder(MicrosoftAccessLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new MicrosoftAccessLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(@Nullable Output<Object> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable Object authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(Object authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder connectionString(Output<Object> connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder connectionString(Object connectionString) {
-            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
-            return this;
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder credential(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
-        public Builder credential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> credential) {
-            this.credential = Codegen.ofNullable(credential);
-            return this;
+
+        public Builder credential(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> credential) {
+            return credential(Output.of(credential));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(@Nullable Output<Object> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable Object userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public MicrosoftAccessLinkedServiceArgs build() {
-            return new MicrosoftAccessLinkedServiceArgs(annotations, authenticationType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, type, userName);
+
+        public Builder userName(Object userName) {
+            return userName(Output.of(userName));
+        }
+
+        public MicrosoftAccessLinkedServiceArgs build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

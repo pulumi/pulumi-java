@@ -23,10 +23,10 @@ public final class ApplicationGatewayCustomErrorResponse extends com.pulumi.reso
      * 
      */
     @Import(name="customErrorPageUrl")
-      private final @Nullable String customErrorPageUrl;
+    private @Nullable String customErrorPageUrl;
 
     public Optional<String> customErrorPageUrl() {
-        return this.customErrorPageUrl == null ? Optional.empty() : Optional.ofNullable(this.customErrorPageUrl);
+        return Optional.ofNullable(this.customErrorPageUrl);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApplicationGatewayCustomErrorResponse extends com.pulumi.reso
      * 
      */
     @Import(name="statusCode")
-      private final @Nullable String statusCode;
+    private @Nullable String statusCode;
 
     public Optional<String> statusCode() {
-        return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
+        return Optional.ofNullable(this.statusCode);
     }
 
-    public ApplicationGatewayCustomErrorResponse(
-        @Nullable String customErrorPageUrl,
-        @Nullable String statusCode) {
-        this.customErrorPageUrl = customErrorPageUrl;
-        this.statusCode = statusCode;
-    }
+    private ApplicationGatewayCustomErrorResponse() {}
 
-    private ApplicationGatewayCustomErrorResponse() {
-        this.customErrorPageUrl = null;
-        this.statusCode = null;
+    private ApplicationGatewayCustomErrorResponse(ApplicationGatewayCustomErrorResponse $) {
+        this.customErrorPageUrl = $.customErrorPageUrl;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayCustomErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customErrorPageUrl;
-        private @Nullable String statusCode;
+        private ApplicationGatewayCustomErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayCustomErrorResponse();
         }
 
         public Builder(ApplicationGatewayCustomErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customErrorPageUrl = defaults.customErrorPageUrl;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ApplicationGatewayCustomErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
-            this.customErrorPageUrl = customErrorPageUrl;
+            $.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
+
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = statusCode;
+            $.statusCode = statusCode;
             return this;
-        }        public ApplicationGatewayCustomErrorResponse build() {
-            return new ApplicationGatewayCustomErrorResponse(customErrorPageUrl, statusCode);
+        }
+
+        public ApplicationGatewayCustomErrorResponse build() {
+            return $;
         }
     }
+
 }

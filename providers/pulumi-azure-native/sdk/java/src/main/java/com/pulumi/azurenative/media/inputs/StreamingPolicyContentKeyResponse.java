@@ -25,10 +25,10 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="policyName")
-      private final @Nullable String policyName;
+    private @Nullable String policyName;
 
     public Optional<String> policyName() {
-        return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class StreamingPolicyContentKeyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="tracks")
-      private final @Nullable List<TrackSelectionResponse> tracks;
+    private @Nullable List<TrackSelectionResponse> tracks;
 
-    public List<TrackSelectionResponse> tracks() {
-        return this.tracks == null ? List.of() : this.tracks;
+    public Optional<List<TrackSelectionResponse>> tracks() {
+        return Optional.ofNullable(this.tracks);
     }
 
-    public StreamingPolicyContentKeyResponse(
-        @Nullable String label,
-        @Nullable String policyName,
-        @Nullable List<TrackSelectionResponse> tracks) {
-        this.label = label;
-        this.policyName = policyName;
-        this.tracks = tracks;
-    }
+    private StreamingPolicyContentKeyResponse() {}
 
-    private StreamingPolicyContentKeyResponse() {
-        this.label = null;
-        this.policyName = null;
-        this.tracks = List.of();
+    private StreamingPolicyContentKeyResponse(StreamingPolicyContentKeyResponse $) {
+        this.label = $.label;
+        this.policyName = $.policyName;
+        this.tracks = $.tracks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyContentKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String label;
-        private @Nullable String policyName;
-        private @Nullable List<TrackSelectionResponse> tracks;
+        private StreamingPolicyContentKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyContentKeyResponse();
         }
 
         public Builder(StreamingPolicyContentKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.policyName = defaults.policyName;
-    	      this.tracks = defaults.tracks;
+            $ = new StreamingPolicyContentKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
+
         public Builder tracks(@Nullable List<TrackSelectionResponse> tracks) {
-            this.tracks = tracks;
+            $.tracks = tracks;
             return this;
         }
+
         public Builder tracks(TrackSelectionResponse... tracks) {
             return tracks(List.of(tracks));
-        }        public StreamingPolicyContentKeyResponse build() {
-            return new StreamingPolicyContentKeyResponse(label, policyName, tracks);
+        }
+
+        public StreamingPolicyContentKeyResponse build() {
+            return $;
         }
     }
+
 }

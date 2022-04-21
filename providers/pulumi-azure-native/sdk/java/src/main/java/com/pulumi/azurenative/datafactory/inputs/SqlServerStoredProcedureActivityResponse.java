@@ -32,10 +32,10 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -65,7 +65,7 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -76,10 +76,10 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="storedProcedureName", required=true)
-      private final Object storedProcedureName;
+    private Object storedProcedureName;
 
     public Object storedProcedureName() {
         return this.storedProcedureName;
@@ -98,10 +98,10 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="storedProcedureParameters")
-      private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
+    private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
-    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
-        return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
+    public Optional<Map<String,StoredProcedureParameterResponse>> storedProcedureParameters() {
+        return Optional.ofNullable(this.storedProcedureParameters);
     }
 
     /**
@@ -110,7 +110,7 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -121,124 +121,104 @@ public final class SqlServerStoredProcedureActivityResponse extends com.pulumi.r
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public SqlServerStoredProcedureActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        Object storedProcedureName,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.storedProcedureName = Objects.requireNonNull(storedProcedureName, "expected parameter 'storedProcedureName' to be non-null");
-        this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private SqlServerStoredProcedureActivityResponse() {}
 
-    private SqlServerStoredProcedureActivityResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.storedProcedureName = null;
-        this.storedProcedureParameters = Map.of();
-        this.type = null;
-        this.userProperties = List.of();
+    private SqlServerStoredProcedureActivityResponse(SqlServerStoredProcedureActivityResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.storedProcedureName = $.storedProcedureName;
+        this.storedProcedureParameters = $.storedProcedureParameters;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerStoredProcedureActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private Object storedProcedureName;
-        private @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private SqlServerStoredProcedureActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerStoredProcedureActivityResponse();
         }
 
         public Builder(SqlServerStoredProcedureActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.storedProcedureName = defaults.storedProcedureName;
-    	      this.storedProcedureParameters = defaults.storedProcedureParameters;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new SqlServerStoredProcedureActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder storedProcedureName(Object storedProcedureName) {
-            this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
+            $.storedProcedureName = storedProcedureName;
             return this;
         }
+
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
-            this.storedProcedureParameters = storedProcedureParameters;
+            $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public SqlServerStoredProcedureActivityResponse build() {
-            return new SqlServerStoredProcedureActivityResponse(dependsOn, description, linkedServiceName, name, policy, storedProcedureName, storedProcedureParameters, type, userProperties);
+        }
+
+        public SqlServerStoredProcedureActivityResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.storedProcedureName = Objects.requireNonNull($.storedProcedureName, "expected parameter 'storedProcedureName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contentVersion")
-      private final @Nullable String contentVersion;
+    private @Nullable String contentVersion;
 
     public Optional<String> contentVersion() {
-        return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
+        return Optional.ofNullable(this.contentVersion);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class ParametersLinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public ParametersLinkResponse(
-        @Nullable String contentVersion,
-        String uri) {
-        this.contentVersion = contentVersion;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ParametersLinkResponse() {}
 
-    private ParametersLinkResponse() {
-        this.contentVersion = null;
-        this.uri = null;
+    private ParametersLinkResponse(ParametersLinkResponse $) {
+        this.contentVersion = $.contentVersion;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParametersLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentVersion;
-        private String uri;
+        private ParametersLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParametersLinkResponse();
         }
 
         public Builder(ParametersLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentVersion = defaults.contentVersion;
-    	      this.uri = defaults.uri;
+            $ = new ParametersLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = contentVersion;
+            $.contentVersion = contentVersion;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public ParametersLinkResponse build() {
-            return new ParametersLinkResponse(contentVersion, uri);
+        }
+
+        public ParametersLinkResponse build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

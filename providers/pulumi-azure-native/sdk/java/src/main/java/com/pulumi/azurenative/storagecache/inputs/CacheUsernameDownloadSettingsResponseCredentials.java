@@ -23,10 +23,10 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
      * 
      */
     @Import(name="bindDn")
-      private final @Nullable String bindDn;
+    private @Nullable String bindDn;
 
     public Optional<String> bindDn() {
-        return this.bindDn == null ? Optional.empty() : Optional.ofNullable(this.bindDn);
+        return Optional.ofNullable(this.bindDn);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
      * 
      */
     @Import(name="bindPassword")
-      private final @Nullable String bindPassword;
+    private @Nullable String bindPassword;
 
     public Optional<String> bindPassword() {
-        return this.bindPassword == null ? Optional.empty() : Optional.ofNullable(this.bindPassword);
+        return Optional.ofNullable(this.bindPassword);
     }
 
-    public CacheUsernameDownloadSettingsResponseCredentials(
-        @Nullable String bindDn,
-        @Nullable String bindPassword) {
-        this.bindDn = bindDn;
-        this.bindPassword = bindPassword;
-    }
+    private CacheUsernameDownloadSettingsResponseCredentials() {}
 
-    private CacheUsernameDownloadSettingsResponseCredentials() {
-        this.bindDn = null;
-        this.bindPassword = null;
+    private CacheUsernameDownloadSettingsResponseCredentials(CacheUsernameDownloadSettingsResponseCredentials $) {
+        this.bindDn = $.bindDn;
+        this.bindPassword = $.bindPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheUsernameDownloadSettingsResponseCredentials defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bindDn;
-        private @Nullable String bindPassword;
+        private CacheUsernameDownloadSettingsResponseCredentials $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheUsernameDownloadSettingsResponseCredentials();
         }
 
         public Builder(CacheUsernameDownloadSettingsResponseCredentials defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindDn = defaults.bindDn;
-    	      this.bindPassword = defaults.bindPassword;
+            $ = new CacheUsernameDownloadSettingsResponseCredentials(Objects.requireNonNull(defaults));
         }
 
         public Builder bindDn(@Nullable String bindDn) {
-            this.bindDn = bindDn;
+            $.bindDn = bindDn;
             return this;
         }
+
         public Builder bindPassword(@Nullable String bindPassword) {
-            this.bindPassword = bindPassword;
+            $.bindPassword = bindPassword;
             return this;
-        }        public CacheUsernameDownloadSettingsResponseCredentials build() {
-            return new CacheUsernameDownloadSettingsResponseCredentials(bindDn, bindPassword);
+        }
+
+        public CacheUsernameDownloadSettingsResponseCredentials build() {
+            return $;
         }
     }
+
 }

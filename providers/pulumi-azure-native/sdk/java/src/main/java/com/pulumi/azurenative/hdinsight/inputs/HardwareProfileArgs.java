@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public HardwareProfileArgs(@Nullable Output<String> vmSize) {
-        this.vmSize = vmSize;
-    }
+    private HardwareProfileArgs() {}
 
-    private HardwareProfileArgs() {
-        this.vmSize = Codegen.empty();
+    private HardwareProfileArgs(HardwareProfileArgs $) {
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HardwareProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vmSize;
+        private HardwareProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HardwareProfileArgs();
         }
 
         public Builder(HardwareProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vmSize = defaults.vmSize;
+            $ = new HardwareProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public HardwareProfileArgs build() {
-            return new HardwareProfileArgs(vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public HardwareProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ServiceProviderResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable ServiceProviderPropertiesResponse properties;
+    private @Nullable ServiceProviderPropertiesResponse properties;
 
     public Optional<ServiceProviderPropertiesResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
-    public ServiceProviderResponse(@Nullable ServiceProviderPropertiesResponse properties) {
-        this.properties = properties;
-    }
+    private ServiceProviderResponse() {}
 
-    private ServiceProviderResponse() {
-        this.properties = null;
+    private ServiceProviderResponse(ServiceProviderResponse $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceProviderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceProviderPropertiesResponse properties;
+        private ServiceProviderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceProviderResponse();
         }
 
         public Builder(ServiceProviderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new ServiceProviderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable ServiceProviderPropertiesResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
-        }        public ServiceProviderResponse build() {
-            return new ServiceProviderResponse(properties);
+        }
+
+        public ServiceProviderResponse build() {
+            return $;
         }
     }
+
 }

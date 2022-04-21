@@ -5,10 +5,10 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class UserObjectReceiverValueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="userObjectIds")
-      private final @Nullable Output<List<String>> userObjectIds;
+    private @Nullable Output<List<String>> userObjectIds;
 
-    public Output<List<String>> userObjectIds() {
-        return this.userObjectIds == null ? Codegen.empty() : this.userObjectIds;
+    public Optional<Output<List<String>>> userObjectIds() {
+        return Optional.ofNullable(this.userObjectIds);
     }
 
-    public UserObjectReceiverValueArgs(@Nullable Output<List<String>> userObjectIds) {
-        this.userObjectIds = userObjectIds;
-    }
+    private UserObjectReceiverValueArgs() {}
 
-    private UserObjectReceiverValueArgs() {
-        this.userObjectIds = Codegen.empty();
+    private UserObjectReceiverValueArgs(UserObjectReceiverValueArgs $) {
+        this.userObjectIds = $.userObjectIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserObjectReceiverValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> userObjectIds;
+        private UserObjectReceiverValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserObjectReceiverValueArgs();
         }
 
         public Builder(UserObjectReceiverValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userObjectIds = defaults.userObjectIds;
+            $ = new UserObjectReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userObjectIds(@Nullable Output<List<String>> userObjectIds) {
-            this.userObjectIds = userObjectIds;
+            $.userObjectIds = userObjectIds;
             return this;
         }
-        public Builder userObjectIds(@Nullable List<String> userObjectIds) {
-            this.userObjectIds = Codegen.ofNullable(userObjectIds);
-            return this;
+
+        public Builder userObjectIds(List<String> userObjectIds) {
+            return userObjectIds(Output.of(userObjectIds));
         }
+
         public Builder userObjectIds(String... userObjectIds) {
             return userObjectIds(List.of(userObjectIds));
-        }        public UserObjectReceiverValueArgs build() {
-            return new UserObjectReceiverValueArgs(userObjectIds);
+        }
+
+        public UserObjectReceiverValueArgs build() {
+            return $;
         }
     }
+
 }

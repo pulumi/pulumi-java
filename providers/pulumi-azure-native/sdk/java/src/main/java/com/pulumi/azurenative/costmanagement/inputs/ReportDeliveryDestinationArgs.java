@@ -5,9 +5,9 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="container", required=true)
-      private final Output<String> container;
+    private Output<String> container;
 
     public Output<String> container() {
         return this.container;
@@ -35,7 +35,7 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -46,76 +46,70 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rootFolderPath")
-      private final @Nullable Output<String> rootFolderPath;
+    private @Nullable Output<String> rootFolderPath;
 
-    public Output<String> rootFolderPath() {
-        return this.rootFolderPath == null ? Codegen.empty() : this.rootFolderPath;
+    public Optional<Output<String>> rootFolderPath() {
+        return Optional.ofNullable(this.rootFolderPath);
     }
 
-    public ReportDeliveryDestinationArgs(
-        Output<String> container,
-        Output<String> resourceId,
-        @Nullable Output<String> rootFolderPath) {
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.rootFolderPath = rootFolderPath;
-    }
+    private ReportDeliveryDestinationArgs() {}
 
-    private ReportDeliveryDestinationArgs() {
-        this.container = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.rootFolderPath = Codegen.empty();
+    private ReportDeliveryDestinationArgs(ReportDeliveryDestinationArgs $) {
+        this.container = $.container;
+        this.resourceId = $.resourceId;
+        this.rootFolderPath = $.rootFolderPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportDeliveryDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> container;
-        private Output<String> resourceId;
-        private @Nullable Output<String> rootFolderPath;
+        private ReportDeliveryDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportDeliveryDestinationArgs();
         }
 
         public Builder(ReportDeliveryDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.resourceId = defaults.resourceId;
-    	      this.rootFolderPath = defaults.rootFolderPath;
+            $ = new ReportDeliveryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder container(Output<String> container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder container(String container) {
-            this.container = Output.of(Objects.requireNonNull(container));
-            return this;
+            return container(Output.of(container));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder rootFolderPath(@Nullable Output<String> rootFolderPath) {
-            this.rootFolderPath = rootFolderPath;
+            $.rootFolderPath = rootFolderPath;
             return this;
         }
-        public Builder rootFolderPath(@Nullable String rootFolderPath) {
-            this.rootFolderPath = Codegen.ofNullable(rootFolderPath);
-            return this;
-        }        public ReportDeliveryDestinationArgs build() {
-            return new ReportDeliveryDestinationArgs(container, resourceId, rootFolderPath);
+
+        public Builder rootFolderPath(String rootFolderPath) {
+            return rootFolderPath(Output.of(rootFolderPath));
+        }
+
+        public ReportDeliveryDestinationArgs build() {
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

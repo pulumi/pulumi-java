@@ -17,7 +17,7 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="alias", required=true)
-      private final String alias;
+    private String alias;
 
     public String alias() {
         return this.alias;
@@ -28,7 +28,7 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,64 +39,59 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDisasterRecoveryConfigArgs(
-        String alias,
-        String namespaceName,
-        String resourceGroupName) {
-        this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDisasterRecoveryConfigArgs() {}
 
-    private GetDisasterRecoveryConfigArgs() {
-        this.alias = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetDisasterRecoveryConfigArgs(GetDisasterRecoveryConfigArgs $) {
+        this.alias = $.alias;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDisasterRecoveryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alias;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetDisasterRecoveryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDisasterRecoveryConfigArgs();
         }
 
         public Builder(GetDisasterRecoveryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDisasterRecoveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(String alias) {
-            this.alias = Objects.requireNonNull(alias);
+            $.alias = alias;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDisasterRecoveryConfigArgs build() {
-            return new GetDisasterRecoveryConfigArgs(alias, namespaceName, resourceGroupName);
+        }
+
+        public GetDisasterRecoveryConfigArgs build() {
+            $.alias = Objects.requireNonNull($.alias, "expected parameter 'alias' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

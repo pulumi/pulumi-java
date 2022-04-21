@@ -21,7 +21,7 @@ public final class VirtualNetworkBgpCommunitiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="regionalCommunity", required=true)
-      private final String regionalCommunity;
+    private String regionalCommunity;
 
     public String regionalCommunity() {
         return this.regionalCommunity;
@@ -32,55 +32,52 @@ public final class VirtualNetworkBgpCommunitiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="virtualNetworkCommunity", required=true)
-      private final String virtualNetworkCommunity;
+    private String virtualNetworkCommunity;
 
     public String virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
 
-    public VirtualNetworkBgpCommunitiesResponse(
-        String regionalCommunity,
-        String virtualNetworkCommunity) {
-        this.regionalCommunity = Objects.requireNonNull(regionalCommunity, "expected parameter 'regionalCommunity' to be non-null");
-        this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity, "expected parameter 'virtualNetworkCommunity' to be non-null");
-    }
+    private VirtualNetworkBgpCommunitiesResponse() {}
 
-    private VirtualNetworkBgpCommunitiesResponse() {
-        this.regionalCommunity = null;
-        this.virtualNetworkCommunity = null;
+    private VirtualNetworkBgpCommunitiesResponse(VirtualNetworkBgpCommunitiesResponse $) {
+        this.regionalCommunity = $.regionalCommunity;
+        this.virtualNetworkCommunity = $.virtualNetworkCommunity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkBgpCommunitiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String regionalCommunity;
-        private String virtualNetworkCommunity;
+        private VirtualNetworkBgpCommunitiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkBgpCommunitiesResponse();
         }
 
         public Builder(VirtualNetworkBgpCommunitiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regionalCommunity = defaults.regionalCommunity;
-    	      this.virtualNetworkCommunity = defaults.virtualNetworkCommunity;
+            $ = new VirtualNetworkBgpCommunitiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder regionalCommunity(String regionalCommunity) {
-            this.regionalCommunity = Objects.requireNonNull(regionalCommunity);
+            $.regionalCommunity = regionalCommunity;
             return this;
         }
+
         public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
-            this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
+            $.virtualNetworkCommunity = virtualNetworkCommunity;
             return this;
-        }        public VirtualNetworkBgpCommunitiesResponse build() {
-            return new VirtualNetworkBgpCommunitiesResponse(regionalCommunity, virtualNetworkCommunity);
+        }
+
+        public VirtualNetworkBgpCommunitiesResponse build() {
+            $.regionalCommunity = Objects.requireNonNull($.regionalCommunity, "expected parameter 'regionalCommunity' to be non-null");
+            $.virtualNetworkCommunity = Objects.requireNonNull($.virtualNetworkCommunity, "expected parameter 'virtualNetworkCommunity' to be non-null");
+            return $;
         }
     }
+
 }

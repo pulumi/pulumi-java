@@ -30,10 +30,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="binding")
-      private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
+    private @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
 
-    public Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding() {
-        return this.binding == null ? null : this.binding;
+    public Optional<Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse>> binding() {
+        return Optional.ofNullable(this.binding);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -52,10 +52,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="inputs")
-      private final @Nullable List<FunctionInputResponse> inputs;
+    private @Nullable List<FunctionInputResponse> inputs;
 
-    public List<FunctionInputResponse> inputs() {
-        return this.inputs == null ? List.of() : this.inputs;
+    public Optional<List<FunctionInputResponse>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="output")
-      private final @Nullable FunctionOutputResponse output;
+    private @Nullable FunctionOutputResponse output;
 
     public Optional<FunctionOutputResponse> output() {
-        return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -75,85 +75,74 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ScalarFunctionPropertiesResponse(
-        @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
-        String etag,
-        @Nullable List<FunctionInputResponse> inputs,
-        @Nullable FunctionOutputResponse output,
-        String type) {
-        this.binding = binding;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.inputs = inputs;
-        this.output = output;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ScalarFunctionPropertiesResponse() {}
 
-    private ScalarFunctionPropertiesResponse() {
-        this.binding = null;
-        this.etag = null;
-        this.inputs = List.of();
-        this.output = null;
-        this.type = null;
+    private ScalarFunctionPropertiesResponse(ScalarFunctionPropertiesResponse $) {
+        this.binding = $.binding;
+        this.etag = $.etag;
+        this.inputs = $.inputs;
+        this.output = $.output;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalarFunctionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
-        private String etag;
-        private @Nullable List<FunctionInputResponse> inputs;
-        private @Nullable FunctionOutputResponse output;
-        private String type;
+        private ScalarFunctionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalarFunctionPropertiesResponse();
         }
 
         public Builder(ScalarFunctionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binding = defaults.binding;
-    	      this.etag = defaults.etag;
-    	      this.inputs = defaults.inputs;
-    	      this.output = defaults.output;
-    	      this.type = defaults.type;
+            $ = new ScalarFunctionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding) {
-            this.binding = binding;
+            $.binding = binding;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder inputs(@Nullable List<FunctionInputResponse> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(FunctionInputResponse... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder output(@Nullable FunctionOutputResponse output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ScalarFunctionPropertiesResponse build() {
-            return new ScalarFunctionPropertiesResponse(binding, etag, inputs, output, type);
+        }
+
+        public ScalarFunctionPropertiesResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

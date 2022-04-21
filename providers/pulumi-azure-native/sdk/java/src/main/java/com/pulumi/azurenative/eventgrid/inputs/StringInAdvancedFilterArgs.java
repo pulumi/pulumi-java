@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class StringInAdvancedFilterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -37,7 +38,7 @@ public final class StringInAdvancedFilterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="operatorType", required=true)
-      private final Output<String> operatorType;
+    private Output<String> operatorType;
 
     public Output<String> operatorType() {
         return this.operatorType;
@@ -48,79 +49,73 @@ public final class StringInAdvancedFilterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public StringInAdvancedFilterArgs(
-        @Nullable Output<String> key,
-        Output<String> operatorType,
-        @Nullable Output<List<String>> values) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").output().arg(operatorType).require();
-        this.values = values;
-    }
+    private StringInAdvancedFilterArgs() {}
 
-    private StringInAdvancedFilterArgs() {
-        this.key = Codegen.empty();
-        this.operatorType = Codegen.empty();
-        this.values = Codegen.empty();
+    private StringInAdvancedFilterArgs(StringInAdvancedFilterArgs $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StringInAdvancedFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private Output<String> operatorType;
-        private @Nullable Output<List<String>> values;
+        private StringInAdvancedFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StringInAdvancedFilterArgs();
         }
 
         public Builder(StringInAdvancedFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
-    	      this.values = defaults.values;
+            $ = new StringInAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder operatorType(Output<String> operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Output.of(Objects.requireNonNull(operatorType));
-            return this;
+            return operatorType(Output.of(operatorType));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public StringInAdvancedFilterArgs build() {
-            return new StringInAdvancedFilterArgs(key, operatorType, values);
+        }
+
+        public StringInAdvancedFilterArgs build() {
+            $.operatorType = Codegen.stringProp("operatorType").output().arg($.operatorType).require();
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.m365securityandcompliance.inputs.ServicesPropertie
 import com.pulumi.azurenative.m365securityandcompliance.inputs.ServicesResourceIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ServicesResourceIdentityArgs> identity;
+    private @Nullable Output<ServicesResourceIdentityArgs> identity;
 
-    public Output<ServicesResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ServicesResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Kind> kind;
+    private Output<Kind> kind;
 
     public Output<Kind> kind() {
         return this.kind;
@@ -46,10 +46,10 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ServicesPropertiesArgs> properties;
+    private @Nullable Output<ServicesPropertiesArgs> properties;
 
-    public Output<ServicesPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ServicesPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,10 +79,10 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -90,128 +90,110 @@ public final class PrivateLinkServicesForO365ManagementActivityAPIArgs extends c
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PrivateLinkServicesForO365ManagementActivityAPIArgs(
-        @Nullable Output<ServicesResourceIdentityArgs> identity,
-        Output<Kind> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<ServicesPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.identity = identity;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = location;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.tags = tags;
-    }
+    private PrivateLinkServicesForO365ManagementActivityAPIArgs() {}
 
-    private PrivateLinkServicesForO365ManagementActivityAPIArgs() {
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PrivateLinkServicesForO365ManagementActivityAPIArgs(PrivateLinkServicesForO365ManagementActivityAPIArgs $) {
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServicesForO365ManagementActivityAPIArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServicesResourceIdentityArgs> identity;
-        private Output<Kind> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<ServicesPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Map<String,String>> tags;
+        private PrivateLinkServicesForO365ManagementActivityAPIArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServicesForO365ManagementActivityAPIArgs();
         }
 
         public Builder(PrivateLinkServicesForO365ManagementActivityAPIArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tags = defaults.tags;
+            $ = new PrivateLinkServicesForO365ManagementActivityAPIArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<ServicesResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ServicesResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ServicesResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(Output<Kind> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Kind kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<ServicesPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ServicesPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ServicesPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PrivateLinkServicesForO365ManagementActivityAPIArgs build() {
-            return new PrivateLinkServicesForO365ManagementActivityAPIArgs(identity, kind, location, properties, resourceGroupName, resourceName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PrivateLinkServicesForO365ManagementActivityAPIArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

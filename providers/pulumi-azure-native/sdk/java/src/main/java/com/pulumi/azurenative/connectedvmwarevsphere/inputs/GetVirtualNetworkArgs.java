@@ -17,7 +17,7 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-      private final String virtualNetworkName;
+    private String virtualNetworkName;
 
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
-    public GetVirtualNetworkArgs(
-        String resourceGroupName,
-        String virtualNetworkName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
-    }
+    private GetVirtualNetworkArgs() {}
 
-    private GetVirtualNetworkArgs() {
-        this.resourceGroupName = null;
-        this.virtualNetworkName = null;
+    private GetVirtualNetworkArgs(GetVirtualNetworkArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkName = $.virtualNetworkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualNetworkName;
+        private GetVirtualNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkArgs();
         }
 
         public Builder(GetVirtualNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkName = defaults.virtualNetworkName;
+            $ = new GetVirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkName(String virtualNetworkName) {
-            this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
+            $.virtualNetworkName = virtualNetworkName;
             return this;
-        }        public GetVirtualNetworkArgs build() {
-            return new GetVirtualNetworkArgs(resourceGroupName, virtualNetworkName);
+        }
+
+        public GetVirtualNetworkArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkName = Objects.requireNonNull($.virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
+            return $;
         }
     }
+
 }

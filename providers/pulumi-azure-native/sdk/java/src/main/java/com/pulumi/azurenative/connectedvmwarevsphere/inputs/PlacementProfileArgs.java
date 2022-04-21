@@ -5,9 +5,9 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable Output<String> datastoreId;
+    private @Nullable Output<String> datastoreId;
 
-    public Output<String> datastoreId() {
-        return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
+    public Optional<Output<String>> datastoreId() {
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hostId")
-      private final @Nullable Output<String> hostId;
+    private @Nullable Output<String> hostId;
 
-    public Output<String> hostId() {
-        return this.hostId == null ? Codegen.empty() : this.hostId;
+    public Optional<Output<String>> hostId() {
+        return Optional.ofNullable(this.hostId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourcePoolId")
-      private final @Nullable Output<String> resourcePoolId;
+    private @Nullable Output<String> resourcePoolId;
 
-    public Output<String> resourcePoolId() {
-        return this.resourcePoolId == null ? Codegen.empty() : this.resourcePoolId;
+    public Optional<Output<String>> resourcePoolId() {
+        return Optional.ofNullable(this.resourcePoolId);
     }
 
-    public PlacementProfileArgs(
-        @Nullable Output<String> clusterId,
-        @Nullable Output<String> datastoreId,
-        @Nullable Output<String> hostId,
-        @Nullable Output<String> resourcePoolId) {
-        this.clusterId = clusterId;
-        this.datastoreId = datastoreId;
-        this.hostId = hostId;
-        this.resourcePoolId = resourcePoolId;
-    }
+    private PlacementProfileArgs() {}
 
-    private PlacementProfileArgs() {
-        this.clusterId = Codegen.empty();
-        this.datastoreId = Codegen.empty();
-        this.hostId = Codegen.empty();
-        this.resourcePoolId = Codegen.empty();
+    private PlacementProfileArgs(PlacementProfileArgs $) {
+        this.clusterId = $.clusterId;
+        this.datastoreId = $.datastoreId;
+        this.hostId = $.hostId;
+        this.resourcePoolId = $.resourcePoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlacementProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterId;
-        private @Nullable Output<String> datastoreId;
-        private @Nullable Output<String> hostId;
-        private @Nullable Output<String> resourcePoolId;
+        private PlacementProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlacementProfileArgs();
         }
 
         public Builder(PlacementProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.hostId = defaults.hostId;
-    	      this.resourcePoolId = defaults.resourcePoolId;
+            $ = new PlacementProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
-        public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Codegen.ofNullable(datastoreId);
-            return this;
+
+        public Builder datastoreId(String datastoreId) {
+            return datastoreId(Output.of(datastoreId));
         }
+
         public Builder hostId(@Nullable Output<String> hostId) {
-            this.hostId = hostId;
+            $.hostId = hostId;
             return this;
         }
-        public Builder hostId(@Nullable String hostId) {
-            this.hostId = Codegen.ofNullable(hostId);
-            return this;
+
+        public Builder hostId(String hostId) {
+            return hostId(Output.of(hostId));
         }
+
         public Builder resourcePoolId(@Nullable Output<String> resourcePoolId) {
-            this.resourcePoolId = resourcePoolId;
+            $.resourcePoolId = resourcePoolId;
             return this;
         }
-        public Builder resourcePoolId(@Nullable String resourcePoolId) {
-            this.resourcePoolId = Codegen.ofNullable(resourcePoolId);
-            return this;
-        }        public PlacementProfileArgs build() {
-            return new PlacementProfileArgs(clusterId, datastoreId, hostId, resourcePoolId);
+
+        public Builder resourcePoolId(String resourcePoolId) {
+            return resourcePoolId(Output.of(resourcePoolId));
+        }
+
+        public PlacementProfileArgs build() {
+            return $;
         }
     }
+
 }

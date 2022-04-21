@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="compression")
-      private final @Nullable Output<Either<String,Compression>> compression;
+    private @Nullable Output<Either<String,Compression>> compression;
 
-    public Output<Either<String,Compression>> compression() {
-        return this.compression == null ? Codegen.empty() : this.compression;
+    public Optional<Output<Either<String,Compression>>> compression() {
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="consumerGroup", required=true)
-      private final Output<String> consumerGroup;
+    private Output<String> consumerGroup;
 
     public Output<String> consumerGroup() {
         return this.consumerGroup;
@@ -46,10 +47,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataConnectionName")
-      private final @Nullable Output<String> dataConnectionName;
+    private @Nullable Output<String> dataConnectionName;
 
-    public Output<String> dataConnectionName() {
-        return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
+    public Optional<Output<String>> dataConnectionName() {
+        return Optional.ofNullable(this.dataConnectionName);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataFormat")
-      private final @Nullable Output<Either<String,EventHubDataFormat>> dataFormat;
+    private @Nullable Output<Either<String,EventHubDataFormat>> dataFormat;
 
-    public Output<Either<String,EventHubDataFormat>> dataFormat() {
-        return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
+    public Optional<Output<Either<String,EventHubDataFormat>>> dataFormat() {
+        return Optional.ofNullable(this.dataFormat);
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -79,7 +80,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="eventHubResourceId", required=true)
-      private final Output<String> eventHubResourceId;
+    private Output<String> eventHubResourceId;
 
     public Output<String> eventHubResourceId() {
         return this.eventHubResourceId;
@@ -90,10 +91,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="eventSystemProperties")
-      private final @Nullable Output<List<String>> eventSystemProperties;
+    private @Nullable Output<List<String>> eventSystemProperties;
 
-    public Output<List<String>> eventSystemProperties() {
-        return this.eventSystemProperties == null ? Codegen.empty() : this.eventSystemProperties;
+    public Optional<Output<List<String>>> eventSystemProperties() {
+        return Optional.ofNullable(this.eventSystemProperties);
     }
 
     /**
@@ -102,7 +103,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -113,7 +114,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kustoPoolName", required=true)
-      private final Output<String> kustoPoolName;
+    private Output<String> kustoPoolName;
 
     public Output<String> kustoPoolName() {
         return this.kustoPoolName;
@@ -124,10 +125,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -135,10 +136,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mappingRuleName")
-      private final @Nullable Output<String> mappingRuleName;
+    private @Nullable Output<String> mappingRuleName;
 
-    public Output<String> mappingRuleName() {
-        return this.mappingRuleName == null ? Codegen.empty() : this.mappingRuleName;
+    public Optional<Output<String>> mappingRuleName() {
+        return Optional.ofNullable(this.mappingRuleName);
     }
 
     /**
@@ -146,7 +147,7 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -157,10 +158,10 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
     /**
@@ -168,222 +169,189 @@ public final class EventHubDataConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public EventHubDataConnectionArgs(
-        @Nullable Output<Either<String,Compression>> compression,
-        Output<String> consumerGroup,
-        @Nullable Output<String> dataConnectionName,
-        @Nullable Output<Either<String,EventHubDataFormat>> dataFormat,
-        Output<String> databaseName,
-        Output<String> eventHubResourceId,
-        @Nullable Output<List<String>> eventSystemProperties,
-        Output<String> kind,
-        Output<String> kustoPoolName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> mappingRuleName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> tableName,
-        Output<String> workspaceName) {
-        this.compression = compression;
-        this.consumerGroup = Objects.requireNonNull(consumerGroup, "expected parameter 'consumerGroup' to be non-null");
-        this.dataConnectionName = dataConnectionName;
-        this.dataFormat = dataFormat;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId, "expected parameter 'eventHubResourceId' to be non-null");
-        this.eventSystemProperties = eventSystemProperties;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
-        this.location = location;
-        this.mappingRuleName = mappingRuleName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tableName = tableName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private EventHubDataConnectionArgs() {}
 
-    private EventHubDataConnectionArgs() {
-        this.compression = Codegen.empty();
-        this.consumerGroup = Codegen.empty();
-        this.dataConnectionName = Codegen.empty();
-        this.dataFormat = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.eventHubResourceId = Codegen.empty();
-        this.eventSystemProperties = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.kustoPoolName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mappingRuleName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private EventHubDataConnectionArgs(EventHubDataConnectionArgs $) {
+        this.compression = $.compression;
+        this.consumerGroup = $.consumerGroup;
+        this.dataConnectionName = $.dataConnectionName;
+        this.dataFormat = $.dataFormat;
+        this.databaseName = $.databaseName;
+        this.eventHubResourceId = $.eventHubResourceId;
+        this.eventSystemProperties = $.eventSystemProperties;
+        this.kind = $.kind;
+        this.kustoPoolName = $.kustoPoolName;
+        this.location = $.location;
+        this.mappingRuleName = $.mappingRuleName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tableName = $.tableName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubDataConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Compression>> compression;
-        private Output<String> consumerGroup;
-        private @Nullable Output<String> dataConnectionName;
-        private @Nullable Output<Either<String,EventHubDataFormat>> dataFormat;
-        private Output<String> databaseName;
-        private Output<String> eventHubResourceId;
-        private @Nullable Output<List<String>> eventSystemProperties;
-        private Output<String> kind;
-        private Output<String> kustoPoolName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> mappingRuleName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> tableName;
-        private Output<String> workspaceName;
+        private EventHubDataConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubDataConnectionArgs();
         }
 
         public Builder(EventHubDataConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compression = defaults.compression;
-    	      this.consumerGroup = defaults.consumerGroup;
-    	      this.dataConnectionName = defaults.dataConnectionName;
-    	      this.dataFormat = defaults.dataFormat;
-    	      this.databaseName = defaults.databaseName;
-    	      this.eventHubResourceId = defaults.eventHubResourceId;
-    	      this.eventSystemProperties = defaults.eventSystemProperties;
-    	      this.kind = defaults.kind;
-    	      this.kustoPoolName = defaults.kustoPoolName;
-    	      this.location = defaults.location;
-    	      this.mappingRuleName = defaults.mappingRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tableName = defaults.tableName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new EventHubDataConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compression(@Nullable Output<Either<String,Compression>> compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
-        public Builder compression(@Nullable Either<String,Compression> compression) {
-            this.compression = Codegen.ofNullable(compression);
-            return this;
+
+        public Builder compression(Either<String,Compression> compression) {
+            return compression(Output.of(compression));
         }
+
         public Builder consumerGroup(Output<String> consumerGroup) {
-            this.consumerGroup = Objects.requireNonNull(consumerGroup);
+            $.consumerGroup = consumerGroup;
             return this;
         }
+
         public Builder consumerGroup(String consumerGroup) {
-            this.consumerGroup = Output.of(Objects.requireNonNull(consumerGroup));
-            return this;
+            return consumerGroup(Output.of(consumerGroup));
         }
+
         public Builder dataConnectionName(@Nullable Output<String> dataConnectionName) {
-            this.dataConnectionName = dataConnectionName;
+            $.dataConnectionName = dataConnectionName;
             return this;
         }
-        public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Codegen.ofNullable(dataConnectionName);
-            return this;
+
+        public Builder dataConnectionName(String dataConnectionName) {
+            return dataConnectionName(Output.of(dataConnectionName));
         }
+
         public Builder dataFormat(@Nullable Output<Either<String,EventHubDataFormat>> dataFormat) {
-            this.dataFormat = dataFormat;
+            $.dataFormat = dataFormat;
             return this;
         }
-        public Builder dataFormat(@Nullable Either<String,EventHubDataFormat> dataFormat) {
-            this.dataFormat = Codegen.ofNullable(dataFormat);
-            return this;
+
+        public Builder dataFormat(Either<String,EventHubDataFormat> dataFormat) {
+            return dataFormat(Output.of(dataFormat));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder eventHubResourceId(Output<String> eventHubResourceId) {
-            this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
+            $.eventHubResourceId = eventHubResourceId;
             return this;
         }
+
         public Builder eventHubResourceId(String eventHubResourceId) {
-            this.eventHubResourceId = Output.of(Objects.requireNonNull(eventHubResourceId));
-            return this;
+            return eventHubResourceId(Output.of(eventHubResourceId));
         }
+
         public Builder eventSystemProperties(@Nullable Output<List<String>> eventSystemProperties) {
-            this.eventSystemProperties = eventSystemProperties;
+            $.eventSystemProperties = eventSystemProperties;
             return this;
         }
-        public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
-            this.eventSystemProperties = Codegen.ofNullable(eventSystemProperties);
-            return this;
+
+        public Builder eventSystemProperties(List<String> eventSystemProperties) {
+            return eventSystemProperties(Output.of(eventSystemProperties));
         }
+
         public Builder eventSystemProperties(String... eventSystemProperties) {
             return eventSystemProperties(List.of(eventSystemProperties));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder kustoPoolName(Output<String> kustoPoolName) {
-            this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
+            $.kustoPoolName = kustoPoolName;
             return this;
         }
+
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
-            return this;
+            return kustoPoolName(Output.of(kustoPoolName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
-            this.mappingRuleName = mappingRuleName;
+            $.mappingRuleName = mappingRuleName;
             return this;
         }
-        public Builder mappingRuleName(@Nullable String mappingRuleName) {
-            this.mappingRuleName = Codegen.ofNullable(mappingRuleName);
-            return this;
+
+        public Builder mappingRuleName(String mappingRuleName) {
+            return mappingRuleName(Output.of(mappingRuleName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public EventHubDataConnectionArgs build() {
-            return new EventHubDataConnectionArgs(compression, consumerGroup, dataConnectionName, dataFormat, databaseName, eventHubResourceId, eventSystemProperties, kind, kustoPoolName, location, mappingRuleName, resourceGroupName, tableName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public EventHubDataConnectionArgs build() {
+            $.consumerGroup = Objects.requireNonNull($.consumerGroup, "expected parameter 'consumerGroup' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.eventHubResourceId = Objects.requireNonNull($.eventHubResourceId, "expected parameter 'eventHubResourceId' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.kustoPoolName = Objects.requireNonNull($.kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

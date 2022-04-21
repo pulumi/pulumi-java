@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HlsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fragmentsPerTsSegment")
-      private final @Nullable Output<Integer> fragmentsPerTsSegment;
+    private @Nullable Output<Integer> fragmentsPerTsSegment;
 
-    public Output<Integer> fragmentsPerTsSegment() {
-        return this.fragmentsPerTsSegment == null ? Codegen.empty() : this.fragmentsPerTsSegment;
+    public Optional<Output<Integer>> fragmentsPerTsSegment() {
+        return Optional.ofNullable(this.fragmentsPerTsSegment);
     }
 
-    public HlsArgs(@Nullable Output<Integer> fragmentsPerTsSegment) {
-        this.fragmentsPerTsSegment = fragmentsPerTsSegment;
-    }
+    private HlsArgs() {}
 
-    private HlsArgs() {
-        this.fragmentsPerTsSegment = Codegen.empty();
+    private HlsArgs(HlsArgs $) {
+        this.fragmentsPerTsSegment = $.fragmentsPerTsSegment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> fragmentsPerTsSegment;
+        private HlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HlsArgs();
         }
 
         public Builder(HlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fragmentsPerTsSegment = defaults.fragmentsPerTsSegment;
+            $ = new HlsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fragmentsPerTsSegment(@Nullable Output<Integer> fragmentsPerTsSegment) {
-            this.fragmentsPerTsSegment = fragmentsPerTsSegment;
+            $.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }
-        public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
-            this.fragmentsPerTsSegment = Codegen.ofNullable(fragmentsPerTsSegment);
-            return this;
-        }        public HlsArgs build() {
-            return new HlsArgs(fragmentsPerTsSegment);
+
+        public Builder fragmentsPerTsSegment(Integer fragmentsPerTsSegment) {
+            return fragmentsPerTsSegment(Output.of(fragmentsPerTsSegment));
+        }
+
+        public HlsArgs build() {
+            return $;
         }
     }
+
 }

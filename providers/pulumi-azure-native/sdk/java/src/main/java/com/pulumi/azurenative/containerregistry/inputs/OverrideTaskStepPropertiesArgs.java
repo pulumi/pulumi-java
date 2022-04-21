@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import com.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OverrideTaskStepPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<ArgumentArgs>> arguments;
+    private @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<ArgumentArgs>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OverrideTaskStepPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable Output<String> contextPath;
+    private @Nullable Output<String> contextPath;
 
-    public Output<String> contextPath() {
-        return this.contextPath == null ? Codegen.empty() : this.contextPath;
+    public Optional<Output<String>> contextPath() {
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OverrideTaskStepPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<String> file;
+    private @Nullable Output<String> file;
 
-    public Output<String> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<String>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OverrideTaskStepPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OverrideTaskStepPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="updateTriggerToken")
-      private final @Nullable Output<String> updateTriggerToken;
+    private @Nullable Output<String> updateTriggerToken;
 
-    public Output<String> updateTriggerToken() {
-        return this.updateTriggerToken == null ? Codegen.empty() : this.updateTriggerToken;
+    public Optional<Output<String>> updateTriggerToken() {
+        return Optional.ofNullable(this.updateTriggerToken);
     }
 
     /**
@@ -79,121 +79,106 @@ public final class OverrideTaskStepPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<SetValueArgs>> values;
+    private @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<SetValueArgs>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public OverrideTaskStepPropertiesArgs(
-        @Nullable Output<List<ArgumentArgs>> arguments,
-        @Nullable Output<String> contextPath,
-        @Nullable Output<String> file,
-        @Nullable Output<String> target,
-        @Nullable Output<String> updateTriggerToken,
-        @Nullable Output<List<SetValueArgs>> values) {
-        this.arguments = arguments;
-        this.contextPath = contextPath;
-        this.file = file;
-        this.target = target;
-        this.updateTriggerToken = updateTriggerToken;
-        this.values = values;
-    }
+    private OverrideTaskStepPropertiesArgs() {}
 
-    private OverrideTaskStepPropertiesArgs() {
-        this.arguments = Codegen.empty();
-        this.contextPath = Codegen.empty();
-        this.file = Codegen.empty();
-        this.target = Codegen.empty();
-        this.updateTriggerToken = Codegen.empty();
-        this.values = Codegen.empty();
+    private OverrideTaskStepPropertiesArgs(OverrideTaskStepPropertiesArgs $) {
+        this.arguments = $.arguments;
+        this.contextPath = $.contextPath;
+        this.file = $.file;
+        this.target = $.target;
+        this.updateTriggerToken = $.updateTriggerToken;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OverrideTaskStepPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ArgumentArgs>> arguments;
-        private @Nullable Output<String> contextPath;
-        private @Nullable Output<String> file;
-        private @Nullable Output<String> target;
-        private @Nullable Output<String> updateTriggerToken;
-        private @Nullable Output<List<SetValueArgs>> values;
+        private OverrideTaskStepPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OverrideTaskStepPropertiesArgs();
         }
 
         public Builder(OverrideTaskStepPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.contextPath = defaults.contextPath;
-    	      this.file = defaults.file;
-    	      this.target = defaults.target;
-    	      this.updateTriggerToken = defaults.updateTriggerToken;
-    	      this.values = defaults.values;
+            $ = new OverrideTaskStepPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<ArgumentArgs> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(ArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder contextPath(@Nullable Output<String> contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
-        public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Codegen.ofNullable(contextPath);
-            return this;
+
+        public Builder contextPath(String contextPath) {
+            return contextPath(Output.of(contextPath));
         }
+
         public Builder file(@Nullable Output<String> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable String file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(String file) {
+            return file(Output.of(file));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder updateTriggerToken(@Nullable Output<String> updateTriggerToken) {
-            this.updateTriggerToken = updateTriggerToken;
+            $.updateTriggerToken = updateTriggerToken;
             return this;
         }
-        public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
-            this.updateTriggerToken = Codegen.ofNullable(updateTriggerToken);
-            return this;
+
+        public Builder updateTriggerToken(String updateTriggerToken) {
+            return updateTriggerToken(Output.of(updateTriggerToken));
         }
+
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<SetValueArgs> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(SetValueArgs... values) {
             return values(List.of(values));
-        }        public OverrideTaskStepPropertiesArgs build() {
-            return new OverrideTaskStepPropertiesArgs(arguments, contextPath, file, target, updateTriggerToken, values);
+        }
+
+        public OverrideTaskStepPropertiesArgs build() {
+            return $;
         }
     }
+
 }

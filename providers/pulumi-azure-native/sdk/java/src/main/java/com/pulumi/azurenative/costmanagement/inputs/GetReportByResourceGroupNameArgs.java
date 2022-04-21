@@ -17,7 +17,7 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
      * 
      */
     @Import(name="reportName", required=true)
-      private final String reportName;
+    private String reportName;
 
     public String reportName() {
         return this.reportName;
@@ -28,55 +28,52 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetReportByResourceGroupNameArgs(
-        String reportName,
-        String resourceGroupName) {
-        this.reportName = Objects.requireNonNull(reportName, "expected parameter 'reportName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetReportByResourceGroupNameArgs() {}
 
-    private GetReportByResourceGroupNameArgs() {
-        this.reportName = null;
-        this.resourceGroupName = null;
+    private GetReportByResourceGroupNameArgs(GetReportByResourceGroupNameArgs $) {
+        this.reportName = $.reportName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportByResourceGroupNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String reportName;
-        private String resourceGroupName;
+        private GetReportByResourceGroupNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportByResourceGroupNameArgs();
         }
 
         public Builder(GetReportByResourceGroupNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reportName = defaults.reportName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetReportByResourceGroupNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reportName(String reportName) {
-            this.reportName = Objects.requireNonNull(reportName);
+            $.reportName = reportName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetReportByResourceGroupNameArgs build() {
-            return new GetReportByResourceGroupNameArgs(reportName, resourceGroupName);
+        }
+
+        public GetReportByResourceGroupNameArgs build() {
+            $.reportName = Objects.requireNonNull($.reportName, "expected parameter 'reportName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

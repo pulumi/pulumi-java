@@ -21,45 +21,45 @@ public final class BlobInventoryPolicyDefinitionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="filters", required=true)
-      private final BlobInventoryPolicyFilterResponse filters;
+    private BlobInventoryPolicyFilterResponse filters;
 
     public BlobInventoryPolicyFilterResponse filters() {
         return this.filters;
     }
 
-    public BlobInventoryPolicyDefinitionResponse(BlobInventoryPolicyFilterResponse filters) {
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-    }
+    private BlobInventoryPolicyDefinitionResponse() {}
 
-    private BlobInventoryPolicyDefinitionResponse() {
-        this.filters = null;
+    private BlobInventoryPolicyDefinitionResponse(BlobInventoryPolicyDefinitionResponse $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicyDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BlobInventoryPolicyFilterResponse filters;
+        private BlobInventoryPolicyDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicyDefinitionResponse();
         }
 
         public Builder(BlobInventoryPolicyDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new BlobInventoryPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(BlobInventoryPolicyFilterResponse filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
-        }        public BlobInventoryPolicyDefinitionResponse build() {
-            return new BlobInventoryPolicyDefinitionResponse(filters);
+        }
+
+        public BlobInventoryPolicyDefinitionResponse build() {
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            return $;
         }
     }
+
 }

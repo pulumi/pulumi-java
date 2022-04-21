@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable Output<String> timeInterval;
+    private @Nullable Output<String> timeInterval;
 
-    public Output<String> timeInterval() {
-        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
+    public Optional<Output<String>> timeInterval() {
+        return Optional.ofNullable(this.timeInterval);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="timeTaken")
-      private final @Nullable Output<String> timeTaken;
+    private @Nullable Output<String> timeTaken;
 
-    public Output<String> timeTaken() {
-        return this.timeTaken == null ? Codegen.empty() : this.timeTaken;
+    public Optional<Output<String>> timeTaken() {
+        return Optional.ofNullable(this.timeTaken);
     }
 
-    public SlowRequestsBasedTriggerArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> path,
-        @Nullable Output<String> timeInterval,
-        @Nullable Output<String> timeTaken) {
-        this.count = count;
-        this.path = path;
-        this.timeInterval = timeInterval;
-        this.timeTaken = timeTaken;
-    }
+    private SlowRequestsBasedTriggerArgs() {}
 
-    private SlowRequestsBasedTriggerArgs() {
-        this.count = Codegen.empty();
-        this.path = Codegen.empty();
-        this.timeInterval = Codegen.empty();
-        this.timeTaken = Codegen.empty();
+    private SlowRequestsBasedTriggerArgs(SlowRequestsBasedTriggerArgs $) {
+        this.count = $.count;
+        this.path = $.path;
+        this.timeInterval = $.timeInterval;
+        this.timeTaken = $.timeTaken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlowRequestsBasedTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> timeInterval;
-        private @Nullable Output<String> timeTaken;
+        private SlowRequestsBasedTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlowRequestsBasedTriggerArgs();
         }
 
         public Builder(SlowRequestsBasedTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.path = defaults.path;
-    	      this.timeInterval = defaults.timeInterval;
-    	      this.timeTaken = defaults.timeTaken;
+            $ = new SlowRequestsBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
         }
-        public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Codegen.ofNullable(timeInterval);
-            return this;
+
+        public Builder timeInterval(String timeInterval) {
+            return timeInterval(Output.of(timeInterval));
         }
+
         public Builder timeTaken(@Nullable Output<String> timeTaken) {
-            this.timeTaken = timeTaken;
+            $.timeTaken = timeTaken;
             return this;
         }
-        public Builder timeTaken(@Nullable String timeTaken) {
-            this.timeTaken = Codegen.ofNullable(timeTaken);
-            return this;
-        }        public SlowRequestsBasedTriggerArgs build() {
-            return new SlowRequestsBasedTriggerArgs(count, path, timeInterval, timeTaken);
+
+        public Builder timeTaken(String timeTaken) {
+            return timeTaken(Output.of(timeTaken));
+        }
+
+        public SlowRequestsBasedTriggerArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.azurenative.aadiam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allTenants")
-      private final @Nullable Output<Boolean> allTenants;
+    private @Nullable Output<Boolean> allTenants;
 
-    public Output<Boolean> allTenants() {
-        return this.allTenants == null ? Codegen.empty() : this.allTenants;
+    public Optional<Output<Boolean>> allTenants() {
+        return Optional.ofNullable(this.allTenants);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ownerTenantId")
-      private final @Nullable Output<String> ownerTenantId;
+    private @Nullable Output<String> ownerTenantId;
 
-    public Output<String> ownerTenantId() {
-        return this.ownerTenantId == null ? Codegen.empty() : this.ownerTenantId;
+    public Optional<Output<String>> ownerTenantId() {
+        return Optional.ofNullable(this.ownerTenantId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<String> resourceGroup;
+    private @Nullable Output<String> resourceGroup;
 
-    public Output<String> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<String>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,10 +89,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,170 +122,143 @@ public final class PrivateLinkForAzureAdArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tenants")
-      private final @Nullable Output<List<String>> tenants;
+    private @Nullable Output<List<String>> tenants;
 
-    public Output<List<String>> tenants() {
-        return this.tenants == null ? Codegen.empty() : this.tenants;
+    public Optional<Output<List<String>>> tenants() {
+        return Optional.ofNullable(this.tenants);
     }
 
-    public PrivateLinkForAzureAdArgs(
-        @Nullable Output<Boolean> allTenants,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ownerTenantId,
-        @Nullable Output<String> policyName,
-        @Nullable Output<String> resourceGroup,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<String> subscriptionId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> tenants) {
-        this.allTenants = allTenants;
-        this.name = name;
-        this.ownerTenantId = ownerTenantId;
-        this.policyName = policyName;
-        this.resourceGroup = resourceGroup;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.subscriptionId = subscriptionId;
-        this.tags = tags;
-        this.tenants = tenants;
-    }
+    private PrivateLinkForAzureAdArgs() {}
 
-    private PrivateLinkForAzureAdArgs() {
-        this.allTenants = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerTenantId = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tenants = Codegen.empty();
+    private PrivateLinkForAzureAdArgs(PrivateLinkForAzureAdArgs $) {
+        this.allTenants = $.allTenants;
+        this.name = $.name;
+        this.ownerTenantId = $.ownerTenantId;
+        this.policyName = $.policyName;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.subscriptionId = $.subscriptionId;
+        this.tags = $.tags;
+        this.tenants = $.tenants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkForAzureAdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allTenants;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ownerTenantId;
-        private @Nullable Output<String> policyName;
-        private @Nullable Output<String> resourceGroup;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<String> subscriptionId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> tenants;
+        private PrivateLinkForAzureAdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkForAzureAdArgs();
         }
 
         public Builder(PrivateLinkForAzureAdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allTenants = defaults.allTenants;
-    	      this.name = defaults.name;
-    	      this.ownerTenantId = defaults.ownerTenantId;
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tags = defaults.tags;
-    	      this.tenants = defaults.tenants;
+            $ = new PrivateLinkForAzureAdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allTenants(@Nullable Output<Boolean> allTenants) {
-            this.allTenants = allTenants;
+            $.allTenants = allTenants;
             return this;
         }
-        public Builder allTenants(@Nullable Boolean allTenants) {
-            this.allTenants = Codegen.ofNullable(allTenants);
-            return this;
+
+        public Builder allTenants(Boolean allTenants) {
+            return allTenants(Output.of(allTenants));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerTenantId(@Nullable Output<String> ownerTenantId) {
-            this.ownerTenantId = ownerTenantId;
+            $.ownerTenantId = ownerTenantId;
             return this;
         }
-        public Builder ownerTenantId(@Nullable String ownerTenantId) {
-            this.ownerTenantId = Codegen.ofNullable(ownerTenantId);
-            return this;
+
+        public Builder ownerTenantId(String ownerTenantId) {
+            return ownerTenantId(Output.of(ownerTenantId));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
+
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(String resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tenants(@Nullable Output<List<String>> tenants) {
-            this.tenants = tenants;
+            $.tenants = tenants;
             return this;
         }
-        public Builder tenants(@Nullable List<String> tenants) {
-            this.tenants = Codegen.ofNullable(tenants);
-            return this;
+
+        public Builder tenants(List<String> tenants) {
+            return tenants(Output.of(tenants));
         }
+
         public Builder tenants(String... tenants) {
             return tenants(List.of(tenants));
-        }        public PrivateLinkForAzureAdArgs build() {
-            return new PrivateLinkForAzureAdArgs(allTenants, name, ownerTenantId, policyName, resourceGroup, resourceGroupName, resourceName, subscriptionId, tags, tenants);
+        }
+
+        public PrivateLinkForAzureAdArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

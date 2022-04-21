@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProxyServerPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ProxyServerPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public ProxyServerPropertiesArgs(
-        @Nullable Output<String> ip,
-        @Nullable Output<String> port) {
-        this.ip = ip;
-        this.port = port;
-    }
+    private ProxyServerPropertiesArgs() {}
 
-    private ProxyServerPropertiesArgs() {
-        this.ip = Codegen.empty();
-        this.port = Codegen.empty();
+    private ProxyServerPropertiesArgs(ProxyServerPropertiesArgs $) {
+        this.ip = $.ip;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyServerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ip;
-        private @Nullable Output<String> port;
+        private ProxyServerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyServerPropertiesArgs();
         }
 
         public Builder(ProxyServerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.port = defaults.port;
+            $ = new ProxyServerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public ProxyServerPropertiesArgs build() {
-            return new ProxyServerPropertiesArgs(ip, port);
+
+        public Builder port(String port) {
+            return port(Output.of(port));
+        }
+
+        public ProxyServerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

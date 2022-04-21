@@ -24,10 +24,10 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final String workspaceId;
+    private String workspaceId;
 
     public String workspaceId() {
         return this.workspaceId;
@@ -46,64 +46,57 @@ public final class LogAnalyticsDestinationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable String workspaceResourceId;
+    private @Nullable String workspaceResourceId;
 
     public Optional<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public LogAnalyticsDestinationResponse(
-        @Nullable String name,
-        String workspaceId,
-        @Nullable String workspaceResourceId) {
-        this.name = name;
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private LogAnalyticsDestinationResponse() {}
 
-    private LogAnalyticsDestinationResponse() {
-        this.name = null;
-        this.workspaceId = null;
-        this.workspaceResourceId = null;
+    private LogAnalyticsDestinationResponse(LogAnalyticsDestinationResponse $) {
+        this.name = $.name;
+        this.workspaceId = $.workspaceId;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private String workspaceId;
-        private @Nullable String workspaceResourceId;
+        private LogAnalyticsDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsDestinationResponse();
         }
 
         public Builder(LogAnalyticsDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new LogAnalyticsDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public LogAnalyticsDestinationResponse build() {
-            return new LogAnalyticsDestinationResponse(name, workspaceId, workspaceResourceId);
+        }
+
+        public LogAnalyticsDestinationResponse build() {
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="associationName", required=true)
-      private final String associationName;
+    private String associationName;
 
     public String associationName() {
         return this.associationName;
@@ -28,55 +28,52 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetAssociationArgs(
-        String associationName,
-        String scope) {
-        this.associationName = Objects.requireNonNull(associationName, "expected parameter 'associationName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetAssociationArgs() {}
 
-    private GetAssociationArgs() {
-        this.associationName = null;
-        this.scope = null;
+    private GetAssociationArgs(GetAssociationArgs $) {
+        this.associationName = $.associationName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associationName;
-        private String scope;
+        private GetAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssociationArgs();
         }
 
         public Builder(GetAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationName = defaults.associationName;
-    	      this.scope = defaults.scope;
+            $ = new GetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationName(String associationName) {
-            this.associationName = Objects.requireNonNull(associationName);
+            $.associationName = associationName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetAssociationArgs build() {
-            return new GetAssociationArgs(associationName, scope);
+        }
+
+        public GetAssociationArgs build() {
+            $.associationName = Objects.requireNonNull($.associationName, "expected parameter 'associationName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

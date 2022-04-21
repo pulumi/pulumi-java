@@ -24,10 +24,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayStatus")
-      private final @Nullable String displayStatus;
+    private @Nullable String displayStatus;
 
     public Optional<String> displayStatus() {
-        return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
+        return Optional.ofNullable(this.displayStatus);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="level")
-      private final @Nullable String level;
+    private @Nullable String level;
 
     public Optional<String> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -68,82 +68,69 @@ public final class ExtensionStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="time")
-      private final @Nullable String time;
+    private @Nullable String time;
 
     public Optional<String> time() {
-        return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
+        return Optional.ofNullable(this.time);
     }
 
-    public ExtensionStatusResponse(
-        @Nullable String code,
-        @Nullable String displayStatus,
-        @Nullable String level,
-        @Nullable String message,
-        @Nullable String time) {
-        this.code = code;
-        this.displayStatus = displayStatus;
-        this.level = Codegen.stringProp("level").arg(level).def("Information").getNullable();
-        this.message = message;
-        this.time = time;
-    }
+    private ExtensionStatusResponse() {}
 
-    private ExtensionStatusResponse() {
-        this.code = null;
-        this.displayStatus = null;
-        this.level = null;
-        this.message = null;
-        this.time = null;
+    private ExtensionStatusResponse(ExtensionStatusResponse $) {
+        this.code = $.code;
+        this.displayStatus = $.displayStatus;
+        this.level = $.level;
+        this.message = $.message;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String displayStatus;
-        private @Nullable String level;
-        private @Nullable String message;
-        private @Nullable String time;
+        private ExtensionStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionStatusResponse();
         }
 
         public Builder(ExtensionStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.displayStatus = defaults.displayStatus;
-    	      this.level = defaults.level;
-    	      this.message = defaults.message;
-    	      this.time = defaults.time;
+            $ = new ExtensionStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder displayStatus(@Nullable String displayStatus) {
-            this.displayStatus = displayStatus;
+            $.displayStatus = displayStatus;
             return this;
         }
+
         public Builder level(@Nullable String level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder time(@Nullable String time) {
-            this.time = time;
+            $.time = time;
             return this;
-        }        public ExtensionStatusResponse build() {
-            return new ExtensionStatusResponse(code, displayStatus, level, message, time);
+        }
+
+        public ExtensionStatusResponse build() {
+            $.level = Codegen.stringProp("level").arg($.level).def("Information").getNullable();
+            return $;
         }
     }
+
 }

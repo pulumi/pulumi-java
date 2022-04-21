@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FileSystemTokenStoreArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="directory")
-      private final @Nullable Output<String> directory;
+    private @Nullable Output<String> directory;
 
-    public Output<String> directory() {
-        return this.directory == null ? Codegen.empty() : this.directory;
+    public Optional<Output<String>> directory() {
+        return Optional.ofNullable(this.directory);
     }
 
-    public FileSystemTokenStoreArgs(@Nullable Output<String> directory) {
-        this.directory = directory;
-    }
+    private FileSystemTokenStoreArgs() {}
 
-    private FileSystemTokenStoreArgs() {
-        this.directory = Codegen.empty();
+    private FileSystemTokenStoreArgs(FileSystemTokenStoreArgs $) {
+        this.directory = $.directory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemTokenStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directory;
+        private FileSystemTokenStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemTokenStoreArgs();
         }
 
         public Builder(FileSystemTokenStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directory = defaults.directory;
+            $ = new FileSystemTokenStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directory(@Nullable Output<String> directory) {
-            this.directory = directory;
+            $.directory = directory;
             return this;
         }
-        public Builder directory(@Nullable String directory) {
-            this.directory = Codegen.ofNullable(directory);
-            return this;
-        }        public FileSystemTokenStoreArgs build() {
-            return new FileSystemTokenStoreArgs(directory);
+
+        public Builder directory(String directory) {
+            return directory(Output.of(directory));
+        }
+
+        public FileSystemTokenStoreArgs build() {
+            return $;
         }
     }
+
 }

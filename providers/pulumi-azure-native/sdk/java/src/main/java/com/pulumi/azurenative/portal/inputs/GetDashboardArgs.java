@@ -17,7 +17,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dashboardName", required=true)
-      private final String dashboardName;
+    private String dashboardName;
 
     public String dashboardName() {
         return this.dashboardName;
@@ -28,55 +28,52 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDashboardArgs(
-        String dashboardName,
-        String resourceGroupName) {
-        this.dashboardName = Objects.requireNonNull(dashboardName, "expected parameter 'dashboardName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDashboardArgs() {}
 
-    private GetDashboardArgs() {
-        this.dashboardName = null;
-        this.resourceGroupName = null;
+    private GetDashboardArgs(GetDashboardArgs $) {
+        this.dashboardName = $.dashboardName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dashboardName;
-        private String resourceGroupName;
+        private GetDashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDashboardArgs();
         }
 
         public Builder(GetDashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardName = defaults.dashboardName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardName(String dashboardName) {
-            this.dashboardName = Objects.requireNonNull(dashboardName);
+            $.dashboardName = dashboardName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDashboardArgs build() {
-            return new GetDashboardArgs(dashboardName, resourceGroupName);
+        }
+
+        public GetDashboardArgs build() {
+            $.dashboardName = Objects.requireNonNull($.dashboardName, "expected parameter 'dashboardName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

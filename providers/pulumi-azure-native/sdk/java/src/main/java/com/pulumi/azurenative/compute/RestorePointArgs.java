@@ -6,10 +6,10 @@ package com.pulumi.azurenative.compute;
 import com.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludeDisks")
-      private final @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
+    private @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
 
-    public Output<List<ApiEntityReferenceArgs>> excludeDisks() {
-        return this.excludeDisks == null ? Codegen.empty() : this.excludeDisks;
+    public Optional<Output<List<ApiEntityReferenceArgs>>> excludeDisks() {
+        return Optional.ofNullable(this.excludeDisks);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -44,7 +44,7 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restorePointCollectionName", required=true)
-      private final Output<String> restorePointCollectionName;
+    private Output<String> restorePointCollectionName;
 
     public Output<String> restorePointCollectionName() {
         return this.restorePointCollectionName;
@@ -55,10 +55,10 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restorePointName")
-      private final @Nullable Output<String> restorePointName;
+    private @Nullable Output<String> restorePointName;
 
-    public Output<String> restorePointName() {
-        return this.restorePointName == null ? Codegen.empty() : this.restorePointName;
+    public Optional<Output<String>> restorePointName() {
+        return Optional.ofNullable(this.restorePointName);
     }
 
     /**
@@ -66,105 +66,94 @@ public final class RestorePointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeCreated")
-      private final @Nullable Output<String> timeCreated;
+    private @Nullable Output<String> timeCreated;
 
-    public Output<String> timeCreated() {
-        return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
+    public Optional<Output<String>> timeCreated() {
+        return Optional.ofNullable(this.timeCreated);
     }
 
-    public RestorePointArgs(
-        @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks,
-        Output<String> resourceGroupName,
-        Output<String> restorePointCollectionName,
-        @Nullable Output<String> restorePointName,
-        @Nullable Output<String> timeCreated) {
-        this.excludeDisks = excludeDisks;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName, "expected parameter 'restorePointCollectionName' to be non-null");
-        this.restorePointName = restorePointName;
-        this.timeCreated = timeCreated;
-    }
+    private RestorePointArgs() {}
 
-    private RestorePointArgs() {
-        this.excludeDisks = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restorePointCollectionName = Codegen.empty();
-        this.restorePointName = Codegen.empty();
-        this.timeCreated = Codegen.empty();
+    private RestorePointArgs(RestorePointArgs $) {
+        this.excludeDisks = $.excludeDisks;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restorePointCollectionName = $.restorePointCollectionName;
+        this.restorePointName = $.restorePointName;
+        this.timeCreated = $.timeCreated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
-        private Output<String> resourceGroupName;
-        private Output<String> restorePointCollectionName;
-        private @Nullable Output<String> restorePointName;
-        private @Nullable Output<String> timeCreated;
+        private RestorePointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointArgs();
         }
 
         public Builder(RestorePointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeDisks = defaults.excludeDisks;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restorePointCollectionName = defaults.restorePointCollectionName;
-    	      this.restorePointName = defaults.restorePointName;
-    	      this.timeCreated = defaults.timeCreated;
+            $ = new RestorePointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeDisks(@Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks) {
-            this.excludeDisks = excludeDisks;
+            $.excludeDisks = excludeDisks;
             return this;
         }
-        public Builder excludeDisks(@Nullable List<ApiEntityReferenceArgs> excludeDisks) {
-            this.excludeDisks = Codegen.ofNullable(excludeDisks);
-            return this;
+
+        public Builder excludeDisks(List<ApiEntityReferenceArgs> excludeDisks) {
+            return excludeDisks(Output.of(excludeDisks));
         }
+
         public Builder excludeDisks(ApiEntityReferenceArgs... excludeDisks) {
             return excludeDisks(List.of(excludeDisks));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restorePointCollectionName(Output<String> restorePointCollectionName) {
-            this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
+            $.restorePointCollectionName = restorePointCollectionName;
             return this;
         }
+
         public Builder restorePointCollectionName(String restorePointCollectionName) {
-            this.restorePointCollectionName = Output.of(Objects.requireNonNull(restorePointCollectionName));
-            return this;
+            return restorePointCollectionName(Output.of(restorePointCollectionName));
         }
+
         public Builder restorePointName(@Nullable Output<String> restorePointName) {
-            this.restorePointName = restorePointName;
+            $.restorePointName = restorePointName;
             return this;
         }
-        public Builder restorePointName(@Nullable String restorePointName) {
-            this.restorePointName = Codegen.ofNullable(restorePointName);
-            return this;
+
+        public Builder restorePointName(String restorePointName) {
+            return restorePointName(Output.of(restorePointName));
         }
+
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
-            this.timeCreated = timeCreated;
+            $.timeCreated = timeCreated;
             return this;
         }
-        public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Codegen.ofNullable(timeCreated);
-            return this;
-        }        public RestorePointArgs build() {
-            return new RestorePointArgs(excludeDisks, resourceGroupName, restorePointCollectionName, restorePointName, timeCreated);
+
+        public Builder timeCreated(String timeCreated) {
+            return timeCreated(Output.of(timeCreated));
+        }
+
+        public RestorePointArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.restorePointCollectionName = Objects.requireNonNull($.restorePointCollectionName, "expected parameter 'restorePointCollectionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class ServiceAcrConfigurationInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="loginServers")
-      private final @Nullable List<String> loginServers;
+    private @Nullable List<String> loginServers;
 
-    public List<String> loginServers() {
-        return this.loginServers == null ? List.of() : this.loginServers;
+    public Optional<List<String>> loginServers() {
+        return Optional.ofNullable(this.loginServers);
     }
 
-    public ServiceAcrConfigurationInfoResponse(@Nullable List<String> loginServers) {
-        this.loginServers = loginServers;
-    }
+    private ServiceAcrConfigurationInfoResponse() {}
 
-    private ServiceAcrConfigurationInfoResponse() {
-        this.loginServers = List.of();
+    private ServiceAcrConfigurationInfoResponse(ServiceAcrConfigurationInfoResponse $) {
+        this.loginServers = $.loginServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAcrConfigurationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> loginServers;
+        private ServiceAcrConfigurationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAcrConfigurationInfoResponse();
         }
 
         public Builder(ServiceAcrConfigurationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginServers = defaults.loginServers;
+            $ = new ServiceAcrConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loginServers(@Nullable List<String> loginServers) {
-            this.loginServers = loginServers;
+            $.loginServers = loginServers;
             return this;
         }
+
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
-        }        public ServiceAcrConfigurationInfoResponse build() {
-            return new ServiceAcrConfigurationInfoResponse(loginServers);
+        }
+
+        public ServiceAcrConfigurationInfoResponse build() {
+            return $;
         }
     }
+
 }

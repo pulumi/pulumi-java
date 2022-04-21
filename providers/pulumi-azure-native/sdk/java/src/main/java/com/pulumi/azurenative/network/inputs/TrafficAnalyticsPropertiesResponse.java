@@ -23,45 +23,44 @@ public final class TrafficAnalyticsPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
-      private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
+    private @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
     public Optional<TrafficAnalyticsConfigurationPropertiesResponse> networkWatcherFlowAnalyticsConfiguration() {
-        return this.networkWatcherFlowAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
+        return Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
     }
 
-    public TrafficAnalyticsPropertiesResponse(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
-        this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
-    }
+    private TrafficAnalyticsPropertiesResponse() {}
 
-    private TrafficAnalyticsPropertiesResponse() {
-        this.networkWatcherFlowAnalyticsConfiguration = null;
+    private TrafficAnalyticsPropertiesResponse(TrafficAnalyticsPropertiesResponse $) {
+        this.networkWatcherFlowAnalyticsConfiguration = $.networkWatcherFlowAnalyticsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficAnalyticsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
+        private TrafficAnalyticsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficAnalyticsPropertiesResponse();
         }
 
         public Builder(TrafficAnalyticsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkWatcherFlowAnalyticsConfiguration = defaults.networkWatcherFlowAnalyticsConfiguration;
+            $ = new TrafficAnalyticsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
-            this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
+            $.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
-        }        public TrafficAnalyticsPropertiesResponse build() {
-            return new TrafficAnalyticsPropertiesResponse(networkWatcherFlowAnalyticsConfiguration);
+        }
+
+        public TrafficAnalyticsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

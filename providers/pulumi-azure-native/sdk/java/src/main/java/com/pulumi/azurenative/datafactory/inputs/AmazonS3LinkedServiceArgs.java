@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accessKeyId")
-      private final @Nullable Output<Object> accessKeyId;
+    private @Nullable Output<Object> accessKeyId;
 
-    public Output<Object> accessKeyId() {
-        return this.accessKeyId == null ? Codegen.empty() : this.accessKeyId;
+    public Optional<Output<Object>> accessKeyId() {
+        return Optional.ofNullable(this.accessKeyId);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<Object> authenticationType;
+    private @Nullable Output<Object> authenticationType;
 
-    public Output<Object> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<Object>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secretAccessKey")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey() {
-        return this.secretAccessKey == null ? Codegen.empty() : this.secretAccessKey;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> secretAccessKey() {
+        return Optional.ofNullable(this.secretAccessKey);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceUrl")
-      private final @Nullable Output<Object> serviceUrl;
+    private @Nullable Output<Object> serviceUrl;
 
-    public Output<Object> serviceUrl() {
-        return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
+    public Optional<Output<Object>> serviceUrl() {
+        return Optional.ofNullable(this.serviceUrl);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sessionToken")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken() {
-        return this.sessionToken == null ? Codegen.empty() : this.sessionToken;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> sessionToken() {
+        return Optional.ofNullable(this.sessionToken);
     }
 
     /**
@@ -143,183 +144,153 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AmazonS3LinkedServiceArgs(
-        @Nullable Output<Object> accessKeyId,
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> authenticationType,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey,
-        @Nullable Output<Object> serviceUrl,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken,
-        Output<String> type) {
-        this.accessKeyId = accessKeyId;
-        this.annotations = annotations;
-        this.authenticationType = authenticationType;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.secretAccessKey = secretAccessKey;
-        this.serviceUrl = serviceUrl;
-        this.sessionToken = sessionToken;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AmazonS3LinkedServiceArgs() {}
 
-    private AmazonS3LinkedServiceArgs() {
-        this.accessKeyId = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.secretAccessKey = Codegen.empty();
-        this.serviceUrl = Codegen.empty();
-        this.sessionToken = Codegen.empty();
-        this.type = Codegen.empty();
+    private AmazonS3LinkedServiceArgs(AmazonS3LinkedServiceArgs $) {
+        this.accessKeyId = $.accessKeyId;
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.secretAccessKey = $.secretAccessKey;
+        this.serviceUrl = $.serviceUrl;
+        this.sessionToken = $.sessionToken;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonS3LinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> accessKeyId;
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> authenticationType;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
-        private @Nullable Output<Object> serviceUrl;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken;
-        private Output<String> type;
+        private AmazonS3LinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonS3LinkedServiceArgs();
         }
 
         public Builder(AmazonS3LinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyId = defaults.accessKeyId;
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.secretAccessKey = defaults.secretAccessKey;
-    	      this.serviceUrl = defaults.serviceUrl;
-    	      this.sessionToken = defaults.sessionToken;
-    	      this.type = defaults.type;
+            $ = new AmazonS3LinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyId(@Nullable Output<Object> accessKeyId) {
-            this.accessKeyId = accessKeyId;
+            $.accessKeyId = accessKeyId;
             return this;
         }
-        public Builder accessKeyId(@Nullable Object accessKeyId) {
-            this.accessKeyId = Codegen.ofNullable(accessKeyId);
-            return this;
+
+        public Builder accessKeyId(Object accessKeyId) {
+            return accessKeyId(Output.of(accessKeyId));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(@Nullable Output<Object> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable Object authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(Object authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder secretAccessKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
-            this.secretAccessKey = secretAccessKey;
+            $.secretAccessKey = secretAccessKey;
             return this;
         }
-        public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
-            this.secretAccessKey = Codegen.ofNullable(secretAccessKey);
-            return this;
+
+        public Builder secretAccessKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
+            return secretAccessKey(Output.of(secretAccessKey));
         }
+
         public Builder serviceUrl(@Nullable Output<Object> serviceUrl) {
-            this.serviceUrl = serviceUrl;
+            $.serviceUrl = serviceUrl;
             return this;
         }
-        public Builder serviceUrl(@Nullable Object serviceUrl) {
-            this.serviceUrl = Codegen.ofNullable(serviceUrl);
-            return this;
+
+        public Builder serviceUrl(Object serviceUrl) {
+            return serviceUrl(Output.of(serviceUrl));
         }
+
         public Builder sessionToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken) {
-            this.sessionToken = sessionToken;
+            $.sessionToken = sessionToken;
             return this;
         }
-        public Builder sessionToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> sessionToken) {
-            this.sessionToken = Codegen.ofNullable(sessionToken);
-            return this;
+
+        public Builder sessionToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> sessionToken) {
+            return sessionToken(Output.of(sessionToken));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AmazonS3LinkedServiceArgs build() {
-            return new AmazonS3LinkedServiceArgs(accessKeyId, annotations, authenticationType, connectVia, description, encryptedCredential, parameters, secretAccessKey, serviceUrl, sessionToken, type);
+            return type(Output.of(type));
+        }
+
+        public AmazonS3LinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

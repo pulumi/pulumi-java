@@ -7,7 +7,6 @@ import com.pulumi.azurenative.edgeorder.enums.NotificationStageName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class NotificationPreferenceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sendNotification", required=true)
-      private final Output<Boolean> sendNotification;
+    private Output<Boolean> sendNotification;
 
     public Output<Boolean> sendNotification() {
         return this.sendNotification;
@@ -37,63 +36,60 @@ public final class NotificationPreferenceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="stageName", required=true)
-      private final Output<Either<String,NotificationStageName>> stageName;
+    private Output<Either<String,NotificationStageName>> stageName;
 
     public Output<Either<String,NotificationStageName>> stageName() {
         return this.stageName;
     }
 
-    public NotificationPreferenceArgs(
-        Output<Boolean> sendNotification,
-        Output<Either<String,NotificationStageName>> stageName) {
-        this.sendNotification = Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-    }
+    private NotificationPreferenceArgs() {}
 
-    private NotificationPreferenceArgs() {
-        this.sendNotification = Codegen.empty();
-        this.stageName = Codegen.empty();
+    private NotificationPreferenceArgs(NotificationPreferenceArgs $) {
+        this.sendNotification = $.sendNotification;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationPreferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> sendNotification;
-        private Output<Either<String,NotificationStageName>> stageName;
+        private NotificationPreferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationPreferenceArgs();
         }
 
         public Builder(NotificationPreferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sendNotification = defaults.sendNotification;
-    	      this.stageName = defaults.stageName;
+            $ = new NotificationPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sendNotification(Output<Boolean> sendNotification) {
-            this.sendNotification = Objects.requireNonNull(sendNotification);
+            $.sendNotification = sendNotification;
             return this;
         }
+
         public Builder sendNotification(Boolean sendNotification) {
-            this.sendNotification = Output.of(Objects.requireNonNull(sendNotification));
-            return this;
+            return sendNotification(Output.of(sendNotification));
         }
+
         public Builder stageName(Output<Either<String,NotificationStageName>> stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
         }
+
         public Builder stageName(Either<String,NotificationStageName> stageName) {
-            this.stageName = Output.of(Objects.requireNonNull(stageName));
-            return this;
-        }        public NotificationPreferenceArgs build() {
-            return new NotificationPreferenceArgs(sendNotification, stageName);
+            return stageName(Output.of(stageName));
+        }
+
+        public NotificationPreferenceArgs build() {
+            $.sendNotification = Objects.requireNonNull($.sendNotification, "expected parameter 'sendNotification' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            return $;
         }
     }
+
 }

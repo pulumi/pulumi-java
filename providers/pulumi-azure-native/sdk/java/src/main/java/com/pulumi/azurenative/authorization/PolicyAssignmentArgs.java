@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enforcementMode")
-      private final @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
+    private @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
 
-    public Output<Either<String,EnforcementMode>> enforcementMode() {
-        return this.enforcementMode == null ? Codegen.empty() : this.enforcementMode;
+    public Optional<Output<Either<String,EnforcementMode>>> enforcementMode() {
+        return Optional.ofNullable(this.enforcementMode);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nonComplianceMessages")
-      private final @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
+    private @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
 
-    public Output<List<NonComplianceMessageArgs>> nonComplianceMessages() {
-        return this.nonComplianceMessages == null ? Codegen.empty() : this.nonComplianceMessages;
+    public Optional<Output<List<NonComplianceMessageArgs>>> nonComplianceMessages() {
+        return Optional.ofNullable(this.nonComplianceMessages);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notScopes")
-      private final @Nullable Output<List<String>> notScopes;
+    private @Nullable Output<List<String>> notScopes;
 
-    public Output<List<String>> notScopes() {
-        return this.notScopes == null ? Codegen.empty() : this.notScopes;
+    public Optional<Output<List<String>>> notScopes() {
+        return Optional.ofNullable(this.notScopes);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
-    public Output<Map<String,ParameterValuesValueArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterValuesValueArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -127,10 +128,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyAssignmentName")
-      private final @Nullable Output<String> policyAssignmentName;
+    private @Nullable Output<String> policyAssignmentName;
 
-    public Output<String> policyAssignmentName() {
-        return this.policyAssignmentName == null ? Codegen.empty() : this.policyAssignmentName;
+    public Optional<Output<String>> policyAssignmentName() {
+        return Optional.ofNullable(this.policyAssignmentName);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyDefinitionId")
-      private final @Nullable Output<String> policyDefinitionId;
+    private @Nullable Output<String> policyDefinitionId;
 
-    public Output<String> policyDefinitionId() {
-        return this.policyDefinitionId == null ? Codegen.empty() : this.policyDefinitionId;
+    public Optional<Output<String>> policyDefinitionId() {
+        return Optional.ofNullable(this.policyDefinitionId);
     }
 
     /**
@@ -149,199 +150,168 @@ public final class PolicyAssignmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public PolicyAssignmentArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Either<String,EnforcementMode>> enforcementMode,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages,
-        @Nullable Output<List<String>> notScopes,
-        @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters,
-        @Nullable Output<String> policyAssignmentName,
-        @Nullable Output<String> policyDefinitionId,
-        Output<String> scope) {
-        this.description = description;
-        this.displayName = displayName;
-        this.enforcementMode = Codegen.stringProp("enforcementMode").left(EnforcementMode.class).output().arg(enforcementMode).def("Default").getNullable();
-        this.identity = identity;
-        this.location = location;
-        this.metadata = metadata;
-        this.nonComplianceMessages = nonComplianceMessages;
-        this.notScopes = notScopes;
-        this.parameters = parameters;
-        this.policyAssignmentName = policyAssignmentName;
-        this.policyDefinitionId = policyDefinitionId;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private PolicyAssignmentArgs() {}
 
-    private PolicyAssignmentArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enforcementMode = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.nonComplianceMessages = Codegen.empty();
-        this.notScopes = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policyAssignmentName = Codegen.empty();
-        this.policyDefinitionId = Codegen.empty();
-        this.scope = Codegen.empty();
+    private PolicyAssignmentArgs(PolicyAssignmentArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enforcementMode = $.enforcementMode;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.nonComplianceMessages = $.nonComplianceMessages;
+        this.notScopes = $.notScopes;
+        this.parameters = $.parameters;
+        this.policyAssignmentName = $.policyAssignmentName;
+        this.policyDefinitionId = $.policyDefinitionId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
-        private @Nullable Output<List<String>> notScopes;
-        private @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
-        private @Nullable Output<String> policyAssignmentName;
-        private @Nullable Output<String> policyDefinitionId;
-        private Output<String> scope;
+        private PolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAssignmentArgs();
         }
 
         public Builder(PolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enforcementMode = defaults.enforcementMode;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.nonComplianceMessages = defaults.nonComplianceMessages;
-    	      this.notScopes = defaults.notScopes;
-    	      this.parameters = defaults.parameters;
-    	      this.policyAssignmentName = defaults.policyAssignmentName;
-    	      this.policyDefinitionId = defaults.policyDefinitionId;
-    	      this.scope = defaults.scope;
+            $ = new PolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enforcementMode(@Nullable Output<Either<String,EnforcementMode>> enforcementMode) {
-            this.enforcementMode = enforcementMode;
+            $.enforcementMode = enforcementMode;
             return this;
         }
-        public Builder enforcementMode(@Nullable Either<String,EnforcementMode> enforcementMode) {
-            this.enforcementMode = Codegen.ofNullable(enforcementMode);
-            return this;
+
+        public Builder enforcementMode(Either<String,EnforcementMode> enforcementMode) {
+            return enforcementMode(Output.of(enforcementMode));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder nonComplianceMessages(@Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages) {
-            this.nonComplianceMessages = nonComplianceMessages;
+            $.nonComplianceMessages = nonComplianceMessages;
             return this;
         }
-        public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageArgs> nonComplianceMessages) {
-            this.nonComplianceMessages = Codegen.ofNullable(nonComplianceMessages);
-            return this;
+
+        public Builder nonComplianceMessages(List<NonComplianceMessageArgs> nonComplianceMessages) {
+            return nonComplianceMessages(Output.of(nonComplianceMessages));
         }
+
         public Builder nonComplianceMessages(NonComplianceMessageArgs... nonComplianceMessages) {
             return nonComplianceMessages(List.of(nonComplianceMessages));
         }
+
         public Builder notScopes(@Nullable Output<List<String>> notScopes) {
-            this.notScopes = notScopes;
+            $.notScopes = notScopes;
             return this;
         }
-        public Builder notScopes(@Nullable List<String> notScopes) {
-            this.notScopes = Codegen.ofNullable(notScopes);
-            return this;
+
+        public Builder notScopes(List<String> notScopes) {
+            return notScopes(Output.of(notScopes));
         }
+
         public Builder notScopes(String... notScopes) {
             return notScopes(List.of(notScopes));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterValuesValueArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterValuesValueArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder policyAssignmentName(@Nullable Output<String> policyAssignmentName) {
-            this.policyAssignmentName = policyAssignmentName;
+            $.policyAssignmentName = policyAssignmentName;
             return this;
         }
-        public Builder policyAssignmentName(@Nullable String policyAssignmentName) {
-            this.policyAssignmentName = Codegen.ofNullable(policyAssignmentName);
-            return this;
+
+        public Builder policyAssignmentName(String policyAssignmentName) {
+            return policyAssignmentName(Output.of(policyAssignmentName));
         }
+
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
-            this.policyDefinitionId = policyDefinitionId;
+            $.policyDefinitionId = policyDefinitionId;
             return this;
         }
-        public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = Codegen.ofNullable(policyDefinitionId);
-            return this;
+
+        public Builder policyDefinitionId(String policyDefinitionId) {
+            return policyDefinitionId(Output.of(policyDefinitionId));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public PolicyAssignmentArgs build() {
-            return new PolicyAssignmentArgs(description, displayName, enforcementMode, identity, location, metadata, nonComplianceMessages, notScopes, parameters, policyAssignmentName, policyDefinitionId, scope);
+            return scope(Output.of(scope));
+        }
+
+        public PolicyAssignmentArgs build() {
+            $.enforcementMode = Codegen.stringProp("enforcementMode").left(EnforcementMode.class).output().arg($.enforcementMode).def("Default").getNullable();
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

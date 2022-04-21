@@ -21,45 +21,45 @@ public final class X12MessageIdentifierResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="messageId", required=true)
-      private final String messageId;
+    private String messageId;
 
     public String messageId() {
         return this.messageId;
     }
 
-    public X12MessageIdentifierResponse(String messageId) {
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-    }
+    private X12MessageIdentifierResponse() {}
 
-    private X12MessageIdentifierResponse() {
-        this.messageId = null;
+    private X12MessageIdentifierResponse(X12MessageIdentifierResponse $) {
+        this.messageId = $.messageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12MessageIdentifierResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageId;
+        private X12MessageIdentifierResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12MessageIdentifierResponse();
         }
 
         public Builder(X12MessageIdentifierResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageId = defaults.messageId;
+            $ = new X12MessageIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
-        }        public X12MessageIdentifierResponse build() {
-            return new X12MessageIdentifierResponse(messageId);
+        }
+
+        public X12MessageIdentifierResponse build() {
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            return $;
         }
     }
+
 }

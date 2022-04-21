@@ -8,10 +8,10 @@ import com.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="links", required=true)
-      private final Output<List<GraphParameterLinkArgs>> links;
+    private Output<List<GraphParameterLinkArgs>> links;
 
     public Output<List<GraphParameterLinkArgs>> links() {
         return this.links;
@@ -50,79 +50,74 @@ public final class GraphParameterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ParameterType>> type;
+    private Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> type() {
         return this.type;
     }
 
-    public GraphParameterArgs(
-        @Nullable Output<String> description,
-        Output<List<GraphParameterLinkArgs>> links,
-        Output<Either<String,ParameterType>> type) {
-        this.description = description;
-        this.links = Objects.requireNonNull(links, "expected parameter 'links' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GraphParameterArgs() {}
 
-    private GraphParameterArgs() {
-        this.description = Codegen.empty();
-        this.links = Codegen.empty();
-        this.type = Codegen.empty();
+    private GraphParameterArgs(GraphParameterArgs $) {
+        this.description = $.description;
+        this.links = $.links;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<GraphParameterLinkArgs>> links;
-        private Output<Either<String,ParameterType>> type;
+        private GraphParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphParameterArgs();
         }
 
         public Builder(GraphParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.links = defaults.links;
-    	      this.type = defaults.type;
+            $ = new GraphParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder links(Output<List<GraphParameterLinkArgs>> links) {
-            this.links = Objects.requireNonNull(links);
+            $.links = links;
             return this;
         }
+
         public Builder links(List<GraphParameterLinkArgs> links) {
-            this.links = Output.of(Objects.requireNonNull(links));
-            return this;
+            return links(Output.of(links));
         }
+
         public Builder links(GraphParameterLinkArgs... links) {
             return links(List.of(links));
         }
+
         public Builder type(Output<Either<String,ParameterType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ParameterType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public GraphParameterArgs build() {
-            return new GraphParameterArgs(description, links, type);
+            return type(Output.of(type));
+        }
+
+        public GraphParameterArgs build() {
+            $.links = Objects.requireNonNull($.links, "expected parameter 'links' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

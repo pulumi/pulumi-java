@@ -24,7 +24,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -35,7 +35,7 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
      * 
      */
     @Import(name="names", required=true)
-      private final List<String> names;
+    private List<String> names;
 
     public List<String> names() {
         return this.names;
@@ -47,67 +47,63 @@ public final class NamedPartitionSchemeDescriptionResponse extends com.pulumi.re
      * 
      */
     @Import(name="partitionScheme", required=true)
-      private final String partitionScheme;
+    private String partitionScheme;
 
     public String partitionScheme() {
         return this.partitionScheme;
     }
 
-    public NamedPartitionSchemeDescriptionResponse(
-        Integer count,
-        List<String> names,
-        String partitionScheme) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-        this.partitionScheme = Codegen.stringProp("partitionScheme").arg(partitionScheme).require();
-    }
+    private NamedPartitionSchemeDescriptionResponse() {}
 
-    private NamedPartitionSchemeDescriptionResponse() {
-        this.count = null;
-        this.names = List.of();
-        this.partitionScheme = null;
+    private NamedPartitionSchemeDescriptionResponse(NamedPartitionSchemeDescriptionResponse $) {
+        this.count = $.count;
+        this.names = $.names;
+        this.partitionScheme = $.partitionScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedPartitionSchemeDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private List<String> names;
-        private String partitionScheme;
+        private NamedPartitionSchemeDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedPartitionSchemeDescriptionResponse();
         }
 
         public Builder(NamedPartitionSchemeDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.names = defaults.names;
-    	      this.partitionScheme = defaults.partitionScheme;
+            $ = new NamedPartitionSchemeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder names(List<String> names) {
-            this.names = Objects.requireNonNull(names);
+            $.names = names;
             return this;
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
         }
+
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Objects.requireNonNull(partitionScheme);
+            $.partitionScheme = partitionScheme;
             return this;
-        }        public NamedPartitionSchemeDescriptionResponse build() {
-            return new NamedPartitionSchemeDescriptionResponse(count, names, partitionScheme);
+        }
+
+        public NamedPartitionSchemeDescriptionResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.names = Objects.requireNonNull($.names, "expected parameter 'names' to be non-null");
+            $.partitionScheme = Codegen.stringProp("partitionScheme").arg($.partitionScheme).require();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterResourceName", required=true)
-      private final String clusterResourceName;
+    private String clusterResourceName;
 
     public String clusterResourceName() {
         return this.clusterResourceName;
@@ -39,7 +39,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterRp", required=true)
-      private final String clusterRp;
+    private String clusterRp;
 
     public String clusterRp() {
         return this.clusterRp;
@@ -50,7 +50,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionInstanceName", required=true)
-      private final String extensionInstanceName;
+    private String extensionInstanceName;
 
     public String extensionInstanceName() {
         return this.extensionInstanceName;
@@ -61,82 +61,73 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExtensionArgs(
-        String clusterName,
-        String clusterResourceName,
-        String clusterRp,
-        String extensionInstanceName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterResourceName = Objects.requireNonNull(clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
-        this.clusterRp = Objects.requireNonNull(clusterRp, "expected parameter 'clusterRp' to be non-null");
-        this.extensionInstanceName = Objects.requireNonNull(extensionInstanceName, "expected parameter 'extensionInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExtensionArgs() {}
 
-    private GetExtensionArgs() {
-        this.clusterName = null;
-        this.clusterResourceName = null;
-        this.clusterRp = null;
-        this.extensionInstanceName = null;
-        this.resourceGroupName = null;
+    private GetExtensionArgs(GetExtensionArgs $) {
+        this.clusterName = $.clusterName;
+        this.clusterResourceName = $.clusterResourceName;
+        this.clusterRp = $.clusterRp;
+        this.extensionInstanceName = $.extensionInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String clusterResourceName;
-        private String clusterRp;
-        private String extensionInstanceName;
-        private String resourceGroupName;
+        private GetExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExtensionArgs();
         }
 
         public Builder(GetExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterResourceName = defaults.clusterResourceName;
-    	      this.clusterRp = defaults.clusterRp;
-    	      this.extensionInstanceName = defaults.extensionInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterResourceName(String clusterResourceName) {
-            this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
+            $.clusterResourceName = clusterResourceName;
             return this;
         }
+
         public Builder clusterRp(String clusterRp) {
-            this.clusterRp = Objects.requireNonNull(clusterRp);
+            $.clusterRp = clusterRp;
             return this;
         }
+
         public Builder extensionInstanceName(String extensionInstanceName) {
-            this.extensionInstanceName = Objects.requireNonNull(extensionInstanceName);
+            $.extensionInstanceName = extensionInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExtensionArgs build() {
-            return new GetExtensionArgs(clusterName, clusterResourceName, clusterRp, extensionInstanceName, resourceGroupName);
+        }
+
+        public GetExtensionArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterResourceName = Objects.requireNonNull($.clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
+            $.clusterRp = Objects.requireNonNull($.clusterRp, "expected parameter 'clusterRp' to be non-null");
+            $.extensionInstanceName = Objects.requireNonNull($.extensionInstanceName, "expected parameter 'extensionInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

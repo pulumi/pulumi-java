@@ -17,7 +17,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final String gatewayName;
+    private String gatewayName;
 
     public String gatewayName() {
         return this.gatewayName;
@@ -28,55 +28,52 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetVpnGatewayArgs(
-        String gatewayName,
-        String resourceGroupName) {
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetVpnGatewayArgs() {}
 
-    private GetVpnGatewayArgs() {
-        this.gatewayName = null;
-        this.resourceGroupName = null;
+    private GetVpnGatewayArgs(GetVpnGatewayArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayName;
-        private String resourceGroupName;
+        private GetVpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpnGatewayArgs();
         }
 
         public Builder(GetVpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetVpnGatewayArgs build() {
-            return new GetVpnGatewayArgs(gatewayName, resourceGroupName);
+        }
+
+        public GetVpnGatewayArgs build() {
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

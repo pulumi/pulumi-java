@@ -25,10 +25,10 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
      * 
      */
     @Import(name="generatedInteractionTypes")
-      private final @Nullable List<String> generatedInteractionTypes;
+    private @Nullable List<String> generatedInteractionTypes;
 
-    public List<String> generatedInteractionTypes() {
-        return this.generatedInteractionTypes == null ? List.of() : this.generatedInteractionTypes;
+    public Optional<List<String>> generatedInteractionTypes() {
+        return Optional.ofNullable(this.generatedInteractionTypes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
      * 
      */
     @Import(name="generatedKpis")
-      private final @Nullable Map<String,String> generatedKpis;
+    private @Nullable Map<String,String> generatedKpis;
 
-    public Map<String,String> generatedKpis() {
-        return this.generatedKpis == null ? Map.of() : this.generatedKpis;
+    public Optional<Map<String,String>> generatedKpis() {
+        return Optional.ofNullable(this.generatedKpis);
     }
 
     /**
@@ -47,70 +47,64 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
      * 
      */
     @Import(name="generatedLinks")
-      private final @Nullable List<String> generatedLinks;
+    private @Nullable List<String> generatedLinks;
 
-    public List<String> generatedLinks() {
-        return this.generatedLinks == null ? List.of() : this.generatedLinks;
+    public Optional<List<String>> generatedLinks() {
+        return Optional.ofNullable(this.generatedLinks);
     }
 
-    public PredictionResponseSystemGeneratedEntities(
-        @Nullable List<String> generatedInteractionTypes,
-        @Nullable Map<String,String> generatedKpis,
-        @Nullable List<String> generatedLinks) {
-        this.generatedInteractionTypes = generatedInteractionTypes;
-        this.generatedKpis = generatedKpis;
-        this.generatedLinks = generatedLinks;
-    }
+    private PredictionResponseSystemGeneratedEntities() {}
 
-    private PredictionResponseSystemGeneratedEntities() {
-        this.generatedInteractionTypes = List.of();
-        this.generatedKpis = Map.of();
-        this.generatedLinks = List.of();
+    private PredictionResponseSystemGeneratedEntities(PredictionResponseSystemGeneratedEntities $) {
+        this.generatedInteractionTypes = $.generatedInteractionTypes;
+        this.generatedKpis = $.generatedKpis;
+        this.generatedLinks = $.generatedLinks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionResponseSystemGeneratedEntities defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> generatedInteractionTypes;
-        private @Nullable Map<String,String> generatedKpis;
-        private @Nullable List<String> generatedLinks;
+        private PredictionResponseSystemGeneratedEntities $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionResponseSystemGeneratedEntities();
         }
 
         public Builder(PredictionResponseSystemGeneratedEntities defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.generatedInteractionTypes = defaults.generatedInteractionTypes;
-    	      this.generatedKpis = defaults.generatedKpis;
-    	      this.generatedLinks = defaults.generatedLinks;
+            $ = new PredictionResponseSystemGeneratedEntities(Objects.requireNonNull(defaults));
         }
 
         public Builder generatedInteractionTypes(@Nullable List<String> generatedInteractionTypes) {
-            this.generatedInteractionTypes = generatedInteractionTypes;
+            $.generatedInteractionTypes = generatedInteractionTypes;
             return this;
         }
+
         public Builder generatedInteractionTypes(String... generatedInteractionTypes) {
             return generatedInteractionTypes(List.of(generatedInteractionTypes));
         }
+
         public Builder generatedKpis(@Nullable Map<String,String> generatedKpis) {
-            this.generatedKpis = generatedKpis;
+            $.generatedKpis = generatedKpis;
             return this;
         }
+
         public Builder generatedLinks(@Nullable List<String> generatedLinks) {
-            this.generatedLinks = generatedLinks;
+            $.generatedLinks = generatedLinks;
             return this;
         }
+
         public Builder generatedLinks(String... generatedLinks) {
             return generatedLinks(List.of(generatedLinks));
-        }        public PredictionResponseSystemGeneratedEntities build() {
-            return new PredictionResponseSystemGeneratedEntities(generatedInteractionTypes, generatedKpis, generatedLinks);
+        }
+
+        public PredictionResponseSystemGeneratedEntities build() {
+            return $;
         }
     }
+
 }

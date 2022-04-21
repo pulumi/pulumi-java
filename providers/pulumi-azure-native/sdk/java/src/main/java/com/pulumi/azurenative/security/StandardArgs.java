@@ -6,11 +6,11 @@ package com.pulumi.azurenative.security;
 import com.pulumi.azurenative.security.inputs.StandardComponentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="components")
-      private final @Nullable Output<List<StandardComponentPropertiesArgs>> components;
+    private @Nullable Output<List<StandardComponentPropertiesArgs>> components;
 
-    public Output<List<StandardComponentPropertiesArgs>> components() {
-        return this.components == null ? Codegen.empty() : this.components;
+    public Optional<Output<List<StandardComponentPropertiesArgs>>> components() {
+        return Optional.ofNullable(this.components);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,10 +100,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="standardId")
-      private final @Nullable Output<String> standardId;
+    private @Nullable Output<String> standardId;
 
-    public Output<String> standardId() {
-        return this.standardId == null ? Codegen.empty() : this.standardId;
+    public Optional<Output<String>> standardId() {
+        return Optional.ofNullable(this.standardId);
     }
 
     /**
@@ -111,157 +111,133 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StandardArgs(
-        @Nullable Output<String> category,
-        @Nullable Output<List<StandardComponentPropertiesArgs>> components,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> standardId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.category = category;
-        this.components = components;
-        this.description = description;
-        this.displayName = displayName;
-        this.kind = kind;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.standardId = standardId;
-        this.tags = tags;
-    }
+    private StandardArgs() {}
 
-    private StandardArgs() {
-        this.category = Codegen.empty();
-        this.components = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.standardId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StandardArgs(StandardArgs $) {
+        this.category = $.category;
+        this.components = $.components;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.standardId = $.standardId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> category;
-        private @Nullable Output<List<StandardComponentPropertiesArgs>> components;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> standardId;
-        private @Nullable Output<Map<String,String>> tags;
+        private StandardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardArgs();
         }
 
         public Builder(StandardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.components = defaults.components;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.standardId = defaults.standardId;
-    	      this.tags = defaults.tags;
+            $ = new StandardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder components(@Nullable Output<List<StandardComponentPropertiesArgs>> components) {
-            this.components = components;
+            $.components = components;
             return this;
         }
-        public Builder components(@Nullable List<StandardComponentPropertiesArgs> components) {
-            this.components = Codegen.ofNullable(components);
-            return this;
+
+        public Builder components(List<StandardComponentPropertiesArgs> components) {
+            return components(Output.of(components));
         }
+
         public Builder components(StandardComponentPropertiesArgs... components) {
             return components(List.of(components));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder standardId(@Nullable Output<String> standardId) {
-            this.standardId = standardId;
+            $.standardId = standardId;
             return this;
         }
-        public Builder standardId(@Nullable String standardId) {
-            this.standardId = Codegen.ofNullable(standardId);
-            return this;
+
+        public Builder standardId(String standardId) {
+            return standardId(Output.of(standardId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public StandardArgs build() {
-            return new StandardArgs(category, components, description, displayName, kind, location, resourceGroupName, standardId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public StandardArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

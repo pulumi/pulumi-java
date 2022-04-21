@@ -27,10 +27,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="customErrorConfigurations")
-      private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
+    private @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
-    public List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations() {
-        return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
+    public Optional<List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations() {
+        return Optional.ofNullable(this.customErrorConfigurations);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -49,10 +49,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="firewallPolicy")
-      private final @Nullable SubResourceResponse firewallPolicy;
+    private @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> firewallPolicy() {
-        return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
+        return Optional.ofNullable(this.firewallPolicy);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="frontendIPConfiguration")
-      private final @Nullable SubResourceResponse frontendIPConfiguration;
+    private @Nullable SubResourceResponse frontendIPConfiguration;
 
     public Optional<SubResourceResponse> frontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
+        return Optional.ofNullable(this.frontendIPConfiguration);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="frontendPort")
-      private final @Nullable SubResourceResponse frontendPort;
+    private @Nullable SubResourceResponse frontendPort;
 
     public Optional<SubResourceResponse> frontendPort() {
-        return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
+        return Optional.ofNullable(this.frontendPort);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="hostNames")
-      private final @Nullable List<String> hostNames;
+    private @Nullable List<String> hostNames;
 
-    public List<String> hostNames() {
-        return this.hostNames == null ? List.of() : this.hostNames;
+    public Optional<List<String>> hostNames() {
+        return Optional.ofNullable(this.hostNames);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -148,10 +148,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="requireServerNameIndication")
-      private final @Nullable Boolean requireServerNameIndication;
+    private @Nullable Boolean requireServerNameIndication;
 
     public Optional<Boolean> requireServerNameIndication() {
-        return this.requireServerNameIndication == null ? Optional.empty() : Optional.ofNullable(this.requireServerNameIndication);
+        return Optional.ofNullable(this.requireServerNameIndication);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="sslCertificate")
-      private final @Nullable SubResourceResponse sslCertificate;
+    private @Nullable SubResourceResponse sslCertificate;
 
     public Optional<SubResourceResponse> sslCertificate() {
-        return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
+        return Optional.ofNullable(this.sslCertificate);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="sslProfile")
-      private final @Nullable SubResourceResponse sslProfile;
+    private @Nullable SubResourceResponse sslProfile;
 
     public Optional<SubResourceResponse> sslProfile() {
-        return this.sslProfile == null ? Optional.empty() : Optional.ofNullable(this.sslProfile);
+        return Optional.ofNullable(this.sslProfile);
     }
 
     /**
@@ -181,178 +181,139 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayHttpListenerResponse(
-        @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        @Nullable SubResourceResponse frontendPort,
-        @Nullable String hostName,
-        @Nullable List<String> hostNames,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Boolean requireServerNameIndication,
-        @Nullable SubResourceResponse sslCertificate,
-        @Nullable SubResourceResponse sslProfile,
-        String type) {
-        this.customErrorConfigurations = customErrorConfigurations;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.firewallPolicy = firewallPolicy;
-        this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPort = frontendPort;
-        this.hostName = hostName;
-        this.hostNames = hostNames;
-        this.id = id;
-        this.name = name;
-        this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.requireServerNameIndication = requireServerNameIndication;
-        this.sslCertificate = sslCertificate;
-        this.sslProfile = sslProfile;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayHttpListenerResponse() {}
 
-    private ApplicationGatewayHttpListenerResponse() {
-        this.customErrorConfigurations = List.of();
-        this.etag = null;
-        this.firewallPolicy = null;
-        this.frontendIPConfiguration = null;
-        this.frontendPort = null;
-        this.hostName = null;
-        this.hostNames = List.of();
-        this.id = null;
-        this.name = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.requireServerNameIndication = null;
-        this.sslCertificate = null;
-        this.sslProfile = null;
-        this.type = null;
+    private ApplicationGatewayHttpListenerResponse(ApplicationGatewayHttpListenerResponse $) {
+        this.customErrorConfigurations = $.customErrorConfigurations;
+        this.etag = $.etag;
+        this.firewallPolicy = $.firewallPolicy;
+        this.frontendIPConfiguration = $.frontendIPConfiguration;
+        this.frontendPort = $.frontendPort;
+        this.hostName = $.hostName;
+        this.hostNames = $.hostNames;
+        this.id = $.id;
+        this.name = $.name;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.requireServerNameIndication = $.requireServerNameIndication;
+        this.sslCertificate = $.sslCertificate;
+        this.sslProfile = $.sslProfile;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayHttpListenerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
-        private String etag;
-        private @Nullable SubResourceResponse firewallPolicy;
-        private @Nullable SubResourceResponse frontendIPConfiguration;
-        private @Nullable SubResourceResponse frontendPort;
-        private @Nullable String hostName;
-        private @Nullable List<String> hostNames;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String protocol;
-        private String provisioningState;
-        private @Nullable Boolean requireServerNameIndication;
-        private @Nullable SubResourceResponse sslCertificate;
-        private @Nullable SubResourceResponse sslProfile;
-        private String type;
+        private ApplicationGatewayHttpListenerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayHttpListenerResponse();
         }
 
         public Builder(ApplicationGatewayHttpListenerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customErrorConfigurations = defaults.customErrorConfigurations;
-    	      this.etag = defaults.etag;
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.frontendIPConfiguration = defaults.frontendIPConfiguration;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.hostName = defaults.hostName;
-    	      this.hostNames = defaults.hostNames;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requireServerNameIndication = defaults.requireServerNameIndication;
-    	      this.sslCertificate = defaults.sslCertificate;
-    	      this.sslProfile = defaults.sslProfile;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayHttpListenerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
-            this.customErrorConfigurations = customErrorConfigurations;
+            $.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
+
         public Builder customErrorConfigurations(ApplicationGatewayCustomErrorResponse... customErrorConfigurations) {
             return customErrorConfigurations(List.of(customErrorConfigurations));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
-            this.firewallPolicy = firewallPolicy;
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
+
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
-            this.frontendIPConfiguration = frontendIPConfiguration;
+            $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
+
         public Builder frontendPort(@Nullable SubResourceResponse frontendPort) {
-            this.frontendPort = frontendPort;
+            $.frontendPort = frontendPort;
             return this;
         }
+
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostNames(@Nullable List<String> hostNames) {
-            this.hostNames = hostNames;
+            $.hostNames = hostNames;
             return this;
         }
+
         public Builder hostNames(String... hostNames) {
             return hostNames(List.of(hostNames));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
-            this.requireServerNameIndication = requireServerNameIndication;
+            $.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
+
         public Builder sslCertificate(@Nullable SubResourceResponse sslCertificate) {
-            this.sslCertificate = sslCertificate;
+            $.sslCertificate = sslCertificate;
             return this;
         }
+
         public Builder sslProfile(@Nullable SubResourceResponse sslProfile) {
-            this.sslProfile = sslProfile;
+            $.sslProfile = sslProfile;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayHttpListenerResponse build() {
-            return new ApplicationGatewayHttpListenerResponse(customErrorConfigurations, etag, firewallPolicy, frontendIPConfiguration, frontendPort, hostName, hostNames, id, name, protocol, provisioningState, requireServerNameIndication, sslCertificate, sslProfile, type);
+        }
+
+        public ApplicationGatewayHttpListenerResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

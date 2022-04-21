@@ -5,10 +5,10 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WeekDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class WeekDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weekdays")
-      private final @Nullable Output<List<String>> weekdays;
+    private @Nullable Output<List<String>> weekdays;
 
-    public Output<List<String>> weekdays() {
-        return this.weekdays == null ? Codegen.empty() : this.weekdays;
+    public Optional<Output<List<String>>> weekdays() {
+        return Optional.ofNullable(this.weekdays);
     }
 
-    public WeekDetailsArgs(
-        @Nullable Output<String> time,
-        @Nullable Output<List<String>> weekdays) {
-        this.time = time;
-        this.weekdays = weekdays;
-    }
+    private WeekDetailsArgs() {}
 
-    private WeekDetailsArgs() {
-        this.time = Codegen.empty();
-        this.weekdays = Codegen.empty();
+    private WeekDetailsArgs(WeekDetailsArgs $) {
+        this.time = $.time;
+        this.weekdays = $.weekdays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeekDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> time;
-        private @Nullable Output<List<String>> weekdays;
+        private WeekDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeekDetailsArgs();
         }
 
         public Builder(WeekDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.time = defaults.time;
-    	      this.weekdays = defaults.weekdays;
+            $ = new WeekDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
+
+        public Builder time(String time) {
+            return time(Output.of(time));
         }
+
         public Builder weekdays(@Nullable Output<List<String>> weekdays) {
-            this.weekdays = weekdays;
+            $.weekdays = weekdays;
             return this;
         }
-        public Builder weekdays(@Nullable List<String> weekdays) {
-            this.weekdays = Codegen.ofNullable(weekdays);
-            return this;
+
+        public Builder weekdays(List<String> weekdays) {
+            return weekdays(Output.of(weekdays));
         }
+
         public Builder weekdays(String... weekdays) {
             return weekdays(List.of(weekdays));
-        }        public WeekDetailsArgs build() {
-            return new WeekDetailsArgs(time, weekdays);
+        }
+
+        public WeekDetailsArgs build() {
+            return $;
         }
     }
+
 }

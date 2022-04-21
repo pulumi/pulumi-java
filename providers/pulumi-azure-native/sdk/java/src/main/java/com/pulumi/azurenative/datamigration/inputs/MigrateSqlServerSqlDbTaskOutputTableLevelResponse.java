@@ -23,7 +23,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -34,7 +34,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="errorPrefix", required=true)
-      private final String errorPrefix;
+    private String errorPrefix;
 
     public String errorPrefix() {
         return this.errorPrefix;
@@ -45,7 +45,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -56,7 +56,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="itemsCompletedCount", required=true)
-      private final Double itemsCompletedCount;
+    private Double itemsCompletedCount;
 
     public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
@@ -67,7 +67,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="itemsCount", required=true)
-      private final Double itemsCount;
+    private Double itemsCount;
 
     public Double itemsCount() {
         return this.itemsCount;
@@ -78,7 +78,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="objectName", required=true)
-      private final String objectName;
+    private String objectName;
 
     public String objectName() {
         return this.objectName;
@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="resultPrefix", required=true)
-      private final String resultPrefix;
+    private String resultPrefix;
 
     public String resultPrefix() {
         return this.resultPrefix;
@@ -101,7 +101,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -112,7 +112,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -123,7 +123,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -134,136 +134,115 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
     }
 
-    public MigrateSqlServerSqlDbTaskOutputTableLevelResponse(
-        String endedOn,
-        String errorPrefix,
-        String id,
-        Double itemsCompletedCount,
-        Double itemsCount,
-        String objectName,
-        String resultPrefix,
-        String resultType,
-        String startedOn,
-        String state,
-        String statusMessage) {
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.errorPrefix = Objects.requireNonNull(errorPrefix, "expected parameter 'errorPrefix' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount, "expected parameter 'itemsCompletedCount' to be non-null");
-        this.itemsCount = Objects.requireNonNull(itemsCount, "expected parameter 'itemsCount' to be non-null");
-        this.objectName = Objects.requireNonNull(objectName, "expected parameter 'objectName' to be non-null");
-        this.resultPrefix = Objects.requireNonNull(resultPrefix, "expected parameter 'resultPrefix' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-    }
+    private MigrateSqlServerSqlDbTaskOutputTableLevelResponse() {}
 
-    private MigrateSqlServerSqlDbTaskOutputTableLevelResponse() {
-        this.endedOn = null;
-        this.errorPrefix = null;
-        this.id = null;
-        this.itemsCompletedCount = null;
-        this.itemsCount = null;
-        this.objectName = null;
-        this.resultPrefix = null;
-        this.resultType = null;
-        this.startedOn = null;
-        this.state = null;
-        this.statusMessage = null;
+    private MigrateSqlServerSqlDbTaskOutputTableLevelResponse(MigrateSqlServerSqlDbTaskOutputTableLevelResponse $) {
+        this.endedOn = $.endedOn;
+        this.errorPrefix = $.errorPrefix;
+        this.id = $.id;
+        this.itemsCompletedCount = $.itemsCompletedCount;
+        this.itemsCount = $.itemsCount;
+        this.objectName = $.objectName;
+        this.resultPrefix = $.resultPrefix;
+        this.resultType = $.resultType;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
+        this.statusMessage = $.statusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskOutputTableLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endedOn;
-        private String errorPrefix;
-        private String id;
-        private Double itemsCompletedCount;
-        private Double itemsCount;
-        private String objectName;
-        private String resultPrefix;
-        private String resultType;
-        private String startedOn;
-        private String state;
-        private String statusMessage;
+        private MigrateSqlServerSqlDbTaskOutputTableLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskOutputTableLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskOutputTableLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endedOn = defaults.endedOn;
-    	      this.errorPrefix = defaults.errorPrefix;
-    	      this.id = defaults.id;
-    	      this.itemsCompletedCount = defaults.itemsCompletedCount;
-    	      this.itemsCount = defaults.itemsCount;
-    	      this.objectName = defaults.objectName;
-    	      this.resultPrefix = defaults.resultPrefix;
-    	      this.resultType = defaults.resultType;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
-    	      this.statusMessage = defaults.statusMessage;
+            $ = new MigrateSqlServerSqlDbTaskOutputTableLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder errorPrefix(String errorPrefix) {
-            this.errorPrefix = Objects.requireNonNull(errorPrefix);
+            $.errorPrefix = errorPrefix;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder itemsCompletedCount(Double itemsCompletedCount) {
-            this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
+            $.itemsCompletedCount = itemsCompletedCount;
             return this;
         }
+
         public Builder itemsCount(Double itemsCount) {
-            this.itemsCount = Objects.requireNonNull(itemsCount);
+            $.itemsCount = itemsCount;
             return this;
         }
+
         public Builder objectName(String objectName) {
-            this.objectName = Objects.requireNonNull(objectName);
+            $.objectName = objectName;
             return this;
         }
+
         public Builder resultPrefix(String resultPrefix) {
-            this.resultPrefix = Objects.requireNonNull(resultPrefix);
+            $.resultPrefix = resultPrefix;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
-        }        public MigrateSqlServerSqlDbTaskOutputTableLevelResponse build() {
-            return new MigrateSqlServerSqlDbTaskOutputTableLevelResponse(endedOn, errorPrefix, id, itemsCompletedCount, itemsCount, objectName, resultPrefix, resultType, startedOn, state, statusMessage);
+        }
+
+        public MigrateSqlServerSqlDbTaskOutputTableLevelResponse build() {
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.errorPrefix = Objects.requireNonNull($.errorPrefix, "expected parameter 'errorPrefix' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.itemsCompletedCount = Objects.requireNonNull($.itemsCompletedCount, "expected parameter 'itemsCompletedCount' to be non-null");
+            $.itemsCount = Objects.requireNonNull($.itemsCount, "expected parameter 'itemsCount' to be non-null");
+            $.objectName = Objects.requireNonNull($.objectName, "expected parameter 'objectName' to be non-null");
+            $.resultPrefix = Objects.requireNonNull($.resultPrefix, "expected parameter 'resultPrefix' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            return $;
         }
     }
+
 }

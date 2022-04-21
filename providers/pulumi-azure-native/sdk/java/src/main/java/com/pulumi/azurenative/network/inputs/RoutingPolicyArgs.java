@@ -5,7 +5,6 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinations", required=true)
-      private final Output<List<String>> destinations;
+    private Output<List<String>> destinations;
 
     public Output<List<String>> destinations() {
         return this.destinations;
@@ -35,7 +34,7 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,79 +45,75 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHop", required=true)
-      private final Output<String> nextHop;
+    private Output<String> nextHop;
 
     public Output<String> nextHop() {
         return this.nextHop;
     }
 
-    public RoutingPolicyArgs(
-        Output<List<String>> destinations,
-        Output<String> name,
-        Output<String> nextHop) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nextHop = Objects.requireNonNull(nextHop, "expected parameter 'nextHop' to be non-null");
-    }
+    private RoutingPolicyArgs() {}
 
-    private RoutingPolicyArgs() {
-        this.destinations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nextHop = Codegen.empty();
+    private RoutingPolicyArgs(RoutingPolicyArgs $) {
+        this.destinations = $.destinations;
+        this.name = $.name;
+        this.nextHop = $.nextHop;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> destinations;
-        private Output<String> name;
-        private Output<String> nextHop;
+        private RoutingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingPolicyArgs();
         }
 
         public Builder(RoutingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.name = defaults.name;
-    	      this.nextHop = defaults.nextHop;
+            $ = new RoutingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(Output<List<String>> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(List<String> destinations) {
-            this.destinations = Output.of(Objects.requireNonNull(destinations));
-            return this;
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nextHop(Output<String> nextHop) {
-            this.nextHop = Objects.requireNonNull(nextHop);
+            $.nextHop = nextHop;
             return this;
         }
+
         public Builder nextHop(String nextHop) {
-            this.nextHop = Output.of(Objects.requireNonNull(nextHop));
-            return this;
-        }        public RoutingPolicyArgs build() {
-            return new RoutingPolicyArgs(destinations, name, nextHop);
+            return nextHop(Output.of(nextHop));
+        }
+
+        public RoutingPolicyArgs build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nextHop = Objects.requireNonNull($.nextHop, "expected parameter 'nextHop' to be non-null");
+            return $;
         }
     }
+
 }

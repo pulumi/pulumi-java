@@ -26,10 +26,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<String> filters;
+    private @Nullable List<String> filters;
 
-    public List<String> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<String>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
      * 
      */
     @Import(name="searchCriteria")
-      private final @Nullable String searchCriteria;
+    private @Nullable String searchCriteria;
 
     public Optional<String> searchCriteria() {
-        return this.searchCriteria == null ? Optional.empty() : Optional.ofNullable(this.searchCriteria);
+        return Optional.ofNullable(this.searchCriteria);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -71,85 +71,73 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
      * 
      */
     @Import(name="updateLimit")
-      private final @Nullable Integer updateLimit;
+    private @Nullable Integer updateLimit;
 
     public Optional<Integer> updateLimit() {
-        return this.updateLimit == null ? Optional.empty() : Optional.ofNullable(this.updateLimit);
+        return Optional.ofNullable(this.updateLimit);
     }
 
-    public ImageTemplateWindowsUpdateCustomizerResponse(
-        @Nullable List<String> filters,
-        @Nullable String name,
-        @Nullable String searchCriteria,
-        String type,
-        @Nullable Integer updateLimit) {
-        this.filters = filters;
-        this.name = name;
-        this.searchCriteria = searchCriteria;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.updateLimit = updateLimit;
-    }
+    private ImageTemplateWindowsUpdateCustomizerResponse() {}
 
-    private ImageTemplateWindowsUpdateCustomizerResponse() {
-        this.filters = List.of();
-        this.name = null;
-        this.searchCriteria = null;
-        this.type = null;
-        this.updateLimit = null;
+    private ImageTemplateWindowsUpdateCustomizerResponse(ImageTemplateWindowsUpdateCustomizerResponse $) {
+        this.filters = $.filters;
+        this.name = $.name;
+        this.searchCriteria = $.searchCriteria;
+        this.type = $.type;
+        this.updateLimit = $.updateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateWindowsUpdateCustomizerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> filters;
-        private @Nullable String name;
-        private @Nullable String searchCriteria;
-        private String type;
-        private @Nullable Integer updateLimit;
+        private ImageTemplateWindowsUpdateCustomizerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateWindowsUpdateCustomizerResponse();
         }
 
         public Builder(ImageTemplateWindowsUpdateCustomizerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.name = defaults.name;
-    	      this.searchCriteria = defaults.searchCriteria;
-    	      this.type = defaults.type;
-    	      this.updateLimit = defaults.updateLimit;
+            $ = new ImageTemplateWindowsUpdateCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder searchCriteria(@Nullable String searchCriteria) {
-            this.searchCriteria = searchCriteria;
+            $.searchCriteria = searchCriteria;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder updateLimit(@Nullable Integer updateLimit) {
-            this.updateLimit = updateLimit;
+            $.updateLimit = updateLimit;
             return this;
-        }        public ImageTemplateWindowsUpdateCustomizerResponse build() {
-            return new ImageTemplateWindowsUpdateCustomizerResponse(filters, name, searchCriteria, type, updateLimit);
+        }
+
+        public ImageTemplateWindowsUpdateCustomizerResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

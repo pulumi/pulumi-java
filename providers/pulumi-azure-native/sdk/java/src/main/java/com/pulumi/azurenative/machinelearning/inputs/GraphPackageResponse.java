@@ -28,10 +28,10 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="edges")
-      private final @Nullable List<GraphEdgeResponse> edges;
+    private @Nullable List<GraphEdgeResponse> edges;
 
-    public List<GraphEdgeResponse> edges() {
-        return this.edges == null ? List.of() : this.edges;
+    public Optional<List<GraphEdgeResponse>> edges() {
+        return Optional.ofNullable(this.edges);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="graphParameters")
-      private final @Nullable Map<String,GraphParameterResponse> graphParameters;
+    private @Nullable Map<String,GraphParameterResponse> graphParameters;
 
-    public Map<String,GraphParameterResponse> graphParameters() {
-        return this.graphParameters == null ? Map.of() : this.graphParameters;
+    public Optional<Map<String,GraphParameterResponse>> graphParameters() {
+        return Optional.ofNullable(this.graphParameters);
     }
 
     /**
@@ -50,67 +50,60 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nodes")
-      private final @Nullable Map<String,GraphNodeResponse> nodes;
+    private @Nullable Map<String,GraphNodeResponse> nodes;
 
-    public Map<String,GraphNodeResponse> nodes() {
-        return this.nodes == null ? Map.of() : this.nodes;
+    public Optional<Map<String,GraphNodeResponse>> nodes() {
+        return Optional.ofNullable(this.nodes);
     }
 
-    public GraphPackageResponse(
-        @Nullable List<GraphEdgeResponse> edges,
-        @Nullable Map<String,GraphParameterResponse> graphParameters,
-        @Nullable Map<String,GraphNodeResponse> nodes) {
-        this.edges = edges;
-        this.graphParameters = graphParameters;
-        this.nodes = nodes;
-    }
+    private GraphPackageResponse() {}
 
-    private GraphPackageResponse() {
-        this.edges = List.of();
-        this.graphParameters = Map.of();
-        this.nodes = Map.of();
+    private GraphPackageResponse(GraphPackageResponse $) {
+        this.edges = $.edges;
+        this.graphParameters = $.graphParameters;
+        this.nodes = $.nodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphPackageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GraphEdgeResponse> edges;
-        private @Nullable Map<String,GraphParameterResponse> graphParameters;
-        private @Nullable Map<String,GraphNodeResponse> nodes;
+        private GraphPackageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphPackageResponse();
         }
 
         public Builder(GraphPackageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.edges = defaults.edges;
-    	      this.graphParameters = defaults.graphParameters;
-    	      this.nodes = defaults.nodes;
+            $ = new GraphPackageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder edges(@Nullable List<GraphEdgeResponse> edges) {
-            this.edges = edges;
+            $.edges = edges;
             return this;
         }
+
         public Builder edges(GraphEdgeResponse... edges) {
             return edges(List.of(edges));
         }
+
         public Builder graphParameters(@Nullable Map<String,GraphParameterResponse> graphParameters) {
-            this.graphParameters = graphParameters;
+            $.graphParameters = graphParameters;
             return this;
         }
+
         public Builder nodes(@Nullable Map<String,GraphNodeResponse> nodes) {
-            this.nodes = nodes;
+            $.nodes = nodes;
             return this;
-        }        public GraphPackageResponse build() {
-            return new GraphPackageResponse(edges, graphParameters, nodes);
+        }
+
+        public GraphPackageResponse build() {
+            return $;
         }
     }
+
 }

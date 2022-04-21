@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="primary")
-      private final @Nullable Output<String> primary;
+    private @Nullable Output<String> primary;
 
-    public Output<String> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<String>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secondary")
-      private final @Nullable Output<String> secondary;
+    private @Nullable Output<String> secondary;
 
-    public Output<String> secondary() {
-        return this.secondary == null ? Codegen.empty() : this.secondary;
+    public Optional<Output<String>> secondary() {
+        return Optional.ofNullable(this.secondary);
     }
 
-    public WebServiceKeysArgs(
-        @Nullable Output<String> primary,
-        @Nullable Output<String> secondary) {
-        this.primary = primary;
-        this.secondary = secondary;
-    }
+    private WebServiceKeysArgs() {}
 
-    private WebServiceKeysArgs() {
-        this.primary = Codegen.empty();
-        this.secondary = Codegen.empty();
+    private WebServiceKeysArgs(WebServiceKeysArgs $) {
+        this.primary = $.primary;
+        this.secondary = $.secondary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServiceKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> primary;
-        private @Nullable Output<String> secondary;
+        private WebServiceKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServiceKeysArgs();
         }
 
         public Builder(WebServiceKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primary = defaults.primary;
-    	      this.secondary = defaults.secondary;
+            $ = new WebServiceKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primary(@Nullable Output<String> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable String primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
+
+        public Builder primary(String primary) {
+            return primary(Output.of(primary));
         }
+
         public Builder secondary(@Nullable Output<String> secondary) {
-            this.secondary = secondary;
+            $.secondary = secondary;
             return this;
         }
-        public Builder secondary(@Nullable String secondary) {
-            this.secondary = Codegen.ofNullable(secondary);
-            return this;
-        }        public WebServiceKeysArgs build() {
-            return new WebServiceKeysArgs(primary, secondary);
+
+        public Builder secondary(String secondary) {
+            return secondary(Output.of(secondary));
+        }
+
+        public WebServiceKeysArgs build() {
+            return $;
         }
     }
+
 }

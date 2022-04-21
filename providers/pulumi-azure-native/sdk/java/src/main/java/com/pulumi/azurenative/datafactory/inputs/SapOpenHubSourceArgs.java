@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Output<Object> additionalColumns;
+    private @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> additionalColumns() {
-        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
+    public Optional<Output<Object>> additionalColumns() {
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="baseRequestId")
-      private final @Nullable Output<Object> baseRequestId;
+    private @Nullable Output<Object> baseRequestId;
 
-    public Output<Object> baseRequestId() {
-        return this.baseRequestId == null ? Codegen.empty() : this.baseRequestId;
+    public Optional<Output<Object>> baseRequestId() {
+        return Optional.ofNullable(this.baseRequestId);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="customRfcReadTableFunctionModule")
-      private final @Nullable Output<Object> customRfcReadTableFunctionModule;
+    private @Nullable Output<Object> customRfcReadTableFunctionModule;
 
-    public Output<Object> customRfcReadTableFunctionModule() {
-        return this.customRfcReadTableFunctionModule == null ? Codegen.empty() : this.customRfcReadTableFunctionModule;
+    public Optional<Output<Object>> customRfcReadTableFunctionModule() {
+        return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="excludeLastRequest")
-      private final @Nullable Output<Object> excludeLastRequest;
+    private @Nullable Output<Object> excludeLastRequest;
 
-    public Output<Object> excludeLastRequest() {
-        return this.excludeLastRequest == null ? Codegen.empty() : this.excludeLastRequest;
+    public Optional<Output<Object>> excludeLastRequest() {
+        return Optional.ofNullable(this.excludeLastRequest);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Output<Object> queryTimeout;
+    private @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> queryTimeout() {
-        return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
+    public Optional<Output<Object>> queryTimeout() {
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sapDataColumnDelimiter")
-      private final @Nullable Output<Object> sapDataColumnDelimiter;
+    private @Nullable Output<Object> sapDataColumnDelimiter;
 
-    public Output<Object> sapDataColumnDelimiter() {
-        return this.sapDataColumnDelimiter == null ? Codegen.empty() : this.sapDataColumnDelimiter;
+    public Optional<Output<Object>> sapDataColumnDelimiter() {
+        return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
 
     /**
@@ -113,10 +114,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Output<Object> sourceRetryCount;
+    private @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
+    public Optional<Output<Object>> sourceRetryCount() {
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -124,10 +125,10 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Output<Object> sourceRetryWait;
+    private @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
+    public Optional<Output<Object>> sourceRetryWait() {
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -136,180 +137,149 @@ public final class SapOpenHubSourceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SapOpenHubSourceArgs(
-        @Nullable Output<Object> additionalColumns,
-        @Nullable Output<Object> baseRequestId,
-        @Nullable Output<Object> customRfcReadTableFunctionModule,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> excludeLastRequest,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> queryTimeout,
-        @Nullable Output<Object> sapDataColumnDelimiter,
-        @Nullable Output<Object> sourceRetryCount,
-        @Nullable Output<Object> sourceRetryWait,
-        Output<String> type) {
-        this.additionalColumns = additionalColumns;
-        this.baseRequestId = baseRequestId;
-        this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.excludeLastRequest = excludeLastRequest;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.queryTimeout = queryTimeout;
-        this.sapDataColumnDelimiter = sapDataColumnDelimiter;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SapOpenHubSourceArgs() {}
 
-    private SapOpenHubSourceArgs() {
-        this.additionalColumns = Codegen.empty();
-        this.baseRequestId = Codegen.empty();
-        this.customRfcReadTableFunctionModule = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.excludeLastRequest = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.queryTimeout = Codegen.empty();
-        this.sapDataColumnDelimiter = Codegen.empty();
-        this.sourceRetryCount = Codegen.empty();
-        this.sourceRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
+    private SapOpenHubSourceArgs(SapOpenHubSourceArgs $) {
+        this.additionalColumns = $.additionalColumns;
+        this.baseRequestId = $.baseRequestId;
+        this.customRfcReadTableFunctionModule = $.customRfcReadTableFunctionModule;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.excludeLastRequest = $.excludeLastRequest;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.queryTimeout = $.queryTimeout;
+        this.sapDataColumnDelimiter = $.sapDataColumnDelimiter;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapOpenHubSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> additionalColumns;
-        private @Nullable Output<Object> baseRequestId;
-        private @Nullable Output<Object> customRfcReadTableFunctionModule;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> excludeLastRequest;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> queryTimeout;
-        private @Nullable Output<Object> sapDataColumnDelimiter;
-        private @Nullable Output<Object> sourceRetryCount;
-        private @Nullable Output<Object> sourceRetryWait;
-        private Output<String> type;
+        private SapOpenHubSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapOpenHubSourceArgs();
         }
 
         public Builder(SapOpenHubSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.baseRequestId = defaults.baseRequestId;
-    	      this.customRfcReadTableFunctionModule = defaults.customRfcReadTableFunctionModule;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.excludeLastRequest = defaults.excludeLastRequest;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sapDataColumnDelimiter = defaults.sapDataColumnDelimiter;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new SapOpenHubSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
-        public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Codegen.ofNullable(additionalColumns);
-            return this;
+
+        public Builder additionalColumns(Object additionalColumns) {
+            return additionalColumns(Output.of(additionalColumns));
         }
+
         public Builder baseRequestId(@Nullable Output<Object> baseRequestId) {
-            this.baseRequestId = baseRequestId;
+            $.baseRequestId = baseRequestId;
             return this;
         }
-        public Builder baseRequestId(@Nullable Object baseRequestId) {
-            this.baseRequestId = Codegen.ofNullable(baseRequestId);
-            return this;
+
+        public Builder baseRequestId(Object baseRequestId) {
+            return baseRequestId(Output.of(baseRequestId));
         }
+
         public Builder customRfcReadTableFunctionModule(@Nullable Output<Object> customRfcReadTableFunctionModule) {
-            this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
+            $.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
-        public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
-            this.customRfcReadTableFunctionModule = Codegen.ofNullable(customRfcReadTableFunctionModule);
-            return this;
+
+        public Builder customRfcReadTableFunctionModule(Object customRfcReadTableFunctionModule) {
+            return customRfcReadTableFunctionModule(Output.of(customRfcReadTableFunctionModule));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder excludeLastRequest(@Nullable Output<Object> excludeLastRequest) {
-            this.excludeLastRequest = excludeLastRequest;
+            $.excludeLastRequest = excludeLastRequest;
             return this;
         }
-        public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
-            this.excludeLastRequest = Codegen.ofNullable(excludeLastRequest);
-            return this;
+
+        public Builder excludeLastRequest(Object excludeLastRequest) {
+            return excludeLastRequest(Output.of(excludeLastRequest));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
-        public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Codegen.ofNullable(queryTimeout);
-            return this;
+
+        public Builder queryTimeout(Object queryTimeout) {
+            return queryTimeout(Output.of(queryTimeout));
         }
+
         public Builder sapDataColumnDelimiter(@Nullable Output<Object> sapDataColumnDelimiter) {
-            this.sapDataColumnDelimiter = sapDataColumnDelimiter;
+            $.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
-        public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
-            this.sapDataColumnDelimiter = Codegen.ofNullable(sapDataColumnDelimiter);
-            return this;
+
+        public Builder sapDataColumnDelimiter(Object sapDataColumnDelimiter) {
+            return sapDataColumnDelimiter(Output.of(sapDataColumnDelimiter));
         }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
-        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
-            return this;
+
+        public Builder sourceRetryCount(Object sourceRetryCount) {
+            return sourceRetryCount(Output.of(sourceRetryCount));
         }
+
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
-        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
-            return this;
+
+        public Builder sourceRetryWait(Object sourceRetryWait) {
+            return sourceRetryWait(Output.of(sourceRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SapOpenHubSourceArgs build() {
-            return new SapOpenHubSourceArgs(additionalColumns, baseRequestId, customRfcReadTableFunctionModule, disableMetricsCollection, excludeLastRequest, maxConcurrentConnections, queryTimeout, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
+            return type(Output.of(type));
+        }
+
+        public SapOpenHubSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

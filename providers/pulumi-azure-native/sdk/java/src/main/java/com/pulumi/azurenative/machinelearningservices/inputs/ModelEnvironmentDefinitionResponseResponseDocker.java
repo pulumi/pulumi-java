@@ -24,10 +24,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
      * 
      */
     @Import(name="baseDockerfile")
-      private final @Nullable String baseDockerfile;
+    private @Nullable String baseDockerfile;
 
     public Optional<String> baseDockerfile() {
-        return this.baseDockerfile == null ? Optional.empty() : Optional.ofNullable(this.baseDockerfile);
+        return Optional.ofNullable(this.baseDockerfile);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
      * 
      */
     @Import(name="baseImage")
-      private final @Nullable String baseImage;
+    private @Nullable String baseImage;
 
     public Optional<String> baseImage() {
-        return this.baseImage == null ? Optional.empty() : Optional.ofNullable(this.baseImage);
+        return Optional.ofNullable(this.baseImage);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
      * 
      */
     @Import(name="baseImageRegistry")
-      private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
+    private @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 
     public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> baseImageRegistry() {
-        return this.baseImageRegistry == null ? Optional.empty() : Optional.ofNullable(this.baseImageRegistry);
+        return Optional.ofNullable(this.baseImageRegistry);
     }
 
-    public ModelEnvironmentDefinitionResponseResponseDocker(
-        @Nullable String baseDockerfile,
-        @Nullable String baseImage,
-        @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
-        this.baseDockerfile = baseDockerfile;
-        this.baseImage = baseImage;
-        this.baseImageRegistry = baseImageRegistry;
-    }
+    private ModelEnvironmentDefinitionResponseResponseDocker() {}
 
-    private ModelEnvironmentDefinitionResponseResponseDocker() {
-        this.baseDockerfile = null;
-        this.baseImage = null;
-        this.baseImageRegistry = null;
+    private ModelEnvironmentDefinitionResponseResponseDocker(ModelEnvironmentDefinitionResponseResponseDocker $) {
+        this.baseDockerfile = $.baseDockerfile;
+        this.baseImage = $.baseImage;
+        this.baseImageRegistry = $.baseImageRegistry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionResponseResponseDocker defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String baseDockerfile;
-        private @Nullable String baseImage;
-        private @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
+        private ModelEnvironmentDefinitionResponseResponseDocker $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionResponseResponseDocker();
         }
 
         public Builder(ModelEnvironmentDefinitionResponseResponseDocker defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseDockerfile = defaults.baseDockerfile;
-    	      this.baseImage = defaults.baseImage;
-    	      this.baseImageRegistry = defaults.baseImageRegistry;
+            $ = new ModelEnvironmentDefinitionResponseResponseDocker(Objects.requireNonNull(defaults));
         }
 
         public Builder baseDockerfile(@Nullable String baseDockerfile) {
-            this.baseDockerfile = baseDockerfile;
+            $.baseDockerfile = baseDockerfile;
             return this;
         }
+
         public Builder baseImage(@Nullable String baseImage) {
-            this.baseImage = baseImage;
+            $.baseImage = baseImage;
             return this;
         }
+
         public Builder baseImageRegistry(@Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
-            this.baseImageRegistry = baseImageRegistry;
+            $.baseImageRegistry = baseImageRegistry;
             return this;
-        }        public ModelEnvironmentDefinitionResponseResponseDocker build() {
-            return new ModelEnvironmentDefinitionResponseResponseDocker(baseDockerfile, baseImage, baseImageRegistry);
+        }
+
+        public ModelEnvironmentDefinitionResponseResponseDocker build() {
+            return $;
         }
     }
+
 }

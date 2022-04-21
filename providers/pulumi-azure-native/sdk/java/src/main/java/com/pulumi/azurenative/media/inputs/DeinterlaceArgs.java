@@ -8,9 +8,9 @@ import com.pulumi.azurenative.media.enums.DeinterlaceParity;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DeinterlaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,DeinterlaceMode>> mode;
+    private @Nullable Output<Either<String,DeinterlaceMode>> mode;
 
-    public Output<Either<String,DeinterlaceMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,DeinterlaceMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class DeinterlaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parity")
-      private final @Nullable Output<Either<String,DeinterlaceParity>> parity;
+    private @Nullable Output<Either<String,DeinterlaceParity>> parity;
 
-    public Output<Either<String,DeinterlaceParity>> parity() {
-        return this.parity == null ? Codegen.empty() : this.parity;
+    public Optional<Output<Either<String,DeinterlaceParity>>> parity() {
+        return Optional.ofNullable(this.parity);
     }
 
-    public DeinterlaceArgs(
-        @Nullable Output<Either<String,DeinterlaceMode>> mode,
-        @Nullable Output<Either<String,DeinterlaceParity>> parity) {
-        this.mode = mode;
-        this.parity = parity;
-    }
+    private DeinterlaceArgs() {}
 
-    private DeinterlaceArgs() {
-        this.mode = Codegen.empty();
-        this.parity = Codegen.empty();
+    private DeinterlaceArgs(DeinterlaceArgs $) {
+        this.mode = $.mode;
+        this.parity = $.parity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeinterlaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DeinterlaceMode>> mode;
-        private @Nullable Output<Either<String,DeinterlaceParity>> parity;
+        private DeinterlaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeinterlaceArgs();
         }
 
         public Builder(DeinterlaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.parity = defaults.parity;
+            $ = new DeinterlaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<Either<String,DeinterlaceMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,DeinterlaceMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,DeinterlaceMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder parity(@Nullable Output<Either<String,DeinterlaceParity>> parity) {
-            this.parity = parity;
+            $.parity = parity;
             return this;
         }
-        public Builder parity(@Nullable Either<String,DeinterlaceParity> parity) {
-            this.parity = Codegen.ofNullable(parity);
-            return this;
-        }        public DeinterlaceArgs build() {
-            return new DeinterlaceArgs(mode, parity);
+
+        public Builder parity(Either<String,DeinterlaceParity> parity) {
+            return parity(Output.of(parity));
+        }
+
+        public DeinterlaceArgs build() {
+            return $;
         }
     }
+
 }

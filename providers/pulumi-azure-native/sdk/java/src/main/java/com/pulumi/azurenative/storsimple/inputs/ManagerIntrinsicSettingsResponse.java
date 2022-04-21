@@ -21,45 +21,45 @@ public final class ManagerIntrinsicSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagerIntrinsicSettingsResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagerIntrinsicSettingsResponse() {}
 
-    private ManagerIntrinsicSettingsResponse() {
-        this.type = null;
+    private ManagerIntrinsicSettingsResponse(ManagerIntrinsicSettingsResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagerIntrinsicSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ManagerIntrinsicSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagerIntrinsicSettingsResponse();
         }
 
         public Builder(ManagerIntrinsicSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ManagerIntrinsicSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagerIntrinsicSettingsResponse build() {
-            return new ManagerIntrinsicSettingsResponse(type);
+        }
+
+        public ManagerIntrinsicSettingsResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

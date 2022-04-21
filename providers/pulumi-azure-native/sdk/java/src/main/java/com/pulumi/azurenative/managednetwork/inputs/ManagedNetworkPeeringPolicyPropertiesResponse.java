@@ -25,7 +25,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -36,10 +36,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="hub")
-      private final @Nullable ResourceIdResponse hub;
+    private @Nullable ResourceIdResponse hub;
 
     public Optional<ResourceIdResponse> hub() {
-        return this.hub == null ? Optional.empty() : Optional.ofNullable(this.hub);
+        return Optional.ofNullable(this.hub);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="mesh")
-      private final @Nullable List<ResourceIdResponse> mesh;
+    private @Nullable List<ResourceIdResponse> mesh;
 
-    public List<ResourceIdResponse> mesh() {
-        return this.mesh == null ? List.of() : this.mesh;
+    public Optional<List<ResourceIdResponse>> mesh() {
+        return Optional.ofNullable(this.mesh);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -69,10 +69,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="spokes")
-      private final @Nullable List<ResourceIdResponse> spokes;
+    private @Nullable List<ResourceIdResponse> spokes;
 
-    public List<ResourceIdResponse> spokes() {
-        return this.spokes == null ? List.of() : this.spokes;
+    public Optional<List<ResourceIdResponse>> spokes() {
+        return Optional.ofNullable(this.spokes);
     }
 
     /**
@@ -80,97 +80,85 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedNetworkPeeringPolicyPropertiesResponse(
-        String etag,
-        @Nullable ResourceIdResponse hub,
-        @Nullable List<ResourceIdResponse> mesh,
-        String provisioningState,
-        @Nullable List<ResourceIdResponse> spokes,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.hub = hub;
-        this.mesh = mesh;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.spokes = spokes;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagedNetworkPeeringPolicyPropertiesResponse() {}
 
-    private ManagedNetworkPeeringPolicyPropertiesResponse() {
-        this.etag = null;
-        this.hub = null;
-        this.mesh = List.of();
-        this.provisioningState = null;
-        this.spokes = List.of();
-        this.type = null;
+    private ManagedNetworkPeeringPolicyPropertiesResponse(ManagedNetworkPeeringPolicyPropertiesResponse $) {
+        this.etag = $.etag;
+        this.hub = $.hub;
+        this.mesh = $.mesh;
+        this.provisioningState = $.provisioningState;
+        this.spokes = $.spokes;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedNetworkPeeringPolicyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable ResourceIdResponse hub;
-        private @Nullable List<ResourceIdResponse> mesh;
-        private String provisioningState;
-        private @Nullable List<ResourceIdResponse> spokes;
-        private String type;
+        private ManagedNetworkPeeringPolicyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedNetworkPeeringPolicyPropertiesResponse();
         }
 
         public Builder(ManagedNetworkPeeringPolicyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.hub = defaults.hub;
-    	      this.mesh = defaults.mesh;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.spokes = defaults.spokes;
-    	      this.type = defaults.type;
+            $ = new ManagedNetworkPeeringPolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder hub(@Nullable ResourceIdResponse hub) {
-            this.hub = hub;
+            $.hub = hub;
             return this;
         }
+
         public Builder mesh(@Nullable List<ResourceIdResponse> mesh) {
-            this.mesh = mesh;
+            $.mesh = mesh;
             return this;
         }
+
         public Builder mesh(ResourceIdResponse... mesh) {
             return mesh(List.of(mesh));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder spokes(@Nullable List<ResourceIdResponse> spokes) {
-            this.spokes = spokes;
+            $.spokes = spokes;
             return this;
         }
+
         public Builder spokes(ResourceIdResponse... spokes) {
             return spokes(List.of(spokes));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedNetworkPeeringPolicyPropertiesResponse build() {
-            return new ManagedNetworkPeeringPolicyPropertiesResponse(etag, hub, mesh, provisioningState, spokes, type);
+        }
+
+        public ManagedNetworkPeeringPolicyPropertiesResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

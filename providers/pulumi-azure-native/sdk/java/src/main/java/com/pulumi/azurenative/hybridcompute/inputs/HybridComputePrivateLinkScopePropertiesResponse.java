@@ -23,7 +23,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
      * 
      */
     @Import(name="privateLinkScopeId", required=true)
-      private final String privateLinkScopeId;
+    private String privateLinkScopeId;
 
     public String privateLinkScopeId() {
         return this.privateLinkScopeId;
@@ -34,7 +34,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -45,64 +45,58 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public HybridComputePrivateLinkScopePropertiesResponse(
-        String privateLinkScopeId,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
-        this.privateLinkScopeId = Objects.requireNonNull(privateLinkScopeId, "expected parameter 'privateLinkScopeId' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private HybridComputePrivateLinkScopePropertiesResponse() {}
 
-    private HybridComputePrivateLinkScopePropertiesResponse() {
-        this.privateLinkScopeId = null;
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
+    private HybridComputePrivateLinkScopePropertiesResponse(HybridComputePrivateLinkScopePropertiesResponse $) {
+        this.privateLinkScopeId = $.privateLinkScopeId;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridComputePrivateLinkScopePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateLinkScopeId;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
+        private HybridComputePrivateLinkScopePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridComputePrivateLinkScopePropertiesResponse();
         }
 
         public Builder(HybridComputePrivateLinkScopePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateLinkScopeId = defaults.privateLinkScopeId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new HybridComputePrivateLinkScopePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateLinkScopeId(String privateLinkScopeId) {
-            this.privateLinkScopeId = Objects.requireNonNull(privateLinkScopeId);
+            $.privateLinkScopeId = privateLinkScopeId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
-        }        public HybridComputePrivateLinkScopePropertiesResponse build() {
-            return new HybridComputePrivateLinkScopePropertiesResponse(privateLinkScopeId, provisioningState, publicNetworkAccess);
+        }
+
+        public HybridComputePrivateLinkScopePropertiesResponse build() {
+            $.privateLinkScopeId = Objects.requireNonNull($.privateLinkScopeId, "expected parameter 'privateLinkScopeId' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

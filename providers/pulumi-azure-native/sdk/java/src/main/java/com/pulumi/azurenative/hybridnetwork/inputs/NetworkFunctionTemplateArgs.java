@@ -6,9 +6,9 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 import com.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionRoleConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class NetworkFunctionTemplateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="networkFunctionRoleConfigurations")
-      private final @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
+    private @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
-    public Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations() {
-        return this.networkFunctionRoleConfigurations == null ? Codegen.empty() : this.networkFunctionRoleConfigurations;
+    public Optional<Output<List<NetworkFunctionRoleConfigurationArgs>>> networkFunctionRoleConfigurations() {
+        return Optional.ofNullable(this.networkFunctionRoleConfigurations);
     }
 
-    public NetworkFunctionTemplateArgs(@Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
-        this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
-    }
+    private NetworkFunctionTemplateArgs() {}
 
-    private NetworkFunctionTemplateArgs() {
-        this.networkFunctionRoleConfigurations = Codegen.empty();
+    private NetworkFunctionTemplateArgs(NetworkFunctionTemplateArgs $) {
+        this.networkFunctionRoleConfigurations = $.networkFunctionRoleConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
+        private NetworkFunctionTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionTemplateArgs();
         }
 
         public Builder(NetworkFunctionTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkFunctionRoleConfigurations = defaults.networkFunctionRoleConfigurations;
+            $ = new NetworkFunctionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkFunctionRoleConfigurations(@Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
-            this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
+            $.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
-        public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
-            this.networkFunctionRoleConfigurations = Codegen.ofNullable(networkFunctionRoleConfigurations);
-            return this;
+
+        public Builder networkFunctionRoleConfigurations(List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
+            return networkFunctionRoleConfigurations(Output.of(networkFunctionRoleConfigurations));
         }
+
         public Builder networkFunctionRoleConfigurations(NetworkFunctionRoleConfigurationArgs... networkFunctionRoleConfigurations) {
             return networkFunctionRoleConfigurations(List.of(networkFunctionRoleConfigurations));
-        }        public NetworkFunctionTemplateArgs build() {
-            return new NetworkFunctionTemplateArgs(networkFunctionRoleConfigurations);
+        }
+
+        public NetworkFunctionTemplateArgs build() {
+            return $;
         }
     }
+
 }

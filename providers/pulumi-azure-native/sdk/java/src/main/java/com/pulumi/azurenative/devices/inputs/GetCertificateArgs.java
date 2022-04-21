@@ -17,7 +17,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateName", required=true)
-      private final String certificateName;
+    private String certificateName;
 
     public String certificateName() {
         return this.certificateName;
@@ -28,7 +28,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetCertificateArgs(
-        String certificateName,
-        String resourceGroupName,
-        String resourceName) {
-        this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetCertificateArgs() {}
 
-    private GetCertificateArgs() {
-        this.certificateName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetCertificateArgs(GetCertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateArgs();
         }
 
         public Builder(GetCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(String certificateName) {
-            this.certificateName = Objects.requireNonNull(certificateName);
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetCertificateArgs build() {
-            return new GetCertificateArgs(certificateName, resourceGroupName, resourceName);
+        }
+
+        public GetCertificateArgs build() {
+            $.certificateName = Objects.requireNonNull($.certificateName, "expected parameter 'certificateName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

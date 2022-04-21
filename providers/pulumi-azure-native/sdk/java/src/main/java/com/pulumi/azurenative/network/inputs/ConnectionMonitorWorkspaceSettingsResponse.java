@@ -23,45 +23,44 @@ public final class ConnectionMonitorWorkspaceSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable String workspaceResourceId;
+    private @Nullable String workspaceResourceId;
 
     public Optional<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public ConnectionMonitorWorkspaceSettingsResponse(@Nullable String workspaceResourceId) {
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private ConnectionMonitorWorkspaceSettingsResponse() {}
 
-    private ConnectionMonitorWorkspaceSettingsResponse() {
-        this.workspaceResourceId = null;
+    private ConnectionMonitorWorkspaceSettingsResponse(ConnectionMonitorWorkspaceSettingsResponse $) {
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorWorkspaceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String workspaceResourceId;
+        private ConnectionMonitorWorkspaceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorWorkspaceSettingsResponse();
         }
 
         public Builder(ConnectionMonitorWorkspaceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new ConnectionMonitorWorkspaceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public ConnectionMonitorWorkspaceSettingsResponse build() {
-            return new ConnectionMonitorWorkspaceSettingsResponse(workspaceResourceId);
+        }
+
+        public ConnectionMonitorWorkspaceSettingsResponse build() {
+            return $;
         }
     }
+
 }

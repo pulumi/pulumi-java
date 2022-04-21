@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class FlavorDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<Map<String,String>> data;
+    private @Nullable Output<Map<String,String>> data;
 
-    public Output<Map<String,String>> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<Map<String,String>>> data() {
+        return Optional.ofNullable(this.data);
     }
 
-    public FlavorDataArgs(@Nullable Output<Map<String,String>> data) {
-        this.data = data;
-    }
+    private FlavorDataArgs() {}
 
-    private FlavorDataArgs() {
-        this.data = Codegen.empty();
+    private FlavorDataArgs(FlavorDataArgs $) {
+        this.data = $.data;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlavorDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> data;
+        private FlavorDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlavorDataArgs();
         }
 
         public Builder(FlavorDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
+            $ = new FlavorDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<Map<String,String>> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable Map<String,String> data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
-        }        public FlavorDataArgs build() {
-            return new FlavorDataArgs(data);
+
+        public Builder data(Map<String,String> data) {
+            return data(Output.of(data));
+        }
+
+        public FlavorDataArgs build() {
+            return $;
         }
     }
+
 }

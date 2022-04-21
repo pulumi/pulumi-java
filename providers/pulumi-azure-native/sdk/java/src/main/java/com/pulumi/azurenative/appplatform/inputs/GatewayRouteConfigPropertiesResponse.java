@@ -25,10 +25,10 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="appResourceId")
-      private final @Nullable String appResourceId;
+    private @Nullable String appResourceId;
 
     public Optional<String> appResourceId() {
-        return this.appResourceId == null ? Optional.empty() : Optional.ofNullable(this.appResourceId);
+        return Optional.ofNullable(this.appResourceId);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -47,67 +47,61 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="routes")
-      private final @Nullable List<GatewayApiRouteResponse> routes;
+    private @Nullable List<GatewayApiRouteResponse> routes;
 
-    public List<GatewayApiRouteResponse> routes() {
-        return this.routes == null ? List.of() : this.routes;
+    public Optional<List<GatewayApiRouteResponse>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public GatewayRouteConfigPropertiesResponse(
-        @Nullable String appResourceId,
-        String provisioningState,
-        @Nullable List<GatewayApiRouteResponse> routes) {
-        this.appResourceId = appResourceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.routes = routes;
-    }
+    private GatewayRouteConfigPropertiesResponse() {}
 
-    private GatewayRouteConfigPropertiesResponse() {
-        this.appResourceId = null;
-        this.provisioningState = null;
-        this.routes = List.of();
+    private GatewayRouteConfigPropertiesResponse(GatewayRouteConfigPropertiesResponse $) {
+        this.appResourceId = $.appResourceId;
+        this.provisioningState = $.provisioningState;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteConfigPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appResourceId;
-        private String provisioningState;
-        private @Nullable List<GatewayApiRouteResponse> routes;
+        private GatewayRouteConfigPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteConfigPropertiesResponse();
         }
 
         public Builder(GatewayRouteConfigPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appResourceId = defaults.appResourceId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.routes = defaults.routes;
+            $ = new GatewayRouteConfigPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appResourceId(@Nullable String appResourceId) {
-            this.appResourceId = appResourceId;
+            $.appResourceId = appResourceId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder routes(@Nullable List<GatewayApiRouteResponse> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
+
         public Builder routes(GatewayApiRouteResponse... routes) {
             return routes(List.of(routes));
-        }        public GatewayRouteConfigPropertiesResponse build() {
-            return new GatewayRouteConfigPropertiesResponse(appResourceId, provisioningState, routes);
+        }
+
+        public GatewayRouteConfigPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

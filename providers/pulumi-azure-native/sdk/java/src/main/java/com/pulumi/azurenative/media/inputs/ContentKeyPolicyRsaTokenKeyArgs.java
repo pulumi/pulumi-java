@@ -23,7 +23,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="exponent", required=true)
-      private final Output<String> exponent;
+    private Output<String> exponent;
 
     public Output<String> exponent() {
         return this.exponent;
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="modulus", required=true)
-      private final Output<String> modulus;
+    private Output<String> modulus;
 
     public Output<String> modulus() {
         return this.modulus;
@@ -46,76 +46,71 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyRsaTokenKeyArgs(
-        Output<String> exponent,
-        Output<String> modulus,
-        Output<String> odataType) {
-        this.exponent = Objects.requireNonNull(exponent, "expected parameter 'exponent' to be non-null");
-        this.modulus = Objects.requireNonNull(modulus, "expected parameter 'modulus' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private ContentKeyPolicyRsaTokenKeyArgs() {}
 
-    private ContentKeyPolicyRsaTokenKeyArgs() {
-        this.exponent = Codegen.empty();
-        this.modulus = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private ContentKeyPolicyRsaTokenKeyArgs(ContentKeyPolicyRsaTokenKeyArgs $) {
+        this.exponent = $.exponent;
+        this.modulus = $.modulus;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyRsaTokenKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> exponent;
-        private Output<String> modulus;
-        private Output<String> odataType;
+        private ContentKeyPolicyRsaTokenKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyRsaTokenKeyArgs();
         }
 
         public Builder(ContentKeyPolicyRsaTokenKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exponent = defaults.exponent;
-    	      this.modulus = defaults.modulus;
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyRsaTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exponent(Output<String> exponent) {
-            this.exponent = Objects.requireNonNull(exponent);
+            $.exponent = exponent;
             return this;
         }
+
         public Builder exponent(String exponent) {
-            this.exponent = Output.of(Objects.requireNonNull(exponent));
-            return this;
+            return exponent(Output.of(exponent));
         }
+
         public Builder modulus(Output<String> modulus) {
-            this.modulus = Objects.requireNonNull(modulus);
+            $.modulus = modulus;
             return this;
         }
+
         public Builder modulus(String modulus) {
-            this.modulus = Output.of(Objects.requireNonNull(modulus));
-            return this;
+            return modulus(Output.of(modulus));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public ContentKeyPolicyRsaTokenKeyArgs build() {
-            return new ContentKeyPolicyRsaTokenKeyArgs(exponent, modulus, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public ContentKeyPolicyRsaTokenKeyArgs build() {
+            $.exponent = Objects.requireNonNull($.exponent, "expected parameter 'exponent' to be non-null");
+            $.modulus = Objects.requireNonNull($.modulus, "expected parameter 'modulus' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

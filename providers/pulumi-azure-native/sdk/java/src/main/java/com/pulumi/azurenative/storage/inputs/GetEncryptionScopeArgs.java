@@ -17,7 +17,7 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="encryptionScopeName", required=true)
-      private final String encryptionScopeName;
+    private String encryptionScopeName;
 
     public String encryptionScopeName() {
         return this.encryptionScopeName;
@@ -39,64 +39,59 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEncryptionScopeArgs(
-        String accountName,
-        String encryptionScopeName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.encryptionScopeName = Objects.requireNonNull(encryptionScopeName, "expected parameter 'encryptionScopeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEncryptionScopeArgs() {}
 
-    private GetEncryptionScopeArgs() {
-        this.accountName = null;
-        this.encryptionScopeName = null;
-        this.resourceGroupName = null;
+    private GetEncryptionScopeArgs(GetEncryptionScopeArgs $) {
+        this.accountName = $.accountName;
+        this.encryptionScopeName = $.encryptionScopeName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEncryptionScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String encryptionScopeName;
-        private String resourceGroupName;
+        private GetEncryptionScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEncryptionScopeArgs();
         }
 
         public Builder(GetEncryptionScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.encryptionScopeName = defaults.encryptionScopeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEncryptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder encryptionScopeName(String encryptionScopeName) {
-            this.encryptionScopeName = Objects.requireNonNull(encryptionScopeName);
+            $.encryptionScopeName = encryptionScopeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEncryptionScopeArgs build() {
-            return new GetEncryptionScopeArgs(accountName, encryptionScopeName, resourceGroupName);
+        }
+
+        public GetEncryptionScopeArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.encryptionScopeName = Objects.requireNonNull($.encryptionScopeName, "expected parameter 'encryptionScopeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

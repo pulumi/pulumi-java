@@ -22,7 +22,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
      * 
      */
     @Import(name="deviceId", required=true)
-      private final String deviceId;
+    private String deviceId;
 
     public String deviceId() {
         return this.deviceId;
@@ -33,7 +33,7 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
      * 
      */
     @Import(name="iotHubName", required=true)
-      private final String iotHubName;
+    private String iotHubName;
 
     public String iotHubName() {
         return this.iotHubName;
@@ -45,64 +45,59 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SecureIotDeviceRemoteTunnelResponse(
-        String deviceId,
-        String iotHubName,
-        String type) {
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-        this.iotHubName = Objects.requireNonNull(iotHubName, "expected parameter 'iotHubName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SecureIotDeviceRemoteTunnelResponse() {}
 
-    private SecureIotDeviceRemoteTunnelResponse() {
-        this.deviceId = null;
-        this.iotHubName = null;
-        this.type = null;
+    private SecureIotDeviceRemoteTunnelResponse(SecureIotDeviceRemoteTunnelResponse $) {
+        this.deviceId = $.deviceId;
+        this.iotHubName = $.iotHubName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecureIotDeviceRemoteTunnelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceId;
-        private String iotHubName;
-        private String type;
+        private SecureIotDeviceRemoteTunnelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecureIotDeviceRemoteTunnelResponse();
         }
 
         public Builder(SecureIotDeviceRemoteTunnelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceId = defaults.deviceId;
-    	      this.iotHubName = defaults.iotHubName;
-    	      this.type = defaults.type;
+            $ = new SecureIotDeviceRemoteTunnelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder iotHubName(String iotHubName) {
-            this.iotHubName = Objects.requireNonNull(iotHubName);
+            $.iotHubName = iotHubName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SecureIotDeviceRemoteTunnelResponse build() {
-            return new SecureIotDeviceRemoteTunnelResponse(deviceId, iotHubName, type);
+        }
+
+        public SecureIotDeviceRemoteTunnelResponse build() {
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            $.iotHubName = Objects.requireNonNull($.iotHubName, "expected parameter 'iotHubName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

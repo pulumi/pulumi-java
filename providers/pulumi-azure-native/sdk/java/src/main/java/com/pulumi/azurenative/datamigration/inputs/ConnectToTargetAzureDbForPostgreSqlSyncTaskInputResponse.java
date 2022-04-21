@@ -21,7 +21,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
+    private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -32,55 +32,52 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
+    private PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(
-        PostgreSqlConnectionInfoResponse sourceConnectionInfo,
-        PostgreSqlConnectionInfoResponse targetConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse() {}
 
-    private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse() {
-        this.sourceConnectionInfo = null;
-        this.targetConnectionInfo = null;
+    private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse $) {
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
-        private PostgreSqlConnectionInfoResponse targetConnectionInfo;
+        private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse();
         }
 
         public Builder(ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse build() {
-            return new ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
+        }
+
+        public ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse build() {
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

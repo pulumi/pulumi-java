@@ -24,10 +24,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="publicIPs")
-      private final @Nullable List<String> publicIPs;
+    private @Nullable List<String> publicIPs;
 
-    public List<String> publicIPs() {
-        return this.publicIPs == null ? List.of() : this.publicIPs;
+    public Optional<List<String>> publicIPs() {
+        return Optional.ofNullable(this.publicIPs);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="subnet")
-      private final @Nullable String subnet;
+    private @Nullable String subnet;
 
     public Optional<String> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -57,76 +57,66 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="vNetId")
-      private final @Nullable String vNetId;
+    private @Nullable String vNetId;
 
     public Optional<String> vNetId() {
-        return this.vNetId == null ? Optional.empty() : Optional.ofNullable(this.vNetId);
+        return Optional.ofNullable(this.vNetId);
     }
 
-    public IntegrationRuntimeVNetPropertiesResponse(
-        @Nullable List<String> publicIPs,
-        @Nullable String subnet,
-        @Nullable String subnetId,
-        @Nullable String vNetId) {
-        this.publicIPs = publicIPs;
-        this.subnet = subnet;
-        this.subnetId = subnetId;
-        this.vNetId = vNetId;
-    }
+    private IntegrationRuntimeVNetPropertiesResponse() {}
 
-    private IntegrationRuntimeVNetPropertiesResponse() {
-        this.publicIPs = List.of();
-        this.subnet = null;
-        this.subnetId = null;
-        this.vNetId = null;
+    private IntegrationRuntimeVNetPropertiesResponse(IntegrationRuntimeVNetPropertiesResponse $) {
+        this.publicIPs = $.publicIPs;
+        this.subnet = $.subnet;
+        this.subnetId = $.subnetId;
+        this.vNetId = $.vNetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeVNetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> publicIPs;
-        private @Nullable String subnet;
-        private @Nullable String subnetId;
-        private @Nullable String vNetId;
+        private IntegrationRuntimeVNetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeVNetPropertiesResponse();
         }
 
         public Builder(IntegrationRuntimeVNetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIPs = defaults.publicIPs;
-    	      this.subnet = defaults.subnet;
-    	      this.subnetId = defaults.subnetId;
-    	      this.vNetId = defaults.vNetId;
+            $ = new IntegrationRuntimeVNetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIPs(@Nullable List<String> publicIPs) {
-            this.publicIPs = publicIPs;
+            $.publicIPs = publicIPs;
             return this;
         }
+
         public Builder publicIPs(String... publicIPs) {
             return publicIPs(List.of(publicIPs));
         }
+
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder vNetId(@Nullable String vNetId) {
-            this.vNetId = vNetId;
+            $.vNetId = vNetId;
             return this;
-        }        public IntegrationRuntimeVNetPropertiesResponse build() {
-            return new IntegrationRuntimeVNetPropertiesResponse(publicIPs, subnet, subnetId, vNetId);
+        }
+
+        public IntegrationRuntimeVNetPropertiesResponse build() {
+            return $;
         }
     }
+
 }

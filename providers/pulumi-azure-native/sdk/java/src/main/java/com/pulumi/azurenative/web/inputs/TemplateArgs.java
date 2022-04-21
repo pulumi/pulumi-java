@@ -8,10 +8,10 @@ import com.pulumi.azurenative.web.inputs.DaprArgs;
 import com.pulumi.azurenative.web.inputs.ScaleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<ContainerArgs>> containers;
+    private @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<ContainerArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dapr")
-      private final @Nullable Output<DaprArgs> dapr;
+    private @Nullable Output<DaprArgs> dapr;
 
-    public Output<DaprArgs> dapr() {
-        return this.dapr == null ? Codegen.empty() : this.dapr;
+    public Optional<Output<DaprArgs>> dapr() {
+        return Optional.ofNullable(this.dapr);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revisionSuffix")
-      private final @Nullable Output<String> revisionSuffix;
+    private @Nullable Output<String> revisionSuffix;
 
-    public Output<String> revisionSuffix() {
-        return this.revisionSuffix == null ? Codegen.empty() : this.revisionSuffix;
+    public Optional<Output<String>> revisionSuffix() {
+        return Optional.ofNullable(this.revisionSuffix);
     }
 
     /**
@@ -63,92 +63,82 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<ScaleArgs> scale;
+    private @Nullable Output<ScaleArgs> scale;
 
-    public Output<ScaleArgs> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<ScaleArgs>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
-    public TemplateArgs(
-        @Nullable Output<List<ContainerArgs>> containers,
-        @Nullable Output<DaprArgs> dapr,
-        @Nullable Output<String> revisionSuffix,
-        @Nullable Output<ScaleArgs> scale) {
-        this.containers = containers;
-        this.dapr = dapr;
-        this.revisionSuffix = revisionSuffix;
-        this.scale = scale;
-    }
+    private TemplateArgs() {}
 
-    private TemplateArgs() {
-        this.containers = Codegen.empty();
-        this.dapr = Codegen.empty();
-        this.revisionSuffix = Codegen.empty();
-        this.scale = Codegen.empty();
+    private TemplateArgs(TemplateArgs $) {
+        this.containers = $.containers;
+        this.dapr = $.dapr;
+        this.revisionSuffix = $.revisionSuffix;
+        this.scale = $.scale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ContainerArgs>> containers;
-        private @Nullable Output<DaprArgs> dapr;
-        private @Nullable Output<String> revisionSuffix;
-        private @Nullable Output<ScaleArgs> scale;
+        private TemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateArgs();
         }
 
         public Builder(TemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containers = defaults.containers;
-    	      this.dapr = defaults.dapr;
-    	      this.revisionSuffix = defaults.revisionSuffix;
-    	      this.scale = defaults.scale;
+            $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<ContainerArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder dapr(@Nullable Output<DaprArgs> dapr) {
-            this.dapr = dapr;
+            $.dapr = dapr;
             return this;
         }
-        public Builder dapr(@Nullable DaprArgs dapr) {
-            this.dapr = Codegen.ofNullable(dapr);
-            return this;
+
+        public Builder dapr(DaprArgs dapr) {
+            return dapr(Output.of(dapr));
         }
+
         public Builder revisionSuffix(@Nullable Output<String> revisionSuffix) {
-            this.revisionSuffix = revisionSuffix;
+            $.revisionSuffix = revisionSuffix;
             return this;
         }
-        public Builder revisionSuffix(@Nullable String revisionSuffix) {
-            this.revisionSuffix = Codegen.ofNullable(revisionSuffix);
-            return this;
+
+        public Builder revisionSuffix(String revisionSuffix) {
+            return revisionSuffix(Output.of(revisionSuffix));
         }
+
         public Builder scale(@Nullable Output<ScaleArgs> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable ScaleArgs scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
-        }        public TemplateArgs build() {
-            return new TemplateArgs(containers, dapr, revisionSuffix, scale);
+
+        public Builder scale(ScaleArgs scale) {
+            return scale(Output.of(scale));
+        }
+
+        public TemplateArgs build() {
+            return $;
         }
     }
+
 }

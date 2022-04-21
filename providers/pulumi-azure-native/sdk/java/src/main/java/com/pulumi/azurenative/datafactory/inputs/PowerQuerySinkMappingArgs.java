@@ -6,10 +6,10 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.PowerQuerySinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PowerQuerySinkMappingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataflowSinks")
-      private final @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
+    private @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
 
-    public Output<List<PowerQuerySinkArgs>> dataflowSinks() {
-        return this.dataflowSinks == null ? Codegen.empty() : this.dataflowSinks;
+    public Optional<Output<List<PowerQuerySinkArgs>>> dataflowSinks() {
+        return Optional.ofNullable(this.dataflowSinks);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class PowerQuerySinkMappingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="queryName")
-      private final @Nullable Output<String> queryName;
+    private @Nullable Output<String> queryName;
 
-    public Output<String> queryName() {
-        return this.queryName == null ? Codegen.empty() : this.queryName;
+    public Optional<Output<String>> queryName() {
+        return Optional.ofNullable(this.queryName);
     }
 
-    public PowerQuerySinkMappingArgs(
-        @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks,
-        @Nullable Output<String> queryName) {
-        this.dataflowSinks = dataflowSinks;
-        this.queryName = queryName;
-    }
+    private PowerQuerySinkMappingArgs() {}
 
-    private PowerQuerySinkMappingArgs() {
-        this.dataflowSinks = Codegen.empty();
-        this.queryName = Codegen.empty();
+    private PowerQuerySinkMappingArgs(PowerQuerySinkMappingArgs $) {
+        this.dataflowSinks = $.dataflowSinks;
+        this.queryName = $.queryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PowerQuerySinkMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks;
-        private @Nullable Output<String> queryName;
+        private PowerQuerySinkMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PowerQuerySinkMappingArgs();
         }
 
         public Builder(PowerQuerySinkMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataflowSinks = defaults.dataflowSinks;
-    	      this.queryName = defaults.queryName;
+            $ = new PowerQuerySinkMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataflowSinks(@Nullable Output<List<PowerQuerySinkArgs>> dataflowSinks) {
-            this.dataflowSinks = dataflowSinks;
+            $.dataflowSinks = dataflowSinks;
             return this;
         }
-        public Builder dataflowSinks(@Nullable List<PowerQuerySinkArgs> dataflowSinks) {
-            this.dataflowSinks = Codegen.ofNullable(dataflowSinks);
-            return this;
+
+        public Builder dataflowSinks(List<PowerQuerySinkArgs> dataflowSinks) {
+            return dataflowSinks(Output.of(dataflowSinks));
         }
+
         public Builder dataflowSinks(PowerQuerySinkArgs... dataflowSinks) {
             return dataflowSinks(List.of(dataflowSinks));
         }
+
         public Builder queryName(@Nullable Output<String> queryName) {
-            this.queryName = queryName;
+            $.queryName = queryName;
             return this;
         }
-        public Builder queryName(@Nullable String queryName) {
-            this.queryName = Codegen.ofNullable(queryName);
-            return this;
-        }        public PowerQuerySinkMappingArgs build() {
-            return new PowerQuerySinkMappingArgs(dataflowSinks, queryName);
+
+        public Builder queryName(String queryName) {
+            return queryName(Output.of(queryName));
+        }
+
+        public PowerQuerySinkMappingArgs build() {
+            return $;
         }
     }
+
 }

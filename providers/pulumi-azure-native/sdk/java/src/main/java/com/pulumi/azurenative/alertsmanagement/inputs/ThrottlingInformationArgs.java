@@ -5,9 +5,9 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ThrottlingInformationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
-    public ThrottlingInformationArgs(@Nullable Output<String> duration) {
-        this.duration = duration;
-    }
+    private ThrottlingInformationArgs() {}
 
-    private ThrottlingInformationArgs() {
-        this.duration = Codegen.empty();
+    private ThrottlingInformationArgs(ThrottlingInformationArgs $) {
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThrottlingInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> duration;
+        private ThrottlingInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThrottlingInformationArgs();
         }
 
         public Builder(ThrottlingInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
+            $ = new ThrottlingInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
-        }        public ThrottlingInformationArgs build() {
-            return new ThrottlingInformationArgs(duration);
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
+        }
+
+        public ThrottlingInformationArgs build() {
+            return $;
         }
     }
+
 }

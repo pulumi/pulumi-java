@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class HttpSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class HttpSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpRequestTimeout")
-      private final @Nullable Output<Object> httpRequestTimeout;
+    private @Nullable Output<Object> httpRequestTimeout;
 
-    public Output<Object> httpRequestTimeout() {
-        return this.httpRequestTimeout == null ? Codegen.empty() : this.httpRequestTimeout;
+    public Optional<Output<Object>> httpRequestTimeout() {
+        return Optional.ofNullable(this.httpRequestTimeout);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class HttpSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class HttpSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Output<Object> sourceRetryCount;
+    private @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
+    public Optional<Output<Object>> sourceRetryCount() {
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class HttpSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Output<Object> sourceRetryWait;
+    private @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
+    public Optional<Output<Object>> sourceRetryWait() {
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -81,115 +82,99 @@ public final class HttpSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public HttpSourceArgs(
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> httpRequestTimeout,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> sourceRetryCount,
-        @Nullable Output<Object> sourceRetryWait,
-        Output<String> type) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.httpRequestTimeout = httpRequestTimeout;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private HttpSourceArgs() {}
 
-    private HttpSourceArgs() {
-        this.disableMetricsCollection = Codegen.empty();
-        this.httpRequestTimeout = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.sourceRetryCount = Codegen.empty();
-        this.sourceRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
+    private HttpSourceArgs(HttpSourceArgs $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.httpRequestTimeout = $.httpRequestTimeout;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> httpRequestTimeout;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> sourceRetryCount;
-        private @Nullable Output<Object> sourceRetryWait;
-        private Output<String> type;
+        private HttpSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpSourceArgs();
         }
 
         public Builder(HttpSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.httpRequestTimeout = defaults.httpRequestTimeout;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new HttpSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
-            this.httpRequestTimeout = httpRequestTimeout;
+            $.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
-        public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
-            this.httpRequestTimeout = Codegen.ofNullable(httpRequestTimeout);
-            return this;
+
+        public Builder httpRequestTimeout(Object httpRequestTimeout) {
+            return httpRequestTimeout(Output.of(httpRequestTimeout));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
-        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
-            return this;
+
+        public Builder sourceRetryCount(Object sourceRetryCount) {
+            return sourceRetryCount(Output.of(sourceRetryCount));
         }
+
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
-        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
-            return this;
+
+        public Builder sourceRetryWait(Object sourceRetryWait) {
+            return sourceRetryWait(Output.of(sourceRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public HttpSourceArgs build() {
-            return new HttpSourceArgs(disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, type);
+            return type(Output.of(type));
+        }
+
+        public HttpSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

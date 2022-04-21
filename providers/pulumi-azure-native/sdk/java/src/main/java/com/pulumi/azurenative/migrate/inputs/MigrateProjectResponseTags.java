@@ -19,45 +19,44 @@ public final class MigrateProjectResponseTags extends com.pulumi.resources.Invok
     public static final MigrateProjectResponseTags Empty = new MigrateProjectResponseTags();
 
     @Import(name="additionalProperties")
-      private final @Nullable String additionalProperties;
+    private @Nullable String additionalProperties;
 
     public Optional<String> additionalProperties() {
-        return this.additionalProperties == null ? Optional.empty() : Optional.ofNullable(this.additionalProperties);
+        return Optional.ofNullable(this.additionalProperties);
     }
 
-    public MigrateProjectResponseTags(@Nullable String additionalProperties) {
-        this.additionalProperties = additionalProperties;
-    }
+    private MigrateProjectResponseTags() {}
 
-    private MigrateProjectResponseTags() {
-        this.additionalProperties = null;
+    private MigrateProjectResponseTags(MigrateProjectResponseTags $) {
+        this.additionalProperties = $.additionalProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateProjectResponseTags defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String additionalProperties;
+        private MigrateProjectResponseTags $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateProjectResponseTags();
         }
 
         public Builder(MigrateProjectResponseTags defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProperties = defaults.additionalProperties;
+            $ = new MigrateProjectResponseTags(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalProperties(@Nullable String additionalProperties) {
-            this.additionalProperties = additionalProperties;
+            $.additionalProperties = additionalProperties;
             return this;
-        }        public MigrateProjectResponseTags build() {
-            return new MigrateProjectResponseTags(additionalProperties);
+        }
+
+        public MigrateProjectResponseTags build() {
+            return $;
         }
     }
+
 }

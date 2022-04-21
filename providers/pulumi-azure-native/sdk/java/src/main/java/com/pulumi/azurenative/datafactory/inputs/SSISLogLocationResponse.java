@@ -25,10 +25,10 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accessCredential")
-      private final @Nullable SSISAccessCredentialResponse accessCredential;
+    private @Nullable SSISAccessCredentialResponse accessCredential;
 
     public Optional<SSISAccessCredentialResponse> accessCredential() {
-        return this.accessCredential == null ? Optional.empty() : Optional.ofNullable(this.accessCredential);
+        return Optional.ofNullable(this.accessCredential);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logPath", required=true)
-      private final Object logPath;
+    private Object logPath;
 
     public Object logPath() {
         return this.logPath;
@@ -47,10 +47,10 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logRefreshInterval")
-      private final @Nullable Object logRefreshInterval;
+    private @Nullable Object logRefreshInterval;
 
     public Optional<Object> logRefreshInterval() {
-        return this.logRefreshInterval == null ? Optional.empty() : Optional.ofNullable(this.logRefreshInterval);
+        return Optional.ofNullable(this.logRefreshInterval);
     }
 
     /**
@@ -58,73 +58,64 @@ public final class SSISLogLocationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SSISLogLocationResponse(
-        @Nullable SSISAccessCredentialResponse accessCredential,
-        Object logPath,
-        @Nullable Object logRefreshInterval,
-        String type) {
-        this.accessCredential = accessCredential;
-        this.logPath = Objects.requireNonNull(logPath, "expected parameter 'logPath' to be non-null");
-        this.logRefreshInterval = logRefreshInterval;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SSISLogLocationResponse() {}
 
-    private SSISLogLocationResponse() {
-        this.accessCredential = null;
-        this.logPath = null;
-        this.logRefreshInterval = null;
-        this.type = null;
+    private SSISLogLocationResponse(SSISLogLocationResponse $) {
+        this.accessCredential = $.accessCredential;
+        this.logPath = $.logPath;
+        this.logRefreshInterval = $.logRefreshInterval;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISLogLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SSISAccessCredentialResponse accessCredential;
-        private Object logPath;
-        private @Nullable Object logRefreshInterval;
-        private String type;
+        private SSISLogLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISLogLocationResponse();
         }
 
         public Builder(SSISLogLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessCredential = defaults.accessCredential;
-    	      this.logPath = defaults.logPath;
-    	      this.logRefreshInterval = defaults.logRefreshInterval;
-    	      this.type = defaults.type;
+            $ = new SSISLogLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
-            this.accessCredential = accessCredential;
+            $.accessCredential = accessCredential;
             return this;
         }
+
         public Builder logPath(Object logPath) {
-            this.logPath = Objects.requireNonNull(logPath);
+            $.logPath = logPath;
             return this;
         }
+
         public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
-            this.logRefreshInterval = logRefreshInterval;
+            $.logRefreshInterval = logRefreshInterval;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SSISLogLocationResponse build() {
-            return new SSISLogLocationResponse(accessCredential, logPath, logRefreshInterval, type);
+        }
+
+        public SSISLogLocationResponse build() {
+            $.logPath = Objects.requireNonNull($.logPath, "expected parameter 'logPath' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

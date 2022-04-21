@@ -21,45 +21,45 @@ public final class NsgReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceArmResourceId", required=true)
-      private final String sourceArmResourceId;
+    private String sourceArmResourceId;
 
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public NsgReferenceResponse(String sourceArmResourceId) {
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
-    }
+    private NsgReferenceResponse() {}
 
-    private NsgReferenceResponse() {
-        this.sourceArmResourceId = null;
+    private NsgReferenceResponse(NsgReferenceResponse $) {
+        this.sourceArmResourceId = $.sourceArmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NsgReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceArmResourceId;
+        private NsgReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NsgReferenceResponse();
         }
 
         public Builder(NsgReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceArmResourceId = defaults.sourceArmResourceId;
+            $ = new NsgReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+            $.sourceArmResourceId = sourceArmResourceId;
             return this;
-        }        public NsgReferenceResponse build() {
-            return new NsgReferenceResponse(sourceArmResourceId);
+        }
+
+        public NsgReferenceResponse build() {
+            $.sourceArmResourceId = Objects.requireNonNull($.sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

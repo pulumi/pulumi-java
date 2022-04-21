@@ -23,10 +23,10 @@ public final class LoadBalancerNatRuleReferenceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class LoadBalancerNatRuleReferenceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceArmResourceId", required=true)
-      private final String sourceArmResourceId;
+    private String sourceArmResourceId;
 
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public LoadBalancerNatRuleReferenceResponse(
-        @Nullable String name,
-        String sourceArmResourceId) {
-        this.name = name;
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
-    }
+    private LoadBalancerNatRuleReferenceResponse() {}
 
-    private LoadBalancerNatRuleReferenceResponse() {
-        this.name = null;
-        this.sourceArmResourceId = null;
+    private LoadBalancerNatRuleReferenceResponse(LoadBalancerNatRuleReferenceResponse $) {
+        this.name = $.name;
+        this.sourceArmResourceId = $.sourceArmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerNatRuleReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private String sourceArmResourceId;
+        private LoadBalancerNatRuleReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerNatRuleReferenceResponse();
         }
 
         public Builder(LoadBalancerNatRuleReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sourceArmResourceId = defaults.sourceArmResourceId;
+            $ = new LoadBalancerNatRuleReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+            $.sourceArmResourceId = sourceArmResourceId;
             return this;
-        }        public LoadBalancerNatRuleReferenceResponse build() {
-            return new LoadBalancerNatRuleReferenceResponse(name, sourceArmResourceId);
+        }
+
+        public LoadBalancerNatRuleReferenceResponse build() {
+            $.sourceArmResourceId = Objects.requireNonNull($.sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

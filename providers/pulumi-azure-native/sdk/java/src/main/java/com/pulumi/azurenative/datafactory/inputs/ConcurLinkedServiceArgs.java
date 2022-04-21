@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<Object> clientId;
+    private Output<Object> clientId;
 
     public Output<Object> clientId() {
         return this.clientId;
@@ -54,10 +55,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectionProperties")
-      private final @Nullable Output<Object> connectionProperties;
+    private @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> connectionProperties() {
-        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
+    public Optional<Output<Object>> connectionProperties() {
+        return Optional.ofNullable(this.connectionProperties);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -121,7 +122,7 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -132,10 +133,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Output<Object> useEncryptedEndpoints;
+    private @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
+    public Optional<Output<Object>> useEncryptedEndpoints() {
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
     /**
@@ -143,10 +144,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="useHostVerification")
-      private final @Nullable Output<Object> useHostVerification;
+    private @Nullable Output<Object> useHostVerification;
 
-    public Output<Object> useHostVerification() {
-        return this.useHostVerification == null ? Codegen.empty() : this.useHostVerification;
+    public Optional<Output<Object>> useHostVerification() {
+        return Optional.ofNullable(this.useHostVerification);
     }
 
     /**
@@ -154,10 +155,10 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="usePeerVerification")
-      private final @Nullable Output<Object> usePeerVerification;
+    private @Nullable Output<Object> usePeerVerification;
 
-    public Output<Object> usePeerVerification() {
-        return this.usePeerVerification == null ? Codegen.empty() : this.usePeerVerification;
+    public Optional<Output<Object>> usePeerVerification() {
+        return Optional.ofNullable(this.usePeerVerification);
     }
 
     /**
@@ -165,209 +166,175 @@ public final class ConcurLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="username", required=true)
-      private final Output<Object> username;
+    private Output<Object> username;
 
     public Output<Object> username() {
         return this.username;
     }
 
-    public ConcurLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        Output<Object> clientId,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<Object> connectionProperties,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Output<String> type,
-        @Nullable Output<Object> useEncryptedEndpoints,
-        @Nullable Output<Object> useHostVerification,
-        @Nullable Output<Object> usePeerVerification,
-        Output<Object> username) {
-        this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.connectVia = connectVia;
-        this.connectionProperties = connectionProperties;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-        this.useHostVerification = useHostVerification;
-        this.usePeerVerification = usePeerVerification;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private ConcurLinkedServiceArgs() {}
 
-    private ConcurLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.connectionProperties = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useEncryptedEndpoints = Codegen.empty();
-        this.useHostVerification = Codegen.empty();
-        this.usePeerVerification = Codegen.empty();
-        this.username = Codegen.empty();
+    private ConcurLinkedServiceArgs(ConcurLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.clientId = $.clientId;
+        this.connectVia = $.connectVia;
+        this.connectionProperties = $.connectionProperties;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
+        this.useHostVerification = $.useHostVerification;
+        this.usePeerVerification = $.usePeerVerification;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConcurLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private Output<Object> clientId;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<Object> connectionProperties;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Output<String> type;
-        private @Nullable Output<Object> useEncryptedEndpoints;
-        private @Nullable Output<Object> useHostVerification;
-        private @Nullable Output<Object> usePeerVerification;
-        private Output<Object> username;
+        private ConcurLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConcurLinkedServiceArgs();
         }
 
         public Builder(ConcurLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clientId = defaults.clientId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
-    	      this.useHostVerification = defaults.useHostVerification;
-    	      this.usePeerVerification = defaults.usePeerVerification;
-    	      this.username = defaults.username;
+            $ = new ConcurLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clientId(Output<Object> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(Object clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
-            this.connectionProperties = connectionProperties;
+            $.connectionProperties = connectionProperties;
             return this;
         }
-        public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Codegen.ofNullable(connectionProperties);
-            return this;
+
+        public Builder connectionProperties(Object connectionProperties) {
+            return connectionProperties(Output.of(connectionProperties));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Codegen.ofNullable(useEncryptedEndpoints);
-            return this;
+
+        public Builder useEncryptedEndpoints(Object useEncryptedEndpoints) {
+            return useEncryptedEndpoints(Output.of(useEncryptedEndpoints));
         }
+
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
-            this.useHostVerification = useHostVerification;
+            $.useHostVerification = useHostVerification;
             return this;
         }
-        public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = Codegen.ofNullable(useHostVerification);
-            return this;
+
+        public Builder useHostVerification(Object useHostVerification) {
+            return useHostVerification(Output.of(useHostVerification));
         }
+
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
-            this.usePeerVerification = usePeerVerification;
+            $.usePeerVerification = usePeerVerification;
             return this;
         }
-        public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = Codegen.ofNullable(usePeerVerification);
-            return this;
+
+        public Builder usePeerVerification(Object usePeerVerification) {
+            return usePeerVerification(Output.of(usePeerVerification));
         }
+
         public Builder username(Output<Object> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(Object username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public ConcurLinkedServiceArgs build() {
-            return new ConcurLinkedServiceArgs(annotations, clientId, connectVia, connectionProperties, description, encryptedCredential, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
+            return username(Output.of(username));
+        }
+
+        public ConcurLinkedServiceArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

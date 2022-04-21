@@ -17,7 +17,7 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleName", required=true)
-      private final String scheduleName;
+    private String scheduleName;
 
     public String scheduleName() {
         return this.scheduleName;
     }
 
-    public GetScheduleArgs(
-        String automationAccountName,
-        String resourceGroupName,
-        String scheduleName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scheduleName = Objects.requireNonNull(scheduleName, "expected parameter 'scheduleName' to be non-null");
-    }
+    private GetScheduleArgs() {}
 
-    private GetScheduleArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
-        this.scheduleName = null;
+    private GetScheduleArgs(GetScheduleArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scheduleName = $.scheduleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
-        private String scheduleName;
+        private GetScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScheduleArgs();
         }
 
         public Builder(GetScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scheduleName = defaults.scheduleName;
+            $ = new GetScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scheduleName(String scheduleName) {
-            this.scheduleName = Objects.requireNonNull(scheduleName);
+            $.scheduleName = scheduleName;
             return this;
-        }        public GetScheduleArgs build() {
-            return new GetScheduleArgs(automationAccountName, resourceGroupName, scheduleName);
+        }
+
+        public GetScheduleArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scheduleName = Objects.requireNonNull($.scheduleName, "expected parameter 'scheduleName' to be non-null");
+            return $;
         }
     }
+
 }

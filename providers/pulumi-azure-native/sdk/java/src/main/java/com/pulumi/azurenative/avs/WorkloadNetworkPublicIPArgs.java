@@ -5,10 +5,10 @@ package com.pulumi.azurenative.avs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="numberOfPublicIPs")
-      private final @Nullable Output<Double> numberOfPublicIPs;
+    private @Nullable Output<Double> numberOfPublicIPs;
 
-    public Output<Double> numberOfPublicIPs() {
-        return this.numberOfPublicIPs == null ? Codegen.empty() : this.numberOfPublicIPs;
+    public Optional<Output<Double>> numberOfPublicIPs() {
+        return Optional.ofNullable(this.numberOfPublicIPs);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -54,10 +54,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publicIPId")
-      private final @Nullable Output<String> publicIPId;
+    private @Nullable Output<String> publicIPId;
 
-    public Output<String> publicIPId() {
-        return this.publicIPId == null ? Codegen.empty() : this.publicIPId;
+    public Optional<Output<String>> publicIPId() {
+        return Optional.ofNullable(this.publicIPId);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public WorkloadNetworkPublicIPArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<Double> numberOfPublicIPs,
-        Output<String> privateCloudName,
-        @Nullable Output<String> publicIPId,
-        Output<String> resourceGroupName) {
-        this.displayName = displayName;
-        this.numberOfPublicIPs = numberOfPublicIPs;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.publicIPId = publicIPId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private WorkloadNetworkPublicIPArgs() {}
 
-    private WorkloadNetworkPublicIPArgs() {
-        this.displayName = Codegen.empty();
-        this.numberOfPublicIPs = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.publicIPId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private WorkloadNetworkPublicIPArgs(WorkloadNetworkPublicIPArgs $) {
+        this.displayName = $.displayName;
+        this.numberOfPublicIPs = $.numberOfPublicIPs;
+        this.privateCloudName = $.privateCloudName;
+        this.publicIPId = $.publicIPId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkPublicIPArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Double> numberOfPublicIPs;
-        private Output<String> privateCloudName;
-        private @Nullable Output<String> publicIPId;
-        private Output<String> resourceGroupName;
+        private WorkloadNetworkPublicIPArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkPublicIPArgs();
         }
 
         public Builder(WorkloadNetworkPublicIPArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.numberOfPublicIPs = defaults.numberOfPublicIPs;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.publicIPId = defaults.publicIPId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new WorkloadNetworkPublicIPArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder numberOfPublicIPs(@Nullable Output<Double> numberOfPublicIPs) {
-            this.numberOfPublicIPs = numberOfPublicIPs;
+            $.numberOfPublicIPs = numberOfPublicIPs;
             return this;
         }
-        public Builder numberOfPublicIPs(@Nullable Double numberOfPublicIPs) {
-            this.numberOfPublicIPs = Codegen.ofNullable(numberOfPublicIPs);
-            return this;
+
+        public Builder numberOfPublicIPs(Double numberOfPublicIPs) {
+            return numberOfPublicIPs(Output.of(numberOfPublicIPs));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder publicIPId(@Nullable Output<String> publicIPId) {
-            this.publicIPId = publicIPId;
+            $.publicIPId = publicIPId;
             return this;
         }
-        public Builder publicIPId(@Nullable String publicIPId) {
-            this.publicIPId = Codegen.ofNullable(publicIPId);
-            return this;
+
+        public Builder publicIPId(String publicIPId) {
+            return publicIPId(Output.of(publicIPId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public WorkloadNetworkPublicIPArgs build() {
-            return new WorkloadNetworkPublicIPArgs(displayName, numberOfPublicIPs, privateCloudName, publicIPId, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public WorkloadNetworkPublicIPArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="expiration")
-      private final @Nullable Output<String> expiration;
+    private @Nullable Output<String> expiration;
 
-    public Output<String> expiration() {
-        return this.expiration == null ? Codegen.empty() : this.expiration;
+    public Optional<Output<String>> expiration() {
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fulfilledDateTime")
-      private final @Nullable Output<String> fulfilledDateTime;
+    private @Nullable Output<String> fulfilledDateTime;
 
-    public Output<String> fulfilledDateTime() {
-        return this.fulfilledDateTime == null ? Codegen.empty() : this.fulfilledDateTime;
+    public Optional<Output<String>> fulfilledDateTime() {
+        return Optional.ofNullable(this.fulfilledDateTime);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="reviewHistoryPeriodEndDateTime")
-      private final @Nullable Output<String> reviewHistoryPeriodEndDateTime;
+    private @Nullable Output<String> reviewHistoryPeriodEndDateTime;
 
-    public Output<String> reviewHistoryPeriodEndDateTime() {
-        return this.reviewHistoryPeriodEndDateTime == null ? Codegen.empty() : this.reviewHistoryPeriodEndDateTime;
+    public Optional<Output<String>> reviewHistoryPeriodEndDateTime() {
+        return Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="reviewHistoryPeriodStartDateTime")
-      private final @Nullable Output<String> reviewHistoryPeriodStartDateTime;
+    private @Nullable Output<String> reviewHistoryPeriodStartDateTime;
 
-    public Output<String> reviewHistoryPeriodStartDateTime() {
-        return this.reviewHistoryPeriodStartDateTime == null ? Codegen.empty() : this.reviewHistoryPeriodStartDateTime;
+    public Optional<Output<String>> reviewHistoryPeriodStartDateTime() {
+        return Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="runDateTime")
-      private final @Nullable Output<String> runDateTime;
+    private @Nullable Output<String> runDateTime;
 
-    public Output<String> runDateTime() {
-        return this.runDateTime == null ? Codegen.empty() : this.runDateTime;
+    public Optional<Output<String>> runDateTime() {
+        return Optional.ofNullable(this.runDateTime);
     }
 
-    public AccessReviewHistoryInstanceArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> expiration,
-        @Nullable Output<String> fulfilledDateTime,
-        @Nullable Output<String> reviewHistoryPeriodEndDateTime,
-        @Nullable Output<String> reviewHistoryPeriodStartDateTime,
-        @Nullable Output<String> runDateTime) {
-        this.displayName = displayName;
-        this.expiration = expiration;
-        this.fulfilledDateTime = fulfilledDateTime;
-        this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
-        this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
-        this.runDateTime = runDateTime;
-    }
+    private AccessReviewHistoryInstanceArgs() {}
 
-    private AccessReviewHistoryInstanceArgs() {
-        this.displayName = Codegen.empty();
-        this.expiration = Codegen.empty();
-        this.fulfilledDateTime = Codegen.empty();
-        this.reviewHistoryPeriodEndDateTime = Codegen.empty();
-        this.reviewHistoryPeriodStartDateTime = Codegen.empty();
-        this.runDateTime = Codegen.empty();
+    private AccessReviewHistoryInstanceArgs(AccessReviewHistoryInstanceArgs $) {
+        this.displayName = $.displayName;
+        this.expiration = $.expiration;
+        this.fulfilledDateTime = $.fulfilledDateTime;
+        this.reviewHistoryPeriodEndDateTime = $.reviewHistoryPeriodEndDateTime;
+        this.reviewHistoryPeriodStartDateTime = $.reviewHistoryPeriodStartDateTime;
+        this.runDateTime = $.runDateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewHistoryInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> expiration;
-        private @Nullable Output<String> fulfilledDateTime;
-        private @Nullable Output<String> reviewHistoryPeriodEndDateTime;
-        private @Nullable Output<String> reviewHistoryPeriodStartDateTime;
-        private @Nullable Output<String> runDateTime;
+        private AccessReviewHistoryInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewHistoryInstanceArgs();
         }
 
         public Builder(AccessReviewHistoryInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.expiration = defaults.expiration;
-    	      this.fulfilledDateTime = defaults.fulfilledDateTime;
-    	      this.reviewHistoryPeriodEndDateTime = defaults.reviewHistoryPeriodEndDateTime;
-    	      this.reviewHistoryPeriodStartDateTime = defaults.reviewHistoryPeriodStartDateTime;
-    	      this.runDateTime = defaults.runDateTime;
+            $ = new AccessReviewHistoryInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder expiration(@Nullable Output<String> expiration) {
-            this.expiration = expiration;
+            $.expiration = expiration;
             return this;
         }
-        public Builder expiration(@Nullable String expiration) {
-            this.expiration = Codegen.ofNullable(expiration);
-            return this;
+
+        public Builder expiration(String expiration) {
+            return expiration(Output.of(expiration));
         }
+
         public Builder fulfilledDateTime(@Nullable Output<String> fulfilledDateTime) {
-            this.fulfilledDateTime = fulfilledDateTime;
+            $.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
-        public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
-            this.fulfilledDateTime = Codegen.ofNullable(fulfilledDateTime);
-            return this;
+
+        public Builder fulfilledDateTime(String fulfilledDateTime) {
+            return fulfilledDateTime(Output.of(fulfilledDateTime));
         }
+
         public Builder reviewHistoryPeriodEndDateTime(@Nullable Output<String> reviewHistoryPeriodEndDateTime) {
-            this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
+            $.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
-        public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
-            this.reviewHistoryPeriodEndDateTime = Codegen.ofNullable(reviewHistoryPeriodEndDateTime);
-            return this;
+
+        public Builder reviewHistoryPeriodEndDateTime(String reviewHistoryPeriodEndDateTime) {
+            return reviewHistoryPeriodEndDateTime(Output.of(reviewHistoryPeriodEndDateTime));
         }
+
         public Builder reviewHistoryPeriodStartDateTime(@Nullable Output<String> reviewHistoryPeriodStartDateTime) {
-            this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
+            $.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
-        public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
-            this.reviewHistoryPeriodStartDateTime = Codegen.ofNullable(reviewHistoryPeriodStartDateTime);
-            return this;
+
+        public Builder reviewHistoryPeriodStartDateTime(String reviewHistoryPeriodStartDateTime) {
+            return reviewHistoryPeriodStartDateTime(Output.of(reviewHistoryPeriodStartDateTime));
         }
+
         public Builder runDateTime(@Nullable Output<String> runDateTime) {
-            this.runDateTime = runDateTime;
+            $.runDateTime = runDateTime;
             return this;
         }
-        public Builder runDateTime(@Nullable String runDateTime) {
-            this.runDateTime = Codegen.ofNullable(runDateTime);
-            return this;
-        }        public AccessReviewHistoryInstanceArgs build() {
-            return new AccessReviewHistoryInstanceArgs(displayName, expiration, fulfilledDateTime, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime);
+
+        public Builder runDateTime(String runDateTime) {
+            return runDateTime(Output.of(runDateTime));
+        }
+
+        public AccessReviewHistoryInstanceArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.search.enums.SharedPrivateLinkResourceProvisioning
 import com.pulumi.azurenative.search.enums.SharedPrivateLinkResourceStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable Output<String> privateLinkResourceId;
+    private @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
+    public Optional<Output<String>> privateLinkResourceId() {
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
+    private @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
 
-    public Output<SharedPrivateLinkResourceProvisioningState> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<SharedPrivateLinkResourceProvisioningState>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable Output<String> requestMessage;
+    private @Nullable Output<String> requestMessage;
 
-    public Output<String> requestMessage() {
-        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
+    public Optional<Output<String>> requestMessage() {
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceRegion")
-      private final @Nullable Output<String> resourceRegion;
+    private @Nullable Output<String> resourceRegion;
 
-    public Output<String> resourceRegion() {
-        return this.resourceRegion == null ? Codegen.empty() : this.resourceRegion;
+    public Optional<Output<String>> resourceRegion() {
+        return Optional.ofNullable(this.resourceRegion);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<SharedPrivateLinkResourceStatus> status;
+    private @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
-    public Output<SharedPrivateLinkResourceStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<SharedPrivateLinkResourceStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public SharedPrivateLinkResourcePropertiesArgs(
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> privateLinkResourceId,
-        @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState,
-        @Nullable Output<String> requestMessage,
-        @Nullable Output<String> resourceRegion,
-        @Nullable Output<SharedPrivateLinkResourceStatus> status) {
-        this.groupId = groupId;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.provisioningState = provisioningState;
-        this.requestMessage = requestMessage;
-        this.resourceRegion = resourceRegion;
-        this.status = status;
-    }
+    private SharedPrivateLinkResourcePropertiesArgs() {}
 
-    private SharedPrivateLinkResourcePropertiesArgs() {
-        this.groupId = Codegen.empty();
-        this.privateLinkResourceId = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.requestMessage = Codegen.empty();
-        this.resourceRegion = Codegen.empty();
-        this.status = Codegen.empty();
+    private SharedPrivateLinkResourcePropertiesArgs(SharedPrivateLinkResourcePropertiesArgs $) {
+        this.groupId = $.groupId;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.provisioningState = $.provisioningState;
+        this.requestMessage = $.requestMessage;
+        this.resourceRegion = $.resourceRegion;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> privateLinkResourceId;
-        private @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
-        private @Nullable Output<String> requestMessage;
-        private @Nullable Output<String> resourceRegion;
-        private @Nullable Output<SharedPrivateLinkResourceStatus> status;
+        private SharedPrivateLinkResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourcePropertiesArgs();
         }
 
         public Builder(SharedPrivateLinkResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.resourceRegion = defaults.resourceRegion;
-    	      this.status = defaults.status;
+            $ = new SharedPrivateLinkResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
-            return this;
+
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
+            return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
+
         public Builder provisioningState(@Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable SharedPrivateLinkResourceProvisioningState provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(SharedPrivateLinkResourceProvisioningState provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Codegen.ofNullable(requestMessage);
-            return this;
+
+        public Builder requestMessage(String requestMessage) {
+            return requestMessage(Output.of(requestMessage));
         }
+
         public Builder resourceRegion(@Nullable Output<String> resourceRegion) {
-            this.resourceRegion = resourceRegion;
+            $.resourceRegion = resourceRegion;
             return this;
         }
-        public Builder resourceRegion(@Nullable String resourceRegion) {
-            this.resourceRegion = Codegen.ofNullable(resourceRegion);
-            return this;
+
+        public Builder resourceRegion(String resourceRegion) {
+            return resourceRegion(Output.of(resourceRegion));
         }
+
         public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable SharedPrivateLinkResourceStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public SharedPrivateLinkResourcePropertiesArgs build() {
-            return new SharedPrivateLinkResourcePropertiesArgs(groupId, privateLinkResourceId, provisioningState, requestMessage, resourceRegion, status);
+
+        public Builder status(SharedPrivateLinkResourceStatus status) {
+            return status(Output.of(status));
+        }
+
+        public SharedPrivateLinkResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

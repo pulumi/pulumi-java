@@ -17,65 +17,61 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
     public static final ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions Empty = new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions();
 
     @Import(name="preflightOptions")
-      private final @Nullable List<String> preflightOptions;
+    private @Nullable List<String> preflightOptions;
 
-    public List<String> preflightOptions() {
-        return this.preflightOptions == null ? List.of() : this.preflightOptions;
+    public Optional<List<String>> preflightOptions() {
+        return Optional.ofNullable(this.preflightOptions);
     }
 
     @Import(name="preflightSupported")
-      private final @Nullable Boolean preflightSupported;
+    private @Nullable Boolean preflightSupported;
 
     public Optional<Boolean> preflightSupported() {
-        return this.preflightSupported == null ? Optional.empty() : Optional.ofNullable(this.preflightSupported);
+        return Optional.ofNullable(this.preflightSupported);
     }
 
-    public ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(
-        @Nullable List<String> preflightOptions,
-        @Nullable Boolean preflightSupported) {
-        this.preflightOptions = preflightOptions;
-        this.preflightSupported = preflightSupported;
-    }
+    private ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions() {}
 
-    private ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions() {
-        this.preflightOptions = List.of();
-        this.preflightSupported = null;
+    private ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions $) {
+        this.preflightOptions = $.preflightOptions;
+        this.preflightSupported = $.preflightSupported;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> preflightOptions;
-        private @Nullable Boolean preflightSupported;
+        private ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preflightOptions = defaults.preflightOptions;
-    	      this.preflightSupported = defaults.preflightSupported;
+            $ = new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder preflightOptions(@Nullable List<String> preflightOptions) {
-            this.preflightOptions = preflightOptions;
+            $.preflightOptions = preflightOptions;
             return this;
         }
+
         public Builder preflightOptions(String... preflightOptions) {
             return preflightOptions(List.of(preflightOptions));
         }
+
         public Builder preflightSupported(@Nullable Boolean preflightSupported) {
-            this.preflightSupported = preflightSupported;
+            $.preflightSupported = preflightSupported;
             return this;
-        }        public ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions build() {
-            return new ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(preflightOptions, preflightSupported);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions build() {
+            return $;
         }
     }
+
 }

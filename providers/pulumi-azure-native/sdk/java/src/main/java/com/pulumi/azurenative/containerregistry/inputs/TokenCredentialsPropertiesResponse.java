@@ -21,68 +21,65 @@ public final class TokenCredentialsPropertiesResponse extends com.pulumi.resourc
     public static final TokenCredentialsPropertiesResponse Empty = new TokenCredentialsPropertiesResponse();
 
     @Import(name="certificates")
-      private final @Nullable List<TokenCertificateResponse> certificates;
+    private @Nullable List<TokenCertificateResponse> certificates;
 
-    public List<TokenCertificateResponse> certificates() {
-        return this.certificates == null ? List.of() : this.certificates;
+    public Optional<List<TokenCertificateResponse>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     @Import(name="passwords")
-      private final @Nullable List<TokenPasswordResponse> passwords;
+    private @Nullable List<TokenPasswordResponse> passwords;
 
-    public List<TokenPasswordResponse> passwords() {
-        return this.passwords == null ? List.of() : this.passwords;
+    public Optional<List<TokenPasswordResponse>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
-    public TokenCredentialsPropertiesResponse(
-        @Nullable List<TokenCertificateResponse> certificates,
-        @Nullable List<TokenPasswordResponse> passwords) {
-        this.certificates = certificates;
-        this.passwords = passwords;
-    }
+    private TokenCredentialsPropertiesResponse() {}
 
-    private TokenCredentialsPropertiesResponse() {
-        this.certificates = List.of();
-        this.passwords = List.of();
+    private TokenCredentialsPropertiesResponse(TokenCredentialsPropertiesResponse $) {
+        this.certificates = $.certificates;
+        this.passwords = $.passwords;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenCredentialsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<TokenCertificateResponse> certificates;
-        private @Nullable List<TokenPasswordResponse> passwords;
+        private TokenCredentialsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenCredentialsPropertiesResponse();
         }
 
         public Builder(TokenCredentialsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.passwords = defaults.passwords;
+            $ = new TokenCredentialsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(@Nullable List<TokenCertificateResponse> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
+
         public Builder certificates(TokenCertificateResponse... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder passwords(@Nullable List<TokenPasswordResponse> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
+
         public Builder passwords(TokenPasswordResponse... passwords) {
             return passwords(List.of(passwords));
-        }        public TokenCredentialsPropertiesResponse build() {
-            return new TokenCredentialsPropertiesResponse(certificates, passwords);
+        }
+
+        public TokenCredentialsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

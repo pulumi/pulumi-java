@@ -23,10 +23,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPrincipalName")
-      private final @Nullable String userPrincipalName;
+    private @Nullable String userPrincipalName;
 
     public Optional<String> userPrincipalName() {
-        return this.userPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.userPrincipalName);
+        return Optional.ofNullable(this.userPrincipalName);
     }
 
-    public ClientInfoResponse(
-        @Nullable String email,
-        @Nullable String name,
-        @Nullable String objectId,
-        @Nullable String userPrincipalName) {
-        this.email = email;
-        this.name = name;
-        this.objectId = objectId;
-        this.userPrincipalName = userPrincipalName;
-    }
+    private ClientInfoResponse() {}
 
-    private ClientInfoResponse() {
-        this.email = null;
-        this.name = null;
-        this.objectId = null;
-        this.userPrincipalName = null;
+    private ClientInfoResponse(ClientInfoResponse $) {
+        this.email = $.email;
+        this.name = $.name;
+        this.objectId = $.objectId;
+        this.userPrincipalName = $.userPrincipalName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable String name;
-        private @Nullable String objectId;
-        private @Nullable String userPrincipalName;
+        private ClientInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientInfoResponse();
         }
 
         public Builder(ClientInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.name = defaults.name;
-    	      this.objectId = defaults.objectId;
-    	      this.userPrincipalName = defaults.userPrincipalName;
+            $ = new ClientInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = userPrincipalName;
+            $.userPrincipalName = userPrincipalName;
             return this;
-        }        public ClientInfoResponse build() {
-            return new ClientInfoResponse(email, name, objectId, userPrincipalName);
+        }
+
+        public ClientInfoResponse build() {
+            return $;
         }
     }
+
 }

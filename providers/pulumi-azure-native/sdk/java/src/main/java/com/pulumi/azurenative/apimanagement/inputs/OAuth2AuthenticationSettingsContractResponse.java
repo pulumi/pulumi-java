@@ -23,10 +23,10 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
      * 
      */
     @Import(name="authorizationServerId")
-      private final @Nullable String authorizationServerId;
+    private @Nullable String authorizationServerId;
 
     public Optional<String> authorizationServerId() {
-        return this.authorizationServerId == null ? Optional.empty() : Optional.ofNullable(this.authorizationServerId);
+        return Optional.ofNullable(this.authorizationServerId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class OAuth2AuthenticationSettingsContractResponse extends com.pulu
      * 
      */
     @Import(name="scope")
-      private final @Nullable String scope;
+    private @Nullable String scope;
 
     public Optional<String> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
-    public OAuth2AuthenticationSettingsContractResponse(
-        @Nullable String authorizationServerId,
-        @Nullable String scope) {
-        this.authorizationServerId = authorizationServerId;
-        this.scope = scope;
-    }
+    private OAuth2AuthenticationSettingsContractResponse() {}
 
-    private OAuth2AuthenticationSettingsContractResponse() {
-        this.authorizationServerId = null;
-        this.scope = null;
+    private OAuth2AuthenticationSettingsContractResponse(OAuth2AuthenticationSettingsContractResponse $) {
+        this.authorizationServerId = $.authorizationServerId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuth2AuthenticationSettingsContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authorizationServerId;
-        private @Nullable String scope;
+        private OAuth2AuthenticationSettingsContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuth2AuthenticationSettingsContractResponse();
         }
 
         public Builder(OAuth2AuthenticationSettingsContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationServerId = defaults.authorizationServerId;
-    	      this.scope = defaults.scope;
+            $ = new OAuth2AuthenticationSettingsContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationServerId(@Nullable String authorizationServerId) {
-            this.authorizationServerId = authorizationServerId;
+            $.authorizationServerId = authorizationServerId;
             return this;
         }
+
         public Builder scope(@Nullable String scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
-        }        public OAuth2AuthenticationSettingsContractResponse build() {
-            return new OAuth2AuthenticationSettingsContractResponse(authorizationServerId, scope);
+        }
+
+        public OAuth2AuthenticationSettingsContractResponse build() {
+            return $;
         }
     }
+
 }

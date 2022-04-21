@@ -9,10 +9,10 @@ import com.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanProtectedItemA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endGroupActions")
-      private final @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
+    private @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
 
-    public Output<List<RecoveryPlanActionArgs>> endGroupActions() {
-        return this.endGroupActions == null ? Codegen.empty() : this.endGroupActions;
+    public Optional<Output<List<RecoveryPlanActionArgs>>> endGroupActions() {
+        return Optional.ofNullable(this.endGroupActions);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="groupType", required=true)
-      private final Output<Either<String,RecoveryPlanGroupType>> groupType;
+    private Output<Either<String,RecoveryPlanGroupType>> groupType;
 
     public Output<Either<String,RecoveryPlanGroupType>> groupType() {
         return this.groupType;
@@ -51,10 +51,10 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replicationProtectedItems")
-      private final @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
+    private @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
 
-    public Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems() {
-        return this.replicationProtectedItems == null ? Codegen.empty() : this.replicationProtectedItems;
+    public Optional<Output<List<RecoveryPlanProtectedItemArgs>>> replicationProtectedItems() {
+        return Optional.ofNullable(this.replicationProtectedItems);
     }
 
     /**
@@ -62,98 +62,91 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="startGroupActions")
-      private final @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
+    private @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
 
-    public Output<List<RecoveryPlanActionArgs>> startGroupActions() {
-        return this.startGroupActions == null ? Codegen.empty() : this.startGroupActions;
+    public Optional<Output<List<RecoveryPlanActionArgs>>> startGroupActions() {
+        return Optional.ofNullable(this.startGroupActions);
     }
 
-    public RecoveryPlanGroupArgs(
-        @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions,
-        Output<Either<String,RecoveryPlanGroupType>> groupType,
-        @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems,
-        @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions) {
-        this.endGroupActions = endGroupActions;
-        this.groupType = Objects.requireNonNull(groupType, "expected parameter 'groupType' to be non-null");
-        this.replicationProtectedItems = replicationProtectedItems;
-        this.startGroupActions = startGroupActions;
-    }
+    private RecoveryPlanGroupArgs() {}
 
-    private RecoveryPlanGroupArgs() {
-        this.endGroupActions = Codegen.empty();
-        this.groupType = Codegen.empty();
-        this.replicationProtectedItems = Codegen.empty();
-        this.startGroupActions = Codegen.empty();
+    private RecoveryPlanGroupArgs(RecoveryPlanGroupArgs $) {
+        this.endGroupActions = $.endGroupActions;
+        this.groupType = $.groupType;
+        this.replicationProtectedItems = $.replicationProtectedItems;
+        this.startGroupActions = $.startGroupActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
-        private Output<Either<String,RecoveryPlanGroupType>> groupType;
-        private @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
-        private @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
+        private RecoveryPlanGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanGroupArgs();
         }
 
         public Builder(RecoveryPlanGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endGroupActions = defaults.endGroupActions;
-    	      this.groupType = defaults.groupType;
-    	      this.replicationProtectedItems = defaults.replicationProtectedItems;
-    	      this.startGroupActions = defaults.startGroupActions;
+            $ = new RecoveryPlanGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endGroupActions(@Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions) {
-            this.endGroupActions = endGroupActions;
+            $.endGroupActions = endGroupActions;
             return this;
         }
-        public Builder endGroupActions(@Nullable List<RecoveryPlanActionArgs> endGroupActions) {
-            this.endGroupActions = Codegen.ofNullable(endGroupActions);
-            return this;
+
+        public Builder endGroupActions(List<RecoveryPlanActionArgs> endGroupActions) {
+            return endGroupActions(Output.of(endGroupActions));
         }
+
         public Builder endGroupActions(RecoveryPlanActionArgs... endGroupActions) {
             return endGroupActions(List.of(endGroupActions));
         }
+
         public Builder groupType(Output<Either<String,RecoveryPlanGroupType>> groupType) {
-            this.groupType = Objects.requireNonNull(groupType);
+            $.groupType = groupType;
             return this;
         }
+
         public Builder groupType(Either<String,RecoveryPlanGroupType> groupType) {
-            this.groupType = Output.of(Objects.requireNonNull(groupType));
-            return this;
+            return groupType(Output.of(groupType));
         }
+
         public Builder replicationProtectedItems(@Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems) {
-            this.replicationProtectedItems = replicationProtectedItems;
+            $.replicationProtectedItems = replicationProtectedItems;
             return this;
         }
-        public Builder replicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemArgs> replicationProtectedItems) {
-            this.replicationProtectedItems = Codegen.ofNullable(replicationProtectedItems);
-            return this;
+
+        public Builder replicationProtectedItems(List<RecoveryPlanProtectedItemArgs> replicationProtectedItems) {
+            return replicationProtectedItems(Output.of(replicationProtectedItems));
         }
+
         public Builder replicationProtectedItems(RecoveryPlanProtectedItemArgs... replicationProtectedItems) {
             return replicationProtectedItems(List.of(replicationProtectedItems));
         }
+
         public Builder startGroupActions(@Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions) {
-            this.startGroupActions = startGroupActions;
+            $.startGroupActions = startGroupActions;
             return this;
         }
-        public Builder startGroupActions(@Nullable List<RecoveryPlanActionArgs> startGroupActions) {
-            this.startGroupActions = Codegen.ofNullable(startGroupActions);
-            return this;
+
+        public Builder startGroupActions(List<RecoveryPlanActionArgs> startGroupActions) {
+            return startGroupActions(Output.of(startGroupActions));
         }
+
         public Builder startGroupActions(RecoveryPlanActionArgs... startGroupActions) {
             return startGroupActions(List.of(startGroupActions));
-        }        public RecoveryPlanGroupArgs build() {
-            return new RecoveryPlanGroupArgs(endGroupActions, groupType, replicationProtectedItems, startGroupActions);
+        }
+
+        public RecoveryPlanGroupArgs build() {
+            $.groupType = Objects.requireNonNull($.groupType, "expected parameter 'groupType' to be non-null");
+            return $;
         }
     }
+
 }

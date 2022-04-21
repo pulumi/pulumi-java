@@ -22,7 +22,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
      * 
      */
     @Import(name="absoluteValue", required=true)
-      private final Double absoluteValue;
+    private Double absoluteValue;
 
     public Double absoluteValue() {
         return this.absoluteValue;
@@ -33,7 +33,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
      * 
      */
     @Import(name="changeValueAbsolute", required=true)
-      private final Double changeValueAbsolute;
+    private Double changeValueAbsolute;
 
     public Double changeValueAbsolute() {
         return this.changeValueAbsolute;
@@ -44,7 +44,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
      * 
      */
     @Import(name="changeValueRelative", required=true)
-      private final Double changeValueRelative;
+    private Double changeValueRelative;
 
     public Double changeValueRelative() {
         return this.changeValueRelative;
@@ -55,7 +55,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
      * 
      */
     @Import(name="dimensionName", required=true)
-      private final String dimensionName;
+    private String dimensionName;
 
     public String dimensionName() {
         return this.dimensionName;
@@ -66,82 +66,73 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
     }
 
-    public RecommendedActionImpactRecordResponse(
-        Double absoluteValue,
-        Double changeValueAbsolute,
-        Double changeValueRelative,
-        String dimensionName,
-        String unit) {
-        this.absoluteValue = Objects.requireNonNull(absoluteValue, "expected parameter 'absoluteValue' to be non-null");
-        this.changeValueAbsolute = Objects.requireNonNull(changeValueAbsolute, "expected parameter 'changeValueAbsolute' to be non-null");
-        this.changeValueRelative = Objects.requireNonNull(changeValueRelative, "expected parameter 'changeValueRelative' to be non-null");
-        this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-    }
+    private RecommendedActionImpactRecordResponse() {}
 
-    private RecommendedActionImpactRecordResponse() {
-        this.absoluteValue = null;
-        this.changeValueAbsolute = null;
-        this.changeValueRelative = null;
-        this.dimensionName = null;
-        this.unit = null;
+    private RecommendedActionImpactRecordResponse(RecommendedActionImpactRecordResponse $) {
+        this.absoluteValue = $.absoluteValue;
+        this.changeValueAbsolute = $.changeValueAbsolute;
+        this.changeValueRelative = $.changeValueRelative;
+        this.dimensionName = $.dimensionName;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedActionImpactRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double absoluteValue;
-        private Double changeValueAbsolute;
-        private Double changeValueRelative;
-        private String dimensionName;
-        private String unit;
+        private RecommendedActionImpactRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedActionImpactRecordResponse();
         }
 
         public Builder(RecommendedActionImpactRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.absoluteValue = defaults.absoluteValue;
-    	      this.changeValueAbsolute = defaults.changeValueAbsolute;
-    	      this.changeValueRelative = defaults.changeValueRelative;
-    	      this.dimensionName = defaults.dimensionName;
-    	      this.unit = defaults.unit;
+            $ = new RecommendedActionImpactRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder absoluteValue(Double absoluteValue) {
-            this.absoluteValue = Objects.requireNonNull(absoluteValue);
+            $.absoluteValue = absoluteValue;
             return this;
         }
+
         public Builder changeValueAbsolute(Double changeValueAbsolute) {
-            this.changeValueAbsolute = Objects.requireNonNull(changeValueAbsolute);
+            $.changeValueAbsolute = changeValueAbsolute;
             return this;
         }
+
         public Builder changeValueRelative(Double changeValueRelative) {
-            this.changeValueRelative = Objects.requireNonNull(changeValueRelative);
+            $.changeValueRelative = changeValueRelative;
             return this;
         }
+
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Objects.requireNonNull(dimensionName);
+            $.dimensionName = dimensionName;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
-        }        public RecommendedActionImpactRecordResponse build() {
-            return new RecommendedActionImpactRecordResponse(absoluteValue, changeValueAbsolute, changeValueRelative, dimensionName, unit);
+        }
+
+        public RecommendedActionImpactRecordResponse build() {
+            $.absoluteValue = Objects.requireNonNull($.absoluteValue, "expected parameter 'absoluteValue' to be non-null");
+            $.changeValueAbsolute = Objects.requireNonNull($.changeValueAbsolute, "expected parameter 'changeValueAbsolute' to be non-null");
+            $.changeValueRelative = Objects.requireNonNull($.changeValueRelative, "expected parameter 'changeValueRelative' to be non-null");
+            $.dimensionName = Objects.requireNonNull($.dimensionName, "expected parameter 'dimensionName' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            return $;
         }
     }
+
 }

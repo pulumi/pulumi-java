@@ -22,7 +22,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -33,7 +33,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notAfter", required=true)
-      private final String notAfter;
+    private String notAfter;
 
     public String notAfter() {
         return this.notAfter;
@@ -44,7 +44,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notBefore", required=true)
-      private final String notBefore;
+    private String notBefore;
 
     public String notBefore() {
         return this.notBefore;
@@ -55,7 +55,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rawData", required=true)
-      private final String rawData;
+    private String rawData;
 
     public String rawData() {
         return this.rawData;
@@ -66,7 +66,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
@@ -77,7 +77,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="signatureAlgorithm", required=true)
-      private final String signatureAlgorithm;
+    private String signatureAlgorithm;
 
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -88,7 +88,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
@@ -99,7 +99,7 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
@@ -110,118 +110,101 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version", required=true)
-      private final Integer version;
+    private Integer version;
 
     public Integer version() {
         return this.version;
     }
 
-    public CertificateDetailsResponse(
-        String issuer,
-        String notAfter,
-        String notBefore,
-        String rawData,
-        String serialNumber,
-        String signatureAlgorithm,
-        String subject,
-        String thumbprint,
-        Integer version) {
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.notAfter = Objects.requireNonNull(notAfter, "expected parameter 'notAfter' to be non-null");
-        this.notBefore = Objects.requireNonNull(notBefore, "expected parameter 'notBefore' to be non-null");
-        this.rawData = Objects.requireNonNull(rawData, "expected parameter 'rawData' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private CertificateDetailsResponse() {}
 
-    private CertificateDetailsResponse() {
-        this.issuer = null;
-        this.notAfter = null;
-        this.notBefore = null;
-        this.rawData = null;
-        this.serialNumber = null;
-        this.signatureAlgorithm = null;
-        this.subject = null;
-        this.thumbprint = null;
-        this.version = null;
+    private CertificateDetailsResponse(CertificateDetailsResponse $) {
+        this.issuer = $.issuer;
+        this.notAfter = $.notAfter;
+        this.notBefore = $.notBefore;
+        this.rawData = $.rawData;
+        this.serialNumber = $.serialNumber;
+        this.signatureAlgorithm = $.signatureAlgorithm;
+        this.subject = $.subject;
+        this.thumbprint = $.thumbprint;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String issuer;
-        private String notAfter;
-        private String notBefore;
-        private String rawData;
-        private String serialNumber;
-        private String signatureAlgorithm;
-        private String subject;
-        private String thumbprint;
-        private Integer version;
+        private CertificateDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateDetailsResponse();
         }
 
         public Builder(CertificateDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuer = defaults.issuer;
-    	      this.notAfter = defaults.notAfter;
-    	      this.notBefore = defaults.notBefore;
-    	      this.rawData = defaults.rawData;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
-    	      this.subject = defaults.subject;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.version = defaults.version;
+            $ = new CertificateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder notAfter(String notAfter) {
-            this.notAfter = Objects.requireNonNull(notAfter);
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder notBefore(String notBefore) {
-            this.notBefore = Objects.requireNonNull(notBefore);
+            $.notBefore = notBefore;
             return this;
         }
+
         public Builder rawData(String rawData) {
-            this.rawData = Objects.requireNonNull(rawData);
+            $.rawData = rawData;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
         }
+
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public CertificateDetailsResponse build() {
-            return new CertificateDetailsResponse(issuer, notAfter, notBefore, rawData, serialNumber, signatureAlgorithm, subject, thumbprint, version);
+        }
+
+        public CertificateDetailsResponse build() {
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.notAfter = Objects.requireNonNull($.notAfter, "expected parameter 'notAfter' to be non-null");
+            $.notBefore = Objects.requireNonNull($.notBefore, "expected parameter 'notBefore' to be non-null");
+            $.rawData = Objects.requireNonNull($.rawData, "expected parameter 'rawData' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            $.signatureAlgorithm = Objects.requireNonNull($.signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="default", required=true)
-      private final String default_;
+    private String default_;
 
     public String default_() {
         return this.default_;
@@ -33,7 +33,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="helpUrl", required=true)
-      private final String helpUrl;
+    private String helpUrl;
 
     public String helpUrl() {
         return this.helpUrl;
@@ -66,7 +66,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="metadata", required=true)
-      private final ServiceProviderParameterResponseMetadata metadata;
+    private ServiceProviderParameterResponseMetadata metadata;
 
     public ServiceProviderParameterResponseMetadata metadata() {
         return this.metadata;
@@ -77,7 +77,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -88,100 +88,87 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServiceProviderParameterResponse(
-        String default_,
-        String description,
-        String displayName,
-        String helpUrl,
-        ServiceProviderParameterResponseMetadata metadata,
-        String name,
-        String type) {
-        this.default_ = Objects.requireNonNull(default_, "expected parameter 'default' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.helpUrl = Objects.requireNonNull(helpUrl, "expected parameter 'helpUrl' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServiceProviderParameterResponse() {}
 
-    private ServiceProviderParameterResponse() {
-        this.default_ = null;
-        this.description = null;
-        this.displayName = null;
-        this.helpUrl = null;
-        this.metadata = null;
-        this.name = null;
-        this.type = null;
+    private ServiceProviderParameterResponse(ServiceProviderParameterResponse $) {
+        this.default_ = $.default_;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.helpUrl = $.helpUrl;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceProviderParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String default_;
-        private String description;
-        private String displayName;
-        private String helpUrl;
-        private ServiceProviderParameterResponseMetadata metadata;
-        private String name;
-        private String type;
+        private ServiceProviderParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceProviderParameterResponse();
         }
 
         public Builder(ServiceProviderParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.helpUrl = defaults.helpUrl;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ServiceProviderParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(String default_) {
-            this.default_ = Objects.requireNonNull(default_);
+            $.default_ = default_;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder helpUrl(String helpUrl) {
-            this.helpUrl = Objects.requireNonNull(helpUrl);
+            $.helpUrl = helpUrl;
             return this;
         }
+
         public Builder metadata(ServiceProviderParameterResponseMetadata metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServiceProviderParameterResponse build() {
-            return new ServiceProviderParameterResponse(default_, description, displayName, helpUrl, metadata, name, type);
+        }
+
+        public ServiceProviderParameterResponse build() {
+            $.default_ = Objects.requireNonNull($.default_, "expected parameter 'default' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.helpUrl = Objects.requireNonNull($.helpUrl, "expected parameter 'helpUrl' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

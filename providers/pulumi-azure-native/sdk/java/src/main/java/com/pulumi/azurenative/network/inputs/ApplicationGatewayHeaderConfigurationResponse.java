@@ -23,10 +23,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
      * 
      */
     @Import(name="headerName")
-      private final @Nullable String headerName;
+    private @Nullable String headerName;
 
     public Optional<String> headerName() {
-        return this.headerName == null ? Optional.empty() : Optional.ofNullable(this.headerName);
+        return Optional.ofNullable(this.headerName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
      * 
      */
     @Import(name="headerValue")
-      private final @Nullable String headerValue;
+    private @Nullable String headerValue;
 
     public Optional<String> headerValue() {
-        return this.headerValue == null ? Optional.empty() : Optional.ofNullable(this.headerValue);
+        return Optional.ofNullable(this.headerValue);
     }
 
-    public ApplicationGatewayHeaderConfigurationResponse(
-        @Nullable String headerName,
-        @Nullable String headerValue) {
-        this.headerName = headerName;
-        this.headerValue = headerValue;
-    }
+    private ApplicationGatewayHeaderConfigurationResponse() {}
 
-    private ApplicationGatewayHeaderConfigurationResponse() {
-        this.headerName = null;
-        this.headerValue = null;
+    private ApplicationGatewayHeaderConfigurationResponse(ApplicationGatewayHeaderConfigurationResponse $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayHeaderConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String headerName;
-        private @Nullable String headerValue;
+        private ApplicationGatewayHeaderConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayHeaderConfigurationResponse();
         }
 
         public Builder(ApplicationGatewayHeaderConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
+            $ = new ApplicationGatewayHeaderConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = headerName;
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = headerValue;
+            $.headerValue = headerValue;
             return this;
-        }        public ApplicationGatewayHeaderConfigurationResponse build() {
-            return new ApplicationGatewayHeaderConfigurationResponse(headerName, headerValue);
+        }
+
+        public ApplicationGatewayHeaderConfigurationResponse build() {
+            return $;
         }
     }
+
 }

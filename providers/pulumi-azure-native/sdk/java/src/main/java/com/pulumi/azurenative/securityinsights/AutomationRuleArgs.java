@@ -9,11 +9,11 @@ import com.pulumi.azurenative.securityinsights.inputs.AutomationRuleTriggeringLo
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
+    private Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
 
     public Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions() {
         return this.actions;
@@ -37,10 +37,10 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="automationRuleId")
-      private final @Nullable Output<String> automationRuleId;
+    private @Nullable Output<String> automationRuleId;
 
-    public Output<String> automationRuleId() {
-        return this.automationRuleId == null ? Codegen.empty() : this.automationRuleId;
+    public Optional<Output<String>> automationRuleId() {
+        return Optional.ofNullable(this.automationRuleId);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -59,7 +59,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -70,7 +70,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="order", required=true)
-      private final Output<Integer> order;
+    private Output<Integer> order;
 
     public Output<Integer> order() {
         return this.order;
@@ -81,7 +81,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -92,7 +92,7 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="triggeringLogic", required=true)
-      private final Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
+    private Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
 
     public Output<AutomationRuleTriggeringLogicArgs> triggeringLogic() {
         return this.triggeringLogic;
@@ -103,144 +103,129 @@ public final class AutomationRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public AutomationRuleArgs(
-        Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions,
-        @Nullable Output<String> automationRuleId,
-        Output<String> displayName,
-        Output<String> operationalInsightsResourceProvider,
-        Output<Integer> order,
-        Output<String> resourceGroupName,
-        Output<AutomationRuleTriggeringLogicArgs> triggeringLogic,
-        Output<String> workspaceName) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.automationRuleId = automationRuleId;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.triggeringLogic = Objects.requireNonNull(triggeringLogic, "expected parameter 'triggeringLogic' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private AutomationRuleArgs() {}
 
-    private AutomationRuleArgs() {
-        this.actions = Codegen.empty();
-        this.automationRuleId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.order = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.triggeringLogic = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private AutomationRuleArgs(AutomationRuleArgs $) {
+        this.actions = $.actions;
+        this.automationRuleId = $.automationRuleId;
+        this.displayName = $.displayName;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.order = $.order;
+        this.resourceGroupName = $.resourceGroupName;
+        this.triggeringLogic = $.triggeringLogic;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
-        private @Nullable Output<String> automationRuleId;
-        private Output<String> displayName;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<Integer> order;
-        private Output<String> resourceGroupName;
-        private Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
-        private Output<String> workspaceName;
+        private AutomationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleArgs();
         }
 
         public Builder(AutomationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.automationRuleId = defaults.automationRuleId;
-    	      this.displayName = defaults.displayName;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.order = defaults.order;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.triggeringLogic = defaults.triggeringLogic;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new AutomationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>... actions) {
             return actions(List.of(actions));
         }
+
         public Builder automationRuleId(@Nullable Output<String> automationRuleId) {
-            this.automationRuleId = automationRuleId;
+            $.automationRuleId = automationRuleId;
             return this;
         }
-        public Builder automationRuleId(@Nullable String automationRuleId) {
-            this.automationRuleId = Codegen.ofNullable(automationRuleId);
-            return this;
+
+        public Builder automationRuleId(String automationRuleId) {
+            return automationRuleId(Output.of(automationRuleId));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder order(Output<Integer> order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Output.of(Objects.requireNonNull(order));
-            return this;
+            return order(Output.of(order));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder triggeringLogic(Output<AutomationRuleTriggeringLogicArgs> triggeringLogic) {
-            this.triggeringLogic = Objects.requireNonNull(triggeringLogic);
+            $.triggeringLogic = triggeringLogic;
             return this;
         }
+
         public Builder triggeringLogic(AutomationRuleTriggeringLogicArgs triggeringLogic) {
-            this.triggeringLogic = Output.of(Objects.requireNonNull(triggeringLogic));
-            return this;
+            return triggeringLogic(Output.of(triggeringLogic));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public AutomationRuleArgs build() {
-            return new AutomationRuleArgs(actions, automationRuleId, displayName, operationalInsightsResourceProvider, order, resourceGroupName, triggeringLogic, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public AutomationRuleArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.triggeringLogic = Objects.requireNonNull($.triggeringLogic, "expected parameter 'triggeringLogic' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

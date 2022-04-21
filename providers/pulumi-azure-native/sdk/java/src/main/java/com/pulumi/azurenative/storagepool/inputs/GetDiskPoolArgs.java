@@ -17,7 +17,7 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskPoolName", required=true)
-      private final String diskPoolName;
+    private String diskPoolName;
 
     public String diskPoolName() {
         return this.diskPoolName;
@@ -28,55 +28,52 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDiskPoolArgs(
-        String diskPoolName,
-        String resourceGroupName) {
-        this.diskPoolName = Objects.requireNonNull(diskPoolName, "expected parameter 'diskPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDiskPoolArgs() {}
 
-    private GetDiskPoolArgs() {
-        this.diskPoolName = null;
-        this.resourceGroupName = null;
+    private GetDiskPoolArgs(GetDiskPoolArgs $) {
+        this.diskPoolName = $.diskPoolName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiskPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskPoolName;
-        private String resourceGroupName;
+        private GetDiskPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiskPoolArgs();
         }
 
         public Builder(GetDiskPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskPoolName = defaults.diskPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDiskPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskPoolName(String diskPoolName) {
-            this.diskPoolName = Objects.requireNonNull(diskPoolName);
+            $.diskPoolName = diskPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDiskPoolArgs build() {
-            return new GetDiskPoolArgs(diskPoolName, resourceGroupName);
+        }
+
+        public GetDiskPoolArgs build() {
+            $.diskPoolName = Objects.requireNonNull($.diskPoolName, "expected parameter 'diskPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

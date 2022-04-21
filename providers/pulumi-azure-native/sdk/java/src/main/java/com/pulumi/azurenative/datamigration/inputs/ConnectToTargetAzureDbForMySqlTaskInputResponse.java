@@ -21,7 +21,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final MySqlConnectionInfoResponse sourceConnectionInfo;
+    private MySqlConnectionInfoResponse sourceConnectionInfo;
 
     public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -32,55 +32,52 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final MySqlConnectionInfoResponse targetConnectionInfo;
+    private MySqlConnectionInfoResponse targetConnectionInfo;
 
     public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetAzureDbForMySqlTaskInputResponse(
-        MySqlConnectionInfoResponse sourceConnectionInfo,
-        MySqlConnectionInfoResponse targetConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetAzureDbForMySqlTaskInputResponse() {}
 
-    private ConnectToTargetAzureDbForMySqlTaskInputResponse() {
-        this.sourceConnectionInfo = null;
-        this.targetConnectionInfo = null;
+    private ConnectToTargetAzureDbForMySqlTaskInputResponse(ConnectToTargetAzureDbForMySqlTaskInputResponse $) {
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetAzureDbForMySqlTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MySqlConnectionInfoResponse sourceConnectionInfo;
-        private MySqlConnectionInfoResponse targetConnectionInfo;
+        private ConnectToTargetAzureDbForMySqlTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetAzureDbForMySqlTaskInputResponse();
         }
 
         public Builder(ConnectToTargetAzureDbForMySqlTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetAzureDbForMySqlTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public ConnectToTargetAzureDbForMySqlTaskInputResponse build() {
-            return new ConnectToTargetAzureDbForMySqlTaskInputResponse(sourceConnectionInfo, targetConnectionInfo);
+        }
+
+        public ConnectToTargetAzureDbForMySqlTaskInputResponse build() {
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

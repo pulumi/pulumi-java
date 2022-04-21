@@ -26,7 +26,7 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -37,10 +37,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
+    private @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
 
-    public Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties() {
-        return this.properties == null ? null : this.properties;
+    public Optional<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -59,73 +59,64 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public InputResponse(
-        String id,
-        @Nullable String name,
-        @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = name;
-        this.properties = properties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InputResponse() {}
 
-    private InputResponse() {
-        this.id = null;
-        this.name = null;
-        this.properties = null;
-        this.type = null;
+    private InputResponse(InputResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String name;
-        private @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
-        private String type;
+        private InputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputResponse();
         }
 
         public Builder(InputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new InputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder properties(@Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public InputResponse build() {
-            return new InputResponse(id, name, properties, type);
+        }
+
+        public InputResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

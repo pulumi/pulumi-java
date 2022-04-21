@@ -7,9 +7,9 @@ import com.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataFormat", required=true)
-      private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
+    private Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
     public Output<Either<String,AzureContainerDataFormat>> dataFormat() {
         return this.dataFormat;
@@ -44,7 +44,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -55,7 +55,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,102 +66,92 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final Output<String> storageAccountName;
+    private Output<String> storageAccountName;
 
     public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
-    public ContainerArgs(
-        @Nullable Output<String> containerName,
-        Output<Either<String,AzureContainerDataFormat>> dataFormat,
-        Output<String> deviceName,
-        Output<String> resourceGroupName,
-        Output<String> storageAccountName) {
-        this.containerName = containerName;
-        this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.containerName = Codegen.empty();
-        this.dataFormat = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
+    private ContainerArgs(ContainerArgs $) {
+        this.containerName = $.containerName;
+        this.dataFormat = $.dataFormat;
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerName;
-        private Output<Either<String,AzureContainerDataFormat>> dataFormat;
-        private Output<String> deviceName;
-        private Output<String> resourceGroupName;
-        private Output<String> storageAccountName;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.dataFormat = defaults.dataFormat;
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
-            this.dataFormat = Objects.requireNonNull(dataFormat);
+            $.dataFormat = dataFormat;
             return this;
         }
+
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
-            this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
-            return this;
+            return dataFormat(Output.of(dataFormat));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountName(Output<String> storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
-            return this;
-        }        public ContainerArgs build() {
-            return new ContainerArgs(containerName, dataFormat, deviceName, resourceGroupName, storageAccountName);
+            return storageAccountName(Output.of(storageAccountName));
+        }
+
+        public ContainerArgs build() {
+            $.dataFormat = Objects.requireNonNull($.dataFormat, "expected parameter 'dataFormat' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class SubscriptionLogSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="category")
-      private final @Nullable String category;
+    private @Nullable String category;
 
     public Optional<String> category() {
-        return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class SubscriptionLogSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public SubscriptionLogSettingsResponse(
-        @Nullable String category,
-        Boolean enabled) {
-        this.category = category;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private SubscriptionLogSettingsResponse() {}
 
-    private SubscriptionLogSettingsResponse() {
-        this.category = null;
-        this.enabled = null;
+    private SubscriptionLogSettingsResponse(SubscriptionLogSettingsResponse $) {
+        this.category = $.category;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionLogSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String category;
-        private Boolean enabled;
+        private SubscriptionLogSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionLogSettingsResponse();
         }
 
         public Builder(SubscriptionLogSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.enabled = defaults.enabled;
+            $ = new SubscriptionLogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable String category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public SubscriptionLogSettingsResponse build() {
-            return new SubscriptionLogSettingsResponse(category, enabled);
+        }
+
+        public SubscriptionLogSettingsResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

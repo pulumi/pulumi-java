@@ -7,9 +7,9 @@ import com.pulumi.azurenative.servicefabricmesh.enums.HeaderMatchType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -37,10 +37,10 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,HeaderMatchType>> type;
+    private @Nullable Output<Either<String,HeaderMatchType>> type;
 
-    public Output<Either<String,HeaderMatchType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,HeaderMatchType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public HttpRouteMatchHeaderArgs(
-        Output<String> name,
-        @Nullable Output<Either<String,HeaderMatchType>> type,
-        @Nullable Output<String> value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = type;
-        this.value = value;
-    }
+    private HttpRouteMatchHeaderArgs() {}
 
-    private HttpRouteMatchHeaderArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private HttpRouteMatchHeaderArgs(HttpRouteMatchHeaderArgs $) {
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteMatchHeaderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<Either<String,HeaderMatchType>> type;
-        private @Nullable Output<String> value;
+        private HttpRouteMatchHeaderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteMatchHeaderArgs();
         }
 
         public Builder(HttpRouteMatchHeaderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new HttpRouteMatchHeaderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<Either<String,HeaderMatchType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,HeaderMatchType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,HeaderMatchType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public HttpRouteMatchHeaderArgs build() {
-            return new HttpRouteMatchHeaderArgs(name, type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public HttpRouteMatchHeaderArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

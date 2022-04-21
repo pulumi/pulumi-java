@@ -25,10 +25,10 @@ public final class StreamingPolicyContentKeysResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="defaultKey")
-      private final @Nullable DefaultKeyResponse defaultKey;
+    private @Nullable DefaultKeyResponse defaultKey;
 
     public Optional<DefaultKeyResponse> defaultKey() {
-        return this.defaultKey == null ? Optional.empty() : Optional.ofNullable(this.defaultKey);
+        return Optional.ofNullable(this.defaultKey);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class StreamingPolicyContentKeysResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="keyToTrackMappings")
-      private final @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
+    private @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
 
-    public List<StreamingPolicyContentKeyResponse> keyToTrackMappings() {
-        return this.keyToTrackMappings == null ? List.of() : this.keyToTrackMappings;
+    public Optional<List<StreamingPolicyContentKeyResponse>> keyToTrackMappings() {
+        return Optional.ofNullable(this.keyToTrackMappings);
     }
 
-    public StreamingPolicyContentKeysResponse(
-        @Nullable DefaultKeyResponse defaultKey,
-        @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
-        this.defaultKey = defaultKey;
-        this.keyToTrackMappings = keyToTrackMappings;
-    }
+    private StreamingPolicyContentKeysResponse() {}
 
-    private StreamingPolicyContentKeysResponse() {
-        this.defaultKey = null;
-        this.keyToTrackMappings = List.of();
+    private StreamingPolicyContentKeysResponse(StreamingPolicyContentKeysResponse $) {
+        this.defaultKey = $.defaultKey;
+        this.keyToTrackMappings = $.keyToTrackMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyContentKeysResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DefaultKeyResponse defaultKey;
-        private @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
+        private StreamingPolicyContentKeysResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyContentKeysResponse();
         }
 
         public Builder(StreamingPolicyContentKeysResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKey = defaults.defaultKey;
-    	      this.keyToTrackMappings = defaults.keyToTrackMappings;
+            $ = new StreamingPolicyContentKeysResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKey(@Nullable DefaultKeyResponse defaultKey) {
-            this.defaultKey = defaultKey;
+            $.defaultKey = defaultKey;
             return this;
         }
+
         public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
-            this.keyToTrackMappings = keyToTrackMappings;
+            $.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
+
         public Builder keyToTrackMappings(StreamingPolicyContentKeyResponse... keyToTrackMappings) {
             return keyToTrackMappings(List.of(keyToTrackMappings));
-        }        public StreamingPolicyContentKeysResponse build() {
-            return new StreamingPolicyContentKeysResponse(defaultKey, keyToTrackMappings);
+        }
+
+        public StreamingPolicyContentKeysResponse build() {
+            return $;
         }
     }
+
 }

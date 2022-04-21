@@ -7,7 +7,6 @@ import com.pulumi.azurenative.cdn.enums.ParamIndicator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="paramIndicator", required=true)
-      private final Output<Either<String,ParamIndicator>> paramIndicator;
+    private Output<Either<String,ParamIndicator>> paramIndicator;
 
     public Output<Either<String,ParamIndicator>> paramIndicator() {
         return this.paramIndicator;
@@ -36,63 +35,60 @@ public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="paramName", required=true)
-      private final Output<String> paramName;
+    private Output<String> paramName;
 
     public Output<String> paramName() {
         return this.paramName;
     }
 
-    public UrlSigningParamIdentifierArgs(
-        Output<Either<String,ParamIndicator>> paramIndicator,
-        Output<String> paramName) {
-        this.paramIndicator = Objects.requireNonNull(paramIndicator, "expected parameter 'paramIndicator' to be non-null");
-        this.paramName = Objects.requireNonNull(paramName, "expected parameter 'paramName' to be non-null");
-    }
+    private UrlSigningParamIdentifierArgs() {}
 
-    private UrlSigningParamIdentifierArgs() {
-        this.paramIndicator = Codegen.empty();
-        this.paramName = Codegen.empty();
+    private UrlSigningParamIdentifierArgs(UrlSigningParamIdentifierArgs $) {
+        this.paramIndicator = $.paramIndicator;
+        this.paramName = $.paramName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningParamIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ParamIndicator>> paramIndicator;
-        private Output<String> paramName;
+        private UrlSigningParamIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningParamIdentifierArgs();
         }
 
         public Builder(UrlSigningParamIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.paramIndicator = defaults.paramIndicator;
-    	      this.paramName = defaults.paramName;
+            $ = new UrlSigningParamIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder paramIndicator(Output<Either<String,ParamIndicator>> paramIndicator) {
-            this.paramIndicator = Objects.requireNonNull(paramIndicator);
+            $.paramIndicator = paramIndicator;
             return this;
         }
+
         public Builder paramIndicator(Either<String,ParamIndicator> paramIndicator) {
-            this.paramIndicator = Output.of(Objects.requireNonNull(paramIndicator));
-            return this;
+            return paramIndicator(Output.of(paramIndicator));
         }
+
         public Builder paramName(Output<String> paramName) {
-            this.paramName = Objects.requireNonNull(paramName);
+            $.paramName = paramName;
             return this;
         }
+
         public Builder paramName(String paramName) {
-            this.paramName = Output.of(Objects.requireNonNull(paramName));
-            return this;
-        }        public UrlSigningParamIdentifierArgs build() {
-            return new UrlSigningParamIdentifierArgs(paramIndicator, paramName);
+            return paramName(Output.of(paramName));
+        }
+
+        public UrlSigningParamIdentifierArgs build() {
+            $.paramIndicator = Objects.requireNonNull($.paramIndicator, "expected parameter 'paramIndicator' to be non-null");
+            $.paramName = Objects.requireNonNull($.paramName, "expected parameter 'paramName' to be non-null");
+            return $;
         }
     }
+
 }

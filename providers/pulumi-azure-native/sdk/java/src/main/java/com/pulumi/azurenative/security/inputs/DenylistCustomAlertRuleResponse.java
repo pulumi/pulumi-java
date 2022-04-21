@@ -24,7 +24,7 @@ public final class DenylistCustomAlertRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="denylistValues", required=true)
-      private final List<String> denylistValues;
+    private List<String> denylistValues;
 
     public List<String> denylistValues() {
         return this.denylistValues;
@@ -35,7 +35,7 @@ public final class DenylistCustomAlertRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -46,7 +46,7 @@ public final class DenylistCustomAlertRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class DenylistCustomAlertRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -69,7 +69,7 @@ public final class DenylistCustomAlertRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ruleType", required=true)
-      private final String ruleType;
+    private String ruleType;
 
     public String ruleType() {
         return this.ruleType;
@@ -80,94 +80,84 @@ public final class DenylistCustomAlertRuleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="valueType", required=true)
-      private final String valueType;
+    private String valueType;
 
     public String valueType() {
         return this.valueType;
     }
 
-    public DenylistCustomAlertRuleResponse(
-        List<String> denylistValues,
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        String ruleType,
-        String valueType) {
-        this.denylistValues = Objects.requireNonNull(denylistValues, "expected parameter 'denylistValues' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
-        this.valueType = Objects.requireNonNull(valueType, "expected parameter 'valueType' to be non-null");
-    }
+    private DenylistCustomAlertRuleResponse() {}
 
-    private DenylistCustomAlertRuleResponse() {
-        this.denylistValues = List.of();
-        this.description = null;
-        this.displayName = null;
-        this.isEnabled = null;
-        this.ruleType = null;
-        this.valueType = null;
+    private DenylistCustomAlertRuleResponse(DenylistCustomAlertRuleResponse $) {
+        this.denylistValues = $.denylistValues;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.isEnabled = $.isEnabled;
+        this.ruleType = $.ruleType;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DenylistCustomAlertRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> denylistValues;
-        private String description;
-        private String displayName;
-        private Boolean isEnabled;
-        private String ruleType;
-        private String valueType;
+        private DenylistCustomAlertRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DenylistCustomAlertRuleResponse();
         }
 
         public Builder(DenylistCustomAlertRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.denylistValues = defaults.denylistValues;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.ruleType = defaults.ruleType;
-    	      this.valueType = defaults.valueType;
+            $ = new DenylistCustomAlertRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder denylistValues(List<String> denylistValues) {
-            this.denylistValues = Objects.requireNonNull(denylistValues);
+            $.denylistValues = denylistValues;
             return this;
         }
+
         public Builder denylistValues(String... denylistValues) {
             return denylistValues(List.of(denylistValues));
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder valueType(String valueType) {
-            this.valueType = Objects.requireNonNull(valueType);
+            $.valueType = valueType;
             return this;
-        }        public DenylistCustomAlertRuleResponse build() {
-            return new DenylistCustomAlertRuleResponse(denylistValues, description, displayName, isEnabled, ruleType, valueType);
+        }
+
+        public DenylistCustomAlertRuleResponse build() {
+            $.denylistValues = Objects.requireNonNull($.denylistValues, "expected parameter 'denylistValues' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.ruleType = Codegen.stringProp("ruleType").arg($.ruleType).require();
+            $.valueType = Objects.requireNonNull($.valueType, "expected parameter 'valueType' to be non-null");
+            return $;
         }
     }
+
 }

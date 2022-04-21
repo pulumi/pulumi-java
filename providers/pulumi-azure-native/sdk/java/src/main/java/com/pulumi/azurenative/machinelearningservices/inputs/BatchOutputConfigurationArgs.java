@@ -7,9 +7,9 @@ import com.pulumi.azurenative.machinelearningservices.enums.BatchOutputAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="appendRowFileName")
-      private final @Nullable Output<String> appendRowFileName;
+    private @Nullable Output<String> appendRowFileName;
 
-    public Output<String> appendRowFileName() {
-        return this.appendRowFileName == null ? Codegen.empty() : this.appendRowFileName;
+    public Optional<Output<String>> appendRowFileName() {
+        return Optional.ofNullable(this.appendRowFileName);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="outputAction")
-      private final @Nullable Output<Either<String,BatchOutputAction>> outputAction;
+    private @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
-    public Output<Either<String,BatchOutputAction>> outputAction() {
-        return this.outputAction == null ? Codegen.empty() : this.outputAction;
+    public Optional<Output<Either<String,BatchOutputAction>>> outputAction() {
+        return Optional.ofNullable(this.outputAction);
     }
 
-    public BatchOutputConfigurationArgs(
-        @Nullable Output<String> appendRowFileName,
-        @Nullable Output<Either<String,BatchOutputAction>> outputAction) {
-        this.appendRowFileName = appendRowFileName;
-        this.outputAction = outputAction;
-    }
+    private BatchOutputConfigurationArgs() {}
 
-    private BatchOutputConfigurationArgs() {
-        this.appendRowFileName = Codegen.empty();
-        this.outputAction = Codegen.empty();
+    private BatchOutputConfigurationArgs(BatchOutputConfigurationArgs $) {
+        this.appendRowFileName = $.appendRowFileName;
+        this.outputAction = $.outputAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchOutputConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appendRowFileName;
-        private @Nullable Output<Either<String,BatchOutputAction>> outputAction;
+        private BatchOutputConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchOutputConfigurationArgs();
         }
 
         public Builder(BatchOutputConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appendRowFileName = defaults.appendRowFileName;
-    	      this.outputAction = defaults.outputAction;
+            $ = new BatchOutputConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appendRowFileName(@Nullable Output<String> appendRowFileName) {
-            this.appendRowFileName = appendRowFileName;
+            $.appendRowFileName = appendRowFileName;
             return this;
         }
-        public Builder appendRowFileName(@Nullable String appendRowFileName) {
-            this.appendRowFileName = Codegen.ofNullable(appendRowFileName);
-            return this;
+
+        public Builder appendRowFileName(String appendRowFileName) {
+            return appendRowFileName(Output.of(appendRowFileName));
         }
+
         public Builder outputAction(@Nullable Output<Either<String,BatchOutputAction>> outputAction) {
-            this.outputAction = outputAction;
+            $.outputAction = outputAction;
             return this;
         }
-        public Builder outputAction(@Nullable Either<String,BatchOutputAction> outputAction) {
-            this.outputAction = Codegen.ofNullable(outputAction);
-            return this;
-        }        public BatchOutputConfigurationArgs build() {
-            return new BatchOutputConfigurationArgs(appendRowFileName, outputAction);
+
+        public Builder outputAction(Either<String,BatchOutputAction> outputAction) {
+            return outputAction(Output.of(outputAction));
+        }
+
+        public BatchOutputConfigurationArgs build() {
+            return $;
         }
     }
+
 }

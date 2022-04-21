@@ -26,10 +26,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
      * 
      */
     @Import(name="additionalFeaturesServerConfigurations")
-      private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
+    private @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
 
     public Optional<AdditionalFeaturesServerConfigurationsResponse> additionalFeaturesServerConfigurations() {
-        return this.additionalFeaturesServerConfigurations == null ? Optional.empty() : Optional.ofNullable(this.additionalFeaturesServerConfigurations);
+        return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
      * 
      */
     @Import(name="sqlConnectivityUpdateSettings")
-      private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
+    private @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
 
     public Optional<SqlConnectivityUpdateSettingsResponse> sqlConnectivityUpdateSettings() {
-        return this.sqlConnectivityUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlConnectivityUpdateSettings);
+        return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
      * 
      */
     @Import(name="sqlStorageUpdateSettings")
-      private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
+    private @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
 
     public Optional<SqlStorageUpdateSettingsResponse> sqlStorageUpdateSettings() {
-        return this.sqlStorageUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlStorageUpdateSettings);
+        return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
 
     /**
@@ -59,73 +59,62 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
      * 
      */
     @Import(name="sqlWorkloadTypeUpdateSettings")
-      private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
+    private @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> sqlWorkloadTypeUpdateSettings() {
-        return this.sqlWorkloadTypeUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
+        return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }
 
-    public ServerConfigurationsManagementSettingsResponse(
-        @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations,
-        @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings,
-        @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings,
-        @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
-        this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
-        this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
-        this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
-        this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
-    }
+    private ServerConfigurationsManagementSettingsResponse() {}
 
-    private ServerConfigurationsManagementSettingsResponse() {
-        this.additionalFeaturesServerConfigurations = null;
-        this.sqlConnectivityUpdateSettings = null;
-        this.sqlStorageUpdateSettings = null;
-        this.sqlWorkloadTypeUpdateSettings = null;
+    private ServerConfigurationsManagementSettingsResponse(ServerConfigurationsManagementSettingsResponse $) {
+        this.additionalFeaturesServerConfigurations = $.additionalFeaturesServerConfigurations;
+        this.sqlConnectivityUpdateSettings = $.sqlConnectivityUpdateSettings;
+        this.sqlStorageUpdateSettings = $.sqlStorageUpdateSettings;
+        this.sqlWorkloadTypeUpdateSettings = $.sqlWorkloadTypeUpdateSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerConfigurationsManagementSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
-        private @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
-        private @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
-        private @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
+        private ServerConfigurationsManagementSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerConfigurationsManagementSettingsResponse();
         }
 
         public Builder(ServerConfigurationsManagementSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalFeaturesServerConfigurations = defaults.additionalFeaturesServerConfigurations;
-    	      this.sqlConnectivityUpdateSettings = defaults.sqlConnectivityUpdateSettings;
-    	      this.sqlStorageUpdateSettings = defaults.sqlStorageUpdateSettings;
-    	      this.sqlWorkloadTypeUpdateSettings = defaults.sqlWorkloadTypeUpdateSettings;
+            $ = new ServerConfigurationsManagementSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations) {
-            this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
+            $.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
+
         public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings) {
-            this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
+            $.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
+
         public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings) {
-            this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
+            $.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
+
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
-            this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
+            $.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
-        }        public ServerConfigurationsManagementSettingsResponse build() {
-            return new ServerConfigurationsManagementSettingsResponse(additionalFeaturesServerConfigurations, sqlConnectivityUpdateSettings, sqlStorageUpdateSettings, sqlWorkloadTypeUpdateSettings);
+        }
+
+        public ServerConfigurationsManagementSettingsResponse build() {
+            return $;
         }
     }
+
 }

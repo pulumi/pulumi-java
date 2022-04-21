@@ -8,11 +8,11 @@ import com.pulumi.azurenative.network.inputs.FirewallPolicyNatRuleCollectionArgs
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="firewallPolicyName", required=true)
-      private final Output<String> firewallPolicyName;
+    private Output<String> firewallPolicyName;
 
     public Output<String> firewallPolicyName() {
         return this.firewallPolicyName;
@@ -36,10 +36,10 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -80,10 +80,10 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="ruleCollectionGroupName")
-      private final @Nullable Output<String> ruleCollectionGroupName;
+    private @Nullable Output<String> ruleCollectionGroupName;
 
-    public Output<String> ruleCollectionGroupName() {
-        return this.ruleCollectionGroupName == null ? Codegen.empty() : this.ruleCollectionGroupName;
+    public Optional<Output<String>> ruleCollectionGroupName() {
+        return Optional.ofNullable(this.ruleCollectionGroupName);
     }
 
     /**
@@ -91,131 +91,114 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="ruleCollections")
-      private final @Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections;
+    private @Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections;
 
-    public Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections() {
-        return this.ruleCollections == null ? Codegen.empty() : this.ruleCollections;
+    public Optional<Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>>> ruleCollections() {
+        return Optional.ofNullable(this.ruleCollections);
     }
 
-    public FirewallPolicyRuleCollectionGroupArgs(
-        Output<String> firewallPolicyName,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleCollectionGroupName,
-        @Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections) {
-        this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionGroupName = ruleCollectionGroupName;
-        this.ruleCollections = ruleCollections;
-    }
+    private FirewallPolicyRuleCollectionGroupArgs() {}
 
-    private FirewallPolicyRuleCollectionGroupArgs() {
-        this.firewallPolicyName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleCollectionGroupName = Codegen.empty();
-        this.ruleCollections = Codegen.empty();
+    private FirewallPolicyRuleCollectionGroupArgs(FirewallPolicyRuleCollectionGroupArgs $) {
+        this.firewallPolicyName = $.firewallPolicyName;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionGroupName = $.ruleCollectionGroupName;
+        this.ruleCollections = $.ruleCollections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleCollectionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> firewallPolicyName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleCollectionGroupName;
-        private @Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections;
+        private FirewallPolicyRuleCollectionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleCollectionGroupArgs();
         }
 
         public Builder(FirewallPolicyRuleCollectionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallPolicyName = defaults.firewallPolicyName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionGroupName = defaults.ruleCollectionGroupName;
-    	      this.ruleCollections = defaults.ruleCollections;
+            $ = new FirewallPolicyRuleCollectionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallPolicyName(Output<String> firewallPolicyName) {
-            this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
+            $.firewallPolicyName = firewallPolicyName;
             return this;
         }
+
         public Builder firewallPolicyName(String firewallPolicyName) {
-            this.firewallPolicyName = Output.of(Objects.requireNonNull(firewallPolicyName));
-            return this;
+            return firewallPolicyName(Output.of(firewallPolicyName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleCollectionGroupName(@Nullable Output<String> ruleCollectionGroupName) {
-            this.ruleCollectionGroupName = ruleCollectionGroupName;
+            $.ruleCollectionGroupName = ruleCollectionGroupName;
             return this;
         }
-        public Builder ruleCollectionGroupName(@Nullable String ruleCollectionGroupName) {
-            this.ruleCollectionGroupName = Codegen.ofNullable(ruleCollectionGroupName);
-            return this;
+
+        public Builder ruleCollectionGroupName(String ruleCollectionGroupName) {
+            return ruleCollectionGroupName(Output.of(ruleCollectionGroupName));
         }
+
         public Builder ruleCollections(@Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections) {
-            this.ruleCollections = ruleCollections;
+            $.ruleCollections = ruleCollections;
             return this;
         }
-        public Builder ruleCollections(@Nullable List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>> ruleCollections) {
-            this.ruleCollections = Codegen.ofNullable(ruleCollections);
-            return this;
+
+        public Builder ruleCollections(List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>> ruleCollections) {
+            return ruleCollections(Output.of(ruleCollections));
         }
+
         public Builder ruleCollections(Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>... ruleCollections) {
             return ruleCollections(List.of(ruleCollections));
-        }        public FirewallPolicyRuleCollectionGroupArgs build() {
-            return new FirewallPolicyRuleCollectionGroupArgs(firewallPolicyName, id, name, priority, resourceGroupName, ruleCollectionGroupName, ruleCollections);
+        }
+
+        public FirewallPolicyRuleCollectionGroupArgs build() {
+            $.firewallPolicyName = Objects.requireNonNull($.firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

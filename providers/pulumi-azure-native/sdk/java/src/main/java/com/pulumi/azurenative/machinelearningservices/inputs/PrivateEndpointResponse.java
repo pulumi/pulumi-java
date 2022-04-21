@@ -21,7 +21,7 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,55 +32,52 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="subnetArmId", required=true)
-      private final String subnetArmId;
+    private String subnetArmId;
 
     public String subnetArmId() {
         return this.subnetArmId;
     }
 
-    public PrivateEndpointResponse(
-        String id,
-        String subnetArmId) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.subnetArmId = Objects.requireNonNull(subnetArmId, "expected parameter 'subnetArmId' to be non-null");
-    }
+    private PrivateEndpointResponse() {}
 
-    private PrivateEndpointResponse() {
-        this.id = null;
-        this.subnetArmId = null;
+    private PrivateEndpointResponse(PrivateEndpointResponse $) {
+        this.id = $.id;
+        this.subnetArmId = $.subnetArmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String subnetArmId;
+        private PrivateEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointResponse();
         }
 
         public Builder(PrivateEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.subnetArmId = defaults.subnetArmId;
+            $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder subnetArmId(String subnetArmId) {
-            this.subnetArmId = Objects.requireNonNull(subnetArmId);
+            $.subnetArmId = subnetArmId;
             return this;
-        }        public PrivateEndpointResponse build() {
-            return new PrivateEndpointResponse(id, subnetArmId);
+        }
+
+        public PrivateEndpointResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.subnetArmId = Objects.requireNonNull($.subnetArmId, "expected parameter 'subnetArmId' to be non-null");
+            return $;
         }
     }
+
 }

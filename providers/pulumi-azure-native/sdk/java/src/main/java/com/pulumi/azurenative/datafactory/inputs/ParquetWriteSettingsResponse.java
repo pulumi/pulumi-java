@@ -25,10 +25,10 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="fileNamePrefix")
-      private final @Nullable Object fileNamePrefix;
+    private @Nullable Object fileNamePrefix;
 
     public Optional<Object> fileNamePrefix() {
-        return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
+        return Optional.ofNullable(this.fileNamePrefix);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maxRowsPerFile")
-      private final @Nullable Object maxRowsPerFile;
+    private @Nullable Object maxRowsPerFile;
 
     public Optional<Object> maxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
+        return Optional.ofNullable(this.maxRowsPerFile);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ParquetWriteSettingsResponse(
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        String type) {
-        this.fileNamePrefix = fileNamePrefix;
-        this.maxRowsPerFile = maxRowsPerFile;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ParquetWriteSettingsResponse() {}
 
-    private ParquetWriteSettingsResponse() {
-        this.fileNamePrefix = null;
-        this.maxRowsPerFile = null;
-        this.type = null;
+    private ParquetWriteSettingsResponse(ParquetWriteSettingsResponse $) {
+        this.fileNamePrefix = $.fileNamePrefix;
+        this.maxRowsPerFile = $.maxRowsPerFile;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParquetWriteSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object fileNamePrefix;
-        private @Nullable Object maxRowsPerFile;
-        private String type;
+        private ParquetWriteSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParquetWriteSettingsResponse();
         }
 
         public Builder(ParquetWriteSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileNamePrefix = defaults.fileNamePrefix;
-    	      this.maxRowsPerFile = defaults.maxRowsPerFile;
-    	      this.type = defaults.type;
+            $ = new ParquetWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = fileNamePrefix;
+            $.fileNamePrefix = fileNamePrefix;
             return this;
         }
+
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = maxRowsPerFile;
+            $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ParquetWriteSettingsResponse build() {
-            return new ParquetWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
+        }
+
+        public ParquetWriteSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ConnectionMonitorSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ConnectionMonitorSourceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public ConnectionMonitorSourceResponse(
-        @Nullable Integer port,
-        String resourceId) {
-        this.port = port;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ConnectionMonitorSourceResponse() {}
 
-    private ConnectionMonitorSourceResponse() {
-        this.port = null;
-        this.resourceId = null;
+    private ConnectionMonitorSourceResponse(ConnectionMonitorSourceResponse $) {
+        this.port = $.port;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer port;
-        private String resourceId;
+        private ConnectionMonitorSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorSourceResponse();
         }
 
         public Builder(ConnectionMonitorSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ConnectionMonitorSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public ConnectionMonitorSourceResponse build() {
-            return new ConnectionMonitorSourceResponse(port, resourceId);
+        }
+
+        public ConnectionMonitorSourceResponse build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

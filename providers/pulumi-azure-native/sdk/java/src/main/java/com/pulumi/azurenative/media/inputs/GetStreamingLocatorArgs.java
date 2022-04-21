@@ -17,7 +17,7 @@ public final class GetStreamingLocatorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetStreamingLocatorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetStreamingLocatorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="streamingLocatorName", required=true)
-      private final String streamingLocatorName;
+    private String streamingLocatorName;
 
     public String streamingLocatorName() {
         return this.streamingLocatorName;
     }
 
-    public GetStreamingLocatorArgs(
-        String accountName,
-        String resourceGroupName,
-        String streamingLocatorName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.streamingLocatorName = Objects.requireNonNull(streamingLocatorName, "expected parameter 'streamingLocatorName' to be non-null");
-    }
+    private GetStreamingLocatorArgs() {}
 
-    private GetStreamingLocatorArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.streamingLocatorName = null;
+    private GetStreamingLocatorArgs(GetStreamingLocatorArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.streamingLocatorName = $.streamingLocatorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamingLocatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String streamingLocatorName;
+        private GetStreamingLocatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamingLocatorArgs();
         }
 
         public Builder(GetStreamingLocatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.streamingLocatorName = defaults.streamingLocatorName;
+            $ = new GetStreamingLocatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder streamingLocatorName(String streamingLocatorName) {
-            this.streamingLocatorName = Objects.requireNonNull(streamingLocatorName);
+            $.streamingLocatorName = streamingLocatorName;
             return this;
-        }        public GetStreamingLocatorArgs build() {
-            return new GetStreamingLocatorArgs(accountName, resourceGroupName, streamingLocatorName);
+        }
+
+        public GetStreamingLocatorArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.streamingLocatorName = Objects.requireNonNull($.streamingLocatorName, "expected parameter 'streamingLocatorName' to be non-null");
+            return $;
         }
     }
+
 }

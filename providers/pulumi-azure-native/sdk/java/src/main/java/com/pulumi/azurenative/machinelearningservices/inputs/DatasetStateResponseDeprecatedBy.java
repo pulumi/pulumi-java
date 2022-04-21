@@ -23,7 +23,7 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -34,55 +34,51 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
      * 
      */
     @Import(name="definitionVersion")
-      private final @Nullable String definitionVersion;
+    private @Nullable String definitionVersion;
 
     public Optional<String> definitionVersion() {
-        return this.definitionVersion == null ? Optional.empty() : Optional.ofNullable(this.definitionVersion);
+        return Optional.ofNullable(this.definitionVersion);
     }
 
-    public DatasetStateResponseDeprecatedBy(
-        String datasetId,
-        @Nullable String definitionVersion) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.definitionVersion = definitionVersion;
-    }
+    private DatasetStateResponseDeprecatedBy() {}
 
-    private DatasetStateResponseDeprecatedBy() {
-        this.datasetId = null;
-        this.definitionVersion = null;
+    private DatasetStateResponseDeprecatedBy(DatasetStateResponseDeprecatedBy $) {
+        this.datasetId = $.datasetId;
+        this.definitionVersion = $.definitionVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetStateResponseDeprecatedBy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private @Nullable String definitionVersion;
+        private DatasetStateResponseDeprecatedBy $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetStateResponseDeprecatedBy();
         }
 
         public Builder(DatasetStateResponseDeprecatedBy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.definitionVersion = defaults.definitionVersion;
+            $ = new DatasetStateResponseDeprecatedBy(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder definitionVersion(@Nullable String definitionVersion) {
-            this.definitionVersion = definitionVersion;
+            $.definitionVersion = definitionVersion;
             return this;
-        }        public DatasetStateResponseDeprecatedBy build() {
-            return new DatasetStateResponseDeprecatedBy(datasetId, definitionVersion);
+        }
+
+        public DatasetStateResponseDeprecatedBy build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            return $;
         }
     }
+
 }

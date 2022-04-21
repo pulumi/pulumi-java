@@ -6,9 +6,9 @@ package com.pulumi.azurenative.portal;
 import com.pulumi.azurenative.portal.inputs.ConsoleCreatePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConsoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consoleName")
-      private final @Nullable Output<String> consoleName;
+    private @Nullable Output<String> consoleName;
 
-    public Output<String> consoleName() {
-        return this.consoleName == null ? Codegen.empty() : this.consoleName;
+    public Optional<Output<String>> consoleName() {
+        return Optional.ofNullable(this.consoleName);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ConsoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<ConsoleCreatePropertiesArgs> properties;
+    private Output<ConsoleCreatePropertiesArgs> properties;
 
     public Output<ConsoleCreatePropertiesArgs> properties() {
         return this.properties;
     }
 
-    public ConsoleArgs(
-        @Nullable Output<String> consoleName,
-        Output<ConsoleCreatePropertiesArgs> properties) {
-        this.consoleName = consoleName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private ConsoleArgs() {}
 
-    private ConsoleArgs() {
-        this.consoleName = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ConsoleArgs(ConsoleArgs $) {
+        this.consoleName = $.consoleName;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consoleName;
-        private Output<ConsoleCreatePropertiesArgs> properties;
+        private ConsoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsoleArgs();
         }
 
         public Builder(ConsoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleName = defaults.consoleName;
-    	      this.properties = defaults.properties;
+            $ = new ConsoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleName(@Nullable Output<String> consoleName) {
-            this.consoleName = consoleName;
+            $.consoleName = consoleName;
             return this;
         }
-        public Builder consoleName(@Nullable String consoleName) {
-            this.consoleName = Codegen.ofNullable(consoleName);
-            return this;
+
+        public Builder consoleName(String consoleName) {
+            return consoleName(Output.of(consoleName));
         }
+
         public Builder properties(Output<ConsoleCreatePropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(ConsoleCreatePropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
-        }        public ConsoleArgs build() {
-            return new ConsoleArgs(consoleName, properties);
+            return properties(Output.of(properties));
+        }
+
+        public ConsoleArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends com.pulumi.resou
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
     }
 
-    public GetDeploymentAtSubscriptionScopeArgs(String deploymentName) {
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-    }
+    private GetDeploymentAtSubscriptionScopeArgs() {}
 
-    private GetDeploymentAtSubscriptionScopeArgs() {
-        this.deploymentName = null;
+    private GetDeploymentAtSubscriptionScopeArgs(GetDeploymentAtSubscriptionScopeArgs $) {
+        this.deploymentName = $.deploymentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentAtSubscriptionScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentName;
+        private GetDeploymentAtSubscriptionScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentAtSubscriptionScopeArgs();
         }
 
         public Builder(GetDeploymentAtSubscriptionScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
+            $ = new GetDeploymentAtSubscriptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
-        }        public GetDeploymentAtSubscriptionScopeArgs build() {
-            return new GetDeploymentAtSubscriptionScopeArgs(deploymentName);
+        }
+
+        public GetDeploymentAtSubscriptionScopeArgs build() {
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            return $;
         }
     }
+
 }

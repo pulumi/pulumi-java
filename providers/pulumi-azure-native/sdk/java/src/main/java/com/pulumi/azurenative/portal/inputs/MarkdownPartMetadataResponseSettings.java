@@ -23,45 +23,44 @@ public final class MarkdownPartMetadataResponseSettings extends com.pulumi.resou
      * 
      */
     @Import(name="content")
-      private final @Nullable MarkdownPartMetadataResponseContent content;
+    private @Nullable MarkdownPartMetadataResponseContent content;
 
     public Optional<MarkdownPartMetadataResponseContent> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
-    public MarkdownPartMetadataResponseSettings(@Nullable MarkdownPartMetadataResponseContent content) {
-        this.content = content;
-    }
+    private MarkdownPartMetadataResponseSettings() {}
 
-    private MarkdownPartMetadataResponseSettings() {
-        this.content = null;
+    private MarkdownPartMetadataResponseSettings(MarkdownPartMetadataResponseSettings $) {
+        this.content = $.content;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataResponseSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MarkdownPartMetadataResponseContent content;
+        private MarkdownPartMetadataResponseSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataResponseSettings();
         }
 
         public Builder(MarkdownPartMetadataResponseSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
+            $ = new MarkdownPartMetadataResponseSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable MarkdownPartMetadataResponseContent content) {
-            this.content = content;
+            $.content = content;
             return this;
-        }        public MarkdownPartMetadataResponseSettings build() {
-            return new MarkdownPartMetadataResponseSettings(content);
+        }
+
+        public MarkdownPartMetadataResponseSettings build() {
+            return $;
         }
     }
+
 }

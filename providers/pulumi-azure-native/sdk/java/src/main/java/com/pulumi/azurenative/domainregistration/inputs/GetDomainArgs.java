@@ -17,7 +17,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,55 +28,52 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDomainArgs(
-        String domainName,
-        String resourceGroupName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDomainArgs() {}
 
-    private GetDomainArgs() {
-        this.domainName = null;
-        this.resourceGroupName = null;
+    private GetDomainArgs(GetDomainArgs $) {
+        this.domainName = $.domainName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String resourceGroupName;
+        private GetDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainArgs();
         }
 
         public Builder(GetDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDomainArgs build() {
-            return new GetDomainArgs(domainName, resourceGroupName);
+        }
+
+        public GetDomainArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

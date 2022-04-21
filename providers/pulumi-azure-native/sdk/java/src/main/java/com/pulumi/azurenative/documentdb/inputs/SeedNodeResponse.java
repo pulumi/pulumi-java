@@ -19,45 +19,44 @@ public final class SeedNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
-    public SeedNodeResponse(@Nullable String ipAddress) {
-        this.ipAddress = ipAddress;
-    }
+    private SeedNodeResponse() {}
 
-    private SeedNodeResponse() {
-        this.ipAddress = null;
+    private SeedNodeResponse(SeedNodeResponse $) {
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SeedNodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipAddress;
+        private SeedNodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SeedNodeResponse();
         }
 
         public Builder(SeedNodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new SeedNodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
-        }        public SeedNodeResponse build() {
-            return new SeedNodeResponse(ipAddress);
+        }
+
+        public SeedNodeResponse build() {
+            return $;
         }
     }
+
 }

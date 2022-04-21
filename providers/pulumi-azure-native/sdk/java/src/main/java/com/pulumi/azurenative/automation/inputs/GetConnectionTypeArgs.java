@@ -17,7 +17,7 @@ public final class GetConnectionTypeArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetConnectionTypeArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectionTypeName", required=true)
-      private final String connectionTypeName;
+    private String connectionTypeName;
 
     public String connectionTypeName() {
         return this.connectionTypeName;
@@ -39,64 +39,59 @@ public final class GetConnectionTypeArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConnectionTypeArgs(
-        String automationAccountName,
-        String connectionTypeName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.connectionTypeName = Objects.requireNonNull(connectionTypeName, "expected parameter 'connectionTypeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConnectionTypeArgs() {}
 
-    private GetConnectionTypeArgs() {
-        this.automationAccountName = null;
-        this.connectionTypeName = null;
-        this.resourceGroupName = null;
+    private GetConnectionTypeArgs(GetConnectionTypeArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.connectionTypeName = $.connectionTypeName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String connectionTypeName;
-        private String resourceGroupName;
+        private GetConnectionTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionTypeArgs();
         }
 
         public Builder(GetConnectionTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.connectionTypeName = defaults.connectionTypeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConnectionTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder connectionTypeName(String connectionTypeName) {
-            this.connectionTypeName = Objects.requireNonNull(connectionTypeName);
+            $.connectionTypeName = connectionTypeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConnectionTypeArgs build() {
-            return new GetConnectionTypeArgs(automationAccountName, connectionTypeName, resourceGroupName);
+        }
+
+        public GetConnectionTypeArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.connectionTypeName = Objects.requireNonNull($.connectionTypeName, "expected parameter 'connectionTypeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

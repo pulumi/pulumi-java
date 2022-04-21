@@ -25,10 +25,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
      * 
      */
     @Import(name="bypassTrafficSettings")
-      private final @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
+    private @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
 
-    public List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings() {
-        return this.bypassTrafficSettings == null ? List.of() : this.bypassTrafficSettings;
+    public Optional<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse>> bypassTrafficSettings() {
+        return Optional.ofNullable(this.bypassTrafficSettings);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
      * 
      */
     @Import(name="signatureOverrides")
-      private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
+    private @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
-    public List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides() {
-        return this.signatureOverrides == null ? List.of() : this.signatureOverrides;
+    public Optional<List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse>> signatureOverrides() {
+        return Optional.ofNullable(this.signatureOverrides);
     }
 
-    public FirewallPolicyIntrusionDetectionConfigurationResponse(
-        @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
-        @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
-        this.bypassTrafficSettings = bypassTrafficSettings;
-        this.signatureOverrides = signatureOverrides;
-    }
+    private FirewallPolicyIntrusionDetectionConfigurationResponse() {}
 
-    private FirewallPolicyIntrusionDetectionConfigurationResponse() {
-        this.bypassTrafficSettings = List.of();
-        this.signatureOverrides = List.of();
+    private FirewallPolicyIntrusionDetectionConfigurationResponse(FirewallPolicyIntrusionDetectionConfigurationResponse $) {
+        this.bypassTrafficSettings = $.bypassTrafficSettings;
+        this.signatureOverrides = $.signatureOverrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIntrusionDetectionConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
-        private @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
+        private FirewallPolicyIntrusionDetectionConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIntrusionDetectionConfigurationResponse();
         }
 
         public Builder(FirewallPolicyIntrusionDetectionConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypassTrafficSettings = defaults.bypassTrafficSettings;
-    	      this.signatureOverrides = defaults.signatureOverrides;
+            $ = new FirewallPolicyIntrusionDetectionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings) {
-            this.bypassTrafficSettings = bypassTrafficSettings;
+            $.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
+
         public Builder bypassTrafficSettings(FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse... bypassTrafficSettings) {
             return bypassTrafficSettings(List.of(bypassTrafficSettings));
         }
+
         public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
-            this.signatureOverrides = signatureOverrides;
+            $.signatureOverrides = signatureOverrides;
             return this;
         }
+
         public Builder signatureOverrides(FirewallPolicyIntrusionDetectionSignatureSpecificationResponse... signatureOverrides) {
             return signatureOverrides(List.of(signatureOverrides));
-        }        public FirewallPolicyIntrusionDetectionConfigurationResponse build() {
-            return new FirewallPolicyIntrusionDetectionConfigurationResponse(bypassTrafficSettings, signatureOverrides);
+        }
+
+        public FirewallPolicyIntrusionDetectionConfigurationResponse build() {
+            return $;
         }
     }
+
 }

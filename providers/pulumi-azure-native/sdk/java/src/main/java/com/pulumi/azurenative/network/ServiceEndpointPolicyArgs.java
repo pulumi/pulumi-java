@@ -6,11 +6,11 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.ServiceEndpointPolicyDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,10 +56,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceEndpointPolicyDefinitions")
-      private final @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
+    private @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
-    public Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions() {
-        return this.serviceEndpointPolicyDefinitions == null ? Codegen.empty() : this.serviceEndpointPolicyDefinitions;
+    public Optional<Output<List<ServiceEndpointPolicyDefinitionArgs>>> serviceEndpointPolicyDefinitions() {
+        return Optional.ofNullable(this.serviceEndpointPolicyDefinitions);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceEndpointPolicyName")
-      private final @Nullable Output<String> serviceEndpointPolicyName;
+    private @Nullable Output<String> serviceEndpointPolicyName;
 
-    public Output<String> serviceEndpointPolicyName() {
-        return this.serviceEndpointPolicyName == null ? Codegen.empty() : this.serviceEndpointPolicyName;
+    public Optional<Output<String>> serviceEndpointPolicyName() {
+        return Optional.ofNullable(this.serviceEndpointPolicyName);
     }
 
     /**
@@ -78,118 +78,103 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServiceEndpointPolicyArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions,
-        @Nullable Output<String> serviceEndpointPolicyName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.id = id;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
-        this.serviceEndpointPolicyName = serviceEndpointPolicyName;
-        this.tags = tags;
-    }
+    private ServiceEndpointPolicyArgs() {}
 
-    private ServiceEndpointPolicyArgs() {
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceEndpointPolicyDefinitions = Codegen.empty();
-        this.serviceEndpointPolicyName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServiceEndpointPolicyArgs(ServiceEndpointPolicyArgs $) {
+        this.id = $.id;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceEndpointPolicyDefinitions = $.serviceEndpointPolicyDefinitions;
+        this.serviceEndpointPolicyName = $.serviceEndpointPolicyName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
-        private @Nullable Output<String> serviceEndpointPolicyName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ServiceEndpointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointPolicyArgs();
         }
 
         public Builder(ServiceEndpointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceEndpointPolicyDefinitions = defaults.serviceEndpointPolicyDefinitions;
-    	      this.serviceEndpointPolicyName = defaults.serviceEndpointPolicyName;
-    	      this.tags = defaults.tags;
+            $ = new ServiceEndpointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceEndpointPolicyDefinitions(@Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
-            this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
+            $.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
-        public Builder serviceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
-            this.serviceEndpointPolicyDefinitions = Codegen.ofNullable(serviceEndpointPolicyDefinitions);
-            return this;
+
+        public Builder serviceEndpointPolicyDefinitions(List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
+            return serviceEndpointPolicyDefinitions(Output.of(serviceEndpointPolicyDefinitions));
         }
+
         public Builder serviceEndpointPolicyDefinitions(ServiceEndpointPolicyDefinitionArgs... serviceEndpointPolicyDefinitions) {
             return serviceEndpointPolicyDefinitions(List.of(serviceEndpointPolicyDefinitions));
         }
+
         public Builder serviceEndpointPolicyName(@Nullable Output<String> serviceEndpointPolicyName) {
-            this.serviceEndpointPolicyName = serviceEndpointPolicyName;
+            $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
         }
-        public Builder serviceEndpointPolicyName(@Nullable String serviceEndpointPolicyName) {
-            this.serviceEndpointPolicyName = Codegen.ofNullable(serviceEndpointPolicyName);
-            return this;
+
+        public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
+            return serviceEndpointPolicyName(Output.of(serviceEndpointPolicyName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ServiceEndpointPolicyArgs build() {
-            return new ServiceEndpointPolicyArgs(id, location, resourceGroupName, serviceEndpointPolicyDefinitions, serviceEndpointPolicyName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ServiceEndpointPolicyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

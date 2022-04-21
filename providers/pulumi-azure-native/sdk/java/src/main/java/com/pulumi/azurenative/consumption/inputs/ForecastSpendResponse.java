@@ -22,7 +22,7 @@ public final class ForecastSpendResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="amount", required=true)
-      private final Double amount;
+    private Double amount;
 
     public Double amount() {
         return this.amount;
@@ -33,55 +33,52 @@ public final class ForecastSpendResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
     }
 
-    public ForecastSpendResponse(
-        Double amount,
-        String unit) {
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-    }
+    private ForecastSpendResponse() {}
 
-    private ForecastSpendResponse() {
-        this.amount = null;
-        this.unit = null;
+    private ForecastSpendResponse(ForecastSpendResponse $) {
+        this.amount = $.amount;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForecastSpendResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double amount;
-        private String unit;
+        private ForecastSpendResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForecastSpendResponse();
         }
 
         public Builder(ForecastSpendResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amount = defaults.amount;
-    	      this.unit = defaults.unit;
+            $ = new ForecastSpendResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder amount(Double amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
-        }        public ForecastSpendResponse build() {
-            return new ForecastSpendResponse(amount, unit);
+        }
+
+        public ForecastSpendResponse build() {
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            return $;
         }
     }
+
 }

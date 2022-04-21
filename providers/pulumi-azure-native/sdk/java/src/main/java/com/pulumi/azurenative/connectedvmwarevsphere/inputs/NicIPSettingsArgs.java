@@ -7,10 +7,10 @@ import com.pulumi.azurenative.connectedvmwarevsphere.enums.IPAddressAllocationMe
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationMethod")
-      private final @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
+    private @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
-    public Output<Either<String,IPAddressAllocationMethod>> allocationMethod() {
-        return this.allocationMethod == null ? Codegen.empty() : this.allocationMethod;
+    public Optional<Output<Either<String,IPAddressAllocationMethod>>> allocationMethod() {
+        return Optional.ofNullable(this.allocationMethod);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gateway")
-      private final @Nullable Output<List<String>> gateway;
+    private @Nullable Output<List<String>> gateway;
 
-    public Output<List<String>> gateway() {
-        return this.gateway == null ? Codegen.empty() : this.gateway;
+    public Optional<Output<List<String>>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -71,108 +71,96 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetMask")
-      private final @Nullable Output<String> subnetMask;
+    private @Nullable Output<String> subnetMask;
 
-    public Output<String> subnetMask() {
-        return this.subnetMask == null ? Codegen.empty() : this.subnetMask;
+    public Optional<Output<String>> subnetMask() {
+        return Optional.ofNullable(this.subnetMask);
     }
 
-    public NicIPSettingsArgs(
-        @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod,
-        @Nullable Output<List<String>> dnsServers,
-        @Nullable Output<List<String>> gateway,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> subnetMask) {
-        this.allocationMethod = allocationMethod;
-        this.dnsServers = dnsServers;
-        this.gateway = gateway;
-        this.ipAddress = ipAddress;
-        this.subnetMask = subnetMask;
-    }
+    private NicIPSettingsArgs() {}
 
-    private NicIPSettingsArgs() {
-        this.allocationMethod = Codegen.empty();
-        this.dnsServers = Codegen.empty();
-        this.gateway = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.subnetMask = Codegen.empty();
+    private NicIPSettingsArgs(NicIPSettingsArgs $) {
+        this.allocationMethod = $.allocationMethod;
+        this.dnsServers = $.dnsServers;
+        this.gateway = $.gateway;
+        this.ipAddress = $.ipAddress;
+        this.subnetMask = $.subnetMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NicIPSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
-        private @Nullable Output<List<String>> dnsServers;
-        private @Nullable Output<List<String>> gateway;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> subnetMask;
+        private NicIPSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NicIPSettingsArgs();
         }
 
         public Builder(NicIPSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationMethod = defaults.allocationMethod;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.gateway = defaults.gateway;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.subnetMask = defaults.subnetMask;
+            $ = new NicIPSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationMethod(@Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod) {
-            this.allocationMethod = allocationMethod;
+            $.allocationMethod = allocationMethod;
             return this;
         }
-        public Builder allocationMethod(@Nullable Either<String,IPAddressAllocationMethod> allocationMethod) {
-            this.allocationMethod = Codegen.ofNullable(allocationMethod);
-            return this;
+
+        public Builder allocationMethod(Either<String,IPAddressAllocationMethod> allocationMethod) {
+            return allocationMethod(Output.of(allocationMethod));
         }
+
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder gateway(@Nullable Output<List<String>> gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
-        public Builder gateway(@Nullable List<String> gateway) {
-            this.gateway = Codegen.ofNullable(gateway);
-            return this;
+
+        public Builder gateway(List<String> gateway) {
+            return gateway(Output.of(gateway));
         }
+
         public Builder gateway(String... gateway) {
             return gateway(List.of(gateway));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
-            this.subnetMask = subnetMask;
+            $.subnetMask = subnetMask;
             return this;
         }
-        public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = Codegen.ofNullable(subnetMask);
-            return this;
-        }        public NicIPSettingsArgs build() {
-            return new NicIPSettingsArgs(allocationMethod, dnsServers, gateway, ipAddress, subnetMask);
+
+        public Builder subnetMask(String subnetMask) {
+            return subnetMask(Output.of(subnetMask));
+        }
+
+        public NicIPSettingsArgs build() {
+            return $;
         }
     }
+
 }

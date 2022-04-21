@@ -22,7 +22,7 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends com.pulumi.reso
      * 
      */
     @Import(name="coreQuota", required=true)
-      private final Integer coreQuota;
+    private Integer coreQuota;
 
     public Integer coreQuota() {
         return this.coreQuota;
@@ -33,55 +33,52 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public VirtualMachineFamilyCoreQuotaResponse(
-        Integer coreQuota,
-        String name) {
-        this.coreQuota = Objects.requireNonNull(coreQuota, "expected parameter 'coreQuota' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private VirtualMachineFamilyCoreQuotaResponse() {}
 
-    private VirtualMachineFamilyCoreQuotaResponse() {
-        this.coreQuota = null;
-        this.name = null;
+    private VirtualMachineFamilyCoreQuotaResponse(VirtualMachineFamilyCoreQuotaResponse $) {
+        this.coreQuota = $.coreQuota;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineFamilyCoreQuotaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer coreQuota;
-        private String name;
+        private VirtualMachineFamilyCoreQuotaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineFamilyCoreQuotaResponse();
         }
 
         public Builder(VirtualMachineFamilyCoreQuotaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreQuota = defaults.coreQuota;
-    	      this.name = defaults.name;
+            $ = new VirtualMachineFamilyCoreQuotaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder coreQuota(Integer coreQuota) {
-            this.coreQuota = Objects.requireNonNull(coreQuota);
+            $.coreQuota = coreQuota;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public VirtualMachineFamilyCoreQuotaResponse build() {
-            return new VirtualMachineFamilyCoreQuotaResponse(coreQuota, name);
+        }
+
+        public VirtualMachineFamilyCoreQuotaResponse build() {
+            $.coreQuota = Objects.requireNonNull($.coreQuota, "expected parameter 'coreQuota' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

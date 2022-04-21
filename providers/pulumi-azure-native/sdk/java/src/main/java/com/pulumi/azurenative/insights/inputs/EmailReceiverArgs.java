@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final Output<String> emailAddress;
+    private Output<String> emailAddress;
 
     public Output<String> emailAddress() {
         return this.emailAddress;
@@ -36,7 +37,7 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,76 +48,71 @@ public final class EmailReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Output<Boolean> useCommonAlertSchema;
+    private @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
+    public Optional<Output<Boolean>> useCommonAlertSchema() {
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    public EmailReceiverArgs(
-        Output<String> emailAddress,
-        Output<String> name,
-        @Nullable Output<Boolean> useCommonAlertSchema) {
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg(useCommonAlertSchema).def(false).getNullable();
-    }
+    private EmailReceiverArgs() {}
 
-    private EmailReceiverArgs() {
-        this.emailAddress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.useCommonAlertSchema = Codegen.empty();
+    private EmailReceiverArgs(EmailReceiverArgs $) {
+        this.emailAddress = $.emailAddress;
+        this.name = $.name;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> emailAddress;
-        private Output<String> name;
-        private @Nullable Output<Boolean> useCommonAlertSchema;
+        private EmailReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailReceiverArgs();
         }
 
         public Builder(EmailReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.name = defaults.name;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
+            $ = new EmailReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(Output<String> emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
-            return this;
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
-            return this;
-        }        public EmailReceiverArgs build() {
-            return new EmailReceiverArgs(emailAddress, name, useCommonAlertSchema);
+
+        public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
+            return useCommonAlertSchema(Output.of(useCommonAlertSchema));
+        }
+
+        public EmailReceiverArgs build() {
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").output().arg($.useCommonAlertSchema).def(false).getNullable();
+            return $;
         }
     }
+
 }

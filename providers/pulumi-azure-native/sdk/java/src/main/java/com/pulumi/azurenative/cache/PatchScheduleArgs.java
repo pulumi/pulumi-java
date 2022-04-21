@@ -6,10 +6,10 @@ package com.pulumi.azurenative.cache;
 import com.pulumi.azurenative.cache.inputs.ScheduleEntryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<String> default_;
+    private @Nullable Output<String> default_;
 
-    public Output<String> default_() {
-        return this.default_ == null ? Codegen.empty() : this.default_;
+    public Optional<Output<String>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -44,7 +44,7 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,92 +55,85 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleEntries", required=true)
-      private final Output<List<ScheduleEntryArgs>> scheduleEntries;
+    private Output<List<ScheduleEntryArgs>> scheduleEntries;
 
     public Output<List<ScheduleEntryArgs>> scheduleEntries() {
         return this.scheduleEntries;
     }
 
-    public PatchScheduleArgs(
-        @Nullable Output<String> default_,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        Output<List<ScheduleEntryArgs>> scheduleEntries) {
-        this.default_ = default_;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scheduleEntries = Objects.requireNonNull(scheduleEntries, "expected parameter 'scheduleEntries' to be non-null");
-    }
+    private PatchScheduleArgs() {}
 
-    private PatchScheduleArgs() {
-        this.default_ = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scheduleEntries = Codegen.empty();
+    private PatchScheduleArgs(PatchScheduleArgs $) {
+        this.default_ = $.default_;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scheduleEntries = $.scheduleEntries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> default_;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<List<ScheduleEntryArgs>> scheduleEntries;
+        private PatchScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchScheduleArgs();
         }
 
         public Builder(PatchScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scheduleEntries = defaults.scheduleEntries;
+            $ = new PatchScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable Output<String> default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
-        public Builder default_(@Nullable String default_) {
-            this.default_ = Codegen.ofNullable(default_);
-            return this;
+
+        public Builder default_(String default_) {
+            return default_(Output.of(default_));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scheduleEntries(Output<List<ScheduleEntryArgs>> scheduleEntries) {
-            this.scheduleEntries = Objects.requireNonNull(scheduleEntries);
+            $.scheduleEntries = scheduleEntries;
             return this;
         }
+
         public Builder scheduleEntries(List<ScheduleEntryArgs> scheduleEntries) {
-            this.scheduleEntries = Output.of(Objects.requireNonNull(scheduleEntries));
-            return this;
+            return scheduleEntries(Output.of(scheduleEntries));
         }
+
         public Builder scheduleEntries(ScheduleEntryArgs... scheduleEntries) {
             return scheduleEntries(List.of(scheduleEntries));
-        }        public PatchScheduleArgs build() {
-            return new PatchScheduleArgs(default_, name, resourceGroupName, scheduleEntries);
+        }
+
+        public PatchScheduleArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scheduleEntries = Objects.requireNonNull($.scheduleEntries, "expected parameter 'scheduleEntries' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="blobEndpoint", required=true)
-      private final String blobEndpoint;
+    private String blobEndpoint;
 
     public String blobEndpoint() {
         return this.blobEndpoint;
@@ -34,7 +34,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="protectedAccountKeyName", required=true)
-      private final String protectedAccountKeyName;
+    private String protectedAccountKeyName;
 
     public String protectedAccountKeyName() {
         return this.protectedAccountKeyName;
@@ -45,10 +45,10 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="protectedAccountKeyName2")
-      private final @Nullable String protectedAccountKeyName2;
+    private @Nullable String protectedAccountKeyName2;
 
     public Optional<String> protectedAccountKeyName2() {
-        return this.protectedAccountKeyName2 == null ? Optional.empty() : Optional.ofNullable(this.protectedAccountKeyName2);
+        return Optional.ofNullable(this.protectedAccountKeyName2);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="queueEndpoint", required=true)
-      private final String queueEndpoint;
+    private String queueEndpoint;
 
     public String queueEndpoint() {
         return this.queueEndpoint;
@@ -67,7 +67,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final String storageAccountName;
+    private String storageAccountName;
 
     public String storageAccountName() {
         return this.storageAccountName;
@@ -78,91 +78,79 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="tableEndpoint", required=true)
-      private final String tableEndpoint;
+    private String tableEndpoint;
 
     public String tableEndpoint() {
         return this.tableEndpoint;
     }
 
-    public DiagnosticsStorageAccountConfigResponse(
-        String blobEndpoint,
-        String protectedAccountKeyName,
-        @Nullable String protectedAccountKeyName2,
-        String queueEndpoint,
-        String storageAccountName,
-        String tableEndpoint) {
-        this.blobEndpoint = Objects.requireNonNull(blobEndpoint, "expected parameter 'blobEndpoint' to be non-null");
-        this.protectedAccountKeyName = Objects.requireNonNull(protectedAccountKeyName, "expected parameter 'protectedAccountKeyName' to be non-null");
-        this.protectedAccountKeyName2 = protectedAccountKeyName2;
-        this.queueEndpoint = Objects.requireNonNull(queueEndpoint, "expected parameter 'queueEndpoint' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-        this.tableEndpoint = Objects.requireNonNull(tableEndpoint, "expected parameter 'tableEndpoint' to be non-null");
-    }
+    private DiagnosticsStorageAccountConfigResponse() {}
 
-    private DiagnosticsStorageAccountConfigResponse() {
-        this.blobEndpoint = null;
-        this.protectedAccountKeyName = null;
-        this.protectedAccountKeyName2 = null;
-        this.queueEndpoint = null;
-        this.storageAccountName = null;
-        this.tableEndpoint = null;
+    private DiagnosticsStorageAccountConfigResponse(DiagnosticsStorageAccountConfigResponse $) {
+        this.blobEndpoint = $.blobEndpoint;
+        this.protectedAccountKeyName = $.protectedAccountKeyName;
+        this.protectedAccountKeyName2 = $.protectedAccountKeyName2;
+        this.queueEndpoint = $.queueEndpoint;
+        this.storageAccountName = $.storageAccountName;
+        this.tableEndpoint = $.tableEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsStorageAccountConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blobEndpoint;
-        private String protectedAccountKeyName;
-        private @Nullable String protectedAccountKeyName2;
-        private String queueEndpoint;
-        private String storageAccountName;
-        private String tableEndpoint;
+        private DiagnosticsStorageAccountConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsStorageAccountConfigResponse();
         }
 
         public Builder(DiagnosticsStorageAccountConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobEndpoint = defaults.blobEndpoint;
-    	      this.protectedAccountKeyName = defaults.protectedAccountKeyName;
-    	      this.protectedAccountKeyName2 = defaults.protectedAccountKeyName2;
-    	      this.queueEndpoint = defaults.queueEndpoint;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.tableEndpoint = defaults.tableEndpoint;
+            $ = new DiagnosticsStorageAccountConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobEndpoint(String blobEndpoint) {
-            this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
+            $.blobEndpoint = blobEndpoint;
             return this;
         }
+
         public Builder protectedAccountKeyName(String protectedAccountKeyName) {
-            this.protectedAccountKeyName = Objects.requireNonNull(protectedAccountKeyName);
+            $.protectedAccountKeyName = protectedAccountKeyName;
             return this;
         }
+
         public Builder protectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
-            this.protectedAccountKeyName2 = protectedAccountKeyName2;
+            $.protectedAccountKeyName2 = protectedAccountKeyName2;
             return this;
         }
+
         public Builder queueEndpoint(String queueEndpoint) {
-            this.queueEndpoint = Objects.requireNonNull(queueEndpoint);
+            $.queueEndpoint = queueEndpoint;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
         }
+
         public Builder tableEndpoint(String tableEndpoint) {
-            this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
+            $.tableEndpoint = tableEndpoint;
             return this;
-        }        public DiagnosticsStorageAccountConfigResponse build() {
-            return new DiagnosticsStorageAccountConfigResponse(blobEndpoint, protectedAccountKeyName, protectedAccountKeyName2, queueEndpoint, storageAccountName, tableEndpoint);
+        }
+
+        public DiagnosticsStorageAccountConfigResponse build() {
+            $.blobEndpoint = Objects.requireNonNull($.blobEndpoint, "expected parameter 'blobEndpoint' to be non-null");
+            $.protectedAccountKeyName = Objects.requireNonNull($.protectedAccountKeyName, "expected parameter 'protectedAccountKeyName' to be non-null");
+            $.queueEndpoint = Objects.requireNonNull($.queueEndpoint, "expected parameter 'queueEndpoint' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            $.tableEndpoint = Objects.requireNonNull($.tableEndpoint, "expected parameter 'tableEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

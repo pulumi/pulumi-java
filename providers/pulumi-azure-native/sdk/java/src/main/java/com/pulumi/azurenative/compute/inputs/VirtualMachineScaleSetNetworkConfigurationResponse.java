@@ -28,10 +28,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings;
+    private @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings;
 
     public Optional<VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Boolean enableAcceleratedNetworking;
+    private @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="enableFpga")
-      private final @Nullable Boolean enableFpga;
+    private @Nullable Boolean enableFpga;
 
     public Optional<Boolean> enableFpga() {
-        return this.enableFpga == null ? Optional.empty() : Optional.ofNullable(this.enableFpga);
+        return Optional.ofNullable(this.enableFpga);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="enableIPForwarding")
-      private final @Nullable Boolean enableIPForwarding;
+    private @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> enableIPForwarding() {
-        return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
+        return Optional.ofNullable(this.enableIPForwarding);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="ipConfigurations", required=true)
-      private final List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations;
+    private List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations;
 
     public List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
@@ -105,7 +105,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -116,10 +116,10 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable SubResourceResponse networkSecurityGroup;
+    private @Nullable SubResourceResponse networkSecurityGroup;
 
     public Optional<SubResourceResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -127,130 +127,104 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
      * 
      */
     @Import(name="primary")
-      private final @Nullable Boolean primary;
+    private @Nullable Boolean primary;
 
     public Optional<Boolean> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
-    public VirtualMachineScaleSetNetworkConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableFpga,
-        @Nullable Boolean enableIPForwarding,
-        @Nullable String id,
-        List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations,
-        String name,
-        @Nullable SubResourceResponse networkSecurityGroup,
-        @Nullable Boolean primary) {
-        this.deleteOption = deleteOption;
-        this.dnsSettings = dnsSettings;
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.enableFpga = enableFpga;
-        this.enableIPForwarding = enableIPForwarding;
-        this.id = id;
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.primary = primary;
-    }
+    private VirtualMachineScaleSetNetworkConfigurationResponse() {}
 
-    private VirtualMachineScaleSetNetworkConfigurationResponse() {
-        this.deleteOption = null;
-        this.dnsSettings = null;
-        this.enableAcceleratedNetworking = null;
-        this.enableFpga = null;
-        this.enableIPForwarding = null;
-        this.id = null;
-        this.ipConfigurations = List.of();
-        this.name = null;
-        this.networkSecurityGroup = null;
-        this.primary = null;
+    private VirtualMachineScaleSetNetworkConfigurationResponse(VirtualMachineScaleSetNetworkConfigurationResponse $) {
+        this.deleteOption = $.deleteOption;
+        this.dnsSettings = $.dnsSettings;
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.enableFpga = $.enableFpga;
+        this.enableIPForwarding = $.enableIPForwarding;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.name = $.name;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.primary = $.primary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetNetworkConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deleteOption;
-        private @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings;
-        private @Nullable Boolean enableAcceleratedNetworking;
-        private @Nullable Boolean enableFpga;
-        private @Nullable Boolean enableIPForwarding;
-        private @Nullable String id;
-        private List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations;
-        private String name;
-        private @Nullable SubResourceResponse networkSecurityGroup;
-        private @Nullable Boolean primary;
+        private VirtualMachineScaleSetNetworkConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetNetworkConfigurationResponse();
         }
 
         public Builder(VirtualMachineScaleSetNetworkConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.enableFpga = defaults.enableFpga;
-    	      this.enableIPForwarding = defaults.enableIPForwarding;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.primary = defaults.primary;
+            $ = new VirtualMachineScaleSetNetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder dnsSettings(@Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
+
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
+
         public Builder enableFpga(@Nullable Boolean enableFpga) {
-            this.enableFpga = enableFpga;
+            $.enableFpga = enableFpga;
             return this;
         }
+
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
-            this.enableIPForwarding = enableIPForwarding;
+            $.enableIPForwarding = enableIPForwarding;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipConfigurations(List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(VirtualMachineScaleSetIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
+
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
-        }        public VirtualMachineScaleSetNetworkConfigurationResponse build() {
-            return new VirtualMachineScaleSetNetworkConfigurationResponse(deleteOption, dnsSettings, enableAcceleratedNetworking, enableFpga, enableIPForwarding, id, ipConfigurations, name, networkSecurityGroup, primary);
+        }
+
+        public VirtualMachineScaleSetNetworkConfigurationResponse build() {
+            $.ipConfigurations = Objects.requireNonNull($.ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

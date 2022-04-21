@@ -7,10 +7,10 @@ import com.pulumi.azurenative.databox.inputs.EncryptionPreferencesArgs;
 import com.pulumi.azurenative.databox.inputs.TransportPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionPreferences")
-      private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
+    private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
-    public Output<EncryptionPreferencesArgs> encryptionPreferences() {
-        return this.encryptionPreferences == null ? Codegen.empty() : this.encryptionPreferences;
+    public Optional<Output<EncryptionPreferencesArgs>> encryptionPreferences() {
+        return Optional.ofNullable(this.encryptionPreferences);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preferredDataCenterRegion")
-      private final @Nullable Output<List<String>> preferredDataCenterRegion;
+    private @Nullable Output<List<String>> preferredDataCenterRegion;
 
-    public Output<List<String>> preferredDataCenterRegion() {
-        return this.preferredDataCenterRegion == null ? Codegen.empty() : this.preferredDataCenterRegion;
+    public Optional<Output<List<String>>> preferredDataCenterRegion() {
+        return Optional.ofNullable(this.preferredDataCenterRegion);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transportPreferences")
-      private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
+    private @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
-    public Output<TransportPreferencesArgs> transportPreferences() {
-        return this.transportPreferences == null ? Codegen.empty() : this.transportPreferences;
+    public Optional<Output<TransportPreferencesArgs>> transportPreferences() {
+        return Optional.ofNullable(this.transportPreferences);
     }
 
-    public PreferencesArgs(
-        @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences,
-        @Nullable Output<List<String>> preferredDataCenterRegion,
-        @Nullable Output<TransportPreferencesArgs> transportPreferences) {
-        this.encryptionPreferences = encryptionPreferences;
-        this.preferredDataCenterRegion = preferredDataCenterRegion;
-        this.transportPreferences = transportPreferences;
-    }
+    private PreferencesArgs() {}
 
-    private PreferencesArgs() {
-        this.encryptionPreferences = Codegen.empty();
-        this.preferredDataCenterRegion = Codegen.empty();
-        this.transportPreferences = Codegen.empty();
+    private PreferencesArgs(PreferencesArgs $) {
+        this.encryptionPreferences = $.encryptionPreferences;
+        this.preferredDataCenterRegion = $.preferredDataCenterRegion;
+        this.transportPreferences = $.transportPreferences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
-        private @Nullable Output<List<String>> preferredDataCenterRegion;
-        private @Nullable Output<TransportPreferencesArgs> transportPreferences;
+        private PreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreferencesArgs();
         }
 
         public Builder(PreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionPreferences = defaults.encryptionPreferences;
-    	      this.preferredDataCenterRegion = defaults.preferredDataCenterRegion;
-    	      this.transportPreferences = defaults.transportPreferences;
+            $ = new PreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionPreferences(@Nullable Output<EncryptionPreferencesArgs> encryptionPreferences) {
-            this.encryptionPreferences = encryptionPreferences;
+            $.encryptionPreferences = encryptionPreferences;
             return this;
         }
-        public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
-            this.encryptionPreferences = Codegen.ofNullable(encryptionPreferences);
-            return this;
+
+        public Builder encryptionPreferences(EncryptionPreferencesArgs encryptionPreferences) {
+            return encryptionPreferences(Output.of(encryptionPreferences));
         }
+
         public Builder preferredDataCenterRegion(@Nullable Output<List<String>> preferredDataCenterRegion) {
-            this.preferredDataCenterRegion = preferredDataCenterRegion;
+            $.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
-        public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
-            this.preferredDataCenterRegion = Codegen.ofNullable(preferredDataCenterRegion);
-            return this;
+
+        public Builder preferredDataCenterRegion(List<String> preferredDataCenterRegion) {
+            return preferredDataCenterRegion(Output.of(preferredDataCenterRegion));
         }
+
         public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
             return preferredDataCenterRegion(List.of(preferredDataCenterRegion));
         }
+
         public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
-            this.transportPreferences = transportPreferences;
+            $.transportPreferences = transportPreferences;
             return this;
         }
-        public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
-            this.transportPreferences = Codegen.ofNullable(transportPreferences);
-            return this;
-        }        public PreferencesArgs build() {
-            return new PreferencesArgs(encryptionPreferences, preferredDataCenterRegion, transportPreferences);
+
+        public Builder transportPreferences(TransportPreferencesArgs transportPreferences) {
+            return transportPreferences(Output.of(transportPreferences));
+        }
+
+        public PreferencesArgs build() {
+            return $;
         }
     }
+
 }

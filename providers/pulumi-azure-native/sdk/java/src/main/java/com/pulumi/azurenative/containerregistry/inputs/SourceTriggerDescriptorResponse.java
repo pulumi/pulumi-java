@@ -23,10 +23,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="branchName")
-      private final @Nullable String branchName;
+    private @Nullable String branchName;
 
     public Optional<String> branchName() {
-        return this.branchName == null ? Optional.empty() : Optional.ofNullable(this.branchName);
+        return Optional.ofNullable(this.branchName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="commitId")
-      private final @Nullable String commitId;
+    private @Nullable String commitId;
 
     public Optional<String> commitId() {
-        return this.commitId == null ? Optional.empty() : Optional.ofNullable(this.commitId);
+        return Optional.ofNullable(this.commitId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="eventType")
-      private final @Nullable String eventType;
+    private @Nullable String eventType;
 
     public Optional<String> eventType() {
-        return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
+        return Optional.ofNullable(this.eventType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="providerType")
-      private final @Nullable String providerType;
+    private @Nullable String providerType;
 
     public Optional<String> providerType() {
-        return this.providerType == null ? Optional.empty() : Optional.ofNullable(this.providerType);
+        return Optional.ofNullable(this.providerType);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pullRequestId")
-      private final @Nullable String pullRequestId;
+    private @Nullable String pullRequestId;
 
     public Optional<String> pullRequestId() {
-        return this.pullRequestId == null ? Optional.empty() : Optional.ofNullable(this.pullRequestId);
+        return Optional.ofNullable(this.pullRequestId);
     }
 
     /**
@@ -89,100 +89,80 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="repositoryUrl")
-      private final @Nullable String repositoryUrl;
+    private @Nullable String repositoryUrl;
 
     public Optional<String> repositoryUrl() {
-        return this.repositoryUrl == null ? Optional.empty() : Optional.ofNullable(this.repositoryUrl);
+        return Optional.ofNullable(this.repositoryUrl);
     }
 
-    public SourceTriggerDescriptorResponse(
-        @Nullable String branchName,
-        @Nullable String commitId,
-        @Nullable String eventType,
-        @Nullable String id,
-        @Nullable String providerType,
-        @Nullable String pullRequestId,
-        @Nullable String repositoryUrl) {
-        this.branchName = branchName;
-        this.commitId = commitId;
-        this.eventType = eventType;
-        this.id = id;
-        this.providerType = providerType;
-        this.pullRequestId = pullRequestId;
-        this.repositoryUrl = repositoryUrl;
-    }
+    private SourceTriggerDescriptorResponse() {}
 
-    private SourceTriggerDescriptorResponse() {
-        this.branchName = null;
-        this.commitId = null;
-        this.eventType = null;
-        this.id = null;
-        this.providerType = null;
-        this.pullRequestId = null;
-        this.repositoryUrl = null;
+    private SourceTriggerDescriptorResponse(SourceTriggerDescriptorResponse $) {
+        this.branchName = $.branchName;
+        this.commitId = $.commitId;
+        this.eventType = $.eventType;
+        this.id = $.id;
+        this.providerType = $.providerType;
+        this.pullRequestId = $.pullRequestId;
+        this.repositoryUrl = $.repositoryUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceTriggerDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String branchName;
-        private @Nullable String commitId;
-        private @Nullable String eventType;
-        private @Nullable String id;
-        private @Nullable String providerType;
-        private @Nullable String pullRequestId;
-        private @Nullable String repositoryUrl;
+        private SourceTriggerDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceTriggerDescriptorResponse();
         }
 
         public Builder(SourceTriggerDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.commitId = defaults.commitId;
-    	      this.eventType = defaults.eventType;
-    	      this.id = defaults.id;
-    	      this.providerType = defaults.providerType;
-    	      this.pullRequestId = defaults.pullRequestId;
-    	      this.repositoryUrl = defaults.repositoryUrl;
+            $ = new SourceTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = branchName;
+            $.branchName = branchName;
             return this;
         }
+
         public Builder commitId(@Nullable String commitId) {
-            this.commitId = commitId;
+            $.commitId = commitId;
             return this;
         }
+
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = providerType;
+            $.providerType = providerType;
             return this;
         }
+
         public Builder pullRequestId(@Nullable String pullRequestId) {
-            this.pullRequestId = pullRequestId;
+            $.pullRequestId = pullRequestId;
             return this;
         }
+
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
-            this.repositoryUrl = repositoryUrl;
+            $.repositoryUrl = repositoryUrl;
             return this;
-        }        public SourceTriggerDescriptorResponse build() {
-            return new SourceTriggerDescriptorResponse(branchName, commitId, eventType, id, providerType, pullRequestId, repositoryUrl);
+        }
+
+        public SourceTriggerDescriptorResponse build() {
+            return $;
         }
     }
+
 }

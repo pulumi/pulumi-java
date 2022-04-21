@@ -21,7 +21,7 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdAt", required=true)
-      private final String createdAt;
+    private String createdAt;
 
     public String createdAt() {
         return this.createdAt;
@@ -32,7 +32,7 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdBy", required=true)
-      private final String createdBy;
+    private String createdBy;
 
     public String createdBy() {
         return this.createdBy;
@@ -43,7 +43,7 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdByType", required=true)
-      private final String createdByType;
+    private String createdByType;
 
     public String createdByType() {
         return this.createdByType;
@@ -54,7 +54,7 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedAt", required=true)
-      private final String lastModifiedAt;
+    private String lastModifiedAt;
 
     public String lastModifiedAt() {
         return this.lastModifiedAt;
@@ -65,7 +65,7 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedBy", required=true)
-      private final String lastModifiedBy;
+    private String lastModifiedBy;
 
     public String lastModifiedBy() {
         return this.lastModifiedBy;
@@ -76,91 +76,80 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedByType", required=true)
-      private final String lastModifiedByType;
+    private String lastModifiedByType;
 
     public String lastModifiedByType() {
         return this.lastModifiedByType;
     }
 
-    public SystemDataResponse(
-        String createdAt,
-        String createdBy,
-        String createdByType,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        String lastModifiedByType) {
-        this.createdAt = Objects.requireNonNull(createdAt, "expected parameter 'createdAt' to be non-null");
-        this.createdBy = Objects.requireNonNull(createdBy, "expected parameter 'createdBy' to be non-null");
-        this.createdByType = Objects.requireNonNull(createdByType, "expected parameter 'createdByType' to be non-null");
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt, "expected parameter 'lastModifiedAt' to be non-null");
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy, "expected parameter 'lastModifiedBy' to be non-null");
-        this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType, "expected parameter 'lastModifiedByType' to be non-null");
-    }
+    private SystemDataResponse() {}
 
-    private SystemDataResponse() {
-        this.createdAt = null;
-        this.createdBy = null;
-        this.createdByType = null;
-        this.lastModifiedAt = null;
-        this.lastModifiedBy = null;
-        this.lastModifiedByType = null;
+    private SystemDataResponse(SystemDataResponse $) {
+        this.createdAt = $.createdAt;
+        this.createdBy = $.createdBy;
+        this.createdByType = $.createdByType;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.lastModifiedByType = $.lastModifiedByType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdAt;
-        private String createdBy;
-        private String createdByType;
-        private String lastModifiedAt;
-        private String lastModifiedBy;
-        private String lastModifiedByType;
+        private SystemDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemDataResponse();
         }
 
         public Builder(SystemDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdByType = defaults.createdByType;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.lastModifiedByType = defaults.lastModifiedByType;
+            $ = new SystemDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder createdByType(String createdByType) {
-            this.createdByType = Objects.requireNonNull(createdByType);
+            $.createdByType = createdByType;
             return this;
         }
+
         public Builder lastModifiedAt(String lastModifiedAt) {
-            this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
+
         public Builder lastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
+
         public Builder lastModifiedByType(String lastModifiedByType) {
-            this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
+            $.lastModifiedByType = lastModifiedByType;
             return this;
-        }        public SystemDataResponse build() {
-            return new SystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
+        }
+
+        public SystemDataResponse build() {
+            $.createdAt = Objects.requireNonNull($.createdAt, "expected parameter 'createdAt' to be non-null");
+            $.createdBy = Objects.requireNonNull($.createdBy, "expected parameter 'createdBy' to be non-null");
+            $.createdByType = Objects.requireNonNull($.createdByType, "expected parameter 'createdByType' to be non-null");
+            $.lastModifiedAt = Objects.requireNonNull($.lastModifiedAt, "expected parameter 'lastModifiedAt' to be non-null");
+            $.lastModifiedBy = Objects.requireNonNull($.lastModifiedBy, "expected parameter 'lastModifiedBy' to be non-null");
+            $.lastModifiedByType = Objects.requireNonNull($.lastModifiedByType, "expected parameter 'lastModifiedByType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class KeyVaultSecretReferenceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="secretUrl", required=true)
-      private final Output<String> secretUrl;
+    private Output<String> secretUrl;
 
     public Output<String> secretUrl() {
         return this.secretUrl;
@@ -35,63 +34,60 @@ public final class KeyVaultSecretReferenceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sourceVault", required=true)
-      private final Output<SubResourceArgs> sourceVault;
+    private Output<SubResourceArgs> sourceVault;
 
     public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault;
     }
 
-    public KeyVaultSecretReferenceArgs(
-        Output<String> secretUrl,
-        Output<SubResourceArgs> sourceVault) {
-        this.secretUrl = Objects.requireNonNull(secretUrl, "expected parameter 'secretUrl' to be non-null");
-        this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
-    }
+    private KeyVaultSecretReferenceArgs() {}
 
-    private KeyVaultSecretReferenceArgs() {
-        this.secretUrl = Codegen.empty();
-        this.sourceVault = Codegen.empty();
+    private KeyVaultSecretReferenceArgs(KeyVaultSecretReferenceArgs $) {
+        this.secretUrl = $.secretUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultSecretReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secretUrl;
-        private Output<SubResourceArgs> sourceVault;
+        private KeyVaultSecretReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultSecretReferenceArgs();
         }
 
         public Builder(KeyVaultSecretReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretUrl = defaults.secretUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new KeyVaultSecretReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretUrl(Output<String> secretUrl) {
-            this.secretUrl = Objects.requireNonNull(secretUrl);
+            $.secretUrl = secretUrl;
             return this;
         }
+
         public Builder secretUrl(String secretUrl) {
-            this.secretUrl = Output.of(Objects.requireNonNull(secretUrl));
-            return this;
+            return secretUrl(Output.of(secretUrl));
         }
+
         public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
-            this.sourceVault = Objects.requireNonNull(sourceVault);
+            $.sourceVault = sourceVault;
             return this;
         }
+
         public Builder sourceVault(SubResourceArgs sourceVault) {
-            this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
-            return this;
-        }        public KeyVaultSecretReferenceArgs build() {
-            return new KeyVaultSecretReferenceArgs(secretUrl, sourceVault);
+            return sourceVault(Output.of(sourceVault));
+        }
+
+        public KeyVaultSecretReferenceArgs build() {
+            $.secretUrl = Objects.requireNonNull($.secretUrl, "expected parameter 'secretUrl' to be non-null");
+            $.sourceVault = Objects.requireNonNull($.sourceVault, "expected parameter 'sourceVault' to be non-null");
+            return $;
         }
     }
+
 }

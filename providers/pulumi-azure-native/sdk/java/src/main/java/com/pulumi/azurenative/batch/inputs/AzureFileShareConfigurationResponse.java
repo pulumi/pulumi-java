@@ -15,14 +15,14 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
     public static final AzureFileShareConfigurationResponse Empty = new AzureFileShareConfigurationResponse();
 
     @Import(name="accountKey", required=true)
-      private final String accountKey;
+    private String accountKey;
 
     public String accountKey() {
         return this.accountKey;
     }
 
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="azureFileUrl", required=true)
-      private final String azureFileUrl;
+    private String azureFileUrl;
 
     public String azureFileUrl() {
         return this.azureFileUrl;
@@ -44,10 +44,10 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable String mountOptions;
+    private @Nullable String mountOptions;
 
     public Optional<String> mountOptions() {
-        return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -55,82 +55,72 @@ public final class AzureFileShareConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="relativeMountPath", required=true)
-      private final String relativeMountPath;
+    private String relativeMountPath;
 
     public String relativeMountPath() {
         return this.relativeMountPath;
     }
 
-    public AzureFileShareConfigurationResponse(
-        String accountKey,
-        String accountName,
-        String azureFileUrl,
-        @Nullable String mountOptions,
-        String relativeMountPath) {
-        this.accountKey = Objects.requireNonNull(accountKey, "expected parameter 'accountKey' to be non-null");
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.azureFileUrl = Objects.requireNonNull(azureFileUrl, "expected parameter 'azureFileUrl' to be non-null");
-        this.mountOptions = mountOptions;
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
-    }
+    private AzureFileShareConfigurationResponse() {}
 
-    private AzureFileShareConfigurationResponse() {
-        this.accountKey = null;
-        this.accountName = null;
-        this.azureFileUrl = null;
-        this.mountOptions = null;
-        this.relativeMountPath = null;
+    private AzureFileShareConfigurationResponse(AzureFileShareConfigurationResponse $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.azureFileUrl = $.azureFileUrl;
+        this.mountOptions = $.mountOptions;
+        this.relativeMountPath = $.relativeMountPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileShareConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountKey;
-        private String accountName;
-        private String azureFileUrl;
-        private @Nullable String mountOptions;
-        private String relativeMountPath;
+        private AzureFileShareConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileShareConfigurationResponse();
         }
 
         public Builder(AzureFileShareConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.azureFileUrl = defaults.azureFileUrl;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.relativeMountPath = defaults.relativeMountPath;
+            $ = new AzureFileShareConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(String accountKey) {
-            this.accountKey = Objects.requireNonNull(accountKey);
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder azureFileUrl(String azureFileUrl) {
-            this.azureFileUrl = Objects.requireNonNull(azureFileUrl);
+            $.azureFileUrl = azureFileUrl;
             return this;
         }
+
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
+
         public Builder relativeMountPath(String relativeMountPath) {
-            this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
+            $.relativeMountPath = relativeMountPath;
             return this;
-        }        public AzureFileShareConfigurationResponse build() {
-            return new AzureFileShareConfigurationResponse(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
+        }
+
+        public AzureFileShareConfigurationResponse build() {
+            $.accountKey = Objects.requireNonNull($.accountKey, "expected parameter 'accountKey' to be non-null");
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.azureFileUrl = Objects.requireNonNull($.azureFileUrl, "expected parameter 'azureFileUrl' to be non-null");
+            $.relativeMountPath = Objects.requireNonNull($.relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
+            return $;
         }
     }
+
 }

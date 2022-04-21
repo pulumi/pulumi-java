@@ -10,11 +10,11 @@ import com.pulumi.azurenative.blockchain.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="blockchainMemberName")
-      private final @Nullable Output<String> blockchainMemberName;
+    private @Nullable Output<String> blockchainMemberName;
 
-    public Output<String> blockchainMemberName() {
-        return this.blockchainMemberName == null ? Codegen.empty() : this.blockchainMemberName;
+    public Optional<Output<String>> blockchainMemberName() {
+        return Optional.ofNullable(this.blockchainMemberName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="consortium")
-      private final @Nullable Output<String> consortium;
+    private @Nullable Output<String> consortium;
 
-    public Output<String> consortium() {
-        return this.consortium == null ? Codegen.empty() : this.consortium;
+    public Optional<Output<String>> consortium() {
+        return Optional.ofNullable(this.consortium);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="consortiumManagementAccountPassword")
-      private final @Nullable Output<String> consortiumManagementAccountPassword;
+    private @Nullable Output<String> consortiumManagementAccountPassword;
 
-    public Output<String> consortiumManagementAccountPassword() {
-        return this.consortiumManagementAccountPassword == null ? Codegen.empty() : this.consortiumManagementAccountPassword;
+    public Optional<Output<String>> consortiumManagementAccountPassword() {
+        return Optional.ofNullable(this.consortiumManagementAccountPassword);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="consortiumMemberDisplayName")
-      private final @Nullable Output<String> consortiumMemberDisplayName;
+    private @Nullable Output<String> consortiumMemberDisplayName;
 
-    public Output<String> consortiumMemberDisplayName() {
-        return this.consortiumMemberDisplayName == null ? Codegen.empty() : this.consortiumMemberDisplayName;
+    public Optional<Output<String>> consortiumMemberDisplayName() {
+        return Optional.ofNullable(this.consortiumMemberDisplayName);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="consortiumRole")
-      private final @Nullable Output<String> consortiumRole;
+    private @Nullable Output<String> consortiumRole;
 
-    public Output<String> consortiumRole() {
-        return this.consortiumRole == null ? Codegen.empty() : this.consortiumRole;
+    public Optional<Output<String>> consortiumRole() {
+        return Optional.ofNullable(this.consortiumRole);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="firewallRules")
-      private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
+    private @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
-    public Output<List<FirewallRuleArgs>> firewallRules() {
-        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
+    public Optional<Output<List<FirewallRuleArgs>>> firewallRules() {
+        return Optional.ofNullable(this.firewallRules);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<Either<String,BlockchainProtocol>> protocol;
+    private @Nullable Output<Either<String,BlockchainProtocol>> protocol;
 
-    public Output<Either<String,BlockchainProtocol>> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<Either<String,BlockchainProtocol>>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -137,10 +137,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -159,209 +159,173 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="validatorNodesSku")
-      private final @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
+    private @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
 
-    public Output<BlockchainMemberNodesSkuArgs> validatorNodesSku() {
-        return this.validatorNodesSku == null ? Codegen.empty() : this.validatorNodesSku;
+    public Optional<Output<BlockchainMemberNodesSkuArgs>> validatorNodesSku() {
+        return Optional.ofNullable(this.validatorNodesSku);
     }
 
-    public BlockchainMemberArgs(
-        @Nullable Output<String> blockchainMemberName,
-        @Nullable Output<String> consortium,
-        @Nullable Output<String> consortiumManagementAccountPassword,
-        @Nullable Output<String> consortiumMemberDisplayName,
-        @Nullable Output<String> consortiumRole,
-        @Nullable Output<List<FirewallRuleArgs>> firewallRules,
-        @Nullable Output<String> location,
-        @Nullable Output<String> password,
-        @Nullable Output<Either<String,BlockchainProtocol>> protocol,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
-        this.blockchainMemberName = blockchainMemberName;
-        this.consortium = consortium;
-        this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
-        this.consortiumMemberDisplayName = consortiumMemberDisplayName;
-        this.consortiumRole = consortiumRole;
-        this.firewallRules = firewallRules;
-        this.location = location;
-        this.password = password;
-        this.protocol = protocol;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.validatorNodesSku = validatorNodesSku;
-    }
+    private BlockchainMemberArgs() {}
 
-    private BlockchainMemberArgs() {
-        this.blockchainMemberName = Codegen.empty();
-        this.consortium = Codegen.empty();
-        this.consortiumManagementAccountPassword = Codegen.empty();
-        this.consortiumMemberDisplayName = Codegen.empty();
-        this.consortiumRole = Codegen.empty();
-        this.firewallRules = Codegen.empty();
-        this.location = Codegen.empty();
-        this.password = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.validatorNodesSku = Codegen.empty();
+    private BlockchainMemberArgs(BlockchainMemberArgs $) {
+        this.blockchainMemberName = $.blockchainMemberName;
+        this.consortium = $.consortium;
+        this.consortiumManagementAccountPassword = $.consortiumManagementAccountPassword;
+        this.consortiumMemberDisplayName = $.consortiumMemberDisplayName;
+        this.consortiumRole = $.consortiumRole;
+        this.firewallRules = $.firewallRules;
+        this.location = $.location;
+        this.password = $.password;
+        this.protocol = $.protocol;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.validatorNodesSku = $.validatorNodesSku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlockchainMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blockchainMemberName;
-        private @Nullable Output<String> consortium;
-        private @Nullable Output<String> consortiumManagementAccountPassword;
-        private @Nullable Output<String> consortiumMemberDisplayName;
-        private @Nullable Output<String> consortiumRole;
-        private @Nullable Output<List<FirewallRuleArgs>> firewallRules;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Either<String,BlockchainProtocol>> protocol;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
+        private BlockchainMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlockchainMemberArgs();
         }
 
         public Builder(BlockchainMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockchainMemberName = defaults.blockchainMemberName;
-    	      this.consortium = defaults.consortium;
-    	      this.consortiumManagementAccountPassword = defaults.consortiumManagementAccountPassword;
-    	      this.consortiumMemberDisplayName = defaults.consortiumMemberDisplayName;
-    	      this.consortiumRole = defaults.consortiumRole;
-    	      this.firewallRules = defaults.firewallRules;
-    	      this.location = defaults.location;
-    	      this.password = defaults.password;
-    	      this.protocol = defaults.protocol;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.validatorNodesSku = defaults.validatorNodesSku;
+            $ = new BlockchainMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockchainMemberName(@Nullable Output<String> blockchainMemberName) {
-            this.blockchainMemberName = blockchainMemberName;
+            $.blockchainMemberName = blockchainMemberName;
             return this;
         }
-        public Builder blockchainMemberName(@Nullable String blockchainMemberName) {
-            this.blockchainMemberName = Codegen.ofNullable(blockchainMemberName);
-            return this;
+
+        public Builder blockchainMemberName(String blockchainMemberName) {
+            return blockchainMemberName(Output.of(blockchainMemberName));
         }
+
         public Builder consortium(@Nullable Output<String> consortium) {
-            this.consortium = consortium;
+            $.consortium = consortium;
             return this;
         }
-        public Builder consortium(@Nullable String consortium) {
-            this.consortium = Codegen.ofNullable(consortium);
-            return this;
+
+        public Builder consortium(String consortium) {
+            return consortium(Output.of(consortium));
         }
+
         public Builder consortiumManagementAccountPassword(@Nullable Output<String> consortiumManagementAccountPassword) {
-            this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
+            $.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
             return this;
         }
-        public Builder consortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
-            this.consortiumManagementAccountPassword = Codegen.ofNullable(consortiumManagementAccountPassword);
-            return this;
+
+        public Builder consortiumManagementAccountPassword(String consortiumManagementAccountPassword) {
+            return consortiumManagementAccountPassword(Output.of(consortiumManagementAccountPassword));
         }
+
         public Builder consortiumMemberDisplayName(@Nullable Output<String> consortiumMemberDisplayName) {
-            this.consortiumMemberDisplayName = consortiumMemberDisplayName;
+            $.consortiumMemberDisplayName = consortiumMemberDisplayName;
             return this;
         }
-        public Builder consortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
-            this.consortiumMemberDisplayName = Codegen.ofNullable(consortiumMemberDisplayName);
-            return this;
+
+        public Builder consortiumMemberDisplayName(String consortiumMemberDisplayName) {
+            return consortiumMemberDisplayName(Output.of(consortiumMemberDisplayName));
         }
+
         public Builder consortiumRole(@Nullable Output<String> consortiumRole) {
-            this.consortiumRole = consortiumRole;
+            $.consortiumRole = consortiumRole;
             return this;
         }
-        public Builder consortiumRole(@Nullable String consortiumRole) {
-            this.consortiumRole = Codegen.ofNullable(consortiumRole);
-            return this;
+
+        public Builder consortiumRole(String consortiumRole) {
+            return consortiumRole(Output.of(consortiumRole));
         }
+
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
-            this.firewallRules = firewallRules;
+            $.firewallRules = firewallRules;
             return this;
         }
-        public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
-            this.firewallRules = Codegen.ofNullable(firewallRules);
-            return this;
+
+        public Builder firewallRules(List<FirewallRuleArgs> firewallRules) {
+            return firewallRules(Output.of(firewallRules));
         }
+
         public Builder firewallRules(FirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder protocol(@Nullable Output<Either<String,BlockchainProtocol>> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable Either<String,BlockchainProtocol> protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(Either<String,BlockchainProtocol> protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder validatorNodesSku(@Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
-            this.validatorNodesSku = validatorNodesSku;
+            $.validatorNodesSku = validatorNodesSku;
             return this;
         }
-        public Builder validatorNodesSku(@Nullable BlockchainMemberNodesSkuArgs validatorNodesSku) {
-            this.validatorNodesSku = Codegen.ofNullable(validatorNodesSku);
-            return this;
-        }        public BlockchainMemberArgs build() {
-            return new BlockchainMemberArgs(blockchainMemberName, consortium, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, firewallRules, location, password, protocol, resourceGroupName, sku, tags, validatorNodesSku);
+
+        public Builder validatorNodesSku(BlockchainMemberNodesSkuArgs validatorNodesSku) {
+            return validatorNodesSku(Output.of(validatorNodesSku));
+        }
+
+        public BlockchainMemberArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

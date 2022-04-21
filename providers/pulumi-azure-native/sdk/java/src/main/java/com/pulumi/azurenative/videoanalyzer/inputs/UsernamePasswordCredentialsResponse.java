@@ -22,7 +22,7 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -34,7 +34,7 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -45,64 +45,59 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public UsernamePasswordCredentialsResponse(
-        String password,
-        String type,
-        String username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private UsernamePasswordCredentialsResponse() {}
 
-    private UsernamePasswordCredentialsResponse() {
-        this.password = null;
-        this.type = null;
-        this.username = null;
+    private UsernamePasswordCredentialsResponse(UsernamePasswordCredentialsResponse $) {
+        this.password = $.password;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsernamePasswordCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String type;
-        private String username;
+        private UsernamePasswordCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsernamePasswordCredentialsResponse();
         }
 
         public Builder(UsernamePasswordCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new UsernamePasswordCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public UsernamePasswordCredentialsResponse build() {
-            return new UsernamePasswordCredentialsResponse(password, type, username);
+        }
+
+        public UsernamePasswordCredentialsResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

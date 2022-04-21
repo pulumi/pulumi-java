@@ -24,10 +24,10 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="options")
-      private final @Nullable Object options;
+    private @Nullable Object options;
 
     public Optional<Object> options() {
-        return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="uiDefinition")
-      private final @Nullable Object uiDefinition;
+    private @Nullable Object uiDefinition;
 
     public Optional<Object> uiDefinition() {
-        return this.uiDefinition == null ? Optional.empty() : Optional.ofNullable(this.uiDefinition);
+        return Optional.ofNullable(this.uiDefinition);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ApiOAuthSettingsParameterResponse(
-        @Nullable Object options,
-        @Nullable Object uiDefinition,
-        @Nullable String value) {
-        this.options = options;
-        this.uiDefinition = uiDefinition;
-        this.value = value;
-    }
+    private ApiOAuthSettingsParameterResponse() {}
 
-    private ApiOAuthSettingsParameterResponse() {
-        this.options = null;
-        this.uiDefinition = null;
-        this.value = null;
+    private ApiOAuthSettingsParameterResponse(ApiOAuthSettingsParameterResponse $) {
+        this.options = $.options;
+        this.uiDefinition = $.uiDefinition;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiOAuthSettingsParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object options;
-        private @Nullable Object uiDefinition;
-        private @Nullable String value;
+        private ApiOAuthSettingsParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiOAuthSettingsParameterResponse();
         }
 
         public Builder(ApiOAuthSettingsParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.options = defaults.options;
-    	      this.uiDefinition = defaults.uiDefinition;
-    	      this.value = defaults.value;
+            $ = new ApiOAuthSettingsParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder options(@Nullable Object options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
+
         public Builder uiDefinition(@Nullable Object uiDefinition) {
-            this.uiDefinition = uiDefinition;
+            $.uiDefinition = uiDefinition;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ApiOAuthSettingsParameterResponse build() {
-            return new ApiOAuthSettingsParameterResponse(options, uiDefinition, value);
+        }
+
+        public ApiOAuthSettingsParameterResponse build() {
+            return $;
         }
     }
+
 }

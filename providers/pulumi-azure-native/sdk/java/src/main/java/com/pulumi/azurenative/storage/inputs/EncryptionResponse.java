@@ -28,10 +28,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionIdentity")
-      private final @Nullable EncryptionIdentityResponse encryptionIdentity;
+    private @Nullable EncryptionIdentityResponse encryptionIdentity;
 
     public Optional<EncryptionIdentityResponse> encryptionIdentity() {
-        return this.encryptionIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionIdentity);
+        return Optional.ofNullable(this.encryptionIdentity);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keySource", required=true)
-      private final String keySource;
+    private String keySource;
 
     public String keySource() {
         return this.keySource;
@@ -50,10 +50,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+    private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requireInfrastructureEncryption")
-      private final @Nullable Boolean requireInfrastructureEncryption;
+    private @Nullable Boolean requireInfrastructureEncryption;
 
     public Optional<Boolean> requireInfrastructureEncryption() {
-        return this.requireInfrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.requireInfrastructureEncryption);
+        return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
 
     /**
@@ -72,82 +72,69 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="services")
-      private final @Nullable EncryptionServicesResponse services;
+    private @Nullable EncryptionServicesResponse services;
 
     public Optional<EncryptionServicesResponse> services() {
-        return this.services == null ? Optional.empty() : Optional.ofNullable(this.services);
+        return Optional.ofNullable(this.services);
     }
 
-    public EncryptionResponse(
-        @Nullable EncryptionIdentityResponse encryptionIdentity,
-        String keySource,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @Nullable Boolean requireInfrastructureEncryption,
-        @Nullable EncryptionServicesResponse services) {
-        this.encryptionIdentity = encryptionIdentity;
-        this.keySource = Codegen.stringProp("keySource").arg(keySource).def("Microsoft.Storage").require();
-        this.keyVaultProperties = keyVaultProperties;
-        this.requireInfrastructureEncryption = requireInfrastructureEncryption;
-        this.services = services;
-    }
+    private EncryptionResponse() {}
 
-    private EncryptionResponse() {
-        this.encryptionIdentity = null;
-        this.keySource = null;
-        this.keyVaultProperties = null;
-        this.requireInfrastructureEncryption = null;
-        this.services = null;
+    private EncryptionResponse(EncryptionResponse $) {
+        this.encryptionIdentity = $.encryptionIdentity;
+        this.keySource = $.keySource;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.requireInfrastructureEncryption = $.requireInfrastructureEncryption;
+        this.services = $.services;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EncryptionIdentityResponse encryptionIdentity;
-        private String keySource;
-        private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
-        private @Nullable Boolean requireInfrastructureEncryption;
-        private @Nullable EncryptionServicesResponse services;
+        private EncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionResponse();
         }
 
         public Builder(EncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionIdentity = defaults.encryptionIdentity;
-    	      this.keySource = defaults.keySource;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.requireInfrastructureEncryption = defaults.requireInfrastructureEncryption;
-    	      this.services = defaults.services;
+            $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionIdentity(@Nullable EncryptionIdentityResponse encryptionIdentity) {
-            this.encryptionIdentity = encryptionIdentity;
+            $.encryptionIdentity = encryptionIdentity;
             return this;
         }
+
         public Builder keySource(String keySource) {
-            this.keySource = Objects.requireNonNull(keySource);
+            $.keySource = keySource;
             return this;
         }
+
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
+
         public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = requireInfrastructureEncryption;
+            $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
+
         public Builder services(@Nullable EncryptionServicesResponse services) {
-            this.services = services;
+            $.services = services;
             return this;
-        }        public EncryptionResponse build() {
-            return new EncryptionResponse(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
+        }
+
+        public EncryptionResponse build() {
+            $.keySource = Codegen.stringProp("keySource").arg($.keySource).def("Microsoft.Storage").require();
+            return $;
         }
     }
+
 }

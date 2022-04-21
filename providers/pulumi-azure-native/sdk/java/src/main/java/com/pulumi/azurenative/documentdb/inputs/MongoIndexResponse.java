@@ -24,10 +24,10 @@ public final class MongoIndexResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable MongoIndexKeysResponse key;
+    private @Nullable MongoIndexKeysResponse key;
 
     public Optional<MongoIndexKeysResponse> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MongoIndexResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable MongoIndexOptionsResponse options;
+    private @Nullable MongoIndexOptionsResponse options;
 
     public Optional<MongoIndexOptionsResponse> options() {
-        return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
+        return Optional.ofNullable(this.options);
     }
 
-    public MongoIndexResponse(
-        @Nullable MongoIndexKeysResponse key,
-        @Nullable MongoIndexOptionsResponse options) {
-        this.key = key;
-        this.options = options;
-    }
+    private MongoIndexResponse() {}
 
-    private MongoIndexResponse() {
-        this.key = null;
-        this.options = null;
+    private MongoIndexResponse(MongoIndexResponse $) {
+        this.key = $.key;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoIndexResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MongoIndexKeysResponse key;
-        private @Nullable MongoIndexOptionsResponse options;
+        private MongoIndexResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoIndexResponse();
         }
 
         public Builder(MongoIndexResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.options = defaults.options;
+            $ = new MongoIndexResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable MongoIndexKeysResponse key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder options(@Nullable MongoIndexOptionsResponse options) {
-            this.options = options;
+            $.options = options;
             return this;
-        }        public MongoIndexResponse build() {
-            return new MongoIndexResponse(key, options);
+        }
+
+        public MongoIndexResponse build() {
+            return $;
         }
     }
+
 }

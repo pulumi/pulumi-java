@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dash", required=true)
-      private final Output<Boolean> dash;
+    private Output<Boolean> dash;
 
     public Output<Boolean> dash() {
         return this.dash;
@@ -34,7 +33,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="download", required=true)
-      private final Output<Boolean> download;
+    private Output<Boolean> download;
 
     public Output<Boolean> download() {
         return this.download;
@@ -45,7 +44,7 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hls", required=true)
-      private final Output<Boolean> hls;
+    private Output<Boolean> hls;
 
     public Output<Boolean> hls() {
         return this.hls;
@@ -56,89 +55,82 @@ public final class EnabledProtocolsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="smoothStreaming", required=true)
-      private final Output<Boolean> smoothStreaming;
+    private Output<Boolean> smoothStreaming;
 
     public Output<Boolean> smoothStreaming() {
         return this.smoothStreaming;
     }
 
-    public EnabledProtocolsArgs(
-        Output<Boolean> dash,
-        Output<Boolean> download,
-        Output<Boolean> hls,
-        Output<Boolean> smoothStreaming) {
-        this.dash = Objects.requireNonNull(dash, "expected parameter 'dash' to be non-null");
-        this.download = Objects.requireNonNull(download, "expected parameter 'download' to be non-null");
-        this.hls = Objects.requireNonNull(hls, "expected parameter 'hls' to be non-null");
-        this.smoothStreaming = Objects.requireNonNull(smoothStreaming, "expected parameter 'smoothStreaming' to be non-null");
-    }
+    private EnabledProtocolsArgs() {}
 
-    private EnabledProtocolsArgs() {
-        this.dash = Codegen.empty();
-        this.download = Codegen.empty();
-        this.hls = Codegen.empty();
-        this.smoothStreaming = Codegen.empty();
+    private EnabledProtocolsArgs(EnabledProtocolsArgs $) {
+        this.dash = $.dash;
+        this.download = $.download;
+        this.hls = $.hls;
+        this.smoothStreaming = $.smoothStreaming;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnabledProtocolsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> dash;
-        private Output<Boolean> download;
-        private Output<Boolean> hls;
-        private Output<Boolean> smoothStreaming;
+        private EnabledProtocolsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnabledProtocolsArgs();
         }
 
         public Builder(EnabledProtocolsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dash = defaults.dash;
-    	      this.download = defaults.download;
-    	      this.hls = defaults.hls;
-    	      this.smoothStreaming = defaults.smoothStreaming;
+            $ = new EnabledProtocolsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dash(Output<Boolean> dash) {
-            this.dash = Objects.requireNonNull(dash);
+            $.dash = dash;
             return this;
         }
+
         public Builder dash(Boolean dash) {
-            this.dash = Output.of(Objects.requireNonNull(dash));
-            return this;
+            return dash(Output.of(dash));
         }
+
         public Builder download(Output<Boolean> download) {
-            this.download = Objects.requireNonNull(download);
+            $.download = download;
             return this;
         }
+
         public Builder download(Boolean download) {
-            this.download = Output.of(Objects.requireNonNull(download));
-            return this;
+            return download(Output.of(download));
         }
+
         public Builder hls(Output<Boolean> hls) {
-            this.hls = Objects.requireNonNull(hls);
+            $.hls = hls;
             return this;
         }
+
         public Builder hls(Boolean hls) {
-            this.hls = Output.of(Objects.requireNonNull(hls));
-            return this;
+            return hls(Output.of(hls));
         }
+
         public Builder smoothStreaming(Output<Boolean> smoothStreaming) {
-            this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
+            $.smoothStreaming = smoothStreaming;
             return this;
         }
+
         public Builder smoothStreaming(Boolean smoothStreaming) {
-            this.smoothStreaming = Output.of(Objects.requireNonNull(smoothStreaming));
-            return this;
-        }        public EnabledProtocolsArgs build() {
-            return new EnabledProtocolsArgs(dash, download, hls, smoothStreaming);
+            return smoothStreaming(Output.of(smoothStreaming));
+        }
+
+        public EnabledProtocolsArgs build() {
+            $.dash = Objects.requireNonNull($.dash, "expected parameter 'dash' to be non-null");
+            $.download = Objects.requireNonNull($.download, "expected parameter 'download' to be non-null");
+            $.hls = Objects.requireNonNull($.hls, "expected parameter 'hls' to be non-null");
+            $.smoothStreaming = Objects.requireNonNull($.smoothStreaming, "expected parameter 'smoothStreaming' to be non-null");
+            return $;
         }
     }
+
 }

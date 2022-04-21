@@ -24,10 +24,10 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="itemId")
-      private final @Nullable String itemId;
+    private @Nullable String itemId;
 
     public Optional<String> itemId() {
-        return this.itemId == null ? Optional.empty() : Optional.ofNullable(this.itemId);
+        return Optional.ofNullable(this.itemId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="protectionIntentItemType", required=true)
-      private final String protectionIntentItemType;
+    private String protectionIntentItemType;
 
     public String protectionIntentItemType() {
         return this.protectionIntentItemType;
@@ -80,10 +80,10 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable String protectionState;
+    private @Nullable String protectionState;
 
     public Optional<String> protectionState() {
-        return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -91,100 +91,81 @@ public final class AzureResourceProtectionIntentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
-    public AzureResourceProtectionIntentResponse(
-        @Nullable String backupManagementType,
-        @Nullable String friendlyName,
-        @Nullable String itemId,
-        @Nullable String policyId,
-        String protectionIntentItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId) {
-        this.backupManagementType = backupManagementType;
-        this.friendlyName = friendlyName;
-        this.itemId = itemId;
-        this.policyId = policyId;
-        this.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").arg(protectionIntentItemType).require();
-        this.protectionState = protectionState;
-        this.sourceResourceId = sourceResourceId;
-    }
+    private AzureResourceProtectionIntentResponse() {}
 
-    private AzureResourceProtectionIntentResponse() {
-        this.backupManagementType = null;
-        this.friendlyName = null;
-        this.itemId = null;
-        this.policyId = null;
-        this.protectionIntentItemType = null;
-        this.protectionState = null;
-        this.sourceResourceId = null;
+    private AzureResourceProtectionIntentResponse(AzureResourceProtectionIntentResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.friendlyName = $.friendlyName;
+        this.itemId = $.itemId;
+        this.policyId = $.policyId;
+        this.protectionIntentItemType = $.protectionIntentItemType;
+        this.protectionState = $.protectionState;
+        this.sourceResourceId = $.sourceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureResourceProtectionIntentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private @Nullable String friendlyName;
-        private @Nullable String itemId;
-        private @Nullable String policyId;
-        private String protectionIntentItemType;
-        private @Nullable String protectionState;
-        private @Nullable String sourceResourceId;
+        private AzureResourceProtectionIntentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureResourceProtectionIntentResponse();
         }
 
         public Builder(AzureResourceProtectionIntentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.itemId = defaults.itemId;
-    	      this.policyId = defaults.policyId;
-    	      this.protectionIntentItemType = defaults.protectionIntentItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.sourceResourceId = defaults.sourceResourceId;
+            $ = new AzureResourceProtectionIntentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder itemId(@Nullable String itemId) {
-            this.itemId = itemId;
+            $.itemId = itemId;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder protectionIntentItemType(String protectionIntentItemType) {
-            this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
+            $.protectionIntentItemType = protectionIntentItemType;
             return this;
         }
+
         public Builder protectionState(@Nullable String protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
+
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
-        }        public AzureResourceProtectionIntentResponse build() {
-            return new AzureResourceProtectionIntentResponse(backupManagementType, friendlyName, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
+        }
+
+        public AzureResourceProtectionIntentResponse build() {
+            $.protectionIntentItemType = Codegen.stringProp("protectionIntentItemType").arg($.protectionIntentItemType).require();
+            return $;
         }
     }
+
 }

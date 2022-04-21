@@ -29,10 +29,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="childItems")
-      private final @Nullable Object childItems;
+    private @Nullable Object childItems;
 
     public Optional<Object> childItems() {
-        return this.childItems == null ? Optional.empty() : Optional.ofNullable(this.childItems);
+        return Optional.ofNullable(this.childItems);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataset", required=true)
-      private final DatasetReferenceResponse dataset;
+    private DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse dataset() {
         return this.dataset;
@@ -51,10 +51,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="minimumSize")
-      private final @Nullable Object minimumSize;
+    private @Nullable Object minimumSize;
 
     public Optional<Object> minimumSize() {
-        return this.minimumSize == null ? Optional.empty() : Optional.ofNullable(this.minimumSize);
+        return Optional.ofNullable(this.minimumSize);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -95,10 +95,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sleep")
-      private final @Nullable Object sleep;
+    private @Nullable Object sleep;
 
     public Optional<Object> sleep() {
-        return this.sleep == null ? Optional.empty() : Optional.ofNullable(this.sleep);
+        return Optional.ofNullable(this.sleep);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Object timeout;
+    private @Nullable Object timeout;
 
     public Optional<Object> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -129,133 +129,109 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public ValidationActivityResponse(
-        @Nullable Object childItems,
-        DatasetReferenceResponse dataset,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object minimumSize,
-        String name,
-        @Nullable Object sleep,
-        @Nullable Object timeout,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.childItems = childItems;
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.minimumSize = minimumSize;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sleep = sleep;
-        this.timeout = timeout;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private ValidationActivityResponse() {}
 
-    private ValidationActivityResponse() {
-        this.childItems = null;
-        this.dataset = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.minimumSize = null;
-        this.name = null;
-        this.sleep = null;
-        this.timeout = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private ValidationActivityResponse(ValidationActivityResponse $) {
+        this.childItems = $.childItems;
+        this.dataset = $.dataset;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.minimumSize = $.minimumSize;
+        this.name = $.name;
+        this.sleep = $.sleep;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object childItems;
-        private DatasetReferenceResponse dataset;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Object minimumSize;
-        private String name;
-        private @Nullable Object sleep;
-        private @Nullable Object timeout;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private ValidationActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationActivityResponse();
         }
 
         public Builder(ValidationActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childItems = defaults.childItems;
-    	      this.dataset = defaults.dataset;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.minimumSize = defaults.minimumSize;
-    	      this.name = defaults.name;
-    	      this.sleep = defaults.sleep;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new ValidationActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder childItems(@Nullable Object childItems) {
-            this.childItems = childItems;
+            $.childItems = childItems;
             return this;
         }
+
         public Builder dataset(DatasetReferenceResponse dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder minimumSize(@Nullable Object minimumSize) {
-            this.minimumSize = minimumSize;
+            $.minimumSize = minimumSize;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder sleep(@Nullable Object sleep) {
-            this.sleep = sleep;
+            $.sleep = sleep;
             return this;
         }
+
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public ValidationActivityResponse build() {
-            return new ValidationActivityResponse(childItems, dataset, dependsOn, description, minimumSize, name, sleep, timeout, type, userProperties);
+        }
+
+        public ValidationActivityResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

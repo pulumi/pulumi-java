@@ -26,10 +26,10 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dataVersion")
-      private final @Nullable JsonFieldWithDefaultResponse dataVersion;
+    private @Nullable JsonFieldWithDefaultResponse dataVersion;
 
     public Optional<JsonFieldWithDefaultResponse> dataVersion() {
-        return this.dataVersion == null ? Optional.empty() : Optional.ofNullable(this.dataVersion);
+        return Optional.ofNullable(this.dataVersion);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="eventTime")
-      private final @Nullable JsonFieldResponse eventTime;
+    private @Nullable JsonFieldResponse eventTime;
 
     public Optional<JsonFieldResponse> eventTime() {
-        return this.eventTime == null ? Optional.empty() : Optional.ofNullable(this.eventTime);
+        return Optional.ofNullable(this.eventTime);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="eventType")
-      private final @Nullable JsonFieldWithDefaultResponse eventType;
+    private @Nullable JsonFieldWithDefaultResponse eventType;
 
     public Optional<JsonFieldWithDefaultResponse> eventType() {
-        return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
+        return Optional.ofNullable(this.eventType);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="id")
-      private final @Nullable JsonFieldResponse id;
+    private @Nullable JsonFieldResponse id;
 
     public Optional<JsonFieldResponse> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="inputSchemaMappingType", required=true)
-      private final String inputSchemaMappingType;
+    private String inputSchemaMappingType;
 
     public String inputSchemaMappingType() {
         return this.inputSchemaMappingType;
@@ -82,10 +82,10 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subject")
-      private final @Nullable JsonFieldWithDefaultResponse subject;
+    private @Nullable JsonFieldWithDefaultResponse subject;
 
     public Optional<JsonFieldWithDefaultResponse> subject() {
-        return this.subject == null ? Optional.empty() : Optional.ofNullable(this.subject);
+        return Optional.ofNullable(this.subject);
     }
 
     /**
@@ -93,100 +93,81 @@ public final class JsonInputSchemaMappingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="topic")
-      private final @Nullable JsonFieldResponse topic;
+    private @Nullable JsonFieldResponse topic;
 
     public Optional<JsonFieldResponse> topic() {
-        return this.topic == null ? Optional.empty() : Optional.ofNullable(this.topic);
+        return Optional.ofNullable(this.topic);
     }
 
-    public JsonInputSchemaMappingResponse(
-        @Nullable JsonFieldWithDefaultResponse dataVersion,
-        @Nullable JsonFieldResponse eventTime,
-        @Nullable JsonFieldWithDefaultResponse eventType,
-        @Nullable JsonFieldResponse id,
-        String inputSchemaMappingType,
-        @Nullable JsonFieldWithDefaultResponse subject,
-        @Nullable JsonFieldResponse topic) {
-        this.dataVersion = dataVersion;
-        this.eventTime = eventTime;
-        this.eventType = eventType;
-        this.id = id;
-        this.inputSchemaMappingType = Codegen.stringProp("inputSchemaMappingType").arg(inputSchemaMappingType).require();
-        this.subject = subject;
-        this.topic = topic;
-    }
+    private JsonInputSchemaMappingResponse() {}
 
-    private JsonInputSchemaMappingResponse() {
-        this.dataVersion = null;
-        this.eventTime = null;
-        this.eventType = null;
-        this.id = null;
-        this.inputSchemaMappingType = null;
-        this.subject = null;
-        this.topic = null;
+    private JsonInputSchemaMappingResponse(JsonInputSchemaMappingResponse $) {
+        this.dataVersion = $.dataVersion;
+        this.eventTime = $.eventTime;
+        this.eventType = $.eventType;
+        this.id = $.id;
+        this.inputSchemaMappingType = $.inputSchemaMappingType;
+        this.subject = $.subject;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonInputSchemaMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JsonFieldWithDefaultResponse dataVersion;
-        private @Nullable JsonFieldResponse eventTime;
-        private @Nullable JsonFieldWithDefaultResponse eventType;
-        private @Nullable JsonFieldResponse id;
-        private String inputSchemaMappingType;
-        private @Nullable JsonFieldWithDefaultResponse subject;
-        private @Nullable JsonFieldResponse topic;
+        private JsonInputSchemaMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonInputSchemaMappingResponse();
         }
 
         public Builder(JsonInputSchemaMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataVersion = defaults.dataVersion;
-    	      this.eventTime = defaults.eventTime;
-    	      this.eventType = defaults.eventType;
-    	      this.id = defaults.id;
-    	      this.inputSchemaMappingType = defaults.inputSchemaMappingType;
-    	      this.subject = defaults.subject;
-    	      this.topic = defaults.topic;
+            $ = new JsonInputSchemaMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataVersion(@Nullable JsonFieldWithDefaultResponse dataVersion) {
-            this.dataVersion = dataVersion;
+            $.dataVersion = dataVersion;
             return this;
         }
+
         public Builder eventTime(@Nullable JsonFieldResponse eventTime) {
-            this.eventTime = eventTime;
+            $.eventTime = eventTime;
             return this;
         }
+
         public Builder eventType(@Nullable JsonFieldWithDefaultResponse eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
+
         public Builder id(@Nullable JsonFieldResponse id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder inputSchemaMappingType(String inputSchemaMappingType) {
-            this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
+            $.inputSchemaMappingType = inputSchemaMappingType;
             return this;
         }
+
         public Builder subject(@Nullable JsonFieldWithDefaultResponse subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
+
         public Builder topic(@Nullable JsonFieldResponse topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
-        }        public JsonInputSchemaMappingResponse build() {
-            return new JsonInputSchemaMappingResponse(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
+        }
+
+        public JsonInputSchemaMappingResponse build() {
+            $.inputSchemaMappingType = Codegen.stringProp("inputSchemaMappingType").arg($.inputSchemaMappingType).require();
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class B2BPartnerContentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="businessIdentities")
-      private final @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
+    private @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
 
-    public Output<List<BusinessIdentityArgs>> businessIdentities() {
-        return this.businessIdentities == null ? Codegen.empty() : this.businessIdentities;
+    public Optional<Output<List<BusinessIdentityArgs>>> businessIdentities() {
+        return Optional.ofNullable(this.businessIdentities);
     }
 
-    public B2BPartnerContentArgs(@Nullable Output<List<BusinessIdentityArgs>> businessIdentities) {
-        this.businessIdentities = businessIdentities;
-    }
+    private B2BPartnerContentArgs() {}
 
-    private B2BPartnerContentArgs() {
-        this.businessIdentities = Codegen.empty();
+    private B2BPartnerContentArgs(B2BPartnerContentArgs $) {
+        this.businessIdentities = $.businessIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(B2BPartnerContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BusinessIdentityArgs>> businessIdentities;
+        private B2BPartnerContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new B2BPartnerContentArgs();
         }
 
         public Builder(B2BPartnerContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.businessIdentities = defaults.businessIdentities;
+            $ = new B2BPartnerContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder businessIdentities(@Nullable Output<List<BusinessIdentityArgs>> businessIdentities) {
-            this.businessIdentities = businessIdentities;
+            $.businessIdentities = businessIdentities;
             return this;
         }
-        public Builder businessIdentities(@Nullable List<BusinessIdentityArgs> businessIdentities) {
-            this.businessIdentities = Codegen.ofNullable(businessIdentities);
-            return this;
+
+        public Builder businessIdentities(List<BusinessIdentityArgs> businessIdentities) {
+            return businessIdentities(Output.of(businessIdentities));
         }
+
         public Builder businessIdentities(BusinessIdentityArgs... businessIdentities) {
             return businessIdentities(List.of(businessIdentities));
-        }        public B2BPartnerContentArgs build() {
-            return new B2BPartnerContentArgs(businessIdentities);
+        }
+
+        public B2BPartnerContentArgs build() {
+            return $;
         }
     }
+
 }

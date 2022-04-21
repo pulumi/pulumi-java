@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class LiveEventOutputTranscriptionTrackArgs extends com.pulumi.reso
      * 
      */
     @Import(name="trackName", required=true)
-      private final Output<String> trackName;
+    private Output<String> trackName;
 
     public Output<String> trackName() {
         return this.trackName;
     }
 
-    public LiveEventOutputTranscriptionTrackArgs(Output<String> trackName) {
-        this.trackName = Objects.requireNonNull(trackName, "expected parameter 'trackName' to be non-null");
-    }
+    private LiveEventOutputTranscriptionTrackArgs() {}
 
-    private LiveEventOutputTranscriptionTrackArgs() {
-        this.trackName = Codegen.empty();
+    private LiveEventOutputTranscriptionTrackArgs(LiveEventOutputTranscriptionTrackArgs $) {
+        this.trackName = $.trackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventOutputTranscriptionTrackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> trackName;
+        private LiveEventOutputTranscriptionTrackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventOutputTranscriptionTrackArgs();
         }
 
         public Builder(LiveEventOutputTranscriptionTrackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trackName = defaults.trackName;
+            $ = new LiveEventOutputTranscriptionTrackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder trackName(Output<String> trackName) {
-            this.trackName = Objects.requireNonNull(trackName);
+            $.trackName = trackName;
             return this;
         }
+
         public Builder trackName(String trackName) {
-            this.trackName = Output.of(Objects.requireNonNull(trackName));
-            return this;
-        }        public LiveEventOutputTranscriptionTrackArgs build() {
-            return new LiveEventOutputTranscriptionTrackArgs(trackName);
+            return trackName(Output.of(trackName));
+        }
+
+        public LiveEventOutputTranscriptionTrackArgs build() {
+            $.trackName = Objects.requireNonNull($.trackName, "expected parameter 'trackName' to be non-null");
+            return $;
         }
     }
+
 }

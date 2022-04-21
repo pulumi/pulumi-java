@@ -22,7 +22,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="bsl", required=true)
-      private final String bsl;
+    private String bsl;
 
     public String bsl() {
         return this.bsl;
@@ -33,7 +33,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="createdAt", required=true)
-      private final String createdAt;
+    private String createdAt;
 
     public String createdAt() {
         return this.createdAt;
@@ -44,7 +44,7 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -55,73 +55,66 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vm", required=true)
-      private final VMResponse vm;
+    private VMResponse vm;
 
     public VMResponse vm() {
         return this.vm;
     }
 
-    public BastionShareableLinkResponse(
-        String bsl,
-        String createdAt,
-        String message,
-        VMResponse vm) {
-        this.bsl = Objects.requireNonNull(bsl, "expected parameter 'bsl' to be non-null");
-        this.createdAt = Objects.requireNonNull(createdAt, "expected parameter 'createdAt' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.vm = Objects.requireNonNull(vm, "expected parameter 'vm' to be non-null");
-    }
+    private BastionShareableLinkResponse() {}
 
-    private BastionShareableLinkResponse() {
-        this.bsl = null;
-        this.createdAt = null;
-        this.message = null;
-        this.vm = null;
+    private BastionShareableLinkResponse(BastionShareableLinkResponse $) {
+        this.bsl = $.bsl;
+        this.createdAt = $.createdAt;
+        this.message = $.message;
+        this.vm = $.vm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BastionShareableLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bsl;
-        private String createdAt;
-        private String message;
-        private VMResponse vm;
+        private BastionShareableLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BastionShareableLinkResponse();
         }
 
         public Builder(BastionShareableLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bsl = defaults.bsl;
-    	      this.createdAt = defaults.createdAt;
-    	      this.message = defaults.message;
-    	      this.vm = defaults.vm;
+            $ = new BastionShareableLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bsl(String bsl) {
-            this.bsl = Objects.requireNonNull(bsl);
+            $.bsl = bsl;
             return this;
         }
+
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder vm(VMResponse vm) {
-            this.vm = Objects.requireNonNull(vm);
+            $.vm = vm;
             return this;
-        }        public BastionShareableLinkResponse build() {
-            return new BastionShareableLinkResponse(bsl, createdAt, message, vm);
+        }
+
+        public BastionShareableLinkResponse build() {
+            $.bsl = Objects.requireNonNull($.bsl, "expected parameter 'bsl' to be non-null");
+            $.createdAt = Objects.requireNonNull($.createdAt, "expected parameter 'createdAt' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.vm = Objects.requireNonNull($.vm, "expected parameter 'vm' to be non-null");
+            return $;
         }
     }
+
 }

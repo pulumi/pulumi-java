@@ -25,10 +25,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
 
     public Optional<String> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="designDefaultValue")
-      private final @Nullable String designDefaultValue;
+    private @Nullable String designDefaultValue;
 
     public Optional<String> designDefaultValue() {
-        return this.designDefaultValue == null ? Optional.empty() : Optional.ofNullable(this.designDefaultValue);
+        return Optional.ofNullable(this.designDefaultValue);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable Double id;
+    private @Nullable Double id;
 
     public Optional<Double> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="required")
-      private final @Nullable Boolean required;
+    private @Nullable Boolean required;
 
     public Optional<Boolean> required() {
-        return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
+        return Optional.ofNullable(this.required);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sensitive")
-      private final @Nullable Boolean sensitive;
+    private @Nullable Boolean sensitive;
 
     public Optional<Boolean> sensitive() {
-        return this.sensitive == null ? Optional.empty() : Optional.ofNullable(this.sensitive);
+        return Optional.ofNullable(this.sensitive);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sensitiveDefaultValue")
-      private final @Nullable String sensitiveDefaultValue;
+    private @Nullable String sensitiveDefaultValue;
 
     public Optional<String> sensitiveDefaultValue() {
-        return this.sensitiveDefaultValue == null ? Optional.empty() : Optional.ofNullable(this.sensitiveDefaultValue);
+        return Optional.ofNullable(this.sensitiveDefaultValue);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="valueSet")
-      private final @Nullable Boolean valueSet;
+    private @Nullable Boolean valueSet;
 
     public Optional<Boolean> valueSet() {
-        return this.valueSet == null ? Optional.empty() : Optional.ofNullable(this.valueSet);
+        return Optional.ofNullable(this.valueSet);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="valueType")
-      private final @Nullable String valueType;
+    private @Nullable String valueType;
 
     public Optional<String> valueType() {
-        return this.valueType == null ? Optional.empty() : Optional.ofNullable(this.valueType);
+        return Optional.ofNullable(this.valueType);
     }
 
     /**
@@ -146,145 +146,110 @@ public final class SsisParameterResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="variable")
-      private final @Nullable String variable;
+    private @Nullable String variable;
 
     public Optional<String> variable() {
-        return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
+        return Optional.ofNullable(this.variable);
     }
 
-    public SsisParameterResponse(
-        @Nullable String dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable String designDefaultValue,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable Boolean required,
-        @Nullable Boolean sensitive,
-        @Nullable String sensitiveDefaultValue,
-        @Nullable Boolean valueSet,
-        @Nullable String valueType,
-        @Nullable String variable) {
-        this.dataType = dataType;
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.designDefaultValue = designDefaultValue;
-        this.id = id;
-        this.name = name;
-        this.required = required;
-        this.sensitive = sensitive;
-        this.sensitiveDefaultValue = sensitiveDefaultValue;
-        this.valueSet = valueSet;
-        this.valueType = valueType;
-        this.variable = variable;
-    }
+    private SsisParameterResponse() {}
 
-    private SsisParameterResponse() {
-        this.dataType = null;
-        this.defaultValue = null;
-        this.description = null;
-        this.designDefaultValue = null;
-        this.id = null;
-        this.name = null;
-        this.required = null;
-        this.sensitive = null;
-        this.sensitiveDefaultValue = null;
-        this.valueSet = null;
-        this.valueType = null;
-        this.variable = null;
+    private SsisParameterResponse(SsisParameterResponse $) {
+        this.dataType = $.dataType;
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.designDefaultValue = $.designDefaultValue;
+        this.id = $.id;
+        this.name = $.name;
+        this.required = $.required;
+        this.sensitive = $.sensitive;
+        this.sensitiveDefaultValue = $.sensitiveDefaultValue;
+        this.valueSet = $.valueSet;
+        this.valueType = $.valueType;
+        this.variable = $.variable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SsisParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataType;
-        private @Nullable String defaultValue;
-        private @Nullable String description;
-        private @Nullable String designDefaultValue;
-        private @Nullable Double id;
-        private @Nullable String name;
-        private @Nullable Boolean required;
-        private @Nullable Boolean sensitive;
-        private @Nullable String sensitiveDefaultValue;
-        private @Nullable Boolean valueSet;
-        private @Nullable String valueType;
-        private @Nullable String variable;
+        private SsisParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SsisParameterResponse();
         }
 
         public Builder(SsisParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.designDefaultValue = defaults.designDefaultValue;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.required = defaults.required;
-    	      this.sensitive = defaults.sensitive;
-    	      this.sensitiveDefaultValue = defaults.sensitiveDefaultValue;
-    	      this.valueSet = defaults.valueSet;
-    	      this.valueType = defaults.valueType;
-    	      this.variable = defaults.variable;
+            $ = new SsisParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder designDefaultValue(@Nullable String designDefaultValue) {
-            this.designDefaultValue = designDefaultValue;
+            $.designDefaultValue = designDefaultValue;
             return this;
         }
+
         public Builder id(@Nullable Double id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder required(@Nullable Boolean required) {
-            this.required = required;
+            $.required = required;
             return this;
         }
+
         public Builder sensitive(@Nullable Boolean sensitive) {
-            this.sensitive = sensitive;
+            $.sensitive = sensitive;
             return this;
         }
+
         public Builder sensitiveDefaultValue(@Nullable String sensitiveDefaultValue) {
-            this.sensitiveDefaultValue = sensitiveDefaultValue;
+            $.sensitiveDefaultValue = sensitiveDefaultValue;
             return this;
         }
+
         public Builder valueSet(@Nullable Boolean valueSet) {
-            this.valueSet = valueSet;
+            $.valueSet = valueSet;
             return this;
         }
+
         public Builder valueType(@Nullable String valueType) {
-            this.valueType = valueType;
+            $.valueType = valueType;
             return this;
         }
+
         public Builder variable(@Nullable String variable) {
-            this.variable = variable;
+            $.variable = variable;
             return this;
-        }        public SsisParameterResponse build() {
-            return new SsisParameterResponse(dataType, defaultValue, description, designDefaultValue, id, name, required, sensitive, sensitiveDefaultValue, valueSet, valueType, variable);
+        }
+
+        public SsisParameterResponse build() {
+            return $;
         }
     }
+
 }

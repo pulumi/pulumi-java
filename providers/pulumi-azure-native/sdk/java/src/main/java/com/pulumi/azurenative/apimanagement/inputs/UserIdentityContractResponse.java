@@ -23,10 +23,10 @@ public final class UserIdentityContractResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class UserIdentityContractResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="provider")
-      private final @Nullable String provider;
+    private @Nullable String provider;
 
     public Optional<String> provider() {
-        return this.provider == null ? Optional.empty() : Optional.ofNullable(this.provider);
+        return Optional.ofNullable(this.provider);
     }
 
-    public UserIdentityContractResponse(
-        @Nullable String id,
-        @Nullable String provider) {
-        this.id = id;
-        this.provider = provider;
-    }
+    private UserIdentityContractResponse() {}
 
-    private UserIdentityContractResponse() {
-        this.id = null;
-        this.provider = null;
+    private UserIdentityContractResponse(UserIdentityContractResponse $) {
+        this.id = $.id;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String provider;
+        private UserIdentityContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityContractResponse();
         }
 
         public Builder(UserIdentityContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.provider = defaults.provider;
+            $ = new UserIdentityContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder provider(@Nullable String provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
-        }        public UserIdentityContractResponse build() {
-            return new UserIdentityContractResponse(id, provider);
+        }
+
+        public UserIdentityContractResponse build() {
+            return $;
         }
     }
+
 }

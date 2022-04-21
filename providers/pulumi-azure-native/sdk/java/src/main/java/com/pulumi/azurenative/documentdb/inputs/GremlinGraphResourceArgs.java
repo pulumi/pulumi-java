@@ -9,10 +9,10 @@ import com.pulumi.azurenative.documentdb.inputs.IndexingPolicyArgs;
 import com.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GremlinGraphResourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="conflictResolutionPolicy")
-      private final @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
+    private @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
 
-    public Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy() {
-        return this.conflictResolutionPolicy == null ? Codegen.empty() : this.conflictResolutionPolicy;
+    public Optional<Output<ConflictResolutionPolicyArgs>> conflictResolutionPolicy() {
+        return Optional.ofNullable(this.conflictResolutionPolicy);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GremlinGraphResourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class GremlinGraphResourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -62,10 +62,10 @@ public final class GremlinGraphResourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="indexingPolicy")
-      private final @Nullable Output<IndexingPolicyArgs> indexingPolicy;
+    private @Nullable Output<IndexingPolicyArgs> indexingPolicy;
 
-    public Output<IndexingPolicyArgs> indexingPolicy() {
-        return this.indexingPolicy == null ? Codegen.empty() : this.indexingPolicy;
+    public Optional<Output<IndexingPolicyArgs>> indexingPolicy() {
+        return Optional.ofNullable(this.indexingPolicy);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GremlinGraphResourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
+    private @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
 
-    public Output<ContainerPartitionKeyArgs> partitionKey() {
-        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
+    public Optional<Output<ContainerPartitionKeyArgs>> partitionKey() {
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -84,115 +84,99 @@ public final class GremlinGraphResourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="uniqueKeyPolicy")
-      private final @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;
+    private @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;
 
-    public Output<UniqueKeyPolicyArgs> uniqueKeyPolicy() {
-        return this.uniqueKeyPolicy == null ? Codegen.empty() : this.uniqueKeyPolicy;
+    public Optional<Output<UniqueKeyPolicyArgs>> uniqueKeyPolicy() {
+        return Optional.ofNullable(this.uniqueKeyPolicy);
     }
 
-    public GremlinGraphResourceArgs(
-        @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy,
-        @Nullable Output<Integer> defaultTtl,
-        Output<String> id,
-        @Nullable Output<IndexingPolicyArgs> indexingPolicy,
-        @Nullable Output<ContainerPartitionKeyArgs> partitionKey,
-        @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy) {
-        this.conflictResolutionPolicy = conflictResolutionPolicy;
-        this.defaultTtl = defaultTtl;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.indexingPolicy = indexingPolicy;
-        this.partitionKey = partitionKey;
-        this.uniqueKeyPolicy = uniqueKeyPolicy;
-    }
+    private GremlinGraphResourceArgs() {}
 
-    private GremlinGraphResourceArgs() {
-        this.conflictResolutionPolicy = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.id = Codegen.empty();
-        this.indexingPolicy = Codegen.empty();
-        this.partitionKey = Codegen.empty();
-        this.uniqueKeyPolicy = Codegen.empty();
+    private GremlinGraphResourceArgs(GremlinGraphResourceArgs $) {
+        this.conflictResolutionPolicy = $.conflictResolutionPolicy;
+        this.defaultTtl = $.defaultTtl;
+        this.id = $.id;
+        this.indexingPolicy = $.indexingPolicy;
+        this.partitionKey = $.partitionKey;
+        this.uniqueKeyPolicy = $.uniqueKeyPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GremlinGraphResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
-        private @Nullable Output<Integer> defaultTtl;
-        private Output<String> id;
-        private @Nullable Output<IndexingPolicyArgs> indexingPolicy;
-        private @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
-        private @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;
+        private GremlinGraphResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GremlinGraphResourceArgs();
         }
 
         public Builder(GremlinGraphResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conflictResolutionPolicy = defaults.conflictResolutionPolicy;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.id = defaults.id;
-    	      this.indexingPolicy = defaults.indexingPolicy;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.uniqueKeyPolicy = defaults.uniqueKeyPolicy;
+            $ = new GremlinGraphResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conflictResolutionPolicy(@Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy) {
-            this.conflictResolutionPolicy = conflictResolutionPolicy;
+            $.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
-        public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyArgs conflictResolutionPolicy) {
-            this.conflictResolutionPolicy = Codegen.ofNullable(conflictResolutionPolicy);
-            return this;
+
+        public Builder conflictResolutionPolicy(ConflictResolutionPolicyArgs conflictResolutionPolicy) {
+            return conflictResolutionPolicy(Output.of(conflictResolutionPolicy));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder indexingPolicy(@Nullable Output<IndexingPolicyArgs> indexingPolicy) {
-            this.indexingPolicy = indexingPolicy;
+            $.indexingPolicy = indexingPolicy;
             return this;
         }
-        public Builder indexingPolicy(@Nullable IndexingPolicyArgs indexingPolicy) {
-            this.indexingPolicy = Codegen.ofNullable(indexingPolicy);
-            return this;
+
+        public Builder indexingPolicy(IndexingPolicyArgs indexingPolicy) {
+            return indexingPolicy(Output.of(indexingPolicy));
         }
+
         public Builder partitionKey(@Nullable Output<ContainerPartitionKeyArgs> partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
-        public Builder partitionKey(@Nullable ContainerPartitionKeyArgs partitionKey) {
-            this.partitionKey = Codegen.ofNullable(partitionKey);
-            return this;
+
+        public Builder partitionKey(ContainerPartitionKeyArgs partitionKey) {
+            return partitionKey(Output.of(partitionKey));
         }
+
         public Builder uniqueKeyPolicy(@Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy) {
-            this.uniqueKeyPolicy = uniqueKeyPolicy;
+            $.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }
-        public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyArgs uniqueKeyPolicy) {
-            this.uniqueKeyPolicy = Codegen.ofNullable(uniqueKeyPolicy);
-            return this;
-        }        public GremlinGraphResourceArgs build() {
-            return new GremlinGraphResourceArgs(conflictResolutionPolicy, defaultTtl, id, indexingPolicy, partitionKey, uniqueKeyPolicy);
+
+        public Builder uniqueKeyPolicy(UniqueKeyPolicyArgs uniqueKeyPolicy) {
+            return uniqueKeyPolicy(Output.of(uniqueKeyPolicy));
+        }
+
+        public GremlinGraphResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

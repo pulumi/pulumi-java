@@ -5,11 +5,11 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="blobTypes", required=true)
-      private final Output<List<String>> blobTypes;
+    private Output<List<String>> blobTypes;
 
     public Output<List<String>> blobTypes() {
         return this.blobTypes;
@@ -37,10 +37,10 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="includeBlobVersions")
-      private final @Nullable Output<Boolean> includeBlobVersions;
+    private @Nullable Output<Boolean> includeBlobVersions;
 
-    public Output<Boolean> includeBlobVersions() {
-        return this.includeBlobVersions == null ? Codegen.empty() : this.includeBlobVersions;
+    public Optional<Output<Boolean>> includeBlobVersions() {
+        return Optional.ofNullable(this.includeBlobVersions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="includeSnapshots")
-      private final @Nullable Output<Boolean> includeSnapshots;
+    private @Nullable Output<Boolean> includeSnapshots;
 
-    public Output<Boolean> includeSnapshots() {
-        return this.includeSnapshots == null ? Codegen.empty() : this.includeSnapshots;
+    public Optional<Output<Boolean>> includeSnapshots() {
+        return Optional.ofNullable(this.includeSnapshots);
     }
 
     /**
@@ -59,95 +59,87 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable Output<List<String>> prefixMatch;
+    private @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> prefixMatch() {
-        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
+    public Optional<Output<List<String>>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
-    public BlobInventoryPolicyFilterArgs(
-        Output<List<String>> blobTypes,
-        @Nullable Output<Boolean> includeBlobVersions,
-        @Nullable Output<Boolean> includeSnapshots,
-        @Nullable Output<List<String>> prefixMatch) {
-        this.blobTypes = Objects.requireNonNull(blobTypes, "expected parameter 'blobTypes' to be non-null");
-        this.includeBlobVersions = includeBlobVersions;
-        this.includeSnapshots = includeSnapshots;
-        this.prefixMatch = prefixMatch;
-    }
+    private BlobInventoryPolicyFilterArgs() {}
 
-    private BlobInventoryPolicyFilterArgs() {
-        this.blobTypes = Codegen.empty();
-        this.includeBlobVersions = Codegen.empty();
-        this.includeSnapshots = Codegen.empty();
-        this.prefixMatch = Codegen.empty();
+    private BlobInventoryPolicyFilterArgs(BlobInventoryPolicyFilterArgs $) {
+        this.blobTypes = $.blobTypes;
+        this.includeBlobVersions = $.includeBlobVersions;
+        this.includeSnapshots = $.includeSnapshots;
+        this.prefixMatch = $.prefixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicyFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> blobTypes;
-        private @Nullable Output<Boolean> includeBlobVersions;
-        private @Nullable Output<Boolean> includeSnapshots;
-        private @Nullable Output<List<String>> prefixMatch;
+        private BlobInventoryPolicyFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicyFilterArgs();
         }
 
         public Builder(BlobInventoryPolicyFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobTypes = defaults.blobTypes;
-    	      this.includeBlobVersions = defaults.includeBlobVersions;
-    	      this.includeSnapshots = defaults.includeSnapshots;
-    	      this.prefixMatch = defaults.prefixMatch;
+            $ = new BlobInventoryPolicyFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobTypes(Output<List<String>> blobTypes) {
-            this.blobTypes = Objects.requireNonNull(blobTypes);
+            $.blobTypes = blobTypes;
             return this;
         }
+
         public Builder blobTypes(List<String> blobTypes) {
-            this.blobTypes = Output.of(Objects.requireNonNull(blobTypes));
-            return this;
+            return blobTypes(Output.of(blobTypes));
         }
+
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
+
         public Builder includeBlobVersions(@Nullable Output<Boolean> includeBlobVersions) {
-            this.includeBlobVersions = includeBlobVersions;
+            $.includeBlobVersions = includeBlobVersions;
             return this;
         }
-        public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
-            this.includeBlobVersions = Codegen.ofNullable(includeBlobVersions);
-            return this;
+
+        public Builder includeBlobVersions(Boolean includeBlobVersions) {
+            return includeBlobVersions(Output.of(includeBlobVersions));
         }
+
         public Builder includeSnapshots(@Nullable Output<Boolean> includeSnapshots) {
-            this.includeSnapshots = includeSnapshots;
+            $.includeSnapshots = includeSnapshots;
             return this;
         }
-        public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
-            this.includeSnapshots = Codegen.ofNullable(includeSnapshots);
-            return this;
+
+        public Builder includeSnapshots(Boolean includeSnapshots) {
+            return includeSnapshots(Output.of(includeSnapshots));
         }
+
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
-        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Codegen.ofNullable(prefixMatch);
-            return this;
+
+        public Builder prefixMatch(List<String> prefixMatch) {
+            return prefixMatch(Output.of(prefixMatch));
         }
+
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
-        }        public BlobInventoryPolicyFilterArgs build() {
-            return new BlobInventoryPolicyFilterArgs(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
+        }
+
+        public BlobInventoryPolicyFilterArgs build() {
+            $.blobTypes = Objects.requireNonNull($.blobTypes, "expected parameter 'blobTypes' to be non-null");
+            return $;
         }
     }
+
 }

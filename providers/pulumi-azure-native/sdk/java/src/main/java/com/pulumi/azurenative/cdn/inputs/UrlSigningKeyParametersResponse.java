@@ -25,7 +25,7 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
@@ -36,7 +36,7 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="secretSource", required=true)
-      private final ResourceReferenceResponse secretSource;
+    private ResourceReferenceResponse secretSource;
 
     public ResourceReferenceResponse secretSource() {
         return this.secretSource;
@@ -47,10 +47,10 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable String secretVersion;
+    private @Nullable String secretVersion;
 
     public Optional<String> secretVersion() {
-        return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -59,73 +59,65 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public UrlSigningKeyParametersResponse(
-        String keyId,
-        ResourceReferenceResponse secretSource,
-        @Nullable String secretVersion,
-        String type) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
-        this.secretVersion = secretVersion;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private UrlSigningKeyParametersResponse() {}
 
-    private UrlSigningKeyParametersResponse() {
-        this.keyId = null;
-        this.secretSource = null;
-        this.secretVersion = null;
-        this.type = null;
+    private UrlSigningKeyParametersResponse(UrlSigningKeyParametersResponse $) {
+        this.keyId = $.keyId;
+        this.secretSource = $.secretSource;
+        this.secretVersion = $.secretVersion;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningKeyParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private ResourceReferenceResponse secretSource;
-        private @Nullable String secretVersion;
-        private String type;
+        private UrlSigningKeyParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningKeyParametersResponse();
         }
 
         public Builder(UrlSigningKeyParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.secretSource = defaults.secretSource;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.type = defaults.type;
+            $ = new UrlSigningKeyParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder secretSource(ResourceReferenceResponse secretSource) {
-            this.secretSource = Objects.requireNonNull(secretSource);
+            $.secretSource = secretSource;
             return this;
         }
+
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public UrlSigningKeyParametersResponse build() {
-            return new UrlSigningKeyParametersResponse(keyId, secretSource, secretVersion, type);
+        }
+
+        public UrlSigningKeyParametersResponse build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.secretSource = Objects.requireNonNull($.secretSource, "expected parameter 'secretSource' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.azurenative.solutions.inputs.PlanArgs;
 import com.pulumi.azurenative.solutions.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationDefinitionId")
-      private final @Nullable Output<String> applicationDefinitionId;
+    private @Nullable Output<String> applicationDefinitionId;
 
-    public Output<String> applicationDefinitionId() {
-        return this.applicationDefinitionId == null ? Codegen.empty() : this.applicationDefinitionId;
+    public Optional<Output<String>> applicationDefinitionId() {
+        return Optional.ofNullable(this.applicationDefinitionId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jitAccessPolicy")
-      private final @Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
+    private @Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
 
-    public Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy() {
-        return this.jitAccessPolicy == null ? Codegen.empty() : this.jitAccessPolicy;
+    public Optional<Output<ApplicationJitAccessPolicyArgs>> jitAccessPolicy() {
+        return Optional.ofNullable(this.jitAccessPolicy);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -81,10 +81,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedBy")
-      private final @Nullable Output<String> managedBy;
+    private @Nullable Output<String> managedBy;
 
-    public Output<String> managedBy() {
-        return this.managedBy == null ? Codegen.empty() : this.managedBy;
+    public Optional<Output<String>> managedBy() {
+        return Optional.ofNullable(this.managedBy);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedResourceGroupId")
-      private final @Nullable Output<String> managedResourceGroupId;
+    private @Nullable Output<String> managedResourceGroupId;
 
-    public Output<String> managedResourceGroupId() {
-        return this.managedResourceGroupId == null ? Codegen.empty() : this.managedResourceGroupId;
+    public Optional<Output<String>> managedResourceGroupId() {
+        return Optional.ofNullable(this.managedResourceGroupId);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Object> parameters;
+    private @Nullable Output<Object> parameters;
 
-    public Output<Object> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="plan")
-      private final @Nullable Output<PlanArgs> plan;
+    private @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<PlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -147,10 +147,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -158,206 +158,170 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplicationArgs(
-        @Nullable Output<String> applicationDefinitionId,
-        @Nullable Output<String> applicationName,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy,
-        Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedBy,
-        @Nullable Output<String> managedResourceGroupId,
-        @Nullable Output<Object> parameters,
-        @Nullable Output<PlanArgs> plan,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationDefinitionId = applicationDefinitionId;
-        this.applicationName = applicationName;
-        this.identity = identity;
-        this.jitAccessPolicy = jitAccessPolicy;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = location;
-        this.managedBy = managedBy;
-        this.managedResourceGroupId = managedResourceGroupId;
-        this.parameters = parameters;
-        this.plan = plan;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.applicationDefinitionId = Codegen.empty();
-        this.applicationName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.jitAccessPolicy = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedBy = Codegen.empty();
-        this.managedResourceGroupId = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.applicationDefinitionId = $.applicationDefinitionId;
+        this.applicationName = $.applicationName;
+        this.identity = $.identity;
+        this.jitAccessPolicy = $.jitAccessPolicy;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.managedBy = $.managedBy;
+        this.managedResourceGroupId = $.managedResourceGroupId;
+        this.parameters = $.parameters;
+        this.plan = $.plan;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationDefinitionId;
-        private @Nullable Output<String> applicationName;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
-        private Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedBy;
-        private @Nullable Output<String> managedResourceGroupId;
-        private @Nullable Output<Object> parameters;
-        private @Nullable Output<PlanArgs> plan;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationDefinitionId = defaults.applicationDefinitionId;
-    	      this.applicationName = defaults.applicationName;
-    	      this.identity = defaults.identity;
-    	      this.jitAccessPolicy = defaults.jitAccessPolicy;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.managedBy = defaults.managedBy;
-    	      this.managedResourceGroupId = defaults.managedResourceGroupId;
-    	      this.parameters = defaults.parameters;
-    	      this.plan = defaults.plan;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationDefinitionId(@Nullable Output<String> applicationDefinitionId) {
-            this.applicationDefinitionId = applicationDefinitionId;
+            $.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
-        public Builder applicationDefinitionId(@Nullable String applicationDefinitionId) {
-            this.applicationDefinitionId = Codegen.ofNullable(applicationDefinitionId);
-            return this;
+
+        public Builder applicationDefinitionId(String applicationDefinitionId) {
+            return applicationDefinitionId(Output.of(applicationDefinitionId));
         }
+
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder jitAccessPolicy(@Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy) {
-            this.jitAccessPolicy = jitAccessPolicy;
+            $.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
-        public Builder jitAccessPolicy(@Nullable ApplicationJitAccessPolicyArgs jitAccessPolicy) {
-            this.jitAccessPolicy = Codegen.ofNullable(jitAccessPolicy);
-            return this;
+
+        public Builder jitAccessPolicy(ApplicationJitAccessPolicyArgs jitAccessPolicy) {
+            return jitAccessPolicy(Output.of(jitAccessPolicy));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedBy(@Nullable Output<String> managedBy) {
-            this.managedBy = managedBy;
+            $.managedBy = managedBy;
             return this;
         }
-        public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Codegen.ofNullable(managedBy);
-            return this;
+
+        public Builder managedBy(String managedBy) {
+            return managedBy(Output.of(managedBy));
         }
+
         public Builder managedResourceGroupId(@Nullable Output<String> managedResourceGroupId) {
-            this.managedResourceGroupId = managedResourceGroupId;
+            $.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
-        public Builder managedResourceGroupId(@Nullable String managedResourceGroupId) {
-            this.managedResourceGroupId = Codegen.ofNullable(managedResourceGroupId);
-            return this;
+
+        public Builder managedResourceGroupId(String managedResourceGroupId) {
+            return managedResourceGroupId(Output.of(managedResourceGroupId));
         }
+
         public Builder parameters(@Nullable Output<Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Object parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder plan(@Nullable Output<PlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(PlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(applicationDefinitionId, applicationName, identity, jitAccessPolicy, kind, location, managedBy, managedResourceGroupId, parameters, plan, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ApplicationArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

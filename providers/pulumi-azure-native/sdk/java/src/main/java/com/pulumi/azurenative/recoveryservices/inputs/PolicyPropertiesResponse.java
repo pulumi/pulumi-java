@@ -35,10 +35,10 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -46,55 +46,50 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="providerSpecificDetails")
-      private final @Nullable Object providerSpecificDetails;
+    private @Nullable Object providerSpecificDetails;
 
-    public Object providerSpecificDetails() {
-        return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
+    public Optional<Object> providerSpecificDetails() {
+        return Optional.ofNullable(this.providerSpecificDetails);
     }
 
-    public PolicyPropertiesResponse(
-        @Nullable String friendlyName,
-        @Nullable Object providerSpecificDetails) {
-        this.friendlyName = friendlyName;
-        this.providerSpecificDetails = providerSpecificDetails;
-    }
+    private PolicyPropertiesResponse() {}
 
-    private PolicyPropertiesResponse() {
-        this.friendlyName = null;
-        this.providerSpecificDetails = null;
+    private PolicyPropertiesResponse(PolicyPropertiesResponse $) {
+        this.friendlyName = $.friendlyName;
+        this.providerSpecificDetails = $.providerSpecificDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String friendlyName;
-        private @Nullable Object providerSpecificDetails;
+        private PolicyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyPropertiesResponse();
         }
 
         public Builder(PolicyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.providerSpecificDetails = defaults.providerSpecificDetails;
+            $ = new PolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
-            this.providerSpecificDetails = providerSpecificDetails;
+            $.providerSpecificDetails = providerSpecificDetails;
             return this;
-        }        public PolicyPropertiesResponse build() {
-            return new PolicyPropertiesResponse(friendlyName, providerSpecificDetails);
+        }
+
+        public PolicyPropertiesResponse build() {
+            return $;
         }
     }
+
 }

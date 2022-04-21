@@ -24,10 +24,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="catalogAdminPassword")
-      private final @Nullable SecureStringResponse catalogAdminPassword;
+    private @Nullable SecureStringResponse catalogAdminPassword;
 
     public Optional<SecureStringResponse> catalogAdminPassword() {
-        return this.catalogAdminPassword == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminPassword);
+        return Optional.ofNullable(this.catalogAdminPassword);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="catalogAdminUserName")
-      private final @Nullable String catalogAdminUserName;
+    private @Nullable String catalogAdminUserName;
 
     public Optional<String> catalogAdminUserName() {
-        return this.catalogAdminUserName == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminUserName);
+        return Optional.ofNullable(this.catalogAdminUserName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="catalogPricingTier")
-      private final @Nullable String catalogPricingTier;
+    private @Nullable String catalogPricingTier;
 
     public Optional<String> catalogPricingTier() {
-        return this.catalogPricingTier == null ? Optional.empty() : Optional.ofNullable(this.catalogPricingTier);
+        return Optional.ofNullable(this.catalogPricingTier);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="catalogServerEndpoint")
-      private final @Nullable String catalogServerEndpoint;
+    private @Nullable String catalogServerEndpoint;
 
     public Optional<String> catalogServerEndpoint() {
-        return this.catalogServerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.catalogServerEndpoint);
+        return Optional.ofNullable(this.catalogServerEndpoint);
     }
 
-    public IntegrationRuntimeSsisCatalogInfoResponse(
-        @Nullable SecureStringResponse catalogAdminPassword,
-        @Nullable String catalogAdminUserName,
-        @Nullable String catalogPricingTier,
-        @Nullable String catalogServerEndpoint) {
-        this.catalogAdminPassword = catalogAdminPassword;
-        this.catalogAdminUserName = catalogAdminUserName;
-        this.catalogPricingTier = catalogPricingTier;
-        this.catalogServerEndpoint = catalogServerEndpoint;
-    }
+    private IntegrationRuntimeSsisCatalogInfoResponse() {}
 
-    private IntegrationRuntimeSsisCatalogInfoResponse() {
-        this.catalogAdminPassword = null;
-        this.catalogAdminUserName = null;
-        this.catalogPricingTier = null;
-        this.catalogServerEndpoint = null;
+    private IntegrationRuntimeSsisCatalogInfoResponse(IntegrationRuntimeSsisCatalogInfoResponse $) {
+        this.catalogAdminPassword = $.catalogAdminPassword;
+        this.catalogAdminUserName = $.catalogAdminUserName;
+        this.catalogPricingTier = $.catalogPricingTier;
+        this.catalogServerEndpoint = $.catalogServerEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeSsisCatalogInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecureStringResponse catalogAdminPassword;
-        private @Nullable String catalogAdminUserName;
-        private @Nullable String catalogPricingTier;
-        private @Nullable String catalogServerEndpoint;
+        private IntegrationRuntimeSsisCatalogInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeSsisCatalogInfoResponse();
         }
 
         public Builder(IntegrationRuntimeSsisCatalogInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogAdminPassword = defaults.catalogAdminPassword;
-    	      this.catalogAdminUserName = defaults.catalogAdminUserName;
-    	      this.catalogPricingTier = defaults.catalogPricingTier;
-    	      this.catalogServerEndpoint = defaults.catalogServerEndpoint;
+            $ = new IntegrationRuntimeSsisCatalogInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
-            this.catalogAdminPassword = catalogAdminPassword;
+            $.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
+
         public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
-            this.catalogAdminUserName = catalogAdminUserName;
+            $.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
+
         public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
-            this.catalogPricingTier = catalogPricingTier;
+            $.catalogPricingTier = catalogPricingTier;
             return this;
         }
+
         public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
-            this.catalogServerEndpoint = catalogServerEndpoint;
+            $.catalogServerEndpoint = catalogServerEndpoint;
             return this;
-        }        public IntegrationRuntimeSsisCatalogInfoResponse build() {
-            return new IntegrationRuntimeSsisCatalogInfoResponse(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint);
+        }
+
+        public IntegrationRuntimeSsisCatalogInfoResponse build() {
+            return $;
         }
     }
+
 }

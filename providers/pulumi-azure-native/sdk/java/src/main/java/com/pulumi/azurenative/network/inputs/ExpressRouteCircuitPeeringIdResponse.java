@@ -23,45 +23,44 @@ public final class ExpressRouteCircuitPeeringIdResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public ExpressRouteCircuitPeeringIdResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private ExpressRouteCircuitPeeringIdResponse() {}
 
-    private ExpressRouteCircuitPeeringIdResponse() {
-        this.id = null;
+    private ExpressRouteCircuitPeeringIdResponse(ExpressRouteCircuitPeeringIdResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitPeeringIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private ExpressRouteCircuitPeeringIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitPeeringIdResponse();
         }
 
         public Builder(ExpressRouteCircuitPeeringIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ExpressRouteCircuitPeeringIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public ExpressRouteCircuitPeeringIdResponse build() {
-            return new ExpressRouteCircuitPeeringIdResponse(id);
+        }
+
+        public ExpressRouteCircuitPeeringIdResponse build() {
+            return $;
         }
     }
+
 }

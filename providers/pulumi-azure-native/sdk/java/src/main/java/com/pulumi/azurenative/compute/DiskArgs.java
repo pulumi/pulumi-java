@@ -16,7 +16,6 @@ import com.pulumi.azurenative.compute.inputs.PurchasePlanArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,6 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,10 +36,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="burstingEnabled")
-      private final @Nullable Output<Boolean> burstingEnabled;
+    private @Nullable Output<Boolean> burstingEnabled;
 
-    public Output<Boolean> burstingEnabled() {
-        return this.burstingEnabled == null ? Codegen.empty() : this.burstingEnabled;
+    public Optional<Output<Boolean>> burstingEnabled() {
+        return Optional.ofNullable(this.burstingEnabled);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationData", required=true)
-      private final Output<CreationDataArgs> creationData;
+    private Output<CreationDataArgs> creationData;
 
     public Output<CreationDataArgs> creationData() {
         return this.creationData;
@@ -58,10 +58,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskAccessId")
-      private final @Nullable Output<String> diskAccessId;
+    private @Nullable Output<String> diskAccessId;
 
-    public Output<String> diskAccessId() {
-        return this.diskAccessId == null ? Codegen.empty() : this.diskAccessId;
+    public Optional<Output<String>> diskAccessId() {
+        return Optional.ofNullable(this.diskAccessId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskIOPSReadOnly")
-      private final @Nullable Output<Double> diskIOPSReadOnly;
+    private @Nullable Output<Double> diskIOPSReadOnly;
 
-    public Output<Double> diskIOPSReadOnly() {
-        return this.diskIOPSReadOnly == null ? Codegen.empty() : this.diskIOPSReadOnly;
+    public Optional<Output<Double>> diskIOPSReadOnly() {
+        return Optional.ofNullable(this.diskIOPSReadOnly);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskIOPSReadWrite")
-      private final @Nullable Output<Double> diskIOPSReadWrite;
+    private @Nullable Output<Double> diskIOPSReadWrite;
 
-    public Output<Double> diskIOPSReadWrite() {
-        return this.diskIOPSReadWrite == null ? Codegen.empty() : this.diskIOPSReadWrite;
+    public Optional<Output<Double>> diskIOPSReadWrite() {
+        return Optional.ofNullable(this.diskIOPSReadWrite);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskMBpsReadOnly")
-      private final @Nullable Output<Double> diskMBpsReadOnly;
+    private @Nullable Output<Double> diskMBpsReadOnly;
 
-    public Output<Double> diskMBpsReadOnly() {
-        return this.diskMBpsReadOnly == null ? Codegen.empty() : this.diskMBpsReadOnly;
+    public Optional<Output<Double>> diskMBpsReadOnly() {
+        return Optional.ofNullable(this.diskMBpsReadOnly);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskMBpsReadWrite")
-      private final @Nullable Output<Double> diskMBpsReadWrite;
+    private @Nullable Output<Double> diskMBpsReadWrite;
 
-    public Output<Double> diskMBpsReadWrite() {
-        return this.diskMBpsReadWrite == null ? Codegen.empty() : this.diskMBpsReadWrite;
+    public Optional<Output<Double>> diskMBpsReadWrite() {
+        return Optional.ofNullable(this.diskMBpsReadWrite);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskName")
-      private final @Nullable Output<String> diskName;
+    private @Nullable Output<String> diskName;
 
-    public Output<String> diskName() {
-        return this.diskName == null ? Codegen.empty() : this.diskName;
+    public Optional<Output<String>> diskName() {
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionArgs> encryption;
+    private @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSettingsCollection")
-      private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+    private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
-    public Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection() {
-        return this.encryptionSettingsCollection == null ? Codegen.empty() : this.encryptionSettingsCollection;
+    public Optional<Output<EncryptionSettingsCollectionArgs>> encryptionSettingsCollection() {
+        return Optional.ofNullable(this.encryptionSettingsCollection);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hyperVGeneration")
-      private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
+    private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGeneration>> hyperVGeneration() {
-        return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
+    public Optional<Output<Either<String,HyperVGeneration>>> hyperVGeneration() {
+        return Optional.ofNullable(this.hyperVGeneration);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxShares")
-      private final @Nullable Output<Integer> maxShares;
+    private @Nullable Output<Integer> maxShares;
 
-    public Output<Integer> maxShares() {
-        return this.maxShares == null ? Codegen.empty() : this.maxShares;
+    public Optional<Output<Integer>> maxShares() {
+        return Optional.ofNullable(this.maxShares);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkAccessPolicy")
-      private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+    private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
-    public Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy() {
-        return this.networkAccessPolicy == null ? Codegen.empty() : this.networkAccessPolicy;
+    public Optional<Output<Either<String,NetworkAccessPolicy>>> networkAccessPolicy() {
+        return Optional.ofNullable(this.networkAccessPolicy);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<OperatingSystemTypes> osType;
+    private @Nullable Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<OperatingSystemTypes>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purchasePlan")
-      private final @Nullable Output<PurchasePlanArgs> purchasePlan;
+    private @Nullable Output<PurchasePlanArgs> purchasePlan;
 
-    public Output<PurchasePlanArgs> purchasePlan() {
-        return this.purchasePlan == null ? Codegen.empty() : this.purchasePlan;
+    public Optional<Output<PurchasePlanArgs>> purchasePlan() {
+        return Optional.ofNullable(this.purchasePlan);
     }
 
     /**
@@ -234,7 +234,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -245,10 +245,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable Output<DiskSecurityProfileArgs> securityProfile;
+    private @Nullable Output<DiskSecurityProfileArgs> securityProfile;
 
-    public Output<DiskSecurityProfileArgs> securityProfile() {
-        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
+    public Optional<Output<DiskSecurityProfileArgs>> securityProfile() {
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -256,10 +256,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<DiskSkuArgs> sku;
+    private @Nullable Output<DiskSkuArgs> sku;
 
-    public Output<DiskSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<DiskSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportsHibernation")
-      private final @Nullable Output<Boolean> supportsHibernation;
+    private @Nullable Output<Boolean> supportsHibernation;
 
-    public Output<Boolean> supportsHibernation() {
-        return this.supportsHibernation == null ? Codegen.empty() : this.supportsHibernation;
+    public Optional<Output<Boolean>> supportsHibernation() {
+        return Optional.ofNullable(this.supportsHibernation);
     }
 
     /**
@@ -278,10 +278,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -289,10 +289,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
     /**
@@ -300,365 +300,294 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public DiskArgs(
-        @Nullable Output<Boolean> burstingEnabled,
-        Output<CreationDataArgs> creationData,
-        @Nullable Output<String> diskAccessId,
-        @Nullable Output<Double> diskIOPSReadOnly,
-        @Nullable Output<Double> diskIOPSReadWrite,
-        @Nullable Output<Double> diskMBpsReadOnly,
-        @Nullable Output<Double> diskMBpsReadWrite,
-        @Nullable Output<String> diskName,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<EncryptionArgs> encryption,
-        @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> maxShares,
-        @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy,
-        @Nullable Output<OperatingSystemTypes> osType,
-        @Nullable Output<PurchasePlanArgs> purchasePlan,
-        Output<String> resourceGroupName,
-        @Nullable Output<DiskSecurityProfileArgs> securityProfile,
-        @Nullable Output<DiskSkuArgs> sku,
-        @Nullable Output<Boolean> supportsHibernation,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> tier,
-        @Nullable Output<List<String>> zones) {
-        this.burstingEnabled = burstingEnabled;
-        this.creationData = Objects.requireNonNull(creationData, "expected parameter 'creationData' to be non-null");
-        this.diskAccessId = diskAccessId;
-        this.diskIOPSReadOnly = diskIOPSReadOnly;
-        this.diskIOPSReadWrite = diskIOPSReadWrite;
-        this.diskMBpsReadOnly = diskMBpsReadOnly;
-        this.diskMBpsReadWrite = diskMBpsReadWrite;
-        this.diskName = diskName;
-        this.diskSizeGB = diskSizeGB;
-        this.encryption = encryption;
-        this.encryptionSettingsCollection = encryptionSettingsCollection;
-        this.extendedLocation = extendedLocation;
-        this.hyperVGeneration = hyperVGeneration;
-        this.location = location;
-        this.maxShares = maxShares;
-        this.networkAccessPolicy = networkAccessPolicy;
-        this.osType = osType;
-        this.purchasePlan = purchasePlan;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityProfile = securityProfile;
-        this.sku = sku;
-        this.supportsHibernation = supportsHibernation;
-        this.tags = tags;
-        this.tier = tier;
-        this.zones = zones;
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.burstingEnabled = Codegen.empty();
-        this.creationData = Codegen.empty();
-        this.diskAccessId = Codegen.empty();
-        this.diskIOPSReadOnly = Codegen.empty();
-        this.diskIOPSReadWrite = Codegen.empty();
-        this.diskMBpsReadOnly = Codegen.empty();
-        this.diskMBpsReadWrite = Codegen.empty();
-        this.diskName = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.encryptionSettingsCollection = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.hyperVGeneration = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maxShares = Codegen.empty();
-        this.networkAccessPolicy = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.purchasePlan = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityProfile = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.supportsHibernation = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.zones = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.burstingEnabled = $.burstingEnabled;
+        this.creationData = $.creationData;
+        this.diskAccessId = $.diskAccessId;
+        this.diskIOPSReadOnly = $.diskIOPSReadOnly;
+        this.diskIOPSReadWrite = $.diskIOPSReadWrite;
+        this.diskMBpsReadOnly = $.diskMBpsReadOnly;
+        this.diskMBpsReadWrite = $.diskMBpsReadWrite;
+        this.diskName = $.diskName;
+        this.diskSizeGB = $.diskSizeGB;
+        this.encryption = $.encryption;
+        this.encryptionSettingsCollection = $.encryptionSettingsCollection;
+        this.extendedLocation = $.extendedLocation;
+        this.hyperVGeneration = $.hyperVGeneration;
+        this.location = $.location;
+        this.maxShares = $.maxShares;
+        this.networkAccessPolicy = $.networkAccessPolicy;
+        this.osType = $.osType;
+        this.purchasePlan = $.purchasePlan;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityProfile = $.securityProfile;
+        this.sku = $.sku;
+        this.supportsHibernation = $.supportsHibernation;
+        this.tags = $.tags;
+        this.tier = $.tier;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> burstingEnabled;
-        private Output<CreationDataArgs> creationData;
-        private @Nullable Output<String> diskAccessId;
-        private @Nullable Output<Double> diskIOPSReadOnly;
-        private @Nullable Output<Double> diskIOPSReadWrite;
-        private @Nullable Output<Double> diskMBpsReadOnly;
-        private @Nullable Output<Double> diskMBpsReadWrite;
-        private @Nullable Output<String> diskName;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<EncryptionArgs> encryption;
-        private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> maxShares;
-        private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
-        private @Nullable Output<OperatingSystemTypes> osType;
-        private @Nullable Output<PurchasePlanArgs> purchasePlan;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<DiskSecurityProfileArgs> securityProfile;
-        private @Nullable Output<DiskSkuArgs> sku;
-        private @Nullable Output<Boolean> supportsHibernation;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> tier;
-        private @Nullable Output<List<String>> zones;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.burstingEnabled = defaults.burstingEnabled;
-    	      this.creationData = defaults.creationData;
-    	      this.diskAccessId = defaults.diskAccessId;
-    	      this.diskIOPSReadOnly = defaults.diskIOPSReadOnly;
-    	      this.diskIOPSReadWrite = defaults.diskIOPSReadWrite;
-    	      this.diskMBpsReadOnly = defaults.diskMBpsReadOnly;
-    	      this.diskMBpsReadWrite = defaults.diskMBpsReadWrite;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.encryption = defaults.encryption;
-    	      this.encryptionSettingsCollection = defaults.encryptionSettingsCollection;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.hyperVGeneration = defaults.hyperVGeneration;
-    	      this.location = defaults.location;
-    	      this.maxShares = defaults.maxShares;
-    	      this.networkAccessPolicy = defaults.networkAccessPolicy;
-    	      this.osType = defaults.osType;
-    	      this.purchasePlan = defaults.purchasePlan;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.sku = defaults.sku;
-    	      this.supportsHibernation = defaults.supportsHibernation;
-    	      this.tags = defaults.tags;
-    	      this.tier = defaults.tier;
-    	      this.zones = defaults.zones;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder burstingEnabled(@Nullable Output<Boolean> burstingEnabled) {
-            this.burstingEnabled = burstingEnabled;
+            $.burstingEnabled = burstingEnabled;
             return this;
         }
-        public Builder burstingEnabled(@Nullable Boolean burstingEnabled) {
-            this.burstingEnabled = Codegen.ofNullable(burstingEnabled);
-            return this;
+
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            return burstingEnabled(Output.of(burstingEnabled));
         }
+
         public Builder creationData(Output<CreationDataArgs> creationData) {
-            this.creationData = Objects.requireNonNull(creationData);
+            $.creationData = creationData;
             return this;
         }
+
         public Builder creationData(CreationDataArgs creationData) {
-            this.creationData = Output.of(Objects.requireNonNull(creationData));
-            return this;
+            return creationData(Output.of(creationData));
         }
+
         public Builder diskAccessId(@Nullable Output<String> diskAccessId) {
-            this.diskAccessId = diskAccessId;
+            $.diskAccessId = diskAccessId;
             return this;
         }
-        public Builder diskAccessId(@Nullable String diskAccessId) {
-            this.diskAccessId = Codegen.ofNullable(diskAccessId);
-            return this;
+
+        public Builder diskAccessId(String diskAccessId) {
+            return diskAccessId(Output.of(diskAccessId));
         }
+
         public Builder diskIOPSReadOnly(@Nullable Output<Double> diskIOPSReadOnly) {
-            this.diskIOPSReadOnly = diskIOPSReadOnly;
+            $.diskIOPSReadOnly = diskIOPSReadOnly;
             return this;
         }
-        public Builder diskIOPSReadOnly(@Nullable Double diskIOPSReadOnly) {
-            this.diskIOPSReadOnly = Codegen.ofNullable(diskIOPSReadOnly);
-            return this;
+
+        public Builder diskIOPSReadOnly(Double diskIOPSReadOnly) {
+            return diskIOPSReadOnly(Output.of(diskIOPSReadOnly));
         }
+
         public Builder diskIOPSReadWrite(@Nullable Output<Double> diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = diskIOPSReadWrite;
+            $.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
-        public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = Codegen.ofNullable(diskIOPSReadWrite);
-            return this;
+
+        public Builder diskIOPSReadWrite(Double diskIOPSReadWrite) {
+            return diskIOPSReadWrite(Output.of(diskIOPSReadWrite));
         }
+
         public Builder diskMBpsReadOnly(@Nullable Output<Double> diskMBpsReadOnly) {
-            this.diskMBpsReadOnly = diskMBpsReadOnly;
+            $.diskMBpsReadOnly = diskMBpsReadOnly;
             return this;
         }
-        public Builder diskMBpsReadOnly(@Nullable Double diskMBpsReadOnly) {
-            this.diskMBpsReadOnly = Codegen.ofNullable(diskMBpsReadOnly);
-            return this;
+
+        public Builder diskMBpsReadOnly(Double diskMBpsReadOnly) {
+            return diskMBpsReadOnly(Output.of(diskMBpsReadOnly));
         }
+
         public Builder diskMBpsReadWrite(@Nullable Output<Double> diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = diskMBpsReadWrite;
+            $.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
-        public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = Codegen.ofNullable(diskMBpsReadWrite);
-            return this;
+
+        public Builder diskMBpsReadWrite(Double diskMBpsReadWrite) {
+            return diskMBpsReadWrite(Output.of(diskMBpsReadWrite));
         }
+
         public Builder diskName(@Nullable Output<String> diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
-        public Builder diskName(@Nullable String diskName) {
-            this.diskName = Codegen.ofNullable(diskName);
-            return this;
+
+        public Builder diskName(String diskName) {
+            return diskName(Output.of(diskName));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = encryptionSettingsCollection;
+            $.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
-        public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = Codegen.ofNullable(encryptionSettingsCollection);
-            return this;
+
+        public Builder encryptionSettingsCollection(EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
+            return encryptionSettingsCollection(Output.of(encryptionSettingsCollection));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
-            this.hyperVGeneration = hyperVGeneration;
+            $.hyperVGeneration = hyperVGeneration;
             return this;
         }
-        public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Codegen.ofNullable(hyperVGeneration);
-            return this;
+
+        public Builder hyperVGeneration(Either<String,HyperVGeneration> hyperVGeneration) {
+            return hyperVGeneration(Output.of(hyperVGeneration));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maxShares(@Nullable Output<Integer> maxShares) {
-            this.maxShares = maxShares;
+            $.maxShares = maxShares;
             return this;
         }
-        public Builder maxShares(@Nullable Integer maxShares) {
-            this.maxShares = Codegen.ofNullable(maxShares);
-            return this;
+
+        public Builder maxShares(Integer maxShares) {
+            return maxShares(Output.of(maxShares));
         }
+
         public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
-            this.networkAccessPolicy = networkAccessPolicy;
+            $.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
-        public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
-            this.networkAccessPolicy = Codegen.ofNullable(networkAccessPolicy);
-            return this;
+
+        public Builder networkAccessPolicy(Either<String,NetworkAccessPolicy> networkAccessPolicy) {
+            return networkAccessPolicy(Output.of(networkAccessPolicy));
         }
+
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(OperatingSystemTypes osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
-            this.purchasePlan = purchasePlan;
+            $.purchasePlan = purchasePlan;
             return this;
         }
-        public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Codegen.ofNullable(purchasePlan);
-            return this;
+
+        public Builder purchasePlan(PurchasePlanArgs purchasePlan) {
+            return purchasePlan(Output.of(purchasePlan));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityProfile(@Nullable Output<DiskSecurityProfileArgs> securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
-        public Builder securityProfile(@Nullable DiskSecurityProfileArgs securityProfile) {
-            this.securityProfile = Codegen.ofNullable(securityProfile);
-            return this;
+
+        public Builder securityProfile(DiskSecurityProfileArgs securityProfile) {
+            return securityProfile(Output.of(securityProfile));
         }
+
         public Builder sku(@Nullable Output<DiskSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable DiskSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(DiskSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
-            this.supportsHibernation = supportsHibernation;
+            $.supportsHibernation = supportsHibernation;
             return this;
         }
-        public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
-            this.supportsHibernation = Codegen.ofNullable(supportsHibernation);
-            return this;
+
+        public Builder supportsHibernation(Boolean supportsHibernation) {
+            return supportsHibernation(Output.of(supportsHibernation));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public DiskArgs build() {
-            return new DiskArgs(burstingEnabled, creationData, diskAccessId, diskIOPSReadOnly, diskIOPSReadWrite, diskMBpsReadOnly, diskMBpsReadWrite, diskName, diskSizeGB, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, location, maxShares, networkAccessPolicy, osType, purchasePlan, resourceGroupName, securityProfile, sku, supportsHibernation, tags, tier, zones);
+        }
+
+        public DiskArgs build() {
+            $.creationData = Objects.requireNonNull($.creationData, "expected parameter 'creationData' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

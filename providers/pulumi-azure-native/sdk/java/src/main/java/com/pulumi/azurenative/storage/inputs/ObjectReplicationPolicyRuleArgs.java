@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="destinationContainer", required=true)
-      private final Output<String> destinationContainer;
+    private Output<String> destinationContainer;
 
     public Output<String> destinationContainer() {
         return this.destinationContainer;
@@ -36,10 +36,10 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
+    private @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
 
-    public Output<ObjectReplicationPolicyFilterArgs> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<ObjectReplicationPolicyFilterArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ruleId")
-      private final @Nullable Output<String> ruleId;
+    private @Nullable Output<String> ruleId;
 
-    public Output<String> ruleId() {
-        return this.ruleId == null ? Codegen.empty() : this.ruleId;
+    public Optional<Output<String>> ruleId() {
+        return Optional.ofNullable(this.ruleId);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceContainer", required=true)
-      private final Output<String> sourceContainer;
+    private Output<String> sourceContainer;
 
     public Output<String> sourceContainer() {
         return this.sourceContainer;
     }
 
-    public ObjectReplicationPolicyRuleArgs(
-        Output<String> destinationContainer,
-        @Nullable Output<ObjectReplicationPolicyFilterArgs> filters,
-        @Nullable Output<String> ruleId,
-        Output<String> sourceContainer) {
-        this.destinationContainer = Objects.requireNonNull(destinationContainer, "expected parameter 'destinationContainer' to be non-null");
-        this.filters = filters;
-        this.ruleId = ruleId;
-        this.sourceContainer = Objects.requireNonNull(sourceContainer, "expected parameter 'sourceContainer' to be non-null");
-    }
+    private ObjectReplicationPolicyRuleArgs() {}
 
-    private ObjectReplicationPolicyRuleArgs() {
-        this.destinationContainer = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.sourceContainer = Codegen.empty();
+    private ObjectReplicationPolicyRuleArgs(ObjectReplicationPolicyRuleArgs $) {
+        this.destinationContainer = $.destinationContainer;
+        this.filters = $.filters;
+        this.ruleId = $.ruleId;
+        this.sourceContainer = $.sourceContainer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectReplicationPolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationContainer;
-        private @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
-        private @Nullable Output<String> ruleId;
-        private Output<String> sourceContainer;
+        private ObjectReplicationPolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectReplicationPolicyRuleArgs();
         }
 
         public Builder(ObjectReplicationPolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationContainer = defaults.destinationContainer;
-    	      this.filters = defaults.filters;
-    	      this.ruleId = defaults.ruleId;
-    	      this.sourceContainer = defaults.sourceContainer;
+            $ = new ObjectReplicationPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationContainer(Output<String> destinationContainer) {
-            this.destinationContainer = Objects.requireNonNull(destinationContainer);
+            $.destinationContainer = destinationContainer;
             return this;
         }
+
         public Builder destinationContainer(String destinationContainer) {
-            this.destinationContainer = Output.of(Objects.requireNonNull(destinationContainer));
-            return this;
+            return destinationContainer(Output.of(destinationContainer));
         }
+
         public Builder filters(@Nullable Output<ObjectReplicationPolicyFilterArgs> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable ObjectReplicationPolicyFilterArgs filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(ObjectReplicationPolicyFilterArgs filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder ruleId(@Nullable Output<String> ruleId) {
-            this.ruleId = ruleId;
+            $.ruleId = ruleId;
             return this;
         }
-        public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Codegen.ofNullable(ruleId);
-            return this;
+
+        public Builder ruleId(String ruleId) {
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder sourceContainer(Output<String> sourceContainer) {
-            this.sourceContainer = Objects.requireNonNull(sourceContainer);
+            $.sourceContainer = sourceContainer;
             return this;
         }
+
         public Builder sourceContainer(String sourceContainer) {
-            this.sourceContainer = Output.of(Objects.requireNonNull(sourceContainer));
-            return this;
-        }        public ObjectReplicationPolicyRuleArgs build() {
-            return new ObjectReplicationPolicyRuleArgs(destinationContainer, filters, ruleId, sourceContainer);
+            return sourceContainer(Output.of(sourceContainer));
+        }
+
+        public ObjectReplicationPolicyRuleArgs build() {
+            $.destinationContainer = Objects.requireNonNull($.destinationContainer, "expected parameter 'destinationContainer' to be non-null");
+            $.sourceContainer = Objects.requireNonNull($.sourceContainer, "expected parameter 'sourceContainer' to be non-null");
+            return $;
         }
     }
+
 }

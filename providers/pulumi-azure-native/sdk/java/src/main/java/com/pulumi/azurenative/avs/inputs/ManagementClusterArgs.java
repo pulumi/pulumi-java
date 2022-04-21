@@ -5,7 +5,6 @@ package com.pulumi.azurenative.avs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ManagementClusterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clusterSize", required=true)
-      private final Output<Integer> clusterSize;
+    private Output<Integer> clusterSize;
 
     public Output<Integer> clusterSize() {
         return this.clusterSize;
     }
 
-    public ManagementClusterArgs(Output<Integer> clusterSize) {
-        this.clusterSize = Objects.requireNonNull(clusterSize, "expected parameter 'clusterSize' to be non-null");
-    }
+    private ManagementClusterArgs() {}
 
-    private ManagementClusterArgs() {
-        this.clusterSize = Codegen.empty();
+    private ManagementClusterArgs(ManagementClusterArgs $) {
+        this.clusterSize = $.clusterSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> clusterSize;
+        private ManagementClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementClusterArgs();
         }
 
         public Builder(ManagementClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSize = defaults.clusterSize;
+            $ = new ManagementClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSize(Output<Integer> clusterSize) {
-            this.clusterSize = Objects.requireNonNull(clusterSize);
+            $.clusterSize = clusterSize;
             return this;
         }
+
         public Builder clusterSize(Integer clusterSize) {
-            this.clusterSize = Output.of(Objects.requireNonNull(clusterSize));
-            return this;
-        }        public ManagementClusterArgs build() {
-            return new ManagementClusterArgs(clusterSize);
+            return clusterSize(Output.of(clusterSize));
+        }
+
+        public ManagementClusterArgs build() {
+            $.clusterSize = Objects.requireNonNull($.clusterSize, "expected parameter 'clusterSize' to be non-null");
+            return $;
         }
     }
+
 }

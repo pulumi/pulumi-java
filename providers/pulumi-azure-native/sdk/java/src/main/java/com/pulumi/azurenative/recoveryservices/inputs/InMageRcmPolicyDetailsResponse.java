@@ -23,7 +23,7 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="appConsistentFrequencyInMinutes", required=true)
-      private final Integer appConsistentFrequencyInMinutes;
+    private Integer appConsistentFrequencyInMinutes;
 
     public Integer appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes;
@@ -34,7 +34,7 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="crashConsistentFrequencyInMinutes", required=true)
-      private final Integer crashConsistentFrequencyInMinutes;
+    private Integer crashConsistentFrequencyInMinutes;
 
     public Integer crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes;
@@ -45,7 +45,7 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="enableMultiVmSync", required=true)
-      private final String enableMultiVmSync;
+    private String enableMultiVmSync;
 
     public String enableMultiVmSync() {
         return this.enableMultiVmSync;
@@ -57,7 +57,7 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -68,82 +68,73 @@ public final class InMageRcmPolicyDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryPointHistoryInMinutes", required=true)
-      private final Integer recoveryPointHistoryInMinutes;
+    private Integer recoveryPointHistoryInMinutes;
 
     public Integer recoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes;
     }
 
-    public InMageRcmPolicyDetailsResponse(
-        Integer appConsistentFrequencyInMinutes,
-        Integer crashConsistentFrequencyInMinutes,
-        String enableMultiVmSync,
-        String instanceType,
-        Integer recoveryPointHistoryInMinutes) {
-        this.appConsistentFrequencyInMinutes = Objects.requireNonNull(appConsistentFrequencyInMinutes, "expected parameter 'appConsistentFrequencyInMinutes' to be non-null");
-        this.crashConsistentFrequencyInMinutes = Objects.requireNonNull(crashConsistentFrequencyInMinutes, "expected parameter 'crashConsistentFrequencyInMinutes' to be non-null");
-        this.enableMultiVmSync = Objects.requireNonNull(enableMultiVmSync, "expected parameter 'enableMultiVmSync' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.recoveryPointHistoryInMinutes = Objects.requireNonNull(recoveryPointHistoryInMinutes, "expected parameter 'recoveryPointHistoryInMinutes' to be non-null");
-    }
+    private InMageRcmPolicyDetailsResponse() {}
 
-    private InMageRcmPolicyDetailsResponse() {
-        this.appConsistentFrequencyInMinutes = null;
-        this.crashConsistentFrequencyInMinutes = null;
-        this.enableMultiVmSync = null;
-        this.instanceType = null;
-        this.recoveryPointHistoryInMinutes = null;
+    private InMageRcmPolicyDetailsResponse(InMageRcmPolicyDetailsResponse $) {
+        this.appConsistentFrequencyInMinutes = $.appConsistentFrequencyInMinutes;
+        this.crashConsistentFrequencyInMinutes = $.crashConsistentFrequencyInMinutes;
+        this.enableMultiVmSync = $.enableMultiVmSync;
+        this.instanceType = $.instanceType;
+        this.recoveryPointHistoryInMinutes = $.recoveryPointHistoryInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmPolicyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer appConsistentFrequencyInMinutes;
-        private Integer crashConsistentFrequencyInMinutes;
-        private String enableMultiVmSync;
-        private String instanceType;
-        private Integer recoveryPointHistoryInMinutes;
+        private InMageRcmPolicyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmPolicyDetailsResponse();
         }
 
         public Builder(InMageRcmPolicyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appConsistentFrequencyInMinutes = defaults.appConsistentFrequencyInMinutes;
-    	      this.crashConsistentFrequencyInMinutes = defaults.crashConsistentFrequencyInMinutes;
-    	      this.enableMultiVmSync = defaults.enableMultiVmSync;
-    	      this.instanceType = defaults.instanceType;
-    	      this.recoveryPointHistoryInMinutes = defaults.recoveryPointHistoryInMinutes;
+            $ = new InMageRcmPolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appConsistentFrequencyInMinutes(Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = Objects.requireNonNull(appConsistentFrequencyInMinutes);
+            $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder crashConsistentFrequencyInMinutes(Integer crashConsistentFrequencyInMinutes) {
-            this.crashConsistentFrequencyInMinutes = Objects.requireNonNull(crashConsistentFrequencyInMinutes);
+            $.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder enableMultiVmSync(String enableMultiVmSync) {
-            this.enableMultiVmSync = Objects.requireNonNull(enableMultiVmSync);
+            $.enableMultiVmSync = enableMultiVmSync;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder recoveryPointHistoryInMinutes(Integer recoveryPointHistoryInMinutes) {
-            this.recoveryPointHistoryInMinutes = Objects.requireNonNull(recoveryPointHistoryInMinutes);
+            $.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
-        }        public InMageRcmPolicyDetailsResponse build() {
-            return new InMageRcmPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, enableMultiVmSync, instanceType, recoveryPointHistoryInMinutes);
+        }
+
+        public InMageRcmPolicyDetailsResponse build() {
+            $.appConsistentFrequencyInMinutes = Objects.requireNonNull($.appConsistentFrequencyInMinutes, "expected parameter 'appConsistentFrequencyInMinutes' to be non-null");
+            $.crashConsistentFrequencyInMinutes = Objects.requireNonNull($.crashConsistentFrequencyInMinutes, "expected parameter 'crashConsistentFrequencyInMinutes' to be non-null");
+            $.enableMultiVmSync = Objects.requireNonNull($.enableMultiVmSync, "expected parameter 'enableMultiVmSync' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.recoveryPointHistoryInMinutes = Objects.requireNonNull($.recoveryPointHistoryInMinutes, "expected parameter 'recoveryPointHistoryInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

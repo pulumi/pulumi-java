@@ -5,9 +5,9 @@ package com.pulumi.azurenative.search.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public IpRuleArgs(@Nullable Output<String> value) {
-        this.value = value;
-    }
+    private IpRuleArgs() {}
 
-    private IpRuleArgs() {
-        this.value = Codegen.empty();
+    private IpRuleArgs(IpRuleArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> value;
+        private IpRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpRuleArgs();
         }
 
         public Builder(IpRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new IpRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public IpRuleArgs build() {
-            return new IpRuleArgs(value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public IpRuleArgs build() {
+            return $;
         }
     }
+
 }

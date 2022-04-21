@@ -11,11 +11,11 @@ import com.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accessCredential")
-      private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
+    private @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
-    public Output<SSISAccessCredentialArgs> accessCredential() {
-        return this.accessCredential == null ? Codegen.empty() : this.accessCredential;
+    public Optional<Output<SSISAccessCredentialArgs>> accessCredential() {
+        return Optional.ofNullable(this.accessCredential);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="childPackages")
-      private final @Nullable Output<List<SSISChildPackageArgs>> childPackages;
+    private @Nullable Output<List<SSISChildPackageArgs>> childPackages;
 
-    public Output<List<SSISChildPackageArgs>> childPackages() {
-        return this.childPackages == null ? Codegen.empty() : this.childPackages;
+    public Optional<Output<List<SSISChildPackageArgs>>> childPackages() {
+        return Optional.ofNullable(this.childPackages);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configurationAccessCredential")
-      private final @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential;
+    private @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential;
 
-    public Output<SSISAccessCredentialArgs> configurationAccessCredential() {
-        return this.configurationAccessCredential == null ? Codegen.empty() : this.configurationAccessCredential;
+    public Optional<Output<SSISAccessCredentialArgs>> configurationAccessCredential() {
+        return Optional.ofNullable(this.configurationAccessCredential);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configurationPath")
-      private final @Nullable Output<Object> configurationPath;
+    private @Nullable Output<Object> configurationPath;
 
-    public Output<Object> configurationPath() {
-        return this.configurationPath == null ? Codegen.empty() : this.configurationPath;
+    public Optional<Output<Object>> configurationPath() {
+        return Optional.ofNullable(this.configurationPath);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="packageContent")
-      private final @Nullable Output<Object> packageContent;
+    private @Nullable Output<Object> packageContent;
 
-    public Output<Object> packageContent() {
-        return this.packageContent == null ? Codegen.empty() : this.packageContent;
+    public Optional<Output<Object>> packageContent() {
+        return Optional.ofNullable(this.packageContent);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="packageLastModifiedDate")
-      private final @Nullable Output<String> packageLastModifiedDate;
+    private @Nullable Output<String> packageLastModifiedDate;
 
-    public Output<String> packageLastModifiedDate() {
-        return this.packageLastModifiedDate == null ? Codegen.empty() : this.packageLastModifiedDate;
+    public Optional<Output<String>> packageLastModifiedDate() {
+        return Optional.ofNullable(this.packageLastModifiedDate);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="packagePassword")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword() {
-        return this.packagePassword == null ? Codegen.empty() : this.packagePassword;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> packagePassword() {
+        return Optional.ofNullable(this.packagePassword);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="packagePath")
-      private final @Nullable Output<Object> packagePath;
+    private @Nullable Output<Object> packagePath;
 
-    public Output<Object> packagePath() {
-        return this.packagePath == null ? Codegen.empty() : this.packagePath;
+    public Optional<Output<Object>> packagePath() {
+        return Optional.ofNullable(this.packagePath);
     }
 
     /**
@@ -131,170 +131,142 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,SsisPackageLocationType>> type;
+    private @Nullable Output<Either<String,SsisPackageLocationType>> type;
 
-    public Output<Either<String,SsisPackageLocationType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,SsisPackageLocationType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SSISPackageLocationArgs(
-        @Nullable Output<SSISAccessCredentialArgs> accessCredential,
-        @Nullable Output<List<SSISChildPackageArgs>> childPackages,
-        @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential,
-        @Nullable Output<Object> configurationPath,
-        @Nullable Output<Object> packageContent,
-        @Nullable Output<String> packageLastModifiedDate,
-        @Nullable Output<String> packageName,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword,
-        @Nullable Output<Object> packagePath,
-        @Nullable Output<Either<String,SsisPackageLocationType>> type) {
-        this.accessCredential = accessCredential;
-        this.childPackages = childPackages;
-        this.configurationAccessCredential = configurationAccessCredential;
-        this.configurationPath = configurationPath;
-        this.packageContent = packageContent;
-        this.packageLastModifiedDate = packageLastModifiedDate;
-        this.packageName = packageName;
-        this.packagePassword = packagePassword;
-        this.packagePath = packagePath;
-        this.type = type;
-    }
+    private SSISPackageLocationArgs() {}
 
-    private SSISPackageLocationArgs() {
-        this.accessCredential = Codegen.empty();
-        this.childPackages = Codegen.empty();
-        this.configurationAccessCredential = Codegen.empty();
-        this.configurationPath = Codegen.empty();
-        this.packageContent = Codegen.empty();
-        this.packageLastModifiedDate = Codegen.empty();
-        this.packageName = Codegen.empty();
-        this.packagePassword = Codegen.empty();
-        this.packagePath = Codegen.empty();
-        this.type = Codegen.empty();
+    private SSISPackageLocationArgs(SSISPackageLocationArgs $) {
+        this.accessCredential = $.accessCredential;
+        this.childPackages = $.childPackages;
+        this.configurationAccessCredential = $.configurationAccessCredential;
+        this.configurationPath = $.configurationPath;
+        this.packageContent = $.packageContent;
+        this.packageLastModifiedDate = $.packageLastModifiedDate;
+        this.packageName = $.packageName;
+        this.packagePassword = $.packagePassword;
+        this.packagePath = $.packagePath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISPackageLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SSISAccessCredentialArgs> accessCredential;
-        private @Nullable Output<List<SSISChildPackageArgs>> childPackages;
-        private @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential;
-        private @Nullable Output<Object> configurationPath;
-        private @Nullable Output<Object> packageContent;
-        private @Nullable Output<String> packageLastModifiedDate;
-        private @Nullable Output<String> packageName;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
-        private @Nullable Output<Object> packagePath;
-        private @Nullable Output<Either<String,SsisPackageLocationType>> type;
+        private SSISPackageLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISPackageLocationArgs();
         }
 
         public Builder(SSISPackageLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessCredential = defaults.accessCredential;
-    	      this.childPackages = defaults.childPackages;
-    	      this.configurationAccessCredential = defaults.configurationAccessCredential;
-    	      this.configurationPath = defaults.configurationPath;
-    	      this.packageContent = defaults.packageContent;
-    	      this.packageLastModifiedDate = defaults.packageLastModifiedDate;
-    	      this.packageName = defaults.packageName;
-    	      this.packagePassword = defaults.packagePassword;
-    	      this.packagePath = defaults.packagePath;
-    	      this.type = defaults.type;
+            $ = new SSISPackageLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessCredential(@Nullable Output<SSISAccessCredentialArgs> accessCredential) {
-            this.accessCredential = accessCredential;
+            $.accessCredential = accessCredential;
             return this;
         }
-        public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
-            this.accessCredential = Codegen.ofNullable(accessCredential);
-            return this;
+
+        public Builder accessCredential(SSISAccessCredentialArgs accessCredential) {
+            return accessCredential(Output.of(accessCredential));
         }
+
         public Builder childPackages(@Nullable Output<List<SSISChildPackageArgs>> childPackages) {
-            this.childPackages = childPackages;
+            $.childPackages = childPackages;
             return this;
         }
-        public Builder childPackages(@Nullable List<SSISChildPackageArgs> childPackages) {
-            this.childPackages = Codegen.ofNullable(childPackages);
-            return this;
+
+        public Builder childPackages(List<SSISChildPackageArgs> childPackages) {
+            return childPackages(Output.of(childPackages));
         }
+
         public Builder childPackages(SSISChildPackageArgs... childPackages) {
             return childPackages(List.of(childPackages));
         }
+
         public Builder configurationAccessCredential(@Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential) {
-            this.configurationAccessCredential = configurationAccessCredential;
+            $.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
-        public Builder configurationAccessCredential(@Nullable SSISAccessCredentialArgs configurationAccessCredential) {
-            this.configurationAccessCredential = Codegen.ofNullable(configurationAccessCredential);
-            return this;
+
+        public Builder configurationAccessCredential(SSISAccessCredentialArgs configurationAccessCredential) {
+            return configurationAccessCredential(Output.of(configurationAccessCredential));
         }
+
         public Builder configurationPath(@Nullable Output<Object> configurationPath) {
-            this.configurationPath = configurationPath;
+            $.configurationPath = configurationPath;
             return this;
         }
-        public Builder configurationPath(@Nullable Object configurationPath) {
-            this.configurationPath = Codegen.ofNullable(configurationPath);
-            return this;
+
+        public Builder configurationPath(Object configurationPath) {
+            return configurationPath(Output.of(configurationPath));
         }
+
         public Builder packageContent(@Nullable Output<Object> packageContent) {
-            this.packageContent = packageContent;
+            $.packageContent = packageContent;
             return this;
         }
-        public Builder packageContent(@Nullable Object packageContent) {
-            this.packageContent = Codegen.ofNullable(packageContent);
-            return this;
+
+        public Builder packageContent(Object packageContent) {
+            return packageContent(Output.of(packageContent));
         }
+
         public Builder packageLastModifiedDate(@Nullable Output<String> packageLastModifiedDate) {
-            this.packageLastModifiedDate = packageLastModifiedDate;
+            $.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
-        public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
-            this.packageLastModifiedDate = Codegen.ofNullable(packageLastModifiedDate);
-            return this;
+
+        public Builder packageLastModifiedDate(String packageLastModifiedDate) {
+            return packageLastModifiedDate(Output.of(packageLastModifiedDate));
         }
+
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
         }
+
         public Builder packagePassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword) {
-            this.packagePassword = packagePassword;
+            $.packagePassword = packagePassword;
             return this;
         }
-        public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> packagePassword) {
-            this.packagePassword = Codegen.ofNullable(packagePassword);
-            return this;
+
+        public Builder packagePassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> packagePassword) {
+            return packagePassword(Output.of(packagePassword));
         }
+
         public Builder packagePath(@Nullable Output<Object> packagePath) {
-            this.packagePath = packagePath;
+            $.packagePath = packagePath;
             return this;
         }
-        public Builder packagePath(@Nullable Object packagePath) {
-            this.packagePath = Codegen.ofNullable(packagePath);
-            return this;
+
+        public Builder packagePath(Object packagePath) {
+            return packagePath(Output.of(packagePath));
         }
+
         public Builder type(@Nullable Output<Either<String,SsisPackageLocationType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,SsisPackageLocationType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SSISPackageLocationArgs build() {
-            return new SSISPackageLocationArgs(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
+
+        public Builder type(Either<String,SsisPackageLocationType> type) {
+            return type(Output.of(type));
+        }
+
+        public SSISPackageLocationArgs build() {
+            return $;
         }
     }
+
 }

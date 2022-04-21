@@ -25,10 +25,10 @@ public final class FlowAccessControlConfigurationPolicyResponse extends com.pulu
      * 
      */
     @Import(name="allowedCallerIpAddresses")
-      private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
+    private @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
 
-    public List<IpAddressRangeResponse> allowedCallerIpAddresses() {
-        return this.allowedCallerIpAddresses == null ? List.of() : this.allowedCallerIpAddresses;
+    public Optional<List<IpAddressRangeResponse>> allowedCallerIpAddresses() {
+        return Optional.ofNullable(this.allowedCallerIpAddresses);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class FlowAccessControlConfigurationPolicyResponse extends com.pulu
      * 
      */
     @Import(name="openAuthenticationPolicies")
-      private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
+    private @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
     public Optional<OpenAuthenticationAccessPoliciesResponse> openAuthenticationPolicies() {
-        return this.openAuthenticationPolicies == null ? Optional.empty() : Optional.ofNullable(this.openAuthenticationPolicies);
+        return Optional.ofNullable(this.openAuthenticationPolicies);
     }
 
-    public FlowAccessControlConfigurationPolicyResponse(
-        @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
-        @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
-        this.allowedCallerIpAddresses = allowedCallerIpAddresses;
-        this.openAuthenticationPolicies = openAuthenticationPolicies;
-    }
+    private FlowAccessControlConfigurationPolicyResponse() {}
 
-    private FlowAccessControlConfigurationPolicyResponse() {
-        this.allowedCallerIpAddresses = List.of();
-        this.openAuthenticationPolicies = null;
+    private FlowAccessControlConfigurationPolicyResponse(FlowAccessControlConfigurationPolicyResponse $) {
+        this.allowedCallerIpAddresses = $.allowedCallerIpAddresses;
+        this.openAuthenticationPolicies = $.openAuthenticationPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAccessControlConfigurationPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
-        private @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
+        private FlowAccessControlConfigurationPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAccessControlConfigurationPolicyResponse();
         }
 
         public Builder(FlowAccessControlConfigurationPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedCallerIpAddresses = defaults.allowedCallerIpAddresses;
-    	      this.openAuthenticationPolicies = defaults.openAuthenticationPolicies;
+            $ = new FlowAccessControlConfigurationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses) {
-            this.allowedCallerIpAddresses = allowedCallerIpAddresses;
+            $.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
+
         public Builder allowedCallerIpAddresses(IpAddressRangeResponse... allowedCallerIpAddresses) {
             return allowedCallerIpAddresses(List.of(allowedCallerIpAddresses));
         }
+
         public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
-            this.openAuthenticationPolicies = openAuthenticationPolicies;
+            $.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
-        }        public FlowAccessControlConfigurationPolicyResponse build() {
-            return new FlowAccessControlConfigurationPolicyResponse(allowedCallerIpAddresses, openAuthenticationPolicies);
+        }
+
+        public FlowAccessControlConfigurationPolicyResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mimeType")
-      private final @Nullable Output<String> mimeType;
+    private @Nullable Output<String> mimeType;
 
-    public Output<String> mimeType() {
-        return this.mimeType == null ? Codegen.empty() : this.mimeType;
+    public Optional<Output<String>> mimeType() {
+        return Optional.ofNullable(this.mimeType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unpack")
-      private final @Nullable Output<Boolean> unpack;
+    private @Nullable Output<Boolean> unpack;
 
-    public Output<Boolean> unpack() {
-        return this.unpack == null ? Codegen.empty() : this.unpack;
+    public Optional<Output<Boolean>> unpack() {
+        return Optional.ofNullable(this.unpack);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ImageAssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ImageAssetArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> mimeType,
-        @Nullable Output<Boolean> unpack,
-        @Nullable Output<String> url) {
-        this.id = id;
-        this.mimeType = mimeType;
-        this.unpack = unpack;
-        this.url = url;
-    }
+    private ImageAssetArgs() {}
 
-    private ImageAssetArgs() {
-        this.id = Codegen.empty();
-        this.mimeType = Codegen.empty();
-        this.unpack = Codegen.empty();
-        this.url = Codegen.empty();
+    private ImageAssetArgs(ImageAssetArgs $) {
+        this.id = $.id;
+        this.mimeType = $.mimeType;
+        this.unpack = $.unpack;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageAssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> mimeType;
-        private @Nullable Output<Boolean> unpack;
-        private @Nullable Output<String> url;
+        private ImageAssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageAssetArgs();
         }
 
         public Builder(ImageAssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.mimeType = defaults.mimeType;
-    	      this.unpack = defaults.unpack;
-    	      this.url = defaults.url;
+            $ = new ImageAssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder mimeType(@Nullable Output<String> mimeType) {
-            this.mimeType = mimeType;
+            $.mimeType = mimeType;
             return this;
         }
-        public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Codegen.ofNullable(mimeType);
-            return this;
+
+        public Builder mimeType(String mimeType) {
+            return mimeType(Output.of(mimeType));
         }
+
         public Builder unpack(@Nullable Output<Boolean> unpack) {
-            this.unpack = unpack;
+            $.unpack = unpack;
             return this;
         }
-        public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = Codegen.ofNullable(unpack);
-            return this;
+
+        public Builder unpack(Boolean unpack) {
+            return unpack(Output.of(unpack));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ImageAssetArgs build() {
-            return new ImageAssetArgs(id, mimeType, unpack, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ImageAssetArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class LiveEventTranscriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="inputTrackSelection")
-      private final @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
+    private @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
 
-    public List<LiveEventInputTrackSelectionResponse> inputTrackSelection() {
-        return this.inputTrackSelection == null ? List.of() : this.inputTrackSelection;
+    public Optional<List<LiveEventInputTrackSelectionResponse>> inputTrackSelection() {
+        return Optional.ofNullable(this.inputTrackSelection);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LiveEventTranscriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="language")
-      private final @Nullable String language;
+    private @Nullable String language;
 
     public Optional<String> language() {
-        return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class LiveEventTranscriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="outputTranscriptionTrack")
-      private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
+    private @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 
     public Optional<LiveEventOutputTranscriptionTrackResponse> outputTranscriptionTrack() {
-        return this.outputTranscriptionTrack == null ? Optional.empty() : Optional.ofNullable(this.outputTranscriptionTrack);
+        return Optional.ofNullable(this.outputTranscriptionTrack);
     }
 
-    public LiveEventTranscriptionResponse(
-        @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection,
-        @Nullable String language,
-        @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
-        this.inputTrackSelection = inputTrackSelection;
-        this.language = language;
-        this.outputTranscriptionTrack = outputTranscriptionTrack;
-    }
+    private LiveEventTranscriptionResponse() {}
 
-    private LiveEventTranscriptionResponse() {
-        this.inputTrackSelection = List.of();
-        this.language = null;
-        this.outputTranscriptionTrack = null;
+    private LiveEventTranscriptionResponse(LiveEventTranscriptionResponse $) {
+        this.inputTrackSelection = $.inputTrackSelection;
+        this.language = $.language;
+        this.outputTranscriptionTrack = $.outputTranscriptionTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventTranscriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
-        private @Nullable String language;
-        private @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
+        private LiveEventTranscriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventTranscriptionResponse();
         }
 
         public Builder(LiveEventTranscriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputTrackSelection = defaults.inputTrackSelection;
-    	      this.language = defaults.language;
-    	      this.outputTranscriptionTrack = defaults.outputTranscriptionTrack;
+            $ = new LiveEventTranscriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection) {
-            this.inputTrackSelection = inputTrackSelection;
+            $.inputTrackSelection = inputTrackSelection;
             return this;
         }
+
         public Builder inputTrackSelection(LiveEventInputTrackSelectionResponse... inputTrackSelection) {
             return inputTrackSelection(List.of(inputTrackSelection));
         }
+
         public Builder language(@Nullable String language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
+
         public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
-            this.outputTranscriptionTrack = outputTranscriptionTrack;
+            $.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
-        }        public LiveEventTranscriptionResponse build() {
-            return new LiveEventTranscriptionResponse(inputTrackSelection, language, outputTranscriptionTrack);
+        }
+
+        public LiveEventTranscriptionResponse build() {
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="containerType", required=true)
-      private final Output<String> containerType;
+    private Output<String> containerType;
 
     public Output<String> containerType() {
         return this.containerType;
@@ -52,10 +53,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable Output<String> healthStatus;
+    private @Nullable Output<String> healthStatus;
 
-    public Output<String> healthStatus() {
-        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
+    public Optional<Output<String>> healthStatus() {
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -74,102 +75,89 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable Output<String> registrationStatus;
+    private @Nullable Output<String> registrationStatus;
 
-    public Output<String> registrationStatus() {
-        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
+    public Optional<Output<String>> registrationStatus() {
+        return Optional.ofNullable(this.registrationStatus);
     }
 
-    public AzureSqlContainerArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        Output<String> containerType,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> healthStatus,
-        @Nullable Output<String> registrationStatus) {
-        this.backupManagementType = backupManagementType;
-        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.registrationStatus = registrationStatus;
-    }
+    private AzureSqlContainerArgs() {}
 
-    private AzureSqlContainerArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.healthStatus = Codegen.empty();
-        this.registrationStatus = Codegen.empty();
+    private AzureSqlContainerArgs(AzureSqlContainerArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.containerType = $.containerType;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.registrationStatus = $.registrationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private Output<String> containerType;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> healthStatus;
-        private @Nullable Output<String> registrationStatus;
+        private AzureSqlContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlContainerArgs();
         }
 
         public Builder(AzureSqlContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerType = defaults.containerType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.registrationStatus = defaults.registrationStatus;
+            $ = new AzureSqlContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder containerType(Output<String> containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Output.of(Objects.requireNonNull(containerType));
-            return this;
+            return containerType(Output.of(containerType));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
-        public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Codegen.ofNullable(healthStatus);
-            return this;
+
+        public Builder healthStatus(String healthStatus) {
+            return healthStatus(Output.of(healthStatus));
         }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
-        public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Codegen.ofNullable(registrationStatus);
-            return this;
-        }        public AzureSqlContainerArgs build() {
-            return new AzureSqlContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus);
+
+        public Builder registrationStatus(String registrationStatus) {
+            return registrationStatus(Output.of(registrationStatus));
+        }
+
+        public AzureSqlContainerArgs build() {
+            $.containerType = Codegen.stringProp("containerType").output().arg($.containerType).require();
+            return $;
         }
     }
+
 }

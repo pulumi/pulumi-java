@@ -17,7 +17,7 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labPlanName", required=true)
-      private final String labPlanName;
+    private String labPlanName;
 
     public String labPlanName() {
         return this.labPlanName;
@@ -28,55 +28,52 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLabPlanArgs(
-        String labPlanName,
-        String resourceGroupName) {
-        this.labPlanName = Objects.requireNonNull(labPlanName, "expected parameter 'labPlanName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLabPlanArgs() {}
 
-    private GetLabPlanArgs() {
-        this.labPlanName = null;
-        this.resourceGroupName = null;
+    private GetLabPlanArgs(GetLabPlanArgs $) {
+        this.labPlanName = $.labPlanName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLabPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labPlanName;
-        private String resourceGroupName;
+        private GetLabPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLabPlanArgs();
         }
 
         public Builder(GetLabPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labPlanName = defaults.labPlanName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLabPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labPlanName(String labPlanName) {
-            this.labPlanName = Objects.requireNonNull(labPlanName);
+            $.labPlanName = labPlanName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLabPlanArgs build() {
-            return new GetLabPlanArgs(labPlanName, resourceGroupName);
+        }
+
+        public GetLabPlanArgs build() {
+            $.labPlanName = Objects.requireNonNull($.labPlanName, "expected parameter 'labPlanName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

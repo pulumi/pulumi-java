@@ -24,10 +24,10 @@ public final class OsDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OsDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class OsDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
-    public OsDiskResponse(
-        @Nullable Integer diskSizeGB,
-        @Nullable String name,
-        @Nullable String osType) {
-        this.diskSizeGB = diskSizeGB;
-        this.name = name;
-        this.osType = osType;
-    }
+    private OsDiskResponse() {}
 
-    private OsDiskResponse() {
-        this.diskSizeGB = null;
-        this.name = null;
-        this.osType = null;
+    private OsDiskResponse(OsDiskResponse $) {
+        this.diskSizeGB = $.diskSizeGB;
+        this.name = $.name;
+        this.osType = $.osType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer diskSizeGB;
-        private @Nullable String name;
-        private @Nullable String osType;
+        private OsDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsDiskResponse();
         }
 
         public Builder(OsDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
+            $ = new OsDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
-        }        public OsDiskResponse build() {
-            return new OsDiskResponse(diskSizeGB, name, osType);
+        }
+
+        public OsDiskResponse build() {
+            return $;
         }
     }
+
 }

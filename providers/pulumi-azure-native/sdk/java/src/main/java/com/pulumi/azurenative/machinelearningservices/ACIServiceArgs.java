@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appInsightsEnabled")
-      private final @Nullable Output<Boolean> appInsightsEnabled;
+    private @Nullable Output<Boolean> appInsightsEnabled;
 
-    public Output<Boolean> appInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
+    public Optional<Output<Boolean>> appInsightsEnabled() {
+        return Optional.ofNullable(this.appInsightsEnabled);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authEnabled")
-      private final @Nullable Output<Boolean> authEnabled;
+    private @Nullable Output<Boolean> authEnabled;
 
-    public Output<Boolean> authEnabled() {
-        return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
+    public Optional<Output<Boolean>> authEnabled() {
+        return Optional.ofNullable(this.authEnabled);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cname")
-      private final @Nullable Output<String> cname;
+    private @Nullable Output<String> cname;
 
-    public Output<String> cname() {
-        return this.cname == null ? Codegen.empty() : this.cname;
+    public Optional<Output<String>> cname() {
+        return Optional.ofNullable(this.cname);
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computeType", required=true)
-      private final Output<String> computeType;
+    private Output<String> computeType;
 
     public Output<String> computeType() {
         return this.computeType;
@@ -73,10 +74,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerResourceRequirements")
-      private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
+    private @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
-    public Output<ContainerResourceRequirementsArgs> containerResourceRequirements() {
-        return this.containerResourceRequirements == null ? Codegen.empty() : this.containerResourceRequirements;
+    public Optional<Output<ContainerResourceRequirementsArgs>> containerResourceRequirements() {
+        return Optional.ofNullable(this.containerResourceRequirements);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataCollection")
-      private final @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
+    private @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
 
-    public Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection() {
-        return this.dataCollection == null ? Codegen.empty() : this.dataCollection;
+    public Optional<Output<ACIServiceCreateRequestDataCollectionArgs>> dataCollection() {
+        return Optional.ofNullable(this.dataCollection);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -106,10 +107,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsNameLabel")
-      private final @Nullable Output<String> dnsNameLabel;
+    private @Nullable Output<String> dnsNameLabel;
 
-    public Output<String> dnsNameLabel() {
-        return this.dnsNameLabel == null ? Codegen.empty() : this.dnsNameLabel;
+    public Optional<Output<String>> dnsNameLabel() {
+        return Optional.ofNullable(this.dnsNameLabel);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionProperties")
-      private final @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
+    private @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
 
-    public Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties() {
-        return this.encryptionProperties == null ? Codegen.empty() : this.encryptionProperties;
+    public Optional<Output<ACIServiceCreateRequestEncryptionPropertiesArgs>> encryptionProperties() {
+        return Optional.ofNullable(this.encryptionProperties);
     }
 
     /**
@@ -128,10 +129,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentImageRequest")
-      private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+    private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
-        return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
+    public Optional<Output<CreateServiceRequestEnvironmentImageRequestArgs>> environmentImageRequest() {
+        return Optional.ofNullable(this.environmentImageRequest);
     }
 
     /**
@@ -139,10 +140,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
+    private @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<CreateServiceRequestKeysArgs>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Output<Map<String,String>> kvTags;
+    private @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> kvTags() {
-        return this.kvTags == null ? Codegen.empty() : this.kvTags;
+    public Optional<Output<Map<String,String>>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -161,10 +162,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -172,10 +173,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -183,7 +184,7 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -194,10 +195,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -205,10 +206,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslCertificate")
-      private final @Nullable Output<String> sslCertificate;
+    private @Nullable Output<String> sslCertificate;
 
-    public Output<String> sslCertificate() {
-        return this.sslCertificate == null ? Codegen.empty() : this.sslCertificate;
+    public Optional<Output<String>> sslCertificate() {
+        return Optional.ofNullable(this.sslCertificate);
     }
 
     /**
@@ -216,10 +217,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslEnabled")
-      private final @Nullable Output<Boolean> sslEnabled;
+    private @Nullable Output<Boolean> sslEnabled;
 
-    public Output<Boolean> sslEnabled() {
-        return this.sslEnabled == null ? Codegen.empty() : this.sslEnabled;
+    public Optional<Output<Boolean>> sslEnabled() {
+        return Optional.ofNullable(this.sslEnabled);
     }
 
     /**
@@ -227,10 +228,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslKey")
-      private final @Nullable Output<String> sslKey;
+    private @Nullable Output<String> sslKey;
 
-    public Output<String> sslKey() {
-        return this.sslKey == null ? Codegen.empty() : this.sslKey;
+    public Optional<Output<String>> sslKey() {
+        return Optional.ofNullable(this.sslKey);
     }
 
     /**
@@ -238,10 +239,10 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vnetConfiguration")
-      private final @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
+    private @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
 
-    public Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration() {
-        return this.vnetConfiguration == null ? Codegen.empty() : this.vnetConfiguration;
+    public Optional<Output<ACIServiceCreateRequestVnetConfigurationArgs>> vnetConfiguration() {
+        return Optional.ofNullable(this.vnetConfiguration);
     }
 
     /**
@@ -249,310 +250,254 @@ public final class ACIServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ACIServiceArgs(
-        @Nullable Output<Boolean> appInsightsEnabled,
-        @Nullable Output<Boolean> authEnabled,
-        @Nullable Output<String> cname,
-        Output<String> computeType,
-        @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements,
-        @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection,
-        @Nullable Output<String> description,
-        @Nullable Output<String> dnsNameLabel,
-        @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties,
-        @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest,
-        @Nullable Output<CreateServiceRequestKeysArgs> keys,
-        @Nullable Output<Map<String,String>> kvTags,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<String> sslCertificate,
-        @Nullable Output<Boolean> sslEnabled,
-        @Nullable Output<String> sslKey,
-        @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration,
-        Output<String> workspaceName) {
-        this.appInsightsEnabled = Codegen.booleanProp("appInsightsEnabled").output().arg(appInsightsEnabled).def(false).getNullable();
-        this.authEnabled = Codegen.booleanProp("authEnabled").output().arg(authEnabled).def(false).getNullable();
-        this.cname = cname;
-        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
-        this.containerResourceRequirements = containerResourceRequirements;
-        this.dataCollection = dataCollection;
-        this.description = description;
-        this.dnsNameLabel = dnsNameLabel;
-        this.encryptionProperties = encryptionProperties;
-        this.environmentImageRequest = environmentImageRequest;
-        this.keys = keys;
-        this.kvTags = kvTags;
-        this.location = location;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = serviceName;
-        this.sslCertificate = sslCertificate;
-        this.sslEnabled = Codegen.booleanProp("sslEnabled").output().arg(sslEnabled).def(false).getNullable();
-        this.sslKey = sslKey;
-        this.vnetConfiguration = vnetConfiguration;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ACIServiceArgs() {}
 
-    private ACIServiceArgs() {
-        this.appInsightsEnabled = Codegen.empty();
-        this.authEnabled = Codegen.empty();
-        this.cname = Codegen.empty();
-        this.computeType = Codegen.empty();
-        this.containerResourceRequirements = Codegen.empty();
-        this.dataCollection = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dnsNameLabel = Codegen.empty();
-        this.encryptionProperties = Codegen.empty();
-        this.environmentImageRequest = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.kvTags = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sslCertificate = Codegen.empty();
-        this.sslEnabled = Codegen.empty();
-        this.sslKey = Codegen.empty();
-        this.vnetConfiguration = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ACIServiceArgs(ACIServiceArgs $) {
+        this.appInsightsEnabled = $.appInsightsEnabled;
+        this.authEnabled = $.authEnabled;
+        this.cname = $.cname;
+        this.computeType = $.computeType;
+        this.containerResourceRequirements = $.containerResourceRequirements;
+        this.dataCollection = $.dataCollection;
+        this.description = $.description;
+        this.dnsNameLabel = $.dnsNameLabel;
+        this.encryptionProperties = $.encryptionProperties;
+        this.environmentImageRequest = $.environmentImageRequest;
+        this.keys = $.keys;
+        this.kvTags = $.kvTags;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.sslCertificate = $.sslCertificate;
+        this.sslEnabled = $.sslEnabled;
+        this.sslKey = $.sslKey;
+        this.vnetConfiguration = $.vnetConfiguration;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ACIServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> appInsightsEnabled;
-        private @Nullable Output<Boolean> authEnabled;
-        private @Nullable Output<String> cname;
-        private Output<String> computeType;
-        private @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
-        private @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> dnsNameLabel;
-        private @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
-        private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
-        private @Nullable Output<CreateServiceRequestKeysArgs> keys;
-        private @Nullable Output<Map<String,String>> kvTags;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<String> sslCertificate;
-        private @Nullable Output<Boolean> sslEnabled;
-        private @Nullable Output<String> sslKey;
-        private @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
-        private Output<String> workspaceName;
+        private ACIServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ACIServiceArgs();
         }
 
         public Builder(ACIServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInsightsEnabled = defaults.appInsightsEnabled;
-    	      this.authEnabled = defaults.authEnabled;
-    	      this.cname = defaults.cname;
-    	      this.computeType = defaults.computeType;
-    	      this.containerResourceRequirements = defaults.containerResourceRequirements;
-    	      this.dataCollection = defaults.dataCollection;
-    	      this.description = defaults.description;
-    	      this.dnsNameLabel = defaults.dnsNameLabel;
-    	      this.encryptionProperties = defaults.encryptionProperties;
-    	      this.environmentImageRequest = defaults.environmentImageRequest;
-    	      this.keys = defaults.keys;
-    	      this.kvTags = defaults.kvTags;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sslCertificate = defaults.sslCertificate;
-    	      this.sslEnabled = defaults.sslEnabled;
-    	      this.sslKey = defaults.sslKey;
-    	      this.vnetConfiguration = defaults.vnetConfiguration;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ACIServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appInsightsEnabled(@Nullable Output<Boolean> appInsightsEnabled) {
-            this.appInsightsEnabled = appInsightsEnabled;
+            $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
-        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = Codegen.ofNullable(appInsightsEnabled);
-            return this;
+
+        public Builder appInsightsEnabled(Boolean appInsightsEnabled) {
+            return appInsightsEnabled(Output.of(appInsightsEnabled));
         }
+
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
-            this.authEnabled = authEnabled;
+            $.authEnabled = authEnabled;
             return this;
         }
-        public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = Codegen.ofNullable(authEnabled);
-            return this;
+
+        public Builder authEnabled(Boolean authEnabled) {
+            return authEnabled(Output.of(authEnabled));
         }
+
         public Builder cname(@Nullable Output<String> cname) {
-            this.cname = cname;
+            $.cname = cname;
             return this;
         }
-        public Builder cname(@Nullable String cname) {
-            this.cname = Codegen.ofNullable(cname);
-            return this;
+
+        public Builder cname(String cname) {
+            return cname(Output.of(cname));
         }
+
         public Builder computeType(Output<String> computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Output.of(Objects.requireNonNull(computeType));
-            return this;
+            return computeType(Output.of(computeType));
         }
+
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
-            this.containerResourceRequirements = containerResourceRequirements;
+            $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
-        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
-            this.containerResourceRequirements = Codegen.ofNullable(containerResourceRequirements);
-            return this;
+
+        public Builder containerResourceRequirements(ContainerResourceRequirementsArgs containerResourceRequirements) {
+            return containerResourceRequirements(Output.of(containerResourceRequirements));
         }
+
         public Builder dataCollection(@Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection) {
-            this.dataCollection = dataCollection;
+            $.dataCollection = dataCollection;
             return this;
         }
-        public Builder dataCollection(@Nullable ACIServiceCreateRequestDataCollectionArgs dataCollection) {
-            this.dataCollection = Codegen.ofNullable(dataCollection);
-            return this;
+
+        public Builder dataCollection(ACIServiceCreateRequestDataCollectionArgs dataCollection) {
+            return dataCollection(Output.of(dataCollection));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dnsNameLabel(@Nullable Output<String> dnsNameLabel) {
-            this.dnsNameLabel = dnsNameLabel;
+            $.dnsNameLabel = dnsNameLabel;
             return this;
         }
-        public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
-            this.dnsNameLabel = Codegen.ofNullable(dnsNameLabel);
-            return this;
+
+        public Builder dnsNameLabel(String dnsNameLabel) {
+            return dnsNameLabel(Output.of(dnsNameLabel));
         }
+
         public Builder encryptionProperties(@Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties) {
-            this.encryptionProperties = encryptionProperties;
+            $.encryptionProperties = encryptionProperties;
             return this;
         }
-        public Builder encryptionProperties(@Nullable ACIServiceCreateRequestEncryptionPropertiesArgs encryptionProperties) {
-            this.encryptionProperties = Codegen.ofNullable(encryptionProperties);
-            return this;
+
+        public Builder encryptionProperties(ACIServiceCreateRequestEncryptionPropertiesArgs encryptionProperties) {
+            return encryptionProperties(Output.of(encryptionProperties));
         }
+
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
-            this.environmentImageRequest = environmentImageRequest;
+            $.environmentImageRequest = environmentImageRequest;
             return this;
         }
-        public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
-            this.environmentImageRequest = Codegen.ofNullable(environmentImageRequest);
-            return this;
+
+        public Builder environmentImageRequest(CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
+            return environmentImageRequest(Output.of(environmentImageRequest));
         }
+
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(CreateServiceRequestKeysArgs keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
-        public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Codegen.ofNullable(kvTags);
-            return this;
+
+        public Builder kvTags(Map<String,String> kvTags) {
+            return kvTags(Output.of(kvTags));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sslCertificate(@Nullable Output<String> sslCertificate) {
-            this.sslCertificate = sslCertificate;
+            $.sslCertificate = sslCertificate;
             return this;
         }
-        public Builder sslCertificate(@Nullable String sslCertificate) {
-            this.sslCertificate = Codegen.ofNullable(sslCertificate);
-            return this;
+
+        public Builder sslCertificate(String sslCertificate) {
+            return sslCertificate(Output.of(sslCertificate));
         }
+
         public Builder sslEnabled(@Nullable Output<Boolean> sslEnabled) {
-            this.sslEnabled = sslEnabled;
+            $.sslEnabled = sslEnabled;
             return this;
         }
-        public Builder sslEnabled(@Nullable Boolean sslEnabled) {
-            this.sslEnabled = Codegen.ofNullable(sslEnabled);
-            return this;
+
+        public Builder sslEnabled(Boolean sslEnabled) {
+            return sslEnabled(Output.of(sslEnabled));
         }
+
         public Builder sslKey(@Nullable Output<String> sslKey) {
-            this.sslKey = sslKey;
+            $.sslKey = sslKey;
             return this;
         }
-        public Builder sslKey(@Nullable String sslKey) {
-            this.sslKey = Codegen.ofNullable(sslKey);
-            return this;
+
+        public Builder sslKey(String sslKey) {
+            return sslKey(Output.of(sslKey));
         }
+
         public Builder vnetConfiguration(@Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration) {
-            this.vnetConfiguration = vnetConfiguration;
+            $.vnetConfiguration = vnetConfiguration;
             return this;
         }
-        public Builder vnetConfiguration(@Nullable ACIServiceCreateRequestVnetConfigurationArgs vnetConfiguration) {
-            this.vnetConfiguration = Codegen.ofNullable(vnetConfiguration);
-            return this;
+
+        public Builder vnetConfiguration(ACIServiceCreateRequestVnetConfigurationArgs vnetConfiguration) {
+            return vnetConfiguration(Output.of(vnetConfiguration));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ACIServiceArgs build() {
-            return new ACIServiceArgs(appInsightsEnabled, authEnabled, cname, computeType, containerResourceRequirements, dataCollection, description, dnsNameLabel, encryptionProperties, environmentImageRequest, keys, kvTags, location, properties, resourceGroupName, serviceName, sslCertificate, sslEnabled, sslKey, vnetConfiguration, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ACIServiceArgs build() {
+            $.appInsightsEnabled = Codegen.booleanProp("appInsightsEnabled").output().arg($.appInsightsEnabled).def(false).getNullable();
+            $.authEnabled = Codegen.booleanProp("authEnabled").output().arg($.authEnabled).def(false).getNullable();
+            $.computeType = Codegen.stringProp("computeType").output().arg($.computeType).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sslEnabled = Codegen.booleanProp("sslEnabled").output().arg($.sslEnabled).def(false).getNullable();
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

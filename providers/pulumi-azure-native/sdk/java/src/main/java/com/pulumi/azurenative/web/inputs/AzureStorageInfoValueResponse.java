@@ -23,10 +23,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable String accessKey;
+    private @Nullable String accessKey;
 
     public Optional<String> accessKey() {
-        return this.accessKey == null ? Optional.empty() : Optional.ofNullable(this.accessKey);
+        return Optional.ofNullable(this.accessKey);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable String mountPath;
+    private @Nullable String mountPath;
 
     public Optional<String> mountPath() {
-        return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="shareName")
-      private final @Nullable String shareName;
+    private @Nullable String shareName;
 
     public Optional<String> shareName() {
-        return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -78,91 +78,75 @@ public final class AzureStorageInfoValueResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AzureStorageInfoValueResponse(
-        @Nullable String accessKey,
-        @Nullable String accountName,
-        @Nullable String mountPath,
-        @Nullable String shareName,
-        String state,
-        @Nullable String type) {
-        this.accessKey = accessKey;
-        this.accountName = accountName;
-        this.mountPath = mountPath;
-        this.shareName = shareName;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = type;
-    }
+    private AzureStorageInfoValueResponse() {}
 
-    private AzureStorageInfoValueResponse() {
-        this.accessKey = null;
-        this.accountName = null;
-        this.mountPath = null;
-        this.shareName = null;
-        this.state = null;
-        this.type = null;
+    private AzureStorageInfoValueResponse(AzureStorageInfoValueResponse $) {
+        this.accessKey = $.accessKey;
+        this.accountName = $.accountName;
+        this.mountPath = $.mountPath;
+        this.shareName = $.shareName;
+        this.state = $.state;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureStorageInfoValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessKey;
-        private @Nullable String accountName;
-        private @Nullable String mountPath;
-        private @Nullable String shareName;
-        private String state;
-        private @Nullable String type;
+        private AzureStorageInfoValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureStorageInfoValueResponse();
         }
 
         public Builder(AzureStorageInfoValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.accountName = defaults.accountName;
-    	      this.mountPath = defaults.mountPath;
-    	      this.shareName = defaults.shareName;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
+            $ = new AzureStorageInfoValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
+
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AzureStorageInfoValueResponse build() {
-            return new AzureStorageInfoValueResponse(accessKey, accountName, mountPath, shareName, state, type);
+        }
+
+        public AzureStorageInfoValueResponse build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

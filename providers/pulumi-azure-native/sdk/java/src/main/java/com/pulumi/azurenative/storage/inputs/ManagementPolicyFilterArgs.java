@@ -6,10 +6,10 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.TagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="blobIndexMatch")
-      private final @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
+    private @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
 
-    public Output<List<TagFilterArgs>> blobIndexMatch() {
-        return this.blobIndexMatch == null ? Codegen.empty() : this.blobIndexMatch;
+    public Optional<Output<List<TagFilterArgs>>> blobIndexMatch() {
+        return Optional.ofNullable(this.blobIndexMatch);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="blobTypes", required=true)
-      private final Output<List<String>> blobTypes;
+    private Output<List<String>> blobTypes;
 
     public Output<List<String>> blobTypes() {
         return this.blobTypes;
@@ -48,85 +48,81 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable Output<List<String>> prefixMatch;
+    private @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> prefixMatch() {
-        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
+    public Optional<Output<List<String>>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
-    public ManagementPolicyFilterArgs(
-        @Nullable Output<List<TagFilterArgs>> blobIndexMatch,
-        Output<List<String>> blobTypes,
-        @Nullable Output<List<String>> prefixMatch) {
-        this.blobIndexMatch = blobIndexMatch;
-        this.blobTypes = Objects.requireNonNull(blobTypes, "expected parameter 'blobTypes' to be non-null");
-        this.prefixMatch = prefixMatch;
-    }
+    private ManagementPolicyFilterArgs() {}
 
-    private ManagementPolicyFilterArgs() {
-        this.blobIndexMatch = Codegen.empty();
-        this.blobTypes = Codegen.empty();
-        this.prefixMatch = Codegen.empty();
+    private ManagementPolicyFilterArgs(ManagementPolicyFilterArgs $) {
+        this.blobIndexMatch = $.blobIndexMatch;
+        this.blobTypes = $.blobTypes;
+        this.prefixMatch = $.prefixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
-        private Output<List<String>> blobTypes;
-        private @Nullable Output<List<String>> prefixMatch;
+        private ManagementPolicyFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyFilterArgs();
         }
 
         public Builder(ManagementPolicyFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobIndexMatch = defaults.blobIndexMatch;
-    	      this.blobTypes = defaults.blobTypes;
-    	      this.prefixMatch = defaults.prefixMatch;
+            $ = new ManagementPolicyFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobIndexMatch(@Nullable Output<List<TagFilterArgs>> blobIndexMatch) {
-            this.blobIndexMatch = blobIndexMatch;
+            $.blobIndexMatch = blobIndexMatch;
             return this;
         }
-        public Builder blobIndexMatch(@Nullable List<TagFilterArgs> blobIndexMatch) {
-            this.blobIndexMatch = Codegen.ofNullable(blobIndexMatch);
-            return this;
+
+        public Builder blobIndexMatch(List<TagFilterArgs> blobIndexMatch) {
+            return blobIndexMatch(Output.of(blobIndexMatch));
         }
+
         public Builder blobIndexMatch(TagFilterArgs... blobIndexMatch) {
             return blobIndexMatch(List.of(blobIndexMatch));
         }
+
         public Builder blobTypes(Output<List<String>> blobTypes) {
-            this.blobTypes = Objects.requireNonNull(blobTypes);
+            $.blobTypes = blobTypes;
             return this;
         }
+
         public Builder blobTypes(List<String> blobTypes) {
-            this.blobTypes = Output.of(Objects.requireNonNull(blobTypes));
-            return this;
+            return blobTypes(Output.of(blobTypes));
         }
+
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
+
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
-        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Codegen.ofNullable(prefixMatch);
-            return this;
+
+        public Builder prefixMatch(List<String> prefixMatch) {
+            return prefixMatch(Output.of(prefixMatch));
         }
+
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
-        }        public ManagementPolicyFilterArgs build() {
-            return new ManagementPolicyFilterArgs(blobIndexMatch, blobTypes, prefixMatch);
+        }
+
+        public ManagementPolicyFilterArgs build() {
+            $.blobTypes = Objects.requireNonNull($.blobTypes, "expected parameter 'blobTypes' to be non-null");
+            return $;
         }
     }
+
 }

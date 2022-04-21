@@ -24,10 +24,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cert")
-      private final @Nullable String cert;
+    private @Nullable String cert;
 
     public Optional<String> cert() {
-        return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
+        return Optional.ofNullable(this.cert);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cname")
-      private final @Nullable String cname;
+    private @Nullable String cname;
 
     public Optional<String> cname() {
-        return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
+        return Optional.ofNullable(this.cname);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public SslConfigurationResponse(
-        @Nullable String cert,
-        @Nullable String cname,
-        @Nullable String key,
-        @Nullable String status) {
-        this.cert = cert;
-        this.cname = cname;
-        this.key = key;
-        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
-    }
+    private SslConfigurationResponse() {}
 
-    private SslConfigurationResponse() {
-        this.cert = null;
-        this.cname = null;
-        this.key = null;
-        this.status = null;
+    private SslConfigurationResponse(SslConfigurationResponse $) {
+        this.cert = $.cert;
+        this.cname = $.cname;
+        this.key = $.key;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cert;
-        private @Nullable String cname;
-        private @Nullable String key;
-        private @Nullable String status;
+        private SslConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslConfigurationResponse();
         }
 
         public Builder(SslConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.cname = defaults.cname;
-    	      this.key = defaults.key;
-    	      this.status = defaults.status;
+            $ = new SslConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
+
         public Builder cname(@Nullable String cname) {
-            this.cname = cname;
+            $.cname = cname;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public SslConfigurationResponse build() {
-            return new SslConfigurationResponse(cert, cname, key, status);
+        }
+
+        public SslConfigurationResponse build() {
+            $.status = Codegen.stringProp("status").arg($.status).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

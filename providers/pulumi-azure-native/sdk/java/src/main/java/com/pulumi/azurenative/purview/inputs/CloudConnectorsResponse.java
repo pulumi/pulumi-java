@@ -18,45 +18,45 @@ public final class CloudConnectorsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="awsExternalId", required=true)
-      private final String awsExternalId;
+    private String awsExternalId;
 
     public String awsExternalId() {
         return this.awsExternalId;
     }
 
-    public CloudConnectorsResponse(String awsExternalId) {
-        this.awsExternalId = Objects.requireNonNull(awsExternalId, "expected parameter 'awsExternalId' to be non-null");
-    }
+    private CloudConnectorsResponse() {}
 
-    private CloudConnectorsResponse() {
-        this.awsExternalId = null;
+    private CloudConnectorsResponse(CloudConnectorsResponse $) {
+        this.awsExternalId = $.awsExternalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudConnectorsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsExternalId;
+        private CloudConnectorsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudConnectorsResponse();
         }
 
         public Builder(CloudConnectorsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsExternalId = defaults.awsExternalId;
+            $ = new CloudConnectorsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder awsExternalId(String awsExternalId) {
-            this.awsExternalId = Objects.requireNonNull(awsExternalId);
+            $.awsExternalId = awsExternalId;
             return this;
-        }        public CloudConnectorsResponse build() {
-            return new CloudConnectorsResponse(awsExternalId);
+        }
+
+        public CloudConnectorsResponse build() {
+            $.awsExternalId = Objects.requireNonNull($.awsExternalId, "expected parameter 'awsExternalId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class AudioTrackDescriptorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="channelMapping")
-      private final @Nullable String channelMapping;
+    private @Nullable String channelMapping;
 
     public Optional<String> channelMapping() {
-        return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
+        return Optional.ofNullable(this.channelMapping);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class AudioTrackDescriptorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public AudioTrackDescriptorResponse(
-        @Nullable String channelMapping,
-        String odataType) {
-        this.channelMapping = channelMapping;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private AudioTrackDescriptorResponse() {}
 
-    private AudioTrackDescriptorResponse() {
-        this.channelMapping = null;
-        this.odataType = null;
+    private AudioTrackDescriptorResponse(AudioTrackDescriptorResponse $) {
+        this.channelMapping = $.channelMapping;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioTrackDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String channelMapping;
-        private String odataType;
+        private AudioTrackDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioTrackDescriptorResponse();
         }
 
         public Builder(AudioTrackDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelMapping = defaults.channelMapping;
-    	      this.odataType = defaults.odataType;
+            $ = new AudioTrackDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelMapping(@Nullable String channelMapping) {
-            this.channelMapping = channelMapping;
+            $.channelMapping = channelMapping;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public AudioTrackDescriptorResponse build() {
-            return new AudioTrackDescriptorResponse(channelMapping, odataType);
+        }
+
+        public AudioTrackDescriptorResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -9,10 +9,10 @@ import com.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="characterEncoding")
-      private final @Nullable Output<String> characterEncoding;
+    private @Nullable Output<String> characterEncoding;
 
-    public Output<String> characterEncoding() {
-        return this.characterEncoding == null ? Codegen.empty() : this.characterEncoding;
+    public Optional<Output<String>> characterEncoding() {
+        return Optional.ofNullable(this.characterEncoding);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="characterSet", required=true)
-      private final Output<Either<String,EdifactCharacterSet>> characterSet;
+    private Output<Either<String,EdifactCharacterSet>> characterSet;
 
     public Output<Either<String,EdifactCharacterSet>> characterSet() {
         return this.characterSet;
@@ -51,7 +51,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="componentSeparator", required=true)
-      private final Output<Integer> componentSeparator;
+    private Output<Integer> componentSeparator;
 
     public Output<Integer> componentSeparator() {
         return this.componentSeparator;
@@ -62,7 +62,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataElementSeparator", required=true)
-      private final Output<Integer> dataElementSeparator;
+    private Output<Integer> dataElementSeparator;
 
     public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
@@ -73,7 +73,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="decimalPointIndicator", required=true)
-      private final Output<EdifactDecimalIndicator> decimalPointIndicator;
+    private Output<EdifactDecimalIndicator> decimalPointIndicator;
 
     public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
@@ -84,7 +84,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="protocolVersion", required=true)
-      private final Output<Integer> protocolVersion;
+    private Output<Integer> protocolVersion;
 
     public Output<Integer> protocolVersion() {
         return this.protocolVersion;
@@ -95,7 +95,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="releaseIndicator", required=true)
-      private final Output<Integer> releaseIndicator;
+    private Output<Integer> releaseIndicator;
 
     public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
@@ -106,7 +106,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="repetitionSeparator", required=true)
-      private final Output<Integer> repetitionSeparator;
+    private Output<Integer> repetitionSeparator;
 
     public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
@@ -117,7 +117,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="segmentTerminator", required=true)
-      private final Output<Integer> segmentTerminator;
+    private Output<Integer> segmentTerminator;
 
     public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
@@ -128,7 +128,7 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
-      private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
+    private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
     public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -139,180 +139,157 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="serviceCodeListDirectoryVersion")
-      private final @Nullable Output<String> serviceCodeListDirectoryVersion;
+    private @Nullable Output<String> serviceCodeListDirectoryVersion;
 
-    public Output<String> serviceCodeListDirectoryVersion() {
-        return this.serviceCodeListDirectoryVersion == null ? Codegen.empty() : this.serviceCodeListDirectoryVersion;
+    public Optional<Output<String>> serviceCodeListDirectoryVersion() {
+        return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }
 
-    public EdifactFramingSettingsArgs(
-        @Nullable Output<String> characterEncoding,
-        Output<Either<String,EdifactCharacterSet>> characterSet,
-        Output<Integer> componentSeparator,
-        Output<Integer> dataElementSeparator,
-        Output<EdifactDecimalIndicator> decimalPointIndicator,
-        Output<Integer> protocolVersion,
-        Output<Integer> releaseIndicator,
-        Output<Integer> repetitionSeparator,
-        Output<Integer> segmentTerminator,
-        Output<SegmentTerminatorSuffix> segmentTerminatorSuffix,
-        @Nullable Output<String> serviceCodeListDirectoryVersion) {
-        this.characterEncoding = characterEncoding;
-        this.characterSet = Objects.requireNonNull(characterSet, "expected parameter 'characterSet' to be non-null");
-        this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
-        this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator, "expected parameter 'decimalPointIndicator' to be non-null");
-        this.protocolVersion = Objects.requireNonNull(protocolVersion, "expected parameter 'protocolVersion' to be non-null");
-        this.releaseIndicator = Objects.requireNonNull(releaseIndicator, "expected parameter 'releaseIndicator' to be non-null");
-        this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator, "expected parameter 'repetitionSeparator' to be non-null");
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
-        this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
-    }
+    private EdifactFramingSettingsArgs() {}
 
-    private EdifactFramingSettingsArgs() {
-        this.characterEncoding = Codegen.empty();
-        this.characterSet = Codegen.empty();
-        this.componentSeparator = Codegen.empty();
-        this.dataElementSeparator = Codegen.empty();
-        this.decimalPointIndicator = Codegen.empty();
-        this.protocolVersion = Codegen.empty();
-        this.releaseIndicator = Codegen.empty();
-        this.repetitionSeparator = Codegen.empty();
-        this.segmentTerminator = Codegen.empty();
-        this.segmentTerminatorSuffix = Codegen.empty();
-        this.serviceCodeListDirectoryVersion = Codegen.empty();
+    private EdifactFramingSettingsArgs(EdifactFramingSettingsArgs $) {
+        this.characterEncoding = $.characterEncoding;
+        this.characterSet = $.characterSet;
+        this.componentSeparator = $.componentSeparator;
+        this.dataElementSeparator = $.dataElementSeparator;
+        this.decimalPointIndicator = $.decimalPointIndicator;
+        this.protocolVersion = $.protocolVersion;
+        this.releaseIndicator = $.releaseIndicator;
+        this.repetitionSeparator = $.repetitionSeparator;
+        this.segmentTerminator = $.segmentTerminator;
+        this.segmentTerminatorSuffix = $.segmentTerminatorSuffix;
+        this.serviceCodeListDirectoryVersion = $.serviceCodeListDirectoryVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactFramingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> characterEncoding;
-        private Output<Either<String,EdifactCharacterSet>> characterSet;
-        private Output<Integer> componentSeparator;
-        private Output<Integer> dataElementSeparator;
-        private Output<EdifactDecimalIndicator> decimalPointIndicator;
-        private Output<Integer> protocolVersion;
-        private Output<Integer> releaseIndicator;
-        private Output<Integer> repetitionSeparator;
-        private Output<Integer> segmentTerminator;
-        private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
-        private @Nullable Output<String> serviceCodeListDirectoryVersion;
+        private EdifactFramingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactFramingSettingsArgs();
         }
 
         public Builder(EdifactFramingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.characterEncoding = defaults.characterEncoding;
-    	      this.characterSet = defaults.characterSet;
-    	      this.componentSeparator = defaults.componentSeparator;
-    	      this.dataElementSeparator = defaults.dataElementSeparator;
-    	      this.decimalPointIndicator = defaults.decimalPointIndicator;
-    	      this.protocolVersion = defaults.protocolVersion;
-    	      this.releaseIndicator = defaults.releaseIndicator;
-    	      this.repetitionSeparator = defaults.repetitionSeparator;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
-    	      this.serviceCodeListDirectoryVersion = defaults.serviceCodeListDirectoryVersion;
+            $ = new EdifactFramingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder characterEncoding(@Nullable Output<String> characterEncoding) {
-            this.characterEncoding = characterEncoding;
+            $.characterEncoding = characterEncoding;
             return this;
         }
-        public Builder characterEncoding(@Nullable String characterEncoding) {
-            this.characterEncoding = Codegen.ofNullable(characterEncoding);
-            return this;
+
+        public Builder characterEncoding(String characterEncoding) {
+            return characterEncoding(Output.of(characterEncoding));
         }
+
         public Builder characterSet(Output<Either<String,EdifactCharacterSet>> characterSet) {
-            this.characterSet = Objects.requireNonNull(characterSet);
+            $.characterSet = characterSet;
             return this;
         }
+
         public Builder characterSet(Either<String,EdifactCharacterSet> characterSet) {
-            this.characterSet = Output.of(Objects.requireNonNull(characterSet));
-            return this;
+            return characterSet(Output.of(characterSet));
         }
+
         public Builder componentSeparator(Output<Integer> componentSeparator) {
-            this.componentSeparator = Objects.requireNonNull(componentSeparator);
+            $.componentSeparator = componentSeparator;
             return this;
         }
+
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Output.of(Objects.requireNonNull(componentSeparator));
-            return this;
+            return componentSeparator(Output.of(componentSeparator));
         }
+
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
-            this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
+            $.dataElementSeparator = dataElementSeparator;
             return this;
         }
+
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Output.of(Objects.requireNonNull(dataElementSeparator));
-            return this;
+            return dataElementSeparator(Output.of(dataElementSeparator));
         }
+
         public Builder decimalPointIndicator(Output<EdifactDecimalIndicator> decimalPointIndicator) {
-            this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
+            $.decimalPointIndicator = decimalPointIndicator;
             return this;
         }
+
         public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
-            this.decimalPointIndicator = Output.of(Objects.requireNonNull(decimalPointIndicator));
-            return this;
+            return decimalPointIndicator(Output.of(decimalPointIndicator));
         }
+
         public Builder protocolVersion(Output<Integer> protocolVersion) {
-            this.protocolVersion = Objects.requireNonNull(protocolVersion);
+            $.protocolVersion = protocolVersion;
             return this;
         }
+
         public Builder protocolVersion(Integer protocolVersion) {
-            this.protocolVersion = Output.of(Objects.requireNonNull(protocolVersion));
-            return this;
+            return protocolVersion(Output.of(protocolVersion));
         }
+
         public Builder releaseIndicator(Output<Integer> releaseIndicator) {
-            this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
+            $.releaseIndicator = releaseIndicator;
             return this;
         }
+
         public Builder releaseIndicator(Integer releaseIndicator) {
-            this.releaseIndicator = Output.of(Objects.requireNonNull(releaseIndicator));
-            return this;
+            return releaseIndicator(Output.of(releaseIndicator));
         }
+
         public Builder repetitionSeparator(Output<Integer> repetitionSeparator) {
-            this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
+            $.repetitionSeparator = repetitionSeparator;
             return this;
         }
+
         public Builder repetitionSeparator(Integer repetitionSeparator) {
-            this.repetitionSeparator = Output.of(Objects.requireNonNull(repetitionSeparator));
-            return this;
+            return repetitionSeparator(Output.of(repetitionSeparator));
         }
+
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
-            this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
+
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Output.of(Objects.requireNonNull(segmentTerminator));
-            return this;
+            return segmentTerminator(Output.of(segmentTerminator));
         }
+
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+            $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
+
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Output.of(Objects.requireNonNull(segmentTerminatorSuffix));
-            return this;
+            return segmentTerminatorSuffix(Output.of(segmentTerminatorSuffix));
         }
+
         public Builder serviceCodeListDirectoryVersion(@Nullable Output<String> serviceCodeListDirectoryVersion) {
-            this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
+            $.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }
-        public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
-            this.serviceCodeListDirectoryVersion = Codegen.ofNullable(serviceCodeListDirectoryVersion);
-            return this;
-        }        public EdifactFramingSettingsArgs build() {
-            return new EdifactFramingSettingsArgs(characterEncoding, characterSet, componentSeparator, dataElementSeparator, decimalPointIndicator, protocolVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, serviceCodeListDirectoryVersion);
+
+        public Builder serviceCodeListDirectoryVersion(String serviceCodeListDirectoryVersion) {
+            return serviceCodeListDirectoryVersion(Output.of(serviceCodeListDirectoryVersion));
+        }
+
+        public EdifactFramingSettingsArgs build() {
+            $.characterSet = Objects.requireNonNull($.characterSet, "expected parameter 'characterSet' to be non-null");
+            $.componentSeparator = Objects.requireNonNull($.componentSeparator, "expected parameter 'componentSeparator' to be non-null");
+            $.dataElementSeparator = Objects.requireNonNull($.dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
+            $.decimalPointIndicator = Objects.requireNonNull($.decimalPointIndicator, "expected parameter 'decimalPointIndicator' to be non-null");
+            $.protocolVersion = Objects.requireNonNull($.protocolVersion, "expected parameter 'protocolVersion' to be non-null");
+            $.releaseIndicator = Objects.requireNonNull($.releaseIndicator, "expected parameter 'releaseIndicator' to be non-null");
+            $.repetitionSeparator = Objects.requireNonNull($.repetitionSeparator, "expected parameter 'repetitionSeparator' to be non-null");
+            $.segmentTerminator = Objects.requireNonNull($.segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
+            $.segmentTerminatorSuffix = Objects.requireNonNull($.segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
+            return $;
         }
     }
+
 }

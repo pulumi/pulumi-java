@@ -20,17 +20,17 @@ public final class AutoScaleRunErrorResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
     }
 
     @Import(name="details")
-      private final @Nullable List<AutoScaleRunErrorResponse> details;
+    private @Nullable List<AutoScaleRunErrorResponse> details;
 
-    public List<AutoScaleRunErrorResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<AutoScaleRunErrorResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -38,67 +38,62 @@ public final class AutoScaleRunErrorResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public AutoScaleRunErrorResponse(
-        String code,
-        @Nullable List<AutoScaleRunErrorResponse> details,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = details;
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private AutoScaleRunErrorResponse() {}
 
-    private AutoScaleRunErrorResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
+    private AutoScaleRunErrorResponse(AutoScaleRunErrorResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleRunErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private @Nullable List<AutoScaleRunErrorResponse> details;
-        private String message;
+        private AutoScaleRunErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleRunErrorResponse();
         }
 
         public Builder(AutoScaleRunErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new AutoScaleRunErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<AutoScaleRunErrorResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(AutoScaleRunErrorResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public AutoScaleRunErrorResponse build() {
-            return new AutoScaleRunErrorResponse(code, details, message);
+        }
+
+        public AutoScaleRunErrorResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

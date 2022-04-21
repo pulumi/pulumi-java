@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -42,10 +42,10 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="publicBlob")
-      private final @Nullable Output<String> publicBlob;
+    private @Nullable Output<String> publicBlob;
 
-    public Output<String> publicBlob() {
-        return this.publicBlob == null ? Codegen.empty() : this.publicBlob;
+    public Optional<Output<String>> publicBlob() {
+        return Optional.ofNullable(this.publicBlob);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class ServerTrustCertificateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ServerTrustCertificateArgs(
-        @Nullable Output<String> certificateName,
-        Output<String> managedInstanceName,
-        @Nullable Output<String> publicBlob,
-        Output<String> resourceGroupName) {
-        this.certificateName = certificateName;
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.publicBlob = publicBlob;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ServerTrustCertificateArgs() {}
 
-    private ServerTrustCertificateArgs() {
-        this.certificateName = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.publicBlob = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ServerTrustCertificateArgs(ServerTrustCertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.publicBlob = $.publicBlob;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerTrustCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateName;
-        private Output<String> managedInstanceName;
-        private @Nullable Output<String> publicBlob;
-        private Output<String> resourceGroupName;
+        private ServerTrustCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerTrustCertificateArgs();
         }
 
         public Builder(ServerTrustCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.publicBlob = defaults.publicBlob;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ServerTrustCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder publicBlob(@Nullable Output<String> publicBlob) {
-            this.publicBlob = publicBlob;
+            $.publicBlob = publicBlob;
             return this;
         }
-        public Builder publicBlob(@Nullable String publicBlob) {
-            this.publicBlob = Codegen.ofNullable(publicBlob);
-            return this;
+
+        public Builder publicBlob(String publicBlob) {
+            return publicBlob(Output.of(publicBlob));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ServerTrustCertificateArgs build() {
-            return new ServerTrustCertificateArgs(certificateName, managedInstanceName, publicBlob, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ServerTrustCertificateArgs build() {
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

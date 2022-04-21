@@ -15,12 +15,12 @@ import com.pulumi.azurenative.streamanalytics.inputs.TransformationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibilityLevel")
-      private final @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
+    private @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
 
-    public Output<Either<String,CompatibilityLevel>> compatibilityLevel() {
-        return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
+    public Optional<Output<Either<String,CompatibilityLevel>>> compatibilityLevel() {
+        return Optional.ofNullable(this.compatibilityLevel);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataLocale")
-      private final @Nullable Output<String> dataLocale;
+    private @Nullable Output<String> dataLocale;
 
-    public Output<String> dataLocale() {
-        return this.dataLocale == null ? Codegen.empty() : this.dataLocale;
+    public Optional<Output<String>> dataLocale() {
+        return Optional.ofNullable(this.dataLocale);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventsLateArrivalMaxDelayInSeconds")
-      private final @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
+    private @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
 
-    public Output<Integer> eventsLateArrivalMaxDelayInSeconds() {
-        return this.eventsLateArrivalMaxDelayInSeconds == null ? Codegen.empty() : this.eventsLateArrivalMaxDelayInSeconds;
+    public Optional<Output<Integer>> eventsLateArrivalMaxDelayInSeconds() {
+        return Optional.ofNullable(this.eventsLateArrivalMaxDelayInSeconds);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventsOutOfOrderMaxDelayInSeconds")
-      private final @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
+    private @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
 
-    public Output<Integer> eventsOutOfOrderMaxDelayInSeconds() {
-        return this.eventsOutOfOrderMaxDelayInSeconds == null ? Codegen.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
+    public Optional<Output<Integer>> eventsOutOfOrderMaxDelayInSeconds() {
+        return Optional.ofNullable(this.eventsOutOfOrderMaxDelayInSeconds);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventsOutOfOrderPolicy")
-      private final @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
+    private @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
 
-    public Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy() {
-        return this.eventsOutOfOrderPolicy == null ? Codegen.empty() : this.eventsOutOfOrderPolicy;
+    public Optional<Output<Either<String,EventsOutOfOrderPolicy>>> eventsOutOfOrderPolicy() {
+        return Optional.ofNullable(this.eventsOutOfOrderPolicy);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functions")
-      private final @Nullable Output<List<FunctionArgs>> functions;
+    private @Nullable Output<List<FunctionArgs>> functions;
 
-    public Output<List<FunctionArgs>> functions() {
-        return this.functions == null ? Codegen.empty() : this.functions;
+    public Optional<Output<List<FunctionArgs>>> functions() {
+        return Optional.ofNullable(this.functions);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<List<InputArgs>> inputs;
+    private @Nullable Output<List<InputArgs>> inputs;
 
-    public Output<List<InputArgs>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<List<InputArgs>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobName")
-      private final @Nullable Output<String> jobName;
+    private @Nullable Output<String> jobName;
 
-    public Output<String> jobName() {
-        return this.jobName == null ? Codegen.empty() : this.jobName;
+    public Optional<Output<String>> jobName() {
+        return Optional.ofNullable(this.jobName);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputErrorPolicy")
-      private final @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
+    private @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
 
-    public Output<Either<String,OutputErrorPolicy>> outputErrorPolicy() {
-        return this.outputErrorPolicy == null ? Codegen.empty() : this.outputErrorPolicy;
+    public Optional<Output<Either<String,OutputErrorPolicy>>> outputErrorPolicy() {
+        return Optional.ofNullable(this.outputErrorPolicy);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputStartMode")
-      private final @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
+    private @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
 
-    public Output<Either<String,OutputStartMode>> outputStartMode() {
-        return this.outputStartMode == null ? Codegen.empty() : this.outputStartMode;
+    public Optional<Output<Either<String,OutputStartMode>>> outputStartMode() {
+        return Optional.ofNullable(this.outputStartMode);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputStartTime")
-      private final @Nullable Output<String> outputStartTime;
+    private @Nullable Output<String> outputStartTime;
 
-    public Output<String> outputStartTime() {
-        return this.outputStartTime == null ? Codegen.empty() : this.outputStartTime;
+    public Optional<Output<String>> outputStartTime() {
+        return Optional.ofNullable(this.outputStartTime);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputs")
-      private final @Nullable Output<List<OutputArgs>> outputs;
+    private @Nullable Output<List<OutputArgs>> outputs;
 
-    public Output<List<OutputArgs>> outputs() {
-        return this.outputs == null ? Codegen.empty() : this.outputs;
+    public Optional<Output<List<OutputArgs>>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -176,7 +176,7 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -187,10 +187,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -209,267 +209,221 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transformation")
-      private final @Nullable Output<TransformationArgs> transformation;
+    private @Nullable Output<TransformationArgs> transformation;
 
-    public Output<TransformationArgs> transformation() {
-        return this.transformation == null ? Codegen.empty() : this.transformation;
+    public Optional<Output<TransformationArgs>> transformation() {
+        return Optional.ofNullable(this.transformation);
     }
 
-    public StreamingJobArgs(
-        @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel,
-        @Nullable Output<String> dataLocale,
-        @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds,
-        @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds,
-        @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy,
-        @Nullable Output<List<FunctionArgs>> functions,
-        @Nullable Output<List<InputArgs>> inputs,
-        @Nullable Output<String> jobName,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy,
-        @Nullable Output<Either<String,OutputStartMode>> outputStartMode,
-        @Nullable Output<String> outputStartTime,
-        @Nullable Output<List<OutputArgs>> outputs,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<TransformationArgs> transformation) {
-        this.compatibilityLevel = compatibilityLevel;
-        this.dataLocale = dataLocale;
-        this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
-        this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
-        this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
-        this.functions = functions;
-        this.inputs = inputs;
-        this.jobName = jobName;
-        this.location = location;
-        this.outputErrorPolicy = outputErrorPolicy;
-        this.outputStartMode = outputStartMode;
-        this.outputStartTime = outputStartTime;
-        this.outputs = outputs;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.transformation = transformation;
-    }
+    private StreamingJobArgs() {}
 
-    private StreamingJobArgs() {
-        this.compatibilityLevel = Codegen.empty();
-        this.dataLocale = Codegen.empty();
-        this.eventsLateArrivalMaxDelayInSeconds = Codegen.empty();
-        this.eventsOutOfOrderMaxDelayInSeconds = Codegen.empty();
-        this.eventsOutOfOrderPolicy = Codegen.empty();
-        this.functions = Codegen.empty();
-        this.inputs = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.outputErrorPolicy = Codegen.empty();
-        this.outputStartMode = Codegen.empty();
-        this.outputStartTime = Codegen.empty();
-        this.outputs = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transformation = Codegen.empty();
+    private StreamingJobArgs(StreamingJobArgs $) {
+        this.compatibilityLevel = $.compatibilityLevel;
+        this.dataLocale = $.dataLocale;
+        this.eventsLateArrivalMaxDelayInSeconds = $.eventsLateArrivalMaxDelayInSeconds;
+        this.eventsOutOfOrderMaxDelayInSeconds = $.eventsOutOfOrderMaxDelayInSeconds;
+        this.eventsOutOfOrderPolicy = $.eventsOutOfOrderPolicy;
+        this.functions = $.functions;
+        this.inputs = $.inputs;
+        this.jobName = $.jobName;
+        this.location = $.location;
+        this.outputErrorPolicy = $.outputErrorPolicy;
+        this.outputStartMode = $.outputStartMode;
+        this.outputStartTime = $.outputStartTime;
+        this.outputs = $.outputs;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.transformation = $.transformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
-        private @Nullable Output<String> dataLocale;
-        private @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
-        private @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
-        private @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
-        private @Nullable Output<List<FunctionArgs>> functions;
-        private @Nullable Output<List<InputArgs>> inputs;
-        private @Nullable Output<String> jobName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
-        private @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
-        private @Nullable Output<String> outputStartTime;
-        private @Nullable Output<List<OutputArgs>> outputs;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<TransformationArgs> transformation;
+        private StreamingJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingJobArgs();
         }
 
         public Builder(StreamingJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibilityLevel = defaults.compatibilityLevel;
-    	      this.dataLocale = defaults.dataLocale;
-    	      this.eventsLateArrivalMaxDelayInSeconds = defaults.eventsLateArrivalMaxDelayInSeconds;
-    	      this.eventsOutOfOrderMaxDelayInSeconds = defaults.eventsOutOfOrderMaxDelayInSeconds;
-    	      this.eventsOutOfOrderPolicy = defaults.eventsOutOfOrderPolicy;
-    	      this.functions = defaults.functions;
-    	      this.inputs = defaults.inputs;
-    	      this.jobName = defaults.jobName;
-    	      this.location = defaults.location;
-    	      this.outputErrorPolicy = defaults.outputErrorPolicy;
-    	      this.outputStartMode = defaults.outputStartMode;
-    	      this.outputStartTime = defaults.outputStartTime;
-    	      this.outputs = defaults.outputs;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.transformation = defaults.transformation;
+            $ = new StreamingJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibilityLevel(@Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel) {
-            this.compatibilityLevel = compatibilityLevel;
+            $.compatibilityLevel = compatibilityLevel;
             return this;
         }
-        public Builder compatibilityLevel(@Nullable Either<String,CompatibilityLevel> compatibilityLevel) {
-            this.compatibilityLevel = Codegen.ofNullable(compatibilityLevel);
-            return this;
+
+        public Builder compatibilityLevel(Either<String,CompatibilityLevel> compatibilityLevel) {
+            return compatibilityLevel(Output.of(compatibilityLevel));
         }
+
         public Builder dataLocale(@Nullable Output<String> dataLocale) {
-            this.dataLocale = dataLocale;
+            $.dataLocale = dataLocale;
             return this;
         }
-        public Builder dataLocale(@Nullable String dataLocale) {
-            this.dataLocale = Codegen.ofNullable(dataLocale);
-            return this;
+
+        public Builder dataLocale(String dataLocale) {
+            return dataLocale(Output.of(dataLocale));
         }
+
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds) {
-            this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
+            $.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
-        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
-            this.eventsLateArrivalMaxDelayInSeconds = Codegen.ofNullable(eventsLateArrivalMaxDelayInSeconds);
-            return this;
+
+        public Builder eventsLateArrivalMaxDelayInSeconds(Integer eventsLateArrivalMaxDelayInSeconds) {
+            return eventsLateArrivalMaxDelayInSeconds(Output.of(eventsLateArrivalMaxDelayInSeconds));
         }
+
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds) {
-            this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
+            $.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
-        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
-            this.eventsOutOfOrderMaxDelayInSeconds = Codegen.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
-            return this;
+
+        public Builder eventsOutOfOrderMaxDelayInSeconds(Integer eventsOutOfOrderMaxDelayInSeconds) {
+            return eventsOutOfOrderMaxDelayInSeconds(Output.of(eventsOutOfOrderMaxDelayInSeconds));
         }
+
         public Builder eventsOutOfOrderPolicy(@Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
-            this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
+            $.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
-        public Builder eventsOutOfOrderPolicy(@Nullable Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
-            this.eventsOutOfOrderPolicy = Codegen.ofNullable(eventsOutOfOrderPolicy);
-            return this;
+
+        public Builder eventsOutOfOrderPolicy(Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
+            return eventsOutOfOrderPolicy(Output.of(eventsOutOfOrderPolicy));
         }
+
         public Builder functions(@Nullable Output<List<FunctionArgs>> functions) {
-            this.functions = functions;
+            $.functions = functions;
             return this;
         }
-        public Builder functions(@Nullable List<FunctionArgs> functions) {
-            this.functions = Codegen.ofNullable(functions);
-            return this;
+
+        public Builder functions(List<FunctionArgs> functions) {
+            return functions(Output.of(functions));
         }
+
         public Builder functions(FunctionArgs... functions) {
             return functions(List.of(functions));
         }
+
         public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable List<InputArgs> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(List<InputArgs> inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(InputArgs... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder jobName(@Nullable Output<String> jobName) {
-            this.jobName = jobName;
+            $.jobName = jobName;
             return this;
         }
-        public Builder jobName(@Nullable String jobName) {
-            this.jobName = Codegen.ofNullable(jobName);
-            return this;
+
+        public Builder jobName(String jobName) {
+            return jobName(Output.of(jobName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder outputErrorPolicy(@Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
-            this.outputErrorPolicy = outputErrorPolicy;
+            $.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
-        public Builder outputErrorPolicy(@Nullable Either<String,OutputErrorPolicy> outputErrorPolicy) {
-            this.outputErrorPolicy = Codegen.ofNullable(outputErrorPolicy);
-            return this;
+
+        public Builder outputErrorPolicy(Either<String,OutputErrorPolicy> outputErrorPolicy) {
+            return outputErrorPolicy(Output.of(outputErrorPolicy));
         }
+
         public Builder outputStartMode(@Nullable Output<Either<String,OutputStartMode>> outputStartMode) {
-            this.outputStartMode = outputStartMode;
+            $.outputStartMode = outputStartMode;
             return this;
         }
-        public Builder outputStartMode(@Nullable Either<String,OutputStartMode> outputStartMode) {
-            this.outputStartMode = Codegen.ofNullable(outputStartMode);
-            return this;
+
+        public Builder outputStartMode(Either<String,OutputStartMode> outputStartMode) {
+            return outputStartMode(Output.of(outputStartMode));
         }
+
         public Builder outputStartTime(@Nullable Output<String> outputStartTime) {
-            this.outputStartTime = outputStartTime;
+            $.outputStartTime = outputStartTime;
             return this;
         }
-        public Builder outputStartTime(@Nullable String outputStartTime) {
-            this.outputStartTime = Codegen.ofNullable(outputStartTime);
-            return this;
+
+        public Builder outputStartTime(String outputStartTime) {
+            return outputStartTime(Output.of(outputStartTime));
         }
+
         public Builder outputs(@Nullable Output<List<OutputArgs>> outputs) {
-            this.outputs = outputs;
+            $.outputs = outputs;
             return this;
         }
-        public Builder outputs(@Nullable List<OutputArgs> outputs) {
-            this.outputs = Codegen.ofNullable(outputs);
-            return this;
+
+        public Builder outputs(List<OutputArgs> outputs) {
+            return outputs(Output.of(outputs));
         }
+
         public Builder outputs(OutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transformation(@Nullable Output<TransformationArgs> transformation) {
-            this.transformation = transformation;
+            $.transformation = transformation;
             return this;
         }
-        public Builder transformation(@Nullable TransformationArgs transformation) {
-            this.transformation = Codegen.ofNullable(transformation);
-            return this;
-        }        public StreamingJobArgs build() {
-            return new StreamingJobArgs(compatibilityLevel, dataLocale, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, inputs, jobName, location, outputErrorPolicy, outputStartMode, outputStartTime, outputs, resourceGroupName, sku, tags, transformation);
+
+        public Builder transformation(TransformationArgs transformation) {
+            return transformation(Output.of(transformation));
+        }
+
+        public StreamingJobArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

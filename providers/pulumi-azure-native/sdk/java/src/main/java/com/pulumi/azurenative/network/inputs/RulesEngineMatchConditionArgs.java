@@ -9,11 +9,11 @@ import com.pulumi.azurenative.network.enums.Transform;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="negateCondition")
-      private final @Nullable Output<Boolean> negateCondition;
+    private @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> negateCondition() {
-        return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
+    public Optional<Output<Boolean>> negateCondition() {
+        return Optional.ofNullable(this.negateCondition);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rulesEngineMatchValue", required=true)
-      private final Output<List<String>> rulesEngineMatchValue;
+    private Output<List<String>> rulesEngineMatchValue;
 
     public Output<List<String>> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
@@ -52,7 +52,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rulesEngineMatchVariable", required=true)
-      private final Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
+    private Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
     public Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
@@ -63,7 +63,7 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rulesEngineOperator", required=true)
-      private final Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
+    private Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
     public Output<Either<String,RulesEngineOperator>> rulesEngineOperator() {
         return this.rulesEngineOperator;
@@ -74,10 +74,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -85,121 +85,109 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="transforms")
-      private final @Nullable Output<List<Either<String,Transform>>> transforms;
+    private @Nullable Output<List<Either<String,Transform>>> transforms;
 
-    public Output<List<Either<String,Transform>>> transforms() {
-        return this.transforms == null ? Codegen.empty() : this.transforms;
+    public Optional<Output<List<Either<String,Transform>>>> transforms() {
+        return Optional.ofNullable(this.transforms);
     }
 
-    public RulesEngineMatchConditionArgs(
-        @Nullable Output<Boolean> negateCondition,
-        Output<List<String>> rulesEngineMatchValue,
-        Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable,
-        Output<Either<String,RulesEngineOperator>> rulesEngineOperator,
-        @Nullable Output<String> selector,
-        @Nullable Output<List<Either<String,Transform>>> transforms) {
-        this.negateCondition = negateCondition;
-        this.rulesEngineMatchValue = Objects.requireNonNull(rulesEngineMatchValue, "expected parameter 'rulesEngineMatchValue' to be non-null");
-        this.rulesEngineMatchVariable = Objects.requireNonNull(rulesEngineMatchVariable, "expected parameter 'rulesEngineMatchVariable' to be non-null");
-        this.rulesEngineOperator = Objects.requireNonNull(rulesEngineOperator, "expected parameter 'rulesEngineOperator' to be non-null");
-        this.selector = selector;
-        this.transforms = transforms;
-    }
+    private RulesEngineMatchConditionArgs() {}
 
-    private RulesEngineMatchConditionArgs() {
-        this.negateCondition = Codegen.empty();
-        this.rulesEngineMatchValue = Codegen.empty();
-        this.rulesEngineMatchVariable = Codegen.empty();
-        this.rulesEngineOperator = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.transforms = Codegen.empty();
+    private RulesEngineMatchConditionArgs(RulesEngineMatchConditionArgs $) {
+        this.negateCondition = $.negateCondition;
+        this.rulesEngineMatchValue = $.rulesEngineMatchValue;
+        this.rulesEngineMatchVariable = $.rulesEngineMatchVariable;
+        this.rulesEngineOperator = $.rulesEngineOperator;
+        this.selector = $.selector;
+        this.transforms = $.transforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineMatchConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> negateCondition;
-        private Output<List<String>> rulesEngineMatchValue;
-        private Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
-        private Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
-        private @Nullable Output<String> selector;
-        private @Nullable Output<List<Either<String,Transform>>> transforms;
+        private RulesEngineMatchConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineMatchConditionArgs();
         }
 
         public Builder(RulesEngineMatchConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.negateCondition = defaults.negateCondition;
-    	      this.rulesEngineMatchValue = defaults.rulesEngineMatchValue;
-    	      this.rulesEngineMatchVariable = defaults.rulesEngineMatchVariable;
-    	      this.rulesEngineOperator = defaults.rulesEngineOperator;
-    	      this.selector = defaults.selector;
-    	      this.transforms = defaults.transforms;
+            $ = new RulesEngineMatchConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
-            this.negateCondition = negateCondition;
+            $.negateCondition = negateCondition;
             return this;
         }
-        public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Codegen.ofNullable(negateCondition);
-            return this;
+
+        public Builder negateCondition(Boolean negateCondition) {
+            return negateCondition(Output.of(negateCondition));
         }
+
         public Builder rulesEngineMatchValue(Output<List<String>> rulesEngineMatchValue) {
-            this.rulesEngineMatchValue = Objects.requireNonNull(rulesEngineMatchValue);
+            $.rulesEngineMatchValue = rulesEngineMatchValue;
             return this;
         }
+
         public Builder rulesEngineMatchValue(List<String> rulesEngineMatchValue) {
-            this.rulesEngineMatchValue = Output.of(Objects.requireNonNull(rulesEngineMatchValue));
-            return this;
+            return rulesEngineMatchValue(Output.of(rulesEngineMatchValue));
         }
+
         public Builder rulesEngineMatchValue(String... rulesEngineMatchValue) {
             return rulesEngineMatchValue(List.of(rulesEngineMatchValue));
         }
+
         public Builder rulesEngineMatchVariable(Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable) {
-            this.rulesEngineMatchVariable = Objects.requireNonNull(rulesEngineMatchVariable);
+            $.rulesEngineMatchVariable = rulesEngineMatchVariable;
             return this;
         }
+
         public Builder rulesEngineMatchVariable(Either<String,RulesEngineMatchVariable> rulesEngineMatchVariable) {
-            this.rulesEngineMatchVariable = Output.of(Objects.requireNonNull(rulesEngineMatchVariable));
-            return this;
+            return rulesEngineMatchVariable(Output.of(rulesEngineMatchVariable));
         }
+
         public Builder rulesEngineOperator(Output<Either<String,RulesEngineOperator>> rulesEngineOperator) {
-            this.rulesEngineOperator = Objects.requireNonNull(rulesEngineOperator);
+            $.rulesEngineOperator = rulesEngineOperator;
             return this;
         }
+
         public Builder rulesEngineOperator(Either<String,RulesEngineOperator> rulesEngineOperator) {
-            this.rulesEngineOperator = Output.of(Objects.requireNonNull(rulesEngineOperator));
-            return this;
+            return rulesEngineOperator(Output.of(rulesEngineOperator));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
-            this.transforms = transforms;
+            $.transforms = transforms;
             return this;
         }
-        public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
-            this.transforms = Codegen.ofNullable(transforms);
-            return this;
+
+        public Builder transforms(List<Either<String,Transform>> transforms) {
+            return transforms(Output.of(transforms));
         }
+
         public Builder transforms(Either<String,Transform>... transforms) {
             return transforms(List.of(transforms));
-        }        public RulesEngineMatchConditionArgs build() {
-            return new RulesEngineMatchConditionArgs(negateCondition, rulesEngineMatchValue, rulesEngineMatchVariable, rulesEngineOperator, selector, transforms);
+        }
+
+        public RulesEngineMatchConditionArgs build() {
+            $.rulesEngineMatchValue = Objects.requireNonNull($.rulesEngineMatchValue, "expected parameter 'rulesEngineMatchValue' to be non-null");
+            $.rulesEngineMatchVariable = Objects.requireNonNull($.rulesEngineMatchVariable, "expected parameter 'rulesEngineMatchVariable' to be non-null");
+            $.rulesEngineOperator = Objects.requireNonNull($.rulesEngineOperator, "expected parameter 'rulesEngineOperator' to be non-null");
+            return $;
         }
     }
+
 }

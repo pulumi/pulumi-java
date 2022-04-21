@@ -23,45 +23,44 @@ public final class ConfigurationProfileResourcePropertiesResponse extends com.pu
      * 
      */
     @Import(name="notifications")
-      private final @Nullable NotificationSettingsResponse notifications;
+    private @Nullable NotificationSettingsResponse notifications;
 
     public Optional<NotificationSettingsResponse> notifications() {
-        return this.notifications == null ? Optional.empty() : Optional.ofNullable(this.notifications);
+        return Optional.ofNullable(this.notifications);
     }
 
-    public ConfigurationProfileResourcePropertiesResponse(@Nullable NotificationSettingsResponse notifications) {
-        this.notifications = notifications;
-    }
+    private ConfigurationProfileResourcePropertiesResponse() {}
 
-    private ConfigurationProfileResourcePropertiesResponse() {
-        this.notifications = null;
+    private ConfigurationProfileResourcePropertiesResponse(ConfigurationProfileResourcePropertiesResponse $) {
+        this.notifications = $.notifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable NotificationSettingsResponse notifications;
+        private ConfigurationProfileResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileResourcePropertiesResponse();
         }
 
         public Builder(ConfigurationProfileResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notifications = defaults.notifications;
+            $ = new ConfigurationProfileResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder notifications(@Nullable NotificationSettingsResponse notifications) {
-            this.notifications = notifications;
+            $.notifications = notifications;
             return this;
-        }        public ConfigurationProfileResourcePropertiesResponse build() {
-            return new ConfigurationProfileResourcePropertiesResponse(notifications);
+        }
+
+        public ConfigurationProfileResourcePropertiesResponse build() {
+            return $;
         }
     }
+
 }

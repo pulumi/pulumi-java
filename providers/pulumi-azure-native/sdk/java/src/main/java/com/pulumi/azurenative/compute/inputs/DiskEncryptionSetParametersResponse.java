@@ -23,45 +23,44 @@ public final class DiskEncryptionSetParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public DiskEncryptionSetParametersResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private DiskEncryptionSetParametersResponse() {}
 
-    private DiskEncryptionSetParametersResponse() {
-        this.id = null;
+    private DiskEncryptionSetParametersResponse(DiskEncryptionSetParametersResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionSetParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private DiskEncryptionSetParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionSetParametersResponse();
         }
 
         public Builder(DiskEncryptionSetParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new DiskEncryptionSetParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public DiskEncryptionSetParametersResponse build() {
-            return new DiskEncryptionSetParametersResponse(id);
+        }
+
+        public DiskEncryptionSetParametersResponse build() {
+            return $;
         }
     }
+
 }

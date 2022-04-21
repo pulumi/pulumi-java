@@ -7,10 +7,10 @@ import com.pulumi.azurenative.providerhub.enums.ThrottlingMetricType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,90 +19,84 @@ public final class ThrottlingMetricArgs extends com.pulumi.resources.ResourceArg
     public static final ThrottlingMetricArgs Empty = new ThrottlingMetricArgs();
 
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     @Import(name="limit", required=true)
-      private final Output<Double> limit;
+    private Output<Double> limit;
 
     public Output<Double> limit() {
         return this.limit;
     }
 
     @Import(name="type", required=true)
-      private final Output<Either<String,ThrottlingMetricType>> type;
+    private Output<Either<String,ThrottlingMetricType>> type;
 
     public Output<Either<String,ThrottlingMetricType>> type() {
         return this.type;
     }
 
-    public ThrottlingMetricArgs(
-        @Nullable Output<String> interval,
-        Output<Double> limit,
-        Output<Either<String,ThrottlingMetricType>> type) {
-        this.interval = interval;
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ThrottlingMetricArgs() {}
 
-    private ThrottlingMetricArgs() {
-        this.interval = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.type = Codegen.empty();
+    private ThrottlingMetricArgs(ThrottlingMetricArgs $) {
+        this.interval = $.interval;
+        this.limit = $.limit;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThrottlingMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> interval;
-        private Output<Double> limit;
-        private Output<Either<String,ThrottlingMetricType>> type;
+        private ThrottlingMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThrottlingMetricArgs();
         }
 
         public Builder(ThrottlingMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.limit = defaults.limit;
-    	      this.type = defaults.type;
+            $ = new ThrottlingMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder limit(Output<Double> limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder limit(Double limit) {
-            this.limit = Output.of(Objects.requireNonNull(limit));
-            return this;
+            return limit(Output.of(limit));
         }
+
         public Builder type(Output<Either<String,ThrottlingMetricType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ThrottlingMetricType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ThrottlingMetricArgs build() {
-            return new ThrottlingMetricArgs(interval, limit, type);
+            return type(Output.of(type));
+        }
+
+        public ThrottlingMetricArgs build() {
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

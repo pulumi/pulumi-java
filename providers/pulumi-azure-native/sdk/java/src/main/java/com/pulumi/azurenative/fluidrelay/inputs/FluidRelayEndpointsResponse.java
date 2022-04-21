@@ -22,7 +22,7 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ordererEndpoints", required=true)
-      private final List<String> ordererEndpoints;
+    private List<String> ordererEndpoints;
 
     public List<String> ordererEndpoints() {
         return this.ordererEndpoints;
@@ -33,61 +33,60 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="storageEndpoints", required=true)
-      private final List<String> storageEndpoints;
+    private List<String> storageEndpoints;
 
     public List<String> storageEndpoints() {
         return this.storageEndpoints;
     }
 
-    public FluidRelayEndpointsResponse(
-        List<String> ordererEndpoints,
-        List<String> storageEndpoints) {
-        this.ordererEndpoints = Objects.requireNonNull(ordererEndpoints, "expected parameter 'ordererEndpoints' to be non-null");
-        this.storageEndpoints = Objects.requireNonNull(storageEndpoints, "expected parameter 'storageEndpoints' to be non-null");
-    }
+    private FluidRelayEndpointsResponse() {}
 
-    private FluidRelayEndpointsResponse() {
-        this.ordererEndpoints = List.of();
-        this.storageEndpoints = List.of();
+    private FluidRelayEndpointsResponse(FluidRelayEndpointsResponse $) {
+        this.ordererEndpoints = $.ordererEndpoints;
+        this.storageEndpoints = $.storageEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FluidRelayEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ordererEndpoints;
-        private List<String> storageEndpoints;
+        private FluidRelayEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FluidRelayEndpointsResponse();
         }
 
         public Builder(FluidRelayEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ordererEndpoints = defaults.ordererEndpoints;
-    	      this.storageEndpoints = defaults.storageEndpoints;
+            $ = new FluidRelayEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ordererEndpoints(List<String> ordererEndpoints) {
-            this.ordererEndpoints = Objects.requireNonNull(ordererEndpoints);
+            $.ordererEndpoints = ordererEndpoints;
             return this;
         }
+
         public Builder ordererEndpoints(String... ordererEndpoints) {
             return ordererEndpoints(List.of(ordererEndpoints));
         }
+
         public Builder storageEndpoints(List<String> storageEndpoints) {
-            this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
+            $.storageEndpoints = storageEndpoints;
             return this;
         }
+
         public Builder storageEndpoints(String... storageEndpoints) {
             return storageEndpoints(List.of(storageEndpoints));
-        }        public FluidRelayEndpointsResponse build() {
-            return new FluidRelayEndpointsResponse(ordererEndpoints, storageEndpoints);
+        }
+
+        public FluidRelayEndpointsResponse build() {
+            $.ordererEndpoints = Objects.requireNonNull($.ordererEndpoints, "expected parameter 'ordererEndpoints' to be non-null");
+            $.storageEndpoints = Objects.requireNonNull($.storageEndpoints, "expected parameter 'storageEndpoints' to be non-null");
+            return $;
         }
     }
+
 }

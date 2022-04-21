@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="messageId", required=true)
-      private final Output<String> messageId;
+    private Output<String> messageId;
 
     public Output<String> messageId() {
         return this.messageId;
@@ -35,7 +35,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schemaName", required=true)
-      private final Output<String> schemaName;
+    private Output<String> schemaName;
 
     public Output<String> schemaName() {
         return this.schemaName;
@@ -46,7 +46,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schemaVersion", required=true)
-      private final Output<String> schemaVersion;
+    private Output<String> schemaVersion;
 
     public Output<String> schemaVersion() {
         return this.schemaVersion;
@@ -57,89 +57,81 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="senderApplicationId")
-      private final @Nullable Output<String> senderApplicationId;
+    private @Nullable Output<String> senderApplicationId;
 
-    public Output<String> senderApplicationId() {
-        return this.senderApplicationId == null ? Codegen.empty() : this.senderApplicationId;
+    public Optional<Output<String>> senderApplicationId() {
+        return Optional.ofNullable(this.senderApplicationId);
     }
 
-    public X12SchemaReferenceArgs(
-        Output<String> messageId,
-        Output<String> schemaName,
-        Output<String> schemaVersion,
-        @Nullable Output<String> senderApplicationId) {
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.schemaVersion = Objects.requireNonNull(schemaVersion, "expected parameter 'schemaVersion' to be non-null");
-        this.senderApplicationId = senderApplicationId;
-    }
+    private X12SchemaReferenceArgs() {}
 
-    private X12SchemaReferenceArgs() {
-        this.messageId = Codegen.empty();
-        this.schemaName = Codegen.empty();
-        this.schemaVersion = Codegen.empty();
-        this.senderApplicationId = Codegen.empty();
+    private X12SchemaReferenceArgs(X12SchemaReferenceArgs $) {
+        this.messageId = $.messageId;
+        this.schemaName = $.schemaName;
+        this.schemaVersion = $.schemaVersion;
+        this.senderApplicationId = $.senderApplicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12SchemaReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> messageId;
-        private Output<String> schemaName;
-        private Output<String> schemaVersion;
-        private @Nullable Output<String> senderApplicationId;
+        private X12SchemaReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12SchemaReferenceArgs();
         }
 
         public Builder(X12SchemaReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageId = defaults.messageId;
-    	      this.schemaName = defaults.schemaName;
-    	      this.schemaVersion = defaults.schemaVersion;
-    	      this.senderApplicationId = defaults.senderApplicationId;
+            $ = new X12SchemaReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageId(Output<String> messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Output.of(Objects.requireNonNull(messageId));
-            return this;
+            return messageId(Output.of(messageId));
         }
+
         public Builder schemaName(Output<String> schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
-            return this;
+            return schemaName(Output.of(schemaName));
         }
+
         public Builder schemaVersion(Output<String> schemaVersion) {
-            this.schemaVersion = Objects.requireNonNull(schemaVersion);
+            $.schemaVersion = schemaVersion;
             return this;
         }
+
         public Builder schemaVersion(String schemaVersion) {
-            this.schemaVersion = Output.of(Objects.requireNonNull(schemaVersion));
-            return this;
+            return schemaVersion(Output.of(schemaVersion));
         }
+
         public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
-            this.senderApplicationId = senderApplicationId;
+            $.senderApplicationId = senderApplicationId;
             return this;
         }
-        public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = Codegen.ofNullable(senderApplicationId);
-            return this;
-        }        public X12SchemaReferenceArgs build() {
-            return new X12SchemaReferenceArgs(messageId, schemaName, schemaVersion, senderApplicationId);
+
+        public Builder senderApplicationId(String senderApplicationId) {
+            return senderApplicationId(Output.of(senderApplicationId));
+        }
+
+        public X12SchemaReferenceArgs build() {
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            $.schemaVersion = Objects.requireNonNull($.schemaVersion, "expected parameter 'schemaVersion' to be non-null");
+            return $;
         }
     }
+
 }

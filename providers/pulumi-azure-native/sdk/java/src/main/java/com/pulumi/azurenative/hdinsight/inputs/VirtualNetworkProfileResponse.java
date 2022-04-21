@@ -23,10 +23,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subnet")
-      private final @Nullable String subnet;
+    private @Nullable String subnet;
 
     public Optional<String> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public VirtualNetworkProfileResponse(
-        @Nullable String id,
-        @Nullable String subnet) {
-        this.id = id;
-        this.subnet = subnet;
-    }
+    private VirtualNetworkProfileResponse() {}
 
-    private VirtualNetworkProfileResponse() {
-        this.id = null;
-        this.subnet = null;
+    private VirtualNetworkProfileResponse(VirtualNetworkProfileResponse $) {
+        this.id = $.id;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String subnet;
+        private VirtualNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkProfileResponse();
         }
 
         public Builder(VirtualNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.subnet = defaults.subnet;
+            $ = new VirtualNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public VirtualNetworkProfileResponse build() {
-            return new VirtualNetworkProfileResponse(id, subnet);
+        }
+
+        public VirtualNetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

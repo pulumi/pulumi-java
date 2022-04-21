@@ -5,10 +5,10 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ChangeFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ChangeFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Output<Integer> retentionInDays;
+    private @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
+    public Optional<Output<Integer>> retentionInDays() {
+        return Optional.ofNullable(this.retentionInDays);
     }
 
-    public ChangeFeedArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> retentionInDays) {
-        this.enabled = enabled;
-        this.retentionInDays = retentionInDays;
-    }
+    private ChangeFeedArgs() {}
 
-    private ChangeFeedArgs() {
-        this.enabled = Codegen.empty();
-        this.retentionInDays = Codegen.empty();
+    private ChangeFeedArgs(ChangeFeedArgs $) {
+        this.enabled = $.enabled;
+        this.retentionInDays = $.retentionInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChangeFeedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> retentionInDays;
+        private ChangeFeedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChangeFeedArgs();
         }
 
         public Builder(ChangeFeedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retentionInDays = defaults.retentionInDays;
+            $ = new ChangeFeedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
-        public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Codegen.ofNullable(retentionInDays);
-            return this;
-        }        public ChangeFeedArgs build() {
-            return new ChangeFeedArgs(enabled, retentionInDays);
+
+        public Builder retentionInDays(Integer retentionInDays) {
+            return retentionInDays(Output.of(retentionInDays));
+        }
+
+        public ChangeFeedArgs build() {
+            return $;
         }
     }
+
 }

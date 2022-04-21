@@ -23,45 +23,44 @@ public final class ServiceManagedIdentityResponseIdentity extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceManagedIdentityResponseIdentity(@Nullable String type) {
-        this.type = type;
-    }
+    private ServiceManagedIdentityResponseIdentity() {}
 
-    private ServiceManagedIdentityResponseIdentity() {
-        this.type = null;
+    private ServiceManagedIdentityResponseIdentity(ServiceManagedIdentityResponseIdentity $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceManagedIdentityResponseIdentity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private ServiceManagedIdentityResponseIdentity $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceManagedIdentityResponseIdentity();
         }
 
         public Builder(ServiceManagedIdentityResponseIdentity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServiceManagedIdentityResponseIdentity(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ServiceManagedIdentityResponseIdentity build() {
-            return new ServiceManagedIdentityResponseIdentity(type);
+        }
+
+        public ServiceManagedIdentityResponseIdentity build() {
+            return $;
         }
     }
+
 }

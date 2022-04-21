@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<Object> clientId;
+    private @Nullable Output<Object> clientId;
 
-    public Output<Object> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<Object>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<Object> language;
+    private @Nullable Output<Object> language;
 
-    public Output<Object> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<Object>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="logonGroup")
-      private final @Nullable Output<Object> logonGroup;
+    private @Nullable Output<Object> logonGroup;
 
-    public Output<Object> logonGroup() {
-        return this.logonGroup == null ? Codegen.empty() : this.logonGroup;
+    public Optional<Output<Object>> logonGroup() {
+        return Optional.ofNullable(this.logonGroup);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="messageServer")
-      private final @Nullable Output<Object> messageServer;
+    private @Nullable Output<Object> messageServer;
 
-    public Output<Object> messageServer() {
-        return this.messageServer == null ? Codegen.empty() : this.messageServer;
+    public Optional<Output<Object>> messageServer() {
+        return Optional.ofNullable(this.messageServer);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="messageServerService")
-      private final @Nullable Output<Object> messageServerService;
+    private @Nullable Output<Object> messageServerService;
 
-    public Output<Object> messageServerService() {
-        return this.messageServerService == null ? Codegen.empty() : this.messageServerService;
+    public Optional<Output<Object>> messageServerService() {
+        return Optional.ofNullable(this.messageServerService);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -142,10 +143,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -153,10 +154,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="server")
-      private final @Nullable Output<Object> server;
+    private @Nullable Output<Object> server;
 
-    public Output<Object> server() {
-        return this.server == null ? Codegen.empty() : this.server;
+    public Optional<Output<Object>> server() {
+        return Optional.ofNullable(this.server);
     }
 
     /**
@@ -164,10 +165,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sncLibraryPath")
-      private final @Nullable Output<Object> sncLibraryPath;
+    private @Nullable Output<Object> sncLibraryPath;
 
-    public Output<Object> sncLibraryPath() {
-        return this.sncLibraryPath == null ? Codegen.empty() : this.sncLibraryPath;
+    public Optional<Output<Object>> sncLibraryPath() {
+        return Optional.ofNullable(this.sncLibraryPath);
     }
 
     /**
@@ -175,10 +176,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sncMode")
-      private final @Nullable Output<Object> sncMode;
+    private @Nullable Output<Object> sncMode;
 
-    public Output<Object> sncMode() {
-        return this.sncMode == null ? Codegen.empty() : this.sncMode;
+    public Optional<Output<Object>> sncMode() {
+        return Optional.ofNullable(this.sncMode);
     }
 
     /**
@@ -186,10 +187,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sncMyName")
-      private final @Nullable Output<Object> sncMyName;
+    private @Nullable Output<Object> sncMyName;
 
-    public Output<Object> sncMyName() {
-        return this.sncMyName == null ? Codegen.empty() : this.sncMyName;
+    public Optional<Output<Object>> sncMyName() {
+        return Optional.ofNullable(this.sncMyName);
     }
 
     /**
@@ -197,10 +198,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sncPartnerName")
-      private final @Nullable Output<Object> sncPartnerName;
+    private @Nullable Output<Object> sncPartnerName;
 
-    public Output<Object> sncPartnerName() {
-        return this.sncPartnerName == null ? Codegen.empty() : this.sncPartnerName;
+    public Optional<Output<Object>> sncPartnerName() {
+        return Optional.ofNullable(this.sncPartnerName);
     }
 
     /**
@@ -208,10 +209,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sncQop")
-      private final @Nullable Output<Object> sncQop;
+    private @Nullable Output<Object> sncQop;
 
-    public Output<Object> sncQop() {
-        return this.sncQop == null ? Codegen.empty() : this.sncQop;
+    public Optional<Output<Object>> sncQop() {
+        return Optional.ofNullable(this.sncQop);
     }
 
     /**
@@ -219,10 +220,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="systemId")
-      private final @Nullable Output<Object> systemId;
+    private @Nullable Output<Object> systemId;
 
-    public Output<Object> systemId() {
-        return this.systemId == null ? Codegen.empty() : this.systemId;
+    public Optional<Output<Object>> systemId() {
+        return Optional.ofNullable(this.systemId);
     }
 
     /**
@@ -230,10 +231,10 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="systemNumber")
-      private final @Nullable Output<Object> systemNumber;
+    private @Nullable Output<Object> systemNumber;
 
-    public Output<Object> systemNumber() {
-        return this.systemNumber == null ? Codegen.empty() : this.systemNumber;
+    public Optional<Output<Object>> systemNumber() {
+        return Optional.ofNullable(this.systemNumber);
     }
 
     /**
@@ -242,7 +243,7 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -253,313 +254,253 @@ public final class SapTableLinkedServiceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<Object> userName;
+    private @Nullable Output<Object> userName;
 
-    public Output<Object> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<Object>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SapTableLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> clientId,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Object> language,
-        @Nullable Output<Object> logonGroup,
-        @Nullable Output<Object> messageServer,
-        @Nullable Output<Object> messageServerService,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Output<Object> server,
-        @Nullable Output<Object> sncLibraryPath,
-        @Nullable Output<Object> sncMode,
-        @Nullable Output<Object> sncMyName,
-        @Nullable Output<Object> sncPartnerName,
-        @Nullable Output<Object> sncQop,
-        @Nullable Output<Object> systemId,
-        @Nullable Output<Object> systemNumber,
-        Output<String> type,
-        @Nullable Output<Object> userName) {
-        this.annotations = annotations;
-        this.clientId = clientId;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.language = language;
-        this.logonGroup = logonGroup;
-        this.messageServer = messageServer;
-        this.messageServerService = messageServerService;
-        this.parameters = parameters;
-        this.password = password;
-        this.server = server;
-        this.sncLibraryPath = sncLibraryPath;
-        this.sncMode = sncMode;
-        this.sncMyName = sncMyName;
-        this.sncPartnerName = sncPartnerName;
-        this.sncQop = sncQop;
-        this.systemId = systemId;
-        this.systemNumber = systemNumber;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = userName;
-    }
+    private SapTableLinkedServiceArgs() {}
 
-    private SapTableLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.language = Codegen.empty();
-        this.logonGroup = Codegen.empty();
-        this.messageServer = Codegen.empty();
-        this.messageServerService = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.server = Codegen.empty();
-        this.sncLibraryPath = Codegen.empty();
-        this.sncMode = Codegen.empty();
-        this.sncMyName = Codegen.empty();
-        this.sncPartnerName = Codegen.empty();
-        this.sncQop = Codegen.empty();
-        this.systemId = Codegen.empty();
-        this.systemNumber = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SapTableLinkedServiceArgs(SapTableLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.clientId = $.clientId;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.language = $.language;
+        this.logonGroup = $.logonGroup;
+        this.messageServer = $.messageServer;
+        this.messageServerService = $.messageServerService;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.server = $.server;
+        this.sncLibraryPath = $.sncLibraryPath;
+        this.sncMode = $.sncMode;
+        this.sncMyName = $.sncMyName;
+        this.sncPartnerName = $.sncPartnerName;
+        this.sncQop = $.sncQop;
+        this.systemId = $.systemId;
+        this.systemNumber = $.systemNumber;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapTableLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> clientId;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Object> language;
-        private @Nullable Output<Object> logonGroup;
-        private @Nullable Output<Object> messageServer;
-        private @Nullable Output<Object> messageServerService;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Output<Object> server;
-        private @Nullable Output<Object> sncLibraryPath;
-        private @Nullable Output<Object> sncMode;
-        private @Nullable Output<Object> sncMyName;
-        private @Nullable Output<Object> sncPartnerName;
-        private @Nullable Output<Object> sncQop;
-        private @Nullable Output<Object> systemId;
-        private @Nullable Output<Object> systemNumber;
-        private Output<String> type;
-        private @Nullable Output<Object> userName;
+        private SapTableLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapTableLinkedServiceArgs();
         }
 
         public Builder(SapTableLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clientId = defaults.clientId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.language = defaults.language;
-    	      this.logonGroup = defaults.logonGroup;
-    	      this.messageServer = defaults.messageServer;
-    	      this.messageServerService = defaults.messageServerService;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.server = defaults.server;
-    	      this.sncLibraryPath = defaults.sncLibraryPath;
-    	      this.sncMode = defaults.sncMode;
-    	      this.sncMyName = defaults.sncMyName;
-    	      this.sncPartnerName = defaults.sncPartnerName;
-    	      this.sncQop = defaults.sncQop;
-    	      this.systemId = defaults.systemId;
-    	      this.systemNumber = defaults.systemNumber;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new SapTableLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clientId(@Nullable Output<Object> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(Object clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder language(@Nullable Output<Object> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable Object language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(Object language) {
+            return language(Output.of(language));
         }
+
         public Builder logonGroup(@Nullable Output<Object> logonGroup) {
-            this.logonGroup = logonGroup;
+            $.logonGroup = logonGroup;
             return this;
         }
-        public Builder logonGroup(@Nullable Object logonGroup) {
-            this.logonGroup = Codegen.ofNullable(logonGroup);
-            return this;
+
+        public Builder logonGroup(Object logonGroup) {
+            return logonGroup(Output.of(logonGroup));
         }
+
         public Builder messageServer(@Nullable Output<Object> messageServer) {
-            this.messageServer = messageServer;
+            $.messageServer = messageServer;
             return this;
         }
-        public Builder messageServer(@Nullable Object messageServer) {
-            this.messageServer = Codegen.ofNullable(messageServer);
-            return this;
+
+        public Builder messageServer(Object messageServer) {
+            return messageServer(Output.of(messageServer));
         }
+
         public Builder messageServerService(@Nullable Output<Object> messageServerService) {
-            this.messageServerService = messageServerService;
+            $.messageServerService = messageServerService;
             return this;
         }
-        public Builder messageServerService(@Nullable Object messageServerService) {
-            this.messageServerService = Codegen.ofNullable(messageServerService);
-            return this;
+
+        public Builder messageServerService(Object messageServerService) {
+            return messageServerService(Output.of(messageServerService));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder server(@Nullable Output<Object> server) {
-            this.server = server;
+            $.server = server;
             return this;
         }
-        public Builder server(@Nullable Object server) {
-            this.server = Codegen.ofNullable(server);
-            return this;
+
+        public Builder server(Object server) {
+            return server(Output.of(server));
         }
+
         public Builder sncLibraryPath(@Nullable Output<Object> sncLibraryPath) {
-            this.sncLibraryPath = sncLibraryPath;
+            $.sncLibraryPath = sncLibraryPath;
             return this;
         }
-        public Builder sncLibraryPath(@Nullable Object sncLibraryPath) {
-            this.sncLibraryPath = Codegen.ofNullable(sncLibraryPath);
-            return this;
+
+        public Builder sncLibraryPath(Object sncLibraryPath) {
+            return sncLibraryPath(Output.of(sncLibraryPath));
         }
+
         public Builder sncMode(@Nullable Output<Object> sncMode) {
-            this.sncMode = sncMode;
+            $.sncMode = sncMode;
             return this;
         }
-        public Builder sncMode(@Nullable Object sncMode) {
-            this.sncMode = Codegen.ofNullable(sncMode);
-            return this;
+
+        public Builder sncMode(Object sncMode) {
+            return sncMode(Output.of(sncMode));
         }
+
         public Builder sncMyName(@Nullable Output<Object> sncMyName) {
-            this.sncMyName = sncMyName;
+            $.sncMyName = sncMyName;
             return this;
         }
-        public Builder sncMyName(@Nullable Object sncMyName) {
-            this.sncMyName = Codegen.ofNullable(sncMyName);
-            return this;
+
+        public Builder sncMyName(Object sncMyName) {
+            return sncMyName(Output.of(sncMyName));
         }
+
         public Builder sncPartnerName(@Nullable Output<Object> sncPartnerName) {
-            this.sncPartnerName = sncPartnerName;
+            $.sncPartnerName = sncPartnerName;
             return this;
         }
-        public Builder sncPartnerName(@Nullable Object sncPartnerName) {
-            this.sncPartnerName = Codegen.ofNullable(sncPartnerName);
-            return this;
+
+        public Builder sncPartnerName(Object sncPartnerName) {
+            return sncPartnerName(Output.of(sncPartnerName));
         }
+
         public Builder sncQop(@Nullable Output<Object> sncQop) {
-            this.sncQop = sncQop;
+            $.sncQop = sncQop;
             return this;
         }
-        public Builder sncQop(@Nullable Object sncQop) {
-            this.sncQop = Codegen.ofNullable(sncQop);
-            return this;
+
+        public Builder sncQop(Object sncQop) {
+            return sncQop(Output.of(sncQop));
         }
+
         public Builder systemId(@Nullable Output<Object> systemId) {
-            this.systemId = systemId;
+            $.systemId = systemId;
             return this;
         }
-        public Builder systemId(@Nullable Object systemId) {
-            this.systemId = Codegen.ofNullable(systemId);
-            return this;
+
+        public Builder systemId(Object systemId) {
+            return systemId(Output.of(systemId));
         }
+
         public Builder systemNumber(@Nullable Output<Object> systemNumber) {
-            this.systemNumber = systemNumber;
+            $.systemNumber = systemNumber;
             return this;
         }
-        public Builder systemNumber(@Nullable Object systemNumber) {
-            this.systemNumber = Codegen.ofNullable(systemNumber);
-            return this;
+
+        public Builder systemNumber(Object systemNumber) {
+            return systemNumber(Output.of(systemNumber));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(@Nullable Output<Object> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable Object userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SapTableLinkedServiceArgs build() {
-            return new SapTableLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, sncLibraryPath, sncMode, sncMyName, sncPartnerName, sncQop, systemId, systemNumber, type, userName);
+
+        public Builder userName(Object userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SapTableLinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

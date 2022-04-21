@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitrate")
-      private final @Nullable Output<Integer> bitrate;
+    private @Nullable Output<Integer> bitrate;
 
-    public Output<Integer> bitrate() {
-        return this.bitrate == null ? Codegen.empty() : this.bitrate;
+    public Optional<Output<Integer>> bitrate() {
+        return Optional.ofNullable(this.bitrate);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channels")
-      private final @Nullable Output<Integer> channels;
+    private @Nullable Output<Integer> channels;
 
-    public Output<Integer> channels() {
-        return this.channels == null ? Codegen.empty() : this.channels;
+    public Optional<Output<Integer>> channels() {
+        return Optional.ofNullable(this.channels);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -72,10 +73,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<Either<String,AacAudioProfile>> profile;
+    private @Nullable Output<Either<String,AacAudioProfile>> profile;
 
-    public Output<Either<String,AacAudioProfile>> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<Either<String,AacAudioProfile>>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -83,115 +84,99 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="samplingRate")
-      private final @Nullable Output<Integer> samplingRate;
+    private @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> samplingRate() {
-        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
+    public Optional<Output<Integer>> samplingRate() {
+        return Optional.ofNullable(this.samplingRate);
     }
 
-    public AacAudioArgs(
-        @Nullable Output<Integer> bitrate,
-        @Nullable Output<Integer> channels,
-        @Nullable Output<String> label,
-        Output<String> odataType,
-        @Nullable Output<Either<String,AacAudioProfile>> profile,
-        @Nullable Output<Integer> samplingRate) {
-        this.bitrate = bitrate;
-        this.channels = channels;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.profile = profile;
-        this.samplingRate = samplingRate;
-    }
+    private AacAudioArgs() {}
 
-    private AacAudioArgs() {
-        this.bitrate = Codegen.empty();
-        this.channels = Codegen.empty();
-        this.label = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.samplingRate = Codegen.empty();
+    private AacAudioArgs(AacAudioArgs $) {
+        this.bitrate = $.bitrate;
+        this.channels = $.channels;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.profile = $.profile;
+        this.samplingRate = $.samplingRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AacAudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bitrate;
-        private @Nullable Output<Integer> channels;
-        private @Nullable Output<String> label;
-        private Output<String> odataType;
-        private @Nullable Output<Either<String,AacAudioProfile>> profile;
-        private @Nullable Output<Integer> samplingRate;
+        private AacAudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AacAudioArgs();
         }
 
         public Builder(AacAudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrate = defaults.bitrate;
-    	      this.channels = defaults.channels;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.profile = defaults.profile;
-    	      this.samplingRate = defaults.samplingRate;
+            $ = new AacAudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrate(@Nullable Output<Integer> bitrate) {
-            this.bitrate = bitrate;
+            $.bitrate = bitrate;
             return this;
         }
-        public Builder bitrate(@Nullable Integer bitrate) {
-            this.bitrate = Codegen.ofNullable(bitrate);
-            return this;
+
+        public Builder bitrate(Integer bitrate) {
+            return bitrate(Output.of(bitrate));
         }
+
         public Builder channels(@Nullable Output<Integer> channels) {
-            this.channels = channels;
+            $.channels = channels;
             return this;
         }
-        public Builder channels(@Nullable Integer channels) {
-            this.channels = Codegen.ofNullable(channels);
-            return this;
+
+        public Builder channels(Integer channels) {
+            return channels(Output.of(channels));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder profile(@Nullable Output<Either<String,AacAudioProfile>> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable Either<String,AacAudioProfile> profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(Either<String,AacAudioProfile> profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
-            this.samplingRate = samplingRate;
+            $.samplingRate = samplingRate;
             return this;
         }
-        public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Codegen.ofNullable(samplingRate);
-            return this;
-        }        public AacAudioArgs build() {
-            return new AacAudioArgs(bitrate, channels, label, odataType, profile, samplingRate);
+
+        public Builder samplingRate(Integer samplingRate) {
+            return samplingRate(Output.of(samplingRate));
+        }
+
+        public AacAudioArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

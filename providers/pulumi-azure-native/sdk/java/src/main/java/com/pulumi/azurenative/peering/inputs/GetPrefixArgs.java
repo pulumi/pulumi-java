@@ -19,10 +19,10 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peeringServiceName", required=true)
-      private final String peeringServiceName;
+    private String peeringServiceName;
 
     public String peeringServiceName() {
         return this.peeringServiceName;
@@ -41,7 +41,7 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefixName", required=true)
-      private final String prefixName;
+    private String prefixName;
 
     public String prefixName() {
         return this.prefixName;
@@ -52,73 +52,65 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrefixArgs(
-        @Nullable String expand,
-        String peeringServiceName,
-        String prefixName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.peeringServiceName = Objects.requireNonNull(peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
-        this.prefixName = Objects.requireNonNull(prefixName, "expected parameter 'prefixName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrefixArgs() {}
 
-    private GetPrefixArgs() {
-        this.expand = null;
-        this.peeringServiceName = null;
-        this.prefixName = null;
-        this.resourceGroupName = null;
+    private GetPrefixArgs(GetPrefixArgs $) {
+        this.expand = $.expand;
+        this.peeringServiceName = $.peeringServiceName;
+        this.prefixName = $.prefixName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String peeringServiceName;
-        private String prefixName;
-        private String resourceGroupName;
+        private GetPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrefixArgs();
         }
 
         public Builder(GetPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.peeringServiceName = defaults.peeringServiceName;
-    	      this.prefixName = defaults.prefixName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder peeringServiceName(String peeringServiceName) {
-            this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
+            $.peeringServiceName = peeringServiceName;
             return this;
         }
+
         public Builder prefixName(String prefixName) {
-            this.prefixName = Objects.requireNonNull(prefixName);
+            $.prefixName = prefixName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrefixArgs build() {
-            return new GetPrefixArgs(expand, peeringServiceName, prefixName, resourceGroupName);
+        }
+
+        public GetPrefixArgs build() {
+            $.peeringServiceName = Objects.requireNonNull($.peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
+            $.prefixName = Objects.requireNonNull($.prefixName, "expected parameter 'prefixName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

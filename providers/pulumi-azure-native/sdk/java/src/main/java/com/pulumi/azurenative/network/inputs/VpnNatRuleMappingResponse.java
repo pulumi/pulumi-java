@@ -23,45 +23,44 @@ public final class VpnNatRuleMappingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="addressSpace")
-      private final @Nullable String addressSpace;
+    private @Nullable String addressSpace;
 
     public Optional<String> addressSpace() {
-        return this.addressSpace == null ? Optional.empty() : Optional.ofNullable(this.addressSpace);
+        return Optional.ofNullable(this.addressSpace);
     }
 
-    public VpnNatRuleMappingResponse(@Nullable String addressSpace) {
-        this.addressSpace = addressSpace;
-    }
+    private VpnNatRuleMappingResponse() {}
 
-    private VpnNatRuleMappingResponse() {
-        this.addressSpace = null;
+    private VpnNatRuleMappingResponse(VpnNatRuleMappingResponse $) {
+        this.addressSpace = $.addressSpace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnNatRuleMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressSpace;
+        private VpnNatRuleMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnNatRuleMappingResponse();
         }
 
         public Builder(VpnNatRuleMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressSpace = defaults.addressSpace;
+            $ = new VpnNatRuleMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressSpace(@Nullable String addressSpace) {
-            this.addressSpace = addressSpace;
+            $.addressSpace = addressSpace;
             return this;
-        }        public VpnNatRuleMappingResponse build() {
-            return new VpnNatRuleMappingResponse(addressSpace);
+        }
+
+        public VpnNatRuleMappingResponse build() {
+            return $;
         }
     }
+
 }

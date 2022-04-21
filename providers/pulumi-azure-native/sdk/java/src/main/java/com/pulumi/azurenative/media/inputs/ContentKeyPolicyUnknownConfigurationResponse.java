@@ -23,45 +23,45 @@ public final class ContentKeyPolicyUnknownConfigurationResponse extends com.pulu
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyUnknownConfigurationResponse(String odataType) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private ContentKeyPolicyUnknownConfigurationResponse() {}
 
-    private ContentKeyPolicyUnknownConfigurationResponse() {
-        this.odataType = null;
+    private ContentKeyPolicyUnknownConfigurationResponse(ContentKeyPolicyUnknownConfigurationResponse $) {
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyUnknownConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
+        private ContentKeyPolicyUnknownConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyUnknownConfigurationResponse();
         }
 
         public Builder(ContentKeyPolicyUnknownConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyUnknownConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public ContentKeyPolicyUnknownConfigurationResponse build() {
-            return new ContentKeyPolicyUnknownConfigurationResponse(odataType);
+        }
+
+        public ContentKeyPolicyUnknownConfigurationResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

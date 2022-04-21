@@ -24,10 +24,10 @@ public final class ProtectionStatusDetailsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="errorDetails")
-      private final @Nullable UserFacingErrorResponse errorDetails;
+    private @Nullable UserFacingErrorResponse errorDetails;
 
     public Optional<UserFacingErrorResponse> errorDetails() {
-        return this.errorDetails == null ? Optional.empty() : Optional.ofNullable(this.errorDetails);
+        return Optional.ofNullable(this.errorDetails);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ProtectionStatusDetailsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public ProtectionStatusDetailsResponse(
-        @Nullable UserFacingErrorResponse errorDetails,
-        @Nullable String status) {
-        this.errorDetails = errorDetails;
-        this.status = status;
-    }
+    private ProtectionStatusDetailsResponse() {}
 
-    private ProtectionStatusDetailsResponse() {
-        this.errorDetails = null;
-        this.status = null;
+    private ProtectionStatusDetailsResponse(ProtectionStatusDetailsResponse $) {
+        this.errorDetails = $.errorDetails;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionStatusDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable UserFacingErrorResponse errorDetails;
-        private @Nullable String status;
+        private ProtectionStatusDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionStatusDetailsResponse();
         }
 
         public Builder(ProtectionStatusDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorDetails = defaults.errorDetails;
-    	      this.status = defaults.status;
+            $ = new ProtectionStatusDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorDetails(@Nullable UserFacingErrorResponse errorDetails) {
-            this.errorDetails = errorDetails;
+            $.errorDetails = errorDetails;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public ProtectionStatusDetailsResponse build() {
-            return new ProtectionStatusDetailsResponse(errorDetails, status);
+        }
+
+        public ProtectionStatusDetailsResponse build() {
+            return $;
         }
     }
+
 }

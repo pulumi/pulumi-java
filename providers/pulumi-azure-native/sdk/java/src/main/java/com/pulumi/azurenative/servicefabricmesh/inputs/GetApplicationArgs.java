@@ -17,7 +17,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationResourceName", required=true)
-      private final String applicationResourceName;
+    private String applicationResourceName;
 
     public String applicationResourceName() {
         return this.applicationResourceName;
@@ -28,55 +28,52 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationArgs(
-        String applicationResourceName,
-        String resourceGroupName) {
-        this.applicationResourceName = Objects.requireNonNull(applicationResourceName, "expected parameter 'applicationResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationArgs() {}
 
-    private GetApplicationArgs() {
-        this.applicationResourceName = null;
-        this.resourceGroupName = null;
+    private GetApplicationArgs(GetApplicationArgs $) {
+        this.applicationResourceName = $.applicationResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationResourceName;
-        private String resourceGroupName;
+        private GetApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationArgs();
         }
 
         public Builder(GetApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationResourceName = defaults.applicationResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationResourceName(String applicationResourceName) {
-            this.applicationResourceName = Objects.requireNonNull(applicationResourceName);
+            $.applicationResourceName = applicationResourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationArgs build() {
-            return new GetApplicationArgs(applicationResourceName, resourceGroupName);
+        }
+
+        public GetApplicationArgs build() {
+            $.applicationResourceName = Objects.requireNonNull($.applicationResourceName, "expected parameter 'applicationResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

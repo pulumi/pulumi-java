@@ -24,7 +24,7 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="builtIn", required=true)
-      private final Boolean builtIn;
+    private Boolean builtIn;
 
     public Boolean builtIn() {
         return this.builtIn;
@@ -35,10 +35,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -57,10 +57,10 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="externalId")
-      private final @Nullable String externalId;
+    private @Nullable String externalId;
 
     public Optional<String> externalId() {
-        return this.externalId == null ? Optional.empty() : Optional.ofNullable(this.externalId);
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -68,82 +68,70 @@ public final class GroupContractPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public GroupContractPropertiesResponse(
-        Boolean builtIn,
-        @Nullable String description,
-        String displayName,
-        @Nullable String externalId,
-        @Nullable String type) {
-        this.builtIn = Objects.requireNonNull(builtIn, "expected parameter 'builtIn' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.externalId = externalId;
-        this.type = type;
-    }
+    private GroupContractPropertiesResponse() {}
 
-    private GroupContractPropertiesResponse() {
-        this.builtIn = null;
-        this.description = null;
-        this.displayName = null;
-        this.externalId = null;
-        this.type = null;
+    private GroupContractPropertiesResponse(GroupContractPropertiesResponse $) {
+        this.builtIn = $.builtIn;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.externalId = $.externalId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupContractPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean builtIn;
-        private @Nullable String description;
-        private String displayName;
-        private @Nullable String externalId;
-        private @Nullable String type;
+        private GroupContractPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupContractPropertiesResponse();
         }
 
         public Builder(GroupContractPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builtIn = defaults.builtIn;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.externalId = defaults.externalId;
-    	      this.type = defaults.type;
+            $ = new GroupContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder builtIn(Boolean builtIn) {
-            this.builtIn = Objects.requireNonNull(builtIn);
+            $.builtIn = builtIn;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public GroupContractPropertiesResponse build() {
-            return new GroupContractPropertiesResponse(builtIn, description, displayName, externalId, type);
+        }
+
+        public GroupContractPropertiesResponse build() {
+            $.builtIn = Objects.requireNonNull($.builtIn, "expected parameter 'builtIn' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

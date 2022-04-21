@@ -25,10 +25,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dependsOnStepGroups")
-      private final @Nullable List<String> dependsOnStepGroups;
+    private @Nullable List<String> dependsOnStepGroups;
 
-    public List<String> dependsOnStepGroups() {
-        return this.dependsOnStepGroups == null ? List.of() : this.dependsOnStepGroups;
+    public Optional<List<String>> dependsOnStepGroups() {
+        return Optional.ofNullable(this.dependsOnStepGroups);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentTargetId", required=true)
-      private final String deploymentTargetId;
+    private String deploymentTargetId;
 
     public String deploymentTargetId() {
         return this.deploymentTargetId;
@@ -47,7 +47,7 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,10 +58,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postDeploymentSteps")
-      private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
+    private @Nullable List<PrePostStepResponse> postDeploymentSteps;
 
-    public List<PrePostStepResponse> postDeploymentSteps() {
-        return this.postDeploymentSteps == null ? List.of() : this.postDeploymentSteps;
+    public Optional<List<PrePostStepResponse>> postDeploymentSteps() {
+        return Optional.ofNullable(this.postDeploymentSteps);
     }
 
     /**
@@ -69,91 +69,82 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preDeploymentSteps")
-      private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
+    private @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
-    public List<PrePostStepResponse> preDeploymentSteps() {
-        return this.preDeploymentSteps == null ? List.of() : this.preDeploymentSteps;
+    public Optional<List<PrePostStepResponse>> preDeploymentSteps() {
+        return Optional.ofNullable(this.preDeploymentSteps);
     }
 
-    public StepGroupResponse(
-        @Nullable List<String> dependsOnStepGroups,
-        String deploymentTargetId,
-        String name,
-        @Nullable List<PrePostStepResponse> postDeploymentSteps,
-        @Nullable List<PrePostStepResponse> preDeploymentSteps) {
-        this.dependsOnStepGroups = dependsOnStepGroups;
-        this.deploymentTargetId = Objects.requireNonNull(deploymentTargetId, "expected parameter 'deploymentTargetId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.postDeploymentSteps = postDeploymentSteps;
-        this.preDeploymentSteps = preDeploymentSteps;
-    }
+    private StepGroupResponse() {}
 
-    private StepGroupResponse() {
-        this.dependsOnStepGroups = List.of();
-        this.deploymentTargetId = null;
-        this.name = null;
-        this.postDeploymentSteps = List.of();
-        this.preDeploymentSteps = List.of();
+    private StepGroupResponse(StepGroupResponse $) {
+        this.dependsOnStepGroups = $.dependsOnStepGroups;
+        this.deploymentTargetId = $.deploymentTargetId;
+        this.name = $.name;
+        this.postDeploymentSteps = $.postDeploymentSteps;
+        this.preDeploymentSteps = $.preDeploymentSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dependsOnStepGroups;
-        private String deploymentTargetId;
-        private String name;
-        private @Nullable List<PrePostStepResponse> postDeploymentSteps;
-        private @Nullable List<PrePostStepResponse> preDeploymentSteps;
+        private StepGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepGroupResponse();
         }
 
         public Builder(StepGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOnStepGroups = defaults.dependsOnStepGroups;
-    	      this.deploymentTargetId = defaults.deploymentTargetId;
-    	      this.name = defaults.name;
-    	      this.postDeploymentSteps = defaults.postDeploymentSteps;
-    	      this.preDeploymentSteps = defaults.preDeploymentSteps;
+            $ = new StepGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
-            this.dependsOnStepGroups = dependsOnStepGroups;
+            $.dependsOnStepGroups = dependsOnStepGroups;
             return this;
         }
+
         public Builder dependsOnStepGroups(String... dependsOnStepGroups) {
             return dependsOnStepGroups(List.of(dependsOnStepGroups));
         }
+
         public Builder deploymentTargetId(String deploymentTargetId) {
-            this.deploymentTargetId = Objects.requireNonNull(deploymentTargetId);
+            $.deploymentTargetId = deploymentTargetId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder postDeploymentSteps(@Nullable List<PrePostStepResponse> postDeploymentSteps) {
-            this.postDeploymentSteps = postDeploymentSteps;
+            $.postDeploymentSteps = postDeploymentSteps;
             return this;
         }
+
         public Builder postDeploymentSteps(PrePostStepResponse... postDeploymentSteps) {
             return postDeploymentSteps(List.of(postDeploymentSteps));
         }
+
         public Builder preDeploymentSteps(@Nullable List<PrePostStepResponse> preDeploymentSteps) {
-            this.preDeploymentSteps = preDeploymentSteps;
+            $.preDeploymentSteps = preDeploymentSteps;
             return this;
         }
+
         public Builder preDeploymentSteps(PrePostStepResponse... preDeploymentSteps) {
             return preDeploymentSteps(List.of(preDeploymentSteps));
-        }        public StepGroupResponse build() {
-            return new StepGroupResponse(dependsOnStepGroups, deploymentTargetId, name, postDeploymentSteps, preDeploymentSteps);
+        }
+
+        public StepGroupResponse build() {
+            $.deploymentTargetId = Objects.requireNonNull($.deploymentTargetId, "expected parameter 'deploymentTargetId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateDnsZoneGroupName", required=true)
-      private final String privateDnsZoneGroupName;
+    private String privateDnsZoneGroupName;
 
     public String privateDnsZoneGroupName() {
         return this.privateDnsZoneGroupName;
@@ -28,7 +28,7 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateEndpointName", required=true)
-      private final String privateEndpointName;
+    private String privateEndpointName;
 
     public String privateEndpointName() {
         return this.privateEndpointName;
@@ -39,64 +39,59 @@ public final class GetPrivateDnsZoneGroupArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateDnsZoneGroupArgs(
-        String privateDnsZoneGroupName,
-        String privateEndpointName,
-        String resourceGroupName) {
-        this.privateDnsZoneGroupName = Objects.requireNonNull(privateDnsZoneGroupName, "expected parameter 'privateDnsZoneGroupName' to be non-null");
-        this.privateEndpointName = Objects.requireNonNull(privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateDnsZoneGroupArgs() {}
 
-    private GetPrivateDnsZoneGroupArgs() {
-        this.privateDnsZoneGroupName = null;
-        this.privateEndpointName = null;
-        this.resourceGroupName = null;
+    private GetPrivateDnsZoneGroupArgs(GetPrivateDnsZoneGroupArgs $) {
+        this.privateDnsZoneGroupName = $.privateDnsZoneGroupName;
+        this.privateEndpointName = $.privateEndpointName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateDnsZoneGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateDnsZoneGroupName;
-        private String privateEndpointName;
-        private String resourceGroupName;
+        private GetPrivateDnsZoneGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateDnsZoneGroupArgs();
         }
 
         public Builder(GetPrivateDnsZoneGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateDnsZoneGroupName = defaults.privateDnsZoneGroupName;
-    	      this.privateEndpointName = defaults.privateEndpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateDnsZoneGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateDnsZoneGroupName(String privateDnsZoneGroupName) {
-            this.privateDnsZoneGroupName = Objects.requireNonNull(privateDnsZoneGroupName);
+            $.privateDnsZoneGroupName = privateDnsZoneGroupName;
             return this;
         }
+
         public Builder privateEndpointName(String privateEndpointName) {
-            this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateDnsZoneGroupArgs build() {
-            return new GetPrivateDnsZoneGroupArgs(privateDnsZoneGroupName, privateEndpointName, resourceGroupName);
+        }
+
+        public GetPrivateDnsZoneGroupArgs build() {
+            $.privateDnsZoneGroupName = Objects.requireNonNull($.privateDnsZoneGroupName, "expected parameter 'privateDnsZoneGroupName' to be non-null");
+            $.privateEndpointName = Objects.requireNonNull($.privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

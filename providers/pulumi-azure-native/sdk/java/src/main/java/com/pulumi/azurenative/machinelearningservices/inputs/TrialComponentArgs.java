@@ -10,11 +10,11 @@ import com.pulumi.azurenative.machinelearningservices.inputs.PyTorchArgs;
 import com.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="codeId")
-      private final @Nullable Output<String> codeId;
+    private @Nullable Output<String> codeId;
 
-    public Output<String> codeId() {
-        return this.codeId == null ? Codegen.empty() : this.codeId;
+    public Optional<Output<String>> codeId() {
+        return Optional.ofNullable(this.codeId);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="command", required=true)
-      private final Output<String> command;
+    private Output<String> command;
 
     public Output<String> command() {
         return this.command;
@@ -53,10 +53,10 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Output<Object> distribution;
+    private @Nullable Output<Object> distribution;
 
-    public Output<Object> distribution() {
-        return this.distribution == null ? Codegen.empty() : this.distribution;
+    public Optional<Output<Object>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="inputDataBindings")
-      private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
+    private @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
-    public Output<Map<String,InputDataBindingArgs>> inputDataBindings() {
-        return this.inputDataBindings == null ? Codegen.empty() : this.inputDataBindings;
+    public Optional<Output<Map<String,InputDataBindingArgs>>> inputDataBindings() {
+        return Optional.ofNullable(this.inputDataBindings);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="outputDataBindings")
-      private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
+    private @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
-    public Output<Map<String,OutputDataBindingArgs>> outputDataBindings() {
-        return this.outputDataBindings == null ? Codegen.empty() : this.outputDataBindings;
+    public Optional<Output<Map<String,OutputDataBindingArgs>>> outputDataBindings() {
+        return Optional.ofNullable(this.outputDataBindings);
     }
 
     /**
@@ -109,141 +109,119 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public TrialComponentArgs(
-        @Nullable Output<String> codeId,
-        Output<String> command,
-        @Nullable Output<Object> distribution,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings,
-        @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings,
-        @Nullable Output<String> timeout) {
-        this.codeId = codeId;
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.distribution = distribution;
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.inputDataBindings = inputDataBindings;
-        this.outputDataBindings = outputDataBindings;
-        this.timeout = timeout;
-    }
+    private TrialComponentArgs() {}
 
-    private TrialComponentArgs() {
-        this.codeId = Codegen.empty();
-        this.command = Codegen.empty();
-        this.distribution = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.inputDataBindings = Codegen.empty();
-        this.outputDataBindings = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private TrialComponentArgs(TrialComponentArgs $) {
+        this.codeId = $.codeId;
+        this.command = $.command;
+        this.distribution = $.distribution;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.inputDataBindings = $.inputDataBindings;
+        this.outputDataBindings = $.outputDataBindings;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrialComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> codeId;
-        private Output<String> command;
-        private @Nullable Output<Object> distribution;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
-        private @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
-        private @Nullable Output<String> timeout;
+        private TrialComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrialComponentArgs();
         }
 
         public Builder(TrialComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeId = defaults.codeId;
-    	      this.command = defaults.command;
-    	      this.distribution = defaults.distribution;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.inputDataBindings = defaults.inputDataBindings;
-    	      this.outputDataBindings = defaults.outputDataBindings;
-    	      this.timeout = defaults.timeout;
+            $ = new TrialComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeId(@Nullable Output<String> codeId) {
-            this.codeId = codeId;
+            $.codeId = codeId;
             return this;
         }
-        public Builder codeId(@Nullable String codeId) {
-            this.codeId = Codegen.ofNullable(codeId);
-            return this;
+
+        public Builder codeId(String codeId) {
+            return codeId(Output.of(codeId));
         }
+
         public Builder command(Output<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String command) {
-            this.command = Output.of(Objects.requireNonNull(command));
-            return this;
+            return command(Output.of(command));
         }
+
         public Builder distribution(@Nullable Output<Object> distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
-        public Builder distribution(@Nullable Object distribution) {
-            this.distribution = Codegen.ofNullable(distribution);
-            return this;
+
+        public Builder distribution(Object distribution) {
+            return distribution(Output.of(distribution));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
-            this.inputDataBindings = inputDataBindings;
+            $.inputDataBindings = inputDataBindings;
             return this;
         }
-        public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
-            this.inputDataBindings = Codegen.ofNullable(inputDataBindings);
-            return this;
+
+        public Builder inputDataBindings(Map<String,InputDataBindingArgs> inputDataBindings) {
+            return inputDataBindings(Output.of(inputDataBindings));
         }
+
         public Builder outputDataBindings(@Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings) {
-            this.outputDataBindings = outputDataBindings;
+            $.outputDataBindings = outputDataBindings;
             return this;
         }
-        public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
-            this.outputDataBindings = Codegen.ofNullable(outputDataBindings);
-            return this;
+
+        public Builder outputDataBindings(Map<String,OutputDataBindingArgs> outputDataBindings) {
+            return outputDataBindings(Output.of(outputDataBindings));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public TrialComponentArgs build() {
-            return new TrialComponentArgs(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public TrialComponentArgs build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            return $;
         }
     }
+
 }

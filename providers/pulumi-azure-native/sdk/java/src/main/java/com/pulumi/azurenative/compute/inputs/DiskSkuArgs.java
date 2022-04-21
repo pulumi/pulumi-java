@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.enums.DiskStorageAccountTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class DiskSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
+    private @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
 
-    public Output<Either<String,DiskStorageAccountTypes>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,DiskStorageAccountTypes>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public DiskSkuArgs(@Nullable Output<Either<String,DiskStorageAccountTypes>> name) {
-        this.name = name;
-    }
+    private DiskSkuArgs() {}
 
-    private DiskSkuArgs() {
-        this.name = Codegen.empty();
+    private DiskSkuArgs(DiskSkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
+        private DiskSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskSkuArgs();
         }
 
         public Builder(DiskSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new DiskSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,DiskStorageAccountTypes>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,DiskStorageAccountTypes> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public DiskSkuArgs build() {
-            return new DiskSkuArgs(name);
+
+        public Builder name(Either<String,DiskStorageAccountTypes> name) {
+            return name(Output.of(name));
+        }
+
+        public DiskSkuArgs build() {
+            return $;
         }
     }
+
 }

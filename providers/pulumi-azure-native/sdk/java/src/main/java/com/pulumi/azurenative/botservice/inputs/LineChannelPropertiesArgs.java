@@ -6,7 +6,6 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.LineRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class LineChannelPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lineRegistrations", required=true)
-      private final Output<List<LineRegistrationArgs>> lineRegistrations;
+    private Output<List<LineRegistrationArgs>> lineRegistrations;
 
     public Output<List<LineRegistrationArgs>> lineRegistrations() {
         return this.lineRegistrations;
     }
 
-    public LineChannelPropertiesArgs(Output<List<LineRegistrationArgs>> lineRegistrations) {
-        this.lineRegistrations = Objects.requireNonNull(lineRegistrations, "expected parameter 'lineRegistrations' to be non-null");
-    }
+    private LineChannelPropertiesArgs() {}
 
-    private LineChannelPropertiesArgs() {
-        this.lineRegistrations = Codegen.empty();
+    private LineChannelPropertiesArgs(LineChannelPropertiesArgs $) {
+        this.lineRegistrations = $.lineRegistrations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LineChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<LineRegistrationArgs>> lineRegistrations;
+        private LineChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LineChannelPropertiesArgs();
         }
 
         public Builder(LineChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lineRegistrations = defaults.lineRegistrations;
+            $ = new LineChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lineRegistrations(Output<List<LineRegistrationArgs>> lineRegistrations) {
-            this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
+            $.lineRegistrations = lineRegistrations;
             return this;
         }
+
         public Builder lineRegistrations(List<LineRegistrationArgs> lineRegistrations) {
-            this.lineRegistrations = Output.of(Objects.requireNonNull(lineRegistrations));
-            return this;
+            return lineRegistrations(Output.of(lineRegistrations));
         }
+
         public Builder lineRegistrations(LineRegistrationArgs... lineRegistrations) {
             return lineRegistrations(List.of(lineRegistrations));
-        }        public LineChannelPropertiesArgs build() {
-            return new LineChannelPropertiesArgs(lineRegistrations);
+        }
+
+        public LineChannelPropertiesArgs build() {
+            $.lineRegistrations = Objects.requireNonNull($.lineRegistrations, "expected parameter 'lineRegistrations' to be non-null");
+            return $;
         }
     }
+
 }

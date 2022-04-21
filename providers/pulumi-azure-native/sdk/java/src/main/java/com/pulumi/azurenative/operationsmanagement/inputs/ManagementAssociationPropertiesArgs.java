@@ -5,7 +5,6 @@ package com.pulumi.azurenative.operationsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ManagementAssociationPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
     }
 
-    public ManagementAssociationPropertiesArgs(Output<String> applicationId) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-    }
+    private ManagementAssociationPropertiesArgs() {}
 
-    private ManagementAssociationPropertiesArgs() {
-        this.applicationId = Codegen.empty();
+    private ManagementAssociationPropertiesArgs(ManagementAssociationPropertiesArgs $) {
+        this.applicationId = $.applicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementAssociationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
+        private ManagementAssociationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementAssociationPropertiesArgs();
         }
 
         public Builder(ManagementAssociationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
+            $ = new ManagementAssociationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
-        }        public ManagementAssociationPropertiesArgs build() {
-            return new ManagementAssociationPropertiesArgs(applicationId);
+            return applicationId(Output.of(applicationId));
+        }
+
+        public ManagementAssociationPropertiesArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

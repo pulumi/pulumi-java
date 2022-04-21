@@ -23,7 +23,7 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
      * 
      */
     @Import(name="systemAssignedIdentityPrincipalId", required=true)
-      private final String systemAssignedIdentityPrincipalId;
+    private String systemAssignedIdentityPrincipalId;
 
     public String systemAssignedIdentityPrincipalId() {
         return this.systemAssignedIdentityPrincipalId;
@@ -34,7 +34,7 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -45,64 +45,58 @@ public final class EnterprisePolicyIdentityResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public EnterprisePolicyIdentityResponse(
-        String systemAssignedIdentityPrincipalId,
-        String tenantId,
-        @Nullable String type) {
-        this.systemAssignedIdentityPrincipalId = Objects.requireNonNull(systemAssignedIdentityPrincipalId, "expected parameter 'systemAssignedIdentityPrincipalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = type;
-    }
+    private EnterprisePolicyIdentityResponse() {}
 
-    private EnterprisePolicyIdentityResponse() {
-        this.systemAssignedIdentityPrincipalId = null;
-        this.tenantId = null;
-        this.type = null;
+    private EnterprisePolicyIdentityResponse(EnterprisePolicyIdentityResponse $) {
+        this.systemAssignedIdentityPrincipalId = $.systemAssignedIdentityPrincipalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterprisePolicyIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String systemAssignedIdentityPrincipalId;
-        private String tenantId;
-        private @Nullable String type;
+        private EnterprisePolicyIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterprisePolicyIdentityResponse();
         }
 
         public Builder(EnterprisePolicyIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.systemAssignedIdentityPrincipalId = defaults.systemAssignedIdentityPrincipalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new EnterprisePolicyIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder systemAssignedIdentityPrincipalId(String systemAssignedIdentityPrincipalId) {
-            this.systemAssignedIdentityPrincipalId = Objects.requireNonNull(systemAssignedIdentityPrincipalId);
+            $.systemAssignedIdentityPrincipalId = systemAssignedIdentityPrincipalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public EnterprisePolicyIdentityResponse build() {
-            return new EnterprisePolicyIdentityResponse(systemAssignedIdentityPrincipalId, tenantId, type);
+        }
+
+        public EnterprisePolicyIdentityResponse build() {
+            $.systemAssignedIdentityPrincipalId = Objects.requireNonNull($.systemAssignedIdentityPrincipalId, "expected parameter 'systemAssignedIdentityPrincipalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

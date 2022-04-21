@@ -25,10 +25,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="autoKeyConfigUrl")
-      private final @Nullable String autoKeyConfigUrl;
+    private @Nullable String autoKeyConfigUrl;
 
     public Optional<String> autoKeyConfigUrl() {
-        return this.autoKeyConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.autoKeyConfigUrl);
+        return Optional.ofNullable(this.autoKeyConfigUrl);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="fluentdConfigUrl")
-      private final @Nullable Object fluentdConfigUrl;
+    private @Nullable Object fluentdConfigUrl;
 
     public Optional<Object> fluentdConfigUrl() {
-        return this.fluentdConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.fluentdConfigUrl);
+        return Optional.ofNullable(this.fluentdConfigUrl);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -81,10 +81,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="maConfigUrl")
-      private final @Nullable String maConfigUrl;
+    private @Nullable String maConfigUrl;
 
     public Optional<String> maConfigUrl() {
-        return this.maConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.maConfigUrl);
+        return Optional.ofNullable(this.maConfigUrl);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,109 +103,87 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
-    public AzureInternalMonitoringPipelineSinkDescriptionResponse(
-        @Nullable String accountName,
-        @Nullable String autoKeyConfigUrl,
-        @Nullable String description,
-        @Nullable Object fluentdConfigUrl,
-        String kind,
-        @Nullable String maConfigUrl,
-        @Nullable String name,
-        @Nullable String namespace) {
-        this.accountName = accountName;
-        this.autoKeyConfigUrl = autoKeyConfigUrl;
-        this.description = description;
-        this.fluentdConfigUrl = fluentdConfigUrl;
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.maConfigUrl = maConfigUrl;
-        this.name = name;
-        this.namespace = namespace;
-    }
+    private AzureInternalMonitoringPipelineSinkDescriptionResponse() {}
 
-    private AzureInternalMonitoringPipelineSinkDescriptionResponse() {
-        this.accountName = null;
-        this.autoKeyConfigUrl = null;
-        this.description = null;
-        this.fluentdConfigUrl = null;
-        this.kind = null;
-        this.maConfigUrl = null;
-        this.name = null;
-        this.namespace = null;
+    private AzureInternalMonitoringPipelineSinkDescriptionResponse(AzureInternalMonitoringPipelineSinkDescriptionResponse $) {
+        this.accountName = $.accountName;
+        this.autoKeyConfigUrl = $.autoKeyConfigUrl;
+        this.description = $.description;
+        this.fluentdConfigUrl = $.fluentdConfigUrl;
+        this.kind = $.kind;
+        this.maConfigUrl = $.maConfigUrl;
+        this.name = $.name;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureInternalMonitoringPipelineSinkDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountName;
-        private @Nullable String autoKeyConfigUrl;
-        private @Nullable String description;
-        private @Nullable Object fluentdConfigUrl;
-        private String kind;
-        private @Nullable String maConfigUrl;
-        private @Nullable String name;
-        private @Nullable String namespace;
+        private AzureInternalMonitoringPipelineSinkDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureInternalMonitoringPipelineSinkDescriptionResponse();
         }
 
         public Builder(AzureInternalMonitoringPipelineSinkDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.autoKeyConfigUrl = defaults.autoKeyConfigUrl;
-    	      this.description = defaults.description;
-    	      this.fluentdConfigUrl = defaults.fluentdConfigUrl;
-    	      this.kind = defaults.kind;
-    	      this.maConfigUrl = defaults.maConfigUrl;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
+            $ = new AzureInternalMonitoringPipelineSinkDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
-            this.autoKeyConfigUrl = autoKeyConfigUrl;
+            $.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
-            this.fluentdConfigUrl = fluentdConfigUrl;
+            $.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder maConfigUrl(@Nullable String maConfigUrl) {
-            this.maConfigUrl = maConfigUrl;
+            $.maConfigUrl = maConfigUrl;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
-        }        public AzureInternalMonitoringPipelineSinkDescriptionResponse build() {
-            return new AzureInternalMonitoringPipelineSinkDescriptionResponse(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);
+        }
+
+        public AzureInternalMonitoringPipelineSinkDescriptionResponse build() {
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            return $;
         }
     }
+
 }

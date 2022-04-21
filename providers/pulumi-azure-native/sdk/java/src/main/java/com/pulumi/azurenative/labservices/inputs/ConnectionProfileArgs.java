@@ -8,6 +8,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clientRdpAccess")
-      private final @Nullable Output<ConnectionType> clientRdpAccess;
+    private @Nullable Output<ConnectionType> clientRdpAccess;
 
-    public Output<ConnectionType> clientRdpAccess() {
-        return this.clientRdpAccess == null ? Codegen.empty() : this.clientRdpAccess;
+    public Optional<Output<ConnectionType>> clientRdpAccess() {
+        return Optional.ofNullable(this.clientRdpAccess);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clientSshAccess")
-      private final @Nullable Output<ConnectionType> clientSshAccess;
+    private @Nullable Output<ConnectionType> clientSshAccess;
 
-    public Output<ConnectionType> clientSshAccess() {
-        return this.clientSshAccess == null ? Codegen.empty() : this.clientSshAccess;
+    public Optional<Output<ConnectionType>> clientSshAccess() {
+        return Optional.ofNullable(this.clientSshAccess);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="webRdpAccess")
-      private final @Nullable Output<ConnectionType> webRdpAccess;
+    private @Nullable Output<ConnectionType> webRdpAccess;
 
-    public Output<ConnectionType> webRdpAccess() {
-        return this.webRdpAccess == null ? Codegen.empty() : this.webRdpAccess;
+    public Optional<Output<ConnectionType>> webRdpAccess() {
+        return Optional.ofNullable(this.webRdpAccess);
     }
 
     /**
@@ -57,89 +58,82 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="webSshAccess")
-      private final @Nullable Output<ConnectionType> webSshAccess;
+    private @Nullable Output<ConnectionType> webSshAccess;
 
-    public Output<ConnectionType> webSshAccess() {
-        return this.webSshAccess == null ? Codegen.empty() : this.webSshAccess;
+    public Optional<Output<ConnectionType>> webSshAccess() {
+        return Optional.ofNullable(this.webSshAccess);
     }
 
-    public ConnectionProfileArgs(
-        @Nullable Output<ConnectionType> clientRdpAccess,
-        @Nullable Output<ConnectionType> clientSshAccess,
-        @Nullable Output<ConnectionType> webRdpAccess,
-        @Nullable Output<ConnectionType> webSshAccess) {
-        this.clientRdpAccess = Codegen.objectProp("clientRdpAccess", ConnectionType.class).output().arg(clientRdpAccess).def(ConnectionType.None).getNullable();
-        this.clientSshAccess = Codegen.objectProp("clientSshAccess", ConnectionType.class).output().arg(clientSshAccess).def(ConnectionType.None).getNullable();
-        this.webRdpAccess = Codegen.objectProp("webRdpAccess", ConnectionType.class).output().arg(webRdpAccess).def(ConnectionType.None).getNullable();
-        this.webSshAccess = Codegen.objectProp("webSshAccess", ConnectionType.class).output().arg(webSshAccess).def(ConnectionType.None).getNullable();
-    }
+    private ConnectionProfileArgs() {}
 
-    private ConnectionProfileArgs() {
-        this.clientRdpAccess = Codegen.empty();
-        this.clientSshAccess = Codegen.empty();
-        this.webRdpAccess = Codegen.empty();
-        this.webSshAccess = Codegen.empty();
+    private ConnectionProfileArgs(ConnectionProfileArgs $) {
+        this.clientRdpAccess = $.clientRdpAccess;
+        this.clientSshAccess = $.clientSshAccess;
+        this.webRdpAccess = $.webRdpAccess;
+        this.webSshAccess = $.webSshAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectionType> clientRdpAccess;
-        private @Nullable Output<ConnectionType> clientSshAccess;
-        private @Nullable Output<ConnectionType> webRdpAccess;
-        private @Nullable Output<ConnectionType> webSshAccess;
+        private ConnectionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionProfileArgs();
         }
 
         public Builder(ConnectionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientRdpAccess = defaults.clientRdpAccess;
-    	      this.clientSshAccess = defaults.clientSshAccess;
-    	      this.webRdpAccess = defaults.webRdpAccess;
-    	      this.webSshAccess = defaults.webSshAccess;
+            $ = new ConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientRdpAccess(@Nullable Output<ConnectionType> clientRdpAccess) {
-            this.clientRdpAccess = clientRdpAccess;
+            $.clientRdpAccess = clientRdpAccess;
             return this;
         }
-        public Builder clientRdpAccess(@Nullable ConnectionType clientRdpAccess) {
-            this.clientRdpAccess = Codegen.ofNullable(clientRdpAccess);
-            return this;
+
+        public Builder clientRdpAccess(ConnectionType clientRdpAccess) {
+            return clientRdpAccess(Output.of(clientRdpAccess));
         }
+
         public Builder clientSshAccess(@Nullable Output<ConnectionType> clientSshAccess) {
-            this.clientSshAccess = clientSshAccess;
+            $.clientSshAccess = clientSshAccess;
             return this;
         }
-        public Builder clientSshAccess(@Nullable ConnectionType clientSshAccess) {
-            this.clientSshAccess = Codegen.ofNullable(clientSshAccess);
-            return this;
+
+        public Builder clientSshAccess(ConnectionType clientSshAccess) {
+            return clientSshAccess(Output.of(clientSshAccess));
         }
+
         public Builder webRdpAccess(@Nullable Output<ConnectionType> webRdpAccess) {
-            this.webRdpAccess = webRdpAccess;
+            $.webRdpAccess = webRdpAccess;
             return this;
         }
-        public Builder webRdpAccess(@Nullable ConnectionType webRdpAccess) {
-            this.webRdpAccess = Codegen.ofNullable(webRdpAccess);
-            return this;
+
+        public Builder webRdpAccess(ConnectionType webRdpAccess) {
+            return webRdpAccess(Output.of(webRdpAccess));
         }
+
         public Builder webSshAccess(@Nullable Output<ConnectionType> webSshAccess) {
-            this.webSshAccess = webSshAccess;
+            $.webSshAccess = webSshAccess;
             return this;
         }
-        public Builder webSshAccess(@Nullable ConnectionType webSshAccess) {
-            this.webSshAccess = Codegen.ofNullable(webSshAccess);
-            return this;
-        }        public ConnectionProfileArgs build() {
-            return new ConnectionProfileArgs(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
+
+        public Builder webSshAccess(ConnectionType webSshAccess) {
+            return webSshAccess(Output.of(webSshAccess));
+        }
+
+        public ConnectionProfileArgs build() {
+            $.clientRdpAccess = Codegen.objectProp("clientRdpAccess", ConnectionType.class).output().arg($.clientRdpAccess).def(ConnectionType.None).getNullable();
+            $.clientSshAccess = Codegen.objectProp("clientSshAccess", ConnectionType.class).output().arg($.clientSshAccess).def(ConnectionType.None).getNullable();
+            $.webRdpAccess = Codegen.objectProp("webRdpAccess", ConnectionType.class).output().arg($.webRdpAccess).def(ConnectionType.None).getNullable();
+            $.webSshAccess = Codegen.objectProp("webSshAccess", ConnectionType.class).output().arg($.webSshAccess).def(ConnectionType.None).getNullable();
+            return $;
         }
     }
+
 }

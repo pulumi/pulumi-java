@@ -17,7 +17,7 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -39,7 +39,7 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetLongTermRetentionPolicyArgs(
-        String databaseName,
-        String policyName,
-        String resourceGroupName,
-        String serverName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetLongTermRetentionPolicyArgs() {}
 
-    private GetLongTermRetentionPolicyArgs() {
-        this.databaseName = null;
-        this.policyName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetLongTermRetentionPolicyArgs(GetLongTermRetentionPolicyArgs $) {
+        this.databaseName = $.databaseName;
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLongTermRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String policyName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetLongTermRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLongTermRetentionPolicyArgs();
         }
 
         public Builder(GetLongTermRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetLongTermRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetLongTermRetentionPolicyArgs build() {
-            return new GetLongTermRetentionPolicyArgs(databaseName, policyName, resourceGroupName, serverName);
+        }
+
+        public GetLongTermRetentionPolicyArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

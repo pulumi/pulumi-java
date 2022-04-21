@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kusto.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public PrivateLinkServiceConnectionStatePropertyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> status) {
-        this.description = description;
-        this.status = status;
-    }
+    private PrivateLinkServiceConnectionStatePropertyArgs() {}
 
-    private PrivateLinkServiceConnectionStatePropertyArgs() {
-        this.description = Codegen.empty();
-        this.status = Codegen.empty();
+    private PrivateLinkServiceConnectionStatePropertyArgs(PrivateLinkServiceConnectionStatePropertyArgs $) {
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionStatePropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> status;
+        private PrivateLinkServiceConnectionStatePropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionStatePropertyArgs();
         }
 
         public Builder(PrivateLinkServiceConnectionStatePropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new PrivateLinkServiceConnectionStatePropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public PrivateLinkServiceConnectionStatePropertyArgs build() {
-            return new PrivateLinkServiceConnectionStatePropertyArgs(description, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public PrivateLinkServiceConnectionStatePropertyArgs build() {
+            return $;
         }
     }
+
 }

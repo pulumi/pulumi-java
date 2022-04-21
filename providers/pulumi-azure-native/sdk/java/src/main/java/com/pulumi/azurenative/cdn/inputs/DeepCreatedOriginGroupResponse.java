@@ -28,10 +28,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="healthProbeSettings")
-      private final @Nullable HealthProbeParametersResponse healthProbeSettings;
+    private @Nullable HealthProbeParametersResponse healthProbeSettings;
 
     public Optional<HealthProbeParametersResponse> healthProbeSettings() {
-        return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
+        return Optional.ofNullable(this.healthProbeSettings);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -50,7 +50,7 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="origins", required=true)
-      private final List<ResourceReferenceResponse> origins;
+    private List<ResourceReferenceResponse> origins;
 
     public List<ResourceReferenceResponse> origins() {
         return this.origins;
@@ -61,10 +61,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="responseBasedOriginErrorDetectionSettings")
-      private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
+    private @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
 
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
-        return this.responseBasedOriginErrorDetectionSettings == null ? Optional.empty() : Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
+        return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
 
     /**
@@ -72,85 +72,74 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-      private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    private @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Optional.empty() : Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
+        return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
 
-    public DeepCreatedOriginGroupResponse(
-        @Nullable HealthProbeParametersResponse healthProbeSettings,
-        String name,
-        List<ResourceReferenceResponse> origins,
-        @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
-        @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-        this.healthProbeSettings = healthProbeSettings;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.origins = Objects.requireNonNull(origins, "expected parameter 'origins' to be non-null");
-        this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
-    }
+    private DeepCreatedOriginGroupResponse() {}
 
-    private DeepCreatedOriginGroupResponse() {
-        this.healthProbeSettings = null;
-        this.name = null;
-        this.origins = List.of();
-        this.responseBasedOriginErrorDetectionSettings = null;
-        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = null;
+    private DeepCreatedOriginGroupResponse(DeepCreatedOriginGroupResponse $) {
+        this.healthProbeSettings = $.healthProbeSettings;
+        this.name = $.name;
+        this.origins = $.origins;
+        this.responseBasedOriginErrorDetectionSettings = $.responseBasedOriginErrorDetectionSettings;
+        this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeepCreatedOriginGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable HealthProbeParametersResponse healthProbeSettings;
-        private String name;
-        private List<ResourceReferenceResponse> origins;
-        private @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
-        private @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+        private DeepCreatedOriginGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeepCreatedOriginGroupResponse();
         }
 
         public Builder(DeepCreatedOriginGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthProbeSettings = defaults.healthProbeSettings;
-    	      this.name = defaults.name;
-    	      this.origins = defaults.origins;
-    	      this.responseBasedOriginErrorDetectionSettings = defaults.responseBasedOriginErrorDetectionSettings;
-    	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+            $ = new DeepCreatedOriginGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder healthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
-            this.healthProbeSettings = healthProbeSettings;
+            $.healthProbeSettings = healthProbeSettings;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder origins(List<ResourceReferenceResponse> origins) {
-            this.origins = Objects.requireNonNull(origins);
+            $.origins = origins;
             return this;
         }
+
         public Builder origins(ResourceReferenceResponse... origins) {
             return origins(List.of(origins));
         }
+
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings) {
-            this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
+            $.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
+
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
-            this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+            $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
-        }        public DeepCreatedOriginGroupResponse build() {
-            return new DeepCreatedOriginGroupResponse(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
+        }
+
+        public DeepCreatedOriginGroupResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.origins = Objects.requireNonNull($.origins, "expected parameter 'origins' to be non-null");
+            return $;
         }
     }
+
 }

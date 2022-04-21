@@ -24,7 +24,7 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final String dayOfWeek;
+    private String dayOfWeek;
 
     public String dayOfWeek() {
         return this.dayOfWeek;
@@ -35,10 +35,10 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable String maintenanceWindow;
+    private @Nullable String maintenanceWindow;
 
     public Optional<String> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindow);
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startHourUtc", required=true)
-      private final Integer startHourUtc;
+    private Integer startHourUtc;
 
     public Integer startHourUtc() {
         return this.startHourUtc;
     }
 
-    public ScheduleEntryResponse(
-        String dayOfWeek,
-        @Nullable String maintenanceWindow,
-        Integer startHourUtc) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-        this.maintenanceWindow = maintenanceWindow;
-        this.startHourUtc = Objects.requireNonNull(startHourUtc, "expected parameter 'startHourUtc' to be non-null");
-    }
+    private ScheduleEntryResponse() {}
 
-    private ScheduleEntryResponse() {
-        this.dayOfWeek = null;
-        this.maintenanceWindow = null;
-        this.startHourUtc = null;
+    private ScheduleEntryResponse(ScheduleEntryResponse $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.startHourUtc = $.startHourUtc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dayOfWeek;
-        private @Nullable String maintenanceWindow;
-        private Integer startHourUtc;
+        private ScheduleEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleEntryResponse();
         }
 
         public Builder(ScheduleEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.startHourUtc = defaults.startHourUtc;
+            $ = new ScheduleEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
+
         public Builder startHourUtc(Integer startHourUtc) {
-            this.startHourUtc = Objects.requireNonNull(startHourUtc);
+            $.startHourUtc = startHourUtc;
             return this;
-        }        public ScheduleEntryResponse build() {
-            return new ScheduleEntryResponse(dayOfWeek, maintenanceWindow, startHourUtc);
+        }
+
+        public ScheduleEntryResponse build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            $.startHourUtc = Objects.requireNonNull($.startHourUtc, "expected parameter 'startHourUtc' to be non-null");
+            return $;
         }
     }
+
 }

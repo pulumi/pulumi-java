@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class ImportPipelineSourcePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final Output<String> keyVaultUri;
+    private Output<String> keyVaultUri;
 
     public Output<String> keyVaultUri() {
         return this.keyVaultUri;
@@ -37,10 +38,10 @@ public final class ImportPipelineSourcePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,PipelineSourceType>> type;
+    private @Nullable Output<Either<String,PipelineSourceType>> type;
 
-    public Output<Either<String,PipelineSourceType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,PipelineSourceType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -50,76 +51,70 @@ public final class ImportPipelineSourcePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ImportPipelineSourcePropertiesArgs(
-        Output<String> keyVaultUri,
-        @Nullable Output<Either<String,PipelineSourceType>> type,
-        @Nullable Output<String> uri) {
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.type = Codegen.stringProp("type").left(PipelineSourceType.class).output().arg(type).def("AzureStorageBlobContainer").getNullable();
-        this.uri = uri;
-    }
+    private ImportPipelineSourcePropertiesArgs() {}
 
-    private ImportPipelineSourcePropertiesArgs() {
-        this.keyVaultUri = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ImportPipelineSourcePropertiesArgs(ImportPipelineSourcePropertiesArgs $) {
+        this.keyVaultUri = $.keyVaultUri;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportPipelineSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyVaultUri;
-        private @Nullable Output<Either<String,PipelineSourceType>> type;
-        private @Nullable Output<String> uri;
+        private ImportPipelineSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportPipelineSourcePropertiesArgs();
         }
 
         public Builder(ImportPipelineSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ImportPipelineSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultUri(Output<String> keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
-            return this;
+            return keyVaultUri(Output.of(keyVaultUri));
         }
+
         public Builder type(@Nullable Output<Either<String,PipelineSourceType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,PipelineSourceType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,PipelineSourceType> type) {
+            return type(Output.of(type));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ImportPipelineSourcePropertiesArgs build() {
-            return new ImportPipelineSourcePropertiesArgs(keyVaultUri, type, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ImportPipelineSourcePropertiesArgs build() {
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            $.type = Codegen.stringProp("type").left(PipelineSourceType.class).output().arg($.type).def("AzureStorageBlobContainer").getNullable();
+            return $;
         }
     }
+
 }

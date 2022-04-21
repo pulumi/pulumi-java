@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="link")
-      private final @Nullable Output<String> link;
+    private @Nullable Output<String> link;
 
-    public Output<String> link() {
-        return this.link == null ? Codegen.empty() : this.link;
+    public Optional<Output<String>> link() {
+        return Optional.ofNullable(this.link);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MetadataAuthorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public MetadataAuthorArgs(
-        @Nullable Output<String> email,
-        @Nullable Output<String> link,
-        @Nullable Output<String> name) {
-        this.email = email;
-        this.link = link;
-        this.name = name;
-    }
+    private MetadataAuthorArgs() {}
 
-    private MetadataAuthorArgs() {
-        this.email = Codegen.empty();
-        this.link = Codegen.empty();
-        this.name = Codegen.empty();
+    private MetadataAuthorArgs(MetadataAuthorArgs $) {
+        this.email = $.email;
+        this.link = $.link;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataAuthorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> link;
-        private @Nullable Output<String> name;
+        private MetadataAuthorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataAuthorArgs();
         }
 
         public Builder(MetadataAuthorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.link = defaults.link;
-    	      this.name = defaults.name;
+            $ = new MetadataAuthorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder link(@Nullable Output<String> link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
-        public Builder link(@Nullable String link) {
-            this.link = Codegen.ofNullable(link);
-            return this;
+
+        public Builder link(String link) {
+            return link(Output.of(link));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public MetadataAuthorArgs build() {
-            return new MetadataAuthorArgs(email, link, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public MetadataAuthorArgs build() {
+            return $;
         }
     }
+
 }

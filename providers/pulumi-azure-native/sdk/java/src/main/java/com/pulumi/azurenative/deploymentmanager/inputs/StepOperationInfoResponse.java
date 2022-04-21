@@ -24,7 +24,7 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="correlationId", required=true)
-      private final String correlationId;
+    private String correlationId;
 
     public String correlationId() {
         return this.correlationId;
@@ -35,7 +35,7 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -46,7 +46,7 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -57,10 +57,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="error")
-      private final @Nullable CloudErrorBodyResponse error;
+    private @Nullable CloudErrorBodyResponse error;
 
     public Optional<CloudErrorBodyResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastUpdatedTime", required=true)
-      private final String lastUpdatedTime;
+    private String lastUpdatedTime;
 
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
@@ -79,91 +79,79 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public StepOperationInfoResponse(
-        String correlationId,
-        String deploymentName,
-        String endTime,
-        @Nullable CloudErrorBodyResponse error,
-        String lastUpdatedTime,
-        String startTime) {
-        this.correlationId = Objects.requireNonNull(correlationId, "expected parameter 'correlationId' to be non-null");
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.error = error;
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime, "expected parameter 'lastUpdatedTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private StepOperationInfoResponse() {}
 
-    private StepOperationInfoResponse() {
-        this.correlationId = null;
-        this.deploymentName = null;
-        this.endTime = null;
-        this.error = null;
-        this.lastUpdatedTime = null;
-        this.startTime = null;
+    private StepOperationInfoResponse(StepOperationInfoResponse $) {
+        this.correlationId = $.correlationId;
+        this.deploymentName = $.deploymentName;
+        this.endTime = $.endTime;
+        this.error = $.error;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepOperationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String correlationId;
-        private String deploymentName;
-        private String endTime;
-        private @Nullable CloudErrorBodyResponse error;
-        private String lastUpdatedTime;
-        private String startTime;
+        private StepOperationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepOperationInfoResponse();
         }
 
         public Builder(StepOperationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.correlationId = defaults.correlationId;
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.endTime = defaults.endTime;
-    	      this.error = defaults.error;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.startTime = defaults.startTime;
+            $ = new StepOperationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder correlationId(String correlationId) {
-            this.correlationId = Objects.requireNonNull(correlationId);
+            $.correlationId = correlationId;
             return this;
         }
+
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder error(@Nullable CloudErrorBodyResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder lastUpdatedTime(String lastUpdatedTime) {
-            this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public StepOperationInfoResponse build() {
-            return new StepOperationInfoResponse(correlationId, deploymentName, endTime, error, lastUpdatedTime, startTime);
+        }
+
+        public StepOperationInfoResponse build() {
+            $.correlationId = Objects.requireNonNull($.correlationId, "expected parameter 'correlationId' to be non-null");
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.lastUpdatedTime = Objects.requireNonNull($.lastUpdatedTime, "expected parameter 'lastUpdatedTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

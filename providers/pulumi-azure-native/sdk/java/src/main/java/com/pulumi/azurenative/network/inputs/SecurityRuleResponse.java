@@ -26,7 +26,7 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="access", required=true)
-      private final String access;
+    private String access;
 
     public String access() {
         return this.access;
@@ -37,10 +37,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationAddressPrefix")
-      private final @Nullable String destinationAddressPrefix;
+    private @Nullable String destinationAddressPrefix;
 
     public Optional<String> destinationAddressPrefix() {
-        return this.destinationAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.destinationAddressPrefix);
+        return Optional.ofNullable(this.destinationAddressPrefix);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationAddressPrefixes")
-      private final @Nullable List<String> destinationAddressPrefixes;
+    private @Nullable List<String> destinationAddressPrefixes;
 
-    public List<String> destinationAddressPrefixes() {
-        return this.destinationAddressPrefixes == null ? List.of() : this.destinationAddressPrefixes;
+    public Optional<List<String>> destinationAddressPrefixes() {
+        return Optional.ofNullable(this.destinationAddressPrefixes);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationApplicationSecurityGroups")
-      private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
+    private @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
 
-    public List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups() {
-        return this.destinationApplicationSecurityGroups == null ? List.of() : this.destinationApplicationSecurityGroups;
+    public Optional<List<ApplicationSecurityGroupResponse>> destinationApplicationSecurityGroups() {
+        return Optional.ofNullable(this.destinationApplicationSecurityGroups);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationPortRange")
-      private final @Nullable String destinationPortRange;
+    private @Nullable String destinationPortRange;
 
     public Optional<String> destinationPortRange() {
-        return this.destinationPortRange == null ? Optional.empty() : Optional.ofNullable(this.destinationPortRange);
+        return Optional.ofNullable(this.destinationPortRange);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destinationPortRanges")
-      private final @Nullable List<String> destinationPortRanges;
+    private @Nullable List<String> destinationPortRanges;
 
-    public List<String> destinationPortRanges() {
-        return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
+    public Optional<List<String>> destinationPortRanges() {
+        return Optional.ofNullable(this.destinationPortRanges);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -114,7 +114,7 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -125,10 +125,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -158,7 +158,7 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -169,7 +169,7 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -180,10 +180,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceAddressPrefix")
-      private final @Nullable String sourceAddressPrefix;
+    private @Nullable String sourceAddressPrefix;
 
     public Optional<String> sourceAddressPrefix() {
-        return this.sourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.sourceAddressPrefix);
+        return Optional.ofNullable(this.sourceAddressPrefix);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceAddressPrefixes")
-      private final @Nullable List<String> sourceAddressPrefixes;
+    private @Nullable List<String> sourceAddressPrefixes;
 
-    public List<String> sourceAddressPrefixes() {
-        return this.sourceAddressPrefixes == null ? List.of() : this.sourceAddressPrefixes;
+    public Optional<List<String>> sourceAddressPrefixes() {
+        return Optional.ofNullable(this.sourceAddressPrefixes);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceApplicationSecurityGroups")
-      private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
+    private @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
 
-    public List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups() {
-        return this.sourceApplicationSecurityGroups == null ? List.of() : this.sourceApplicationSecurityGroups;
+    public Optional<List<ApplicationSecurityGroupResponse>> sourceApplicationSecurityGroups() {
+        return Optional.ofNullable(this.sourceApplicationSecurityGroups);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourcePortRange")
-      private final @Nullable String sourcePortRange;
+    private @Nullable String sourcePortRange;
 
     public Optional<String> sourcePortRange() {
-        return this.sourcePortRange == null ? Optional.empty() : Optional.ofNullable(this.sourcePortRange);
+        return Optional.ofNullable(this.sourcePortRange);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourcePortRanges")
-      private final @Nullable List<String> sourcePortRanges;
+    private @Nullable List<String> sourcePortRanges;
 
-    public List<String> sourcePortRanges() {
-        return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
+    public Optional<List<String>> sourcePortRanges() {
+        return Optional.ofNullable(this.sourcePortRanges);
     }
 
     /**
@@ -235,235 +235,187 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public SecurityRuleResponse(
-        String access,
-        @Nullable String description,
-        @Nullable String destinationAddressPrefix,
-        @Nullable List<String> destinationAddressPrefixes,
-        @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
-        @Nullable String destinationPortRange,
-        @Nullable List<String> destinationPortRanges,
-        String direction,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String protocol,
-        String provisioningState,
-        @Nullable String sourceAddressPrefix,
-        @Nullable List<String> sourceAddressPrefixes,
-        @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
-        @Nullable String sourcePortRange,
-        @Nullable List<String> sourcePortRanges,
-        @Nullable String type) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.description = description;
-        this.destinationAddressPrefix = destinationAddressPrefix;
-        this.destinationAddressPrefixes = destinationAddressPrefixes;
-        this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
-        this.destinationPortRange = destinationPortRange;
-        this.destinationPortRanges = destinationPortRanges;
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sourceAddressPrefix = sourceAddressPrefix;
-        this.sourceAddressPrefixes = sourceAddressPrefixes;
-        this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
-        this.sourcePortRange = sourcePortRange;
-        this.sourcePortRanges = sourcePortRanges;
-        this.type = type;
-    }
+    private SecurityRuleResponse() {}
 
-    private SecurityRuleResponse() {
-        this.access = null;
-        this.description = null;
-        this.destinationAddressPrefix = null;
-        this.destinationAddressPrefixes = List.of();
-        this.destinationApplicationSecurityGroups = List.of();
-        this.destinationPortRange = null;
-        this.destinationPortRanges = List.of();
-        this.direction = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.priority = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.sourceAddressPrefix = null;
-        this.sourceAddressPrefixes = List.of();
-        this.sourceApplicationSecurityGroups = List.of();
-        this.sourcePortRange = null;
-        this.sourcePortRanges = List.of();
-        this.type = null;
+    private SecurityRuleResponse(SecurityRuleResponse $) {
+        this.access = $.access;
+        this.description = $.description;
+        this.destinationAddressPrefix = $.destinationAddressPrefix;
+        this.destinationAddressPrefixes = $.destinationAddressPrefixes;
+        this.destinationApplicationSecurityGroups = $.destinationApplicationSecurityGroups;
+        this.destinationPortRange = $.destinationPortRange;
+        this.destinationPortRanges = $.destinationPortRanges;
+        this.direction = $.direction;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.sourceAddressPrefix = $.sourceAddressPrefix;
+        this.sourceAddressPrefixes = $.sourceAddressPrefixes;
+        this.sourceApplicationSecurityGroups = $.sourceApplicationSecurityGroups;
+        this.sourcePortRange = $.sourcePortRange;
+        this.sourcePortRanges = $.sourcePortRanges;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String access;
-        private @Nullable String description;
-        private @Nullable String destinationAddressPrefix;
-        private @Nullable List<String> destinationAddressPrefixes;
-        private @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
-        private @Nullable String destinationPortRange;
-        private @Nullable List<String> destinationPortRanges;
-        private String direction;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Integer priority;
-        private String protocol;
-        private String provisioningState;
-        private @Nullable String sourceAddressPrefix;
-        private @Nullable List<String> sourceAddressPrefixes;
-        private @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
-        private @Nullable String sourcePortRange;
-        private @Nullable List<String> sourcePortRanges;
-        private @Nullable String type;
+        private SecurityRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityRuleResponse();
         }
 
         public Builder(SecurityRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.description = defaults.description;
-    	      this.destinationAddressPrefix = defaults.destinationAddressPrefix;
-    	      this.destinationAddressPrefixes = defaults.destinationAddressPrefixes;
-    	      this.destinationApplicationSecurityGroups = defaults.destinationApplicationSecurityGroups;
-    	      this.destinationPortRange = defaults.destinationPortRange;
-    	      this.destinationPortRanges = defaults.destinationPortRanges;
-    	      this.direction = defaults.direction;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sourceAddressPrefix = defaults.sourceAddressPrefix;
-    	      this.sourceAddressPrefixes = defaults.sourceAddressPrefixes;
-    	      this.sourceApplicationSecurityGroups = defaults.sourceApplicationSecurityGroups;
-    	      this.sourcePortRange = defaults.sourcePortRange;
-    	      this.sourcePortRanges = defaults.sourcePortRanges;
-    	      this.type = defaults.type;
+            $ = new SecurityRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder access(String access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
-            this.destinationAddressPrefix = destinationAddressPrefix;
+            $.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
+
         public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
-            this.destinationAddressPrefixes = destinationAddressPrefixes;
+            $.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
+
         public Builder destinationAddressPrefixes(String... destinationAddressPrefixes) {
             return destinationAddressPrefixes(List.of(destinationAddressPrefixes));
         }
+
         public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups) {
-            this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
+            $.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
+
         public Builder destinationApplicationSecurityGroups(ApplicationSecurityGroupResponse... destinationApplicationSecurityGroups) {
             return destinationApplicationSecurityGroups(List.of(destinationApplicationSecurityGroups));
         }
+
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
-            this.destinationPortRange = destinationPortRange;
+            $.destinationPortRange = destinationPortRange;
             return this;
         }
+
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
-            this.destinationPortRanges = destinationPortRanges;
+            $.destinationPortRanges = destinationPortRanges;
             return this;
         }
+
         public Builder destinationPortRanges(String... destinationPortRanges) {
             return destinationPortRanges(List.of(destinationPortRanges));
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
-            this.sourceAddressPrefix = sourceAddressPrefix;
+            $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
+
         public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
-            this.sourceAddressPrefixes = sourceAddressPrefixes;
+            $.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
+
         public Builder sourceAddressPrefixes(String... sourceAddressPrefixes) {
             return sourceAddressPrefixes(List.of(sourceAddressPrefixes));
         }
+
         public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups) {
-            this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
+            $.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
+
         public Builder sourceApplicationSecurityGroups(ApplicationSecurityGroupResponse... sourceApplicationSecurityGroups) {
             return sourceApplicationSecurityGroups(List.of(sourceApplicationSecurityGroups));
         }
+
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
-            this.sourcePortRange = sourcePortRange;
+            $.sourcePortRange = sourcePortRange;
             return this;
         }
+
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = sourcePortRanges;
+            $.sourcePortRanges = sourcePortRanges;
             return this;
         }
+
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public SecurityRuleResponse build() {
-            return new SecurityRuleResponse(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, etag, id, name, priority, protocol, provisioningState, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
+        }
+
+        public SecurityRuleResponse build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

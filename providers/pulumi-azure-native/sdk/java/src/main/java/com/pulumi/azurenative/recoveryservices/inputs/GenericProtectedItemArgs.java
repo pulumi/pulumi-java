@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="backupSetName")
-      private final @Nullable Output<String> backupSetName;
+    private @Nullable Output<String> backupSetName;
 
-    public Output<String> backupSetName() {
-        return this.backupSetName == null ? Codegen.empty() : this.backupSetName;
+    public Optional<Output<String>> backupSetName() {
+        return Optional.ofNullable(this.backupSetName);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="createMode")
-      private final @Nullable Output<Either<String,CreateMode>> createMode;
+    private @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Output<Either<String,CreateMode>> createMode() {
-        return this.createMode == null ? Codegen.empty() : this.createMode;
+    public Optional<Output<Either<String,CreateMode>>> createMode() {
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="deferredDeleteTimeInUTC")
-      private final @Nullable Output<String> deferredDeleteTimeInUTC;
+    private @Nullable Output<String> deferredDeleteTimeInUTC;
 
-    public Output<String> deferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Codegen.empty() : this.deferredDeleteTimeInUTC;
+    public Optional<Output<String>> deferredDeleteTimeInUTC() {
+        return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="deferredDeleteTimeRemaining")
-      private final @Nullable Output<String> deferredDeleteTimeRemaining;
+    private @Nullable Output<String> deferredDeleteTimeRemaining;
 
-    public Output<String> deferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Codegen.empty() : this.deferredDeleteTimeRemaining;
+    public Optional<Output<String>> deferredDeleteTimeRemaining() {
+        return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fabricName")
-      private final @Nullable Output<String> fabricName;
+    private @Nullable Output<String> fabricName;
 
-    public Output<String> fabricName() {
-        return this.fabricName == null ? Codegen.empty() : this.fabricName;
+    public Optional<Output<String>> fabricName() {
+        return Optional.ofNullable(this.fabricName);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
-      private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
+    private @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
-    public Output<Boolean> isDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Codegen.empty() : this.isDeferredDeleteScheduleUpcoming;
+    public Optional<Output<Boolean>> isDeferredDeleteScheduleUpcoming() {
+        return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isRehydrate")
-      private final @Nullable Output<Boolean> isRehydrate;
+    private @Nullable Output<Boolean> isRehydrate;
 
-    public Output<Boolean> isRehydrate() {
-        return this.isRehydrate == null ? Codegen.empty() : this.isRehydrate;
+    public Optional<Output<Boolean>> isRehydrate() {
+        return Optional.ofNullable(this.isRehydrate);
     }
 
     /**
@@ -142,10 +143,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isScheduledForDeferredDelete")
-      private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
+    private @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
-    public Output<Boolean> isScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Codegen.empty() : this.isScheduledForDeferredDelete;
+    public Optional<Output<Boolean>> isScheduledForDeferredDelete() {
+        return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
     /**
@@ -153,10 +154,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="lastRecoveryPoint")
-      private final @Nullable Output<String> lastRecoveryPoint;
+    private @Nullable Output<String> lastRecoveryPoint;
 
-    public Output<String> lastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Codegen.empty() : this.lastRecoveryPoint;
+    public Optional<Output<String>> lastRecoveryPoint() {
+        return Optional.ofNullable(this.lastRecoveryPoint);
     }
 
     /**
@@ -164,10 +165,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -175,10 +176,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyState")
-      private final @Nullable Output<String> policyState;
+    private @Nullable Output<String> policyState;
 
-    public Output<String> policyState() {
-        return this.policyState == null ? Codegen.empty() : this.policyState;
+    public Optional<Output<String>> policyState() {
+        return Optional.ofNullable(this.policyState);
     }
 
     /**
@@ -186,10 +187,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="protectedItemId")
-      private final @Nullable Output<Double> protectedItemId;
+    private @Nullable Output<Double> protectedItemId;
 
-    public Output<Double> protectedItemId() {
-        return this.protectedItemId == null ? Codegen.empty() : this.protectedItemId;
+    public Optional<Output<Double>> protectedItemId() {
+        return Optional.ofNullable(this.protectedItemId);
     }
 
     /**
@@ -198,7 +199,7 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="protectedItemType", required=true)
-      private final Output<String> protectedItemType;
+    private Output<String> protectedItemType;
 
     public Output<String> protectedItemType() {
         return this.protectedItemType;
@@ -209,10 +210,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable Output<Either<String,ProtectionState>> protectionState;
+    private @Nullable Output<Either<String,ProtectionState>> protectionState;
 
-    public Output<Either<String,ProtectionState>> protectionState() {
-        return this.protectionState == null ? Codegen.empty() : this.protectionState;
+    public Optional<Output<Either<String,ProtectionState>>> protectionState() {
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -220,10 +221,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceAssociations")
-      private final @Nullable Output<Map<String,String>> sourceAssociations;
+    private @Nullable Output<Map<String,String>> sourceAssociations;
 
-    public Output<Map<String,String>> sourceAssociations() {
-        return this.sourceAssociations == null ? Codegen.empty() : this.sourceAssociations;
+    public Optional<Output<Map<String,String>>> sourceAssociations() {
+        return Optional.ofNullable(this.sourceAssociations);
     }
 
     /**
@@ -231,10 +232,10 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable Output<String> sourceResourceId;
+    private @Nullable Output<String> sourceResourceId;
 
-    public Output<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
+    public Optional<Output<String>> sourceResourceId() {
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -242,297 +243,239 @@ public final class GenericProtectedItemArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="workloadType")
-      private final @Nullable Output<Either<String,DataSourceType>> workloadType;
+    private @Nullable Output<Either<String,DataSourceType>> workloadType;
 
-    public Output<Either<String,DataSourceType>> workloadType() {
-        return this.workloadType == null ? Codegen.empty() : this.workloadType;
+    public Optional<Output<Either<String,DataSourceType>>> workloadType() {
+        return Optional.ofNullable(this.workloadType);
     }
 
-    public GenericProtectedItemArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Output<String> backupSetName,
-        @Nullable Output<String> containerName,
-        @Nullable Output<Either<String,CreateMode>> createMode,
-        @Nullable Output<String> deferredDeleteTimeInUTC,
-        @Nullable Output<String> deferredDeleteTimeRemaining,
-        @Nullable Output<String> fabricName,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming,
-        @Nullable Output<Boolean> isRehydrate,
-        @Nullable Output<Boolean> isScheduledForDeferredDelete,
-        @Nullable Output<String> lastRecoveryPoint,
-        @Nullable Output<String> policyId,
-        @Nullable Output<String> policyState,
-        @Nullable Output<Double> protectedItemId,
-        Output<String> protectedItemType,
-        @Nullable Output<Either<String,ProtectionState>> protectionState,
-        @Nullable Output<Map<String,String>> sourceAssociations,
-        @Nullable Output<String> sourceResourceId,
-        @Nullable Output<Either<String,DataSourceType>> workloadType) {
-        this.backupManagementType = backupManagementType;
-        this.backupSetName = backupSetName;
-        this.containerName = containerName;
-        this.createMode = createMode;
-        this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
-        this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
-        this.fabricName = fabricName;
-        this.friendlyName = friendlyName;
-        this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
-        this.isRehydrate = isRehydrate;
-        this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
-        this.lastRecoveryPoint = lastRecoveryPoint;
-        this.policyId = policyId;
-        this.policyState = policyState;
-        this.protectedItemId = protectedItemId;
-        this.protectedItemType = Codegen.stringProp("protectedItemType").output().arg(protectedItemType).require();
-        this.protectionState = protectionState;
-        this.sourceAssociations = sourceAssociations;
-        this.sourceResourceId = sourceResourceId;
-        this.workloadType = workloadType;
-    }
+    private GenericProtectedItemArgs() {}
 
-    private GenericProtectedItemArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.backupSetName = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.createMode = Codegen.empty();
-        this.deferredDeleteTimeInUTC = Codegen.empty();
-        this.deferredDeleteTimeRemaining = Codegen.empty();
-        this.fabricName = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.isDeferredDeleteScheduleUpcoming = Codegen.empty();
-        this.isRehydrate = Codegen.empty();
-        this.isScheduledForDeferredDelete = Codegen.empty();
-        this.lastRecoveryPoint = Codegen.empty();
-        this.policyId = Codegen.empty();
-        this.policyState = Codegen.empty();
-        this.protectedItemId = Codegen.empty();
-        this.protectedItemType = Codegen.empty();
-        this.protectionState = Codegen.empty();
-        this.sourceAssociations = Codegen.empty();
-        this.sourceResourceId = Codegen.empty();
-        this.workloadType = Codegen.empty();
+    private GenericProtectedItemArgs(GenericProtectedItemArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.backupSetName = $.backupSetName;
+        this.containerName = $.containerName;
+        this.createMode = $.createMode;
+        this.deferredDeleteTimeInUTC = $.deferredDeleteTimeInUTC;
+        this.deferredDeleteTimeRemaining = $.deferredDeleteTimeRemaining;
+        this.fabricName = $.fabricName;
+        this.friendlyName = $.friendlyName;
+        this.isDeferredDeleteScheduleUpcoming = $.isDeferredDeleteScheduleUpcoming;
+        this.isRehydrate = $.isRehydrate;
+        this.isScheduledForDeferredDelete = $.isScheduledForDeferredDelete;
+        this.lastRecoveryPoint = $.lastRecoveryPoint;
+        this.policyId = $.policyId;
+        this.policyState = $.policyState;
+        this.protectedItemId = $.protectedItemId;
+        this.protectedItemType = $.protectedItemType;
+        this.protectionState = $.protectionState;
+        this.sourceAssociations = $.sourceAssociations;
+        this.sourceResourceId = $.sourceResourceId;
+        this.workloadType = $.workloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericProtectedItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Output<String> backupSetName;
-        private @Nullable Output<String> containerName;
-        private @Nullable Output<Either<String,CreateMode>> createMode;
-        private @Nullable Output<String> deferredDeleteTimeInUTC;
-        private @Nullable Output<String> deferredDeleteTimeRemaining;
-        private @Nullable Output<String> fabricName;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
-        private @Nullable Output<Boolean> isRehydrate;
-        private @Nullable Output<Boolean> isScheduledForDeferredDelete;
-        private @Nullable Output<String> lastRecoveryPoint;
-        private @Nullable Output<String> policyId;
-        private @Nullable Output<String> policyState;
-        private @Nullable Output<Double> protectedItemId;
-        private Output<String> protectedItemType;
-        private @Nullable Output<Either<String,ProtectionState>> protectionState;
-        private @Nullable Output<Map<String,String>> sourceAssociations;
-        private @Nullable Output<String> sourceResourceId;
-        private @Nullable Output<Either<String,DataSourceType>> workloadType;
+        private GenericProtectedItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericProtectedItemArgs();
         }
 
         public Builder(GenericProtectedItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.backupSetName = defaults.backupSetName;
-    	      this.containerName = defaults.containerName;
-    	      this.createMode = defaults.createMode;
-    	      this.deferredDeleteTimeInUTC = defaults.deferredDeleteTimeInUTC;
-    	      this.deferredDeleteTimeRemaining = defaults.deferredDeleteTimeRemaining;
-    	      this.fabricName = defaults.fabricName;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.isDeferredDeleteScheduleUpcoming = defaults.isDeferredDeleteScheduleUpcoming;
-    	      this.isRehydrate = defaults.isRehydrate;
-    	      this.isScheduledForDeferredDelete = defaults.isScheduledForDeferredDelete;
-    	      this.lastRecoveryPoint = defaults.lastRecoveryPoint;
-    	      this.policyId = defaults.policyId;
-    	      this.policyState = defaults.policyState;
-    	      this.protectedItemId = defaults.protectedItemId;
-    	      this.protectedItemType = defaults.protectedItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.sourceAssociations = defaults.sourceAssociations;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.workloadType = defaults.workloadType;
+            $ = new GenericProtectedItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
-            this.backupSetName = backupSetName;
+            $.backupSetName = backupSetName;
             return this;
         }
-        public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = Codegen.ofNullable(backupSetName);
-            return this;
+
+        public Builder backupSetName(String backupSetName) {
+            return backupSetName(Output.of(backupSetName));
         }
+
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
-        public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Codegen.ofNullable(createMode);
-            return this;
+
+        public Builder createMode(Either<String,CreateMode> createMode) {
+            return createMode(Output.of(createMode));
         }
+
         public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
+            $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
-        public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = Codegen.ofNullable(deferredDeleteTimeInUTC);
-            return this;
+
+        public Builder deferredDeleteTimeInUTC(String deferredDeleteTimeInUTC) {
+            return deferredDeleteTimeInUTC(Output.of(deferredDeleteTimeInUTC));
         }
+
         public Builder deferredDeleteTimeRemaining(@Nullable Output<String> deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
+            $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
-        public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = Codegen.ofNullable(deferredDeleteTimeRemaining);
-            return this;
+
+        public Builder deferredDeleteTimeRemaining(String deferredDeleteTimeRemaining) {
+            return deferredDeleteTimeRemaining(Output.of(deferredDeleteTimeRemaining));
         }
+
         public Builder fabricName(@Nullable Output<String> fabricName) {
-            this.fabricName = fabricName;
+            $.fabricName = fabricName;
             return this;
         }
-        public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Codegen.ofNullable(fabricName);
-            return this;
+
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
+            $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
-        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = Codegen.ofNullable(isDeferredDeleteScheduleUpcoming);
-            return this;
+
+        public Builder isDeferredDeleteScheduleUpcoming(Boolean isDeferredDeleteScheduleUpcoming) {
+            return isDeferredDeleteScheduleUpcoming(Output.of(isDeferredDeleteScheduleUpcoming));
         }
+
         public Builder isRehydrate(@Nullable Output<Boolean> isRehydrate) {
-            this.isRehydrate = isRehydrate;
+            $.isRehydrate = isRehydrate;
             return this;
         }
-        public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = Codegen.ofNullable(isRehydrate);
-            return this;
+
+        public Builder isRehydrate(Boolean isRehydrate) {
+            return isRehydrate(Output.of(isRehydrate));
         }
+
         public Builder isScheduledForDeferredDelete(@Nullable Output<Boolean> isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
+            $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
-        public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = Codegen.ofNullable(isScheduledForDeferredDelete);
-            return this;
+
+        public Builder isScheduledForDeferredDelete(Boolean isScheduledForDeferredDelete) {
+            return isScheduledForDeferredDelete(Output.of(isScheduledForDeferredDelete));
         }
+
         public Builder lastRecoveryPoint(@Nullable Output<String> lastRecoveryPoint) {
-            this.lastRecoveryPoint = lastRecoveryPoint;
+            $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
-        public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = Codegen.ofNullable(lastRecoveryPoint);
-            return this;
+
+        public Builder lastRecoveryPoint(String lastRecoveryPoint) {
+            return lastRecoveryPoint(Output.of(lastRecoveryPoint));
         }
+
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder policyState(@Nullable Output<String> policyState) {
-            this.policyState = policyState;
+            $.policyState = policyState;
             return this;
         }
-        public Builder policyState(@Nullable String policyState) {
-            this.policyState = Codegen.ofNullable(policyState);
-            return this;
+
+        public Builder policyState(String policyState) {
+            return policyState(Output.of(policyState));
         }
+
         public Builder protectedItemId(@Nullable Output<Double> protectedItemId) {
-            this.protectedItemId = protectedItemId;
+            $.protectedItemId = protectedItemId;
             return this;
         }
-        public Builder protectedItemId(@Nullable Double protectedItemId) {
-            this.protectedItemId = Codegen.ofNullable(protectedItemId);
-            return this;
+
+        public Builder protectedItemId(Double protectedItemId) {
+            return protectedItemId(Output.of(protectedItemId));
         }
+
         public Builder protectedItemType(Output<String> protectedItemType) {
-            this.protectedItemType = Objects.requireNonNull(protectedItemType);
+            $.protectedItemType = protectedItemType;
             return this;
         }
+
         public Builder protectedItemType(String protectedItemType) {
-            this.protectedItemType = Output.of(Objects.requireNonNull(protectedItemType));
-            return this;
+            return protectedItemType(Output.of(protectedItemType));
         }
+
         public Builder protectionState(@Nullable Output<Either<String,ProtectionState>> protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
-        public Builder protectionState(@Nullable Either<String,ProtectionState> protectionState) {
-            this.protectionState = Codegen.ofNullable(protectionState);
-            return this;
+
+        public Builder protectionState(Either<String,ProtectionState> protectionState) {
+            return protectionState(Output.of(protectionState));
         }
+
         public Builder sourceAssociations(@Nullable Output<Map<String,String>> sourceAssociations) {
-            this.sourceAssociations = sourceAssociations;
+            $.sourceAssociations = sourceAssociations;
             return this;
         }
-        public Builder sourceAssociations(@Nullable Map<String,String> sourceAssociations) {
-            this.sourceAssociations = Codegen.ofNullable(sourceAssociations);
-            return this;
+
+        public Builder sourceAssociations(Map<String,String> sourceAssociations) {
+            return sourceAssociations(Output.of(sourceAssociations));
         }
+
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
-        public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
-            return this;
+
+        public Builder sourceResourceId(String sourceResourceId) {
+            return sourceResourceId(Output.of(sourceResourceId));
         }
+
         public Builder workloadType(@Nullable Output<Either<String,DataSourceType>> workloadType) {
-            this.workloadType = workloadType;
+            $.workloadType = workloadType;
             return this;
         }
-        public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
-            this.workloadType = Codegen.ofNullable(workloadType);
-            return this;
-        }        public GenericProtectedItemArgs build() {
-            return new GenericProtectedItemArgs(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, fabricName, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastRecoveryPoint, policyId, policyState, protectedItemId, protectedItemType, protectionState, sourceAssociations, sourceResourceId, workloadType);
+
+        public Builder workloadType(Either<String,DataSourceType> workloadType) {
+            return workloadType(Output.of(workloadType));
+        }
+
+        public GenericProtectedItemArgs build() {
+            $.protectedItemType = Codegen.stringProp("protectedItemType").output().arg($.protectedItemType).require();
+            return $;
         }
     }
+
 }

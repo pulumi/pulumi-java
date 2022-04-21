@@ -7,11 +7,11 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsDescriptionArg
 import com.pulumi.azurenative.servicefabricmesh.inputs.ServiceResourceDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationResourceName")
-      private final @Nullable Output<String> applicationResourceName;
+    private @Nullable Output<String> applicationResourceName;
 
-    public Output<String> applicationResourceName() {
-        return this.applicationResourceName == null ? Codegen.empty() : this.applicationResourceName;
+    public Optional<Output<String>> applicationResourceName() {
+        return Optional.ofNullable(this.applicationResourceName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="debugParams")
-      private final @Nullable Output<String> debugParams;
+    private @Nullable Output<String> debugParams;
 
-    public Output<String> debugParams() {
-        return this.debugParams == null ? Codegen.empty() : this.debugParams;
+    public Optional<Output<String>> debugParams() {
+        return Optional.ofNullable(this.debugParams);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
+    private @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
 
-    public Output<DiagnosticsDescriptionArgs> diagnostics() {
-        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
+    public Optional<Output<DiagnosticsDescriptionArgs>> diagnostics() {
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="services")
-      private final @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
+    private @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
 
-    public Output<List<ServiceResourceDescriptionArgs>> services() {
-        return this.services == null ? Codegen.empty() : this.services;
+    public Optional<Output<List<ServiceResourceDescriptionArgs>>> services() {
+        return Optional.ofNullable(this.services);
     }
 
     /**
@@ -101,144 +101,123 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplicationArgs(
-        @Nullable Output<String> applicationResourceName,
-        @Nullable Output<String> debugParams,
-        @Nullable Output<String> description,
-        @Nullable Output<DiagnosticsDescriptionArgs> diagnostics,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<ServiceResourceDescriptionArgs>> services,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationResourceName = applicationResourceName;
-        this.debugParams = debugParams;
-        this.description = description;
-        this.diagnostics = diagnostics;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.services = services;
-        this.tags = tags;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.applicationResourceName = Codegen.empty();
-        this.debugParams = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diagnostics = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.services = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.applicationResourceName = $.applicationResourceName;
+        this.debugParams = $.debugParams;
+        this.description = $.description;
+        this.diagnostics = $.diagnostics;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.services = $.services;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationResourceName;
-        private @Nullable Output<String> debugParams;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
-        private @Nullable Output<Map<String,String>> tags;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationResourceName = defaults.applicationResourceName;
-    	      this.debugParams = defaults.debugParams;
-    	      this.description = defaults.description;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.services = defaults.services;
-    	      this.tags = defaults.tags;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationResourceName(@Nullable Output<String> applicationResourceName) {
-            this.applicationResourceName = applicationResourceName;
+            $.applicationResourceName = applicationResourceName;
             return this;
         }
-        public Builder applicationResourceName(@Nullable String applicationResourceName) {
-            this.applicationResourceName = Codegen.ofNullable(applicationResourceName);
-            return this;
+
+        public Builder applicationResourceName(String applicationResourceName) {
+            return applicationResourceName(Output.of(applicationResourceName));
         }
+
         public Builder debugParams(@Nullable Output<String> debugParams) {
-            this.debugParams = debugParams;
+            $.debugParams = debugParams;
             return this;
         }
-        public Builder debugParams(@Nullable String debugParams) {
-            this.debugParams = Codegen.ofNullable(debugParams);
-            return this;
+
+        public Builder debugParams(String debugParams) {
+            return debugParams(Output.of(debugParams));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diagnostics(@Nullable Output<DiagnosticsDescriptionArgs> diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
-        public Builder diagnostics(@Nullable DiagnosticsDescriptionArgs diagnostics) {
-            this.diagnostics = Codegen.ofNullable(diagnostics);
-            return this;
+
+        public Builder diagnostics(DiagnosticsDescriptionArgs diagnostics) {
+            return diagnostics(Output.of(diagnostics));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder services(@Nullable Output<List<ServiceResourceDescriptionArgs>> services) {
-            this.services = services;
+            $.services = services;
             return this;
         }
-        public Builder services(@Nullable List<ServiceResourceDescriptionArgs> services) {
-            this.services = Codegen.ofNullable(services);
-            return this;
+
+        public Builder services(List<ServiceResourceDescriptionArgs> services) {
+            return services(Output.of(services));
         }
+
         public Builder services(ServiceResourceDescriptionArgs... services) {
             return services(List.of(services));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(applicationResourceName, debugParams, description, diagnostics, location, resourceGroupName, services, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ApplicationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

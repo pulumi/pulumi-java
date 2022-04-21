@@ -5,9 +5,9 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keySource")
-      private final @Nullable Output<String> keySource;
+    private @Nullable Output<String> keySource;
 
-    public Output<String> keySource() {
-        return this.keySource == null ? Codegen.empty() : this.keySource;
+    public Optional<Output<String>> keySource() {
+        return Optional.ofNullable(this.keySource);
     }
 
-    public AccountEncryptionArgs(@Nullable Output<String> keySource) {
-        this.keySource = keySource;
-    }
+    private AccountEncryptionArgs() {}
 
-    private AccountEncryptionArgs() {
-        this.keySource = Codegen.empty();
+    private AccountEncryptionArgs(AccountEncryptionArgs $) {
+        this.keySource = $.keySource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keySource;
+        private AccountEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountEncryptionArgs();
         }
 
         public Builder(AccountEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keySource = defaults.keySource;
+            $ = new AccountEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keySource(@Nullable Output<String> keySource) {
-            this.keySource = keySource;
+            $.keySource = keySource;
             return this;
         }
-        public Builder keySource(@Nullable String keySource) {
-            this.keySource = Codegen.ofNullable(keySource);
-            return this;
-        }        public AccountEncryptionArgs build() {
-            return new AccountEncryptionArgs(keySource);
+
+        public Builder keySource(String keySource) {
+            return keySource(Output.of(keySource));
+        }
+
+        public AccountEncryptionArgs build() {
+            return $;
         }
     }
+
 }

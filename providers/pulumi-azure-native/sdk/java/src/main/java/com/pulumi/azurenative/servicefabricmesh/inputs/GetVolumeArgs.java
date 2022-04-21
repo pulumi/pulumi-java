@@ -17,7 +17,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeResourceName", required=true)
-      private final String volumeResourceName;
+    private String volumeResourceName;
 
     public String volumeResourceName() {
         return this.volumeResourceName;
     }
 
-    public GetVolumeArgs(
-        String resourceGroupName,
-        String volumeResourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.volumeResourceName = Objects.requireNonNull(volumeResourceName, "expected parameter 'volumeResourceName' to be non-null");
-    }
+    private GetVolumeArgs() {}
 
-    private GetVolumeArgs() {
-        this.resourceGroupName = null;
-        this.volumeResourceName = null;
+    private GetVolumeArgs(GetVolumeArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.volumeResourceName = $.volumeResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String volumeResourceName;
+        private GetVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVolumeArgs();
         }
 
         public Builder(GetVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.volumeResourceName = defaults.volumeResourceName;
+            $ = new GetVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder volumeResourceName(String volumeResourceName) {
-            this.volumeResourceName = Objects.requireNonNull(volumeResourceName);
+            $.volumeResourceName = volumeResourceName;
             return this;
-        }        public GetVolumeArgs build() {
-            return new GetVolumeArgs(resourceGroupName, volumeResourceName);
+        }
+
+        public GetVolumeArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.volumeResourceName = Objects.requireNonNull($.volumeResourceName, "expected parameter 'volumeResourceName' to be non-null");
+            return $;
         }
     }
+
 }

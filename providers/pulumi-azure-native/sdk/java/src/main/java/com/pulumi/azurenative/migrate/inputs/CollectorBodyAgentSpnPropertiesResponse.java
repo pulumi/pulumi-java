@@ -19,10 +19,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="audience")
-      private final @Nullable String audience;
+    private @Nullable String audience;
 
     public Optional<String> audience() {
-        return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="authority")
-      private final @Nullable String authority;
+    private @Nullable String authority;
 
     public Optional<String> authority() {
-        return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -63,82 +63,68 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public CollectorBodyAgentSpnPropertiesResponse(
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable String objectId,
-        @Nullable String tenantId) {
-        this.applicationId = applicationId;
-        this.audience = audience;
-        this.authority = authority;
-        this.objectId = objectId;
-        this.tenantId = tenantId;
-    }
+    private CollectorBodyAgentSpnPropertiesResponse() {}
 
-    private CollectorBodyAgentSpnPropertiesResponse() {
-        this.applicationId = null;
-        this.audience = null;
-        this.authority = null;
-        this.objectId = null;
-        this.tenantId = null;
+    private CollectorBodyAgentSpnPropertiesResponse(CollectorBodyAgentSpnPropertiesResponse $) {
+        this.applicationId = $.applicationId;
+        this.audience = $.audience;
+        this.authority = $.authority;
+        this.objectId = $.objectId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectorBodyAgentSpnPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String audience;
-        private @Nullable String authority;
-        private @Nullable String objectId;
-        private @Nullable String tenantId;
+        private CollectorBodyAgentSpnPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectorBodyAgentSpnPropertiesResponse();
         }
 
         public Builder(CollectorBodyAgentSpnPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.audience = defaults.audience;
-    	      this.authority = defaults.authority;
-    	      this.objectId = defaults.objectId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new CollectorBodyAgentSpnPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder audience(@Nullable String audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
+
         public Builder authority(@Nullable String authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public CollectorBodyAgentSpnPropertiesResponse build() {
-            return new CollectorBodyAgentSpnPropertiesResponse(applicationId, audience, authority, objectId, tenantId);
+        }
+
+        public CollectorBodyAgentSpnPropertiesResponse build() {
+            return $;
         }
     }
+
 }

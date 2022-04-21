@@ -6,9 +6,9 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.DiskEncryptionTarget;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="targets")
-      private final @Nullable Output<List<DiskEncryptionTarget>> targets;
+    private @Nullable Output<List<DiskEncryptionTarget>> targets;
 
-    public Output<List<DiskEncryptionTarget>> targets() {
-        return this.targets == null ? Codegen.empty() : this.targets;
+    public Optional<Output<List<DiskEncryptionTarget>>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
-    public DiskEncryptionConfigurationArgs(@Nullable Output<List<DiskEncryptionTarget>> targets) {
-        this.targets = targets;
-    }
+    private DiskEncryptionConfigurationArgs() {}
 
-    private DiskEncryptionConfigurationArgs() {
-        this.targets = Codegen.empty();
+    private DiskEncryptionConfigurationArgs(DiskEncryptionConfigurationArgs $) {
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DiskEncryptionTarget>> targets;
+        private DiskEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionConfigurationArgs();
         }
 
         public Builder(DiskEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targets = defaults.targets;
+            $ = new DiskEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targets(@Nullable Output<List<DiskEncryptionTarget>> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
-        public Builder targets(@Nullable List<DiskEncryptionTarget> targets) {
-            this.targets = Codegen.ofNullable(targets);
-            return this;
+
+        public Builder targets(List<DiskEncryptionTarget> targets) {
+            return targets(Output.of(targets));
         }
+
         public Builder targets(DiskEncryptionTarget... targets) {
             return targets(List.of(targets));
-        }        public DiskEncryptionConfigurationArgs build() {
-            return new DiskEncryptionConfigurationArgs(targets);
+        }
+
+        public DiskEncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

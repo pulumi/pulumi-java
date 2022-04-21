@@ -13,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bytesToCapturePerPacket")
-      private final @Nullable Output<Double> bytesToCapturePerPacket;
+    private @Nullable Output<Double> bytesToCapturePerPacket;
 
-    public Output<Double> bytesToCapturePerPacket() {
-        return this.bytesToCapturePerPacket == null ? Codegen.empty() : this.bytesToCapturePerPacket;
+    public Optional<Output<Double>> bytesToCapturePerPacket() {
+        return Optional.ofNullable(this.bytesToCapturePerPacket);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<PacketCaptureFilterArgs>> filters;
+    private @Nullable Output<List<PacketCaptureFilterArgs>> filters;
 
-    public Output<List<PacketCaptureFilterArgs>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<PacketCaptureFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkWatcherName", required=true)
-      private final Output<String> networkWatcherName;
+    private Output<String> networkWatcherName;
 
     public Output<String> networkWatcherName() {
         return this.networkWatcherName;
@@ -58,10 +59,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packetCaptureName")
-      private final @Nullable Output<String> packetCaptureName;
+    private @Nullable Output<String> packetCaptureName;
 
-    public Output<String> packetCaptureName() {
-        return this.packetCaptureName == null ? Codegen.empty() : this.packetCaptureName;
+    public Optional<Output<String>> packetCaptureName() {
+        return Optional.ofNullable(this.packetCaptureName);
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -80,7 +81,7 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageLocation", required=true)
-      private final Output<PacketCaptureStorageLocationArgs> storageLocation;
+    private Output<PacketCaptureStorageLocationArgs> storageLocation;
 
     public Output<PacketCaptureStorageLocationArgs> storageLocation() {
         return this.storageLocation;
@@ -91,7 +92,7 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target", required=true)
-      private final Output<String> target;
+    private Output<String> target;
 
     public Output<String> target() {
         return this.target;
@@ -102,10 +103,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeLimitInSeconds")
-      private final @Nullable Output<Integer> timeLimitInSeconds;
+    private @Nullable Output<Integer> timeLimitInSeconds;
 
-    public Output<Integer> timeLimitInSeconds() {
-        return this.timeLimitInSeconds == null ? Codegen.empty() : this.timeLimitInSeconds;
+    public Optional<Output<Integer>> timeLimitInSeconds() {
+        return Optional.ofNullable(this.timeLimitInSeconds);
     }
 
     /**
@@ -113,157 +114,139 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="totalBytesPerSession")
-      private final @Nullable Output<Double> totalBytesPerSession;
+    private @Nullable Output<Double> totalBytesPerSession;
 
-    public Output<Double> totalBytesPerSession() {
-        return this.totalBytesPerSession == null ? Codegen.empty() : this.totalBytesPerSession;
+    public Optional<Output<Double>> totalBytesPerSession() {
+        return Optional.ofNullable(this.totalBytesPerSession);
     }
 
-    public PacketCaptureArgs(
-        @Nullable Output<Double> bytesToCapturePerPacket,
-        @Nullable Output<List<PacketCaptureFilterArgs>> filters,
-        Output<String> networkWatcherName,
-        @Nullable Output<String> packetCaptureName,
-        Output<String> resourceGroupName,
-        Output<PacketCaptureStorageLocationArgs> storageLocation,
-        Output<String> target,
-        @Nullable Output<Integer> timeLimitInSeconds,
-        @Nullable Output<Double> totalBytesPerSession) {
-        this.bytesToCapturePerPacket = Codegen.doubleProp("bytesToCapturePerPacket").output().arg(bytesToCapturePerPacket).def(0e+00).getNullable();
-        this.filters = filters;
-        this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
-        this.packetCaptureName = packetCaptureName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageLocation = Objects.requireNonNull(storageLocation, "expected parameter 'storageLocation' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-        this.timeLimitInSeconds = Codegen.integerProp("timeLimitInSeconds").output().arg(timeLimitInSeconds).def(18000).getNullable();
-        this.totalBytesPerSession = Codegen.doubleProp("totalBytesPerSession").output().arg(totalBytesPerSession).def(1.073741824e+09).getNullable();
-    }
+    private PacketCaptureArgs() {}
 
-    private PacketCaptureArgs() {
-        this.bytesToCapturePerPacket = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.networkWatcherName = Codegen.empty();
-        this.packetCaptureName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageLocation = Codegen.empty();
-        this.target = Codegen.empty();
-        this.timeLimitInSeconds = Codegen.empty();
-        this.totalBytesPerSession = Codegen.empty();
+    private PacketCaptureArgs(PacketCaptureArgs $) {
+        this.bytesToCapturePerPacket = $.bytesToCapturePerPacket;
+        this.filters = $.filters;
+        this.networkWatcherName = $.networkWatcherName;
+        this.packetCaptureName = $.packetCaptureName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageLocation = $.storageLocation;
+        this.target = $.target;
+        this.timeLimitInSeconds = $.timeLimitInSeconds;
+        this.totalBytesPerSession = $.totalBytesPerSession;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketCaptureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> bytesToCapturePerPacket;
-        private @Nullable Output<List<PacketCaptureFilterArgs>> filters;
-        private Output<String> networkWatcherName;
-        private @Nullable Output<String> packetCaptureName;
-        private Output<String> resourceGroupName;
-        private Output<PacketCaptureStorageLocationArgs> storageLocation;
-        private Output<String> target;
-        private @Nullable Output<Integer> timeLimitInSeconds;
-        private @Nullable Output<Double> totalBytesPerSession;
+        private PacketCaptureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketCaptureArgs();
         }
 
         public Builder(PacketCaptureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bytesToCapturePerPacket = defaults.bytesToCapturePerPacket;
-    	      this.filters = defaults.filters;
-    	      this.networkWatcherName = defaults.networkWatcherName;
-    	      this.packetCaptureName = defaults.packetCaptureName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageLocation = defaults.storageLocation;
-    	      this.target = defaults.target;
-    	      this.timeLimitInSeconds = defaults.timeLimitInSeconds;
-    	      this.totalBytesPerSession = defaults.totalBytesPerSession;
+            $ = new PacketCaptureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bytesToCapturePerPacket(@Nullable Output<Double> bytesToCapturePerPacket) {
-            this.bytesToCapturePerPacket = bytesToCapturePerPacket;
+            $.bytesToCapturePerPacket = bytesToCapturePerPacket;
             return this;
         }
-        public Builder bytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
-            this.bytesToCapturePerPacket = Codegen.ofNullable(bytesToCapturePerPacket);
-            return this;
+
+        public Builder bytesToCapturePerPacket(Double bytesToCapturePerPacket) {
+            return bytesToCapturePerPacket(Output.of(bytesToCapturePerPacket));
         }
+
         public Builder filters(@Nullable Output<List<PacketCaptureFilterArgs>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<PacketCaptureFilterArgs> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<PacketCaptureFilterArgs> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(PacketCaptureFilterArgs... filters) {
             return filters(List.of(filters));
         }
+
         public Builder networkWatcherName(Output<String> networkWatcherName) {
-            this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
+            $.networkWatcherName = networkWatcherName;
             return this;
         }
+
         public Builder networkWatcherName(String networkWatcherName) {
-            this.networkWatcherName = Output.of(Objects.requireNonNull(networkWatcherName));
-            return this;
+            return networkWatcherName(Output.of(networkWatcherName));
         }
+
         public Builder packetCaptureName(@Nullable Output<String> packetCaptureName) {
-            this.packetCaptureName = packetCaptureName;
+            $.packetCaptureName = packetCaptureName;
             return this;
         }
-        public Builder packetCaptureName(@Nullable String packetCaptureName) {
-            this.packetCaptureName = Codegen.ofNullable(packetCaptureName);
-            return this;
+
+        public Builder packetCaptureName(String packetCaptureName) {
+            return packetCaptureName(Output.of(packetCaptureName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageLocation(Output<PacketCaptureStorageLocationArgs> storageLocation) {
-            this.storageLocation = Objects.requireNonNull(storageLocation);
+            $.storageLocation = storageLocation;
             return this;
         }
+
         public Builder storageLocation(PacketCaptureStorageLocationArgs storageLocation) {
-            this.storageLocation = Output.of(Objects.requireNonNull(storageLocation));
-            return this;
+            return storageLocation(Output.of(storageLocation));
         }
+
         public Builder target(Output<String> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
+            return target(Output.of(target));
         }
+
         public Builder timeLimitInSeconds(@Nullable Output<Integer> timeLimitInSeconds) {
-            this.timeLimitInSeconds = timeLimitInSeconds;
+            $.timeLimitInSeconds = timeLimitInSeconds;
             return this;
         }
-        public Builder timeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
-            this.timeLimitInSeconds = Codegen.ofNullable(timeLimitInSeconds);
-            return this;
+
+        public Builder timeLimitInSeconds(Integer timeLimitInSeconds) {
+            return timeLimitInSeconds(Output.of(timeLimitInSeconds));
         }
+
         public Builder totalBytesPerSession(@Nullable Output<Double> totalBytesPerSession) {
-            this.totalBytesPerSession = totalBytesPerSession;
+            $.totalBytesPerSession = totalBytesPerSession;
             return this;
         }
-        public Builder totalBytesPerSession(@Nullable Double totalBytesPerSession) {
-            this.totalBytesPerSession = Codegen.ofNullable(totalBytesPerSession);
-            return this;
-        }        public PacketCaptureArgs build() {
-            return new PacketCaptureArgs(bytesToCapturePerPacket, filters, networkWatcherName, packetCaptureName, resourceGroupName, storageLocation, target, timeLimitInSeconds, totalBytesPerSession);
+
+        public Builder totalBytesPerSession(Double totalBytesPerSession) {
+            return totalBytesPerSession(Output.of(totalBytesPerSession));
+        }
+
+        public PacketCaptureArgs build() {
+            $.bytesToCapturePerPacket = Codegen.doubleProp("bytesToCapturePerPacket").output().arg($.bytesToCapturePerPacket).def(0e+00).getNullable();
+            $.networkWatcherName = Objects.requireNonNull($.networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageLocation = Objects.requireNonNull($.storageLocation, "expected parameter 'storageLocation' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            $.timeLimitInSeconds = Codegen.integerProp("timeLimitInSeconds").output().arg($.timeLimitInSeconds).def(18000).getNullable();
+            $.totalBytesPerSession = Codegen.doubleProp("totalBytesPerSession").output().arg($.totalBytesPerSession).def(1.073741824e+09).getNullable();
+            return $;
         }
     }
+
 }

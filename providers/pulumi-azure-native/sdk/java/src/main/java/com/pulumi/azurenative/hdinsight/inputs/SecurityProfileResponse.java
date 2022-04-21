@@ -24,10 +24,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="aaddsResourceId")
-      private final @Nullable String aaddsResourceId;
+    private @Nullable String aaddsResourceId;
 
     public Optional<String> aaddsResourceId() {
-        return this.aaddsResourceId == null ? Optional.empty() : Optional.ofNullable(this.aaddsResourceId);
+        return Optional.ofNullable(this.aaddsResourceId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterUsersGroupDNs")
-      private final @Nullable List<String> clusterUsersGroupDNs;
+    private @Nullable List<String> clusterUsersGroupDNs;
 
-    public List<String> clusterUsersGroupDNs() {
-        return this.clusterUsersGroupDNs == null ? List.of() : this.clusterUsersGroupDNs;
+    public Optional<List<String>> clusterUsersGroupDNs() {
+        return Optional.ofNullable(this.clusterUsersGroupDNs);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="directoryType")
-      private final @Nullable String directoryType;
+    private @Nullable String directoryType;
 
     public Optional<String> directoryType() {
-        return this.directoryType == null ? Optional.empty() : Optional.ofNullable(this.directoryType);
+        return Optional.ofNullable(this.directoryType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="domain")
-      private final @Nullable String domain;
+    private @Nullable String domain;
 
     public Optional<String> domain() {
-        return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="domainUserPassword")
-      private final @Nullable String domainUserPassword;
+    private @Nullable String domainUserPassword;
 
     public Optional<String> domainUserPassword() {
-        return this.domainUserPassword == null ? Optional.empty() : Optional.ofNullable(this.domainUserPassword);
+        return Optional.ofNullable(this.domainUserPassword);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="domainUsername")
-      private final @Nullable String domainUsername;
+    private @Nullable String domainUsername;
 
     public Optional<String> domainUsername() {
-        return this.domainUsername == null ? Optional.empty() : Optional.ofNullable(this.domainUsername);
+        return Optional.ofNullable(this.domainUsername);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ldapsUrls")
-      private final @Nullable List<String> ldapsUrls;
+    private @Nullable List<String> ldapsUrls;
 
-    public List<String> ldapsUrls() {
-        return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
+    public Optional<List<String>> ldapsUrls() {
+        return Optional.ofNullable(this.ldapsUrls);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="msiResourceId")
-      private final @Nullable String msiResourceId;
+    private @Nullable String msiResourceId;
 
     public Optional<String> msiResourceId() {
-        return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
+        return Optional.ofNullable(this.msiResourceId);
     }
 
     /**
@@ -112,124 +112,100 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="organizationalUnitDN")
-      private final @Nullable String organizationalUnitDN;
+    private @Nullable String organizationalUnitDN;
 
     public Optional<String> organizationalUnitDN() {
-        return this.organizationalUnitDN == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnitDN);
+        return Optional.ofNullable(this.organizationalUnitDN);
     }
 
-    public SecurityProfileResponse(
-        @Nullable String aaddsResourceId,
-        @Nullable List<String> clusterUsersGroupDNs,
-        @Nullable String directoryType,
-        @Nullable String domain,
-        @Nullable String domainUserPassword,
-        @Nullable String domainUsername,
-        @Nullable List<String> ldapsUrls,
-        @Nullable String msiResourceId,
-        @Nullable String organizationalUnitDN) {
-        this.aaddsResourceId = aaddsResourceId;
-        this.clusterUsersGroupDNs = clusterUsersGroupDNs;
-        this.directoryType = directoryType;
-        this.domain = domain;
-        this.domainUserPassword = domainUserPassword;
-        this.domainUsername = domainUsername;
-        this.ldapsUrls = ldapsUrls;
-        this.msiResourceId = msiResourceId;
-        this.organizationalUnitDN = organizationalUnitDN;
-    }
+    private SecurityProfileResponse() {}
 
-    private SecurityProfileResponse() {
-        this.aaddsResourceId = null;
-        this.clusterUsersGroupDNs = List.of();
-        this.directoryType = null;
-        this.domain = null;
-        this.domainUserPassword = null;
-        this.domainUsername = null;
-        this.ldapsUrls = List.of();
-        this.msiResourceId = null;
-        this.organizationalUnitDN = null;
+    private SecurityProfileResponse(SecurityProfileResponse $) {
+        this.aaddsResourceId = $.aaddsResourceId;
+        this.clusterUsersGroupDNs = $.clusterUsersGroupDNs;
+        this.directoryType = $.directoryType;
+        this.domain = $.domain;
+        this.domainUserPassword = $.domainUserPassword;
+        this.domainUsername = $.domainUsername;
+        this.ldapsUrls = $.ldapsUrls;
+        this.msiResourceId = $.msiResourceId;
+        this.organizationalUnitDN = $.organizationalUnitDN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String aaddsResourceId;
-        private @Nullable List<String> clusterUsersGroupDNs;
-        private @Nullable String directoryType;
-        private @Nullable String domain;
-        private @Nullable String domainUserPassword;
-        private @Nullable String domainUsername;
-        private @Nullable List<String> ldapsUrls;
-        private @Nullable String msiResourceId;
-        private @Nullable String organizationalUnitDN;
+        private SecurityProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileResponse();
         }
 
         public Builder(SecurityProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aaddsResourceId = defaults.aaddsResourceId;
-    	      this.clusterUsersGroupDNs = defaults.clusterUsersGroupDNs;
-    	      this.directoryType = defaults.directoryType;
-    	      this.domain = defaults.domain;
-    	      this.domainUserPassword = defaults.domainUserPassword;
-    	      this.domainUsername = defaults.domainUsername;
-    	      this.ldapsUrls = defaults.ldapsUrls;
-    	      this.msiResourceId = defaults.msiResourceId;
-    	      this.organizationalUnitDN = defaults.organizationalUnitDN;
+            $ = new SecurityProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
-            this.aaddsResourceId = aaddsResourceId;
+            $.aaddsResourceId = aaddsResourceId;
             return this;
         }
+
         public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
-            this.clusterUsersGroupDNs = clusterUsersGroupDNs;
+            $.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
+
         public Builder clusterUsersGroupDNs(String... clusterUsersGroupDNs) {
             return clusterUsersGroupDNs(List.of(clusterUsersGroupDNs));
         }
+
         public Builder directoryType(@Nullable String directoryType) {
-            this.directoryType = directoryType;
+            $.directoryType = directoryType;
             return this;
         }
+
         public Builder domain(@Nullable String domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
+
         public Builder domainUserPassword(@Nullable String domainUserPassword) {
-            this.domainUserPassword = domainUserPassword;
+            $.domainUserPassword = domainUserPassword;
             return this;
         }
+
         public Builder domainUsername(@Nullable String domainUsername) {
-            this.domainUsername = domainUsername;
+            $.domainUsername = domainUsername;
             return this;
         }
+
         public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
-            this.ldapsUrls = ldapsUrls;
+            $.ldapsUrls = ldapsUrls;
             return this;
         }
+
         public Builder ldapsUrls(String... ldapsUrls) {
             return ldapsUrls(List.of(ldapsUrls));
         }
+
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = msiResourceId;
+            $.msiResourceId = msiResourceId;
             return this;
         }
+
         public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
-            this.organizationalUnitDN = organizationalUnitDN;
+            $.organizationalUnitDN = organizationalUnitDN;
             return this;
-        }        public SecurityProfileResponse build() {
-            return new SecurityProfileResponse(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
+        }
+
+        public SecurityProfileResponse build() {
+            return $;
         }
     }
+
 }

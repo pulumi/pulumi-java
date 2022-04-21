@@ -7,10 +7,10 @@ import com.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import com.pulumi.azurenative.documentdb.inputs.MongoDBDatabaseResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,10 +34,10 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<CreateUpdateOptionsArgs> options;
+    private @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<CreateUpdateOptionsArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<MongoDBDatabaseResourceArgs> resource;
+    private Output<MongoDBDatabaseResourceArgs> resource;
 
     public Output<MongoDBDatabaseResourceArgs> resource() {
         return this.resource;
@@ -78,7 +78,7 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,128 +89,111 @@ public final class MongoDBResourceMongoDBDatabaseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MongoDBResourceMongoDBDatabaseArgs(
-        Output<String> accountName,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> location,
-        @Nullable Output<CreateUpdateOptionsArgs> options,
-        Output<MongoDBDatabaseResourceArgs> resource,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.databaseName = databaseName;
-        this.location = location;
-        this.options = options;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private MongoDBResourceMongoDBDatabaseArgs() {}
 
-    private MongoDBResourceMongoDBDatabaseArgs() {
-        this.accountName = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.options = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MongoDBResourceMongoDBDatabaseArgs(MongoDBResourceMongoDBDatabaseArgs $) {
+        this.accountName = $.accountName;
+        this.databaseName = $.databaseName;
+        this.location = $.location;
+        this.options = $.options;
+        this.resource = $.resource;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDBResourceMongoDBDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<CreateUpdateOptionsArgs> options;
-        private Output<MongoDBDatabaseResourceArgs> resource;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private MongoDBResourceMongoDBDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDBResourceMongoDBDatabaseArgs();
         }
 
         public Builder(MongoDBResourceMongoDBDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.location = defaults.location;
-    	      this.options = defaults.options;
-    	      this.resource = defaults.resource;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new MongoDBResourceMongoDBDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(CreateUpdateOptionsArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder resource(Output<MongoDBDatabaseResourceArgs> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(MongoDBDatabaseResourceArgs resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
+            return resource(Output.of(resource));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public MongoDBResourceMongoDBDatabaseArgs build() {
-            return new MongoDBResourceMongoDBDatabaseArgs(accountName, databaseName, location, options, resource, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public MongoDBResourceMongoDBDatabaseArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

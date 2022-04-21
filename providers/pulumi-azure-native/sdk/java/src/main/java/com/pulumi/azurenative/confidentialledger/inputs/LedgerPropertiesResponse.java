@@ -26,10 +26,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="aadBasedSecurityPrincipals")
-      private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
+    private @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
 
-    public List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals() {
-        return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
+    public Optional<List<AADBasedSecurityPrincipalResponse>> aadBasedSecurityPrincipals() {
+        return Optional.ofNullable(this.aadBasedSecurityPrincipals);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="certBasedSecurityPrincipals")
-      private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
+    private @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
 
-    public List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals() {
-        return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
+    public Optional<List<CertBasedSecurityPrincipalResponse>> certBasedSecurityPrincipals() {
+        return Optional.ofNullable(this.certBasedSecurityPrincipals);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="identityServiceUri", required=true)
-      private final String identityServiceUri;
+    private String identityServiceUri;
 
     public String identityServiceUri() {
         return this.identityServiceUri;
@@ -59,7 +59,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ledgerInternalNamespace", required=true)
-      private final String ledgerInternalNamespace;
+    private String ledgerInternalNamespace;
 
     public String ledgerInternalNamespace() {
         return this.ledgerInternalNamespace;
@@ -70,7 +70,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ledgerName", required=true)
-      private final String ledgerName;
+    private String ledgerName;
 
     public String ledgerName() {
         return this.ledgerName;
@@ -81,10 +81,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ledgerStorageAccount")
-      private final @Nullable String ledgerStorageAccount;
+    private @Nullable String ledgerStorageAccount;
 
     public Optional<String> ledgerStorageAccount() {
-        return this.ledgerStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.ledgerStorageAccount);
+        return Optional.ofNullable(this.ledgerStorageAccount);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ledgerType")
-      private final @Nullable String ledgerType;
+    private @Nullable String ledgerType;
 
     public Optional<String> ledgerType() {
-        return this.ledgerType == null ? Optional.empty() : Optional.ofNullable(this.ledgerType);
+        return Optional.ofNullable(this.ledgerType);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ledgerUri", required=true)
-      private final String ledgerUri;
+    private String ledgerUri;
 
     public String ledgerUri() {
         return this.ledgerUri;
@@ -114,124 +114,105 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public LedgerPropertiesResponse(
-        @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals,
-        @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals,
-        String identityServiceUri,
-        String ledgerInternalNamespace,
-        String ledgerName,
-        @Nullable String ledgerStorageAccount,
-        @Nullable String ledgerType,
-        String ledgerUri,
-        String provisioningState) {
-        this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
-        this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
-        this.identityServiceUri = Objects.requireNonNull(identityServiceUri, "expected parameter 'identityServiceUri' to be non-null");
-        this.ledgerInternalNamespace = Objects.requireNonNull(ledgerInternalNamespace, "expected parameter 'ledgerInternalNamespace' to be non-null");
-        this.ledgerName = Objects.requireNonNull(ledgerName, "expected parameter 'ledgerName' to be non-null");
-        this.ledgerStorageAccount = ledgerStorageAccount;
-        this.ledgerType = ledgerType;
-        this.ledgerUri = Objects.requireNonNull(ledgerUri, "expected parameter 'ledgerUri' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private LedgerPropertiesResponse() {}
 
-    private LedgerPropertiesResponse() {
-        this.aadBasedSecurityPrincipals = List.of();
-        this.certBasedSecurityPrincipals = List.of();
-        this.identityServiceUri = null;
-        this.ledgerInternalNamespace = null;
-        this.ledgerName = null;
-        this.ledgerStorageAccount = null;
-        this.ledgerType = null;
-        this.ledgerUri = null;
-        this.provisioningState = null;
+    private LedgerPropertiesResponse(LedgerPropertiesResponse $) {
+        this.aadBasedSecurityPrincipals = $.aadBasedSecurityPrincipals;
+        this.certBasedSecurityPrincipals = $.certBasedSecurityPrincipals;
+        this.identityServiceUri = $.identityServiceUri;
+        this.ledgerInternalNamespace = $.ledgerInternalNamespace;
+        this.ledgerName = $.ledgerName;
+        this.ledgerStorageAccount = $.ledgerStorageAccount;
+        this.ledgerType = $.ledgerType;
+        this.ledgerUri = $.ledgerUri;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LedgerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
-        private @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
-        private String identityServiceUri;
-        private String ledgerInternalNamespace;
-        private String ledgerName;
-        private @Nullable String ledgerStorageAccount;
-        private @Nullable String ledgerType;
-        private String ledgerUri;
-        private String provisioningState;
+        private LedgerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LedgerPropertiesResponse();
         }
 
         public Builder(LedgerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadBasedSecurityPrincipals = defaults.aadBasedSecurityPrincipals;
-    	      this.certBasedSecurityPrincipals = defaults.certBasedSecurityPrincipals;
-    	      this.identityServiceUri = defaults.identityServiceUri;
-    	      this.ledgerInternalNamespace = defaults.ledgerInternalNamespace;
-    	      this.ledgerName = defaults.ledgerName;
-    	      this.ledgerStorageAccount = defaults.ledgerStorageAccount;
-    	      this.ledgerType = defaults.ledgerType;
-    	      this.ledgerUri = defaults.ledgerUri;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new LedgerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals) {
-            this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
+            $.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
+
         public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalResponse... aadBasedSecurityPrincipals) {
             return aadBasedSecurityPrincipals(List.of(aadBasedSecurityPrincipals));
         }
+
         public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals) {
-            this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
+            $.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
+
         public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalResponse... certBasedSecurityPrincipals) {
             return certBasedSecurityPrincipals(List.of(certBasedSecurityPrincipals));
         }
+
         public Builder identityServiceUri(String identityServiceUri) {
-            this.identityServiceUri = Objects.requireNonNull(identityServiceUri);
+            $.identityServiceUri = identityServiceUri;
             return this;
         }
+
         public Builder ledgerInternalNamespace(String ledgerInternalNamespace) {
-            this.ledgerInternalNamespace = Objects.requireNonNull(ledgerInternalNamespace);
+            $.ledgerInternalNamespace = ledgerInternalNamespace;
             return this;
         }
+
         public Builder ledgerName(String ledgerName) {
-            this.ledgerName = Objects.requireNonNull(ledgerName);
+            $.ledgerName = ledgerName;
             return this;
         }
+
         public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
-            this.ledgerStorageAccount = ledgerStorageAccount;
+            $.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
+
         public Builder ledgerType(@Nullable String ledgerType) {
-            this.ledgerType = ledgerType;
+            $.ledgerType = ledgerType;
             return this;
         }
+
         public Builder ledgerUri(String ledgerUri) {
-            this.ledgerUri = Objects.requireNonNull(ledgerUri);
+            $.ledgerUri = ledgerUri;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public LedgerPropertiesResponse build() {
-            return new LedgerPropertiesResponse(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, identityServiceUri, ledgerInternalNamespace, ledgerName, ledgerStorageAccount, ledgerType, ledgerUri, provisioningState);
+        }
+
+        public LedgerPropertiesResponse build() {
+            $.identityServiceUri = Objects.requireNonNull($.identityServiceUri, "expected parameter 'identityServiceUri' to be non-null");
+            $.ledgerInternalNamespace = Objects.requireNonNull($.ledgerInternalNamespace, "expected parameter 'ledgerInternalNamespace' to be non-null");
+            $.ledgerName = Objects.requireNonNull($.ledgerName, "expected parameter 'ledgerName' to be non-null");
+            $.ledgerUri = Objects.requireNonNull($.ledgerUri, "expected parameter 'ledgerUri' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

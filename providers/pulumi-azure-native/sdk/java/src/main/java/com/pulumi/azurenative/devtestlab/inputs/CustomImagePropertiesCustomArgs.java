@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devtestlab.enums.CustomImageOsType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<Either<String,CustomImageOsType>> osType;
+    private Output<Either<String,CustomImageOsType>> osType;
 
     public Output<Either<String,CustomImageOsType>> osType() {
         return this.osType;
@@ -49,76 +49,69 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sysPrep")
-      private final @Nullable Output<Boolean> sysPrep;
+    private @Nullable Output<Boolean> sysPrep;
 
-    public Output<Boolean> sysPrep() {
-        return this.sysPrep == null ? Codegen.empty() : this.sysPrep;
+    public Optional<Output<Boolean>> sysPrep() {
+        return Optional.ofNullable(this.sysPrep);
     }
 
-    public CustomImagePropertiesCustomArgs(
-        @Nullable Output<String> imageName,
-        Output<Either<String,CustomImageOsType>> osType,
-        @Nullable Output<Boolean> sysPrep) {
-        this.imageName = imageName;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.sysPrep = sysPrep;
-    }
+    private CustomImagePropertiesCustomArgs() {}
 
-    private CustomImagePropertiesCustomArgs() {
-        this.imageName = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.sysPrep = Codegen.empty();
+    private CustomImagePropertiesCustomArgs(CustomImagePropertiesCustomArgs $) {
+        this.imageName = $.imageName;
+        this.osType = $.osType;
+        this.sysPrep = $.sysPrep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImagePropertiesCustomArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageName;
-        private Output<Either<String,CustomImageOsType>> osType;
-        private @Nullable Output<Boolean> sysPrep;
+        private CustomImagePropertiesCustomArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImagePropertiesCustomArgs();
         }
 
         public Builder(CustomImagePropertiesCustomArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageName = defaults.imageName;
-    	      this.osType = defaults.osType;
-    	      this.sysPrep = defaults.sysPrep;
+            $ = new CustomImagePropertiesCustomArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder osType(Output<Either<String,CustomImageOsType>> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(Either<String,CustomImageOsType> osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder sysPrep(@Nullable Output<Boolean> sysPrep) {
-            this.sysPrep = sysPrep;
+            $.sysPrep = sysPrep;
             return this;
         }
-        public Builder sysPrep(@Nullable Boolean sysPrep) {
-            this.sysPrep = Codegen.ofNullable(sysPrep);
-            return this;
-        }        public CustomImagePropertiesCustomArgs build() {
-            return new CustomImagePropertiesCustomArgs(imageName, osType, sysPrep);
+
+        public Builder sysPrep(Boolean sysPrep) {
+            return sysPrep(Output.of(sysPrep));
+        }
+
+        public CustomImagePropertiesCustomArgs build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

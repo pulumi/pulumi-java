@@ -25,10 +25,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="allowedAuthenticationType")
-      private final @Nullable Integer allowedAuthenticationType;
+    private @Nullable Integer allowedAuthenticationType;
 
     public Optional<Integer> allowedAuthenticationType() {
-        return this.allowedAuthenticationType == null ? Optional.empty() : Optional.ofNullable(this.allowedAuthenticationType);
+        return Optional.ofNullable(this.allowedAuthenticationType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
-      private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
+    private @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
     public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
-        return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
+        return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="compression")
-      private final @Nullable String compression;
+    private @Nullable String compression;
 
     public Optional<String> compression() {
-        return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="initialReplicationMethod")
-      private final @Nullable String initialReplicationMethod;
+    private @Nullable String initialReplicationMethod;
 
     public Optional<String> initialReplicationMethod() {
-        return this.initialReplicationMethod == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationMethod);
+        return Optional.ofNullable(this.initialReplicationMethod);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -81,10 +81,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="offlineReplicationExportPath")
-      private final @Nullable String offlineReplicationExportPath;
+    private @Nullable String offlineReplicationExportPath;
 
     public Optional<String> offlineReplicationExportPath() {
-        return this.offlineReplicationExportPath == null ? Optional.empty() : Optional.ofNullable(this.offlineReplicationExportPath);
+        return Optional.ofNullable(this.offlineReplicationExportPath);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="offlineReplicationImportPath")
-      private final @Nullable String offlineReplicationImportPath;
+    private @Nullable String offlineReplicationImportPath;
 
     public Optional<String> offlineReplicationImportPath() {
-        return this.offlineReplicationImportPath == null ? Optional.empty() : Optional.ofNullable(this.offlineReplicationImportPath);
+        return Optional.ofNullable(this.offlineReplicationImportPath);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="onlineReplicationStartTime")
-      private final @Nullable String onlineReplicationStartTime;
+    private @Nullable String onlineReplicationStartTime;
 
     public Optional<String> onlineReplicationStartTime() {
-        return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
+        return Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryPoints")
-      private final @Nullable Integer recoveryPoints;
+    private @Nullable Integer recoveryPoints;
 
     public Optional<Integer> recoveryPoints() {
-        return this.recoveryPoints == null ? Optional.empty() : Optional.ofNullable(this.recoveryPoints);
+        return Optional.ofNullable(this.recoveryPoints);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="replicaDeletionOption")
-      private final @Nullable String replicaDeletionOption;
+    private @Nullable String replicaDeletionOption;
 
     public Optional<String> replicaDeletionOption() {
-        return this.replicaDeletionOption == null ? Optional.empty() : Optional.ofNullable(this.replicaDeletionOption);
+        return Optional.ofNullable(this.replicaDeletionOption);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="replicationFrequencyInSeconds")
-      private final @Nullable Integer replicationFrequencyInSeconds;
+    private @Nullable Integer replicationFrequencyInSeconds;
 
     public Optional<Integer> replicationFrequencyInSeconds() {
-        return this.replicationFrequencyInSeconds == null ? Optional.empty() : Optional.ofNullable(this.replicationFrequencyInSeconds);
+        return Optional.ofNullable(this.replicationFrequencyInSeconds);
     }
 
     /**
@@ -147,145 +147,111 @@ public final class HyperVReplicaBluePolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="replicationPort")
-      private final @Nullable Integer replicationPort;
+    private @Nullable Integer replicationPort;
 
     public Optional<Integer> replicationPort() {
-        return this.replicationPort == null ? Optional.empty() : Optional.ofNullable(this.replicationPort);
+        return Optional.ofNullable(this.replicationPort);
     }
 
-    public HyperVReplicaBluePolicyDetailsResponse(
-        @Nullable Integer allowedAuthenticationType,
-        @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @Nullable String compression,
-        @Nullable String initialReplicationMethod,
-        String instanceType,
-        @Nullable String offlineReplicationExportPath,
-        @Nullable String offlineReplicationImportPath,
-        @Nullable String onlineReplicationStartTime,
-        @Nullable Integer recoveryPoints,
-        @Nullable String replicaDeletionOption,
-        @Nullable Integer replicationFrequencyInSeconds,
-        @Nullable Integer replicationPort) {
-        this.allowedAuthenticationType = allowedAuthenticationType;
-        this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
-        this.compression = compression;
-        this.initialReplicationMethod = initialReplicationMethod;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.offlineReplicationExportPath = offlineReplicationExportPath;
-        this.offlineReplicationImportPath = offlineReplicationImportPath;
-        this.onlineReplicationStartTime = onlineReplicationStartTime;
-        this.recoveryPoints = recoveryPoints;
-        this.replicaDeletionOption = replicaDeletionOption;
-        this.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
-        this.replicationPort = replicationPort;
-    }
+    private HyperVReplicaBluePolicyDetailsResponse() {}
 
-    private HyperVReplicaBluePolicyDetailsResponse() {
-        this.allowedAuthenticationType = null;
-        this.applicationConsistentSnapshotFrequencyInHours = null;
-        this.compression = null;
-        this.initialReplicationMethod = null;
-        this.instanceType = null;
-        this.offlineReplicationExportPath = null;
-        this.offlineReplicationImportPath = null;
-        this.onlineReplicationStartTime = null;
-        this.recoveryPoints = null;
-        this.replicaDeletionOption = null;
-        this.replicationFrequencyInSeconds = null;
-        this.replicationPort = null;
+    private HyperVReplicaBluePolicyDetailsResponse(HyperVReplicaBluePolicyDetailsResponse $) {
+        this.allowedAuthenticationType = $.allowedAuthenticationType;
+        this.applicationConsistentSnapshotFrequencyInHours = $.applicationConsistentSnapshotFrequencyInHours;
+        this.compression = $.compression;
+        this.initialReplicationMethod = $.initialReplicationMethod;
+        this.instanceType = $.instanceType;
+        this.offlineReplicationExportPath = $.offlineReplicationExportPath;
+        this.offlineReplicationImportPath = $.offlineReplicationImportPath;
+        this.onlineReplicationStartTime = $.onlineReplicationStartTime;
+        this.recoveryPoints = $.recoveryPoints;
+        this.replicaDeletionOption = $.replicaDeletionOption;
+        this.replicationFrequencyInSeconds = $.replicationFrequencyInSeconds;
+        this.replicationPort = $.replicationPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVReplicaBluePolicyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer allowedAuthenticationType;
-        private @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
-        private @Nullable String compression;
-        private @Nullable String initialReplicationMethod;
-        private String instanceType;
-        private @Nullable String offlineReplicationExportPath;
-        private @Nullable String offlineReplicationImportPath;
-        private @Nullable String onlineReplicationStartTime;
-        private @Nullable Integer recoveryPoints;
-        private @Nullable String replicaDeletionOption;
-        private @Nullable Integer replicationFrequencyInSeconds;
-        private @Nullable Integer replicationPort;
+        private HyperVReplicaBluePolicyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVReplicaBluePolicyDetailsResponse();
         }
 
         public Builder(HyperVReplicaBluePolicyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAuthenticationType = defaults.allowedAuthenticationType;
-    	      this.applicationConsistentSnapshotFrequencyInHours = defaults.applicationConsistentSnapshotFrequencyInHours;
-    	      this.compression = defaults.compression;
-    	      this.initialReplicationMethod = defaults.initialReplicationMethod;
-    	      this.instanceType = defaults.instanceType;
-    	      this.offlineReplicationExportPath = defaults.offlineReplicationExportPath;
-    	      this.offlineReplicationImportPath = defaults.offlineReplicationImportPath;
-    	      this.onlineReplicationStartTime = defaults.onlineReplicationStartTime;
-    	      this.recoveryPoints = defaults.recoveryPoints;
-    	      this.replicaDeletionOption = defaults.replicaDeletionOption;
-    	      this.replicationFrequencyInSeconds = defaults.replicationFrequencyInSeconds;
-    	      this.replicationPort = defaults.replicationPort;
+            $ = new HyperVReplicaBluePolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
-            this.allowedAuthenticationType = allowedAuthenticationType;
+            $.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
+
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
-            this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
+            $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
+
         public Builder compression(@Nullable String compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
+
         public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
-            this.initialReplicationMethod = initialReplicationMethod;
+            $.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
-            this.offlineReplicationExportPath = offlineReplicationExportPath;
+            $.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
+
         public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
-            this.offlineReplicationImportPath = offlineReplicationImportPath;
+            $.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
+
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
-            this.onlineReplicationStartTime = onlineReplicationStartTime;
+            $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
+
         public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
-            this.recoveryPoints = recoveryPoints;
+            $.recoveryPoints = recoveryPoints;
             return this;
         }
+
         public Builder replicaDeletionOption(@Nullable String replicaDeletionOption) {
-            this.replicaDeletionOption = replicaDeletionOption;
+            $.replicaDeletionOption = replicaDeletionOption;
             return this;
         }
+
         public Builder replicationFrequencyInSeconds(@Nullable Integer replicationFrequencyInSeconds) {
-            this.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
+            $.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
             return this;
         }
+
         public Builder replicationPort(@Nullable Integer replicationPort) {
-            this.replicationPort = replicationPort;
+            $.replicationPort = replicationPort;
             return this;
-        }        public HyperVReplicaBluePolicyDetailsResponse build() {
-            return new HyperVReplicaBluePolicyDetailsResponse(allowedAuthenticationType, applicationConsistentSnapshotFrequencyInHours, compression, initialReplicationMethod, instanceType, offlineReplicationExportPath, offlineReplicationImportPath, onlineReplicationStartTime, recoveryPoints, replicaDeletionOption, replicationFrequencyInSeconds, replicationPort);
+        }
+
+        public HyperVReplicaBluePolicyDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

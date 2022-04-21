@@ -24,10 +24,10 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="certificateThumbprint")
-      private final @Nullable String certificateThumbprint;
+    private @Nullable String certificateThumbprint;
 
     public Optional<String> certificateThumbprint() {
-        return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
+        return Optional.ofNullable(this.certificateThumbprint);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public WebServiceParameterResponse(
-        @Nullable String certificateThumbprint,
-        @Nullable Object value) {
-        this.certificateThumbprint = certificateThumbprint;
-        this.value = value;
-    }
+    private WebServiceParameterResponse() {}
 
-    private WebServiceParameterResponse() {
-        this.certificateThumbprint = null;
-        this.value = null;
+    private WebServiceParameterResponse(WebServiceParameterResponse $) {
+        this.certificateThumbprint = $.certificateThumbprint;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServiceParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateThumbprint;
-        private @Nullable Object value;
+        private WebServiceParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServiceParameterResponse();
         }
 
         public Builder(WebServiceParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateThumbprint = defaults.certificateThumbprint;
-    	      this.value = defaults.value;
+            $ = new WebServiceParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = certificateThumbprint;
+            $.certificateThumbprint = certificateThumbprint;
             return this;
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public WebServiceParameterResponse build() {
-            return new WebServiceParameterResponse(certificateThumbprint, value);
+        }
+
+        public WebServiceParameterResponse build() {
+            return $;
         }
     }
+
 }

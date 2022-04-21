@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AppInsightsPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public AppInsightsPropertiesArgs(@Nullable Output<String> resourceId) {
-        this.resourceId = resourceId;
-    }
+    private AppInsightsPropertiesArgs() {}
 
-    private AppInsightsPropertiesArgs() {
-        this.resourceId = Codegen.empty();
+    private AppInsightsPropertiesArgs(AppInsightsPropertiesArgs $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppInsightsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceId;
+        private AppInsightsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppInsightsPropertiesArgs();
         }
 
         public Builder(AppInsightsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new AppInsightsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public AppInsightsPropertiesArgs build() {
-            return new AppInsightsPropertiesArgs(resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public AppInsightsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

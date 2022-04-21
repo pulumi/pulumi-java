@@ -5,10 +5,10 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CmkKekIdentityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="useSystemAssignedIdentity")
-      private final @Nullable Output<Boolean> useSystemAssignedIdentity;
+    private @Nullable Output<Boolean> useSystemAssignedIdentity;
 
-    public Output<Boolean> useSystemAssignedIdentity() {
-        return this.useSystemAssignedIdentity == null ? Codegen.empty() : this.useSystemAssignedIdentity;
+    public Optional<Output<Boolean>> useSystemAssignedIdentity() {
+        return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CmkKekIdentityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable Output<String> userAssignedIdentity;
+    private @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
+    public Optional<Output<String>> userAssignedIdentity() {
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public CmkKekIdentityArgs(
-        @Nullable Output<Boolean> useSystemAssignedIdentity,
-        @Nullable Output<String> userAssignedIdentity) {
-        this.useSystemAssignedIdentity = useSystemAssignedIdentity;
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private CmkKekIdentityArgs() {}
 
-    private CmkKekIdentityArgs() {
-        this.useSystemAssignedIdentity = Codegen.empty();
-        this.userAssignedIdentity = Codegen.empty();
+    private CmkKekIdentityArgs(CmkKekIdentityArgs $) {
+        this.useSystemAssignedIdentity = $.useSystemAssignedIdentity;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CmkKekIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> useSystemAssignedIdentity;
-        private @Nullable Output<String> userAssignedIdentity;
+        private CmkKekIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CmkKekIdentityArgs();
         }
 
         public Builder(CmkKekIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.useSystemAssignedIdentity = defaults.useSystemAssignedIdentity;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new CmkKekIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder useSystemAssignedIdentity(@Nullable Output<Boolean> useSystemAssignedIdentity) {
-            this.useSystemAssignedIdentity = useSystemAssignedIdentity;
+            $.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
-        public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
-            this.useSystemAssignedIdentity = Codegen.ofNullable(useSystemAssignedIdentity);
-            return this;
+
+        public Builder useSystemAssignedIdentity(Boolean useSystemAssignedIdentity) {
+            return useSystemAssignedIdentity(Output.of(useSystemAssignedIdentity));
         }
+
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
-            return this;
-        }        public CmkKekIdentityArgs build() {
-            return new CmkKekIdentityArgs(useSystemAssignedIdentity, userAssignedIdentity);
+
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public CmkKekIdentityArgs build() {
+            return $;
         }
     }
+
 }

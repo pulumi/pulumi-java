@@ -23,7 +23,7 @@ public final class PngFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filenamePattern", required=true)
-      private final Output<String> filenamePattern;
+    private Output<String> filenamePattern;
 
     public Output<String> filenamePattern() {
         return this.filenamePattern;
@@ -35,63 +35,60 @@ public final class PngFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public PngFormatArgs(
-        Output<String> filenamePattern,
-        Output<String> odataType) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private PngFormatArgs() {}
 
-    private PngFormatArgs() {
-        this.filenamePattern = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private PngFormatArgs(PngFormatArgs $) {
+        this.filenamePattern = $.filenamePattern;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PngFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filenamePattern;
-        private Output<String> odataType;
+        private PngFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PngFormatArgs();
         }
 
         public Builder(PngFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filenamePattern = defaults.filenamePattern;
-    	      this.odataType = defaults.odataType;
+            $ = new PngFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filenamePattern(Output<String> filenamePattern) {
-            this.filenamePattern = Objects.requireNonNull(filenamePattern);
+            $.filenamePattern = filenamePattern;
             return this;
         }
+
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Output.of(Objects.requireNonNull(filenamePattern));
-            return this;
+            return filenamePattern(Output.of(filenamePattern));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public PngFormatArgs build() {
-            return new PngFormatArgs(filenamePattern, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public PngFormatArgs build() {
+            $.filenamePattern = Objects.requireNonNull($.filenamePattern, "expected parameter 'filenamePattern' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

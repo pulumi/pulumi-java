@@ -6,10 +6,10 @@ package com.pulumi.azurenative.openenergyplatform.inputs;
 import com.pulumi.azurenative.openenergyplatform.inputs.DataPartitionNamesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class EnergyServicePropertiesArgs extends com.pulumi.resources.Reso
     public static final EnergyServicePropertiesArgs Empty = new EnergyServicePropertiesArgs();
 
     @Import(name="authAppId")
-      private final @Nullable Output<String> authAppId;
+    private @Nullable Output<String> authAppId;
 
-    public Output<String> authAppId() {
-        return this.authAppId == null ? Codegen.empty() : this.authAppId;
+    public Optional<Output<String>> authAppId() {
+        return Optional.ofNullable(this.authAppId);
     }
 
     @Import(name="dataPartitionNames")
-      private final @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
+    private @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
 
-    public Output<List<DataPartitionNamesArgs>> dataPartitionNames() {
-        return this.dataPartitionNames == null ? Codegen.empty() : this.dataPartitionNames;
+    public Optional<Output<List<DataPartitionNamesArgs>>> dataPartitionNames() {
+        return Optional.ofNullable(this.dataPartitionNames);
     }
 
-    public EnergyServicePropertiesArgs(
-        @Nullable Output<String> authAppId,
-        @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames) {
-        this.authAppId = authAppId;
-        this.dataPartitionNames = dataPartitionNames;
-    }
+    private EnergyServicePropertiesArgs() {}
 
-    private EnergyServicePropertiesArgs() {
-        this.authAppId = Codegen.empty();
-        this.dataPartitionNames = Codegen.empty();
+    private EnergyServicePropertiesArgs(EnergyServicePropertiesArgs $) {
+        this.authAppId = $.authAppId;
+        this.dataPartitionNames = $.dataPartitionNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnergyServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authAppId;
-        private @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
+        private EnergyServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnergyServicePropertiesArgs();
         }
 
         public Builder(EnergyServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authAppId = defaults.authAppId;
-    	      this.dataPartitionNames = defaults.dataPartitionNames;
+            $ = new EnergyServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authAppId(@Nullable Output<String> authAppId) {
-            this.authAppId = authAppId;
+            $.authAppId = authAppId;
             return this;
         }
-        public Builder authAppId(@Nullable String authAppId) {
-            this.authAppId = Codegen.ofNullable(authAppId);
-            return this;
+
+        public Builder authAppId(String authAppId) {
+            return authAppId(Output.of(authAppId));
         }
+
         public Builder dataPartitionNames(@Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames) {
-            this.dataPartitionNames = dataPartitionNames;
+            $.dataPartitionNames = dataPartitionNames;
             return this;
         }
-        public Builder dataPartitionNames(@Nullable List<DataPartitionNamesArgs> dataPartitionNames) {
-            this.dataPartitionNames = Codegen.ofNullable(dataPartitionNames);
-            return this;
+
+        public Builder dataPartitionNames(List<DataPartitionNamesArgs> dataPartitionNames) {
+            return dataPartitionNames(Output.of(dataPartitionNames));
         }
+
         public Builder dataPartitionNames(DataPartitionNamesArgs... dataPartitionNames) {
             return dataPartitionNames(List.of(dataPartitionNames));
-        }        public EnergyServicePropertiesArgs build() {
-            return new EnergyServicePropertiesArgs(authAppId, dataPartitionNames);
+        }
+
+        public EnergyServicePropertiesArgs build() {
+            return $;
         }
     }
+
 }
